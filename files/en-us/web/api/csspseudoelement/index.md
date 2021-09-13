@@ -10,56 +10,51 @@ tags:
   - Reference
 browser-compat: api.CSSPseudoElement
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSPseudoElement</code></strong> interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.</p>
+The **`CSSPseudoElement`** interface represents a pseudo-element that may be the target of an event or animated using the {{DOMxRef('Web Animations API', '', '', 'true')}}. Instances of this interface may be obtained by calling {{DOMxRef('Element.pseudo()')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.</dd>
- <dt>{{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the pseudo-element selector as a {{DOMxRef('CSSOMString')}}.</dd>
-</dl>
+- {{DOMxRef('CSSPseudoElement.element')}} {{Experimental_Inline}} {{readOnlyInline}}
+  - : Returns the originating/parent {{DOMxRef('Element')}} of the pseudo-element.
+- {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{readOnlyInline}}
+  - : Returns the pseudo-element selector as a {{DOMxRef('CSSOMString')}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>CSSPseudoElement</code> extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:</em></p>
+_`CSSPseudoElement` extends {{DOMxRef('EventTarget')}}, so it inherits the following methods:_
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>Registers an event handler of a specific event type on the pseudo-element.</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>Dispatches an event to this pseudo-element.</dd>
- <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>Removes an event listener from the pseudo-element.</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : Registers an event handler of a specific event type on the pseudo-element.
+- {{domxref("EventTarget.dispatchEvent()")}}
+  - : Dispatches an event to this pseudo-element.
+- {{domxref("EventTarget.removeEventListener()")}}
+  - : Removes an event listener from the pseudo-element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example_using_Element.pseudo">Basic example using Element.pseudo</h3>
+### Basic example using Element.pseudo
 
-<p>Using pseudo-elements, most modern browsers will automatically add quotation marks around text inside a {{HTMLElement('q')}} element. (A style rule may be needed to add quotation marks in older browsers.) The example below demonstrates the basic properties of the <code>CSSPseudoElement</code> object representing the opening quotation mark.</p>
+Using pseudo-elements, most modern browsers will automatically add quotation marks around text inside a {{HTMLElement('q')}} element. (A style rule may be needed to add quotation marks in older browsers.) The example below demonstrates the basic properties of the `CSSPseudoElement` object representing the opening quotation mark.
 
-<pre class="brush: js">const element = document.querySelector('q');
+```js
+const element = document.querySelector('q');
 const cssPseudoElement = element.pseudo('::before');
 console.log(cssPseudoElement.element); // Outputs [object HTMLQuoteElement]
 console.log(cssPseudoElement.type); // Outputs '::before'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef('Element.pseudo()')}}</li>
- <li>{{DOMxRef('Web Animations API', '', '', 'true')}}</li>
- <li>{{DOMxRef('Element.animate()')}}</li>
-</ul>
+- {{DOMxRef('Element.pseudo()')}}
+- {{DOMxRef('Web Animations API', '', '', 'true')}}
+- {{DOMxRef('Element.animate()')}}

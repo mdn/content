@@ -10,61 +10,58 @@ tags:
   - id
 browser-compat: api.RTCDataChannel.id
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-    <code><strong>id</strong></code> returns an ID number (between 0 and 65,534) which
-    uniquely identifies the {{domxref("RTCDataChannel")}}. This ID is set at the
-  time the data channel is created, either by the user agent (if
-  {{domxref("RTCDataChannel.negotiated")}} is <code>false</code>) or by the site or app
-  script (if <code>negotiated</code> is <code>true</code>).</p>
+The read-only `RTCDataChannel` property
+**`id`** returns an ID number (between 0 and 65,534) which
+uniquely identifies the {{domxref("RTCDataChannel")}}. This ID is set at the
+time the data channel is created, either by the user agent (if
+{{domxref("RTCDataChannel.negotiated")}} is `false`) or by the site or app
+script (if `negotiated` is `true`).
 
-<p>Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical maximum of
-  65,534 data channels on it, although the actual maximum may vary from browser to
-  browser.</p>
+Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical maximum of
+65,534 data channels on it, although the actual maximum may vary from browser to
+browser.
 
-<div class="note">
-  <p><strong>Note:</strong> In early versions of the WebRTC specification, this property's name was
-    {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
-    be updated.</p>
-</div>
+> **Note:** In early versions of the WebRTC specification, this property's name was
+> {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
+> be updated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>id</em> = <em>aDataChannel</em>.id;
-</pre>
+```js
+var id = aDataChannel.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>unsigned short</code> value (that is, an integer between 0 and 65,535) which
-  uniquely identifies the data channel.</p>
+An `unsigned short` value (that is, an integer between 0 and 65,535) which
+uniquely identifies the data channel.
 
-<p>While the {{domxref("RTCDataChannel.label", "label")}} property doesn't have to be
-  unique, this ID number is guaranteed to be unique among all data channels. Additionally,
-  known implementations of WebRTC use the same ID on both peers. A unique ID makes it
-  easier for your code to do its own out-of-band data channel-related signaling.</p>
+While the {{domxref("RTCDataChannel.label", "label")}} property doesn't have to be
+unique, this ID number is guaranteed to be unique among all data channels. Additionally,
+known implementations of WebRTC use the same ID on both peers. A unique ID makes it
+easier for your code to do its own out-of-band data channel-related signaling.
 
-<p>This can be also useful for logging and debugging purposes.</p>
+This can be also useful for logging and debugging purposes.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
-<code>
-console.log("Channel id: " + dc.id);</code></pre>
+    var pc = new RTCPeerConnection();
+    var dc = pc.createDataChannel("my channel");
 
-<h2 id="Specifications">Specifications</h2>
+    console.log("Channel id: " + dc.id);
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

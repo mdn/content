@@ -2,37 +2,38 @@
 title: KeyboardLayoutMap.keys
 slug: Web/API/KeyboardLayoutMap/keys
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- KeyboardLayoutMap
-- Property
-- Reference
-- keyboard
-- keys
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - KeyboardLayoutMap
+  - Property
+  - Reference
+  - keyboard
+  - keys
 browser-compat: api.KeyboardLayoutMap.keys
 ---
-<div>{{SeeCompatTable}}{{APIRef("Keyboard API")}}</div>
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-<p>The <strong><code>keys</code></strong> read-only property of
-    the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
-  Iterator object that contains the keys for each index in the
-    array.</p>
+The **`keys`** read-only property of
+the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
+Iterator object that contains the keys for each index in the
+array.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>iterator</var> = KeyboardLayoutMap.keys</pre>
+```js
+iterator = KeyboardLayoutMap.keys
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An iterator.</p>
+An iterator.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

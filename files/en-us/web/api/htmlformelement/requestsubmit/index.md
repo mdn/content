@@ -2,84 +2,81 @@
 title: HTMLFormElement.requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLFormElement
-- Input
-- Method
-- button
-- form
-- requestSubmit
-- submit
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLFormElement
+  - Input
+  - Method
+  - button
+  - form
+  - requestSubmit
+  - submit
 browser-compat: api.HTMLFormElement.requestSubmit
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLFormElement")}}
-    method <code><strong>requestSubmit()</strong></code> requests that the form be
-    submitted using a specific submit button.</p>
+The {{domxref("HTMLFormElement")}}
+method **`requestSubmit()`** requests that the form be
+submitted using a specific submit button.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>htmlFormElement</var>.requestSubmit(<var>submitter</var>);</pre>
+```js
+htmlFormElement.requestSubmit(submitter);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>submitter</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>The submit button whose attributes describe the method by which the form is to be
-      submitted. This may be either an {{HTMLElement("input")}} or
-      {{HTMLElement("button")}} element whose <code>type</code> attribute
-      is <code>submit</code>.</p>
+- `submitter` {{optional_inline}}
 
-    <p>If you omit the <code><var>submitter</var></code> parameter, the form element
-      itself is used as the submitter.</p>
-  </dd>
-</dl>
+  - : The submit button whose attributes describe the method by which the form is to be
+    submitted. This may be either an {{HTMLElement("input")}} or
+    {{HTMLElement("button")}} element whose `type` attribute
+    is `submit`.
 
-<h3 id="Return_value">Return value</h3>
+    If you omit the `submitter` parameter, the form element
+    itself is used as the submitter.
 
-<p>None.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+None.
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>The specified <code><var>submitter</var></code> is not a submit button.</dd>
-  <dt><code>NotFoundError</code></dt>
-  <dd>The specified <code><var>submitter</var></code> isn't a member of the form on
-    which <code>requestSubmit()</code> was called. The submitter must be either a
+### Exceptions
+
+- `TypeError`
+  - : The specified `submitter` is not a submit button.
+- `NotFoundError`
+  - : The specified `submitter` isn't a member of the form on
+    which `requestSubmit()` was called. The submitter must be either a
     descendant of the form element or must have an {{htmlattrxref("form", "input")}}
-    attribute referring to the form.</dd>
-</dl>
+    attribute referring to the form.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The obvious question is: Why does this method exist, when we've had the
-  {{domxref("HTMLFormElement.submit", "submit()")}} method since the dawn of time?</p>
+The obvious question is: Why does this method exist, when we've had the
+{{domxref("HTMLFormElement.submit", "submit()")}} method since the dawn of time?
 
-<p>The answer is simple. <code>submit()</code> submits the form, but that's all it
-  does. <code>requestSubmit()</code>, on the other hand, acts as if a submit button were
-  clicked. The form's content is validated, and the form is submitted only if validation
-  succeeds. Once the form has been submitted, the
-  {{domxref("HTMLFormElement.submit_event", "submit")}} event is sent back to the form
-  object.</p>
+The answer is simple. `submit()` submits the form, but that's all it
+does. `requestSubmit()`, on the other hand, acts as if a submit button were
+clicked. The form's content is validated, and the form is submitted only if validation
+succeeds. Once the form has been submitted, the
+{{domxref("HTMLFormElement.submit_event", "submit")}} event is sent back to the form
+object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the example below, the form is submitted by attempting to send the request using
-  <code>requestSubmit()</code> if it's available. If a submit button with the
-  ID <code>main-submit</code> is found, that's used to submit the form. Otherwise, the
-  form is submitted with no <code>submitter</code> parameter, so it's submitted directly
-  by the form itself.</p>
+In the example below, the form is submitted by attempting to send the request using
+`requestSubmit()` if it's available. If a submit button with the
+ID `main-submit` is found, that's used to submit the form. Otherwise, the
+form is submitted with no `submitter` parameter, so it's submitted directly
+by the form itself.
 
-<p>If, on the other hand, <code>requestSubmit()</code> isn't available, this code falls
-  back to calling the form's {{domxref("HTMLFormElement.submit", "submit()")}} method.</p>
+If, on the other hand, `requestSubmit()` isn't available, this code falls
+back to calling the form's {{domxref("HTMLFormElement.submit", "submit()")}} method.
 
-<pre class="brush: js">let myForm = document.querySelector("form");
+```js
+let myForm = document.querySelector("form");
 let submitButton = myForm.querySelector("#main-submit");
 
 if (myForm.requestSubmit) {
@@ -91,12 +88,12 @@ if (myForm.requestSubmit) {
 } else {
   myForm.submit();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

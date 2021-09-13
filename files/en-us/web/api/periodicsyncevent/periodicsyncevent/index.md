@@ -2,73 +2,70 @@
 title: PeriodicSyncEvent()
 slug: Web/API/PeriodicSyncEvent/PeriodicSyncEvent
 tags:
-- Constructor
-- Offline
-- PWA
-- PeriodicSyncEvent
-- Service Worker
-- Web Periodic Background Synchronization API
-- periodic sync
+  - Constructor
+  - Offline
+  - PWA
+  - PeriodicSyncEvent
+  - Service Worker
+  - Web Periodic Background Synchronization API
+  - periodic sync
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>PeriodicSyncEvent()</code></strong> constructor
-  creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically
-  used. The browser creates these objects itself and provides them to
-  {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.</p>
+The **`PeriodicSyncEvent()`** constructor
+creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically
+used. The browser creates these objects itself and provides them to
+{{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>PeriodicSyncEvent</var> = new PeriodicSyncEvent();</pre>
+```js
+var PeriodicSyncEvent = new PeriodicSyncEvent();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>A {{domxref("DOMString")}} indicating the event which occurred. For
-    <code>PeriodicSyncEvent</code>, this is always <code>periodicsync</code>.</dd>
-  <dt><em>periodicSyncEventInitDict</em> {{optional_inline}}</dt>
-  <dd>An options object containing any initialization data you want to populate the
-    <code>PeriodicSyncEvent</code> object with. The options are:
-    <ul>
-      <li><code>tag</code>: The tag referencing the sync event.</li>
-    </ul>
-  </dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+    `PeriodicSyncEvent`, this is always `periodicsync`.
+- _periodicSyncEventInitDict_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An options object containing any initialization data you want to populate the
+    `PeriodicSyncEvent` object with. The options are:
 
-<p>A {{domxref("PeriodicSyncEvent")}} object configured using the given inputs.</p>
+    - `tag`: The tag referencing the sync event.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
-  associated tag.</p>
+A {{domxref("PeriodicSyncEvent")}} object configured using the given inputs.
 
-<pre class="brush: js">var syncTag = {
+## Examples
+
+This example constructs a new {{domxref('PeriodicSyncEvent')}} with the relevant
+associated tag.
+
+```js
+var syncTag = {
   tag : 'unique-tag'
 }
 
 var psEvent = new ExtendableEvent('periodicsync', syncTag);
 
 psEvent.tag; // should return 'unique-tag'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
-      the Periodic Background Sync API</a></li>
-  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
-      Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with
+  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A
+  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

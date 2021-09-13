@@ -2,60 +2,51 @@
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
 tags:
-- API
-- CloseEvent
-- Constructor
-- Reference
+  - API
+  - CloseEvent
+  - Constructor
+  - Reference
 browser-compat: api.CloseEvent.CloseEvent
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p>The <strong><code>CloseEvent()</code></strong> constructor creates a new
-  {{domxref("CloseEvent")}}.</p>
+The **`CloseEvent()`** constructor creates a new
+{{domxref("CloseEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">new CloseEvent(typeArg);
-new CloseEvent(typeArg, closeEventInit);</pre>
+```js
+new CloseEvent(typeArg);
+new CloseEvent(typeArg, closeEventInit);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>typeArg</code></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code>closeEventInit</code> {{optional_inline}}</dt>
-  <dd>Is a <code>CloseEventInit</code> dictionary, having the following fields:
+- `typeArg`
+  - : Is a {{domxref("DOMString")}} representing the name of the event.
+- `closeEventInit` {{optional_inline}}
 
-    <ul>
-      <li><code>"wasClean"</code>, optional and defaulting to <code>false</code>, of type
-        <code>long</code>, indicates if the connection has been closed cleanly or not.
-      </li>
-      <li><code>"code"</code>, optional and defaulting to <code>0</code>, of type
-        <code>unsigned short</code>, that is the connection close code sent by the server.
-      </li>
-      <li><code>"reason"</code>, optional and defaulting to <code>''</code>, of type
-        {{domxref("DOMString")}}, that is a human-readable reason why the server closed
-        the connection.</li>
-    </ul>
+  - : Is a `CloseEventInit` dictionary, having the following fields:
 
-    <div class="note">
-      <p><strong>Note:</strong> The <code>CloseEventInit</code> dictionary also accepts fields from the
-        {{domxref("Event.Event", "EventInit")}} dictionary.</p>
-    </div>
-  </dd>
-</dl>
+    - `"wasClean"`, optional and defaulting to `false`, of type
+      `long`, indicates if the connection has been closed cleanly or not.
+    - `"code"`, optional and defaulting to `0`, of type
+      `unsigned short`, that is the connection close code sent by the server.
+    - `"reason"`, optional and defaulting to `''`, of type
+      {{domxref("DOMString")}}, that is a human-readable reason why the server closed
+      the connection.
 
-<h2 id="Specifications">Specifications</h2>
+    > **Note:** The `CloseEventInit` dictionary also accepts fields from the
+    > {{domxref("Event.Event", "EventInit")}} dictionary.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CloseEvent")}}, the interface of the objects it constructs.</li>
-</ul>
+- {{domxref("CloseEvent")}}, the interface of the objects it constructs.

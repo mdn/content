@@ -2,39 +2,42 @@
 title: BasicCardResponse.expiryYear
 slug: Web/API/BasicCardResponse/expiryYear
 tags:
-- API
-- Basic Card Payment
-- BasicCardResponse
-- Experimental
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- expiryYear
-- Deprecated
-- Non-standard
+  - API
+  - Basic Card Payment
+  - BasicCardResponse
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - expiryYear
+  - Deprecated
+  - Non-standard
 browser-compat: api.BasicCardResponse.expiryYear
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>expiryYear</code></strong> property of the
-  {{domxref("BasicCardResponse")}} dictionary contains the expiry year of the card used to
-  make the payment.</p>
+The **`expiryYear`** property of the
+{{domxref("BasicCardResponse")}} dictionary contains the expiry year of the card used to
+make the payment.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>"expiryYear"</em> : "number"</pre>
+```js
+"expiryYear" : "number"
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the card expiry year as a four-digit number in
-  the range 0000 to 9999.</p>
+A {{domxref("DOMString")}} representing the card expiry year as a four-digit number in
+the range 0000 to 9999.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Let's look at a sample payment request:</p>
+Let's look at a sample payment request:
 
-<pre class="brush: js">var request = new PaymentRequest(supportedInstruments, details, options);
+```js
+var request = new PaymentRequest(supportedInstruments, details, options);
 
 // Call show() to trigger the browser's payment flow.
 request.show().then(function(instrumentResponse) {
@@ -43,16 +46,18 @@ request.show().then(function(instrumentResponse) {
 })
 .catch(function(err) {
   // Do something with the error from request.show().
-});</pre>
+});
+```
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and
-  the promise resolves successfully, the {{domxref("PaymentResponse")}} object available
-  inside the fulfilled promise (<code>instrumentResponse</code> above) will have a
-  {{domxref("details","PaymentResponse.details")}} property that will contain response
-  details. This has to conform to the structure defined by the
-  <code>BasicCardResponse</code> dictionary, and may look something like this:</p>
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and
+the promise resolves successfully, the {{domxref("PaymentResponse")}} object available
+inside the fulfilled promise (`instrumentResponse` above) will have a
+{{domxref("details","PaymentResponse.details")}} property that will contain response
+details. This has to conform to the structure defined by the
+`BasicCardResponse` dictionary, and may look something like this:
 
-<pre class="brush: js">{
+```js
+{
   "cardNumber' : '9999999999999999",
   "cardholderName' : 'Mr. Dick Straw",
   "cardSecurityCode" : "999",
@@ -60,14 +65,15 @@ request.show().then(function(instrumentResponse) {
   "expiryYear" : "2021",
   "billingAddress" : {
     "country" : "GB",
-    // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
+    // etc. billing address is a PaymentAddress object
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer part of any specification.</p>
+This feature is no longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

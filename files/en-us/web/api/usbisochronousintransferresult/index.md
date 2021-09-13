@@ -12,30 +12,26 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousInTransferResult
 ---
-<p>{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}</p>
+{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
 
-<p>The <code>USBIsochronousInTransferResult</code> interface of the <a href="/en-US/docs/Web/API/WebUSB_API" rel="nofollow">WebUSB API</a> provides the result from a call to the <code>isochronousTransferIn()</code> method of the <code>USBDevice</code> interface. It represents the result from requesting a transfer of data from the USB device to the USB host.</p>
+The `USBIsochronousInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides the result from a call to the `isochronousTransferIn()` method of the `USBDevice` interface. It represents the result from requesting a transfer of data from the USB device to the USB host.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult()")}}</dt>
- <dd>Creates a new <code>USBIsochronousInTransferResult</code> object with the provided <code>packets</code> and <code>data</code> fields.</dd>
-</dl>
+- {{domxref("USBIsochronousInTransferResult.USBIsochronousInTransferResult()")}}
+  - : Creates a new `USBIsochronousInTransferResult` object with the provided `packets` and `data` fields.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("USBIsochronousInTransferResult.data")}}{{readonlyInline}}</dt>
- <dd>Returns a <code>DataView</code> object containing the data received from the device. This is the combined data from all packets. See the individual <code>DataView</code> objects in the <code>packets</code> array for the portion of this buffer containing data from each packet.</dd>
- <dt>{{domxref("USBIsochronousInTransferResult.packets")}}{{readonlyInline}}</dt>
- <dd>Returns an array of <code>USBIsochronousInTransferPacket</code> objects containing the result of each request to receive a packet from the device.</dd>
-</dl>
+- {{domxref("USBIsochronousInTransferResult.data")}}{{readonlyInline}}
+  - : Returns a `DataView` object containing the data received from the device. This is the combined data from all packets. See the individual `DataView` objects in the `packets` array for the portion of this buffer containing data from each packet.
+- {{domxref("USBIsochronousInTransferResult.packets")}}{{readonlyInline}}
+  - : Returns an array of `USBIsochronousInTransferPacket` objects containing the result of each request to receive a packet from the device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

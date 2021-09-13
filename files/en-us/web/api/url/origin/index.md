@@ -2,62 +2,60 @@
 title: URL.origin
 slug: Web/API/URL/origin
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- URL
-- URL API
-- origin
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - URL
+  - URL API
+  - origin
 browser-compat: api.URL.origin
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <strong><code>origin</code></strong> read-only property of
-    the {{domxref("URL")}} interface returns a {{domxref("USVString")}} containing the
-    Unicode serialization of the origin of the represented URL.</p>
+The **`origin`** read-only property of
+the {{domxref("URL")}} interface returns a {{domxref("USVString")}} containing the
+Unicode serialization of the origin of the represented URL.
 
-<p>The exact structure
-  varies depending on the type of URL:</p>
+The exact structure
+varies depending on the type of URL:
 
-<ul>
-  <li>For <code>http</code> or <code>https</code> URLs, the scheme followed by
-    <code>'://'</code>, followed by the domain, followed by <code>':'</code>, followed by
-    the port (the default port, <code>80</code> and <code>443</code> respectively, if
-    explicitly specified).</li>
-  <li>For <code>file:</code> URLs, the value is browser dependant.</li>
-  <li>for <code>blob:</code> URLs, the origin of the URL following <code>blob:</code> will
-    be used, e.g <code>"blob:https://mozilla.org"</code> will be returned as
-    <code>"https://mozilla.org".</code></li>
-</ul>
+- For `http` or `https` URLs, the scheme followed by
+  `'://'`, followed by the domain, followed by `':'`, followed by
+  the port (the default port, `80` and `443` respectively, if
+  explicitly specified).
+- For `file:` URLs, the value is browser dependant.
+- for `blob:` URLs, the origin of the URL following `blob:` will
+  be used, e.g `"blob:https://mozilla.org"` will be returned as
+  `"https://mozilla.org".`
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>originString</em> = <em>url</em>.origin
-</pre>
+```js
+const originString = url.origin
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL("blob:https://mozilla.org:443/")
+```js
+const url = new URL("blob:https://mozilla.org:443/")
 console.log(url.origin); // Logs 'https://mozilla.org'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface</li>
-</ul>
+- The {{domxref("URL")}} interface

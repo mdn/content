@@ -12,34 +12,38 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.arrayBuffer
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>arrayBuffer()</strong></code>method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.</p>
+The **`arrayBuffer()`**method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myArrayBuffer = PushEvent.data.arrayBuffer();</pre>
+```js
+var myArrayBuffer = PushEvent.data.arrayBuffer();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An {{jsxref("ArrayBuffer")}}.</p>
+An {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var buffer = event.data.arrayBuffer();
 
   // do something with your array buffer
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

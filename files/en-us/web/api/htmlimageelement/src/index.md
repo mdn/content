@@ -2,100 +2,100 @@
 title: HTMLImageElement.src
 slug: Web/API/HTMLImageElement/src
 tags:
-- 1x
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Reference
-- URL
-- fallback
-- source
-- src
+  - 1x
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Reference
+  - URL
+  - fallback
+  - source
+  - src
 browser-compat: api.HTMLImageElement.src
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLImageElement")}} property
-    <strong><code>src</code></strong>, which reflects the HTML {{htmlattrxref("src",
+The {{domxref("HTMLImageElement")}} property
+**`src`**, which reflects the HTML {{htmlattrxref("src",
     "img")}} attribute, specifies the image to display in the {{HTMLElement("img")}}
-    element.</p>
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.src = <em>newSource</em>;
-let <em>src</em> = <em>htmlImageElement</em>.src;</pre>
+```js
+htmlImageElement.src = newSource;
+let src = htmlImageElement.src;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>When providing only a single image, rather than a set of images from which the browser
-  selects the best match for the viewport size and display pixel density, the
-  <code>src</code> attribute is a {{domxref("USVString")}} specifying the URL of the
-  desired image. This can be set either within the HTML itself using the
-  {{htmlattrxref("src", "img")}} content attribute, or programmatically by setting the
-  element's <code>src</code> property.</p>
+When providing only a single image, rather than a set of images from which the browser
+selects the best match for the viewport size and display pixel density, the
+`src` attribute is a {{domxref("USVString")}} specifying the URL of the
+desired image. This can be set either within the HTML itself using the
+{{htmlattrxref("src", "img")}} content attribute, or programmatically by setting the
+element's `src` property.
 
-<p>If you use the {{htmlattrxref("srcset", "img")}} content attribute to provide multiple
-  image options for different display pixel densities, the URL specified by the
-  <code>src</code> attribute is used in one of two ways:</p>
+If you use the {{htmlattrxref("srcset", "img")}} content attribute to provide multiple
+image options for different display pixel densities, the URL specified by the
+`src` attribute is used in one of two ways:
 
-<ul>
-  <li>as a fallback for browsers that don't support <code>srcset</code>.</li>
-  <li>as an equivalent for specifying an image in <code>srcset</code> with the size
-    multiplier <code>1x</code>; that is, the image specified by <code>src</code> is used
-    on low-density screens (such as typical 72 DPI or 96 DPI displays).</li>
-</ul>
+- as a fallback for browsers that don't support `srcset`.
+- as an equivalent for specifying an image in `srcset` with the size
+  multiplier `1x`; that is, the image specified by `src` is used
+  on low-density screens (such as typical 72 DPI or 96 DPI displays).
 
-<p>Additionally, if you use <code>src</code> along with <em>both</em>
-  {{domxref("HTMLImageElement.sizes", "sizes")}} (or the
-  corresponding {{htmlattrxref("sizes", "img")}} content attribute) <em>and</em>
-  <code>srcset</code> in order to choose an image based on the viewport size, the
-  <code>src</code> attribute is only used as a fallback for browsers that don't support
-  <code>sizes</code> and <code>srcset</code>; otherwise, it's not used at all.</p>
+Additionally, if you use `src` along with _both_
+{{domxref("HTMLImageElement.sizes", "sizes")}} (or the
+corresponding {{htmlattrxref("sizes", "img")}} content attribute) _and_
+`srcset` in order to choose an image based on the viewport size, the
+`src` attribute is only used as a fallback for browsers that don't support
+`sizes` and `srcset`; otherwise, it's not used at all.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_a_single_image">Specifying a single image</h3>
+### Specifying a single image
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img src="grapefruit-slice-332-332.jpg"
+```html
+<img src="grapefruit-slice-332-332.jpg"
      width="160"
-     alt="Slices of grapefruit, looking yummy."&gt;
-</pre>
+     alt="Slices of grapefruit, looking yummy.">
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Specifying_a_single_image", 640,200)}}</p>
+{{EmbedLiveSample("Specifying_a_single_image", 640,200)}}
 
-<h3 id="Using_src_with_an_image_set">Using src with an image set</h3>
+### Using src with an image set
 
-<p>When using a set of images with the {{domxref("HTMLImageElement.srcset", "srcset")}}
-  property, the <code>src</code> serves as either a fallback for older browsers, or as the
-  <code>1x</code> size of the image.</p>
+When using a set of images with the {{domxref("HTMLImageElement.srcset", "srcset")}}
+property, the `src` serves as either a fallback for older browsers, or as the
+`1x` size of the image.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<h3 id="Specifying_a_fallback_for_viewport-based_selection">Specifying a fallback for
-  viewport-based selection</h3>
+### Specifying a fallback for viewport-based selection
 
-<p>When using viewport-bases selection of an image from a <code>srcset</code> by also
-  specifying the {{domxref("HTMLImageElement.sizes", "sizes")}} property, the
-  <code>src</code> property serves as the fallback to be used on browsers that don't
-  support viewport-based selection. Browsers that <em>do</em> support viewport-based
-  selection will ignore <code>src</code> in this situation.</p>
+When using viewport-bases selection of an image from a `srcset` by also
+specifying the {{domxref("HTMLImageElement.sizes", "sizes")}} property, the
+`src` property serves as the fallback to be used on browsers that don't
+support viewport-based selection. Browsers that _do_ support viewport-based
+selection will ignore `src` in this situation.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

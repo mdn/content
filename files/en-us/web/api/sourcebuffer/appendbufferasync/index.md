@@ -2,56 +2,55 @@
 title: SourceBuffer.appendBufferAsync()
 slug: Web/API/SourceBuffer/appendBufferAsync
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media
-- Media Source Extensions
-- Method
-- Non-standard
-- Reference
-- SourceBuffer
-- Video
-- appendBufferAsync
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media
+  - Media Source Extensions
+  - Method
+  - Non-standard
+  - Reference
+  - SourceBuffer
+  - Video
+  - appendBufferAsync
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
-<div>{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
 
-<p>The <code><strong>appendBufferAsync()</strong></code> method
-    of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
-    appending media segment data from an {{jsxref("ArrayBuffer")}} or
-    {{domxref("ArrayBufferView")}} object to the <code>SourceBuffer</code>. It
-  returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
-</p>
+The **`appendBufferAsync()`** method
+of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
+appending media segment data from an {{jsxref("ArrayBuffer")}} or
+{{domxref("ArrayBufferView")}} object to the `SourceBuffer`. It
+returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>appendPromise</em> = <em>sourceBuffer</em>.appendBufferAsync(<em>source</em>);</pre>
+```js
+appendPromise = sourceBuffer.appendBufferAsync(source);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>source</code></dt>
-  <dd>A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
+- `source`
+  - : A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
     {{jsxref("ArrayBuffer")}}) which contains the media segment data you want to add to
-    the <code>SourceBuffer</code>.</dd>
-</dl>
+    the `SourceBuffer`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is fulfilled when the buffer has been added successfully
-  to the <code>SourceBuffer</code>, or <code>null</code> if the request could not be
-  initiated.</p>
+A {{jsxref("Promise")}} which is fulfilled when the buffer has been added successfully
+to the `SourceBuffer`, or `null` if the request could not be
+initiated.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simplified example async function, <code>fillSourceBuffer()</code>, takes as input
-  parameters {{domxref("BufferSource")}}, <code>buffer</code>, and a
-  <code>SourceBuffer</code> to which to append the source media from the buffer.</p>
+This simplified example async function, `fillSourceBuffer()`, takes as input
+parameters {{domxref("BufferSource")}}, `buffer`, and a
+`SourceBuffer` to which to append the source media from the buffer.
 
-<pre class="brush: js">async function fillSourceBuffer(buffer, msBuffer) {
+```js
+async function fillSourceBuffer(buffer, msBuffer) {
   try {
     while(true) {
       await msBuffer.appendBufferAsync(buffer);
@@ -60,22 +59,20 @@ browser-compat: api.SourceBuffer.appendBufferAsync
     handleException(e);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is not on track to become a standard.</p>
+This feature is not part of any specification. It is not on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions
-      API</a></li>
-  <li>{{domxref("SourceBuffer.appendBuffer()")}}</li>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- [Media Source Extensions
+  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- {{domxref("SourceBuffer.appendBuffer()")}}
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

@@ -2,31 +2,31 @@
 title: PaymentRequest.prototype.id
 slug: Web/API/PaymentRequest/id
 tags:
-- API
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Reference
-- Secure context
-- id
+  - API
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Reference
+  - Secure context
+  - id
 browser-compat: api.PaymentRequest.id
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>id</code></strong> read-only attribute of the
-  {{domxref("PaymentRequest")}} interface returns a unique identifier for a particular
-  {{domxref("PaymentRequest")}} instance.</p>
+The **`id`** read-only attribute of the
+{{domxref("PaymentRequest")}} interface returns a unique identifier for a particular
+{{domxref("PaymentRequest")}} instance.
 
-<p>When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
-  supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.</p>
+When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
+supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how to give a {{domxref("PaymentRequest")}} instance a custom id.
-</p>
+This example shows how to give a {{domxref("PaymentRequest")}} instance a custom id.
 
-<pre class="brush:js">const details = {
+```js
+const details = {
   id: "super-store-order-123-12312",
   total: {
     label: "Total due",
@@ -35,33 +35,35 @@ browser-compat: api.PaymentRequest.id
 };
 const request = new PaymentRequest(methodData, details);
 console.log(request.id); // super-store-order-123-12312
-</pre>
+```
 
-<p>The <code>id</code> is then also available in the {{domxref("PaymentResponse")}}
-  returned from the <code>show()</code> method, but under the <code>requestId</code>
-  attribute.</p>
+The `id` is then also available in the {{domxref("PaymentResponse")}}
+returned from the `show()` method, but under the `requestId`
+attribute.
 
-<pre class="brush:js">const response = await request.show();
+```js
+const response = await request.show();
 console.log(response.requestId === request.id);
 
 // And in serialized form too
 const json = response.toJSON();
 console.log(json.requestId,response.requestId, request.id);
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>id</em> = <em>paymentRequest</em>.id</pre>
+```js
+var id = paymentRequest.id
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

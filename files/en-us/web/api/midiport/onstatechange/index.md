@@ -9,30 +9,33 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.onstatechange
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>onstatechange</code></strong> event handler of the {{domxref("MIDIPort")}} interface processes {{domxref("MIDIPort/statechange_event", "statechange")}} events.</p>
+The **`onstatechange`** event handler of the {{domxref("MIDIPort")}} interface processes {{domxref("MIDIPort/statechange_event", "statechange")}} events.
 
-<p> The event fires when a port changes from open to closed, or closed to open.</p>
+The event fires when a port changes from open to closed, or closed to open.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MIDIPort.onstatechange = function;
-MIDIPort.addEventListener('statechange', function);</pre>
+```js
+MIDIPort.onstatechange = function;
+MIDIPort.addEventListener('statechange', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example the current {{domxref("MIDIPort.state")}} is logged each time it changes.</p>
+In the following example the current {{domxref("MIDIPort.state")}} is logged each time it changes.
 
-<pre class="brush: js">port.onstatechange = function() {
+```js
+port.onstatechange = function() {
   console.log(port.state);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

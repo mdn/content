@@ -2,48 +2,48 @@
 title: HTMLAreaElement.rel
 slug: Web/API/HTMLAreaElement/rel
 tags:
-- API
-- HTML DOM
-- HTMLAreaElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLAreaElement
+  - Property
+  - Reference
 browser-compat: api.HTMLAreaElement.rel
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLAreaElement.rel</strong></code> property reflects the
-  {{htmlattrxref("rel", "area")}} attribute. It is a {{domxref("DOMString")}} containing a
-  space-separated list of <a href="/en-US/docs/Web/HTML/Link_types">link types</a>
-  indicating the relationship between the resource represented by the
-  {{HTMLElement("area")}} element and the current document.</p>
+The **`HTMLAreaElement.rel`** property reflects the
+{{htmlattrxref("rel", "area")}} attribute. It is a {{domxref("DOMString")}} containing a
+space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
+indicating the relationship between the resource represented by the
+{{HTMLElement("area")}} element and the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>relstr</em> = <em>areaElt</em>.rel;
-<em>areaElt</em>.rel = <em>relstr</em>;
-</pre>
+```js
+var relstr = areaElt.rel;
+areaElt.rel = relstr;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var areas = document.getElementsByTagName("area");
+```js
+var areas = document.getElementsByTagName("area");
 var length = areas.length;
-for (var i = 0; i &lt; length; i++) {
+for (var i = 0; i < length; i++) {
   alert("Rel: " + areas[i].rel);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
-    {{domxref("HTMLAnchorElement.rel")}} and {{domxref("HTMLLinkElement.rel")}}.</li>
-  <li>The very same list but as tokens: {{domxref("HTMLAreaElement.relList")}}</li>
-</ul>
+- The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
+  {{domxref("HTMLAnchorElement.rel")}} and {{domxref("HTMLLinkElement.rel")}}.
+- The very same list but as tokens: {{domxref("HTMLAreaElement.relList")}}

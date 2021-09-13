@@ -2,52 +2,53 @@
 title: RTCIceServer.credential
 slug: Web/API/RTCIceServer/credential
 tags:
-- Credential
-- Experimental
-- Property
-- RTCIceServer
-- Reference
-- TURN
-- WebRTC
+  - Credential
+  - Experimental
+  - Property
+  - RTCIceServer
+  - Reference
+  - TURN
+  - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}</p>
+{{draft("I'm experimenting with structure for pages documenting members of
+  dictionaries. Please contact ~~sheppy with any feedback.")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The {{domxref("RTCIceServer")}} dictionary's
-    <code><strong>credential</strong></code> property is a string providing the credential
-    to use when connecting to the described server. This is typically a password, key, or
-    other secret.</p>
+The {{domxref("RTCIceServer")}} dictionary's
+**`credential`** property is a string providing the credential
+to use when connecting to the described server. This is typically a password, key, or
+other secret.
 
-<div class="note">
-  <p><strong>Note:</strong> This value is used when the <code>RTCIceServer</code> describes a
-    {{Glossary("TURN")}} server.</p>
-</div>
+> **Note:** This value is used when the `RTCIceServer` describes a
+> {{Glossary("TURN")}} server.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var iceServer = {
+```js
+var iceServer = {
                   ...
-                  credential = <em>credential</em>,
+                  credential = credential,
                   ...
                 };
 
-var <em>credential</em> = <em>iceServer</em>.credential;
+var credential = iceServer.credential;
 
-<em>iceServer</em>.credential = <em>newCredential</em>;</pre>
+iceServer.credential = newCredential;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a new {{domxref("RTCPeerConnection")}} which uses a
-  {{Glossary("TURN")}} server at <code>turnserver.example.org</code> to negotiate
-  connections. Logging into the TURN server uses the username "webrtc" and the creative
-  password "turnpassword".</p>
+This example creates a new {{domxref("RTCPeerConnection")}} which uses a
+{{Glossary("TURN")}} server at `turnserver.example.org` to negotiate
+connections. Logging into the TURN server uses the username "webrtc" and the creative
+password "turnpassword".
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: "turn:turnserver.example.org",  // A TURN server
@@ -55,19 +56,18 @@ var <em>credential</em> = <em>iceServer</em>.credential;
       credential: "turnpassword"
     }
   ]
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCIceServer")}}</li>
-  <li>{{domxref("RTCIceServer.credentialType")}}</li>
-</ul>
+- {{domxref("RTCIceServer")}}
+- {{domxref("RTCIceServer.credentialType")}}

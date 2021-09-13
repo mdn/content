@@ -2,43 +2,41 @@
 title: GlobalEventHandlers.onloadeddata
 slug: Web/API/GlobalEventHandlers/onloadeddata
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onloadeddata
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>onloadeddata</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("loadeddata")}} events.</p>
+The **`onloadeddata`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("loadeddata")}} events.
 
-<p>The <code>loadeddata</code> event is fired when the first frame of the media has
-  finished loading.</p>
+The `loadeddata` event is fired when the first frame of the media has
+finished loading.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.onloadeddata = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onloadeddata;
-</pre>
+```js
+element.onloadeddata = handlerFunction;
+var handlerFunction = element.onloadeddata;
+```
 
-<p><code>handlerFunction</code> is either <code>null</code> or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-  specifying the handler for the event.</p>
+`handlerFunction` is either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("loadeddata")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM event handlers</a></li>
-</ul>
+- {{event("loadeddata")}}
+- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)

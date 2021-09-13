@@ -14,30 +14,29 @@ tags:
   - kinds
 browser-compat: api.TrackDefault.kinds
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>kinds</strong></code> read-only property of the {{domxref("TrackDefault")}} interface returns default kinds for an associated {{domxref("SourceBuffer")}} to use when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain label information for a new track.</p>
+The **`kinds`** read-only property of the {{domxref("TrackDefault")}} interface returns default kinds for an associated {{domxref("SourceBuffer")}} to use when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain label information for a new track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mykinds = TrackDefault.kinds;
-</pre>
+```js
+var mykinds = TrackDefault.kinds;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("DOMString")}}s.</p>
+An array of {{domxref("DOMString")}}s.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

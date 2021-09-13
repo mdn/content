@@ -8,35 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLHeadElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLHeadElement</code></strong> interface contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLHeadElement`** interface contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the URIs of one or more metadata profiles (white space separated).</dd>
-</dl>
+- {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the URIs of one or more metadata profiles (white space separated).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("head")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("head")}}

@@ -2,69 +2,72 @@
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
 tags:
-- API
-- Contains
-- DOM
-- DOMTokenList
-- Method
-- Reference
+  - API
+  - Contains
+  - DOM
+  - DOMTokenList
+  - Method
+  - Reference
 browser-compat: api.DOMTokenList.contains
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>contains()</strong></code> method of the {{domxref("DOMTokenList")}}
-  interface returns a boolean value — <code>true</code> if the underlying list
-  contains the given <code><var>token</var></code>, otherwise <code>false</code>.</p>
+The **`contains()`** method of the {{domxref("DOMTokenList")}}
+interface returns a boolean value — `true` if the underlying list
+contains the given `token`, otherwise `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>tokenList</var>.contains(<var>token</var>);</pre>
+```js
+tokenList.contains(token);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>token</var></code></dt>
-  <dd>A {{domxref("DOMString")}} representing the token you want to check for the
-    existence of in the list.</dd>
-</dl>
+- `token`
+  - : A {{domxref("DOMString")}} representing the token you want to check for the
+    existence of in the list.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value, which is <code>true</code> if the calling list contains
-  <code><var>token</var></code>, otherwise <code>false</code>.</p>
+A boolean value, which is `true` if the calling list contains
+`token`, otherwise `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}. We then test for the existence of <code>"c"</code> in
-  the list, and write the result into the <code>&lt;span&gt;</code>'s
-  {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}. We then test for the existence of `"c"` in
+the list, and write the result into the `<span>`'s
+{{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 let result = classes.contains("c");
 if (result) {
   span.textContent = "The classList contains 'c'";
 } else {
    span.textContent = "The classList does not contain 'c'";
-}</pre>
+}
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

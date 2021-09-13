@@ -7,41 +7,40 @@ tags:
   - Property
 browser-compat: api.HTMLAnchorElement.protocol
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The
-  <strong><code>HTMLAnchorElement.protocol</code></strong>
-  property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
-  including the final <code>':'</code>.</p>
+The
+**`HTMLAnchorElement.protocol`**
+property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+including the final `':'`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.protocol;
+string = anchor.protocol;
 // Setter
-<em>anchor</em>.protocol = <em>string</em>;
-</pre>
+anchor.protocol = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the protocol of an anchor link</h3>
+### Getting the protocol of an anchor link
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementById("myAnchor");
 anchor.protocol; // returns 'https:'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

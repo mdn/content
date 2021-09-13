@@ -2,44 +2,45 @@
 title: RTCRtpReceiver.getContributingSources()
 slug: Web/API/RTCRtpReceiver/getContributingSources
 tags:
-- API
-- CSRC
-- Contributing Sources
-- Media
-- Method
-- RTCRtpReceiver
-- Reference
-- WebRTC
-- getContributingSources
+  - API
+  - CSRC
+  - Contributing Sources
+  - Media
+  - Method
+  - RTCRtpReceiver
+  - Reference
+  - WebRTC
+  - getContributingSources
 browser-compat: api.RTCRtpReceiver.getContributingSources
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The <strong><code>getContributingSources()</code></strong>
-    method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
-    {{domxref("RTCRtpContributingSource")}} instances, each corresponding to one CSRC
-    (contributing source) identifier received by the current <code>RTCRtpReceiver</code>
-    in the last ten seconds.</p>
+The **`getContributingSources()`**
+method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
+{{domxref("RTCRtpContributingSource")}} instances, each corresponding to one CSRC
+(contributing source) identifier received by the current `RTCRtpReceiver`
+in the last ten seconds.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rtcRtpContributingSources</em> = <em>rtcRtpReceiver</em>.getContributingSources()</pre>
+```js
+var rtcRtpContributingSources = rtcRtpReceiver.getContributingSources()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("RTCRtpContributingSource")}} instances. Each instance describes
-  one of the contributing sources that provided data to the incoming stream in the past
-  ten seconds.</p>
+An array of {{domxref("RTCRtpContributingSource")}} instances. Each instance describes
+one of the contributing sources that provided data to the incoming stream in the past
+ten seconds.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

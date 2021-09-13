@@ -11,57 +11,50 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> Although the interface is available outside <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.</p>
-</div>
+> **Note:** Although the interface is available outside [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), the {{domxref("BaseAudioContext.audioWorklet")}} property is not, thus custom {{domxref("AudioWorkletProcessor")}}s cannot be defined outside them.
 
-<p>The <strong><code>AudioWorkletNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.</p>
+The **`AudioWorkletNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a base class for a user-defined {{domxref("AudioNode")}}, which can be connected to an audio routing graph along with other nodes. It has an associated {{domxref("AudioWorkletProcessor")}}, which does the actual audio processing in a Web Audio rendering thread.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}</dt>
- <dd>Creates a new instance of an <code>AudioWorkletNode</code> object.</dd>
-</dl>
+- {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}}
+  - : Creates a new instance of an `AudioWorkletNode` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Also Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.port")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("MessagePort")}} used for bidirectional communication between the node and its associated {{domxref("AudioWorkletProcessor")}}. The other end is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.</dd>
- <dt>{{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}</dt>
- <dd>Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying <code>AudioWorkletProcessor</code>. If the <code>AudioWorkletProcessor</code> has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create <code>AudioParam</code> objects on the <code>AudioWorkletNode</code>. With this mechanism it is possible to make your own <code>AudioParam</code> objects accessible from your <code>AudioWorkletNode</code>. You can then use their values in the associated <code>AudioWorkletProcessor</code>.</dd>
-</dl>
+- {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
+  - : Returns a {{domxref("MessagePort")}} used for bidirectional communication between the node and its associated {{domxref("AudioWorkletProcessor")}}. The other end is available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the processor.
+- {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
+  - : Returns an {{domxref("AudioParamMap")}} — a collection of {{domxref("AudioParam")}} objects. They are instantiated during the creation of the underlying `AudioWorkletProcessor`. If the `AudioWorkletProcessor` has a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter, the {{domxref("AudioParamDescriptor")}} array returned from it is used to create `AudioParam` objects on the `AudioWorkletNode`. With this mechanism it is possible to make your own `AudioParam` objects accessible from your `AudioWorkletNode`. You can then use their values in the associated `AudioWorkletProcessor`.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("AudioWorkletNode.onprocessorerror")}}</dt>
- <dd>Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.</dd>
-</dl>
+- {{domxref("AudioWorkletNode.onprocessorerror")}}
+  - : Fired when an error is thrown in associated {{domxref("AudioWorkletProcessor")}}. Once fired, the processor and consequently the node will output silence throughout its lifetime.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Also inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<p><em>The <code>AudioWorkletNode</code> interface does not define any methods of its own.</em></p>
+_The `AudioWorkletNode` interface does not define any methods of its own._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create a custom <code>AudioWorkletNode</code> that outputs white noise.</p>
+In this example we create a custom `AudioWorkletNode` that outputs white noise.
 
-<p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}}, which will output white noise, and register it. Note that this should be done in a separate file.</p>
+First, we need to define a custom {{domxref("AudioWorkletProcessor")}}, which will output white noise, and register it. Note that this should be done in a separate file.
 
-<pre class="brush: js">// white-noise-processor.js
+```js
+// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel =&gt; {
-      for (let i = 0; i &lt; channel.length; i++) {
+    output.forEach(channel => {
+      for (let i = 0; i < channel.length; i++) {
         channel[i] = Math.random() * 2 - 1
       }
     })
@@ -70,27 +63,26 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('white-noise-processor', WhiteNoiseProcessor)
-</pre>
+```
 
-<p>Next, in our main script file we'll load the processor, create an instance of <code>AudioWorkletNode</code> passing it the name of the processor, and connect the node to an audio graph.</p>
+Next, in our main script file we'll load the processor, create an instance of `AudioWorkletNode` passing it the name of the processor, and connect the node to an audio graph.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('white-noise-processor.js')
 const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
 whiteNoiseNode.connect(audioContext.destination)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

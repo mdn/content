@@ -2,40 +2,38 @@
 title: MSGraphicsTrust
 slug: Web/API/MSGraphicsTrust
 tags:
-- msGraphicsTrust
+  - msGraphicsTrust
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msGraphicsTrust()</strong></code> constructor returns an object that
-  provides properties for info on protected video playback.</p>
+The **`msGraphicsTrust()`** constructor returns an object that
+provides properties for info on protected video playback.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-var <em>trustObject</em> = media.msGraphicsTrustStatus;
+```js
+var trustObject = media.msGraphicsTrustStatus;
+```
 
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- constrictionActive
+  - : A read-only property which returns _true_ when protected media is forced to
+    play in a lower resolution.
+- status
+  - : A read-only property which returns an enum with the driver status when playing
+    protected content.
 
-<dl>
-  <dt>constrictionActive</dt>
-  <dd>A read-only property which returns <em>true</em> when protected media is forced to
-    play in a lower resolution.</dd>
-  <dt>status</dt>
-  <dd>A read-only property which returns an enum with the driver status when playing
-    protected content.</dd>
-</dl>
+### Inheritance hierarchy
 
-<h3 id="Inheritance_hierarchy">Inheritance hierarchy</h3>
+The MSGraphicsTrust does not inherit from any class or interface.
 
-<p>The MSGraphicsTrust does not inherit from any class or interface.</p>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var trustObject = media.msGraphicsTrustStatus;
-</pre>
+```js
+var trustObject = media.msGraphicsTrustStatus;
+```

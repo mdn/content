@@ -9,29 +9,31 @@ tags:
   - Serial
 browser-compat: api.Serial.ondisconnect
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>ondisconnect</code></strong> EventHandler of the {{domxref("Serial")}} interface is called when the port has been disconnected from the device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.</p>
+The **`ondisconnect`** EventHandler of the {{domxref("Serial")}} interface is called when the port has been disconnected from the device. This method receives an {{domxref("Event")}} object. The target of this event is the {{domxref("SerialPort")}} interface that has been disconnected.
 
-<p>This event is only fired for ports associated with removable devices such as those connected via USB. The user must grant the origin permission to access this device during a call to {{domxref("Serial.requestPort()", "requestPort()")}} before this event will be fired.</p>
+This event is only fired for ports associated with removable devices such as those connected via USB. The user must grant the origin permission to access this device during a call to {{domxref("Serial.requestPort()", "requestPort()")}} before this event will be fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Serial.ondisconnect = <var>function(event)</var>;
-Serial.addEventListener('disconnect', <var>function(event)</var>);</pre>
+    Serial.ondisconnect = function(event);
+    Serial.addEventListener('disconnect', function(event));
 
-<h2>Example</h2>
+## Example
 
-<p>The following example shows an event listener for the <code>disconnect</code> event,. This allows the site to react when a port is disconnected.</p>
+The following example shows an event listener for the `disconnect` event,. This allows the site to react when a port is disconnected.
 
-<pre class="brush: js">navigator.serial.addEventListener('disconnect', (e) => {
+```js
+navigator.serial.addEventListener('disconnect', (e) => {
   // Remove `e.target` from the list of available ports.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,281 +9,309 @@ tags:
   - Deprecated
   - Reference
 ---
-<p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
+{{APIRef("IndexedDB")}} {{ draft() }}
 
-<div class="warning">
-<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
-</div>
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-<p>The <code>IDBIndexSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides synchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a> in a database.</p>
+The `IDBIndexSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides synchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database.
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <td><code>any <a href="#add">add</a> (in any value, in optional any key) raises (<a href="/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>any <a href="#get">get</a> (in any key) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>any <a href="#getobject">getObject</a> (in any key) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#opencursor">openCursor</a> (in optional <a href="/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#openobjectcursor">openObjectCursor</a> (in optional <a href="/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>any <a href="#put">put</a> (in any value, in optional any key) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#remove">remove</a> (in any key) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          >any <a href="#add">add</a> (in any value, in optional any key) raises
+          (<a href="/IDBDatabaseException">IDBDatabaseException</a>);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >any <a href="#get">get</a> (in any key) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >any <a href="#getobject">getObject</a> (in any key) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#opencursor">openCursor</a> (in optional
+          <a href="/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange</a> range, in
+          optional unsigned short direction) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#openobjectcursor">openObjectCursor</a> (in optional
+          <a href="/en-US/docs/Web/API/IDBKeyRange">IDBKeyRange</a> range, in
+          optional unsigned short direction) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >any <a href="#put">put</a> (in any value, in optional any key) raises
+          (<a href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#remove">remove</a> (in any key) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>keyPath</code></td>
-   <td><code>readonly DOMString</code></td>
-   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> of this index. If this attribute is null, this index is not auto-populated.</td>
-  </tr>
-  <tr>
-   <td><code>name</code></td>
-   <td><code>readonly DOMString</code></td>
-   <td>The name of this index.</td>
-  </tr>
-  <tr>
-   <td><code>storeName</code></td>
-   <td><code>readonly DOMString</code></td>
-   <td>This index's referenced <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object store</a>.</td>
-  </tr>
-  <tr>
-   <td><code>unique</code></td>
-   <td><code>readonly boolean</code></td>
-   <td>If true, a key can have only one value within the index; if false, a key can have duplicate values.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>keyPath</code></td>
+      <td><code>readonly DOMString</code></td>
+      <td>
+        The
+        <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
+          >key path</a
+        >
+        of this index. If this attribute is null, this index is not
+        auto-populated.
+      </td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td><code>readonly DOMString</code></td>
+      <td>The name of this index.</td>
+    </tr>
+    <tr>
+      <td><code>storeName</code></td>
+      <td><code>readonly DOMString</code></td>
+      <td>
+        This index's referenced
+        <a
+          href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store"
+          >object store</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td><code>unique</code></td>
+      <td><code>readonly boolean</code></td>
+      <td>
+        If true, a key can have only one value within the index; if false, a key
+        can have duplicate values.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="add">add()</h3>
+### add()
 
-<p>Stores the given value into this index, optionally with the specified key. If a record already exists with the given key, an exception is raised.</p>
+Stores the given value into this index, optionally with the specified key. If a record already exists with the given key, an exception is raised.
 
-<pre>any add(
-  in any value,
-  in optional any key
-) raises (IDBDatabaseException);
-</pre>
+    any add(
+      in any value,
+      in optional any key
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters">Parameters</h5>
+##### Parameters
 
-<h5 id="Returns">Returns</h5>
+##### Returns
 
-<h5 id="Exceptions">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise a IDBDatabaseException with the following code:</p>
+This method can raise a IDBDatabaseException with the following code:
 
-<dl>
- <dt>value</dt>
- <dd>The value to store into the index.</dd>
- <dt>key</dt>
- <dd>A key to use for identifying the record.</dd>
- <dt><code>any</code></dt>
- <dd>The key for the stored record.</dd>
- <dt><a href="/en-US/docs/Web/API/IDBDatabaseException#constraint_err"><code>CONSTRAINT_ERR</code></a></dt>
- <dd>If a record exists in this index with a key corresponding to the <em>key</em> parameter or the index is auto-populated, or if no record exists with a key corresponding to the <em>value</em> parameter in the index's referenced object store.</dd>
-</dl>
+- value
+  - : The value to store into the index.
+- key
+  - : A key to use for identifying the record.
+- `any`
+  - : The key for the stored record.
+- [`CONSTRAINT_ERR`](/en-US/docs/Web/API/IDBDatabaseException#constraint_err)
+  - : If a record exists in this index with a key corresponding to the _key_ parameter or the index is auto-populated, or if no record exists with a key corresponding to the _value_ parameter in the index's referenced object store.
 
-<h3 id="get()">get()</h3>
+### get()
 
-<p>Retrieves the value from this index for the record that corresponds to the given key.</p>
+Retrieves the value from this index for the record that corresponds to the given key.
 
-<pre>any get (
-  in any key
-) raises (IDBDatabaseException);
-</pre>
+    any get (
+      in any key
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_2">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>key</dt>
- <dd>The key that identifies the record to be retrieved.</dd>
-</dl>
+- key
+  - : The key that identifies the record to be retrieved.
 
-<h5 id="Returns_2">Returns</h5>
+##### Returns
 
-<dl>
- <dt><code>any</code></dt>
- <dd>The retrieved value from the index.</dd>
-</dl>
+- `any`
+  - : The retrieved value from the index.
 
-<h5 id="Exceptions_2">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If no record exists in this index for the given key.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If no record exists in this index for the given key.
 
-<h3 id="getObject">getObject()</h3>
+### getObject()
 
-<p>Retrieves and returns the value from this index's referenced object store that corresponds to the given key.</p>
+Retrieves and returns the value from this index's referenced object store that corresponds to the given key.
 
-<pre>any getObject (
-  in any key
-) raises (IDBDatabaseException);
-</pre>
+    any getObject (
+      in any key
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_3">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>key</dt>
- <dd>The key that identifies the record to be retrieved.</dd>
-</dl>
+- key
+  - : The key that identifies the record to be retrieved.
 
-<h5 id="Returns_3">Returns</h5>
+##### Returns
 
-<dl>
- <dt><code>any</code></dt>
- <dd>The retrieved value from the referenced object store.</dd>
-</dl>
+- `any`
+  - : The retrieved value from the referenced object store.
 
-<h5 id="Exceptions_3">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise a IDBDatabaseException with the following code:</p>
+This method can raise a IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If no record exists in this index for the given key.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If no record exists in this index for the given key.
 
-<h3 id="openCursor">openCursor()</h3>
+### openCursor()
 
-<p>Creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the records of this index. The range of the new cursor matches the specified <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range">key range</a>; if the key range is not specified or is null, then the range includes all the records.</p>
+Creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the records of this index. The range of the new cursor matches the specified [key range](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range); if the key range is not specified or is null, then the range includes all the records.
 
-<pre>void openCursor (
-  in optional IDBKeyRange range,
-  in optional unsigned short direction
-) raises (IDBDatabaseException);
-</pre>
+    void openCursor (
+      in optional IDBKeyRange range,
+      in optional unsigned short direction
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_4">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>range</dt>
- <dd>The key range to use as the cursor's range.</dd>
- <dt>direction</dt>
- <dd>The cursor's required direction.</dd>
-</dl>
+- range
+  - : The key range to use as the cursor's range.
+- direction
+  - : The cursor's required direction.
 
-<h5 id="Returns_4">Returns</h5>
+##### Returns
 
-<p><code>void</code></p>
+`void`
 
-<h5 id="Exceptions_4">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If no records exist in this index for the requested key range.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If no records exist in this index for the requested key range.
 
-<h3 id="openObjectCursor">openObjectCursor()</h3>
+### openObjectCursor()
 
-<p>Creates a cursor over the records of this index's referenced object store, as arranged by this index. The range of the new cursor matches the specified key range; if the key range is not specified or is null, then the range includes all the records.</p>
+Creates a cursor over the records of this index's referenced object store, as arranged by this index. The range of the new cursor matches the specified key range; if the key range is not specified or is null, then the range includes all the records.
 
-<pre>void openObjectCursor (
-  in optional IDBKeyRange range,
-  in optional unsigned short direction
-) raises (IDBDatabaseException);
-</pre>
+    void openObjectCursor (
+      in optional IDBKeyRange range,
+      in optional unsigned short direction
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_5">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>range</dt>
- <dd>The key range to use as the cursor's range.</dd>
- <dt>direction</dt>
- <dd>The cursor's required direction.</dd>
-</dl>
+- range
+  - : The key range to use as the cursor's range.
+- direction
+  - : The cursor's required direction.
 
-<h5 id="Returns_5">Returns</h5>
+##### Returns
 
-<p><code>void</code></p>
+`void`
 
-<h5 id="Exceptions_5">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If no records exist in this index for the requested key range.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If no records exist in this index for the requested key range.
 
-<h3 id="put">put()</h3>
+### put()
 
-<p>Stores the given value in this index and returns the key for the stored record. If a record already exists with the given key, the record is overwritten.</p>
+Stores the given value in this index and returns the key for the stored record. If a record already exists with the given key, the record is overwritten.
 
-<pre>any put (
-  in any value,
-  in optional any key) raises (IDBDatabaseException);
-</pre>
+    any put (
+      in any value,
+      in optional any key) raises (IDBDatabaseException);
 
-<h5 id="Parameters_6">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>value</dt>
- <dd>The value to be stored in the record.</dd>
- <dt>key</dt>
- <dd>The key to be used to identify the record.</dd>
-</dl>
+- value
+  - : The value to be stored in the record.
+- key
+  - : The key to be used to identify the record.
 
-<h5 id="Returns_6">Returns</h5>
+##### Returns
 
-<dl>
- <dt>any</dt>
- <dd>The key for the stored record.</dd>
-</dl>
+- any
+  - : The key for the stored record.
 
-<h3 id="remove">remove()</h3>
+### remove()
 
-<p>Removes from this index any records that correspond to the given key.</p>
+Removes from this index any records that correspond to the given key.
 
-<pre>void remove (
-  in any key
-) raises (IDBDatabaseException);
-</pre>
+    void remove (
+      in any key
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_7">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>key</dt>
- <dd>Key of the records to be removed.</dd>
-</dl>
+- key
+  - : Key of the records to be removed.
 
-<h5 id="Exceptions_6">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise a DatabaseException with the following code:</p>
+This method can raise a DatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If a record does not exist in this index with the given key.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If a record does not exist in this index with the given key.

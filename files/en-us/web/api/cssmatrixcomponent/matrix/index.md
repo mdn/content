@@ -2,44 +2,43 @@
 title: CSSMatrixComponent.matrix
 slug: Web/API/CSSMatrixComponent/matrix
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMatrixComponent
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
-- matrix
+  - API
+  - CSS Typed Object Model API
+  - CSSMatrixComponent
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
+  - matrix
 browser-compat: api.CSSMatrixComponent.matrix
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>matrix</code></strong> property of the
-  {{domxref("CSSMatrixComponent")}} interface gets and sets a 2d or 3d matrix.</p>
+The **`matrix`** property of the
+{{domxref("CSSMatrixComponent")}} interface gets and sets a 2d or 3d matrix.
 
-<p>See the <a
-    href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a> and <a
-    href="/en-US/docs/Web/CSS/transform-function/matrix3d()">matrix3d()</a> pages for
-  examples.</p>
+See the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix3d()>) pages for
+examples.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>matrix</var> = CSSMatrixComponent.matrix;</pre>
+```js
+var matrix = CSSMatrixComponent.matrix;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>a matrix.</p>
+a matrix.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do.</p>
+To do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

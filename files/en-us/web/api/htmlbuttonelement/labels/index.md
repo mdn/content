@@ -2,52 +2,56 @@
 title: HTMLButtonElement.labels
 slug: Web/API/HTMLButtonElement/labels
 tags:
-- API
-- HTML DOM
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.HTMLButtonElement.labels
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>HTMLButtonElement.labels</strong></code> read-only property returns a
-  {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-  {{HTMLElement("button")}} element.</p>
+The **`HTMLButtonElement.labels`** read-only property returns a
+{{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
+{{HTMLElement("button")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>labelElements</var> = <var>button</var>.labels;
-</pre>
+```js
+var labelElements = button.labels;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("NodeList")}} containing the <code>&lt;label&gt;</code> elements associated
-  with the <code>&lt;button&gt;</code> element.</p>
+A {{domxref("NodeList")}} containing the `<label>` elements associated
+with the `<button>` element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label id="label1" for="test"&gt;Label 1&lt;/label&gt;
-&lt;button id="test"&gt;Button&lt;/button&gt;
-&lt;label id="label2" for="test"&gt;Label 2&lt;/label&gt;
-</pre>
+```html
+<label id="label1" for="test">Label 1</label>
+<button id="test">Button</button>
+<label id="label2" for="test">Label 2</label>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", function() {
+```js
+window.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("test");
-  for(var i = 0; i &lt; button.labels.length; i++) {
+  for(var i = 0; i < button.labels.length; i++) {
     console.log(button.labels[i].textContent); // "Label 1" and "Label 2"
   }
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample("Example", "100%", 30)}}</p>
+{{EmbedLiveSample("Example", "100%", 30)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

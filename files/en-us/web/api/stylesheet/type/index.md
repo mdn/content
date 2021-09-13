@@ -2,32 +2,34 @@
 title: StyleSheet.type
 slug: Web/API/StyleSheet/type
 tags:
-- API
-- CSSOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - CSSOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.StyleSheet.type
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>type</strong></code> property of the {{domxref("StyleSheet")}}
-  interface specifies the style sheet language for the given style sheet.</p>
+The **`type`** property of the {{domxref("StyleSheet")}}
+interface specifies the style sheet language for the given style sheet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = stylesheet.type
-</pre>
+```js
+string = stylesheet.type
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"> myStyleSheet.type = 'text/css';
-</pre>
+```js
+ myStyleSheet.type = 'text/css';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

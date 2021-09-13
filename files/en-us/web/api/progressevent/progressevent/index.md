@@ -8,52 +8,49 @@ tags:
   - ProgressEvent
 browser-compat: api.ProgressEvent.ProgressEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>ProgressEvent()</strong></code> constructor returns a newly created
-  {{domxref("ProgressEvent")}}, representing the current completion of a long process.</p>
+The **`ProgressEvent()`** constructor returns a newly created
+{{domxref("ProgressEvent")}}, representing the current completion of a long process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">progressEvent = new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
-</pre>
+```js
+progressEvent = new ProgressEvent(type, {lengthComputable: aBooleanValue, loaded: aNumber, total: aNumber});
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p><em>The <code>ProgressEvent()</code> constructor also inherits arguments from
-    {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `ProgressEvent()` constructor also inherits arguments from
+{{domxref("Event.Event", "Event()")}}._
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the name of the type of the
-    <code>ProgressEvent</code>. It is case-sensitive.</dd>
-  <dt><code>lengthComputable</code> {{optional_inline}}</dt>
-  <dd>Is a boolean flag indicating if the total work to be done, and the
+- _type_
+  - : Is a {{domxref("DOMString")}} representing the name of the type of the
+    `ProgressEvent`. It is case-sensitive.
+- `lengthComputable` {{optional_inline}}
+  - : Is a boolean flag indicating if the total work to be done, and the
     amount of work already done, by the underlying process is calculable. In other words,
-    it tells if the progress is measurable or not. It defaults to <code>false</code>.</dd>
-  <dt><code>loaded</code> {{optional_inline}}</dt>
-  <dd>Is an <code>unsigned long long</code> representing the amount of work already
+    it tells if the progress is measurable or not. It defaults to `false`.
+- `loaded` {{optional_inline}}
+  - : Is an `unsigned long long` representing the amount of work already
     performed by the underlying process. The ratio of work done can be calculated with the
-    property and <code>ProgressEvent.total</code>. When downloading a resource using HTTP,
+    property and `ProgressEvent.total`. When downloading a resource using HTTP,
     this only represent the part of the content itself, not headers and other overhead. It
-    defaults to <code>0</code>.</dd>
-  <dt><code>total</code> {{optional_inline}}</dt>
-  <dd>Is an <code>unsigned long long</code> representing the total amount of work that the
+    defaults to `0`.
+- `total` {{optional_inline}}
+  - : Is an `unsigned long long` representing the total amount of work that the
     underlying process is in the progress of performing. When downloading a resource using
     HTTP, this only represent the content itself, not headers and other overhead. It
-    defaults to <code>0</code>.</dd>
-</dl>
+    defaults to `0`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("ProgressEvent")}} interface it belongs to.

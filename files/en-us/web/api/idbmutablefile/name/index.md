@@ -9,27 +9,26 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Provides the name of the file.</p>
+Provides the name of the file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var name = <em>instanceOfFileHandle</em>.name
-</pre>
+```js
+var name = instanceOfFileHandle.name
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A string.</p>
+A string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("IDBMutableFile")}}</li>
-</ul>
+- {{domxref("IDBMutableFile")}}

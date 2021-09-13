@@ -10,56 +10,49 @@ tags:
   - iceGatheringState
 browser-compat: api.RTCPeerConnection.iceGatheringState
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only property<code><strong>RTCPeerConnection.iceGatheringState</strong></code> returns a string
-  that describes the connection's ICE gathering state.
-  This lets you detect, for example, when collection of ICE candidates has finished.</p>
+The read-only property**`RTCPeerConnection.iceGatheringState`** returns a string
+that describes the connection's ICE gathering state.
+This lets you detect, for example, when collection of ICE candidates has finished.
 
-<p>You can detect when the value of this property changes by watching for an event of type
-  {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}.
-</p>
+You can detect when the value of this property changes by watching for an event of type
+{{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> var state = <em>RTCPeerConnection</em>.iceGatheringState;</pre>
+```js
+ var state = RTCPeerConnection.iceGatheringState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The possible values are:</p>
+The possible values are:
 
-<dl>
-  <dt><code>new</code></dt>
-  <dd>The peer connection was just created and hasn't done any networking yet.</dd>
-
-  <dt><code>gathering</code></dt>
-  <dd>The ICE agent is in the process of gathering candidates for the connection.</dd>
-
-  <dt><code>complete</code></dt>
-  <dd>
-    The ICE agent has finished gathering candidates.
+- `new`
+  - : The peer connection was just created and hasn't done any networking yet.
+- `gathering`
+  - : The ICE agent is in the process of gathering candidates for the connection.
+- `complete`
+  - : The ICE agent has finished gathering candidates.
     If something happens that requires collecting new candidates,
     such as a new interface being added or the addition of a new ICE server,
-    the state will revert to <code>gathering</code> to gather those candidates.
-  </dd>
-</dl>
+    the state will revert to `gathering` to gather those candidates.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>var pc = new RTCPeerConnection();
-var state = pc.iceGatheringState;</pre>
+    var pc = new RTCPeerConnection();
+    var state = pc.iceGatheringState;
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

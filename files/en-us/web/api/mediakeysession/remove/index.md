@@ -12,18 +12,18 @@ tags:
   - remove
 browser-compat: api.MediaKeySession.remove
 ---
-<p>{{APIRef("EncryptedMediaExtensions")}}</p>
+{{APIRef("EncryptedMediaExtensions")}}
 
-<p>The <code>MediaKeySession.remove()</code> method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.</p>
+The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
 
-<h2 id="Return_value">Return value</h2>
+## Return value
 
-<p>A {{jsxref('Promise')}} that resolves to a boolean indicating whether the load succeeded or failed.</p>
+A {{jsxref('Promise')}} that resolves to a boolean indicating whether the load succeeded or failed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

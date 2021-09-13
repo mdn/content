@@ -2,53 +2,53 @@
 title: NodeList.length
 slug: Web/API/NodeList/length
 tags:
-- API
-- DOM
-- Gecko
-- NeedsSpecTable
-- NodeList
-- Property
-- Reference
+  - API
+  - DOM
+  - Gecko
+  - NeedsSpecTable
+  - NodeList
+  - Property
+  - Reference
 browser-compat: api.NodeList.length
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NodeList.length</strong></code> property returns the number of items
-  in a {{domxref("NodeList")}}.</p>
+The **`NodeList.length`** property returns the number of items
+in a {{domxref("NodeList")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>numItems</em> = <em>nodeList</em>.length
-</pre>
+```js
+numItems = nodeList.length
+```
 
-<ul>
-  <li><code>numItems</code> is an integer value representing the number of items in a
-    <code>NodeList</code>.</li>
-</ul>
+- `numItems` is an integer value representing the number of items in a
+  `NodeList`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <code>length</code> property is often useful in DOM programming. It's often used to
-  test the length of a list, to see if it exists at all. It's also commonly used as the
-  iterator in a <code>for</code> loop, as in this example.</p>
+The `length` property is often useful in DOM programming. It's often used to
+test the length of a list, to see if it exists at all. It's also commonly used as the
+iterator in a `for` loop, as in this example.
 
-<pre class="brush: js">// All the paragraphs in the document
+```js
+// All the paragraphs in the document
 const items = document.getElementsByTagName("p");
 
 // For each item in the list,
 // append the entire element as a string of HTML
 let gross = "";
-for (let i = 0; i &lt; items.length; i++) {
+for (let i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 
 // gross is now all the HTML for the paragraphs
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

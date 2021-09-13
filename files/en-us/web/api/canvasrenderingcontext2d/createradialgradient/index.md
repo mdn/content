@@ -2,83 +2,78 @@
 title: CanvasRenderingContext2D.createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Gradients
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Gradients
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.createRadialGradient()</code></strong>
-  method of the Canvas 2D API creates a radial gradient using the size and coordinates of
-  two circles.</p>
+The
+**`CanvasRenderingContext2D.createRadialGradient()`**
+method of the Canvas 2D API creates a radial gradient using the size and coordinates of
+two circles.
 
-<p>This method returns a {{domxref("CanvasGradient")}}. To be applied to a shape, the
-  gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle",
+This method returns a {{domxref("CanvasGradient")}}. To be applied to a shape, the
+gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle",
   "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
-  properties.</p>
+properties.
 
-<div class="note">
-  <p><strong>Note:</strong> Gradient coordinates are global, i.e., relative to the current
-    coordinate space. When applied to a shape, the coordinates are NOT relative to the
-    shape's coordinates.</p>
-</div>
+> **Note:** Gradient coordinates are global, i.e., relative to the current
+> coordinate space. When applied to a shape, the coordinates are NOT relative to the
+> shape's coordinates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CanvasGradient <var>ctx</var>.createRadialGradient(<var>x0</var>, <var>y0</var>, <var>r0</var>, <var>x1</var>, <var>y1</var>, <var>r1</var>);
-</pre>
+```js
+CanvasGradient ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+```
 
-<p>The <code>createRadialGradient()</code> method is specified by six parameters, three
-  defining the gradient's start circle, and three defining the end circle.</p>
+The `createRadialGradient()` method is specified by six parameters, three
+defining the gradient's start circle, and three defining the end circle.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x0</code></dt>
-  <dd>The x-axis coordinate of the start circle.</dd>
-  <dt><code>y0</code></dt>
-  <dd>The y-axis coordinate of the start circle.</dd>
-  <dt><code>r0</code></dt>
-  <dd>The radius of the start circle. Must be non-negative and finite.</dd>
-  <dt><code>x1</code></dt>
-  <dd>The x-axis coordinate of the end circle.</dd>
-  <dt><code>y1</code></dt>
-  <dd>The y-axis coordinate of the end circle.</dd>
-  <dt><code>r1</code></dt>
-  <dd>The radius of the end circle. Must be non-negative and finite.</dd>
-</dl>
+- `x0`
+  - : The x-axis coordinate of the start circle.
+- `y0`
+  - : The y-axis coordinate of the start circle.
+- `r0`
+  - : The radius of the start circle. Must be non-negative and finite.
+- `x1`
+  - : The x-axis coordinate of the end circle.
+- `y1`
+  - : The y-axis coordinate of the end circle.
+- `r1`
+  - : The radius of the end circle. Must be non-negative and finite.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>{{domxref("CanvasGradient")}}</dt>
-  <dd>A radial <code>CanvasGradient</code> initialized with the two specified circles.
-  </dd>
-</dl>
+- {{domxref("CanvasGradient")}}
+  - : A radial `CanvasGradient` initialized with the two specified circles.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Filling_a_rectangle_with_a_radial_gradient">Filling a rectangle with a radial
-  gradient</h3>
+### Filling a rectangle with a radial gradient
 
-<p>This example initializes a radial gradient using the
-  <code>createRadialGradient()</code> method. Three color stops between the gradient's two
-  circles are then created. Finally, the gradient is assigned to the canvas context, and
-  is rendered to a filled rectangle.</p>
+This example initializes a radial gradient using the
+`createRadialGradient()` method. Three color stops between the gradient's two
+circles are then created. Finally, the gradient is assigned to the canvas context, and
+is rendered to a filled rectangle.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="200" height="200"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="200" height="200"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Create a radial gradient
@@ -94,33 +89,29 @@ gradient.addColorStop(1, 'green');
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 160, 160);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Filling_a_rectangle_with_a_radial_gradient', 700, 240) }}</p>
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_radial_gradient', 700, 240) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-    throws <code>NOT_SUPPORTED_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
-  <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a negative radius
-    correctly throws <code>INDEX_SIZE_ERR</code>.</li>
-</ul>
+- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
+  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
+- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a negative radius
+  correctly throws `INDEX_SIZE_ERR`.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createConicGradient()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createConicGradient()")}}

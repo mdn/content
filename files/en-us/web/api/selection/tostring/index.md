@@ -10,46 +10,41 @@ tags:
   - Selection
 browser-compat: api.Selection.toString
 ---
-<div>
-  <div>
-    <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-  </div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.toString()</code></strong> method returns a string
-  currently being represented by the selection object, i.e. the currently selected text.
-</p>
+The **`Selection.toString()`** method returns a string
+currently being represented by the selection object, i.e. the currently selected text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.toString()
-</pre>
+```js
+sel.toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the selection.</p>
+A string representing the selection.
 
-<h2 id="Parameters">Description</h2>
+## Description
 
-<p>This method returns the currently selected text.</p>
+This method returns the currently selected text.
 
-<p>In <a href="/en-US/docs/Web/JavaScript">JavaScript</a>, this method is called automatically when
-  a function the selection object is passed to requires a string:</p>
+In [JavaScript](/en-US/docs/Web/JavaScript), this method is called automatically when
+a function the selection object is passed to requires a string:
 
-<pre class="brush: js">alert(window.getSelection()) // What is called
+```js
+alert(window.getSelection()) // What is called
 alert(window.getSelection().toString())  // What is actually being effectively called.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

@@ -10,54 +10,35 @@ tags:
   - filesystem
 browser-compat: api.FileSystemSync
 ---
-<div>
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
-</div>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<p>In the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a>, a <code>FileSystemSync </code>object represents a file system. It has two properties.</p>
+In the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync `object represents a file system. It has two properties.
 
-<h2 id="About_this_document">About this document</h2>
+## About this document
 
-<p>This document was last updated on March 2, 2012 and follows the <a href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
+This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
 
-<p>The specification is abandoned for the moment, failing to get significant traction.</p>
+The specification is abandoned for the moment, failing to get significant traction.
 
-<h2 id="Basic_concepts">Basic concepts</h2>
+## Basic concepts
 
-<p>The <code>FileSystemSync</code> object is your gateway to the entire API and you will use it a lot. So once you have a reference, cache the object in a global variable or class property.</p>
+The `FileSystemSync` object is your gateway to the entire API and you will use it a lot. So once you have a reference, cache the object in a global variable or class property.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>name</code></td>
-   <td><code>readonly DOMString</code></td>
-   <td>Name of the file system. The name must be unique across the list of exposed file systems.</td>
-  </tr>
-  <tr>
-   <td><code>root</code></td>
-   <td><code>readonly DirectoryEntry</code></td>
-   <td>The root directory of the file system.</td>
-  </tr>
- </tbody>
-</table>
+| Attribute | Type                      | Description                                                                               |
+| --------- | ------------------------- | ----------------------------------------------------------------------------------------- |
+| `name`    | `readonly DOMString`      | Name of the file system. The name must be unique across the list of exposed file systems. |
+| `root`    | `readonly DirectoryEntry` | The root directory of the file system.                                                    |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
+Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
-<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
+Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -9,36 +9,37 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.result
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>result</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.</p>
+The **`result`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let theResult = BackgroundFetchRegistration.result;</pre>
+    let theResult = BackgroundFetchRegistration.result;
 
-<h3>Value</h3>
-<p>One of the following strings:</p>
+### Value
 
-<dl>
-  <dt><code>""</code></dt>
-  <dd>The fetch is active so there is no result.</dd>
-  <dt><code>"success"</code></dt>
-  <dd>The background fetch was successful.</dd>
-  <dt><code>"failure"</code></dt>
-  <dd>The background fetch failed. This only appears when there is no ability for the browser to retry.</dd>
-</dl>
+One of the following strings:
 
-<h2 id="Examples">Examples</h2>
+- `""`
+  - : The fetch is active so there is no result.
+- `"success"`
+  - : The background fetch was successful.
+- `"failure"`
+  - : The background fetch failed. This only appears when there is no ability for the browser to retry.
 
-<p>Logging {{domxref("BackgroundFetchRegistration.result")}} to the console returns a string indicating the status, or an empty string if the fetch is still active.</p>
+## Examples
 
-<pre class="brush: js">console.log(bgFetch.result);</pre>
+Logging {{domxref("BackgroundFetchRegistration.result")}} to the console returns a string indicating the status, or an empty string if the fetch is still active.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(bgFetch.result);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

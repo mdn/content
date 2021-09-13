@@ -13,42 +13,41 @@ tags:
   - decodingInfo()
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
-<p>{{APIRef("MediaCapabilities")}}</p>
+{{APIRef("MediaCapabilities")}}
 
-<p>The <strong><code>MediaCapabilities.decodingInfo()</code></strong> method, part of the <a href="/en-US/docs/Web/API/MediaCapabilities">Media Capabilities API</a>, returns a promise with the tested media configuration's <a href="/en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo">mediaCapabilitiesInfo</a>; this contains the three Boolean properties <code>supported</code>, <code>smooth</code>, and <code>powerefficient</code>, which describe whether decoding the media described would be supported, smooth, and powerefficient.</p>
+The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's [mediaCapabilitiesInfo](/en-US/docs/Web/API/MediaCapabilities/MediaCapabilitiesInfo); this contains the three Boolean properties `supported`, `smooth`, and `powerefficient`, which describe whether decoding the media described would be supported, smooth, and powerefficient.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mediaCapabilities.decodingInfo(<em>MediaDecodingConfiguration</em>)</pre>
+```js
+mediaCapabilities.decodingInfo(MediaDecodingConfiguration)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>MediaDecodingConfiguration</dt>
- <dd>A valid {{domxref("MediaDecodingConfiguration")}} dictionary containing a valid media decoding <code>type</code> of <code>file</code> or <code>media-source</code> and a valid media configuration: either an {{domxref("AudioConfiguration")}} or a {{domxref("VideoConfiguration")}}.</dd>
-</dl>
+- MediaDecodingConfiguration
+  - : A valid {{domxref("MediaDecodingConfiguration")}} dictionary containing a valid media decoding `type` of `file` or `media-source` and a valid media configuration: either an {{domxref("AudioConfiguration")}} or a {{domxref("VideoConfiguration")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} fulfilling with a {{domxref("MediaCapabilitiesInfo")}} interface containing three Boolean attributes:</p>
+A {{jsxref('Promise')}} fulfilling with a {{domxref("MediaCapabilitiesInfo")}} interface containing three Boolean attributes:
 
-<ul>
- <li><code>supported</code></li>
- <li><code>smooth</code></li>
- <li><code>powerEfficient</code></li>
-</ul>
+- `supported`
+- `smooth`
+- `powerEfficient`
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A <code>TypeError</code> is raised if the <code>MediaConfiguration</code> passed to the <code>decodingInfo()</code> method is invalid, either because the type is not video or audio, the <code>contentType</code> is not a valid codec MIME type, the media decoding configuration is not a valid value for the <a href="/en-US/docs/Web/API/MediaDecodingType">media decoding type</a>, or any other error in the media configuration passed to the method, including omitting values required in the <a href="/en-US/docs/Web/API/MediaDecodingConfiguration">media decoding configuration</a>.</p>
+A `TypeError` is raised if the `MediaConfiguration` passed to the `decodingInfo()` method is invalid, either because the type is not video or audio, the `contentType` is not a valid codec MIME type, the media decoding configuration is not a valid value for the [media decoding type](/en-US/docs/Web/API/MediaDecodingType), or any other error in the media configuration passed to the method, including omitting values required in the [media decoding configuration](/en-US/docs/Web/API/MediaDecodingConfiguration).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">//Create media configuration to be tested
+```js
+//Create media configuration to be tested
 const mediaConfig = {
     type : 'file', // or 'media-source'
     audio : {
-        contentType : &quot;audio/ogg; codecs=vorbis&quot;, // valid content type
+        contentType : "audio/ogg; codecs=vorbis", // valid content type
         channels : 2,     // audio channels used by the track
         bitrate : 132700, // number of bits used to encode 1s of audio
         samplerate : 5200 // number of audio samples making up that 1s.
@@ -56,26 +55,25 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result =&gt; {
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
     console.log('This configuration is ' +
         (result.supported ? '' : 'not ') + 'supported, ' +
         (result.smooth ? '' : 'not ') + 'smooth, and ' +
         (result.powerEfficient ? '' : 'not ') + 'power efficient.')
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaDecodingConfiguration")}}</li>
- <li>{{domxref("VideoConfiguration")}}</li>
- <li>{{domxref("AudioConfiguration")}}</li>
- <li>{{domxref("MediaCapabilities.encodingInfo()")}}</li>
-</ul>
+- {{domxref("MediaDecodingConfiguration")}}
+- {{domxref("VideoConfiguration")}}
+- {{domxref("AudioConfiguration")}}
+- {{domxref("MediaCapabilities.encodingInfo()")}}

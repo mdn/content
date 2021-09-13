@@ -11,55 +11,52 @@ tags:
   - web console
 browser-compat: api.console.timeEnd
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.timeEnd()</code></strong> stops a timer that was previously started by calling {{domxref("console.time()")}}.</p>
+The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console.time()")}}.
 
-<p>See <a href="/en-US/docs/Web/API/console#timers">Timers</a> in the documentation for
-	details and examples.</p>
+See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for
+details and examples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.timeEnd(<em>label</em>);
-</pre>
+```js
+console.timeEnd(label);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>label</code></dt>
-	<dd>The name of the timer to stop. Once stopped, the elapsed time is automatically
-		displayed in the <a href="/en-US/docs/Tools/Web_Console">Web console</a> along
-		with an indicator that the time has ended.</dd>
-</dl>
+- `label`
+  - : The name of the timer to stop. Once stopped, the elapsed time is automatically
+    displayed in the [Web console](/en-US/docs/Tools/Web_Console) along
+    with an indicator that the time has ended.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>The output from the example above shows the time taken by the user to dismiss the first
-	alert box, followed by the time it took for the user to dismiss the second alert:</p>
+The output from the example above shows the time taken by the user to dismiss the first
+alert box, followed by the time it took for the user to dismiss the second alert:
 
-<p><img src="timer_output.png"></p>
+![](timer_output.png)
 
-<p>Notice that the timer's name is displayed when the timer value is logged using
-	<code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
-	has the additional information, "timer ended" to make it obvious that the timer is no
-	longer tracking time.</p>
+Notice that the timer's name is displayed when the timer value is logged using
+`timeLog()` and again when it's stopped. In addition, the call to timeEnd()
+has the additional information, "timer ended" to make it obvious that the timer is no
+longer tracking time.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

@@ -2,34 +2,35 @@
 title: Navigator.mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 tags:
-- API
-- Experimental
-- Media
-- Media Capabilities API
-- MediaCapabilities
-- Navigator
+  - API
+  - Experimental
+  - Media
+  - Media Capabilities API
+  - MediaCapabilities
+  - Navigator
 browser-compat: api.Navigator.mediaCapabilities
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <code><strong>Navigator.mediaCapabilities</strong></code> read-only property
-  returns a {{domxref("MediaCapabilities")}} object that can expose information about the
-  decoding and encoding capabilities for a given format and output capabilities as defined
-  by the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a>.
-</p>
+The **`Navigator.mediaCapabilities`** read-only property
+returns a {{domxref("MediaCapabilities")}} object that can expose information about the
+decoding and encoding capabilities for a given format and output capabilities as defined
+by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>mediaCapabilitiesObj</em> = <em>globalObj</em>.navigator.mediaCapabilities
-</pre>
+```js
+mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("MediaCapabilities")}} object.</p>
+A {{domxref("MediaCapabilities")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">navigator.mediaCapabilities.decodingInfo({
+```js
+navigator.mediaCapabilities.decodingInfo({
     type : 'file',
     audio : {
         contentType : "audio/mp3",
@@ -43,21 +44,19 @@ browser-compat: api.Navigator.mediaCapabilities
         (result.smooth ? '' : 'not ') + 'smooth, and ' +
         (result.powerEfficient ? '' : 'not ') + 'power efficient.')
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a></li>
-  <li>{{domxref("Navigator")}}</li>
-</ul>
+- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
+- {{domxref("Navigator")}}
 
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}

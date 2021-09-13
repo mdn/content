@@ -2,87 +2,81 @@
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
 tags:
-- API
-- Align
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- alignment
-- float
-- img
-- Deprecated
+  - API
+  - Align
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - alignment
+  - float
+  - img
+  - Deprecated
 browser-compat: api.HTMLImageElement.align
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <em>obsolete</em> <code><strong>align</strong></code>
-    property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
-    how to position the image relative to its container.</p>
+The *obsolete* **`align`**
+property of the {{domxref("HTMLImageElement")}} interface is a string which indicates
+how to position the image relative to its container.
 
-<p>You should instead use the
-  CSS property {{cssxref("vertical-align")}}, which does in fact also work on images
-  despite its name. You can also use the {{cssxref("float")}} property to float the image
-  to the left or right margin.</p>
+You should instead use the
+CSS property {{cssxref("vertical-align")}}, which does in fact also work on images
+despite its name. You can also use the {{cssxref("float")}} property to float the image
+to the left or right margin.
 
-<p>The <code>align</code> property reflects the HTML {{htmlattrxref("align", "img")}}
-  content attribute.</p>
+The `align` property reflects the HTML {{htmlattrxref("align", "img")}}
+content attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.align = <em>alignMode</em>;
-<em>alignMode</em> = <em>htmlImageElement</em>.align;
-</pre>
+```js
+htmlImageElement.align = alignMode;
+alignMode = htmlImageElement.align;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying one of the following strings which set the
-  alignment mode for the image.</p>
+A {{domxref("DOMString")}} specifying one of the following strings which set the
+alignment mode for the image.
 
-<h4 id="Baseline_alignment">Baseline alignment</h4>
+#### Baseline alignment
 
-<p>These three values specify the alignment of the element relative to the text baseline.
-  These should be replaced by using the CSS {{cssxref("vertical-align")}} property.</p>
+These three values specify the alignment of the element relative to the text baseline.
+These should be replaced by using the CSS {{cssxref("vertical-align")}} property.
 
-<dl>
-  <dt><code>bottom</code></dt>
-  <dd>The bottom edge of the image is to be aligned vertically with the current text
-    baseline. <strong>Default value.</strong></dd>
-  <dt><code>middle</code></dt>
-  <dd>The center of the object should be aligned vertically with the current baseline.
-  </dd>
-  <dt><code>top</code></dt>
-  <dd>The top edge of the object should be aligned vertically with the current baseline.
-  </dd>
-</dl>
+- `bottom`
+  - : The bottom edge of the image is to be aligned vertically with the current text
+    baseline. **Default value.**
+- `middle`
+  - : The center of the object should be aligned vertically with the current baseline.
+- `top`
+  - : The top edge of the object should be aligned vertically with the current baseline.
 
-<p>It may be worth noting that {{cssxref("vertical-align")}} offers several additional
-  options for its value; you may wish to consider these when changing your code to use it.
-</p>
+It may be worth noting that {{cssxref("vertical-align")}} offers several additional
+options for its value; you may wish to consider these when changing your code to use it.
 
-<h4 id="Floating_images_horizontally">Floating images horizontally</h4>
+#### Floating images horizontally
 
-<p>The <code>left</code> and <code>right</code> properties don't affect the
-  baseline-relative alignment. Instead, they cause the image to "float" to the left or
-  right margin, allowing the following text to flow around the image. You should instead
-  use the CSS {{cssxref("float")}} property, specifying as the value
-  either <code>left</code> or <code>right</code>.</p>
+The `left` and `right` properties don't affect the
+baseline-relative alignment. Instead, they cause the image to "float" to the left or
+right margin, allowing the following text to flow around the image. You should instead
+use the CSS {{cssxref("float")}} property, specifying as the value
+either `left` or `right`.
 
-<dl>
-  <dt><code>left</code></dt>
-  <dd>Floats the image over to place the left edge flush against the current margin. Any
-    text that follows will flow against the image's right edge.</dd>
-  <dt><code>right</code></dt>
-  <dd>Floats the image to place its right edge flush against the right margin. Subsequent
-    text will flow along the image's left edge.</dd>
-</dl>
+- `left`
+  - : Floats the image over to place the left edge flush against the current margin. Any
+    text that follows will flow against the image's right edge.
+- `right`
+  - : Floats the image to place its right edge flush against the right margin. Subsequent
+    text will flow along the image's left edge.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

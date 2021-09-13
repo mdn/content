@@ -2,56 +2,56 @@
 title: TextTrackList.onchange
 slug: Web/API/TextTrackList/onchange
 tags:
-- API
-- Adding Tracks
-- Event Handler
-- HTML DOM
-- HTMLMediaElement
-- Media
-- Property
-- Reference
-- TextTrack
-- TextTrackList
-- addTrack
-- onchange
-- text track
-- track
+  - API
+  - Adding Tracks
+  - Event Handler
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Reference
+  - TextTrack
+  - TextTrackList
+  - addTrack
+  - onchange
+  - text track
+  - track
 browser-compat: api.TextTrackList.onchange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("TextTrackList")}}</strong> property
-    <strong><code>onchange</code></strong> is an event handler which is called when the
-    {{event("change")}} event occurs, indicating that a change has occurred on a
-    {{domxref("TextTrack")}} in the <code>VideoTrackList</code>.</p>
+The **{{domxref("TextTrackList")}}** property
+**`onchange`** is an event handler which is called when the
+{{event("change")}} event occurs, indicating that a change has occurred on a
+{{domxref("TextTrack")}} in the `VideoTrackList`.
 
-<div class="note">
-  <p><strong>Note:</strong> You can also add a handler for the <code>change</code> event
-    using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
-</div>
+> **Note:** You can also add a handler for the `change` event
+> using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>TextTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+```js
+TextTrackList.onchange = eventHandler;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet establishes a handler for the {{event("change")}} event that looks at each
-  of the tracks in the list, calling a function to update the state of a user interface
-  control that indicates the current state of the track.</p>
+This snippet establishes a handler for the {{event("change")}} event that looks at each
+of the tracks in the list, calling a function to update the state of a user interface
+control that indicates the current state of the track.
 
-<pre class="brush: js">var trackList = document.querySelector("video, audio").textTracks;
+```js
+var trackList = document.querySelector("video, audio").textTracks;
 
 trackList.onchange = function(event) {
    .... /* do something */
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

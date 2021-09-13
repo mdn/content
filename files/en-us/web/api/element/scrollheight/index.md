@@ -2,79 +2,80 @@
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 tags:
-- API
-- CSSOM View
-- NeedsDHTMLRemovalInExample
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsDHTMLRemovalInExample
+  - Property
+  - Reference
 browser-compat: api.Element.scrollHeight
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Element.scrollHeight</code></strong> read-only property is a
-  measurement of the height of an element's content, including content not visible on the
-  screen due to overflow.</p>
+The **`Element.scrollHeight`** read-only property is a
+measurement of the height of an element's content, including content not visible on the
+screen due to overflow.
 
-<p><img src="scrollheight.png"></p>
+![](scrollheight.png)
 
-<p>The <code>scrollHeight</code> value is equal to the minimum height the element would
-  require in order to fit all the content in the viewport without using a vertical
-  scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight",
+The `scrollHeight` value is equal to the minimum height the element would
+require in order to fit all the content in the viewport without using a vertical
+scrollbar. The height is measured in the same way as {{domxref("Element.clientHeight",
   "clientHeight")}}: it includes the element's padding, but not its border, margin or
-  horizontal scrollbar (if present). It can also include the height of pseudo-elements
-  such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
-  fit without a need for vertical scrollbar, its <code>scrollHeight</code> is equal to
-  {{domxref("Element.clientHeight", "clientHeight")}}</p>
+horizontal scrollbar (if present). It can also include the height of pseudo-elements
+such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can
+fit without a need for vertical scrollbar, its `scrollHeight` is equal to
+{{domxref("Element.clientHeight", "clientHeight")}}
 
-<div class="note">
-  <p><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value, use
-    {{domxref("Element.getBoundingClientRect()")}}.</p>
-</div>
+> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> {{domxref("Element.getBoundingClientRect()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>elemScrollHeight</var> = <var>element</var>.scrollHeight;</pre>
+```js
+elemScrollHeight = element.scrollHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer corresponding to the scrollHeight pixel value of the element.</p>
+An integer corresponding to the scrollHeight pixel value of the element.
 
-<h2 id="Problems_and_solutions">Problems and solutions</h2>
+## Problems and solutions
 
-<h3 id="Determine_if_an_element_has_been_totally_scrolled">Determine if an element has
-  been totally scrolled</h3>
+### Determine if an element has been totally scrolled
 
-<p>The following equivalence returns <code>true</code> if an element is at the end of its
-  scroll, <code>false</code> if it isn't.</p>
+The following equivalence returns `true` if an element is at the end of its
+scroll, `false` if it isn't.
 
-<pre class="brush: js">element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
-</pre>
+```js
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+```
 
-<p>When the container does not scroll, but has overflowing children, these checks
-  determine if the container can scroll:</p>
+When the container does not scroll, but has overflowing children, these checks
+determine if the container can scroll:
 
-<pre class="brush: js">window.getComputedStyle(element).overflowY === 'visible'
+```js
+window.getComputedStyle(element).overflowY === 'visible'
 window.getComputedStyle(element).overflowY !== 'hidden'
-</pre>
+```
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Checking that the user has read a text</h3>
+### Checking that the user has read a text
 
-<p>Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
-  equivalence can be useful to determine whether a user has read a text or not (see also
-  the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
-  properties).</p>
+Associated with the {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} event, this
+equivalence can be useful to determine whether a user has read a text or not (see also
+the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
+properties).
 
-  <p>The checkbox in the demo below is disabled, and so cannot be checked to show agreement
-    until the content of the textarea has been scrolled through.</p>
+The checkbox in the demo below is disabled, and so cannot be checked to show agreement
+until the content of the textarea has been scrolled through.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -96,18 +97,20 @@ ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maec
 interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
 laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
 nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="agree" name="accept" /&gt;
-    &lt;label for="agree"&gt;I agree&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Next" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" id="agree" name="accept" />
+    <label for="agree">I agree</label>
+    <input type="submit" id="nextstep" value="Next" />
+  </p>
+</form>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#notice {
+```css
+#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -122,11 +125,13 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   padding: 5px;
   border: #2A9F00 solid 2px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function checkReading () {
+```js
+function checkReading () {
   if (checkReading.read) {
     return;
   }
@@ -144,27 +149,25 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Checking_that_the_user_has_read_a_text', '640', '400')}}</p>
+{{EmbedLiveSample('Checking_that_the_user_has_read_a_text', '640', '400')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)">MSDN:
-      Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
-      9</a></li>
-  <li>{{domxref("Element.clientHeight")}}</li>
-  <li>{{domxref("HTMLElement.offsetHeight")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining
-      the dimensions of elements</a></li>
-</ul>
+- [MSDN:
+  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
+  9](<https://docs.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)
+- {{domxref("Element.clientHeight")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- [Determining
+  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

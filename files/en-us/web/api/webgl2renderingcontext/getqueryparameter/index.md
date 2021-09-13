@@ -2,63 +2,60 @@
 title: WebGL2RenderingContext.getQueryParameter()
 slug: Web/API/WebGL2RenderingContext/getQueryParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getQueryParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getQueryParameter()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns parameter
-  information of a {{domxref("WebGLQuery")}} object.</p>
+The **`WebGL2RenderingContext.getQueryParameter()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns parameter
+information of a {{domxref("WebGLQuery")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getQueryParameter(<var>query</var>, <var>pname</var>);
-</pre>
+```js
+any gl.getQueryParameter(query, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>query</dt>
-  <dd>A {{domxref("WebGLQuery")}} object.</dd>
-  <dt><code>pname</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
-    <ul>
-      <li><code>gl.QUERY_RESULT</code>: Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
-        query result.</li>
-      <li><code>gl.QUERY_RESULT_AVAILABLE</code>: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
-        indicating whether or not a query result is available.</li>
-    </ul>
-  </dd>
-</dl>
+- query
+  - : A {{domxref("WebGLQuery")}} object.
+- `pname`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
 
-<p>Depends on the <code>pname</code> parameter, either a {{domxref("WebGL_API/Types", "GLuint")}} or a
-  {{domxref("WebGL_API/Types", "GLboolean")}}.</p>
+    - `gl.QUERY_RESULT`: Returns a {{domxref("WebGL_API/Types", "GLuint")}} containing the
+      query result.
+    - `gl.QUERY_RESULT_AVAILABLE`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
+      indicating whether or not a query result is available.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">var query = gl.createQuery();
+Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLuint")}} or a
+{{domxref("WebGL_API/Types", "GLboolean")}}.
+
+## Examples
+
+```js
+var query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 var result = gl.getQueryParameter(query, gl.QUERY_RESULT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLQuery")}}</li>
-</ul>
+- {{domxref("WebGLQuery")}}

@@ -2,44 +2,45 @@
 title: RTCIceCandidatePairStats.consentRequestsSent
 slug: Web/API/RTCIceCandidatePairStats/consentRequestsSent
 tags:
-- API
-- Candidates
-- Connectivity
-- ICE
-- Networking
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- contentRequestsReceived
-- data
-- rtc
+  - API
+  - Candidates
+  - Connectivity
+  - ICE
+  - Networking
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - contentRequestsReceived
+  - data
+  - rtc
 browser-compat: api.RTCIceCandidatePairStats.consentRequestsSent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>consentRequestsSent</code></strong> specifies the number of consent
-    requests that have been sent by this peer to the remote peer on the connection
-    described by the pair of candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`consentRequestsSent`** specifies the number of consent
+requests that have been sent by this peer to the remote peer on the connection
+described by the pair of candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>consentRequestsSent</em> = <em>rtcIceCandidatePairStats</em>.consentRequestsSent;</pre>
+```js
+consentRequestsSent = rtcIceCandidatePairStats.consentRequestsSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer indicating the number of consent requests this peer has sent to the other
-  peer over the connection described by the pair of candidates referenced by this
-  <code>RTCIceCandidatePairStats</code> object.</p>
+An integer indicating the number of consent requests this peer has sent to the other
+peer over the connection described by the pair of candidates referenced by this
+`RTCIceCandidatePairStats` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

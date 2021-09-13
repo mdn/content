@@ -2,53 +2,50 @@
 title: ReadableByteStreamController.error()
 slug: Web/API/ReadableByteStreamController/error
 tags:
-- API
-- Error
-- Experimental
-- Method
-- ReadableByteStreamController
-- Reference
-- Streams
+  - API
+  - Error
+  - Experimental
+  - Method
+  - ReadableByteStreamController
+  - Reference
+  - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>error()</code></strong> method of the
-  {{domxref("ReadableByteStreamController")}} interface causes any future interactions
-  with the associated stream to error.</p>
+The **`error()`** method of the
+{{domxref("ReadableByteStreamController")}} interface causes any future interactions
+with the associated stream to error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>readableByteStreamController</em>.error(<em>e</em>);</pre>
+```js
+readableByteStreamController.error(e);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>e</em></dt>
-  <dd>The error you want future interactions to fail with.</dd>
-</dl>
+- _e_
+  - : The error you want future interactions to fail with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableByteStreamController</code>, or the stream
-    is not readable for some other reason.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableByteStreamController`, or the stream
+    is not readable for some other reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

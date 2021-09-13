@@ -2,75 +2,75 @@
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.activeTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.activeTexture()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies which texture unit to
-  make active.</p>
+The **`WebGLRenderingContext.activeTexture()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) specifies which texture unit to
+make active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>void gl</em>.activeTexture</var><var>(texture);</var>
-</pre>
+```js
+void gl.activeTexture(texture);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>texture</code></dt>
-  <dd>The texture unit to make active. The value is a <code>gl.TEXTURE<em>I</em></code>
-    where <em>I</em> is within the range from 0 to
-    <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
-</dl>
+- `texture`
+  - : The texture unit to make active. The value is a `gl.TEXTUREI`
+    where _I_ is within the range from 0 to
+    `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If <em>texture</em> is not one of <code>gl.TEXTURE<em>I</em></code>, where <em>I</em>
-  is within the range from 0 to <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, a
-  <code>gl.INVALID_ENUM</code> error is thrown.</p>
+If _texture_ is not one of `gl.TEXTUREI`, where _I_
+is within the range from 0 to `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1`, a
+`gl.INVALID_ENUM` error is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following call selects <code>gl.TEXTURE1</code> as the current texture. Subsequent
-  calls that modify the texture state will affect this texture.</p>
+The following call selects `gl.TEXTURE1` as the current texture. Subsequent
+calls that modify the texture state will affect this texture.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
-</pre>
+```js
+gl.activeTexture(gl.TEXTURE1);
+```
 
-<p>The number of texture units is implementation dependent, you can get this number with
-  the help of the <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code> constant. It is, per
-  specification, at least 8.</p>
+The number of texture units is implementation dependent, you can get this number with
+the help of the `MAX_COMBINED_TEXTURE_IMAGE_UNITS` constant. It is, per
+specification, at least 8.
 
-<pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
-</pre>
+```js
+gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+```
 
-<p>To get the active texture, query the <code>ACTIVE_TEXTURE</code> constant.</p>
+To get the active texture, query the `ACTIVE_TEXTURE` constant.
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
+```js
+gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);
 // returns "33984" (0x84C0, gl.TEXTURE0 enum value)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getParameter()")}}

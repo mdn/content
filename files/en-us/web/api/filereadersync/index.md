@@ -6,46 +6,40 @@ tags:
   - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <code>FileReaderSync</code> interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.</p>
+The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This interface is <strong>only available</strong> in <a href="/en-US/docs/Web/API/Worker">workers</a> as it enables synchronous I/O that could potentially block.</p>
-</div>
+> **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface does not have any properties.</p>
+This interface does not have any properties.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}</dt>
- <dd>This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into an {{jsxref("ArrayBuffer")}} representing the input data as a binary string.</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline}}</dt>
- <dd>This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a binary string. This method is deprecated, consider using <code>readAsArrayBuffer()</code> instead.</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}</dt>
- <dd>This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a text string. The optional <strong><code>encoding</code></strong> parameter indicates the encoding to be used (e.g., iso-8859-1 or UTF-8). If not present, the method will apply a detection algorithm for it.</dd>
- <dt>{{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}</dt>
- <dd>This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a data URL.</dd>
-</dl>
+- {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into an {{jsxref("ArrayBuffer")}} representing the input data as a binary string.
+- {{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline}}
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a binary string. This method is deprecated, consider using `readAsArrayBuffer()` instead.
+- {{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a text string. The optional **`encoding`** parameter indicates the encoding to be used (e.g., iso-8859-1 or UTF-8). If not present, the method will apply a detection algorithm for it.
+- {{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a data URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}</li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
-</ul>
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileReader")}}

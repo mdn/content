@@ -9,31 +9,34 @@ tags:
   - FontFace
 browser-compat: api.FontFace.lineGapOverride
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>lineGapOverride</code></strong> property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor. The possible values are <code>normal</code>, indicating that the metric used should be obtained from the font file, or a percentage.</p>
+The **`lineGapOverride`** property of the {{domxref("FontFace")}} interface returns and sets the value of the {{cssxref("@font-face/line-gap-override")}} descriptor. The possible values are `normal`, indicating that the metric used should be obtained from the font file, or a percentage.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let lineGapOverride = FontFace.lineGapOverride;
+```js
+let lineGapOverride = FontFace.lineGapOverride;
 FontFace.lineGapOverride = '90%';
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString","string")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString","string")}}.
 
-<pre class="brush: css">let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)', {'lineGapOverride':'90%'});
+## Examples
+
+```css
+let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)', {'lineGapOverride':'90%'});
 console.log(fontFace.lineGapOverride); // 90%
 fontFace.lineGapOverride = 'normal';
-console.log(fontFace.lineGapOverride); // 'normal'</pre>
+console.log(fontFace.lineGapOverride); // 'normal'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

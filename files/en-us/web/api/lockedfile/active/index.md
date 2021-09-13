@@ -2,50 +2,38 @@
 title: LockedFile.active
 slug: Web/API/LockedFile/active
 tags:
-- API
-- Files
-- Non-standard
-- Property
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Non-standard
+  - Property
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<p>The <strong><code>active</code></strong> property allows to know if the
-  {{domxref("LockedFile")}} object is still usable (<code>true</code>) or not
-  (<code>false</code>). If the object is inactive then it is impossible to perform any
-  read or write operation with it. Typically, a {{domxref("LockedFile")}} object becomes
-  inactive when the {{domxref("LockedFile.abort()")}} method is called or if an error
-  occurs.</p>
+The **`active`** property allows to know if the
+{{domxref("LockedFile")}} object is still usable (`true`) or not
+(`false`). If the object is inactive then it is impossible to perform any
+read or write operation with it. Typically, a {{domxref("LockedFile")}} object becomes
+inactive when the {{domxref("LockedFile.abort()")}} method is called or if an error
+occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var state = <em>instanceOfLockedFile</em>.active
-</pre>
+```js
+var state = instanceOfLockedFile.active
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft Proposal.</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft Proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

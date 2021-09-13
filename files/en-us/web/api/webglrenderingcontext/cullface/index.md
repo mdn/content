@@ -2,72 +2,68 @@
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.cullFace
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.cullFace()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies whether or not front-
-  and/or back-facing polygons can be culled.</p>
+The **`WebGLRenderingContext.cullFace()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies whether or not front-
+and/or back-facing polygons can be culled.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.cullFace(<var>mode</var>);
-</pre>
+```js
+void gl.cullFace(mode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether front- or back-facing polygons are
-    candidates for culling. The default value is <code>gl.BACK</code>. Possible values
+- `mode`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether front- or back-facing polygons are
+    candidates for culling. The default value is `gl.BACK`. Possible values
     are:
-    <ul>
-      <li><code>gl.FRONT</code></li>
-      <li><code>gl.BACK</code></li>
-      <li><code>gl.FRONT_AND_BACK</code></li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.FRONT`
+    - `gl.BACK`
+    - `gl.FRONT_AND_BACK`
 
-<p>None.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<p>Polygon culling is disabled by default. To enable or disable culling, use the
-  {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.CULL_FACE</code>.</p>
+## Examples
 
-<pre class="brush: js">gl.enable(gl.CULL_FACE);
+Polygon culling is disabled by default. To enable or disable culling, use the
+{{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.CULL_FACE`.
+
+```js
+gl.enable(gl.CULL_FACE);
 gl.cullFace(gl.FRONT_AND_BACK);
-</pre>
+```
 
-<p>To check the current cull face mode, query the <code>CULL_FACE_MODE</code> constant.
-</p>
+To check the current cull face mode, query the `CULL_FACE_MODE` constant.
 
-<pre class="brush: js">gl.getParameter(gl.CULL_FACE_MODE) === gl.FRONT_AND_BACK;
+```js
+gl.getParameter(gl.CULL_FACE_MODE) === gl.FRONT_AND_BACK;
 // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.frontFace()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enable()")}}
+- {{domxref("WebGLRenderingContext.frontFace()")}}

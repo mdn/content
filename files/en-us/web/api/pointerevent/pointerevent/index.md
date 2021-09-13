@@ -8,81 +8,56 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
-<p>{{APIRef("Pointer Events")}}</p>
+{{APIRef("Pointer Events")}}
 
-<p>The <strong><code>PointerEvent()</code></strong> constructor creates a new synthetic
-	and untrusted {{domxref("PointerEvent")}} object instance.</p>
+The **`PointerEvent()`** constructor creates a new synthetic
+and untrusted {{domxref("PointerEvent")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"> <em>event</em> = new PointerEvent(<em>type</em>, <em>PointerEventInit</em>);</pre>
+```js
+ event = new PointerEvent(type, PointerEventInit);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-	<dt><em>type</em></dt>
-	<dd>Is a {{domxref("DOMString")}} representing the name of the event (see <a
-			href="/en-US/docs/Web/API/PointerEvent#pointer_event_types">PointerEvent event
-			types</a>).</dd>
-	<dt><em>PointerEventInit</em>{{optional_inline}}</dt>
-	<dd>Is a <code>PointerEventInit</code> dictionary, having the following fields:
+- _type_
+  - : Is a {{domxref("DOMString")}} representing the name of the event (see [PointerEvent event
+    types](/en-US/docs/Web/API/PointerEvent#pointer_event_types)).
+- _PointerEventInit_{{optional_inline}}
 
-		<ul>
-      <li>
-        <code>pointerId</code> — optional <code>long</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
-      </li>
-      <li>
-        <code>width</code> — optional <code>double</code>, defaulting to <code>1</code>,
-        sets the value of the instance'sc{{domxref("PointerEvent.width")}}.
-      </li>
-      <li>
-        <code>height</code> — optional <code>double</code>, defaulting to <code>1</code>,
-        sets the value of the instance's {{domxref("PointerEvent.height")}}.
-      </li>
-      <li>
-        <code>pressure</code> — optional <code>float</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.pressure")}}.
-      </li>
-      <li>
-        <code>tangentialPressure</code> — optional <code>float</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.tangentialPressure")}}.
-      </li>
-      <li>
-        <code>tiltX</code> — optional <code>long</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.tiltX")}}.
-      </li>
-      <li>
-        <code>tiltY</code> — optional <code>long</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.tiltY")}}.
-      </li>
-      <li>
-        <code>twist</code> — optional <code>long</code>, defaulting to <code>0</code>,
-        sets the value of the instance's {{domxref("PointerEvent.twist")}}.
-      </li>
-      <li>
-        <code>pointerType</code> — optional {{domxref("DOMString")}}, defaulting to <code>""</code>
-        sets the value of the instance's {{domxref("PointerEvent.pointerType")}}.
-      </li>
-      <li>
-        <code>isPrimary</code> — optional boolean value, defaulting to <code>false</code>
-        sets the value of the instance's {{domxref("PointerEvent.isPrimary")}}.
-      </li>
-		</ul>
+  - : Is a `PointerEventInit` dictionary, having the following fields:
 
-		<div class="note">
-			<p><strong>Note:</strong> The <code>PointerEventInit</code> dictionary also
-				accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
-				{{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
-				"EventInit")}} dictionaries.</p>
-		</div>
-	</dd>
-</dl>
+    - `pointerId` — optional `long`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
+    - `width` — optional `double`, defaulting to `1`,
+      sets the value of the instance'sc{{domxref("PointerEvent.width")}}.
+    - `height` — optional `double`, defaulting to `1`,
+      sets the value of the instance's {{domxref("PointerEvent.height")}}.
+    - `pressure` — optional `float`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.pressure")}}.
+    - `tangentialPressure` — optional `float`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.tangentialPressure")}}.
+    - `tiltX` — optional `long`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.tiltX")}}.
+    - `tiltY` — optional `long`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.tiltY")}}.
+    - `twist` — optional `long`, defaulting to `0`,
+      sets the value of the instance's {{domxref("PointerEvent.twist")}}.
+    - `pointerType` — optional {{domxref("DOMString")}}, defaulting to `""`
+      sets the value of the instance's {{domxref("PointerEvent.pointerType")}}.
+    - `isPrimary` — optional boolean value, defaulting to `false`
+      sets the value of the instance's {{domxref("PointerEvent.isPrimary")}}.
 
-<h2 id="Example">Example</h2>
+    > **Note:** The `PointerEventInit` dictionary also
+    > accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
+    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
+				"EventInit")}} dictionaries.
 
-<pre class="brush: js">var moveEvent = new PointerEvent("pointermove");
+## Example
+
+```js
+var moveEvent = new PointerEvent("pointermove");
 
 var downEvent = new PointerEvent("pointerdown",
    {pointerId: 1,
@@ -93,8 +68,8 @@ var downEvent = new PointerEvent("pointerdown",
     height: 100,
     isPrimary: true
    });
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

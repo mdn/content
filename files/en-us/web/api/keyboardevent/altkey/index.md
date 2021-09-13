@@ -2,37 +2,38 @@
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 tags:
-- API
-- DOM
-- KeyboardEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - KeyboardEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.KeyboardEvent.altKey
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>KeyboardEvent.altKey</code></strong> read-only property is a
-  boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or
-  <kbd>⌥</kbd> on OS X) was pressed (<code>true</code>) or not (<code>false</code>) when
-  the event occurred.</p>
+The **`KeyboardEvent.altKey`** read-only property is a
+boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) was pressed (`true`) or not (`false`) when
+the event occurred.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>altKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.altKey
-</pre>
+```js
+var altKeyPressed = instanceOfKeyboardEvent.altKey
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value</p>
+A boolean value
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;altKey example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>altKey example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e){
   alert(
@@ -42,28 +43,27 @@ function showChar(e){
   );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeydown="showChar(event);"&gt;
-&lt;p&gt;
+<body onkeydown="showChar(event);">
+<p>
 Press any character key,
-with or without holding down the ALT key.&lt;br /&gt;
+with or without holding down the ALT key.<br />
 You can also use the SHIFT key together with the ALT key.
-&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</p>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

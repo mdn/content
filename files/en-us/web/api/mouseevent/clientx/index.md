@@ -2,76 +2,79 @@
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
 tags:
-- API
-- CSSOM View
-- DOM
-- DOM Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - CSSOM View
+  - DOM
+  - DOM Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.clientX
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>clientX</code></strong> read-only property of the
-  {{domxref("MouseEvent")}} interface provides the horizontal coordinate within the
-  application's {{glossary("viewport")}} at which the event occurred (as opposed to the
-  coordinate within the page).</p>
+The **`clientX`** read-only property of the
+{{domxref("MouseEvent")}} interface provides the horizontal coordinate within the
+application's {{glossary("viewport")}} at which the event occurred (as opposed to the
+coordinate within the page).
 
-<p>For example, clicking on the left edge of the viewport will always result in a mouse
-  event with a <code>clientX</code> value of <code>0</code>, regardless of whether the
-  page is scrolled horizontally.</p>
+For example, clicking on the left edge of the viewport will always result in a mouse
+event with a `clientX` value of `0`, regardless of whether the
+page is scrolled horizontally.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</pre>
+```js
+var x = instanceOfMouseEvent.clientX
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>double</code> floating point value, as redefined by the CSSOM View Module.
-  Originally, this property was defined as a <code>long</code> integer. See the "Browser
-  compatibility" section for details.</p>
+A `double` floating point value, as redefined by the CSSOM View Module.
+Originally, this property was defined as a `long` integer. See the "Browser
+compatibility" section for details.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example displays your mouse's coordinates whenever you trigger the
-  {{Event("mousemove")}} event.</p>
+This example displays your mouse's coordinates whenever you trigger the
+{{Event("mousemove")}} event.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Move your mouse to see its position.&lt;/p&gt;
-&lt;p id="screen-log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Move your mouse to see its position.</p>
+<p id="screen-log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let screenLog = document.querySelector('#screen-log');
+```js
+let screenLog = document.querySelector('#screen-log');
 document.addEventListener('mousemove', logKey);
 
 function logKey(e) {
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("MouseEvent") }}</li>
-  <li>{{domxref("MouseEvent.clientY","clientY")}}</li>
-  <li>{{domxref("MouseEvent.screenX","screenX")}} /
-    {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} /
+  {{domxref("MouseEvent.screenY","screenY")}}

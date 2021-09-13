@@ -8,40 +8,39 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.port
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.port</code></strong> property is a
-  {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-  contain an explicit port number, it will be set to <code>''</code>.</p>
+The **`HTMLAreaElement.port`** property is a
+{{domxref("USVString")}} containing the port number of the URL. If the URL does not
+contain an explicit port number, it will be set to `''`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.port;
+string = area.port;
 // Setter
-<em>area</em>.port = <em>string</em>;
-</pre>
+area.port = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the port from an area link</h3>
+### Getting the port from an area link
 
-<pre class="brush: js">// An &lt;area id="myArea" href="https://developer.mozilla.org:443/en-US/docs/HTMLAreaElement"&gt; element is in the document
+```js
+// An <area id="myArea" href="https://developer.mozilla.org:443/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementByID("myArea");
 area.port; // returns '443'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

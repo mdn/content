@@ -12,29 +12,29 @@ tags:
   - getDescriptors()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptors
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>
-  The <strong><code>BluetoothRemoteGATTCharacteristic.getDescriptors()</code></strong> method
-  returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
-  {{domxref("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID. </p>
+The **`BluetoothRemoteGATTCharacteristic.getDescriptors()`** method
+returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
+{{domxref("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptors[]) { ... })</pre>
+```js
+BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptors[]) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}
-  of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.</p>
+A {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}}
+of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

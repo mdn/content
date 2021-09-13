@@ -11,45 +11,45 @@ tags:
   - clone
 browser-compat: api.Response.clone
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>clone()</code></strong> method of the {{domxref("Response")}}
-  interface creates a clone of a response object, identical in every way, but stored in a
-  different variable.</p>
+The **`clone()`** method of the {{domxref("Response")}}
+interface creates a clone of a response object, identical in every way, but stored in a
+different variable.
 
-<p><code>clone()</code> throws a {{jsxref("TypeError")}} if the response
-  body has already been used. In fact, the main reason <code>clone()</code>
-  exists is to allow multiple uses of body objects (when they are one-use
-  only.)</p>
+`clone()` throws a {{jsxref("TypeError")}} if the response
+body has already been used. In fact, the main reason `clone()`
+exists is to allow multiple uses of body objects (when they are one-use
+only.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>response2</var> = <var>response1</var>.clone();</pre>
+```js
+var response2 = response1.clone();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("Response")}} object.</p>
+A {{domxref("Response")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a
-    href="https://github.com/mdn/fetch-examples/tree/master/fetch-response-clone">Fetch
-    Response clone example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone
-    live</a>) we create a new {{domxref("Request")}} object using the
-  {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-  fetch this request using {{domxref("fetch()")}}. When the fetch
-  resolves successfully, we clone it, extract a blob from both responses using two
-  {{domxref("Response.blob")}} calls, create object URLs out of the blobs using
-  {{domxref("URL.createObjectURL")}}, and display them in two separate
-  {{htmlelement("img")}} elements.</p>
+In our [Fetch
+Response clone example](https://github.com/mdn/fetch-examples/tree/master/fetch-response-clone) (see [Fetch Response clone
+live](https://mdn.github.io/fetch-examples/fetch-response-clone/)) we create a new {{domxref("Request")}} object using the
+{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
+fetch this request using {{domxref("fetch()")}}. When the fetch
+resolves successfully, we clone it, extract a blob from both responses using two
+{{domxref("Response.blob")}} calls, create object URLs out of the blobs using
+{{domxref("URL.createObjectURL")}}, and display them in two separate
+{{htmlelement("img")}} elements.
 
-<pre class="brush: js">var image1 = document.querySelector('.img1');
+```js
+var image1 = document.querySelector('.img1');
 var image2 = document.querySelector('.img2');
 
 var myRequest = new Request('flowers.jpg');
@@ -66,21 +66,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     image2.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

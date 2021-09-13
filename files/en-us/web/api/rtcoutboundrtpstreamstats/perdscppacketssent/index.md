@@ -2,59 +2,54 @@
 title: RTCOutboundRtpStreamStats.perDscpPacketsSent
 slug: Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 tags:
-- API
-- DSCP
-- Media
-- Property
-- RTCOutboundRtpStreamStats
-- RTP
-- Reference
-- Services
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- perDscpPacketsSent
+  - API
+  - DSCP
+  - Media
+  - Property
+  - RTCOutboundRtpStreamStats
+  - RTP
+  - Reference
+  - Services
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - perDscpPacketsSent
 browser-compat: api.RTCOutboundRtpStreamStats.perDscpPacketsSent
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>perDscpPacketsSent</code></strong> property
-    of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a record comprised of
-    key/value pairs in which each key is a string representation of a Differentiated
-    Services Code Point and the value is the number of packets sent for that DCSP.</p>
+The **`perDscpPacketsSent`** property
+of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a record comprised of
+key/value pairs in which each key is a string representation of a Differentiated
+Services Code Point and the value is the number of packets sent for that DCSP.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Not all operating systems make data available on a per-DSCP
-    basis, so this property shouldn't be relied upon on those systems.</p>
-</div>
+> **Note:** Not all operating systems make data available on a per-DSCP
+> basis, so this property shouldn't be relied upon on those systems.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>perDscpPacketsSent</em> = <em>RTCOutboundRtpStreamStats</em>.perDscpPacketsSent;</pre>
+```js
+var perDscpPacketsSent = RTCOutboundRtpStreamStats.perDscpPacketsSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A record comprised of string/value pairs. Each key is the string representation of a
-  single Differentiated Services Code Point (DSCP)'s ID number.</p>
+A record comprised of string/value pairs. Each key is the string representation of a
+single Differentiated Services Code Point (DSCP)'s ID number.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Due to network bleaching and remapping, the numbers seen on
-    this record are not necessarily going to match the values as they were when the data
-    was sent.</p>
-</div>
+> **Note:** Due to network bleaching and remapping, the numbers seen on
+> this record are not necessarily going to match the values as they were when the data
+> was sent.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(2474)}}: The Differentiated Service field in IPv4 and IPv6 headers</li>
-</ul>
+- {{RFC(2474)}}: The Differentiated Service field in IPv4 and IPv6 headers

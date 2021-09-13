@@ -2,48 +2,48 @@
 title: AudioTrack.id
 slug: Web/API/AudioTrack/id
 tags:
-- API
-- Audio
-- Audio Track
-- AudioTrack
-- HTML DOM
-- Interface
-- Media
-- Property
-- Read-only
-- Reference
-- id
-- track
+  - API
+  - Audio
+  - Audio Track
+  - AudioTrack
+  - HTML DOM
+  - Interface
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - id
+  - track
 browser-compat: api.AudioTrack.id
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>id</strong></code> property contains a
-    string which uniquely identifies the track represented by the
-    <strong>{{domxref("AudioTrack")}}</strong>.</p>
+The **`id`** property contains a
+string which uniquely identifies the track represented by the
+**{{domxref("AudioTrack")}}**.
 
-<p>This ID can be used with the
-  {{domxref("AudioTrackList.getTrackById()")}} method to locate a specific track within
-  the media associated with a media element. The track ID can also be used as the fragment of a URL that loads the specific track
-  (if the media supports media fragments).</p>
+This ID can be used with the
+{{domxref("AudioTrackList.getTrackById()")}} method to locate a specific track within
+the media associated with a media element. The track ID can also be used as the fragment of a URL that loads the specific track
+(if the media supports media fragments).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackID</em> = <em>AudioTrack</em>.id;</pre>
+```js
+var trackID = AudioTrack.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
-  {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} on an
-  {{domxref("AudioTrackList")}} such as the one specified by a media element's
-  {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.</p>
+A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
+{{domxref("AudioTrackList.getTrackById", "getTrackById()")}} on an
+{{domxref("AudioTrackList")}} such as the one specified by a media element's
+{{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

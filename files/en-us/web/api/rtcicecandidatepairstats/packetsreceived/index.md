@@ -2,44 +2,45 @@
 title: RTCIceCandidatePairStats.packetsReceived
 slug: Web/API/RTCIceCandidatePairStats/packetsReceived
 tags:
-- API
-- Communication
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- packetsReceived
+  - API
+  - Communication
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - packetsReceived
 browser-compat: api.RTCIceCandidatePairStats.packetsReceived
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-    <code><strong>packetsReceived</strong></code> property indicates the total number of
-    packets of any kind that have been received on the connection described by the pair of
-    candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`packetsReceived`** property indicates the total number of
+packets of any kind that have been received on the connection described by the pair of
+candidates.
 
-<p>The number of packets sent to date on the connection can be obtained using
-  {{domxref("RTCIceCandidatePairStats.packetsSent", "packetsSent")}}.</p>
+The number of packets sent to date on the connection can be obtained using
+{{domxref("RTCIceCandidatePairStats.packetsSent", "packetsSent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>packetsReceived</em> = <em>rtcIceCandidatePairStats</em>.packetsReceived;</pre>
+```js
+packetsReceived = rtcIceCandidatePairStats.packetsReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the total number of packets, of any kind, which have been
-  received on the connection described by the two candidates comprising this pair.</p>
+An integer value indicating the total number of packets, of any kind, which have been
+received on the connection described by the two candidates comprising this pair.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

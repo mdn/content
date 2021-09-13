@@ -2,35 +2,36 @@
 title: USBDevice.deviceVersionMajor
 slug: Web/API/USBDevice/deviceVersionMajor
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- deviceVersionMajor
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - deviceVersionMajor
 browser-compat: api.USBDevice.deviceVersionMajor
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>deviceVersionMajor</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface he major version number of the device in a semantic
-  versioning scheme.</p>
+The **`deviceVersionMajor`** read only property of the
+{{domxref("USBDevice")}} interface he major version number of the device in a semantic
+versioning scheme.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var serialNumber = USBDevice.deviceVersionMajor</pre>
+```js
+var serialNumber = USBDevice.deviceVersionMajor
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number.</p>
+A number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

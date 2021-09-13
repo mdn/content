@@ -13,28 +13,28 @@ tags:
   - top
 browser-compat: api.DOMRectReadOnly.top
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>top</strong></code> read-only property of the <strong><code>DOMRectReadOnly</code></strong> interface returns the top coordinate value of the <code>DOMRect.</code> (Has the same value as <code>y</code>, or <code>y + height</code> if <code>height</code> is negative.)</p>
+The **`top`** read-only property of the **`DOMRectReadOnly`** interface returns the top coordinate value of the `DOMRect.` (Has the same value as `y`, or `y + height` if `height` is negative.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var recTop = DOMRect.top;</pre>
+```js
+var recTop = DOMRect.top;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

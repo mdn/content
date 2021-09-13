@@ -10,44 +10,38 @@ tags:
   - Reference
 browser-compat: api.HTMLDetailsElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLDetailsElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.</p>
+The **`HTMLDetailsElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("details")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDetailsElement.open")}}</dt>
- <dd>Is a boolean value reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.</dd>
-</dl>
+- {{domxref("HTMLDetailsElement.open")}}
+  - : Is a boolean value reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element's contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to this event using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/HTMLDetailsElement/toggle_event">toggle</a></code></dt>
- <dd>Fired when the <code>open</code>/<code>closed</code> state of a {{HtmlElement("details")}} element is toggled.</dd>
-</dl>
+- [`toggle`](/en-US/docs/Web/API/HTMLDetailsElement/toggle_event)
+  - : Fired when the `open`/`closed` state of a {{HtmlElement("details")}} element is toggled.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("details")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("details")}}

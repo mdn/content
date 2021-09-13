@@ -2,51 +2,48 @@
 title: Document.compatMode
 slug: Web/API/Document/compatMode
 tags:
-- API
-- DOM
-- Document
-- Property
-- Reference
+  - API
+  - DOM
+  - Document
+  - Property
+  - Reference
 browser-compat: api.Document.compatMode
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>Document.compatMode</strong></code> read-only property indicates
-  whether the document is rendered in <a
-    href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">Quirks mode</a> or
-  Standards mode.</p>
+The **`Document.compatMode`** read-only property indicates
+whether the document is rendered in [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) or
+Standards mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>mode</var> = <var>document</var>.compatMode
-</pre>
+```js
+const mode = document.compatMode
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An enumerated value that can be:</p>
+An enumerated value that can be:
 
-<ul>
-  <li>"<code>BackCompat</code>" if the document is in quirks mode.</li>
-  <li>"<code>CSS1Compat</code>" if the document is in no-quirks (also known as
-    "standards") mode or limited-quirks (also known as "almost standards") mode.</li>
-</ul>
+- "`BackCompat`" if the document is in quirks mode.
+- "`CSS1Compat`" if the document is in no-quirks (also known as
+  "standards") mode or limited-quirks (also known as "almost standards") mode.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> All these modes are now standardized, so the older "standards"
-    and "almost standards" names are nonsensical and no longer used in standards.</p>
-</div>
+> **Note:** All these modes are now standardized, so the older "standards"
+> and "almost standards" names are nonsensical and no longer used in standards.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (document.compatMode == "BackCompat") {
+```js
+if (document.compatMode == "BackCompat") {
   // in Quirks mode
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

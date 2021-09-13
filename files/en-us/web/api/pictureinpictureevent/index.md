@@ -9,37 +9,33 @@ tags:
   - Reference
 browser-compat: api.PictureInPictureEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>PictureInPictureEvent</code></strong> interface represents picture-in-picture-related events, including {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}, {{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}} and {{domxref("PictureInPictureWindow/resize_event", "resize")}}</p>
+The **`PictureInPictureEvent`** interface represents picture-in-picture-related events, including {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}, {{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}} and {{domxref("PictureInPictureWindow/resize_event", "resize")}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PictureInPictureEvent.PictureInPictureEvent", "PictureInPictureEvent()")}}</dt>
- <dd>Creates a <code>PictureInPictureEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("PictureInPictureEvent.PictureInPictureEvent", "PictureInPictureEvent()")}}
+  - : Creates a `PictureInPictureEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_This interface also inherits properties from its parent {{domxref("Event")}}_.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_This interface also inherits properties from its parent {{domxref("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Event")}} base interface</li>
-</ul>
+- The {{domxref("Event")}} base interface

@@ -2,58 +2,56 @@
 title: HTMLImageElement.isMap
 slug: Web/API/HTMLImageElement/isMap
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image Map
-- Link
-- Reference
-- isMap
-- server-side
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image Map
+  - Link
+  - Reference
+  - isMap
+  - server-side
 browser-compat: api.HTMLImageElement.isMap
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLImageElement")}} property <code><strong>isMap</strong></code> is a
-	Boolean value which indicates that the image is to be used by a server-side image map.
-	This may only be used on images located within an {{HTMLElement("a")}} element.</p>
+The {{domxref("HTMLImageElement")}} property **`isMap`** is a
+Boolean value which indicates that the image is to be used by a server-side image map.
+This may only be used on images located within an {{HTMLElement("a")}} element.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> For accessibility reasons, you should generally avoid using
-		server-side image maps, as they require the use of a mouse. Use a <a
-			href="/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">client-side
-			image map</a> instead.</p>
-</div>
+> **Note:** For accessibility reasons, you should generally avoid using
+> server-side image maps, as they require the use of a mouse. Use a [client-side
+> image map](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image) instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.isMap = true|false;
-let isMap = <em>htmlImageElement</em>.isMap;
-</pre>
+```js
+htmlImageElement.isMap = true|false;
+let isMap = htmlImageElement.isMap;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the image is being used for a server-side
-	image map; otherwise, the value is <code>false</code>.</p>
+A Boolean value which is `true` if the image is being used for a server-side
+image map; otherwise, the value is `false`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When an image marked as being part of a server-side image map is clicked, the browser
-	constructs the string "?x,y", where x and y indicate the coordinates at which the
-	mouse was clicked as offsets from the top-left corner of the image, specified in CSS
-	pixels.</p>
+When an image marked as being part of a server-side image map is clicked, the browser
+constructs the string "?x,y", where x and y indicate the coordinates at which the
+mouse was clicked as offsets from the top-left corner of the image, specified in CSS
+pixels.
 
-<p>The browser then fetches that URL from the server and displays or downloads it
-	depending on the value of the {{htmlattrxref("download", "a")}} attribute.</p>
+The browser then fetches that URL from the server and displays or downloads it
+depending on the value of the {{htmlattrxref("download", "a")}} attribute.
 
-<p>Unlike server-side image maps, client-side image maps don't cause the
-	{{HTMLElement("img")}} element to adopt interactive content mode.</p>
+Unlike server-side image maps, client-side image maps don't cause the
+{{HTMLElement("img")}} element to adopt interactive content mode.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

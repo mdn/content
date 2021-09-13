@@ -11,35 +11,39 @@ tags:
   - request
 browser-compat: api.Request.headers
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>headers</code></strong> read-only property of the
-  {{domxref("Request")}} interface contains the {{domxref("Headers")}} object associated
-  with the request.</p>
+The **`headers`** read-only property of the
+{{domxref("Request")}} interface contains the {{domxref("Headers")}} object associated
+with the request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myHeaders</var> = <var>request</var>.headers;</pre>
+```js
+var myHeaders = request.headers;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("Headers")}} object.</p>
+A {{domxref("Headers")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the request headers in a variable:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the request headers in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myHeaders = myRequest.headers; // Headers {}</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myHeaders = myRequest.headers; // Headers {}
+```
 
-<p>To add a header to the {{domxref("Headers")}} object we use
-  {{domxref("Headers.append")}}; we then create a new <code>Request</code> along with a
-  2nd init parameter, passing headers in as an init option:</p>
+To add a header to the {{domxref("Headers")}} object we use
+{{domxref("Headers.append")}}; we then create a new `Request` along with a
+2nd init parameter, passing headers in as an init option:
 
-<pre class="brush: js">var myHeaders = new Headers();
+```js
+var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
 
 var myInit = {
@@ -51,21 +55,19 @@ var myInit = {
 
 var myRequest = new Request('flowers.jpg', myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'</pre>
+myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

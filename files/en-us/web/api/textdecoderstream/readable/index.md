@@ -9,28 +9,31 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.readable
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>readable</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("ReadableStream")}}.</p>
+The **`readable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>readable</var> = <var>TextDecoderStream</var>.readable;</pre>
+    var readable = TextDecoderStream.readable;
 
-<h3>Value</h3>
-<p>A {{domxref("ReadableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ReadableStream")}}.
 
-<p>This example shows how to return a {{domxref("ReadableStream")}} from a <code>TextDecoderStream</code>.</p>
+## Examples
 
-<pre class="brush:js">stream = new TextDecoderStream();
-console.log(stream.readable); //a ReadableStream</pre>
+This example shows how to return a {{domxref("ReadableStream")}} from a `TextDecoderStream`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextDecoderStream();
+console.log(stream.readable); //a ReadableStream
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

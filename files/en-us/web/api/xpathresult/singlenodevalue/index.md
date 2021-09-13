@@ -10,59 +10,62 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.singleNodeValue
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The read-only <strong><code>singleNodeValue</code></strong> property of the
-  {{domxref("XPathResult")}} interface returns a {{domxref("Node")}} value or
-  <code>null</code> in case no node was matched of a result with
-  {{domxref("XPathResult.resultType")}} being <code>ANY_UNORDERED_NODE_TYPE</code> or
-  <code>FIRST_ORDERED_NODE_TYPE</code>.</p>
+The read-only **`singleNodeValue`** property of the
+{{domxref("XPathResult")}} interface returns a {{domxref("Node")}} value or
+`null` in case no node was matched of a result with
+{{domxref("XPathResult.resultType")}} being `ANY_UNORDERED_NODE_TYPE` or
+`FIRST_ORDERED_NODE_TYPE`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>value</em> = <em>result</em>.singleNodeValue;
-</pre>
+```js
+var value = result.singleNodeValue;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The return value is the {{domxref("Node")}} value of the <code>XPathResult</code>
-  returned by {{domxref("Document.evaluate()")}}.</p>
+The return value is the {{domxref("Node")}} value of the `XPathResult`
+returned by {{domxref("Document.evaluate()")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case {{domxref("XPathResult.resultType")}} is not
-  <code>ANY_UNORDERED_NODE_TYPE</code> or <code>FIRST_ORDERED_NODE_TYPE</code>, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+In case {{domxref("XPathResult.resultType")}} is not
+`ANY_UNORDERED_NODE_TYPE` or `FIRST_ORDERED_NODE_TYPE`, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>singleNodeValue</code> property.</p>
+The following example shows the use of the `singleNodeValue` property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Tag name of the element having the text content 'XPath example': &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Tag name of the element having the text content 'XPath example': <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = &quot;//*[text()='XPath example']&quot;;
+```js
+var xpath = "//*[text()='XPath example']";
 var result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
-document.querySelector(&quot;output&quot;).textContent = result.singleNodeValue.localName;
-</pre>
+document.querySelector("output").textContent = result.singleNodeValue.localName;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

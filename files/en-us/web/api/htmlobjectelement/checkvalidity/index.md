@@ -2,42 +2,44 @@
 title: HTMLObjectElement.checkValidity
 slug: Web/API/HTMLObjectElement/checkValidity
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- Method
-- NeedsExample
-- Reference
-- checkValidity
-- checkValidity()
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - Method
+  - NeedsExample
+  - Reference
+  - checkValidity
+  - checkValidity()
 browser-compat: api.HTMLObjectElement.checkValidity
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>checkValidity()</code></strong> method of the
-  {{domxref("HTMLObjectElement")}} interface returns a boolean value that always
-  is true, because object objects are never candidates for constraint validation.</p>
+The **`checkValidity()`** method of the
+{{domxref("HTMLObjectElement")}} interface returns a boolean value that always
+is true, because object objects are never candidates for constraint validation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const valid = HTMLObjectElement.checkValidity();</pre>
+```js
+const valid = HTMLObjectElement.checkValidity();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code></p>
+`true`
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

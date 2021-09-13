@@ -12,68 +12,51 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.fetch
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>fetch()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects. </p>
+The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);</pre>
+    let backgroundFetchRegistration = BackgroundFetchManager.fetch(id, requests [,options]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-<dt><code>id</code></dt>
-<dd>A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.</dd>
-<dt><code>requests</code></dt>
-<dd>A {{domxref("RequestInfo")}} object or an array of such objects.</dd>
-<dt><code>options</code> {{optional_inline}}</dt>
-<dd>A {{domxref("BackgroundFetchOptions")}} object.</dd>
-</dl>
+- `id`
+  - : A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.
+- `requests`
+  - : A {{domxref("RequestInfo")}} object or an array of such objects.
+- `options` {{optional_inline}}
+  - : A {{domxref("BackgroundFetchOptions")}} object.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-<dt>TypeError</dt>
-<dd>Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested <code>id</code>, or the request fails.</dd>
-<dt>DOMException</dt>
-<dd>
-  <p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
-  <table class="standard-table">
-   <thead>
-    <tr>
-     <th scope="col">Exception</th>
-     <th scope="col">Description</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <td><code>AbortError</code></td>
-     <td>Indicates the fetch was aborted.</td>
-    </tr>
-    <tr>
-     <td><code>NotAllowedError</code></td>
-     <td>Indicates that user permission has not been granted to make background fetches.</td>
-    </tr>
-   </tbody>
-  </table>
-</dd>
-</dl>
+- TypeError
+  - : Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested `id`, or the request fails.
+- DOMException
 
-<h2 id="Examples">Examples</h2>
+  - : This method may raise a {{domxref("DOMException")}} of the following types:
 
-<p>The following examples shows how to use <code>fetch()</code> to create a
+    | Exception         | Description                                                                     |
+    | ----------------- | ------------------------------------------------------------------------------- |
+    | `AbortError`      | Indicates the fetch was aborted.                                                |
+    | `NotAllowedError` | Indicates that user permission has not been granted to make background fetches. |
+
+## Examples
+
+The following examples shows how to use `fetch()` to create a
 {{domxref("BackgroundFetchRegistration")}}. With an active
 {{domxref('ServiceWorker', 'service worker')}}, use the
 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the
-<code>BackgroundFetchManager</code> object and call its <code>fetch()</code>
-method.</p>
+`BackgroundFetchManager` object and call its `fetch()`
+method.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+```js
+navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
     title: 'Episode 5: Interesting things.',
     icons: [{
@@ -83,12 +66,13 @@ method.</p>
     }],
     downloadTotal: 60 * 1024 * 1024,
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

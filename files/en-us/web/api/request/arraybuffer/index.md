@@ -10,30 +10,30 @@ tags:
   - Request
 browser-compat: api.Request.arrayBuffer
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>arrayBuffer()</code></strong> method of the {{domxref("Request")}} interface
-reads the request body and returns it as a promise that resolves with an {{jsxref("ArrayBuffer")}}.</p>
+The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
+reads the request body and returns it as a promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 request.arrayBuffer().then(function(buffer) {
    // do something with the buffer
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves with an {{jsxref("ArrayBuffer")}}.</p>
+A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const myArray = new Uint8Array(10);
 
 const request = new Request('/myEndpoint', {
@@ -44,18 +44,16 @@ const request = new Request('/myEndpoint', {
 request.arrayBuffer().then(function(buffer) {
   // do something with the buffer sent in the request
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.arrayBuffer()")}}</li>
-</ul>
+- {{domxref("Response.arrayBuffer()")}}

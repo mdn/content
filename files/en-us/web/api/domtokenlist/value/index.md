@@ -2,54 +2,59 @@
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
 tags:
-- API
-- DOM
-- DOMTokenList
-- Property
-- Reference
-- value
+  - API
+  - DOM
+  - DOMTokenList
+  - Property
+  - Reference
+  - value
 browser-compat: api.DOMTokenList.value
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>value</strong></code> property of the {{domxref("DOMTokenList")}}
-  interface is a stringifier that returns the value of the list as a
-  {{domxref("DOMString")}}, or clears and sets the list to the given value.</p>
+The **`value`** property of the {{domxref("DOMTokenList")}}
+interface is a stringifier that returns the value of the list as a
+{{domxref("DOMString")}}, or clears and sets the list to the given value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>tokenList</var>.value;</pre>
+```js
+tokenList.value;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}</p>
+A {{domxref("DOMString")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}, then write the value of the list to the
-  <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}, then write the value of the list to the
+`<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 span.textContent = classes.value;
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

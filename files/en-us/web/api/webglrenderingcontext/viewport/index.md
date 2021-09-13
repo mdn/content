@@ -2,85 +2,84 @@
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.viewport
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.viewport()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets the viewport, which specifies
-  the affine transformation of x and y from normalized device coordinates to window
-  coordinates.</p>
+The **`WebGLRenderingContext.viewport()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the viewport, which specifies
+the affine transformation of x and y from normalized device coordinates to window
+coordinates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>void gl</em>.viewport</var><var>(x, y, width, height);</var>
-</pre>
+```js
+void gl.viewport(x, y, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal coordinate for the lower left
-    corner of the viewport origin. Default value: 0.</dd>
-  <dt><code>y</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
-    of the viewport origin. Default value: 0.</dd>
-  <dt>width</dt>
-  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the viewport. Default
-    value: width of the canvas.</dd>
-  <dt>height</dt>
-  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the viewport. Default
-    value: height of the canvas.</dd>
-</dl>
+- `x`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal coordinate for the lower left
+    corner of the viewport origin. Default value: 0.
+- `y`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
+    of the viewport origin. Default value: 0.
+- width
+  - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the viewport. Default
+    value: width of the canvas.
+- height
+  - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the viewport. Default
+    value: height of the canvas.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<p>If either <em>width</em> or <em>height</em> is a negative value, a
-  <code>gl.INVALID_VALUE</code> error is thrown.</p>
+If either _width_ or _height_ is a negative value, a
+`gl.INVALID_VALUE` error is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When you first create a WebGL context, the size of the viewport will match the size of
-  the canvas. However, if you resize the canvas, you will need to tell the WebGL context a
-  new viewport setting. In this situation, you can use <code>gl.viewport</code>.</p>
+When you first create a WebGL context, the size of the viewport will match the size of
+the canvas. However, if you resize the canvas, you will need to tell the WebGL context a
+new viewport setting. In this situation, you can use `gl.viewport`.
 
-<pre class="brush: js">gl.viewport(0, 0, canvas.width, canvas.height);
-</pre>
+```js
+gl.viewport(0, 0, canvas.width, canvas.height);
+```
 
-<p>The viewport width and height are clamped to a range that is implementation dependent.
-  To get this range, you can use the <code>MAX_VIEWPORT_DIMS</code> constant, which
-  returns an {{jsxref("Int32Array")}}.</p>
+The viewport width and height are clamped to a range that is implementation dependent.
+To get this range, you can use the `MAX_VIEWPORT_DIMS` constant, which
+returns an {{jsxref("Int32Array")}}.
 
-<pre class="brush: js">gl.getParameter(gl.MAX_VIEWPORT_DIMS);
+```js
+gl.getParameter(gl.MAX_VIEWPORT_DIMS);
 // e.g. Int32Array[16384, 16384]
-</pre>
+```
 
-<p>To get the current viewport, query the <code>VIEWPORT</code> constant.</p>
+To get the current viewport, query the `VIEWPORT` constant.
 
-<pre class="brush: js">gl.getParameter(gl.VIEWPORT);
+```js
+gl.getParameter(gl.VIEWPORT);
 // e.g. Int32Array[0, 0, 640, 480]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.scissor()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.scissor()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

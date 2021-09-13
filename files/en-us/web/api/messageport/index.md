@@ -10,88 +10,79 @@ tags:
   - Reference
 browser-compat: api.MessagePort
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>MessagePort</code></strong> interface of the <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.</p>
+The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("EventTarget")}}</em></p>
+_Inherits methods from its parent, {{domxref("EventTarget")}}_
 
-<dl>
- <dt>{{domxref("MessagePort.postMessage","postMessage()")}}</dt>
- <dd>Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.</dd>
- <dt>{{domxref("MessagePort.start","start()")}}</dt>
- <dd>Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.onmessage")}}.)</dd>
- <dt>{{domxref("MessagePort.close","close()")}}</dt>
- <dd>Disconnects the port, so it is no longer active.</dd>
-</dl>
+- {{domxref("MessagePort.postMessage","postMessage()")}}
+  - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
+- {{domxref("MessagePort.start","start()")}}
+  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.onmessage")}}.)
+- {{domxref("MessagePort.close","close()")}}
+  - : Disconnects the port, so it is no longer active.
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<p><em>Inherits event handlers from its parent, {{domxref("EventTarget")}}</em></p>
+_Inherits event handlers from its parent, {{domxref("EventTarget")}}_
 
-<dl>
- <dt>{{domxref("MessagePort.onmessage","onmessage")}}</dt>
- <dd>An {{domxref("EventListener")}} called when {{domxref("MessageEvent")}} of type <code>message</code> is fired on the port—that is, when the port receives a message.</dd>
- <dt>{{domxref("MessagePort.onmessageerror","onmessageerror")}}</dt>
- <dd>An {{domxref("EventListener")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.</dd>
-</dl>
+- {{domxref("MessagePort.onmessage","onmessage")}}
+  - : An {{domxref("EventListener")}} called when {{domxref("MessageEvent")}} of type `message` is fired on the port—that is, when the port receives a message.
+- {{domxref("MessagePort.onmessageerror","onmessageerror")}}
+  - : An {{domxref("EventListener")}} called when a {{domxref("MessageEvent")}} of type {{domxref("MessageError")}} is fired—that is, when it receives a message that cannot be deserialized.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{domxref("MessagePort.message_event","message")}}</dt>
- <dd>Fired when a <code>MessagePort</code> object receives a message.<br>
- Also available via the {{domxref("MessagePort.onmessage","onmessage")}} property.</dd>
- <dt>{{domxref("MessagePort.messageerror_event","messageerror")}}</dt>
- <dd>Fired when a <code>MessagePort</code> object receives a message that can't be deserialized.<br>
- Also available via the {{domxref("MessagePort.onmessageerror","onmessageerror")}} property.</dd>
-</dl>
+- {{domxref("MessagePort.message_event","message")}}
+  - : Fired when a `MessagePort` object receives a message.
+    Also available via the {{domxref("MessagePort.onmessage","onmessage")}} property.
+- {{domxref("MessagePort.messageerror_event","messageerror")}}
+  - : Fired when a `MessagePort` object receives a message that can't be deserialized.
+    Also available via the {{domxref("MessagePort.onmessageerror","onmessageerror")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.</p>
+In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.
 
-<p>When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.</p>
+When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 
-<p>When a message is received back from the IFrame, the <code>onMessage</code> function outputs the message to a paragraph.</p>
+When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 
-<pre>var channel = new MessageChannel();
-var output = document.querySelector('.output');
-var iframe = document.querySelector('iframe');
+    var channel = new MessageChannel();
+    var output = document.querySelector('.output');
+    var iframe = document.querySelector('iframe');
 
-// Wait for the iframe to load
-iframe.addEventListener("load", onLoad);
+    // Wait for the iframe to load
+    iframe.addEventListener("load", onLoad);
 
-function onLoad() {
-  // Listen for messages on port1
-  channel.port1.onmessage = onMessage;
+    function onLoad() {
+      // Listen for messages on port1
+      channel.port1.onmessage = onMessage;
 
-  // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
-}
+      // Transfer port2 to the iframe
+      iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+    }
 
-// Handle messages received on port1
-function onMessage(e) {
-  output.innerHTML = e.data;
-}
-</pre>
+    // Handle messages received on port1
+    function onMessage(e) {
+      output.innerHTML = e.data;
+    }
 
-<p>For a full working example, see our <a class="external external-icon" href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a> on Github (<a class="external external-icon" href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>).</p>
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

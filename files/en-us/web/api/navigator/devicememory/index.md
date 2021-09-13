@@ -2,52 +2,53 @@
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
 tags:
-- API
-- Device Memory API
-- Navigator
-- Property
-- Reference
-- deviceMemory
-- memory
+  - API
+  - Device Memory API
+  - Navigator
+  - Property
+  - Reference
+  - deviceMemory
+  - memory
 browser-compat: api.Navigator.deviceMemory
 ---
-<div>{{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>deviceMemory</code></strong> read-only
-    property of the {{domxref("Navigator")}} interface returns the approximate amount of
-    device memory in gigabytes.</p>
+The **`deviceMemory`** read-only
+property of the {{domxref("Navigator")}} interface returns the approximate amount of
+device memory in gigabytes.
 
-<p>The reported value is imprecise to curtail fingerprinting. It’s approximated by
-  rounding down to the nearest power of 2, then dividing that number by 1024. It is then
-  clamped within lower and upper bounds to protect the privacy of owners of very low- or
-  high-memory devices.</p>
+The reported value is imprecise to curtail fingerprinting. It’s approximated by
+rounding down to the nearest power of 2, then dividing that number by 1024. It is then
+clamped within lower and upper bounds to protect the privacy of owners of very low- or
+high-memory devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>memoryAmount</em> = navigator.deviceMemory</pre>
+```js
+memoryAmount = navigator.deviceMemory
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating point number; one of <code>0.25</code>, <code>0.5</code>, <code>1</code>,
-  <code>2</code>, <code>4</code>, <code>8</code>.</p>
+A floating point number; one of `0.25`, `0.5`, `1`,
+`2`, `4`, `8`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const memory = navigator.deviceMemory
+```js
+const memory = navigator.deviceMemory
 console.log (`This device has at least ${memory}GiB of RAM.`)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
-  <li>{{HTTPHeader("Device-Memory")}} HTTP header</li>
-</ul>
+- [Device Memory API](/en-US/docs/Web/API/Device_Memory_API)
+- {{HTTPHeader("Device-Memory")}} HTTP header

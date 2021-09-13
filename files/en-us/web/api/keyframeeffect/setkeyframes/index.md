@@ -13,51 +13,57 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.setKeyframes
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code><strong>setKeyframes()</strong></code> method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected <code>KeyframeEffect</code> with a new set of keyframes.</p>
+The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface replaces the keyframes that make up the affected `KeyframeEffect` with a new set of keyframes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">existingKeyframeEffect.setKeyframes(<em>keyframes</em>);</pre>
+```js
+existingKeyframeEffect.setKeyframes(keyframes);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>keyframes</dt>
- <dd>A keyframe object or <code>null</code>. If set to <code>null</code>, the keyframes are replaced with a sequence of empty keyframes.<br>
- <br>
- More information about a keyframe object's <a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#syntax">format</a>.</dd>
-</dl>
+- keyframes
 
-<h3 id="Return_value">Return value</h3>
+  - : A keyframe object or `null`. If set to `null`, the keyframes are replaced with a sequence of empty keyframes.
 
-<p>Void.</p>
+    More information about a keyframe object's [format](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#syntax).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
+
+Void.
+
+### Exceptions
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td>One or more of the frames were not of the correct type of object, the keyframes were not <a href="https://w3c.github.io/web-animations/#loosely-sorted-by-offset">loosely sorted by offset</a>, or a keyframe existed with an offset of less than 0 or more than 1.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Exception</th>
+      <th scope="col">Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>TypeError</code></td>
+      <td>
+        One or more of the frames were not of the correct type of object, the
+        keyframes were not
+        <a href="https://w3c.github.io/web-animations/#loosely-sorted-by-offset"
+          >loosely sorted by offset</a
+        >, or a keyframe existed with an offset of less than 0 or more than 1.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> If the keyframes cannot be processed or are malformed, the <code>KeyframeEffect</code>'s keyframes are not modified.</p>
-</div>
+> **Note:** If the keyframes cannot be processed or are malformed, the `KeyframeEffect`'s keyframes are not modified.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// passing an array of keyframe objects
+```js
+// passing an array of keyframe objects
 existingKeyframeEffect.setKeyframes(
 [
   { color: 'blue' },
@@ -78,19 +84,18 @@ existingKeyframeEffect.setKeyframes(
   {
     color: 'blue'
   }
-);</pre>
+);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/KeyframeEffect">KeyframeEffect Interface</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-</ul>
+- [KeyframeEffect Interface](/en-US/docs/Web/API/KeyframeEffect)
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

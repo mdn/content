@@ -2,38 +2,37 @@
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.binaryType
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.binaryType</code></strong> property controls the type of
-  binary data being received over the WebSocket connection.</p>
+The **`WebSocket.binaryType`** property controls the type of
+binary data being received over the WebSocket connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>var binaryType</em> = aWebSocket.binaryType;</pre>
+```js
+var binaryType = aWebSocket.binaryType;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{DOMXref("DOMString")}}:</p>
+A {{DOMXref("DOMString")}}:
 
-<dl>
-  <dt><code>"blob"</code></dt>
-  <dd>Use {{domxref("Blob")}} objects for binary data. This is the default value.</dd>
-  <dt><code>"arraybuffer"</code></dt>
-  <dd>Use {{jsxref("ArrayBuffer")}} objects for binary data.
-  </dd>
-</dl>
+- `"blob"`
+  - : Use {{domxref("Blob")}} objects for binary data. This is the default value.
+- `"arraybuffer"`
+  - : Use {{jsxref("ArrayBuffer")}} objects for binary data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Create WebSocket connection.
+```js
+// Create WebSocket connection.
 const socket = new WebSocket("ws://localhost:8080");
 // Change binary type from "blob" to "arraybuffer"
 socket.binaryType = "arraybuffer";
@@ -48,12 +47,13 @@ socket.addEventListener("message", function (event) {
         // text frame
         console.log(event.data);
     }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,55 +2,54 @@
 title: SVGImageElement.decode
 slug: Web/API/SVGImageElement/decode
 tags:
-- API
-- Decode
-- Experimental
-- Image
-- Method
-- NeedsExample
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- asynchronous
+  - API
+  - Decode
+  - Experimental
+  - Image
+  - Method
+  - NeedsExample
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - asynchronous
 browser-compat: api.SVGImageElement.decode
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>decode()</code></strong> method of the
-    {{domxref("SVGImageElement")}} interface initiates asynchronous decoding of an image,
-    returning a {{jsxref('Promise')}} that resolves once the image data is ready
-  for use.</p>
+The **`decode()`** method of the
+{{domxref("SVGImageElement")}} interface initiates asynchronous decoding of an image,
+returning a {{jsxref('Promise')}} that resolves once the image data is ready
+for use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = <em>svgImageElement</em>.decode();</pre>
+```js
+var promise = svgImageElement.decode();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} which resolves once the image data is ready to be used, such as
-  by appending it to the DOM, replacing an existing image, and so forth.</p>
+A {{jsxref('Promise')}} which resolves once the image data is ready to be used, such as
+by appending it to the DOM, replacing an existing image, and so forth.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLImageElement.decode()")}}: The same thing, but for HTML
-    {{HTMLElement("image")}} elements</li>
-</ul>
+- {{domxref("HTMLImageElement.decode()")}}: The same thing, but for HTML
+  {{HTMLElement("image")}} elements

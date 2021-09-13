@@ -9,31 +9,33 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
-<p>A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.</p>
+A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.
 
-<h2 id="Color_animation_with_clear">Color animation with clear</h2>
+## Color animation with clear
 
-<p>{{EmbedLiveSample("Color_animation_with_clear",660,425)}}</p>
+{{EmbedLiveSample("Color_animation_with_clear",660,425)}}
 
-<p>This example provides a simple illustration of color animation with {{Glossary("WebGL")}}, as well as user interaction. The user can start, stop and restart the animation by clicking the button.</p>
+This example provides a simple illustration of color animation with {{Glossary("WebGL")}}, as well as user interaction. The user can start, stop and restart the animation by clicking the button.
 
-<p>This time we put the {{Glossary("WebGL")}} function calls within a timer event handler. A click event handler additionally enables the basic user interaction of starting and stopping the animation. The timer and the timer handler function establish the animation loop, a set of drawing commands that are executed at a regular period (typically, every frame; in this case, once per second).</p>
+This time we put the {{Glossary("WebGL")}} function calls within a timer event handler. A click event handler additionally enables the basic user interaction of starting and stopping the animation. The timer and the timer handler function establish the animation loop, a set of drawing commands that are executed at a regular period (typically, every frame; in this case, once per second).
 
-<pre class="brush: html">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
-&lt;p&gt;You can click the button below to toggle the
-    color animation on or off.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;button id="animation-onoff"&gt;
+```html
+<p>A simple WebGL program that shows color animation.</p>
+<p>You can click the button below to toggle the
+    color animation on or off.</p>
+<canvas id="canvas-view">Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<button id="animation-onoff">
   Press here to
-&lt;strong&gt;[verb goes here]&lt;/strong&gt;
+<strong>[verb goes here]</strong>
   the animation
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -51,9 +53,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupAnimation (evt) {
+```js
+window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -114,8 +117,8 @@ button {
     return [Math.random(), Math.random(), Math.random()];
   }
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}

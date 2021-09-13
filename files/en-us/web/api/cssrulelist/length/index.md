@@ -9,29 +9,33 @@ tags:
   - CSSRuleList
 browser-compat: api.CSSRuleList.length
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>length</code></strong> property of the {{domxref("CSSRuleList")}} interface returns the number of {{domxref("CSSRule")}} objects in the list.</p>
+The **`length`** property of the {{domxref("CSSRuleList")}} interface returns the number of {{domxref("CSSRule")}} objects in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let length = CSSRuleList.length;</pre>
+```js
+let length = CSSRuleList.length;
+```
 
-<h3>Value</h3>
-<p>An integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer.
 
-<p>In the following example the number of items in the {{domxref("CSSRuleList")}} named <code>myRules</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.length);</pre>
+In the following example the number of items in the {{domxref("CSSRuleList")}} named `myRules` is printed to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules.length);
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
+{{Compat}}

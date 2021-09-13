@@ -2,34 +2,36 @@
 title: 'Location: pathname'
 slug: Web/API/Location/pathname
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.pathname
 ---
-<p>{{ApiRef("Location")}}</p>
+{{ApiRef("Location")}}
 
-<p>The <strong><code>pathname</code></strong> property of the {{domxref("Location")}}
-interface is a {{domxref("USVString")}} containing the path of the URL for the location, which will be the empty string if there is no path.</p>
-  
-<h2 id="Syntax">Syntax</h2>
+The **`pathname`** property of the {{domxref("Location")}}
+interface is a {{domxref("USVString")}} containing the path of the URL for the location, which will be the empty string if there is no path.
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.pathname;
-<em>object</em>.pathname = <em>string</em>;
-</pre>
+## Syntax
 
-<h2 id="Examples">Examples</h2>
+```js
+string = object.pathname;
+object.pathname = string;
+```
 
-<pre class="brush: js">// Let's an &lt;a id="myAnchor" href="/en-US/docs/Location.pathname"&gt; element be in the document
+## Examples
+
+```js
+// Let's an <a id="myAnchor" href="/en-US/docs/Location.pathname"> element be in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

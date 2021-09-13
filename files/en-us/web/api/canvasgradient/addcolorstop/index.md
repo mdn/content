@@ -2,55 +2,56 @@
 title: CanvasGradient.addColorStop()
 slug: Web/API/CanvasGradient/addColorStop
 tags:
-- API
-- Canvas
-- CanvasGradient
-- Gradients
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasGradient
+  - Gradients
+  - Method
+  - Reference
 browser-compat: api.CanvasGradient.addColorStop
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The
-  <strong><code>CanvasGradient.addColorStop()</code></strong>
-  method adds a new color stop, defined by an <code>offset</code> and a
-  <code>color</code>, to a given canvas gradient.</p>
+The
+**`CanvasGradient.addColorStop()`**
+method adds a new color stop, defined by an `offset` and a
+`color`, to a given canvas gradient.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>gradient</em>.addColorStop(<em>offset</em>, <em>color</em>);
-</pre>
+```js
+void gradient.addColorStop(offset, color);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>offset</code></dt>
-  <dd>A number between <code>0</code> and <code>1</code>, inclusive, representing the
-    position of the color stop. <code>0</code> represents the start of the gradient and
-    <code>1</code> represents the end; an <code>INDEX_SIZE_ERR</code> is raised if the
-    number is outside that range.</dd>
-  <dt><code>color</code></dt>
-  <dd>A <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("&lt;color&gt;")}} value
-    representing the color of the stop. A <code>SYNTAX_ERR</code> is raised if the value
-    cannot be parsed as a CSS <code>&lt;color&gt;</code> value.</dd>
-</dl>
+- `offset`
+  - : A number between `0` and `1`, inclusive, representing the
+    position of the color stop. `0` represents the start of the gradient and
+    `1` represents the end; an `INDEX_SIZE_ERR` is raised if the
+    number is outside that range.
+- `color`
+  - : A [CSS](/en-US/docs/Web/CSS) {{cssxref("&lt;color&gt;")}} value
+    representing the color of the stop. A `SYNTAX_ERR` is raised if the value
+    cannot be parsed as a CSS `<color>` value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_stops_to_a_gradient">Adding stops to a gradient</h3>
+### Adding stops to a gradient
 
-<p>This example uses the <code>addColorStop</code> method to add stops to a linear
-  {{domxref("CanvasGradient")}} object. The gradient is then used to fill a rectangle.</p>
+This example uses the `addColorStop` method to add stops to a linear
+{{domxref("CanvasGradient")}} object. The gradient is then used to fill a rectangle.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let gradient = ctx.createLinearGradient(0, 0, 200, 0);
@@ -59,24 +60,22 @@ gradient.addColorStop(.7, 'white');
 gradient.addColorStop(1, 'pink');
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Adding_stops_to_a_gradient', 700, 180) }}</p>
+{{ EmbedLiveSample('Adding_stops_to_a_gradient', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasGradient")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasGradient")}}
+- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

@@ -2,57 +2,58 @@
 title: CSSUnparsedValue.length
 slug: Web/API/CSSUnparsedValue/length
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- NeedsExample
-- Property
-- Reference
-- length
+  - API
+  - CSS Typed Object Model API
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - NeedsExample
+  - Property
+  - Reference
+  - length
 browser-compat: api.CSSUnparsedValue.length
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>length</code></strong> read-only property of the
-  {{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.</p>
+The **`length`** read-only property of the
+{{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>length</var> = CSSUnparsedValue.length;</pre>
+```js
+var length = CSSUnparsedValue.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer.</p>
+An integer.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we employ the {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}}
-  constructor, then query the length:</p>
+In this example we employ the {{domxref('CSSUnparsedValue.CSSUnparsedValue()')}}
+constructor, then query the length:
 
-<pre class="brush: js">let values = new CSSUnparsedValue( ['1em', '#445566', '-45px'] );
+```js
+let values = new CSSUnparsedValue( ['1em', '#445566', '-45px'] );
 
-console.log( values.length ) // 3</pre>
+console.log( values.length ) // 3
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}</li>
-  <li>{{domxref("CSSUnparsedValue.entries")}}</li>
-  <li>{{domxref("CSSUnparsedValue.forEach")}}</li>
-  <li>{{domxref("CSSUnparsedValue.keys")}}</li>
-  <li>{{domxref("CSSUnparsedValue.values")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.entries")}}
+- {{domxref("CSSUnparsedValue.forEach")}}
+- {{domxref("CSSUnparsedValue.keys")}}
+- {{domxref("CSSUnparsedValue.values")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

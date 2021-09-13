@@ -9,41 +9,37 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLineElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGLineElement</code></strong> interface provides access to the properties of {{ SVGElement("line") }} elements, as well as methods to manipulate them.</p>
+The **`SVGLineElement`** interface provides access to the properties of {{ SVGElement("line") }} elements, as well as methods to manipulate them.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-<dl>
- <dt>{{domxref("SVGLineElement.x1")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("x1")}} on the given {{SVGElement("line")}} element.</dd>
- <dt>{{domxref("SVGLineElement.y1")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("y1")}} on the given {{SVGElement("line")}} element.</dd>
- <dt>{{domxref("SVGLineElement.x2")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("x2")}} on the given {{SVGElement("line")}} element.</dd>
- <dt>{{domxref("SVGLineElement.y2")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("y2")}} on the given {{SVGElement("line")}} element.</dd>
-</dl>
+- {{domxref("SVGLineElement.x1")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("x1")}} on the given {{SVGElement("line")}} element.
+- {{domxref("SVGLineElement.y1")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("y1")}} on the given {{SVGElement("line")}} element.
+- {{domxref("SVGLineElement.x2")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("x2")}} on the given {{SVGElement("line")}} element.
+- {{domxref("SVGLineElement.y2")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} that corresponds to attribute {{SVGAttr("y2")}} on the given {{SVGElement("line")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("line")}} SVG Element</li>
-</ul>
+- {{SVGElement("line")}} SVG Element

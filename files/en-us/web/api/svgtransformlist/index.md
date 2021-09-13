@@ -8,217 +8,363 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTransformList
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<h2 id="SVG_transform_list_interface">SVG transform list interface</h2>
+## SVG transform list interface
 
-<p>The <code>SVGTransformList</code> defines a list of {{ domxref("SVGTransform") }} objects.</p>
+The `SVGTransformList` defines a list of {{ domxref("SVGTransform") }} objects.
 
-<p>An <code>SVGTransformList</code> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</p>
+An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-<div class="note">
-<p><strong>Note:</strong> Starting in {{Gecko("9.0") }},the <code>SVGTransformList</code> DOM interface is now indexable and can be accessed like Arrays</p>
-</div>
+> **Note:** Starting in {{Gecko("9.0") }},the `SVGTransformList` DOM interface is now indexable and can be accessed like Arrays
 
-<h3 id="Interface_overview">Interface overview</h3>
+### Interface overview
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Also implement</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Methods</th>
-   <td>
-    <ul>
-     <li><code>void clear()</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>initialize(in {{ domxref("SVGTransform") }} <em>newItem</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>getItem(in unsigned long <em>index</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>insertItemBefore(in {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned long <em>index</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>replaceItem(in {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned long <em>index</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>removeItem(in unsigned long <em>index</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>appendItem(in {{ domxref("SVGTransform") }} <em>newItem</em>)</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>createSVGTransformFromMatrix(in {{ domxref("SVGMatrix") }})</code></li>
-     <li>{{ domxref("SVGTransform") }} <code>consolidate()</code></li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Properties</th>
-   <td>
-    <ul>
-     <li>readonly unsigned long <code>numberOfItems</code></li>
-     <li>readonly unsigned long <code>length</code> {{ non-standard_inline() }}</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGTransformList">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Also implement</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Methods</th>
+      <td>
+        <ul>
+          <li><code>void clear()</code></li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code
+              >initialize(in {{ domxref("SVGTransform") }}
+              <em>newItem</em>)</code
+            >
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code>getItem(in unsigned long <em>index</em>)</code>
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code
+              >insertItemBefore(in {{ domxref("SVGTransform") }}
+              <em>newItem</em>, in unsigned long <em>index</em>)</code
+            >
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code
+              >replaceItem(in {{ domxref("SVGTransform") }}
+              <em>newItem</em>, in unsigned long <em>index</em>)</code
+            >
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code>removeItem(in unsigned long <em>index</em>)</code>
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code
+              >appendItem(in {{ domxref("SVGTransform") }}
+              <em>newItem</em>)</code
+            >
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }}
+            <code
+              >createSVGTransformFromMatrix(in
+              {{ domxref("SVGMatrix") }})</code
+            >
+          </li>
+          <li>
+            {{ domxref("SVGTransform") }} <code>consolidate()</code>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Properties</th>
+      <td>
+        <ul>
+          <li>readonly unsigned long <code>numberOfItems</code></li>
+          <li>
+            readonly unsigned long
+            <code>length</code> {{ non-standard_inline() }}
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Normative document</th>
+      <td>
+        <a
+          href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGTransformList"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## Properties
+
+| Name                                          | Type          | Description                      |
+| --------------------------------------------- | ------------- | -------------------------------- |
+| `numberOfItems`                               | unsigned long | The number of items in the list. |
+| `length `{{ non-standard_inline() }} | unsigned long | The number of items in the list. |
+
+## Methods
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Type</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>numberOfItems</code></td>
-   <td>unsigned long</td>
-   <td>The number of items in the list.</td>
-  </tr>
-  <tr>
-   <td><code>length </code> {{ non-standard_inline() }}</td>
-   <td>unsigned long</td>
-   <td>The number of items in the list.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>Name &#x26; Arguments</th>
+      <th>Return</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code><strong>clear</strong>()</code>
+      </td>
+      <td><code>void</code></td>
+      <td>
+        <p>
+          Clears all existing current items from the list, with the result being
+          an empty list.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>initialize</strong>(in
+          {{ domxref("SVGTransform") }} <em>newItem</em>)</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Clears all existing current items from the list and re-initializes the
+          list to hold the single item specified by the parameter. If the
+          inserted item is already in a list, it is removed from its previous
+          list before it is inserted into this list. The inserted item is the
+          item itself and not a copy. The return value is the item inserted into
+          the list.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><strong>getItem</strong>(in unsigned long <em>index</em>)</code>
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Returns the specified item from the list. The returned item is the
+          item itself and not a copy. Any changes made to the item are
+          immediately reflected in the list. The first item is number 0.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>insertItemBefore</strong>(in
+          {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
+          long <em>index</em>)</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Inserts a new item into the list at the specified position. The first
+          item is number 0. If <code>newItem</code> is already in a list, it is
+          removed from its previous list before it is inserted into this list.
+          The inserted item is the item itself and not a copy. If the item is
+          already in this list, note that the index of the item to insert before
+          is before the removal of the item. If the <code>index</code> is equal
+          to 0, then the new item is inserted at the front of the list. If the
+          index is greater than or equal to <code>numberOfItems</code>, then the
+          new item is appended to the end of the list.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>replaceItem</strong>(in
+          {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
+          long <em>index</em>)</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Replaces an existing item in the list with a new item. If
+          <code>newItem</code> is already in a list, it is removed from its
+          previous list before it is inserted into this list. The inserted item
+          is the item itself and not a copy. If the item is already in this
+          list, note that the index of the item to replace is before the removal
+          of the item.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
+            than or equal to <code>numberOfItems</code>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>Removes an existing item from the list.</p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>INDEX_SIZE_ERR</code> is raised if the index number is greater
+            than or equal to <code>numberOfItems</code>.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>appendItem</strong>(in
+          {{ domxref("SVGTransform") }} <em>newItem</em>)</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Inserts a new item at the end of the list. If <code>newItem</code> is
+          already in a list, it is removed from its previous list before it is
+          inserted into this list. The inserted item is the item itself and not
+          a copy.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><strong>createSVGTransformFromMatrix</strong>(in
+          {{ domxref("SVGMatrix") }})</code
+        >
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        Creates an <code>SVGTransform</code> object which is initialized to
+        transform of type <code>SVG_TRANSFORM_MATRIX</code> and whose values are
+        the given matrix. The values from the parameter matrix are copied, the
+        matrix parameter is not adopted as <code>SVGTransform::matrix</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><strong>consolidate</strong>()</code>
+      </td>
+      <td>{{ domxref("SVGTransform") }}</td>
+      <td>
+        <p>
+          Consolidates the list of separate <code>SVGTransform</code> objects by
+          multiplying the equivalent transformation matrices together to result
+          in a list consisting of a single <code>SVGTransform</code> object of
+          type <code>SVG_TRANSFORM_MATRIX</code>. The consolidation operation
+          creates new <code>SVGTransform</code> object as the first and only
+          item in the list. The returned item is the item itself and not a copy.
+          Any changes made to the item are immediately reflected in the list.
+        </p>
+        <p><strong>Exceptions:</strong></p>
+        <ul>
+          <li>
+            a {{ domxref("DOMException") }} with code
+            <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list
+            corresponds to a read only attribute or when the object itself is
+            read only.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Methods">Methods</h2>
+## Examples
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Name &amp; Arguments</th>
-   <th>Return</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><strong>clear</strong>()</code></td>
-   <td><code>void</code></td>
-   <td>
-    <p>Clears all existing current items from the list, with the result being an empty list.</p>
+### Using multiple SVGTransform objects
 
-    <p><strong>Exceptions:</strong></p>
+In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation -- such as `translate`, `rotate`, and `scale`. We apply multiple transformation by appending the transform object to the `SVGTransformList` associated with an SVG element.
 
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>initialize</strong>(in {{ domxref("SVGTransform") }} <em>newItem</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Clears all existing current items from the list and re-initializes the list to hold the single item specified by the parameter. If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. The return value is the item inserted into the list.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>getItem</strong>(in unsigned long <em>index</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Returns the specified item from the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list. The first item is number 0.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>insertItemBefore</strong>(in {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned long <em>index</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Inserts a new item into the list at the specified position. The first item is number 0. If <code>newItem</code> is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to insert before is before the removal of the item. If the <code>index</code> is equal to 0, then the new item is inserted at the front of the list. If the index is greater than or equal to <code>numberOfItems</code>, then the new item is appended to the end of the list.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>replaceItem</strong>(in {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned long <em>index</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Replaces an existing item in the list with a new item. If <code>newItem</code> is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to replace is before the removal of the item.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-     <li>a {{ domxref("DOMException") }} with code <code>INDEX_SIZE_ERR</code> is raised if the index number is greater than or equal to <code>numberOfItems</code>.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>removeItem</strong>(in unsigned long <em>index</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Removes an existing item from the list.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-     <li>a {{ domxref("DOMException") }} with code <code>INDEX_SIZE_ERR</code> is raised if the index number is greater than or equal to <code>numberOfItems</code>.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>appendItem</strong>(in {{ domxref("SVGTransform") }} <em>newItem</em>)</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Inserts a new item at the end of the list. If <code>newItem</code> is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code><strong>createSVGTransformFromMatrix</strong>(in {{ domxref("SVGMatrix") }})</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>Creates an <code>SVGTransform</code> object which is initialized to transform of type <code>SVG_TRANSFORM_MATRIX</code> and whose values are the given matrix. The values from the parameter matrix are copied, the matrix parameter is not adopted as <code>SVGTransform::matrix</code>.</td>
-  </tr>
-  <tr>
-   <td><code><strong>consolidate</strong>()</code></td>
-   <td>{{ domxref("SVGTransform") }}</td>
-   <td>
-    <p>Consolidates the list of separate <code>SVGTransform</code> objects by multiplying the equivalent transformation matrices together to result in a list consisting of a single <code>SVGTransform</code> object of type <code>SVG_TRANSFORM_MATRIX</code>. The consolidation operation creates new <code>SVGTransform</code> object as the first and only item in the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.</p>
-
-    <p><strong>Exceptions:</strong></p>
-
-    <ul>
-     <li>a {{ domxref("DOMException") }} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the list corresponds to a read only attribute or when the object itself is read only.</li>
-    </ul>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_multiple_SVGTransform_objects">Using multiple SVGTransform objects</h3>
-
-<p>In this example we create a function that will apply three different transformations to the SVG element that has been clicked on. In order to do this we create a separate {{domxref("SVGTransform")}} object for each transformation -- such as <code>translate</code>, <code>rotate</code>, and <code>scale</code>. We apply multiple transformation by appending the transform object to the <code>SVGTransformList</code> associated with an SVG element.</p>
-
-<pre class="brush: html">&lt;svg id="my-svg" viewBox="0 0 300 280"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;desc&gt;Example showing how to transform svg elements that using SVGTransform objects&lt;/desc&gt;
-  &lt;script type="application/ecmascript"&gt; &lt;![CDATA[
+```html
+<svg id="my-svg" viewBox="0 0 300 280"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <desc>Example showing how to transform svg elements that using SVGTransform objects</desc>
+  <script type="application/ecmascript"> <![CDATA[
     function transformMe(evt) {
       // svg root element to access the createSVGTransform() function
       var svgroot = evt.target.parentNode;
@@ -241,28 +387,29 @@ browser-compat: api.SVGTransformList
       tfmList.appendItem(rotate);
       tfmList.appendItem(scale);
     }
-  ]]&gt; &lt;/script&gt;
+  ]]> </script>
 
-  &lt;polygon fill="orange" stroke="black" stroke-width="5"
+  <polygon fill="orange" stroke="black" stroke-width="5"
            points="100,225 100,115 130,115 70,15 70,15 10,115 40,115 40,225"
-           onclick="transformMe(evt)"/&gt;
-  &lt;rect x="200" y="100" width="100" height="100"
+           onclick="transformMe(evt)"/>
+  <rect x="200" y="100" width="100" height="100"
         fill="yellow" stroke="black" stroke-width="5"
-        onclick="transformMe(evt)"/&gt;
-  &lt;text x="40" y="250"
-        font-family="Verdana" font-size="16" fill="green" &gt;
+        onclick="transformMe(evt)"/>
+  <text x="40" y="250"
+        font-family="Verdana" font-size="16" fill="green" >
     Click on a shape to transform it
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+  </text>
+</svg>
+```
 
-<p>Live preview:</p>
+Live preview:
 
-<p>{{EmbedLiveSample("Using_multiple_SVGTransform_objects",300,280)}}</p>
+{{EmbedLiveSample("Using_multiple_SVGTransform_objects",300,280)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

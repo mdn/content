@@ -2,53 +2,50 @@
 title: PushManager.registrations()
 slug: Web/API/PushManager/registrations
 tags:
-- API
-- Deprecated
-- Method
-- Reference
-- Simple Push API
+  - API
+  - Deprecated
+  - Method
+  - Reference
+  - Simple Push API
 browser-compat: api.PushManager.registrations
 ---
-<div>{{deprecated_header}}{{ApiRef("Push API")}}</div>
+{{deprecated_header}}{{ApiRef("Push API")}}
 
-<p>The <strong><code>registrations</code></strong> method is used to ask the system about
-  existing push endpoint registrations.</p>
+The **`registrations`** method is used to ask the system about
+existing push endpoint registrations.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method has been superseded by the {{domxref("PushManager.getSubscription()")}} method.</p>
-</div>
+> **Note:** This method has been superseded by the {{domxref("PushManager.getSubscription()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = navigator.push.registrations();</pre>
+```js
+var request = navigator.push.registrations();
+```
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
-</p>
+A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
-<p>If the method call is successful, the request's <code>result</code> will be an array of
-  {{Anch("PushRegistration")}} objects.</p>
+If the method call is successful, the request's `result` will be an array of
+{{Anch("PushRegistration")}} objects.
 
-<h3 id="PushRegistration">PushRegistration</h3>
+### PushRegistration
 
-<p>Those objects are anonymous JavaScript objects with the following properties:</p>
+Those objects are anonymous JavaScript objects with the following properties:
 
-<dl>
-  <dt><code>pushEndpoint</code></dt>
-  <dd>A string representing the URL of the endpoint.</dd>
-  <dt><code>version</code></dt>
-  <dd>The current version that the push endpoint is at.</dd>
-</dl>
+- `pushEndpoint`
+  - : A string representing the URL of the endpoint.
+- `version`
+  - : The current version that the push endpoint is at.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var req = navigator.push.registrations();
+```js
+var req = navigator.push.registrations();
 
 req.onsuccess = function(e) {
-  if (req.result.length &gt; 0) {
-    for (var i = 0, l = req.result.length; i &lt; l; i++) {
+  if (req.result.length > 0) {
+    for (var i = 0, l = req.result.length; i < l; i++) {
       console.log("Existing registration", req.result[i].pushEndpoint, req.result[i].version);
     }
     // Reuse existing endpoints.
@@ -60,19 +57,17 @@ req.onsuccess = function(e) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification anymore. It is no longer on track to become a standard.</p>
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PushManager")}}</li>
-  <li>{{domxref("DOMRequest")}}</li>
-</ul>
+- {{domxref("PushManager")}}
+- {{domxref("DOMRequest")}}

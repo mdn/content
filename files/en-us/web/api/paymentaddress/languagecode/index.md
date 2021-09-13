@@ -2,45 +2,45 @@
 title: PaymentAddress.languageCode
 slug: Web/API/PaymentAddress/languageCode
 tags:
-- API
-- Address
-- Deprecated
-- Language
-- LanguageCode
-- Locale
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- rtc
+  - API
+  - Address
+  - Deprecated
+  - Language
+  - LanguageCode
+  - Locale
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - rtc
 browser-compat: api.PaymentAddress.languageCode
 ---
-<p>{{deprecated_header}}{{APIRef("Payment Request API")}}{{Non-standard_header}}</p>
+{{deprecated_header}}{{APIRef("Payment Request API")}}{{Non-standard_header}}
 
-<p>The <strong><code>languageCode</code></strong> read-only
-    property of the {{domxref('PaymentAddress')}} interface returns a string containing
-    the <a href="https://datatracker.ietf.org/doc/html/bcp47">BCP-47</a> language code for the
-    address.</p>
+The **`languageCode`** read-only
+property of the {{domxref('PaymentAddress')}} interface returns a string containing
+the [BCP-47](https://datatracker.ietf.org/doc/html/bcp47) language code for the
+address.
 
-<p>This is used while localizing the displayy of the address, allowing
-  the determination of the field separators and the order of fields when formatting the
-  address.</p>
+This is used while localizing the displayy of the address, allowing
+the determination of the field separators and the order of fields when formatting the
+address.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentLanguageCode</em> = <em>PaymentAddress</em>.languageCode;</pre>
+```js
+var paymentLanguageCode = PaymentAddress.languageCode;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} providing the <a
-    href="https://datatracker.ietf.org/doc/html/bcp47">BCP-47</a> format language code indicating
-  the language the address was written in, such as <code>"en-US"</code>,
-  <code>"pt-BR"</code>, or <code>"ja-JP"</code>.</p>
+A {{domxref("DOMString")}} providing the [BCP-47](https://datatracker.ietf.org/doc/html/bcp47) format language code indicating
+the language the address was written in, such as `"en-US"`,
+`"pt-BR"`, or `"ja-JP"`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -17,58 +17,56 @@ tags:
   - mousedown
 browser-compat: api.Element.mousedown_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>mousedown</code></strong> event is fired at an {{domxref("Element")}} when a pointing device button is pressed while the pointer is inside the element.</p>
+The **`mousedown`** event is fired at an {{domxref("Element")}} when a pointing device button is pressed while the pointer is inside the element.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This differs from the {{domxref("Element/click_event", "click")}} event in that <code>click</code> is fired after a full click action occurs; that is, the mouse button is pressed and released while the pointer remains inside the same element. <code>mousedown</code> is fired the moment the button is initially pressed.</p>
-</div>
+> **Note:** This differs from the {{domxref("Element/click_event", "click")}} event in that `click` is fired after a full click action occurs; that is, the mouse button is pressed and released while the pointer remains inside the same element. `mousedown` is fired the moment the button is initially pressed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/Element/mousemove_event#examples"><code>mousemove_event</code></a> for example code.</p>
+See [`mousemove_event`](/en-US/docs/Web/API/Element/mousemove_event#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

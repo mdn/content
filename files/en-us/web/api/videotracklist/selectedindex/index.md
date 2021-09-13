@@ -2,37 +2,38 @@
 title: VideoTrackList.selectedIndex
 slug: Web/API/VideoTrackList/selectedIndex
 tags:
-- API
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- VideoTrackList
-- track
+  - API
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - VideoTrackList
+  - track
 browser-compat: api.VideoTrackList.selectedIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("VideoTrackList")}}</strong>
-    property <code><strong>selectedIndex</strong></code> returns the index of the
-    currently selected track, if any, or <code>-1</code> otherwise.</p>
+The read-only **{{domxref("VideoTrackList")}}**
+property **`selectedIndex`** returns the index of the
+currently selected track, if any, or `-1` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>index</em> = <em>VideoTrackList</em>.selectedIndex;</pre>
+```js
+var index = VideoTrackList.selectedIndex;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number indicating the index of the currently selected track, if any, or
-  <code>-1</code> otherwise.</p>
+A number indicating the index of the currently selected track, if any, or
+`-1` otherwise.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

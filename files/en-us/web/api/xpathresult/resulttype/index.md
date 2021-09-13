@@ -10,25 +10,25 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.resultType
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The read-only <strong><code>resultType</code></strong> property of the
-  {{domxref("XPathResult")}} interface represents the type of the result, as defined by
-  the type constants.</p>
+The read-only **`resultType`** property of the
+{{domxref("XPathResult")}} interface represents the type of the result, as defined by
+the type constants.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>resultType</var> = <var>result</var>.resultType;
-</pre>
+```js
+var resultType = result.resultType;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>An integer value representing the type of the result, as defined by the <a
-    href="#">type constants</a>.</p>
+An integer value representing the type of the result, as defined by the [type constants](#).
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
 <table class="no-markdown">
   <thead>
@@ -42,15 +42,19 @@ browser-compat: api.XPathResult.resultType
     <tr>
       <td><code>ANY_TYPE</code></td>
       <td><code>0</code></td>
-      <td>A result set containing whatever type naturally results from evaluation of the
-        expression. Note that if the result is a node-set then
-        <code>UNORDERED_NODE_ITERATOR_TYPE</code> is always the resulting type.</td>
+      <td>
+        A result set containing whatever type naturally results from evaluation
+        of the expression. Note that if the result is a node-set then
+        <code>UNORDERED_NODE_ITERATOR_TYPE</code> is always the resulting type.
+      </td>
     </tr>
     <tr>
       <td><code>NUMBER_TYPE</code></td>
       <td><code>1</code></td>
-      <td>A result containing a single number. This is useful for example, in an XPath
-        expression using the <code>count()</code> function.</td>
+      <td>
+        A result containing a single number. This is useful for example, in an
+        XPath expression using the <code>count()</code> function.
+      </td>
     </tr>
     <tr>
       <td><code>STRING_TYPE</code></td>
@@ -60,78 +64,96 @@ browser-compat: api.XPathResult.resultType
     <tr>
       <td><code>BOOLEAN_TYPE</code></td>
       <td><code>3</code></td>
-      <td>A result containing a single boolean value. This is useful for example, in an
-        XPath expression using the <code>not()</code> function.</td>
+      <td>
+        A result containing a single boolean value. This is useful for example,
+        in an XPath expression using the <code>not()</code> function.
+      </td>
     </tr>
     <tr>
       <td><code>UNORDERED_NODE_ITERATOR_TYPE</code></td>
       <td><code>4</code></td>
-      <td>A result node-set containing all the nodes matching the expression. The nodes
-        may not necessarily be in the same order that they appear in the document.</td>
+      <td>
+        A result node-set containing all the nodes matching the expression. The
+        nodes may not necessarily be in the same order that they appear in the
+        document.
+      </td>
     </tr>
     <tr>
       <td><code>ORDERED_NODE_ITERATOR_TYPE</code></td>
       <td><code>5</code></td>
-      <td>A result node-set containing all the nodes matching the expression. The nodes in
-        the result set are in the same order that they appear in the document.</td>
+      <td>
+        A result node-set containing all the nodes matching the expression. The
+        nodes in the result set are in the same order that they appear in the
+        document.
+      </td>
     </tr>
     <tr>
       <td><code>UNORDERED_NODE_SNAPSHOT_TYPE</code></td>
       <td><code>6</code></td>
-      <td>A result node-set containing snapshots of all the nodes matching the expression.
-        The nodes may not necessarily be in the same order that they appear in the
-        document.</td>
+      <td>
+        A result node-set containing snapshots of all the nodes matching the
+        expression. The nodes may not necessarily be in the same order that they
+        appear in the document.
+      </td>
     </tr>
     <tr>
       <td><code>ORDERED_NODE_SNAPSHOT_TYPE</code></td>
       <td><code>7</code></td>
-      <td>A result node-set containing snapshots of all the nodes matching the expression.
-        The nodes in the result set are in the same order that they appear in the
-        document.</td>
+      <td>
+        A result node-set containing snapshots of all the nodes matching the
+        expression. The nodes in the result set are in the same order that they
+        appear in the document.
+      </td>
     </tr>
     <tr>
       <td><code>ANY_UNORDERED_NODE_TYPE</code></td>
       <td><code>8</code></td>
-      <td>A result node-set containing any single node that matches the expression. The
-        node is not necessarily the first node in the document that matches the
-        expression.</td>
+      <td>
+        A result node-set containing any single node that matches the
+        expression. The node is not necessarily the first node in the document
+        that matches the expression.
+      </td>
     </tr>
     <tr>
       <td><code>FIRST_ORDERED_NODE_TYPE</code></td>
       <td><code>9</code></td>
-      <td>A result node-set containing the first node in the document that matches the
-        expression.</td>
+      <td>
+        A result node-set containing the first node in the document that matches
+        the expression.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>resultType</code> property.</p>
+The following example shows the use of the `resultType` property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Is XPath result a node set: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Is XPath result a node set: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = &quot;//div&quot;;
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
-document.querySelector(&quot;output&quot;).textContent =
-  result.resultType &gt;= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &amp;&amp;
-  result.resultType &lt;= XPathResult.FIRST_ORDERED_NODE_TYPE;
-</pre>
+document.querySelector("output").textContent =
+  result.resultType >= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &&
+  result.resultType <= XPathResult.FIRST_ORDERED_NODE_TYPE;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

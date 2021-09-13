@@ -10,41 +10,39 @@ tags:
   - structuredClone
 browser-compat: api.structuredClone
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The global <strong><code>structuredClone()</code></strong> method deep clones a given value using the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a>.</p>
+The global **`structuredClone()`** method deep clones a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>clonedValue</var> = structuredClone(<var>value</var>[, { <var>transfer</var> }]);
-</pre>
+```js
+const clonedValue = structuredClone(value[, { transfer }]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>value</var></code></dt>
-  <dd>The value to be cloned. This can be any <a
-    href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured-clonable
-    type</a>.</dd>
-    <dt><code><var>transfer</var></code> {{optional_inline}}</dt>
-    <dd>A sequence of objects that are <a
-        href="/en-US/docs/Web/API/Transferable">transferred</a> with value. The
-      ownership of these objects is transfered from the input value to the cloned value
-      that is returned.</dd>
-  </dl>
+- `value`
+  - : The value to be cloned. This can be any [structured-clonable
+    type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- `transfer` {{optional_inline}}
+  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with value. The
+    ownership of these objects is transfered from the input value to the cloned value
+    that is returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The returned <code><var>clonedValue</var></code> is a clone of the original passed
-  <code><var>value</var></code>, with transfered values for items passed in the
-  <code><var>transfer</var></code> array.</p>
+The returned `clonedValue` is a clone of the original passed
+`value`, with transfered values for items passed in the
+`transfer` array.
 
-<h2>Description</h2>
+## Description
 
-<p>This function can be used to deep copy JavaScript values. The structured clone algorithm
-  also supports circular references. The below example demonstrates this:</p>
+This function can be used to deep copy JavaScript values. The structured clone algorithm
+also supports circular references. The below example demonstrates this:
 
-<pre class="brush: js">// Create an object with a value and a circular reference to itself.
+```js
+// Create an object with a value and a circular reference to itself.
 const original = { name: "MDN" };
 original.itself = original;
 
@@ -54,19 +52,16 @@ const clone = self.structuredClone(original);
 console.assert(clone !== original); // object are not the same (not same identity)
 console.assert(clone.name === "MDN"); // they do have the same values
 console.assert(clone.itself === clone); // and the circular reference is preserved
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-    href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a></li>
-</ul>
+- [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)

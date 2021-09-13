@@ -2,48 +2,47 @@
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- TreeWalker
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - TreeWalker
 browser-compat: api.TreeWalker.previousNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>TreeWalker.previousNode()</code></strong> method moves the current
-  {{domxref("Node")}} to the previous <em>visible</em> node in the document order, and
-  returns the found node. It also moves the current node to this one. If no such node
-  exists,or if it is before that the <em>root node</em> defined at the object
-  construction, returns <code>null</code> and the current node is not changed.</p>
+The **`TreeWalker.previousNode()`** method moves the current
+{{domxref("Node")}} to the previous _visible_ node in the document order, and
+returns the found node. It also moves the current node to this one. If no such node
+exists,or if it is before that the _root node_ defined at the object
+construction, returns `null` and the current node is not changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> = <em>treeWalker</em>.previousNode();
-</pre>
+```js
+node = treeWalker.previousNode();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.previousNode(); // returns null as there is no parent
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface it belongs to.

@@ -2,94 +2,96 @@
 title: SpeechRecognitionErrorEvent.error
 slug: Web/API/SpeechRecognitionErrorEvent/error
 tags:
-- API
-- Error
-- Experimental
-- Property
-- Reference
-- SpeechRecognitionErrorEvent
-- Web Speech API
-- recognition
-- speech
+  - API
+  - Error
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognitionErrorEvent
+  - Web Speech API
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognitionErrorEvent.error
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>error</code></strong> read-only property of the
-  {{domxref("SpeechRecognitionErrorEvent")}} interface returns the type of error raised.
-</p>
+The **`error`** read-only property of the
+{{domxref("SpeechRecognitionErrorEvent")}} interface returns the type of error raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myError = event.error;
-</pre>
+```js
+var myError = event.error;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} naming the type of error. The possible error types are:</p>
+A {{domxref("DOMString")}} naming the type of error. The possible error types are:
 
-<dl>
-  <dt>no-speech</dt>
-  <dd>No speech was detected.</dd>
-  <dt>aborted</dt>
-  <dd>Speech input was aborted in some manner, perhaps by some user-agent-specific
-    behavior like a button the user can press to cancel speech input.</dd>
-  <dt>audio-capture</dt>
-  <dd>Audio capture failed.</dd>
-  <dt>network</dt>
-  <dd>Network communication required for completing the recognition failed.</dd>
-  <dt>not-allowed</dt>
-  <dd>The user agent disallowed any speech input from occurring for reasons of security,
-    privacy or user preference.</dd>
-  <dt>service-not-allowed</dt>
-  <dd>The user agent disallowed the requested speech recognition service, either because
+- no-speech
+  - : No speech was detected.
+- aborted
+  - : Speech input was aborted in some manner, perhaps by some user-agent-specific
+    behavior like a button the user can press to cancel speech input.
+- audio-capture
+  - : Audio capture failed.
+- network
+  - : Network communication required for completing the recognition failed.
+- not-allowed
+  - : The user agent disallowed any speech input from occurring for reasons of security,
+    privacy or user preference.
+- service-not-allowed
+  - : The user agent disallowed the requested speech recognition service, either because
     the user agent doesn't support it or because of reasons of security, privacy or user
     preference. In this case it would allow another more suitable speech recognition
-    service to be used instead.</dd>
-  <dt>bad-grammar</dt>
-  <dd>There was an error in the speech recognition grammar or semantic tags, or the chosen
-    grammar format or semantic tag format was unsupported.</dd>
-  <dt>language-not-supported</dt>
-  <dd>The language was not supported.</dd>
-</dl>
+    service to be used instead.
+- bad-grammar
+  - : There was an error in the speech recognition grammar or semantic tags, or the chosen
+    grammar format or semantic tag format was unsupported.
+- language-not-supported
+  - : The language was not supported.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var recognition = new SpeechRecognition();
+```js
+var recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
   console.log('Speech recognition error detected: ' + event.error);
   console.log('Additional information: ' + event.message);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

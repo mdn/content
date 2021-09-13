@@ -8,43 +8,44 @@ tags:
   - Property
 browser-compat: api.HTMLMediaElement.playbackRate
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.playbackRate</code></strong> property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.</p>
+The **`HTMLMediaElement.playbackRate`** property sets the rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.
 
-<p>If <code>playbackRate</code> is negative, the media is <strong>not</strong> played backwards.</p>
+If `playbackRate` is negative, the media is **not** played backwards.
 
-<p>The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range <code>0.25</code> to <code>4.0</code>).</p>
+The audio is muted when the fast forward or slow motion is outside a useful range (for example, Gecko mutes the sound outside the range `0.25` to `4.0`).
 
-<p>The pitch of the audio is corrected by default and is the same for every speed. Some browsers implement the non-standard {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} property to control this.</p>
+The pitch of the audio is corrected by default and is the same for every speed. Some browsers implement the non-standard {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} property to control this.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// video
-<var>video</var>.playbackRate = 1.5;
+```js
+// video
+video.playbackRate = 1.5;
 // audio
-<var>audio</var>.playbackRate = 1.0;
-</pre>
+audio.playbackRate = 1.0;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code><a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double</a></code>. <code>1.0</code> is "normal speed," values lower than <code>1.0</code> make the media play slower than normal, higher values make it play faster. (<strong>Default:</strong> <code>1.0</code>)</p>
+A [`double`](https://en.wikipedia.org/wiki/Double-precision_floating-point_format). `1.0` is "normal speed," values lower than `1.0` make the media play slower than normal, higher values make it play faster. (**Default:** `1.0`)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
-console.log(obj.playbackRate); // Expected Output: 1</pre>
+```js
+var obj = document.createElement('video');
+console.log(obj.playbackRate); // Expected Output: 1
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

@@ -11,50 +11,53 @@ tags:
   - Element
 browser-compat: api.Element.ariaRowSpan
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaRowSpan</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-rowspan</code> attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.</p>
+The **`ariaRowSpan`** property of the {{domxref("Element")}} interface reflects the value of the `aria-rowspan` attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaRowSpan</var> = element.ariaRowSpan;
-<var>element</var>.ariaRowSpan = <var>ariaRowSpan</var></pre>
+    var ariaRowSpan = element.ariaRowSpan;
+    element.ariaRowSpan = ariaRowSpan
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains an integer.
 
-<p>In this example the <code>aria-rowspan</code> attribute on the element with an ID of <code>spanning-heading</code> is set to "3". Using <code>ariaRowSpan</code> we update the value to "2".</p>
+## Examples
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th id="spanning-heading" rowspan="3" aria-rowspan="3"&gt;Spanning heading&lt;/th&gt;
-    &lt;th&gt;Heading&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;One&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Two&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+In this example the `aria-rowspan` attribute on the element with an ID of `spanning-heading` is set to "3". Using `ariaRowSpan` we update the value to "2".
 
-<pre class="brush: js">let el = document.getElementById('spanning-heading');
+```html
+<table>
+  <tr>
+    <th id="spanning-heading" rowspan="3" aria-rowspan="3">Spanning heading</th>
+    <th>Heading</th>
+  </tr>
+  <tr>
+    <td>One</td>
+  </tr>
+  <tr>
+    <td>Two</td>
+  </tr>
+</table>
+```
+
+```js
+let el = document.getElementById('spanning-heading');
 console.log(el.ariaRowSpan);
 el.ariaRowSpan = "2";
-console.log(el.ariaRowSpan);</pre>
+console.log(el.ariaRowSpan);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

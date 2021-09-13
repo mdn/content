@@ -2,41 +2,41 @@
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- scriptURL
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - scriptURL
 browser-compat: api.ServiceWorker.scriptURL
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>Returns the <code>ServiceWorker</code> serialized script URL defined as part of <a
-    href="/en-US/docs/Web/API/ServiceWorkerRegistration"
-    title="ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin."><code>ServiceWorkerRegistration</code></a>.
-  Must be on the same origin as the document that registers the
-  <code>ServiceWorker</code>.</p>
+Returns the `ServiceWorker` serialized script URL defined as part of [`ServiceWorkerRegistration`](/en-US/docs/Web/API/ServiceWorkerRegistration "ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin.").
+Must be on the same origin as the document that registers the
+`ServiceWorker`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">someURL = ServiceWorker.scriptURL
-</pre>
+```js
+someURL = ServiceWorker.scriptURL
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} (see the <a
-    href="https://heycam.github.io/webidl/#idl-USVString">WebIDL definition of
-    USVString</a>.)</p>
+A {{domxref("USVString")}} (see the [WebIDL definition of
+USVString](https://heycam.github.io/webidl/#idl-USVString).)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">TBD</pre>
+```js
+TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

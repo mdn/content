@@ -2,57 +2,54 @@
 title: WebGL2RenderingContext.deleteSync()
 slug: Web/API/WebGL2RenderingContext/deleteSync
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteSync
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.deleteSync()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> deletes a given
-  {{domxref("WebGLSync")}} object.</p>
+The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLSync")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteSync(<var>sync</var>);
-</pre>
+```js
+void gl.deleteSync(sync);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>sync</code></dt>
-  <dd>A {{domxref("WebGLSync")}} object to delete.</dd>
-</dl>
+- `sync`
+  - : A {{domxref("WebGLSync")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. <code>WebGLSync</code>
-  objects are not available in WebGL 1.</p>
+`gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSync`
+objects are not available in WebGL 1.
 
-<pre class="brush: js">var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+```js
+var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
 // ...
 
 gl.deleteSync(sync);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLSync")}}</li>
-</ul>
+- {{domxref("WebGLSync")}}

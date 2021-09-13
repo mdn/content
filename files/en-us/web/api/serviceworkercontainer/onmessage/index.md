@@ -2,47 +2,47 @@
 title: ServiceWorkerContainer.onmessage
 slug: Web/API/ServiceWorkerContainer/onmessage
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerContainer
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.onmessage
 ---
-<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>onmessage</code></strong> property of the
-  {{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever a
-  {{Event("message")}} event occurs — when incoming messages are received to the
-  {{domxref("ServiceWorkerContainer")}} object (e.g., via a
-  {{domxref("Client.postMessage()")}} call).</p>
+The **`onmessage`** property of the
+{{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever a
+{{Event("message")}} event occurs — when incoming messages are received to the
+{{domxref("ServiceWorkerContainer")}} object (e.g., via a
+{{domxref("Client.postMessage()")}} call).
 
-<div class="note">
-  <p><strong>Note:</strong> Messages received from service worker contexts (e.g. as the
-    event object of onmessage) are represented by {{domxref("MessageEvent")}} objects in
-    modern browsers, for consistency with other web messaging features. (They used to be
-    represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have now been
-    deprecated.)</p>
-</div>
+> **Note:** Messages received from service worker contexts (e.g. as the
+> event object of onmessage) are represented by {{domxref("MessageEvent")}} objects in
+> modern browsers, for consistency with other web messaging features. (They used to be
+> represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have now been
+> deprecated.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerContainer</em>.onmessage = function(<em>messageevent</em>) { ... }</pre>
+```js
+serviceWorkerContainer.onmessage = function(messageevent) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.onmessage = function(messageevent) {
+```js
+navigator.serviceWorker.onmessage = function(messageevent) {
   console.log(`received data: ${messageevent.data}`);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

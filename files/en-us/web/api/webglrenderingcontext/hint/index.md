@@ -2,83 +2,76 @@
 title: WebGLRenderingContext.hint()
 slug: Web/API/WebGLRenderingContext/hint
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.hint
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.hint()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies hints for certain
-  behaviors. The interpretation of these hints depend on the implementation.</p>
+The **`WebGLRenderingContext.hint()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies hints for certain
+behaviors. The interpretation of these hints depend on the implementation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.hint(<var>target</var>, <var>mode</var>);
-</pre>
+```js
+void gl.hint(target, mode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>Sets which behavior to be controlled. Possible values:
-    <ul>
-      <li><code>gl.GENERATE_MIPMAP_HINT</code>: Quality of filtering when generating
-        mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.</li>
-      <li>When using the {{domxref("OES_standard_derivatives")}} extension:
-        <ul>
-          <li><code>ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES</code>: Accuracy of the
-            derivative calculation for the GLSL built-in functions: <code>dFdx</code>,
-            <code>dFdy</code>, and <code>fwidth</code>.</li>
-        </ul>
-      </li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.FRAGMENT_SHADER_DERIVATIVE_HINT</code>: Same as
-            <code>ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES</code></li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>mode</dt>
-  <dd>Sets the behavior. The default value is <code>gl.DONT_CARE</code>. The possible
+- target
+
+  - : Sets which behavior to be controlled. Possible values:
+
+    - `gl.GENERATE_MIPMAP_HINT`: Quality of filtering when generating
+      mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
+    - When using the {{domxref("OES_standard_derivatives")}} extension:
+
+      - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`: Accuracy of the
+        derivative calculation for the GLSL built-in functions: `dFdx`,
+        `dFdy`, and `fwidth`.
+
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
+
+      - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`: Same as
+        `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+
+- mode
+
+  - : Sets the behavior. The default value is `gl.DONT_CARE`. The possible
     values are:
-    <ul>
-      <li><code>gl.FASTEST</code>: The most efficient behavior should be used.</li>
-      <li><code>gl.NICEST</code>: The most correct or the highest quality option should be
-        used.</li>
-      <li><code>gl.DONT_CARE</code>: There is no preference for this behavior.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.FASTEST`: The most efficient behavior should be used.
+    - `gl.NICEST`: The most correct or the highest quality option should be
+      used.
+    - `gl.DONT_CARE`: There is no preference for this behavior.
 
-<p>None.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<p>The following example hints that the quality of filtering when generating mipmap images
-  should be most efficient instead of best quality.</p>
+## Examples
 
-<pre class="brush: js">gl.hint(gl.GENERATE_MIPMAP_HINT, gl.FASTEST);
-</pre>
+The following example hints that the quality of filtering when generating mipmap images
+should be most efficient instead of best quality.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+gl.hint(gl.GENERATE_MIPMAP_HINT, gl.FASTEST);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.generateMipmap()")}}</li>
-  <li>{{domxref("OES_standard_derivatives")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+- {{domxref("OES_standard_derivatives")}}

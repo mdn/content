@@ -2,32 +2,33 @@
 title: WebSocket.extensions
 slug: Web/API/WebSocket/extensions
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.extensions
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.extensions</code></strong> read-only property returns the
-  extensions selected by the server. This is currently only the empty string or a list of
-  extensions as negotiated by the connection.</p>
+The **`WebSocket.extensions`** read-only property returns the
+extensions selected by the server. This is currently only the empty string or a list of
+extensions as negotiated by the connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>var extensions</em> = aWebSocket.extensions;</pre>
+```js
+var extensions = aWebSocket.extensions;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

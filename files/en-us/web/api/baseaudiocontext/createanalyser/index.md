@@ -11,44 +11,40 @@ tags:
   - createAnalyser
 browser-compat: api.BaseAudioContext.createAnalyser
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>createAnalyser()</code> method of the
-  {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
-  can be used to expose audio time and frequency data and create data visualisations.</p>
+The `createAnalyser()` method of the
+{{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
+can be used to expose audio time and frequency data and create data visualisations.
 
-  <div class="notecard note">
-    <p><strong>Note:</strong> The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
-      recommended way to create an {{domxref("AnalyserNode")}}; see
-      <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-  </div>
+> **Note:** The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
+> recommended way to create an {{domxref("AnalyserNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For more on using this node, see the
-    {{domxref("AnalyserNode")}} page.</p>
-</div>
+> **Note:** For more on using this node, see the
+> {{domxref("AnalyserNode")}} page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>analyserNode</var> = <var>baseAudioContext</var>.createAnalyser();</pre>
+```js
+var analyserNode = baseAudioContext.createAnalyser();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An {{domxref("AnalyserNode")}}.</p>
+An {{domxref("AnalyserNode")}}.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an AudioContext to create an Analyser node,
-  then use requestAnimationFrame() to collect time domain data repeatedly and draw an
-  "oscilloscope style" output of the current audio input. For more complete applied
-  examples/information, check out our <a
-    href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see
-  <a
-    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js
-    lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an AudioContext to create an Analyser node,
+then use requestAnimationFrame() to collect time domain data repeatedly and draw an
+"oscilloscope style" output of the current audio input. For more complete applied
+examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see
+[app.js
+lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -77,7 +73,7 @@ function draw() {
       var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -95,19 +91,17 @@ function draw() {
       canvasCtx.stroke();
     };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

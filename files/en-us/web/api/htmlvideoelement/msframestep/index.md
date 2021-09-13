@@ -2,42 +2,38 @@
 title: HTMLVideoElement.msFrameStep()
 slug: Web/API/HTMLVideoElement/msFrameStep
 tags:
-- API
-- 'API:Microsoft Extensions'
-- Method
-- Non-standard
-- Reference
-- msFrameStep
+  - API
+  - API:Microsoft Extensions
+  - Method
+  - Non-standard
+  - Reference
+  - msFrameStep
 ---
-<div>{{APIRef("HTML DOM")}}{{Non-standard_Header}}</div>
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
-<p>The <strong><code>HTMLVideoElement.msFrameStep()</code></strong> method steps the video
-  by one frame forward or one frame backward.</p>
+The **`HTMLVideoElement.msFrameStep()`** method steps the video
+by one frame forward or one frame backward.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLVideoElement</em>.msFrameStep(<em>forward</em>);
-</pre>
+```js
+HTMLVideoElement.msFrameStep(forward);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>forward</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Boolean">Boolean </a>which if set to <em>true</em>
-    steps the video forward by one frame, if <em>false</em> steps the video backwards by
-    one frame.</dd>
-</dl>
+- forward
+  - : A [Boolean ](/en-US/docs/Glossary/Boolean)which if set to _true_
+    steps the video forward by one frame, if _false_ steps the video backwards by
+    one frame.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLMediaElement")}}</li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- {{DOMxRef("HTMLMediaElement")}}
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)

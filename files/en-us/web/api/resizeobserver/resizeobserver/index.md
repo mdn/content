@@ -2,63 +2,62 @@
 title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 tags:
-- API
-- Constructor
-- Reference
-- Resize Observer API
-- ResizeObserver
-- observers
+  - API
+  - Constructor
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - observers
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>ResizeObserver</code></strong> constructor creates a
-  new {{domxref("ResizeObserver")}} object, which can be used to report changes to the
-  content or border box of an {{domxref('Element')}} or the bounding box of an
-  {{domxref('SVGElement')}}.</p>
+The **`ResizeObserver`** constructor creates a
+new {{domxref("ResizeObserver")}} object, which can be used to report changes to the
+content or border box of an {{domxref('Element')}} or the bounding box of an
+{{domxref('SVGElement')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>ResizeObserver</var> = new ResizeObserver(<var>callback</var>)</pre>
+```js
+var ResizeObserver = new ResizeObserver(callback)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callback</var></code></dt>
-  <dd>The function called whenever an observed resize occurs. The function is called with
+- `callback`
+
+  - : The function called whenever an observed resize occurs. The function is called with
     two parameters:
-    <dl>
-      <dt><code><var>entries</var></code></dt>
-      <dd>An array of {{domxref('ResizeObserverEntry')}} objects that can be used to
-        access the new dimensions of the element after each change.</dd>
-      <dt><code><var>observer</var></code></dt>
-      <dd>A reference to the <code>ResizeObserver</code> itself, so it will definitely be
+
+    - `entries`
+      - : An array of {{domxref('ResizeObserverEntry')}} objects that can be used to
+        access the new dimensions of the element after each change.
+    - `observer`
+      - : A reference to the `ResizeObserver` itself, so it will definitely be
         accessible from inside the callback, should you need it. This could be used for
         example to automatically unobserve the observer when a certain condition is
-        reached, but you can omit it if you don't need it.</dd>
-    </dl>
+        reached, but you can omit it if you don't need it.
 
-    <p>The callback will generally follow a pattern along the lines of:</p>
+    The callback will generally follow a pattern along the lines of:
 
-    <pre class="brush: js">function(entries, observer) {
-  for (let entry of entries) {
-    // Do something to each entry
-    // and possibly something to the observer itself
-  }
-}</pre>
-  </dd>
-</dl>
+    ```js
+    function(entries, observer) {
+      for (let entry of entries) {
+        // Do something to each entry
+        // and possibly something to the observer itself
+      }
+    }
+    ```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is taken from the <a
-    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
-  (<a
-    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
-    source</a>) example:</p>
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
+([see
+source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       if (entry.contentBoxSize[0]) {
@@ -77,12 +76,13 @@ browser-compat: api.ResizeObserver.ResizeObserver
   console.log('Size changed');
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

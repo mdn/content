@@ -9,47 +9,41 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent
 ---
-<div>{{SeeCompatTable}}{{APIRef("Web Animations API")}}</div>
+{{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
-<p>The <strong><code>AnimationEvent</code></strong> interface represents events providing information related to <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">animations</a>.</p>
+The **`AnimationEvent`** interface represents events providing information related to [animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}</dt>
- <dd>Creates an <code>AnimationEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
+  - : Creates an `AnimationEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} that generated the animation.</dd>
- <dt>{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}</dt>
- <dd>Is a <code>float</code> giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an <code>animationstart</code> event, <code>elapsedTime</code> is <code>0.0</code> unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with <code>elapsedTime</code> containing <code>(-1 * <var>delay</var>)</code>.</dd>
- <dt>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}}, starting with <code>'::'</code>, containing the name of the <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: <code>''</code>.</dd>
-</dl>
+- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} that generated the animation.
+- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+  - : Is a `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
+- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}}, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
- <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

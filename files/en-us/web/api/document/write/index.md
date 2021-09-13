@@ -10,81 +10,80 @@ tags:
   - write
 browser-compat: api.Document.write
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Document.write()</code></strong> method writes a string of text to a document stream opened by {{domxref("document.open()")}}.</p>
+The **`Document.write()`** method writes a string of text to a document stream opened by {{domxref("document.open()")}}.
 
-<div class="note"><p><strong>Note:</strong> Because <code>document.write()</code> writes to the document <strong>stream</strong>, calling <code>document.write()</code> on a closed (loaded) document automatically calls <code>document.open()</code>, <a href="/en-US/docs/Web/API/Document/open#notes">which will clear the document</a>.</p></div>
+> **Note:** Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document automatically calls `document.open()`, [which will clear the document](/en-US/docs/Web/API/Document/open#notes).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>document</var>.write(<var>markup</var>);
-</pre>
+```js
+document.write(markup);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><var>markup</var></dt>
- <dd>A string containing the text to be written to the document.</dd>
-</dl>
+- _markup_
+  - : A string containing the text to be written to the document.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: html">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-  &lt;title&gt;Write example&lt;/title&gt;
+<head>
+  <title>Write example</title>
 
-  &lt;script&gt;
+  <script>
     function newContent() {
       document.open();
-      document.write("&lt;h1&gt;Out with the old, in with the new!&lt;/h1&gt;");
+      document.write("<h1>Out with the old, in with the new!</h1>");
       document.close();
     }
-  &lt;/script&gt;
-&lt;/head&gt;
+  </script>
+</head>
 
-&lt;body onload="newContent();"&gt;
-  &lt;p&gt;Some original document content.&lt;/p&gt;
-&lt;/body&gt;
+<body onload="newContent();">
+  <p>Some original document content.</p>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<p>{{EmbedLiveSample("Syntax")}}</p>
+{{EmbedLiveSample("Syntax")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The text you write is parsed into the document's structure model. In the example above, the <code>h1</code> element becomes a node in the document.</p>
+The text you write is parsed into the document's structure model. In the example above, the `h1` element becomes a node in the document.
 
-<p>Writing to a document that has already loaded without calling {{domxref("document.open()")}} will automatically call <code>document.open()</code>. After writing, call {{domxref("document.close()")}} to tell the browser to finish loading the page.</p>
+Writing to a document that has already loaded without calling {{domxref("document.open()")}} will automatically call `document.open()`. After writing, call {{domxref("document.close()")}} to tell the browser to finish loading the page.
 
-<p>If the <code>document.write()</code> call is embedded within an inline HTML <code>&lt;script&gt;</code> tag, then it will not call <code>document.open()</code>. For example:</p>
+If the `document.write()` call is embedded within an inline HTML `<script>` tag, then it will not call `document.open()`. For example:
 
-<pre class="brush: html">&lt;script&gt;
-  document.write("&lt;h1&gt;Main title&lt;/h1&gt;")
-&lt;/script&gt;
-</pre>
+```html
+<script>
+  document.write("<h1>Main title</h1>")
+</script>
+```
 
-<div class="note"><p><strong>Note:</strong> <code>document.write()</code> and {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">do not work in XHTML documents</a> (you'll get an "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. More information is available in the <a href="https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</p></div>
+> **Note:** `document.write()` and {{domxref("document.writeln")}} [do not work in XHTML documents](/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML) (you'll get an "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an `application/xhtml+xml` {{Glossary("MIME type")}}. More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-<div class="note"><p><strong>Note:</strong> Using <code>document.write()</code> in <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> or <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts will be ignored and you'll get a message like "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" in the error console.</p></div>
+> **Note:** Using `document.write()` in [deferred](/en-US/docs/Web/HTML/Element/script#attr-defer) or [asynchronous](/en-US/docs/Web/HTML/Element/script#attr-async) scripts will be ignored and you'll get a message like "A call to `document.write()` from an asynchronously-loaded external script was ignored" in the error console.
 
-<div class="note"><p><strong>Note:</strong> In Edge only, calling <code>document.write()</code> more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".</p></div>
+> **Note:** In Edge only, calling `document.write()` more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".
 
-<div class="note"><p><strong>Note:</strong> Starting with version 55, Chrome will not execute <code>&lt;script&gt;</code> elements injected via <code>document.write()</code> when specific conditions are met. For more information, refer to <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">Intervening against document.write()</a>.</p></div>
+> **Note:** Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met. For more information, refer to [Intervening against document.write()](https://developers.google.com/web/updates/2016/08/removing-document-write).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("element.innerHTML")}}</li>
- <li>{{domxref("document.createElement()")}}</li>
-</ul>
+- {{domxref("element.innerHTML")}}
+- {{domxref("document.createElement()")}}

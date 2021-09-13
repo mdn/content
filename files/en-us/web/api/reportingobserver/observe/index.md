@@ -2,50 +2,50 @@
 title: ReportingObserver.observe()
 slug: Web/API/ReportingObserver/observe
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Reporting API
-- ReportingObserver
-- observe
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Reporting API
+  - ReportingObserver
+  - observe
 browser-compat: api.ReportingObserver.observe
 ---
-<div>{{APIRef("Reporting API")}}{{SeeCompatTable}}</div>
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>observe()</code></strong> method of the
-  {{domxref("ReportingObserver")}} interface instructs a reporting observer to start
-  collecting reports in its report queue.</p>
+The **`observe()`** method of the
+{{domxref("ReportingObserver")}} interface instructs a reporting observer to start
+collecting reports in its report queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>reportingObserverInstance</em>.observe()
-</pre>
+```js
+reportingObserverInstance.observe()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
 
 let observer = new ReportingObserver(function(reports, observer) {
-  reportBtn.onclick = () =&gt; displayReports(reports);
+  reportBtn.onclick = () => displayReports(reports);
 }, options);
 
 observer.observe()
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

@@ -14,80 +14,70 @@ tags:
   - querySelector
 browser-compat: api.Document.querySelector
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The {{domxref("Document")}} method <code><strong>querySelector()</strong></code>
-  returns the first {{domxref("Element")}} within the document that matches the specified
-  selector, or group of selectors. If no matches are found, <code>null</code> is returned.
-</p>
+The {{domxref("Document")}} method **`querySelector()`**
+returns the first {{domxref("Element")}} within the document that matches the specified
+selector, or group of selectors. If no matches are found, `null` is returned.
 
-<div class="note">
-  <p><strong>Note:</strong> The matching is done using depth-first pre-order traversal of
-    the document's nodes starting with the first element in the document's markup and
-    iterating through sequential nodes by order of the number of child nodes.</p>
-</div>
+> **Note:** The matching is done using depth-first pre-order traversal of
+> the document's nodes starting with the first element in the document's markup and
+> iterating through sequential nodes by order of the number of child nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>element</var> = document.querySelector(<var>selectors</var>);
-</pre>
+```js
+element = document.querySelector(selectors);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><var>selectors</var></dt>
-  <dd>A {{domxref("DOMString")}} containing one or more selectors to match. This string
-    must be a valid CSS selector string; if it isn't, a <code>SyntaxError</code> exception
-    is thrown. See <a
-      href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating
-      DOM elements using selectors</a> for more about selectors and how to manage them.
-  </dd>
-</dl>
+- _selectors_
+  - : A {{domxref("DOMString")}} containing one or more selectors to match. This string
+    must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
+    is thrown. See [Locating
+    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
 
-<div class="note">
-  <p><strong>Note:</strong> Characters that are not part of standard CSS syntax must be
-    escaped using a backslash character. Since JavaScript also uses backslash escaping, be
-    especially careful when writing string literals using these characters. See
-    {{anch("Escaping special characters")}} for more information.</p>
-</div>
+> **Note:** Characters that are not part of standard CSS syntax must be
+> escaped using a backslash character. Since JavaScript also uses backslash escaping, be
+> especially careful when writing string literals using these characters. See
+> {{anch("Escaping special characters")}} for more information.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("Element")}} object representing the first element in the document
-  that matches the specified set of <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS
-    selectors</a>, or <code>null</code> is returned if there are no matches.</p>
+An {{domxref("Element")}} object representing the first element in the document
+that matches the specified set of [CSS
+selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
 
-<p>If you need a list of all elements matching the specified selectors, you should use
-  {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.</p>
+If you need a list of all elements matching the specified selectors, you should use
+{{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SyntaxError</code></dt>
-  <dd>The syntax of the specified <var>selectors</var> is invalid.</dd>
-</dl>
+- `SyntaxError`
+  - : The syntax of the specified _selectors_ is invalid.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>If the specified selector matches an ID that is incorrectly used more than once in the
-  document, the first element with that ID is returned.</p>
+If the specified selector matches an ID that is incorrectly used more than once in the
+document, the first element with that ID is returned.
 
-<p><a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-elements</a> will never return
-  any elements, as specified in the <a
-    href="https://www.w3.org/TR/selectors-api/#grammar">Selectors API</a>.</p>
+[CSS pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) will never return
+any elements, as specified in the [Selectors API](https://www.w3.org/TR/selectors-api/#grammar).
 
-<h3 id="Escaping_special_characters">Escaping special characters</h3>
+### Escaping special characters
 
-<p>To match against an ID or selectors that do not follow standard CSS syntax (by using a
-  colon or space inappropriately, for example), you must escape the character with a
-  backslash ("<code>\</code>"). As the backslash is also an escape character in
-  JavaScript, if you are entering a literal string, you must escape it <em>twice</em>
-  (once for the JavaScript string, and another time for <code>querySelector()</code>):</p>
+To match against an ID or selectors that do not follow standard CSS syntax (by using a
+colon or space inappropriately, for example), you must escape the character with a
+backslash ("`\`"). As the backslash is also an escape character in
+JavaScript, if you are entering a literal string, you must escape it _twice_
+(once for the JavaScript string, and another time for `querySelector()`):
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
   console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
   document.querySelector('#foo\bar');    // Does not match anything
 
@@ -97,55 +87,55 @@ browser-compat: api.Document.querySelector
 
   document.querySelector('#foo:bar');    // Does not match anything
   document.querySelector('#foo\\:bar');  // Match the second div
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Finding_the_first_element_matching_a_class">Finding the first element matching a
-  class</h3>
+### Finding the first element matching a class
 
-<p>In this example, the first element in the document with the class
-  "<code>myclass</code>" is returned:</p>
+In this example, the first element in the document with the class
+"`myclass`" is returned:
 
-<pre class="brush: js">var el = document.querySelector(".myclass");
-</pre>
+```js
+var el = document.querySelector(".myclass");
+```
 
-<h3 id="A_more_complex_selector">A more complex selector</h3>
+### A more complex selector
 
-<p>Selectors can also be really powerful, as demonstrated in the following example. Here,
-  the first {{HTMLElement("input")}} element with the name "login"
-  (<code>&lt;input name="login"/&gt;</code>) located inside a {{HTMLElement("div")}} whose
-  class is "user-panel main" (<code>&lt;div class="user-panel main"&gt;</code>) in the
-  document is returned:</p>
+Selectors can also be really powerful, as demonstrated in the following example. Here,
+the first {{HTMLElement("input")}} element with the name "login"
+(`<input name="login"/>`) located inside a {{HTMLElement("div")}} whose
+class is "user-panel main" (`<div class="user-panel main">`) in the
+document is returned:
 
-<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name='login']");
-</pre>
+```js
+var el = document.querySelector("div.user-panel.main input[name='login']");
+```
 
-<h3 id="Negation">Negation</h3>
+### Negation
 
-<p>As all CSS selector strings are valid, you can also negate selectors:</p>
+As all CSS selector strings are valid, you can also negate selectors:
 
-<pre
-  class="brush: js">var el = document.querySelector("div.user-panel:not(.main) input[name='login']");</pre>
+```js
+var el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+```
 
-<p>This will select an input with a parent div with the <code>user-panel</code> class but
-  not the <code>main</code> class.</p>
+This will select an input with a parent div with the `user-panel` class but
+not the `main` class.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating
-      DOM elements using selectors</a></li>
-  <li>{{domxref("Element.querySelector()")}}</li>
-  <li>{{domxref("Document.querySelectorAll()")}}</li>
-  <li>{{domxref("Element.querySelectorAll()")}}</li>
-</ul>
+- [Locating
+  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}
+- {{domxref("Element.querySelectorAll()")}}

@@ -2,44 +2,45 @@
 title: RTCRtpContributingSource.rtpTimestamp
 slug: Web/API/RTCRtpContributingSource/rtpTimestamp
 tags:
-- API
-- Audio
-- Media
-- Property
-- RTCRtpContributingSource
-- Reference
-- Stamp
-- Time
-- Video
-- WebRTC
-- WebRTC API
-- receiver
-- rtpTimestamp
+  - API
+  - Audio
+  - Media
+  - Property
+  - RTCRtpContributingSource
+  - Reference
+  - Stamp
+  - Time
+  - Video
+  - WebRTC
+  - WebRTC API
+  - receiver
+  - rtpTimestamp
 browser-compat: api.RTCRtpContributingSource.rtpTimestamp
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The read-only <strong><code>rtpTimestamp</code></strong>
-    property of the {{domxref("RTCRtpContributingSource")}} dictionary contains a
-    {{domxref("DOMHighResTimeStamp")}} indicating the source-generated time at which the
-    media contained int he packet was first sampled or obtained.</p>
+The read-only **`rtpTimestamp`**
+property of the {{domxref("RTCRtpContributingSource")}} dictionary contains a
+{{domxref("DOMHighResTimeStamp")}} indicating the source-generated time at which the
+media contained int he packet was first sampled or obtained.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>rtpTimestamp</em> = <em>RTCRtpContributingSource</em>.rtpTimestamp</pre>
+```js
+let rtpTimestamp = RTCRtpContributingSource.rtpTimestamp
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value specifiying a source-generated timestamp indicating the time at which
-  the media in this packet, scheduled for play out at the time indicated by
-  {{domxref("RTCRtpContributingSource.timestamp", "timestamp")}}, was initially sampled or
-  generated. This value may be useful for sequencing and synchronization purposes.</p>
+An integer value specifiying a source-generated timestamp indicating the time at which
+the media in this packet, scheduled for play out at the time indicated by
+{{domxref("RTCRtpContributingSource.timestamp", "timestamp")}}, was initially sampled or
+generated. This value may be useful for sequencing and synchronization purposes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

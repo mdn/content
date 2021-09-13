@@ -13,60 +13,54 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.acceleration
 ---
-<p>{{APIRef("Device Orientation Events")}}</p>
+{{APIRef("Device Orientation Events")}}
 
-<p>The <code>acceleration</code> property returns the amount of acceleration recorded by
-  the device, in <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">meters
-    per second squared (m/s²)</a>. The acceleration value does not include the effect of
-    the gravity force, in constrast to
-    {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.</p>
+The `acceleration` property returns the amount of acceleration recorded by
+the device, in [meters
+per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared). The acceleration value does not include the effect of
+the gravity force, in constrast to
+{{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If the hardware doesn't know how to remove gravity from the
-    acceleration data, this value may not be present in the
-    {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
-    {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.</p>
-</div>
+> **Note:** If the hardware doesn't know how to remove gravity from the
+> acceleration data, this value may not be present in the
+> {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
+> {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>acceleration</var> = <var>deviceMotionEvent</var>.acceleration;</pre>
+```js
+var acceleration = deviceMotionEvent.acceleration;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The <code>acceleration</code> property is an object providing information about
-  acceleration on three axis. Each axis is represented with its own property:</p>
+The `acceleration` property is an object providing information about
+acceleration on three axis. Each axis is represented with its own property:
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>Represents the acceleration upon the x axis which is the west to east axis</dd>
-  <dt><code>y</code></dt>
-  <dd>Represents the acceleration upon the y axis which is the south to north axis</dd>
-  <dt><code>z</code></dt>
-  <dd>Represents the acceleration upon the z axis which is the down to up axis</dd>
-</dl>
+- `x`
+  - : Represents the acceleration upon the x axis which is the west to east axis
+- `y`
+  - : Represents the acceleration upon the y axis which is the south to north axis
+- `z`
+  - : Represents the acceleration upon the z axis which is the down to up axis
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}</li>
-  <li>{{Event("devicemotion")}}</li>
-  <li>{{DOMxRef("window.ondevicemotion")}}</li>
-  <li>{{Event("deviceorientation")}}</li>
-  <li>{{DOMxRef("DeviceOrientationEvent")}}</li>
-  <li>{{DOMxRef("LinearAccelerationSensor")}}</li>
-  <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device
-      orientation</a></li>
-  <li><a href="/en-US/docs/Web/Events/Orientation_and_motion_data_explained"
-      title="Orientation and motion data explained">Orientation and motion data
-      explained</a></li>
-</ul>
+- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}
+- {{Event("devicemotion")}}
+- {{DOMxRef("window.ondevicemotion")}}
+- {{Event("deviceorientation")}}
+- {{DOMxRef("DeviceOrientationEvent")}}
+- {{DOMxRef("LinearAccelerationSensor")}}
+- [Detecting device
+  orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
+- [Orientation and motion data
+  explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")

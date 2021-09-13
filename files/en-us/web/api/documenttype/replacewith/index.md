@@ -9,33 +9,31 @@ tags:
   - Reference
 browser-compat: api.DocumentType.replaceWith
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DocumentType.replaceWith()</strong></code> method replaces the document type with a set of given nodes.</p>
+The **`DocumentType.replaceWith()`** method replaces the document type with a set of given nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">replaceWith(...nodes)</pre>
+```js
+replaceWith(...nodes)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of nodes to replace the {{domxref("DocumentType")}} with.</dd>
-</dl>
+- `nodes`
+  - : A set of nodes to replace the {{domxref("DocumentType")}} with.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_replaceWith">Using <code>replaceWith()</code></h3>
+### Using `replaceWith()`
 
-<pre class="brush: js">
+```js
 let svg_dt = document.implementation.createDocumentType(
   'svg:svg',
   '-//W3C//DTD SVG 1.1//EN',
@@ -43,19 +41,16 @@ let svg_dt = document.implementation.createDocumentType(
 );
 
 document.doctype.replaceWith(svg_dt);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}
+{{Specifications}}
 
-</p>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.replaceWith()")}}</li>
-</ul>
+- {{domxref("Element.replaceWith()")}}

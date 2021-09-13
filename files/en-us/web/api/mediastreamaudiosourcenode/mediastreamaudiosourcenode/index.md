@@ -2,67 +2,62 @@
 title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 tags:
-- API
-- Audio
-- Constructor
-- MediaStreamAudioSourceNode
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - MediaStreamAudioSourceNode
+  - Reference
+  - Web Audio API
 browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio
-      API</a>'s <code><strong>MediaStreamAudioSourceNode()</strong></code> constructor
-    creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
-    the first audio track of a given {{domxref("MediaStream")}} as its source.</p>
+The [Web Audio
+API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSourceNode()`** constructor
+creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
+the first audio track of a given {{domxref("MediaStream")}} as its source.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Another way to create a
-    <code>MediaStreamAudioSourceNode</code> is to call
-    the{{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
-    from which you want to obtain audio.</p>
-</div>
+> **Note:** Another way to create a
+> `MediaStreamAudioSourceNode` is to call
+> the{{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
+> from which you want to obtain audio.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>audioSourceNode</em> = new MediaStreamAudioSourceNode(<em>context</em>, <em>options</em>);</pre>
+```js
+audioSourceNode = new MediaStreamAudioSourceNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to
-    be associated with.</dd>
-  <dt><code>options</code></dt>
-  <dd>
-    <p>A {{domxref("MediaStreamAudioSourceOptions")}} object defining the properties you
-      want the <code>MediaStreamAudioSourceNode</code> to have:</p>
+- `context`
+  - : An {{domxref("AudioContext")}} representing the audio context you want the node to
+    be associated with.
+- `options`
 
-    <p>{{page("/en-US/docs/Web/API/MediaStreamAudioSourceOptions", "Properties")}}</p>
-  </dd>
-</dl>
+  - : A {{domxref("MediaStreamAudioSourceOptions")}} object defining the properties you
+    want the `MediaStreamAudioSourceNode` to have:
 
-<h3 id="Return_value">Return value</h3>
+    {{page("/en-US/docs/Web/API/MediaStreamAudioSourceOptions", "Properties")}}
 
-<p>A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
-  whose media is obtained from the specified source stream.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
+whose media is obtained from the specified source stream.
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The specified {{domxref("MediaStream")}} doesn't have any audio tracks.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- `InvalidStateError`
+  - : The specified {{domxref("MediaStream")}} doesn't have any audio tracks.
 
-<p>This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain
-  access to the user's camera, then creates a new
-  {{domxref("MediaStreamAudioSourceNode")}} from its {{domxref("MediaStream")}}.</p>
+## Examples
 
-<pre class="brush: js">// define variables
+This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain
+access to the user's camera, then creates a new
+{{domxref("MediaStreamAudioSourceNode")}} from its {{domxref("MediaStream")}}.
+
+```js
+// define variables
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // getUserMedia block - grab stream
@@ -85,12 +80,13 @@ if (navigator.mediaDevices.getUserMedia) {
       });
 } else {
   console.log('new getUserMedia not supported on your browser!');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

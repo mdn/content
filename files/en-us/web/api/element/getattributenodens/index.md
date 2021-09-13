@@ -8,31 +8,28 @@ tags:
   - Reference
 browser-compat: api.Element.getAttributeNodeNS
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>Returns the <code>Attr</code> node for the attribute with the given namespace and name.</p>
+Returns the `Attr` node for the attribute with the given namespace and name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>, <em>nodeName</em>)
-</pre>
+    attributeNode = element.getAttributeNodeNS(namespace, nodeName)
 
-<ul>
- <li><code>attributeNode</code> is the node for specified attribute.</li>
- <li><code>namespace</code> is a string specifying the namespace of the attribute.</li>
- <li><code>nodeName</code> is a string specifying the name of the attribute.</li>
-</ul>
+- `attributeNode` is the node for specified attribute.
+- `namespace` is a string specifying the namespace of the attribute.
+- `nodeName` is a string specifying the name of the attribute.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>getAttributeNodeNS</code> is more specific than <a href="getAttributeNode">getAttributeNode</a> in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is <a href="/en-US/docs/Web/API/Element/setAttributeNodeNS">setAttributeNodeNS</a>.</p>
+`getAttributeNodeNS` is more specific than [getAttributeNode](getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

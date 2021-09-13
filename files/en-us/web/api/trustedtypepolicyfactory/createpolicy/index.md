@@ -9,83 +9,78 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>createPolicy()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as <code>policyOptions</code>.</p>
+The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
 
-<h3 id="Default_policy">The default policy</h3>
+### The default policy
 
-<p>In Chrome a policy with a name of "default" creates a special policy that will be used if a string (rather than a Trusted Type object) is passed to an injection sink. This can be used in a transitional phase while moving from an application that inserted strings into injection sinks.</p>
+In Chrome a policy with a name of "default" creates a special policy that will be used if a string (rather than a Trusted Type object) is passed to an injection sink. This can be used in a transitional phase while moving from an application that inserted strings into injection sinks.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The above behavior is not yet settled in the specification and may change in future.</p>
-</div>
+> **Note:** The above behavior is not yet settled in the specification and may change in future.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> A lax default policy could defeat the purpose of using Trusted Types, and therefore should be defined with strict rules to ensure it cannot be used to run dangerous code.</p>
-</div>
+> **Warning:** A lax default policy could defeat the purpose of using Trusted Types, and therefore should be defined with strict rules to ensure it cannot be used to run dangerous code.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>policy</var> = <var>TrustedTypePolicyFactory</var>.createPolicy(<var>policyName</var>,<var>policyOptions</var>);</pre>
+    var policy = TrustedTypePolicyFactory.createPolicy(policyName,policyOptions);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>policyName</code></dt>
-  <dd>A {{domxref("DOMString")}} with the name of the policy.</dd>
-  <dt><code>policyOptions</code>{{optional_inline}}</dt>
-  <dd>User-defined functions for converting strings into trusted values.
-    <dl>
-      <dt><code>CreateHTML(<var>input</var>[,<var>args</var>])</code></dt>
-      <dd>A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedHTML")}} object.</dd>
-      <dt><code>CreateScript(<var>input</var>[,<var>args</var>])</code></dt>
-      <dd>A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScript")}} object.</dd>
-      <dt><code>CreateScriptURL(<var>input</var>[,<var>args</var>])</code></dt>
-      <dd>A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.</dd>
-    </dl>
-  </dd>
-</dl>
+- `policyName`
+  - : A {{domxref("DOMString")}} with the name of the policy.
+- `policyOptions`{{optional_inline}}
 
-<h3 id="Returns">Return value</h3>
+  - : User-defined functions for converting strings into trusted values.
 
-<p>A {{domxref("TrustedTypePolicy")}} object.</p>
+    - `CreateHTML(input[,args])`
+      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedHTML")}} object.
+    - `CreateScript(input[,args])`
+      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScript")}} object.
+    - `CreateScriptURL(input[,args])`
+      - : A callback function in the form of a {{domxref("DOMString", "string")}} that contains code to run when creating a {{domxref("TrustedScriptURL")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if policy names are restricted by the <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">Content Security Policy <code>trusted-types</code> directive</a> and this name is not on the allowlist.</dd>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if the name is a duplicate and the <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types">Content Security Policy trusted-types directive</a> is not using <code>allow-duplicates</code>.</dd>
-</dl>
+A {{domxref("TrustedTypePolicy")}} object.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The below code creates a policy with the name <code>"myEscapePolicy"</code> with a function defined for <code>createHTML()</code> which sanitizes HTML.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if policy names are restricted by the [Content Security Policy `trusted-types` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) and this name is not on the allowlist.
+- {{jsxref("TypeError")}}
+  - : Thrown if the name is a duplicate and the [Content Security Policy trusted-types directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) is not using `allow-duplicates`.
 
-<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
-});</pre>
+## Examples
 
-<h3>Creating a default policy</h3>
+The below code creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
 
-<p>On a site where Trusted Types are enforced via a Content Security Policy with the <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></code> directive set to <code>script</code>, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, the following default policy will be used.</p>
+```js
+const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) => string.replace(/\>/g, "<")
+});
+```
 
-<p>The policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.</p>
+### Creating a default policy
 
-<pre class="brush: js">trustedTypes.createPolicy('default', {
+On a site where Trusted Types are enforced via a Content Security Policy with the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) directive set to `script`, any injection script that accepts a script expects a Trusted Type object. In the case that a string is inserted instead, the following default policy will be used.
+
+The policy logs a message to the console to remind the developer to refactor this part of the application to use a Trusted Type object. It also appends details of the use of the default policy, type, and injection sink to the returned value.
+
+```js
+trustedTypes.createPolicy('default', {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
     return s + '?default-policy-used&type=' + encodeURIComponent(type) +
           '&sink=' + encodeURIComponent(sink);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

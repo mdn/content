@@ -12,28 +12,24 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousOutTransferResult
 ---
-<p>{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}</p>
+{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
 
-<p>The <code>USBIsochronousOutTransferResult</code> interface of the <a href="/en-US/docs/Web/API/WebUSB_API" rel="nofollow">WebUSB API</a> provides the result from a call to the <code>isochronousTransferOut()</code> method of the <code>USBDevice</code> interface. It represents the result from requesting a transfer of data from the USB host to the USB device.</p>
+The `USBIsochronousOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides the result from a call to the `isochronousTransferOut()` method of the `USBDevice` interface. It represents the result from requesting a transfer of data from the USB host to the USB device.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult()")}}</dt>
- <dd>Creates a new <code>USBIsochronousOutTransferResult</code> object with the provided <code>packet</code> field.</dd>
-</dl>
+- {{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult()")}}
+  - : Creates a new `USBIsochronousOutTransferResult` object with the provided `packet` field.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("USBIsochronousOutTransferResult.packets")}}{{readonlyInline}}</dt>
- <dd>Returns an array of <code>USBIsochronousOutTransferPacket</code> objects containing the result of each request to send a packet to the device.</dd>
-</dl>
+- {{domxref("USBIsochronousOutTransferResult.packets")}}{{readonlyInline}}
+  - : Returns an array of `USBIsochronousOutTransferPacket` objects containing the result of each request to send a packet to the device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,59 +2,56 @@
 title: SourceBuffer.appendStream()
 slug: Web/API/SourceBuffer/appendStream
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Method
-- Reference
-- SourceBuffer
-- Video
-- appendstream
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Method
+  - Reference
+  - SourceBuffer
+  - Video
+  - appendstream
 browser-compat: api.SourceBuffer.appendStream
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>appendStream()</strong></code> method of the
-  {{domxref("SourceBuffer")}} interface appends media segment data from a
-  <code>ReadableStream</code> object to the <code>SourceBuffer</code>.</p>
+The **`appendStream()`** method of the
+{{domxref("SourceBuffer")}} interface appends media segment data from a
+`ReadableStream` object to the `SourceBuffer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sourceBuffer</em>.appendStream(<em>stream</em>, <em>maxSize</em>);
-</pre>
+```js
+sourceBuffer.appendStream(stream, maxSize);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>stream</dt>
-  <dd>The {{domxref("ReadableStream")}} that is the source of the media segment data you
-    want to append to the <code>SourceBuffer</code>.</dd>
-  <dt>maxSize</dt>
-  <dd>An unsigned long value indicating the maximum number of bytes that can be appended
-    in this operation.</dd>
-</dl>
+- stream
+  - : The {{domxref("ReadableStream")}} that is the source of the media segment data you
+    want to append to the `SourceBuffer`.
+- maxSize
+  - : An unsigned long value indicating the maximum number of bytes that can be appended
+    in this operation.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

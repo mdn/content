@@ -2,51 +2,50 @@
 title: StorageEstimate.usage
 slug: Web/API/StorageEstimate/usage
 tags:
-- API
-- Reference
-- Secure context
-- Storage
-- Storage API
-- StorageEstimate
-- Usage
+  - API
+  - Reference
+  - Secure context
+  - Storage
+  - Storage API
+  - StorageEstimate
+  - Usage
 browser-compat: api.StorageEstimate.usage
 ---
-<div>{{securecontext_header}}{{APIRef("Storage")}}</div>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>The {{domxref("StorageEstimate")}} dictionary's <strong><code>usage</code></strong>
-  property is a conservative approximation of how much storage is allotted to the origin
-  or Web app that called {{domxref("StorageManager.estimate()")}}; there may be more space
-  available, but there will not be less. The value is an estimate because the
-  {{Glossary("user agent")}} may use compression, duplication prevention techniques, and
-  other methods to improve storage efficiency.</p>
+The {{domxref("StorageEstimate")}} dictionary's **`usage`**
+property is a conservative approximation of how much storage is allotted to the origin
+or Web app that called {{domxref("StorageManager.estimate()")}}; there may be more space
+available, but there will not be less. The value is an estimate because the
+{{Glossary("user agent")}} may use compression, duplication prevention techniques, and
+other methods to improve storage efficiency.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>usage</em> = <em>StorageEstimate</em>.usage;
-</pre>
+```js
+usage = StorageEstimate.usage;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A numeric value specifying an approximation of the total amount of storage space available for use by the application.</p>
+A numeric value specifying an approximation of the total amount of storage space available for use by the application.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/StorageManager/estimate#example"><code>StorageManager.estimate</code></a> for example code.</p>
+See [`StorageManager.estimate`](/en-US/docs/Web/API/StorageManager/estimate#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Storage_API">Storage API</a></li>
-  <li>{{domxref("Navigator")}}</li>
-  <li>{{domxref("StorageManager")}}</li>
-  <li>{{domxref("StorageEstimate")}}</li>
-  <li>{{domxref("StorageEstimate.quota")}}</li>
-</ul>
+- [Storage API](/en-US/docs/Web/API/Storage_API)
+- {{domxref("Navigator")}}
+- {{domxref("StorageManager")}}
+- {{domxref("StorageEstimate")}}
+- {{domxref("StorageEstimate.quota")}}

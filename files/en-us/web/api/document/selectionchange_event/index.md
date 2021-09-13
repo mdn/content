@@ -10,63 +10,62 @@ tags:
   - selectionchange
 browser-compat: api.Document.selectionchange_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code><strong>selectionchange</strong></code> event of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is fired when the current {{domxref("Selection")}} of a {{domxref("Document")}} is changed.</p>
+The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the current {{domxref("Selection")}} of a {{domxref("Document")}} is changed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event can be handled by adding an event listener for <code>selectionchange</code> or using the global {{domxref("GlobalEventHandlers.onselectionchange","onselectionchange")}} event handler.</p>
+The event can be handled by adding an event listener for `selectionchange` or using the global {{domxref("GlobalEventHandlers.onselectionchange","onselectionchange")}} event handler.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This event is not quite the same as the <code>selectionchange</code> events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed.
-  See {{domxref("GlobalEventHandlers.onselectionchange")}} for more information.</p>
-</div>
+> **Note:** This event is not quite the same as the `selectionchange` events fired when the text selection in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is changed.
+> See {{domxref("GlobalEventHandlers.onselectionchange")}} for more information.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// addEventListener version
-document.addEventListener('selectionchange', () =&gt; {
+```js
+// addEventListener version
+document.addEventListener('selectionchange', () => {
   console.log(document.getSelection());
 });
 
 // onselectionchange version
-document.onselectionchange = () =&gt; {
+document.onselectionchange = () => {
   console.log(document.getSelection());
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document/selectstart_event", "selectstart")}}</li>
- <li>{{domxref("Document.getSelection()")}}</li>
- <li>{{domxref("Selection", "Selection")}}</li>
-</ul>
+- {{domxref("Document/selectstart_event", "selectstart")}}
+- {{domxref("Document.getSelection()")}}
+- {{domxref("Selection", "Selection")}}

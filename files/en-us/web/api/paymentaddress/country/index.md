@@ -2,62 +2,57 @@
 title: PaymentAddress.country
 slug: Web/API/PaymentAddress/country
 tags:
-- API
-- Address
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Reference
-- country
-- payment
-- paymentAddress
+  - API
+  - Address
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Reference
+  - country
+  - payment
+  - paymentAddress
 browser-compat: api.PaymentAddress.country
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>country</code></strong> read-only property of the
-  {{domxref('PaymentAddress')}} interface is a string identifying the address's country
-  using the {{interwiki("wikipedia", "ISO 3166-1 alpha-2")}} standard. The string is
-  always in its canonical upper-case form.</p>
+The **`country`** read-only property of the
+{{domxref('PaymentAddress')}} interface is a string identifying the address's country
+using the {{interwiki("wikipedia", "ISO 3166-1 alpha-2")}} standard. The string is
+always in its canonical upper-case form.
 
-<p>Some examples of valid <code>country</code> values: <code>"US"</code>,
-  <code>"GB"</code>, <code>"CN"</code>, or <code>"JP"</code>.</p>
+Some examples of valid `country` values: `"US"`,
+`"GB"`, `"CN"`, or `"JP"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentCountry</em> = <em>PaymentAddress</em>.country;</pre>
+```js
+var paymentCountry = PaymentAddress.country;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which contains the ISO3166-1 alpha-2 code identifying the
-  country in which the address is located, or an empty string if no country is available,
-  which frequently can be assumed to mean "same country as the site owner."</p>
+A {{domxref("DOMString")}} which contains the ISO3166-1 alpha-2 code identifying the
+country in which the address is located, or an empty string if no country is available,
+which frequently can be assumed to mean "same country as the site owner."
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>If the payment handler validates the address and determines that the value of
-  <code>country</code> is invalid, a call to
-  {{domxref("PaymentRequestUpdateEvent.updateWith()")}} will be made with a
-  <code>details</code> object containing a <code>shippingAddressErrors</code>
-  field. That field contains an {{domxref("AddressErrors")}}-compliant object whose
-  {{domxref("AddressErrors.country", "country")}} property is a string indicating the
-  validation error that occurred and, if possible, suggests how to fix it.</p>
+If the payment handler validates the address and determines that the value of
+`country` is invalid, a call to
+{{domxref("PaymentRequestUpdateEvent.updateWith()")}} will be made with a
+`details` object containing a `shippingAddressErrors`
+field. That field contains an {{domxref("AddressErrors")}}-compliant object whose
+{{domxref("AddressErrors.country", "country")}} property is a string indicating the
+validation error that occurred and, if possible, suggests how to fix it.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+## See also
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li><a
-        href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-        the Payment Request API</a></li>
-    <li>{{domxref("PaymentRequestUpdateEvent.updateWith")}}</li>
-    <li>{{domxref("AddressErrors.country")}}</li>
-  </ul>
-</div>
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- {{domxref("PaymentRequestUpdateEvent.updateWith")}}
+- {{domxref("AddressErrors.country")}}

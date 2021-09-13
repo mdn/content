@@ -12,35 +12,33 @@ tags:
   - getPrimaryService()
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryService
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTServer.getPrimaryService() </code></strong>method
-  returns a promise to the primary {{domxref("BluetoothRemoteGATTService")}} offered by the
-  bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.</p>
+The **`BluetoothRemoteGATTServer.getPrimaryService() `**method
+returns a promise to the primary {{domxref("BluetoothRemoteGATTService")}} offered by the
+bluetooth device for a specified {{domxref("BluetoothServiceUUID")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>BluetoothRemoteGATTServer</em>.getPrimaryService(<em>bluetoothServiceUUID</em>).then(function(<em>bluetoothGATTService</em>) { ... })</pre>
+```js
+BluetoothRemoteGATTServer.getPrimaryService(bluetoothServiceUUID).then(function(bluetoothGATTService) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
-</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTService")}} object.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>BluetoothServiceUUID</code></dt>
-  <dd>A Bluetooth service universally unique identifier for a specified device.</dd>
-</dl>
+- `BluetoothServiceUUID`
+  - : A Bluetooth service universally unique identifier for a specified device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

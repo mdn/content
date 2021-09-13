@@ -2,37 +2,36 @@
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
 tags:
-- API
-- Encoding
-- Property
-- Read-only
-- Reference
-- TextEncoder
+  - API
+  - Encoding
+  - Property
+  - Read-only
+  - Reference
+  - TextEncoder
 browser-compat: api.TextEncoder.encoding
 ---
-<div>{{APIRef("Encoding API")}}</div>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextEncoder.encoding</code></strong> read-only property returns a
-  {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the
-  specific encoder.</p>
+The **`TextEncoder.encoding`** read-only property returns a
+{{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the
+specific encoder.
 
-<p>It can only have the following value <code>utf-8</code>.</p>
+It can only have the following value `utf-8`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>b</var> = <var>encoder</var>.encoding;</pre>
+```js
+b = encoder.encoding;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("TextEncoder")}} interface it belongs to.</li>
-</ul>
+- The {{DOMxRef("TextEncoder")}} interface it belongs to.

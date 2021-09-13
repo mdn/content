@@ -19,56 +19,59 @@ tags:
   - icecandidateerror
 browser-compat: api.RTCPeerConnection.icecandidateerror_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> event <code><strong>icecandidateerror</strong></code> is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.</p>
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) event **`icecandidateerror`** is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("RTCPeerConnectionIceErrorEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerConnection.onicecandidateerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("RTCPeerConnectionIceErrorEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCPeerConnection.onicecandidateerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The error object's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property is one of the numeric STUN error codes. There is one additional, WebRTC-specific, error which lies outside the valid STUN error code range: 701. Error 701 indicates that none of the ICE candidates were able to successfully make contact with the STUN or TURN server.</p>
+The error object's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} property is one of the numeric STUN error codes. There is one additional, WebRTC-specific, error which lies outside the valid STUN error code range: 701. Error 701 indicates that none of the ICE candidates were able to successfully make contact with the STUN or TURN server.
 
-<p>The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's <a href="/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState">ICE gathering state</a> is <code>gathering</code>.</p>
+The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's [ICE gathering state](/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState) is `gathering`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example establishes a handler for <code>icecandidateerror</code>s that occur on the {{domxref("RTCPeerConnection")}} <code>pc</code>. This handler looks specifically for 701 errors that indicate that candidates couldn't reach the STUN or TURN server.</p>
+The following example establishes a handler for `icecandidateerror`s that occur on the {{domxref("RTCPeerConnection")}} `pc`. This handler looks specifically for 701 errors that indicate that candidates couldn't reach the STUN or TURN server.
 
-<p>When this happens, the server URL and the error message are passed to a function called <code>reportConnectFail()</code> to log or output the connection failure.</p>
+When this happens, the server URL and the error message are passed to a function called `reportConnectFail()` to log or output the connection failure.
 
-<pre class="brush: js">pc.addEventListener("icecandidateerror", (event) =&gt; {
+```js
+pc.addEventListener("icecandidateerror", (event) => {
   if (event.errorCode === 701) {
     reportConnectFail(event.url, event.errorText);
   }
 });
-</pre>
+```
 
-<p>Note that if multiple STUN and/or TURN servers are provided when creating the connection, this error may happen more than once, if more than one of those servers fails. Each provided server is tried until a connection is established.</p>
+Note that if multiple STUN and/or TURN servers are provided when creating the connection, this error may happen more than once, if more than one of those servers fails. Each provided server is tried until a connection is established.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

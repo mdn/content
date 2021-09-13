@@ -11,61 +11,71 @@ tags:
   - close
 browser-compat: api.HTMLDialogElement.close_event
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>The <code>close</code> event is fired on an <code>HTMLDialogElement</code> object when the dialog it represents has been closed.</p>
+The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclose">onclose</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onclose"
+            >onclose</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;dialog class="example-dialog"&gt;
-    &lt;button class="close" type="reset"&gt;Close&lt;/button&gt;
-&lt;/dialog&gt;
+```html
+<dialog class="example-dialog">
+    <button class="close" type="reset">Close</button>
+</dialog>
 
-&lt;button class="open-dialog"&gt;Open dialog&lt;/button&gt;
+<button class="open-dialog">Open dialog</button>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<pre class="brush: css hidden">button, div {
+```css hidden
+button, div {
     margin: .5rem;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const result = document.querySelector('.result');
+```js
+const result = document.querySelector('.result');
 
 const dialog = document.querySelector('.example-dialog');
-dialog.addEventListener('close', (event) =&gt; {
+dialog.addEventListener('close', (event) => {
     result.textContent = 'dialog was closed';
 });
 
 const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () =&gt; {
+openDialog.addEventListener('click', () => {
   if (typeof dialog.showModal === 'function') {
       dialog.showModal();
       result.textContent = '';
@@ -75,25 +85,23 @@ openDialog.addEventListener('click', () =&gt; {
 });
 
 const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () =&gt; {
+closeButton.addEventListener('click', () => {
     dialog.close();
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '100px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML <code><a href="/en-US/docs/Web/HTML/Element/dialog">&lt;dialog&gt;</a></code> element</li>
-</ul>
+- HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog) element

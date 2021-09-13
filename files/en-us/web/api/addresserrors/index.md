@@ -16,59 +16,56 @@ tags:
   - paymentAddress
 browser-compat: api.AddressErrors
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>AddressErrors</code></strong> dictionary is used by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to report validation errors in a physical address (typically a billing address or a shipping address). Any members which are present indicate that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.</p>
+The **`AddressErrors`** dictionary is used by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to report validation errors in a physical address (typically a billing address or a shipping address). Any members which are present indicate that a validation error occurred for the member of the same name in an address described using {{domxref("PaymentAddress")}}.
 
-<p><code>AddressErrors</code> is the type of the object returned by <code>shippingAddressErrors</code> in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.</p>
+`AddressErrors` is the type of the object returned by `shippingAddressErrors` in the object passed into {{domxref("PaymentRequestUpdateEvent.updateWith()")}} by the {{event("shippingaddresschange")}} event handler if a change to the address resulted in a validation error occurring.
 
-<p>See the {{anch("Examples", "examples below")}} to see how this works.</p>
+See the {{anch("Examples", "examples below")}} to see how this works.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AddressErrors.addressLine", "addressLine")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.city", "city")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.country", "country")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.dependentLocality", "dependentLocality")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.organization", "organization")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.phone", "phone")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.postalCode", "postalCode")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.recipient", "recipient")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.region", "region")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
- <dt>{{domxref("AddressErrors.sortingCode", "sortingCode")}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
-</dl>
+- {{domxref("AddressErrors.addressLine", "addressLine")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.addressLine", "addressLine")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.city", "city")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.city", "city")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.country", "country")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.country", "country")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.dependentLocality", "dependentLocality")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.organization", "organization")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.organization", "organization")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.phone", "phone")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.phone", "phone")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.postalCode", "postalCode")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.postalCode", "postalCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.recipient", "recipient")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.recipient", "recipient")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.region", "region")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.region", "region")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
+- {{domxref("AddressErrors.sortingCode", "sortingCode")}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.sortingCode", "sortingCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<p>These properties have been removed from the specification and should no longer be used.</p>
+These properties have been removed from the specification and should no longer be used.
 
-<dl>
- <dt>{{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.</dd>
-</dl>
+- {{domxref("AddressErrors.languageCode", "languageCode")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} which, if present, indicates that the {{domxref("PaymentAddress.languageCode", "languageCode")}} property of the {{domxref("PaymentAddress")}} could not be validated. The contents of the string provide a human-readable explanation of the validation failure, and ideally suggestions to correct the problem.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Keep in mind that some violation errors may be outside the ability of the user to fix. Try to avoid asking the user to make corrections to things they can't change, and there may be situations in which you need to allow validation errors to be accepted anyway (for example, if you validate addresses against a postal service database and a new home has been built and its address is not yet in the database).</p>
+Keep in mind that some violation errors may be outside the ability of the user to fix. Try to avoid asking the user to make corrections to things they can't change, and there may be situations in which you need to allow validation errors to be accepted anyway (for example, if you validate addresses against a postal service database and a new home has been built and its address is not yet in the database).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Snippet_Limiting_destination_countries">Snippet: Limiting destination countries</h3>
+### Snippet: Limiting destination countries
 
-<p>This first example is just a snippet showing an implementation of the event handler for the {{event("shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.</p>
+This first example is just a snippet showing an implementation of the event handler for the {{event("shippingaddresschange")}} event which checks to be sure the chosen address is located within one of a limited number of countries.
 
-<pre class="brush: js">function handleAddressChange(ev) {
+```js
+function handleAddressChange(ev) {
   const validCountries = ["US", "CA", "GB", "JP", "CN", "MX"];
 
   const genericAddressError = "Unable to ship to the given address. Please check for any errors.";
@@ -90,21 +87,23 @@ browser-compat: api.AddressErrors
   }
 
   ev.updateWith(updateDetails);
-}</pre>
+}
+```
 
-<p>See {{anch("Handling address changes")}} for a description of how this code works.</p>
+See {{anch("Handling address changes")}} for a description of how this code works.
 
-<h3 id="Complete_example">Complete example</h3>
+### Complete example
 
-<p>Here we'll see a complete, working version of the example above (except of course that it's not connected to an actual payment handler, so no payments are actually processed). In the example, we're handling a donation to an organization that will be sending a "thank you" gift to the donor, so it requests shipping information along with allowing the donation payment itself.</p>
+Here we'll see a complete, working version of the example above (except of course that it's not connected to an actual payment handler, so no payments are actually processed). In the example, we're handling a donation to an organization that will be sending a "thank you" gift to the donor, so it requests shipping information along with allowing the donation payment itself.
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<h5 id="Payment_Request_data">Payment Request data</h5>
+##### Payment Request data
 
-<p>First, we declare the variables <code>supportedHandlers</code>, which is compatible with {{domxref("PaymentMethodData")}}, and <code>defaultPaymentDetails</code>, which is an object containing the properties described in {{domxref("PaymentRequestUpdateEvent.updateWith")}}.</p>
+First, we declare the variables `supportedHandlers`, which is compatible with {{domxref("PaymentMethodData")}}, and `defaultPaymentDetails`, which is an object containing the properties described in {{domxref("PaymentRequestUpdateEvent.updateWith")}}.
 
-<pre class="brush: js">let supportedHandlers = [
+```js
+let supportedHandlers = [
   {
     supportedMethods: "basic-card",
     data: {
@@ -130,17 +129,19 @@ let defaultPaymentDetails = {
       selected: true
     }
   ]
-};</pre>
+};
+```
 
-<p><code>supportedHandlers</code> describes the supported payment handlers and the details for those. In this example, only the Basic Card handler is supported, and it's configured to permit both debit and credit cards from Visa, Master Card, American Express, and Discover.</p>
+`supportedHandlers` describes the supported payment handlers and the details for those. In this example, only the Basic Card handler is supported, and it's configured to permit both debit and credit cards from Visa, Master Card, American Express, and Discover.
 
-<p><code>defaultPaymentDetails</code> describes the payment being requested. A description of the total amount being requested (including a label and the currency used), a list of the line items (in this case only one, "Original donation amount"), and a list of shipping options available; in this case only one.</p>
+`defaultPaymentDetails` describes the payment being requested. A description of the total amount being requested (including a label and the currency used), a list of the line items (in this case only one, "Original donation amount"), and a list of shipping options available; in this case only one.
 
-<h5 id="Process_the_payment">Process the payment</h5>
+##### Process the payment
 
-<p>The main payment processing code is found in the <code>process()</code> method, up next.</p>
+The main payment processing code is found in the `process()` method, up next.
 
-<pre class="brush: js">let request;
+```js
+let request;
 
 function process() {
   let options = {requestShipping: true};
@@ -161,17 +162,19 @@ function process() {
   } catch (e) {
     // Catch any errors from trying to create the PaymentRequest object.
   }
-}</pre>
+}
+```
 
-<p>This code creates a new {{domxref("PaymentRequest")}}, providing the supported handlers and payment options we set up above, as well as additional options (in this case, that we want to ask for shipping information).</p>
+This code creates a new {{domxref("PaymentRequest")}}, providing the supported handlers and payment options we set up above, as well as additional options (in this case, that we want to ask for shipping information).
 
-<p>After that, we set up the handler for the {{event("shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.</p>
+After that, we set up the handler for the {{event("shippingaddresschange")}} event so we can validate address information and call the request's {{domxref("PaymentRequest.show", "show()")}} method to start running the payment UI.
 
-<h5 id="Handling_address_changes">Handling address changes</h5>
+##### Handling address changes
 
-<p>The <code>handleAddressChange()</code> method, called when <code>shippingaddresschange</code> events occur, is where we'll look to see if the country is one of those we allow as shipping destinations.</p>
+The `handleAddressChange()` method, called when `shippingaddresschange` events occur, is where we'll look to see if the country is one of those we allow as shipping destinations.
 
-<pre class="brush: js">function handleAddressChange(ev) {
+```js
+function handleAddressChange(ev) {
   const validCountries = ["US", "CA", "GB", "JP", "CN", "MX"];
 
   const genericAddressError = "Unable to ship to the given address. Please check for any errors.";
@@ -193,49 +196,51 @@ function process() {
   }
 
   ev.updateWith(updateDetails);
-}</pre>
+}
+```
 
-<p>The <code>shippingaddresschange</code> event doesn't receive the {{domxref("PaymentRequest")}} object directly, so we fetch it from the {{domxref("Event.target", "target")}} property of the event. If the request's {{domxref("PaymentRequest.shippingAddress", "shippingAddress")}} has a value for {{domxref("PaymentAddress.country", "country")}} which isn't in the array <code>validCountries</code>, we generate the error.</p>
+The `shippingaddresschange` event doesn't receive the {{domxref("PaymentRequest")}} object directly, so we fetch it from the {{domxref("Event.target", "target")}} property of the event. If the request's {{domxref("PaymentRequest.shippingAddress", "shippingAddress")}} has a value for {{domxref("PaymentAddress.country", "country")}} which isn't in the array `validCountries`, we generate the error.
 
-<p>That's done by removing all shipping options currently set on the request, then set up an object named <code>shippingAddressErrors</code> which contains a <code>country</code> property which is an error message describing why the stated country isn't being permitted as a value.</p>
+That's done by removing all shipping options currently set on the request, then set up an object named `shippingAddressErrors` which contains a `country` property which is an error message describing why the stated country isn't being permitted as a value.
 
-<p>Then an object is created with its <code>error</code> set to a generic message about address errors and with the reset of the object's values taken from <code>shippingAddressErrors</code>, and, using "<code>...defaultPaymentDetails</code>" as the final entry in the object, the remeainder of the properties' values are taken from <code>defaultPaymentDetails</code>.</p>
+Then an object is created with its `error` set to a generic message about address errors and with the reset of the object's values taken from `shippingAddressErrors`, and, using "`...defaultPaymentDetails`" as the final entry in the object, the remeainder of the properties' values are taken from `defaultPaymentDetails`.
 
-<p>The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method, passing along the <code>updateDetails</code> object. This lets the Payment Request API know to present the specified error or errors but to allow the user to keep trying to edit the address.</p>
+The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method, passing along the `updateDetails` object. This lets the Payment Request API know to present the specified error or errors but to allow the user to keep trying to edit the address.
 
-<h5 id="Setting_up_the_Donate_Now_button">Setting up the Donate Now button</h5>
+##### Setting up the Donate Now button
 
-<p>This code creates a handler for the {{event("load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.</p>
+This code creates a handler for the {{event("load")}} event on the {{domxref("Window", "window")}} which in turn adds the needed {{event("click")}} event handler to the "Donate Now" button so that clicking it starts the payment process.
 
-<pre class="brush: js">window.addEventListener("load", function(ev) {
+```js
+window.addEventListener("load", function(ev) {
   document.getElementById("pay").addEventListener("click", process, false);
 }, false);
-</pre>
+```
 
-<p>See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.</p>
+See {{domxref("EventTarget.addEventListener", "addEventListener()")}}  for information about event handlers and how they work.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>Here's the simple HTML for this example.</p>
+Here's the simple HTML for this example.
 
-<pre class="brush: html">&lt;p&gt;Donate US $65 to our worthwhile cause and we will send you a totally
-not-useless gift as a token of our thanks!&lt;/p&gt;
-&lt;button id="pay"&gt;Donate Now&lt;/button&gt;</pre>
+```html
+<p>Donate US $65 to our worthwhile cause and we will send you a totally
+not-useless gift as a token of our thanks!</p>
+<button id="pay">Donate Now</button>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The final product is below.</p>
+The final product is below.
 
-<div class="note">
-<p><strong>Note:</strong> if you have content blocking features enabled in your browser, the example may not work inline below. In that case, you can {{LiveSampleLink("Complete_example", "view the example on its own page")}}.</p>
-</div>
+> **Note:** if you have content blocking features enabled in your browser, the example may not work inline below. In that case, you can {{LiveSampleLink("Complete_example", "view the example on its own page")}}.
 
-<p>{{EmbedLiveSample("Complete_example", 640, 400)}}</p>
+{{EmbedLiveSample("Complete_example", 640, 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

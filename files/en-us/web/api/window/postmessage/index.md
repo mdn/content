@@ -2,168 +2,166 @@
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
 tags:
-- API
-- Cross-origin Communication
-- HTML DOM
-- Method
-- Reference
-- Window
-- postMessage
+  - API
+  - Cross-origin Communication
+  - HTML DOM
+  - Method
+  - Reference
+  - Window
+  - postMessage
 browser-compat: api.Window.postMessage
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>window.postMessage()</code></strong> method safely enables
-  cross-origin communication between {{domxref("Window")}} objects; <em>e.g.,</em> between
-  a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
-</p>
+The **`window.postMessage()`** method safely enables
+cross-origin communication between {{domxref("Window")}} objects; _e.g.,_ between
+a page and a pop-up that it spawned, or between a page and an iframe embedded within it.
 
-<p>Normally, scripts on different pages are allowed to access each other if and only if
-  the pages they originate from share the same protocol, port number, and host (also known
-  as the "<a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>").
-  <code>window.postMessage()</code> provides a controlled mechanism to securely circumvent
-  this restriction (if used properly).</p>
+Normally, scripts on different pages are allowed to access each other if and only if
+the pages they originate from share the same protocol, port number, and host (also known
+as the "[same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)").
+`window.postMessage()` provides a controlled mechanism to securely circumvent
+this restriction (if used properly).
 
-<p>Broadly, one window may obtain a reference to another (<em>e.g.,</em> via
-  <code>targetWindow = window.opener</code>), and then dispatch a
-  {{domxref("MessageEvent")}} on it with <code>targetWindow.postMessage()</code>. The
-  receiving window is then free to <a href="/en-US/docs/Web/Events/Event_handlers">handle this event</a> as needed. The arguments passed to <code>window.postMessage()</code>
-  (<em>i.e.,</em> the “message”) are <a href="#the_dispatched_event">exposed to the receiving window through the event object</a>.</p>
+Broadly, one window may obtain a reference to another (_e.g.,_ via
+`targetWindow = window.opener`), and then dispatch a
+{{domxref("MessageEvent")}} on it with `targetWindow.postMessage()`. The
+receiving window is then free to [handle this event](/en-US/docs/Web/Events/Event_handlers) as needed. The arguments passed to `window.postMessage()`
+(_i.e.,_ the “message”) are [exposed to the receiving window through the event object](#the_dispatched_event).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>targetWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
+```js
+targetWindow.postMessage(message, targetOrigin, [transfer]);
+```
 
-<dl>
-  <dt><code><em>targetWindow</em></code></dt>
-  <dd>A reference to the window that will receive the message. Methods for obtaining such
+- `targetWindow`
+
+  - : A reference to the window that will receive the message. Methods for obtaining such
     a reference include:
-    <ul>
-      <li>{{domxref("window.open")}} (to spawn a new window and then reference it),</li>
-      <li>{{domxref("window.opener")}} (to reference the window that spawned this one),
-      </li>
-      <li>{{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded
-        {{HTMLElement("iframe")}} from its parent window),</li>
-      <li>{{domxref("window.parent")}} (to reference the parent window from within an
-        embedded {{HTMLElement("iframe")}}), or</li>
-      <li>{{domxref("window.frames")}} + an index value (named or numeric).</li>
-    </ul>
-  </dd>
-  <dt><code><em>message</em></code></dt>
-  <dd>Data to be sent to the other window. The data is serialized using
+
+    - {{domxref("window.open")}} (to spawn a new window and then reference it),
+    - {{domxref("window.opener")}} (to reference the window that spawned this one),
+    - {{domxref("HTMLIFrameElement.contentWindow")}} (to reference an embedded
+      {{HTMLElement("iframe")}} from its parent window),
+    - {{domxref("window.parent")}} (to reference the parent window from within an
+      embedded {{HTMLElement("iframe")}}), or
+    - {{domxref("window.frames")}} + an index value (named or numeric).
+
+- `message`
+  - : Data to be sent to the other window. The data is serialized using
     {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
     algorithm")}}. This means you can pass a broad variety of data objects safely to the
-    destination window without having to serialize them yourself.</dd>
-  <dt><code><em>targetOrigin</em></code></dt>
-  <dd>Specifies what the origin of <code>targetWindow</code> must be for the event to be
-    dispatched, either as the literal string <code>"*"</code> (indicating no preference)
+    destination window without having to serialize them yourself.
+- `targetOrigin`
+  - : Specifies what the origin of `targetWindow` must be for the event to be
+    dispatched, either as the literal string `"*"` (indicating no preference)
     or as a URI. If at the time the event is scheduled to be dispatched the scheme,
-    hostname, or port of <code>targetWindow</code>'s document does not match that provided
-    in <code>targetOrigin</code>, the event will not be dispatched; only if all three
+    hostname, or port of `targetWindow`'s document does not match that provided
+    in `targetOrigin`, the event will not be dispatched; only if all three
     match will the event be dispatched. This mechanism provides control over where
-    messages are sent; for example, if <code>postMessage()</code> was used to transmit a
+    messages are sent; for example, if `postMessage()` was used to transmit a
     password, it would be absolutely critical that this argument be a URI whose origin is
     the same as the intended receiver of the message containing the password, to prevent
-    interception of the password by a malicious third party. <strong>Always provide a
-      specific <code>targetOrigin</code>, not <code>*</code>, if you know where the other
-      window's document should be located. Failing to provide a specific target discloses
-      the data you send to any interested malicious site.</strong></dd>
-  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
-  <dd>Is a sequence of {{domxref("Transferable")}} objects that are transferred with the
+    interception of the password by a malicious third party. **Always provide a
+    specific `targetOrigin`, not `*`, if you know where the other
+    window's document should be located. Failing to provide a specific target discloses
+    the data you send to any interested malicious site.**
+- `transfer` {{optional_Inline}}
+  - : Is a sequence of {{domxref("Transferable")}} objects that are transferred with the
     message. The ownership of these objects is given to the destination side and they are
-    no longer usable on the sending side.</dd>
-</dl>
+    no longer usable on the sending side.
 
-<h2 id="The_dispatched_event">The dispatched event</h2>
+## The dispatched event
 
-<p>A <code>window</code> can listen for dispatched messages by executing the following
-  JavaScript:</p>
+A `window` can listen for dispatched messages by executing the following
+JavaScript:
 
-<pre class="brush: js">window.addEventListener("message", (event) =&gt; {
+```js
+window.addEventListener("message", (event) => {
   if (event.origin !== "http://example.org:8080")
     return;
 
   // ...
 }, false);
-</pre>
+```
 
-<p>The properties of the dispatched message are:</p>
+The properties of the dispatched message are:
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>The object passed from the other window.</dd>
-  <dt><code>origin</code></dt>
-  <dd>The {{Glossary("origin")}} of the window that sent the message at the time
-    <code>postMessage</code> was called. This string is the concatenation of the protocol
+- `data`
+  - : The object passed from the other window.
+- `origin`
+  - : The {{Glossary("origin")}} of the window that sent the message at the time
+    `postMessage` was called. This string is the concatenation of the protocol
     and "://", the host name if one exists, and ":" followed by a port number if a port is
     present and differs from the default port for the given protocol. Examples of typical
-    origins are <code>https://example.org</code> (implying port
-    <code>443</code>), <code>http://example.net</code> (implying port
-    <code>80</code>), and <code>http://example.com:8080</code>. Note that
-    this origin is <em>not</em> guaranteed to be the current or future origin of that
+    origins are `https://example.org` (implying port
+    `443`), `http://example.net` (implying port
+    `80`), and `http://example.com:8080`. Note that
+    this origin is _not_ guaranteed to be the current or future origin of that
     window, which might have been navigated to a different location since
-    <code>postMessage</code> was called.</dd>
-  <dt><code>source</code></dt>
-  <dd>A reference to the {{domxref("window")}} object that sent the message; you can use
+    `postMessage` was called.
+- `source`
+  - : A reference to the {{domxref("window")}} object that sent the message; you can use
     this to establish two-way communication between two windows with different origins.
-  </dd>
-</dl>
 
-<h2 id="Security_concerns">Security concerns</h2>
+## Security concerns
 
-<p><strong>If you do not expect to receive messages from other sites, <em>do not</em> add
-    any event listeners for <code>message</code> events.</strong> This is a completely
-  foolproof way to avoid security problems.</p>
+**If you do not expect to receive messages from other sites, _do not_ add
+any event listeners for `message` events.** This is a completely
+foolproof way to avoid security problems.
 
-<p>If you do expect to receive messages from other sites, <strong>always verify the
-    sender's identity</strong> using the <code>origin</code> and possibly
-  <code>source</code> properties. Any window (including, for example,
-  <code>http://evil.example.com</code>) can send a message to any other window,
-  and you have no guarantees that an unknown sender will not send malicious messages.
-  Having verified identity, however, you still should <strong>always verify the syntax of
-    the received message</strong>. Otherwise, a security hole in the site you trusted to
-  send only trusted messages could then open a cross-site scripting hole in your site.</p>
+If you do expect to receive messages from other sites, **always verify the
+sender's identity** using the `origin` and possibly
+`source` properties. Any window (including, for example,
+`http://evil.example.com`) can send a message to any other window,
+and you have no guarantees that an unknown sender will not send malicious messages.
+Having verified identity, however, you still should **always verify the syntax of
+the received message**. Otherwise, a security hole in the site you trusted to
+send only trusted messages could then open a cross-site scripting hole in your site.
 
-<p><strong>Always specify an exact target origin, not <code>*</code>, when you use
-    <code>postMessage</code> to send data to other windows.</strong> A malicious site can
-  change the location of the window without your knowledge, and therefore it can intercept
-  the data sent using <code>postMessage</code>.</p>
+**Always specify an exact target origin, not `*`, when you use
+`postMessage` to send data to other windows.** A malicious site can
+change the location of the window without your knowledge, and therefore it can intercept
+the data sent using `postMessage`.
 
-<h3 id="Secure_shared_memory_messaging">Secure shared memory messaging</h3>
+### Secure shared memory messaging
 
-<p>If <code>postMessage()</code> throws when used with {{jsxref("SharedArrayBuffer")}}
-  objects, you might need to make sure you cross-site isolated your site properly. Shared
-  memory is gated behind two HTTP headers:</p>
+If `postMessage()` throws when used with {{jsxref("SharedArrayBuffer")}}
+objects, you might need to make sure you cross-site isolated your site properly. Shared
+memory is gated behind two HTTP headers:
 
-<ul>
-  <li>{{HTTPHeader("Cross-Origin-Opener-Policy")}} with <code>same-origin</code> as value
-    (protects your origin from attackers)</li>
-  <li>{{HTTPHeader("Cross-Origin-Embedder-Policy")}} with <code>require-corp</code> as
-    value (protects victims from your origin)</li>
-</ul>
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value
+  (protects your origin from attackers)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` as
+  value (protects victims from your origin)
 
-<pre class="brush: plain">Cross-Origin-Opener-Policy: same-origin
+```plain
+Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
-</pre>
+```
 
-<p>To check if cross origin isolation has been successful, you can test against the
-  {{domxref("crossOriginIsolated")}}
-  property available to window and worker contexts:</p>
+To check if cross origin isolation has been successful, you can test against the
+{{domxref("crossOriginIsolated")}}
+property available to window and worker contexts:
 
-<pre class="brush: js">if (crossOriginIsolated) {
+```js
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
-}</pre>
+}
+```
 
-<p>See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
+See also {{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "Planned changes
   to shared memory", "", 1)}} which is starting to roll out to browsers (Firefox 79, for
-  example).</p>
+example).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">/*
- * In window A's scripts, with A being on &lt;http://example.com:8080&gt;:
+```js
+/*
+ * In window A's scripts, with A being on <http://example.com:8080>:
  */
 
 var popup = window.open(/* popup details */);
@@ -178,7 +176,7 @@ popup.postMessage("The user is 'bob' and the password is 'secret'",
 // the window hasn't changed its location.
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener("message", (event) =&gt; {
+window.addEventListener("message", (event) => {
   // Do we trust the sender of this message?  (might be
   // different from what we originally opened, for example).
   if (event.origin !== "http://example.com")
@@ -187,14 +185,15 @@ window.addEventListener("message", (event) =&gt; {
   // event.source is popup
   // event.data is "hi there yourself!  the secret response is: rheeeeet!"
 }, false);
-</pre>
+```
 
-<pre class="brush: js">/*
- * In the popup's scripts, running on &lt;http://example.com&gt;:
+```js
+/*
+ * In the popup's scripts, running on <http://example.com>:
  */
 
 // Called sometime after postMessage is called
-window.addEventListener("message", (event) =&gt; {
+window.addEventListener("message", (event) => {
   // Do we trust the sender of this message?
   if (event.origin !== "http://example.com:8080")
     return;
@@ -210,78 +209,75 @@ window.addEventListener("message", (event) =&gt; {
                            "is: rheeeeet!",
                            event.origin);
 }, false);
-</pre>
+```
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Any window may access this method on any other window, at any time, regardless of the
-  location of the document in the window, to send it a message. Consequently, any event
-  listener used to receive messages <strong>must</strong> first check the identity of the
-  sender of the message, using the <code>origin</code> and possibly <code>source</code>
-  properties. This cannot be overstated: <strong>Failure to check the <code>origin</code>
-    and possibly <code>source</code> properties enables cross-site scripting
-    attacks.</strong></p>
+Any window may access this method on any other window, at any time, regardless of the
+location of the document in the window, to send it a message. Consequently, any event
+listener used to receive messages **must** first check the identity of the
+sender of the message, using the `origin` and possibly `source`
+properties. This cannot be overstated: **Failure to check the `origin`
+and possibly `source` properties enables cross-site scripting
+attacks.**
 
-<p>As with any asynchronously-dispatched script (timeouts, user-generated events), it is
-  not possible for the caller of <code>postMessage</code> to detect when an event handler
-  listening for events sent by <code>postMessage</code> throws an exception.</p>
+As with any asynchronously-dispatched script (timeouts, user-generated events), it is
+not possible for the caller of `postMessage` to detect when an event handler
+listening for events sent by `postMessage` throws an exception.
 
-<p>After <code>postMessage()</code> is called, the {{domxref("MessageEvent")}} will be
-  dispatched <em>only after all pending execution contexts have finished</em>.
-  For example, if <code>postMessage()</code> is invoked in an event handler, that event
-  handler will run to completion, as will any remaining handlers for that same event,
-  before the {{domxref("MessageEvent")}} is dispatched.</p>
+After `postMessage()` is called, the {{domxref("MessageEvent")}} will be
+dispatched _only after all pending execution contexts have finished_.
+For example, if `postMessage()` is invoked in an event handler, that event
+handler will run to completion, as will any remaining handlers for that same event,
+before the {{domxref("MessageEvent")}} is dispatched.
 
-<p>The value of the <code>origin</code> property of the dispatched event is not affected
-  by the current value of <code>document.domain</code> in the calling window.</p>
+The value of the `origin` property of the dispatched event is not affected
+by the current value of `document.domain` in the calling window.
 
-<p>For IDN host names only, the value of the <code>origin</code> property is not
-  consistently Unicode or punycode; for greatest compatibility check for both the IDN and
-  punycode values when using this property if you expect messages from IDN sites. This
-  value will eventually be consistently IDN, but for now you should handle both IDN and
-  punycode forms.</p>
+For IDN host names only, the value of the `origin` property is not
+consistently Unicode or punycode; for greatest compatibility check for both the IDN and
+punycode values when using this property if you expect messages from IDN sites. This
+value will eventually be consistently IDN, but for now you should handle both IDN and
+punycode forms.
 
-<p>The value of the <code>origin</code> property when the sending window contains a
-  <code>javascript:</code> or <code>data:</code> URL is the origin of the script that
-  loaded the URL.</p>
+The value of the `origin` property when the sending window contains a
+`javascript:` or `data:` URL is the origin of the script that
+loaded the URL.
 
-<h3 id="Using_window.postMessage_in_extensions_Non-standard_inline">Using
-  window.postMessage in extensions {{Non-standard_inline}}</h3>
+### Using window\.postMessage in extensions {{Non-standard_inline}}
 
-<p><code>window.postMessage</code> is available to JavaScript running in chrome code
-  (e.g., in extensions and privileged code), but the <code>source</code> property of the
-  dispatched event is always <code>null</code> as a security restriction. (The other
-  properties have their expected values.)</p>
+`window.postMessage` is available to JavaScript running in chrome code
+(e.g., in extensions and privileged code), but the `source` property of the
+dispatched event is always `null` as a security restriction. (The other
+properties have their expected values.)
 
-<p>It is not possible for content or web context scripts to specify a
-  <code>targetOrigin</code> to communicate directly with an extension (either the
-  background script or a content script). Web or content scripts <em>can</em> use
-  <code>window.postMessage</code> with a <code>targetOrigin</code> of <code>"*"</code> to
-  broadcast to every listener, but this is discouraged, since an extension cannot be
-  certain the origin of such messages, and other listeners (including those you do not
-  control) can listen in.</p>
+It is not possible for content or web context scripts to specify a
+`targetOrigin` to communicate directly with an extension (either the
+background script or a content script). Web or content scripts _can_ use
+`window.postMessage` with a `targetOrigin` of `"*"` to
+broadcast to every listener, but this is discouraged, since an extension cannot be
+certain the origin of such messages, and other listeners (including those you do not
+control) can listen in.
 
-<p>Content scripts should use {{WebExtAPIRef("runtime.sendMessage")}} to communicate with
-  the background script. Web context scripts can use custom events to communicate with
-  content scripts (with randomly generated event names, if needed, to prevent snooping
-  from the guest page).</p>
+Content scripts should use {{WebExtAPIRef("runtime.sendMessage")}} to communicate with
+the background script. Web context scripts can use custom events to communicate with
+content scripts (with randomly generated event names, if needed, to prevent snooping
+from the guest page).
 
-<p>Lastly, posting a message to a page at a <code>file:</code> URL currently requires that
-  the <code>targetOrigin</code> argument be <code>"*"</code>. <code>file://</code> cannot
-  be used as a security restriction; this restriction may be modified in the future.</p>
+Lastly, posting a message to a page at a `file:` URL currently requires that
+the `targetOrigin` argument be `"*"`. `file://` cannot
+be used as a security restriction; this restriction may be modified in the future.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.domain")}}</li>
-  <li>{{domxref("CustomEvent")}}</li>
-  <li>{{domxref("BroadcastChannel")}} - For same-origin communication.</li>
-</ul>
+- {{domxref("Document.domain")}}
+- {{domxref("CustomEvent")}}
+- {{domxref("BroadcastChannel")}} - For same-origin communication.

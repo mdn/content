@@ -9,79 +9,102 @@ tags:
   - Worklets
 browser-compat: api.Worklet
 ---
-<div>{{APIRef("Worklets")}}{{SeeCompatTable}}</div>
+{{APIRef("Worklets")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Worklet</code></strong> interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.</p>
+The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
 
-<p>With Worklets, you can run JavaScript and <a href="/en-US/docs/WebAssembly">WebAssembly</a> code to do graphics rendering or audio processing where high performance is required.</p>
+With Worklets, you can run JavaScript and [WebAssembly](/en-US/docs/WebAssembly) code to do graphics rendering or audio processing where high performance is required.
 
-<h2 id="Worklet_types">Worklet types</h2>
+## Worklet types
 
-<p>Worklets are restricted to specific use cases; they cannot be used for arbitrary computations like Web Workers. The <code>Worklet</code> interface abstracts properties and methods common to all kind of worklets, and cannot be created directly. Instead, you can use one of the following classes:</p>
+Worklets are restricted to specific use cases; they cannot be used for arbitrary computations like Web Workers. The `Worklet` interface abstracts properties and methods common to all kind of worklets, and cannot be created directly. Instead, you can use one of the following classes:
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th>Name</th>
-   <th>Description</th>
-   <th>Location</th>
-   <th>Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("PaintWorklet")}}</td>
-   <td>For programmatically generating an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.</td>
-   <td><strong>Chrome:</strong> Main thread, <strong>Gecko:</strong> Paint thread</td>
-   <td><a href="https://drafts.css-houdini.org/css-paint-api-1/#paint-worklet">CSS Painting API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("AudioWorklet")}}</td>
-   <td>For audio processing with custom AudioNodes.</td>
-   <td>Web Audio render thread</td>
-   <td><a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">Web Audio API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("AnimationWorklet")}}</td>
-   <td>For creating scroll-linked and other high performance procedural animations.</td>
-   <td>Compositor thread</td>
-   <td><a href="https://wicg.github.io/animation-worklet/">CSS Animation Worklet API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("LayoutWorklet")}}</td>
-   <td>For defining the positioning and dimensions of custom elements.</td>
-   <td></td>
-   <td><a href="https://drafts.css-houdini.org/css-layout-api-1/#layout-worklet">CSS Layout API</a></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{domxref("PaintWorklet")}}</td>
+      <td>
+        For programmatically generating an image where a CSS property expects a
+        file. Access this interface through
+        {{DOMxRef("CSS.paintWorklet")}}.
+      </td>
+      <td>
+        <strong>Chrome:</strong> Main thread, <strong>Gecko:</strong> Paint
+        thread
+      </td>
+      <td>
+        <a href="https://drafts.css-houdini.org/css-paint-api-1/#paint-worklet"
+          >CSS Painting API</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("AudioWorklet")}}</td>
+      <td>For audio processing with custom AudioNodes.</td>
+      <td>Web Audio render thread</td>
+      <td>
+        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet"
+          >Web Audio API</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("AnimationWorklet")}}</td>
+      <td>
+        For creating scroll-linked and other high performance procedural
+        animations.
+      </td>
+      <td>Compositor thread</td>
+      <td>
+        <a href="https://wicg.github.io/animation-worklet/"
+          >CSS Animation Worklet API</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("LayoutWorklet")}}</td>
+      <td>For defining the positioning and dimensions of custom elements.</td>
+      <td></td>
+      <td>
+        <a
+          href="https://drafts.css-houdini.org/css-layout-api-1/#layout-worklet"
+          >CSS Layout API</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For 3D rendering with <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>, you don't use Worklets. Instead, you write Vertex Shaders and Fragment Shaders using GLSL code, and those shaders will then run on the graphics card.</p>
+For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use Worklets. Instead, you write Vertex Shaders and Fragment Shaders using GLSL code, and those shaders will then run on the graphics card.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The Worklet interface does not define any properties.</em></p>
+_The Worklet interface does not define any properties._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Worklet.addModule()")}} {{experimental_inline}}</dt>
- <dd>Adds the script module at the given URL to the current worklet.</dd>
-</dl>
+- {{domxref("Worklet.addModule()")}} {{experimental_inline}}
+  - : Adds the script module at the given URL to the current worklet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2016/05/houdini">Houdini: Demystifying CSS</a> on Google Developers (May 2016)</li>
- <li><a href="https://www.youtube.com/watch?v=g1L4O1smMC0&amp;t=1m33s">AudioWorklet :: What, Why, and How</a> on YouTube (November 2017)</li>
- <li><a href="https://developers.google.com/web/updates/2017/12/audio-worklet">Enter AudioWorklet</a> on Google Developers (December 2017)</li>
- <li><a href="https://www.youtube.com/watch?v=ZPkMMShYxKU&amp;t=0m19s">Animation Worklet - HTTP203 Advent</a> on YouTube (December 2017)</li>
-</ul>
+- [Houdini: Demystifying CSS](https://developers.google.com/web/updates/2016/05/houdini) on Google Developers (May 2016)
+- [AudioWorklet :: What, Why, and How](https://www.youtube.com/watch?v=g1L4O1smMC0&t=1m33s) on YouTube (November 2017)
+- [Enter AudioWorklet](https://developers.google.com/web/updates/2017/12/audio-worklet) on Google Developers (December 2017)
+- [Animation Worklet - HTTP203 Advent](https://www.youtube.com/watch?v=ZPkMMShYxKU&t=0m19s) on YouTube (December 2017)

@@ -10,56 +10,53 @@ tags:
   - Offline web applications
   - Web Development
 ---
-<p>Some browsers implement <a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">Online/Offline events</a> from the <a href="https://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 specification</a>.</p>
+Some browsers implement [Online/Offline events](https://www.whatwg.org/specs/web-apps/current-work/#offline) from the [WHATWG Web Applications 1.0 specification](https://www.whatwg.org/specs/web-apps/current-work/).
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>In order to build a good offline-capable web application, you need to know when your application is actually offline. You also need to know when your application has returned to an 'online' status again. Effectively, the requirements break down as such:</p>
+In order to build a good offline-capable web application, you need to know when your application is actually offline. You also need to know when your application has returned to an 'online' status again. Effectively, the requirements break down as such:
 
-<ol>
- <li>You need to know when the user comes back online, so that you can re-synchronize with the server.</li>
- <li>You need to know when the user is offline, so that you can queue your server requests for a later time.</li>
-</ol>
+1.  You need to know when the user comes back online, so that you can re-synchronize with the server.
+2.  You need to know when the user is offline, so that you can queue your server requests for a later time.
 
-<p>It is this process that online/offline events help to simplify.</p>
+It is this process that online/offline events help to simplify.
 
-<p>Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
 
-<h2 id="API">API</h2>
+## API
 
-<h3 id="navigator.onLine"><code>navigator.onLine</code></h3>
+### `navigator.onLine`
 
-<p><code><a href="/en-US/docs/DOM/window.navigator.onLine">navigator.onLine</a></code> is a property that maintains a <code>true</code>/<code>false</code> value (<code>true</code> for online, <code>false</code> for offline).</p>
+[`navigator.onLine`](/en-US/docs/DOM/window.navigator.onLine) is a property that maintains a `true`/`false` value (`true` for online, `false` for offline).
 
-<p>This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the <a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">specification</a>:</p>
+This property is updated whenever the user switches into "Offline Mode" (File → Work Offline in Firefox). Additionally, this property should update whenever a browser is no longer capable of connecting to the network. According to the [specification](https://www.whatwg.org/specs/web-apps/current-work/#offline):
 
-<blockquote>The <code>navigator.onLine</code> attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
+> The `navigator.onLine` attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...
 
-<p>Firefox 2 updates this property when switching to/from the browser's Offline mode.  <a href="/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
+Firefox 2 updates this property when switching to/from the browser's Offline mode.  [Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.
 
-<p>This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.</p>
+This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.
 
-<h3 id=".22online.22_and_.22offline.22_events">"<code>online</code>" and "<code>offline</code>" events</h3>
+### "`online`" and "`offline`" events
 
-<p><a href="/en-US/docs/Firefox_3_for_developers">Firefox 3</a> introduces two new events: "<a href="/en-US/docs/Web/API/document.ononline"><code>online</code></a>" and "<a href="/en-US/docs/Web/API/document.onoffline"><code>offline</code></a>". These two events are fired on the <code>&lt;body&gt;</code> of each page when the browser switches between online and offline mode. Additionally, the events bubble up from <code>document.body</code>, to <code>document</code>, ending at <code>window</code>. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).</p>
+[Firefox 3](/en-US/docs/Firefox_3_for_developers) introduces two new events: "[`online`](/en-US/docs/Web/API/document.ononline)" and "[`offline`](/en-US/docs/Web/API/document.onoffline)". These two events are fired on the `<body>` of each page when the browser switches between online and offline mode. Additionally, the events bubble up from `document.body`, to `document`, ending at `window`. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).
 
-<p><a href="/en-US/Firefox/Releases/41#Miscellaneous">Firefox 41</a> fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.</p>
+[Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.
 
-<p>You can register listeners for these events in a few familiar ways:</p>
+You can register listeners for these events in a few familiar ways:
 
-<ul>
- <li>using <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> on the <code>window</code>, <code>document</code>, or <code>document.body</code></li>
- <li>by setting the <code>.ononline</code> or <code>.onoffline</code> properties on <code>document</code> or <code>document.body</code> to a JavaScript <code>Function</code> object. (<strong>Note:</strong> using <code>window.ononline</code> or <code>window.onoffline</code> will not work for compatibility reasons.)</li>
- <li>by specifying <code>ononline="..."</code> or <code>onoffline="..."</code> attributes on the <code>&lt;body&gt;</code> tag in the HTML markup.</li>
-</ul>
+- using [`addEventListener`](/en-US/docs/DOM/element.addEventListener) on the `window`, `document`, or `document.body`
+- by setting the `.ononline` or `.onoffline` properties on `document` or `document.body` to a JavaScript `Function` object. (**Note:** using `window.ononline` or `window.onoffline` will not work for compatibility reasons.)
+- by specifying `ononline="..."` or `onoffline="..."` attributes on the `<body>` tag in the HTML markup.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>There's <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">a simple test case</a> that you can run to verify that the events are working (does not work in Chrome due to attaching the event listener to document.body).</p>
+There's [a simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609) that you can run to verify that the events are working (does not work in Chrome due to attaching the event listener to document.body).
 
-<p>Here's the JavaScript part:</p>
+Here's the JavaScript part:
 
-<pre class="brush: js">window.addEventListener('load', function() {
+```js
+window.addEventListener('load', function() {
   var status = document.getElementById("status");
   var log = document.getElementById("log");
 
@@ -74,11 +71,13 @@ tags:
 
   window.addEventListener('online',  updateOnlineStatus);
   window.addEventListener('offline', updateOnlineStatus);
-});</pre>
+});
+```
 
-<p>A touch of CSS</p>
+A touch of CSS
 
-<pre class="brush: css">#status {
+```css
+#status {
   position: fixed;
   width: 100%;
   font: bold 1em sans-serif;
@@ -98,28 +97,27 @@ tags:
 .offline {
   background: red;
 }
-</pre>
+```
 
-<p>And the corresponding HTML:</p>
+And the corresponding HTML:
 
-<pre class="brush: html">&lt;div id="status"&gt;&lt;/div&gt;
-&lt;div id="log"&gt;&lt;/div&gt;
-&lt;p&gt;This is a test&lt;/p&gt;
-</pre>
+```html
+<div id="status"></div>
+<div id="log"></div>
+<p>This is a test</p>
+```
 
-<p>Here's the live result</p>
+Here's the live result
 
-<p>{{ EmbedLiveSample('Example', '100%', '150') }}</p>
+{{ EmbedLiveSample('Example', '100%', '150') }}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request">responses from XMLHttpRequest</a>.</p>
+If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
 
-<h2 id="References">References</h2>
+## References
 
-<ul>
- <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">follow-up</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">A simple test case</a></li>
- <li><a href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
-</ul>
+- ['Online/Offline events' section from the WHATWG Web Applications 1.0 Specification](https://www.whatwg.org/specs/web-apps/current-work/#offline)
+- [The bug tracking online/offline events implementation in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=336359) and a [follow-up](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
+- [A simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
+- [An explanation of Online/Offline events](http://ejohn.org/blog/offline-events/)

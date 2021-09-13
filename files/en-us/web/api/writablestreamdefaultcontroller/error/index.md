@@ -11,45 +11,42 @@ tags:
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController.error
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>error()</code></strong> method of the
-  {{domxref("WritableStreamDefaultController")}} interface causes any future interactions
-  with the associated stream to error.</p>
+The **`error()`** method of the
+{{domxref("WritableStreamDefaultController")}} interface causes any future interactions
+with the associated stream to error.
 
-<p>This method is rarely used, since usually it suffices to return a rejected promise from
-  one of the underlying sink’s methods. However, it can be useful for suddenly shutting
-  down a stream in response to an event outside the normal lifecycle of interactions with
-  the underlying sink.</p>
+This method is rarely used, since usually it suffices to return a rejected promise from
+one of the underlying sink’s methods. However, it can be useful for suddenly shutting
+down a stream in response to an event outside the normal lifecycle of interactions with
+the underlying sink.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>writableStreamDefaultController</em>.error(<em>e</em>);</pre>
+```js
+writableStreamDefaultController.error(e);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>e</dt>
-  <dd>A {{domxref("DOMString")}} representing the error you want future interactions to
-    fail with.</dd>
-</dl>
+- e
+  - : A {{domxref("DOMString")}} representing the error you want future interactions to
+    fail with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The stream you are trying to error is not a {{domxref("WritableStream")}}.</dd>
-</dl>
+- TypeError
+  - : The stream you are trying to error is not a {{domxref("WritableStream")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush: js ">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   start(controller) {
     // do stuff with controller
 
@@ -65,12 +62,13 @@ browser-compat: api.WritableStreamDefaultController.error
   abort(err) {
     ...
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

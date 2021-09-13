@@ -2,50 +2,50 @@
 title: DOMPoint.y
 slug: Web/API/DOMPoint/y
 tags:
-- API
-- Coordinate
-- DOM
-- DOMPoint
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Reference
-- y
+  - API
+  - Coordinate
+  - DOM
+  - DOMPoint
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Reference
+  - 'y'
 browser-compat: api.DOMPoint.y
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPoint</strong></code> interface's
-    <code><strong>y</strong></code> property holds the vertical coordinate, <em>y</em>,
-    for a point in space.</p>
+The **`DOMPoint`** interface's
+**`y`** property holds the vertical coordinate, _y_,
+for a point in space.
 
-<p>Unless transforms have been applied to alter the
-  orientation, the value of <code>y</code> increases downward and decreases upward.</p>
+Unless transforms have been applied to alter the
+orientation, the value of `y` increases downward and decreases upward.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>yPos</em> = <em>DOMPoint</em>.y;</pre>
+```js
+var yPos = DOMPoint.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the <em>y</em> coordinate's value
-  for the point. This value is <strong>unrestricted</strong>, meaning that it is allowed
-  to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
-  {{jsxref("Infinity", "±Infinity")}}).</p>
+A double-precision floating-point value indicating the _y_ coordinate's value
+for the point. This value is **unrestricted**, meaning that it is allowed
+to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
+{{jsxref("Infinity", "±Infinity")}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
-    {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
-    "w")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
+  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
+    "w")}}.

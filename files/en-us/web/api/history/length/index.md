@@ -2,39 +2,38 @@
 title: History.length
 slug: Web/API/History/length
 tags:
-- API
-- HTML DOM
-- History
-- History API
-- Property
-- Read-only
-- Reference
+  - API
+  - HTML DOM
+  - History
+  - History API
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.History.length
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>The <code><strong>History.length</strong></code> read-only
-    property returns an integer representing the number of elements in the session
-    history, including the currently loaded page.</p>
+The **`History.length`** read-only
+property returns an integer representing the number of elements in the session
+history, including the currently loaded page.
 
-<p>For example, for a page loaded in
-  a new tab this property returns <code>1</code>.</p>
+For example, for a page loaded in
+a new tab this property returns `1`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>length</em> = history.length
-</pre>
+```js
+const length = history.length
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("History")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("History")}} interface it belongs to.

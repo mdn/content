@@ -9,67 +9,72 @@ tags:
   - getSelection
 browser-compat: api.Document.getSelection
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getSelection()</code></strong> property of
-    the {{DOMxRef("Document")}} interface returns a {{DOMxRef("Selection")}}
-    object representing the range of text selected by the user, or the current position of
-    the caret.</p>
+The **`getSelection()`** property of
+the {{DOMxRef("Document")}} interface returns a {{DOMxRef("Selection")}}
+object representing the range of text selected by the user, or the current position of
+the caret.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">getSelection()</pre>
+```js
+getSelection()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{DOMxRef("Selection")}} object.</p>
+A {{DOMxRef("Selection")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Getting_a_Selection_object">Getting a Selection object</h3>
+### Getting a Selection object
 
-<pre class="brush:js">
+```js
 let selection = document.getSelection();
 let selRange = selection.getRangeAt(0);
 // do stuff with the range
 
 console.log(selection); // Selection object
-</pre>
+```
 
-<h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
+### String representation of the Selection object
 
-<p>Some functions (like {{DOMxRef("Window.alert()")}}) call {{JSxRef("Object.toString", "toString()")}}
-  automatically and the returned value is passed to the function. As a consequence, this will return the selected text
-  and not the <code>Selection</code> object:</p>
+Some functions (like {{DOMxRef("Window.alert()")}}) call {{JSxRef("Object.toString", "toString()")}}
+automatically and the returned value is passed to the function. As a consequence, this will return the selected text
+and not the `Selection` object:
 
-<pre class="brush:js;">alert(selection);</pre>
+```js
+alert(selection);
+```
 
-<p>However, not all functions call <code>toString()</code> automatically.
-  To use a <code>Selection</code> object as a string, call its <code>toString()</code> method directly:</p>
+However, not all functions call `toString()` automatically.
+To use a `Selection` object as a string, call its `toString()` method directly:
 
-<pre class="brush:js;">let selectedText = selection.toString();</pre>
+```js
+let selectedText = selection.toString();
+```
 
-<h2 id="Related_objects">Related objects</h2>
+## Related objects
 
-<p>You can call {{domxref("Window.getSelection()")}}, which works identically to
-  <code>Document.getSelection()</code>.</p>
+You can call {{domxref("Window.getSelection()")}}, which works identically to
+`Document.getSelection()`.
 
-<p>It is worth noting that currently <code>getSelection()</code> doesn't work on the
-  content of {{htmlelement("input")}} elements in Firefox.
-  {{domxref("HTMLInputElement.setSelectionRange()")}}) could be used to work around this.
-</p>
+It is worth noting that currently `getSelection()` doesn't work on the
+content of {{htmlelement("input")}} elements in Firefox.
+{{domxref("HTMLInputElement.setSelectionRange()")}}) could be used to work around this.
 
-<p>Notice also the difference between <em>selection</em> and <em>focus</em>.
-  {{domxref("Document.activeElement")}} returns the focused element.</p>
+Notice also the difference between _selection_ and _focus_.
+{{domxref("Document.activeElement")}} returns the focused element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

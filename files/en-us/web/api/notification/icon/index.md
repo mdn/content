@@ -2,57 +2,56 @@
 title: Notification.icon
 slug: Web/API/Notification/icon
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- icon
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - icon
 browser-compat: api.Notification.icon
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>icon</code></strong> read-only property of the
-  {{domxref("Notification")}} interface contains the URL of an icon to be displayed as
-  part of the notification, as specified in the <code>icon</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`icon`** read-only property of the
+{{domxref("Notification")}} interface contains the URL of an icon to be displayed as
+part of the notification, as specified in the `icon` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>icon</var> = <var>Notification</var>.icon;
-</pre>
+```js
+var icon = Notification.icon;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a class="external external-icon"
-    href="https://github.com/mdn/to-do-notifications/tree/gh-pages" rel="noopener">To-do
-    list app</a> (<a class="external external-icon"
-    href="https://mdn.github.io/to-do-notifications/" rel="noopener">view the app running
-    live</a>), we use the {{domxref("Notification.Notification","Notification()")}}
-  constructor to fire a notification, passing it arguments to specify the body, icon and
-  title we want.</p>
+In our [To-do
+list app](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view the app running
+live](https://mdn.github.io/to-do-notifications/)), we use the {{domxref("Notification.Notification","Notification()")}}
+constructor to fire a notification, passing it arguments to specify the body, icon and
+title we want.
 
-<pre class="brush: js">var notification = new Notification('To do list', {
+```js
+var notification = new Notification('To do list', {
   body: text,
   icon: img
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

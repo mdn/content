@@ -2,57 +2,56 @@
 title: RTCRemoteOutboundRtpStreamStats.remoteTimestamp
 slug: Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp
 tags:
-- API
-- Property
-- RTCRemoteOutboundRtpStreamStats
-- Reference
-- Remote
-- Statistics
-- Stats
-- Timer
-- Timing
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- remoteTimestamp
-- timeStamp
+  - API
+  - Property
+  - RTCRemoteOutboundRtpStreamStats
+  - Reference
+  - Remote
+  - Statistics
+  - Stats
+  - Timer
+  - Timing
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - remoteTimestamp
+  - timeStamp
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.remoteTimestamp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRemoteOutboundRtpStreamStats")}} property
-  <strong><code>remoteTimestamp</code></strong> indicates the timestamp on the remote peer
-  at which these statistics were sent. This differs from <code>timestamp</code>, which
-  indicates the time at which the statistics were generated or received locally.</p>
+The {{domxref("RTCRemoteOutboundRtpStreamStats")}} property
+**`remoteTimestamp`** indicates the timestamp on the remote peer
+at which these statistics were sent. This differs from `timestamp`, which
+indicates the time at which the statistics were generated or received locally.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>remoteTimestamp</em> = <em>rtcRemoteOutboundRtpStreamStats</em>.remoteTimestamp;
-</pre>
+```js
+let remoteTimestamp = rtcRemoteOutboundRtpStreamStats.remoteTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} value indicating the timestamp on the remote peer
-  at which it sent these statistics. This is different from the value
-  <code>timestamp</code>, which gives the time at which the statistics were generated or
-  received by the local peer.</p>
+A {{domxref("DOMHighResTimeStamp")}} value indicating the timestamp on the remote peer
+at which it sent these statistics. This is different from the value
+`timestamp`, which gives the time at which the statistics were generated or
+received by the local peer.
 
-<p>If this property is present, it comes from the {{Glossary("RTCP")}} Sender Report (SR)
-  block, which reflects the clock on the remote peer at the time the message was sent.
-  Keep in mind that this means the clock may not be synchronized with the local clock, and
-  that both the current time and the pace at which the clock runs may differ to some
-  extent.</p>
+If this property is present, it comes from the {{Glossary("RTCP")}} Sender Report (SR)
+block, which reflects the clock on the remote peer at the time the message was sent.
+Keep in mind that this means the clock may not be synchronized with the local clock, and
+that both the current time and the pace at which the clock runs may differ to some
+extent.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCStats.timestamp")}}</li>
-</ul>
+- {{domxref("RTCStats.timestamp")}}

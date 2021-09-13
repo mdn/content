@@ -2,54 +2,52 @@
 title: StorageEstimate.quota
 slug: Web/API/StorageEstimate/quota
 tags:
-- API
-- Property
-- Quota
-- Quotas
-- Reference
-- Secure context
-- StorageEstimate
+  - API
+  - Property
+  - Quota
+  - Quotas
+  - Reference
+  - Secure context
+  - StorageEstimate
 browser-compat: api.StorageEstimate.quota
 ---
-<div>{{securecontext_header}}{{APIRef("Storage")}}</div>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>The {{domxref("StorageEstimate")}} dictionary's <strong><code>quota</code></strong>
-  property is a conservative approximation of how much storage is allotted to the origin
-  or Web app that called {{domxref("StorageManager.estimate()")}}; there may be more space
-  available, but there will not be less. This value is an estimate to help prevent its use
-  for fingerprinting—that is, identifying a device using an amalgamation of the values of
-  seemingly innocuous properties.</p>
+The {{domxref("StorageEstimate")}} dictionary's **`quota`**
+property is a conservative approximation of how much storage is allotted to the origin
+or Web app that called {{domxref("StorageManager.estimate()")}}; there may be more space
+available, but there will not be less. This value is an estimate to help prevent its use
+for fingerprinting—that is, identifying a device using an amalgamation of the values of
+seemingly innocuous properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>quota</em> = <em>StorageEstimate</em>.quota;</pre>
+```js
+quota = StorageEstimate.quota;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A numeric value specifying an approximation of the total amount of storage space available for use by the application.</p>
+A numeric value specifying an approximation of the total amount of storage space available for use by the application.
 
-<div class="note">
-  <p><strong>Note:</strong> User agents might not report the actual storage space for privacy reasons. Chrome, for instance, always reports 60% of the actual disk size.</p>
-</div>
+> **Note:** User agents might not report the actual storage space for privacy reasons. Chrome, for instance, always reports 60% of the actual disk size.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/StorageManager/estimate#example"><code>StorageManager.estimate</code></a> for example code.</p>
+See [`StorageManager.estimate`](/en-US/docs/Web/API/StorageManager/estimate#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Storage_API">Storage API</a></li>
-  <li>{{domxref("Navigator")}}</li>
-  <li>{{domxref("StorageManager")}}</li>
-  <li>{{domxref("StorageEstimate")}}</li>
-  <li>{{domxref("StorageEstimate.usage")}}</li>
-</ul>
+- [Storage API](/en-US/docs/Web/API/Storage_API)
+- {{domxref("Navigator")}}
+- {{domxref("StorageManager")}}
+- {{domxref("StorageEstimate")}}
+- {{domxref("StorageEstimate.usage")}}

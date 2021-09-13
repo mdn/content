@@ -2,37 +2,41 @@
 title: HashChangeEvent.newURL
 slug: Web/API/HashChangeEvent/newURL
 tags:
-- API
-- HashChangeEvent
-- Property
-- Reference
-- Web API
+  - API
+  - HashChangeEvent
+  - Property
+  - Reference
+  - Web API
 browser-compat: api.HashChangeEvent.newURL
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>newURL</strong></code> read-only property of the
-  {{domxref("HashChangeEvent")}} interface returns the new URL to which the window is
-  navigating.</p>
+The **`newURL`** read-only property of the
+{{domxref("HashChangeEvent")}} interface returns the new URL to which the window is
+navigating.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>newEventUrl</em> = <em>event</em>.newURL;</pre>
+```js
+let newEventUrl = event.newURL;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.addEventListener('hashchange', function(event) {
+```js
+window.addEventListener('hashchange', function(event) {
   console.log('Hash changed to ' + event.newURL);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

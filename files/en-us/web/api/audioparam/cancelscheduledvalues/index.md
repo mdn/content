@@ -10,49 +10,44 @@ tags:
   - cancelScheduledValues
 browser-compat: api.AudioParam.cancelScheduledValues
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>cancelScheduledValues()</code> method of the {{ domxref("AudioParam") }}
-    Interface cancels all scheduled future changes to the <code>AudioParam</code>.</p>
-</div>
+The `cancelScheduledValues()` method of the {{ domxref("AudioParam") }}
+Interface cancels all scheduled future changes to the `AudioParam`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var AudioParam = AudioParam.cancelScheduledValues(startTime)</pre>
+```js
+var AudioParam = AudioParam.cancelScheduledValues(startTime)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>startTime</dt>
-  <dd>A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
-    was first created after which all scheduled changes will be cancelled.</dd>
-</dl>
+- startTime
+  - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
+    was first created after which all scheduled changes will be cancelled.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A reference to this <code>AudioParam</code> object. In some older implementations this
-  method returns void.</p>
+A reference to this `AudioParam` object. In some older implementations this
+method returns void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var gainNode = audioCtx.createGain();
+```js
+var gainNode = audioCtx.createGain();
 gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2); //'gain' is the AudioParam
 gainNode.gain.cancelScheduledValues(audioCtx.currentTime);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

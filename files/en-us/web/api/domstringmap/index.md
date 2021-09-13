@@ -11,21 +11,19 @@ tags:
   - Reference
 browser-compat: api.DOMStringMap
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>DOMStringMap</code></strong> interface is used for the {{domxref("HTMLElement.dataset")}}/{{domxref("SVGElement.dataset")}} attribute, to represent data for custom attributes added to elements.</p>
+The **`DOMStringMap`** interface is used for the {{domxref("HTMLElement.dataset")}}/{{domxref("SVGElement.dataset")}} attribute, to represent data for custom attributes added to elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes#attr-data-*">Global attributes - data-*</a></li>
-</ul>
+- {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
+- [Global attributes - data-\*](/en-US/docs/Web/HTML/Global_attributes#attr-data-*)

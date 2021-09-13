@@ -2,50 +2,50 @@
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
 tags:
-- API
-- HTML DOM
-- Interface
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- Video Track
-- VideoTrack
-- id
-- track
+  - API
+  - HTML DOM
+  - Interface
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - Video Track
+  - VideoTrack
+  - id
+  - track
 browser-compat: api.VideoTrack.id
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>id</strong></code> property contains a
-    string which uniquely identifies the track represented by the
-    <strong>{{domxref("VideoTrack")}}</strong>.</p>
+The **`id`** property contains a
+string which uniquely identifies the track represented by the
+**{{domxref("VideoTrack")}}**.
 
-<p>This ID can be used with the
-  {{domxref("VideoTrackList.getTrackById()")}} method to locate a specific track within
-  the media associated with a media element.</p>
+This ID can be used with the
+{{domxref("VideoTrackList.getTrackById()")}} method to locate a specific track within
+the media associated with a media element.
 
-<p>The track ID can also be used as the fragment of a URL that loads the specific track
-  (if the media supports media fragments).</p>
+The track ID can also be used as the fragment of a URL that loads the specific track
+(if the media supports media fragments).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackID</em> = <em>VideoTrack</em>.id;</pre>
+```js
+var trackID = VideoTrack.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
-  {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} on an
-  {{domxref("VideoTrackList")}} such as the one specified by a media element's
-  {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.</p>
+A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
+{{domxref("VideoTrackList.getTrackById", "getTrackById()")}} on an
+{{domxref("VideoTrackList")}} such as the one specified by a media element's
+{{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

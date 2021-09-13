@@ -2,47 +2,40 @@
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
 tags:
-- API
-- Deprecated
-- HTML DOM
-- NeedsCompatTable
-- NeedsExample
-- NeedsSpecTable
-- Property
-- Reference
-- Window
+  - API
+  - Deprecated
+  - HTML DOM
+  - NeedsCompatTable
+  - NeedsExample
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Window
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
-<p>{{Deprecated_Header}}{{Non-standard_Header}}</p>
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Application Cache is deprecated as of Firefox 44, and is no longer available in
-    insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta
-    only). Don't use it to offline websites — consider using <a
-      href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> instead.</p>
-</div>
+> **Warning:** Application Cache is deprecated as of Firefox 44, and is no longer available in
+> insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta
+> only). Don't use it to offline websites — consider using [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
 
-<p>Returns a reference to the application cache object for the window.</p>
+Returns a reference to the application cache object for the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>cache</var> = window.applicationCache
-</pre>
+```js
+cache = window.applicationCache
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>cache</code> is an object reference to an <code>OfflineResourceList</code>.
-  </li>
-</ul>
+- `cache` is an object reference to an `OfflineResourceList`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTML/Using_the_application_cache">Using Application
-      Cache</a></li>
-</ul>
+- [Using Application
+  Cache](/en-US/docs/Web/HTML/Using_the_application_cache)

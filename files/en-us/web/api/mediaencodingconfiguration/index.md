@@ -12,26 +12,23 @@ tags:
   - Video
 browser-compat: api.MediaEncodingConfiguration
 ---
-<p>The <strong><code>MediaEncodingConfiguration</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> is used to define the type of media being tested when calling {{domxref("MediaCapabilities.encodingInfo()")}} to query whether a specific media configuration is supported, smooth, and/or power efficient.</p>
+The **`MediaEncodingConfiguration`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) is used to define the type of media being tested when calling {{domxref("MediaCapabilities.encodingInfo()")}} to query whether a specific media configuration is supported, smooth, and/or power efficient.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>A <code>MediaEncodingConfiguration</code> dictionary takes two properties:</p>
+A `MediaEncodingConfiguration` dictionary takes two properties:
 
-<ul>
- <li><code>type</code> — the type of media being tested; takes one of two values:
+- `type` — the type of media being tested; takes one of two values:
 
-  <ul>
-   <li><code>record</code> — Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.</li>
-   <li><code>transmission</code> — Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).</li>
-  </ul>
- </li>
- <li>A media configuration — a {{domxref("VideoConfiguration")}} {{domxref("AudioConfiguration")}} dictionary.</li>
-</ul>
+  - `record` — Represents a configuration for recording of media, e.g. using {{domxref("MediaRecorder")}}.
+  - `transmission` — Represents a configuration meant to be transmitted over electronic means (e.g. using {{domxref("RTCPeerConnection")}}).
 
-<h2 id="Examples">Examples</h2>
+- A media configuration — a {{domxref("VideoConfiguration")}} {{domxref("AudioConfiguration")}} dictionary.
 
-<pre class="brush: js">//Create media configuration to be tested
+## Examples
+
+```js
+//Create media configuration to be tested
 const mediaConfig = {
     type : 'record', // or 'transmission'
     video : {
@@ -44,22 +41,21 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.encodingInfo(mediaConfig).then(result =&gt; {
+navigator.mediaCapabilities.encodingInfo(mediaConfig).then(result => {
     console.log('This configuration is ' +  (result.supported ? '' : 'not ') + 'supported.')
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaConfiguration")}}</li>
- <li>{{domxref("MediaDecodingConfiguration")}}</li>
- <li>{{domxref("MediaRecorder.isTypeSupported()")}}</li>
-</ul>
+- {{domxref("MediaConfiguration")}}
+- {{domxref("MediaDecodingConfiguration")}}
+- {{domxref("MediaRecorder.isTypeSupported()")}}

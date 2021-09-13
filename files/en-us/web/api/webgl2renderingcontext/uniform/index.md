@@ -1,31 +1,29 @@
 ---
-title: 'WebGL2RenderingContext.uniform[1234][uif][v]()'
+title: WebGL2RenderingContext.uniform[1234][uif][v]()
 slug: Web/API/WebGL2RenderingContext/uniform
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
-- WebGL2RenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
+  - WebGL2RenderingContext
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.uniform[1234][uif][v]()</code></strong>
-  methods of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specify values of
-  uniform variables.</p>
+The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**
+methods of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of
+uniform variables.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>ui</code> stands for <em>unsigned integer</em>, <code>i</code> for <em>integer,
-    </em><code>f</code> for <em>float</em>, and <code>v</code> for <em>vector.</em><br>
-    Not all combinations are valid: <code>u</code> cannot be combined with <code>f</code>.
-    See the syntax table below. Equivalent Regex: <code>uniform[1234](u?i|f)v?</code></p>
-</div>
+> **Note:** `ui` stands for _unsigned integer_, `i` for _integer,_ > `f` for _float_, and `v` for _vector._
+> Not all combinations are valid: `u` cannot be combined with `f`.
+> See the syntax table below. Equivalent Regex: `uniform[1234](u?i|f)v?`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void gl.uniform1ui(location, v0);
+```js
+void gl.uniform1ui(location, v0);
 void gl.uniform2ui(location, v0, v1);
 void gl.uniform3ui(location, v0, v1, v2);
 void gl.uniform4ui(location, v0, v1, v2, v3);
@@ -41,40 +39,35 @@ void gl.uniform1uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform2uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform3uiv(location, data, optional srcOffset, optional srcLength);
 void gl.uniform4uiv(location, data, optional srcOffset, optional srcLength);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>location</dt>
-  <dd>A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.</dd>
-  <dt><code>data, v0, v1, v2, v3</code></dt>
-  <dd>A new value to be used for the uniform variable. Possible types:
-    <ul>
-      <li>A {{jsxref("Number")}} for unsigned integer values (methods with
-        <code>ui</code>), for integer values (methods with <code>i</code>), or for floats
-        (methods with <code>f</code>).</li>
-      <li>A {{jsxref("Uint32Array")}} for unsigned integer vector methods (methods with
-        <code>uiv</code>).</li>
-    </ul>
-  </dd>
-</dl>
+- location
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
+    attribute to modify.
+- `data, v0, v1, v2, v3`
 
-<h3 id="Return_value">Return value</h3>
+  - : A new value to be used for the uniform variable. Possible types:
 
-<p>None.</p>
+    - A {{jsxref("Number")}} for unsigned integer values (methods with
+      `ui`), for integer values (methods with `i`), or for floats
+      (methods with `f`).
+    - A {{jsxref("Uint32Array")}} for unsigned integer vector methods (methods with
+      `uiv`).
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+None.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniform()")}}

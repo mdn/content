@@ -10,78 +10,77 @@ tags:
   - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <code><strong>createImageBitmap()</strong></code> method creates a bitmap from a
-  given source, optionally cropped to contain only a portion of that source. The method
-  exists on the global scope in both windows and workers. It accepts a variety of
-  different image sources, and returns a {{jsxref("Promise")}} which resolves to an
-  {{domxref("ImageBitmap")}}.</p>
+The **`createImageBitmap()`** method creates a bitmap from a
+given source, optionally cropped to contain only a portion of that source. The method
+exists on the global scope in both windows and workers. It accepts a variety of
+different image sources, and returns a {{jsxref("Promise")}} which resolves to an
+{{domxref("ImageBitmap")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const imageBitmapPromise = createImageBitmap(<em>image</em>[, options]);
-const imageBitmapPromise = createImageBitmap(<em>image, sx, sy, sw, sh</em>[, options]);</pre>
+```js
+const imageBitmapPromise = createImageBitmap(image[, options]);
+const imageBitmapPromise = createImageBitmap(image, sx, sy, sw, sh[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>image</code></dt>
-  <dd>An image source, which can be an {{HTMLElement("img")}}, SVG
+- `image`
+  - : An image source, which can be an {{HTMLElement("img")}}, SVG
     {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}},
     {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}},
     {{domxref("HTMLVideoElement")}},
     {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}},
-    {{domxref("ImageBitmap")}}, or {{domxref("OffscreenCanvas")}} object.</dd>
-  <dt><code>sx</code></dt>
-  <dd>The x coordinate of the reference point of the rectangle from which the
-    <code>ImageBitmap</code> will be extracted.</dd>
-  <dt><code>sy</code></dt>
-  <dd>The y coordinate of the reference point of the rectangle from which the
-    <code>ImageBitmap</code> will be extracted.</dd>
-  <dt><code>sw</code></dt>
-  <dd>The width of the rectangle from which the <code>ImageBitmap</code> will be
-    extracted. This value can be negative.</dd>
-  <dt><code>sh</code></dt>
-  <dd>The height of the rectangle from which the <code>ImageBitmap</code> will be
-    extracted. This value can be negative.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for the image's extraction. The available options are:
-    <ul>
-      <li><code>imageOrientation</code>: Specifies whether the image should be presented
-        as is or flipped vertically. Either <code>none</code> (default) or
-        <code>flipY</code>.</li>
-      <li><code>premultiplyAlpha</code>: Specifies whether the bitmap's color channels
-        should be premultiplied by the alpha channel. One of <code>none</code>,
-        <code>premultiply</code>, or <code>default</code> (default).</li>
-      <li><code>colorSpaceConversion</code>: Specifies whether the image should be decoded
-        using color space conversion. Either <code>none</code> or <code>default</code>
-        (default). The value <code>default</code> indicates that implementation-specific
-        behavior is used.</li>
-      <li><code>resizeWidth</code>: A long integer that indicates the output width.</li>
-      <li><code>resizeHeight</code>: A long integer that indicates the output height.</li>
-      <li><code>resizeQuality</code>: Specifies the algorithm to be used for resizing the
-        input to match the output dimensions. One of <code>pixelated</code>,
-        <code>low</code> (default), <code>medium</code>, or <code>high</code>.</li>
-    </ul>
-  </dd>
-</dl>
+    {{domxref("ImageBitmap")}}, or {{domxref("OffscreenCanvas")}} object.
+- `sx`
+  - : The x coordinate of the reference point of the rectangle from which the
+    `ImageBitmap` will be extracted.
+- `sy`
+  - : The y coordinate of the reference point of the rectangle from which the
+    `ImageBitmap` will be extracted.
+- `sw`
+  - : The width of the rectangle from which the `ImageBitmap` will be
+    extracted. This value can be negative.
+- `sh`
+  - : The height of the rectangle from which the `ImageBitmap` will be
+    extracted. This value can be negative.
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that sets options for the image's extraction. The available options are:
 
-<p>A {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}} object
-  containing bitmap data from the given rectangle.</p>
+    - `imageOrientation`: Specifies whether the image should be presented
+      as is or flipped vertically. Either `none` (default) or
+      `flipY`.
+    - `premultiplyAlpha`: Specifies whether the bitmap's color channels
+      should be premultiplied by the alpha channel. One of `none`,
+      `premultiply`, or `default` (default).
+    - `colorSpaceConversion`: Specifies whether the image should be decoded
+      using color space conversion. Either `none` or `default`
+      (default). The value `default` indicates that implementation-specific
+      behavior is used.
+    - `resizeWidth`: A long integer that indicates the output width.
+    - `resizeHeight`: A long integer that indicates the output height.
+    - `resizeQuality`: Specifies the algorithm to be used for resizing the
+      input to match the output dimensions. One of `pixelated`,
+      `low` (default), `medium`, or `high`.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<h3 id="Creating_sprites_from_a_sprite_sheet">Creating sprites from a sprite sheet</h3>
+A {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}} object
+containing bitmap data from the given rectangle.
 
-<p>This example loads a sprite sheet, extracts individual sprites, and then renders each
-  sprite to the canvas. A sprite sheet is an image containing multiple smaller images,
-  each of which you want to be able to render separately.</p>
+## Example
 
-<pre class="brush: js ">var canvas = document.getElementById('myCanvas'),
+### Creating sprites from a sprite sheet
+
+This example loads a sprite sheet, extracts individual sprites, and then renders each
+sprite to the canvas. A sprite sheet is an image containing multiple smaller images,
+each of which you want to be able to render separately.
+
+```js
+var canvas = document.getElementById('myCanvas'),
 ctx = canvas.getContext('2d'),
 image = new Image();
 
@@ -100,19 +99,17 @@ image.onload = function() {
 
 // Load the sprite sheet from an image file
 image.src = 'sprites.png';
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
-  <li>{{domxref("ImageData")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- {{domxref("ImageData")}}

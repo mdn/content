@@ -13,28 +13,28 @@ tags:
   - width
 browser-compat: api.DOMRectReadOnly.width
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>width</strong></code> read-only property of the <strong><code>DOMRectReadOnly</code></strong> interface represents the width of the <code>DOMRect</code>.</p>
+The **`width`** read-only property of the **`DOMRectReadOnly`** interface represents the width of the `DOMRect`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var recWidth = DOMRect.width;</pre>
+```js
+var recWidth = DOMRect.width;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

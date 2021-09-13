@@ -10,46 +10,42 @@ tags:
   - coneOuterGain
 browser-compat: api.PannerNode.coneOuterGain
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>coneOuterGain</code> property of the {{ domxref("PannerNode") }} interface is a double value, describing the amount of volume reduction outside the cone, defined by the {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} attribute.</p>
+The `coneOuterGain` property of the {{ domxref("PannerNode") }} interface is a double value, describing the amount of volume reduction outside the cone, defined by the {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} attribute.
 
-<p>The <code>coneOuterGain</code> property's default value is <code>0</code>, meaning that no sound can be heard outside the cone.</p>
-</div>
+The `coneOuterGain` property's default value is `0`, meaning that no sound can be heard outside the cone.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panner = audioCtx.createPanner();
-panner.coneOuterGain = 0;</pre>
+panner.coneOuterGain = 0;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double. The default is <code>0</code>, and its value can be in the range 0–1.</p>
+A double. The default is `0`, and its value can be in the range 0–1.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>The property has been given a value outside the accepted range (0–1).</dd>
-</dl>
+- `InvalidStateError`
+  - : The property has been given a value outside the accepted range (0–1).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/PannerNode/orientationX#example"><code>PannerNode.orientationX</code></a> for example code that demonstrates how changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} affects volume.</p>
+See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates how changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} affects volume.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio spatialisation basics</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

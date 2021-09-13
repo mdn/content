@@ -10,80 +10,65 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioContext
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>OfflineAudioContext</code> interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard {{domxref("AudioContext")}}, an <code>OfflineAudioContext</code> doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an {{domxref("AudioBuffer")}}.</p>
+The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard {{domxref("AudioContext")}}, an `OfflineAudioContext` doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an {{domxref("AudioBuffer")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.OfflineAudioContext()")}}</dt>
- <dd>Creates a new <code>OfflineAudioContext</code> instance.</dd>
-</dl>
+- {{domxref("OfflineAudioContext.OfflineAudioContext()")}}
+  - : Creates a new `OfflineAudioContext` instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}.</em></p>
+_Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-<dl>
- <dt>{{domxref('OfflineAudioContext.length')}} {{readonlyinline}}</dt>
- <dd>An integer representing the size of the buffer in sample-frames.</dd>
-</dl>
+- {{domxref('OfflineAudioContext.length')}} {{readonlyinline}}
+  - : An integer representing the size of the buffer in sample-frames.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.oncomplete")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.</dd>
-</dl>
+- {{domxref("OfflineAudioContext.oncomplete")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}.</em></p>
+_Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.suspend()")}}</dt>
- <dd>Schedules a suspension of the time progression in the audio context at the specified time and returns a promise.</dd>
- <dt>{{domxref("OfflineAudioContext.startRendering()")}}</dt>
- <dd>Starts rendering the audio, taking into account the current connections and the current scheduled changes. This page covers both the event-based version and the promise-based version.</dd>
-</dl>
+- {{domxref("OfflineAudioContext.suspend()")}}
+  - : Schedules a suspension of the time progression in the audio context at the specified time and returns a promise.
+- {{domxref("OfflineAudioContext.startRendering()")}}
+  - : Starts rendering the audio, taking into account the current connections and the current scheduled changes. This page covers both the event-based version and the promise-based version.
 
-<h3 id="Deprecated_methods">Deprecated methods</h3>
+### Deprecated methods
 
-<dl>
- <dt>{{domxref("OfflineAudioContext.resume()")}}</dt>
- <dd>Resumes the progression of time in an audio context that has previously been suspended.</dd>
-</dl>
+- {{domxref("OfflineAudioContext.resume()")}}
+  - : Resumes the progression of time in an audio context that has previously been suspended.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>resume()</code> method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.</p>
-</div>
+> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface:</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete</a></code></dt>
- <dd>Fired when the rendering of an offline audio context is complete.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/OfflineAudioContext/oncomplete">oncomplete</a></code> event handler property.</dd>
-</dl>
+- [`complete`](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
+  - : Fired when the rendering of an offline audio context is complete.
+    Also available using the [`oncomplete`](/en-US/docs/Web/API/OfflineAudioContext/oncomplete) event handler property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the <code>OfflineAudioContext</code> to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.</p>
+In this simple example, we declare both an {{domxref("AudioContext")}} and an `OfflineAudioContext` object. We use the `AudioContext` to load an audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the `OfflineAudioContext` to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.
 
-<p>When the <code>startRendering()</code> promise resolves, rendering has completed and the output <code>AudioBuffer</code> is returned out of the promise.</p>
+When the `startRendering()` promise resolves, rendering has completed and the output `AudioBuffer` is returned out of the promise.
 
-<p>At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise <code>AudioBuffer</code>. This is then played as part of a simple standard audio graph.</p>
+At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise `AudioBuffer`. This is then played as part of a simple standard audio graph.
 
-<div class="note">
-<p><strong>Note:</strong> For a working example, see our <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (see the <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">source code</a> too.)</p>
-</div>
+> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) Github repo (see the [source code](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) too.)
 
-<pre class="brush: js">// define online and offline audio context
+```js
+// define online and offline audio context
 
 var audioCtx = new AudioContext();
 var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
@@ -131,18 +116,17 @@ function getData() {
 
 // Run getData to start the process off
 
-getData();</pre>
+getData();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

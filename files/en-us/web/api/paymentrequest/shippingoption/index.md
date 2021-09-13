@@ -12,42 +12,45 @@ tags:
   - shippingOption
 browser-compat: api.PaymentRequest.shippingOption
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>shippingOption</code></strong> read-only attribute of
-  the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
-  option, null (if no shipping option was set to be selected) or a shipping option
-  selected by the user. It is initially <code>null</code> by when no "selected" shipping
-  options are provided.</p>
+The **`shippingOption`** read-only attribute of
+the {{domxref('PaymentRequest')}} interface returns either the id of a selected shipping
+option, null (if no shipping option was set to be selected) or a shipping option
+selected by the user. It is initially `null` by when no "selected" shipping
+options are provided.
 
-<p>This attribute is only populated if the constructor is called with the
-  <code>requestShipping</code> flag set to <code>true</code>. If
-  <code>requestShipping</code> was <code>false</code> (or missing),
-   <code>shippingOption</code> returns <code>null</code>, even the developer provides
-  a  selected a shipping option.</p>
+This attribute is only populated if the constructor is called with the
+`requestShipping` flag set to `true`. If
+`requestShipping` was `false` (or missing),
+ `shippingOption` returns `null`, even the developer provides
+a  selected a shipping option.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// Returns the id of the selected PaymentShippingOption
-var shippingOption = request.shippingOption; </pre>
+```js
+// Returns the id of the selected PaymentShippingOption
+var shippingOption = request.shippingOption;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and
-  the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In
-  each calls to <code>updateDetails()</code>  are made, one using a promise, and the other
-  with a plain JS object. This demotrates synchrounous and asynchronous updates to a
-  payment sheet. </p>
+In the example below, the {{domxref('PaymentRequest.onshippingoptionchange')}} and
+the {{domxref('PaymentRequest.onshippingaoptionchange')}} events are dispatched. In
+each calls to `updateDetails()`  are made, one using a promise, and the other
+with a plain JS object. This demotrates synchrounous and asynchronous updates to a
+payment sheet.
 
-<pre class="brush: js">const request = new PaymentRequest(methodData, details, options);
+```js
+const request = new PaymentRequest(methodData, details, options);
 // Async update to details
-request.onshippingaddresschange = ev =&gt; {
+request.onshippingaddresschange = ev => {
   ev.updateWith(checkShipping(request));
 };
 // Sync update to the total
-request.onshippingoptionchange = ev =&gt; {
+request.onshippingoptionchange = ev => {
   const shippingOption = shippingOptions.find(
-    option =&gt; option.id === request.id
+    option => option.id === request.id
   );
   const newTotal = {
     currency: "USD",
@@ -68,8 +71,8 @@ async function checkShipping(request) {
     return { ...details, error: `Sorry! we can't ship to your address.` };
   }
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

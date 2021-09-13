@@ -2,63 +2,60 @@
 title: WebGL2RenderingContext.getQuery()
 slug: Web/API/WebGL2RenderingContext/getQuery
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getQuery
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getQuery()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns the currently active
-  {{domxref("WebGLQuery")}} for the <code>target</code>, or {{jsxref("null")}}.</p>
+The **`WebGL2RenderingContext.getQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the currently active
+{{domxref("WebGLQuery")}} for the `target`, or {{jsxref("null")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLQuery <var>gl</var>.getQuery(<var>target</var>, <var>pname</var>);
-</pre>
+```js
+WebGLQuery gl.getQuery(target, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
-    <ul>
-      <li><code>gl.ANY_SAMPLES_PASSED</code>: Specifies an occlusion query: these queries
-        detect whether an object is visible (whether the scoped drawing commands pass the
-        depth test and if so, how many samples pass).</li>
-      <li><code>gl.ANY_SAMPLES_PASSED_CONSERVATIVE</code>: Same as above above, but less
-        accurate and faster version.</li>
-      <li><code>gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</code>: Number of primitives that
-        are written to transform feedback buffers.</li>
-    </ul>
-  </dd>
-  <dt>pname</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the query object target. Must be
-    <code>gl.CURRENT_QUERY</code>.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
 
-<p>A {{domxref("WebGLQuery")}} object.</p>
+    - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries
+      detect whether an object is visible (whether the scoped drawing commands pass the
+      depth test and if so, how many samples pass).
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: Same as above above, but less
+      accurate and faster version.
+    - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that
+      are written to transform feedback buffers.
 
-<h2 id="Examples">Examples</h2>
+- pname
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the query object target. Must be
+    `gl.CURRENT_QUERY`.
 
-<pre class="brush: js">var currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
-</pre>
+### Return value
 
-<h2 id="Specifications">Specifications</h2>
+A {{domxref("WebGLQuery")}} object.
+
+## Examples
+
+```js
+var currentQuery = gl.getQuery(gl.ANY_SAMPLES_PASSED, gl.CURRENT_QUERY);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLQuery")}}</li>
-</ul>
+- {{domxref("WebGLQuery")}}

@@ -2,48 +2,48 @@
 title: SpeechRecognition.onspeechstart
 slug: Web/API/SpeechRecognition/onspeechstart
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onspeechstart
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onspeechstart
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onspeechstart
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onspeechstart</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when sound recognized by the speech recognition service as speech has been detected
-  (when the
-  <code><a href="/en-US/docs/Web/API/SpeechRecognition/speechstart_event">speechstart</a></code>
-  event fires.)</p>
+The **`onspeechstart`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when sound recognized by the speech recognition service as speech has been detected
+(when the
+[`speechstart`](/en-US/docs/Web/API/SpeechRecognition/speechstart_event)
+event fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onspeechstart = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onspeechstart = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onspeechstart = function() {
+```js
+recognition.onspeechstart = function() {
   console.log('Speech has been detected');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

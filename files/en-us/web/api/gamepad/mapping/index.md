@@ -11,33 +11,32 @@ tags:
   - Reference
 browser-compat: api.Gamepad.mapping
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>Gamepad.mapping</strong></code> property of the
-	{{domxref("Gamepad")}} interface returns a string indicating whether the browser has
-	remapped the controls on the device to a known layout.</p>
+The **`Gamepad.mapping`** property of the
+{{domxref("Gamepad")}} interface returns a string indicating whether the browser has
+remapped the controls on the device to a known layout.
 
-<p>The currently supported known layouts are:</p>
+The currently supported known layouts are:
 
-<ul>
-  <li>"standard" for the <a href="https://w3c.github.io/gamepad/#remapping">standard gamepad</a>.</li>
-  <li>"xr-standard for the <a href="https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading">standard XR gamepad</a>. See also {{domxref("XRInputSource.gamepad")}}.</li>
-</ul>
+- "standard" for the [standard gamepad](https://w3c.github.io/gamepad/#remapping).
+- "xr-standard for the [standard XR gamepad](https://immersive-web.github.io/webxr-gamepads-module/#xr-standard-heading). See also {{domxref("XRInputSource.gamepad")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let gp = navigator.getGamepads()[0];
-console.log(gp.mapping);</pre>
+```js
+let gp = navigator.getGamepads()[0];
+console.log(gp.mapping);
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

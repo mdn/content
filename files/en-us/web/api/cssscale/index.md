@@ -12,36 +12,32 @@ tags:
   - Interface
 browser-compat: api.CSSScale
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSScale</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <a href="/en-US/docs/Web/CSS/transform-function/scale()">scale()</a> and <a href="/en-US/docs/Web/CSS/transform-function/scale()">scale3d()</a> values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.</p>
+The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [scale()](</en-US/docs/Web/CSS/transform-function/scale()>) and [scale3d()](</en-US/docs/Web/CSS/transform-function/scale()>) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSScale.CSSScale()")}}</dt>
- <dd>Creates a new <code>CSSScale</code> object.</dd>
-</dl>
+- {{domxref("CSSScale.CSSScale()")}}
+  - : Creates a new `CSSScale` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSScale.x','x')}}</dt>
- <dd>Returns or sets the x-axis value.</dd>
- <dt>{{domxref('CSSScale.y','y')}}</dt>
- <dd>Returns or sets the y-axis value.</dd>
- <dt>{{domxref('CSSScale.z','z')}}</dt>
- <dd>Returns or sets the z-axis value.</dd>
-</dl>
+- {{domxref('CSSScale.x','x')}}
+  - : Returns or sets the x-axis value.
+- {{domxref('CSSScale.y','y')}}
+  - : Returns or sets the y-axis value.
+- {{domxref('CSSScale.z','z')}}
+  - : Returns or sets the z-axis value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do.</p>
+To do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

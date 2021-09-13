@@ -10,66 +10,71 @@ tags:
   - Push
   - Tutorial
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.</p>
+The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
-<p>Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.</p>
+Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-<p><img alt="" src="android-notification.png"></p>
+![](android-notification.png)
 
-<p>The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.</p>
+The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as <a href="https://slack.com/">Slack</a>.</p>
+One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as [Slack](https://slack.com/).
 
-<p>We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> and notifies users when tasks are due using system notifications. <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">Download the To-do list code</a>, or <a href="https://mdn.github.io/to-do-notifications/">view the app running live</a>.</p>
+We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/to-do-notifications/tree/gh-pages), or [view the app running live](https://mdn.github.io/to-do-notifications/).
 
-<h2 id="Requesting_permission">Requesting permission</h2>
+## Requesting permission
 
-<p>Before an app can send a notification, the user must grant the application the right to do so. This is a common requirement when an API tries to interact with something outside a web page — at least once, the user needs to specifically grant that application permission to present notifications, thereby letting the user control which apps/sites are allowed to display notifications.</p>
+Before an app can send a notification, the user must grant the application the right to do so. This is a common requirement when an API tries to interact with something outside a web page — at least once, the user needs to specifically grant that application permission to present notifications, thereby letting the user control which apps/sites are allowed to display notifications.
 
-<p>Because of abuses of push notifications in the past, web browsers and developers have begun to implement strategies to help mitigate this problem. You should only request consent to display notifications in response to a user gesture (e.g. clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notification permission requests not triggered in response to a user gesture. Firefox is already doing this from version 72, for example, and Safari has done it for some time.</p>
+Because of abuses of push notifications in the past, web browsers and developers have begun to implement strategies to help mitigate this problem. You should only request consent to display notifications in response to a user gesture (e.g. clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notification permission requests not triggered in response to a user gesture. Firefox is already doing this from version 72, for example, and Safari has done it for some time.
 
-<p>In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e. HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.</p>
+In addition, In Chrome and Firefox you cannot request notifications at all unless the site is a secure context (i.e. HTTPS), and you can no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s.
 
-<h3 id="Checking_current_permission_status">Checking current permission status</h3>
+### Checking current permission status
 
-<p>You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission")}} read only property. It can have one of three possible values:</p>
+You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission")}} read only property. It can have one of three possible values:
 
-<dl>
- <dt><code>default</code></dt>
- <dd>The user hasn't been asked for permission yet, so notifications won't be displayed.</dd>
- <dt><code>granted</code></dt>
- <dd>The user has granted permission to display notifications, after having been asked previously.</dd>
- <dt><code>denied</code></dt>
- <dd>The user has explicitly declined permission to show notifications.</dd>
-</dl>
+- `default`
+  - : The user hasn't been asked for permission yet, so notifications won't be displayed.
+- `granted`
+  - : The user has granted permission to display notifications, after having been asked previously.
+- `denied`
+  - : The user has explicitly declined permission to show notifications.
 
-<h3 id="Getting_permission">Getting permission</h3>
+### Getting permission
 
-<p>If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:</p>
+If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
 
-<pre class="brush: js">Notification.requestPermission().then(function(result) {
+```js
+Notification.requestPermission().then(function(result) {
   console.log(result);
-});</pre>
+});
+```
 
-<p>This uses the promise-based version of the method. If you want to support older versions, you might have to use the older callback version, which looks like this:</p>
+This uses the promise-based version of the method. If you want to support older versions, you might have to use the older callback version, which looks like this:
 
-<pre class="brush: js">Notification.requestPermission();</pre>
+```js
+Notification.requestPermission();
+```
 
-<p>The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.</p>
+The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<p>In our todo list demo, we include an "Enable notifications" button that, when pressed, requests notification permissions for the app.</p>
+In our todo list demo, we include an "Enable notifications" button that, when pressed, requests notification permissions for the app.
 
-<pre class="brush: html">&lt;button id="enable"&gt;Enable notifications&lt;/button&gt;</pre>
+```html
+<button id="enable">Enable notifications</button>
+```
 
-<p>Clicking this calls the <code>askNotificationPermission()</code> function:</p>
+Clicking this calls the `askNotificationPermission()` function:
 
-<pre class="brush: js">function askNotificationPermission() {
+```js
+function askNotificationPermission() {
   // function to actually ask the permissions
   function handlePermission(permission) {
     // set the button to shown or hidden, depending on what the user answers
@@ -86,7 +91,7 @@ tags:
   } else {
     if(checkNotificationPromise()) {
       Notification.requestPermission()
-      .then((permission) =&gt; {
+      .then((permission) => {
         handlePermission(permission);
       })
     } else {
@@ -95,21 +100,21 @@ tags:
       });
     }
   }
-}</pre>
+}
+```
 
-<p>Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we then run a check to see whether the promise-based version of <code>Notification.requestPermission()</code> is supported. If it is, we run the promise-based version (supported everywhere except Safari), and if not, we run the older callback-based version (which is supported in Safari).</p>
+Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we then run a check to see whether the promise-based version of `Notification.requestPermission()` is supported. If it is, we run the promise-based version (supported everywhere except Safari), and if not, we run the older callback-based version (which is supported in Safari).
 
-<p>To avoid duplicating code, we have stored a few bits of housekeeping code inside the <code>handlePermission()</code> function, which is the first main block inside this snippet. Inside here we explicitly set the <code>Notification.permission</code> value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.</p>
+To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
 
-<div class="note">
-<p><strong>Note:</strong> Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the <code>load</code> event handler (see <a href="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>).</p>
-</div>
+> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284)).
 
-<h3 id="Feature-detecting_the_requestPermission_promise">Feature-detecting the requestPermission() promise</h3>
+### Feature-detecting the requestPermission() promise
 
-<p>Above we said that we had to check whether the browser supports the promise version of <code>Notification.requestPermission()</code>. We did this using the following:</p>
+Above we said that we had to check whether the browser supports the promise version of `Notification.requestPermission()`. We did this using the following:
 
-<pre class="brush: js">function checkNotificationPromise() {
+```js
+function checkNotificationPromise() {
     try {
       Notification.requestPermission().then();
     } catch(e) {
@@ -117,79 +122,80 @@ tags:
     }
 
     return true;
-  }</pre>
+  }
+```
 
-<p>We basically try to see if the <code>.then()</code> method is available on <code>requestPermission()</code>. If so, we move on and return <code>true</code>. If it fails, we return <code>false</code> in the <code>catch() {}</code> block.</p>
+We basically try to see if the `.then()` method is available on `requestPermission()`. If so, we move on and return `true`. If it fails, we return `false` in the `catch() {}` block.
 
-<h2 id="Creating_a_notification">Creating a notification</h2>
+## Creating a notification
 
-<p>Creating a notification is easy; just use the {{domxref("Notification")}} constructor. This constructor expects a title to display within the notification and some options to enhance the notification such as an {{domxref("Notification.icon","icon")}} or a text {{domxref("Notification.body","body")}}.</p>
+Creating a notification is easy; just use the {{domxref("Notification")}} constructor. This constructor expects a title to display within the notification and some options to enhance the notification such as an {{domxref("Notification.icon","icon")}} or a text {{domxref("Notification.body","body")}}.
 
-<p>For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the <code>createNotification()</code> function):</p>
+For example, in the to-do-list example we use the following snippet to create a notification when required (found inside the `createNotification()` function):
 
-<pre class="brush: js">var img = '/to-do-notifications/img/icon-128.png';
+```js
+var img = '/to-do-notifications/img/icon-128.png';
 var text = 'HEY! Your task "' + title + '" is now overdue.';
-var notification = new Notification('To do list', { body: text, icon: img });</pre>
+var notification = new Notification('To do list', { body: text, icon: img });
+```
 
-<h2 id="Closing_notifications">Closing notifications</h2>
+## Closing notifications
 
-<p>Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.</p>
+Used {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
 
-<pre class="brush: js">var n = new Notification('My Great Song');
+```js
+var n = new Notification('My Great Song');
 document.addEventListener('visibilitychange', function() {
   if (document.visibilityState === 'visible') {
     // The tab has become visible so clear the now-stale Notification.
     n.close();
   }
 });
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> This API shouldn't be used just to have the notification removed from the screen after a fixed delay (on modern browsers) since this method will also remove the notification from any notification tray, preventing users from interacting with it after it was initially shown.</p>
-</div>
+> **Note:** This API shouldn't be used just to have the notification removed from the screen after a fixed delay (on modern browsers) since this method will also remove the notification from any notification tray, preventing users from interacting with it after it was initially shown.
 
-<div class="note">
-<p><strong>Note:</strong> When you receive a "close" event, there is no guarantee that it's the user who closed the notification. This is in line with the specification, which states: "When a notification is closed, either by the underlying notifications platform or by the user, the close steps for it must be run."</p>
-</div>
+> **Note:** When you receive a "close" event, there is no guarantee that it's the user who closed the notification. This is in line with the specification, which states: "When a notification is closed, either by the underlying notifications platform or by the user, the close steps for it must be run."
 
-<h2 id="Notification_events">Notification events</h2>
+## Notification events
 
-<p>There are four events that are triggered on the {{domxref("Notification")}} instance:</p>
+There are four events that are triggered on the {{domxref("Notification")}} instance:
 
-<dl>
- <dt><code>click</code></dt>
- <dd>Triggered when the user clicks on the notification.</dd>
- <dt><code>close</code></dt>
- <dd>Triggered once the notification is closed.</dd>
- <dt><code>error</code></dt>
- <dd>Triggered if something goes wrong with the notification; this is usually because the notification couldn't be displayed for some reason.</dd>
- <dt><code>show</code></dt>
- <dd>Triggered when the notification is displayed to the user.</dd>
-</dl>
+- `click`
+  - : Triggered when the user clicks on the notification.
+- `close`
+  - : Triggered once the notification is closed.
+- `error`
+  - : Triggered if something goes wrong with the notification; this is usually because the notification couldn't be displayed for some reason.
+- `show`
+  - : Triggered when the notification is displayed to the user.
 
-<p>These events can be tracked using the {{domxref("Notification.onclick","onclick")}}, {{domxref("Notification.onclose","onclose")}}, {{domxref("Notification.onerror","onerror")}}, and {{domxref("Notification.onshow","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.</p>
+These events can be tracked using the {{domxref("Notification.onclick","onclick")}}, {{domxref("Notification.onclose","onclose")}}, {{domxref("Notification.onerror","onerror")}}, and {{domxref("Notification.onshow","onshow")}} handlers. Because {{domxref("Notification")}} also inherits from {{domxref("EventTarget")}}, it's possible to use the {{domxref("EventTarget.addEventListener","addEventListener()")}} method on it.
 
-<h2 id="Replacing_existing_notifications">Replacing existing notifications</h2>
+## Replacing existing notifications
 
-<p>It is usually undesirable for a user to receive a lot of notifications in a short space of time — for example, what if a messenger application notified a user for each incoming message, and they were being sent a lot? To avoid spamming the user with too many notifications, it's possible to modify the pending notifications queue, replacing single or multiple pending notifications with a new one.</p>
+It is usually undesirable for a user to receive a lot of notifications in a short space of time — for example, what if a messenger application notified a user for each incoming message, and they were being sent a lot? To avoid spamming the user with too many notifications, it's possible to modify the pending notifications queue, replacing single or multiple pending notifications with a new one.
 
-<p>To do this, it's possible to add a tag to any new notification. If a notification already has the same tag and has not been displayed yet, the new notification replaces that previous notification. If the notification with the same tag has already been displayed, the previous notification is closed and the new one is displayed.</p>
+To do this, it's possible to add a tag to any new notification. If a notification already has the same tag and has not been displayed yet, the new notification replaces that previous notification. If the notification with the same tag has already been displayed, the previous notification is closed and the new one is displayed.
 
-<h3 id="Tag_example">Tag example</h3>
+### Tag example
 
-<p>Assume the following basic HTML:</p>
+Assume the following basic HTML:
 
-<pre class="brush: html">&lt;button&gt;Notify me!&lt;/button&gt;</pre>
+```html
+<button>Notify me!</button>
+```
 
-<p>It's possible to handle multiple notifications this way:</p>
+It's possible to handle multiple notifications this way:
 
-<pre class="brush: js">window.addEventListener('load', function () {
+```js
+window.addEventListener('load', function () {
   var button = document.getElementsByTagName('button')[0];
 
   button.addEventListener('click', function () {
     // If the user agreed to get notified
     // Let's try to send ten notifications
-    if (window.Notification &amp;&amp; Notification.permission === "granted") {
+    if (window.Notification && Notification.permission === "granted") {
       var i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       var interval = window.setInterval(function () {
@@ -204,7 +210,7 @@ document.addEventListener('visibilitychange', function() {
     // If the user hasn't told if they want to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
-    else if (window.Notification &amp;&amp; Notification.permission !== "denied") {
+    else if (window.Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         // If the user said okay
         if (status === "granted") {
@@ -232,23 +238,21 @@ document.addEventListener('visibilitychange', function() {
       alert("Hi!");
     }
   });
-});</pre>
+});
+```
 
-<p>See the live result below:</p>
+See the live result below:
 
-<p>{{ EmbedLiveSample('Tag_example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.Notification")}}
 
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Notification")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("Notification") }}</li>
-</ul>
+- {{ domxref("Notification") }}

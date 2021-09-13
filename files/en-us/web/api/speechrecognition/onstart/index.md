@@ -2,47 +2,47 @@
 title: SpeechRecognition.onstart
 slug: Web/API/SpeechRecognition/onstart
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onstart
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onstart
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onstart
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onstart</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when the speech recognition service has begun listening to incoming audio with intent to
-  recognize grammars associated with the current <code>SpeechRecognition</code> (when the
-  <a href="/en-US/docs/Web/API/SpeechRecognition/start_event">start event</a> fires.)</p>
+The **`onstart`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when the speech recognition service has begun listening to incoming audio with intent to
+recognize grammars associated with the current `SpeechRecognition` (when the
+[start event](/en-US/docs/Web/API/SpeechRecognition/start_event) fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onstart = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onstart = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onstart = function() {
+```js
+recognition.onstart = function() {
   console.log('Speech recognition service has started');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -2,63 +2,64 @@
 title: TextEncoder.prototype.encode()
 slug: Web/API/TextEncoder/encode
 tags:
-- API
-- Encoding
-- Method
-- Reference
-- TextEncoder
-- encode
+  - API
+  - Encoding
+  - Method
+  - Reference
+  - TextEncoder
+  - encode
 browser-compat: api.TextEncoder.encode
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextEncoder.prototype.encode()</code></strong> method takes a
-  {{domxref("USVString")}} as input, and returns a {{jsxref("Global_Objects/Uint8Array",
+The **`TextEncoder.prototype.encode()`** method takes a
+{{domxref("USVString")}} as input, and returns a {{jsxref("Global_Objects/Uint8Array",
   "Uint8Array")}} containing the text given in parameters encoded with the specific method
-  for that <code>TextEncoder</code> object.</p>
+for that `TextEncoder` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>b1</var> = <var>encoder</var>.encode(<var>string</var>);
-</pre>
+```js
+b1 = encoder.encode(string);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>string</var></code></dt>
-  <dd>Is a {{DOMxRef("USVString")}} containing the text to encode.</dd>
-</dl>
+- `string`
+  - : Is a {{DOMxRef("USVString")}} containing the text to encode.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Uint8Array")}} object.</p>
+A {{jsxref("Uint8Array")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;p class="source"&gt;This is a sample paragraph.&lt;/p&gt;
-&lt;p class="result"&gt;Encoded result: &lt;/p&gt;</pre>
+```html
+<p class="source">This is a sample paragraph.</p>
+<p class="result">Encoded result: </p>
+```
 
-<pre class="brush: js">const sourcePara = document.querySelector('.source');
+```js
+const sourcePara = document.querySelector('.source');
 const resultPara = document.querySelector('.result');
 const string = sourcePara.textContent;
 
 const textEncoder = new TextEncoder();
 
 let encoded = textEncoder.encode(string);
-resultPara.textContent += encoded;</pre>
+resultPara.textContent += encoded;
+```
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("TextEncoder")}} interface it belongs to.</li>
-</ul>
+- The {{DOMxRef("TextEncoder")}} interface it belongs to.

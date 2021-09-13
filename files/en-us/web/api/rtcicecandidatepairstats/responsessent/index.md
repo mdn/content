@@ -2,48 +2,47 @@
 title: RTCIceCandidatePairStats.responsesSent
 slug: Web/API/RTCIceCandidatePairStats/responsesSent
 tags:
-- API
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Responses
-- STUN
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- responsesSent
+  - API
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Responses
+  - STUN
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - responsesSent
 browser-compat: api.RTCIceCandidatePairStats.responsesSent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-    <strong><code>responsesSent</code></strong> property indicates the total number of
-    {{Glossary("STUN")}} connectivity check responses that have been sent so far on the
-    connection described by this pair of candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`responsesSent`** property indicates the total number of
+{{Glossary("STUN")}} connectivity check responses that have been sent so far on the
+connection described by this pair of candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>responsesSent</em> = <em>rtcIceCandidatePairStats</em>.responsesSent;</pre>
+```js
+responsesSent = rtcIceCandidatePairStats.responsesSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of times a response has been sent to a
-  {{Glossary("STUN")}} connectivity check request.</p>
+An integer value indicating the number of times a response has been sent to a
+{{Glossary("STUN")}} connectivity check request.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Since it isn't possible to tell the difference between
-    connectivity check requests and consent requests, this value includes both.</p>
-</div>
+> **Note:** Since it isn't possible to tell the difference between
+> connectivity check requests and consent requests, this value includes both.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

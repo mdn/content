@@ -2,39 +2,41 @@
 title: MediaElementAudioSourceNode.mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
 tags:
-- API
-- MediaElementAudioSourceNode
-- Property
-- Reference
-- Web Audio API
-- mediaElement
+  - API
+  - MediaElementAudioSourceNode
+  - Property
+  - Reference
+  - Web Audio API
+  - mediaElement
 browser-compat: api.MediaElementAudioSourceNode.mediaElement
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The {{domxref("MediaElementAudioSourceNode")}} interface's
-    read-only <code><strong>mediaElement</strong></code> property indicates the
-    {{domxref("HTMLMediaElement")}} that contains the audio track from which the node is
-    receiving audio.</p>
+The {{domxref("MediaElementAudioSourceNode")}} interface's
+read-only **`mediaElement`** property indicates the
+{{domxref("HTMLMediaElement")}} that contains the audio track from which the node is
+receiving audio.
 
-<p>This stream was specified when the node was first created,
-  either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode",
+This stream was specified when the node was first created,
+either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode",
   "MediaElementAudioSourceNode()")}} constructor or the
-  {{domxref("AudioContext.createMediaElementSource()")}} method.</p>
+{{domxref("AudioContext.createMediaElementSource()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>audioSourceElement</em> = <em>mediaElementAudioSourceNode</em>.mediaElement;</pre>
+```js
+audioSourceElement = mediaElementAudioSourceNode.mediaElement;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLMediaElement")}} representing the element which contains the source
-  of audio for the node.</p>
+An {{domxref("HTMLMediaElement")}} representing the element which contains the source
+of audio for the node.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const audioCtx = new window.AudioContext();
+```js
+const audioCtx = new window.AudioContext();
 const audioElem = document.querySelector('audio');
 
 let options = {
@@ -42,12 +44,13 @@ let options = {
 }
 
 let source = new MediaElementAudioSourceNode(audioCtx, options);
-console.log(source.mediaElement);</pre>
+console.log(source.mediaElement);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

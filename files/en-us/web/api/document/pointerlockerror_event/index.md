@@ -9,57 +9,61 @@ tags:
   - pointerlockerror
 browser-compat: api.Document.pointerlockerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointerlockerror</code> event is fired when locking the pointer failed (for technical reasons or because the permission was denied).</p>
+The `pointerlockerror` event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document/onpointerlockerror", "onpointerlockerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document/onpointerlockerror", "onpointerlockerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-document.addEventListener('pointerlockerror', (event) =&gt; {
+document.addEventListener('pointerlockerror', (event) => {
   console.log('Error locking pointer');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointerlockerror</code> event handler property:</p>
+Using the `onpointerlockerror` event handler property:
 
-<pre class="brush: js">document.onpointerlockerror = (event) =&gt; {
+```js
+document.onpointerlockerror = (event) => {
   console.log('Error locking pointer');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Using Pointer Lock API</a></li>
-</ul>
+- [Using Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)

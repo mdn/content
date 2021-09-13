@@ -2,64 +2,67 @@
 title: XPathResult.booleanValue
 slug: Web/API/XPathResult/booleanValue
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
 browser-compat: api.XPathResult.booleanValue
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The read-only <strong><code>booleanValue</code></strong> property of the
-  {{domxref("XPathResult")}} interface returns the boolean value of a result with
-  {{domxref("XPathResult.resultType")}} being <code>BOOLEAN_TYPE</code>.</p>
+The read-only **`booleanValue`** property of the
+{{domxref("XPathResult")}} interface returns the boolean value of a result with
+{{domxref("XPathResult.resultType")}} being `BOOLEAN_TYPE`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>value</em> = <em>result</em>.booleanValue;
-</pre>
+```js
+var value = result.booleanValue;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The return value is the boolean value of the <code>XPathResult</code> returned by
-  {{domxref("Document.evaluate()")}}.</p>
+The return value is the boolean value of the `XPathResult` returned by
+{{domxref("Document.evaluate()")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case {{domxref("XPathResult.resultType")}} is not <code>BOOLEAN_TYPE</code>, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+In case {{domxref("XPathResult.resultType")}} is not `BOOLEAN_TYPE`, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>booleanValue</code> property.</p>
+The following example shows the use of the `booleanValue` property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;p&gt;Text is 'XPath example': &lt;output&gt;&lt;/output&gt;&lt;/p&gt;
-</pre>
+```html
+<div>XPath example</div>
+<p>Text is 'XPath example': <output></output></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div/text() = 'XPath example'";
+```js
+var xpath = "//div/text() = 'XPath example'";
 var result = document.evaluate(xpath, document, null, XPathResult.BOOLEAN_TYPE, null);
 document.querySelector("output").textContent = result.booleanValue;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

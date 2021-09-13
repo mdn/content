@@ -2,62 +2,55 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 tags:
-- API
-- Bluetooth
-- Experimental
-- Interface
-- Reference
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - Experimental
+  - Interface
+  - Reference
+  - Web Bluetooth API
 browser-compat: api.Bluetooth
 ---
-<p>{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>Bluetooth</code></strong> interface of the <a
-    href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> returns a
-  {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the specified
-  options.</p>
+The **`Bluetooth`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) returns a
+{{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the specified
+options.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent {{domxref("EventTarget")}}.</em></p>
+_Inherits properties from its parent {{domxref("EventTarget")}}._
 
-<dl>
-  <dt>{{domxref("Bluetooth.referringDevice")}} {{readonlyinline}}</dt>
-  <dd>Returns a reference to the device, if any, from which the user opened the current
+- {{domxref("Bluetooth.referringDevice")}} {{readonlyinline}}
+  - : Returns a reference to the device, if any, from which the user opened the current
     page. For example, an Eddystone beacon might advertise a URL, which the user agent
     allows the user to open. A BluetoothDevice representing the beacon would be available
-    through <code>navigator.bluetooth.referringDevice</code>.</dd>
-</dl>
+    through `navigator.bluetooth.referringDevice`.
 
-<h3 id="Events">Events</h3>
+### Events
 
-<dl>
-  <dt>{{domxref("Bluetooth.onavailabilitychanged")}}</dt>
-  <dd>An event handler that runs when an event of type <code>availabilitychanged</code>
-    has fired.</dd>
-</dl>
+- {{domxref("Bluetooth.onavailabilitychanged")}}
+  - : An event handler that runs when an event of type `availabilitychanged`
+    has fired.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolved to a boolean value indicating
+- {{domxref("Bluetooth.getAvailability","Bluetooth.getAvailability()")}}
+  - : Returns a {{jsxref("Promise")}} that resolved to a boolean value indicating
     whether the user-agent has the ability to support Bluetooth. Some user-agents let the
     user configure an option that affects what is returned by this value. If this option
-    is set, that is the value returned by this method.</dd>
-  <dt>{{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolved to an array of
+    is set, that is the value returned by this method.
+- {{domxref("Bluetooth.getDevices","Bluetooth.getDevices()")}}
+  - : Returns a {{jsxref("Promise")}} that resolved to an array of
     {{domxref("BluetoothDevice")}}s which the origin already obtained permission for via a
-    call to {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}}.</dd>
-  <dt>{{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the
-    specified options.</dd>
-</dl>
+    call to {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}}.
+- {{domxref("Bluetooth.requestDevice","Bluetooth.requestDevice()")}}
+  - : Returns a {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the
+    specified options.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

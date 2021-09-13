@@ -9,29 +9,34 @@ tags:
   - USBConnectionEvent
 browser-compat: api.USBConnectionEvent.device
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <strong><code>device</code></strong> read-only property of the {{domxref("USBConnectionEvent")}} interface returns a {{domxref("USBDevice")}} object representing the device being connected or disconnected.</p>
+The **`device`** read-only property of the {{domxref("USBConnectionEvent")}} interface returns a {{domxref("USBDevice")}} object representing the device being connected or disconnected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let device = USBConnectionEvent.device;</pre>
+```js
+let device = USBConnectionEvent.device;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("USBDevice")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("USBDevice")}} object.
 
-<p>Connecting a USB device fires the <code>connect</code> event. The current {{domxref("USBDevice")}} is returned by calling <code>event.device</code>.</p>
+## Examples
 
-<pre class="brush: js">navigator.usb.addEventListener('connect', event => {
+Connecting a USB device fires the `connect` event. The current {{domxref("USBDevice")}} is returned by calling `event.device`.
+
+```js
+navigator.usb.addEventListener('connect', event => {
   console.log(event.device);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

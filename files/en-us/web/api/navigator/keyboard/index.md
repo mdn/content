@@ -2,35 +2,37 @@
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- Navigator
-- Property
-- Reference
-- keyboard
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - Navigator
+  - Property
+  - Reference
+  - keyboard
 browser-compat: api.Navigator.keyboard
 ---
-<div>{{SeeCompatTable}}{{APIRef("Keyboard API")}}</div>
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-<p>The <strong><code>keyboard</code></strong> read-only property
-    of the {{domxref("Navigator")}} interface returns a {{domxref('Keyboard')}} object
-    which provides access to functions that retrieve keyboard layout maps and toggle
-    capturing of key presses from the physical keyboard.</p>
+The **`keyboard`** read-only property
+of the {{domxref("Navigator")}} interface returns a {{domxref('Keyboard')}} object
+which provides access to functions that retrieve keyboard layout maps and toggle
+capturing of key presses from the physical keyboard.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>keyboard</var> = navigator.keyboard</pre>
+```js
+var keyboard = navigator.keyboard
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('Keyboard')}} object.</p>
+A {{domxref('Keyboard')}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

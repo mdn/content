@@ -2,44 +2,44 @@
 title: msFirstPaint
 slug: Web/API/MsFirstPaint
 tags:
-- msFirstPaint
+  - msFirstPaint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msFirstPaint</strong></code> is a read-only property which gets the time
-  when the document loaded by the window object began to be displayed to the user.</p>
+**`msFirstPaint`** is a read-only property which gets the time
+when the document loaded by the window object began to be displayed to the user.
 
-<p>Put another way, <code>msFirstPaint</code> utilizes the browser to measure when the
-  first content completes being painted in the window. It is available from javascript and
-  can be reported from the field.</p>
+Put another way, `msFirstPaint` utilizes the browser to measure when the
+first content completes being painted in the window. It is available from javascript and
+can be reported from the field.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 
 p = object.msFirstPaint;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+An Integer value that represents the time when the document began to be displayed or 0
+if the document could not be loaded.
 
-<p>An Integer value that represents the time when the document began to be displayed or 0
-  if the document could not be loaded.</p>
+The numerical value reported represents the number of milliseconds between the recorded
+time and midnight January 1, 1970 (UTC).
 
-<p>The numerical value reported represents the number of milliseconds between the recorded
-  time and midnight January 1, 1970 (UTC).</p>
+This property is supported only for documents displayed in IE9 Standards mode.
 
-<p>This property is supported only for documents displayed in IE9 Standards mode.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+The following example shows how to calculate the time that is required to request the
+document before the document begins to display for the user.
 
-<p>The following example shows how to calculate the time that is required to request the
-  document before the document begins to display for the user.</p>
-
-<pre class="brush: js">  var oTiming = window.performance.timing;
+```js
+  var oTiming = window.performance.timing;
   var iTimeMS = oTiming.msFirstPaint - oTiming.navigationStart;
-</pre>
+```

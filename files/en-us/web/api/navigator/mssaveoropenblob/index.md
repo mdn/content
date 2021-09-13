@@ -3,48 +3,44 @@ title: Navigator.msSaveOrOpenBlob
 slug: Web/API/Navigator/msSaveOrOpenBlob
 browser-compat: api.Navigator.msSaveOrOpenBlob
 ---
-<div>{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}</div>
+{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
-<p>The <strong><code>Navigator.msSaveOrOpenBlob()</code></strong> method saves the
-    {{domxref("File")}} or {{domxref("Blob")}} to disk. This method behaves in the same
-    way as {{domxref("Navigator.msSaveBlob()")}} except that this enables the file open
-    option.</p>
+The **`Navigator.msSaveOrOpenBlob()`** method saves the
+{{domxref("File")}} or {{domxref("Blob")}} to disk. This method behaves in the same
+way as {{domxref("Navigator.msSaveBlob()")}} except that this enables the file open
+option.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.msSaveOrOpenBlob(blob, <em>defaultName</em>);
-</pre>
+```js
+navigator.msSaveOrOpenBlob(blob, defaultName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code>blob</code></dt>
-    <dd>A blob to be saved.</dd>
-    <dt><code>defaultName</code></dt>
-    <dd>
-        <p>The file name to be used when saving file.</p>
-    </dd>
-</dl>
+- `blob`
+  - : A blob to be saved.
+- `defaultName`
+  - : The file name to be used when saving file.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>True is returned as long as the download notification bar is displayed, or false if a
-    failure occurred.</p>
+True is returned as long as the download notification bar is displayed, or false if a
+failure occurred.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When a site calls this method, the behavior is the same as when Windows Internet
-    Explorer downloads a file with the following in the header:</p>
+When a site calls this method, the behavior is the same as when Windows Internet
+Explorer downloads a file with the following in the header:
 
-<pre>Content-Length: &lt;blob.size&gt;
-Content-Type: &lt;blob.type&gt;
-Content-Disposition: attachment;filename=&lt;defaultName&gt;
-</pre>
+    Content-Length: <blob.size>
+    Content-Type: <blob.type>
+    Content-Disposition: attachment;filename=<defaultName>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specifications.</p>
+Not part of any specifications.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,37 +12,35 @@ tags:
   - onupgradeneeded
 browser-compat: api.IDBOpenDBRequest.onupgradeneeded
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>onupgradeneeded</code></strong> property of the
-    {{domxref("IDBOpenDBRequest")}} interface is the event handler for the
-    {{event("upgradeneeded")}} event, triggered when a database of a bigger version number
-    than the existing stored database is loaded.</p>
+The **`onupgradeneeded`** property of the
+{{domxref("IDBOpenDBRequest")}} interface is the event handler for the
+{{event("upgradeneeded")}} event, triggered when a database of a bigger version number
+than the existing stored database is loaded.
 
-  <p>The event passed to the handler is an {{domxref("IDBVersionChangeEvent")}}.</p>
+The event passed to the handler is an {{domxref("IDBVersionChangeEvent")}}.
 
-  <p>Inside the event handler function you can include code to upgrade the database
-    structure, as shown in the example below.</p>
+Inside the event handler function you can include code to upgrade the database
+structure, as shown in the example below.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IDBOpenDBRequest</em>.onupgradeneeded = <em>function</em>(event) { ... };</pre>
+```js
+IDBOpenDBRequest.onupgradeneeded = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example you can see the onupgradeneeded handler being used to update
-  the database structure if a database with a higher version number is loaded. For a full
-  working example, see our <a class="external"
-    href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-    Notifications</a> app (<a class="external"
-    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following example you can see the onupgradeneeded handler being used to update
+the database structure if a database with a higher version number is loaded. For a full
+working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Request version 3 of the database.
 var request = window.indexedDB.open("library", 3);
@@ -55,21 +53,21 @@ request.onupgradeneeded = function(event) {
   db = request.result;
 
   db.onerror = function(errorEvent) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
-  if (event.oldVersion &lt; 1) {
+  if (event.oldVersion < 1) {
     // Version 1 is the first version of the database.
     var store = db.createObjectStore("books", {keyPath: "isbn"});
     var titleIndex = store.createIndex("by_title", "title", {unique: true});
     var authorIndex = store.createIndex("by_author", "author");
   }
-  if (event.oldVersion &lt; 2) {
+  if (event.oldVersion < 2) {
     // Version 2 introduces a new index of books by year.
     var bookStore = request.transaction.objectStore("books");
     var yearIndex = bookStore.createIndex("by_year", "year");
   }
-  if (event.oldVersion &lt; 3) {
+  if (event.oldVersion < 3) {
     // Version 3 introduces a new object store for magazines with two indexes.
     var magazines = db.createObjectStore("magazines");
     var publisherIndex = magazines.createIndex("by_publisher", "publisher");
@@ -78,39 +76,33 @@ request.onupgradeneeded = function(event) {
 };
 
 request.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 request.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
   db = request.result;
   populateAndDisplayData();
 };
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event">upgradeneeded</a></code>
-    event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
+  event

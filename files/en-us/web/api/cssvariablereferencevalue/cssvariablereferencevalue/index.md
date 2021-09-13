@@ -11,47 +11,34 @@ tags:
   - Reference
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
-<div>{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>Creates a new {{domxref('CSSVariableReferenceValue')}}.</p>
+Creates a new {{domxref('CSSVariableReferenceValue')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new CSSVariableReferenceValue(variable[, fallback]])
-</pre>
+```js
+new CSSVariableReferenceValue(variable[, fallback]])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><var>variable</var></dt>
-  <dd>
-    <p>A <a href="/en-US/docs/Web/CSS/--*">custom property name</a>.</p>
-  </dd>
-  <dt><var>fallback</var></dt>
-  <dd>
-    <p>Optional. A <a
-        href="/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values">custom
-        property fallback value</a>.</p>
-  </dd>
-</dl>
+- _variable_
+  - : A [custom property name](/en-US/docs/Web/CSS/--*).
+- _fallback_
+  - : Optional. A [custom
+    property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<dl>
-  <dt><var>variable</var></dt>
-  <dd>
-    <p>A CSS <a href="/en-US/docs/Web/CSS/--*">custom property</a></p>
-  </dd>
-  <dt><var>fallback</var></dt>
-  <dd>
-    <p>Optional. A <a
-        href="/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values">custom
-        property fallback value</a>.</p>
-  </dd>
-</dl>
+- _variable_
+  - : A CSS [custom property](/en-US/docs/Web/CSS/--*)
+- _fallback_
+  - : Optional. A [custom
+    property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).

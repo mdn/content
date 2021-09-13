@@ -2,62 +2,61 @@
 title: WebGL2RenderingContext.getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getFragDataLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getFragDataLocation()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns the binding of
-  color numbers to user-defined varying out variables.</p>
+The **`WebGL2RenderingContext.getFragDataLocation()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the binding of
+color numbers to user-defined varying out variables.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLint <var>gl</var>.getFragDataLocation(<var>program</var>, <var>name</var>);
-</pre>
+```js
+GLint gl.getFragDataLocation(program, name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}} to query.</dd>
-  <dt>name</dt>
-  <dd>A {{domxref("DOMString")}} specifying the name of the user-defined varying out
-    variable.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} to query.
+- name
+  - : A {{domxref("DOMString")}} specifying the name of the user-defined varying out
+    variable.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLint")}} indicating the assigned color number binding, or <code>-1</code>
-  otherwise.</p>
+A {{domxref("WebGL_API/Types", "GLint")}} indicating the assigned color number binding, or `-1`
+otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// program is a linked WebGLProgram
+```js
+// program is a linked WebGLProgram
 
-gl.getFragDataLocation(program, 'fragColor');</pre>
+gl.getFragDataLocation(program, 'fragColor');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

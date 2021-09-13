@@ -9,20 +9,19 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort.onconnect
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>onconnect</code></strong> event handler of the {{domxref("SerialPort")}} interface is called when the port has disconnected from the device. This method receives an {{domxref("Event")}} object. This event is only fired for ports associated with removable devices such as those connected via USB. This event bubbles to the instance of {{domxref("Serial")}} that returned this interface..</p>
+The **`onconnect`** event handler of the {{domxref("SerialPort")}} interface is called when the port has disconnected from the device. This method receives an {{domxref("Event")}} object. This event is only fired for ports associated with removable devices such as those connected via USB. This event bubbles to the instance of {{domxref("Serial")}} that returned this interface..
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+    SerialPort.onconnect = function(event);
+    SerialPort.addEventListener('connect', function(event));
 
-<pre class="syntaxbox">SerialPort.onconnect = <var>function(event)</var>;
-SerialPort.addEventListener('connect', <var>function(event)</var>);</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

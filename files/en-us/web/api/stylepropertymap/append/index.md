@@ -2,57 +2,57 @@
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
 tags:
-- API
-- CSS Typed Object Model API
-- Houdini
-- Method
-- Reference
-- StylePropertyMap
-- append()
+  - API
+  - CSS Typed Object Model API
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMap
+  - append()
 browser-compat: api.StylePropertyMap.append
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>append()</code></strong> method of the
-  {{domxref("StylePropertyMap")}} interface adds the passed CSS value to the
-  <code>StylePropertyMap</code> with the given property.</p>
+The **`append()`** method of the
+{{domxref("StylePropertyMap")}} interface adds the passed CSS value to the
+`StylePropertyMap` with the given property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">StylePropertyMap.append(<var>property</var>,<var>value</var>)</pre>
+```js
+StylePropertyMap.append(property,value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>property</dt>
-  <dd>An identifier indicating the stylistic feature (e.g. font, width, background
-    color) to add.</dd>
-  <dt>value</dt>
-  <dd>The value the given property should have.</dd>
-</dl>
+- property
+  - : An identifier indicating the stylistic feature (e.g. font, width, background
+    color) to add.
+- value
+  - : The value the given property should have.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows an extra background image value being added to the
-  {{cssxref('background-image')}} property of the element, using
-  {{domxref('HTMLElement.attributeStyleMap')}}.</p>
+This example shows an extra background image value being added to the
+{{cssxref('background-image')}} property of the element, using
+{{domxref('HTMLElement.attributeStyleMap')}}.
 
-<pre class="brush: js">// get the button element
+```js
+// get the button element
 const buttonEl = document.querySelector('button');
 
 // append another value to the background-image property set on the attribute
 buttonEl.attributeStyleMap.append('background-image', 'linear-gradient(180deg, blue, black');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

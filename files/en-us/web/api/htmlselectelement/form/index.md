@@ -2,41 +2,46 @@
 title: HTMLSelectElement.form
 slug: Web/API/HTMLSelectElement/form
 tags:
-- API
-- HTMLSelectElement
-- Property
-- Read-only
-- Reference
+  - API
+  - HTMLSelectElement
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.HTMLSelectElement.form
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.form</strong></code> read-only property returns a
-  {{domxref("HTMLFormElement")}} representing the form that this element is associated
-  with. If the element is not associated with of a {{HTMLElement("form")}} element, then
-  it returns <code>null</code>.</p>
+The **`HTMLSelectElement.form`** read-only property returns a
+{{domxref("HTMLFormElement")}} representing the form that this element is associated
+with. If the element is not associated with of a {{HTMLElement("form")}} element, then
+it returns `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">aForm = aSelectElement.form.selectname;</pre>
+```js
+aForm = aSelectElement.form.selectname;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="http://www.google.com/search" method="get"&gt;
- &lt;label&gt;Google: &lt;input type="search" name="q"&gt;&lt;/label&gt; &lt;input type="submit" value="Search..."&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="http://www.google.com/search" method="get">
+ <label>Google: <input type="search" name="q"></label> <input type="submit" value="Search...">
+</form>
+```
 
-<h3 id="Javascript">Javascript</h3>
+### Javascript
 
-<p>A property available on all form elements, "type" returns the type of the calling form
-  element. For SELECT, the two possible values are "<code>select-one</code>" or
-  "<code>select-multiple</code>", depending on the type of selection list. The below code
-  gives all SELECT elements in a particular form a CSS class of
-  "<code>selectclass</code>":</p>
+A property available on all form elements, "type" returns the type of the calling form
+element. For SELECT, the two possible values are "`select-one`" or
+"`select-multiple`", depending on the type of selection list. The below code
+gives all SELECT elements in a particular form a CSS class of
+"`selectclass`":
 
-<pre class="brush: html">&lt;script type="text/javascript"&gt;
+```html
+<script type="text/javascript">
 var form_element = document.getElementById('subscribe_form');
 var vist = form_element.style;
 if (vist.display=='' || vist.display=='none')
@@ -47,13 +52,13 @@ else
 {
   vist.display = 'none';
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,74 +2,73 @@
 title: MediaSessionActionDetails.seekTime
 slug: Web/API/MediaSessionActionDetails/seekTime
 tags:
-- API
-- Audio
-- Media
-- Media Session API
-- MediaSession
-- MediaSessionActionDetails
-- Property
-- Reference
-- Scrub
-- Time
-- Video
-- absolute
-- forward
-- reverse
-- seek
-- seekTime
+  - API
+  - Audio
+  - Media
+  - Media Session API
+  - MediaSession
+  - MediaSessionActionDetails
+  - Property
+  - Reference
+  - Scrub
+  - Time
+  - Video
+  - absolute
+  - forward
+  - reverse
+  - seek
+  - seekTime
 browser-compat: api.MediaSessionActionDetails.seekTime
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The {{domxref("MediaSessionActionDetails")}}
-    dictionary's <code><strong>seekTime</strong></code> property is always included when a
-    <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekto">seekto</a></code>
-    action is sent to the action handler callback. Its value is the absolute time, in
-    seconds, to move the current play position to.</p>
+The {{domxref("MediaSessionActionDetails")}}
+dictionary's **`seekTime`** property is always included when a
+[`seekto`](/en-US/docs/Web/API/MediaSessionActionDetails#seekto)
+action is sent to the action handler callback. Its value is the absolute time, in
+seconds, to move the current play position to.
 
-<p>To change the time by an offset rather than moving to an absolute time, the
-  <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekforward">seekforward</a></code>
-  or
-  <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekbackward">seekbackward</a></code>
-  actions should be used instead.</p>
+To change the time by an offset rather than moving to an absolute time, the
+[`seekforward`](/en-US/docs/Web/API/MediaSessionActionDetails#seekforward)
+or
+[`seekbackward`](/en-US/docs/Web/API/MediaSessionActionDetails#seekbackward)
+actions should be used instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>mediaSessionActionDetails</em> = { seekTime: <em>absTimeInSeconds</em> };
+```js
+let mediaSessionActionDetails = { seekTime: absTimeInSeconds };
 
-let <em>absTime</em> = <em>mediaSessionActionDetails</em>.seekTime;
-</pre>
+let absTime = mediaSessionActionDetails.seekTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value indicating the absolute time in seconds into the media to which
-  to move the current play position.</p>
+A floating-point value indicating the absolute time in seconds into the media to which
+to move the current play position.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>To perform a "fast" seek (such as when issuing multiple <code>seekto</code> actions in
-  sequence while handling a scrubbing operation, the details object's
-  {{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property's value is set
-  to <code>true</code>, indicating that you should minimize or eliminate anything you do
-  while handling the action that is only necessary at the final step.</p>
+To perform a "fast" seek (such as when issuing multiple `seekto` actions in
+sequence while handling a scrubbing operation, the details object's
+{{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property's value is set
+to `true`, indicating that you should minimize or eliminate anything you do
+while handling the action that is only necessary at the final step.
 
-<p>If the value of <code>fastSeek</code> is false, or <code>fastSeek</code> is missing,
-  the action should be treated as the final action of the operation, and you should
-  finalize any details that need to be handled.</p>
+If the value of `fastSeek` is false, or `fastSeek` is missing,
+the action should be treated as the final action of the operation, and you should
+finalize any details that need to be handled.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a></li>
-  <li>Refer to the {{domxref("MediaSession")}} method
-    {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</li>
-</ul>
+- [Media Session API](/en-US/docs/Web/API/Media_Session_API)
+- Refer to the {{domxref("MediaSession")}} method
+  {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}

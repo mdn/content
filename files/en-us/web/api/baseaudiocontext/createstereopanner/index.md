@@ -12,47 +12,45 @@ tags:
   - createStereoPanner
 browser-compat: api.BaseAudioContext.createStereoPanner
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>createStereoPanner()</code> method of the {{ domxref("BaseAudioContext") }}
-  interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
-  stereo panning to an audio source. It positions an incoming audio stream in a stereo
-  image using a low-cost <a class="external external-icon"
-    href="https://webaudio.github.io/web-audio-api/#equal-power">equal-power</a> panning
-  algorithm.</p>
+The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }}
+interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
+stereo panning to an audio source. It positions an incoming audio stream in a stereo
+image using a low-cost [equal-power](https://webaudio.github.io/web-audio-api/#equal-power) panning
+algorithm.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
-    constructor is the recommended way to create a {{domxref("StereoPannerNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
+> constructor is the recommended way to create a {{domxref("StereoPannerNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.createStereoPanner();</pre>
+```js
+baseAudioContext.createStereoPanner();
+```
 
-<h3 id="Description">Returns</h3>
+### Returns
 
-<p>A {{domxref("StereoPannerNode")}}.</p>
+A {{domxref("StereoPannerNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a
-    href="https://mdn.github.io/webaudio-examples/stereo-panner-node/">StereoPannerNode
-    example</a> (<a
-    href="https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node">see
-    source code</a>) HTML we have a simple {{htmlelement("audio")}} element along with a
-  slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
-  create a {{domxref("MediaElementAudioSourceNode")}} and a
-  {{domxref("StereoPannerNode")}}, and connect the two together using the
-  <code>connect() </code>method. We then use an <code>oninput</code> event handler to
-  change the value of the {{domxref("StereoPannerNode.pan")}} parameter and update the pan
-  value display when the slider is moved.</p>
+In our [StereoPannerNode
+example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see
+source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
+slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
+create a {{domxref("MediaElementAudioSourceNode")}} and a
+{{domxref("StereoPannerNode")}}, and connect the two together using the
+`connect() `method. We then use an `oninput` event handler to
+change the value of the {{domxref("StereoPannerNode.pan")}} parameter and update the pan
+value display when the slider is moved.
 
-<p>Moving the slider left and right while the music is playing pans the music across to
-  the left and right speakers of the output, respectively.</p>
+Moving the slider left and right while the music is playing pans the music across to
+the left and right speakers of the output, respectively.
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var myAudio = document.querySelector('audio');
 
 var panControl = document.querySelector('.panning-control');
@@ -79,19 +77,17 @@ panControl.oninput = function() {
 // and the panNode to the destination, so we can play the
 // music and adjust the panning using the controls
 source.connect(panNode);
-panNode.connect(audioCtx.destination);</pre>
+panNode.connect(audioCtx.destination);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

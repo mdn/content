@@ -13,76 +13,74 @@ tags:
   - Sensors
 browser-compat: api.OrientationSensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>OrientationSensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.</p>
+The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for orientation sensors. This interface cannot be used directly. Instead it provides properties and methods accessed by interfaces that inherit from it.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Interfaces_based_on_OrientationSensor">Interfaces based on OrientationSensor</h2>
+## Interfaces based on OrientationSensor
 
-<p>Below is a list of interfaces based on the OrientationSensor interface.</p>
+Below is a list of interfaces based on the OrientationSensor interface.
 
-<ul>
- <li>{{domxref('AbsoluteOrientationSensor')}}</li>
- <li>{{domxref('RelativeOrientationSensor')}}</li>
-</ul>
+- {{domxref('AbsoluteOrientationSensor')}}
+- {{domxref('RelativeOrientationSensor')}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("OrientationSensor.quaternion")}}</dt>
- <dd>Returns a four element {{jsxref('Array')}} whose elements contain the components of the unit quaternion representing the device's orientation.</dd>
-</dl>
+- {{domxref("OrientationSensor.quaternion")}}
+  - : Returns a four element {{jsxref('Array')}} whose elements contain the components of the unit quaternion representing the device's orientation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("OrientationSensor.populateMatrix()")}}</dt>
- <dd>Populates the given object with the rotation matrix based on the latest sensor reading. The rotation maxtrix is shown below.</dd>
-</dl>
+- {{domxref("OrientationSensor.populateMatrix()")}}
+  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation maxtrix is shown below.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_Example">Basic Example</h3>
+### Basic Example
 
-<p>The following example, which is loosely based on <a href="https://intel.github.io/generic-sensor-demos/orientation-phone/">Intel's Orientation Phone demo</a>, instantiates an <code>AbsoluteOrientationSensor</code> with a frequency of 60 times a second. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.</p>
+The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `AbsoluteOrientationSensor` with a frequency of 60 times a second. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
-<pre class="brush: js">const options = { frequency: 60, referenceFrame: 'device' };
+```js
+const options = { frequency: 60, referenceFrame: 'device' };
 const sensor = new AbsoluteOrientationSensor(options);
 
-sensor.addEventListener('reading', () =&gt; {
+sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error =&gt; {
+sensor.addEventListener('error', error => {
    if (event.error.name == 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
-sensor.start();</pre>
+sensor.start();
+```
 
-<h3 id="Permissions_Example">Permissions Example</h3>
+### Permissions Example
 
-<p>Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
+Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
-<pre class="brush: js">const sensor = new AbsoluteOrientationSensor();
+```js
+const sensor = new AbsoluteOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "magnetometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results =&gt; {
-         if (results.every(result =&gt; result.state === "granted")) {
+       .then(results => {
+         if (results.every(result => result.state === "granted")) {
            sensor.start();
            ...
          } else {
            console.log("No permissions to use AbsoluteOrientationSensor.");
          }
-   });</pre>
+   });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

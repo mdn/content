@@ -17,74 +17,67 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCIceCandidate</code></strong> interface—part of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>—represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration which may be used to establish an {{domxref("RTCPeerConnection")}}.</p>
+The **`RTCIceCandidate`** interface—part of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API)—represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration which may be used to establish an {{domxref("RTCPeerConnection")}}.
 
-<p>An ICE candidate describes the protocols and routing needed for WebRTC to be able to communicate with a remote device. When starting a WebRTC peer connection, typically a number of candidates are proposed by each end of the connection, until they mutually agree upon one which describes the connection they decide will be best. WebRTC then uses that candidate's details to initiate the connection.</p>
+An ICE candidate describes the protocols and routing needed for WebRTC to be able to communicate with a remote device. When starting a WebRTC peer connection, typically a number of candidates are proposed by each end of the connection, until they mutually agree upon one which describes the connection they decide will be best. WebRTC then uses that candidate's details to initiate the connection.
 
-<p>For details on how the ICE process works, see <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a>. The article <a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a> provides additional useful details.</p>
+For details on how the ICE process works, see [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime). The article [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity) provides additional useful details.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}</dt>
-	<dd>Creates an <code>RTCIceCandidate</code> object to represent a single ICE candidate, optionally configured based on a configuration object.
-	<div class="notecard note">
-		<p><strong>Note:</strong> For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.</p>
-	</div>
-	</dd>
-</dl>
+- {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}
 
-<h2 id="Properties">Properties</h2>
+  - : Creates an `RTCIceCandidate` object to represent a single ICE candidate, optionally configured based on a configuration object.
 
-<dl>
-	<dt>{{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} containing the IP address of the candidate.</dd>
-	<dt>{{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a <code>candidate-attribute</code> as defined in {{RFC(5245)}}. This string is empty (<code>""</code>) if the <code>RTCIceCandidate</code> is an "end of candidates" indicator.</dd>
-	<dt>{{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}</dt>
-	<dd>A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either <code>rtp</code> or <code>rtcp</code>, and is derived from the  <code>"component-id"</code> field in the <code>candidate</code> a-line string. </dd>
-	<dt>{{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}</dt>
-	<dd>Returns a {{domxref("DOMString")}} containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.</dd>
-	<dt>{{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}</dt>
-	<dd>An integer value indicating the candidate's port number.</dd>
-	<dt>{{domxref("RTCIceCandidate.priority", "priority")}} {{readonlyInline}}</dt>
-	<dd>A long integer value indicating the candidate's priority.</dd>
-	<dt>{{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}</dt>
-	<dd>A string indicating whether the candidate's protocol is <code>"tcp"</code> or <code>"udp"</code>.</dd>
-	<dt>{{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}</dt>
-	<dd>If the candidate is derived from another candidate, <code>relatedAddress</code> is a {{domxref("DOMString")}} containing that host candidate's IP address. For host candidates, this value is <code>null</code>.</dd>
-	<dt>{{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}</dt>
-	<dd>For a candidate that is derived from another, such as a relay or reflexive candidate, the <code><dfn>relatedPort</dfn></code> is a number indicating the port number of the candidate from which this candidate is derived. For host candidates, the <code>relatedPort</code> property is <code>null</code>.</dd>
-	<dt>{{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or <code>null</code> if no such association exists.</dd>
-	<dt>{{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}</dt>
-	<dd>If not <code>null</code>, <code>sdpMLineIndex</code> indicates the zero-based index number of the media description (as defined in <a href="https://datatracker.ietf.org/doc/html/rfc4566">RFC 4566</a>) in the {{Glossary("SDP")}} with which the candidate is associated.</dd>
-	<dt>{{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}</dt>
-	<dd>If <code>protocol</code> is <code>"tcp"</code>, <code>tcpType</code> represents the type of TCP candidate. Otherwise, <code>tcpType</code> is <code>null</code>.</dd>
-	<dt>{{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} indicating the type of candidate as one of the strings listed on <a href="/en-US/docs/Web/API/RTCIceCandidate/type#values"><code>RTCIceCandidate.type</code></a>.</dd>
-	<dt>{{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same <code>usernameFragment</code>, even across ICE restarts.</dd>
-</dl>
+    > **Note:** For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
 
-<h2 id="Methods">Methods</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("RTCIceCandidate.toJSON", "toJSON()")}}</dt>
-	<dd>Returns a {{Glossary("JSON")}} representation of the <code>RTCIceCandidate</code>'s current configuration.
-		The format of the representation is the same as the <code>candidateInfo</code> object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure a candidate.</dd>
-</dl>
+- {{domxref("RTCIceCandidate.address", "address")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} containing the IP address of the candidate.
+- {{domxref("RTCIceCandidate.candidate", "candidate")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing the transport address for the candidate that can be used for connectivity checks. The format of this address is a `candidate-attribute` as defined in {{RFC(5245)}}. This string is empty (`""`) if the `RTCIceCandidate` is an "end of candidates" indicator.
+- {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
+  - : A string which indicates whether the candidate is an RTP or an RTCP candidate; its value is either `rtp` or `rtcp`, and is derived from the  `"component-id"` field in the `candidate` a-line string.
+- {{domxref("RTCIceCandidate.foundation", "foundation")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing a unique identifier that is the same for any candidates of the same type, share the same base (the address from which the ICE agent sent the candidate), and come from the same {{Glossary("STUN")}} server. This is used to help optimize ICE performance while prioritizing and correlating candidates that appear on multiple {{domxref("RTCIceTransport")}} objects.
+- {{domxref("RTCIceCandidate.port", "port")}} {{readonlyInline}}
+  - : An integer value indicating the candidate's port number.
+- {{domxref("RTCIceCandidate.priority", "priority")}} {{readonlyInline}}
+  - : A long integer value indicating the candidate's priority.
+- {{domxref("RTCIceCandidate.protocol", "protocol")}} {{readonlyInline}}
+  - : A string indicating whether the candidate's protocol is `"tcp"` or `"udp"`.
+- {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}} {{readonlyInline}}
+  - : If the candidate is derived from another candidate, `relatedAddress` is a {{domxref("DOMString")}} containing that host candidate's IP address. For host candidates, this value is `null`.
+- {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}} {{readonlyInline}}
+  - : For a candidate that is derived from another, such as a relay or reflexive candidate, the `relatedPort` is a number indicating the port number of the candidate from which this candidate is derived. For host candidates, the `relatedPort` property is `null`.
+- {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or `null` if no such association exists.
+- {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{readonlyInline}}
+  - : If not `null`, `sdpMLineIndex` indicates the zero-based index number of the media description (as defined in [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566)) in the {{Glossary("SDP")}} with which the candidate is associated.
+- {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{readonlyInline}}
+  - : If `protocol` is `"tcp"`, `tcpType` represents the type of TCP candidate. Otherwise, `tcpType` is `null`.
+- {{domxref("RTCIceCandidate.type", "type")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
+- {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.
 
-<h2 id="Examples">Examples</h2>
+## Methods
 
-<p>For examples, see the article <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>, which demonstrates the entire process.</p>
+- {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
+  - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.
+    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure a candidate.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+For examples, see the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling), which demonstrates the entire process.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

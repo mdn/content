@@ -2,38 +2,41 @@
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
 tags:
-- API
-- Credential Management API
-- FederatedCredential
-- NeedsExample
-- Property
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - FederatedCredential
+  - NeedsExample
+  - Property
+  - Reference
+  - credential management
 browser-compat: api.FederatedCredential.provider
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>The <strong><code>provider</code></strong> property of the
-  {{domxref("FederatedCredential")}} interface returns a {{domxref("USVString")}}
-  containing a credential's federated identity provider.</p>
+The **`provider`** property of the
+{{domxref("FederatedCredential")}} interface returns a {{domxref("USVString")}}
+containing a credential's federated identity provider.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var provider = FederatedCredential.provider</pre>
+```js
+var provider = FederatedCredential.provider
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing a credential's federated identity provider.</p>
+A {{domxref("USVString")}} containing a credential's federated identity provider.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

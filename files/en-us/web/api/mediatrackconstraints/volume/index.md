@@ -2,73 +2,71 @@
 title: MediaTrackConstraints.volume
 slug: Web/API/MediaTrackConstraints/volume
 tags:
-- API
-- Audio
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- Volume
-- WebRTC
-- getusermedia
+  - API
+  - Audio
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - Volume
+  - WebRTC
+  - getusermedia
 browser-compat: api.MediaTrackConstraints.volume
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>volume</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.volume", "volume")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`volume`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.volume", "volume")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by a call
-  to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
-  unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by a call
+to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
+unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { volume: <em>constraint</em> };
+```js
+var constraintsObject = { volume: constraint };
 
-<em>constraintsObject</em>.volume = <em>constraint</em>;
-</pre>
+constraintsObject.volume = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> describing the acceptable or required value(s) for an
-  audio track's volume, on a linear scale where 0.0 means silence and 1.0 is the highest
-  supported volume.</p>
+A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for an
+audio track's volume, on a linear scale where 0.0 means silence and 1.0 is the highest
+supported volume.
 
-<p>If this value is a number, the user agent will attempt to obtain media whose volume is
-  as close as possible to this number given the capabilities of the hardware and the other
-  constraints specified. Otherwise, the value of this <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> will
-  guide the user agent in its efforts to provide an exact match to the required volume (if
-  <code>exact</code> is specified or both <code>min</code> and <code>max</code> are
-  provided and have the same value) or to a best-possible value.</p>
+If this value is a number, the user agent will attempt to obtain media whose volume is
+as close as possible to this number given the capabilities of the hardware and the other
+constraints specified. Otherwise, the value of this [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) will
+guide the user agent in its efforts to provide an exact match to the required volume (if
+`exact` is specified or both `min` and `max` are
+provided and have the same value) or to a best-possible value.
 
-<p>Any constraint set which only permits values outside the range 0.0 to 1.0 cannot be
-  satisfied and will result in failure.</p>
+Any constraint set which only permits values outside the range 0.0 to 1.0 cannot be
+satisfied and will result in failure.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

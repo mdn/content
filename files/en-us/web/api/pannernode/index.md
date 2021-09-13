@@ -9,115 +9,102 @@ tags:
   - Web Audio API
 browser-compat: api.PannerNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>PannerNode</code> interface represents the position and behavior of an audio source signal in space. It is an {{domxref("AudioNode")}} audio-processing module describing its position with right-hand Cartesian coordinates, its movement using a velocity vector and its directionality using a directionality cone.</p>
-</div>
+The `PannerNode` interface represents the position and behavior of an audio source signal in space. It is an {{domxref("AudioNode")}} audio-processing module describing its position with right-hand Cartesian coordinates, its movement using a velocity vector and its directionality using a directionality cone.
 
-<p>A <code>PannerNode</code> always has exactly one input and one output: the input can be <em>mono</em> or <em>stereo</em> but the output is always <em>stereo</em> (2 channels); you can't have panning effects without at least two audio channels!</p>
+A `PannerNode` always has exactly one input and one output: the input can be _mono_ or _stereo_ but the output is always _stereo_ (2 channels); you can't have panning effects without at least two audio channels!
 
-<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="webaudiopannernode.png"></p>
+![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](webaudiopannernode.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"clamped-max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("PannerNode.PannerNode", "PannerNode()")}}</dt>
+- {{domxref("PannerNode.PannerNode", "PannerNode()")}}
+  - : Creates a new `PannerNode` object instance.
 
- <dd>Creates a new <code>PannerNode</code> object instance.</dd>
-</dl>
+## Properties
 
-<h2 id="Properties">Properties</h2>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+> **Note:** The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, `PannerNode.positionX`. While setting the same property is done with `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
 
-<div class="note">
-<p><strong>Note:</strong> The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, <code>PannerNode.positionX</code>. While setting the same property is done with <code>PannerNode.positionX.value</code>. This is why these values are not marked read only, which is how they appear in the WebIDL.</p>
-</div>
+- {{domxref("PannerNode.coneInnerAngle")}}
+  - : Is a double value describing the angle, in degrees, of a cone inside of which there will be no volume reduction.
+- {{domxref("PannerNode.coneOuterAngle")}}
+  - : A double value describing the angle, in degrees, of a cone outside of which the volume will be reduced by a constant value, defined by the `coneOuterGain` attribute.
+- {{domxref("PannerNode.coneOuterGain")}}
+  - : A double value describing the amount of volume reduction outside the cone defined by the `coneOuterAngle` attribute. Its default value is `0`, meaning that no sound can be heard.
+- {{domxref("PannerNode.distanceModel")}}
+  - : An enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener. Possible values are `"linear"`, `"inverse"` and `"exponential"`. The default value is `"inverse"`.
+- {{domxref("PannerNode.maxDistance")}}
+  - : A double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further.
+- {{domxref("PannerNode.orientationX")}}
+  - : Represents the horizontal position of the audio source's vector in a right-hand cartesian coordinate system. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 1.
+- {{domxref("PannerNode.orientationY")}}
+  - : Represents the vertical position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+- {{domxref("PannerNode.orientationZ")}}
+  - : Represents the longitudinal (back and forth) position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+- {{domxref("PannerNode.panningModel")}}
+  - : An enumerated value determining which spatialisation algorithm to use to position the audio in 3D space.
+- {{domxref("PannerNode.positionX")}}
+  - : Represents the horizontal position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+- {{domxref("PannerNode.positionY")}}
+  - : Represents the vertical position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+- {{domxref("PannerNode.positionZ")}}
+  - : Represents the longitudinal (back and forth) position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.
+- {{domxref("PannerNode.refDistance")}}
+  - : A double value representing the reference distance for reducing volume as the audio source moves further from the listener. For distances greater than this the volume will be reduced based on `rolloffFactor` and `distanceModel`.
+- {{domxref("PannerNode.rolloffFactor")}}
+  - : A double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.
 
-<dl>
- <dt>{{domxref("PannerNode.coneInnerAngle")}}</dt>
- <dd>Is a double value describing the angle, in degrees, of a cone inside of which there will be no volume reduction.</dd>
- <dt>{{domxref("PannerNode.coneOuterAngle")}}</dt>
- <dd>A double value describing the angle, in degrees, of a cone outside of which the volume will be reduced by a constant value, defined by the <code>coneOuterGain</code> attribute.</dd>
- <dt>{{domxref("PannerNode.coneOuterGain")}}</dt>
- <dd>A double value describing the amount of volume reduction outside the cone defined by the <code>coneOuterAngle</code> attribute. Its default value is <code>0</code>, meaning that no sound can be heard.</dd>
- <dt>{{domxref("PannerNode.distanceModel")}}</dt>
- <dd>An enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener. Possible values are <code>"linear"</code>, <code>"inverse"</code> and <code>"exponential"</code>. The default value is <code>"inverse"</code>.</dd>
- <dt>{{domxref("PannerNode.maxDistance")}}</dt>
- <dd>A double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further.</dd>
- <dt>{{domxref("PannerNode.orientationX")}}</dt>
- <dd>Represents the horizontal position of the audio source's vector in a right-hand cartesian coordinate system. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 1.</dd>
- <dt>{{domxref("PannerNode.orientationY")}}</dt>
- <dd>Represents the vertical position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.</dd>
- <dt>{{domxref("PannerNode.orientationZ")}}</dt>
- <dd>Represents the longitudinal (back and forth) position of the audio source's vector in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.</dd>
- <dt>{{domxref("PannerNode.panningModel")}}</dt>
- <dd>An enumerated value determining which spatialisation algorithm to use to position the audio in 3D space.</dd>
- <dt>{{domxref("PannerNode.positionX")}}</dt>
- <dd>Represents the horizontal position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.</dd>
- <dt>{{domxref("PannerNode.positionY")}}</dt>
- <dd>Represents the vertical position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.</dd>
- <dt>{{domxref("PannerNode.positionZ")}}</dt>
- <dd>Represents the longitudinal (back and forth) position of the audio in a right-hand cartesian coordinate system. The default is 0. While this {{domxref("AudioParam")}} cannot be directly changed, its value can be altered using its {{domxref("AudioParam.value", "value")}} property. The default is value is 0.</dd>
- <dt>{{domxref("PannerNode.refDistance")}}</dt>
- <dd>A double value representing the reference distance for reducing volume as the audio source moves further from the listener. For distances greater than this the volume will be reduced based on <code>rolloffFactor</code> and <code>distanceModel</code>.</dd>
- <dt>{{domxref("PannerNode.rolloffFactor")}}</dt>
- <dd>A double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+- {{domxref("PannerNode.setPosition()")}} {{deprecated_inline}}
+  - : Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.)
+- {{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}
+  - : Defines the direction the audio source is playing in.
+- {{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}
+  - : Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity that could pitch up or down {{domxref("AudioBufferSourceNode")}}s connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.
 
-<dl>
- <dt>{{domxref("PannerNode.setPosition()")}} {{deprecated_inline}}</dt>
- <dd>Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.)</dd>
- <dt>{{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}</dt>
- <dd>Defines the direction the audio source is playing in.</dd>
- <dt>{{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}</dt>
- <dd>Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity that could pitch up or down {{domxref("AudioBufferSourceNode")}}s connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,58 +2,56 @@
 title: Window.frameElement
 slug: Web/API/Window/frameElement
 tags:
-- API
-- DOM
-- Property
-- Reference
-- Window
+  - API
+  - DOM
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.frameElement
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>The <code><strong>Window.frameElement</strong></code> property
-    returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})
-    in which the window is embedded.</p>
+The **`Window.frameElement`** property
+returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})
+in which the window is embedded.
 
-<div class="note">
-  <p><strong>Note:</strong> Despite this property's name, it works for documents embedded
-    within any embedding point, including {{HTMLElement("object")}},
-    {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.</p>
-</div>
+> **Note:** Despite this property's name, it works for documents embedded
+> within any embedding point, including {{HTMLElement("object")}},
+> {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>frameEl</em> = window.frameElement
-</pre>
+```js
+const frameEl = window.frameElement
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The element which the window is embedded into. If the window isn't embedded into
-  another document, or if the document into which it's embedded has a different
-  {{glossary("origin")}}, the value is {{jsxref("null")}} instead.</p>
+The element which the window is embedded into. If the window isn't embedded into
+another document, or if the document into which it's embedded has a different
+{{glossary("origin")}}, the value is {{jsxref("null")}} instead.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">const frameEl = window.frameElement;
+```js
+const frameEl = window.frameElement;
 // If we're embedded, change the containing element's URL to 'https://mozilla.org/'
 if (frameEl) {
   frameEl.src = 'https://mozilla.org/';
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.frames")}} returns an array-like object, listing the direct
-    sub-frames of the current window.</li>
-  <li>{{domxref("window.parent")}} returns the parent window, which is the window
-    containing the <code>frameElement</code> of the child window.</li>
-</ul>
+- {{domxref("window.frames")}} returns an array-like object, listing the direct
+  sub-frames of the current window.
+- {{domxref("window.parent")}} returns the parent window, which is the window
+  containing the `frameElement` of the child window.

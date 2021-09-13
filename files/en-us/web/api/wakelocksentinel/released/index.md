@@ -2,50 +2,52 @@
 title: WakeLockSentinel.released
 slug: Web/API/WakeLockSentinel/released
 tags:
-- Property
-- Read-only
-- Screen Wake Lock API
-- WakeLockSentinel
+  - Property
+  - Read-only
+  - Screen Wake Lock API
+  - WakeLockSentinel
 browser-compat: api.WakeLockSentinel.released
 ---
-<div>{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The read-only <strong><code>released</code></strong> property of the
-	{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
-	a {{domxref("WakeLockSentinel")}} has been released yet.</p>
+The read-only **`released`** property of the
+{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
+a {{domxref("WakeLockSentinel")}} has been released yet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>released</var> = <em>sentinel</em>.released;</pre>
+```js
+var released = sentinel.released;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value, that is <code>false</code> until the
-	{{domxref("WakeLockSentinel")}} has been released (either through a call to
-	{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
-	automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been
-	emitted, after which it becomes <code>true</code> and no longer changes.</p>
+A boolean value, that is `false` until the
+{{domxref("WakeLockSentinel")}} has been released (either through a call to
+{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
+automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been
+emitted, after which it becomes `true` and no longer changes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows how <strong><code>released</code></strong>'s value changes within a
-	{{domxref("WakeLockSentinel")}}'s life cycle.</p>
+This example shows how **`released`**'s value changes within a
+{{domxref("WakeLockSentinel")}}'s life cycle.
 
-<pre class="brush: js">const sentinel = await navigator.wakeLock.request('screen');
+```js
+const sentinel = await navigator.wakeLock.request('screen');
 console.log(sentinel.released);  // Logs "false"
 
-sentinel.onrelease = () =&gt; {
+sentinel.onrelease = () => {
   console.log(sentinel.released);  // Logs "true"
 };
 
 await sentinel.release();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

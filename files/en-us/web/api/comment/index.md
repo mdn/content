@@ -7,39 +7,35 @@ tags:
   - Reference
 browser-compat: api.Comment
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>Comment</strong></code> interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.</p>
+The **`Comment`** interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.
 
-<p>Comments are represented in HTML and XML as content between '<code>&lt;!--</code>' and '<code>--&gt;</code>'. In XML, the character sequence '<code>--</code>' cannot be used within a comment.</p>
+Comments are represented in HTML and XML as content between '`<!--`' and '`-->`'. In XML, the character sequence '`--`' cannot be used within a comment.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no specific property, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}.</em></p>
+_This interface has no specific property, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}</dt>
- <dd>Returns a <code>Comment</code> object with the parameter as its textual content.</dd>
-</dl>
+- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
+  - : Returns a `Comment` object with the parameter as its textual content.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no specific method, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}.</em></p>
+_This interface has no specific method, but inherits those of its parent, {{domxref("CharacterData")}}, and indirectly those of {{domxref("Node")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

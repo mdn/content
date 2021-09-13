@@ -10,27 +10,25 @@ tags:
   - SyncManager
 browser-compat: api.SyncManager
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>SyncManager</code></strong> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> provides an interface for registering and listing sync registrations.</p>
+The **`SyncManager`** interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) provides an interface for registering and listing sync registrations.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("SyncManager.register")}}</dt>
- <dd>Create a new sync registration and return a {{jsxref("Promise")}}.</dd>
- <dt>{{domxref("SyncManager.getTags")}}</dt>
- <dd>Return a list of developer-defined identifiers for SyncManager registration.</dd>
-</dl>
+- {{domxref("SyncManager.register")}}
+  - : Create a new sync registration and return a {{jsxref("Promise")}}.
+- {{domxref("SyncManager.getTags")}}
+  - : Return a list of developer-defined identifiers for SyncManager registration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

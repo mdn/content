@@ -8,39 +8,38 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.username
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.username</code></strong> property is a
-  {{domxref("USVString")}} containing the username specified before the domain name.</p>
+The **`HTMLAnchorElement.username`** property is a
+{{domxref("USVString")}} containing the username specified before the domain name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.username;
+string = anchor.username;
 // Setter
-<em>anchor</em>.username = <em>string</em>;
-</pre>
+anchor.username = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the username from an anchor link</h3>
+### Getting the username from an anchor link
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementByID("myAnchor");
 anchor.username; // returns 'anonymous'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

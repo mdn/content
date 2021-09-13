@@ -11,53 +11,54 @@ tags:
   - Deprecated
 browser-compat: api.Document.styleSheetSets
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>styleSheetSets</code></strong> read-only property returns a live list of all of the currently-available style sheet sets.</p>
+The **`styleSheetSets`** read-only property returns a live list of all of the currently-available style sheet sets.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>sets</var> = <var>document</var>.styleSheetSets;
-</pre>
+```js
+var sets = document.styleSheetSets;
+```
 
-<p>On return, <code>sets</code> is a list of style sheet sets that are available.</p>
+On return, `sets` is a list of style sheet sets that are available.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate
-  it with the names of all the available style sheet sets with code like this:</p>
+Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate
+it with the names of all the available style sheet sets with code like this:
 
-<pre class="brush:js">const list = document.getElementById('sheetList');
+```js
+const list = document.getElementById('sheetList');
 const sheets = document.styleSheetSets;
 
 list.textContent = '';
 
-for (let i = 0; i &lt; sheets.length; i++) {
+for (let i = 0; i < sheets.length; i++) {
   const item = document.createElement('li');
 
   item.textContent = sheets[i];
   list.appendChild(item);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The list of available style sheet sets is constructed by enumerating all the style
-  sheets available for the document, in the order in which they're listed in the
-  {{domxref("Document.styleSheets")}} attribute, adding the <code>title</code> of each
-  style sheet that has a title to the list. Duplicates are dropped from the list (using a
-  case-sensitive comparison).</p>
+The list of available style sheet sets is constructed by enumerating all the style
+sheets available for the document, in the order in which they're listed in the
+{{domxref("Document.styleSheets")}} attribute, adding the `title` of each
+style sheet that has a title to the list. Duplicates are dropped from the list (using a
+case-sensitive comparison).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Stylesheet")}}</li>
-  <li>{{domxref("Document.styleSheets")}}</li>
-  <li>{{domxref("document.lastStyleSheetSet")}}</li>
-  <li>{{domxref("document.preferredStyleSheetSet")}}</li>
-  <li>{{domxref("document.selectedStyleSheetSet")}}</li>
-  <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("Stylesheet")}}
+- {{domxref("Document.styleSheets")}}
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

@@ -2,51 +2,49 @@
 title: CSSTransformValue.toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSTransformValue
-- Experimental
-- Houdini
-- Method
-- toMatrix
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Method
+  - toMatrix
 browser-compat: api.CSSTransformValue.toMatrix
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>toMatrix()</code></strong> method of the
-  {{domxref("CSSTransformValue")}} interface returns a {{domxref('DOMMatrix')}} object.
-</p>
+The **`toMatrix()`** method of the
+{{domxref("CSSTransformValue")}} interface returns a {{domxref('DOMMatrix')}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>matrix</var> = CSSTransformValue.toMatrix();</pre>
+```js
+var matrix = CSSTransformValue.toMatrix();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('DOMMatrix')}} object.</p>
+A {{domxref('DOMMatrix')}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised if any lengths involved in generating the matrix are not compatible units
-    with px (such as relative lengths or percentages).</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Raised if any lengths involved in generating the matrix are not compatible units
+    with px (such as relative lengths or percentages).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

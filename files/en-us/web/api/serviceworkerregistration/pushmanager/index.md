@@ -2,35 +2,37 @@
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 tags:
-- API
-- Property
-- Push
-- PushManager
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
+  - API
+  - Property
+  - Push
+  - PushManager
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.pushManager
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>pushManager</code></strong> property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-  {{domxref("PushManager")}} interface for managing push subscriptions; this includes
-  support for subscribing, getting an active subscription, and accessing push permission
-  status.</p>
+The **`pushManager`** property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
+{{domxref("PushManager")}} interface for managing push subscriptions; this includes
+support for subscribing, getting an active subscription, and accessing push permission
+status.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>pushManager</em> = <em>serviceWorkerRegistration</em>.pushManager;
-</pre>
+```js
+var pushManager = serviceWorkerRegistration.pushManager;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("PushManager")}} object.</p>
+A {{domxref("PushManager")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
@@ -53,18 +55,17 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [Push API](/en-US/docs/Web/API/Push_API)

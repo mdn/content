@@ -17,43 +17,37 @@ tags:
   - getusermedia
 browser-compat: api.MediaStreamConstraints
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>MediaStreamConstraints</code></strong> dictionary is used when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to specify what kinds of tracks should be included in the returned {{domxref("MediaStream")}}, and, optionally, to establish constraints for those tracks' settings.</p>
+The **`MediaStreamConstraints`** dictionary is used when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to specify what kinds of tracks should be included in the returned {{domxref("MediaStream")}}, and, optionally, to establish constraints for those tracks' settings.
 
-<p>To learn more about how constraints work, see <a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>.</p>
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>Some combination—but not necessarily all—of the following properties will exist on the object.</p>
+Some combination—but not necessarily all—of the following properties will exist on the object.
 
-<h3 id="Track_constraints">Track constraints</h3>
+### Track constraints
 
-<dl>
- <dt>{{domxref("MediaStreamConstraints.audio", "audio")}}</dt>
- <dd>Either a Boolean (which indicates whether or not an audio track is requested) or a {{domxref("MediaTrackConstraints")}} object providing the constraints which must be met by the audio track included in the returned {{domxref("MediaStream")}}. If constraints are specified, an audio track is inherently requested.</dd>
- <dt>{{domxref("MediaStreamConstraints.video", "video")}}</dt>
- <dd>Either a Boolean (which indicates whether or not a video track is requested) or a {{domxref("MediaTrackConstraints")}} object providing the constraints which must be met by the video track included in the returned {{domxref("MediaStream")}}. If constraints are specified, a video track is inherently requested.</dd>
-</dl>
+- {{domxref("MediaStreamConstraints.audio", "audio")}}
+  - : Either a Boolean (which indicates whether or not an audio track is requested) or a {{domxref("MediaTrackConstraints")}} object providing the constraints which must be met by the audio track included in the returned {{domxref("MediaStream")}}. If constraints are specified, an audio track is inherently requested.
+- {{domxref("MediaStreamConstraints.video", "video")}}
+  - : Either a Boolean (which indicates whether or not a video track is requested) or a {{domxref("MediaTrackConstraints")}} object providing the constraints which must be met by the video track included in the returned {{domxref("MediaStream")}}. If constraints are specified, a video track is inherently requested.
 
-<h3 id="Security">Security</h3>
+### Security
 
-<dl>
- <dt>{{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}}</dt>
- <dd>A {{domxref("DOMString")}} identifying the peer who has sole access to the stream. If this property is specified, only the indicated peer can receive and use the stream. Streams isolated in this way can only be displayed in a media element ({{HTMLElement("audio")}} or {{HTMLElement("video")}}) where the content is protected just as if {{Glossary("CORS")}} cross-origin rules were in effect.</dd>
-</dl>
+- {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}}
+  - : A {{domxref("DOMString")}} identifying the peer who has sole access to the stream. If this property is specified, only the indicated peer can receive and use the stream. Streams isolated in this way can only be displayed in a media element ({{HTMLElement("audio")}} or {{HTMLElement("video")}}) where the content is protected just as if {{Glossary("CORS")}} cross-origin rules were in effect.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaDevices.getUserMedia()")}}</li>
- <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
- <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
- <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

@@ -8,36 +8,36 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.hostname
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.hostname</code></strong> property is a
-  {{domxref("USVString")}} containing the domain of the URL.</p>
+The **`HTMLAnchorElement.hostname`** property is a
+{{domxref("USVString")}} containing the domain of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.hostname;
+string = anchor.hostname;
 // Setter
-<em>anchor</em>.hostname = <em>string</em>;
-</pre>
+anchor.hostname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementById("myAnchor");
-anchor.hostname; // returns 'developer.mozilla.org'</pre>
+anchor.hostname; // returns 'developer.mozilla.org'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

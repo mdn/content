@@ -2,41 +2,45 @@
 title: BatteryManager.onchargingchange
 slug: Web/API/BatteryManager/onchargingchange
 tags:
-- API
-- Battery API
-- Event Handler
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - Battery API
+  - Event Handler
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.BatteryManager.onchargingchange
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>{{APIRef("Battery API")}}</p>
+{{APIRef("Battery API")}}
 
-<p>Specifies an event listener to receive {{event("chargingchange")}} events. These events
-   occur when the battery {{domxref("BatteryManager.charging", "charging")}} state is
-   updated.</p>
+Specifies an event listener to receive {{event("chargingchange")}} events. These events
+occur when the battery {{domxref("BatteryManager.charging", "charging")}} state is
+updated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">battery.onchargingchange = funcRef</pre>
+```js
+battery.onchargingchange = funcRef
+```
 
-<p>Where <code><em>battery</em></code> is a {{domxref("BatteryManager")}} object, and
-   <code><em>funcRef</em></code> is a function to be called when the
-   {{event("chargingchange")}} event occurs.</p>
+Where `battery` is a {{domxref("BatteryManager")}} object, and
+`funcRef` is a function to be called when the
+{{event("chargingchange")}} event occurs.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="level"&gt;(battery level unknown)&lt;/div&gt;
-&lt;div id="chargingTime"&gt;(charging time unknown)&lt;/div&gt;
-</pre>
+```html
+<div id="level">(battery level unknown)</div>
+<div id="chargingTime">(charging time unknown)</div>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js; ">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
    battery.onchargingchange = chargingChange();
 
@@ -45,21 +49,19 @@ browser-compat: api.BatteryManager.onchargingchange
       document.querySelector('#chargingTime').textContent = battery.chargingTime;
    }
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 40) }}</p>
+{{ EmbedLiveSample('Example', '100%', 40) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-   <li>{{domxref("BatteryManager")}}</li>
-   <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

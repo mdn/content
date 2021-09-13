@@ -10,29 +10,24 @@ tags:
   - Window
 browser-compat: api.Window.mozAnimationStartTime
 ---
-<p>{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{deprecated_header}}</p>
+{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{deprecated_header}}
 
-<p>Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code>, because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another.</p>
+Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another.
 
-<p>This also allows JavaScript-based animations to remain synchronized with CSS transitions and SMIL animations triggered during the same refresh interval.</p>
+This also allows JavaScript-based animations to remain synchronized with CSS transitions and SMIL animations triggered during the same refresh interval.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>time</em> = window.mozAnimationStartTime;
-</pre>
+    time = window.mozAnimationStartTime;
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><em><code>time</code></em> is the time in milliseconds since the epoch at which animations for the current window should be considered to have started.</li>
-</ul>
+- _`time`_ is the time in milliseconds since the epoch at which animations for the current window should be considered to have started.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
-</ul>
+- {{domxref("window.requestAnimationFrame")}}

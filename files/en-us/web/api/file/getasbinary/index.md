@@ -10,31 +10,28 @@ tags:
   - Reference
   - Deprecated
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}
 
-<div class="note notebox">
-  <p><strong>Note:</strong> This method was removed from Firefox 7.0 and onward.</p>
-</div>
+> **Note:** This method was removed from Firefox 7.0 and onward.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>getAsBinary</code> method allows to access the file's data in raw binary format.</p>
+The `getAsBinary` method allows to access the file's data in raw binary format.
 
-<div class="note">
-<p><strong>Note:</strong> This method is obsolete; you should use the {{domxref("FileReader")}} method {{domxref("FileReader.readAsBinaryString()","readAsBinaryString()")}} or {{domxref("FileReader.readAsArrayBuffer()","readAsArrayBuffer()")}} instead.</p>
-</div>
+> **Note:** This method is obsolete; you should use the {{domxref("FileReader")}} method {{domxref("FileReader.readAsBinaryString()","readAsBinaryString()")}} or {{domxref("FileReader.readAsArrayBuffer()","readAsArrayBuffer()")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var binary = <em>instanceOfFile</em>.getAsBinary();</pre>
+    var binary = instanceOfFile.getAsBinary();
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string.</p>
+A string.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js;">// fileInput is an HTMLInputElement: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput is an HTMLInputElement: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
@@ -48,29 +45,28 @@ var accept = {
 
 var file;
 
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
   file = files[i];
 
   // if file type could be detected
   if (file !== null) {
-    if (accept.binary.indexOf(file.type) &gt; -1) {
+    if (accept.binary.indexOf(file.type) > -1) {
       // file is a binary, which we accept
       var data = file.getAsBinary();
-    } else if (accept.text.indexOf(file.type) &gt; -1) {
+    } else if (accept.text.indexOf(file.type) > -1) {
       // file is of type text, which we accept
       var data = file.getAsText();
       // modify data with string methods
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("File")}}</li>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

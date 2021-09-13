@@ -10,33 +10,31 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframeRule.keyText
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>keyText</code></strong> property of the {{domxref("CSSKeyframeRule")}} interface represents the keyframe selector as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.</p>
+The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface represents the keyframe selector as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>text</var> = <var>CSSKeyframeRule</var>.keyText;
-<var>CSSKeyframeRule</var>.keyText = <var>text</var>;</pre>
+    var text = CSSKeyframeRule.keyText;
+    CSSKeyframeRule.keyText = text;
 
-<h3 id="value">Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+### Value
 
-<h3 id="exceptions">Exceptions</h3>
+A {{domxref('CSSOMString')}}.
 
-<dl>
-    <dt>{{jsxref("SyntaxError")}}</dt>
-    <dd>Thrown if <code>keyText</code> is updated with an invalid keyframe selector, in which case <code>keyText</code> remains untouched.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Example">Example</h2>
+- {{jsxref("SyntaxError")}}
+  - : Thrown if `keyText` is updated with an invalid keyframe selector, in which case `keyText` remains untouched.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrame")}} objects for each keyframe.
-</p>
+## Example
 
-<pre class="brush: css">@keyframes slidein {
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrame")}} objects for each keyframe.
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -44,16 +42,19 @@ browser-compat: api.CSSKeyframeRule.keyText
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0].keyText); // a string containing 0%</pre>
+console.log(keyframes[0].keyText); // a string containing 0%
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,27 +10,32 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.navigator
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>navigator</strong></code> read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.</p>
+The **`navigator`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var navigatorObj = self.navigator;</pre>
+```js
+var navigatorObj = self.navigator;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("WorkerNavigator")}} object.</p>
+A {{domxref("WorkerNavigator")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you call the following</p>
+If you call the following
 
-<pre class="brush: js">console.log(navigator);</pre>
+```js
+console.log(navigator);
+```
 
-<p>inside a worker (which would basically be the equivalent of <code>self.console.log(self.navigator);</code>, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerNavigator")}} object written to the console — something like the following:</p>
+inside a worker (which would basically be the equivalent of `self.console.log(self.navigator);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerNavigator")}} object written to the console — something like the following:
 
-<pre class="brush: js">Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
+```js
+Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) Ap…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36", product: "Gecko", platform: "MacIntel", appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKi…ML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"…}
     appCodeName: "Mozilla"
     appName: "Netscape"
     appVersion: "5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"
@@ -39,18 +44,19 @@ browser-compat: api.WorkerGlobalScope.navigator
     platform: "MacIntel"
     product: "Gecko"
     userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36"
-    __proto__: Object</pre>
+    __proto__: Object
+```
 
-<p>You could use this navigator object to return more information about the runtime envinronment, as you might do with a normal {{domxref("Navigator")}} object.</p>
+You could use this navigator object to return more information about the runtime envinronment, as you might do with a normal {{domxref("Navigator")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("WorkerNavigator")}}</p>
+{{domxref("WorkerNavigator")}}

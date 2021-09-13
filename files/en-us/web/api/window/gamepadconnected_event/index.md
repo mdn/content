@@ -3,54 +3,55 @@ title: 'Window: gamepadconnected event'
 slug: Web/API/Window/gamepadconnected_event
 browser-compat: api.Window.gamepadconnected_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>gamepadconnected</code> event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.</p>
+The `gamepadconnected` event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("GamepadEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{ domxref("Window.ongamepadconnected","ongamepadconnected")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("GamepadEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{ domxref("Window.ongamepadconnected","ongamepadconnected")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event will not fire if disallowed by the document's {{httpheader('Feature-Policy/gamepad','gamepad')}} <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>.</p>
+The event will not fire if disallowed by the document's {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">window.addEventListener('gamepadconnected', event =&gt; {
+```js
+window.addEventListener('gamepadconnected', event => {
 
     // All buttons and axes values can be accessed through
     event.gamepad;
 
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/gamepaddisconnected_event">gamepaddisconnected</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using Gamepad API</a></li>
-</ul>
+- [gamepaddisconnected](/en-US/docs/Web/API/Window/gamepaddisconnected_event)
+- [Using Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

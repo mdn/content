@@ -2,60 +2,62 @@
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 tags:
-- API
-- Iterator
-- Method
-- Reference
-- URL API
-- URLSearchParams
+  - API
+  - Iterator
+  - Method
+  - Reference
+  - URL API
+  - URLSearchParams
 browser-compat: api.URLSearchParams.values
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <code><strong>values()</strong></code> method of the {{domxref("URLsearchParams")}}
-  interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-  through all values contained in this object. The values are {{domxref("USVString")}}
-  objects.</p>
+The **`values()`** method of the {{domxref("URLsearchParams")}}
+interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
+through all values contained in this object. The values are {{domxref("USVString")}}
+objects.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">searchParams.values();</pre>
+```js
+searchParams.values();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the values
 for(var value of searchParams.values()) {
   console.log(value);
-}</pre>
+}
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>value1
-value2</pre>
+    value1
+    value2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface.</li>
-</ul>
+- The {{domxref("URL")}} interface.

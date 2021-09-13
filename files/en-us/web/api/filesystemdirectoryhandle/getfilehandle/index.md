@@ -9,77 +9,71 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getFileHandle
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>getFileHandle()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface returns a
-  {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the
-  directory the method is called.</p>
+The **`getFileHandle()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface returns a
+{{domxref('FileSystemFileHandle')}} for a file with the specified name, within the
+directory the method is called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>FileSystemFileHandle</var> = FileSystemDirectoryHandle.getFileHandle(name);</pre>
+```js
+var FileSystemFileHandle = FileSystemDirectoryHandle.getFileHandle(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>name</em></dt>
-  <dd>A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
-    the file you wish to retrieve.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>
-    <p>An object with the following properties:</p>
-    <ul>
-      <li><code>create</code>: A {{jsxref('Boolean')}}. Default <code>false</code>. When
-        set to <code>true</code> if the file is not found, one with the specified name
-        will be created and returned.</li>
-    </ul>
-  </dd>
-</dl>
+- _name_
+  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+    the file you wish to retrieve.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following properties:
 
-<p>A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}}.</p>
+    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
+      set to `true` if the file is not found, one with the specified name
+      will be created and returned.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>NotAllowedError</code></dt>
-  <dd>If {{domxref('PermissionStatus')}} is not 'granted'.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>If the name specified is not a valid string or contains characters that would
-    interfere with the native file system</dd>
-  <dt><code>TypeMismatchError</code></dt>
-  <dd>If the named entry is a directory and not a file.</dd>
-  <dt><code>NotFoundError</code></dt>
-  <dd>if file doesn't exist and the <code>create</code> option is set to
-    <code>false</code>.</dd>
-</dl>
+A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}}.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following example returns a file handle with the specified name, if the file does
-  not exist it is created.</p>
+- `NotAllowedError`
+  - : If {{domxref('PermissionStatus')}} is not 'granted'.
+- `TypeError`
+  - : If the name specified is not a valid string or contains characters that would
+    interfere with the native file system
+- `TypeMismatchError`
+  - : If the named entry is a directory and not a file.
+- `NotFoundError`
+  - : if file doesn't exist and the `create` option is set to
+    `false`.
 
-<pre class="brush: js">const fileName = 'fileToGetName';
+## Examples
+
+The following example returns a file handle with the specified name, if the file does
+not exist it is created.
+
+```js
+const fileName = 'fileToGetName';
 
 // assuming we have a directory handle: 'currentDirHandle'
-const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});</pre>
+const fileHandle = currentDirHandle.getFileHandle(fileName, {create: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

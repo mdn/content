@@ -2,36 +2,37 @@
 title: MediaRecorder.audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
 tags:
-- API
-- Audio
-- Media Recorder API
-- MediaRecorder
-- Property
-- Reference
+  - API
+  - Audio
+  - Media Recorder API
+  - MediaRecorder
+  - Property
+  - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>audioBitsPerSecond</code></strong> read-only
-    property of the {{domxref("MediaRecorder")}} interface returns the audio encoding bit
-    rate in use.</p>
+The **`audioBitsPerSecond`** read-only
+property of the {{domxref("MediaRecorder")}} interface returns the audio encoding bit
+rate in use.
 
-<p>This may differ from the bit rate specified in the constructor (if
-  it was provided).</p>
+This may differ from the bit rate specified in the constructor (if
+it was provided).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond</pre>
+```js
+var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Number")}} (unsigned long).</p>
+A {{jsxref("Number")}} (unsigned long).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

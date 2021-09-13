@@ -2,104 +2,91 @@
 title: WebGLRenderingContext.drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawElements
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.drawElements()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> renders primitives from array data.
-</p>
+The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.drawElements(<var>mode</var>, <var>count</var>, <var>type</var>, <var>offset</var>);
-</pre>
+```js
+void gl.drawElements(mode, count, type, offset);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
+- `mode`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-    <ul>
-      <li><code>gl.POINTS</code>: Draws a single dot.</li>
-      <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
-      <li><code>gl.LINE_LOOP</code>: Draws a straight line to the next vertex, and
-        connects the last vertex back to the first.</li>
-      <li><code>gl.LINES</code>: Draws a line between a pair of vertices.</li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code>
-      </li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code>
-      </li>
-      <li><code>gl.TRIANGLES</code>: Draws a triangle for a group of three vertices.</li>
-    </ul>
-  </dd>
-  <dt>count</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements of the bound element array
-    buffer to be rendered. For example, to draw a wireframe triangle with <code>gl.LINES</code>
-    the count should be 2 endpoints per line &times; 3 lines = 6 elements. However to draw the
-    same wireframe triangle with <code>gl.LINE_STRIP</code> the element array buffer does not
+
+    - `gl.POINTS`: Draws a single dot.
+    - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
+    - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
+      connects the last vertex back to the first.
+    - `gl.LINES`: Draws a line between a pair of vertices.
+    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
+    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
+    - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
+
+- count
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements of the bound element array
+    buffer to be rendered. For example, to draw a wireframe triangle with `gl.LINES`
+    the count should be 2 endpoints per line × 3 lines = 6 elements. However to draw the
+    same wireframe triangle with `gl.LINE_STRIP` the element array buffer does not
     repeat the indices for the end of the first line/start of the second line, and end of the
-    second line/start of the third line, so <code>count</code> will be four. To draw the same
-    triangle with <code>gl.LINE_LOOP</code> the element array buffer does not repeat the
-    first/last vertex either so <code>count</code> will be three.</dd>
-  <dt>type</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
+    second line/start of the third line, so `count` will be four. To draw the same
+    triangle with `gl.LINE_LOOP` the element array buffer does not repeat the
+    first/last vertex either so `count` will be three.
+- type
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
-    <ul>
-      <li><code>gl.UNSIGNED_BYTE</code></li>
-      <li><code>gl.UNSIGNED_SHORT</code></li>
-      <li>When using the {{domxref("OES_element_index_uint")}} extension:
-        <ul>
-          <li><code>gl.UNSIGNED_INT</code></li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>offset</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying a byte offset in the element array buffer. Must
-    be a valid multiple of the size of the given <code>type</code>.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.UNSIGNED_BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - When using the {{domxref("OES_element_index_uint")}} extension:
 
-<p>None.</p>
+      - `gl.UNSIGNED_INT`
 
-<h3 id="Exceptions">Exceptions</h3>
+- offset
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying a byte offset in the element array buffer. Must
+    be a valid multiple of the size of the given `type`.
 
-<ul>
-  <li>If <code>mode</code> is not one of the accepted values, a
-    <code>gl.INVALID_ENUM</code> error is thrown.</li>
-  <li>If <code>offset</code> is not a valid multiple of the size of the given type, a
-    <code>gl.INVALID_OPERATION</code> error is thrown.</li>
-  <li>If <code>count</code> is negative, a <code>gl.INVALID_VALUE</code> error is thrown.
-  </li>
-</ul>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<pre class="brush: js">gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_BYTE, 0);
-</pre>
+### Exceptions
 
-<h2 id="Specifications">Specifications</h2>
+- If `mode` is not one of the accepted values, a
+  `gl.INVALID_ENUM` error is thrown.
+- If `offset` is not a valid multiple of the size of the given type, a
+  `gl.INVALID_OPERATION` error is thrown.
+- If `count` is negative, a `gl.INVALID_VALUE` error is thrown.
+
+## Examples
+
+```js
+gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_BYTE, 0);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.drawArrays()")}}</li>
-  <li>{{domxref("OES_element_index_uint")}}</li>
-  <li>{{domxref("WEBGL_multi_draw.multiDrawElementsWEBGL()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxref("OES_element_index_uint")}}
+- {{domxref("WEBGL_multi_draw.multiDrawElementsWEBGL()")}}

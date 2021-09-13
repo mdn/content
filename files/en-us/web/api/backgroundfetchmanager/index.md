@@ -11,30 +11,29 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>BackgroundFetchManager</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.</p>
+The **`BackgroundFetchManager`** interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-<dt>{{domxref('BackgroundFetchManager.fetch','fetch()' )}}</dt>
-<dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.</dd>
-<dt>{{domxref('BackgroundFetchManager.get','get()')}}</dt>
-<dd>Returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided <code>id</code> or {{jsxref("undefined")}} if the <code>id</code> is not found.</dd>
-<dt>{{domxref('BackgroundFetchManager.getIDs','getIDs()')}}</dt>
-<dd>Returns the IDs of all registered background fetches.</dd>
-</dl>
+- {{domxref('BackgroundFetchManager.fetch','fetch()' )}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
+- {{domxref('BackgroundFetchManager.get','get()')}}
+  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
+- {{domxref('BackgroundFetchManager.getIDs','getIDs()')}}
+  - : Returns the IDs of all registered background fetches.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls <code>fetch()</code> to download a video in the background.</p>
+The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download a video in the background.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+```js
+navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
     title: 'Episode 5: Interesting things.',
     icons: [{
@@ -44,12 +43,13 @@ browser-compat: api.BackgroundFetchManager
     }],
     downloadTotal: 60 * 1024 * 1024,
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

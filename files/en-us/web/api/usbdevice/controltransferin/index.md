@@ -2,59 +2,58 @@
 title: USBDevice.controlTransferIn()
 slug: Web/API/USBDevice/controlTransferIn
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- controlTransferIn
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - controlTransferIn
 browser-compat: api.USBDevice.controlTransferIn
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>controlTransferIn()</code></strong> method of the
-  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
-  {{domxref("USBInTransferResult")}} when the result of a command or status request has
-  been received from the USB device.</p>
+The **`controlTransferIn()`** method of the
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
+{{domxref("USBInTransferResult")}} when the result of a command or status request has
+been received from the USB device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = USBDevice.controlTransferIn(<em>setup</em>, <em>length</em>)</pre>
+```js
+var promise = USBDevice.controlTransferIn(setup, length)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>setup </dt>
-  <dd>An object that sets options for . The available options are:
-    <ul>
-      <li><code>requestType</code>: Must be one of three values specifying whether the
-        tranfer is <code>"standard"</code> (common to all USB devices)
-        <code>"class"</code> (common to an industry-standard class of devices) or
-        <code>"vendor"</code>.</li>
-      <li><code>recipient</code>: Specifices the target of the transfer on the device, one
-        of <code>"device"</code>, <code>"interface"</code>, <code>"endpoint"</code>, or
-        <code>"other"</code>.</li>
-      <li><code>request</code>: A vendor-specific command.</li>
-      <li><code>value</code>: Vender-specific request parameters.</li>
-      <li><code>index</code>: The interface number of the recipient.</li>
-    </ul>
-  </dd>
-  <dt>length</dt>
-  <dd>The maximum number of bytes to read from the device. The actual data is in
-    the {{domxref("USBInTransferResult")}} in the resolved Promise.</dd>
-</dl>
+- setup
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that sets options for . The available options are:
 
-<p>{{jsxref("promise")}} that resolves with a {{domxref("USBInTransferResult")}}.</p>
+    - `requestType`: Must be one of three values specifying whether the
+      tranfer is `"standard"` (common to all USB devices)
+      `"class"` (common to an industry-standard class of devices) or
+      `"vendor"`.
+    - `recipient`: Specifices the target of the transfer on the device, one
+      of `"device"`, `"interface"`, `"endpoint"`, or
+      `"other"`.
+    - `request`: A vendor-specific command.
+    - `value`: Vender-specific request parameters.
+    - `index`: The interface number of the recipient.
 
-<h2 id="Specifications">Specifications</h2>
+- length
+  - : The maximum number of bytes to read from the device. The actual data is in
+    the {{domxref("USBInTransferResult")}} in the resolved Promise.
+
+### Return value
+
+{{jsxref("promise")}} that resolves with a {{domxref("USBInTransferResult")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

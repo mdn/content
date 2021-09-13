@@ -8,39 +8,38 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.username
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.username</code></strong> property is a
-  {{domxref("USVString")}} containing the username specified before the domain name.</p>
+The **`HTMLAreaElement.username`** property is a
+{{domxref("USVString")}} containing the username specified before the domain name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.username;
+string = area.username;
 // Setter
-<em>area</em>.username = <em>string</em>;
-</pre>
+area.username = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the username from an area link</h3>
+### Getting the username from an area link
 
-<pre class="brush: js">// An &lt;area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"&gt; element is in the document
+```js
+// An <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementByID("myArea");
 area.username; // returns 'anonymous'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

@@ -2,70 +2,70 @@
 title: CSSKeywordValue()
 slug: Web/API/CSSKeywordValue/CSSKeywordValue
 tags:
-- API
-- CSS Typed Object Model API
-- CSSKeywordValue
-- Constructor
-- Experimental
-- Houdini
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSKeywordValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Reference
 browser-compat: api.CSSKeywordValue.CSSKeywordValue
 ---
-<div>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSKeywordValue()</code></strong> constructor
-    creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and
-    other identifiers.</p>
+The **`CSSKeywordValue()`** constructor
+creates a new {{domxref("CSSKeywordValue")}} object which represents CSS keywords and
+other identifiers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>cssKeywordValue</var> = new CSSKeywordValue(<var>val</var>)</pre>
+```js
+var cssKeywordValue = new CSSKeywordValue(val)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>Sets or returns the value of the new <code>CSSKeywordValue</code>.</dd>
-</dl>
+- value
+  - : Sets or returns the value of the new `CSSKeywordValue`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>If the <code>value</code> parameter is not specified or it is not of type {{jsxref('String')}}.</dd>
-</dl>
+- `TypeError`
+  - : If the `value` parameter is not specified or it is not of type {{jsxref('String')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example resets the CSS {{cssxref('display')}} property to its defaults,
-  setting the inline
-  <code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code> attribute
-  to <code>style="display: initial"</code> if viewed in the <a
-    href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element">developer tools
-    inspector</a>.</p>
+The following example resets the CSS {{cssxref('display')}} property to its defaults,
+setting the inline
+[`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute
+to `style="display: initial"` if viewed in the [developer tools
+inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
 
-<pre class="brush: css hidden">#myElement {
+```css hidden
+#myElement {
   display: flex;
-}</pre>
+}
+```
 
-<pre
-  class="brush: html hidden">&lt;div id="myElement"&gt;Check the developer tools to see the log in the console and to inspect the style attribute on this div.&lt;/div&gt;</pre>
+```html hidden
+<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+```
 
-<pre class="brush: js">let keyword = new CSSKeywordValue('initial');
+```js
+let keyword = new CSSKeywordValue('initial');
 let myElement = document.getElementById('myElement').attributeStyleMap;
     myElement.set('display', keyword);
 
 console.log( myElement.get('display').value);  // 'initial'
 console.dir( keyword );
-</pre>
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 120)}}</p>
+{{EmbedLiveSample("Examples", 120, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

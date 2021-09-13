@@ -2,33 +2,34 @@
 title: MediaKeySystemAccess.getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
 tags:
-- API
-- Audio
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemAccess
-- Method
-- NeedsExample
-- Reference
-- Video
-- getConfiguration
+  - API
+  - Audio
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemAccess
+  - Method
+  - NeedsExample
+  - Reference
+  - Video
+  - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemAccess.getConfiguration()</code> method returns a
-  {{domxref('MediaKeySystemConfiguration')}} object with the supported combination of
-  configuration options.</p>
+The `MediaKeySystemAccess.getConfiguration()` method returns a
+{{domxref('MediaKeySystemConfiguration')}} object with the supported combination of
+configuration options.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>mediaKeySystemConfiguration</var> = <var>mediaKeySystemAccess</var>.getConfiguration();</pre>
+```js
+var mediaKeySystemConfiguration = mediaKeySystemAccess.getConfiguration();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

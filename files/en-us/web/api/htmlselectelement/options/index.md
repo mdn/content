@@ -2,56 +2,60 @@
 title: HTMLSelectElement.options
 slug: Web/API/HTMLSelectElement/options
 tags:
-- API
-- HTMLSelectElement
-- Options
-- Property
-- Read-only
-- Web
+  - API
+  - HTMLSelectElement
+  - Options
+  - Property
+  - Read-only
+  - Web
 browser-compat: api.HTMLSelectElement.options
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>HTMLSelectElement.options</strong></code> read-only property returns
-  a {{domxref("HTMLOptionsCollection")}} of the {{HTMLElement("option")}} elements
-  contained by the {{HTMLElement("select")}} element.</p>
+The **`HTMLSelectElement.options`** read-only property returns
+a {{domxref("HTMLOptionsCollection")}} of the {{HTMLElement("option")}} elements
+contained by the {{HTMLElement("select")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>options</var> = <var>select</var>.options;
-</pre>
+```js
+var options = select.options;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("HTMLOptionsCollection")}} containing the <code>&lt;option&gt;</code>
-  elements contained by the <code>&lt;select&gt;</code> element.</p>
+A {{domxref("HTMLOptionsCollection")}} containing the `<option>`
+elements contained by the `<select>` element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label for="test"&gt;Label&lt;/label&gt;
-&lt;select id="test"&gt;
-  &lt;option value="1"&gt;Option 1&lt;/option&gt;
-  &lt;option value="2"&gt;Option 2&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html
+<label for="test">Label</label>
+<select id="test">
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", function() {
+```js
+window.addEventListener("DOMContentLoaded", function() {
   const select = document.getElementById("test");
-  for(var i = 0; i &lt; select.options.length; i++) {
+  for(var i = 0; i < select.options.length; i++) {
     console.log(select.options[i].label); // "Option 1" and "Option 2"
   }
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample("Example", "100%", 30)}}</p>
+{{EmbedLiveSample("Example", "100%", 30)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

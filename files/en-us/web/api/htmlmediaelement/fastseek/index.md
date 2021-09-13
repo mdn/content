@@ -2,62 +2,57 @@
 title: HTMLMediaElement.fastSeek()
 slug: Web/API/HTMLMediaElement/fastSeek
 tags:
-- API
-- Audio
-- HTMLMediaElement
-- Media
-- Method
-- Reference
-- fastSeek
+  - API
+  - Audio
+  - HTMLMediaElement
+  - Media
+  - Method
+  - Reference
+  - fastSeek
 browser-compat: api.HTMLMediaElement.fastSeek
 ---
-<p>{{APIRef("HTML DOM")}} {{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>HTMLMediaElement.fastSeek()</code></strong> method quickly seeks the
-  media to the new time with precision tradeoff.</p>
+The **`HTMLMediaElement.fastSeek()`** method quickly seeks the
+media to the new time with precision tradeoff.
 
-<div class="note">
-  <p><strong>Note:</strong> If you need to seek with precision, you should set <a
-      href="/en-US/docs/Web/API/HTMLMediaElement/currentTime"><code>HTMLMediaElement.currentTime</code></a>
-    instead.</p>
-</div>
+> **Note:** If you need to seek with precision, you should set [`HTMLMediaElement.currentTime`](/en-US/docs/Web/API/HTMLMediaElement/currentTime)
+> instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLMediaElement</em>.fastSeek(time);</pre>
+```js
+HTMLMediaElement.fastSeek(time);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>time</dt>
-  <dd>A double.</dd>
-</dl>
+- time
+  - : A double.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example quickly seeks to 20-second position of the video element.</p>
+This example quickly seeks to 20-second position of the video element.
 
-<pre class="brush: js">let myVideo = document.getElementById("myVideoElement");
+```js
+let myVideo = document.getElementById("myVideoElement");
 
 myVideo.fastSeek(20);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/HTMLMediaElement/currentTime">HTMLMediaElement.currentTime</a>
-    for seeking without precision tradeoff</li>
-</ul>
+- [HTMLMediaElement.currentTime](/en-US/docs/Web/API/HTMLMediaElement/currentTime)
+  for seeking without precision tradeoff

@@ -2,44 +2,44 @@
 title: SourceBuffer.appendWindowStart
 slug: Web/API/SourceBuffer/appendWindowStart
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- appendWindowStart
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - appendWindowStart
 browser-compat: api.SourceBuffer.appendWindowStart
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>appendWindowStart</strong></code> property of the
-  {{domxref("SourceBuffer")}} interface controls the timestamp for the start of the <a
-    href="https://w3c.github.io/media-source/#append-window">append window</a>, a
-  timestamp range that can be used to filter what media data is appended to the
-  <code>SourceBuffer</code>. Coded media frames with timestamps wthin this range will be
-  appended, whereas those outside the range will be filtered out.</p>
+The **`appendWindowStart`** property of the
+{{domxref("SourceBuffer")}} interface controls the timestamp for the start of the [append window](https://w3c.github.io/media-source/#append-window), a
+timestamp range that can be used to filter what media data is appended to the
+`SourceBuffer`. Coded media frames with timestamps wthin this range will be
+appended, whereas those outside the range will be filtered out.
 
-<p>The default value of <code>appendWindowStart</code> is the presentation start time,
-  which is the beginning time of the playable media.</p>
+The default value of `appendWindowStart` is the presentation start time,
+which is the beginning time of the playable media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myAppendWindowStart</em> = <em>sourceBuffer</em>.appendWindowStart;
+```js
+var myAppendWindowStart = sourceBuffer.appendWindowStart;
 
-<em>sourceBuffer</em>.appendWindowStart = 2.0;
-</pre>
+sourceBuffer.appendWindowStart = 2.0;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double, indicating the start time of the append window, in seconds.</p>
+A double, indicating the start time of the append window, in seconds.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions may be thrown when setting a new value for this property.</p>
+The following exceptions may be thrown when setting a new value for this property.
 
 <table class="no-markdown">
   <thead>
@@ -51,34 +51,37 @@ browser-compat: api.SourceBuffer.appendWindowStart
   <tbody>
     <tr>
       <td><code>InvalidAccessError</code></td>
-      <td>An attempt was made to set the value to less than 0, or a value greater than or
-        equal to {{domxref("SourceBuffer.appendWindowEnd")}}.</td>
+      <td>
+        An attempt was made to set the value to less than 0, or a value greater
+        than or equal to
+        {{domxref("SourceBuffer.appendWindowEnd")}}.
+      </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>This {{domxref("SourceBuffer")}} object is being updated (i.e. its
-        {{domxref("SourceBuffer.updating")}} property is currently <code>true</code>), or
-        this <code>SourceBuffer</code> has been removed from the
-        {{domxref("MediaSource")}}.</td>
+      <td>
+        This {{domxref("SourceBuffer")}} object is being updated (i.e.
+        its {{domxref("SourceBuffer.updating")}} property is
+        currently <code>true</code>), or this <code>SourceBuffer</code> has been
+        removed from the {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

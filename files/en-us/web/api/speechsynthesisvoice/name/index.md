@@ -2,35 +2,37 @@
 title: SpeechSynthesisVoice.name
 slug: Web/API/SpeechSynthesisVoice/name
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesisVoice
-- Web Speech API
-- name
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesisVoice
+  - Web Speech API
+  - name
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesisVoice.name
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>name</strong></code> read-only property of the
-  {{domxref("SpeechSynthesisVoice")}} interface returns a human-readable name that
-  represents the voice.</p>
+The **`name`** read-only property of the
+{{domxref("SpeechSynthesisVoice")}} interface returns a human-readable name that
+represents the voice.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var voiceName = speechSynthesisVoiceInstance.name;
-</pre>
+```js
+var voiceName = speechSynthesisVoiceInstance.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the name of the voice.</p>
+A {{domxref("DOMString")}} representing the name of the voice.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">for(i = 0; i &lt; voices.length ; i++) {
+```js
+for(i = 0; i < voices.length ; i++) {
   var option = document.createElement('option');
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -41,18 +43,17 @@ browser-compat: api.SpeechSynthesisVoice.name
   option.setAttribute('data-lang', voices[i].lang);
   option.setAttribute('data-name', voices[i].name);
   voiceSelect.appendChild(option);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -2,32 +2,35 @@
 title: NodeList.values()
 slug: Web/API/NodeList/values
 tags:
-- DOM
-- Iterator
-- Method
-- NodeList
-- Reference
-- Web
-- Polyfill
+  - DOM
+  - Iterator
+  - Method
+  - NodeList
+  - Reference
+  - Web
+  - Polyfill
 browser-compat: api.NodeList.values
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NodeList.values()</strong></code> method returns an
-  {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
-  in this object. The values are {{domxref("Node")}} objects.</p>
+The **`NodeList.values()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
+in this object. The values are {{domxref("Node")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">nodeList.values();</pre>
+```js
+nodeList.values();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -42,23 +45,20 @@ var list = node.childNodes;
 for(var value of list.values()) {
   console.log(value);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>&lt;p&gt;
-#text "hey"
-&lt;span&gt;
-</pre>
+    <p>
+    #text "hey"
+    <span>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>NodeList.prototype.values</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
-  <li>{{domxref("Node")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- A polyfill of `NodeList.prototype.values` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

@@ -12,35 +12,30 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousOutTransferPacket
 ---
-<p>{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}</p>
+{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
 
-<p>The <code>USBIsochronousOutTransferPacket</code> interface of the <a href="/en-US/docs/Web/API/WebUSB_API" rel="nofollow">WebUSB API</a> is part of the response from a call to the <code>isochronousTransferOut()</code> method of the <code>USBDevice</code> interface. It represents the status of an individual packet from a request to transfer data from the USB host to the USB device over an isochronous endpoint.</p>
+The `USBIsochronousOutTransferPacket` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) is part of the response from a call to the `isochronousTransferOut()` method of the `USBDevice` interface. It represents the status of an individual packet from a request to transfer data from the USB host to the USB device over an isochronous endpoint.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("USBIsochronousOutTransferPacket.USBIsochronousOutTransferPacket()")}}</dt>
- <dd>Creates a new <code>USBIsochronousOutTransferPacket</code> object with the provided <code>status</code> and <code>bytesWritten</code> fields.</dd>
-</dl>
+- {{domxref("USBIsochronousOutTransferPacket.USBIsochronousOutTransferPacket()")}}
+  - : Creates a new `USBIsochronousOutTransferPacket` object with the provided `status` and `bytesWritten` fields.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("USBIsochronousOutTransferPacket.bytesWritten")}}{{readonlyInline}}</dt>
- <dd>Returns the number of bytes from the packet that were sent to the device.</dd>
- <dt>{{domxref("USBIsochronousOutTransferPacket.status")}}{{readonlyInline}}</dt>
- <dd>Returns the status of the transfer request, one of:
- <ul>
-  <li><code>"ok"</code> - The transfer was successful.</li>
-  <li><code>"stall"</code> - The device indicated an error by generating a stall condition on the endpoint. A stall on an isochronous endpoint does not need to be cleared.</li>
- </ul>
- </dd>
-</dl>
+- {{domxref("USBIsochronousOutTransferPacket.bytesWritten")}}{{readonlyInline}}
+  - : Returns the number of bytes from the packet that were sent to the device.
+- {{domxref("USBIsochronousOutTransferPacket.status")}}{{readonlyInline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Returns the status of the transfer request, one of:
+
+    - `"ok"` - The transfer was successful.
+    - `"stall"` - The device indicated an error by generating a stall condition on the endpoint. A stall on an isochronous endpoint does not need to be cleared.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,35 +2,37 @@
 title: SyncEvent.tag
 slug: Web/API/SyncEvent/tag
 tags:
-- API
-- Background Sync
-- Experimental
-- Property
-- Reference
-- ServiceWorker
-- SyncEvent
-- tag
+  - API
+  - Background Sync
+  - Experimental
+  - Property
+  - Reference
+  - ServiceWorker
+  - SyncEvent
+  - tag
 browser-compat: api.SyncEvent.tag
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>The <strong><code>SyncEvent.tag</code></strong> read-only property of the
-  {{domxref("SyncEvent")}} interface returns the developer-defined identifier for
-  this <code>SyncEvent</code>. This is the value passed in the <code>tag</code> parameter
-  of the {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.</p>
+The **`SyncEvent.tag`** read-only property of the
+{{domxref("SyncEvent")}} interface returns the developer-defined identifier for
+this `SyncEvent`. This is the value passed in the `tag` parameter
+of the {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>tag</em> = SyncEvent.tag</pre>
+```js
+var tag = SyncEvent.tag
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The developer-defined identifier for this <code>SyncEvent</code>.</p>
+The developer-defined identifier for this `SyncEvent`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

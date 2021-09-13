@@ -9,58 +9,56 @@ tags:
   - HID
 browser-compat: api.HID.requestDevice
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>requestDevice()</code></strong> method of the {{domxref("HID")}} interface requests access to a HID device.</p>
+The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
 
-<p>The user agent will present a permission dialog including a list of connected devices, and ask the user to select and grant permission to one of these devices.</p>
+The user agent will present a permission dialog including a list of connected devices, and ask the user to select and grant permission to one of these devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HID.requestDevice(options);</pre>
+```js
+HID.requestDevice(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code></dt>
-  <dd>An object containing an array of filter objects for possible devices to pair with. Each filter object can have the following properties:
-    <dl>
-      <dt><code>vendorId</code>{{Optional_Inline}}</dt>
-      <dd>An integer representing the vendorId of the requested HID device</dd>
-      <dt><code>productId</code>{{Optional_Inline}}</dt>
-      <dd>An integer representing the productId of the requested HID device.</dd>
-      <dt><code>usagePage</code>{{Optional_Inline}}</dt>
-      <dd><p>An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.</p>
-      <p>Standard HID usage values can be found in the <a href="https://usb.org/document-library/hid-usage-tables-122">HID Usage Tables</a> document</p>
-      </dd>
-      <dt><code>usage</code>{{Optional_Inline}}</dt>
-      <dd>An integer representing the usage ID component of the HID usage of the requested device.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options`
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.</p>
-</div>
+  - : An object containing an array of filter objects for possible devices to pair with. Each filter object can have the following properties:
 
-<h3 id="Returns">Return value</h3>
+    - `vendorId`{{Optional_Inline}}
+      - : An integer representing the vendorId of the requested HID device
+    - `productId`{{Optional_Inline}}
+      - : An integer representing the productId of the requested HID device.
+    - `usagePage`{{Optional_Inline}}
 
-<p>A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects that match the filters passed in.</p>
+      - : An integer representing the usage page component of the HID usage of the requested device. The usage for a top level collection is used to identify the device type.
 
-<h3 id="Exceptions">Exceptions</h3>
+        Standard HID usage values can be found in the [HID Usage Tables](https://usb.org/document-library/hid-usage-tables-122) document
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>SecurityError</code></dt>
-  <dd>Thrown if the page does not allow access to the HID feature.</dd>
-</dl>
+    - `usage`{{Optional_Inline}}
+      - : An integer representing the usage ID component of the HID usage of the requested device.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.
 
-<h3>Matching a device with all four filter rules</h3>
+### Return value
 
-<p>In the following example a HID device is requested that has a vendor ID of <code>0xABCD</code>, product ID of <code>0x1234</code>, usage page <code>0x0C</code> and usage ID <code>0x01</code>. Only devices that match all of these rules will be shown.</p>
+A {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects that match the filters passed in.
 
-<pre class="brush:js">let requestButton = document.getElementById("request-hid-device");
+### Exceptions
+
+- {{domxref("DOMException")}} `SecurityError`
+  - : Thrown if the page does not allow access to the HID feature.
+
+## Examples
+
+### Matching a device with all four filter rules
+
+In the following example a HID device is requested that has a vendor ID of `0xABCD`, product ID of `0x1234`, usage page `0x0C` and usage ID `0x01`. Only devices that match all of these rules will be shown.
+
+```js
+let requestButton = document.getElementById("request-hid-device");
   requestButton.addEventListener("click", async () => {
     let device;
     try {
@@ -84,13 +82,15 @@ browser-compat: api.HID.requestDevice
     } else {
       console.log(`HID: ${device.productName}`);
     }
-  });</pre>
+  });
+```
 
-  <h3>An example with two filters</h3>
+### An example with two filters
 
-  <p>This next example includes two filters. Devices will be shown if they match either of these filters.</p>
+This next example includes two filters. Devices will be shown if they match either of these filters.
 
-  <pre class="brush: js">// Filter on devices with the Nintendo Switch Joy-Con USB Vendor/Product IDs.
+```js
+// Filter on devices with the Nintendo Switch Joy-Con USB Vendor/Product IDs.
   const filters = [
     {
       vendorId: 0x057e, // Nintendo Co., Ltd
@@ -103,12 +103,13 @@ browser-compat: api.HID.requestDevice
   ];
 
   // Prompt user to select a Joy-Con device.
-  const [device] = await navigator.hid.requestDevice({ filters });</pre>
+  const [device] = await navigator.hid.requestDevice({ filters });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

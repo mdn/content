@@ -10,49 +10,48 @@ tags:
   - Reference
 browser-compat: api.GlobalEventHandlers.onfocus
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onfocus</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("focus")}} events on the given element.</p>
+The **`onfocus`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("focus")}} events on the given element.
 
-<p>The <code>focus</code> event is raised when the user sets focus on an element.</p>
+The `focus` event is raised when the user sets focus on an element.
 
-<p>For <code>onfocus</code> to fire on non-input elements, they must be given the
-  {{htmlattrxref("tabindex")}} attribute (see <a
-    href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building
-    keyboard accessibility back in</a> for more details).</p>
+For `onfocus` to fire on non-input elements, they must be given the
+{{htmlattrxref("tabindex")}} attribute (see [Building
+keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in) for more details).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The opposite of <code>onfocus</code> is
-    {{domxref("GlobalEventHandlers.onblur", "onblur")}}.</p>
-</div>
+> **Note:** The opposite of `onfocus` is
+> {{domxref("GlobalEventHandlers.onblur", "onblur")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onfocus = <em>functionRef</em>;
-</pre>
+```js
+target.onfocus = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses {{domxref("GlobalEventHandlers.onblur", "onblur")}} and
-  <code>onfocus</code> to change the text within an {{HtmlElement("input")}} element.</p>
+This example uses {{domxref("GlobalEventHandlers.onblur", "onblur")}} and
+`onfocus` to change the text within an {{HtmlElement("input")}} element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" value="CLICK HERE"&gt;
-</pre>
+```html
+<input type="text" value="CLICK HERE">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let input = document.querySelector('input');
+```js
+let input = document.querySelector('input');
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
@@ -63,29 +62,27 @@ function inputBlur() {
 
 function inputFocus() {
   input.value = 'Focus is here';
-}</pre>
+}
+```
 
-<h3 id="Result_2">Result</h3>
+### Result
 
-<p>Try clicking in and out of the form field, and watch its contents change accordingly.
-</p>
+Try clicking in and out of the form field, and watch its contents change accordingly.
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>In contrast to IE, in which almost all kinds of elements receive the <code>focus</code>
-  event, almost all kinds of elements on Gecko browsers do NOT work with this event.</p>
+In contrast to IE, in which almost all kinds of elements receive the `focus`
+event, almost all kinds of elements on Gecko browsers do NOT work with this event.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("focus")}} event</li>
-  <li>Related event handler: {{domxref("GlobalEventHandlers.onblur")}}</li>
-</ul>
+- {{event("focus")}} event
+- Related event handler: {{domxref("GlobalEventHandlers.onblur")}}

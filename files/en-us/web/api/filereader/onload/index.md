@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.FileReader.onload
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>FileReader.onload</code></strong> property contains an event handler executed when the {{event('load')}} event is fired, when content read with <a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">readAsArrayBuffer</a>, <a href="/en-US/docs/Web/API/FileReader/readAsBinaryString">readAsBinaryString</a>, <a href="/en-US/docs/Web/API/FileReader/readAsDataURL">readAsDataURL</a> or <a href="/en-US/docs/Web/API/FileReader/readAsText">readAsText</a> is available.</p>
+The **`FileReader.onload`** property contains an event handler executed when the {{event('load')}} event is fired, when content read with [readAsArrayBuffer](/en-US/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/en-US/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/en-US/docs/Web/API/FileReader/readAsDataURL) or [readAsText](/en-US/docs/Web/API/FileReader/readAsText) is available.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js;">// Callback from a &lt;input type=&quot;file&quot; onchange=&quot;onChange(event)&quot;&gt;
+```js
+// Callback from a <input type="file" onchange="onChange(event)">
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
@@ -26,8 +27,8 @@ function onChange(event) {
 
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

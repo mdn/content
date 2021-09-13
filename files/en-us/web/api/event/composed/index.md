@@ -2,65 +2,64 @@
 title: Event.composed
 slug: Web/API/Event/composed
 tags:
-- API
-- Event
-- Property
-- Read-only
-- Reference
-- Web Components
-- composed
-- scoped
-- shadow dom
+  - API
+  - Event
+  - Property
+  - Read-only
+  - Reference
+  - Web Components
+  - composed
+  - scoped
+  - shadow dom
 browser-compat: api.Event.composed
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>The read-only <strong><code>composed</code></strong> property of the
-  {{domxref("Event")}} interface returns a boolean value which indicates whether
-  or not the event will propagate across the shadow DOM boundary into the standard DOM.
-</p>
+The read-only **`composed`** property of the
+{{domxref("Event")}} interface returns a boolean value which indicates whether
+or not the event will propagate across the shadow DOM boundary into the standard DOM.
 
-<div class="note">
-  <p><strong>Note:</strong> This property was formerly named <code>scoped</code>.</p>
-</div>
+> **Note:** This property was formerly named `scoped`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const isComposed = <var>Event</var>.composed;</pre>
+```js
+const isComposed = Event.composed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value which is <code>true</code> if the event will cross from the
-  shadow DOM into the standard DOM after reaching the shadow root. (That is, the first
-  node in the shadow DOM in which the event began to propagate.)</p>
+A boolean value which is `true` if the event will cross from the
+shadow DOM into the standard DOM after reaching the shadow root. (That is, the first
+node in the shadow DOM in which the event began to propagate.)
 
-<p>All UA-dispatched UI events are composed (click/touch/mouseover/copy/paste, etc.). Most
-  other types of events are not composed, and so will return <code>false</code>. For
-  example, this includes synthetic events that are created without their
-  <code>composed</code> option set to <code>true</code>.</p>
+All UA-dispatched UI events are composed (click/touch/mouseover/copy/paste, etc.). Most
+other types of events are not composed, and so will return `false`. For
+example, this includes synthetic events that are created without their
+`composed` option set to `true`.
 
-<p>Propagation only occurs if the {{domxref("Event.bubbles", "bubbles")}} property is also
-  <code>true</code>. However, capturing only composed events are also handled at host as
-  if they were in <code>AT_TARGET</code> phase. You can determine the path the event will
-  follow through the shadow root to the DOM root by calling
-  {{domxref("Event.composedPath", "composedPath()")}}.</p>
+Propagation only occurs if the {{domxref("Event.bubbles", "bubbles")}} property is also
+`true`. However, capturing only composed events are also handled at host as
+if they were in `AT_TARGET` phase. You can determine the path the event will
+follow through the shadow root to the DOM root by calling
+{{domxref("Event.composedPath", "composedPath()")}}.
 
-<p>If this value is <code>false</code>, the shadow root will be the last node to be
-  offered the event.</p>
+If this value is `false`, the shadow root will be the last node to be
+offered the event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our composed-composed-path example (see it live), we define two trivial custom
-  elements, <code>&lt;open-shadow&gt;</code> and <code>&lt;closed-shadow&gt;</code>, both
-  of which take the contents of their text attribute and insert them into the element's
-  shadow DOM as the text content of a <code>&lt;p&gt;</code> element. The only difference
-  between the two is that their shadow roots are attached with their modes set to
-  <code>open</code> and <code>closed</code> respectively.</p>
+In our composed-composed-path example (see it live), we define two trivial custom
+elements, `<open-shadow>` and `<closed-shadow>`, both
+of which take the contents of their text attribute and insert them into the element's
+shadow DOM as the text content of a `<p>` element. The only difference
+between the two is that their shadow roots are attached with their modes set to
+`open` and `closed` respectively.
 
-<p>The first definition looks like this, for example:</p>
+The first definition looks like this, for example:
 
-<pre class="brush: js">customElements.define('open-shadow',
+```js
+customElements.define('open-shadow',
   class extends HTMLElement {
     constructor() {
       super();
@@ -72,47 +71,49 @@ browser-compat: api.Event.composed
         .appendChild(pElem);
 
   }
-});</pre>
+});
+```
 
-<p>We then insert one of each element into our page:</p>
+We then insert one of each element into our page:
 
-<pre class="brush: html">&lt;open-shadow text="I have an open shadow root"&gt;&lt;/open-shadow&gt;
-&lt;closed-shadow text="I have a closed shadow root"&gt;&lt;/closed-shadow&gt;</pre>
+```html
+<open-shadow text="I have an open shadow root"></open-shadow>
+<closed-shadow text="I have a closed shadow root"></closed-shadow>
+```
 
-<p>Then include a click event listener on the <code>&lt;html&gt;</code> element:</p>
+Then include a click event listener on the `<html>` element:
 
-<pre class="brush: js">document.querySelector('html').addEventListener('click',function(e) {
+```js
+document.querySelector('html').addEventListener('click',function(e) {
   console.log(e.composed);
   console.log(e.composedPath());
-});</pre>
+});
+```
 
-<p>When you click on the <code>&lt;open-shadow&gt;</code> element and then the
-  <code>&lt;closed-shadow&gt;</code> element, you'll notice two things.</p>
+When you click on the `<open-shadow>` element and then the
+`<closed-shadow>` element, you'll notice two things.
 
-<ol>
-  <li>The <code>composed</code> property returns <code>true</code> because the
-    <code>click</code> event is always able to propagate across shadow boundaries.</li>
-  <li>You'll notice a difference in the value of <code>composedPath</code> for the two
-    elements.</li>
-</ol>
+1.  The `composed` property returns `true` because the
+    `click` event is always able to propagate across shadow boundaries.
+2.  You'll notice a difference in the value of `composedPath` for the two
+    elements.
 
-<p>The <code>&lt;open-shadow&gt;</code> element's composed path is this:</p>
+The `<open-shadow>` element's composed path is this:
 
-<pre>Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+    Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 
-<p>Whereas the <code>&lt;closed-shadow&gt;</code> element's composed path is a follows:
-</p>
+Whereas the `<closed-shadow>` element's composed path is a follows:
 
-<pre>Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+    Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 
-<p>In the second case, the event listeners only propagate as far as the
-  <code>&lt;closed-shadow&gt;</code> element itself, but not to the nodes inside the
-  shadow boundary.</p>
+In the second case, the event listeners only propagate as far as the
+`<closed-shadow>` element itself, but not to the nodes inside the
+shadow boundary.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

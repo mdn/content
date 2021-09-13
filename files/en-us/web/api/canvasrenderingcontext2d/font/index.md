@@ -2,95 +2,92 @@
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.font
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.font</code></strong>
-  property of the Canvas 2D API specifies the current text style to use when drawing text.
-  This string uses the same syntax as the <a href="/en-US/docs/Web/CSS/font">CSS font</a>
-  specifier.</p>
+The
+**`CanvasRenderingContext2D.font`**
+property of the Canvas 2D API specifies the current text style to use when drawing text.
+This string uses the same syntax as the [CSS font](/en-US/docs/Web/CSS/font)
+specifier.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.font = <em>value</em>;
-</pre>
+```js
+ctx.font = value;
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font
-    is 10px sans-serif.</dd>
-</dl>
+- `value`
+  - : A {{domxref("DOMString")}} parsed as CSS {{cssxref("font")}} value. The default font
+    is 10px sans-serif.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_a_custom_font">Using a custom font</h3>
+### Using a custom font
 
-<p>In this example we use the <code>font</code> property to specify a custom font weight,
-  size, and family.</p>
+In this example we use the `font` property to specify a custom font weight,
+size, and family.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = 'bold 48px serif';
 ctx.strokeText('Hello world', 50, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Using_a_custom_font', 700, 180) }}</p>
+{{ EmbedLiveSample('Using_a_custom_font', 700, 180) }}
 
-<h3 id="Loading_fonts_with_the_CSS_Font_Loading_API">Loading fonts with the CSS Font
-  Loading API</h3>
+### Loading fonts with the CSS Font Loading API
 
-<p>With the help of the {{domxref("FontFace")}} API, you can explicitly load fonts before
-  using them in a canvas.</p>
+With the help of the {{domxref("FontFace")}} API, you can explicitly load fonts before
+using them in a canvas.
 
-<pre class="brush: js">let f = new FontFace('test', 'url(x)');
+```js
+let f = new FontFace('test', 'url(x)');
 
 f.load().then(function() {
   // Ready to use the font in a canvas context
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>In Gecko-based browsers, such as Firefox, a non-standard and deprecated property
-    <code>ctx.mozTextStyle</code> is implemented besides this property. Use
-    <code>ctx.font</code> instead.</li>
-  <li>In Gecko, when setting a system font as the value of a canvas 2D context's
-    {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., <code>menu</code>),
-    getting the font value used to fail to return the expected font (it returns nothing).
-    This is fixed in Firefox's <a
-      href="https://wiki.mozilla.org/Quantum/Stylo">Quantum/Stylo</a> parallel CSS engine,
-    released in Firefox 57 ({{bug(1374885)}}).</li>
-</ul>
+- In Gecko-based browsers, such as Firefox, a non-standard and deprecated property
+  `ctx.mozTextStyle` is implemented besides this property. Use
+  `ctx.font` instead.
+- In Gecko, when setting a system font as the value of a canvas 2D context's
+  {{domxref("CanvasRenderingContext2D.font", "font")}} (e.g., `menu`),
+  getting the font value used to fail to return the expected font (it returns nothing).
+  This is fixed in Firefox's [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) parallel CSS engine,
+  released in Firefox 57 ({{bug(1374885)}}).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}

@@ -2,34 +2,35 @@
 title: PasswordCredential.password
 slug: Web/API/PasswordCredential/password
 tags:
-- API
-- Credential Management API
-- NeedsExample
-- PasswordCredential
-- Property
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - NeedsExample
+  - PasswordCredential
+  - Property
+  - Reference
+  - credential management
 browser-compat: api.PasswordCredential.password
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>The <strong><code>password</code></strong> read-only property
-    of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
-    containing the password of the credential.</p>
+The **`password`** read-only property
+of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
+containing the password of the credential.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>password</em> = <em>passwordCredential</em>.password</pre>
+```js
+password = passwordCredential.password
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing a password.</p>
+A {{domxref("USVString")}} containing a password.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

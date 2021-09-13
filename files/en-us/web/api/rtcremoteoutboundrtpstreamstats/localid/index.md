@@ -20,120 +20,126 @@ tags:
   - localId
 browser-compat: api.RTCRemoteOutboundRtpStreamStats.localId
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
-    dictionary's  <code><strong>localId</strong></code> property is a string which can be
-    used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
-    {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.</p>
+The {{domxref("RTCRemoteOutboundRtpStreamStats")}}
+dictionary's  **`localId`** property is a string which can be
+used to identify the {{domxref("RTCInboundRtpStreamStats")}} object whose
+{{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} matches this value.
 
-<p>Together, these two objects provide statistics about the inbound and outbound
-  sides of the same synchronization source (SSRC).</p>
+Together, these two objects provide statistics about the inbound and outbound
+sides of the same synchronization source (SSRC).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>localId</em> = <em>rtcRemoteOutboundRtpStreamStats</em>.localId;</pre>
+```js
+let localId = rtcRemoteOutboundRtpStreamStats.localId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which can be compared to the value of an
-  {{domxref("RTCInboundRtpStreamStats")}} object's
-  {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
-  represent statistics for each of the two sides of the same set of data received by the
-  local peer.</p>
+A {{domxref("DOMString")}} which can be compared to the value of an
+{{domxref("RTCInboundRtpStreamStats")}} object's
+{{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}} property to see if the two
+represent statistics for each of the two sides of the same set of data received by the
+local peer.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You can think of the local and remote views of the same RTP stream as pairs, each of
-  which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
-  includes an <code>remote-outbound-rtp</code> statistics object (of type
-  <code>RTCRemoteOutboundRtpStreamstats</code>), it should also have a corresponding
-  <code>inbound-rtp</code> object. Both of these provide information about the same batch
-  of packets being transmitted from the remote peer to the local device. The difference is
-  that <code>remote-outbound-rtp</code> describes statistics about the transmission(s) 
-  from the perspective of the remote peer, while <code>inbound-rtp</code> offers
-  statistics about the incoming data from the local peer's perspective.</p>
+You can think of the local and remote views of the same RTP stream as pairs, each of
+which has a reference back to the other one. Thus, if an {{domxref("RTCStatsReport")}}
+includes an `remote-outbound-rtp` statistics object (of type
+`RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
+`inbound-rtp` object. Both of these provide information about the same batch
+of packets being transmitted from the remote peer to the local device. The difference is
+that `remote-outbound-rtp` describes statistics about the transmission(s) 
+from the perspective of the remote peer, while `inbound-rtp` offers
+statistics about the incoming data from the local peer's perspective.
 
-<p>You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
-  example on Glitch.</p>
+You can {{anch("Try it and fork it", "examine, try out, and experiment")}} with this
+example on Glitch.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we have a pair of functions: the first,
-  <code>networkTestStart()</code>, captures an initial report, and the second,
-  <code>networkTestStop()</code>, captures a second report, then uses the two reports to
-  output some information about the network conditions... XXX ...</p>
+In this example, we have a pair of functions: the first,
+`networkTestStart()`, captures an initial report, and the second,
+`networkTestStop()`, captures a second report, then uses the two reports to
+output some information about the network conditions... XXX ...
 
-<h3 id="networkTestStart">networkTestStart()</h3>
+### networkTestStart()
 
-<p>This function calls the {{domxref("RTCPeerConnection")}} method
-  {{domxref("RTCPeerConnection.getStats", "getStats()")}} to request an
-  {{domxref("RTCStatsReport")}} and store it in the variable <code>startReport</code>.</p>
+This function calls the {{domxref("RTCPeerConnection")}} method
+{{domxref("RTCPeerConnection.getStats", "getStats()")}} to request an
+{{domxref("RTCStatsReport")}} and store it in the variable `startReport`.
 
-<pre class="brush: js">let startReport;
+```js
+let startReport;
 
 async function networkTestStart(pc) {
   if (pc) {
     startReport = await pc.getStats();
   }
-}</pre>
+}
+```
 
-<p>Given an {{domxref("RTCPeerConnection")}}, <code>pc</code>, this calls its
-  {{domxref("RTCPeerConnection.getStats", "getStats()")}} method to obtain a statistics
-  report object, which it stores in <code>startReport</code> for use once the end-of-test
-  data has been collected by <code>networkTestStop()</code>.</p>
+Given an {{domxref("RTCPeerConnection")}}, `pc`, this calls its
+{{domxref("RTCPeerConnection.getStats", "getStats()")}} method to obtain a statistics
+report object, which it stores in `startReport` for use once the end-of-test
+data has been collected by `networkTestStop()`.
 
-<h3 id="networkTestStop">networkTestStop()</h3>
+### networkTestStop()
 
-<p>The <code>networkTestStop()</code> function obtains a second report,
-  <code>endReport</code>, then uses the two reports together to determine several... XXX
-  ...</p>
+The `networkTestStop()` function obtains a second report,
+`endReport`, then uses the two reports together to determine several... XXX
+...
 
-<h4 id="Finding_paired_statistics">Finding paired statistics</h4>
+#### Finding paired statistics
 
-<p>Each statistics record of {{domxref("RTCStats.type", "type")}}
-  <code>remote-outbound-rtp</code> (describing a remote peer's statistics about sending
-  data to the local peer) has a corresponding record of type <code>inbound-rtp</code>
-  which describes the local peer's perspective on the same data being moved between the
-  two peers. Let's create a utility function to help us look up the value of a key in the
-  paired statistics object.</p>
+Each statistics record of {{domxref("RTCStats.type", "type")}}
+`remote-outbound-rtp` (describing a remote peer's statistics about sending
+data to the local peer) has a corresponding record of type `inbound-rtp`
+which describes the local peer's perspective on the same data being moved between the
+two peers. Let's create a utility function to help us look up the value of a key in the
+paired statistics object.
 
-<p>The <code>findReportEntry()</code> function shown below examines
-  an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
-  record which contains the specified <code>key</code> — <em>and</em> for which the key
-  has the specified <code>value</code>. If no match is found (or the statistics report has
-  no record corresponding to the statistics category indicated by <code>key</code>.</p>
+The `findReportEntry()` function shown below examines
+an {{domxref("RTCStatsReport")}}, returning the {{domxref("RTCStats")}}-based statistics
+record which contains the specified `key` — _and_ for which the key
+has the specified `value`. If no match is found (or the statistics report has
+no record corresponding to the statistics category indicated by `key`.
 
-<pre class="brush: js">function findReportEntry(report, key, value) {
+```js
+function findReportEntry(report, key, value) {
   for (const stats of report.values()) {
     if (stats[key] === value) {
       return stats;
     }
   }
   return null;
-}</pre>
+}
+```
 
-<p>Since the <code>RTCStatsReport</code> is a JavaScript
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></code>,
-  we can iterate over the map's
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values">values()</a></code>
-  to examine each of the <code>RTCStats</code>-based statistics records in the report
-  until we find one that has the <code>key</code> property with the specified
-  <code>value</code>. When a match is found, the statistics object is returned.</p>
+Since the `RTCStatsReport` is a JavaScript
+[`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map),
+we can iterate over the map's
+[`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
+to examine each of the `RTCStats`-based statistics records in the report
+until we find one that has the `key` property with the specified
+`value`. When a match is found, the statistics object is returned.
 
-<p>If no match is found, the function returns <code>null</code>.</p>
+If no match is found, the function returns `null`.
 
-<h4 id="The_main_networkTestStop_function">The main networkTestStop() function</h4>
+#### The main networkTestStop() function
 
-<p>Now let's look at the <code>networkTestStop()</code> function itself. It takes as input
-  the {{domxref("RTCPeerConnection")}} being tested, calls <code>getStats()</code> to get
-  a new <code>RTCStatsReport</code> with current statistics, then computes the results
-  it's looking for, outputting those results as appropriate to the user by appending
-  appropriate HTML to the contents of the {{HTMLElement("div")}} element whose class is
-  <code>stats-box</code>.</p>
+Now let's look at the `networkTestStop()` function itself. It takes as input
+the {{domxref("RTCPeerConnection")}} being tested, calls `getStats()` to get
+a new `RTCStatsReport` with current statistics, then computes the results
+it's looking for, outputting those results as appropriate to the user by appending
+appropriate HTML to the contents of the {{HTMLElement("div")}} element whose class is
+`stats-box`.
 
-<pre class="brush: js">async function networkTestStop(pc) {
+```js
+async function networkTestStop(pc) {
   if (pc) {
     let statsBox = document.querySelector(".stats-box");
     let endReport = await pc.getStats();
@@ -159,108 +165,102 @@ async function networkTestStart(pc) {
 
           let frameString = "";
           if (!isNaN(framesDecoded)) {
-            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.&lt;br&gt;`;
+            frameString = `Decoded ${framesDecoded} frames for a frame rate of ${frameRate.toFixed(2)} FPS.<br>`;
           }
 
-          let logEntry = `&lt;div class="stats-entry"&gt;&lt;h2&gt;Report ID: ${endRemoteOutbound.id}&lt;/h2&gt;` +
-                         `Remote peer sent ${packetsSent} packets ${timeString}.&lt;br&gt;` +
+          let logEntry = `<div class="stats-entry"><h2>Report ID: ${endRemoteOutbound.id}</h2>` +
+                         `Remote peer sent ${packetsSent} packets ${timeString}.<br>` +
                          `${frameString}` +
-                         `Data size: ${bytesSent} bytes.&lt;/div&gt;`;
+                         `Data size: ${bytesSent} bytes.</div>`;
           statsBox.innerHTML += logEntry;
         } else {
-          statsBox.innerHTML += `&lt;div class="stats-error"&gt;Unable to find initial statistics for ID ${endRemoteOutbound.id}.&lt;/div&gt;`
+          statsBox.innerHTML += `<div class="stats-error">Unable to find initial statistics for ID ${endRemoteOutbound.id}.</div>`
         }
       }
 
       statsBox.scrollTo(0, statsBox.scrollHeight);
     }
   }
-}</pre>
+}
+```
 
-<p>Here's what's going on in the <code>networkTestStop()</code> function: after calling
-  the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
+Here's what's going on in the `networkTestStop()` function: after calling
+the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.getStats",
   "getStats()")}} to get the latest statistics report for the connection and storing it in
-  <code>endReport</code>,  This is an {{domxref("RTCStatsReport")}} object, which maps
-  strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
-  corresponding {{domxref("RTCStats")}}-based type.</p>
+`endReport`,  This is an {{domxref("RTCStatsReport")}} object, which maps
+strings taken from the {{domxref("RTCStatsType")}} enumerated type to objects of the
+corresponding {{domxref("RTCStats")}}-based type.
 
-<p>Now we can begin to process the results, starting with the ending statistics found in
-  <code>endReport</code>. In this case, we're looking for statistics records whose
-  <code>type</code> is <code>remote-outbound-rtp</code>, so we iterate over the entries in
-  the statistics report until we find an entry of that type. This object is, specifically,
-  of type {{domxref("RTCRemoteOutboundRtpStreamStats")}}, and it provides statistics
-  giving details about the state of things <em>from the perspective of the remote
-    peer</em>. This statistics record is stored in <code>endRemoteOutbound</code>.</p>
+Now we can begin to process the results, starting with the ending statistics found in
+`endReport`. In this case, we're looking for statistics records whose
+`type` is `remote-outbound-rtp`, so we iterate over the entries in
+the statistics report until we find an entry of that type. This object is, specifically,
+of type {{domxref("RTCRemoteOutboundRtpStreamStats")}}, and it provides statistics
+giving details about the state of things _from the perspective of the remote
+peer_. This statistics record is stored in `endRemoteOutbound`.
 
-<p>Once the ending <code>remote-outbound-rtp</code> record is found, we use
-  its {{domxref("RTCStats.id", "id")}} property to get its ID. WIth that in hand, we can
-  look up the <code>remote-outbound-rtp</code> record in the starting statistics record
-  (<code>startReport</code>), which we store into <code>startRemoteOutbound</code>.</p>
+Once the ending `remote-outbound-rtp` record is found, we use
+its {{domxref("RTCStats.id", "id")}} property to get its ID. WIth that in hand, we can
+look up the `remote-outbound-rtp` record in the starting statistics record
+(`startReport`), which we store into `startRemoteOutbound`.
 
-<p>Now we obtain the <code>inbound-rtp</code> statistics that correspond to these two
-  <code>remote-outbound-rtp</code> records by finding the <code>remoteId</code> property
-  within them whose value is the ID of the <code>remote-outbound-rtp</code> record. We use
-  the <code>findReportEntry()</code> function described in the previous section for that,
-  storing the located <code>inbound-rtp</code> records in <code>startInboundStats</code>
-  and <code>endInboundStats</code>.</p>
+Now we obtain the `inbound-rtp` statistics that correspond to these two
+`remote-outbound-rtp` records by finding the `remoteId` property
+within them whose value is the ID of the `remote-outbound-rtp` record. We use
+the `findReportEntry()` function described in the previous section for that,
+storing the located `inbound-rtp` records in `startInboundStats`
+and `endInboundStats`.
 
-<p>Now we have all the raw statistics needed to calculate the information we want to
-  display, so we do so:</p>
+Now we have all the raw statistics needed to calculate the information we want to
+display, so we do so:
 
-<ul>
-  <li>We calculate the amount of time—<code>elapsedTime</code>—that elapsed between the
-    two reports being sent by subtracting the {{domxref("RTCStats.timestamp",
-    "timestamp")}} <code>startReport</code> from that of <code>endReport</code>. We then
-    divide by 1000 to convert the result from milliseconds to seconds.</li>
-  <li>We compute the number of packets sent during this
-    interval—<code>packetsSent</code>—by subtracting the two reports' values for the
-    {{domxref("RTCSentRtpStreamStats.packetsSent", "packetsSent")}} property.</li>
-  <li>Similarly, the number of bytes sent during this interval—<code>bytesSent</code>—is
-    calculated by subtracting the starting statistics object's
-    {{domxref("RTCSentRtpStreamStats.bytesSent", "bytesSent")}} property from that of the
-    ending statistics.</li>
-  <li>The number of frames decoded during this interval—<code>framesDecoded</code>—is
-    determined by subtracting <code>startRecord</code>'s
-    {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}} from
-    <code>endRecord.framesDecoded</code>.</li>
-  <li>Finally, the frame rate over the elapsed time span is calculated by dividing
-    <code>framesDecoded</code> by <code>elapsedTime</code>.</li>
-</ul>
+- We calculate the amount of time—`elapsedTime`—that elapsed between the
+  two reports being sent by subtracting the {{domxref("RTCStats.timestamp",
+    "timestamp")}} `startReport` from that of `endReport`. We then
+  divide by 1000 to convert the result from milliseconds to seconds.
+- We compute the number of packets sent during this
+  interval—`packetsSent`—by subtracting the two reports' values for the
+  {{domxref("RTCSentRtpStreamStats.packetsSent", "packetsSent")}} property.
+- Similarly, the number of bytes sent during this interval—`bytesSent`—is
+  calculated by subtracting the starting statistics object's
+  {{domxref("RTCSentRtpStreamStats.bytesSent", "bytesSent")}} property from that of the
+  ending statistics.
+- The number of frames decoded during this interval—`framesDecoded`—is
+  determined by subtracting `startRecord`'s
+  {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}} from
+  `endRecord.framesDecoded`.
+- Finally, the frame rate over the elapsed time span is calculated by dividing
+  `framesDecoded` by `elapsedTime`.
 
-<p>The remainder of the <code>networkTestStop()</code> function constructs the HTML used
-  to display the output of the collected and computed results to the user, then append it
-  to the element <code>statsBox</code>, which we're using to show the status updates to
-  the user.</p>
+The remainder of the `networkTestStop()` function constructs the HTML used
+to display the output of the collected and computed results to the user, then append it
+to the element `statsBox`, which we're using to show the status updates to
+the user.
 
-<p>The output log, given the styles used by the example, looks like this:</p>
+The output log, given the styles used by the example, looks like this:
 
-<p><img
-    alt="A screenshot of the example showing logged statistics taken from paired remote-outbound-rtp and inbound-rtp statistics records"
-    src="rtc-log-screenshot.png"></p>
+![A screenshot of the example showing logged statistics taken from paired remote-outbound-rtp and inbound-rtp statistics records](rtc-log-screenshot.png)
 
-<p>In the screenshot, we see a heading followed by the scrollable {{HTMLElement("div")}}
-  we refer to as <code>statsBox</code>. The box contains a number of log entries, the last
-  handful of which are visible. Each one represents approximately one second of time
-  (since that's much time we're waiting between calling <code>networkTestStart()</code>
-  and <code>networkTestStop()</code>).</p>
+In the screenshot, we see a heading followed by the scrollable {{HTMLElement("div")}}
+we refer to as `statsBox`. The box contains a number of log entries, the last
+handful of which are visible. Each one represents approximately one second of time
+(since that's much time we're waiting between calling `networkTestStart()`
+and `networkTestStop()`).
 
-<h3 id="Try_it_and_fork_it">Try it and fork it</h3>
+### Try it and fork it
 
-<p>This example is <a href="https://websocket-webrtc-chat-with-stats.glitch.me">available
-    on Glitch for you to try out</a>, examine, or remix.  You can also <a
-    href="https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats">access
-    it directly</a> using Glitch's Git server.</p>
+This example is [available
+on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.  You can also [access
+it directly](https://33030790-3517-4d21-9b93-511347fa1ebd@api.glitch.com/git/websocket-webrtc-chat-with-stats) using Glitch's Git server.
 
-<p><a
-      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=remix_this&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats">Remix It</a></p>
+[Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 
-<p><a
-      href="https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&amp;utm_source=view_source&amp;utm_medium=button&amp;utm_campaign=glitchButton#!/websocket-webrtc-chat-with-stats">View Source</a></p>
+[View Source](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=view_source&utm_medium=button&utm_campaign=glitchButton#!/websocket-webrtc-chat-with-stats)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

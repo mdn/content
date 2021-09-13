@@ -2,56 +2,55 @@
 title: DOMPointReadOnly.y
 slug: Web/API/DOMPointReadOnly/y
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Read-only
-- Reference
-- Vertical
-- 'y'
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Read-only
+  - Reference
+  - Vertical
+  - 'y'
 browser-compat: api.DOMPointReadOnly.y
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPointReadOnly</strong></code> interface's
-    <code><strong>y</strong></code> property holds the vertical coordinate, y, for a
-    read-only point in space.</p>
+The **`DOMPointReadOnly`** interface's
+**`y`** property holds the vertical coordinate, y, for a
+read-only point in space.
 
-<p>If your script needs to be able to change the value
-  of this property, you should instead use the {{domxref("DOMPoint")}} object.</p>
+If your script needs to be able to change the value
+of this property, you should instead use the {{domxref("DOMPoint")}} object.
 
-<p>In general, positive values of <code>y</code> mean downward, and negative values of
-  <code>y</code> mean upward, assuming no transforms have resulted in a reversal.</p>
+In general, positive values of `y` mean downward, and negative values of
+`y` mean upward, assuming no transforms have resulted in a reversal.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>yPos</var> = <var>someDOMPointReadOnly</var>.y;</pre>
+```js
+const yPos = someDOMPointReadOnly.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the y coordinate's value for the
-  point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the y coordinate's value for the
+point. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
-    {{domxref("DOMPointReadOnly.z", "z")}}, and the perspective value,
-    {{domxref("DOMPointReadOnly.w", "w")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
+  {{domxref("DOMPointReadOnly.z", "z")}}, and the perspective value,
+  {{domxref("DOMPointReadOnly.w", "w")}}.

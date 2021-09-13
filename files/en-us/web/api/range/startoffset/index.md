@@ -8,44 +8,44 @@ tags:
   - Range
 browser-compat: api.Range.startOffset
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>Range.startOffset</strong></code> read-only property returns a number
-  representing where in the <code>startContainer</code> the <code>Range</code> starts.</p>
+The **`Range.startOffset`** read-only property returns a number
+representing where in the `startContainer` the `Range` starts.
 
-<p>If the <code>startContainer</code> is a {{domxref("Node")}} of type
-  {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then the
-  offset is the number of characters from the start of the <code>startContainer</code> to
-  the boundary point of the {{domxref("Range")}}. For other {{domxref("Node")}} types, the
-  <code>startOffset</code> is the number of child nodes between the start of the
-  <code>startContainer</code> and the boundary point of the {{domxref("Range")}}.</p>
+If the `startContainer` is a {{domxref("Node")}} of type
+{{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("CDATASection")}}, then the
+offset is the number of characters from the start of the `startContainer` to
+the boundary point of the {{domxref("Range")}}. For other {{domxref("Node")}} types, the
+`startOffset` is the number of child nodes between the start of the
+`startContainer` and the boundary point of the {{domxref("Range")}}.
 
-<p>To change the <code>startOffset</code> of a {{domxref("Range")}}, use the
-  {{domxref("Range.setStart")}} method.</p>
+To change the `startOffset` of a {{domxref("Range")}}, use the
+{{domxref("Range.setStart")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>startRangeOffset</em> = <em>range</em>.startOffset;
-</pre>
+```js
+startRangeOffset = range.startOffset;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var range = document.createRange();
+```js
+var range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 var startRangeOffset = range.startOffset;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

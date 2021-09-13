@@ -2,37 +2,38 @@
 title: HTMLObjectElement.validationMessage
 slug: Web/API/HTMLObjectElement/validationMessage
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- validationMessage
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - validationMessage
 browser-compat: api.HTMLObjectElement.validationMessage
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>validationMessage</code></strong> read-only property
-  of the {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}}
-  representing a localized message that describes the validation constraints that the
-  control does not satisfy (if any). This is the empty string if the control is not a
-  candidate for constraint validation (willValidate is false), or it satisfies its
-  constraints.</p>
+The **`validationMessage`** read-only property
+of the {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}}
+representing a localized message that describes the validation constraints that the
+control does not satisfy (if any). This is the empty string if the control is not a
+candidate for constraint validation (willValidate is false), or it satisfies its
+constraints.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var String = HTMLObjectElement.validationMessage;</pre>
+```js
+var String = HTMLObjectElement.validationMessage;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

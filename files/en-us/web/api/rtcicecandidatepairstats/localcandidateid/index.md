@@ -2,50 +2,51 @@
 title: RTCIceCandidateStats.localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
 tags:
-- API
-- Candidate
-- Connection
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- local
-- localCandidateId
+  - API
+  - Candidate
+  - Connection
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - local
+  - localCandidateId
 browser-compat: api.RTCIceCandidatePairStats.localCandidateId
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>localCandidateId</code></strong> is a string that uniquely identifies
-    the local {{Glossary("ICE")}} candidate which was analyzed to generate the
-    {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
-    candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`localCandidateId`** is a string that uniquely identifies
+the local {{Glossary("ICE")}} candidate which was analyzed to generate the
+{{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
+candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>localCandidateId</em> = <em>rtcIceCandidatePairStats</em>.localCandidateId;</pre>
+```js
+localCandidateId = rtcIceCandidatePairStats.localCandidateId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} giving a unique identifier for the local
-  {{domxref("RTCIceCandidate")}} for the connection described by this
-  <code>RTCIceCandidatePairStats</code> object.</p>
+A {{domxref("DOMString")}} giving a unique identifier for the local
+{{domxref("RTCIceCandidate")}} for the connection described by this
+`RTCIceCandidatePairStats` object.
 
-<p>This candidate is the source of one of the two {{domxref("RTCIceCandidateStats")}}
-  objects that were used to compute the contents of this
-  {{domxref("RTCIceCandidatePairStats")}} object.</p>
+This candidate is the source of one of the two {{domxref("RTCIceCandidateStats")}}
+objects that were used to compute the contents of this
+{{domxref("RTCIceCandidatePairStats")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,50 +10,48 @@ tags:
   - Reference
 browser-compat: api.UIEvent.which
 ---
-<div>{{ APIRef("DOM Events") }} {{Non-standard_header}}</div>
+{{ APIRef("DOM Events") }} {{Non-standard_header}}
 
-<p>The <code><strong>UIEvent.which</strong></code> read-only property of the {{domxref("UIEvent")}}
-  interface returns a number that indicates which button was pressed on the mouse, or the
-  numeric <code>keyCode</code> or the character code (<code>charCode</code>) of the key
-  pressed on the keyboard.</p>
+The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}}
+interface returns a number that indicates which button was pressed on the mouse, or the
+numeric `keyCode` or the character code (`charCode`) of the key
+pressed on the keyboard.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js notranslate">var <em>result</em> = <em>event</em>.which;
-</pre>
+```js
+var result = event.which;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<h4 id="Return_value_KeyboardEvent">Return value for {{domxref("KeyboardEvent")}}</h4>
+#### Return value for {{domxref("KeyboardEvent")}}
 
-<ul>
-  <li><code>event.which</code> contains the numeric code for a particular key pressed,
-    depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see
-    {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for
-    more details.</li>
-</ul>
+- `event.which` contains the numeric code for a particular key pressed,
+  depending on whether an alphanumeric or non-alphanumeric key was pressed. Please see
+  {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for
+  more details.
 
-<h4 id="Return_value_MouseEvent">Return value for {{domxref("MouseEvent")}} {{non-standard_inline}}</h4>
+#### Return value for {{domxref("MouseEvent")}} {{non-standard_inline}}
 
-<p>A number representing a given button:</p>
+A number representing a given button:
 
-<ul>
-  <li><code>0</code>: No button</li>
-  <li><code>1</code>: Left button</li>
-  <li><code>2</code>: Middle button (if present)</li>
-  <li><code>3</code>: Right button</li>
-</ul>
+- `0`: No button
+- `1`: Left button
+- `2`: Middle button (if present)
+- `3`: Right button
 
-<p>For a mouse configured for left-handed use, the button actions are reversed. In this
-  case, the values are read from right to left.</p>
+For a mouse configured for left-handed use, the button actions are reversed. In this
+case, the values are read from right to left.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;charCode/keyCode/which example&lt;/title&gt;
+```html
+<html>
+<head>
+<title>charCode/keyCode/which example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showKeyPress(evt) {
 alert("onkeypress handler: \n"
@@ -72,31 +70,29 @@ alert("onkeydown handler: \n"
      );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body
+<body
  onkeypress="showKeyPress(event);"
  onkeydown="keyDown(event);"
-&gt;
+>
 
-&lt;p&gt;Please press any key.&lt;/p&gt;
+<p>Please press any key.</p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("KeyboardEvent")}}</li>
-  <li>{{domxref("MouseEvent")}}</li>
-</ul>
+- {{domxref("KeyboardEvent")}}
+- {{domxref("MouseEvent")}}

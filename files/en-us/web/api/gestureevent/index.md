@@ -9,65 +9,55 @@ tags:
   - Reference
 browser-compat: api.GestureEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>GestureEvent</strong></code> is a proprietary interface specific to WebKit which gives information regarding multi-touch gestures. Events using this interface include {{event("gesturestart")}}, {{event("gesturechange")}}, and {{event("gestureend")}}.</p>
+The **`GestureEvent`** is a proprietary interface specific to WebKit which gives information regarding multi-touch gestures. Events using this interface include {{event("gesturestart")}}, {{event("gesturechange")}}, and {{event("gestureend")}}.
 
-<p><code>GestureEvent</code> derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.</p>
+`GestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}</dt>
- <dd>Creates a <code>GestureEvent</code> object.</dd>
-</dl>
+- {{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}
+  - : Creates a `GestureEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("GestureEvent.rotation")}} {{readonlyinline}}</dt>
- <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: <code>0.0</code></dd>
- <dt>{{domxref("GestureEvent.scale")}} {{readonlyinline}}</dt>
- <dd>Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: <code>1.0</code></dd>
-</dl>
+- {{domxref("GestureEvent.rotation")}} {{readonlyinline}}
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
+- {{domxref("GestureEvent.scale")}} {{readonlyinline}}
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("GestureEvent.initGestureEvent()")}}</dt>
- <dd>Initializes the value of an <code>GestureEvent</code>. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+- {{domxref("GestureEvent.initGestureEvent()")}}
+  - : Initializes the value of an `GestureEvent`. If the event has already being dispatched, this method does nothing.
 
-<h2 id="Gesture_event_types">Gesture event types</h2>
+## Gesture event types
 
-<ul>
- <li>{{event("gesturestart")}}</li>
- <li>{{event("gesturechange")}}</li>
- <li>{{event("gestureend")}}</li>
-</ul>
+- {{event("gesturestart")}}
+- {{event("gesturechange")}}
+- {{event("gestureend")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any specification.</em> Apple has <a href="https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html">a description at the Safari Developer Library</a>.</p>
+_Not part of any specification._ Apple has [a description at the Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MSGestureEvent")}}</li>
- <li>{{event("MSGestureStart")}}</li>
- <li>{{event("MSGestureEnd")}}</li>
- <li>{{event("MSGestureTap")}}</li>
- <li>{{event("MSGestureHold")}}</li>
- <li>{{event("MSGestureChange")}}</li>
- <li>{{event("MSInertiaStart")}}</li>
-</ul>
+- {{domxref("MSGestureEvent")}}
+- {{event("MSGestureStart")}}
+- {{event("MSGestureEnd")}}
+- {{event("MSGestureTap")}}
+- {{event("MSGestureHold")}}
+- {{event("MSGestureChange")}}
+- {{event("MSInertiaStart")}}

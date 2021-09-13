@@ -2,72 +2,72 @@
 title: Attr.localName
 slug: Web/API/Attr/localName
 tags:
-- API
-- DOM
-- Property
-- Reference
+  - API
+  - DOM
+  - Property
+  - Reference
 browser-compat: api.Attr.localName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Attr.localName</strong></code> read-only property returns the local
-  part of the qualified name of an attribute.</p>
+The **`Attr.localName`** read-only property returns the local
+part of the qualified name of an attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>name</var> = <var>attribute</var>.localName
-</pre>
+```js
+name = attribute.localName
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing the local part of the attribute's qualified
-  name.</p>
+A {{domxref("DOMString")}} representing the local part of the attribute's qualified
+name.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows "id" in an alert dialog.</p>
+The following example shows "id" in an alert dialog.
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;button id="example"&gt;Click me&lt;/button&gt;</pre>
+```html
+<button id="example">Click me</button>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">const element = document.querySelector("#example");
+```js
+const element = document.querySelector("#example");
 element.addEventListener("click", function() {
   const attribute = element.attributes[0];
   alert(attribute.localName);
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example','100%',30) }}</p>
+{{ EmbedLiveSample('Example','100%',30) }}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The local name of an attribute is the part of the attribute's qualified name that comes
-  after the colon. Qualified names are typically used in XML as part of the namespace(s)
-  of the particular XML documents.</p>
+The local name of an attribute is the part of the attribute's qualified name that comes
+after the colon. Qualified names are typically used in XML as part of the namespace(s)
+of the particular XML documents.
 
-<div class="note">
-  <p><strong>Note:</strong> In {{Gecko("1.9.2")}} and earlier, the property returns the
-    upper-cased version of the local name for HTML attributes in HTML DOMs (as opposed to
-    XHTML attributes in XML DOMs). In later versions, in compliance with HTML5, the
-    property returns in the case of the internal DOM storage, which is lower case for both
-    HTML attributes in HTML DOMs and XHTML attributes in XML DOMs.</p>
-</div>
+> **Note:** In {{Gecko("1.9.2")}} and earlier, the property returns the
+> upper-cased version of the local name for HTML attributes in HTML DOMs (as opposed to
+> XHTML attributes in XML DOMs). In later versions, in compliance with HTML5, the
+> property returns in the case of the internal DOM storage, which is lower case for both
+> HTML attributes in HTML DOMs and XHTML attributes in XML DOMs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Attr.namespaceURI")}}</li>
-  <li>{{domxref("Attr.prefix")}}</li>
-  <li>{{domxref("Element.localName")}}</li>
-</ul>
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Element.localName")}}

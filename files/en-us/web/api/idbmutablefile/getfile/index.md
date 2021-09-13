@@ -9,29 +9,28 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>getFile</code> method allows to retrieve a read-only snapshot of the handled
-  file in the form of a {{domxref("File")}} object.</p>
+The `getFile` method allows to retrieve a read-only snapshot of the handled
+file in the form of a {{domxref("File")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = <em>instanceOfFileHandle</em>.getFile();</pre>
+```js
+var request = instanceOfFileHandle.getFile();
+```
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("DOMRequest")}} object. In case of success, the request's
-  <code>result</code> is a {{domxref("File")}} object.</p>
+A {{domxref("DOMRequest")}} object. In case of success, the request's
+`result` is a {{domxref("File")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("IDBMutableFile")}}</li>
-</ul>
+- {{domxref("IDBMutableFile")}}

@@ -12,32 +12,31 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>SpeechSynthesisEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.</p>
+The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}.</em></p>
+_The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
-<dl>
-	<dt>{{domxref("SpeechSynthesisEvent.charIndex")}} {{readonlyinline}}</dt>
-	<dd>Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.</dd>
-	<dt>{{domxref("SpeechSynthesisEvent.elapsedTime")}} {{readonlyinline}}</dt>
-	<dd>Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.</dd>
-	<dt>{{domxref("SpeechSynthesisEvent.name")}} {{readonlyinline}}</dt>
-	<dd>Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the <a href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</a> marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.</dd>
-	<dt>{{domxref("SpeechSynthesisEvent.utterance")}} {{readonlyinline}}</dt>
-	<dd>Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.</dd>
-</dl>
+- {{domxref("SpeechSynthesisEvent.charIndex")}} {{readonlyinline}}
+  - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
+- {{domxref("SpeechSynthesisEvent.elapsedTime")}} {{readonlyinline}}
+  - : Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.
+- {{domxref("SpeechSynthesisEvent.name")}} {{readonlyinline}}
+  - : Returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{event("mark")}} event, or the type of boundary reached in the case of a {{event("boundary")}} event.
+- {{domxref("SpeechSynthesisEvent.utterance")}} {{readonlyinline}}
+  - : Returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}.</em></p>
+_The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">utterThis.onpause = function(event) {
+```js
+utterThis.onpause = function(event) {
   var char = event.utterance.text.charAt(event.charIndex);
   console.log('Speech paused at character ' + event.charIndex + ' of "' +
   event.utterance.text + '", which is "' + char + '".');
@@ -45,18 +44,17 @@ browser-compat: api.SpeechSynthesisEvent
 
 utterThis.onboundary = function(event) {
   console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

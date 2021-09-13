@@ -15,34 +15,33 @@ tags:
   - web console
 browser-compat: api.console.trace
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.trace()</code></strong> method outputs a stack trace to the
-  <a href="/en-US/docs/Tools/Web_Console">Web console</a>.
-</p>
+The **`console.trace()`** method outputs a stack trace to the
+[Web console](/en-US/docs/Tools/Web_Console).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>See <a href="/en-US/docs/Web/API/console#stack_traces">Stack traces</a> in the
-	{{domxref("console")}} documentation for details and examples.</p>
+See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the
+{{domxref("console")}} documentation for details and examples.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.trace( [...<var>any</var>, ...<var>data</var> ]);
-</pre>
+```js
+console.trace( [...any, ...data ]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>...<var>any</var>, ...<var>data</var></code> {{optional_inline}}</dt>
-	<dd>Zero or more objects to be output to console along with the trace. These are
-		assembled and formatted the same way they would be if passed to the
-		{{domxref("console.log()")}} method.</dd>
-</dl>
+- `...any, ...data` {{optional_inline}}
+  - : Zero or more objects to be output to console along with the trace. These are
+    assembled and formatted the same way they would be if passed to the
+    {{domxref("console.log()")}} method.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
   function bar() {
     console.trace();
   }
@@ -50,19 +49,18 @@ browser-compat: api.console.trace
 }
 
 foo();
-</pre>
+```
 
-<p>In the console, the following trace will be displayed:</p>
+In the console, the following trace will be displayed:
 
-<pre>bar
-foo
-&lt;anonymous&gt;</pre>
+    bar
+    foo
+    <anonymous>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

@@ -2,51 +2,50 @@
 title: RTCIceCandidatePairStats.circuitBreakerTriggerCount
 slug: Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount
 tags:
-- API
-- Circuit-Breaker
-- Connection
-- Property
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- circuitBreakerTriggerCount
+  - API
+  - Circuit-Breaker
+  - Connection
+  - Property
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - circuitBreakerTriggerCount
 browser-compat: api.RTCIceCandidatePairStats.circuitBreakerTriggerCount
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>circuitBreakerTriggerCount</code></strong> indicates the number of times
-    the circuit-breaker has been triggered to indicate a connection timeout or other
-    unexpected connection abort on this specific connection configuration.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`circuitBreakerTriggerCount`** indicates the number of times
+the circuit-breaker has been triggered to indicate a connection timeout or other
+unexpected connection abort on this specific connection configuration.
 
-<p>A circuit breaker trigger is fired each time the connection times out or otherwise
-  needs to be halted automatically.</p>
+A circuit breaker trigger is fired each time the connection times out or otherwise
+needs to be halted automatically.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>cbtCount</em> = <em>rtcIceCandidatePairStats</em>.circuitBreakerTriggerCount;</pre>
+```js
+cbtCount = rtcIceCandidatePairStats.circuitBreakerTriggerCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of times the circuit-breaker has been triggered
-  for the 5-tuple used by this connection. A 5-tuple defining a TCP connection is made up
-  of the following data:</p>
+An integer value indicating the number of times the circuit-breaker has been triggered
+for the 5-tuple used by this connection. A 5-tuple defining a TCP connection is made up
+of the following data:
 
-<ul>
-  <li>The source IP address.</li>
-  <li>The source port number.</li>
-  <li>The destination IP address.</li>
-  <li>The destination port number.</li>
-  <li>Network protocol.</li>
-</ul>
+- The source IP address.
+- The source port number.
+- The destination IP address.
+- The destination port number.
+- Network protocol.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

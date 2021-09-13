@@ -11,50 +11,47 @@ tags:
   - credential management
 browser-compat: api.Credential
 ---
-<div>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</div>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-<p>The <strong><code>Credential</code></strong> interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> provides information about an entity (usually a user) as a prerequisite to a trust decision.</p>
+The **`Credential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about an entity (usually a user) as a prerequisite to a trust decision.
 
-<p><code>Credential</code> objects may be of 3 different types:</p>
+`Credential` objects may be of 3 different types:
 
-<ul>
- <li>{{domxref("PasswordCredential")}}</li>
- <li>{{domxref("PublicKeyCredential")}}</li>
- <li>{{domxref("FederatedCredential")}}</li>
-</ul>
+- {{domxref("PasswordCredential")}}
+- {{domxref("PublicKeyCredential")}}
+- {{domxref("FederatedCredential")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Credential.id")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the credential's identifier. This might be any one of a GUID, username, or email address.</dd>
- <dt>{{domxref("Credential.type")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the credential's type. Valid values are <code>password</code>, <code>federated</code> and <code>public-key</code>. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} and {{domxref("PublicKeyCredential")}})</dd>
-</dl>
+- {{domxref("Credential.id")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the credential's identifier. This might be any one of a GUID, username, or email address.
+- {{domxref("Credential.type")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the credential's type. Valid values are `password`, `federated` and `public-key`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} and {{domxref("PublicKeyCredential")}})
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let pwdCredential = new PasswordCredential({
+```js
+let pwdCredential = new PasswordCredential({
   id: "example-username", // Username/ID
   name: "John Doe", // Display name
   password: "correct horse battery staple" // Password
 });
 
 console.assert(pwdCredential.type === "password");
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

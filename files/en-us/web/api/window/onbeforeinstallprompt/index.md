@@ -2,34 +2,36 @@
 title: Window.onbeforeinstallprompt
 slug: Web/API/Window/onbeforeinstallprompt
 tags:
-- API
-- Event Handler
-- Manifest
-- Property
-- Reference
-- Window
-- onbeforeinstallprompt
+  - API
+  - Event Handler
+  - Manifest
+  - Property
+  - Reference
+  - Window
+  - onbeforeinstallprompt
 browser-compat: api.Window.onbeforeinstallprompt
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.onbeforeinstallprompt</strong></code> property is an event
-  handler for processing a {{event("beforeinstallprompt")}}, which is dispatched on
-  devices when a user is about to be prompted to "install" a web application. <a
-    href="../BeforeInstallPromptEvent">Its associated event</a> may be saved for later and
-  used to prompt the user at a more suitable time. </p>
+The **`Window.onbeforeinstallprompt`** property is an event
+handler for processing a {{event("beforeinstallprompt")}}, which is dispatched on
+devices when a user is about to be prompted to "install" a web application. [Its associated event](../BeforeInstallPromptEvent) may be saved for later and
+used to prompt the user at a more suitable time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.addEventListener("beforeinstallprompt", function(event) { ... });
-window.onbeforeinstallprompt = function(event) { ...};</pre>
+```js
+window.addEventListener("beforeinstallprompt", function(event) { ... });
+window.onbeforeinstallprompt = function(event) { ...};
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example uses the <code>beforeinstallprompt</code> event to make an
-  install button operable, by using the event inside a click handler.</p>
+The following example uses the `beforeinstallprompt` event to make an
+install button operable, by using the event inside a click handler.
 
-<pre class="brush: js">window.addEventListener("beforeinstallprompt", function(beforeInstallPromptEvent) {
+```js
+window.addEventListener("beforeinstallprompt", function(beforeInstallPromptEvent) {
   beforeInstallPromptEvent.preventDefault(); // Prevents immediate prompt display
 
   // Shows prompt after a user clicks an "install" button
@@ -39,15 +41,14 @@ window.onbeforeinstallprompt = function(event) { ...};</pre>
   });
 
   installButton.hidden = false; // Make button operable
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BeforeInstallPromptEvent.prompt")}}</li>
-  <li>{{domxref("BeforeInstallPromptEvent")}}</li>
-</ul>
+- {{domxref("BeforeInstallPromptEvent.prompt")}}
+- {{domxref("BeforeInstallPromptEvent")}}

@@ -11,71 +11,63 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>registerProcessor</code></strong> method of the
-  {{domxref("AudioWorkletGlobalScope")}} interface registers a class constructor derived
-  from {{domxref("AudioWorkletProcessor")}} interface under a specified <em>name</em>.</p>
+The **`registerProcessor`** method of the
+{{domxref("AudioWorkletGlobalScope")}} interface registers a class constructor derived
+from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioWorkletGlobalScope</em>.registerProcessor(<em>name</em>, <em>processorCtor</em>);
-</pre>
+```js
+AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A string representing the name under which the processor will be registered.</dd>
-  <dt><code>processorCtor</code></dt>
-  <dd>The constructor of a class derived from {{domxref("AudioWorkletProcessor")}}.</dd>
-</dl>
+- `name`
+  - : A string representing the name under which the processor will be registered.
+- `processorCtor`
+  - : The constructor of a class derived from {{domxref("AudioWorkletProcessor")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A key-value pair <code>{ <em>name:</em> constructor }</code>
-    is saved internally in the {{domxref("AudioWorkletGlobalScope")}} once  the processor
-    is registered. The <em>name</em> is to be referred to when creating an
-    {{domxref("AudioWorkletNode")}} based on the registered processor. A new processor by
-    the given name is internally created and associated with the new node.</p>
-</div>
+> **Note:** A key-value pair `{ name: constructor }`
+> is saved internally in the {{domxref("AudioWorkletGlobalScope")}} once  the processor
+> is registered. The _name_ is to be referred to when creating an
+> {{domxref("AudioWorkletNode")}} based on the registered processor. A new processor by
+> the given name is internally created and associated with the new node.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>
-    <p>Thrown under the following conditions:</p>
-    <ul>
-      <li>The <em>name</em> is an empty string.</li>
-      <li>A constructor under the given <em>name</em> is already registered. Registering
-        the same name twice is not allowed.</li>
-    </ul>
-  </dd>
-  <dt><code>TypeError</code></dt>
-  <dd>
-    <p>Thrown under the following conditions:</p>
-    <ul>
-      <li>The <em>processorCtor</em> is not a callable constructor.</li>
-      <li>The {{domxref("AudioWorkletProcessor.parameterDescriptors",
+- `NotSupportedError`
+
+  - : Thrown under the following conditions:
+
+    - The _name_ is an empty string.
+    - A constructor under the given _name_ is already registered. Registering
+      the same name twice is not allowed.
+
+- `TypeError`
+
+  - : Thrown under the following conditions:
+
+    - The _processorCtor_ is not a callable constructor.
+    - The {{domxref("AudioWorkletProcessor.parameterDescriptors",
         "parameterDescriptors")}} property of the constructor exists and doesn't return an
-        array of {{domxref("AudioParamDescriptor")}}-based objects.</li>
-    </ul>
-  </dd>
-</dl>
+      array of {{domxref("AudioParamDescriptor")}}-based objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create a custom <code>AudioWorkletNode</code> that outputs silence.
-</p>
+In this example we create a custom `AudioWorkletNode` that outputs silence.
 
-<p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
-  Note that this should be done in a separate file.</p>
+First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
+Note that this should be done in a separate file.
 
-<pre class="brush: js">// test-processor.js
+```js
+// test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
   process (inputs, outputs, parameters) {
     return true
@@ -83,29 +75,27 @@ class TestProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('test-processor', TestProcessor)
-</pre>
+```
 
-<p>Next, in our main script file we'll load the processor, create an instance of
-  <code>AudioWorkletNode</code> — passing it the processor name that we used when calling
-  <code>registerProcessor</code> — and connect it to an audio graph.</p>
+Next, in our main script file we'll load the processor, create an instance of
+`AudioWorkletNode` — passing it the processor name that we used when calling
+`registerProcessor` — and connect it to an audio graph.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')
 const node = new AudioWorkletNode(audioContext, 'test-processor')
 node.connect(audioContext.destination)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

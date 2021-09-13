@@ -8,46 +8,38 @@ tags:
   - WebHID API
 browser-compat: api.HID
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>HID</code></strong> interface provides methods for connecting to <em>HID devices</em>, listing attached HID devices and event handlers for connected HID devices.</p>
+The **`HID`** interface provides methods for connecting to _HID devices_, listing attached HID devices and event handlers for connected HID devices.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties of its parent, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits properties of its parent, {{domxref("EventTarget")}}._
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("HID.onconnect")}}</dt>
- <dd>Fired when an HID device is connected.</dd>
- <dt>{{domxref("HID.ondisconnect")}}</dt>
- <dd>Fired when an HID device is disconnected.</dd>
-</dl>
+- {{domxref("HID.onconnect")}}
+  - : Fired when an HID device is connected.
+- {{domxref("HID.ondisconnect")}}
+  - : Fired when an HID device is disconnected.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods of its parent, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("HID.getDevices","getDevices()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
- </dd>
- <dt>{{domxref("HID.requestDevice","requestDevice()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
- </dd>
-</dl>
+- {{domxref("HID.getDevices","getDevices()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
+- {{domxref("HID.requestDevice","requestDevice()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebHID API")}}</li>
-</ul>
+- {{domxref("WebHID API")}}

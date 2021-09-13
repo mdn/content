@@ -11,31 +11,34 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
 
-<p>A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.</p>
+A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
 
-<h2 id="Animation_and_user_interaction_with_scissoring">Animation and user interaction with scissoring</h2>
+## Animation and user interaction with scissoring
 
-<p>{{EmbedLiveSample("Animation_and_user_interaction_with_scissoring",660,425)}}</p>
+{{EmbedLiveSample("Animation_and_user_interaction_with_scissoring",660,425)}}
 
-<p>This is a simple game. The objective: try to catch as many of the raining rectangles as you can by clicking on them. In this example, we use an object-oriented approach for the displayed rectangles, which helps to keep the state of the rectangle (its position, color, and so on) organized in one place, and the overall code more compact and reusable.</p>
+This is a simple game. The objective: try to catch as many of the raining rectangles as you can by clicking on them. In this example, we use an object-oriented approach for the displayed rectangles, which helps to keep the state of the rectangle (its position, color, and so on) organized in one place, and the overall code more compact and reusable.
 
-<p>This example combines clearing the drawing buffer with solid colors and scissoring operations. It is a preview of a full graphical application that manipulates various phases of the {{Glossary("WebGL")}} graphics pipeline and state machine.</p>
+This example combines clearing the drawing buffer with solid colors and scissoring operations. It is a preview of a full graphical application that manipulates various phases of the {{Glossary("WebGL")}} graphics pipeline and state machine.
 
-<p>In addition, the example demonstrates how to integrate the WebGL function calls within a game loop. The game loop is responsible for drawing the animation frames, and keeping the animation responsive to user input. Here, the game loop is implemented using timeouts.</p>
+In addition, the example demonstrates how to integrate the WebGL function calls within a game loop. The game loop is responsible for drawing the animation frames, and keeping the animation responsive to user input. Here, the game loop is implemented using timeouts.
 
-<pre class="brush: html hidden">&lt;p&gt;You caught
-&lt;strong&gt;0&lt;/strong&gt;.
+```html hidden
+<p>You caught
+<strong>0</strong>.
   You missed
-&lt;strong&gt;0&lt;/strong&gt;.&lt;/p&gt;
-</pre>
+<strong>0</strong>.</p>
+```
 
-<pre class="brush: html hidden">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -53,12 +56,14 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupAnimation, false);
 var gl,
   timer,
@@ -87,7 +92,7 @@ function drawAnimation () {
       rainingRect.size[0] , rainingRect.size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   rainingRect.position[1] -= rainingRect.velocity;
-  if (rainingRect.position[1] &lt; 0) {
+  if (rainingRect.position[1] < 0) {
     misses += 1;
     missesDisplay.textContent = misses;
     rainingRect = new Rectangle();
@@ -112,8 +117,8 @@ function playerClick (evt) {
   // Increment score and create a new rectangle.
   var diffPos = [ position[0] - rainingRect.position[0],
       position[1] - rainingRect.position[1] ];
-  if ( diffPos[0] &gt;= 0 &amp;&amp; diffPos[0] &lt; rainingRect.size[0]
-      &amp;&amp; diffPos[1] &gt;= 0 &amp;&amp; diffPos[1] &lt; rainingRect.size[1] ) {
+  if ( diffPos[0] >= 0 && diffPos[0] < rainingRect.size[0]
+      && diffPos[1] >= 0 && diffPos[1] < rainingRect.size[1] ) {
     score += 1;
     scoreDisplay.textContent = score;
     rainingRect = new Rectangle();
@@ -144,9 +149,10 @@ function Rectangle () {
     return [Math.random(), Math.random(), Math.random()];
   }
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -163,11 +169,12 @@ function Rectangle () {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">})();
-</pre>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/raining-rectangles).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}

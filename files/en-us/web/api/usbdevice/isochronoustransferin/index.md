@@ -2,46 +2,45 @@
 title: USBDevice.isochronousTransferIn()
 slug: Web/API/USBDevice/isochronousTransferIn
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- isochronousTransferIn
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - isochronousTransferIn
 browser-compat: api.USBDevice.isochronousTransferIn
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>isochronousTransferIn()</code></strong> method of the
-  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
-  {{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been
-  transmitted received from the USB device.</p>
+The **`isochronousTransferIn()`** method of the
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves with a
+{{domxref("USBIsochronousInTransferResult")}} when time sensitive information has been
+transmitted received from the USB device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = USBDevice.isochronousTransferIn(<em>endpointNumber</em>, <em>packetLengths</em>) </pre>
+```js
+var promise = USBDevice.isochronousTransferIn(endpointNumber, packetLengths)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>endpointNumber</dt>
-  <dd>The number of a device-specific endpoint (buffer).</dd>
-  <dt>packetLengths</dt>
-  <dd>An array of lengths for the packets being received.</dd>
-</dl>
+- endpointNumber
+  - : The number of a device-specific endpoint (buffer).
+- packetLengths
+  - : An array of lengths for the packets being received.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}} that resolves with a
-  {{domxref("USBIsochronousInTransferResult")}}</p>
+A {{jsxref("promise")}} that resolves with a
+{{domxref("USBIsochronousInTransferResult")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

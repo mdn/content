@@ -11,68 +11,66 @@ tags:
   - Window
 browser-compat: api.Window.personalbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Returns the <code>personalbar</code> object, whose visibility can be toggled in the
-  window.</p>
+Returns the `personalbar` object, whose visibility can be toggled in the
+window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>objRef</em> =<em>window</em>.personalbar
-</pre>
+```js
+objRef =window.personalbar
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}</p>
+{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
 
-<p>{{deprecated_inline}} The following complete HTML example shows the way that the
-  visible property of the various "bar" objects is used, and also the change to the
-  privileges necessary to write to the visible property of any of the bars on an existing
-  window. Due to <a
-    href="/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code">deprecation of
-    enablePrivilege</a> this functionality can not be used in web pages. EnablePrivilege
-  is disabled in Firefox 15 and will be removed in Firefox 17.</p>
+{{deprecated_inline}} The following complete HTML example shows the way that the
+visible property of the various "bar" objects is used, and also the change to the
+privileges necessary to write to the visible property of any of the bars on an existing
+window. Due to [deprecation of
+enablePrivilege](/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege
+is disabled in Firefox 15 and will be removed in Firefox 17.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Various DOM Tests</title>
 
-&lt;script&gt;
+<script>
 // changing bar states on the existing window
 netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
 window.personalbar.visible = !window.personalbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When you load the example page above, the browser displays the following dialog: <img
-    src="modify_any_open_window_dialog.png"></p>
+When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
 
-<p>To toggle the visibility of these bars, you must either sign your scripts or enable the
-  appropriate privileges, as in the example above. Also be aware that dynamically updating
-  the visibilty of the various toolbars can change the size of the window rather
-  dramatically, and may affect the layout of your page.</p>
+To toggle the visibility of these bars, you must either sign your scripts or enable the
+appropriate privileges, as in the example above. Also be aware that dynamically updating
+the visibilty of the various toolbars can change the size of the window rather
+dramatically, and may affect the layout of your page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.locationbar")}}, {{domxref("window.menubar")}},
-    {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}},
-    {{domxref("window.toolbar")}}</li>
-</ul>
+- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}},
+  {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}},
+  {{domxref("window.toolbar")}}

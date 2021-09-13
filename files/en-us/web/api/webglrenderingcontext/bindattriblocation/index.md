@@ -2,58 +2,56 @@
 title: WebGLRenderingContext.bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindAttribLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.bindAttribLocation()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> binds a generic vertex index
-  to an attribute variable.</p>
+The **`WebGLRenderingContext.bindAttribLocation()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a generic vertex index
+to an attribute variable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.bindAttribLocation(<var>program</var>, <var>index</var>, <var>name</var>);
-</pre>
+```js
+void gl.bindAttribLocation(program, index, name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} object to bind.</dd>
-  <dt>index</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex to bind.</dd>
-  <dt>name</dt>
-  <dd>A {{domxref("DOMString")}} specifying the name of the variable to bind to the
-    generic vertex index. This name cannot start with "webgl_" or "_webgl_", as these are
-    reserved for use by WebGL.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} object to bind.
+- index
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex to bind.
+- name
+  - : A {{domxref("DOMString")}} specifying the name of the variable to bind to the
+    generic vertex index. This name cannot start with "webgl\_" or "\_webgl\_", as these are
+    reserved for use by WebGL.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.bindAttribLocation(program, colorLocation, 'vColor');
-</pre>
+```js
+gl.bindAttribLocation(program, colorLocation, 'vColor');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getAttribLocation()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
+- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}

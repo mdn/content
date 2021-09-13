@@ -10,20 +10,22 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.oninstall
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>oninstall</strong></code> property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event occurs (when the service worker installs). This happens before <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activation</a>.</p>
+The **`oninstall`** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event occurs (when the service worker installs). This happens before [activation](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>self</em>.oninstall = function(event) { ... };
-</pre>
+```js
+self.oninstall = function(event) { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet shows how an <code>install</code> event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:</p>
+The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
-<pre class="brush: js">self.oninstall = function(event) {
+```js
+self.oninstall = function(event) {
   event.waitUntil(
    caches.open('v1').then(function(cache) {
          return cache.add(
@@ -40,21 +42,20 @@ browser-compat: api.ServiceWorkerGlobalScope.oninstall
      );
    })
    );
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}

@@ -10,22 +10,20 @@ tags:
   - Reference
 browser-compat: api.HTMLMenuItemElement
 ---
-<p>{{APIRef("HTML DOM")}}{{Deprecated_Header}}</p>
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-<p>The <strong><code>HTMLMenuItemElement</code></strong> interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menuitem")}} elements.</p>
+The **`HTMLMenuItemElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menuitem")}} elements.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("HTMLMenuElement")}}</li>
-</ul>
+- {{DOMxRef("HTMLMenuElement")}}

@@ -11,80 +11,73 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>OscillatorNode</code></strong> interface represents a periodic waveform, such as a sine wave. It is an {{domxref("AudioScheduledSourceNode")}} audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.</p>
+The **`OscillatorNode`** interface represents a periodic waveform, such as a sine wave. It is an {{domxref("AudioScheduledSourceNode")}} audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>max</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>speakers</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>max</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>speakers</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}</dt>
- <dd>Creates a new instance of an <code>OscillatorNode</code> object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
-</dl>
+- {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
+  - : Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's {{anch("properties")}}.  As an alternative, you can use the {{domxref("BaseAudioContext.createOscillator()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:</em></p>
+_Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:_
 
-<dl>
- <dt>{{domxref("OscillatorNode.frequency")}}</dt>
- <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (though the <code>AudioParam</code> returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).</dd>
- <dt>{{domxref("OscillatorNode.detune")}}</dt>
- <dd>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in cents (though the <code>AudioParam</code> returned is read-only, the value it represents is not). The default value is 0.</dd>
- <dt>{{domxref("OscillatorNode.type")}}</dt>
- <dd>A string which specifies the shape of waveform to play; this can be one of a number of standard values, or <code>custom</code> to use a {{domxref("PeriodicWave")}} to describe a custom waveform. Different waves will produce different tones. Standard values are <code>"sine"</code>, <code>"square"</code>, <code>"sawtooth"</code>, <code>"triangle"</code> and <code>"custom"</code>. The default is <code>"sine"</code>.</dd>
-</dl>
+- {{domxref("OscillatorNode.frequency")}}
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).
+- {{domxref("OscillatorNode.detune")}}
+  - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in cents (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 0.
+- {{domxref("OscillatorNode.type")}}
+  - : A string which specifies the shape of waveform to play; this can be one of a number of standard values, or `custom` to use a {{domxref("PeriodicWave")}} to describe a custom waveform. Different waves will produce different tones. Standard values are `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. The default is `"sine"`.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("OscillatorNode.onended")}}</dt>
- <dd>Sets the event handler for the {{event("ended")}} event, which fires when the tone has stopped playing.</dd>
-</dl>
+- {{domxref("OscillatorNode.onended")}}
+  - : Sets the event handler for the {{event("ended")}} event, which fires when the tone has stopped playing.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following:</em></p>
+_Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following:_
 
-<dl>
- <dt>{{domxref("OscillatorNode.setPeriodicWave()")}}</dt>
- <dd>Sets a {{domxref("PeriodicWave")}} which describes a periodic waveform to be used instead of one of the standard waveforms; calling this sets the <code>type</code> to <code>custom</code>.</dd>
- <dt>{{domxref("OscillatorNode.start()")}}</dt>
- <dd>Specifies the exact time to start playing the tone.</dd>
- <dt>{{domxref("OscillatorNode.stop()")}}</dt>
- <dd>Specifies the time to stop playing the tone.</dd>
-</dl>
+- {{domxref("OscillatorNode.setPeriodicWave()")}}
+  - : Sets a {{domxref("PeriodicWave")}} which describes a periodic waveform to be used instead of one of the standard waveforms; calling this sets the `type` to `custom`.
+- {{domxref("OscillatorNode.start()")}}
+  - : Specifies the exact time to start playing the tone.
+- {{domxref("OscillatorNode.stop()")}}
+  - : Specifies the time to stop playing the tone.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 
-<pre class="brush: js">// create web audio api context
+```js
+// create web audio api context
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -93,18 +86,17 @@ const oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

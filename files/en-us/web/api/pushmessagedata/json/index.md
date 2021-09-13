@@ -12,34 +12,38 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.json
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>json()</strong></code>method of the {{domxref("PushMessageData")}} interface extracts push message data by parsing it as a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> string and returning the result.</p>
+The **`json()`**method of the {{domxref("PushMessageData")}} interface extracts push message data by parsing it as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) string and returning the result.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myData = pushEvent.data.json();</pre>
+```js
+var myData = pushEvent.data.json();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number...</p>
+The result of parsing push event data as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number...
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var myData = event.data.json();
 
   // do something with your data
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

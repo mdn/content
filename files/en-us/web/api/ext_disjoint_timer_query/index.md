@@ -8,95 +8,78 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>EXT_disjoint_timer_query</strong> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and provides a way to measure the duration of a set of GL commands, without stalling the rendering pipeline.</p>
+The **EXT_disjoint_timer_query** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and provides a way to measure the duration of a set of GL commands, without stalling the rendering pipeline.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts .</p>
+> **Note:** This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts .
+>
+> In WebGL 2, the {{domxref("getQueryObject")}} was renamed to {{domxref("getQueryParameter")}}.
+> In WebGL 2, other queries (such as occlusion queries and primitive queries) are possible using {{domxref("WebGLQuery")}} objects.
 
-<p>In WebGL 2, the {{domxref("getQueryObject")}} was renamed to {{domxref("getQueryParameter")}}.<br>
- In WebGL 2, other queries (such as occlusion queries and primitive queries) are possible using {{domxref("WebGLQuery")}} objects.</p>
-</div>
+## Types
 
-<h2 id="Types">Types</h2>
+This extension exposes a new type:
 
-<p>This extension exposes a new type:</p>
+- GLuint64EXT
+  - : Unsigned 64-bit integer number.
 
-<dl>
- <dt>GLuint64EXT</dt>
- <dd>Unsigned 64-bit integer number.</dd>
-</dl>
+## Constants
 
-<h2 id="Constants">Constants</h2>
+This extension exposes seven new constants.
 
-<p>This extension exposes seven new constants.</p>
+- `ext.QUERY_COUNTER_BITS_EXT`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the number of bits used to hold the query result for the given target.
+- `ext.CURRENT_QUERY_EXT`
+  - : A {{domxref("WebGLQuery")}} object, which is the currently active query for the given target.
+- `ext.QUERY_RESULT_EXT`
+  - : A {{domxref("WebGL_API/Types", "GLuint64EXT")}} containing the query result.
+- `ext.QUERY_RESULT_AVAILABLE_EXT`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not a query result is available.
+- `ext.TIME_ELAPSED_EXT`
+  - : Elapsed time (in nanoseconds).
+- `ext.TIMESTAMP_EXT`
+  - : The current time.
+- `ext.GPU_DISJOINT_EXT`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the GPU performed any disjoint operation.
 
-<dl>
- <dt><code>ext.QUERY_COUNTER_BITS_EXT</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the number of bits used to hold the query result for the given target.</dd>
- <dt><code>ext.CURRENT_QUERY_EXT</code></dt>
- <dd>A {{domxref("WebGLQuery")}} object, which is the currently active query for the given target.</dd>
- <dt><code>ext.QUERY_RESULT_EXT</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLuint64EXT")}} containing the query result.</dd>
- <dt><code>ext.QUERY_RESULT_AVAILABLE_EXT</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not a query result is available.</dd>
- <dt><code>ext.TIME_ELAPSED_EXT</code></dt>
- <dd>Elapsed time (in nanoseconds).</dd>
- <dt><code>ext.TIMESTAMP_EXT</code></dt>
- <dd>The current time.</dd>
- <dt><code>ext.GPU_DISJOINT_EXT</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the GPU performed any disjoint operation.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+This extension exposes eight new methods.
 
-<p>This extension exposes eight new methods.</p>
+- {{domxref("EXT_disjoint_timer_query.createQueryEXT()", "ext.createQueryEXT()")}}
+  - : Creates a new {{domxref("WebGLTimerQueryEXT")}}.
+- {{domxref("EXT_disjoint_timer_query.deleteQueryEXT()", "ext.deleteQueryEXT()")}}
+  - : Deletes a given {{domxref("WebGLTimerQueryEXT")}}.
+- {{domxref("EXT_disjoint_timer_query.isQueryEXT()", "ext.isQueryEXT()")}}
+  - : Returns `true` if a given object is a valid {{domxref("WebGLTimerQueryEXT")}}.
+- {{domxref("EXT_disjoint_timer_query.beginQueryEXT()", "ext.beginQueryEXT()")}}
+  - : The timer starts when all commands prior to `beginQueryEXT` have been fully executed.
+- {{domxref("EXT_disjoint_timer_query.endQueryEXT()", "ext.endQueryEXT()")}}
+  - : The timer stops when all commands prior to `endQueryEXT` have been fully executed.
+- {{domxref("EXT_disjoint_timer_query.queryCounterEXT()", "ext.queryCounterEXT()")}}
+  - : Records the current time into the corresponding query object.
+- {{domxref("EXT_disjoint_timer_query.getQueryEXT()", "ext.getQueryEXT()")}}
+  - : Returns information about a query target.
+- {{domxref("EXT_disjoint_timer_query.getQueryObjectEXT()", "ext.getQueryObjectEXT()")}}
+  - : Return the state of a query object.
 
-<dl>
- <dt>{{domxref("EXT_disjoint_timer_query.createQueryEXT()", "ext.createQueryEXT()")}}</dt>
- <dd>
- <p>Creates a new {{domxref("WebGLTimerQueryEXT")}}.</p>
- </dd>
- <dt>{{domxref("EXT_disjoint_timer_query.deleteQueryEXT()", "ext.deleteQueryEXT()")}}</dt>
- <dd>
- <p>Deletes a given {{domxref("WebGLTimerQueryEXT")}}.</p>
- </dd>
- <dt>{{domxref("EXT_disjoint_timer_query.isQueryEXT()", "ext.isQueryEXT()")}}</dt>
- <dd>
- <p>Returns <code>true</code> if a given object is a valid {{domxref("WebGLTimerQueryEXT")}}.</p>
- </dd>
- <dt>{{domxref("EXT_disjoint_timer_query.beginQueryEXT()", "ext.beginQueryEXT()")}}</dt>
- <dd>The timer starts when all commands prior to <code>beginQueryEXT</code> have been fully executed.</dd>
- <dt>{{domxref("EXT_disjoint_timer_query.endQueryEXT()", "ext.endQueryEXT()")}}</dt>
- <dd>The timer stops when all commands prior to <code>endQueryEXT</code> have been fully executed.</dd>
- <dt>{{domxref("EXT_disjoint_timer_query.queryCounterEXT()", "ext.queryCounterEXT()")}}</dt>
- <dd>
- <p>Records the current time into the corresponding query object.</p>
- </dd>
- <dt>{{domxref("EXT_disjoint_timer_query.getQueryEXT()", "ext.getQueryEXT()")}}</dt>
- <dd>Returns information about a query target.</dd>
- <dt>{{domxref("EXT_disjoint_timer_query.getQueryObjectEXT()", "ext.getQueryObjectEXT()")}}</dt>
- <dd>Return the state of a query object.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
+```
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}

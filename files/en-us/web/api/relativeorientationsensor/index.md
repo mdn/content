@@ -14,77 +14,77 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>RelativeOrientationSensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> describes the device's physical orientation without regard to the Earth's reference coordinate system.</p>
+The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
 
-<p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code>, and <code>'gyroscope'</code> device sensors through the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
+To use this sensor, the user must grant permission to the `'accelerometer'`, and `'gyroscope'` device sensors through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}</dt>
- <dd>Creates a new <code>RelativeOrientationSensor</code> object.</dd>
-</dl>
+- {{domxref("RelativeOrientationSensor.RelativeOrientationSensor", "RelativeOrientationSensor()")}}
+  - : Creates a new `RelativeOrientationSensor` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}.</em></p>
+_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p><em>No specific event handlers; inherits methods from its ancestor, {{domxref('Sensor')}}.</em></p>
+_No specific event handlers; inherits methods from its ancestor, {{domxref('Sensor')}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}.</em></p>
+_No specific methods; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_Example">Basic Example</h3>
+### Basic Example
 
-<p>The following example, which is loosely based on <a href="https://intel.github.io/generic-sensor-demos/orientation-phone/">Intel's Orientation Phone demo</a>, instantiates an <code>RelativeOrientationSensor</code> with a frequency of 60 times a second.</p>
+The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `RelativeOrientationSensor` with a frequency of 60 times a second.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The Intel demo this is based on uses the <code>AbsoluteOreintationSensor</code>. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.</p>
-</div>
+> **Note:** The Intel demo this is based on uses the `AbsoluteOreintationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
-<pre class="brush: js">const options = { frequency: 60, referenceFrame: 'device' };
+```js
+const options = { frequency: 60, referenceFrame: 'device' };
 const sensor = new RelativeOrientationSensor(options);
 
-sensor.addEventListener('reading', () =&gt; {
+sensor.addEventListener('reading', () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener('error', error =&gt; {
+sensor.addEventListener('error', error => {
   if (event.error.name == 'NotReadableError') {
     console.log("Sensor is not available.");
   }
 });
-sensor.start();</pre>
+sensor.start();
+```
 
-<h3 id="Permissions_Example">Permissions Example</h3>
+### Permissions Example
 
-<p>Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.</p>
+Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
-<pre class="brush: js">const sensor = new RelativeOrientationSensor();
+```js
+const sensor = new RelativeOrientationSensor();
 Promise.all([navigator.permissions.query({ name: "accelerometer" }),
              navigator.permissions.query({ name: "gyroscope" })])
-       .then(results =&gt; {
-         if (results.every(result =&gt; result.state === "granted")) {
+       .then(results => {
+         if (results.every(result => result.state === "granted")) {
            sensor.start();
            ...
          } else {
            console.log("No permissions to use RelativeOrientationSensor.");
          }
-   });</pre>
+   });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

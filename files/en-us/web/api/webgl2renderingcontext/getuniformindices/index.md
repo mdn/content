@@ -2,53 +2,51 @@
 title: WebGL2RenderingContext.getUniformIndices()
 slug: Web/API/WebGL2RenderingContext/getUniformIndices
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getUniformIndices
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getUniformIndices()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> retrieves the indices of a
-  number of uniforms within a {{domxref("WebGLProgram")}}.</p>
+The **`WebGL2RenderingContext.getUniformIndices()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves the indices of a
+number of uniforms within a {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">sequence&lt;GLuint&gt; <var>gl</var>.getUniformIndices(<var>program</var>, <var>uniformNames</var>);</pre>
+```js
+sequence<GLuint> gl.getUniformIndices(program, uniformNames);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} containing uniforms whose indices to query.</dd>
-  <dt><code>uniformNames</code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("DOMString")}} specifying the names of the
-    uniforms to query.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} containing uniforms whose indices to query.
+- `uniformNames`
+  - : An {{jsxref("Array")}} of {{domxref("DOMString")}} specifying the names of the
+    uniforms to query.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} containing the uniform indices.</p>
+An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} containing the uniform indices.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-</pre>
+```js
+var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}

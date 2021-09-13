@@ -13,36 +13,32 @@ tags:
   - Video
 browser-compat: api.OverconstrainedError
 ---
-<div>{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>OverconstrainedError</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a> indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.</p>
+The **`OverconstrainedError`** interface of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API) indicates that the set of desired capabilities for the current {{domxref('MediaStreamTrack')}} cannot currently be met. When this event is thrown on a MediaStreamTrack, it is muted until either the current constraints can be established or until satisfiable constraints are applied.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("OverconstrainedError.OverconstrainedError()")}}</dt>
- <dd>Creates a new <code>OverconstrainedError</code> object.</dd>
-</dl>
+- {{domxref("OverconstrainedError.OverconstrainedError()")}}
+  - : Creates a new `OverconstrainedError` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("OverconstrainedError.constraint")}} {{readonlyInline}}</dt>
- <dd>Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.</dd>
- <dt>{{domxref("DOMException.message")}} {{readonlyInline}}</dt>
- <dd>Returns the text supplied in the constructor.</dd>
- <dt>{{domxref("DOMException.name")}} {{readonlyInline}}</dt>
- <dd>Will always return <code>OverconstrainedError</code>.</dd>
-</dl>
+- {{domxref("OverconstrainedError.constraint")}} {{readonlyInline}}
+  - : Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.
+- {{domxref("DOMException.message")}} {{readonlyInline}}
+  - : Returns the text supplied in the constructor.
+- {{domxref("DOMException.name")}} {{readonlyInline}}
+  - : Will always return `OverconstrainedError`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

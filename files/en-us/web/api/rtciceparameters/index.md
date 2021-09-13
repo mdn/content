@@ -19,29 +19,27 @@ tags:
   - username
 browser-compat: api.RTCIceParameters
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCIceParameters</strong></code> dictionary specifies the username fragment and password assigned to an {{Glossary("ICE")}} session.</p>
+The **`RTCIceParameters`** dictionary specifies the username fragment and password assigned to an {{Glossary("ICE")}} session.
 
-<p>During ICE negotiation, each peer's username fragment and password are recorded in an <code>RTCIceParameters</code> object, which can be obtained from the {{domxref("RTCIceTransport")}} by calling its {{domxref("RTCIceTransport.getLocalParameters", "getLocalParameters()")}} or {{domxref("RTCIceTransport.getRemoteParameters", "getRemoteParameters()")}} method, depending on which end interests you.</p>
+During ICE negotiation, each peer's username fragment and password are recorded in an `RTCIceParameters` object, which can be obtained from the {{domxref("RTCIceTransport")}} by calling its {{domxref("RTCIceTransport.getLocalParameters", "getLocalParameters()")}} or {{domxref("RTCIceTransport.getRemoteParameters", "getRemoteParameters()")}} method, depending on which end interests you.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the value of the ICE session's username fragment field, <code>ufrag</code>.</dd>
- <dt>{{domxref("RTCIceParameters.password", "password")}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the session's password string.</dd>
-</dl>
+- {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}}
+  - : A {{domxref("DOMString")}} specifying the value of the ICE session's username fragment field, `ufrag`.
+- {{domxref("RTCIceParameters.password", "password")}}
+  - : A {{domxref("DOMString")}} specifying the session's password string.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The username fragment and password uniquely identify the remote peer for the duration of the ICE session, and are used to both ensure security and to avoid crosstalk across multiple ongoing ICE sessions. See {{domxref("RTCIceCandidate.usernameFragment")}} for further information.</p>
+The username fragment and password uniquely identify the remote peer for the duration of the ICE session, and are used to both ensure security and to avoid crosstalk across multiple ongoing ICE sessions. See {{domxref("RTCIceCandidate.usernameFragment")}} for further information.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

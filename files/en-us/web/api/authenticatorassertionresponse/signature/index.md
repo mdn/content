@@ -2,56 +2,52 @@
 title: AuthenticatorAssertionResponse.signature
 slug: Web/API/AuthenticatorAssertionResponse/signature
 tags:
-- API
-- AuthenticatorAssertionResponse
-- Property
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - AuthenticatorAssertionResponse
+  - Property
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.signature
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>signature</code></strong> read-only property of the
-  {{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
-  object which is the signature of the authenticator for both
-  {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and a SHA-256 hash of
-  the client data
-  ({{domxref("AuthenticatorResponse.clientDataJSON","AuthenticatorAssertionResponse.clientDataJSON")}}).
-</p>
+The **`signature`** read-only property of the
+{{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
+object which is the signature of the authenticator for both
+{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and a SHA-256 hash of
+the client data
+({{domxref("AuthenticatorResponse.clientDataJSON","AuthenticatorAssertionResponse.clientDataJSON")}}).
 
-<p>This signature will be sent to the server for control, as part of the response. It
-  provides the proof that an authenticator does possess the private key which was used for
-  the credential's generation.</p>
+This signature will be sent to the server for control, as part of the response. It
+provides the proof that an authenticator does possess the private key which was used for
+the credential's generation.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An <code>AuthenticatorAssertionResponse</code> instance is
-    available on {{domxref("PublicKeyCredential.response")}} after calling
-    {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.</p>
-</div>
+> **Note:** An `AuthenticatorAssertionResponse` instance is
+> available on {{domxref("PublicKeyCredential.response")}} after calling
+> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This property may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>signature</em> = <em>authenticatorAssertionResponse</em>.signature</pre>
+```js
+signature = authenticatorAssertionResponse.signature
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its
-  private key) for both {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
-  and a SHA-256 hash given by the client for its data (the challenge, the origin, etc. and
-  available from
-  {{domxref("AuthenticatorResponse.clientDataJSON","AuthenticatorAssertionResponse.clientDataJSON")}}).
-</p>
+An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its
+private key) for both {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
+and a SHA-256 hash given by the client for its data (the challenge, the origin, etc. and
+available from
+{{domxref("AuthenticatorResponse.clientDataJSON","AuthenticatorAssertionResponse.clientDataJSON")}}).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
@@ -66,12 +62,12 @@ navigator.credentials.get({  publicKey: options })
 }).catch(function (err) {
    console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

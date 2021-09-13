@@ -2,41 +2,43 @@
 title: 'Location: hash'
 slug: Web/API/Location/hash
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.hash
 ---
-<div>{{ APIRef("Location") }}</div>
+{{ APIRef("Location") }}
 
-<p>The <strong><code>hash</code></strong> property of the
-    {{domxref("Location")}} interface returns a {{domxref("USVString")}} containing a
-    <code>'#'</code> followed by the fragment identifier of the URL — the ID on the page
-    that the URL is trying to target.</p>
+The **`hash`** property of the
+{{domxref("Location")}} interface returns a {{domxref("USVString")}} containing a
+`'#'` followed by the fragment identifier of the URL — the ID on the page
+that the URL is trying to target.
 
-<p>The fragment is not <a
-    href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
-  have a fragment identifier, this property contains an empty string, <code>""</code>.</p>
+The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+have a fragment identifier, this property contains an empty string, `""`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+```js
+string = object.hash;
+object.hash = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;a id="myAnchor" href="/en-US/docs/Location.href#Examples"&gt;Examples&lt;/a&gt;
-&lt;script&gt;
+```html
+<a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
+<script>
   var anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // Returns '#Examples'
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

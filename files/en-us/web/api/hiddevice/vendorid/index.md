@@ -9,35 +9,37 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.vendorId
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>vendorId</code></strong> read-only property of the {{domxref("HIDDevice")}} interface returns the vendor ID of the connected HID device. This identifies the vendor of the device.</p>
+The **`vendorId`** read-only property of the {{domxref("HIDDevice")}} interface returns the vendor ID of the connected HID device. This identifies the vendor of the device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let vendorId = HIDDevice.vendorId;</pre>
+```js
+let vendorId = HIDDevice.vendorId;
+```
 
-<h3>Value</h3>
-<p>An integer. If the device has no vendor ID, or the vendor ID cannot be accessed this will return <code>0</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer. If the device has no vendor ID, or the vendor ID cannot be accessed this will return `0`.
 
-<p>The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of <code>vendorId</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', async () => {
+The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `vendorId` to the console.
+
+```js
+document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach(device => {
     console.log(`HID: ${device.vendorId}`);
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

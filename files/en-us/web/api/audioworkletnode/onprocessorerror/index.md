@@ -13,38 +13,36 @@ tags:
   - onprocessorerror
 browser-compat: api.AudioWorkletNode.onprocessorerror
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>onprocessorerror</code> property of the {{ domxref("AudioWorkletNode") }}
-  interface defines an event handler function to be called when the
-  {{domxref("AudioWorkletNode.processorerror_event", "processorerror")}} event fires. This
-  occurs when the underlying {{domxref("AudioWorkletProcessor")}} behind the node throws
-  an exception in its constructor, the {{domxref("AudioWorkletProcessor.process",
-  "process")}} method, or any user-defined class method.</p>
+The `onprocessorerror` property of the {{ domxref("AudioWorkletNode") }}
+interface defines an event handler function to be called when the
+{{domxref("AudioWorkletNode.processorerror_event", "processorerror")}} event fires. This
+occurs when the underlying {{domxref("AudioWorkletProcessor")}} behind the node throws
+an exception in its constructor, the {{domxref("AudioWorkletProcessor.process",
+  "process")}} method, or any user-defined class method.
 
-<p>Once an exception is thrown, the processor (and thus the node) will output silence
-  throughout its lifetime.</p>
+Once an exception is thrown, the processor (and thus the node) will output silence
+throughout its lifetime.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">audioWorkletNode.onprocessorerror = function() { ... };</pre>
+```js
+audioWorkletNode.onprocessorerror = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>// FILL IN EXAMPLE SNIPPET</p>
+// FILL IN EXAMPLE SNIPPET
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

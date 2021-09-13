@@ -2,36 +2,37 @@
 title: BluetoothRemoteGATTDescriptor.value
 slug: Web/API/BluetoothRemoteGATTDescriptor/value
 tags:
-- API
-- Bluetooth
-- BluetoothGattDescriptor
-- BluetoothRemoteGATTDescriptor
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- value
+  - API
+  - Bluetooth
+  - BluetoothGattDescriptor
+  - BluetoothRemoteGATTDescriptor
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - value
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
-<p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor</code><code>.value</code></strong>
-  read-only property returns an {{jsxref("ArrayBuffer")}} containing the currently cached
-  descriptor value. This value gets updated when the value of the descriptor is read.</p>
+The **` BluetoothRemoteGATTDescriptor``.value `**
+read-only property returns an {{jsxref("ArrayBuffer")}} containing the currently cached
+descriptor value. This value gets updated when the value of the descriptor is read.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>characteristic</em> = BluetoothRemoteGATTDescriptor.characteristic</pre>
+```js
+var characteristic = BluetoothRemoteGATTDescriptor.characteristic
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An {{jsxref("ArrayBuffer")}}.</p>
+An {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

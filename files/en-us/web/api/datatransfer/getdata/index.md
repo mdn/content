@@ -2,83 +2,79 @@
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- drag and drop
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.getData
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>DataTransfer.getData()</code></strong>
-        method retrieves drag data (as a {{domxref("DOMString")}}) for the specified type.
-        If the drag operation does not include data, this method returns an empty
-        string.</p>
+The **`DataTransfer.getData()`**
+method retrieves drag data (as a {{domxref("DOMString")}}) for the specified type.
+If the drag operation does not include data, this method returns an empty
+string.
 
-<p>Example data types are <code>text/plain</code> and <code>text/uri-list</code>.</p>
+Example data types are `text/plain` and `text/uri-list`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>dataTransfer</var>.getData(format);
-</pre>
+```js
+dataTransfer.getData(format);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-    <dt><code>format</code></dt>
-    <dd>A {{domxref("DOMString")}} representing the type of data to retrieve.</dd>
-</dl>
+- `format`
+  - : A {{domxref("DOMString")}} representing the type of data to retrieve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-    <dt>{{domxref("DOMString")}}</dt>
-    <dd>A {{domxref("DOMString")}} representing the drag data for the specified
-        <code>format</code>. If the drag operation has no data or the operation has no
-        data for the specified <code>format</code>, this method returns an empty string.
-    </dd>
-</dl>
+- {{domxref("DOMString")}}
+  - : A {{domxref("DOMString")}} representing the drag data for the specified
+    `format`. If the drag operation has no data or the operation has no
+    data for the specified `format`, this method returns an empty string.
 
-<h3 id="Caveats">Caveats</h3>
+### Caveats
 
-<dl>
-    <dt>Data availability</dt>
-    <dd>The <a
-            href="https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode">HTML5
-            Drag and Drop Specification</a> dictates a <code>drag data store mode</code>.
-        This may result in unexpected behavior, being
-        <strong><code>DataTransfer.getData()</code></strong> not returning an expected
-        value.</dd>
-</dl>
+- Data availability
+  - : The [HTML5
+    Drag and Drop Specification](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) dictates a `drag data store mode`.
+    This may result in unexpected behavior, being
+    **`DataTransfer.getData()`** not returning an expected
+    value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the {{domxref("DataTransfer")}} object's
-    {{domxref("DataTransfer.getData()","getData()")}} and
-    {{domxref("DataTransfer.setData()","setData()")}} methods.</p>
+This example shows the use of the {{domxref("DataTransfer")}} object's
+{{domxref("DataTransfer.getData()","getData()")}} and
+{{domxref("DataTransfer.setData()","setData()")}} methods.
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;
-    &lt;span id="drag" draggable="true" ondragstart="drag(event)"&gt;drag me to the other box&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">#div1, #div2 {
+```css
+#div1, #div2 {
     width:100px;
     height:50px;
     padding:10px;
     border:1px solid #aaaaaa;
 }
-</pre>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">function allowDrop(allowdropevent) {
+```js
+function allowDrop(allowdropevent) {
     allowdropevent.target.style.color = 'blue';
     allowdropevent.preventDefault();
 }
@@ -94,26 +90,24 @@ function drop(dropevent) {
     dropevent.target.appendChild(document.getElementById(data));
     document.getElementById("drag").style.color = 'black';
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample('Example', 600) }}</div>
+{{EmbedLiveSample('Example', 600) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

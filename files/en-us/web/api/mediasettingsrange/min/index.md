@@ -2,35 +2,36 @@
 title: MediaSettingsRange.min
 slug: Web/API/MediaSettingsRange/min
 tags:
-- API
-- ImageCapture
-- MediaSettingsRange
-- MediaStream
-- MediaStream Image Capture API
-- Property
-- Reference
-- min
+  - API
+  - ImageCapture
+  - MediaSettingsRange
+  - MediaStream
+  - MediaStream Image Capture API
+  - Property
+  - Reference
+  - min
 browser-compat: api.MediaSettingsRange.min
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Image")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>min</code></strong> read-only property of
-		the {{domxref("MediaSettingsRange")}} interface returns the minimum value of the
-		settings range.</p>
+The **`min`** read-only property of
+the {{domxref("MediaSettingsRange")}} interface returns the minimum value of the
+settings range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>min</em> = <em>mediaSettingsRange</em>.min</pre>
+```js
+var min = mediaSettingsRange.min
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer.</p>
+A double integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

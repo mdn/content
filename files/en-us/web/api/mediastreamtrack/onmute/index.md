@@ -2,61 +2,60 @@
 title: MediaStreamTrack.onmute
 slug: Web/API/MediaStreamTrack/onmute
 tags:
-- Event Handler
-- Media Capture
-- Media Capture and Streams
-- MediaStreamTrack
-- Property
-- Reference
-- WebRTC
-- mute
-- onmute
+  - Event Handler
+  - Media Capture
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - Property
+  - Reference
+  - WebRTC
+  - mute
+  - onmute
 browser-compat: api.MediaStreamTrack.onmute
 ---
-<div>{{ APIRef("Media Capture and Streams") }}</div>
+{{ APIRef("Media Capture and Streams") }}
 
-<p>{{domxref("MediaStreamTrack")}}'s
-    <code><strong>onmute</strong></code> event handler is called when the
-    {{event("mute")}} event is received.</p>
+{{domxref("MediaStreamTrack")}}'s
+**`onmute`** event handler is called when the
+{{event("mute")}} event is received.
 
-<p>Such an event is sent when the track is
-  temporarily not able to send data.</p>
+Such an event is sent when the track is
+temporarily not able to send data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>track</em>.onmute = <em>muteHandler</em>;
-</pre>
+```js
+track.onmute = muteHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to serve as an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{event("mute")}} event.
-  The event handler function receives a single parameter: the event object, which is a
-  simple {{domxref("Event")}} object.</p>
+A function to serve as an [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{event("mute")}} event.
+The event handler function receives a single parameter: the event object, which is a
+simple {{domxref("Event")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, an <code>onmute</code> handler is established to set the content HTML
-  of an element to display the "muted speaker" Emoji.</p>
+In this example, an `onmute` handler is established to set the content HTML
+of an element to display the "muted speaker" Emoji.
 
-<pre class="brush: js">myTrack.onmute = function(evt) {
-  playStateIcon.innerHTML = "&amp;#1F507;";
+```js
+myTrack.onmute = function(evt) {
+  playStateIcon.innerHTML = "&#1F507;";
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("mute")}} event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("MediaStreamTrack.muted")}} to determine if a track is currently muted
-  </li>
-  <li>{{domxref("MediaStreamTrack.onunmute")}}, the event handler for the
-    {{domxref("unmute")}} event.</li>
-</ul>
+- The {{event("mute")}} event and its type, {{domxref("Event")}}.
+- {{domxref("MediaStreamTrack.muted")}} to determine if a track is currently muted
+- {{domxref("MediaStreamTrack.onunmute")}}, the event handler for the
+  {{domxref("unmute")}} event.

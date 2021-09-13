@@ -2,48 +2,49 @@
 title: HTMLVideoElement.videoWidth
 slug: Web/API/HTMLVideoElement/videoWidth
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLVideoElement
-- Intrinsic Width
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- size
-- videoWidth
-- width
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLVideoElement
+  - Intrinsic Width
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - size
+  - videoWidth
+  - width
 browser-compat: api.HTMLVideoElement.videoWidth
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLVideoElement")}} interface's read-only
-    <code><strong>videoWidth</strong></code> property indicates the <strong>intrinsic
-      width</strong> of the video, expressed in CSS pixels. In simple terms, this is the
-    width of the media in its natural size.</p>
+The {{domxref("HTMLVideoElement")}} interface's read-only
+**`videoWidth`** property indicates the **intrinsic
+width** of the video, expressed in CSS pixels. In simple terms, this is the
+width of the media in its natural size.
 
-<p>See <a href="#about_intrinsic_width_and_height">About intrinsic width and height</a> for more details.</p>
+See [About intrinsic width and height](#about_intrinsic_width_and_height) for more details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>width</em> = <em>htmlVideoElement</em>.videoWidth;</pre>
+```js
+width = htmlVideoElement.videoWidth;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value specifying the intrinsic width of the video in CSS pixels. If the
-  element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is
-  <code>HTMLMediaElement.HAVE_NOTHING</code>, then the value of this property is 0,
-  because neither video nor poster frame size information is yet available.</p>
+An integer value specifying the intrinsic width of the video in CSS pixels. If the
+element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is
+`HTMLMediaElement.HAVE_NOTHING`, then the value of this property is 0,
+because neither video nor poster frame size information is yet available.
 
-<p>{{page("/en-US/docs/Web/API/HTMLVideoElement/videoHeight", "About intrinsic width and height", 0, 1)}}</p>
+{{page("/en-US/docs/Web/API/HTMLVideoElement/videoHeight", "About intrinsic width and height", 0, 1)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,78 +2,76 @@
 title: WebGLRenderingContext.isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
 tags:
-- API
-- Context
-- Lost
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
-- isContextLost
+  - API
+  - Context
+  - Lost
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
+  - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The
-    <code><strong>WebGLRenderingContext.isContextLost()</strong></code> method returns a
-    boolean value indicating whether or not the WebGL context has been lost and
-    must be re-established before rendering can resume.</p>
+The
+**`WebGLRenderingContext.isContextLost()`** method returns a
+boolean value indicating whether or not the WebGL context has been lost and
+must be re-established before rendering can resume.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>let <em>isLost</em> = <em>gl</em></var>.isContextLost();</pre>
+```js
+let isLost = gl.isContextLost();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value which is <code>true</code> if the context is lost, or
-  <code>false</code> if not.</p>
+A boolean value which is `true` if the context is lost, or
+`false` if not.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>There are several reasons why a WebGL context may be lost, making it necessary to
-  re-establish the context before resuming rendering. Examples include:</p>
+There are several reasons why a WebGL context may be lost, making it necessary to
+re-establish the context before resuming rendering. Examples include:
 
-<ul>
-  <li>Two or more pages are using the GPU, but together place too high a demand on the
-    GPU, so the browser tells the two contexts that they've lost the connection, then
-    selects one of the two to restore access for.</li>
-  <li>The user's computer has multiple graphics processors (such as a laptop with both
-    mobile and desktop class GPUs, the former used primarily when on battery power), and
-    the user or system decides to switch GPUs. In this case, all contexts are lost, then
-    restored after switching GPUs.</li>
-  <li>Another page running in the user's browser performs an operation using the GPU that
-    takes too long, causing hte browser to decide to reset the GPU in order to break the
-    stall. This would cause every WebGL context to be lost throughout the entire browser.
-  </li>
-  <li>The user updates their graphics driver on an operating system that allows graphics
-    drivers to be updated without restarting the system.</li>
-</ul>
+- Two or more pages are using the GPU, but together place too high a demand on the
+  GPU, so the browser tells the two contexts that they've lost the connection, then
+  selects one of the two to restore access for.
+- The user's computer has multiple graphics processors (such as a laptop with both
+  mobile and desktop class GPUs, the former used primarily when on battery power), and
+  the user or system decides to switch GPUs. In this case, all contexts are lost, then
+  restored after switching GPUs.
+- Another page running in the user's browser performs an operation using the GPU that
+  takes too long, causing hte browser to decide to reset the GPU in order to break the
+  stall. This would cause every WebGL context to be lost throughout the entire browser.
+- The user updates their graphics driver on an operating system that allows graphics
+  drivers to be updated without restarting the system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>For example, when checking for program linking success, you could also check if the
-  context is not lost:</p>
+For example, when checking for program linking success, you could also check if the
+context is not lost:
 
-<pre class="brush: js">gl.linkProgram(program);
+```js
+gl.linkProgram(program);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS) &amp;&amp; !gl.isContextLost()) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
   var info = gl.getProgramInfoLog(program);
   console.log('Error linking program:\n' + info);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("WebGLContextEvent")}} signals changes in the context state.</li>
-  <li><a href="https://www.khronos.org/webgl/wiki/HandlingContextLost">Handling lost
-      context in WebGL</a>: Khronos WebGL wiki</li>
-</ul>
+- The {{domxref("WebGLContextEvent")}} signals changes in the context state.
+- [Handling lost
+  context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki

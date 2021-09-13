@@ -2,31 +2,33 @@
 title: 'Location: username'
 slug: Web/API/Location/username
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.username
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>username</code></strong> property of the {{domxref("Location")}}
-  interface is a {{domxref("USVString")}} containing the username specified before the
-  domain name.</p>
+The **`username`** property of the {{domxref("Location")}}
+interface is a {{domxref("USVString")}} containing the username specified before the
+domain name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.username;
-<em>object</em>.username = <em>string</em>;
-</pre>
+```js
+string = object.username;
+object.username = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Let's &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/Location.username"&gt; be in the document
+```js
+// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/Location.username"> be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Returns:'anonymous'
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -15,33 +15,31 @@ tags:
   - source
 browser-compat: api.TrackDefaultList.TrackDefaultList
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>TrackDefaultList()</strong></code> constructor of the {{domxref("TrackDefaultList")}} interface constructs and returns a new <code>TrackDefaultList</code> object.</p>
+The **`TrackDefaultList()`** constructor of the {{domxref("TrackDefaultList")}} interface constructs and returns a new `TrackDefaultList` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var trackDefaultList = new TrackDefaultList(trackDefaults);</pre>
+```js
+var trackDefaultList = new TrackDefaultList(trackDefaults);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>trackDefaults</dt>
- <dd>A sequence (array) of {{domxref("TrackDefault")}} objects.</dd>
-</dl>
+- trackDefaults
+  - : A sequence (array) of {{domxref("TrackDefault")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("TrackDefaultList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}
+- {{domxref("TrackDefaultList")}}

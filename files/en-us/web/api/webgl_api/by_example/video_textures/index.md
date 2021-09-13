@@ -10,14 +10,14 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{ draft() }}</p>
+{{ draft() }}
 
-<p>{{Previous("Learn/WebGL/By_example/Textures_from_code")}}</p>
+{{Previous("Learn/WebGL/By_example/Textures_from_code")}}
 
-<p>This example demonstrates how to use video files as textures for WebGL surfaces.</p>
+This example demonstrates how to use video files as textures for WebGL surfaces.
 
-<h2 id="Textures_from_video">Textures from video</h2>
+## Textures from video
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-<p>{{Previous("Learn/WebGL/By_example/Textures_from_code")}}</p>
+{{Previous("Learn/WebGL/By_example/Textures_from_code")}}

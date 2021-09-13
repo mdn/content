@@ -10,38 +10,41 @@ tags:
   - Experimental
 browser-compat: api.CSSStyleRule.styleMap
 ---
-<div>{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>styleMap</code></strong> read-only property of the
-    {{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object
-    which provides access to the rule's property-value pairs.</p>
+The **`styleMap`** read-only property of the
+{{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object
+which provides access to the rule's property-value pairs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var stylePropertyMap = <em>cssStyleRule</em>.styleMap;</pre>
+```js
+var stylePropertyMap = cssStyleRule.styleMap;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('StylePropertyMap')}} object.</p>
+A {{domxref('StylePropertyMap')}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows <code>styleMap</code> being used to modify a style using
-    the {{domxref('StylePropertyMap.set()')}} method.</p>
+The following example shows `styleMap` being used to modify a style using
+the {{domxref('StylePropertyMap.set()')}} method.
 
-<pre class="brush: js">const stylesheet = document.styleSheets[0];
+```js
+const stylesheet = document.styleSheets[0];
 
-Object.values(stylesheet.cssRules).forEach(block =&gt; {
+Object.values(stylesheet.cssRules).forEach(block => {
   if (block.selectorText === 'button') {
     block.styleMap.set('--mainColor', 'black');
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

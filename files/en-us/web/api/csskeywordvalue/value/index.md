@@ -2,51 +2,52 @@
 title: CSSKeywordValue.value
 slug: Web/API/CSSKeywordValue/value
 tags:
-- API
-- CSS Typed Object Model API
-- CSSKeywordValue
-- Experimental
-- Houdini
-- Property
-- Reference
-- value
+  - API
+  - CSS Typed Object Model API
+  - CSSKeywordValue
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - value
 browser-compat: api.CSSKeywordValue.value
 ---
-<div>{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>value</code></strong> property of the
-    {{domxref("CSSKeywordValue")}} interface returns or sets the value of the
-    <code>CSSKeywordValue</code>. </p>
+The **`value`** property of the
+{{domxref("CSSKeywordValue")}} interface returns or sets the value of the
+`CSSKeywordValue`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>val</var> = <var>cssKeywordValue</var>.value
-<var>cssKeywordValue</var>.value = <var>val</var></pre>
+```js
+var val = cssKeywordValue.value
+cssKeywordValue.value = val
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('USVString')}}.</p>
+A {{domxref('USVString')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>If the <code>value</code> property is an empty {{jsxref('String')}} when being set.</dd>
-</dl>
+- `TypeError`
+  - : If the `value` property is an empty {{jsxref('String')}} when being set.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example resets the CSS {{cssxref('display')}} property to its defaults.
-</p>
+The following example resets the CSS {{cssxref('display')}} property to its defaults.
 
-<pre class="brush: js">let indicator = document.getElementById('indicator');
+```js
+let indicator = document.getElementById('indicator');
 indicator.attributeStyleMap.set('display', new CSSKeywordValue('initial'));
-indicator.attributeStyleMap.get('display').value // 'initial'</pre>
+indicator.attributeStyleMap.get('display').value // 'initial'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

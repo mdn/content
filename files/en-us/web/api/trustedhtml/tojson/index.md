@@ -9,34 +9,35 @@ tags:
   - TrustedHTML
 browser-compat: api.TrustedHTML.toJSON
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("TrustedHTML")}} interface returns a JSON representation of the stored data.</p>
+The **`toJSON()`** method of the {{domxref("TrustedHTML")}} interface returns a JSON representation of the stored data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>json</var> = <var>TrustedHTML</var>.toJSON();</pre>
+    var json = TrustedHTML.toJSON();
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.</p>
+A {{domxref("DOMString","string")}} containing a JSON representation of the stored data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The constant <code>escaped</code> is an object created via the Trusted Types policy escapeHTMLPolicy. The <code>toString()</code> method returns a string to safely insert into a document.</p>
+The constant `escaped` is an object created via the Trusted Types policy escapeHTMLPolicy. The `toString()` method returns a string to safely insert into a document.
 
-<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+```js
+const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) => string.replace(/\>/g, "<")
 });
 
-const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 console.log(escaped.toJSON());
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

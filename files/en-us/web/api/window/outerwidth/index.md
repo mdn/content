@@ -9,27 +9,25 @@ tags:
   - Reference
 browser-compat: api.Window.outerWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>Window.outerWidth</code></strong> read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.</p>
+**`Window.outerWidth`** read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.</p>
+To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 
-<p>To get the inner width of a window, i.e. the width of the page being displayed, see {{domxref("window.innerWidth")}}.</p>
+To get the inner width of a window, i.e. the width of the page being displayed, see {{domxref("window.innerWidth")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}</li>
-</ul>
+- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
+- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}

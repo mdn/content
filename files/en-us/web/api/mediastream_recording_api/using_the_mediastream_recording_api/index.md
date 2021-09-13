@@ -10,57 +10,60 @@ tags:
   - NeedsUpdate
   - Tutorial
 ---
-<div>{{DefaultAPISidebar("MediaStream Recording")}}</div>
+{{DefaultAPISidebar("MediaStream Recording")}}
 
-<p>The <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.</p>
+The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.
 
-<p>Both audio and video may be recorded, separately or together. This article aims to provide a basic guide on how to use the MediaRecorder interface, which provides this API.</p>
+Both audio and video may be recorded, separately or together. This article aims to provide a basic guide on how to use the MediaRecorder interface, which provides this API.
 
-<h2 id="A_sample_application_Web_Dictaphone">A sample application: Web Dictaphone</h2>
+## A sample application: Web Dictaphone
 
-<p><img alt="An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back." src="web-dictaphone.png"></p>
+![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
-<p>To demonstrate basic usage of the MediaRecorder API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.</p>
+To demonstrate basic usage of the MediaRecorder API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.
 
-<p>You can see this <a href="https://mdn.github.io/web-dictaphone/">demo running live</a>, or <a href="https://github.com/mdn/web-dictaphone">grab the source code</a> on GitHub.</p>
+You can see this [demo running live](https://mdn.github.io/web-dictaphone/), or [grab the source code](https://github.com/mdn/web-dictaphone) on GitHub.
 
-<h2 id="CSS_goodies">CSS goodies</h2>
+## CSS goodies
 
-<p>The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the {{anch("Basic app setup")}} section.</p>
+The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the {{anch("Basic app setup")}} section.
 
-<h3 id="Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc">Keeping the interface constrained to the viewport, regardless of device height, with calc()</h3>
+### Keeping the interface constrained to the viewport, regardless of device height, with calc()
 
-<p>The {{cssxref("calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.</p>
+The {{cssxref("calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
 
-<p>For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:</p>
+For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:
 
-<pre class="brush: css">header {
+```css
+header {
   height: 70px;
 }
 
 .main-controls {
   padding-bottom: 0.7rem;
   height: 170px;
-}</pre>
+}
+```
 
-<p>However, we wanted to make the third area (which contains the recorded samples you can play back) take up whatever space is left, regardless of the device height. Flexbox could be the answer here, but it's a bit overkill for such a simple layout. Instead, the problem was solved by making the third container's height equal to 100% of the parent height, minus the heights and padding of the other two:</p>
+However, we wanted to make the third area (which contains the recorded samples you can play back) take up whatever space is left, regardless of the device height. Flexbox could be the answer here, but it's a bit overkill for such a simple layout. Instead, the problem was solved by making the third container's height equal to 100% of the parent height, minus the heights and padding of the other two:
 
-<pre class="brush: css">.sound-clips {
+```css
+.sound-clips {
   box-shadow: inset 0 3px 4px rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
   height: calc(100% - 240px - 0.7rem);
   overflow: scroll;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> <code>calc()</code> has good support across modern browsers too, even going back to Internet Explorer 9.</p>
-</div>
+> **Note:** `calc()` has good support across modern browsers too, even going back to Internet Explorer 9.
 
-<h3 id="Checkbox_hack_for_showinghiding">Checkbox hack for showing/hiding</h3>
+### Checkbox hack for showing/hiding
 
-<p>This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right hand corner. First of all, we style the <code>&lt;label&gt;</code> how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:</p>
+This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
 
-<pre class="brush: css">label {
+```css
+label {
     font-family: 'NotoColorEmoji';
     font-size: 3rem;
     position: absolute;
@@ -68,18 +71,22 @@ tags:
     right: 3px;
     z-index: 5;
     cursor: pointer;
-}</pre>
+}
+```
 
-<p>Then we hide the actual checkbox, because we don't want it cluttering up our UI:</p>
+Then we hide the actual checkbox, because we don't want it cluttering up our UI:
 
-<pre class="brush: css">input[type=checkbox] {
+```css
+input[type=checkbox] {
    position: absolute;
    top: -100px;
-}</pre>
+}
+```
 
-<p>Next, we style the Information screen (wrapped in an {{htmlelement("aside")}} element) how we want it, give it fixed position so that it doesn't appear in the layout flow and affect the main UI, transform it to the position we want it to sit in by default, and give it a transition for smooth showing/hiding:</p>
+Next, we style the Information screen (wrapped in an {{htmlelement("aside")}} element) how we want it, give it fixed position so that it doesn't appear in the layout flow and affect the main UI, transform it to the position we want it to sit in by default, and give it a transition for smooth showing/hiding:
 
-<pre class="brush: css">aside {
+```css
+aside {
    position: fixed;
    top: 0;
    left: 0;
@@ -90,27 +97,33 @@ tags:
    transition: 0.6s all;
    background-color: #999;
     background-image: linear-gradient(to top right, rgba(0,0,0,0), rgba(0,0,0,0.5));
-}</pre>
+}
+```
 
-<p>Last, we write a rule to say that when the checkbox is checked (when we click/focus the label), the adjacent <code>&lt;aside&gt;</code> element will have its horizontal translation value changed and transition smoothly into view:</p>
+Last, we write a rule to say that when the checkbox is checked (when we click/focus the label), the adjacent `<aside>` element will have its horizontal translation value changed and transition smoothly into view:
 
-<pre class="brush: css">input[type=checkbox]:checked ~ aside {
+```css
+input[type=checkbox]:checked ~ aside {
   transform: translateX(0);
-}</pre>
+}
+```
 
-<h2 id="Basic_app_setup">Basic app setup</h2>
+## Basic app setup
 
-<p>To grab the media stream we want to capture, we use <code>getUserMedia()</code>. We then use the MediaRecorder API to record the stream, and output each recorded snippet into the source of a generated {{htmlelement("audio")}} element so it can be played back.</p>
+To grab the media stream we want to capture, we use `getUserMedia()`. We then use the MediaRecorder API to record the stream, and output each recorded snippet into the source of a generated {{htmlelement("audio")}} element so it can be played back.
 
-<p>We'll declare some variables for the record and stop buttons, and the {{htmlelement("article")}} that will contain the generated audio players:</p>
+We'll declare some variables for the record and stop buttons, and the {{htmlelement("article")}} that will contain the generated audio players:
 
-<pre class="brush: js">const record = document.querySelector('.record');
+```js
+const record = document.querySelector('.record');
 const stop = document.querySelector('.stop');
-const soundClips = document.querySelector('.sound-clips');</pre>
+const soundClips = document.querySelector('.sound-clips');
+```
 
-<p>Finally for this section, we set up the basic <code>getUserMedia</code> structure:</p>
+Finally for this section, we set up the basic `getUserMedia` structure:
 
-<pre class="brush: js">if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {
+```js
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
    console.log('getUserMedia supported.');
    navigator.mediaDevices.getUserMedia (
       // constraints - only audio needed for this app
@@ -130,67 +143,71 @@ const soundClips = document.querySelector('.sound-clips');</pre>
    );
 } else {
    console.log('getUserMedia not supported on your browser!');
-}</pre>
+}
+```
 
-<p>The whole thing is wrapped in a test that checks whether <code>getUserMedia</code> is supported before running anything else. Next, we call <code>getUserMedia()</code> and inside it define:</p>
+The whole thing is wrapped in a test that checks whether `getUserMedia` is supported before running anything else. Next, we call `getUserMedia()` and inside it define:
 
-<ul>
- <li><strong>The constraints</strong>: Only audio is to be captured for our dictaphone.</li>
- <li><strong>The success callback</strong>: This code is run once the <code>getUserMedia</code> call has been completed successfully.</li>
- <li><strong>The error/failure callback</strong>: The code is run if the <code>getUserMedia</code> call fails for whatever reason.</li>
-</ul>
+- **The constraints**: Only audio is to be captured for our dictaphone.
+- **The success callback**: This code is run once the `getUserMedia` call has been completed successfully.
+- **The error/failure callback**: The code is run if the `getUserMedia` call fails for whatever reason.
 
-<div class="note">
-<p><strong>Note:</strong> All of the code below is placed inside the <code>getUserMedia</code> success callback.</p>
-</div>
+> **Note:** All of the code below is placed inside the `getUserMedia` success callback.
 
-<h2 id="Capturing_the_media_stream">Capturing the media stream</h2>
+## Capturing the media stream
 
-<p>Once <code>getUserMedia</code> has created a media stream successfully, you create a new Media Recorder instance with the <code>MediaRecorder()</code> constructor and pass it the stream directly. This is your entry point into using the MediaRecorder API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.</p>
+Once `getUserMedia` has created a media stream successfully, you create a new Media Recorder instance with the `MediaRecorder()` constructor and pass it the stream directly. This is your entry point into using the MediaRecorder API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.
 
-<pre class="brush: js">const mediaRecorder = new MediaRecorder(stream);</pre>
+```js
+const mediaRecorder = new MediaRecorder(stream);
+```
 
-<p>There are a series of methods available in the {{domxref("MediaRecorder")}} interface that allow you to control recording of the media stream; in Web Dictaphone we just make use of two, and listen to some events. First of all, {{domxref("MediaRecorder.start()")}} is used to start recording the stream once the record button is pressed:</p>
+There are a series of methods available in the {{domxref("MediaRecorder")}} interface that allow you to control recording of the media stream; in Web Dictaphone we just make use of two, and listen to some events. First of all, {{domxref("MediaRecorder.start()")}} is used to start recording the stream once the record button is pressed:
 
-<pre class="brush: js">record.onclick = function() {
+```js
+record.onclick = function() {
   mediaRecorder.start();
   console.log(mediaRecorder.state);
   console.log("recorder started");
   record.style.background = "red";
   record.style.color = "black";
-}</pre>
+}
+```
 
-<p>When the <code>MediaRecorder</code> is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".</p>
+When the `MediaRecorder` is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".
 
-<p>As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:</p>
+As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.ondataavailable")}}:
 
-<pre class="brush: js">let chunks = [];
+```js
+let chunks = [];
 
 mediaRecorder.ondataavailable = function(e) {
-  <span class="pl-smi">chunks</span>.<span class="pl-c1">push</span>(<span class="pl-smi">e</span>.<span class="pl-c1">data</span>);
-}</pre>
+  chunks.push(e.data);
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The browser will fire <code>dataavailable</code> events as needed, but if you want to intervene you can also include a timeslice when invoking the <code>start()</code> method — for example <code>start(10000)</code> — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.</p>
-</div>
+> **Note:** The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
 
-<p>Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.</p>
+Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.
 
-<pre class="brush: js">stop.onclick = function() {
+```js
+stop.onclick = function() {
   mediaRecorder.stop();
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
   record.style.background = "";
   record.style.color = "";
-}</pre>
+}
+```
 
-<p>Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).</p>
+Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
 
-<h2 id="Grabbing_and_using_the_blob">Grabbing and using the blob</h2>
+## Grabbing and using the blob
 
-<p>When recording has stopped, the <code>state</code> property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:</p>
+When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.onstop")}}, and finalize our blob there from all the chunks we have received:
 
-<pre class="brush: js">mediaRecorder.onstop = function(e) {
+```js
+mediaRecorder.onstop = function(e) {
   console.log("recorder stopped");
 
   const clipName = prompt('Enter a name for your sound clip');
@@ -219,53 +236,41 @@ mediaRecorder.ondataavailable = function(e) {
     let evtTgt = e.target;
     evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
   }
-}</pre>
+}
+```
 
-<p>Let's go through the above code and look at what's happening.</p>
+Let's go through the above code and look at what's happening.
 
-<p>First, we display a prompt asking the user to name their clip.</p>
+First, we display a prompt asking the user to name their clip.
 
-<p>Next, we create an HTML structure like the following, inserting it into our clip container, which is an {{htmlelement("article")}} element.</p>
+Next, we create an HTML structure like the following, inserting it into our clip container, which is an {{htmlelement("article")}} element.
 
-<pre class="brush: html">&lt;article class="clip"&gt;
-  &lt;audio controls&gt;&lt;/audio&gt;
-  &lt;p&gt;<em>your clip name</em>&lt;/p&gt;
-  &lt;button&gt;Delete&lt;/button&gt;
-&lt;/article&gt;</pre>
+```html
+<article class="clip">
+  <audio controls></audio>
+  <p>your clip name</p>
+  <button>Delete</button>
+</article>
+```
 
-<p>After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using <code>window.URL.createObjectURL(blob)</code>. We then set the value of the {{HTMLElement("audio")}} element's {{htmlattrxref("src", "audio")}} attribute to the object URL, so that when the play button is pressed on the audio player, it will play the <code>Blob</code>.</p>
+After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's {{htmlattrxref("src", "audio")}} attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
 
-<p>Finally, we set an <code>onclick</code> handler on the delete button to be a function that deletes the whole clip HTML structure.</p>
+Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("MediaStream Recording", "#MediaRecorderAPI")}}</td>
-   <td>{{Spec2("MediaStream Recording")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                                       | Comment            |
+| ---------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| {{SpecName("MediaStream Recording", "#MediaRecorderAPI")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="MediaRecorder"><code>MediaRecorder</code></h3>
+### `MediaRecorder`
 
-<p>{{Compat("api.MediaRecorder")}}</p>
+{{Compat("api.MediaRecorder")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaRecorder API</a> landing page</li>
- <li><code>{{domxref("Navigator.getUserMedia()")}}</code></li>
- <li><a href="https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/">MediaRecorder API now supported by 65% of your website users</a></li>
-</ul>
+- [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
+- `{{domxref("Navigator.getUserMedia()")}}`
+- [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

@@ -9,225 +9,214 @@ tags:
   - Deprecated
   - Reference
 ---
-<p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
+{{APIRef("IndexedDB")}} {{ draft() }}
 
-<div class="warning">
-<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
-</div>
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-<p>The <code>DatabaseSync</code> interface in the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a synchronous <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</a>.</p>
+The `DatabaseSync` interface in the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a synchronous [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#createobjectstore">createObjectStore</a> (in DOMString name, in DOMString keypath, in optional boolean autoIncrement) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#openobjectstore">openObjectStore</a> (in DOMString name, in optional unsigned short mode) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#removeobjectstore">removeObjectStore</a> (in DOMString storeName) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#setversion">setVersion</a> (in DOMString version);</code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/IDBTransactionSync">IDBTransactionSync</a> <a href="#transaction">transaction</a> (in optional DOMStringList storeNames, in optional unsigned int timeout) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBObjectStoreSync"
+            >IDBObjectStoreSync</a
+          >
+          <a href="#createobjectstore">createObjectStore</a> (in DOMString name,
+          in DOMString keypath, in optional boolean autoIncrement) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBObjectStoreSync"
+            >IDBObjectStoreSync</a
+          >
+          <a href="#openobjectstore">openObjectStore</a> (in DOMString name, in
+          optional unsigned short mode) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#removeobjectstore">removeObjectStore</a> (in DOMString
+          storeName) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#setversion">setVersion</a> (in DOMString
+          version);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBTransactionSync"
+            >IDBTransactionSync</a
+          >
+          <a href="#transaction">transaction</a> (in optional DOMStringList
+          storeNames, in optional unsigned int timeout) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>description</code></td>
-   <td><code>readonly DOMString </code></td>
-   <td>The human-readable description of the connected database.</td>
-  </tr>
-  <tr>
-   <td><code>name </code></td>
-   <td><code>readonly DOMString </code></td>
-   <td>The name of the connected database.</td>
-  </tr>
-  <tr>
-   <td><code>objectStores </code></td>
-   <td><code>readonly DOMStringList </code></td>
-   <td>The names of the object stores that exist in the connected database.</td>
-  </tr>
-  <tr>
-   <td><code>version </code></td>
-   <td><code>readonly DOMString</code></td>
-   <td>The version of the connected database. Has the null value when the database is first created.</td>
-  </tr>
- </tbody>
-</table>
+| Attribute      | Type                     | Description                                                                                   |
+| -------------- | ------------------------ | --------------------------------------------------------------------------------------------- |
+| `description`  | `readonly DOMString`     | The human-readable description of the connected database.                                     |
+| `name`         | `readonly DOMString`     | The name of the connected database.                                                           |
+| `objectStores` | `readonly DOMStringList` | The names of the object stores that exist in the connected database.                          |
+| `version`      | `readonly DOMString`     | The version of the connected database. Has the null value when the database is first created. |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="createObjectStore">createObjectStore()</h3>
+### createObjectStore()
 
-<p>Creates and returns a new object store with the given name in the connected database.</p>
+Creates and returns a new object store with the given name in the connected database.
 
-<pre class="eval"> IDBObjectStoreSync createObjectStore(
-  in DOMString name,
-  in DOMString keypath,
-  in optional boolean autoIncrement
-) raises  (IDBDatabaseException);
-</pre>
+     IDBObjectStoreSync createObjectStore(
+      in DOMString name,
+      in DOMString keypath,
+      in optional boolean autoIncrement
+    ) raises  (IDBDatabaseException);
 
-<h5 id="Parameters">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>name</dt>
- <dd>The name of a new object store.</dd>
- <dt>keypath</dt>
- <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.</dd>
- <dt>autoIncrement</dt>
- <dd>If true, the object store uses a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key generator</a>; if false, it does not use one.</dd>
-</dl>
+- name
+  - : The name of a new object store.
+- keypath
+  - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) used by the new object store. If a null path is specified, then the object store does not have a key path, and uses out-of-line keys.
+- autoIncrement
+  - : If true, the object store uses a [key generator](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator); if false, it does not use one.
 
-<h5 id="Returns">Returns</h5>
+##### Returns
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
- <dd>An object to access the newly created object store.</dd>
-</dl>
+- [`IDBObjectStoreSync`](/en-US/docs/Web/API/IDBObjectStoreSync)
+  - : An object to access the newly created object store.
 
-<h5 id="Exceptions">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#constraint_err">CONSTRAINT_ERR</a></code></dt>
- <dd>If an object store with the same name (based on case-sensitive comparison) already exists in the connected database.</dd>
-</dl>
+- [`CONSTRAINT_ERR`](/en-US/docs/Web/API/IDBDatabaseException#constraint_err)
+  - : If an object store with the same name (based on case-sensitive comparison) already exists in the connected database.
 
-<h3 id="openObjectStore">openObjectStore()</h3>
+### openObjectStore()
 
-<p>Opens the object store with the given name in the connected database using the specified mode.</p>
+Opens the object store with the given name in the connected database using the specified mode.
 
-<pre>IDBObjectStoreSync openObjectStore (
-  in DOMString name,
-  in optional unsigned short mode
-) raises (IDBDatabaseException);
-</pre>
+    IDBObjectStoreSync openObjectStore (
+      in DOMString name,
+      in optional unsigned short mode
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_2">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>name</dt>
- <dd>The name of the object store to open.</dd>
- <dt>mode</dt>
- <dd>The mode that is used to access the object store.</dd>
-</dl>
+- name
+  - : The name of the object store to open.
+- mode
+  - : The mode that is used to access the object store.
 
-<h5 id="Returns_2">Returns</h5>
+##### Returns
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/IDBObjectStoreSync"><code>IDBObjectStoreSync</code></a></dt>
- <dd>An object to access the opened object store.</dd>
-</dl>
+- [`IDBObjectStoreSync`](/en-US/docs/Web/API/IDBObjectStoreSync)
+  - : An object to access the opened object store.
 
-<h5 id="Exceptions_2">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If an object store with the given name (based on case-sensitive comparison) already exists in the connected database.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If an object store with the given name (based on case-sensitive comparison) already exists in the connected database.
 
-<h3 id="removeObjectStore">removeObjectStore()</h3>
+### removeObjectStore()
 
-<p>Destroys an object store with the given name, as well as all indexes that reference that object store.</p>
+Destroys an object store with the given name, as well as all indexes that reference that object store.
 
-<pre>void removeObjectStore (
-  in DOMString storeName
-) raises (IDBDatabaseException);
-</pre>
+    void removeObjectStore (
+      in DOMString storeName
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_3">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>storeName</dt>
- <dd>The name of an existing object store to remove.</dd>
-</dl>
+- storeName
+  - : The name of an existing object store to remove.
 
-<h5 id="Returns_3">Returns</h5>
+##### Returns
 
-<p><code>void</code></p>
+`void`
 
-<h5 id="Exceptions_3">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If the object store with the given name (based on case-sensitive comparison) does not exist in the connected database.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If the object store with the given name (based on case-sensitive comparison) does not exist in the connected database.
 
-<h3 id="setversion">setVersion()</h3>
+### setVersion()
 
-<p>Sets the version of the connected database.</p>
+Sets the version of the connected database.
 
-<pre>void setVersion (
-  in DOMString version
-);
-</pre>
+    void setVersion (
+      in DOMString version
+    );
 
-<h5 id="Parameters_4">Parameters</h5>
+##### Parameters
 
-<h5 id="Returns_4">Returns</h5>
+##### Returns
 
-<p><code>void</code></p>
+`void`
 
-<dl>
- <dt>version</dt>
- <dd>The version to store in the database.</dd>
-</dl>
+- version
+  - : The version to store in the database.
 
-<h3 id="transaction">transaction()</h3>
+### transaction()
 
-<p>Creates and returns a transaction, acquiring locks on the given database objects, within the specified timeout duration, if possible.</p>
+Creates and returns a transaction, acquiring locks on the given database objects, within the specified timeout duration, if possible.
 
-<pre>IDBTransactionSync transaction (
-  in optional DOMStringList storeNames,
-  in optional unsigned int timeout
-) raises (IDBDatabaseException);
-</pre>
+    IDBTransactionSync transaction (
+      in optional DOMStringList storeNames,
+      in optional unsigned int timeout
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters_5">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>storeNames</dt>
- <dd>The names of object stores and indexes in the scope of the new transaction.</dd>
- <dt>timeout</dt>
- <dd>The interval that this operation is allowed to take to acquire locks on all the objects stores and indexes identified in <code>storeNames</code>.</dd>
-</dl>
+- storeNames
+  - : The names of object stores and indexes in the scope of the new transaction.
+- timeout
+  - : The interval that this operation is allowed to take to acquire locks on all the objects stores and indexes identified in `storeNames`.
 
-<h5 id="Returns_5">Returns</h5>
+##### Returns
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBTransactionSync">IDBTransactionSync</a></code></dt>
- <dd>An object to access the newly created transaction.</dd>
-</dl>
+- [`IDBTransactionSync`](/en-US/docs/Web/API/IDBTransactionSync)
+  - : An object to access the newly created transaction.
 
-<h5 id="Exceptions_4">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#timeout_err">TIMEOUT_ERR</a></code></dt>
- <dd>If reserving all the database objects identified in <code>storeNames</code> takes longer than the <code>timeout</code> interval.</dd>
-</dl>
+- [`TIMEOUT_ERR`](/en-US/docs/Web/API/IDBDatabaseException#timeout_err)
+  - : If reserving all the database objects identified in `storeNames` takes longer than the `timeout` interval.

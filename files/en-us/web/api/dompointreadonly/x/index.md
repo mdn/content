@@ -2,54 +2,52 @@
 title: DOMPointReadOnly.x
 slug: Web/API/DOMPointReadOnly/x
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Read-only
-- Reference
-- x
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Read-only
+  - Reference
+  - x
 browser-compat: api.DOMPointReadOnly.x
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPointReadOnly</strong></code> interface's
-  <code><strong>x</strong></code> property holds the horizontal coordinate, x, for a
-  read-only point in space. This property cannot be changed by JavaScript code in this
-  read-only version of the <code>DOMPoint</code> object.</p>
+The **`DOMPointReadOnly`** interface's
+**`x`** property holds the horizontal coordinate, x, for a
+read-only point in space. This property cannot be changed by JavaScript code in this
+read-only version of the `DOMPoint` object.
 
-<p>In general, positive values <code>x</code> mean to the right, and negative values of
-  <code>x</code> means to the left, assuming no transforms have resulted in a reversal.
-</p>
+In general, positive values `x` mean to the right, and negative values of
+`x` means to the left, assuming no transforms have resulted in a reversal.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>xPos</var> = <var>someDOMPointReadOnly</var>.x;</pre>
+```js
+const xPos = someDOMPointReadOnly.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the x coordinate's value for the
-  point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the x coordinate's value for the
+point. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPointReadOnly.y", "y")}},
-    {{domxref("DOMPointReadOnly.z", "z")}}, and the perspective value,
-    {{domxref("DOMPointReadOnly.w", "w")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPointReadOnly.y", "y")}},
+  {{domxref("DOMPointReadOnly.z", "z")}}, and the perspective value,
+  {{domxref("DOMPointReadOnly.w", "w")}}.

@@ -11,46 +11,46 @@ tags:
   - request
 browser-compat: api.Request.referrerPolicy
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>referrerPolicy</code></strong> read-only property of the
-  {{domxref("Request")}} interface returns the referrer policy, which governs what
-  referrer information, sent in the {{HTTPHeader("Referer")}} header, should be included
-  with the request.</p>
+The **`referrerPolicy`** read-only property of the
+{{domxref("Request")}} interface returns the referrer policy, which governs what
+referrer information, sent in the {{HTTPHeader("Referer")}} header, should be included
+with the request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myReferrerPolicy</var> = <var>request</var>.referrerPolicy;</pre>
+```js
+var myReferrerPolicy = request.referrerPolicy;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the request's <code>referrerPolicy</code>. For
-  more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
-  header page.</p>
+A {{domxref("DOMString")}} representing the request's `referrerPolicy`. For
+more information and possible values, see the {{HTTPHeader("Referrer-Policy")}} HTTP
+header page.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the request referrer policy in a variable:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the request referrer policy in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrerPolicy; // returns "" by default</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myReferrer = myRequest.referrerPolicy; // returns "" by default
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

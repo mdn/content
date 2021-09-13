@@ -7,19 +7,18 @@ tags:
   - Video
   - WebGL
 ---
-<p>{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
-<p>In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.</p>
+In this demonstration, we build upon the previous example by replacing our static textures with the frames of an mp4 video file that's playing. This is actually pretty easy to do and fun to watch, so let's get started. You can use similar code to use any sort of data (such as a {{ HTMLElement("canvas") }}) as the source for your textures.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example uses the <a href="https://glmatrix.net/">glMatrix</a> library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Getting_access_to_the_video">Getting access to the video</h2>
+## Getting access to the video
 
-<p>The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames:</p>
+The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames:
 
-<pre class="brush: js">// will set to true when video can be copied to texture
+```js
+// will set to true when video can be copied to texture
 var copyVideo = false;
 
 function setupVideo(url) {
@@ -49,27 +48,27 @@ function setupVideo(url) {
   video.play();
 
   function checkReady() {
-    if (playing &amp;&amp; timeupdate) {
+    if (playing && timeupdate) {
       copyVideo = true;
     }
   }
 
   return video;
 }
+```
 
-</pre>
+First we create a video element. We set it to autoplay, mute the sound, and loop the video. We then set up two events to make sure the video is playing and the time has been updated. We need both of these checks because it will produce an error if you upload a video to WebGL that has no data available yet. Checking for both of these events guarantees there is data available and it's safe to start uploading video to a WebGL texture. In the code above, we confirm whether we got both of those events; if so, we set a global variable, `copyVideo`, to true to indicate that it's safe to start copying the video to a texture.
 
-<p>First we create a video element. We set it to autoplay, mute the sound, and loop the video. We then set up two events to make sure the video is playing and the time has been updated. We need both of these checks because it will produce an error if you upload a video to WebGL that has no data available yet. Checking for both of these events guarantees there is data available and it's safe to start uploading video to a WebGL texture. In the code above, we confirm whether we got both of those events; if so, we set a global variable, <code>copyVideo</code>, to true to indicate that it's safe to start copying the video to a texture.</p>
+And finally, we set the `src` attribute to start and call `play` to start loading and playing the video.
 
-<p>And finally, we set the <code>src</code> attribute to start and call <code>play</code> to start loading and playing the video.</p>
+The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
 
-<p>The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for help.</p>
+## Using the video frames as a texture
 
-<h2 id="Using_the_video_frames_as_a_texture">Using the video frames as a texture</h2>
+The next change is to `initTexture()`, which becomes much simpler, since it no longer needs to load an image file. Instead, all it does is create an empty texture object, put a single pixel in it, and set its filtering for later use:
 
-<p>The next change is to <code>initTexture()</code>, which becomes much simpler, since it no longer needs to load an image file. Instead, all it does is create an empty texture object, put a single pixel in it, and set its filtering for later use:</p>
-
-<pre class="brush: js">function initTexture(gl) {
+```js
+function initTexture(gl) {
   const texture = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -97,11 +96,12 @@ function setupVideo(url) {
 
   return texture;
 }
-</pre>
+```
 
-<div>Here's what the <code>updateTexture()</code> function looks like; this is where the real work is done:</div>
+Here's what the `updateTexture()` function looks like; this is where the real work is done:
 
-<pre class="brush: js">function updateTexture(gl, texture, video) {
+```js
+function updateTexture(gl, texture, video) {
   const level = 0;
   const internalFormat = gl.RGBA;
   const srcFormat = gl.RGBA;
@@ -110,15 +110,16 @@ function setupVideo(url) {
   gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
                 srcFormat, srcType, video);
 }
-</pre>
+```
 
-<p>You've seen this code before. It's nearly identical to the image onload function in the previous example — except when we call <code>texImage2D()</code>, instead of passing an <code>Image</code> object, we pass in the {{ HTMLElement("video") }} element. WebGL knows how to pull the current frame out and use it as a texture.</p>
+You've seen this code before. It's nearly identical to the image onload function in the previous example — except when we call `texImage2D()`, instead of passing an `Image` object, we pass in the {{ HTMLElement("video") }} element. WebGL knows how to pull the current frame out and use it as a texture.
 
-<p>Then in <code>main()</code> in place of the call to <code>loadTexture()</code> in the previous example, we call  <code>initTexture</code><code>()</code> followed by <code>setupVideo()</code> .</p>
+Then in `main()` in place of the call to `loadTexture()` in the previous example, we call  ` initTexture``() ` followed by `setupVideo()` .
 
-<p>In the definition of <code>render()</code> if <code>copyVideo</code> is true, then we call <code>updateTexture()</code> each time just before we call the <code>drawScene()</code> function.</p>
+In the definition of `render()` if `copyVideo` is true, then we call `updateTexture()` each time just before we call the `drawScene()` function.
 
-<pre class="brush: js">  const texture = initTexture(gl);
+```js
+  const texture = initTexture(gl);
 
   const video = setupVideo('Firefox.mp4');
 
@@ -139,18 +140,16 @@ function setupVideo(url) {
     requestAnimationFrame(render);
   }
   requestAnimationFrame(render);
-</pre>
+```
 
-<p>That's all there is to it!</p>
+That's all there is to it!
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">Open this demo on a new page</a></p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample8/)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Using_HTML5_audio_and_video">Using audio and video in Firefox</a></li>
-</ul>
+- [Using audio and video in Firefox](/en-US/docs/Using_HTML5_audio_and_video)
 
-<p>{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

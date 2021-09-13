@@ -11,24 +11,24 @@ tags:
   - onnotificationclick
 browser-compat: api.ServiceWorkerGlobalScope.onnotificationclick
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong>ServiceWorkerGlobalScope.onnotificationclick</strong> property is an event handler called whenever the {{Event("notificationclick")}} event is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user clicks on a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.</p>
+The **ServiceWorkerGlobalScope.onnotificationclick** property is an event handler called whenever the {{Event("notificationclick")}} event is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user clicks on a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
-<p>Notifications created on the main thread or in workers which aren't service workers using the {{domxref("Notification.Notification","Notification()")}} constructor will instead receive a {{Event("click")}} event on the <code>Notification</code> object itself.</p>
+Notifications created on the main thread or in workers which aren't service workers using the {{domxref("Notification.Notification","Notification()")}} constructor will instead receive a {{Event("click")}} event on the `Notification` object itself.
 
-<div class="note">
-<p><strong>Note:</strong> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the {{domxref("Notification.Notification","Notification()")}} constructor will throw an error.</p>
-</div>
+> **Note:** Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the {{domxref("Notification.Notification","Notification()")}} constructor will throw an error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... };
-</pre>
+```js
+ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.onnotificationclick = function(event) {
+```js
+self.onnotificationclick = function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -37,21 +37,21 @@ browser-compat: api.ServiceWorkerGlobalScope.onnotificationclick
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

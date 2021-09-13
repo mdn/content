@@ -9,51 +9,48 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.RTCPeerConnection
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCPeerConnection()</code></strong>
-    constructor returns a newly-created {{domxref("RTCPeerConnection")}}, which represents
-    a connection between the local device and a remote peer.</p>
+The **`RTCPeerConnection()`**
+constructor returns a newly-created {{domxref("RTCPeerConnection")}}, which represents
+a connection between the local device and a remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">pc = new RTCPeerConnection([<em>configuration</em>]);</pre>
+```js
+pc = new RTCPeerConnection([configuration]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>configuration</code> {{optional_inline}}</dt>
-  <dd>An <a href="#rtcconfiguration_dictionary"><code>RTCConfiguration</code>
-      dictionary</a> providing options to configure the new connection.</dd>
-</dl>
+- `configuration` {{optional_inline}}
+  - : An [`RTCConfiguration`
+    dictionary](#rtcconfiguration_dictionary) providing options to configure the new connection.
 
-<h3 id="RTCConfiguration_dictionary">RTCConfiguration dictionary</h3>
+### RTCConfiguration dictionary
 
-<p>{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}</p>
+{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A newly-created {{domxref("RTCPeerConnection")}} object, configured as described by
-  <code>configuration</code>, if specified; otherwise, configured to appropriate basic
-  defaults.</p>
+A newly-created {{domxref("RTCPeerConnection")}} object, configured as described by
+`configuration`, if specified; otherwise, configured to appropriate basic
+defaults.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and
-      video calling</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">WebRTC architecture
-      overview</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
-      session</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- [Signaling and
+  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture
+  overview](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [Lifetime of a WebRTC
+  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}

@@ -2,43 +2,44 @@
 title: MediaDeviceInfo.label
 slug: Web/API/MediaDeviceInfo/label
 tags:
-- API
-- Media
-- Media Capture
-- Media Capture and Streams
-- Media Capture and Streams API
-- MediaDevicesInfo
-- Property
-- Reference
-- label
+  - API
+  - Media
+  - Media Capture
+  - Media Capture and Streams
+  - Media Capture and Streams API
+  - MediaDevicesInfo
+  - Property
+  - Reference
+  - label
 browser-compat: api.MediaDeviceInfo.label
 ---
-<div>{{APIRef("Media Capture")}}</div>
+{{APIRef("Media Capture")}}
 
-<p>The <strong><code>label</code></strong> readonlyinline
-    property of the {{domxref("MediaDeviceInfo")}} interface returns a
-    {{domxref("DOMString")}}, that is a label describing this device (for example
-    "External USB Webcam").</p>
+The **`label`** readonlyinline
+property of the {{domxref("MediaDeviceInfo")}} interface returns a
+{{domxref("DOMString")}}, that is a label describing this device (for example
+"External USB Webcam").
 
-<p>Only available during active <code>MediaStream</code>
-  use, or when persistent permissions have been granted.</p>
+Only available during active `MediaStream`
+use, or when persistent permissions have been granted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>label</em> = <em>MediaDeviceInfo</em>.label;</pre>
+```js
+var label = MediaDeviceInfo.label;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which describes the media device. For security reasons, the
-  <code>label</code> is always an empty string (<code>""</code>) if the user has not
-  obtained permission to use at least one media device, either by starting a stream from
-  the microphone or camera, or by persistent permissions being granted.</p>
+A {{domxref("DOMString")}} which describes the media device. For security reasons, the
+`label` is always an empty string (`""`) if the user has not
+obtained permission to use at least one media device, either by starting a stream from
+the microphone or camera, or by persistent permissions being granted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

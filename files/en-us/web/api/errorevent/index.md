@@ -7,50 +7,44 @@ tags:
   - Worker API
 browser-compat: api.ErrorEvent
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>ErrorEvent</code></strong> interface represents events providing information related to errors in scripts or in files.</p>
+The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ErrorEvent.message")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a human-readable error message describing the problem.</dd>
- <dt>{{domxref("ErrorEvent.filename")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the name of the script file in which the error occurred.</dd>
- <dt>{{domxref("ErrorEvent.lineno")}} {{readonlyInline}}</dt>
- <dd>Is an <code>integer</code> containing the line number of the script file on which the error occurred.</dd>
- <dt>{{domxref("ErrorEvent.colno")}} {{readonlyInline}}</dt>
- <dd>Is an <code>integer</code> containing the column number of the script file on which the error occurred.</dd>
- <dt>{{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Is a JavaScript <code>Object</code> that is concerned by the event.</dd>
-</dl>
+- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}} containing a human-readable error message describing the problem.
+- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}} containing the name of the script file in which the error occurred.
+- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
+  - : Is an `integer` containing the line number of the script file on which the error occurred.
+- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
+  - : Is an `integer` containing the column number of the script file on which the error occurred.
+- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
+  - : Is a JavaScript `Object` that is concerned by the event.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}</dt>
- <dd>Creates an <code>ErrorEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
+  - : Creates an `ErrorEvent` event with the given parameters.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent {{domxref("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a>, most likely objects to raise such an event</li>
-</ul>
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event

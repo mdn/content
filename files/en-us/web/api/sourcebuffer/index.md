@@ -13,85 +13,80 @@ tags:
   - Video
 browser-compat: api.SourceBuffer
 ---
-<p>{{APIRef("Media Source Extensions")}}</p>
+{{APIRef("Media Source Extensions")}}
 
-<p>The <strong><code>SourceBuffer</code></strong> interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.</p>
+The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SourceBuffer.appendWindowEnd")}}</dt>
- <dd>Controls the timestamp for the end of the append window.</dd>
- <dt>{{domxref("SourceBuffer.appendWindowStart")}}</dt>
- <dd>Controls the timestamp for the start of the <a href="https://w3c.github.io/media-source/#append-window">append window</a>. This is a timestamp range that can be used to filter what media data is appended to the <code>SourceBuffer</code>. Coded media frames with timestamps within this range will be appended, whereas those outside the range will be filtered out.</dd>
- <dt>{{domxref("SourceBuffer.audioTracks")}} {{readonlyInline}}</dt>
- <dd>A list of the audio tracks currently contained inside the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.buffered")}} {{readonlyInline}}</dt>
- <dd>Returns the time ranges that are currently buffered in the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.mode")}}</dt>
- <dd>Controls how the order of media segments in the <code>SourceBuffer</code> is handled, in terms of whether they can be appended in any order, or they have to be kept in a strict sequence.</dd>
- <dt>{{domxref("SourceBuffer.textTracks")}} {{readonlyInline}}</dt>
- <dd>A list of the text tracks currently contained inside the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.timestampOffset")}}</dt>
- <dd>Controls the offset applied to timestamps inside media segments that are subsequently appended to the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.trackDefaults")}}</dt>
- <dd>Specifies the default values to use if kind, label, and/or language information is not available in the <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> of the media to be appended to the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.updating")}} {{readonlyInline}}</dt>
- <dd>A boolean indicating whether the <code>SourceBuffer</code> is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.</dd>
- <dt>{{domxref("SourceBuffer.videoTracks")}} {{readonlyInline}}</dt>
- <dd>A list of the video tracks currently contained inside the <code>SourceBuffer</code>.</dd>
-</dl>
+- {{domxref("SourceBuffer.appendWindowEnd")}}
+  - : Controls the timestamp for the end of the append window.
+- {{domxref("SourceBuffer.appendWindowStart")}}
+  - : Controls the timestamp for the start of the [append window](https://w3c.github.io/media-source/#append-window). This is a timestamp range that can be used to filter what media data is appended to the `SourceBuffer`. Coded media frames with timestamps within this range will be appended, whereas those outside the range will be filtered out.
+- {{domxref("SourceBuffer.audioTracks")}} {{readonlyInline}}
+  - : A list of the audio tracks currently contained inside the `SourceBuffer`.
+- {{domxref("SourceBuffer.buffered")}} {{readonlyInline}}
+  - : Returns the time ranges that are currently buffered in the `SourceBuffer`.
+- {{domxref("SourceBuffer.mode")}}
+  - : Controls how the order of media segments in the `SourceBuffer` is handled, in terms of whether they can be appended in any order, or they have to be kept in a strict sequence.
+- {{domxref("SourceBuffer.textTracks")}} {{readonlyInline}}
+  - : A list of the text tracks currently contained inside the `SourceBuffer`.
+- {{domxref("SourceBuffer.timestampOffset")}}
+  - : Controls the offset applied to timestamps inside media segments that are subsequently appended to the `SourceBuffer`.
+- {{domxref("SourceBuffer.trackDefaults")}}
+  - : Specifies the default values to use if kind, label, and/or language information is not available in the [initialization segment](https://w3c.github.io/media-source/#init-segment) of the media to be appended to the `SourceBuffer`.
+- {{domxref("SourceBuffer.updating")}} {{readonlyInline}}
+  - : A boolean indicating whether the `SourceBuffer` is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.
+- {{domxref("SourceBuffer.videoTracks")}} {{readonlyInline}}
+  - : A list of the video tracks currently contained inside the `SourceBuffer`.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("SourceBuffer.onabort")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
- <dt>{{domxref("SourceBuffer.onerror")}}</dt>
- <dd>Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
- <dt>{{domxref("SourceBuffer.onupdate")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>. This event is fired before <code>onupdateend</code>.</dd>
- <dt>{{domxref("SourceBuffer.onupdateend")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} has ended. This event is fired after <code>onupdate</code>.</dd>
- <dt>{{domxref("SourceBuffer.onupdatestart")}}</dt>
- <dd>Fired whenever the value of {{domxref("SourceBuffer.updating")}} transitions from <code>false</code> to <code>true</code>.</dd>
-</dl>
+- {{domxref("SourceBuffer.onabort")}}
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+- {{domxref("SourceBuffer.onerror")}}
+  - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
+- {{domxref("SourceBuffer.onupdate")}}
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `onupdateend`.
+- {{domxref("SourceBuffer.onupdateend")}}
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} has ended. This event is fired after `onupdate`.
+- {{domxref("SourceBuffer.onupdatestart")}}
+  - : Fired whenever the value of {{domxref("SourceBuffer.updating")}} transitions from `false` to `true`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SourceBuffer.abort()")}}</dt>
- <dd>Aborts the current segment and resets the segment parser.</dd>
- <dt>{{domxref("SourceBuffer.appendBuffer()")}}</dt>
- <dd>Appends media segment data from an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object to the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.appendBufferAsync()")}} {{experimental_inline}}</dt>
- <dd>Starts the process of asynchronously appending the specified buffer to the <code>SourceBuffer</code>. Returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.</dd>
- <dt>{{domxref("SourceBuffer.appendStream()")}}</dt>
- <dd>Appends media segment data from a <code>ReadableStream</code> object to the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.changeType()")}}</dt>
- <dd>Changes the {{Glossary("MIME type")}} that future calls to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} will expect the new data to conform to.</dd>
- <dt>{{domxref("SourceBuffer.remove()")}}</dt>
- <dd>Removes media segments within a specific time range from the <code>SourceBuffer</code>.</dd>
- <dt>{{domxref("SourceBuffer.removeAsync()")}} {{experimental_inline}}</dt>
- <dd>Starts the process of asynchronously removing media segments in the specified range from the <code>SourceBuffer</code>. Returns a {{jsxref("Promise")}} which is fulfilled once all matching segments have been removed.</dd>
-</dl>
+- {{domxref("SourceBuffer.abort()")}}
+  - : Aborts the current segment and resets the segment parser.
+- {{domxref("SourceBuffer.appendBuffer()")}}
+  - : Appends media segment data from an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object to the `SourceBuffer`.
+- {{domxref("SourceBuffer.appendBufferAsync()")}} {{experimental_inline}}
+  - : Starts the process of asynchronously appending the specified buffer to the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been appended.
+- {{domxref("SourceBuffer.appendStream()")}}
+  - : Appends media segment data from a `ReadableStream` object to the `SourceBuffer`.
+- {{domxref("SourceBuffer.changeType()")}}
+  - : Changes the {{Glossary("MIME type")}} that future calls to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} will expect the new data to conform to.
+- {{domxref("SourceBuffer.remove()")}}
+  - : Removes media segments within a specific time range from the `SourceBuffer`.
+- {{domxref("SourceBuffer.removeAsync()")}} {{experimental_inline}}
+  - : Starts the process of asynchronously removing media segments in the specified range from the `SourceBuffer`. Returns a {{jsxref("Promise")}} which is fulfilled once all matching segments have been removed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following simple example loads a video chunk by chunk as fast as possible, playing it as soon as it can. This example was written by Nick Desaulniers and can be <a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">viewed live here</a> (you can also <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+The following simple example loads a video chunk by chunk as fast as possible, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -123,19 +118,18 @@ function fetchAB (url, cb) {
     cb(xhr.response);
   };
   xhr.send();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

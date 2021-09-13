@@ -2,71 +2,76 @@
 title: SpeechRecognitionEvent.interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognitionEvent
-- Web Speech API
-- interpretation
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognitionEvent
+  - Web Speech API
+  - interpretation
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognitionEvent.interpretation
 ---
-<div>{{APIRef("Web Speech API")}}{{deprecated_header}}</div>
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
-<p>The <code><strong>interpretation</strong></code> read-only property of the
-  {{domxref("SpeechRecognitionEvent")}} interface returns the semantic meaning of what the
-  user said.</p>
+The **`interpretation`** read-only property of the
+{{domxref("SpeechRecognitionEvent")}} interface returns the semantic meaning of what the
+user said.
 
-<p>This might be determined, for instance, through the SISR specification of semantics in
-  a grammar (see <a href="https://www.w3.org/TR/semantic-interpretation/">Semantic
-    Interpretation for Speech Recognition (SISR) Version 1.0</a> for specification and
-  examples.)</p>
+This might be determined, for instance, through the SISR specification of semantics in
+a grammar (see [Semantic
+Interpretation for Speech Recognition (SISR) Version 1.0](https://www.w3.org/TR/semantic-interpretation/) for specification and
+examples.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myInterpretation = event.interpretation;
-</pre>
+```js
+var myInterpretation = event.interpretation;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The returned value can be of any type. If no semantic interpretation has been returned
-  by the speec recognition system, <code>null</code> will be returned.</p>
+The returned value can be of any type. If no semantic interpretation has been returned
+by the speec recognition system, `null` will be returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
   console.log(event.interpretation);
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

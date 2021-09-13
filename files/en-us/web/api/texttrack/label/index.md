@@ -9,33 +9,35 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.label
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>label</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns a human-readable label for the text track, if it is available.</p>
+The **`label`** read-only property of the {{domxref("TextTrack")}} interface returns a human-readable label for the text track, if it is available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let label = TextTrack.label;</pre>
+```js
+let label = TextTrack.label;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the <code>label</code>, or an empty string.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the `label`, or an empty string.
 
-<p>In the following example the value of <code>label</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example the value of `label` is printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.label);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

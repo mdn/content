@@ -2,53 +2,57 @@
 title: HTMLOutputElement.labels
 slug: Web/API/HTMLOutputElement/labels
 tags:
-- API
-- HTML DOM
-- HTMLOutputElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLOutputElement
+  - Property
+  - Reference
 browser-compat: api.HTMLOutputElement.labels
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>HTMLOutputElement.labels</strong></code> read-only property returns a
-  {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-  {{HTMLElement("output")}} element.</p>
+The **`HTMLOutputElement.labels`** read-only property returns a
+{{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
+{{HTMLElement("output")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>labelElements</var> = <var>output</var>.labels;
-</pre>
+```js
+var labelElements = output.labels;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("NodeList")}} containing the <code>&lt;label&gt;</code> elements associated
-  with the <code>&lt;output&gt;</code> element.</p>
+A {{domxref("NodeList")}} containing the `<label>` elements associated
+with the `<output>` element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;label id="label1" for="test"&gt;Label 1&lt;/label&gt;
-&lt;output id="test"&gt;Output&lt;/output&gt;
-&lt;label id="label2" for="test"&gt;Label 2&lt;/label&gt;
-</pre>
+```html
+<label id="label1" for="test">Label 1</label>
+<output id="test">Output</output>
+<label id="label2" for="test">Label 2</label>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener("DOMContentLoaded", function() {
+```js
+window.addEventListener("DOMContentLoaded", function() {
   const output = document.getElementById("test");
-  for(var i = 0; i &lt; output.labels.length; i++) {
+  for(var i = 0; i < output.labels.length; i++) {
     console.log(output.labels[i].textContent); // "Label 1" and "Label 2"
   }
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample("Example", "100%", 30)}}</p>
+{{EmbedLiveSample("Example", "100%", 30)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

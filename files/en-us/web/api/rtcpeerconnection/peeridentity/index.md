@@ -15,73 +15,69 @@ tags:
   - WebRTC API
 browser-compat: api.RTCPeerConnection.peerIdentity
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only {{domxref("RTCPeerConnection")}} property
-    <code><strong>peerIdentity</strong></code> returns a JavaScript {{jsxref("Promise")}}
-    that resolves to an {{domxref("RTCIdentityAssertion")}} which contains a
-    {{domxref("DOMString")}} identifying the remote peer. Once this promise
-  resolves successfully, the resulting identity is the <strong>target peer
-    identity</strong> and cannot change for the duration of the connection.</p>
+The read-only {{domxref("RTCPeerConnection")}} property
+**`peerIdentity`** returns a JavaScript {{jsxref("Promise")}}
+that resolves to an {{domxref("RTCIdentityAssertion")}} which contains a
+{{domxref("DOMString")}} identifying the remote peer. Once this promise
+resolves successfully, the resulting identity is the **target peer
+identity** and cannot change for the duration of the connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var <em>identity</em> = <em>rtcPeerConnection</em>.peerIdentity;</pre>
+```js
+ var identity = rtcPeerConnection.peerIdentity;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A JavaScript {{jsxref("Promise")}} which resolves to an
-  {{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.</p>
+A JavaScript {{jsxref("Promise")}} which resolves to an
+{{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.
 
-<p>If an error occcurs while attempting to validate an incoming identity assertion (that
-  is, the information describing a peer's identity), the promise is rejected. If there
-  isn't already a target peer identity, <code>peerIdentity</code> is set to a newly
-  created promise and the process begins again, until the process succeeds or no further
-  attempts to authenticate occur.</p>
+If an error occcurs while attempting to validate an incoming identity assertion (that
+is, the information describing a peer's identity), the promise is rejected. If there
+isn't already a target peer identity, `peerIdentity` is set to a newly
+created promise and the process begins again, until the process succeeds or no further
+attempts to authenticate occur.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The promise returned by
-    {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} cannot
-    resolve until any target peer identity that's been set is validated. If the identity
-    hasn't been validated yet, the promise returned by <code>setRemoteDescription()</code>
-    will be rejected. If there's no target peer identity,
-    <code>setRemoteDescription()</code> doesn't need to wait for validation to occur
-    before it resolves.</p>
-</div>
+> **Note:** The promise returned by
+> {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} cannot
+> resolve until any target peer identity that's been set is validated. If the identity
+> hasn't been validated yet, the promise returned by `setRemoteDescription()`
+> will be rejected. If there's no target peer identity,
+> `setRemoteDescription()` doesn't need to wait for validation to occur
+> before it resolves.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a function, <code>getIdentityAssertion()</code>, is created which
-  asynchronously waits for the peer's identity to be verified, then returns the identity
-  to the caller. If an error occurs and the promise is rejected, this logs the error to
-  the console and returns <code>null</code> to the caller.</p>
+In this example, a function, `getIdentityAssertion()`, is created which
+asynchronously waits for the peer's identity to be verified, then returns the identity
+to the caller. If an error occurs and the promise is rejected, this logs the error to
+the console and returns `null` to the caller.
 
-<pre>let pc = new RTCPeerConnection();
+    let pc = new RTCPeerConnection();
 
-/* ... */
+    /* ... */
 
-async function getIdentityAssertion(pc) {
-  try {
-    const identity = await pc.peerIdentity;
-    return identity;
-  } catch(err) {
-    console.log("Error identifying remote peer: ", err);
-    return null;
-  }
-}
-</pre>
+    async function getIdentityAssertion(pc) {
+      try {
+        const identity = await pc.peerIdentity;
+        return identity;
+      } catch(err) {
+        console.log("Error identifying remote peer: ", err);
+        return null;
+      }
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

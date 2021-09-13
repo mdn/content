@@ -12,35 +12,39 @@ tags:
   - onerror
 browser-compat: api.ServiceWorker.onerror
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>onerror</strong></code> property of the {{domxref("ServiceWorker")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>, that is a function to be called when the {{event("error")}} event occurs.</p>
+The **`onerror`** property of the {{domxref("ServiceWorker")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers), that is a function to be called when the {{event("error")}} event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myServiceWorker.onerror = function(event) { ... };</pre>
+```js
+myServiceWorker.onerror = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}} and sets up an <code>onerror</code> handler on the resulting object:</p>
+The following code snippet gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}} and sets up an `onerror` handler on the resulting object:
 
-<pre class="brush: js">// in the page being controlled
+```js
+// in the page being controlled
 if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
 
-  navigator.serviceWorker.ready.then(registration =&gt; {
-    registration.active.onerror = (event) =&gt; {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.active.onerror = (event) => {
       console.log('An error occurred in the service worker!');
     };
   });
 
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

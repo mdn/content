@@ -2,119 +2,115 @@
 title: WebGLRenderingContext.stencilOpSeparate()
 slug: Web/API/WebGLRenderingContext/stencilOpSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilOpSeparate
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.stencilOpSeparate()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets the front and/or
-  back-facing stencil test actions.</p>
+The **`WebGLRenderingContext.stencilOpSeparate()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or
+back-facing stencil test actions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.stencilOpSeparate(<var>face</var>, <var>fail</var>, <var>zfail</var>, <var>zpass</var>);
-</pre>
+```js
+void gl.stencilOpSeparate(face, fail, zfail, zpass);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The <code>fail</code>, <code>zfail</code> and <code>zpass</code> parameters accept all
-  constants listed below.</p>
+The `fail`, `zfail` and `zpass` parameters accept all
+constants listed below.
 
-<dl>
-  <dt>face</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
+- face
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
-    <ul>
-      <li><code>gl.FRONT</code></li>
-      <li><code>gl.BACK</code></li>
-      <li><code>gl.FRONT_AND_BACK</code></li>
-    </ul>
-  </dd>
-  <dt><code>fail</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test fails.
-    The default value is <code>gl.KEEP</code>.</dd>
-  <dt><code>zfail</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test passes,
-    but the depth test fails. The default value is <code>gl.KEEP</code>.</dd>
-  <dt><code>zpass</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when both the stencil test
+
+    - `gl.FRONT`
+    - `gl.BACK`
+    - `gl.FRONT_AND_BACK`
+
+- `fail`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test fails.
+    The default value is `gl.KEEP`.
+- `zfail`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test passes,
+    but the depth test fails. The default value is `gl.KEEP`.
+- `zpass`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when both the stencil test
     and the depth test pass, or when the stencil test passes and there is no depth buffer
-    or depth testing is disabled. The default value is <code>gl.KEEP</code>.</dd>
-</dl>
+    or depth testing is disabled. The default value is `gl.KEEP`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<dl>
-  <dt><code>gl.KEEP</code></dt>
-  <dd>Keeps the current value.</dd>
-  <dt><code>gl.ZERO</code></dt>
-  <dd>Sets the stencil buffer value to 0.</dd>
-  <dt><code>gl.REPLACE</code></dt>
-  <dd>Sets the stencil buffer value to the reference value as specified by
-    {{domxref("WebGLRenderingContext.stencilFunc()")}}.</dd>
-  <dt><code>gl.INCR</code></dt>
-  <dd>Increments the current stencil buffer value. Clamps to the maximum representable
-    unsigned value.</dd>
-  <dt><code>gl.INCR_WRAP</code></dt>
-  <dd>Increments the current stencil buffer value. Wraps stencil buffer value to zero when
-    incrementing the maximum representable unsigned value.</dd>
-  <dt><code>gl.DECR</code></dt>
-  <dd>Decrements the current stencil buffer value. Clamps to 0.</dd>
-  <dt><code>gl.DECR_WRAP</code></dt>
-  <dd>Decrements the current stencil buffer value. Wraps stencil buffer value to the
+- `gl.KEEP`
+  - : Keeps the current value.
+- `gl.ZERO`
+  - : Sets the stencil buffer value to 0.
+- `gl.REPLACE`
+  - : Sets the stencil buffer value to the reference value as specified by
+    {{domxref("WebGLRenderingContext.stencilFunc()")}}.
+- `gl.INCR`
+  - : Increments the current stencil buffer value. Clamps to the maximum representable
+    unsigned value.
+- `gl.INCR_WRAP`
+  - : Increments the current stencil buffer value. Wraps stencil buffer value to zero when
+    incrementing the maximum representable unsigned value.
+- `gl.DECR`
+  - : Decrements the current stencil buffer value. Clamps to 0.
+- `gl.DECR_WRAP`
+  - : Decrements the current stencil buffer value. Wraps stencil buffer value to the
     maximum representable unsigned value when decrementing a stencil buffer value of 0.
-  </dd>
-  <dt><code>gl.INVERT</code></dt>
-  <dd>Inverts the current stencil buffer value bitwise.</dd>
-</dl>
+- `gl.INVERT`
+  - : Inverts the current stencil buffer value bitwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The stencil testing is disabled by default. To enable or disable stencil testing, use
-  the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.STENCIL_TEST</code>.</p>
+The stencil testing is disabled by default. To enable or disable stencil testing, use
+the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.STENCIL_TEST`.
 
-<pre class="brush: js">gl.enable(gl.STENCIL_TEST);
+```js
+gl.enable(gl.STENCIL_TEST);
 gl.stencilOpSeparate(gl.FRONT, gl.INCR, gl.DECR, gl.INVERT);
-</pre>
+```
 
-<p>To get the current information about stencil and depth pass or fail, query the
-  following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.</p>
+To get the current information about stencil and depth pass or fail, query the
+following constants with {{domxref("WebGLRenderingContext.getParameter",
+  "getParameter()")}}.
 
-<pre class="brush: js">gl.getParameter(gl.STENCIL_FAIL);
+```js
+gl.getParameter(gl.STENCIL_FAIL);
 gl.getParameter(gl.STENCIL_PASS_DEPTH_PASS);
 gl.getParameter(gl.STENCIL_PASS_DEPTH_FAIL);
 gl.getParameter(gl.STENCIL_BACK_FAIL);
 gl.getParameter(gl.STENCIL_BACK_PASS_DEPTH_PASS);
 gl.getParameter(gl.STENCIL_BACK_PASS_DEPTH_FAIL);
 gl.getParameter(gl.STENCIL_BITS);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.stencilOp()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilFunc()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.stencilOp()")}}
+- {{domxref("WebGLRenderingContext.stencilFunc()")}}
+- {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}

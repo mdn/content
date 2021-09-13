@@ -11,49 +11,49 @@ tags:
   - close
 browser-compat: api.AudioContext.close
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>close()</code> method of the {{ domxref("AudioContext") }} Interface closes the audio context, releasing any system audio resources that it uses.</p>
+The `close()` method of the {{ domxref("AudioContext") }} Interface closes the audio context, releasing any system audio resources that it uses.
 
-<p>Closed contexts cannot have new nodes created, but can decode audio data, create buffers, etc.</p>
+Closed contexts cannot have new nodes created, but can decode audio data, create buffers, etc.
 
-<p>This function does not automatically release all <code>AudioContext</code>-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional <code>AudioContexts</code> from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned {{jsxref("Promise")}} resolves when all <code>AudioContext</code>-creation-blocking resources have been released. This method throws an <code>INVALID_STATE_ERR</code> exception if called on an {{domxref("OfflineAudioContext")}}.</p>
+This function does not automatically release all `AudioContext`-created objects, unless other references have been released as well; however, it will forcibly release any system audio resources that might prevent additional `AudioContexts` from being created and used, suspend the progression of audio time in the audio context, and stop processing audio data. The returned {{jsxref("Promise")}} resolves when all `AudioContext`-creation-blocking resources have been released. This method throws an `INVALID_STATE_ERR` exception if called on an {{domxref("OfflineAudioContext")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 audioCtx.close().then(function() { ... });
 await audioCtx.close();
-</pre>
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves with void.</p>
+A {{jsxref("Promise")}} that resolves with void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is taken from our <a href="https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html">AudioContext states demo</a> (<a href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running live</a>.) When the stop button is clicked, <code>close()</code> is called. When the promise resolves, the example is reset to its beginning state.</p>
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the stop button is clicked, `close()` is called. When the promise resolves, the example is reset to its beginning state.
 
-<pre class="brush: js">stopBtn.onclick = function() {
+```js
+stopBtn.onclick = function() {
   audioCtx.close().then(function() {
     startBtn.removeAttribute('disabled');
     susresBtn.setAttribute('disabled', 'disabled');
     stopBtn.setAttribute('disabled', 'disabled');
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

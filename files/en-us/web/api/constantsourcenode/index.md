@@ -11,74 +11,63 @@ tags:
   - Web Audio API
 browser-compat: api.ConstantSourceNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>ConstantSourceNode</code> interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a>.</p>
+The `ConstantSourceNode` interface—part of the Web Audio API—represents an audio source (based upon {{domxref("AudioScheduledSourceNode")}}) whose output is single unchanging value. This makes it useful for cases in which you need a constant value coming in from an audio source. In addition, it can be used like a constructible {{domxref("AudioParam")}} by automating the value of its {{domxref("ConstantSourceNode.offset", "offset")}} or by connecting another node to it; see [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
-<p>A <code>ConstantSourceNode</code> has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.</p>
+A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) output. The output's value is always the same as the value of the {{domxref("ConstantSourceNode.offset", "offset")}} parameter.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}</dt>
- <dd>Creates and returns a new <code>ConstantSourceNode</code> instance, optionally specifying an object which establishes initial values for the object's properties. As an alternative, you can use the {{domxref("BaseAudioContext.createConstantSource()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
-</dl>
+- {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
+  - : Creates and returns a new `ConstantSourceNode` instance, optionally specifying an object which establishes initial values for the object's properties. As an alternative, you can use the {{domxref("BaseAudioContext.createConstantSource()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent interface, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:</em></p>
+_Inherits properties from its parent interface, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:_
 
-<dl>
- <dt>{{domxref("ConstantSourceNode.offset", "offset")}}</dt>
- <dd>An {{domxref("AudioParam")}} which specifies the value that this source continuously outputs. The default value is 1.0.</dd>
-</dl>
+- {{domxref("ConstantSourceNode.offset", "offset")}}
+  - : An {{domxref("AudioParam")}} which specifies the value that this source continuously outputs. The default value is 1.0.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p><em>Inherits event handlers from its parent interface, {{domxref("AudioScheduledSourceNode")}}.</em></p>
+_Inherits event handlers from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 
-<div class="note">
-<p><strong>Note:</strong> Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.</p>
-</div>
+> **Note:** Some browsers' implementations of this event handler are part of the  {{domxref("AudioScheduledSourceNode")}} interface.
 
-<dl>
- <dt>{{domxref("AudioScheduledSourceNode.onended()","onended")}}</dt>
- <dd>Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.</dd>
-</dl>
+- {{domxref("AudioScheduledSourceNode.onended()","onended")}}
+  - : Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("AudioScheduledSourceNode")}}.</em></p>
+_Inherits methods from its parent interface, {{domxref("AudioScheduledSourceNode")}}._
 
-<div class="note">
-<p><strong>Note:</strong> Some browsers' implementations of these methods are part of the {{domxref("AudioScheduledSourceNode")}} interface.</p>
-</div>
+> **Note:** Some browsers' implementations of these methods are part of the {{domxref("AudioScheduledSourceNode")}} interface.
 
-<dl>
- <dt>{{domxref("AudioScheduledSourceNode.start", "start()")}}</dt>
- <dd>Schedules a sound to playback at an exact time.</dd>
- <dt>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</dt>
- <dd>Schedules a sound to stop playback at an exact time.</dd>
-</dl>
+- {{domxref("AudioScheduledSourceNode.start", "start()")}}
+  - : Schedules a sound to playback at an exact time.
+- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
+  - : Schedules a sound to stop playback at an exact time.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the article <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode</a>, a <code>ConstantSourceNode</code> is created to allow one slider control to change the gain on two {{domxref("GainNode")}}s. The three nodes are set up like this:</p>
+In the article [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode), a `ConstantSourceNode` is created to allow one slider control to change the gain on two {{domxref("GainNode")}}s. The three nodes are set up like this:
 
-<pre class="brush: js">gainNode2 = context.createGain();
+```js
+gainNode2 = context.createGain();
 gainNode3 = context.createGain();
 gainNode2.gain.value = gainNode3.gain.value = 0.5;
 volumeSliderControl.value = gainNode2.gain.value;
@@ -90,26 +79,24 @@ constantNode.start();
 
 gainNode2.connect(context.destination);
 gainNode3.connect(context.destination);
-</pre>
+```
 
-<p>This code starts by creating the gain nodes and setting them and the volume control that will adjust their value all to 0.5. Then the <code>ConstantSourceNode</code> is created by calling {{domxref("BaseAudioContext/createConstantSource", "AudioContext.createConstantSource()")}}, and the gain parameters of each of the two gain nodes are connected to the <code>ConstantSourceNode</code>. After starting the constant source by calling its {{domxref("AudioScheduledSourceNode.start", "start()")}} method. Finally, the two gain nodes are connected to the audio destination (typically speakers or headphones).</p>
+This code starts by creating the gain nodes and setting them and the volume control that will adjust their value all to 0.5. Then the `ConstantSourceNode` is created by calling {{domxref("BaseAudioContext/createConstantSource", "AudioContext.createConstantSource()")}}, and the gain parameters of each of the two gain nodes are connected to the `ConstantSourceNode`. After starting the constant source by calling its {{domxref("AudioScheduledSourceNode.start", "start()")}} method. Finally, the two gain nodes are connected to the audio destination (typically speakers or headphones).
 
-<p>Now, whenever the value of {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} changes, the gain on both <code>gainNode2</code> and <code>gainNode3</code> will change to have that same value.</p>
+Now, whenever the value of {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} changes, the gain on both `gainNode2` and `gainNode3` will change to have that same value.
 
-<p>To see this example in action, as well as to read the rest of the code from which these snippets were derived, see <a href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling multiple parameters with ConstantSourceNode.</a></p>
+To see this example in action, as well as to read the rest of the code from which these snippets were derived, see [Controlling multiple parameters with ConstantSourceNode.](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioScheduledSourceNode")}}</li>
- <li>{{domxref("AudioNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioScheduledSourceNode")}}
+- {{domxref("AudioNode")}}

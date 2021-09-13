@@ -9,31 +9,33 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.onexit
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>onexit</code></strong> EventHandler of the {{domxref("TextTrackCue")}} interface processes <code>exit</code> events.</p>
+The **`onexit`** EventHandler of the {{domxref("TextTrackCue")}} interface processes `exit` events.
 
-<p> The <code>exit</code> event fires when a cue stops being active.</p>
+The `exit` event fires when a cue stops being active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">TextTrackCue.onexit = function;
-TextTrackCue.addEventListener('exit', function);</pre>
+```js
+TextTrackCue.onexit = function;
+TextTrackCue.addEventListener('exit', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example, <code>onenter</code> is used to print to the console when <code>cue1</code> stops being displayed as the active cue.</p>
+In the following example, `onenter` is used to print to the console when `cue1` stops being displayed as the active cue.
 
-<pre class="brush: js">cue1.onexit = function() {
+```js
+cue1.onexit = function() {
   console.log('Cue 1 has left the building.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

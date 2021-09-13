@@ -11,14 +11,12 @@ tags:
   - Reference
 browser-compat: api.HTMLHtmlElement.version
 ---
-<div>{{ APIRef("HTML DOM") }} {{deprecated_header}}</div>
+{{ APIRef("HTML DOM") }} {{deprecated_header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property has been declared as deprecated by the W3C technical recommendation for HTML 4.01 in favor of use of the DTD for obtaining version information for a document.</p>
-</div>
+> **Note:** This property has been declared as deprecated by the W3C technical recommendation for HTML 4.01 in favor of use of the DTD for obtaining version information for a document.
 
-<p>Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string.</p>
+Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

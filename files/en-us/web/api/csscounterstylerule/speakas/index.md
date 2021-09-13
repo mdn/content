@@ -9,37 +9,43 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.speakAs
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
-<p>The <strong><code>speakAs</code></strong>  property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/speak-as","speak-as")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.</p>
+The **`speakAs`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/speak-as","speak-as")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let speakAs = CSSCounterStyleRule.speakAs;
+```js
+let speakAs = CSSCounterStyleRule.speakAs;
 CSSCounterStyleRule.speakAs = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}
 
-<p>The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, <code>myRules[0]</code> is this <code>@counter-style</code> rule, returning <code>speakAs</code> gives us the value "bullets".</p>
+## Examples
 
-<pre class="brush: css">@counter-style box-corner {
+The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, `myRules[0]` is this `@counter-style` rule, returning `speakAs` gives us the value "bullets".
+
+```css
+@counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
   suffix: ': ';
   speak-as: "bullets";
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].speakAs); // "bullets" </pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].speakAs); // "bullets"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

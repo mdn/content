@@ -9,70 +9,66 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getActiveUniforms()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> retrieves information about
-  active uniforms within a {{domxref("WebGLProgram")}}.</p>
+The **`WebGL2RenderingContext.getActiveUniforms()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves information about
+active uniforms within a {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">any <var>gl</var>.getActiveUniforms(<var>program</var>, <var>uniformIndices</var>, <var>pname</var>);</pre>
+```js
+any gl.getActiveUniforms(program, uniformIndices, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} containing the active uniforms.</dd>
-  <dt><code>uniformIndices</code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} specifying the indices of the active
-    uniforms to query.</dd>
-  <dt><code>pname</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to query. Possible values:
-    <ul>
-      <li><code>gl.UNIFORM_TYPE</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLenum")}} indicating the <a
-          href="/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value">types
-          of the uniforms</a>.</li>
-      <li><code>gl.UNIFORM_SIZE</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLuint")}} indicating the sizes of the uniforms.</li>
-      <li><code>gl.UNIFORM_BLOCK_INDEX</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLint")}} indicating the block indices of the uniforms.</li>
-      <li><code>gl.UNIFORM_OFFSET</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLint")}} indicating the uniform buffer offsets.</li>
-      <li><code>gl.UNIFORM_ARRAY_STRIDE</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLint")}} indicating the strides between the elements.</li>
-      <li><code>gl.UNIFORM_MATRIX_STRIDE</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLint")}} indicating the strides between columns of a column-major
-        matrix or a row-major matrix.</li>
-      <li><code>gl.UNIFORM_IS_ROW_MAJOR</code>: Returns an {{jsxref("Array")}} of
-        {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether each of the uniforms is a row-major
-        matrix or not.</li>
-    </ul>
-  </dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} containing the active uniforms.
+- `uniformIndices`
+  - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLuint")}} specifying the indices of the active
+    uniforms to query.
+- `pname`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to query. Possible values:
 
-<p>Depends on which information is requested using the <code>pname</code> parameter.</p>
+    - `gl.UNIFORM_TYPE`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLenum")}} indicating the [types
+      of the uniforms](/en-US/docs/Web/API/WebGLRenderingContext/getUniform#return_value).
+    - `gl.UNIFORM_SIZE`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLuint")}} indicating the sizes of the uniforms.
+    - `gl.UNIFORM_BLOCK_INDEX`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLint")}} indicating the block indices of the uniforms.
+    - `gl.UNIFORM_OFFSET`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLint")}} indicating the uniform buffer offsets.
+    - `gl.UNIFORM_ARRAY_STRIDE`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLint")}} indicating the strides between the elements.
+    - `gl.UNIFORM_MATRIX_STRIDE`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLint")}} indicating the strides between columns of a column-major
+      matrix or a row-major matrix.
+    - `gl.UNIFORM_IS_ROW_MAJOR`: Returns an {{jsxref("Array")}} of
+      {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether each of the uniforms is a row-major
+      matrix or not.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre
-  class="brush: js">var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-var uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);</pre>
+Depends on which information is requested using the `pname` parameter.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+var uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
+var uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}

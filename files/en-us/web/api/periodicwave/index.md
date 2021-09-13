@@ -13,43 +13,37 @@ tags:
   - waveform
 browser-compat: api.PeriodicWave
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <strong><code>PeriodicWave</code></strong> interface defines a periodic waveform that can be used to shape the output of an {{domxref("OscillatorNode")}}.</p>
-</div>
+The **`PeriodicWave`** interface defines a periodic waveform that can be used to shape the output of an {{domxref("OscillatorNode")}}.
 
-<p><code>PeriodicWave</code> has no inputs or outputs; it is used to define custom oscillators when calling {{domxref("OscillatorNode.setPeriodicWave()")}}. The <code>PeriodicWave</code> itself is created/returned by {{domxref("BaseAudioContext.createPeriodicWave")}}.</p>
+`PeriodicWave` has no inputs or outputs; it is used to define custom oscillators when calling {{domxref("OscillatorNode.setPeriodicWave()")}}. The `PeriodicWave` itself is created/returned by {{domxref("BaseAudioContext.createPeriodicWave")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("PeriodicWave.PeriodicWave()")}}</dt>
-	<dd>Creates a new <code>PeriodicWave</code> object instance using the default values for all properties. If you wish to establish custom property values at the outset, use the {{domxref("BaseAudioContext.createPeriodicWave")}} factory method instead.</dd>
-</dl>
+- {{domxref("PeriodicWave.PeriodicWave()")}}
+  - : Creates a new `PeriodicWave` object instance using the default values for all properties. If you wish to establish custom property values at the outset, use the {{domxref("BaseAudioContext.createPeriodicWave")}} factory method instead.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>None; also, <code>PeriodicWave</code> doesn't inherit any properties.</em></p>
+_None; also, `PeriodicWave` doesn't inherit any properties._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>None; also, <code>PeriodicWave</code> doesn't inherit any methods.</em></p>
+_None; also, `PeriodicWave` doesn't inherit any methods._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{domxref("BaseAudioContext.createPeriodicWave")}} for simple example code that shows how to create a <code>PeriodicWave</code> object containing a simple sine wave.</p>
+See {{domxref("BaseAudioContext.createPeriodicWave")}} for simple example code that shows how to create a `PeriodicWave` object containing a simple sine wave.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

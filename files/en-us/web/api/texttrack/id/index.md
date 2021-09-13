@@ -9,33 +9,36 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.id
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>id</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns the ID of the track if it has one.</p>
+The **`id`** read-only property of the {{domxref("TextTrack")}} interface returns the ID of the track if it has one.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let id = TextTrack.id;</pre>
+```js
+let id = TextTrack.id;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the ID, or an empty string.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the ID, or an empty string.
 
-<p>In the following example the value of <code>id</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example the value of `id` is printed to the console.
+
+```js
+let video = document.querySelector('video');
   let track = video.addTextTrack("captions", "Captions", "en");
   track.mode = "showing";
   console.log(track.id);
-  </pre>
 
-<h2 id="Specifications">Specifications</h2>
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

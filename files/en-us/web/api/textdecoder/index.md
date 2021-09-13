@@ -11,19 +11,20 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <code><strong>TextDecoder</strong></code> interface represents a decoder for a specific text encoding, such as <code>UTF-8</code>, <code>ISO-8859-2</code>, <code>KOI8-R</code>, <code>GBK</code>, etc. A decoder takes a stream of bytes as input and emits a stream of code points.</p>
+The **`TextDecoder`** interface represents a decoder for a specific text encoding, such as `UTF-8`, `ISO-8859-2`, `KOI8-R`, `GBK`, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Representing_text_with_typed_arrays">Representing text with typed arrays</h3>
+### Representing text with typed arrays
 
-<p>This example shows how to decode a Chinese/Japanese character <img alt="" src="2019-05-21_191907.png">, as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.</p>
+This example shows how to decode a Chinese/Japanese character ![](2019-05-21_191907.png), as represented by five different typed arrays: {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, and {{jsxref("Int32Array")}}.
 
-<pre class="brush: js">let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
+```js
+let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
 
 let u8arr = new Uint8Array([240, 160, 174, 183]);
 let i8arr = new Int8Array([-16, -96, -82, -73]);
@@ -36,60 +37,53 @@ console.log(utf8decoder.decode(i8arr));
 console.log(utf8decoder.decode(u16arr));
 console.log(utf8decoder.decode(i16arr));
 console.log(utf8decoder.decode(i32arr));
-</pre>
+```
 
-<h3 id="Handling_non-UTF8_text">Handling non-UTF8 text</h3>
+### Handling non-UTF8 text
 
-<p>In this example, we decode the Russian text "Привет, мир!", which means "Hello, world." In our {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} constructor, we specify the Windows-1251 character encoding, which is appropriate for Cyrillic script.</p>
+In this example, we decode the Russian text "Привет, мир!", which means "Hello, world." In our {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} constructor, we specify the Windows-1251 character encoding, which is appropriate for Cyrillic script.
 
-<pre class="brush: js">let win1251decoder = new TextDecoder('windows-1251');
+```js
+let win1251decoder = new TextDecoder('windows-1251');
 let bytes = new Uint8Array([207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33]);
 console.log(win1251decoder.decode(bytes)); // Привет, мир!
-</pre>
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}</dt>
- <dd>Returns a newly constructed <code>TextDecoder</code> that will generate a code point stream with the decoding method specified in parameters.</dd>
-</dl>
+- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
+  - : Returns a newly constructed `TextDecoder` that will generate a code point stream with the decoding method specified in parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>TextDecoder</code> interface doesn't inherit any properties.</em></p>
+_The `TextDecoder` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the <code>TextDecoder</code> will use.</dd>
- <dt>{{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}</dt>
- <dd>Is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.</dd>
- <dt>{{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}</dt>
- <dd>Is a {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.</dd>
-</dl>
+- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
+  - : Is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}
+  - : Is a {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>TextDecoder</code> interface doesn't inherit any method</em>.</p>
+_The `TextDecoder` interface doesn't inherit any method_.
 
-<dl>
- <dt>{{DOMxRef("TextDecoder.prototype.decode()")}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the text decoded with the method of the specific <code>TextDecoder</code> object.</dd>
-</dl>
+- {{DOMxRef("TextDecoder.prototype.decode()")}}
+  - : Returns a {{DOMxRef("DOMString")}} containing the text decoded with the method of the specific `TextDecoder` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays</li>
- <li>A <a href="http://code.google.com/p/stringencoding/">shim</a> allowing to use this interface in browsers that don't support it.</li>
- <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></li>
- <li><a href="https://nodejs.org/api/util.html#util_class_util_textdecoder">Node.js supports global export from v11.0.0</a></li>
-</ul>
+- The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.
+- [`StringView`](/en-US/docs/Mozilla/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
+- A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
+- [`Components.utils.importGlobalProperties`](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
+- [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textdecoder)

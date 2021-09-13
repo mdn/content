@@ -2,34 +2,35 @@
 title: HTMLObjectElement.form
 slug: Web/API/HTMLObjectElement/form
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- form
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - form
 browser-compat: api.HTMLObjectElement.form
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>form</code></strong> read-only property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("HTMLFormElement")}}
-  representing the object element's form owner, or null if there isn't one.</p>
+The **`form`** read-only property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("HTMLFormElement")}}
+representing the object element's form owner, or null if there isn't one.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var HTMLFormElement = HTMLObjectElement.form;</pre>
+```js
+var HTMLFormElement = HTMLObjectElement.form;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('HTMLFormElement')}}.</p>
+A {{domxref('HTMLFormElement')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

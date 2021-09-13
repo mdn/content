@@ -2,111 +2,82 @@
 title: CanvasRenderingContext2D.getTransform()
 slug: Web/API/CanvasRenderingContext2D/getTransform
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.getTransform
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.getTransform()</code></strong>
-  method of the Canvas 2D API retrieves the current transformation matrix being applied to
-  the context.</p>
+The
+**`CanvasRenderingContext2D.getTransform()`**
+method of the Canvas 2D API retrieves the current transformation matrix being applied to
+the context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>storedTransform <strong>=</strong> ctx</em>.getTransform();
-</pre>
+```js
+let storedTransform = ctx.getTransform();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMMatrix")}} object.</p>
+A {{domxref("DOMMatrix")}} object.
 
-<p>The transformation matrix is described by: <math>
-    <semantics>
-      <mrow>
-        <mo>[</mo>
-        <mtable columnalign="center center center" rowspacing="0.5ex">
-          <mtr>
-            <mtd>
-              <mi>a</mi>
-            </mtd>
-            <mtd>
-              <mi>c</mi>
-            </mtd>
-            <mtd>
-              <mi>e</mi>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mi>b</mi>
-            </mtd>
-            <mtd>
-              <mi>d</mi>
-            </mtd>
-            <mtd>
-              <mi>f</mi>
-            </mtd>
-          </mtr>
-          <mtr>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>0</mn>
-            </mtd>
-            <mtd>
-              <mn>1</mn>
-            </mtd>
-          </mtr>
-        </mtable>
-        <mo>]</mo>
-      </mrow>
-      <annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d
-        &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation>
-    </semantics>
-  </math></p>
+The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
+<mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
+</mtd><mtd><mi>c</mi>
+</mtd><mtd><mi>e</mi>
+</mtd></mtr><mtr><mtd><mi>b</mi>
+</mtd><mtd><mi>d</mi>
+</mtd><mtd><mi>f</mi>
+</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd><mtd><mn>0</mn>
+</mtd><mtd><mn>1</mn>
+</mtd></mtr></mtable><mo>]</mo>
+</mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
+&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The returned object is not live, so updating it will not
-    affect the current transformation matrix, and updating the current transformation
-    matrix will not affect an already returned <code>DOMMatrix</code>.</p>
-</div>
+> **Note:** The returned object is not live, so updating it will not
+> affect the current transformation matrix, and updating the current transformation
+> matrix will not affect an already returned `DOMMatrix`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, we have two {{htmlelement("canvas")}} elements. We apply a
-  transform to the first one's context using
-  {{domxref("CanvasRenderingContext2D.setTransform()")}} and draw a square on it, then
-  retrieve the matrix from it using <code>getTransform()</code>.</p>
+In the following example, we have two {{htmlelement("canvas")}} elements. We apply a
+transform to the first one's context using
+{{domxref("CanvasRenderingContext2D.setTransform()")}} and draw a square on it, then
+retrieve the matrix from it using `getTransform()`.
 
-<p>We then apply the retrieved matrix directly to the second canvas context by passing the
-  <code>DOMMatrix</code> object directly to <code>setTransform()</code>, and draw a circle
-  on it.</p>
+We then apply the retrieved matrix directly to the second canvas context by passing the
+`DOMMatrix` object directly to `setTransform()`, and draw a circle
+on it.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas width="240"&gt;&lt;/canvas&gt;
-&lt;canvas width="240"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas width="240"></canvas>
+<canvas width="240"></canvas>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">canvas {
+```css
+canvas {
   border: 1px solid black;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvases = document.querySelectorAll('canvas');
+```js
+const canvases = document.querySelectorAll('canvas');
 const ctx1 = canvases[0].getContext('2d');
 const ctx2 = canvases[1].getContext('2d');
 
@@ -119,23 +90,22 @@ console.log(storedTransform);
 ctx2.setTransform(storedTransform);
 ctx2.beginPath();
 ctx2.arc(50, 50, 50, 0, 2 * Math.PI);
-ctx2.fill();</pre>
+ctx2.fill();
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Examples', "100%", 180) }}</p>
+{{ EmbedLiveSample('Examples', "100%", 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.transform()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.transform()")}}

@@ -9,31 +9,28 @@ tags:
   - Reference
 browser-compat: api.PushManager.hasPermission
 ---
-<div>{{deprecated_header}}{{ApiRef("Push API")}}</div>
+{{deprecated_header}}{{ApiRef("Push API")}}
 
-<p>The <strong><code>PushManager.hasPermission()</code></strong> method of the {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to the <code>PushPermissionStatus</code> of the requesting webapp, which will be one of <code>granted</code>, <code>denied</code>, or <code>default</code>.</p>
+The **`PushManager.hasPermission()`** method of the {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to the `PushPermissionStatus` of the requesting webapp, which will be one of `granted`, `denied`, or `default`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This feature has been superseded by the {{domxref("PushManager.permissionState()")}} method.</p>
-</div>
+> **Note:** This feature has been superseded by the {{domxref("PushManager.permissionState()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PushManager.hasPermission().then(function(pushPermissionStatus) { ... } );</pre>
+```js
+PushManager.hasPermission().then(function(pushPermissionStatus) { ... } );
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification anymore. It is no longer on track to become a standard.</p>
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-<p>{{Compat}}</p>
-</div>
-</div>
+{{Compat}}

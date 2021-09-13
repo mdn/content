@@ -2,59 +2,56 @@
 title: WebGLRenderingContext.isTexture()
 slug: Web/API/WebGLRenderingContext/isTexture
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.isTexture()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns <code>true</code> if the
-  passed {{domxref("WebGLTexture")}} is valid and <code>false</code> otherwise.</p>
+The **`WebGLRenderingContext.isTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
+passed {{domxref("WebGLTexture")}} is valid and `false` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLboolean <var>gl</var>.isTexture(<var>texture</var>);
-</pre>
+```js
+GLboolean gl.isTexture(texture);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>texture</dt>
-  <dd>A {{domxref("WebGLTexture")}} to check.</dd>
-</dl>
+- texture
+  - : A {{domxref("WebGLTexture")}} to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the texture is valid.</p>
+A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the texture is valid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_a_texture">Checking a texture</h3>
+### Checking a texture
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
 gl.isTexture(texture);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

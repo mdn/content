@@ -13,38 +13,35 @@ tags:
   - Deprecated
 browser-compat: api.HMDVRDevice
 ---
-<div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>HMDVRDevice</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents a head mounted display, providing access to information about each eye, and allowing us to modify the current field of view.</p>
+The **`HMDVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a head mounted display, providing access to information about each eye, and allowing us to modify the current field of view.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("HMDVRDevice.getEyeParameters()")}}</dt>
- <dd>Returns current parameters for the eye specified as its argument ("left" or "right") — such as field of view information — stored in a {{domxref("VREyeParameters")}} object.</dd>
- <dt>{{domxref("HMDVRDevice.setFieldOfView()")}}</dt>
- <dd>Sets the field of view for both eyes.</dd>
-</dl>
+- {{domxref("HMDVRDevice.getEyeParameters()")}}
+  - : Returns current parameters for the eye specified as its argument ("left" or "right") — such as field of view information — stored in a {{domxref("VREyeParameters")}} object.
+- {{domxref("HMDVRDevice.setFieldOfView()")}}
+  - : Sets the field of view for both eyes.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}.</em></p>
+_This interface doesn't define any properties of its own, but it does inherit the properties of its parent interface, {{domxref("VRDisplay")}}._
 
-<dl>
- <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{readonlyInline}}</dt>
- <dd>Returns the distinct hardware ID for the overall hardware unit that this <code>VRDevice</code> is a part of. All devices that are part of the same physical piece of hardware will have the same <code>hardwareUnitId</code>.</dd>
- <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}}</dt>
- <dd>Returns the ID for this specific <code>VRDevice</code>. The ID shouldn’t change across browser restarts, allowing configuration data to be saved based on it.</dd>
- <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}}</dt>
- <dd>A human-readable name to identify the <code>VRDevice</code>.</dd>
-</dl>
+- {{domxref("VRDisplay.hardwareUnitId")}} {{readonlyInline}}
+  - : Returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
+- {{domxref("VRDisplay.displayId")}} {{readonlyInline}}
+  - : Returns the ID for this specific `VRDevice`. The ID shouldn’t change across browser restarts, allowing configuration data to be saved based on it.
+- {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
+  - : A human-readable name to identify the `VRDevice`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example, taken from the WebVR spec, finds the first available <code>HMDVRDevice</code> and its associated {{domxref("PositionSensorVRDevice")}}, if it has one.</p>
+The following example, taken from the WebVR spec, finds the first available `HMDVRDevice` and its associated {{domxref("PositionSensorVRDevice")}}, if it has one.
 
-<pre class="brush: js">navigator.getVRDevices().then(function(devices) {
-  for (var i = 0; i &lt; devices.length; ++i) {
+```js
+navigator.getVRDevices().then(function(devices) {
+  for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
       break;
@@ -52,22 +49,21 @@ browser-compat: api.HMDVRDevice
   }
 
   if (gHMD) {
-    for (var i = 0; i &lt; devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice &amp;&amp; devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+    for (var i = 0; i < devices.length; ++i) {
+      if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
         break;
       }
     }
   }
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

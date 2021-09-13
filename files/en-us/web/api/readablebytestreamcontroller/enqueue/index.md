@@ -2,54 +2,51 @@
 title: ReadableByteStreamController.enqueue()
 slug: Web/API/ReadableByteStreamController/enqueue
 tags:
-- API
-- Experimental
-- Method
-- ReadableByteStreamController
-- Reference
-- Streams
-- enqueue
+  - API
+  - Experimental
+  - Method
+  - ReadableByteStreamController
+  - Reference
+  - Streams
+  - enqueue
 browser-compat: api.ReadableByteStreamController.enqueue
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>enqueue()</code></strong> method of the
-  {{domxref("ReadableByteStreamController")}} interface enqueues a given chunk in the
-  associated stream.</p>
+The **`enqueue()`** method of the
+{{domxref("ReadableByteStreamController")}} interface enqueues a given chunk in the
+associated stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>readableByteStreamController</em>.enqueue(<em>chunk</em>);</pre>
+```js
+readableByteStreamController.enqueue(chunk);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>chunk</em></dt>
-  <dd>The chunk to enqueue.</dd>
-</dl>
+- _chunk_
+  - : The chunk to enqueue.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableByteStreamController</code>, or the stream
+- TypeError
+  - : The source object is not a `ReadableByteStreamController`, or the stream
     cannot be read for some other reason, or the chunk is not an object, or the chunk's
-    internal array buffer is non-existent or detached.</dd>
-</dl>
+    internal array buffer is non-existent or detached.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

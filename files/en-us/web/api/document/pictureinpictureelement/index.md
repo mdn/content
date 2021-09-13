@@ -14,57 +14,58 @@ tags:
   - pip
 browser-compat: api.Document.pictureInPictureElement
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The
-    <code><strong>Document.pictureInPictureElement</strong></code> read-only
-    property returns the {{ domxref("Element") }} that is currently being
-    presented in picture-in-picture mode in this document, or <code>null</code> if
-    picture-in-picture mode is not currently in use.</p>
+The
+**`Document.pictureInPictureElement`** read-only
+property returns the {{ domxref("Element") }} that is currently being
+presented in picture-in-picture mode in this document, or `null` if
+picture-in-picture mode is not currently in use.
 
-<p>Although this property is read-only, it will not throw if it is modified (even in
-  strict mode); the setter is a no-operation and will be ignored.</p>
+Although this property is read-only, it will not throw if it is modified (even in
+strict mode); the setter is a no-operation and will be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>document</var>.pictureInPictureElement;</pre>
+```js
+document.pictureInPictureElement;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A reference to the {{domxref("Element")}} object that's currently in
-  picture-in-picture mode; if picture-in-picture mode isn't currently in use by the
-  <code><var>document</var></code>, the returned value is <code>null</code>.</p>
+A reference to the {{domxref("Element")}} object that's currently in
+picture-in-picture mode; if picture-in-picture mode isn't currently in use by the
+`document`, the returned value is `null`.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<p>This example presents a function, <code>exitPictureInPicture()</code>,
-  which tests the value returned by <code>pictureInPictureElement</code>. If the document
-  is in picture-in-picture mode (<code>pictureInPictureElement</code> isn't
-  <code>null</code>), <code><a href="/en-US/docs/Web/API/Document/exitPictureInPicture">Document.exitPictureInPicture()</a></code> is run to exit
-  picture-in-picture mode.</p>
+This example presents a function, `exitPictureInPicture()`,
+which tests the value returned by `pictureInPictureElement`. If the document
+is in picture-in-picture mode (`pictureInPictureElement` isn't
+`null`), [`Document.exitPictureInPicture()`](/en-US/docs/Web/API/Document/exitPictureInPicture) is run to exit
+picture-in-picture mode.
 
-<pre class="brush: js">function exitPictureInPicture() {
+```js
+function exitPictureInPicture() {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
-  <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
-  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-  <li>{{CSSxRef(":picture-in-picture")}}</li>
-</ul>
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+- {{DOMxRef("Document.pictureInPictureEnabled")}}
+- {{DOMxRef("Document.exitPictureInPicture()")}}
+- {{CSSxRef(":picture-in-picture")}}

@@ -2,31 +2,32 @@
 title: MediaKeySystemConfiguration.videoCapabilities
 slug: Web/API/MediaKeySystemConfiguration/videoCapabilities
 tags:
-- API
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemConfiguration
-- NeedsExample
-- Property
-- Reference
-- Video
-- initDataTypes
+  - API
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemConfiguration
+  - NeedsExample
+  - Property
+  - Reference
+  - Video
+  - initDataTypes
 browser-compat: api.MediaKeySystemConfiguration.videoCapabilities
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemConfiguration.videoCapabilities</code> read-only property
-  returns an array of supported video type and capability pairs.</p>
+The `MediaKeySystemConfiguration.videoCapabilities` read-only property
+returns an array of supported video type and capability pairs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>videoCapabilities</var>[{contentType: '<var>contentType</var>', robustness:'<var>robustness</var>'}] = <var>mediaSystemConfiguration</var>.videoCapabilities;</pre>
+```js
+var videoCapabilities[{contentType: 'contentType', robustness:'robustness'}] = mediaSystemConfiguration.videoCapabilities;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

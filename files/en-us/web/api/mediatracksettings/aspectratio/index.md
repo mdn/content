@@ -2,67 +2,65 @@
 title: MediaTrackSettings.aspectRatio
 slug: Web/API/MediaTrackSettings/aspectRatio
 tags:
-- API
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- Video
-- WebRTC
-- aspectRatio
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - Video
+  - WebRTC
+  - aspectRatio
 browser-compat: api.MediaTrackSettings.aspectRatio
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>aspectRatio</strong></code> property is a double-precision floating-point
-  number indicating the aspect ratio of the {{domxref("MediaStreamTrack")}} as currently
-  configured. This lets you determine what value was selected to comply with your
-  specified constraints for this property's value as described in the
-  {{domxref("MediaTrackConstraints.aspectRatio")}} property you provided when calling
-  either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`aspectRatio`** property is a double-precision floating-point
+number indicating the aspect ratio of the {{domxref("MediaStreamTrack")}} as currently
+configured. This lets you determine what value was selected to comply with your
+specified constraints for this property's value as described in the
+{{domxref("MediaTrackConstraints.aspectRatio")}} property you provided when calling
+either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>aspectRatio</em> = <em>MediaTrackSettings</em>.aspectRatio;
-</pre>
+```js
+var aspectRatio = MediaTrackSettings.aspectRatio;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point number indicating the current configuration of the
-  track's aspect ratio. The aspect ratio is computed by taking the track's width, dividing
-  by its height, and rounding the result to ten decimal places. For example, the standard
-  16:9 high-definition aspect ratio can be computed as 1920/1080, or 1.7777777778.</p>
+A double-precision floating-point number indicating the current configuration of the
+track's aspect ratio. The aspect ratio is computed by taking the track's width, dividing
+by its height, and rounding the result to ten decimal places. For example, the standard
+16:9 high-definition aspect ratio can be computed as 1920/1080, or 1.7777777778.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.aspectRatio")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.aspectRatio")}}
+- {{domxref("MediaTrackSettings")}}

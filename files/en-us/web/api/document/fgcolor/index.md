@@ -2,53 +2,51 @@
 title: Document.fgColor
 slug: Web/API/Document/fgColor
 tags:
-- API
-- Deprecated
-- HTML DOM
-- NeedsMarkupWork
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Deprecated
+  - HTML DOM
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.Document.fgColor
 ---
-<div>{{ApiRef}}{{Deprecated_header}}</div>
+{{ApiRef}}{{Deprecated_header}}
 
-<p><strong><code>fgColor</code></strong> gets/sets the foreground color, or text color, of
-  the current document.</p>
+**`fgColor`** gets/sets the foreground color, or text color, of
+the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>color</var> = <var>document</var>.fgColor;
-<var>document</var>.fgColor = <var>color;</var>
-</pre>
+```js
+var color = document.fgColor;
+document.fgColor = color;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><var>color</var> is a string representing the color as a word (e.g., "red") or
-    hexadecimal value (e.g., "<code>#ff0000</code>").</li>
-</ul>
+- _color_ is a string representing the color as a word (e.g., "red") or
+  hexadecimal value (e.g., "`#ff0000`").
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">document.fgColor = "white";
+```js
+document.fgColor = "white";
 document.bgColor = "darkblue";
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The default value for this property in Mozilla Firefox is black (<code>#000000</code>
-  in hexadecimal).</p>
+The default value for this property in Mozilla Firefox is black (`#000000`
+in hexadecimal).
 
-<p><code>document.fgColor</code> is <a
-    href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">deprecated in DOM
-    Level 2 HTML</a>. The recommended alternative is the CSS property {{Cssxref("color")}}
-  (e.g., <code>document.body.style.color = "red"</code>).</p>
+`document.fgColor` is [deprecated in DOM
+Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). The recommended alternative is the CSS property {{Cssxref("color")}}
+(e.g., `document.body.style.color = "red"`).
 
-<p>Another alternative is <code>document.body.text</code>, although this is <a
-    href="https://www.w3.org/TR/html401/struct/global.html#adef-text">deprecated in HTML
-    4.01</a> in favor of the CSS alternative above.</p>
+Another alternative is `document.body.text`, although this is [deprecated in HTML
+4.01](https://www.w3.org/TR/html401/struct/global.html#adef-text) in favor of the CSS alternative above.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

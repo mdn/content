@@ -7,43 +7,40 @@ tags:
   - Tutorial
   - WebSockets
 ---
-<h2 id="Introduction">Introduction</h2>
+## Introduction
 
-<p>If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.</p>
+If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
-<p>This server conforms to <a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455</a> so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.</p>
+This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
 
-<h2 id="First_steps">First steps</h2>
+## First steps
 
-<p>WebSockets communicate over a <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (Transmission Control Protocol)</a> connection. Luckily, C# has a <a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener</a> class which does as the name suggests. It is in the <em>System.Net.Sockets</em> namespace.</p>
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
 
-<div class="note">
-<p><strong>Note:</strong> It is a good idea to include the namespace with the <code>using</code> keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.</p>
-</div>
+> **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
-<h3 id="TcpListener">TcpListener</h3>
+### TcpListener
 
-<p>Constructor:</p>
+Constructor:
 
-<pre class="brush: cpp">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
+```cpp
+TcpListener(System.Net.IPAddress localaddr, int port)
+```
 
-<p><code>localaddr</code> specifies the IP of the listener, and <code>port</code> specifies the port.</p>
+`localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-<div class="note">
-<p><strong>Note:</strong> To create an <code>IPAddress</code> object from a <code>string</code>, use the <code>Parse</code> static method of <code>IPAddress</code><em>.</em></p>
-</div>
+> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
 
-<p>Methods:</p>
+Methods:
 
-<ul>
- <li><code>Start()</code></li>
- <li><code>System.Net.Sockets.<a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
-  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.</li>
-</ul>
+- `Start()`
+- `System.Net.Sockets.TcpClient AcceptTcpClient()`
+  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.
 
-<p>Here's a barebones server implementation:</p>
+Here's a barebones server implementation:
 
-<pre class="brush: cpp">using System.Net.Sockets;
+```cpp
+using System.Net.Sockets;
 using System.Net;
 using System;
 
@@ -59,38 +56,40 @@ class Server {
         Console.WriteLine("A client connected.");
     }
 }
-</pre>
+```
 
-<h3 id="TcpClient">TcpClient</h3>
+### TcpClient
 
-<p>Methods:</p>
+Methods:
 
-<ul>
- <li><code>System.Net.Sockets.<a href="https://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
-  Gets the stream which is the communication channel. Both sides of the channel have reading and writing capability.</li>
-</ul>
+- `System.Net.Sockets.NetworkStream GetStream()`
+  Gets the stream which is the communication channel. Both sides of the channel have reading and writing capability.
 
-<p>Properties:</p>
+Properties:
 
-<ul>
- <li><code>int Available</code><br>
-  This Property indicates how many bytes of data have been sent. The value is zero until <code>NetworkStream.DataAvailable</code> is <em>true</em>.</li>
-</ul>
+- `int Available`
+  This Property indicates how many bytes of data have been sent. The value is zero until `NetworkStream.DataAvailable` is _true_.
 
-<h3 id="NetworkStream">NetworkStream</h3>
+### NetworkStream
 
-<p>Methods:</p>
+Methods:
 
-<ul>
- <li><pre class="brush: cpp">Write(Byte[] buffer, int offset, int size)</pre><br>
-  Writes bytes from buffer, offset and size determine length of message.</li>
- <li><pre class="brush: cpp">Read(Byte[] buffer, int offset, int size)</pre><br>
-  Reads bytes to <code>buffer</code>. <code>offset</code> and <code>size</code> determine the length of the message.</li>
-</ul>
+- ```cpp
+  Write(Byte[] buffer, int offset, int size)
+  ```
 
-<p>Let us extend our example.</p>
+  Writes bytes from buffer, offset and size determine length of message.
 
-<pre class="brush: cpp">TcpClient client = server.AcceptTcpClient();
+- ```cpp
+  Read(Byte[] buffer, int offset, int size)
+  ```
+
+  Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
+
+Let us extend our example.
+
+```cpp
+TcpClient client = server.AcceptTcpClient();
 
 Console.WriteLine("A client connected.");
 
@@ -103,18 +102,20 @@ while (true) {
     Byte[] bytes = new Byte[client.Available];
 
     stream.Read(bytes, 0, bytes.Length);
-}</pre>
+}
+```
 
-<h2 id="Handshaking">Handshaking</h2>
+## Handshaking
 
-<p>When a client connects to a server, it sends a GET request to upgrade the connection to a WebSocket from a simple HTTP request. This is known as handshaking.</p>
+When a client connects to a server, it sends a GET request to upgrade the connection to a WebSocket from a simple HTTP request. This is known as handshaking.
 
-<p>This sample code can detect a GET from the client. Note that this will block until the first 3 bytes of a message are available. Alternative solutions should be investigated for production environments.</p>
+This sample code can detect a GET from the client. Note that this will block until the first 3 bytes of a message are available. Alternative solutions should be investigated for production environments.
 
-<pre class="brush: cpp">using System.Text;
+```cpp
+using System.Text;
 using System.Text.RegularExpressions;
 
-while(client.Available &lt; 3)
+while(client.Available < 3)
 {
    // wait for enough bytes to be available
 }
@@ -130,20 +131,20 @@ if (Regex.IsMatch(data, "^GET")) {
 
 } else {
 
-}</pre>
+}
+```
 
-<p>The response is easy to build, but might be a little bit difficult to understand. The full explanation of the Server handshake can be found in RFC 6455, section 4.2.2. For our purposes, we'll just build a simple response.</p>
+The response is easy to build, but might be a little bit difficult to understand. The full explanation of the Server handshake can be found in RFC 6455, section 4.2.2. For our purposes, we'll just build a simple response.
 
-<p>You must:</p>
+You must:
 
-<ol>
- <li>Obtain the value of the "Sec-WebSocket-Key" request header without any leading or trailing whitespace</li>
- <li>Concatenate it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (a special GUID specified by RFC 6455)</li>
- <li>Compute SHA-1 and Base64 hash of the new value</li>
- <li>Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response</li>
-</ol>
+1.  Obtain the value of the "Sec-WebSocket-Key" request header without any leading or trailing whitespace
+2.  Concatenate it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (a special GUID specified by RFC 6455)
+3.  Compute SHA-1 and Base64 hash of the new value
+4.  Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
 
-<pre class="brush: cpp"> if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+```cpp
+ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
@@ -161,98 +162,67 @@ if (Regex.IsMatch(data, "^GET")) {
 
     stream.Write(response, 0, response.Length);
 }
-</pre>
+```
 
-<h2 id="Decoding_messages">Decoding messages</h2>
+## Decoding messages
 
-<p>After a successful handshake, the client will send encoded messages to the server.</p>
+After a successful handshake, the client will send encoded messages to the server.
 
-<p>If we send "MDN", we get these bytes:</p>
+If we send "MDN", we get these bytes:
 
-<pre>129 131 61 84 35 6 112 16 109</pre>
+    129 131 61 84 35 6 112 16 109
 
-<p>Let's take a look at what these bytes mean.</p>
+Let's take a look at what these bytes mean.
 
-<p>The first byte, which currently has a value of 129, is a bitfield that breaks down as such:</p>
+The first byte, which currently has a value of 129, is a bitfield that breaks down as such:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">FIN (Bit 0)</th>
-   <th scope="col">RSV1 (Bit 1)</th>
-   <th scope="col">RSV2 (Bit 2)</th>
-   <th scope="col">RSV3 (Bit 3)</th>
-   <th scope="col">Opcode (Bit 4:7)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-   <td>0x1=0001</td>
-  </tr>
- </tbody>
-</table>
+| FIN (Bit 0) | RSV1 (Bit 1) | RSV2 (Bit 2) | RSV3 (Bit 3) | Opcode (Bit 4:7) |
+| ----------- | ------------ | ------------ | ------------ | ---------------- |
+| 1           | 0            | 0            | 0            | 0x1=0001         |
 
-<ul>
- <li>FIN bit: This bit indicates whether the full message has been sent from the client. Messages may be sent in frames, but for now we will keep things simple.</li>
- <li>RSV1, RSV2, RSV3: These bits must be 0 unless an extension is negotiated which supplies a nonzero value to them.</li>
- <li>Opcode: These bits describe the type of message received. Opcode 0x1 means this is a text message. <a href="https://datatracker.ietf.org/doc/html/rfc6455#section-5.2">Full list of Opcodes</a></li>
-</ul>
+- FIN bit: This bit indicates whether the full message has been sent from the client. Messages may be sent in frames, but for now we will keep things simple.
+- RSV1, RSV2, RSV3: These bits must be 0 unless an extension is negotiated which supplies a nonzero value to them.
+- Opcode: These bits describe the type of message received. Opcode 0x1 means this is a text message. [Full list of Opcodes](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
 
-<p>The second byte, which currently has a value of 131, is another bitfield that breaks down as such:</p>
+The second byte, which currently has a value of 131, is another bitfield that breaks down as such:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">MASK (Bit 0)</th>
-   <th scope="col">Payload Length (Bit 1:7)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>1</td>
-   <td>0x83=0000011</td>
-  </tr>
- </tbody>
-</table>
+| MASK (Bit 0) | Payload Length (Bit 1:7) |
+| ------------ | ------------------------ |
+| 1            | 0x83=0000011             |
 
-<ul>
- <li>MASK bit: Defines whether the "Payload data" is masked.  If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.</li>
- <li>Payload Length: If this value is between 0 and 125, then it is the length of message. If it is 126, the following 2 bytes (16-bit unsigned integer) are the length. If it is 127, the following 8 bytes (64-bit unsigned integer) are the length.</li>
-</ul>
+- MASK bit: Defines whether the "Payload data" is masked.  If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.
+- Payload Length: If this value is between 0 and 125, then it is the length of message. If it is 126, the following 2 bytes (16-bit unsigned integer) are the length. If it is 127, the following 8 bytes (64-bit unsigned integer) are the length.
 
-<div class="note">
-<p><strong>Note:</strong> Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.</p>
-</div>
+> **Note:** Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.
 
-<p>Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.</p>
+Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.
 
-<p>The remaining bytes are the encoded message payload.</p>
+The remaining bytes are the encoded message payload.
 
-<h3 id="Decoding_algorithm">Decoding algorithm</h3>
+### Decoding algorithm
 
-<p><em>D_i</em> = <em>E_i</em> XOR <em>M</em>_(<em>i</em> mod 4)</p>
+_D_i_ = _E_i_ XOR _M_\_(_i_ mod 4)
 
-<p>where <em>D</em> is the decoded message array, <em>E</em> is the encoded message array, <em>M</em> is the mask byte array, and <em>i</em> is the index of the message byte to decode.</p>
+where _D_ is the decoded message array, _E_ is the encoded message array, _M_ is the mask byte array, and _i_ is the index of the message byte to decode.
 
-<p>Example in C#:</p>
+Example in C#:
 
-<pre class="brush: cpp">Byte[] decoded = new Byte[3];
+```cpp
+Byte[] decoded = new Byte[3];
 Byte[] encoded = new Byte[3] {112, 16, 109};
 Byte[] mask = new Byte[4] {61, 84, 35, 6};
 
-for (int i = 0; i &lt; encoded.Length; i++) {
+for (int i = 0; i < encoded.Length; i++) {
     decoded[i] = (Byte)(encoded[i] ^ mask[i % 4]);
-}</pre>
+}
+```
 
-<h2 id="Put_together">Put together</h2>
+## Put together
 
-<h3 id="wsserver.cs">wsserver.cs</h3>
+### wsserver.cs
 
-<pre class="brush: cpp">//
+```cpp
+//
 // csc wsserver.cs
 // wsserver.exe
 
@@ -279,7 +249,7 @@ class Server {
         // enter to an infinite cycle to be able to handle every change in stream
         while (true) {
             while (!stream.DataAvailable);
-            while (client.Available &lt; 3); // match against "get"
+            while (client.Available < 3); // match against "get"
 
             byte[] bytes = new byte[client.Available];
             stream.Read(bytes, 0, client.Available);
@@ -306,11 +276,11 @@ class Server {
 
                 stream.Write(response, 0, response.Length);
             } else {
-                bool fin = (bytes[0] &amp; 0b10000000) != 0,
-                    mask = (bytes[1] &amp; 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
+                bool fin = (bytes[0] & 0b10000000) != 0,
+                    mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
 
-                int opcode = bytes[0] &amp; 0b00001111, // expecting 1 - text message
-                    msglen = bytes[1] - 128, // &amp; 0111 1111
+                int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
+                    msglen = bytes[1] - 128, // & 0111 1111
                     offset = 2;
 
                 if (msglen == 126) {
@@ -331,7 +301,7 @@ class Server {
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
 
-                    for (int i = 0; i &lt; msglen; ++i)
+                    for (int i = 0; i < msglen; ++i)
                         decoded[i] = (byte)(bytes[offset + i] ^ masks[i % 4]);
 
                     string text = Encoding.UTF8.GetString(decoded);
@@ -343,23 +313,25 @@ class Server {
             }
         }
     }
-}</pre>
+}
+```
 
-<h3 id="client.html">client.html</h3>
+### client.html
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;style&gt;
+```html
+<!doctype html>
+<style>
     textarea { vertical-align: bottom; }
     #output { overflow: auto; }
-    #output &gt; p { overflow-wrap: break-word; }
+    #output > p { overflow-wrap: break-word; }
     #output span { color: blue; }
     #output span.error { color: red; }
-&lt;/style&gt;
-&lt;h2&gt;WebSocket Test&lt;/h2&gt;
-&lt;textarea cols=60 rows=6&gt;&lt;/textarea&gt;
-&lt;button&gt;send&lt;/button&gt;
-&lt;div id=output&gt;&lt;/div&gt;
-&lt;script&gt;
+</style>
+<h2>WebSocket Test</h2>
+<textarea cols=60 rows=6></textarea>
+<button>send</button>
+<div id=output></div>
+<script>
     // http://www.websocket.org/echo.html
 
     var button = document.querySelector("button"),
@@ -381,11 +353,11 @@ class Server {
     };
 
     websocket.onmessage = function (e) {
-        writeToScreen("&lt;span&gt;RESPONSE: " + e.data + "&lt;/span&gt;");
+        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
     };
 
     websocket.onerror = function (e) {
-        writeToScreen("&lt;span class=error&gt;ERROR:&lt;/span&gt; " + e.data);
+        writeToScreen("<span class=error>ERROR:</span> " + e.data);
     };
 
     function doSend(message) {
@@ -394,20 +366,19 @@ class Server {
     }
 
     function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "&lt;p&gt;" + message + "&lt;/p&gt;");
+        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
     }
 
     function onClickButton() {
         var text = textarea.value;
 
-        text &amp;&amp; doSend(text);
+        text && doSend(text);
         textarea.value = "";
         textarea.focus();
     }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Related">Related</h2>
+## Related
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
-</ul>
+- [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

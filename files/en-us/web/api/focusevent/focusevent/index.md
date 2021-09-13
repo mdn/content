@@ -2,60 +2,54 @@
 title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 tags:
-- API
-- Constructor
-- Event
-- FocusEvent
-- Reference
+  - API
+  - Constructor
+  - Event
+  - FocusEvent
+  - Reference
 browser-compat: api.FocusEvent.FocusEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>FocusEvent()</strong></code> constructor returns a newly created
-  {{domxref("FocusEvent")}} object with an optional {{domxref("EventTarget")}}. When the
-  event has both a source and a destination, the <code>relatedTarget</code> value must be
-  set to the other target.</p>
+The **`FocusEvent()`** constructor returns a newly created
+{{domxref("FocusEvent")}} object with an optional {{domxref("EventTarget")}}. When the
+event has both a source and a destination, the `relatedTarget` value must be
+set to the other target.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>focusEvent</em> = new FocusEvent(<em>typeArg</em>[, <em>focusEventInit</em>]);
-</pre>
+```js
+var focusEvent = new FocusEvent(typeArg[, focusEventInit]);
+```
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<p><em>The <code>FocusEvent()</code> constructor also inherits arguments from
-    {{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
-    "Event()")}}.</em></p>
+_The `FocusEvent()` constructor also inherits arguments from
+{{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
+    "Event()")}}._
 
-<dl>
-  <dt><code>typeArg</code></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code>focusEventInit</code> {{optional_inline}}</dt>
-  <dd>Is a <code>FocusEventInit</code> dictionary, having the following fields:
-    <ul>
-      <li><code>"relatedTarget"</code>, optional and defaulting to <code>null</code>, is
-        an {{domxref("EventTarget")}} representing the secondary target of a
-        {{domxref("FocusEvent")}}.</li>
-    </ul>
+- `typeArg`
+  - : Is a {{domxref("DOMString")}} representing the name of the event.
+- `focusEventInit` {{optional_inline}}
 
-    <div class="note">
-      <p><strong>Note:</strong> The <code>FocusEventInit</code> dictionary also accepts fields from the
-        {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
-        "EventInit")}} dictionaries.</p>
-    </div>
-  </dd>
-</dl>
+  - : Is a `FocusEventInit` dictionary, having the following fields:
 
-<h2 id="Specifications">Specifications</h2>
+    - `"relatedTarget"`, optional and defaulting to `null`, is
+      an {{domxref("EventTarget")}} representing the secondary target of a
+      {{domxref("FocusEvent")}}.
+
+    > **Note:** The `FocusEventInit` dictionary also accepts fields from the
+    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
+        "EventInit")}} dictionaries.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("FocusEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("FocusEvent")}} interface it belongs to.

@@ -3,14 +3,14 @@ title: SVGAnimatedString.baseVal
 slug: Web/API/SVGAnimatedString/baseVal
 browser-compat: api.SVGAnimatedString.baseVal
 ---
-<p>{{APIRef("SVG")}}</p>
+{{APIRef("SVG")}}
 
-<p>BaseVal gets or sets the base value of the given attribute before any animations are applied. The base value of the given attribute before applying any animations. Setter throws DOMException.</p>
+BaseVal gets or sets the base value of the given attribute before any animations are applied. The base value of the given attribute before applying any animations. Setter throws DOMException.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

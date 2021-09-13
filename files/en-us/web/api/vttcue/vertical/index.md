@@ -9,32 +9,34 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.vertical
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>vertical</code></strong> property of the {{domxref("VTTCue")}} interface is a {{domxref("DOMString","string")}} representing the cue's writing direction.</p>
+The **`vertical`** property of the {{domxref("VTTCue")}} interface is a {{domxref("DOMString","string")}} representing the cue's writing direction.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let vertical = VTTCue.vertical;
-VTTCue.vertical = "lr";</pre>
+```js
+let vertical = VTTCue.vertical;
+VTTCue.vertical = "lr";
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>""</code> (an empty string)</dt>
-  <dd>Represents a horizontal writing direction.</dd>
-  <dt><code>"rl"</code></dt>
-  <dd>Represents a vertical writing direction growing to the left.</dd>
-  <dt><code>"lr"</code></dt>
-  <dd>Represents a vertical writing direction growing to the right.</dd>
-</dl>
+A {{domxref("DOMString","string")}} containing one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `""` (an empty string)
+  - : Represents a horizontal writing direction.
+- `"rl"`
+  - : Represents a vertical writing direction growing to the left.
+- `"lr"`
+  - : Represents a vertical writing direction growing to the right.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>vertical</code> is set to <code>"rl"</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `vertical` is set to `"rl"`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -43,12 +45,12 @@ cue1.vertical = 'rl';
 console.log(cue1.vertical);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

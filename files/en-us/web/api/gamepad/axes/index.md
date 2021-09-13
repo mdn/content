@@ -11,22 +11,25 @@ tags:
   - Reference
 browser-compat: api.Gamepad.axes
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>Gamepad.axes</strong></code> property of the {{domxref("Gamepad") }}
-  interface returns an array representing the controls with axes present on the device
-  (e.g. analog thumb sticks).</p>
+The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
+interface returns an array representing the controls with axes present on the device
+(e.g. analog thumb sticks).
 
-<p>Each entry in the array is a floating point value in the range -1.0 – 1.0, representing
-  the axis position from the lowest value (-1.0) to the highest value (1.0).</p>
+Each entry in the array is a floating point value in the range -1.0 – 1.0, representing
+the axis position from the lowest value (-1.0) to the highest value (1.0).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const axes = gamepad.axes;</pre>
+```js
+const axes = gamepad.axes;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function gameLoop() {
+```js
+function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
   } else {
@@ -47,20 +50,21 @@ browser-compat: api.Gamepad.axes
   ball.style.top = b*2 + "px";
 
   var start = rAF(gameLoop);
-};</pre>
+};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An array of {{domxref("double") }} values.</p>
+An array of {{domxref("double") }} values.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

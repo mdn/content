@@ -2,45 +2,46 @@
 title: RTCOutboundRtpStreamStats.remoteId
 slug: Web/API/RTCOutboundRtpStreamStats/remoteId
 tags:
-- API
-- Property
-- RTCOutboundRtpStreamStats
-- RTCRtpReceiver
-- RTCRtpSender
-- Reference
-- Remote
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- id
-- remoteId
+  - API
+  - Property
+  - RTCOutboundRtpStreamStats
+  - RTCRtpReceiver
+  - RTCRtpSender
+  - Reference
+  - Remote
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - id
+  - remoteId
 browser-compat: api.RTCOutboundRtpStreamStats.remoteId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>remoteId</code></strong> property of the
-    {{domxref("RTCOutboundRtpStreamStats")}} dictionary specifies the
-    {{domxref("RTCStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
-    object representing the remote peer's {{domxref("RTCRtpReceiver")}} which is sending
-    the media to the local peer for this SSRC.</p>
+The **`remoteId`** property of the
+{{domxref("RTCOutboundRtpStreamStats")}} dictionary specifies the
+{{domxref("RTCStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
+object representing the remote peer's {{domxref("RTCRtpReceiver")}} which is sending
+the media to the local peer for this SSRC.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>remoteStatsId</em> = <em>RTCOutboundRtpStreamStats</em>.remoteId;</pre>
+```js
+var remoteStatsId = RTCOutboundRtpStreamStats.remoteId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the ID of the
-  {{domxref("RTCRemoteInboundRtpStreamStats")}} object that represents the remote peer's
-  {{domxref("RTCRtpReceiver")}} for the synchronization source represented by this stats
-  object.</p>
+A {{domxref("DOMString")}} containing the ID of the
+{{domxref("RTCRemoteInboundRtpStreamStats")}} object that represents the remote peer's
+{{domxref("RTCRtpReceiver")}} for the synchronization source represented by this stats
+object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

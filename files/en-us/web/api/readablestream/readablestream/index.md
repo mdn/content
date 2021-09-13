@@ -2,122 +2,115 @@
 title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 tags:
-- API
-- Constructor
-- ReadableStream
-- Reference
+  - API
+  - Constructor
+  - ReadableStream
+  - Reference
 browser-compat: api.ReadableStream.ReadableStream
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>ReadableStream()</code></strong> constructor creates
-  and returns a readable stream object from the given handlers.</p>
+The **`ReadableStream()`** constructor creates
+and returns a readable stream object from the given handlers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>readableStream</em> = new ReadableStream(<em>underlyingSource</em>[, <em>queuingStrategy</em>]);</pre>
+```js
+var readableStream = new ReadableStream(underlyingSource[, queuingStrategy]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>underlyingSource {{optional_inline}}</dt>
-  <dd>An object containing methods and properties that define how the constructed stream
-    instance will behave. <code>underlyingSource</code> can contain the following:
-    <dl>
-      <dt>start(controller) {{optional_inline}}</dt>
-      <dd>This is a method, called immediately when the object is constructed. The
+- underlyingSource {{optional_inline}}
+
+  - : An object containing methods and properties that define how the constructed stream
+    instance will behave. `underlyingSource` can contain the following:
+
+    - start(controller) {{optional_inline}}
+      - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
         to the stream source, and do anything else required to set up the stream
         functionality. If this process is to be done asynchronously, it can return a
-        promise to signal success or failure. The <code>controller</code> parameter passed
+        promise to signal success or failure. The `controller` parameter passed
         to this method is a {{domxref("ReadableStreamDefaultController")}} or a
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
-        <code>type</code> property. This can be used by the developer to control the
-        stream during set up.</dd>
-      <dt>pull(controller) {{optional_inline}}</dt>
-      <dd>This method, also defined by the developer, will be called repeatedly when the
+        `type` property. This can be used by the developer to control the
+        stream during set up.
+    - pull(controller) {{optional_inline}}
+      - : This method, also defined by the developer, will be called repeatedly when the
         stream's internal queue of chunks is not full, up until it reaches its high water
-        mark. If <code>pull()</code> returns a promise, then it won't be called again
+        mark. If `pull()` returns a promise, then it won't be called again
         until that promise fulfills; if the promise rejects, the stream will become
-        errored. The <code>controller</code> parameter passed to this method is a
+        errored. The `controller` parameter passed to this method is a
         {{domxref("ReadableStreamDefaultController")}} or a
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
-        <code>type</code> property. This can be used by the developer to control the
-        stream as more chunks are fetched.</dd>
-      <dt>cancel(reason) {{optional_inline}}</dt>
-      <dd>This method, also defined by the developer, will be called if the app signals
+        `type` property. This can be used by the developer to control the
+        stream as more chunks are fetched.
+    - cancel(reason) {{optional_inline}}
+      - : This method, also defined by the developer, will be called if the app signals
         that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
-        success or failure. The <code>reason</code> parameter contains a
-        {{domxref("DOMString")}} describing why the stream was cancelled.</dd>
-      <dt>type {{optional_inline}}</dt>
-      <dd>This property controls what type of readable stream is being dealt with. If it
-        is included with a value set to <code>"bytes"</code>, the passed controller object
+        success or failure. The `reason` parameter contains a
+        {{domxref("DOMString")}} describing why the stream was cancelled.
+    - type {{optional_inline}}
+      - : This property controls what type of readable stream is being dealt with. If it
+        is included with a value set to `"bytes"`, the passed controller object
         will be a {{domxref("ReadableByteStreamController")}} capable of handling a BYOB
         (bring your own buffer)/byte stream. If it is not included, the passed controller
-        will be a {{domxref("ReadableStreamDefaultController")}}.</dd>
-      <dt>autoAllocateChunkSize {{optional_inline}}</dt>
-      <dd>For byte streams, the developer can set the <code>autoAllocateChunkSize</code>
+        will be a {{domxref("ReadableStreamDefaultController")}}.
+    - autoAllocateChunkSize {{optional_inline}}
+      - : For byte streams, the developer can set the `autoAllocateChunkSize`
         with a positive integer value to turn on the stream's auto-allocation feature.
         With this turned on, the stream implementation will automatically allocate an
         {{jsxref("ArrayBuffer")}} with a size of the given integer, and the consumer can
-        also use a default reader.</dd>
-    </dl>
-  </dd>
-  <dt>queuingStrategy {{optional_inline}}</dt>
-  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+        also use a default reader.
+
+- queuingStrategy {{optional_inline}}
+
+  - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-    <dl>
-      <dt>highWaterMark</dt>
-      <dd>A non-negative integer — this defines the total number of chunks that can be
-        contained in the internal queue before backpressure is applied.</dd>
-      <dt>size(chunk)</dt>
-      <dd>A method containing a parameter <code>chunk</code> — this indicates the size to
-        use for each chunk, in bytes.</dd>
-    </dl>
 
-    <div class="note">
-      <p><strong>Note:</strong> You could define your own custom
-        <code>queuingStrategy</code>, or use an instance of
-        {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
-        for this object value. If no <code>queuingStrategy</code> is supplied, the default
-        used is the same as a <code>CountQueuingStrategy</code> with a high water mark of
-        1.</p>
-    </div>
-  </dd>
-</dl>
+    - highWaterMark
+      - : A non-negative integer — this defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.
+    - size(chunk)
+      - : A method containing a parameter `chunk` — this indicates the size to
+        use for each chunk, in bytes.
 
-<h3 id="Return_value">Return value</h3>
+    > **Note:** You could define your own custom
+    > `queuingStrategy`, or use an instance of
+    > {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
+    > for this object value. If no `queuingStrategy` is supplied, the default
+    > used is the same as a `CountQueuingStrategy` with a high water mark of
+    > 1\.
 
-<p>An instance of the {{domxref("ReadableStream")}} object.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+An instance of the {{domxref("ReadableStream")}} object.
 
-<dl>
-  <dt>RangeError</dt>
-  <dd>The supplied type value is neither <code>"bytes"</code> nor <code>undefined</code>.
-  </dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- RangeError
+  - : The supplied type value is neither `"bytes"` nor `undefined`.
 
-<p>In the following simple example, a custom <code>ReadableStream</code> is created using
-  a constructor (see our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
-    stream example</a> for the full code). The <code>start()</code> function generates a
-  random string of text every second and enqueues it into the stream. A
-  <code>cancel()</code> fuction is also provided to stop the generation if
-  {{domxref("ReadableStream.cancel()")}} is called for any reason.</p>
+## Examples
 
-<p>When a button is pressed, the generation is stopped, the stream is closed using
-  {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
-  which reads the data back out of the stream.</p>
+In the following simple example, a custom `ReadableStream` is created using
+a constructor (see our [Simple random
+stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+random string of text every second and enqueues it into the stream. A
+`cancel()` fuction is also provided to stop the generation if
+{{domxref("ReadableStream.cancel()")}} is called for any reason.
 
-<pre class="brush: js">const stream = new ReadableStream({
+When a button is pressed, the generation is stopped, the stream is closed using
+{{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
+which reads the data back out of the stream.
+
+```js
+const stream = new ReadableStream({
   start(controller) {
-    interval = setInterval(() =&gt; {
+    interval = setInterval(() => {
       let string = randomChars();
 
       // Add the string to the stream
@@ -143,12 +136,13 @@ browser-compat: api.ReadableStream.ReadableStream
     // so we should stop generating strings
     clearInterval(interval);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

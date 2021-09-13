@@ -10,43 +10,46 @@ tags:
   - Read-only
 browser-compat: api.CSSPageRule.style
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>style</code></strong> read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSStyleDeclaration")}} object. This represents an object that is a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">CSS declaration block</a>, and exposes style information and various style-related methods and properties.</p>
+The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface returns a {{domxref("CSSStyleDeclaration")}} object. This represents an object that is a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block), and exposes style information and various style-related methods and properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>style</var> = <var>CSSPageRule</var>.style;</pre>
+    var style = CSSPageRule.style;
 
-<h3>Value</h3>
-<p>A {{domxref("CSSStyleDeclaration")}} object, which represents a <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">CSS declaration block</a> with the following properties:</p>
+### Value
 
-<dl>
-  <dt>computed flag</dt>
-  <dd>Unset.</dd>
-  <dt>declarations</dt>
-  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.</dd>
-  <dt>parent CSS rule</dt>
-  <dd>The context object, which is an alias for <a href="https://heycam.github.io/webidl/#this">this</a>.</dd>
-  <dt>owner node</dt>
-  <dd>Null.</dd>
-</dl>
+A {{domxref("CSSStyleDeclaration")}} object, which represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) with the following properties:
 
-<h2 id="Examples">Examples</h2>
+- computed flag
+  - : Unset.
+- declarations
+  - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
+- parent CSS rule
+  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+- owner node
+  - : Null.
 
-<p>The stylesheet includes a {{cssxref("@page")}} rule. Getting a list of rules, then returning the value of the style property will return a {{domxref("CSSStyleDeclaration")}} object.</p>
+## Examples
 
-<pre class="brush: css">@page {
+The stylesheet includes a {{cssxref("@page")}} rule. Getting a list of rules, then returning the value of the style property will return a {{domxref("CSSStyleDeclaration")}} object.
+
+```css
+@page {
   margin: 1cm;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].style); // returns a CSSStyleDeclaration object</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].style); // returns a CSSStyleDeclaration object
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

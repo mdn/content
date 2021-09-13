@@ -2,43 +2,43 @@
 title: USBDevice.opened
 slug: Web/API/USBDevice/opened
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- opened
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - opened
 browser-compat: api.USBDevice.opened
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>opened</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface indicates whether a session has been started with a
-  paired USB device. A device must be opened before it can be controlled by a web page.
-</p>
+The **`opened`** read only property of the
+{{domxref("USBDevice")}} interface indicates whether a session has been started with a
+paired USB device. A device must be opened before it can be controlled by a web page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var serialNumber = USBDevice.opened</pre>
+```js
+var serialNumber = USBDevice.opened
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("boolean")}}.</p>
+A {{jsxref("boolean")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example is for a hypothetical USB device with a multi-colored LED. It shows how to
-  test that a device is open before calling {{domxref("USBDevice.controlTransferOut")}} to
-  set a specified LED color.</p>
+This example is for a hypothetical USB device with a multi-colored LED. It shows how to
+test that a device is open before calling {{domxref("USBDevice.controlTransferOut")}} to
+set a specified LED color.
 
-<div class="note">
-  <p><strong>Note:</strong> What data can be passed to a USB device and how it is passed is particular and unique
-    to each device. </p>
-</div>
+> **Note:** What data can be passed to a USB device and how it is passed is particular and unique
+> to each device.
 
-<pre class="brush: js">async setDeviceColor(usbDevice, r, g, b) {
+```js
+async setDeviceColor(usbDevice, r, g, b) {
    if (device.opened) {
      // This hypothetical USB device requires that the data passed to
      // it be in a Uint8Array.
@@ -53,12 +53,12 @@ browser-compat: api.USBDevice.opened
      }, payload);
    }
  }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

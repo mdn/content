@@ -2,40 +2,42 @@
 title: PerformanceResourceTiming.connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceResourceTiming.connectStart
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>connectStart</code></strong> read-only property returns the
-  {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the user agent starts
-  establishing the connection to the server to retrieve the resource.</p>
+The **`connectStart`** read-only property returns the
+{{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the user agent starts
+establishing the connection to the server to retrieve the resource.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.connectStart;
-</pre>
+```js
+resource.connectStart;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish
-  the connection to the server to retrieve the resource.</p>
+A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to establish
+the connection to the server to retrieve the resource.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, the value of the <code>*Start</code> and <code>*End</code>
-  properties of all "<code>resource</code>"
-  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+In the following example, the value of the `*Start` and `*End`
+properties of all "`resource`"
+{{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -49,7 +51,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in perfEntry;
     if (supported) {
@@ -60,12 +62,12 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

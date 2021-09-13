@@ -14,78 +14,76 @@ tags:
   - delete
 browser-compat: api.Cache.delete
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>delete()</code></strong> method of the {{domxref("Cache")}} interface
-  finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the
-  {{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to
-  <code>true</code>. If no {{domxref("Cache")}} entry is found, it resolves
-  to <code>false</code>.</p>
+The **`delete()`** method of the {{domxref("Cache")}} interface
+finds the {{domxref("Cache")}} entry whose key is the request, and if found, deletes the
+{{domxref("Cache")}} entry and returns a {{jsxref("Promise")}} that resolves to
+`true`. If no {{domxref("Cache")}} entry is found, it resolves
+to `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.delete(<em>request</em>, {<em>options</em>}).then(function(<em>found</em>) {
+```js
+cache.delete(request, {options}).then(function(found) {
   // your cache entry has been deleted if found
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request</dt>
-  <dd>The {{domxref("Request")}} you are looking to delete. This can be a
-    <code>Request</code> object or a URL.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object whose properties control how matching is done in the <code>delete</code>
+- request
+  - : The {{domxref("Request")}} you are looking to delete. This can be a
+    `Request` object or a URL.
+- options {{optional_inline}}
+
+  - : An object whose properties control how matching is done in the `delete`
     operation. The available options are:
-    <ul>
-      <li><code>ignoreSearch</code>: A boolean value that specifies whether the
-        matching process should ignore the query string in the url.  If set to
-        <code>true</code>, the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A boolean value that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>HTTP</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A boolean value that, when set to
-        <code>true,</code> tells the matching operation not to perform <code>VARY</code>
-        header matching.  In other words, if the URL matches you will get a match
-        regardless of  whether the {{domxref("Response")}} object has a <code>VARY</code>
-        header. It defaults to <code>false</code>.</li>
-      <li><code>cacheName</code>: A {{domxref("DOMString")}} that represents a specific
-        cache to search within. Note that this option is ignored by
-        <code>Cache.delete()</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `ignoreSearch`: A boolean value that specifies whether the
+      matching process should ignore the query string in the url.  If set to
+      `true`, the `?value=bar` part of
+      `http://foo.com/?value=bar` would be ignored when performing a match.
+      It defaults to `false`.
+    - `ignoreMethod`: A boolean value that, when set to
+      `true`, prevents matching operations from validating the
+      {{domxref("Request")}} `HTTP` method (normally only `GET`
+      and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`: A boolean value that, when set to
+      `true,` tells the matching operation not to perform `VARY`
+      header matching.  In other words, if the URL matches you will get a match
+      regardless of  whether the {{domxref("Response")}} object has a `VARY`
+      header. It defaults to `false`.
+    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+      cache to search within. Note that this option is ignored by
+      `Cache.delete()`.
 
-<p>a {{jsxref("Promise")}} that resolves to <code>true</code> if the cache entry is
-  deleted, or <code>false</code> otherwise.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+a {{jsxref("Promise")}} that resolves to `true` if the cache entry is
+deleted, or `false` otherwise.
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+## Examples
+
+```js
+caches.open('v1').then(function(cache) {
   cache.delete('/images/image.png').then(function(response) {
     someUIUpdateFunction();
   });
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

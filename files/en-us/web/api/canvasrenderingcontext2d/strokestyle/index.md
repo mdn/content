@@ -2,84 +2,84 @@
 title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>CanvasRenderingContext2D.strokeStyle</strong></code> property of the
-  Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
-  (outlines) around shapes. The default is <code>#000</code> (black).</p>
+The **`CanvasRenderingContext2D.strokeStyle`** property of the
+Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
+(outlines) around shapes. The default is `#000` (black).
 
-<div class="note">
-  <p><strong>Note:</strong> For more examples of stroke and fill styles, see <a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-      styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-      tutorial</a>.</p>
-</div>
+> **Note:** For more examples of stroke and fill styles, see [Applying
+> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
+> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.strokeStyle = <em>color</em>;
-<em>ctx</em>.strokeStyle = <em>gradient</em>;
-<em>ctx</em>.strokeStyle = <em>pattern</em>;
-</pre>
+```js
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
-  <dt><code>color</code></dt>
-  <dd>A {{domxref("DOMString")}} parsed as <a href="/en-US/docs/Web/CSS">CSS</a>
-    {{cssxref("&lt;color&gt;")}} value.</dd>
-  <dt><code>gradient</code></dt>
-  <dd>A {{domxref("CanvasGradient")}} object (a linear or radial gradient).</dd>
-  <dt><code>pattern</code></dt>
-  <dd>A {{domxref("CanvasPattern")}} object (a repeating image).</dd>
-</dl>
+- `color`
+  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
+    {{cssxref("&lt;color&gt;")}} value.
+- `gradient`
+  - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
+- `pattern`
+  - : A {{domxref("CanvasPattern")}} object (a repeating image).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_stroke_color_of_a_shape">Changing the stroke color of a shape</h3>
+### Changing the stroke color of a shape
 
-<p>This example applies a blue stroke color to a rectangle.</p>
+This example applies a blue stroke color to a rectangle.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.strokeStyle = 'blue';
 ctx.strokeRect(10, 10, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_the_stroke_color_of_a_shape', 700, 160) }}</p>
+{{ EmbedLiveSample('Changing_the_stroke_color_of_a_shape', 700, 160) }}
 
-<h3 id="Creating_multiple_stroke_colors_using_loops">Creating multiple stroke colors using
-  loops</h3>
+### Creating multiple stroke colors using loops
 
-<p>In this example, we use two <code>for</code> loops and the
-  {{domxref("CanvasRenderingContext2D.arc", "arc()")}} method to draw a grid of circles,
-  each having a different stroke color. To achieve this, we use the two variables
-  <code>i</code> and <code>j</code> to generate a unique RGB color for each circle, and
-  only modify the green and blue values. (The red channel has a fixed value.)</p>
+In this example, we use two `for` loops and the
+{{domxref("CanvasRenderingContext2D.arc", "arc()")}} method to draw a grid of circles,
+each having a different stroke color. To achieve this, we use the two variables
+`i` and `j` to generate a unique RGB color for each circle, and
+only modify the green and blue values. (The red channel has a fixed value.)
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 
-for (let i = 0; i &lt; 6; i++) {
-  for (let j = 0; j &lt; 6; j++) {
+for (let i = 0; i < 6; i++) {
+  for (let j = 0; j < 6; j++) {
     ctx.strokeStyle = `rgb(
         0,
         ${Math.floor(255 - 42.5 * i)},
@@ -89,36 +89,35 @@ for (let i = 0; i &lt; 6; i++) {
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>The result looks like this:</p>
+The result looks like this:
 
-<p>{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180",
-  "canvas_strokestyle.png")}}</p>
+{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180",
+  "canvas_strokestyle.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_note">WebKit/Blink-specific note</h3>
+### WebKit/Blink-specific note
 
-<p>In WebKit- and Blink-based browsers, the non-standard and deprecated method
-  <code>ctx.setStrokeColor()</code> is implemented in addition to this property.</p>
+In WebKit- and Blink-based browsers, the non-standard and deprecated method
+`ctx.setStrokeColor()` is implemented in addition to this property.
 
-<pre class="brush: js">setStrokeColor(color, optional alpha);
+```js
+setStrokeColor(color, optional alpha);
 setStrokeColor(grayLevel, optional alpha);
 setStrokeColor(r, g, b, a);
 setStrokeColor(c, m, y, k, a);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasGradient")}}</li>
-  <li>{{domxref("CanvasPattern")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}

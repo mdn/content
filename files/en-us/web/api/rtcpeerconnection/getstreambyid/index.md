@@ -9,72 +9,70 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.getStreamById
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p>The <code><strong>RTCPeerConnection.getStreamById()</strong></code> method returns the
-  {{DOMxRef("MediaStream")}}</a>
-  with the given id that is associated with local or remote end of the connection. If no
-  stream matches, it returns <code>null</code>.</p>
+The **`RTCPeerConnection.getStreamById()`** method returns the
+{{DOMxRef("MediaStream")}}
+with the given id that is associated with local or remote end of the connection. If no
+stream matches, it returns `null`.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This property has been replaced with the
-    {{domxref("RTCPeerConnection.getLocalStreams")}} and
-    {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that
-    uses <code>stream</code>, you will need to update, since browsers have begun to remove
-    support for <code>stream</code>.</p>
-</div>
+> **Warning:** This property has been replaced with the
+> {{domxref("RTCPeerConnection.getLocalStreams")}} and
+> {{domxref("RTCPeerConnection.getRemoteStreams")}} properties. If you have code that
+> uses `stream`, you will need to update, since browsers have begun to remove
+> support for `stream`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mediaStream = pc.getStream(id);</pre>
+```js
+var mediaStream = pc.getStream(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>id</em></dt>
-  <dd>Is a {{domxref("DOMString")}} corresponding to the stream to return.</dd>
-</dl>
+- _id_
+  - : Is a {{domxref("DOMString")}} corresponding to the stream to return.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var stream = pc.getStreamById(myTrackId);
+```js
+var stream = pc.getStreamById(myTrackId);
 if (stream) {
   console.log("Found stream: " + stream.id);
-}</pre>
+}
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Running the following code before any other code will create
-  <code>RTCPeerConnection.prototype.getStreamById()</code> if it's not natively available.
-</p>
+Running the following code before any other code will create
+`RTCPeerConnection.prototype.getStreamById()` if it's not natively available.
 
-<pre class="brush: js">// from: https://bugs.chromium.org/p/chromium/issues/detail?id=698163&amp;desc=5#c10
+```js
+// from: https://bugs.chromium.org/p/chromium/issues/detail?id=698163&desc=5#c10
 RTCPeerConnection.prototype.getStreamById = function(id) {
   try {
     var localStreams = this.getLocalStreams();
     var remoteStreams = this.getRemoteStreams();
     var i;
-    for (i = 0; i &lt; localStreams.length; i++) {
+    for (i = 0; i < localStreams.length; i++) {
      if (localStreams[i].id == id)
        return localStreams[i];
     }
-    for (i = 0; i &lt; remoteStreams.length; i++) {
+    for (i = 0; i < remoteStreams.length; i++) {
      if (remoteStreams[i].id == id)
        return remoteStreams[i];
     }
   } catch(e) {}
   return null;
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

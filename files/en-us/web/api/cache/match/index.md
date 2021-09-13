@@ -13,84 +13,79 @@ tags:
   - match
 browser-compat: api.Cache.match
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>match()</code></strong> method of the
-    {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
-    {{domxref("Response")}} associated with the first matching request in the
-    {{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
-    to {{jsxref("undefined")}}.</p>
+The **`match()`** method of the
+{{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the
+{{domxref("Response")}} associated with the first matching request in the
+{{domxref("Cache")}} object. If no match is found, the {{jsxref("Promise")}} resolves
+to {{jsxref("undefined")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.match(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
+```js
+cache.match(request, {options}).then(function(response) {
   // Do something with the response
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request</dt>
-  <dd>The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object that sets options for the <code>match</code> operation. The available
+- request
+  - : The {{domxref("Request")}} for which you are attempting to find responses in the
+    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
+- options {{optional_inline}}
+
+  - : An object that sets options for the `match` operation. The available
     options are:
-    <ul>
-      <li><code>ignoreSearch</code>: A boolean value that specifies whether to
-        ignore the query string in the URL.  For example, if set to
-        <code>true</code> the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A boolean value that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A boolean value that when set to
-        <code>true</code> tells the matching operation not to perform <code>VARY</code>
-        header matching — i.e. if the URL matches you will get a match regardless of
-        whether the {{domxref("Response")}} object has a <code>VARY</code> header. It
-        defaults to <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `ignoreSearch`: A boolean value that specifies whether to
+      ignore the query string in the URL.  For example, if set to
+      `true` the `?value=bar` part of
+      `http://foo.com/?value=bar` would be ignored when performing a match.
+      It defaults to `false`.
+    - `ignoreMethod`: A boolean value that, when set to
+      `true`, prevents matching operations from validating the
+      {{domxref("Request")}} `http` method (normally only `GET`
+      and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`: A boolean value that when set to
+      `true` tells the matching operation not to perform `VARY`
+      header matching — i.e. if the URL matches you will get a match regardless of
+      whether the {{domxref("Response")}} object has a `VARY` header. It
+      defaults to `false`.
 
-<p>A {{jsxref("Promise")}} that resolves to the first {{domxref("Response")}} that matches
-  the request or to {{jsxref("undefined")}} if no match is found.</p>
+### Return value
 
-<div class="note">
-  <p><strong>Note:</strong> <code>Cache.match()</code> is basically identical to
-    {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
-    all matching responses, it resolves with the first matching response only (that is,
-    <code><var>response</var>[0]</code>).</p>
-</div>
+A {{jsxref("Promise")}} that resolves to the first {{domxref("Response")}} that matches
+the request or to {{jsxref("undefined")}} if no match is found.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** `Cache.match()` is basically identical to
+> {{domxref("Cache.matchAll()")}}, except that rather than resolving with an array of
+> all matching responses, it resolves with the first matching response only (that is,
+> `response[0]`).
 
-<p>This example is taken from the <a
-    href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js">custom
-    offline page</a> example (<a
-    href="https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html">live
-    demo</a>). It uses a cache to supply selected data when a request fails. A
-  <code>catch()</code> clause is triggered when the call to <code>fetch()</code> throws an
-  exception. Inside the <code>catch()</code> clause, <code>match()</code> is used to
-  return the correct response.</p>
+## Examples
 
-<p>In this example, only HTML documents retrieved with the GET HTTP verb will be
-  cached. If our <code>if()</code> condition is false, then this fetch handler won't
-  intercept the request. If there are any other fetch handlers registered, they will get a
-  chance to call <code>event.respondWith()</code>. If no fetch handlers call
-  <code>event.respondWith()</code>, the request will be handled by the browser as if there
-  were no service worker involvement. If <code>fetch()</code> returns a valid HTTP
-  response with an response code in the 4xx or 5xx range, the <code>catch()</code> will
-  NOT be called. </p>
+This example is taken from the [custom
+offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js) example ([live
+demo](https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html)). It uses a cache to supply selected data when a request fails. A
+`catch()` clause is triggered when the call to `fetch()` throws an
+exception. Inside the `catch()` clause, `match()` is used to
+return the correct response.
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+In this example, only HTML documents retrieved with the GET HTTP verb will be
+cached. If our `if()` condition is false, then this fetch handler won't
+intercept the request. If there are any other fetch handlers registered, they will get a
+chance to call `event.respondWith()`. If no fetch handlers call
+`event.respondWith()`, the request will be handled by the browser as if there
+were no service worker involvement. If `fetch()` returns a valid HTTP
+response with an response code in the 4xx or 5xx range, the `catch()` will
+NOT be called.
+
+```js
+self.addEventListener('fetch', function(event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &amp;&amp;
+  if (event.request.method === 'GET' &&
       event.request.headers.get('accept').indexOf('text/html') !== -1) {
     console.log('Handling fetch event for', event.request.url);
     event.respondWith(
@@ -102,21 +97,20 @@ browser-compat: api.Cache.match
       })
     );
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

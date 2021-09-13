@@ -13,55 +13,51 @@ tags:
   - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope
 ---
-<p>{{APIRef("CSS Painting API")}} {{SeeCompatTable}}</p>
+{{APIRef("CSS Painting API")}} {{SeeCompatTable}}
 
-<p>The <strong><code>PaintWorklet</code></strong> interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.</p>
+The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.
 
-<h2 id="privacy_concerns">Privacy concerns</h2>
+## Privacy concerns
 
-<p>To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an {{HTMLAttrXref("href", "a")}} attribute, and for children of such elements. For details, see the following:</p>
-<ul>
-  <li>The CSS Painting API <a href="https://drafts.css-houdini.org/css-paint-api/#privacy-considerations">Privacy Considerations section</a></li>
-  <li>The CSS Painting API spec issue <a href="https://github.com/w3c/css-houdini-drafts/issues/791">“CSS Paint API leaks browsing history”</a></li>
-</ul>
+To avoid leaking visited links, this feature is currently disabled in Chrome-based browsers for {{HTMLElement("a")}} elements with an {{HTMLAttrXref("href", "a")}} attribute, and for children of such elements. For details, see the following:
 
-<h2 id="Properties">Properties</h2>
+- The CSS Painting API [Privacy Considerations section](https://drafts.css-houdini.org/css-paint-api/#privacy-considerations)
+- The CSS Painting API spec issue [“CSS Paint API leaks browsing history”](https://github.com/w3c/css-houdini-drafts/issues/791)
 
-<dl>
- <dt>{{domxref('PaintWorklet.devicePixelRatio')}}</dt>
- <dd>Returns the current device's ratio of physical pixels to logical pixels.</dd>
-</dl>
+## Properties
 
-<h3 id="Event_handlers">Event handlers</h3>
+- {{domxref('PaintWorklet.devicePixelRatio')}}
+  - : Returns the current device's ratio of physical pixels to logical pixels.
 
-<p>None.</p>
+### Event handlers
 
-<h2 id="Methods">Methods</h2>
+None.
 
-<p><em>This interface inherits methods from {{domxref('Worklet')}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref('PaintWorklet.registerPaint()')}}</dt>
- <dd>Registers a class programmatically generate an image where a CSS property expects a file.</dd>
- <dt>{{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}</dt>
- <dd>The <code><a href="/en-US/docs/Web/API/Worklet/addModule">addModule()</a></code> method, inhertied from the <em>{{domxref('Worklet')}}</em> interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.</dd>
-</dl>
+_This interface inherits methods from {{domxref('Worklet')}}._
 
-<h2 id="Examples">Examples</h2>
+- {{domxref('PaintWorklet.registerPaint()')}}
+  - : Registers a class programmatically generate an image where a CSS property expects a file.
+- {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}
+  - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inhertied from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
 
-<p>The following three examples go together to show creating, loading, and using a <code>PaintWorklet</code>.</p>
+## Examples
 
-<h3 id="Create_a_PaintWorklet">Create a PaintWorklet</h3>
+The following three examples go together to show creating, loading, and using a `PaintWorklet`.
 
-<p>The following shows an example worklet module. This should be in a separate js file. Note that <code>registerPaint()</code> is called without a reference to <code>PaintWorklet</code>.</p>
+### Create a PaintWorklet
 
-<pre class="brush: js">class CheckerboardPainter {
+The following shows an example worklet module. This should be in a separate js file. Note that `registerPaint()` is called without a reference to `PaintWorklet`.
+
+```js
+class CheckerboardPainter {
   paint(ctx, geom, properties) {
     // Use `ctx` as if it was a normal canvas
     const colors = ['red', 'green', 'blue'];
     const size = 32;
-    for(let y = 0; y &lt; geom.height/size; y++) {
-      for(let x = 0; x &lt; geom.width/size; x++) {
+    for(let y = 0; y < geom.height/size; y++) {
+      for(let x = 0; x < geom.width/size; x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;
@@ -73,47 +69,52 @@ browser-compat: api.PaintWorkletGlobalScope
 }
 
 // Register our class under a specific name
-registerPaint('checkerboard', CheckerboardPainter);</pre>
+registerPaint('checkerboard', CheckerboardPainter);
+```
 
-<h3 id="Load_a_PaintWorklet">Load a PaintWorklet</h3>
+### Load a PaintWorklet
 
-<p>The following example demonstrates loading the above worklet from its js file and does so by feature detection.</p>
+The following example demonstrates loading the above worklet from its js file and does so by feature detection.
 
-<pre class="brush: js">&lt;script&gt;
+```js
+<script>
   if ('paintWorklet' in CSS) {
     CSS.paintWorklet.addModule('checkerboard.js');
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h3 id="Use_a_PaintWorklet">Use a PaintWorklet</h3>
+### Use a PaintWorklet
 
-<p>This example shows how to use a <code>PaintWorklet</code> in a stylesheet, including the simplest way to provide a fallback if <code>PaintWorklet</code> isn't supported. </p>
+This example shows how to use a `PaintWorklet` in a stylesheet, including the simplest way to provide a fallback if `PaintWorklet` isn't supported.
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   textarea {
     background-image: url(checkerboard);
     background-image: paint(checkerboard);
   }
-&lt;/style&gt;
-&lt;textarea&gt;&lt;/textarea&gt;</pre>
+</style>
+<textarea></textarea>
+```
 
-<p>You can also use the {{cssxref('@supports')}} at-rule.</p>
+You can also use the {{cssxref('@supports')}} at-rule.
 
-<pre class="brush: css">@supports (background: paint(id)) {
+```css
+@supports (background: paint(id)) {
   background-image: paint(checkerboard);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
-</ul>
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [Houdini APIs](/en-US/docs/Web/Houdini)

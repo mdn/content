@@ -2,84 +2,82 @@
 title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 tags:
-- API
-- Experimental
-- HTMLLinkElement
-- Property
-- Reference
+  - API
+  - Experimental
+  - HTMLLinkElement
+  - Property
+  - Reference
 browser-compat: api.HTMLLinkElement.referrerPolicy
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The
-  <strong><code>HTMLLinkElement.referrerPolicy</code></strong>
-  property reflect the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
-  {{HTMLElement("link")}} element defining which referrer is sent when fetching the
-  resource.</p>
+The
+**`HTMLLinkElement.referrerPolicy`**
+property reflect the HTML {{htmlattrxref("referrerpolicy","link")}} attribute of the
+{{HTMLElement("link")}} element defining which referrer is sent when fetching the
+resource.
 
-<p>See the HTTP {{HTTPHeader("Referrer-Policy")}} header for details.</p>
+See the HTTP {{HTTPHeader("Referrer-Policy")}} header for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">DOMString HTMLLinkElement.referrerPolicy</pre>
+```js
+DOMString HTMLLinkElement.referrerPolicy
+```
 
-<h3 id="Values">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}; one of the following:</p>
+A {{domxref("DOMString")}}; one of the following:
 
-<dl>
-  <dt>no-referrer</dt>
-  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
-    information is sent along with requests.</dd>
-  <dt>no-referrer-when-downgrade</dt>
-  <dd>The URL is sent
+- no-referrer
+  - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
+    information is sent along with requests.
+- no-referrer-when-downgrade
+  - : The URL is sent
     as a referrer when the protocol security level stays the same (e.g.HTTP→HTTP,
-    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).</dd>
-  <dt>origin</dt>
-  <dd>Only send the origin of the document as the referrer in all cases.<br>
-    The document <code>https://example.com/page.html</code> will send the referrer
-    <code>https://example.com/</code>.</dd>
-  <dt>origin-when-cross-origin</dt>
-  <dd>Send a full URL when performing a same-origin request, but only send the origin of
-    the document for other cases.</dd>
-  <dt>same-origin</dt>
-  <dd>A referrer will be sent for <a
-      href="/en-US/docs/Web/Security/Same-origin_policy">same-site origins</a>, but
-    cross-origin requests will contain no referrer information.</dd>
-  <dt>strict-origin</dt>
-  <dd>Only send the origin of the document as the referrer when the protocol security
+    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).
+- origin
+  - : Only send the origin of the document as the referrer in all cases.
+    The document `https://example.com/page.html` will send the referrer
+    `https://example.com/`.
+- origin-when-cross-origin
+  - : Send a full URL when performing a same-origin request, but only send the origin of
+    the document for other cases.
+- same-origin
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+    cross-origin requests will contain no referrer information.
+- strict-origin
+  - : Only send the origin of the document as the referrer when the protocol security
     level stays the same (e.g. HTTPS→HTTPS), but don't send it to a less secure
-    destination (e.g. HTTPS→HTTP).</dd>
-  <dt>strict-origin-when-cross-origin (default)</dt>
-  <dd>This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
+    destination (e.g. HTTPS→HTTP).
+- strict-origin-when-cross-origin (default)
+  - : This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
     protocol security level stays the same (e.g. HTTPS→HTTPS), and send no header to a
-    less secure destination (e.g. HTTPS→HTTP).</dd>
-  <dt>unsafe-url</dt>
-  <dd>Send a full URL when performing a same-origin or cross-origin request. This policy
+    less secure destination (e.g. HTTPS→HTTP).
+- unsafe-url
+  - : Send a full URL when performing a same-origin or cross-origin request. This policy
     will leak origins and paths from TLS-protected resources to insecure origins.
-    Carefully consider the impact of this setting.</dd>
-</dl>
+    Carefully consider the impact of this setting.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var links = document.getElementsByTagName("link");
+```js
+var links = document.getElementsByTagName("link");
 links[0].referrerPolicy; // "no-referrer"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>HTTP header {{HTTPHeader("Referrer-Policy")}}</li>
-  <li>{{domxref("HTMLAnchorElement.referrerPolicy")}}</li>
-  <li>{{domxref("HTMLAreaElement.referrerPolicy")}}</li>
-  <li>{{domxref("HTMLIFrameElement.referrerPolicy")}}</li>
-  <li>{{domxref("HTMLImageElement.referrerPolicy")}}</li>
-</ul>
+- HTTP header {{HTTPHeader("Referrer-Policy")}}
+- {{domxref("HTMLAnchorElement.referrerPolicy")}}
+- {{domxref("HTMLAreaElement.referrerPolicy")}}
+- {{domxref("HTMLIFrameElement.referrerPolicy")}}
+- {{domxref("HTMLImageElement.referrerPolicy")}}

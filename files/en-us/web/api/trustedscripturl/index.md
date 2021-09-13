@@ -8,39 +8,36 @@ tags:
   - TrustedScriptURL
 browser-compat: api.TrustedScriptURL
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>TrustedScriptURL</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that will parse it as a URL of an external script. These objects are created via {{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}} and therefore have no constructor.</p>
+The **`TrustedScriptURL`** interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will parse it as a URL of an external script. These objects are created via {{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}} and therefore have no constructor.
 
-<p>The value of a <strong>TrustedScriptURL</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
+The value of a **TrustedScriptURL** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("TrustedScriptURL.toJSON()")}}</dt>
-  <dd>Returns a JSON representation of the stored data.</dd>
-  <dt>{{domxref("TrustedScriptURL.toString()")}}</dt>
-  <dd>A {{domxref("USVString","string")}} containing the sanitized URL.</dd>
-</dl>
+- {{domxref("TrustedScriptURL.toJSON()")}}
+  - : Returns a JSON representation of the stored data.
+- {{domxref("TrustedScriptURL.toString()")}}
+  - : A {{domxref("USVString","string")}} containing the sanitized URL.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy.</p>
+The constant `sanitized` is an object created via a Trusted Types policy.
 
-<pre class="brush: js">const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+```js
+const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
 console.log(sanitized;) /* a TrustedScriptURL object */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
-</ul>
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)

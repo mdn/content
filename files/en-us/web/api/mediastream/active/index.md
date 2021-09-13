@@ -2,57 +2,59 @@
 title: MediaStream.active
 slug: Web/API/MediaStream/active
 tags:
-- API
-- Media Capture and Streams
-- Media Streams API
-- MediaStream
-- Property
-- Reference
-- active
+  - API
+  - Media Capture and Streams
+  - Media Streams API
+  - MediaStream
+  - Property
+  - Reference
+  - active
 browser-compat: api.MediaStream.active
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>active</code></strong> read-only property of the
-  {{domxref("MediaStream")}} interface returns a Boolean value which is
-  <code>true</code> if the stream is currently active; otherwise, it returns
-  <code>false</code>. A stream is considered <strong>active</strong> if at least one of
-  its {{domxref("MediaStreamTrack")}}s is not in the {{domxref("MediaStreamTrack.ended")}}
-  state. Once every track has ended, the stream's <code>active</code> property becomes
-  <code>false</code>.</p>
+The **`active`** read-only property of the
+{{domxref("MediaStream")}} interface returns a Boolean value which is
+`true` if the stream is currently active; otherwise, it returns
+`false`. A stream is considered **active** if at least one of
+its {{domxref("MediaStreamTrack")}}s is not in the {{domxref("MediaStreamTrack.ended")}}
+state. Once every track has ended, the stream's `active` property becomes
+`false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>isActive</em> = <em>MediaStream</em>.active;</pre>
+```js
+const isActive = MediaStream.active;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the stream is currently active;
-  otherwise, the value is <code>false</code>.</p>
+A Boolean value which is `true` if the stream is currently active;
+otherwise, the value is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a new stream whose source is the user's local camera and microphone is
-  requested using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. When that
-  stream becomes available (that is, when the returned {{jsxref("Promise")}} is fulfilled,
-  a button on the page is updated based on whether or not the stream is currently active.
-</p>
+In this example, a new stream whose source is the user's local camera and microphone is
+requested using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. When that
+stream becomes available (that is, when the returned {{jsxref("Promise")}} is fulfilled,
+a button on the page is updated based on whether or not the stream is currently active.
 
-<pre class="brush: js">const promise = navigator.mediaDevices.getUserMedia({
+```js
+const promise = navigator.mediaDevices.getUserMedia({
   audio: true,
   video: true
 });
 
-promise.then((stream) =&gt; {
+promise.then((stream) => {
   const startBtn = document.querySelector('#startBtn');
   startBtn.disabled = stream.active;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

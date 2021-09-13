@@ -2,74 +2,70 @@
 title: MediaTrackConstraints.sampleSize
 slug: Web/API/MediaTrackConstraints/sampleSize
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- WebRTC
-- sampleSize
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - WebRTC
+  - sampleSize
 browser-compat: api.MediaTrackConstraints.sampleSize
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>sampleSize</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.sampleSize", "sampleSize")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`sampleSize`** property is a [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.sampleSize", "sampleSize")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { sampleSize: <em>constraint</em> };
+```js
+var constraintsObject = { sampleSize: constraint };
 
-<em>constraintsObject</em>.sampleSize = <em>constraint</em>;
-</pre>
+constraintsObject.sampleSize = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If this value is a number, the user agent will attempt to obtain media whose sample
-  size (in bits per linear sample) is as close as possible to this number given the
-  capabilities of the hardware and the other constraints specified. Otherwise, the value
-  of this <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> will guide the user agent in its efforts to provide
-  an exact match to the required sample size (if <code>exact</code> is specified or both
-  <code>min</code> and <code>max</code> are provided and have the same value) or to a
-  best-possible value.</p>
+If this value is a number, the user agent will attempt to obtain media whose sample
+size (in bits per linear sample) is as close as possible to this number given the
+capabilities of the hardware and the other constraints specified. Otherwise, the value
+of this [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) will guide the user agent in its efforts to provide
+an exact match to the required sample size (if `exact` is specified or both
+`min` and `max` are provided and have the same value) or to a
+best-possible value.
 
-<div class="note">
-  <p><strong>Note:</strong> Since this property can only represent linear sample sizes, this constraint can only
-    be met by devices that can produce audio with linear samples.</p>
-</div>
+> **Note:** Since this property can only represent linear sample sizes, this constraint can only
+> be met by devices that can produce audio with linear samples.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

@@ -2,33 +2,34 @@
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 tags:
-- API
-- Event
-- Level 3
-- Method
-- Reference
-- stopImmediatePropagation
+  - API
+  - Event
+  - Level 3
+  - Method
+  - Reference
+  - stopImmediatePropagation
 browser-compat: api.Event.stopImmediatePropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>stopImmediatePropagation()</strong></code> method of the
-  {{domxref("Event")}} interface prevents other listeners of the same event from being
-  called.</p>
+The **`stopImmediatePropagation()`** method of the
+{{domxref("Event")}} interface prevents other listeners of the same event from being
+called.
 
-<p>If several listeners are attached to the same element for the same event type, they are
-  called in the order in which they were added. If <code>stopImmediatePropagation()</code>
-  is invoked during one such call, no remaining listeners will be called.</p>
+If several listeners are attached to the same element for the same event type, they are
+called in the order in which they were added. If `stopImmediatePropagation()`
+is invoked during one such call, no remaining listeners will be called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>event</em>.stopImmediatePropagation();</pre>
+```js
+event.stopImmediatePropagation();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

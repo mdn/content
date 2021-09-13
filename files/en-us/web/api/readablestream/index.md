@@ -15,48 +15,43 @@ tags:
   - data
 browser-compat: api.ReadableStream
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <code>ReadableStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a readable stream of byte data. The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> offers a concrete instance of a <code>ReadableStream</code> through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.</p>
+The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}</dt>
-	<dd>Creates and returns a readable stream object from the given handlers.</dd>
-</dl>
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}
+  - : Creates and returns a readable stream object from the given handlers.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("ReadableStream.locked")}} {{readonlyInline}}</dt>
-	<dd>The <code>locked</code> getter returns whether or not the readable stream is <a href="https://streams.spec.whatwg.org/#locked-to-a-reader">locked to a reader</a>.</dd>
-</dl>
+- {{domxref("ReadableStream.locked")}} {{readonlyInline}}
+  - : The `locked` getter returns whether or not the readable stream is [locked to a reader](https://streams.spec.whatwg.org/#locked-to-a-reader).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("ReadableStream.cancel()")}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
-	<dt>{{domxref("ReadableStream.getReader()")}}</dt>
-	<dd>Creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.</dd>
-	<dt>{{domxref("ReadableStream.pipeThrough()")}}</dt>
-	<dd>Provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.</dd>
-	<dt>{{domxref("ReadableStream.pipeTo()")}}</dt>
-	<dd>Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.</dd>
-	<dt>{{domxref("ReadableStream.tee()")}}</dt>
-	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
-</dl>
+- {{domxref("ReadableStream.cancel()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
+- {{domxref("ReadableStream.getReader()")}}
+  - : Creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.
+- {{domxref("ReadableStream.pipeThrough()")}}
+  - : Provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
+- {{domxref("ReadableStream.pipeTo()")}}
+  - : Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
+- {{domxref("ReadableStream.tee()")}}
+  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="example-fetch-stream">Fetch stream</h3>
+### Fetch stream
 
-<p>In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
+In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.
 
-<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.</p>
+It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
 
-<pre class="brush: js">fetch('https://www.example.org')
+```js
+fetch('https://www.example.org')
 .then(response => response.body)
 .then(rb => {
   const reader = rb.getReader();
@@ -93,13 +88,14 @@ browser-compat: api.ReadableStream
   // Do things with result
   console.log(result);
 });
-</pre>
+```
 
-<h3 id="example-ittr-to-stream">Async iterator to stream</h3>
+### Async iterator to stream
 
-<p>Converting an <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">(async) iterator</a> to a readable stream:</p>
+Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) to a readable stream:
 
-<pre class="brush: js">function iteratorToStream(iterator) {
+```js
+function iteratorToStream(iterator) {
   return new ReadableStream({
     async pull(controller) {
       const { value, done } = await iterator.next();
@@ -112,20 +108,18 @@ browser-compat: api.ReadableStream
     },
   });
 }
-</pre>
+```
 
-<p>This works with both async and non-async iterators.</p>
+This works with both async and non-async iterators.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
-</ul>
+- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.

@@ -2,43 +2,43 @@
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
 tags:
-- API
-- Client
-- Experimental
-- Method
-- Navigate
-- Reference
-- Service Workers
-- WindowClient
+  - API
+  - Client
+  - Experimental
+  - Method
+  - Navigate
+  - Reference
+  - Service Workers
+  - WindowClient
 browser-compat: api.WindowClient.navigate
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>navigate()</code></strong> method of the {{domxref("WindowClient")}}
-  interface loads a specified URL into a controlled client page then returns a
-  {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.</p>
+The **`navigate()`** method of the {{domxref("WindowClient")}}
+interface loads a specified URL into a controlled client page then returns a
+{{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>windowClient</em>.navigate(<em>url</em>).then(function(<em>windowClient</em>) {
+```js
+windowClient.navigate(url).then(function(windowClient) {
   // do something with your WindowClient after navigation
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>The location to navigate to.</dd>
-</dl>
+- `url`
+  - : The location to navigate to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.</p>
+A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

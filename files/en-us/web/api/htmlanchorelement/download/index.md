@@ -2,37 +2,36 @@
 title: HTMLAnchorElement.download
 slug: Web/API/HTMLAnchorElement/download
 tags:
-- API
-- HTML DOM
-- HTMLAnchorElement
-- Property
-- Reference
-- download
+  - API
+  - HTML DOM
+  - HTMLAnchorElement
+  - Property
+  - Reference
+  - download
 browser-compat: api.HTMLAnchorElement.download
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLAnchorElement.download</strong></code> property is a
-  {{domxref("DOMString")}} indicating that the linked resource is intended to be
-  downloaded rather than displayed in the browser. The value, if any, specifies the
-  default file name for use in labeling the resource in a local file system. If the name
-  is not a valid file name in the underlying OS, the browser will adjust it.</p>
+The **`HTMLAnchorElement.download`** property is a
+{{domxref("DOMString")}} indicating that the linked resource is intended to be
+downloaded rather than displayed in the browser. The value, if any, specifies the
+default file name for use in labeling the resource in a local file system. If the name
+is not a valid file name in the underlying OS, the browser will adjust it.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This value might not be used for download. This value cannot
-    be used to determine whether the download will occur.</p>
-</div>
+> **Note:** This value might not be used for download. This value cannot
+> be used to determine whether the download will occur.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>dnload</em> = <em>anchorElt</em>.download;
-<em>anchorElt</em>.download = <em>dnload</em>;
-</pre>
+```js
+var dnload = anchorElt.download;
+anchorElt.download = dnload;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,71 +2,56 @@
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
 tags:
-- API
-- Database
-- IDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- readyState
+  - API
+  - Database
+  - IDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - readyState
 browser-compat: api.IDBRequest.readyState
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>readyState</code></strong> read-only property of the
-    {{domxref("IDBRequest")}} interface returns the state of the request.</p>
+The **`readyState`** read-only property of the
+{{domxref("IDBRequest")}} interface returns the state of the request.
 
-  <p>>Every request starts in the <code>pending</code> state. The state changes to
-    <code>done</code> when the request completes successfully or when an error
-      occurs.</p>
+\>Every request starts in the `pending` state. The state changes to
+`done` when the request completes successfully or when an error
+occurs.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>currentReadyState</em> = <em>request</em>.readyState;</pre>
+```js
+var currentReadyState = request.readyState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("IDBRequestReadyState")}} of the request, which takes one of the
-  following two values:</p>
+The {{domxref("IDBRequestReadyState")}} of the request, which takes one of the
+following two values:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Meaning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>pending</code></td>
-      <td>The request is pending.</td>
-    </tr>
-    <tr>
-      <td><code>done</code></td>
-      <td>The request is done.<br>
-         </td>
-    </tr>
-  </tbody>
-</table>
+| Value     | Meaning                 |
+| --------- | ----------------------- |
+| `pending` | The request is pending. |
+| `done`    | The request is done.    |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests a given record title, <code>onsuccess</code> gets the
-  associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code>), updates
-    one property of the record, and then puts the updated record back into the object
-    store in another request. The <code>readyState</code> of the 2nd request is logged to
-    the developer console. For a full working example, see our 
-    <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
-    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+The following example requests a given record title, `onsuccess` gets the
+associated record from the {{domxref("IDBObjectStore")}} (made available
+as `objectStoreTitleRequest.result`), updates
+one property of the record, and then puts the updated record back into the object
+store in another request. The `readyState` of the 2nd request is logged to
+the developer console. For a full working example, see our 
+[To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">var title = "Walk dog";
+```js
+var title = "Walk dog";
 
 // Open up a transaction as usual
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -93,27 +78,24 @@ objectStoreTitleRequest.onsuccess = function() {
   updateTitleRequest.onsuccess = function() {
     displayData();
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

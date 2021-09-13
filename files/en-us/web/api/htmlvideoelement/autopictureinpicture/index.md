@@ -2,47 +2,45 @@
 title: HTMLVideoElement.autoPictureInPicture
 slug: Web/API/HTMLVideoElement/autoPictureInPicture
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLVideoElement
-- Media
-- Picture-in-Picture
-- Picture-in-Picture API
-- Property
-- Reference
-- Video
-- pip
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLVideoElement
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Property
+  - Reference
+  - Video
+  - pip
 browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLVideoElement")}} 
-    <code><strong>autoPictureInPicture</strong></code> property reflects the HTML
-    attribute indicating whether the video should enter or leave picture-in-picture mode
-    automatically.</p>
+The {{domxref("HTMLVideoElement")}} 
+**`autoPictureInPicture`** property reflects the HTML
+attribute indicating whether the video should enter or leave picture-in-picture mode
+automatically.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>autoPictureInPicture</em> = <em>htmlVideoElement</em>.<em>autoPictureInPicture</em>;</pre>
+```js
+autoPictureInPicture = htmlVideoElement.autoPictureInPicture;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value that is <code>true</code> if the video should enter or
-  leave picture-in-picture mode automatically when changing tab and/or application.</p>
+A boolean value that is `true` if the video should enter or
+leave picture-in-picture mode automatically when changing tab and/or application.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><code><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></code>
-  </li>
-</ul>
+- [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement)

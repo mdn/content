@@ -2,58 +2,52 @@
 title: DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
 tags:
-- API
-- Constructor
-- Device Orientation
-- Device Orientation API
-- Experimental
-- Mobile
-- Motion
-- Non-standard
-- Orientation
-- Reference
+  - API
+  - Constructor
+  - Device Orientation
+  - Device Orientation API
+  - Experimental
+  - Mobile
+  - Motion
+  - Non-standard
+  - Orientation
+  - Reference
 browser-compat: api.DeviceMotionEvent.DeviceMotionEvent
 ---
-<p>{{APIRef("Device Orientation Events")}}{{Non-standard_header}}</p>
+{{APIRef("Device Orientation Events")}}{{Non-standard_header}}
 
-<p>The <strong><code>DeviceMotionEvent()</code></strong> constructor creates a new
-  {{DOMxRef("DeviceMotionEvent")}}.</p>
+The **`DeviceMotionEvent()`** constructor creates a new
+{{DOMxRef("DeviceMotionEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var deviceMotionEvent = new DeviceMotionEvent(type[, options])</pre>
+```js
+var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code>options</code>{{Optional_Inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>acceleration</code>: An object giving the acceleration of the device on
-        the three axis X, Y and Z. Acceleration is expressed in <a
-          href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s²</a>.
-      </li>
-      <li><code>accelerationIncludingGravity</code>: An object giving the acceleration of
-        the device on the three axis X, Y and Z with the effect of gravity. Acceleration
-        is expressed in <a
-          href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s²</a>.
-      </li>
-      <li><code>rotationRate</code>: An object giving the rate of change of the device's
-        orientation on the three orientation axis alpha, beta and gamma. Rotation rate is
-        express in degrees per seconds.</li>
-      <li><code>interval</code>: A number representing the interval of time, in
-        milliseconds, at which data is obtained from the device.</li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} representing the name of the event.
+- `options`{{Optional_Inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Options are as follows:
 
-<p><em>Not part of any specifications.</em></p>
+    - `acceleration`: An object giving the acceleration of the device on
+      the three axis X, Y and Z. Acceleration is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+    - `accelerationIncludingGravity`: An object giving the acceleration of
+      the device on the three axis X, Y and Z with the effect of gravity. Acceleration
+      is expressed in [m/s²](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+    - `rotationRate`: An object giving the rate of change of the device's
+      orientation on the three orientation axis alpha, beta and gamma. Rotation rate is
+      express in degrees per seconds.
+    - `interval`: A number representing the interval of time, in
+      milliseconds, at which data is obtained from the device.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Specifications
 
-<p>{{Compat}}</p>
+_Not part of any specifications._
+
+## Browser compatibility
+
+{{Compat}}

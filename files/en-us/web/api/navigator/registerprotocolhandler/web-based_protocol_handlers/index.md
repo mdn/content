@@ -6,122 +6,121 @@ tags:
   - HTML5
   - Web-Based Protocol Handlers
 ---
+## Background
 
-<h2 id="Background">Background</h2>
+It's fairly common to find web pages link to resources using non-`http` protocols. An example is the `mailto:` protocol:
 
-<p>It's fairly common to find web pages link to resources using non-<code>http</code> protocols. An example is the <code>mailto:</code> protocol:</p>
+```html
+<a href="mailto:webmaster@example.com">Web Master</a>
+```
 
-<pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;Web Master&lt;/a&gt;</pre>
+Web authors can use a `mailto:` link when they want to provide a convenient way for users to send an email, directly from the webpage. When the link is activated, the browser should launch the default desktop application for handling email. You can think of this as a _desktop-based_ protocol handler.
 
-<p>Web authors can use a <code>mailto:</code> link when they want to provide a convenient way for users to send an email, directly from the webpage. When the link is activated, the browser should launch the default desktop application for handling email. You can think of this as a <em>desktop-based</em> protocol handler.</p>
+Web-based protocol handlers allow web-based applications to participate in the process too. This is becoming more important as more types of applications migrate to the web. In fact, there are many web-based email handling applications that could process a `mailto` link.
 
-<p>Web-based protocol handlers allow web-based applications to participate in the process too. This is becoming more important as more types of applications migrate to the web. In fact, there are many web-based email handling applications that could process a <code>mailto</code> link.</p>
+## Registering
 
-<h2 id="Registering">Registering</h2>
+Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler) to register itself with the browser as a potential handler for a given protocol. For example:
 
-<p>Setting up a web application as a protocol handler is not a difficult process. Basically, the web application uses <code><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler">registerProtocolHandler()</a></code> to register itself with the browser as a potential handler for a given protocol. For example:</p>
-
-<pre class="brush: js">navigator.registerProtocolHandler("web+burger",
+```js
+navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");</pre>
+                                  "Burger handler");
+```
 
-<p>Where the parameters are:</p>
+Where the parameters are:
 
-<ul>
- <li>The protocol.</li>
- <li>The URL template, used as the handler. The "%s" is replaced with the <code>href</code> of the link and a GET is executed on the resultant URL.</li>
- <li>The user friendly name for the protocol handler.</li>
-</ul>
+- The protocol.
+- The URL template, used as the handler. The "%s" is replaced with the `href` of the link and a GET is executed on the resultant URL.
+- The user friendly name for the protocol handler.
 
-<p>When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:</p>
+When a browser executes this code, it should display a prompt to the user, asking permission to allow the web application to register as a handler for the protocol. Firefox displays a prompt in the notification bar area:
 
-<p><img alt="" src="protocolregister.png"></p>
+![](protocolregister.png)
 
-<div class="note"><p><strong>Note:</strong> The URL template supplied when registering <strong>must</strong> be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, <code>http://example.com/homepage.html</code> can register a protocol handler for <code >http://example.com/handle_mailto/%s</code>, but not for <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</p></div>
+> **Note:** The URL template supplied when registering **must** be of the same domain as the webpage attempting to perform the registration or the registration will fail. For example, `http://example.com/homepage.html` can register a protocol handler for `http://example.com/handle_mailto/%s`, but not for `http://example.org/handle_mailto/%s`.
 
-<p>Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.</p>
+Registering the same protocol handler more than once will pop up a different notification, indicating that the protocol handler is already registered. Therefore, it is a good idea to guard your call to register the protocol handler with a check to see if it is already registered, such as in the example below.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: js">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Protocol Handler Sample - Register&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+```js
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <title>Web Protocol Handler Sample - Register</title>
+  <script type="text/javascript">
     navigator.registerProtocolHandler("web+burger",
                                   "http://www.google.co.uk/?uri=%s",
                                   "Burger handler");
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Web Protocol Handler Sample&lt;/h1&gt;
-  &lt;p&gt;This web page will install a web protocol handler for the &lt;code&gt;web+burger:&lt;/code&gt; protocol.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <h1>Web Protocol Handler Sample</h1>
+  <p>This web page will install a web protocol handler for the <code>web+burger:</code> protocol.</p>
+</body>
+</html>
+```
 
-<h2 id="Activating">Activating</h2>
+## Activating
 
-<p>Now, anytime the user activates a link that uses the registered protocol, the browser will route the action to the URL supplied when the web application registered. Firefox will, by default, prompt the user before handling off the action.</p>
+Now, anytime the user activates a link that uses the registered protocol, the browser will route the action to the URL supplied when the web application registered. Firefox will, by default, prompt the user before handling off the action.
 
-<h3 id="Example_2">Example</h3>
+### Example
 
-<pre class="brush: html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Protocol Handler Sample - Test&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Hey have you seen &lt;a href="web+burger:cheeseburger"&gt;this&lt;/a&gt; before?&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  <title>Web Protocol Handler Sample - Test</title>
+</head>
+<body>
+  <p>Hey have you seen <a href="web+burger:cheeseburger">this</a> before?</p>
+</body>
+</html>
+```
 
-<h2 id="Handling">Handling</h2>
+## Handling
 
-<p>The next phase is handling the action. The browser extracts the <code>href</code> from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:</p>
+The next phase is handling the action. The browser extracts the `href` from the activated link, combines it with the URL template supplied during handler registration and performs an HTTP GET on the URL. So, using the above examples, the browser would perform a GET on this URL:
 
-<pre>http://www.google.co.uk/?uri=web+burger:cheeseburger
-</pre>
+    http://www.google.co.uk/?uri=web+burger:cheeseburger
 
-<p>Server side code can extract the query string parameters and perform the desired action.</p>
+Server side code can extract the query string parameters and perform the desired action.
 
-<div class="note"><p><strong>Note:</strong> The server side code is passed the <strong>entire</strong> contents of the <code>href</code>. This means the server side code will have to parse out the protocol from the data.</p></div>
+> **Note:** The server side code is passed the **entire** contents of the `href`. This means the server side code will have to parse out the protocol from the data.
 
-<h3 id="Example_3">Example</h3>
+### Example
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
 $value = "";
 if ( isset ( $_GET["value"] ) ) {
   $value = $_GET["value"];
 }
-?&gt;
+?>
 
-&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;title&gt;Web Protocol Handler Sample&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Web Protocol Handler Sample - Handler&lt;/h1&gt;
-  &lt;p&gt;This web page is called when handling a &lt;code&gt;web+burger:&lt;/code&gt; protocol action. The data sent:&lt;/p&gt;
-  &lt;textarea&gt;
-&lt;?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?&gt;
-  &lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Web Protocol Handler Sample</title>
+</head>
+<body>
+  <h1>Web Protocol Handler Sample - Handler</h1>
+  <p>This web page is called when handling a <code>web+burger:</code> protocol action. The data sent:</p>
+  <textarea>
+<?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?>
+  </textarea>
+</body>
+</html>
+```
 
-<h2 id="References">References</h2>
+## References
 
-<ul>
- <li><a href="https://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers">http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers</a></li>
-</ul>
+- [http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers](https://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler">nsIProtocolHandler</a> (XUL only)</li>
- <li><a href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler Enhancing the Federated Web</a> at Mozilla Webdev</li>
- <li><a href="https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler">Register a custom protocolHandler</a> at Google Developers.</li>
-</ul>
+- [nsIProtocolHandler](/en-US/docs/XPCOM_Interface_Reference/nsIProtocolHandler) (XUL only)
+- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [Register a custom protocolHandler](https://developers.google.com/web/updates/2011/06/Registering-a-custom-protocol-handler) at Google Developers.

@@ -2,86 +2,86 @@
 title: CSSStyleSheet.addRule()
 slug: Web/API/CSSStyleSheet/addRule
 tags:
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Method
-- Object Model
-- Reference
-- Style
-- StyleSheet
-- addRule
-- legacy
-- rules
-- Deprecated
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Method
+  - Object Model
+  - Reference
+  - Style
+  - StyleSheet
+  - addRule
+  - legacy
+  - rules
+  - Deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
-<p>{{APIRef("CSSOM")}}{{deprecated_header}}</p>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The obsolete {{domxref("CSSStyleSheet")}} interface's
-  <code><strong>addRule()</strong></code> <em>legacy method</em> adds a new rule to the
-  stylesheet. You should avoid using this method, and should instead use the more standard
-  {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} method.</p>
+The obsolete {{domxref("CSSStyleSheet")}} interface's
+**`addRule()`** _legacy method_ adds a new rule to the
+stylesheet. You should avoid using this method, and should instead use the more standard
+{{domxref("CSSStyleSheet.insertRule", "insertRule()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>result</em> = <em>cssStyleSheet</em>.addRule(<em>selector</em>, <em>styleBlock</em>, <em>index</em>);</pre>
+```js
+var result = cssStyleSheet.addRule(selector, styleBlock, index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>selector</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the selector portion of the CSS rule. The
-    default is the string <code>undefined</code>.</dd>
-  <dt><code>styleBlock</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the style block to apply to elements matching
-    the <code>selector</code>. The default is the string <code>undefined</code>.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>An optional index into the stylesheet's {{domxref("CSSRuleList")}} at which to
-    insert the new rule. If <code>index</code> is not specified, the next index after the
+- `selector`
+  - : A {{domxref("DOMString")}} specifying the selector portion of the CSS rule. The
+    default is the string `undefined`.
+- `styleBlock`
+  - : A {{domxref("DOMString")}} indicating the style block to apply to elements matching
+    the `selector`. The default is the string `undefined`.
+- `index` {{optional_inline}}
+  - : An optional index into the stylesheet's {{domxref("CSSRuleList")}} at which to
+    insert the new rule. If `index` is not specified, the next index after the
     last item currently in the list is used (that is, the value of
-    <code>cssStyleSheet.cssRules.length</code>).</dd>
-</dl>
+    `cssStyleSheet.cssRules.length`).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Always returns -1.</p>
+Always returns -1.
 
-<p>Note that due to somewhat estoteric rules about where you can legally insert rules,
-  it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule",
-  "insertRule()")}} for more information.</p>
+Note that due to somewhat estoteric rules about where you can legally insert rules,
+it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule",
+  "insertRule()")}} for more information.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This method is implemented by browsers by constructing a string using the template
-  literal <code>`${selector}{${styleBlock}}`</code>, then passing it into the standard
-  {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} method.</p>
+This method is implemented by browsers by constructing a string using the template
+literal `` `${selector}{${styleBlock}}` ``, then passing it into the standard
+{{domxref("CSSStyleSheet.insertRule", "insertRule()")}} method.
 
-<p>Therefore, given existing code such as the following:</p>
+Therefore, given existing code such as the following:
 
-<pre class="brush: js">cssStyleSheet.addRule(selector, styles, 0);</pre>
+```js
+cssStyleSheet.addRule(selector, styles, 0);
+```
 
-<p>You can rewrite this to use the more standard <code>insertRule()</code> like this:</p>
+You can rewrite this to use the more standard `insertRule()` like this:
 
-<pre class="brush: js">cssStyleSheet.insertRule(`${selector} {${styles}}`, 0);</pre>
+```js
+cssStyleSheet.insertRule(`${selector} {${styles}}`, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

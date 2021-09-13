@@ -12,32 +12,28 @@ tags:
   - Interface
 browser-compat: api.CSSMatrixComponent
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMatrixComponent</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <a href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a> and <a href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix3d()</a> values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.</p>
+The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix()>) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSMatrixComponent.CSSMatrixComponent()")}}</dt>
- <dd>Creates a new <code>CSSMatrixComponent</code> object.</dd>
-</dl>
+- {{domxref("CSSMatrixComponent.CSSMatrixComponent()")}}
+  - : Creates a new `CSSMatrixComponent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMatrixComponent.matrix','matrix')}}</dt>
- <dd>A matrix.</dd>
-</dl>
+- {{domxref('CSSMatrixComponent.matrix','matrix')}}
+  - : A matrix.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do.</p>
+To do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

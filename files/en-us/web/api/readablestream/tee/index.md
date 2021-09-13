@@ -2,61 +2,59 @@
 title: ReadableStream.tee()
 slug: Web/API/ReadableStream/tee
 tags:
-- API
-- Method
-- ReadableStream
-- Reference
-- Streams
-- tee
+  - API
+  - Method
+  - ReadableStream
+  - Reference
+  - Streams
+  - tee
 browser-compat: api.ReadableStream.tee
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>tee()</code></strong> method of the
-  {{domxref("ReadableStream")}} interface <a
-    href="https://streams.spec.whatwg.org/#tee-a-readable-stream">tees</a> the current readable stream, returning a
-  two-element array containing the two resulting branches as
-  new {{domxref("ReadableStream")}} instances.</p>
+The **`tee()`** method of the
+{{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a
+two-element array containing the two resulting branches as
+new {{domxref("ReadableStream")}} instances.
 
-<p>This is useful for allowing two readers to read a stream simultaneously, perhaps at
-  different speeds. You might do this for example in a ServiceWorker if you want to fetch
-  a response from the server and stream it to the browser, but also stream it to the
-  ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need
-  two copies to do this.</p>
+This is useful for allowing two readers to read a stream simultaneously, perhaps at
+different speeds. You might do this for example in a ServiceWorker if you want to fetch
+a response from the server and stream it to the browser, but also stream it to the
+ServiceWorker cache. Since a response body cannot be consumed more than once, you’d need
+two copies to do this.
 
-<p>To cancel the stream you then need to cancel both resulting branches. Teeing a stream
-  will generally lock it for the duration, preventing other readers from locking it.</p>
+To cancel the stream you then need to cancel both resulting branches. Teeing a stream
+will generally lock it for the duration, preventing other readers from locking it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>teedStreams</em> = <em>readableStream</em>.tee();</pre>
+```js
+var teedStreams = readableStream.tee();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.</p>
+An {{jsxref("Array")}} containing two {{domxref("ReadableStream")}} instances.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source stream is not a <code>ReadableStream</code>.</dd>
-</dl>
+- TypeError
+  - : The source stream is not a `ReadableStream`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, a previously-created stream is teed, then both
-  resulting streams (contained in two members of a generated array) are passed to a
-  function that reads the data out of the two streams and prints each stream's chunks
-  sequentially to a different part of the UI. See <a
-    href="https://mdn.github.io/dom-examples/streams/simple-tee-example/">Simple tee
-    example</a> for the full code.</p>
+In the following simple example, a previously-created stream is teed, then both
+resulting streams (contained in two members of a generated array) are passed to a
+function that reads the data out of the two streams and prints each stream's chunks
+sequentially to a different part of the UI. See [Simple tee
+example](https://mdn.github.io/dom-examples/streams/simple-tee-example/) for the full code.
 
-<pre class="brush: js">function teeStream() {
+```js
+function teeStream() {
   const teedOff = stream.tee();
   fetchStream(teedOff[0], list2);
   fetchStream(teedOff[1], list3);
@@ -87,12 +85,13 @@ function fetchStream(stream, list) {
     // Read some more, and call this function again
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

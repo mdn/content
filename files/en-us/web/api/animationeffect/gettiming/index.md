@@ -11,30 +11,30 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.getTiming
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code>AnimationEffect.getTiming()</code> method of the {{domxref("AnimationEffect")}} interface returns an {{domxref("EffectTiming")}} object containing the timing properties for the Animation Effect.</p>
+The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} interface returns an {{domxref("EffectTiming")}} object containing the timing properties for the Animation Effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">animationTiming = animation.getTiming();</pre>
+```js
+animationTiming = animation.getTiming();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An {{domxref("EffectTiming")}} object.</p>
+An {{domxref("EffectTiming")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationEffect")}}</li>
- <li>{{domxref("EffectTiming")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationEffect")}}
+- {{domxref("EffectTiming")}}

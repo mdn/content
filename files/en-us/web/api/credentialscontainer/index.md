@@ -12,39 +12,39 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-<p>The <strong><code>CredentialsContainer</code></strong> interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.</p>
+The **`CredentialsContainer`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or <code>null</code> if no <code>Credential</code> object can be created. In exceptional circumstances, the {{jsxref("Promise")}} may reject.</dd>
-	<dt>{{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}</dt>
-	<dd>Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.</dd>
-	<dt>{{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}</dt>
-	<dd>Sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty {{jsxref("Promise")}}. For example, you might call this, after a user signs out of a website to ensure that they aren't automatically signed in on the next site visit. Earlier versions of the spec called this method <code>requireUserMediation()</code>. See {{anch("Browser compatibility")}} for support details.</dd>
-	<dt>{{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}</dt>
-	<dd>Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.</dd>
-</dl>
+- {{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a new {{domxref("Credential")}} instance based on the provided options, or `null` if no `Credential` object can be created. In exceptional circumstances, the {{jsxref("Promise")}} may reject.
+- {{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}
+  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.
+- {{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}
+  - : Sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty {{jsxref("Promise")}}. For example, you might call this, after a user signs out of a website to ensure that they aren't automatically signed in on the next site visit. Earlier versions of the spec called this method `requireUserMediation()`. See {{anch("Browser compatibility")}} for support details.
+- {{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}
+  - : Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,43 +2,43 @@
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
 tags:
-- API
-- Deprecated
-- Element
-- HTML
-- HTML DOM
-- Property
-- Reference
-- UX
+  - API
+  - Deprecated
+  - Element
+  - HTML
+  - HTML DOM
+  - Property
+  - Reference
+  - UX
 browser-compat: api.HTMLElement.contextMenu
 ---
-<div>{{APIRef("HTML DOM")}}{{Deprecated_Header}}
-  <p>The <code><strong>HTMLElement.contextMenu</strong></code> property refers to the
-    context menu assigned to an element using the {{htmlattrxref("contextmenu")}}
-    attribute. The menu itself is created using the {{HTMLElement("menu")}} element.</p>
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-  <h2 id="Syntax">Syntax</h2>
+The **`HTMLElement.contextMenu`** property refers to the
+context menu assigned to an element using the {{htmlattrxref("contextmenu")}}
+attribute. The menu itself is created using the {{HTMLElement("menu")}} element.
 
-  <pre class="brush: js">var <var>elementContextMenu</var> = <var>element</var>.contextMenu;
-</pre>
+## Syntax
 
-  <h2 id="Example">Example</h2>
+```js
+var elementContextMenu = element.contextMenu;
+```
 
-  <pre class="brush: js">var contextMenu = document.getElementById("element").contextMenu;
+## Example
+
+```js
+var contextMenu = document.getElementById("element").contextMenu;
 
 // Change the label of the first menu entry
 contextMenu.firstElementChild.label = "New label";
-</pre>
+```
 
-  <h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-  <p>{{Compat}}</p>
+{{Compat}}
 
-  <h2 id="See_also">See also</h2>
+## See also
 
-  <ul>
-    <li>{{htmlattrxref("contextmenu")}}</li>
-    <li>{{HTMLElement("menu")}}</li>
-    <li>{{HTMLElement("menuitem")}}</li>
-  </ul>
-</div>
+- {{htmlattrxref("contextmenu")}}
+- {{HTMLElement("menu")}}
+- {{HTMLElement("menuitem")}}

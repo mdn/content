@@ -2,33 +2,34 @@
 title: MediaKeyStatusMap.size
 slug: Web/API/MediaKeyStatusMap/size
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Property
-- Reference
-- size
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Property
+  - Reference
+  - size
 browser-compat: api.MediaKeyStatusMap.size
 ---
-<p>{{SeeCompatTable}}{{APIRef("EncryptedMediaExtensions API")}}</p>
+{{SeeCompatTable}}{{APIRef("EncryptedMediaExtensions API")}}
 
-<p>The <strong><code>size</code></strong> read-only property of
-    the {{domxref("MediaKeyStatusMap")}} interface returns the number of key/value paIrs
-    in the status map.</p>
+The **`size`** read-only property of
+the {{domxref("MediaKeyStatusMap")}} interface returns the number of key/value paIrs
+in the status map.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>size</em> = MediaKeyStatusMap.size;</pre>
+```js
+var size = MediaKeyStatusMap.size;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A long integer.</p>
+A long integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,49 +9,52 @@ tags:
   - Stringifier
 browser-compat: api.Range.toString
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.toString()</code></strong> method is a stringifier returning
-  the text of the {{domxref("Range")}}.</p>
+The **`Range.toString()`** method is a stringifier returning
+the text of the {{domxref("Range")}}.
 
-<p>Alerting the contents of a {{domxref("Range")}} makes an implicit
-  <code>toString()</code> call, so comparing range and text through an alert dialog is
-  ineffective.</p>
+Alerting the contents of a {{domxref("Range")}} makes an implicit
+`toString()` call, so comparing range and text through an alert dialog is
+ineffective.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>text</em> = <em>range</em>.toString();</pre>
+```js
+text = range.toString();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This example logs &lt;b&gt;everything&lt;/b&gt; between the bold &lt;b&gt;words&lt;/b&gt;. Look at the output below.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>This example logs <b>everything</b> between the bold <b>words</b>. Look at the output below.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const range = document.createRange();
+```js
+const range = document.createRange();
 
 range.setStartBefore(document.getElementsByTagName('b').item(0), 0);
 range.setEndAfter(document.getElementsByTagName('b').item(1), 0);
-document.getElementById('log').textContent = range.toString();</pre>
+document.getElementById('log').textContent = range.toString();
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

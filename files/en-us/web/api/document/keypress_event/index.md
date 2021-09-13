@@ -9,77 +9,81 @@ tags:
   - Reference
 browser-compat: api.Document.keypress_event
 ---
-<div>{{APIRef}} {{deprecated_header}}</div>
+{{APIRef}} {{deprecated_header}}
 
-<p>The <strong><code>keypress</code></strong> event is fired when a key that produces a character value is pressed down.</p>
+The **`keypress`** event is fired when a key that produces a character value is pressed down.
 
-<p>Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys. Examples of keys that don't produce a character value are modifier keys such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.</p>
+Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys. Examples of keys that don't produce a character value are modifier keys such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Since this event has been deprecated, you should look to use <code><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></code> or <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> instead.</p>
-</div>
+> **Warning:** Since this event has been deprecated, you should look to use [`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event) or [`keydown`](/en-US/docs/Web/API/Document/keydown_event) instead.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Default Action</th>
-   <td>Varies: <code>keypress</code> event; launch text composition system; <code>blur</code> and <code>focus</code> events; <code>DOMActivate</code> event; other event</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Default Action</th>
+      <td>
+        Varies: <code>keypress</code> event; launch text composition system;
+        <code>blur</code> and <code>focus</code> events;
+        <code>DOMActivate</code> event; other event
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="addEventListener_keypress_example">addEventListener keypress example</h3>
+### addEventListener keypress example
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key.
 
-<pre class="brush: html">&lt;p&gt;Press inside this IFrame first to focus it, then try pressing keys on the keyboard.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Press inside this IFrame first to focus it, then try pressing keys on the keyboard.</p>
+<p id="log"></p>
+```
 
-<pre class="brush: js">const log = document.getElementById('log');
+```js
+const log = document.getElementById('log');
 
 document.addEventListener('keypress', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keypress_example")}}</p>
+{{EmbedLiveSample("addEventListener_keypress_example")}}
 
-<h3 id="onkeypress_equivalent">onkeypress equivalent</h3>
+### onkeypress equivalent
 
-<pre class="brush: js">document.onkeypress = logKey;</pre>
+```js
+document.onkeypress = logKey;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
- <li>The {{domxref("Element")}} interface, which the event also targets.</li>
- <li>Related events:
-  <ul>
-   <li><code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code></li>
-  </ul>
- </li>
-</ul>
+- {{domxref("GlobalEventHandlers.onkeypress")}}
+- The {{domxref("Element")}} interface, which the event also targets.
+- Related events:
+
+  - [`keydown`](/en-US/docs/Web/API/Document/keydown_event)
+  - [`keyup`](/en-US/docs/Web/API/Document/keyup_event)

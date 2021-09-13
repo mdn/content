@@ -16,68 +16,65 @@ tags:
   - web animations api
 browser-compat: api.EffectTiming.delay
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The {{domxref("EffectTiming")}} dictionary's <strong><code>delay</code></strong> property
-  in the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>
-  represents the number of milliseconds to delay the start of the animation.</p>
+The {{domxref("EffectTiming")}} dictionary's **`delay`** property
+in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+represents the number of milliseconds to delay the start of the animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>timingProperties</em> = {
-  delay: <em>delayInMilliseconds</em>
+```js
+var timingProperties = {
+  delay: delayInMilliseconds
 };
 
-<em>timingProperties</em>.delay = <em>delayInMilliseconds</em>;
-</pre>
+timingProperties.delay = delayInMilliseconds;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number specifying the delay, in milliseconds, from the start of the animation's play
-  cycle to the beginning of its <strong>active interval</strong> (the time index at which
-  actual animation begins). Defaults to 0.</p>
+A number specifying the delay, in milliseconds, from the start of the animation's play
+cycle to the beginning of its **active interval** (the time index at which
+actual animation begins). Defaults to 0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Pool of
-    Tears</a> example, each tear is passed a random delay via its timing object:</p>
+In the [Pool of
+Tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010) example, each tear is passed a random delay via its timing object:
 
-<pre><code>// Randomizer function
-var getRandomMsRange = function(min, max) {
-  return Math.random() * (max - min) + min;
-}
+    // Randomizer function
+    var getRandomMsRange = function(min, max) {
+      return Math.random() * (max - min) + min;
+    }
 
-// Loop through each tear
-tears.forEach(function(el) {
+    // Loop through each tear
+    tears.forEach(function(el) {
 
-  // Animate each tear
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // randomized for each tear
-      duration: getRandomMsRange(2000, 6000), // randomized for each tear
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+      // Animate each tear
+      el.animate(
+        tearsFalling,
+        {
+          delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+          duration: getRandomMsRange(2000, 6000), // randomized for each tear
+          iterations: Infinity,
+          easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+        });
     });
-});</code></pre>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
-    both accept an object of timing properties including this one.
-  </li>
-  <li>CSS's
-    <code><a href="/en-US/docs/Web/CSS/transition-delay">transition-delay</a></code>
-    and <code><a href="/en-US/docs/Web/CSS/animation-delay">animation-delay</a></code>
-  </li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+  both accept an object of timing properties including this one.
+- CSS's
+  [`transition-delay`](/en-US/docs/Web/CSS/transition-delay)
+  and [`animation-delay`](/en-US/docs/Web/CSS/animation-delay)

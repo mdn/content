@@ -8,37 +8,31 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_debug_shaders
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_debug_shaders</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes a method to debug shaders from privileged contexts.</p>
+The **`WEBGL_debug_shaders`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes a method to debug shaders from privileged contexts.
 
-<p>This extension is not directly available to web sites as the way of how the shader is translated may uncover personally-identifiable information to the web page about the kind of graphics card in the user's computer.</p>
+This extension is not directly available to web sites as the way of how the shader is translated may uncover personally-identifiable information to the web page about the kind of graphics card in the user's computer.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> Depending on the privacy settings of the browser, this extension might only be available to privileged contexts.</p>
+> **Note:** Depending on the privacy settings of the browser, this extension might only be available to privileged contexts.
+>
+> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<p>This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("WEBGL_debug_shaders.getTranslatedShaderSource()")}}
+  - : Returns the translated shader source.
 
-<dl>
- <dt>{{domxref("WEBGL_debug_shaders.getTranslatedShaderSource()")}}</dt>
- <dd>Returns the translated shader source.</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}

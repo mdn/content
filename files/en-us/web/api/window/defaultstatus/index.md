@@ -13,41 +13,35 @@ tags:
   - Reference
   - Window
 ---
-<p>{{APIRef()}}{{deprecated_header}}</p>
+{{APIRef()}}{{deprecated_header}}
 
-<div class="note notebox">
-  <p><strong>Note:</strong> This method was removed from Firefox 23 and onward.</p>
-</div>
+> **Note:** This method was removed from Firefox 23 and onward.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Gets/sets the status bar text for the given window.</p>
+Gets/sets the status bar text for the given window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>var sMsg</em> = window.defaultStatus;
-window.defaultStatus = <em>sMsg;</em>
-</pre>
+    var sMsg = window.defaultStatus;
+    window.defaultStatus = sMsg;
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>sMsg</code> is a string containing the text to be displayed by default in the statusbar.</li>
-</ul>
+- `sMsg` is a string containing the text to be displayed by default in the statusbar.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>&lt;html&gt;
- &lt;body onload="window.defaultStatus='hello!';"/&gt;
-  &lt;button onclick="window.confirm('Are you sure you want to quit?');"&gt;confirm&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    <html>
+     <body onload="window.defaultStatus='hello!';"/>
+      <button onclick="window.confirm('Are you sure you want to quit?');">confirm</button>
+     </body>
+    </html>
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>To set the status once the window has been opened, use {{domxref("window.status")}}.</p>
+To set the status once the window has been opened, use {{domxref("window.status")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>HTML5</p>
+HTML5

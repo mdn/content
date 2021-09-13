@@ -9,26 +9,31 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.form
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>form</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.</p>
+The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let form = ElementInternals.form;
-</pre>
+```js
+let form = ElementInternals.form;
+```
 
-<h3>Value</h3>
-<p>An {{domxref("HTMLFormElement")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An {{domxref("HTMLFormElement")}}.
 
-<p>The following example shows a custom checkbox component inside a form with an ID of <code>myForm</code>. Printing <code>form.length</code> to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.</p>
+## Examples
 
-<pre class="brush: html">&lt;form id="myForm"&gt;&lt;custom-checkbox id="join-checkbox"&gt;&lt;/custom-checkbox&gt;
-  &lt;custom-label for="custom-checkbox"&gt;Join newsletter&lt;/custom-label&gt;&lt;/form&gt;</pre>
+The following example shows a custom checkbox component inside a form with an ID of `myForm`. Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
 
-<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+```html
+<form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>
+  <custom-label for="custom-checkbox">Join newsletter</custom-label></form>
+```
+
+```js
+class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
 
   constructor() {
@@ -42,14 +47,13 @@ browser-compat: api.ElementInternals.form
 })();
 
 let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.form.length);</pre>
+console.log(element.internals_.form.length);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

@@ -9,47 +9,45 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.open
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>open()</code></strong> method of the {{domxref("HIDDevice")}} interface requests that the operating sytem opens the HID device.</p>
+The **`open()`** method of the {{domxref("HIDDevice")}} interface requests that the operating sytem opens the HID device.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.getRequestDevice()")}} must be opened with this method before it is available to transfer data.</p>
-</div>
+> **Note:** HID devices are not opened automatically. Therefore, a {{domxref("HIDDevice")}} returned by {{domxref("HID.getRequestDevice()")}} must be opened with this method before it is available to transfer data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HIDDevice.open();</pre>
+```js
+HIDDevice.open();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code> once the connection is opened.</p>
+A {{jsxref("Promise")}} that resolves with `undefined` once the connection is opened.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if the connection is already open.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>Thrown if the attempt to open the connection fails for any reason.</dd>
-</dl>
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if the connection is already open.
+- {{domxref("DOMException")}} `NotAllowedError`
+  - : Thrown if the attempt to open the connection fails for any reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, we wait for the HID connection to open before attempting to send or receive data.</p>
+In the following example, we wait for the HID connection to open before attempting to send or receive data.
 
-<pre class="brush: css">await device.open();</pre>
+```css
+await device.open();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

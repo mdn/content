@@ -2,80 +2,81 @@
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
 browser-compat: api.Node.isSameNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>isSameNode()</strong></code> method for
-    <code>Node</code> objects is a legacy alias the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">for the <code>===</code> strict equality operator</a>. That is, it tests whether two nodes are the same (in other words, whether they
-    reference the same object).</p>
+The **`isSameNode()`** method for
+`Node` objects is a legacy alias the [for the `===` strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality). That is, it tests whether two nodes are the same (in other words, whether they
+reference the same object).
 
-<p>There’s no need to use <code>isSameNode()</code>; instead use the <code>===</code> strict equality operator.</p>
+There’s no need to use `isSameNode()`; instead use the `===` strict equality operator.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>isSameNode</var> = <var>node</var>.isSameNode(<var>otherNode</var>)
-</pre>
+```js
+const isSameNode = node.isSameNode(otherNode)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>otherNode</var></code> The {{domxref("Node")}} to test against.</li>
-</ul>
+- `otherNode` The {{domxref("Node")}} to test against.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we create three {{HTMLElement("div")}} blocks. The first and third
-  have the same contents and attributes, while the second is different. Then we run some
-  JavaScript to compare the nodes using <code>isSameNode()</code> and output the results.
-</p>
+In this example, we create three {{HTMLElement("div")}} blocks. The first and third
+have the same contents and attributes, while the second is different. Then we run some
+JavaScript to compare the nodes using `isSameNode()` and output the results.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;This is the first element.&lt;/div&gt;
-&lt;div&gt;This is the second element.&lt;/div&gt;
-&lt;div&gt;This is the first element.&lt;/div&gt;
+```html
+<div>This is the first element.</div>
+<div>This is the second element.</div>
+<div>This is the first element.</div>
 
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+<p id="output"></p>
+```
 
-<pre class="brush: css hidden">#output {
+```css hidden
+#output {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
   display: block;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "&lt;br/&gt;";
-</pre>
+output.innerHTML += "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
+output.innerHTML += "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
+output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
+```
 
-<h3 id="Results">Results</h3>
+### Results
 
-<p>{{ EmbedLiveSample('Example', 480) }}</p>
+{{ EmbedLiveSample('Example', 480) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.isEqualNode()")}}</li>
-</ul>
+- {{domxref("Node.isEqualNode()")}}

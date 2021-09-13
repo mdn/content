@@ -11,28 +11,27 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>NavigationPreloadManager</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> provides methods for managing the preloading of resources with a service worker.</p>
+The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources with a service worker.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("NavigationPreloadManager.enable()")}}</dt>
- <dd>Enables navigation preloading and returns a {{jsxref("Promise")}} that resolves.</dd>
- <dt>{{domxref("NavigationPreloadManager.disable()")}}</dt>
- <dd>Disables navigation preloading and returns a {{jsxref("Promise")}} that resolves.</dd>
- <dt>{{domxref("NavigationPreloadManager.setHeaderValue()")}}</dt>
- <dd>Sets the value of the <code>Service-Worker-Navigation-Preload</code> header and returns an empty {{jsxref("Promise")}}.</dd>
- <dt>{{domxref("NavigationPreloadManager.getState()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves to an object with properties indicating whether preload is enabled and the contents of the <code>Service-Worker-Navigation-Preload</code>.</dd>
-</dl>
+- {{domxref("NavigationPreloadManager.enable()")}}
+  - : Enables navigation preloading and returns a {{jsxref("Promise")}} that resolves.
+- {{domxref("NavigationPreloadManager.disable()")}}
+  - : Disables navigation preloading and returns a {{jsxref("Promise")}} that resolves.
+- {{domxref("NavigationPreloadManager.setHeaderValue()")}}
+  - : Sets the value of the `Service-Worker-Navigation-Preload` header and returns an empty {{jsxref("Promise")}}.
+- {{domxref("NavigationPreloadManager.getState()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves to an object with properties indicating whether preload is enabled and the contents of the `Service-Worker-Navigation-Preload`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h4 id="Feature_Detecting_and_Enabling_Navigation_Preloading">Feature Detecting and Enabling Navigation Preloading </h4>
+#### Feature Detecting and Enabling Navigation Preloading 
 
-<pre class="brush: js">addEventListener('activate', event =&gt; {
+```js
+addEventListener('activate', event => {
   event.waitUntil(async function() {
     if (self.registration.navigationPreload) {
       // Enable navigation preloads!
@@ -40,13 +39,14 @@ browser-compat: api.NavigationPreloadManager
     }
   }());
 });
-</pre>
+```
 
-<h4 id="Using_a_Preloaded_Response">Using a Preloaded Response</h4>
+#### Using a Preloaded Response
 
-<p>The following example shows the implementation of a fetch event that uses a preloaded response. </p>
+The following example shows the implementation of a fetch event that uses a preloaded response.
 
-<pre class="brush: js">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   event.respondWith(async function() {
     // Respond from the cache if we can
     const cachedResponse = await caches.match(event.request);
@@ -59,12 +59,13 @@ browser-compat: api.NavigationPreloadManager
     // Else try the network.
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

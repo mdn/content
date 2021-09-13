@@ -2,43 +2,43 @@
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
 tags:
-- API
-- DOM
-- KeyboardEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - KeyboardEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>KeyboardEvent.isComposing</strong></code> read-only property returns
-  a boolean value indicating if the event is fired within a composition
-  session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
-  and before {{domxref("Element/compositionend_event", "compositionend")}}.</p>
+The **`KeyboardEvent.isComposing`** read-only property returns
+a boolean value indicating if the event is fired within a composition
+session, i.e. after {{domxref("Element/compositionstart_event", "compositionstart")}}
+and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>bool</var> = <var>event</var>.isComposing;</pre>
+```js
+var bool = event.isComposing;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var kbdEvent = new KeyboardEvent("syntheticKey", false);
+```js
+var kbdEvent = new KeyboardEvent("syntheticKey", false);
 console.log(kbdEvent.isComposing); // return false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>
-  <li>{{domxref("KeyboardEvent")}}</li>
-</ul>
+- {{ event("compositionstart") }} and {{ event("compositionend")}}
+- {{domxref("KeyboardEvent")}}

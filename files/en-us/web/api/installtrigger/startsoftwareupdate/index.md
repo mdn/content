@@ -2,32 +2,36 @@
 title: InstallTrigger.startSoftwareUpdate
 slug: Web/API/InstallTrigger/startSoftwareUpdate
 ---
-<h2 id="Summary">Summary</h2>
-<p>Triggers the downloading and installation of the software at the specified URL.</p>
+## Summary
 
-<h3 id="Method_of">Method of</h3>
-<p><a href="/en-US/docs/Web/API/InstallTrigger">InstallTrigger</a>
-  object</p>
+Triggers the downloading and installation of the software at the specified URL.
 
-<h2 id="Syntax">Syntax</h2>
-<pre class="brush: js">Boolean startSoftwareUpdate ( String url);
-</pre>
+### Method of
 
-<h3 id="Parameters">Parameters</h3>
-<p>The <code>startSoftwareUpdate</code> method has the following parameter:</p>
-<dl>
-  <dt><code>url</code></dt>
-  <dd>A uniform resource locator specifying the location of the XPI file containing the
-    software.</dd>
-</dl>
+[InstallTrigger](/en-US/docs/Web/API/InstallTrigger)
+object
 
-<h3 id="Returns">Returns</h3>
-<p>True.</p>
+## Syntax
 
-<h2 id="Description">Description</h2>
-<p>The <code>startSoftwareUpdate</code> method triggers a software download and install
-  from the specified URL. This method has been largely superseded by newer <a
-    href="/en-US/docs/Web/API/InstallTrigger/install">
-    install</a> method, which is more flexible and allows you to install more than one
-  XPI. Note also that XPIs installed with this method must have their own install.js files
-  in which the full installation is defined.</p>
+```js
+Boolean startSoftwareUpdate ( String url);
+```
+
+### Parameters
+
+The `startSoftwareUpdate` method has the following parameter:
+
+- `url`
+  - : A uniform resource locator specifying the location of the XPI file containing the
+    software.
+
+### Returns
+
+True.
+
+## Description
+
+The `startSoftwareUpdate` method triggers a software download and install
+from the specified URL. This method has been largely superseded by newer [install](/en-US/docs/Web/API/InstallTrigger/install) method, which is more flexible and allows you to install more than one
+XPI. Note also that XPIs installed with this method must have their own install.js files
+in which the full installation is defined.

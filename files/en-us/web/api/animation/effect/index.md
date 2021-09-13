@@ -12,32 +12,32 @@ tags:
   - web animations api
 browser-compat: api.Animation.effect
 ---
-<div>{{ SeeCompatTable() }} {{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }} {{ APIRef("Web Animations") }}
 
-<p>The <strong><code>Animation.effect</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on {{domxref("AnimationEffect")}}, such as {{domxref("KeyframeEffect")}}, or <code>null</code>.</p>
+The **`Animation.effect`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on {{domxref("AnimationEffect")}}, such as {{domxref("KeyframeEffect")}}, or `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>effect</em> = <em>Animation</em>.effect;
+```js
+var effect = Animation.effect;
 
-<em>Animation</em>.effect = <em>{{domxref("AnimationEffect")}}</em></pre>
+Animation.effect = {{domxref("AnimationEffect")}}
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or <code>null</code> to indicate no active effect.</p>
+A {{domxref("AnimationEffect")}} object describing the target animation effect for the animation, or `null` to indicate no active effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationEffect")}}</li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationEffect")}}
+- {{domxref("Animation")}}

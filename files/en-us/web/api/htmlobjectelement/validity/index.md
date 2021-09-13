@@ -2,34 +2,35 @@
 title: HTMLObjectElement.validity
 slug: Web/API/HTMLObjectElement/validity
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- validity
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - validity
 browser-compat: api.HTMLObjectElement.validity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>validity</code></strong> read-only property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("ValidityState")}} with
-  the validity states that this element is in.</p>
+The **`validity`** read-only property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("ValidityState")}} with
+the validity states that this element is in.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var ValidityState = HTMLObjectElement.validity;</pre>
+```js
+var ValidityState = HTMLObjectElement.validity;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ValidityState")}} object.</p>
+A {{domxref("ValidityState")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

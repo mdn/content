@@ -9,37 +9,41 @@ tags:
   - HID
 browser-compat: api.HID.getDevices
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>getDevices()</code></strong> method of the {{domxref("HID")}} interface gets a list of the connected HID devices.</p>
+The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of the connected HID devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HID.getDevices();</pre>
+```js
+HID.getDevices();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a list of {{domxref("HIDDevice")}} objects.</p>
+A {{jsxref("Promise")}} that resolves with a list of {{domxref("HIDDevice")}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example gets a list of devices and logs the device names to the console.</p>
+The following example gets a list of devices and logs the device names to the console.
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', async () => {
+```js
+document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach(device => {
     console.log(`HID: ${device.productName}`);
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

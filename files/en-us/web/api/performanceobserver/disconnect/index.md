@@ -2,33 +2,35 @@
 title: PeformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 tags:
-- API
-- Method
-- Performance Observer API
-- PerformanceObserver
-- Reference
-- Web Performance
-- disconnect()
-- observers
+  - API
+  - Method
+  - Performance Observer API
+  - PerformanceObserver
+  - Reference
+  - Web Performance
+  - disconnect()
+  - observers
 browser-compat: api.PerformanceObserver.disconnect
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>disconnect()</code></strong> method of the
-  {{domxref('PerformanceObserver')}} interface is used to stop the performance observer
-  from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
-  events.</p>
+The **`disconnect()`** method of the
+{{domxref('PerformanceObserver')}} interface is used to stop the performance observer
+from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
+events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>performanceObserver</em>.disconnect();
-</pre>
+```js
+performanceObserver.disconnect();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -42,12 +44,12 @@ function perf_observer(list, observer) {
 }
 var observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

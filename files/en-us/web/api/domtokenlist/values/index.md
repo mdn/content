@@ -2,65 +2,70 @@
 title: DOMTokenList.values()
 slug: Web/API/DOMTokenList/values
 tags:
-- DOM
-- DOMTokenList
-- Iterable
-- Method
-- Reference
-- Web
-- values
+  - DOM
+  - DOMTokenList
+  - Iterable
+  - Method
+  - Reference
+  - Web
+  - values
 browser-compat: api.DOMTokenList.values
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>values()</strong></code> method of the {{domxref("DOMTokenList")}}
-  interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing developers to
-  go through all values contained in the <code>DOMTokenList</code>. The individual values
-  are {{domxref("DOMString")}} objects.</p>
+The **`values()`** method of the {{domxref("DOMTokenList")}}
+interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing developers to
+go through all values contained in the `DOMTokenList`. The individual values
+are {{domxref("DOMString")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">tokenList.values();</pre>
+```js
+tokenList.values();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}. We when retrieve an iterator containing the values
-  using <code>values()</code>, then iterate through those values using a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> loop,
-  writing each one to the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}. We when retrieve an iterator containing the values
+using `values()`, then iterate through those values using a [for ... of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop,
+writing each one to the `<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
 for(var value of iterator) {
   span.textContent += value + ' ++ ';
-}</pre>
+}
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

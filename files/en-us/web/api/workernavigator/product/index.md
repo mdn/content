@@ -9,37 +9,33 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.product
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The value of the <strong><code>WorkerNavigator.product</code></strong> property is always
-  "<code>Gecko</code>", in any browser. This property is kept only for compatibility
-  purposes.</p>
+The value of the **`WorkerNavigator.product`** property is always
+"`Gecko`", in any browser. This property is kept only for compatibility
+purposes.
 
+> **Note:** Do not rely on this property to return a real product name. All browsers return "`Gecko`" as the value of this property.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Do not rely on this property to return a real product name. All browsers return "<code>Gecko</code>" as the value of this property.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+productName = navigator.product
+```
 
-<pre class="brush: js"><em>productName</em> = navigator.product
-</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+The string "`Gecko`".
 
-<p>The string "<code>Gecko</code>".</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WorkerNavigator.appCodeName")}}</li>
-  <li>{{domxref("WorkerNavigator.appName")}}</li>
-</ul>
+- {{domxref("WorkerNavigator.appCodeName")}}
+- {{domxref("WorkerNavigator.appName")}}

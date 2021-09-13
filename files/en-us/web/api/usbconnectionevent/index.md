@@ -8,40 +8,38 @@ tags:
   - USBConnectionEvent
 browser-compat: api.USBConnectionEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <strong><code>USBConnectionEvent</code></strong> interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}} when the user agent detects that a new USB device has been connected or disconnected.</p>
+The **`USBConnectionEvent`** interface of the {{domxref('WebUSB API','','',' ')}} is the event type passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}} when the user agent detects that a new USB device has been connected or disconnected.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("USBConnectionEvent.USBConnectionEvent()")}}</dt>
-  <dd>Returns a <code>USBConnectionEvent</code> object.</dd>
-</dl>
+- {{domxref("USBConnectionEvent.USBConnectionEvent()")}}
+  - : Returns a `USBConnectionEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("USBConnectionEvent.device")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("USBDevice")}} object representing the current device.</dd>
-</dl>
+- {{domxref("USBConnectionEvent.device")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("USBDevice")}} object representing the current device.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.</p>
+In the following example listening for connect and disconnect events is used to add and remove the devices from the user interface of an application.
 
-<pre class="brush: js">navigator.usb.addEventListener('connect', event => {
+```js
+navigator.usb.addEventListener('connect', event => {
   // Add event.device to the UI.
 });
 
 navigator.usb.addEventListener('disconnect', event => {
   // Remove event.device from the UI.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

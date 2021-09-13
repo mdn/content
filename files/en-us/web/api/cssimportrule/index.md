@@ -8,42 +8,44 @@ tags:
   - Reference
 browser-compat: api.CSSImportRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSImportRule</code></strong> interface represents an {{cssxref("@import")}} {{cssxref("at-rule")}}.</p>
+The **`CSSImportRule`** interface represents an {{cssxref("@import")}} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
-  <dt>{{domxref("CSSImportRule.href")}}{{readonlyinline}}</dt>
-  <dd>Returns the url specified by the {{cssxref("@import")}} rule.</dd>
-  <dt>{{domxref("CSSImportRule.media")}}</dt>
-  <dd>Returns the value of the <code>media</code> attribute of the associated stylesheet.</dd>
-  <dt>{{domxref("CSSImportRule.stylesheet")}}{{readonlyinline}}</dt>
-  <dd>Returns the associated stylesheet.</dd>
-</dl>
+- {{domxref("CSSImportRule.href")}}{{readonlyinline}}
+  - : Returns the url specified by the {{cssxref("@import")}} rule.
+- {{domxref("CSSImportRule.media")}}
+  - : Returns the value of the `media` attribute of the associated stylesheet.
+- {{domxref("CSSImportRule.stylesheet")}}{{readonlyinline}}
+  - : Returns the associated stylesheet.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the first item in the list of CSS rules will be a <code>CSSImportRule</code>.</p>
+The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the first item in the list of CSS rules will be a `CSSImportRule`.
 
-<pre class="brush:css">@import url("style.css") screen;</pre>
+```css
+@import url("style.css") screen;
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSImportRule</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSImportRule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

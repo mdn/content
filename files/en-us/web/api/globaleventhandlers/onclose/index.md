@@ -2,60 +2,55 @@
 title: GlobalEventHandlers.onclose
 slug: Web/API/GlobalEventHandlers/onclose
 tags:
-- API
-- Dialog
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- HTML DOM
-- NeedsExample
-- Property
-- Reference
+  - API
+  - Dialog
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - HTML DOM
+  - NeedsExample
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onclose
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <code><strong>onclose</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("close")}} events sent to a {{HTMLElement("dialog")}} element.</p>
+The **`onclose`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("close")}} events sent to a {{HTMLElement("dialog")}} element.
 
-<p>The <code>close</code> event fires when the user closes a <code>&lt;dialog&gt;</code>.
-</p>
+The `close` event fires when the user closes a `<dialog>`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> To handle the closing of a window, use
-    {{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} or
-    {{domxref("WindowEventHandlers.onunload", "onunload")}}.</p>
-</div>
+> **Note:** To handle the closing of a window, use
+> {{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} or
+> {{domxref("WindowEventHandlers.onunload", "onunload")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onclose = <em>functionRef</em>;
-</pre>
+```js
+target.onclose = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives an {{domxref("Event")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+argument.
 
-<p>Only one <code>onclose</code> handler can be assigned to an object at a time. You may
-  prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
-  it's more flexible.</p>
+Only one `onclose` handler can be assigned to an object at a time. You may
+prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
+it's more flexible.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("close")}} event</li>
-  <li>HTML {{HTMLElement("dialog")}} element</li>
-  <li>Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}</li>
-</ul>
+- {{event("close")}} event
+- HTML {{HTMLElement("dialog")}} element
+- Related event handler: {{domxref("GlobalEventHandlers.oncancel")}}

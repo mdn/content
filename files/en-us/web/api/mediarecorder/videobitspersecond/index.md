@@ -3,35 +3,35 @@ title: MediaRecorder.videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>videoBitsPerSecond</code></strong> read-only
-        property of the {{domxref("MediaRecorder")}} interface returns the video encoding
-        bit rate in use.</p>
+The **`videoBitsPerSecond`** read-only
+property of the {{domxref("MediaRecorder")}} interface returns the video encoding
+bit rate in use.
 
-<p>This may differ from the bit rate specified in the
-    constructor, if it was provided.</p>
+This may differ from the bit rate specified in the
+constructor, if it was provided.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var videoBitsPerSecond = MediaRecorder.videoBitsPerSecond</pre>
+```js
+var videoBitsPerSecond = MediaRecorder.videoBitsPerSecond
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Number")}} (unsigned long).</p>
+A {{jsxref("Number")}} (unsigned long).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-    <p>{{Compat}}</p>
-</div>
+{{Compat}}

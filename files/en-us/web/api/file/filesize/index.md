@@ -2,36 +2,35 @@
 title: File.fileSize
 slug: Web/API/File/fileSize
 tags:
-- API
-- DOM
-- File API
-- Files
-- Non-standard
-- Property
-- Reference
-- Deprecated
+  - API
+  - DOM
+  - File API
+  - Files
+  - Non-standard
+  - Property
+  - Reference
+  - Deprecated
 ---
-<p>{{APIRef("File API") }}{{non-standard_header}} {{Deprecated_Header}}</p>
+{{APIRef("File API") }}{{non-standard_header}} {{Deprecated_Header}}
 
-<p>Returns the size of a file in bytes.</p>
+Returns the size of a file in bytes.
 
-<div class="note"><p><strong>Note:</strong> This property is deprecated. Use {{domxref("Blob.size")}} instead.</p></div>
+> **Note:** This property is deprecated. Use {{domxref("Blob.size")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>size</em> = <em>instanceOfFile</em>.fileSize;</pre>
+```js
+var size = instanceOfFile.fileSize;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number.</p>
+A number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Blob.size")}}</li>
-</ul>
+- {{domxref("Blob.size")}}

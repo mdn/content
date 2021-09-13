@@ -2,33 +2,34 @@
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
 tags:
-- API
-- Experimental
-- Navigator
-- Permissions
-- Property
-- Reference
+  - API
+  - Experimental
+  - Navigator
+  - Permissions
+  - Property
+  - Reference
 browser-compat: api.Navigator.permissions
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>The <code><strong>Navigator.permissions</strong></code> read-only property returns a
-	{{domxref("Permissions")}} object that can be used to query and update permission
-	status of APIs covered by the <a
-		href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
+The **`Navigator.permissions`** read-only property returns a
+{{domxref("Permissions")}} object that can be used to query and update permission
+status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>permissionsObj</em> = <em>globalObj</em>.navigator.permissions
-</pre>
+```js
+permissionsObj = globalObj.navigator.permissions
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("Permissions")}} object.</p>
+A {{domxref("Permissions")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(result) {
+```js
+navigator.permissions.query({name:'geolocation'}).then(function(result) {
   if (result.state === 'granted') {
     showMap();
   } else if (result.state === 'prompt') {
@@ -36,19 +37,17 @@ browser-compat: api.Navigator.permissions
   }
   // Don't do anything if the permission was denied.
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></li>
-	<li>{{domxref("Navigator")}}</li>
-</ul>
+- [Permissions API](/en-US/docs/Web/API/Permissions_API)
+- {{domxref("Navigator")}}

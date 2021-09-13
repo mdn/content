@@ -2,53 +2,55 @@
 title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
 tags:
-- API
-- CSSOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - CSSOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.StyleSheet.ownerNode
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>ownerNode</strong></code> property of the
-    {{domxref("StyleSheet")}} interface returns the node that associates this style sheet
-    with the document.</p>
+The **`ownerNode`** property of the
+{{domxref("StyleSheet")}} interface returns the node that associates this style sheet
+with the document.
 
-<p>This is usually an HTML
-  <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> or
-  <code><a href="/en-US/docs/Web/HTML/Element/style">&lt;style&gt;</a></code> element, but
-  can also return a <a href="/en-US/docs/Web/API/ProcessingInstruction">processing
-    instruction node</a> in the case of <code>&lt;?xml-stylesheet ?&gt;</code>.</p>
+This is usually an HTML
+[`<link>`](/en-US/docs/Web/HTML/Element/link) or
+[`<style>`](/en-US/docs/Web/HTML/Element/style) element, but
+can also return a [processing
+instruction node](/en-US/docs/Web/API/ProcessingInstruction) in the case of `<?xml-stylesheet ?>`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeRef</em> = stylesheet.ownerNode
-</pre>
+```js
+nodeRef = stylesheet.ownerNode
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;html lang="en"&gt;
- &lt;head&gt;
-  &lt;link rel="stylesheet" href="example.css"&gt;
- &lt;/head&gt;
- &lt;body&gt;
-   &lt;button onclick="alert(document.styleSheets[0].ownerNode)"&gt;Show example.css’s ownerNode&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
+```html
+<html lang="en">
+ <head>
+  <link rel="stylesheet" href="example.css">
+ </head>
+ <body>
+   <button onclick="alert(document.styleSheets[0].ownerNode)">Show example.css’s ownerNode</button>
+ </body>
+</html>
 // Displays "object HTMLLinkElement"
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>For style sheets that are included by other style sheets, such as with
-  <code><a href="/en-US/docs/Web/CSS/@import">@import</a></code>, the value of this
-  property is <code>null</code>.</p>
+For style sheets that are included by other style sheets, such as with
+[`@import`](/en-US/docs/Web/CSS/@import), the value of this
+property is `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

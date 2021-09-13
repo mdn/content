@@ -9,30 +9,28 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFuncBElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEFuncBElement</code></strong> interface corresponds to the {{SVGElement("feFuncB")}} element.</p>
+The **`SVGFEFuncBElement`** interface corresponds to the {{SVGElement("feFuncB")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}.</em></p>
+_This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feFuncB")}}</li>
-</ul>
+- {{SVGElement("feFuncB")}}

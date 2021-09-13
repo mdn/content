@@ -9,45 +9,43 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isScript
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>isScript()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.</p>
+The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The purpose of the functions <code>isScript()</code>, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.</p>
-</div>
+> **Note:** The purpose of the functions `isScript()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>isScript</var> = <var>TrustedTypePolicyFactory</var>.isScript(<var>value</var>);</pre>
+    var isScript = TrustedTypePolicyFactory.isScript(value);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("TrustedScript")}} object.</dd>
-</dl>
+- `value`
+  - : A {{domxref("TrustedScript")}} object.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("TrustedScript")}} object.</p>
+A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("TrustedScript")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example the constant <code>url</code> was created by a policy, and therefore <code>isScriptURL()</code> returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to <code>isScriptURL()</code>.</p>
+In the below example the constant `url` was created by a policy, and therefore `isScriptURL()` returns true. The second example is an attempt to fake an object, and the third is a string. Both of these will return false when passed to `isScriptURL()`.
 
-<pre class="brush: js">const myScript = policy.createScript("eval('2 + 2')");
+```js
+const myScript = policy.createScript("eval('2 + 2')");
 console.log(trustedTypes.isScript(myScript)) // true;
 
 const fake = Object.create(TrustedScript.prototype);
 console.log(trustedTypes.isScript(fake)); // false
 
-console.log(trustedTypes.isScript("eval('2 + 2')")); // false</pre>
+console.log(trustedTypes.isScript("eval('2 + 2')")); // false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

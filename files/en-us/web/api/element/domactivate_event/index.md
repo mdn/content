@@ -15,39 +15,40 @@ tags:
   - onactivate
 browser-compat: api.Element.DOMActivate_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<div>{{Deprecated_Header}}</div>
+{{Deprecated_Header}}
 
-<p>The <code><strong>DOMActivate</strong></code> event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.</p>
+The **`DOMActivate`** event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
+```html
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
      xmlns:ev="http://www.w3.org/2001/xml-events"
-     width="6cm" height="5cm" viewBox="0 0 600 500"&gt;
+     width="6cm" height="5cm" viewBox="0 0 600 500">
 
-  &lt;desc&gt;Example: invoke an ECMAScript function from a DOMActivate event&lt;/desc&gt;
+  <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>
 
-  &lt;!-- ECMAScript to change the radius --&gt;
-  &lt;script type="application/ecmascript"&gt;&lt;![CDATA[
+  <!-- ECMAScript to change the radius -->
+  <script type="application/ecmascript"><![CDATA[
     function change(evt) {
       var circle = evt.target;
       var currentRadius = circle.getFloatTrait("r");
@@ -56,34 +57,32 @@ browser-compat: api.Element.DOMActivate_event
       else
         circle.setFloatTrait("r", currentRadius * 0.5);
     }
-  ]]&gt;&lt;/script&gt;
+  ]]></script>
 
-  &lt;!-- Act on each DOMActivate event --&gt;
-  &lt;circle cx="300" cy="225" r="100" fill="red"&gt;
-    &lt;handler type="application/ecmascript" ev:event="DOMActivate"&gt; change(evt); &lt;/handler&gt;
-  &lt;/circle&gt;
+  <!-- Act on each DOMActivate event -->
+  <circle cx="300" cy="225" r="100" fill="red">
+    <handler type="application/ecmascript" ev:event="DOMActivate"> change(evt); </handler>
+  </circle>
 
-  &lt;text x="300" y="480" font-family="Verdana" font-size="35" text-anchor="middle"&gt;
+  <text x="300" y="480" font-family="Verdana" font-size="35" text-anchor="middle">
     Activate the circle to change its size
-  &lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Examples", 640, 200)}}</p>
+{{EmbedLiveSample("Examples", 640, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MouseEvent")}}</li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
-</ul>
+- {{domxref("MouseEvent")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}

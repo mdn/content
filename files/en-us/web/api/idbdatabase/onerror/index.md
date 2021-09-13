@@ -2,48 +2,48 @@
 title: IDBDatabase.onerror
 slug: Web/API/IDBDatabase/onerror
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Property
-- Reference
-- Storage
-- onerror
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - onerror
 browser-compat: api.IDBDatabase.onerror
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <code><strong>onerror</strong></code> event handler of the
-  {{domxref("IDBDatabase")}} interface handles the error event, fired when a request
-  returns an error and bubbles up to the connection object.</p>
+The **`onerror`** event handler of the
+{{domxref("IDBDatabase")}} interface handles the error event, fired when a request
+returns an error and bubbles up to the connection object.
 
-<div class="note">
-  <p><strong>Note:</strong> Consider using <code>IDBOpenDBRequest.onsuccess</code> instead
-    (see {{domxref("IDBRequest.onsuccess")}}, where it is inherited from).</p>
-</div>
+> **Note:** Consider using `IDBOpenDBRequest.onsuccess` instead
+> (see {{domxref("IDBRequest.onsuccess")}}, where it is inherited from).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IDBDatabase</em>.onerror = <em>function</em>(event) { ... }</pre>
+```js
+IDBDatabase.onerror = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
-  creates a new object store; it also includes <code>onerror</code> and <code>onabort</code> functions to handle non-success cases.</p>
+This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
+creates a new object store; it also includes `onerror` and `onabort` functions to handle non-success cases.
 
-<pre class="brush: js;">DBOpenRequest.onupgradeneeded = function(event) {
+```js
+DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error opening database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error opening database.</li>';
   };
 
   db.onabort = function(event) {
-    note.innerHTML += '&lt;li&gt;Database opening aborted!&lt;/li&gt;';
+    note.innerHTML += '<li>Database opening aborted!</li>';
   };
 
   // Create an objectStore for this database
@@ -60,30 +60,26 @@ browser-compat: api.IDBDatabase.onerror
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
-};</pre>
+  note.innerHTML += '<li>Object store created.</li>';
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li><code><a href="/en-US/docs/Web/API/IDBDatabase/error_event">error</a></code> event
-  </li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`error`](/en-US/docs/Web/API/IDBDatabase/error_event) event

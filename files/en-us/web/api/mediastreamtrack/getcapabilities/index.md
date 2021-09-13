@@ -2,44 +2,44 @@
 title: MediaStreamTrack.getCapabilities()
 slug: Web/API/MediaStreamTrack/getCapabilities
 tags:
-- API
-- Media Capture and Streams API
-- Media Streams API
-- MediaStreamTrack
-- Method
-- Reference
-- getCapabilities
+  - API
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaStreamTrack
+  - Method
+  - Reference
+  - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>getCapabilities()</code></strong> method of
-    the {{domxref("MediaStreamTrack")}} interface returns a
-    {{domxref('MediaTrackCapabilities')}} object which specifies the values or range of
-    values which each constrainable property, based upon the platform and {{Glossary("user
-    agent")}}.</p>
+The **`getCapabilities()`** method of
+the {{domxref("MediaStreamTrack")}} interface returns a
+{{domxref('MediaTrackCapabilities')}} object which specifies the values or range of
+values which each constrainable property, based upon the platform and {{Glossary("user
+    agent")}}.
 
-<p>Once you know what the browser's capabilities are, your script can use
-  {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to ask for the
-  track to be configured to match ideal or acceptable settings. See <a
-    href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints,
-    and settings</a> for details on how to work with constrainable properties.</p>
+Once you know what the browser's capabilities are, your script can use
+{{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to ask for the
+track to be configured to match ideal or acceptable settings. See [Capabilities, constraints,
+and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>capabilities</em> = <em>track</em>.getCapabilities()</pre>
+```js
+const capabilities = track.getCapabilities()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of
-  values which are supported for each of the user agent's supported constrainable
-  properties.</p>
+A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of
+values which are supported for each of the user agent's supported constrainable
+properties.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

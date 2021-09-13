@@ -2,36 +2,38 @@
 title: USBDevice.deviceProtocol
 slug: Web/API/USBDevice/deviceProtocol
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- deviceProtocol
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - deviceProtocol
 browser-compat: api.USBDevice.deviceProtocol
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>deviceProtocol</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface one of three properties that identify USB devices for
-  the purpose of loading a USB driver that will work with that device. The other two
-  properties are <code>USBDevice.deviceClass</code>
-  and <code>USBDevice.deviceSubclass</code>.</p>
+The **`deviceProtocol`** read only property of the
+{{domxref("USBDevice")}} interface one of three properties that identify USB devices for
+the purpose of loading a USB driver that will work with that device. The other two
+properties are `USBDevice.deviceClass`
+and `USBDevice.deviceSubclass`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var number = USBDevice.deviceProtocol</pre>
+```js
+var number = USBDevice.deviceProtocol
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number.</p>
+A number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

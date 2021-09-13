@@ -17,23 +17,24 @@ tags:
   - endContainer
 browser-compat: api.AbstractRange.endContainer
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>endContainer</code></strong> property of the {{domxref("AbstractRange")}} interface returns the {{domxref("Node")}} in which the end of the range is located.</p>
+The **`endContainer`** property of the {{domxref("AbstractRange")}} interface returns the {{domxref("Node")}} in which the end of the range is located.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>endNode</em> = <em>range</em>.endContainer
-</pre>
+```js
+var endNode = range.endContainer
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The DOM {{domxref("Node")}} which contains the final character of the range.</p>
+The DOM {{domxref("Node")}} which contains the final character of the range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

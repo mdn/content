@@ -2,58 +2,57 @@
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowBlur
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.shadowBlur</code></strong>
-  property of the Canvas 2D API specifies the amount of blur applied to shadows. The
-  default is <code>0</code> (no blur).</p>
+The
+**`CanvasRenderingContext2D.shadowBlur`**
+property of the Canvas 2D API specifies the amount of blur applied to shadows. The
+default is `0` (no blur).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Shadows are only drawn if the
-    {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
-    a non-transparent value. One of the <code>shadowBlur</code>,
-    {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or
-    {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
-    be non-zero, as well.</p>
-</div>
+> **Note:** Shadows are only drawn if the
+> {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
+> a non-transparent value. One of the `shadowBlur`,
+> {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or
+> {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
+> be non-zero, as well.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.shadowBlur = <em>level</em>;
-</pre>
+```js
+ctx.shadowBlur = level;
+```
 
-<dl>
-  <dt><code>level</code></dt>
-  <dd>A non-negative float specifying the level of shadow blur, where <code>0</code>
+- `level`
+  - : A non-negative float specifying the level of shadow blur, where `0`
     represents no blur and larger numbers represent increasingly more blur. This value
     doesn't correspond to a number of pixels, and is not affected by the current
-    transformation matrix. The default value is <code>0</code>. Negative,
-    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.</dd>
-</dl>
+    transformation matrix. The default value is `0`. Negative,
+    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_a_shadow_to_a_shape">Adding a shadow to a shape</h3>
+### Adding a shadow to a shape
 
-<p>This example adds a blurred shadow to a rectangle. The <code>shadowColor</code>
-  property sets its color, and <code>shadowBlur</code> sets its level of bluriness.</p>
+This example adds a blurred shadow to a rectangle. The `shadowColor`
+property sets its color, and `shadowBlur` sets its level of bluriness.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Shadow
@@ -63,34 +62,33 @@ ctx.shadowBlur = 15;
 // Rectangle
 ctx.fillStyle = 'blue';
 ctx.fillRect(20, 20, 150, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Adding_a_shadow_to_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Adding_a_shadow_to_a_shape', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<p>In WebKit- and Blink-based browsers, the non-standard and deprecated method
-  <code>ctx.setShadow()</code> is implemented besides this property.</p>
+In WebKit- and Blink-based browsers, the non-standard and deprecated method
+`ctx.setShadow()` is implemented besides this property.
 
-<pre class="brush: js">setShadow(width, height, blur, color, alpha);
+```js
+setShadow(width, height, blur, color, alpha);
 setShadow(width, height, blur, graylevel, alpha);
 setShadow(width, height, blur, r, g, b, a);
 setShadow(width, height, blur, c, m, y, k, a);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.shadowColor")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.shadowColor")}}

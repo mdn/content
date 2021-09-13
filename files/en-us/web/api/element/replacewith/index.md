@@ -9,36 +9,35 @@ tags:
   - Reference
 browser-compat: api.Element.replaceWith
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.replaceWith()</strong></code> method replaces this
-  <code>Element</code> in the children list of its parent with a set of
-  {{domxref("Node")}} or {{domxref("DOMString")}} objects. {{domxref("DOMString")}}
-  objects are inserted as equivalent {{domxref("Text")}} nodes.</p>
+The **`Element.replaceWith()`** method replaces this
+`Element` in the children list of its parent with a set of
+{{domxref("Node")}} or {{domxref("DOMString")}} objects. {{domxref("DOMString")}}
+objects are inserted as equivalent {{domxref("Text")}} nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">replaceWith(...nodes)</pre>
+```js
+replaceWith(...nodes)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_replaceWith">Using <code>replaceWith()</code></h3>
+### Using `replaceWith()`
 
-<pre class="brush: js">const div = document.createElement("div");
+```js
+const div = document.createElement("div");
 const p = document.createElement("p");
 div.appendChild(p);
 const span = document.createElement("span");
@@ -46,32 +45,30 @@ const span = document.createElement("span");
 p.replaceWith(span);
 
 console.log(div.outerHTML);
-// "&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
-</pre>
+// "<div><span></span></div>"
+```
 
-<h3 id="replaceWith_is_unscopable"><code>replaceWith()</code> is
-  unscopable</h3>
+### `replaceWith()` is unscopable
 
-<p>The <code>replaceWith()</code> method is not scoped into the <code>with</code>
-  statement. See {{jsxref("Symbol.unscopables")}} for more information.</p>
+The `replaceWith()` method is not scoped into the `with`
+statement. See {{jsxref("Symbol.unscopables")}} for more information.
 
-<pre class="brush: js">with(node) {
+```js
+with(node) {
   replaceWith("foo");
 }
-// ReferenceError: replaceWith is not defined </pre>
+// ReferenceError: replaceWith is not defined
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}
+{{Specifications}}
 
-</p>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.replaceChild()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("NodeList")}}

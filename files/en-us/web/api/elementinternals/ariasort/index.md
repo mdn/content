@@ -11,49 +11,48 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaSort
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaSort</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-sort</code> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.</p>
+The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-sort` attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaSort = ElementInternals.ariaSort;
-ElementInternals.ariaSort = <var>ariaSort;</pre>
+```js
+let ariaSort = ElementInternals.ariaSort;
+ElementInternals.ariaSort = ariaSort;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"ascending"</code></dt>
-  <dd>Items are sorted in ascending order by this column.</dd>
-  <dt><code>"descending"</code></dt>
-  <dd>Items are sorted in descending order by this column.</dd>
-  <dt><code>"none"</code></dt>
-  <dd>There is no defined sort applied to the column.</dd>
-  <dt><code>"other"</code></dt>
-  <dd>A sort algorithm other than ascending or descending has been applied.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"ascending"`
+  - : Items are sorted in ascending order by this column.
+- `"descending"`
+  - : Items are sorted in descending order by this column.
+- `"none"`
+  - : There is no defined sort applied to the column.
+- `"other"`
+  - : A sort algorithm other than ascending or descending has been applied.
 
-<p>In this example the value of <code>ariaSort</code> is set to "ascending".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaSort = "ascending";</pre>
+In this example the value of `ariaSort` is set to "ascending".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaSort = "ascending";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

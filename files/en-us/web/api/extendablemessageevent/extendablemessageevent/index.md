@@ -2,74 +2,70 @@
 title: ExtendableMessageEvent()
 slug: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 tags:
-- API
-- Constructor
-- Experimental
-- ExtendableMessageEvent
-- Reference
-- Service Workers
+  - API
+  - Constructor
+  - Experimental
+  - ExtendableMessageEvent
+  - Reference
+  - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The
-  <strong><code>ExtendableMessageEvent()</code></strong>
-  constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.</p>
+The
+**`ExtendableMessageEvent()`**
+constructor creates a new {{domxref("ExtendableMessageEvent")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>extendableMessageEvent</em> = new ExtendableMessageEvent(<em>type</em>, <em>init</em>);</pre>
+```js
+var extendableMessageEvent = new ExtendableMessageEvent(type, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>type</dt>
-  <dd>A {{domxref("DOMString")}} that defines the type of the message event being created.
-  </dd>
-  <dt>init {{optional_inline}}</dt>
-  <dd>An initialization object, which should contain the following parameters:
-    <ul>
-      <li><code>data</code>: The event's data — this can be any data type.</li>
-      <li><code>origin</code>: A {{domxref("DOMString")}} that defines the origin of the
-        corresponding service worker's environment settings object.</li>
-      <li><code>lastEventId</code>: A {{domxref("DOMString")}} that defines the last event
-        ID of the event source.</li>
-      <li><code>source</code>: The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or
-        {{domxref("MessagePort")}} that sent the message.</li>
-      <li><code>ports</code>: An array containing the {{domxref("MessagePort")}} objects
-        connected to the channel sending the message.</li>
-    </ul>
-  </dd>
-</dl>
+- type
+  - : A {{domxref("DOMString")}} that defines the type of the message event being created.
+- init {{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : An initialization object, which should contain the following parameters:
 
-<pre class="brush: js">var init = {
+    - `data`: The event's data — this can be any data type.
+    - `origin`: A {{domxref("DOMString")}} that defines the origin of the
+      corresponding service worker's environment settings object.
+    - `lastEventId`: A {{domxref("DOMString")}} that defines the last event
+      ID of the event source.
+    - `source`: The {{domxref("Client")}}, {{domxref("ServiceWorker")}} or
+      {{domxref("MessagePort")}} that sent the message.
+    - `ports`: An array containing the {{domxref("MessagePort")}} objects
+      connected to the channel sending the message.
+
+## Examples
+
+```js
+var init = {
              data : 'hello message',
              source : MessagePortReference,
              ports : MessagePortListReference
            }
 
-var myEME = new ExtendableMessageEvent('message', init);</pre>
+var myEME = new ExtendableMessageEvent('message', init);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

@@ -8,60 +8,54 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{DefaultAPISidebar("Channel Messaging API")}}</p>
+{{DefaultAPISidebar("Channel Messaging API")}}
 
-<p>The <strong>Channel Messaging API</strong> allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.</p>
+The **Channel Messaging API** allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Channel_messaging_concepts_and_usage">Channel messaging concepts and usage</h2>
+## Channel messaging concepts and usage
 
-<p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
+A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses `port1`, and the app at the other end of the port uses `port2` — you send a message to `port2`, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)
 
-<p>When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.</p>
+When these transferable objects are transferred, they are no longer usable on the context they previously belonged to. A port, after it is sent, can no longer be used by the original context.
 
-<p>The other browsing context can listen for the message using {{domxref("MessagePort.onmessage")}}, and grab the contents of the message using the event's <code>data</code> attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.</p>
+The other browsing context can listen for the message using {{domxref("MessagePort.onmessage")}}, and grab the contents of the message using the event's `data` attribute. You could then respond by sending a message back to the original document using {{domxref("MessagePort.postMessage")}}.
 
-<p>When you want to stop sending messages down the channel, you can invoke {{domxref("MessagePort.close")}} to close the ports.</p>
+When you want to stop sending messages down the channel, you can invoke {{domxref("MessagePort.close")}} to close the ports.
 
-<p>Find out more about how to use this API in <a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a>.</p>
+Find out more about how to use this API in [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging).
 
-<h2 id="Channel_messaging_interfaces">Channel messaging interfaces</h2>
+## Channel messaging interfaces
 
-<dl>
- <dt>{{domxref("MessageChannel")}}</dt>
- <dd>Creates a new message channel to send messages across.</dd>
- <dt>{{domxref("MessagePort")}}</dt>
- <dd>Controls the ports on the message channel, allowing sending of messages from one port and listening out for them arriving at the other.</dd>
- <dt>{{domxref("PortCollection")}}</dt>
- <dd>An array of <code>MessagePort</code>s; an experimental solution to allow broadcasting of a message to multiple ports simultaneously.</dd>
-</dl>
+- {{domxref("MessageChannel")}}
+  - : Creates a new message channel to send messages across.
+- {{domxref("MessagePort")}}
+  - : Controls the ports on the message channel, allowing sending of messages from one port and listening out for them arriving at the other.
+- {{domxref("PortCollection")}}
+  - : An array of `MessagePort`s; an experimental solution to allow broadcasting of a message to multiple ports simultaneously.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<ul>
- <li>We have published a <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a> on Github (<a href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.</li>
- <li>You can also see a <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage">multimessaging demo</a> (<a href="https://mdn.github.io/dom-examples/channel-messaging-multimessage/">run this live</a>), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.</li>
-</ul>
+- We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+- You can also see a [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.MessageChannel")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="MessageChannel"><code>MessageChannel</code></h3>
+### `MessageChannel`
 
-<p>{{Compat("api.MessageChannel", 0)}}</p>
+{{Compat("api.MessageChannel", 0)}}
 
-<h3 id="MessagePort"><code>MessagePort</code></h3>
+### `MessagePort`
 
-<p>{{Compat("api.MessagePort", 0)}}</p>
+{{Compat("api.MessagePort", 0)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a></li>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)

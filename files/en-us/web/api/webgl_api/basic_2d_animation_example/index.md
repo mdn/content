@@ -11,19 +11,20 @@ tags:
   - WebGL
   - WebGL API
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).</p>
+In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).
 
-<h2 id="A_rotating_square_example">A rotating square example</h2>
+## A rotating square example
 
-<p>Let's follow the different steps to get our rotating square.</p>
+Let's follow the different steps to get our rotating square.
 
-<h3 id="Vertex_shader">Vertex shader</h3>
+### Vertex shader
 
-<p>First, let's take a look at the vertex shader. Its job, as always, is to convert the coordinates we're using for our scene into clipspace coordinates (that is, the system by which (0, 0) is at the center of the context and each axis extends from -1.0 to 1.0 regardless of the actual size of the context).</p>
+First, let's take a look at the vertex shader. Its job, as always, is to convert the coordinates we're using for our scene into clipspace coordinates (that is, the system by which (0, 0) is at the center of the context and each axis extends from -1.0 to 1.0 regardless of the actual size of the context).
 
-<pre class="brush: html">&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
+```html
+<script id="vertex-shader" type="x-shader/x-vertex">
   attribute vec2 aVertexPosition;
 
   uniform vec2 uScalingFactor;
@@ -39,21 +40,23 @@ tags:
 
     gl_Position = vec4(rotatedPosition * uScalingFactor, 0.0, 1.0);
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>The main program shares with us the attribute <code>aVertexPosition</code>, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.</p>
+The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.
 
-<p>We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
+We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
 
-<p>Then the final position is computed by multiplying the rotated position by the scaling vector provided by the JavaScript code in <code>uScalingFactor</code>. The values of <code>z</code> and <code>w</code> are fixed at 0.0 and 1.0, respectively, since we're drawing in 2D.</p>
+Then the final position is computed by multiplying the rotated position by the scaling vector provided by the JavaScript code in `uScalingFactor`. The values of `z` and `w` are fixed at 0.0 and 1.0, respectively, since we're drawing in 2D.
 
-<p>The standard WebGL global <code>gl_Position</code> is then set to the transformed and rotated vertex's position.</p>
+The standard WebGL global `gl_Position` is then set to the transformed and rotated vertex's position.
 
-<h3 id="Fragment_shader">Fragment shader</h3>
+### Fragment shader
 
-<p>Next comes the fragment shader. Its role is to return the color of each pixel in the shape being rendered. Since we're drawing a solid, untextured object with no lighting applied, this is exceptionally simple:</p>
+Next comes the fragment shader. Its role is to return the color of each pixel in the shape being rendered. Since we're drawing a solid, untextured object with no lighting applied, this is exceptionally simple:
 
-<pre class="brush: html">&lt;script id="fragment-shader" type="x-shader/x-fragment"&gt;
+```html
+<script id="fragment-shader" type="x-shader/x-fragment">
   #ifdef GL_ES
     precision highp float;
   #endif
@@ -63,23 +66,27 @@ tags:
   void main() {
     gl_FragColor = uGlobalColor;
   }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>This starts by specifying the precision of the <code>float</code> type, as required. Then we set the global <code>gl_FragColor</code> to the value of the uniform <code>uGlobalColor</code>, which is set by the JavaScript code to the color being used to draw the square.</p>
+This starts by specifying the precision of the `float` type, as required. Then we set the global `gl_FragColor` to the value of the uniform `uGlobalColor`, which is set by the JavaScript code to the color being used to draw the square.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.</p>
+The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
-<pre class="brush: html">&lt;canvas id="glcanvas" width="600" height="460"&gt;
+```html
+<canvas id="glcanvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
-&lt;/canvas&gt;</pre>
+</canvas>
+```
 
-<h3 id="Globals_and_initialization">Globals and initialization</h3>
+### Globals and initialization
 
-<p>First, the global variables. We won't discuss these here; instead, we'll talk about them as they're used in the code to come.</p>
+First, the global variables. We won't discuss these here; instead, we'll talk about them as they're used in the code to come.
 
-<pre class="brush: js">let gl = null;
+```js
+let gl = null;
 let glCanvas = null;
 
 // Aspect ratio and coordinate system
@@ -108,11 +115,12 @@ let aVertexPosition;
 
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
-</pre>
+```
 
-<p>Initializing the program is handled through a {{event("load")}} event handler called <code>startup()</code>:</p>
+Initializing the program is handled through a {{event("load")}} event handler called `startup()`:
 
-<pre class="brush: js">window.addEventListener("load", startup, false);
+```js
+window.addEventListener("load", startup, false);
 
 function startup() {
   glCanvas = document.getElementById("glcanvas");
@@ -150,31 +158,33 @@ function startup() {
   currentAngle = 0.0;
 
   animateScene();
-}</pre>
+}
+```
 
-<p>After getting the WebGL context, <code>gl</code>, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array <code>shaderSet</code> contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of <code>gl.VERTEX_SHADER</code> or <code>gl.FRAGMENT_SHADER</code>) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).</p>
+After getting the WebGL context, `gl`, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array `shaderSet` contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).
 
-<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program. We'll look at how this works next.</p>
+The shader set is passed into the function `buildShaderProgram()`, which returns the compiled and linked shader program. We'll look at how this works next.
 
-<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0, 1]</code>, and the scaling vector to <code>[1.0, aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
+Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to `[0, 1]`, and the scaling vector to `[1.0, aspectRatio]`. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.
 
-<p>The array of vertices is created next, as a {{jsxref("Float32Array")}} with six coordinates (three 2D vertices) per triangle to be drawn, for a total of 12 values.</p>
+The array of vertices is created next, as a {{jsxref("Float32Array")}} with six coordinates (three 2D vertices) per triangle to be drawn, for a total of 12 values.
 
-<p>As you can see, we're using a coordinate system of -1.0 to 1.0 for each axis. Why, you may ask, do we need to do any adjustments at all? This is because our context is not square. We're using a context that's 600 pixels wide and 460 tall. Each of those dimensions is mapped to the range -1.0 to 1.0. Since the two axes aren't the same length, if we don't adjust the values of one of the two axes, the square will get stretched out in one direction or the other. So we need to normalize these values.</p>
+As you can see, we're using a coordinate system of -1.0 to 1.0 for each axis. Why, you may ask, do we need to do any adjustments at all? This is because our context is not square. We're using a context that's 600 pixels wide and 460 tall. Each of those dimensions is mapped to the range -1.0 to 1.0. Since the two axes aren't the same length, if we don't adjust the values of one of the two axes, the square will get stretched out in one direction or the other. So we need to normalize these values.
 
-<p>Once the vertex array has been created, we create a new GL buffer to contain them by calling {{domxref("WebGLRenderingContext.createBuffer", "gl.createBuffer()")}}. We bind the standard WebGL array buffer reference to that by calling {{domxref("WebGLRenderingContext.bindBuffer", "gl.bindBuffer()")}} and then copy the vertex data into the buffer using {{domxref("WebGLRenderingContext.bufferData", "gl.bufferData()")}}. The usage hint <code>gl.STATIC_DRAW</code> is specified, telling WebGL that the data will be set only one time and never modified, but will be used repeatedly. This lets WebGL consider any optimizations it can apply that may improve performance based on that information.</p>
+Once the vertex array has been created, we create a new GL buffer to contain them by calling {{domxref("WebGLRenderingContext.createBuffer", "gl.createBuffer()")}}. We bind the standard WebGL array buffer reference to that by calling {{domxref("WebGLRenderingContext.bindBuffer", "gl.bindBuffer()")}} and then copy the vertex data into the buffer using {{domxref("WebGLRenderingContext.bufferData", "gl.bufferData()")}}. The usage hint `gl.STATIC_DRAW` is specified, telling WebGL that the data will be set only one time and never modified, but will be used repeatedly. This lets WebGL consider any optimizations it can apply that may improve performance based on that information.
 
-<p>With the vertex data now provided to WebGL, we set <code>vertexNumComponents</code> to the number of components in each vertex (2, since they're 2D vertexes) and <code>vertexCount</code> to the number of vertexes in the vertex list.</p>
+With the vertex data now provided to WebGL, we set `vertexNumComponents` to the number of components in each vertex (2, since they're 2D vertexes) and `vertexCount` to the number of vertexes in the vertex list.
 
-<p>Then the current rotation angle (in degrees) is set to 0.0, since we haven't performed any rotation yet, and the rotation speed (in degrees per screen refresh period, typically 60 FPS) is set to 6.</p>
+Then the current rotation angle (in degrees) is set to 0.0, since we haven't performed any rotation yet, and the rotation speed (in degrees per screen refresh period, typically 60 FPS) is set to 6.
 
-<p>Finally, <code>animateScene()</code> is called to render the first frame and schedule the rendering of the next frame of the animation.</p>
+Finally, `animateScene()` is called to render the first frame and schedule the rendering of the next frame of the animation.
 
-<h3 id="Compiling_and_linking_the_shader_program">Compiling and linking the shader program</h3>
+### Compiling and linking the shader program
 
-<p>The <code>buildShaderProgram()</code> function accepts as input an array of objects describing a set of shader functions to be compiled and linked into the shader program and returns the shader program after it's been built and linked.</p>
+The `buildShaderProgram()` function accepts as input an array of objects describing a set of shader functions to be compiled and linked into the shader program and returns the shader program after it's been built and linked.
 
-<pre class="brush: js">function buildShaderProgram(shaderInfo) {
+```js
+function buildShaderProgram(shaderInfo) {
   let program = gl.createProgram();
 
   shaderInfo.forEach(function(desc) {
@@ -193,27 +203,27 @@ function startup() {
   }
 
   return program;
-}</pre>
+}
+```
 
-<p>First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} is called to create a new, empty, GLSL program.</p>
+First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} is called to create a new, empty, GLSL program.
 
-<p>Then, for each shader in the specified list of shaders, we call a <code>compileShader()</code> function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the <code>&lt;script&gt;</code> element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.</p>
+Then, for each shader in the specified list of shaders, we call a `compileShader()` function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the `<script>` element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> We could go a step farther here, actually, and look at the value of the <code>&lt;script&gt;</code> element's <code>type</code> attribute to determine the shader type.</p>
-</div>
+> **Note:** We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
 
-<p>Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.</p>
+Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.
 
-<p>If an error occurs while linking the program, the error message is logged to console.</p>
+If an error occurs while linking the program, the error message is logged to console.
 
-<p>Finally, the compiled program is returned to the caller.</p>
+Finally, the compiled program is returned to the caller.
 
-<h3 id="Compiling_an_individual_shader">Compiling an individual shader</h3>
+### Compiling an individual shader
 
-<p>The <code>compileShader()</code> function, below, is called by <code>buildShaderProgram()</code> to compile a single shader.</p>
+The `compileShader()` function, below, is called by `buildShaderProgram()` to compile a single shader.
 
-<pre class="brush: js">function compileShader(id, type) {
+```js
+function compileShader(id, type) {
   let code = document.getElementById(id).firstChild.nodeValue;
   let shader = gl.createShader(type);
 
@@ -225,21 +235,23 @@ function startup() {
     console.log(gl.getShaderInfoLog(shader));
   }
   return shader;
-}</pre>
+}
+```
 
-<p>The code is fetched from the HTML document by obtaining the value of the text node contained within the {{HTMLElement("script")}} element with the specified ID. Then a new shader of the specified type is created using {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.</p>
+The code is fetched from the HTML document by obtaining the value of the text node contained within the {{HTMLElement("script")}} element with the specified ID. Then a new shader of the specified type is created using {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.
 
-<p>The source code is sent into the new shader by passing it into {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}, and then the shader is compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}</p>
+The source code is sent into the new shader by passing it into {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}, and then the shader is compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}
 
-<p>Compile errors are logged to the console. Note the use of a <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literal</a> string to insert the correct shader type string into the message that gets generated. The actual error details are obtained by calling {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}.</p>
+Compile errors are logged to the console. Note the use of a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals) string to insert the correct shader type string into the message that gets generated. The actual error details are obtained by calling {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}.
 
-<p>Finally, the compiled shader is returned to the caller (which is the <code>buildShaderProgram()</code> function.</p>
+Finally, the compiled shader is returned to the caller (which is the `buildShaderProgram()` function.
 
-<h3 id="Drawing_and_animating_the_scene">Drawing and animating the scene</h3>
+### Drawing and animating the scene
 
-<p>The <code>animateScene()</code> function is called to render each animation frame.</p>
+The `animateScene()` function is called to render each animation frame.
 
-<pre class="brush: js">function animateScene() {
+```js
+function animateScene() {
   gl.viewport(0, 0, glCanvas.width, glCanvas.height);
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
@@ -281,42 +293,40 @@ function startup() {
     previousTime = currentTime;
     animateScene();
   });
-}</pre>
+}
+```
 
-<p>The first thing that needs to be done in order to draw a frame of the animation is to clear the background to the desired color. In this case, we set the viewport based on the size of the {{HTMLElement("canvas")}}, call {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} to set the color to use when clearing content, then we clear the buffer with {{domxref("WebGLRenderingContext.clear", "clear()")}}.</p>
+The first thing that needs to be done in order to draw a frame of the animation is to clear the background to the desired color. In this case, we set the viewport based on the size of the {{HTMLElement("canvas")}}, call {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} to set the color to use when clearing content, then we clear the buffer with {{domxref("WebGLRenderingContext.clear", "clear()")}}.
 
-<p>Next, the current rotation vector is computed by converting the current rotation in degrees (<code>currentAngle</code>) into {{interwiki("wikipedia", "radians")}}, then setting the first component of the rotation vector to the {{interwiki("wikipedia", "sine")}} of that value and the second component to the {{interwiki("wikipedia", "cosine")}}. The <code>currentRotation</code> vector is now the location of the point on the {{interwiki("wikipedia", "unit circle")}} located at the angle <code>currentAngle</code>.</p>
+Next, the current rotation vector is computed by converting the current rotation in degrees (`currentAngle`) into {{interwiki("wikipedia", "radians")}}, then setting the first component of the rotation vector to the {{interwiki("wikipedia", "sine")}} of that value and the second component to the {{interwiki("wikipedia", "cosine")}}. The `currentRotation` vector is now the location of the point on the {{interwiki("wikipedia", "unit circle")}} located at the angle `currentAngle`.
 
-<p>{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).</p>
+{{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).
 
-<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext/uniform", "uniform2fv()")}} (since this is a 2-value floating-point vector).</p>
+The uniform named `uScalingFactor` is set to the `currentScale` value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using {{domxref("WebGLRenderingContext/uniform", "uniform2fv()")}} (since this is a 2-value floating-point vector).
 
-<p><code>uRotationVector</code> is set to the current rotation vector (<code>currentRotation)</code>, also using <code>uniform2fv()</code>.</p>
+`uRotationVector` is set to the current rotation vector (`currentRotation)`, also using `uniform2fv()`.
 
-<p><code>uGlobalColor</code> is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
+`uGlobalColor` is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).
 
-<p>Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.</p>
+Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 
-<p>With the index of the vertex position attribute now available in <code>aVertexPosition</code>, we call <code>enableVertexAttribArray()</code> to enable the position attribute so it can be used by the shader program (in particular, by the vertex shader).</p>
+With the index of the vertex position attribute now available in `aVertexPosition`, we call `enableVertexAttribArray()` to enable the position attribute so it can be used by the shader program (in particular, by the vertex shader).
 
-<p>Then the vertex buffer is bound to the <code>aVertexPosition</code> attribute by calling {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}. This step is not obvious, since this binding is almost a side effect. But as a result, accessing <code>aVertexPosition</code> now obtains data from the vertex buffer.</p>
+Then the vertex buffer is bound to the `aVertexPosition` attribute by calling {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}. This step is not obvious, since this binding is almost a side effect. But as a result, accessing `aVertexPosition` now obtains data from the vertex buffer.
 
-<p>With the association in place between the vertex buffer for our shape and the <code>aVertexPosition</code> attribute used to deliver vertexes one by one into the vertex shader, we're ready to draw the shape by calling {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}}.</p>
+With the association in place between the vertex buffer for our shape and the `aVertexPosition` attribute used to deliver vertexes one by one into the vertex shader, we're ready to draw the shape by calling {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}}.
 
-<p>At this point, the frame has been drawn. All that's left to do is to schedule to draw the next one. That's done here by calling {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}, which asks that a callback function be executed the next time the browser is ready to update the screen.</p>
+At this point, the frame has been drawn. All that's left to do is to schedule to draw the next one. That's done here by calling {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}, which asks that a callback function be executed the next time the browser is ready to update the screen.
 
-<p>Our <code>requestAnimationFrame()</code> callback receives as input a single parameter, <code>currentTime</code>, which specifies the time at which the frame drawing began. We use that and the saved time at which the last frame was drawn, <code>previousTime</code>, along with the number of degrees per second the square should rotate (<code>degreesPerSecond</code>) to calculate the new value of <code>currentAngle</code>. Then the value of <code>previousTime</code> is updated and we call <code>animateScene()</code> to draw the next frame (and in turn schedule the next frame to be drawn, ad infinitum).</p>
-</div>
+Our `requestAnimationFrame()` callback receives as input a single parameter, `currentTime`, which specifies the time at which the frame drawing began. We use that and the saved time at which the last frame was drawn, `previousTime`, along with the number of degrees per second the square should rotate (`degreesPerSecond`) to calculate the new value of `currentAngle`. Then the value of `previousTime` is updated and we call `animateScene()` to draw the next frame (and in turn schedule the next frame to be drawn, ad infinitum).
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.</p>
+This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.
 
-<p>{{EmbedLiveSample("A_rotating_square_example", 660, 500)}}</p>
+{{EmbedLiveSample("A_rotating_square_example", 660, 500)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a></li>
-</ul>
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial)

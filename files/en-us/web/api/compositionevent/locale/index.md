@@ -2,43 +2,43 @@
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
 tags:
-- API
-- CompositionEvent
-- Deprecated
-- Locale
-- Property
-- Reference
+  - API
+  - CompositionEvent
+  - Deprecated
+  - Locale
+  - Property
+  - Reference
 browser-compat: api.CompositionEvent.locale
 ---
-<div>{{deprecated_header}}{{APIRef("DOM Events")}}</div>
+{{deprecated_header}}{{APIRef("DOM Events")}}
 
-<p>The <code><strong>locale</strong></code> read-only property of the
-  {{domxref("CompositionEvent")}} interface returns the locale of current input method
-  (for example, the keyboard layout locale if the composition is associated with IME).</p>
+The **`locale`** read-only property of the
+{{domxref("CompositionEvent")}} interface returns the locale of current input method
+(for example, the keyboard layout locale if the composition is associated with IME).
 
-<div class="notecard warning"><p><strong>Warning:</strong> Even for browsers supporting it, don't trust the value contained in this property.
-  Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
-is not guaranteed to be coherent.</p></div>
+> **Warning:** Even for browsers supporting it, don't trust the value contained in this property.
+> Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
+> is not guaranteed to be coherent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>myLocale</var> = <var>CompositionEvent</var>.locale</pre>
+```js
+myLocale = CompositionEvent.locale
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the locale of current input method.</p>
+A {{domxref("DOMString")}} representing the locale of current input method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was in early versions of different specifications. It is now only kept for compatibility purposes, and the way
-to set its value when creating a {{domxref("CompositionEvent")}} is <a href="https://github.com/w3c/uievents/issues/48">not well defined</a>.</p>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+This property was in early versions of different specifications. It is now only kept for compatibility purposes, and the way
+to set its value when creating a {{domxref("CompositionEvent")}} is [not well defined](https://github.com/w3c/uievents/issues/48).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
-  <li>{{domxref("CompositionEvent")}}</li>
-</ul>
+## See also
+
+- {{domxref("CompositionEvent")}}

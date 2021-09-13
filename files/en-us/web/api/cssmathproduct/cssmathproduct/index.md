@@ -2,39 +2,38 @@
 title: CSSMathProduct()
 slug: Web/API/CSSMathProduct/CSSMathProduct
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathProduct
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSMathProduct
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Reference
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathProduct()</code></strong> constructor creates
-  a new {{domxref("CSSMathProduct")}} object which creates a new
-  {{domxref('CSSMathProduct')}} object which multiplies the arguments passed into it. </p>
+The **`CSSMathProduct()`** constructor creates
+a new {{domxref("CSSMathProduct")}} object which creates a new
+{{domxref('CSSMathProduct')}} object which multiplies the arguments passed into it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMathProduct</var> = new CSSMathProduct(<em>args</em>)</pre>
+```js
+var CSSMathProduct = new CSSMathProduct(args)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>args</dt>
-  <dd>A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
-    integer or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- args
+  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
+    integer or a {{domxref('CSSNumericValue')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

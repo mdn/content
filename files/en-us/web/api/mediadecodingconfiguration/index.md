@@ -12,26 +12,23 @@ tags:
   - Video
 browser-compat: api.MediaDecodingConfiguration
 ---
-<p>The <strong><code>MediaDecodingConfiguration</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> is used to define the type of media being tested when calling {{domxref("MediaCapabilities.decodingInfo()")}} to query whether a specific media configuration is supported, smooth, and/or power efficient.</p>
+The **`MediaDecodingConfiguration`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) is used to define the type of media being tested when calling {{domxref("MediaCapabilities.decodingInfo()")}} to query whether a specific media configuration is supported, smooth, and/or power efficient.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>A <code>MediaDecodingConfiguration</code> dictionary takes two properties:</p>
+A `MediaDecodingConfiguration` dictionary takes two properties:
 
-<ul>
- <li><code>type</code> — the type of media being tested. This takes one of two values:
+- `type` — the type of media being tested. This takes one of two values:
 
-  <ul>
-   <li><code>file</code>: Represents a configuration that is meant to be used for a plain file playback.</li>
-   <li><code>media-source</code>: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.</li>
-  </ul>
- </li>
- <li>A media configuration — a {{domxref("VideoConfiguration")}} or {{domxref("AudioConfiguration")}} dictionary.</li>
-</ul>
+  - `file`: Represents a configuration that is meant to be used for a plain file playback.
+  - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
 
-<h2 id="Examples">Examples</h2>
+- A media configuration — a {{domxref("VideoConfiguration")}} or {{domxref("AudioConfiguration")}} dictionary.
 
-<pre class="brush: js">//Create media configuration to be tested
+## Examples
+
+```js
+//Create media configuration to be tested
 const mediaConfig = {
     type : 'file', // or 'media-source'
     video : {
@@ -44,23 +41,22 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result =&gt; {
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
     console.log('This configuration is ' +  (result.supported ? '' : 'not ') + 'supported.')
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaConfiguration")}}</li>
- <li>{{domxref("MediaEncodingConfiguration")}}</li>
- <li>{{domxref("HTMLMediaElement.canPlayType()")}} for file</li>
- <li>{{domxref("MediaSource.isTypeSupported()")}} for media-source</li>
-</ul>
+- {{domxref("MediaConfiguration")}}
+- {{domxref("MediaEncodingConfiguration")}}
+- {{domxref("HTMLMediaElement.canPlayType()")}} for file
+- {{domxref("MediaSource.isTypeSupported()")}} for media-source

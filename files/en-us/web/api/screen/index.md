@@ -8,76 +8,71 @@ tags:
   - Reference
 browser-compat: api.Screen
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code>Screen</code> interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.</p>
+The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
 
-<p>Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.</p>
+Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}</dt>
- <dd>Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.</dd>
- <dt>{{DOMxRef("Screen.availLeft")}} {{Non-standard_Inline}}</dt>
- <dd>Returns the first available pixel available from the left side of the screen.</dd>
- <dt>{{DOMxRef("Screen.availHeight")}}</dt>
- <dd>Specifies the height of the screen, in pixels, minus permanent or semipermanent user interface features displayed by the operating system, such as the Taskbar on Windows.</dd>
- <dt>{{DOMxRef("Screen.availWidth")}}</dt>
- <dd>Returns the amount of horizontal space in pixels available to the window.</dd>
- <dt>{{DOMxRef("Screen.colorDepth")}}</dt>
- <dd>Returns the color depth of the screen.</dd>
- <dt>{{DOMxRef("Screen.height")}}</dt>
- <dd>Returns the height of the screen in pixels.</dd>
- <dt>{{DOMxRef("Screen.left")}} {{Non-standard_Inline}}</dt>
- <dd>Returns the distance in pixels from the left side of the main screen to the left side of the current screen.</dd>
- <dt>{{DOMxRef("Screen.orientation")}}</dt>
- <dd>Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.</dd>
- <dt>{{DOMxRef("Screen.pixelDepth")}}</dt>
- <dd>Gets the bit depth of the screen.</dd>
- <dt>{{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}</dt>
- <dd>Returns the distance in pixels from the top side of the current screen.</dd>
- <dt>{{DOMxRef("Screen.width")}}</dt>
- <dd>Returns the width of the screen.</dd>
- <dt>{{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Boolean. Setting to false will turn off the device's screen.</dd>
- <dt>{{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.</dd>
-</dl>
+- {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
+  - : Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.
+- {{DOMxRef("Screen.availLeft")}} {{Non-standard_Inline}}
+  - : Returns the first available pixel available from the left side of the screen.
+- {{DOMxRef("Screen.availHeight")}}
+  - : Specifies the height of the screen, in pixels, minus permanent or semipermanent user interface features displayed by the operating system, such as the Taskbar on Windows.
+- {{DOMxRef("Screen.availWidth")}}
+  - : Returns the amount of horizontal space in pixels available to the window.
+- {{DOMxRef("Screen.colorDepth")}}
+  - : Returns the color depth of the screen.
+- {{DOMxRef("Screen.height")}}
+  - : Returns the height of the screen in pixels.
+- {{DOMxRef("Screen.left")}} {{Non-standard_Inline}}
+  - : Returns the distance in pixels from the left side of the main screen to the left side of the current screen.
+- {{DOMxRef("Screen.orientation")}}
+  - : Returns the {{DOMxRef("ScreenOrientation")}} instance associated with this screen.
+- {{DOMxRef("Screen.pixelDepth")}}
+  - : Gets the bit depth of the screen.
+- {{DOMxRef("Screen.top")}} {{deprecated_inline}}{{Non-standard_Inline}}
+  - : Returns the distance in pixels from the top side of the current screen.
+- {{DOMxRef("Screen.width")}}
+  - : Returns the width of the screen.
+- {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Boolean. Setting to false will turn off the device's screen.
+- {{DOMxRef("Screen.mozBrightness")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-<h3 id="Events_handler">Events handler</h3>
+### Events handler
 
-<dl>
- <dt>{{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}</dt>
- <dd>A handler for the {{Event("orientationchange")}} event.</dd>
-</dl>
+- {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
+  - : A handler for the {{Event("orientationchange")}} event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Lock the screen orientation (only works in fullscreen or for installed apps)</dd>
- <dt>{{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Unlock the screen orientation (only works in fullscreen or for installed apps)</dd>
-</dl>
+- {{DOMxRef("Screen.lockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Lock the screen orientation (only works in fullscreen or for installed apps)
+- {{DOMxRef("Screen.unlockOrientation")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-<p><em>Methods inherited from {{DOMxRef("EventTarget")}}:</em></p>
+_Methods inherited from {{DOMxRef("EventTarget")}}:_
 
-<p>{{Page("/en-US/docs/Web/API/EventTarget", "Methods")}}</p>
+{{Page("/en-US/docs/Web/API/EventTarget", "Methods")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (screen.pixelDepth &lt; 8) {
+```js
+if (screen.pixelDepth < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

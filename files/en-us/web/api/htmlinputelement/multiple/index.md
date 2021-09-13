@@ -11,18 +11,19 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.multiple
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLInputElement.multiple</code></strong> property indicates if an input can have more than one value. Firefox currently only supports <code>multiple</code> for <code>&lt;input type="file"&gt;</code>.</p>
+The **`HTMLInputElement.multiple`** property indicates if an input can have more than one value. Firefox currently only supports `multiple` for `<input type="file">`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// fileInput is a &lt;input type=file multiple&gt;
+```js
+// fileInput is a <input type=file multiple>
 let fileInput = document.getElementById('myfileinput');
 
 if (fileInput.multiple == true) {
 
-  for (let i = 0; i &lt; fileInput.files.length; i++) {
+  for (let i = 0; i < fileInput.files.length; i++) {
     // Loop fileInput.files
   }
 
@@ -30,19 +31,17 @@ if (fileInput.multiple == true) {
 } else {
   let file = fileInput.files.item(0);
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/FileList">FileList</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=523771">Bug 523771</a> - Support &lt;input type=file multiple&gt;</li>
-</ul>
+- [FileList](/en-US/docs/Web/API/FileList)
+- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

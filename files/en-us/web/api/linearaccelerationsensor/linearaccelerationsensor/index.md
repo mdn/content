@@ -2,54 +2,52 @@
 title: LinearAccelerationSensor()
 slug: Web/API/LinearAccelerationSensor/LinearAccelerationSensor
 tags:
-- API
-- Accelerometer
-- Constructor
-- Generic Sensor API
-- LinearAccelerationSensor
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
+  - API
+  - Accelerometer
+  - Constructor
+  - Generic Sensor API
+  - LinearAccelerationSensor
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>LinearAccelerationSensor()</code></strong>
-    constructor creates a new {{domxref("LinearAccelerationSensor")}} object which
-    provides on each reading the acceleration applied to the device along all three axes,
-    but without the contribution of gravity.</p>
+The **`LinearAccelerationSensor()`**
+constructor creates a new {{domxref("LinearAccelerationSensor")}} object which
+provides on each reading the acceleration applied to the device along all three axes,
+but without the contribution of gravity.
 
-<p>If a feature policy blocks use of a feature, it is because your code is inconsistent
-  with the policies set on your server. This is not something that would ever be shown to
-  a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature, it is because your code is inconsistent
+with the policies set on your server. This is not something that would ever be shown to
+a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>linearAccelerationSensor</var> = new LinearAccelerationSensor([<em>options</em>])</pre>
+```js
+var linearAccelerationSensor = new LinearAccelerationSensor([options])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>frequency</code>: The desired number of times per second a sample should
-        be taken, meaning the number of times per second that
-        {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
-        used, the latter for frequencies less than a second. The actual reading frequency
-        depends on device hardware and consequently may be less than requested.</li>
-      <li><code>referenceFrame</code>: Either <code>'device'</code> or
-        <code>'screen'</code>. The default is <code>'device'</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- _options_ {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Options are as follows:
+
+    - `frequency`: The desired number of times per second a sample should
+      be taken, meaning the number of times per second that
+      {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
+      used, the latter for frequencies less than a second. The actual reading frequency
+      depends on device hardware and consequently may be less than requested.
+    - `referenceFrame`: Either `'device'` or
+      `'screen'`. The default is `'device'`.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

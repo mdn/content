@@ -9,51 +9,51 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.replace
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>replace()</strong></code> method of the {{domxref("DOMTokenList")}}
-  interface replaces an existing token with a new token. If the first token doesn't
-  exist, <code>replace()</code> returns <code>false</code> immediately, without adding the
-  new token to the token list.</p>
+The **`replace()`** method of the {{domxref("DOMTokenList")}}
+interface replaces an existing token with a new token. If the first token doesn't
+exist, `replace()` returns `false` immediately, without adding the
+new token to the token list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>tokenList</var>.replace(<var>oldToken</var>, <var>newToken</var>);</pre>
+```js
+tokenList.replace(oldToken, newToken);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>oldToken</var></code></dt>
-  <dd>A {{domxref("DOMString")}} representing the token you want to replace.</dd>
-  <dt><code><var>newToken</var></code></dt>
-  <dd>A {{domxref("DOMString")}} representing the token you want to replace
-    <code><var>oldToken</var></code> with.</dd>
-</dl>
+- `oldToken`
+  - : A {{domxref("DOMString")}} representing the token you want to replace.
+- `newToken`
+  - : A {{domxref("DOMString")}} representing the token you want to replace
+    `oldToken` with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value, which is <code>true</code> if <code><var>oldToken</var></code> was
-  successfully replaced, or <code>false</code> if not.</p>
+A boolean value, which is `true` if `oldToken` was
+successfully replaced, or `false` if not.
 
-<div class="note">
-  <p><strong>Note:</strong> In older browsers, <code>replace()</code> returns void.</p>
-</div>
+> **Note:** In older browsers, `replace()` returns void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}. We then replace a token in the list, and write the
-  list into the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}. We then replace a token in the list, and write the
+list into the `<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 
 let result = classes.replace("c", "z");
@@ -63,32 +63,35 @@ if (result) {
   span.textContent = classes;
 } else {
   span.textContent = 'token not replaced successfully';
-}</pre>
+}
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following polyfill will add the replace method to the <code>DOMTokenList</code>
-  class.  The following code will only work with <strong>IE10-11</strong>. To use with
-  earlier versions of IE, refer to the polyfill at
-  {{domxref("element.classList#Polyfill")}}</p>
+The following polyfill will add the replace method to the `DOMTokenList`
+class.  The following code will only work with **IE10-11**. To use with
+earlier versions of IE, refer to the polyfill at
+{{domxref("element.classList#Polyfill")}}
 
-<pre class="brush: js">DOMTokenList.prototype.replace = function (a, b) {
+```js
+DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
         this.add(b);
         this.remove(a);
         return true;
     }
     return false;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

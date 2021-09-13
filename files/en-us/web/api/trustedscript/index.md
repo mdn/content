@@ -8,39 +8,36 @@ tags:
   - TrustedScript
 browser-compat: api.TrustedScript
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>TrustedScript</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string with an uncompiled script body that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that might execute the script. These objects are created via {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} and therefore have no constructor.</p>
+The **`TrustedScript`** interface of the {{domxref('Trusted Types API')}} represents a string with an uncompiled script body that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that might execute the script. These objects are created via {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} and therefore have no constructor.
 
-<p>The value of a <strong>TrustedScript</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
+The value of a **TrustedScript** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("TrustedScript.toJSON()")}}</dt>
-  <dd>Returns a JSON representation of the stored data.</dd>
-  <dt>{{domxref("TrustedScript.toString()")}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing the sanitized script.</dd>
-</dl>
+- {{domxref("TrustedScript.toJSON()")}}
+  - : Returns a JSON representation of the stored data.
+- {{domxref("TrustedScript.toString()")}}
+  - : A {{domxref("DOMString","string")}} containing the sanitized script.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy.</p>
+The constant `sanitized` is an object created via a Trusted Types policy.
 
-<pre class="brush: js">const sanitized = scriptPolicy.createScript("eval('2 + 2')");
+```js
+const sanitized = scriptPolicy.createScript("eval('2 + 2')");
 console.log(sanitized); /* a TrustedScript object */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
-</ul>
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)

@@ -2,37 +2,39 @@
 title: Sensor.hasReading
 slug: Web/API/Sensor/hasReading
 tags:
-- API
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- hasReading
+  - API
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - hasReading
 browser-compat: api.Sensor.hasReading
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>hasReading</code></strong> read-only
-    property of the {{domxref("Sensor")}} interface returns a boolean value
-    indicating whether the sensor has a reading.</p>
+The **`hasReading`** read-only
+property of the {{domxref("Sensor")}} interface returns a boolean value
+indicating whether the sensor has a reading.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var boolean = sensorInstance.hasReading</pre>
+```js
+var boolean = sensorInstance.hasReading
+```
 
-<p>Because {{domxref('Sensor')}} is a base class, <code>hasReading</code> may only be read
-  from one of its derived classes.</p>
+Because {{domxref('Sensor')}} is a base class, `hasReading` may only be read
+from one of its derived classes.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

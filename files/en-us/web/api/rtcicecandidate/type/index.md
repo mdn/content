@@ -16,64 +16,63 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.type
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>type</code></strong> specifies the type of candidate the object represents.</p>
+The **{{domxref("RTCIceCandidate")}}** interface's read-only **`type`** specifies the type of candidate the object represents.
 
-<p>The <code>type</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
-  You can't specify the value of <code>type</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line (the <code>cand-type</code> field), if it's formatted properly.</p>
+The `type` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+You can't specify the value of `type` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line (the `cand-type` field), if it's formatted properly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>type</em> = <em>RTCIceCandidate</em>.type;</pre>
+```js
+var type = RTCIceCandidate.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.</p>
+A {{domxref("DOMString")}} whose value is one of those defined below. These candidate types are listed in order of priority; the higher in the list they are, the more efficient they are.
 
-<dl>
- <dt><code>host</code></dt>
- <dd>The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.address")}} property is in fact the true address of the remote peer.</dd>
- <dt><code>srflx</code></dt>
- <dd>The candidate is a server reflexive candidate; the <code>ip</code> indicates an intermediary address assigned by the {{Glossary("STUN")}} server to represent the candidate's peer anonymously.</dd>
- <dt><code>prflx</code></dt>
- <dd>The candidate is a peer reflexive candidate; the <code>ip</code> is an intermediary address assigned by the STUN server to represent the candidate's peer anonymously.</dd>
- <dt><code>relay</code></dt>
- <dd>The candidate is a relay candidate, obtained from a {{Glossary("TURN")}} server. The relay candidate's IP address is an address the TURN server uses to forward the media between the two peers.</dd>
-</dl>
+- `host`
+  - : The candidate is a host candidate, whose IP address as specified in the {{domxref("RTCIceCandidate.address")}} property is in fact the true address of the remote peer.
+- `srflx`
+  - : The candidate is a server reflexive candidate; the `ip` indicates an intermediary address assigned by the {{Glossary("STUN")}} server to represent the candidate's peer anonymously.
+- `prflx`
+  - : The candidate is a peer reflexive candidate; the `ip` is an intermediary address assigned by the STUN server to represent the candidate's peer anonymously.
+- `relay`
+  - : The candidate is a relay candidate, obtained from a {{Glossary("TURN")}} server. The relay candidate's IP address is an address the TURN server uses to forward the media between the two peers.
 
-<p>If <code>type</code> is <code>null</code>, that information was missing from the
-  {{domxref("RTCIceCandidate.candidate", "candidate")}}'s a-line, which will cause
-  {{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
-  <code>OperationError</code> exception.</p>
+If `type` is `null`, that information was missing from the
+{{domxref("RTCIceCandidate.candidate", "candidate")}}'s a-line, which will cause
+{{domxref("RTCPeerConnection.addIceCandidate()")}} to throw an
+`OperationError` exception.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
-  present a modified user interface for host candidates (those where the
-  {{domxref("RTCIceCandidate/address", "ip")}} refers directly to the remote peer, rather than
-  an intermediary).</p>
+In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is used to
+present a modified user interface for host candidates (those where the
+{{domxref("RTCIceCandidate/address", "ip")}} refers directly to the remote peer, rather than
+an intermediary).
 
-<pre class="brush: js">if (candidate.type == "host") {
+```js
+if (candidate.type == "host") {
   showHostControls();
 } else {
   hideHostControls();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
-  <li>{{domxref("RTCIceCandidate.tcpType")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
+- {{domxref("RTCIceCandidate.tcpType")}}

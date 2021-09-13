@@ -2,118 +2,119 @@
 title: PaymentCurrencyAmount.value
 slug: Web/API/PaymentCurrencyAmount/value
 tags:
-- API
-- Commerce
-- Currency
-- Payment Request
-- Payment Request API
-- PaymentCurrencyAmount
-- Price
-- Property
-- Reference
-- cost
-- payment
-- value
+  - API
+  - Commerce
+  - Currency
+  - Payment Request
+  - Payment Request API
+  - PaymentCurrencyAmount
+  - Price
+  - Property
+  - Reference
+  - cost
+  - payment
+  - value
 browser-compat: api.PaymentCurrencyAmount.value
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The {{domxref("PaymentCurrencyAmount")}} property
-    <strong><code>value</code></strong> is a string containing the decimal numeric value
-    of the payment, specified in the currency units indicated by the
-    {{domxref("PaymentCurrencyAmount.currency", "currency")}} property.</p>
+The {{domxref("PaymentCurrencyAmount")}} property
+**`value`** is a string containing the decimal numeric value
+of the payment, specified in the currency units indicated by the
+{{domxref("PaymentCurrencyAmount.currency", "currency")}} property.
 
-<p>The
-  contents of this string must be a valid decimal number; that is, some number of digits
-  between 0 and 9 with up to one optional decimal point. An optional leading minus sign
-  ("-") can be included to indicate a negative value, such as to represent a refund or
-  discount.</p>
+The
+contents of this string must be a valid decimal number; that is, some number of digits
+between 0 and 9 with up to one optional decimal point. An optional leading minus sign
+("-") can be included to indicate a negative value, such as to represent a refund or
+discount.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The number given in this string is always specified
-    using the period (".") as the decimal point, rather than the comma (","), even if the
-    user's locale normally uses the comma. You must convert the entered text to this form
-    or it will not be valid.</p>
-</div>
+> **Note:** The number given in this string is always specified
+> using the period (".") as the decimal point, rather than the comma (","), even if the
+> user's locale normally uses the comma. You must convert the entered text to this form
+> or it will not be valid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>value</em> = <em>paymentCurrencyAmount</em>.value;</pre>
+```js
+value = paymentCurrencyAmount.value;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} indicating the numeric value of the payment. This must be a
-  valid decimal number, with an optional leading minus sign ("-"), then one or more
-  decimal digits 0 through 9, optionally with a decimal point (".") with at least one
-  digit following it to represent fractional units. There must not be any leading or
-  trailing whitespace in the string.</p>
+A {{domxref("DOMString")}} indicating the numeric value of the payment. This must be a
+valid decimal number, with an optional leading minus sign ("-"), then one or more
+decimal digits 0 through 9, optionally with a decimal point (".") with at least one
+digit following it to represent fractional units. There must not be any leading or
+trailing whitespace in the string.
 
-<p>For uniformity and consistency, the value is always given using the period (".") as the
-  decimal character, regardless of the user's locale. You need to convert the value to
-  this format before submitting the payment.</p>
+For uniformity and consistency, the value is always given using the period (".") as the
+decimal character, regardless of the user's locale. You need to convert the value to
+this format before submitting the payment.
 
-<p>See the example {{anch("Verifying a properly formatted price")}} below for a simple
-  regular expression that can be used to validate the <code>value</code> string prior to
-  submission.</p>
+See the example {{anch("Verifying a properly formatted price")}} below for a simple
+regular expression that can be used to validate the `value` string prior to
+submission.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Representing_prices">Representing prices</h3>
+### Representing prices
 
-<p>This example represents the price of $42.95 in US dollars:</p>
+This example represents the price of $42.95 in US dollars:
 
-<pre class="brush: js">let itemPrice = {
+```js
+let itemPrice = {
   currency: "USD",
   value: "42.95"
 };
-</pre>
+```
 
-<p>This example specifies a price of £7.77:</p>
+This example specifies a price of £7.77:
 
-<pre class="brush: js">let shippingCost = {
+```js
+let shippingCost = {
   currency: "GBP",
   value: "7.77"
 }
-</pre>
+```
 
-<p>This example specifies a price of 1000¥:</p>
+This example specifies a price of 1000¥:
 
-<pre class="brush: js">let price = {
+```js
+let price = {
   currency: "JPY",
   value: "1000"
 }
-</pre>
+```
 
-<h3 id="Verifying_a_properly_formatted_price">Verifying a properly formatted price</h3>
+### Verifying a properly formatted price
 
-<p>You can ensure that the value entered as a price is formatted correctly prior to
-  submission by matching it against a simple {{Glossary("regular expression")}}:</p>
+You can ensure that the value entered as a price is formatted correctly prior to
+submission by matching it against a simple {{Glossary("regular expression")}}:
 
-<pre class="brush: js">function checkPriceFormat(price) {
+```js
+function checkPriceFormat(price) {
   let validRegex = /^-?[0-9]+(\.[0-9]+)?$/;
 
   return validRegex.test(price);
-}</pre>
+}
+```
 
-<p>This function, <code>checkPriceFormat()</code>, will return <code>true</code> if the
-  specified price string is formatted properly, or <code>false</code> if it's not.</p>
+This function, `checkPriceFormat()`, will return `true` if the
+specified price string is formatted properly, or `false` if it's not.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-      the Payment Request API</a></li>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing
-      concepts</a></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing
+  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

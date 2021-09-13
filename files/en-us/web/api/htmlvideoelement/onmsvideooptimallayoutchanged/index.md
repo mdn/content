@@ -4,60 +4,41 @@ slug: Web/API/HTMLVideoElement/onMSVideoOptimalLayoutChanged
 tags:
   - onMSVideoOptimalLayoutChanged
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>onMSVideoOptimalLayoutChanged</strong></code> is an event which occurs when the <a href="/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback">msIsLayoutOptimalForPlayback</a> state changes.</p>
+**`onMSVideoOptimalLayoutChanged`** is an event which occurs when the [msIsLayoutOptimalForPlayback](/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback) state changes.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Event Property</td>
-   <td>object.onMSVideoOptimalLayoutChanged = handler;</td>
-  </tr>
-  <tr>
-   <td>attachEvent Method</td>
-   <td>object.attachEvent("onMSVideoOptimalLayoutChanged", handler)</td>
-  </tr>
-  <tr>
-   <td>addEventListener Method</td>
-   <td>object.addEventListener("", handler, useCapture)</td>
-  </tr>
- </tbody>
-</table>
+| Value                   | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Event Property          | object.onMSVideoOptimalLayoutChanged = handler;              |
+| attachEvent Method      | object.attachEvent("onMSVideoOptimalLayoutChanged", handler) |
+| addEventListener Method | object.addEventListener("", handler, useCapture)             |
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td>Synchronous</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Bubbles</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>Synchronous</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Bubbles</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Cancelable</td>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback">msIsLayoutOptimalForPlayback</a></li>
- <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [msIsLayoutOptimalForPlayback](/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback)
+- [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

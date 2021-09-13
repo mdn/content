@@ -12,27 +12,30 @@ tags:
   - web animations api
 browser-compat: api.Animation.onremove
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The {{domxref("Animation")}} interface's <code><strong>onremove</strong></code> property (from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>) is the event handler for the {{event("remove")}} event. This event is sent when the animation is removed (i.e., put into an <code>active</code> replace state).</p>
+The {{domxref("Animation")}} interface's **`onremove`** property (from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)) is the event handler for the {{event("remove")}} event. This event is sent when the animation is removed (i.e., put into an `active` replace state).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>removeHandler</em> = <em>animation</em>.onremove;
+```js
+var removeHandler = animation.onremove;
 
-<em>animation</em>.onremove = <em>removeHandler</em>;</pre>
+animation.onremove = removeHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be called to handle the {{event("remove")}} event, or <code>null</code> if no <code>remove</code> event handler is set.</p>
+A function to be called to handle the {{event("remove")}} event, or `null` if no `remove` event handler is set.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our simple <a href="https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html">replace indefinite animations demo</a>, you can see the following code:</p>
+In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
 
-<pre class="brush: js">const divElem = document.querySelector('div');
+```js
+const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt =&gt; {
+document.body.addEventListener('mousemove', evt => {
   let anim = divElem.animate(
     { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
@@ -47,23 +50,22 @@ document.body.addEventListener('mousemove', evt =&gt; {
   }
 
   console.log(anim.replaceState);
-});</pre>
+});
+```
 
-<p>Here we have a <code>&lt;div&gt;</code> element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the &lt;div&gt; element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.</p>
+Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the \<div> element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
-<p>A console message is logged each time an animation it removed, invoked when the <code>remove </code>event is fired.</p>
+A console message is logged each time an animation it removed, invoked when the `remove `event is fired.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

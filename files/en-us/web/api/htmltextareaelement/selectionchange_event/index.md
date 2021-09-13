@@ -11,76 +11,75 @@ tags:
   - Experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <code><strong>selectionchange</strong></code> event of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
-  This includes both changes in the selected range of characters, or if the caret moves.</p>
+The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
+This includes both changes in the selected range of characters, or if the caret moves.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onselectionchange", "onselectionchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the {{domxref("HTMLTextAreaElement")}} <code>selectionStart</code>, <code>selectionEnd</code> and <code>selectionDirection</code> properties.</p>
+The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the {{domxref("HTMLTextAreaElement")}} `selectionStart`, `selectionEnd` and `selectionDirection` properties.
 
-<p>It is also possible to add a listener on the global {{domxref("GlobalEventHandlers.onselectionchange","onselectionchange")}} event handler, and within the handler function use {{domxref("Document.getSelection()")}} to get the {{domxref("Selection", "Selection")}}. However this is not very useful for getting changes to <em>text</em> selections.</p>
+It is also possible to add a listener on the global {{domxref("GlobalEventHandlers.onselectionchange","onselectionchange")}} event handler, and within the handler function use {{domxref("Document.getSelection()")}} to get the {{domxref("Selection", "Selection")}}. However this is not very useful for getting changes to _text_ selections.
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The example below shows how to get the text selected in an {{HTMLElement("textarea")}} element.
 
-<p>The example below shows how to get the text selected in an {{HTMLElement("textarea")}} element.</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div>Enter and select text here:<br><textarea id="mytext" rows="2" cols="20"></textarea></div>
+<div>selectionStart: <span id="start"></span></div>
+<div>selectionEnd: <span id="end"></span></div>
+<div>selectionDirection: <span id="direction"></span></div>
+```
 
-<pre class="brush: html">&lt;div&gt;Enter and select text here:&lt;br&gt;&lt;textarea id="mytext" rows="2" cols="20"&gt;&lt;/textarea&gt;&lt;/div&gt;
-&lt;div&gt;selectionStart: &lt;span id="start"&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;selectionEnd: &lt;span id="end"&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;selectionDirection: &lt;span id="direction"&gt;&lt;/span&gt;&lt;/div&gt;
-</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">const myinput = document.getElementById("mytext");
+```js
+const myinput = document.getElementById("mytext");
 
 myinput.addEventListener("selectionchange", () => {
   document.getElementById("start").textContent = mytext.selectionStart;
   document.getElementById("end").textContent = mytext.selectionEnd;
   document.getElementById("direction").textContent = mytext.selectionDirection;
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.onselectionchange")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.onselectionchange")}}

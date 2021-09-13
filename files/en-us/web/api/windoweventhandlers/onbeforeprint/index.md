@@ -2,47 +2,46 @@
 title: WindowEventHandlers.onbeforeprint
 slug: Web/API/WindowEventHandlers/onbeforeprint
 tags:
-- API
-- Event Handler
-- HTML DOM
-- Property
-- Reference
-- Wiindow
-- printing
+  - API
+  - Event Handler
+  - HTML DOM
+  - Property
+  - Reference
+  - Wiindow
+  - printing
 browser-compat: api.WindowEventHandlers.onbeforeprint
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>The <code><strong>onbeforeprint</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("beforeprint")}} events for the current window. These events are
-  raised before the print dialog window is opened.</p>
+The **`onbeforeprint`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("beforeprint")}} events for the current window. These events are
+raised before the print dialog window is opened.
 
-<p>The <code>beforeprint</code> and {{event("afterprint")}} events allow pages to change
-  their content before printing starts (perhaps to remove a banner, for example) and then
-  revert those changes after printing has completed. In general, you should prefer the use
-  of an
-  <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types">@media print</a></code>
-  CSS at-rule, but it may be necessary to use these events in some cases.</p>
+The `beforeprint` and {{event("afterprint")}} events allow pages to change
+their content before printing starts (perhaps to remove a banner, for example) and then
+revert those changes after printing has completed. In general, you should prefer the use
+of an
+[`@media print`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_types)
+CSS at-rule, but it may be necessary to use these events in some cases.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.addEventListener("beforeprint", function(event) { ... });
+```js
+window.addEventListener("beforeprint", function(event) { ... });
 window.onbeforeprint = function(event) { ... };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Window.print()")}}</li>
-  <li>{{domxref("WindowEventHandlers.onafterprint")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Printing">Printing</a></li>
-</ul>
+- {{domxref("Window.print()")}}
+- {{domxref("WindowEventHandlers.onafterprint")}}
+- [Printing](/en-US/docs/Web/Guide/Printing)

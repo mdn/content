@@ -13,53 +13,47 @@ tags:
   - onwarning
 browser-compat: api.MediaRecorder.onwarning
 ---
-<div>{{Deprecated_header}}</div>
+{{Deprecated_header}}{{APIRef("Media Recorder API")}}
 
-<div>{{APIRef("Media Recorder API")}}</div>
+The **`MediaRecorder.onwarning `**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+recording `warning` event, allowing you to run code in response to non-fatal
+errors being thrown during media recording via a `MediaRecorder` (errors that don't
+halt recording).
 
-<p>The <strong><code>MediaRecorder.onwarning </code></strong>event handler (part of the <a
-    href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaRecorder API</a>) handles the
-    recording <code>warning</code> event, allowing you to run code in response to non-fatal
-  errors being thrown during media recording via a <code>MediaRecorder</code> (errors that don't
-  halt recording).</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+mediaRecorder.onwarning = function(event) { ... }
+mediaRecorder.addEventListener('warning', function(event) { ... })
+```
 
-<pre
-  class="brush: js"><em>mediaRecorder</em>.onwarning = function(<em>event</em>) { ... }
-<em>mediaRecorder</em>.addEventListener('warning', function(<em>event</em>) { ... })</pre>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">...
+```js
+...
 
   mediaRecorder.onwarning = function(e) {
     console.log("A warning has been raised: " + e.message);
   }
 
-...</pre>
+...
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt><code>message</code></dt>
-  <dd>Contains information about the error that occurred.</dd>
-</dl>
+- `message`
+  - : Contains information about the error that occurred.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaRecorder API</a></li>
-  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-    getUserMedia + Web Audio API visualization demo, by <a
-      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Using
+  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

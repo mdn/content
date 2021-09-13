@@ -10,42 +10,42 @@ tags:
   - web console
 browser-compat: api.console.group
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.group()</code></strong> method creates a new inline group in the <a href="/en-US/docs/Tools/Web_Console">Web
-		console</a> log. This indents following console messages by an additional level,
-	until {{domxref("console.groupEnd()")}} is called.</p>
+The **`console.group()`** method creates a new inline group in the [Web
+console](/en-US/docs/Tools/Web_Console) log. This indents following console messages by an additional level,
+until {{domxref("console.groupEnd()")}} is called.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.group([label]);
-</pre>
+```js
+console.group([label]);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-	<dt><code>label</code></dt>
-	<dd>Label for the group. Optional. (Chrome 59 tested) Does not work with
-		<code>console.groupEnd()</code>.</dd>
-</dl>
+- `label`
+  - : Label for the group. Optional. (Chrome 59 tested) Does not work with
+    `console.groupEnd()`.
 
-<p>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</p>
+{{h3_gecko_minversion("Using groups in the console", "9.0")}}
 
-<p>You can use nested groups to help organize your output by visually associating related
-	messages. To create a new nested block, call <code>console.group()</code>. The
-	<code>console.groupCollapsed()</code> method is similar, but the new block is
-	collapsed and requires clicking a disclosure button to read it.</p>
+You can use nested groups to help organize your output by visually associating related
+messages. To create a new nested block, call `console.group()`. The
+`console.groupCollapsed()` method is similar, but the new block is
+collapsed and requires clicking a disclosure button to read it.
 
-<p><strong>Note:</strong> From Gecko 9 until Gecko 51, the <code>groupCollapsed()</code>
-	method was the same as <code>group()</code>. Collapsed groups are fully supported
-	starting in Gecko 52. See {{bug("1088360")}}.</p>
+**Note:** From Gecko 9 until Gecko 51, the `groupCollapsed()`
+method was the same as `group()`. Collapsed groups are fully supported
+starting in Gecko 52. See {{bug("1088360")}}.
 
-<p>To exit the current group, call <code>console.groupEnd()</code>. For example, given
-	this code:</p>
+To exit the current group, call `console.groupEnd()`. For example, given
+this code:
 
-<pre class="brush: js">console.log("This is the outer level");
+```js
+console.log("This is the outer level");
 console.group();
 console.log("Level 2");
 console.group();
@@ -55,22 +55,19 @@ console.groupEnd();
 console.log("Back to level 2");
 console.groupEnd();
 console.log("Back to the outer level");
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p><img alt="A screenshot of messages nested in the console output."
-		src="nesting.png"></p>
+![A screenshot of messages nested in the console output.](nesting.png)
 
-<p>See <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">Using groups in
-		the console</a> in the documentation of {{domxref("console")}} for more details.
-</p>
+See [Using groups in
+the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the documentation of {{domxref("console")}} for more details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

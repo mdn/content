@@ -2,61 +2,56 @@
 title: RTCRtpTransceiver.stopped
 slug: Web/API/RTCRtpTransceiver/stopped
 tags:
-- API
-- Deprecated
-- Media
-- Property
-- RTCRtpTransceiver
-- RTP
-- Reference
-- WebRTC
-- stopped
+  - API
+  - Deprecated
+  - Media
+  - Property
+  - RTCRtpTransceiver
+  - RTP
+  - Reference
+  - WebRTC
+  - stopped
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
-<div>{{APIRef("WebRTC")}}{{deprecated_header}}</div>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The read-only <strong><code>stopped</code></strong> property
-    on the {{domxref("RTCRtpTransceiver")}} interface indicates whether or not the
-    transceiver's associated sender and receiver have both been stopped.</p>
+The read-only **`stopped`** property
+on the {{domxref("RTCRtpTransceiver")}} interface indicates whether or not the
+transceiver's associated sender and receiver have both been stopped.
 
-<p>The transceiver is stopped if the {{domxref("RTCRtpTransceiver.stop", "stop()")}}
-  method has been called or if a change to either the local or the remote description has
-  caused the transceiver to be stopped for some reason.</p>
+The transceiver is stopped if the {{domxref("RTCRtpTransceiver.stop", "stop()")}}
+method has been called or if a change to either the local or the remote description has
+caused the transceiver to be stopped for some reason.
 
-<div class="Notecard note">
-  <p><strong>Note:</strong> This property is <em>deprecated</em> and will be removed in the future. Instead, look
-    at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
-    Its value is <code>stopped</code> if the transceiver has stopped.</p>
-</div>
+> **Note:** This property is _deprecated_ and will be removed in the future. Instead, look
+> at the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}.
+> Its value is `stopped` if the transceiver has stopped.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>isStopped</em> = <em>RTCRtpTransceiver</em>.stopped;</pre>
+```js
+var isStopped = RTCRtpTransceiver.stopped;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the transceiver's
-  {{domxref("RTCRtpTransceiver.sender", "sender")}} will no longer send data, and its
-  {{domxref("RTCRtpTransceiver.receiver", "receiver")}} will no longer receive data. If
-  either or both are still at work, the result is <code>false</code>.</p>
+A Boolean value which is `true` if the transceiver's
+{{domxref("RTCRtpTransceiver.sender", "sender")}} will no longer send data, and its
+{{domxref("RTCRtpTransceiver.receiver", "receiver")}} will no longer receive data. If
+either or both are still at work, the result is `false`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
+## Specifications
 
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Specifications">Specifications</h2>
+## Browser compatibility
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

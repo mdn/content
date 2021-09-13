@@ -14,65 +14,68 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.signalingstatechange_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>An <strong><code>signalingstatechange</code></strong> event is sent to an {{domxref("RTCPeerConnection")}} to notify it that its signaling state, as indicated by the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property, has changed.</p>
+An **`signalingstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} to notify it that its signaling state, as indicated by the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property, has changed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerConnection.onsignalingstatechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCPeerConnection.onsignalingstatechange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given an {{domxref("RTCPeerConnection")}}, <code>pc</code>, and an <code>updateStatus()</code> function that presents status information to the user, this code sets up an event handler to let the user know when the ICE negotiation process finishes up.</p>
+Given an {{domxref("RTCPeerConnection")}}, `pc`, and an `updateStatus()` function that presents status information to the user, this code sets up an event handler to let the user know when the ICE negotiation process finishes up.
 
-<pre class="brush: js">pc.addEventListener("signalingstatechange", ev =&gt; {
+```js
+pc.addEventListener("signalingstatechange", ev => {
   switch(pc.signalingState) {
     case "stable":
       updateStatus("ICE negotiation complete");
       break;
   }
 }, false);
-</pre>
+```
 
-<p>Using {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}, it looks like this:</p>
+Using {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}}, it looks like this:
 
-<pre class="brush: js">pc.onsignalingstatechange = ev =&gt; {
+```js
+pc.onsignalingstatechange = ev => {
   switch(pc.signalingState) {
     case "stable":
       updateStatus("ICE negotiation complete");
       break;
     }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCPeerConnection.signalingState")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.signalingState")}}

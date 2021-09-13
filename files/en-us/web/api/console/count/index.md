@@ -2,40 +2,41 @@
 title: console.count()
 slug: Web/API/console/count
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Reference
-- Web Development
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Reference
+  - Web Development
+  - web console
 browser-compat: api.console.count
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.count()</code></strong> method logs the number of times that
-  this particular call to <code>count()</code> has been called.</p>
+The **`console.count()`** method logs the number of times that
+this particular call to `count()` has been called.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.count(<var>[label]</var>);</pre>
+```js
+console.count([label]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>label</code> {{Optional_Inline}}</dt>
-  <dd>A {{jsxref("String")}}. If supplied, <code>count()</code> outputs the number of
-    times it has been called with that label. If omitted, <code>count()</code> behaves as
-    though it was called with the "default" label.</dd>
-</dl>
+- `label` {{Optional_Inline}}
+  - : A {{jsxref("String")}}. If supplied, `count()` outputs the number of
+    times it has been called with that label. If omitted, `count()` behaves as
+    though it was called with the "default" label.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>For example, given code like this:</p>
+For example, given code like this:
 
-<pre class="brush: js;">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count();
@@ -47,22 +48,23 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count();</pre>
+console.count();
+```
 
-<p>Console output will look something like this:</p>
+Console output will look something like this:
 
-<pre>"default: 1"
-"default: 2"
-"default: 3"
-"default: 4"</pre>
+    "default: 1"
+    "default: 2"
+    "default: 3"
+    "default: 4"
 
-<p>The label is displayed as <code>default</code> because no explicit label was supplied.
-</p>
+The label is displayed as `default` because no explicit label was supplied.
 
-<p>If we pass the <code>user</code> variable as the <code>label</code> argument to the
-  first invocation of <code>count()</code>, and the string "alice" to the second:</p>
+If we pass the `user` variable as the `label` argument to the
+first invocation of `count()`, and the string "alice" to the second:
 
-<pre class="brush: js;">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count(user);
@@ -74,22 +76,22 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>We will see output like this:</p>
+We will see output like this:
 
-<pre>"bob: 1"
-"alice: 1"
-"alice: 2"
-"alice: 3"</pre>
+    "bob: 1"
+    "alice: 1"
+    "alice: 2"
+    "alice: 3"
 
-<p>We're now maintaining separate counts based only on the value of <code>label</code>.
-</p>
+We're now maintaining separate counts based only on the value of `label`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

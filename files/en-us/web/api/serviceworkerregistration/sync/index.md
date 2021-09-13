@@ -2,35 +2,36 @@
 title: ServiceWorkerRegistration.sync
 slug: Web/API/ServiceWorkerRegistration/sync
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- Sync
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - Sync
 browser-compat: api.ServiceWorkerRegistration.sync
 ---
-<div>{{Non-standard_header}}{{APIRef("Service Workers API")}}</div>
+{{Non-standard_header}}{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>sync</strong></code> property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-  {{domxref("SyncManager")}} interface, which manages background synchronization
-  processes.</p>
+The **`sync`** property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
+{{domxref("SyncManager")}} interface, which manages background synchronization
+processes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>syncManager</em> = <em>serviceWorkerRegistration</em>.sync;
-</pre>
+```js
+var syncManager = serviceWorkerRegistration.sync;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("SyncManager")}} object.</p>
+A {{domxref("SyncManager")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,28 +9,30 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 
-<p>This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.</p>
+This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.
 
-<h2 id="Clearing_the_rendering_context_with_random_colors">Clearing the rendering context with random colors</h2>
+## Clearing the rendering context with random colors
 
-<p>{{EmbedLiveSample("Clearing_the_rendering_context_with_random_colors",660,425)}}</p>
+{{EmbedLiveSample("Clearing_the_rendering_context_with_random_colors",660,425)}}
 
-<p>This example provides a simple illustration of how to combine {{Glossary("WebGL")}} and user interaction. Every time the user clicks the canvas or the button, the canvas is cleared with a new randomly chosen color.</p>
+This example provides a simple illustration of how to combine {{Glossary("WebGL")}} and user interaction. Every time the user clicks the canvas or the button, the canvas is cleared with a new randomly chosen color.
 
-<p>Note how we embed the {{Glossary("WebGL")}} function calls inside the event handler function.</p>
+Note how we embed the {{Glossary("WebGL")}} function calls inside the event handler function.
 
-<pre class="brush: html">&lt;p&gt;A very simple WebGL program that still shows some color and
-    user interaction.&lt;/p&gt;
-&lt;p&gt;You can repeatedly click the empty canvas or the button below
-    to change color.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;button id="color-switcher"&gt;Press here to switch color&lt;/button&gt;
-</pre>
+```html
+<p>A very simple WebGL program that still shows some color and
+    user interaction.</p>
+<p>You can repeatedly click the empty canvas or the button below
+    to change color.</p>
+<canvas id="canvas-view">Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<button id="color-switcher">Press here to switch color</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -48,9 +50,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupWebGL (evt) {
+```js
+window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
 
   // Cleaning after ourselves. The event handler removes
@@ -99,8 +102,8 @@ button {
   }
 
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}

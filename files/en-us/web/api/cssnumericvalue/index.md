@@ -11,79 +11,71 @@ tags:
   - Reference
 browser-compat: api.CSSNumericValue
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSNumericValue</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> represents operations that all numeric values can perform.</p>
+The **`CSSNumericValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents operations that all numeric values can perform.
 
-<h2 id="Interfaces_based_on_CSSNumericValue">Interfaces based on CSSNumericValue</h2>
+## Interfaces based on CSSNumericValue
 
-<p>Below is a list of interfaces based on the CSSNumericValue interface.</p>
+Below is a list of interfaces based on the CSSNumericValue interface.
 
-<ul>
-	<li>{{domxref('CSSMathClamp')}}</li>
-	<li>{{domxref('CSSMathInvert')}}</li>
-	<li>{{domxref('CSSMathMax')}}</li>
-	<li>{{domxref('CSSMathMin')}}</li>
-	<li>{{domxref('CSSMathNegate')}}</li>
-	<li>{{domxref('CSSMathProduct')}}</li>
-	<li>{{domxref('CSSMathSum')}}</li>
-	<li>{{domxref('CSSMathValue')}}</li>
-	<li>{{domxref('CSSNumericArray')}}</li>
-	<li>{{domxref('CSSUnitValue')}}</li>
-</ul>
+- {{domxref('CSSMathClamp')}}
+- {{domxref('CSSMathInvert')}}
+- {{domxref('CSSMathMax')}}
+- {{domxref('CSSMathMin')}}
+- {{domxref('CSSMathNegate')}}
+- {{domxref('CSSMathProduct')}}
+- {{domxref('CSSMathSum')}}
+- {{domxref('CSSMathValue')}}
+- {{domxref('CSSNumericArray')}}
+- {{domxref('CSSUnitValue')}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="Instance_methods">Instance methods</h3>
+### Instance methods
 
-<dl>
-	<dt>{{domxref('CSSNumericValue.add')}}</dt>
-	<dd>Adds a supplied number to the <code>CSSNumericValue</code>.</dd>
-	<dt>{{domxref('CSSNumericValue.sub')}}</dt>
-	<dd>Subtracts a supplied number from the <code>CSSNumericValue</code>.</dd>
-	<dt>{{domxref('CSSNumericValue.mul')}}</dt>
-	<dd>Multiplies the <code>CSSNumericValue</code> by the supplied value.</dd>
-	<dt>{{domxref('CSSNumericValue.div')}}</dt>
-	<dd>Divides the <code>CSSNumericValue</code> by the supplied value.</dd>
-	<dt>{{domxref('CSSNumericValue.min')}}</dt>
-	<dd>Returns the minimum value passed</dd>
-	<dt>{{domxref('CSSNumericValue.max')}}</dt>
-	<dd>Returns the maximum value passed</dd>
-	<dt>{{domxref('CSSNumericValue.equals')}}</dt>
-	<dd><em>True</em> if all the values are the exact same type and value, in the same order. Otherwise, <em>false.</em></dd>
-	<dt>{{domxref('CSSNumericValue.to')}}</dt>
-	<dd>Converts <code>value</code> into another one with the specified <var>unit.</var></dd>
-	<dt>{{domxref('CSSNumericValue.toSum')}}</dt>
-	<dd>Converts an existing <code>CSSNumericValue</code> into a {{domxref("CSSMathSum")}} object with values of a specified unit.</dd>
-	<dt>{{domxref('CSSNumericValue.type')}}</dt>
-	<dd>Returns the type of <code>CSSNumericValue</code>, one of <code>angle</code>, <code>flex</code>, <code>frequency</code>, <code>length</code>, <code>resolution</code>, <code>percent</code>, <code>percentHint</code>, or <code>time</code>.</dd>
-</dl>
+- {{domxref('CSSNumericValue.add')}}
+  - : Adds a supplied number to the `CSSNumericValue`.
+- {{domxref('CSSNumericValue.sub')}}
+  - : Subtracts a supplied number from the `CSSNumericValue`.
+- {{domxref('CSSNumericValue.mul')}}
+  - : Multiplies the `CSSNumericValue` by the supplied value.
+- {{domxref('CSSNumericValue.div')}}
+  - : Divides the `CSSNumericValue` by the supplied value.
+- {{domxref('CSSNumericValue.min')}}
+  - : Returns the minimum value passed
+- {{domxref('CSSNumericValue.max')}}
+  - : Returns the maximum value passed
+- {{domxref('CSSNumericValue.equals')}}
+  - : _True_ if all the values are the exact same type and value, in the same order. Otherwise, _false._
+- {{domxref('CSSNumericValue.to')}}
+  - : Converts `value` into another one with the specified _unit._
+- {{domxref('CSSNumericValue.toSum')}}
+  - : Converts an existing `CSSNumericValue` into a {{domxref("CSSMathSum")}} object with values of a specified unit.
+- {{domxref('CSSNumericValue.type')}}
+  - : Returns the type of `CSSNumericValue`, one of `angle`, `flex`, `frequency`, `length`, `resolution`, `percent`, `percentHint`, or `time`.
 
-<h3 id="Static_methods">Static methods</h3>
+### Static methods
 
-<dl>
-	<dt>{{domxref('CSSNumericValue.parse')}}</dt>
-	<dd>Allows a <code>CSSNumericValue</code> to be constructed directly from a string containing CSS. </dd>
-</dl>
+- {{domxref('CSSNumericValue.parse')}}
+  - : Allows a `CSSNumericValue` to be constructed directly from a string containing CSS.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref('CSSImageValue')}}</li>
-	<li>{{domxref('CSSKeywordValue')}}</li>
-	<li>{{domxref('CSSPositionValue')}}</li>
-	<li>{{domxref('CSSTransformValue')}}</li>
-	<li>{{domxref('CSSUnparsedValue')}}</li>
-</ul>
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}

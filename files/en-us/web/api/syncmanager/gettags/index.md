@@ -2,35 +2,36 @@
 title: SyncManager.getTags()
 slug: Web/API/SyncManager/getTags
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- ServiceWorker
-- SyncManager
-- getTags
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - ServiceWorker
+  - SyncManager
+  - getTags
 browser-compat: api.SyncManager.getTags
 ---
-<p>{{APIRef("Service Workers API")}}{{Non-standard_header}}</p>
+{{APIRef("Service Workers API")}}{{Non-standard_header}}
 
-<p>The <code><strong>SyncManager.getTags</strong></code> method of the
-  {{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for
-  <code>SyncManager</code> registrations.</p>
+The **`SyncManager.getTags`** method of the
+{{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for
+`SyncManager` registrations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">SyncManager.getTags().then(function(<em>tags[]</em>) { ... })</pre>
+```js
+SyncManager.getTags().then(function(tags[]) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to an array of {{jsxref("DOMString")}}s
-  containing developer-defined identifiers for <code>SyncManager</code> registrations.</p>
+A {{jsxref("Promise")}} that resolves to an array of {{jsxref("DOMString")}}s
+containing developer-defined identifiers for `SyncManager` registrations.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

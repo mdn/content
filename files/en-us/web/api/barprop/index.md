@@ -8,46 +8,42 @@ tags:
   - BarProp
 browser-compat: api.BarProp
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>BarProp</code></strong> interface of the {{domxref('Document Object Model')}} represents the web browser user interface elements that are exposed to scripts in web pages. Each of the following interface elements are represented by a <code>BarProp</code> object.</p>
+The **`BarProp`** interface of the {{domxref('Document Object Model')}} represents the web browser user interface elements that are exposed to scripts in web pages. Each of the following interface elements are represented by a `BarProp` object.
 
-<dl>
-  <dt>{{domxref("Window.locationbar")}}</dt>
-  <dd>The browser location bar.</dd>
-  <dt>{{domxref("Window.menubar")}}</dt>
-  <dd>The browser menu bar.</dd>
-  <dt>{{domxref("Window.personalbar")}}</dt>
-  <dd>The browser personal bar.</dd>
-  <dt>{{domxref("Window.scrollbars")}}</dt>
-  <dd>The browser scrollbars.</dd>
-  <dt>{{domxref("Window.statusbar")}}</dt>
-  <dd>The browser status bar.</dd>
-  <dt>{{domxref("Window.toolbar")}}</dt>
-  <dd>The browser toolbar.</dd>
-</dl>
+- {{domxref("Window.locationbar")}}
+  - : The browser location bar.
+- {{domxref("Window.menubar")}}
+  - : The browser menu bar.
+- {{domxref("Window.personalbar")}}
+  - : The browser personal bar.
+- {{domxref("Window.scrollbars")}}
+  - : The browser scrollbars.
+- {{domxref("Window.statusbar")}}
+  - : The browser status bar.
+- {{domxref("Window.toolbar")}}
+  - : The browser toolbar.
 
-<p>The <code>BarProp</code> interface is not accessed directly, but via one of these elements.</p>
+The `BarProp` interface is not accessed directly, but via one of these elements.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("BarProp.visible")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.</dd>
-</dl>
+- {{domxref("BarProp.visible")}}{{ReadOnlyInline}}
+  - : A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example prints a <code>BarProp</code> object to the console that represents the location bar.</p>
+The following example prints a `BarProp` object to the console that represents the location bar.
 
-<pre class="brush: js">console.log(window.locationbar);</pre>
+```js
+console.log(window.locationbar);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

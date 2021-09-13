@@ -8,45 +8,38 @@ tags:
   - CookieChangeEvent
 browser-compat: api.CookieChangeEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The <strong><code>CookieChangeEvent</code></strong> interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").</p>
+The **`CookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("CookieStore.onchange()")}} when any cookie changes have occurred. A cookie change consists of a cookie and a type (either "changed" or "deleted").
 
-<p>Cookie changes that will cause the <code>CookieChangeEvent</code> to be dispatched are:</p>
+Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 
-<ul>
-  <li>A cookie is newly created and not immediately removed. In this case <code>type</code> is "changed".</li>
-  <li>A cookie is newly created and immediately removed. In this case <code>type</code> is "deleted"</li>
-  <li>A cookie is removed. In this case <code>type</code> is "deleted".</li>
-</ul>
+- A cookie is newly created and not immediately removed. In this case `type` is "changed".
+- A cookie is newly created and immediately removed. In this case `type` is "deleted"
+- A cookie is removed. In this case `type` is "deleted".
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</p>
-</div>
+> **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("CookieChangeEvent.CookieChangeEvent()")}}</dt>
-  <dd>Creates a new <code>CookieChangeEvent</code>.</dd>
-</dl>
+- {{domxref("CookieChangeEvent.CookieChangeEvent()")}}
+  - : Creates a new `CookieChangeEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("Event")}}.</em></p>
+_This interface also inherits properties from {{domxref("Event")}}._
 
-<dl>
-  <dt>{{domxref("CookieChangeEvent.changed")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an array containing one or more changed cookies.</dd>
-  <dt>{{domxref("CookieChangeEvent.deleted")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an array containing one or more deleted cookies.</dd>
-</dl>
+- {{domxref("CookieChangeEvent.changed")}}{{ReadOnlyInline}}
+  - : Returns an array containing one or more changed cookies.
+- {{domxref("CookieChangeEvent.deleted")}}{{ReadOnlyInline}}
+  - : Returns an array containing one or more deleted cookies.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example when the cookie is set, the event listener logs the event to the console. This is a <code>CookieChangeEvent</code> object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.</p>
+In this example when the cookie is set, the event listener logs the event to the console. This is a `CookieChangeEvent` object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.
 
-<pre class="brush:js">cookieStore.addEventListener('change', (event) => {
+```js
+cookieStore.addEventListener('change', (event) => {
   console.log(event);
 });
 
@@ -56,12 +49,13 @@ cookieStore.set({
   value: "cookie1-value",
   expires: Date.now() + one_day,
   domain: "example.com"
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

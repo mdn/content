@@ -2,69 +2,73 @@
 title: GlobalEventHandlers.onpointerdown
 slug: Web/API/GlobalEventHandlers/onpointerdown
 tags:
-- API
-- Document
-- Element
-- GlobalEventHandlers
-- HTML DOM
-- Pointer Events
-- Pointer Events API
-- PointerEvent
-- Property
-- Reference
-- Window
+  - API
+  - Document
+  - Element
+  - GlobalEventHandlers
+  - HTML DOM
+  - Pointer Events
+  - Pointer Events API
+  - PointerEvent
+  - Property
+  - Reference
+  - Window
 browser-compat: api.GlobalEventHandlers.onpointerdown
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("GlobalEventHandlers")}} event handler
-  <strong><code>onpointerdown</code></strong> is used to specify the event handler for the
-  {{event("pointerdown")}} event, which is fired when the pointing device is initially
-  pressed. This event can be sent to {{domxref("Window")}}, {{domxref("Document")}}, and
-  {{domxref("Element")}} objects.</p>
+The {{domxref("GlobalEventHandlers")}} event handler
+**`onpointerdown`** is used to specify the event handler for the
+{{event("pointerdown")}} event, which is fired when the pointing device is initially
+pressed. This event can be sent to {{domxref("Window")}}, {{domxref("Document")}}, and
+{{domxref("Element")}} objects.
 
-<p>This is functionally equivalent to the {{event("mousedown")}} event when generated due
-  to user activity with a mouse or mouse-compatible device. If the
-  <code>pointerdown</code> event isn't canceled through a call to
-  {{domxref("Event.preventDefault", "preventDefault()")}}, most user agents will fire a
-  <code>mousedown</code> event, so that sites not using pointer events will work.</p>
+This is functionally equivalent to the {{event("mousedown")}} event when generated due
+to user activity with a mouse or mouse-compatible device. If the
+`pointerdown` event isn't canceled through a call to
+{{domxref("Event.preventDefault", "preventDefault()")}}, most user agents will fire a
+`mousedown` event, so that sites not using pointer events will work.
 
-<p>You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to
-  add a listener for <code>pointerdown</code> events.</p>
+You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to
+add a listener for `pointerdown` events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>target</var>.onpointerdown = <var>downHandler</var>;
+```js
+target.onpointerdown = downHandler;
 
-var <var>downHandler</var> = <var>target</var>.onpointerdown;
-</pre>
+var downHandler = target.onpointerdown;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Function")}} to handle the <code>pointerdown</code> event for the
-  <code><var>target</var></code> {{domxref("Element")}}, {{domxref("Document")}}, or
-  {{domxref("Window")}}. It receives as input the {{domxref("PointerEvent")}} describing
-  the <code>pointerdown</code> event.</p>
+A {{jsxref("Function")}} to handle the `pointerdown` event for the
+`target` {{domxref("Element")}}, {{domxref("Document")}}, or
+{{domxref("Window")}}. It receives as input the {{domxref("PointerEvent")}} describing
+the `pointerdown` event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3>Responding to pointer down events</h3>
+### Responding to pointer down events
 
-<p>This example demonstrates how to watch for and act upon <code>pointerdown</code> events
-  using <code>onpointerdown</code>. You could also use <code>addEventListener()</code>, of
-  course.</p>
+This example demonstrates how to watch for and act upon `pointerdown` events
+using `onpointerdown`. You could also use `addEventListener()`, of
+course.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="target"&gt;
+```html
+<div id="target">
     Tap me, click me, or touch me!
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>The CSS sets up the appearance of the target, and doesn't affect its functionality at  all.</p>
+The CSS sets up the appearance of the target, and doesn't affect its functionality at all.
 
-<pre class="brush: css">#target {
+```css
+#target {
   width: 400px;
   height: 30px;
   text-align: center;
@@ -74,11 +78,13 @@ var <var>downHandler</var> = <var>target</var>.onpointerdown;
   border: 2px solid darkblue;
   cursor: pointer;
   user-select: none;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var targetBox = document.getElementById("target");
+```js
+var targetBox = document.getElementById("target");
 
 targetBox.onpointerdown = handleDown;
 
@@ -102,65 +108,62 @@ function handleDown(evt) {
 
   targetBox.textContent = `Thanks for ${action} me!`;
   evt.preventDefault();
-}</pre>
+}
+```
 
-<p>This uses <code>onpointerdown</code> to establish the function
-  <code>handleDown()</code> as the event handler for pointer down events.</p>
+This uses `onpointerdown` to establish the function
+`handleDown()` as the event handler for pointer down events.
 
-<p>The <code>handleDown()</code> function, in turn, looks at the value of
-  {{domxref("PointerEvent.pointerType", "pointerType")}} to determine what kind of
-  pointing device was used, then uses that information to customize a string to replace
-  the contents of the target box.</p>
+The `handleDown()` function, in turn, looks at the value of
+{{domxref("PointerEvent.pointerType", "pointerType")}} to determine what kind of
+pointing device was used, then uses that information to customize a string to replace
+the contents of the target box.
 
-<p>Then the event's {{domxref("Event.preventDefault", "preventDefault()")}} method is
-  called to ensure that the <code>mousedown</code> event isn't triggered, potentially
-  causing events to be handled twice if we had a handler for those events in case Pointer
-  Event support is missing.</p>
+Then the event's {{domxref("Event.preventDefault", "preventDefault()")}} method is
+called to ensure that the `mousedown` event isn't triggered, potentially
+causing events to be handled twice if we had a handler for those events in case Pointer
+Event support is missing.
 
-<p>We also have a handler for {{event("pointerup")}} events:</p>
+We also have a handler for {{event("pointerup")}} events:
 
-<pre class="brush: js">targetBox.onpointerup = handleUp;
+```js
+targetBox.onpointerup = handleUp;
 
 function handleUp(evt) {
   targetBox.textContent = "Tap me, click me, or touch me!";
   evt.preventDefault();
-}</pre>
+}
+```
 
-<p>This code restores the original text into the target box after the
-  user's interaction with the element ends (for example, when they release the mouse
-  button, or when they lift the stylus or finger from the screen).</p>
+This code restores the original text into the target box after the
+user's interaction with the element ends (for example, when they release the mouse
+button, or when they lift the stylus or finger from the screen).
 
-<p>In addition, the event's {{domxref("Event.preventDefault", "preventDefault()")}} method
-  is called to ensure that the <code>mouseup</code> event isn't triggered unnecessarily.
-</p>
+In addition, the event's {{domxref("Event.preventDefault", "preventDefault()")}} method
+is called to ensure that the `mouseup` event isn't triggered unnecessarily.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The resulting output is shown below. Try tapping, clicking, or touching the box and see
-  what happens. For full effect, try it with a variety of pointer types.</p>
+The resulting output is shown below. Try tapping, clicking, or touching the box and see
+what happens. For full effect, try it with a variety of pointer types.
 
-<p>{{EmbedLiveSample("Responding_to_pointer_down_events", 450, 50)}}</p>
+{{EmbedLiveSample("Responding_to_pointer_down_events", 450, 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Pointer_events">Pointer events</a></li>
-  <li><a href="/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events">Using Pointer
-      Events</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems">Coordinate systems</a>
-  </li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointerdown_event">Document: pointerdown</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">HTMLElement: pointerdown</a></code>
-    event</li>
-</ul>
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)
+- [Using Pointer
+  Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+- [`Document: pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event)
+  event
+- [`HTMLElement: pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+  event

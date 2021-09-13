@@ -2,29 +2,30 @@
 title: USB.ondisconnect
 slug: Web/API/USB/ondisconnect
 tags:
-- API
-- Method
-- Reference
-- USB
-- WebUSB
-- WebUSB API
-- ondisconnect
+  - API
+  - Method
+  - Reference
+  - USB
+  - WebUSB
+  - WebUSB API
+  - ondisconnect
 browser-compat: api.USB.ondisconnect
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>ondisconnect</code></strong> property of the {{domxref("USB")}} is an
-  event handler called whenever a paired device is disconnected. It is passed an instance of {{domxref("USBConnectionEvent")}}.</p>
+The **`ondisconnect`** property of the {{domxref("USB")}} is an
+event handler called whenever a paired device is disconnected. It is passed an instance of {{domxref("USBConnectionEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">USB.ondisconnect = <em>disconnectFunction</em></pre>
+```js
+USB.ondisconnect = disconnectFunction
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,75 +2,57 @@
 title: PaymentAddress.addressLine
 slug: Web/API/PaymentAddress/addressLine
 tags:
-- API
-- Address
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Read-only
-- Reference
-- payment
-- paymentAddress
+  - API
+  - Address
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Read-only
+  - Reference
+  - payment
+  - paymentAddress
 browser-compat: api.PaymentAddress.addressLine
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>addressLine</code></strong> read-only
-    property of the {{domxref('PaymentAddress')}} interface is an array of
-    {{domxref("DOMString")}} objects, each specifying a line of the address that is not
-    covered by one of the other properties of <code>PaymentAddress</code>.</p>
+The **`addressLine`** read-only
+property of the {{domxref('PaymentAddress')}} interface is an array of
+{{domxref("DOMString")}} objects, each specifying a line of the address that is not
+covered by one of the other properties of `PaymentAddress`.
 
-<p>These
-  lines may include the street name, house number, apartment number, rural delivery route,
-  descriptive instructions, or post office box.</p>
+These
+lines may include the street name, house number, apartment number, rural delivery route,
+descriptive instructions, or post office box.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentAddressLines</em> = <em>PaymentAddress</em>.addressLine;</pre>
+```js
+var paymentAddressLines = PaymentAddress.addressLine;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("DOMString")}} objects, each containing one line of the address.
-  For example, the <code>addressLine</code> array for the Mozilla Space in London would
-  have the following entries:</p>
+An array of {{domxref("DOMString")}} objects, each containing one line of the address.
+For example, the `addressLine` array for the Mozilla Space in London would
+have the following entries:
 
-<table class="standard-table">
-  <caption>Example showing <code>addressLine</code> entries for an address in London
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Index</th>
-      <th scope="col">addressLine[] value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>Metal Box Factory</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Suite 441, 4th floor</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>30 Great Guildford Street</td>
-    </tr>
-  </tbody>
-</table>
+| Index | addressLine[] value       |
+| ----- | ------------------------- |
+| 0     | Metal Box Factory         |
+| 1     | Suite 441, 4th floor      |
+| 2     | 30 Great Guildford Street |
 
-<p>These, combined with additional values for other properties of the
-  {{domxref("PaymentAddress")}}, would represent the full address, which is:</p>
+These, combined with additional values for other properties of the
+{{domxref("PaymentAddress")}}, would represent the full address, which is:
 
-<p>Mozilla<br>
-  Metal Box Factory<br>
-  Suite 441, 4th floor<br>
-  30 Great Guildford Street<br>
-  London SE1 0HS<br>
-  United Kingdom</p>
+Mozilla
+Metal Box Factory
+Suite 441, 4th floor
+30 Great Guildford Street
+London SE1 0HS
+United Kingdom
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

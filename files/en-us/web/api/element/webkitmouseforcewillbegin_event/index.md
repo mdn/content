@@ -19,48 +19,46 @@ tags:
   - webkitmouseforcewillbegin
 browser-compat: api.Element.webkitmouseforcewillbegin_event
 ---
-<p>{{APIRef}}{{Non-standard_header()}}</p>
+{{APIRef}}{{Non-standard_header()}}
 
-<p>Safari for macOS fires the non-standard <code><strong>webkitmouseforcewillbegin</strong></code> event at an {{domxref("Element")}} before firing the initial {{event("mousedown")}} event.</p>
+Safari for macOS fires the non-standard **`webkitmouseforcewillbegin`** event at an {{domxref("Element")}} before firing the initial {{event("mousedown")}} event.
 
-<p>This offers the opportunity to tell the system not to trigger any default Force Touch actions if and when the click turns into a <a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch event</a>.</p>
+This offers the opportunity to tell the system not to trigger any default Force Touch actions if and when the click turns into a [Force Touch event](/en-US/docs/Web/API/Force_Touch_events).
 
-<p>To instruct macOS not to engage any default Force Touch actions if the user apply enough pressure to activate a Force Touch event, call {{domxref("Event.preventDefault", "preventDefault()")}} on the <code>webkitmouseforcewillbegin</code> event object.</p>
+To instruct macOS not to engage any default Force Touch actions if the user apply enough pressure to activate a Force Touch event, call {{domxref("Event.preventDefault", "preventDefault()")}} on the `webkitmouseforcewillbegin` event object.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><strong><code>webkitmouseforcewillbegin</code></strong> is a proprietary, WebKit-specific event. It is part of the <a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a> feature.</p>
+**`webkitmouseforcewillbegin`** is a proprietary, WebKit-specific event. It is part of the [Force Touch events](/en-US/docs/Web/API/Force_Touch_events) feature.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any specification.</em> Apple has <a href="https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html">a description at the Mac Developer Library</a>.</p>
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li><a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a></li>
- <li>{{event("webkitmouseforcedown")}}</li>
- <li>{{event("webkitmouseforceup")}}</li>
- <li>{{event("webkitmouseforcechanged")}}</li>
- <li>{{domxref("Force_Touch_events")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Force Touch events](/en-US/docs/Web/API/Force_Touch_events)
+- {{event("webkitmouseforcedown")}}
+- {{event("webkitmouseforceup")}}
+- {{event("webkitmouseforcechanged")}}
+- {{domxref("Force_Touch_events")}}

@@ -11,35 +11,33 @@ tags:
   - StylePropertyMap
 browser-compat: api.StylePropertyMap
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>StylePropertyMap</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.</p>
+The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}.</em></p>
+_Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}.</em></p>
+_Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-<dl>
- <dt>{{DOMxRef("StylePropertyMap.append()")}}</dt>
- <dd>Adds a new CSS declaration to the <code>StylePropertyMap</code> with the given property and value.</dd>
- <dt>{{DOMxRef("StylePropertyMap.clear()")}}</dt>
- <dd>Removes all declarations in the <code>StylePropertyMap</code>.</dd>
- <dt>{{DOMxRef("StylePropertyMap.delete()")}}</dt>
- <dd>Removes the CSS declaration with the given property.</dd>
- <dt>{{DOMxRef("StylePropertyMap.set()")}}</dt>
- <dd>Changes the CSS declaration with the given property.</dd>
-</dl>
+- {{DOMxRef("StylePropertyMap.append()")}}
+  - : Adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
+- {{DOMxRef("StylePropertyMap.clear()")}}
+  - : Removes all declarations in the `StylePropertyMap`.
+- {{DOMxRef("StylePropertyMap.delete()")}}
+  - : Removes the CSS declaration with the given property.
+- {{DOMxRef("StylePropertyMap.set()")}}
+  - : Changes the CSS declaration with the given property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,63 +2,62 @@
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 tags:
-- API
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserver
-- Method
-- Reference
-- unobserve
+  - API
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserver
+  - Method
+  - Reference
+  - unobserve
 browser-compat: api.IntersectionObserver.unobserve
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The {{domxref("IntersectionObserver")}} method
-    <code><strong>unobserve()</strong></code> instructs the
-    <code>IntersectionObserver</code> to stop observing the specified target
-    element.</p>
+The {{domxref("IntersectionObserver")}} method
+**`unobserve()`** instructs the
+`IntersectionObserver` to stop observing the specified target
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IntersectionObserver</em>.unobserve(<em>target</em>);</pre>
+```js
+IntersectionObserver.unobserve(target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>The {{domxref("Element")}} to cease observing. If the specified element isn't being
-    observed, this method does nothing and no exception is thrown.</dd>
-</dl>
+- `target`
+  - : The {{domxref("Element")}} to cease observing. If the specified element isn't being
+    observed, this method does nothing and no exception is thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet shows an observer being created, an element being observed, and then being
-  unobserved.</p>
+This snippet shows an observer being created, an element being observed, and then being
+unobserved.
 
-<pre class="brush: js">var observer = new IntersectionObserver(callback);
+```js
+var observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById("elementToObserve"));
 
 /* ... */
 
-observer.unobserve(document.getElementById("elementToObserve"));</pre>
+observer.unobserve(document.getElementById("elementToObserve"));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer
-      API</a></li>
-  <li>{{domxref("IntersectionObserver.observe()")}}</li>
-</ul>
+- [Intersection Observer
+  API](/en-US/docs/Web/API/Intersection_Observer_API)
+- {{domxref("IntersectionObserver.observe()")}}

@@ -11,54 +11,48 @@ tags:
   - Secure context
 browser-compat: api.PaymentResponse
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>PaymentResponse</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> is returned after a user selects a payment method and approves a payment request.</p>
+The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is returned after a user selects a payment method and approves a payment request.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref('PaymentResponse.details')}} {{readonlyinline}} {{securecontext_inline}}</dt>
-	<dd>Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used; for example, if the Basic Card payment method is used, this object must conform to the structure defined in the {{domxref("BasicCardResponse")}} dictionary.</dd>
-	<dt>{{domxref('PaymentResponse.methodName')}} {{readonlyinline}} {{securecontext_inline}}</dt>
-	<dd>Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc.. </dd>
-	<dt>{{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Returns the email address supplied by the user. This option is only present when the <code>requestPayerEmail</code> option is set to <code>true</code> in the <code>options</code> parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</dd>
-	<dt>{{domxref('PaymentResponse.payerName')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Returns the name supplied by the user. This option is only present when the <code>requestPayerName</code> option is set to true in the <code>options</code> parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</dd>
-	<dt>{{domxref('PaymentResponse.payerPhone')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Returns the phone number supplied by the user. This option is only present when the <code>requestPayerPhone</code> option is set to <code>true</code> in the <code>options</code> parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</dd>
-	<dt>{{domxref('PaymentResponse.requestId')}} {{readonlyinline}} {{securecontext_inline}}</dt>
-	<dd>Returns the identifier of the {{domxref('PaymentRequest')}} that produced the current response. This is the same value supplied in the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor by <code>details.id</code>.</dd>
-	<dt>{{domxref('PaymentResponse.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Returns the shipping Address supplied by the user. This option is only present when the <code>requestShipping</code> option is set to <code>true</code> in the <code>options</code> parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</dd>
-	<dt>{{domxref('PaymentResponse.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Returns the ID attribute of the shipping option selected by the user. This option is only present when the <code>requestShipping</code> option is set to <code>true</code> in the <code>options</code> parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</dd>
-</dl>
+- {{domxref('PaymentResponse.details')}} {{readonlyinline}} {{securecontext_inline}}
+  - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used; for example, if the Basic Card payment method is used, this object must conform to the structure defined in the {{domxref("BasicCardResponse")}} dictionary.
+- {{domxref('PaymentResponse.methodName')}} {{readonlyinline}} {{securecontext_inline}}
+  - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc..
+- {{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the email address supplied by the user. This option is only present when the `requestPayerEmail` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
+- {{domxref('PaymentResponse.payerName')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the name supplied by the user. This option is only present when the `requestPayerName` option is set to true in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
+- {{domxref('PaymentResponse.payerPhone')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the phone number supplied by the user. This option is only present when the `requestPayerPhone` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
+- {{domxref('PaymentResponse.requestId')}} {{readonlyinline}} {{securecontext_inline}}
+  - : Returns the identifier of the {{domxref('PaymentRequest')}} that produced the current response. This is the same value supplied in the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor by `details.id`.
+- {{domxref('PaymentResponse.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the shipping Address supplied by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
+- {{domxref('PaymentResponse.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the ID attribute of the shipping option selected by the user. This option is only present when the `requestShipping` option is set to `true` in the `options` parameter of the {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref('PaymentResponse.retry()')}} {{securecontext_inline}}</dt>
-	<dd>If something is wrong with the payment response's data (and there is a recoverable error), this method allows a merchant to request that the user retry the payment. The method takes an object as argument, which is used to signal to the user exactly what is wrong with the payment response so they can try to correct any issues.</dd>
-	<dt>{{domxref('PaymentResponse.complete()')}} {{securecontext_inline}}</dt>
-	<dd>Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.</dd>
-</dl>
+- {{domxref('PaymentResponse.retry()')}} {{securecontext_inline}}
+  - : If something is wrong with the payment response's data (and there is a recoverable error), this method allows a merchant to request that the user retry the payment. The method takes an object as argument, which is used to signal to the user exactly what is wrong with the payment response so they can try to correct any issues.
+- {{domxref('PaymentResponse.complete()')}} {{securecontext_inline}}
+  - : Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to this event using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
-	<dt><code><a href="/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange</a></code>{{securecontext_inline}}{{deprecated_inline}}</dt>
-	<dd>Fired during a retry when the user makes changes to their personal information while filling out a payment request form. Allows the developer to revalidate any requested user data (e.g., the phone number or the email address) if it changes.<br>
-	Also available via the <code><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange">onpayerdetailchange</a></code> property.</dd>
-</dl>
+- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event){{securecontext_inline}}{{deprecated_inline}}
+  - : Fired during a retry when the user makes changes to their personal information while filling out a payment request form. Allows the developer to revalidate any requested user data (e.g., the phone number or the email address) if it changes.
+    Also available via the [`onpayerdetailchange`](/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

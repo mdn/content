@@ -12,45 +12,44 @@ tags:
   - web animations api
 browser-compat: api.Animation.oncancel
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code><strong>oncancel</strong></code> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} interface is the event handler for the {{event("cancel")}} event.</p>
+The **`oncancel`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface is the event handler for the {{event("cancel")}} event.
 
-<p>The <code>cancel</code> event can be triggered manually with {{domxref("Animation.cancel()")}} when the animation enters the <code>"idle"</code> play state from another state, such as when the animation is removed from an element before it finishes playing</p>
+The `cancel` event can be triggered manually with {{domxref("Animation.cancel()")}} when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing
 
-<div class="note">
-<p><strong>Note:</strong> Creating a new animation that is initially idle does not trigger a {{event("cancel")}} event on the new animation.</p>
-</div>
+> **Note:** Creating a new animation that is initially idle does not trigger a {{event("cancel")}} event on the new animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>cancelHandler</em> = <em>Animation</em>.oncancel;
+```js
+var cancelHandler = Animation.oncancel;
 
-<em>Animation</em>.oncancel = <em>cancelHandler</em>;</pre>
+Animation.oncancel = cancelHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be executed when the animation is cancelled, or <code>null</code> if there is no {{event("cancel")}} event handler.</p>
+A function to be executed when the animation is cancelled, or `null` if there is no {{event("cancel")}} event handler.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If this animation is canceled, remove its element.</p>
+If this animation is canceled, remove its element.
 
-<pre class="brush: js">animation.oncancel = function() { animation.effect.target.remove(); };
-</pre>
+```js
+animation.oncancel = function() { animation.effect.target.remove(); };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>The {{event("cancel")}} event</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- The {{event("cancel")}} event

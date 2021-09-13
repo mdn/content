@@ -2,64 +2,61 @@
 title: SyncManager.register()
 slug: Web/API/SyncManager/register
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- ServiceWorker
-- SyncManager
-- register
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - ServiceWorker
+  - SyncManager
+  - register
 browser-compat: api.SyncManager.register
 ---
-<p>{{APIRef("Service Workers API")}}{{Non-standard_header}}</p>
+{{APIRef("Service Workers API")}}{{Non-standard_header}}
 
-<p>The <code><strong>SyncManager.register</strong></code> method of the
-  {{domxref("SyncManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
-  {{domxref("SyncRegistration")}} instance.</p>
+The **`SyncManager.register`** method of the
+{{domxref("SyncManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
+{{domxref("SyncRegistration")}} instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">SyncManager.register([<em>options</em>]).then(function(<em>syncRegistration</em>) { ... })</pre>
+```js
+SyncManager.register([options]).then(function(syncRegistration) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to an instance of
-  {{domxref("SyncRegistration")}}.</p>
+A {{jsxref("Promise")}} that resolves to an instance of
+{{domxref("SyncRegistration")}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object that sets options for an instance of {{domxref("SyncRegistration")}}. The
+- options {{optional_inline}}
+
+  - : An object that sets options for an instance of {{domxref("SyncRegistration")}}. The
     available options are:
-    <ul>
-      <li><code>allowOnBattery</code>: A boolean that determines whether synchronization
-        is allowed when the user agent is on a battery-powered device. The default
-        is <code>true</code>.</li>
-      <li><code>id</code>: The unique identifier of the specified
-        {{domxref("SyncRegistration")}} object.</li>
-      <li><code>idleRequired</code>: A boolean that determines whether synchronization is
-        allowed when the user agent's device is idle. The default is <code>false</code>.
-      </li>
-      <li><code>maxDelay</code>: The maximum delay in milliseconds before the next
-        <code>sync</code> event (or the first <code>sync</code> event if it is periodic).
-        The default is <code>0</code>, meaning there is no maximum delay.</li>
-      <li><code>minDelay</code>: The minimum delay in milliseconds before the
-        next <code>sync</code> event (or the first sync event if it is periodic). The
-        default is <code>0</code>.</li>
-      <li><code>minPeriod</code>: The minimum time
-        in milliseconds between periodic sync events. The default is <code>0</code>,
-        meaning events are not periodic.</li>
-      <li><code>minRequiredNetwork</code>: The network condition under which background
-        synchronization will occur. Valid values are <code>'network-any'</code>,
-        <code>'network-offline'</code>, <code>'network-online'</code>,
-        <code>'network-non-mobile'</code>. The default value is
-        <code>'network-online'</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `allowOnBattery`: A boolean that determines whether synchronization
+      is allowed when the user agent is on a battery-powered device. The default
+      is `true`.
+    - `id`: The unique identifier of the specified
+      {{domxref("SyncRegistration")}} object.
+    - `idleRequired`: A boolean that determines whether synchronization is
+      allowed when the user agent's device is idle. The default is `false`.
+    - `maxDelay`: The maximum delay in milliseconds before the next
+      `sync` event (or the first `sync` event if it is periodic).
+      The default is `0`, meaning there is no maximum delay.
+    - `minDelay`: The minimum delay in milliseconds before the
+      next `sync` event (or the first sync event if it is periodic). The
+      default is `0`.
+    - `minPeriod`: The minimum time
+      in milliseconds between periodic sync events. The default is `0`,
+      meaning events are not periodic.
+    - `minRequiredNetwork`: The network condition under which background
+      synchronization will occur. Valid values are `'network-any'`,
+      `'network-offline'`, `'network-online'`,
+      `'network-non-mobile'`. The default value is
+      `'network-online'`.
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

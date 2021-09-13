@@ -2,54 +2,52 @@
 title: PublicKeyCredentialRequestOptions.userVerification
 slug: Web/API/PublicKeyCredentialRequestOptions/userVerification
 tags:
-- API
-- Property
-- PublicKeyCredentialRequestOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialRequestOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions.userVerification
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>userVerification</code></strong> is an optional property of the
-  {{domxref("PublicKeyCredentialRequestOptions")}}. This is a string which indicates how
-  the user verification should be part of the authentication process.</p>
+**`userVerification`** is an optional property of the
+{{domxref("PublicKeyCredentialRequestOptions")}}. This is a string which indicates how
+the user verification should be part of the authentication process.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An analogous option exists for the creation operation
-    ({{domxref("CredentialsContainer.create","navigators.credentials.create()")}}), see
-    the <code>userVerification</code> property of
-    {{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}}.</p>
-</div>
+> **Note:** An analogous option exists for the creation operation
+> ({{domxref("CredentialsContainer.create","navigators.credentials.create()")}}), see
+> the `userVerification` property of
+> {{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>userVerification </em>= <em>publicKeyCredentialRequestOptions</em>.userVerification</pre>
+```js
+userVerification = publicKeyCredentialRequestOptions.userVerification
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string qualifying how the user verification should be part of the authentication
-  process. The values may be:</p>
+A string qualifying how the user verification should be part of the authentication
+process. The values may be:
 
-<ul>
-  <li><code>"required"</code>: user verification is required, the operation will fail if
-    the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not have the UV
-    flag (as part of {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})</li>
-  <li><code>"preferred"</code>: user verification is preferred, the operation will not
-    fail if the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not
-    have the UV flag (as part of
-    {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})</li>
-  <li><code>"discouraged"</code>: user verification should not be employed as to minimize
-    the user interaction during the process.</li>
-</ul>
+- `"required"`: user verification is required, the operation will fail if
+  the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not have the UV
+  flag (as part of {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})
+- `"preferred"`: user verification is preferred, the operation will not
+  fail if the {{domxref("AuthenticatorAssertionResponse","response","",1)}} does not
+  have the UV flag (as part of
+  {{domxref("AuthenticatorAssertionResponse.authenticatorData")}})
+- `"discouraged"`: user verification should not be employed as to minimize
+  the user interaction during the process.
 
-<p>The default value is <code>"preferred"</code>.</p>
+The default value is `"preferred"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   userVerification: "preferred",
   challenge: new Uint8Array([/* bytes sent from the server */]),
 };
@@ -61,20 +59,18 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}} whose
-    <code>userVerification</code> property serves the same purpose for credential
-    creation.</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}} whose
+  `userVerification` property serves the same purpose for credential
+  creation.

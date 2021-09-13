@@ -12,54 +12,47 @@ tags:
   - WebVR
 browser-compat: api.VRFrameData
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRFrameData</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.</p>
+The **`VRFrameData`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents all the information needed to render a single frame of a VR scene; constructed by {{domxref("VRDisplay.getFrameData()")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("VRFrameData.VRFrameData()")}}</dt>
- <dd>Creates a <code>VRFrameData</code> object instance.</dd>
-</dl>
+- {{domxref("VRFrameData.VRFrameData()")}}
+  - : Creates a `VRFrameData` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye’s rendering.</dd>
- <dt>{{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye’s rendering.</dd>
- <dt>{{domxref("VRFrameData.pose")}} {{readonlyInline}}</dt>
- <dd>The {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.</dd>
- <dt>{{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye’s rendering.</dd>
- <dt>{{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}</dt>
- <dd>A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye’s rendering.</dd>
- <dt>{{domxref("VRFrameData.timestamp")}} {{readonlyInline}}</dt>
- <dd>A constantly increasing timestamp value representing the time a frame update occurred.</dd>
-</dl>
+- {{domxref("VRFrameData.leftProjectionMatrix")}} {{readonlyInline}}
+  - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the left eye’s rendering.
+- {{domxref("VRFrameData.leftViewMatrix")}} {{readonlyInline}}
+  - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye’s rendering.
+- {{domxref("VRFrameData.pose")}} {{readonlyInline}}
+  - : The {{domxref("VRPose")}} of the {{domxref("VRDisplay")}} at the current {{domxref("VRFrameData.timestamp")}}.
+- {{domxref("VRFrameData.rightProjectionMatrix")}} {{readonlyInline}}
+  - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye’s rendering.
+- {{domxref("VRFrameData.rightViewMatrix")}} {{readonlyInline}}
+  - : A {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye’s rendering.
+- {{domxref("VRFrameData.timestamp")}} {{readonlyInline}}
+  - : A constantly increasing timestamp value representing the time a frame update occurred.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/VRDisplay/getFrameData#examples"><code>VRDisplay.getFrameData()</code></a> for example code.</p>
+See [`VRDisplay.getFrameData()`](/en-US/docs/Web/API/VRDisplay/getFrameData#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

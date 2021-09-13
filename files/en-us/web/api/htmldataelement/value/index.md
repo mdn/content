@@ -2,34 +2,36 @@
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
 tags:
-- API
-- HTML DOM
-- HTMLDataElement
-- Property
-- Reference
-- data
-- value
+  - API
+  - HTML DOM
+  - HTMLDataElement
+  - Property
+  - Reference
+  - data
+  - value
 browser-compat: api.HTMLDataElement.value
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>value</code></strong> property of the {{domxref("HTMLDataElement")}}
-  interface returns a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value",
-  "data")}} HTML attribute.</p>
+The **`value`** property of the {{domxref("HTMLDataElement")}}
+interface returns a {{domxref("DOMString")}} reflecting the {{htmlattrxref("value",
+  "data")}} HTML attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>aValue</em> = <em>htmlDataElement</em>.<em>value</em>
-<em>htmlDataElement</em>.<em>value</em> = <em>aValue</em></pre>
+```js
+var aValue = htmlDataElement.value
+htmlDataElement.value = aValue
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

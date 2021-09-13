@@ -9,65 +9,61 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>matchAll()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.</p>
+The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns an array of matching {{domxref("BackgroundFetchRecord")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let records = BackgroundFetchRegistration.matchAll(request,options);</pre>
+    let records = BackgroundFetchRegistration.matchAll(request,options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>request</code></dt>
-  <dd>The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for the <code>match</code> operation. The available
+- `request`
+  - : The {{domxref("Request")}} for which you are attempting to find records.
+    This can be a {{domxref("Request")}} object or a URL.
+- `options` {{optional_inline}}
+
+  - : An object that sets options for the `match` operation. The available
     options are:
-    <dl>
-      <dt><code>ignoreSearch</code></dt>
-      <dd>A boolean value that specifies whether to
+
+    - `ignoreSearch`
+      - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
-        <code>true</code> the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</dd>
-      <dt><code>ignoreMethod</code></dt>
-      <dd>A boolean value. When <code>true</code>,
-        prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
-        If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
-      <dt><code>ignoreVary</code></dt>
-      <dd>A boolean value. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+        `true` the `?value=bar` part of
+        `http://foo.com/?value=bar` would be ignored when performing a match.
+        It defaults to `false`.
+    - `ignoreMethod`
+      - : A boolean value. When `true`,
+        prevents matching operations from validating the {{domxref("Request")}} `http` method.
+        If `false` (the default) only `GET` and `HEAD` are allowed.
+    - `ignoreVary`
+      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
         header should be ignored.
-        It defaults to <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        It defaults to `false`.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("BackgroundFetchRecord")}} objects.</p>
+A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("BackgroundFetchRecord")}} objects.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is <code>false</code>, indicating that there is not a fetch in progress, return a promise that resolves with an <code>InvalidStateError</code> {{domxref("DOMException")}}.</dd>
-</dl>
+- `InvalidStateError`
+  - : If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is not a fetch in progress, return a promise that resolves with an `InvalidStateError` {{domxref("DOMException")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Use <code>matchAll()</code> with no parameters to return all of the records in a background fetch.</p>
+Use `matchAll()` with no parameters to return all of the records in a background fetch.
 
-<pre class="brush: js">const records = await bgFetch.matchAll();
+```js
+const records = await bgFetch.matchAll();
 console.log(records); // an array of BackgroundFetchRecord objects
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

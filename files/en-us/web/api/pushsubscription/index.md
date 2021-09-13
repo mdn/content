@@ -12,39 +12,36 @@ tags:
   - Service Workers
 browser-compat: api.PushSubscription
 ---
-<div>{{SeeCompatTable}}{{ApiRef("Push API")}} </div>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>The <code>PushSubscription</code> interface of the <a href="/en-US/docs/Web/API/Push_API">Push API</a> provides a subcription's URL endpoint and allows unsubscription from a push service.</p>
+The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subcription's URL endpoint and allows unsubscription from a push service.
 
-<p>An instance of this interface can be serialized.</p>
+An instance of this interface can be serialized.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PushSubscription.endpoint")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("USVString")}} containing the endpoint associated with the push subscription.</dd>
- <dt>{{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise. </dd>
- <dt>{{domxref("PushSubscription.options")}} {{readonlyinline}}</dt>
- <dd>An object containing the options used to create the subscription.</dd>
- <dt>{{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the subscription ID associated with the push subscription.</dd>
-</dl>
+- {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
+  - : A {{domxref("USVString")}} containing the endpoint associated with the push subscription.
+- {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
+- {{domxref("PushSubscription.options")}} {{readonlyinline}}
+  - : An object containing the options used to create the subscription.
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
+  - : A {{domxref("DOMString")}} containing the subscription ID associated with the push subscription.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PushSubscription.getKey()")}}</dt>
- <dd>Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.</dd>
- <dt>{{domxref("PushSubscription.toJSON()")}}</dt>
- <dd>Standard serializer — returns a JSON representation of the subscription properties.</dd>
- <dt>{{domxref("PushSubscription.unsubscribe()")}}</dt>
- <dd>Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.</dd>
-</dl>
+- {{domxref("PushSubscription.getKey()")}}
+  - : Returns an {{jsxref("ArrayBuffer")}} which contains the client's public key, which can then be sent to a server and used in encrypting push message data.
+- {{domxref("PushSubscription.toJSON()")}}
+  - : Standard serializer — returns a JSON representation of the subscription properties.
+- {{domxref("PushSubscription.unsubscribe()")}}
+  - : Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
       // You've successfully unsubscribed
@@ -52,19 +49,18 @@ browser-compat: api.PushSubscription
       // Unsubscription failed
     })
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Push API](/en-US/docs/Web/API/Push_API)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

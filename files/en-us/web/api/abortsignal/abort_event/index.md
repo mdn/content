@@ -9,64 +9,69 @@ tags:
   - abort
 browser-compat: api.AbortSignal.abort_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>abort</strong></code> event of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> is fired when a fetch request is aborted, i.e. using {{domxref("AbortController.abort()")}}.</p>
+The **`abort`** event of the [Fetch API](/en-US/docs/Web/API/Fetch_API) is fired when a fetch request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td><code><a href="/en-US/docs/Web/API/AbortSignal/onabort">onabort</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/AbortSignal/onabort">onabort</a></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippets, we create a new <code>AbortController</code> object, and get its {{domxref("AbortSignal")}} (available using the <code>signal</code> property). Later on we check whether or not it the signal has been aborted using the <code>onabort</code> property, and send an appropriate log to the console.</p>
+In the following snippets, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not it the signal has been aborted using the `onabort` property, and send an appropriate log to the console.
 
-<p>You can use the <code>abort</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `abort` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 signal.addEventListener('abort', function() {
  console.log('Request aborted');
-};</pre>
+};
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/AbortSignal/onabort">onabort</a></code> event handler property:</p>
+Or use the [`onabort`](/en-US/docs/Web/API/AbortSignal/onabort) event handler property:
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 signal.onabort = function() {
   console.log('Request aborted');
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

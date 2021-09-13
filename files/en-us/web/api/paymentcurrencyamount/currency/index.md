@@ -2,67 +2,64 @@
 title: PaymentCurrencyAmount.currency
 slug: Web/API/PaymentCurrencyAmount/currency
 tags:
-- API
-- Commerce
-- Currency
-- Monetary System
-- Money
-- Payment Request
-- Payment Request API
-- PaymentCurrencySystem
-- Reference
-- payment
+  - API
+  - Commerce
+  - Currency
+  - Monetary System
+  - Money
+  - Payment Request
+  - Payment Request API
+  - PaymentCurrencySystem
+  - Reference
+  - payment
 browser-compat: api.PaymentCurrencyAmount.currency
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The {{domxref("PaymentCurrencyAmount")}} property
-    <strong><code>currency</code></strong> is a string which specifies the currency in
-    which the {{domxref("PaymentCurrencyAmount.value", "value")}} is specified.</p>
+The {{domxref("PaymentCurrencyAmount")}} property
+**`currency`** is a string which specifies the currency in
+which the {{domxref("PaymentCurrencyAmount.value", "value")}} is specified.
 
-<p>The
-  value is always specified using the 3-letter codes defined by the <a
-    href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4127</a> standard.</p>
+The
+value is always specified using the 3-letter codes defined by the [ISO 4127](https://www.iso.org/iso-4217-currency-codes.html) standard.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>currency</em> = <em>paymentCurrencyAmount</em>.currency;</pre>
+```js
+currency = paymentCurrencyAmount.currency;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the canonical, three-character currency
-  identification code defined by the <a
-    href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a> standard. This is
-  the currency in which the payment's {{domxref("PaymentCurrencyAmount.value", "value")}}
-  is given. All currency values must include the currency system in this property.</p>
+A {{domxref("DOMString")}} specifying the canonical, three-character currency
+identification code defined by the [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) standard. This is
+the currency in which the payment's {{domxref("PaymentCurrencyAmount.value", "value")}}
+is given. All currency values must include the currency system in this property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example represents the price of $42.95 in US dollars.</p>
+This example represents the price of $42.95 in US dollars.
 
-<pre class="brush: js">let itemPrice = {
+```js
+let itemPrice = {
   currency: "USD",
   value: "42.95"
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-      the Payment Request API</a></li>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing
-      concepts</a></li>
-  <li>{{interwiki("wikipedia", "ISO 4217")}} on Wikipedia</li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing
+  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- {{interwiki("wikipedia", "ISO 4217")}} on Wikipedia

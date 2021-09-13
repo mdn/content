@@ -14,24 +14,26 @@ tags:
   - duration
 browser-compat: api.MediaSource.duration
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>duration</strong></code> property of the {{domxref("MediaSource")}}
-  interface gets and sets the duration of the current media being presented.</p>
+The **`duration`** property of the {{domxref("MediaSource")}}
+interface gets and sets the duration of the current media being presented.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>mediaSource</em>.duration = 5.5; // 5.5 seconds
+```js
+mediaSource.duration = 5.5; // 5.5 seconds
 
-var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
+var myDuration = mediaSource.duration;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double. A value in seconds is expected.</p>
+A double. A value in seconds is expected.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions may be thrown when setting a new value for this property.</p>
+The following exceptions may be thrown when setting a new value for this property.
 
 <table class="no-markdown">
   <thead>
@@ -43,28 +45,33 @@ var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
   <tbody>
     <tr>
       <td><code>InvalidAccessError</code></td>
-      <td>An attempt was made to set a duration value that was negative, or
-        <code>NaN</code>.</td>
+      <td>
+        An attempt was made to set a duration value that was negative, or
+        <code>NaN</code>.
+      </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>{{domxref("MediaSource.readyState")}} is not equal to <code>open</code>, or one
-        or more of the {{domxref("SourceBuffer")}} objects in
-        {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their
-        {{domxref("SourceBuffer.updating")}} property is <code>true</code>.)</td>
+      <td>
+        {{domxref("MediaSource.readyState")}} is not equal to
+        <code>open</code>, or one or more of the
+        {{domxref("SourceBuffer")}} objects in
+        {{domxref("MediaSource.sourceBuffers")}} are being updated
+        (i.e. their {{domxref("SourceBuffer.updating")}} property is
+        <code>true</code>.)
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is based on a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre class="brush: js ">function sourceOpen (_) {
+```js
+function sourceOpen (_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
@@ -79,19 +86,18 @@ var <em>myDuration</em> = <em>mediaSource</em>.duration;</pre>
   });
 };
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

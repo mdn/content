@@ -8,39 +8,33 @@ tags:
   - Reference
 browser-compat: api.HTMLMapElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLMapElement</code></strong> interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements.</p>
+The **`HTMLMapElement`** interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLMapElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the {{HTMLElement("map")}} element for referencing it other context. If the <code>id</code> attribute is set, this must have the same value; and it cannot be <code>null</code> or empty.</dd>
- <dt>{{domxref("HTMLMapElement.areas")}} {{readonlyInline}}</dt>
- <dd>Is a live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.</dd>
-</dl>
+- {{domxref("HTMLMapElement.name")}}
+  - : Is a {{domxref("DOMString")}} representing the {{HTMLElement("map")}} element for referencing it other context. If the `id` attribute is set, this must have the same value; and it cannot be `null` or empty.
+- {{domxref("HTMLMapElement.areas")}} {{readonlyInline}}
+  - : Is a live {{domxref("HTMLCollection")}} representing the {{HTMLElement("area")}} elements associated to this {{HTMLElement("map")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} .</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}} ._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("map") }}.</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("map") }}.

@@ -2,35 +2,37 @@
 title: Sensor.onactivate
 slug: Web/API/Sensor/onactivate
 tags:
-- API
-- EventHandler
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- activate
-- onactivate
+  - API
+  - EventHandler
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - activate
+  - onactivate
 browser-compat: api.Sensor.onactivate
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>onactivate</code></strong> <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> is
-  called when one of the Sensor interface's child interfaces becomes active.</span></p>
+The **`onactivate`** [event handler](/en-US/docs/Web/Events/Event_handlers) is
+called when one of the Sensor interface's child interfaces becomes active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">sensorInstance.onactivate = function
-   sensorInstance.addEventListener('activate', function() { ... })</pre>
+```js
+sensorInstance.onactivate = function
+   sensorInstance.addEventListener('activate', function() { ... })
+```
 
-<p>Because {{domxref('Sensor')}} is a base class, <code>onactivate</code> may only be used
-  on one of its derived classes.</p>
+Because {{domxref('Sensor')}} is a base class, `onactivate` may only be used
+on one of its derived classes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

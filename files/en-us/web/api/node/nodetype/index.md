@@ -2,30 +2,31 @@
 title: Node.nodeType
 slug: Web/API/Node/nodeType
 tags:
-- API
-- DOM
-- Property
-- Reference
+  - API
+  - DOM
+  - Property
+  - Reference
 browser-compat: api.Node.nodeType
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The read-only <code><strong>Node.nodeType</strong></code>
-    property is an integer that identifies what the node is. It distinguishes different
-    kind of nodes from each other, such as {{domxref("Element", "elements")}},
-    {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.</p>
+The read-only **`Node.nodeType`**
+property is an integer that identifies what the node is. It distinguishes different
+kind of nodes from each other, such as {{domxref("Element", "elements")}},
+{{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em><var>type</var></em> = <em>node</em>.nodeType;
-</pre>
+```js
+var type = node.nodeType;
+```
 
-<p>Returns an integer which specifies the type of the node. Possible values are listed in
-  {{anch("Node type constants")}}.</p>
+Returns an integer which specifies the type of the node. Possible values are listed in
+{{anch("Node type constants")}}.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<h3 id="Node_type_constants">Node type constants</h3>
+### Node type constants
 
 <table class="no-markdown">
   <thead>
@@ -39,35 +40,50 @@ browser-compat: api.Node.nodeType
     <tr>
       <td><code>Node.ELEMENT_NODE</code></td>
       <td><code>1</code></td>
-      <td>An {{domxref("Element")}} node like {{HTMLElement("p")}} or
-        {{HTMLElement("div")}}.</td>
+      <td>
+        An {{domxref("Element")}} node like {{HTMLElement("p")}}
+        or {{HTMLElement("div")}}.
+      </td>
     </tr>
     <tr>
       <td><code>Node.ATTRIBUTE_NODE</code></td>
       <td><code>2</code></td>
-      <td>An {{domxref("Attr", "Attribute")}} of an {{domxref("Element")}}.</td>
+      <td>
+        An {{domxref("Attr", "Attribute")}} of an
+        {{domxref("Element")}}.
+      </td>
     </tr>
     <tr>
       <td><code>Node.TEXT_NODE</code></td>
       <td><code>3</code></td>
-      <td>The actual {{domxref("Text")}} inside an {{domxref("Element")}} or
-        {{domxref("Attr")}}.</td>
+      <td>
+        The actual {{domxref("Text")}} inside an
+        {{domxref("Element")}} or {{domxref("Attr")}}.
+      </td>
     </tr>
     <tr>
       <td><code>Node.CDATA_SECTION_NODE</code></td>
       <td><code>4</code></td>
-      <td>A {{domxref("CDATASection")}}, such as <code>&lt;!CDATA[[ … ]]&gt;</code>.</td>
+      <td>
+        A {{domxref("CDATASection")}}, such as
+        <code>&#x3C;!CDATA[[ … ]]></code>.
+      </td>
     </tr>
     <tr>
       <td><code>Node.PROCESSING_INSTRUCTION_NODE</code></td>
       <td><code>7</code></td>
-      <td>A {{domxref("ProcessingInstruction")}} of an XML document, such as
-        <code>&lt;?xml-stylesheet … ?&gt;</code>.</td>
+      <td>
+        A {{domxref("ProcessingInstruction")}} of an XML document,
+        such as <code>&#x3C;?xml-stylesheet … ?></code>.
+      </td>
     </tr>
     <tr>
       <td><code>Node.COMMENT_NODE</code></td>
       <td><code>8</code></td>
-      <td>A {{domxref("Comment")}} node, such as <code>&lt;!-- … --&gt;</code>.</td>
+      <td>
+        A {{domxref("Comment")}} node, such as
+        <code>&#x3C;!-- … --></code>.
+      </td>
     </tr>
     <tr>
       <td><code>Node.DOCUMENT_NODE</code></td>
@@ -77,7 +93,9 @@ browser-compat: api.Node.nodeType
     <tr>
       <td><code>Node.DOCUMENT_TYPE_NODE</code></td>
       <td><code>10</code></td>
-      <td>A {{domxref("DocumentType")}} node, such as <code>&lt;!DOCTYPE html&gt;</code>.
+      <td>
+        A {{domxref("DocumentType")}} node, such as
+        <code>&#x3C;!DOCTYPE html></code>.
       </td>
     </tr>
     <tr>
@@ -88,14 +106,15 @@ browser-compat: api.Node.nodeType
   </tbody>
 </table>
 
-<p>The following constants have been deprecated and are not in use anymore: <code>Node.ENTITY_REFERENCE_NODE</code> (5),
-  <code>Node.ENTITY_NODE</code> (6), and <code>Node.NOTATION_NODE</code> (12).</p>
+The following constants have been deprecated and are not in use anymore: `Node.ENTITY_REFERENCE_NODE` (5),
+`Node.ENTITY_NODE` (6), and `Node.NOTATION_NODE` (12).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Different_types_of_nodes">Different types of nodes</h3>
+### Different types of nodes
 
-<pre class="brush: js">document.nodeType === Node.DOCUMENT_NODE; // true
+```js
+document.nodeType === Node.DOCUMENT_NODE; // true
 document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
 document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
@@ -105,23 +124,24 @@ p.textContent = "Once upon a time…";
 
 p.nodeType === Node.ELEMENT_NODE; // true
 p.firstChild.nodeType === Node.TEXT_NODE; // true
-</pre>
+```
 
-<h3 id="Comments">Comments</h3>
+### Comments
 
-<p>This example checks if the first node inside the document element is a comment, and
-  displays a message if not.</p>
+This example checks if the first node inside the document element is a comment, and
+displays a message if not.
 
-<pre class="brush: js">var node = document.documentElement.firstChild;
+```js
+var node = document.documentElement.firstChild;
 if (node.nodeType !== Node.COMMENT_NODE) {
   console.warn("You should comment your code!");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

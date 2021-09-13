@@ -10,76 +10,72 @@ tags:
   - Read-only
 browser-compat: api.Node.baseURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>baseURI</strong></code> read-only property returns the absolute base
-  URL of a {{domxref("Node")}}.</p>
+The **`baseURI`** read-only property returns the absolute base
+URL of a {{domxref("Node")}}.
 
-<p>The base URL is used to resolve relative URLs when the browser needs to obtain an
-  absolute URL, for example when processing the HTML {{HTMLElement("img")}} element's
-  <code>src</code> attribute or XML <code>{{glossary("xlink")}}:href</code> attribute.</p>
+The base URL is used to resolve relative URLs when the browser needs to obtain an
+absolute URL, for example when processing the HTML {{HTMLElement("img")}} element's
+`src` attribute or XML `{{glossary("xlink")}}:href` attribute.
 
-<p>In most cases the base URL is the location of the document, but it can be affected by
-  many factors, including the {{HTMLElement("base")}} element in HTML and the
-  <code><a href="/en-US/docs/Web/XML/xml:base">xml:base</a></code> attribute in XML.</p>
+In most cases the base URL is the location of the document, but it can be affected by
+many factors, including the {{HTMLElement("base")}} element in HTML and the
+[`xml:base`](/en-US/docs/Web/XML/xml:base) attribute in XML.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>nodeBaseURI</em> = <em>node</em>.baseURI;
-</pre>
+```js
+var nodeBaseURI = node.baseURI;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{ domxref("DOMString") }} representing the base URL of the specified
-  {{domxref("Node")}}. It may be <code>null</code> if unable to obtain an absolute URI.
-  Although this property is read-only, its value may change in certain situations (see
-  below).</p>
+A {{ domxref("DOMString") }} representing the base URL of the specified
+{{domxref("Node")}}. It may be `null` if unable to obtain an absolute URI.
+Although this property is read-only, its value may change in certain situations (see
+below).
 
-<h2 id="Details">Details</h2>
+## Details
 
-<h3 id="The_base_URL_of_a_document">The base URL of a document</h3>
+### The base URL of a document
 
-<p>The base URL of a <em>document</em> defaults to the document's address (as displayed by
-  the browser and available in {{domxref("window.location")}}), but it can be changed:</p>
+The base URL of a _document_ defaults to the document's address (as displayed by
+the browser and available in {{domxref("window.location")}}), but it can be changed:
 
-<ul>
-  <li>When an HTML {{HTMLElement("base")}} tag is found in the document</li>
-  <li>When the document is new (created dynamically)</li>
-</ul>
+- When an HTML {{HTMLElement("base")}} tag is found in the document
+- When the document is new (created dynamically)
 
-<p>See the <a href="https://developers.whatwg.org/urls.html#base-urls">Base URLs section of
-    the HTML Living standard</a> for details.</p>
+See the [Base URLs section of
+the HTML Living standard](https://developers.whatwg.org/urls.html#base-urls) for details.
 
-<p>You can use <code>{{domxref("document")}}.baseURI</code> to obtain the base URL of a
-  document. Note that obtaining the base URL for a document may return different URLs over
-  time if the {{HTMLElement("base")}} tags or the document's location change.</p>
+You can use `{{domxref("document")}}.baseURI` to obtain the base URL of a
+document. Note that obtaining the base URL for a document may return different URLs over
+time if the {{HTMLElement("base")}} tags or the document's location change.
 
-<h3 id="The_base_URL_of_an_element">The base URL of an element</h3>
+### The base URL of an element
 
-<p>The base URL of an <em>element</em> in HTML normally equals the base URL of the
-  document the node is in.</p>
+The base URL of an _element_ in HTML normally equals the base URL of the
+document the node is in.
 
-<p>If the document contains <code><a href="/en-US/docs/Web/XML/xml:base">xml:base</a></code>
-  attributes (which you shouldn't do in HTML documents), the
-  <code><em>element</em>.baseURI</code> takes the <code>xml:base</code> attributes of
-  element's parents into account when computing the base URL. See <a
-    href="/en-US/docs/Web/XML/xml:base">xml:base</a> for details.</p>
+If the document contains [`xml:base`](/en-US/docs/Web/XML/xml:base)
+attributes (which you shouldn't do in HTML documents), the
+`element.baseURI` takes the `xml:base` attributes of
+element's parents into account when computing the base URL. See [xml:base](/en-US/docs/Web/XML/xml:base) for details.
 
-<p>You can use <code>{{domxref("element")}}.baseURI</code> to obtain the base URL of an
-  element.</p>
+You can use `{{domxref("element")}}.baseURI` to obtain the base URL of an
+element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("base")}} element (HTML)</li>
-  <li><code><a href="/en-US/docs/Web/XML/xml:base">xml:base</a></code> attribute (XML
-    documents).</li>
-</ul>
+- {{HTMLElement("base")}} element (HTML)
+- [`xml:base`](/en-US/docs/Web/XML/xml:base) attribute (XML
+  documents).

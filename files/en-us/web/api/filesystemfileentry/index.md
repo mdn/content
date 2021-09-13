@@ -11,32 +11,28 @@ tags:
   - Reference
 browser-compat: api.FileSystemFileEntry
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <strong><code>FileSystemFileEntry</code></strong> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> represents a file in a file system. It offers properties describing the file's attributes, as well as the {{domxref("FileSystemFileEntry.file", "file()")}} method, which creates a {{domxref("File")}} object that can be used to read the file.</p>
+The **`FileSystemFileEntry`** interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It offers properties describing the file's attributes, as well as the {{domxref("FileSystemFileEntry.file", "file()")}} method, which creates a {{domxref("File")}} object that can be used to read the file.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits the properties of its parent interface, {{domxref("FileSystemEntry")}}, but has no properties unique to this interface.</em></p>
+_Inherits the properties of its parent interface, {{domxref("FileSystemEntry")}}, but has no properties unique to this interface._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("FileSystemFileEntry.file", "file()")}}</dt>
-	<dd>Creates a new {{domxref("File")}} object which can be used to read the file.</dd>
-</dl>
+- {{domxref("FileSystemFileEntry.file", "file()")}}
+  - : Creates a new {{domxref("File")}} object which can be used to read the file.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
-	<li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -11,32 +11,33 @@ tags:
   - Secure context
 browser-compat: api.Geolocation.clearWatch
 ---
-<p>{{securecontext_header}}{{ APIref("Geolocation API") }}</p>
+{{securecontext_header}}{{ APIref("Geolocation API") }}
 
-<p>The <strong><code>Geolocation.clearWatch()</code></strong> method is used to unregister
-  location/error monitoring handlers previously installed using
-  {{domxref("Geolocation.watchPosition()")}}.</p>
+The **`Geolocation.clearWatch()`** method is used to unregister
+location/error monitoring handlers previously installed using
+{{domxref("Geolocation.watchPosition()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.geolocation.clearWatch(<var>id</var>);</pre>
+```js
+navigator.geolocation.clearWatch(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>id</var></code></dt>
-  <dd>The ID number returned by the {{domxref("Geolocation.watchPosition()")}} method when
-    installing the handler you wish to remove.</dd>
-</dl>
+- `id`
+  - : The ID number returned by the {{domxref("Geolocation.watchPosition()")}} method when
+    installing the handler you wish to remove.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var id, target, option;
+```js
+var id, target, option;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulation, you reach the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -58,21 +59,19 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</a></li>
-  <li>{{domxref("Geolocation")}}</li>
-  <li>{{domxref("Geolocation.watchPosition()")}}</li>
-  <li>{{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}
+- {{domxref("Geolocation.watchPosition()")}}
+- {{domxref("Geolocation.getCurrentPosition()")}}

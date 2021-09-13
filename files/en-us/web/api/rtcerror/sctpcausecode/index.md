@@ -2,46 +2,46 @@
 title: RTCError.sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
 tags:
-- API
-- Error
-- Networking
-- Property
-- RTCError
-- Read-only
-- Reference
-- SCTP
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- sctpCauseCode
+  - API
+  - Error
+  - Networking
+  - Property
+  - RTCError
+  - Read-only
+  - Reference
+  - SCTP
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - sctpCauseCode
 browser-compat: api.RTCError.sctpCauseCode
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code><strong>sctpCauseCode</strong></code> property in an
-  {{domxref("RTCError")}} object provides the {{Glossary("SCTP")}} cause code explaining
-  why the SCTP negotiation failed, if the <code>RTCError</code> represents an SCTP error.
-</p>
+The read-only **`sctpCauseCode`** property in an
+{{domxref("RTCError")}} object provides the {{Glossary("SCTP")}} cause code explaining
+why the SCTP negotiation failed, if the `RTCError` represents an SCTP error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>sctpCause</em> = <em>rtcError</em>.sctpCauseCode;</pre>
+```js
+let sctpCause = rtcError.sctpCauseCode;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long integer value specifying SCTP cause code explaining why the error
-  occurred. This property is <code>null</code> if the error isn't an SCTP error, with its
-  {{domxref("RTCError.errorDetail", "errorDetail")}} property set to
-  <code>sctp-failure</code>.</p>
+An unsigned long integer value specifying SCTP cause code explaining why the error
+occurred. This property is `null` if the error isn't an SCTP error, with its
+{{domxref("RTCError.errorDetail", "errorDetail")}} property set to
+`sctp-failure`.
 
-<p>The standard SCTP error cause codes, numbered 1-13, are defined in the SCTP
-  specification: {{RFC(4960, "", "3.3.10")}}.</p>
+The standard SCTP error cause codes, numbered 1-13, are defined in the SCTP
+specification: {{RFC(4960, "", "3.3.10")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,54 +2,57 @@
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 tags:
-- API
-- Blending
-- Canvas
-- CanvasRenderingContext2D
-- Compositing
-- Property
-- Reference
+  - API
+  - Blending
+  - Canvas
+  - CanvasRenderingContext2D
+  - Compositing
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.globalCompositeOperation</code></strong>
-  property of the Canvas 2D API sets the type of compositing operation to apply when
-  drawing new shapes.</p>
+The
+**`CanvasRenderingContext2D.globalCompositeOperation`**
+property of the Canvas 2D API sets the type of compositing operation to apply when
+drawing new shapes.
 
-<p>See also <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing and
-    clipping</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-    Tutorial</a>.</p>
+See also [Compositing and
+clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the [Canvas
+Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>ctx</em>.globalCompositeOperation = <em>type</em>;</pre>
+```js
+ctx.globalCompositeOperation = type;
+```
 
-<p><code>type</code> is a {{jsxref("String")}} identifying which of the compositing or
-  blending mode operations to use.</p>
+`type` is a {{jsxref("String")}} identifying which of the compositing or
+blending mode operations to use.
 
-<h3 id="Types">Types</h3>
+### Types
 
-<p>{{EmbedLiveSample("Compositing_example", 750, 6900, ""
-  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
+{{EmbedLiveSample("Compositing_example", 750, 6900, ""
+  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_composite_operation">Changing the composite operation</h3>
+### Changing the composite operation
 
-<p>This example uses the <code>globalCompositeOperation</code> property to draw two
-  rectangles that exclude themselves where they overlap.</p>
+This example uses the `globalCompositeOperation` property to draw two
+rectangles that exclude themselves where they overlap.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.globalCompositeOperation = 'xor';
@@ -59,43 +62,36 @@ ctx.fillRect(10, 10, 100, 100);
 
 ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<ul>
-  <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-    <code>ctx.setCompositeOperation()</code> is implemented besides this property.</li>
-  <li>Support for <code>"plus-darker"</code> and <code>"darker"</code> were removed in
-    Chrome 48. Developers looking for a replacement should use <code>"darken"</code>.</li>
-</ul>
+- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
+  `ctx.setCompositeOperation()` is implemented besides this property.
+- Support for `"plus-darker"` and `"darker"` were removed in
+  Chrome 48. Developers looking for a replacement should use `"darken"`.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>An early Canvas specification draft specified the value <code>"darker"</code>.
-    However, Firefox removed support for <code>"darker"</code> in version 4
-    ({{bug(571532)}}). See also <a
-      href="http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker">this
-      blog post</a> that suggests using <code>"difference"</code> as a way to achieve a
-    similar affect to <code>"darker"</code>.</li>
-</ul>
+- An early Canvas specification draft specified the value `"darker"`.
+  However, Firefox removed support for `"darker"` in version 4
+  ({{bug(571532)}}). See also [this
+  blog post](http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker) that suggests using `"difference"` as a way to achieve a
+  similar affect to `"darker"`.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.globalAlpha")}}

@@ -15,44 +15,38 @@ tags:
   - events
 browser-compat: api.BlobEvent
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>BlobEvent</code></strong> interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily,  associated with media content.</p>
+The **`BlobEvent`** interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily,  associated with media content.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}</dt>
- <dd>Creates a <code>BlobEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}
+  - : Creates a `BlobEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("BlobEvent.data")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Blob")}} representing the data associated with the event. The event was fired on the {{domxref("EventTarget")}} because of something happening on that specific {{domxref("Blob")}}.</dd>
- <dt>{{domxref("BlobEvent.timecode")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the difference between the timestamp of the first chunk in data and the timestamp of the first chunk in the first BlobEvent produced by this recorder. Note that the timecode in the first produced BlobEvent does not need to be zero.</dd>
-</dl>
+- {{domxref("BlobEvent.data")}} {{readonlyInline}}
+  - : A {{domxref("Blob")}} representing the data associated with the event. The event was fired on the {{domxref("EventTarget")}} because of something happening on that specific {{domxref("Blob")}}.
+- {{domxref("BlobEvent.timecode")}} {{readonlyinline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the difference between the timestamp of the first chunk in data and the timestamp of the first chunk in the first BlobEvent produced by this recorder. Note that the timecode in the first produced BlobEvent does not need to be zero.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent {{domxref("Event")}}.</em></p>
+_No specific method; inherits methods from its parent {{domxref("Event")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Event")}} base interface.</li>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a>: Sends <code>BlobEvent</code> objects each time a chunk of media is ready.</li>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a></li>
-</ul>
+- The {{domxref("Event")}} base interface.
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API): Sends `BlobEvent` objects each time a chunk of media is ready.
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

@@ -2,35 +2,36 @@
 title: USBDevice.manufacturerName
 slug: Web/API/USBDevice/manufacturerName
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- manufacturerName
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - manufacturerName
 browser-compat: api.USBDevice.manufacturerName
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>manufacturerName</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface the of the organization that manufactured the USB
-  device.</p>
+The **`manufacturerName`** read only property of the
+{{domxref("USBDevice")}} interface the of the organization that manufactured the USB
+device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var serialNumber = USBDevice.manufacturerName</pre>
+```js
+var serialNumber = USBDevice.manufacturerName
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("DOMString")}}.</p>
+A {{jsxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

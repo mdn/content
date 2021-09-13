@@ -3,33 +3,29 @@ title: MediaImage
 slug: Web/API/MediaImage
 browser-compat: api.MediaImage
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The Media Session API's <code><strong>MediaImage</strong></code> dictionary describes the images associated with a media resource's {{domxref("MediaMetadata")}}.</p>
+The Media Session API's **`MediaImage`** dictionary describes the images associated with a media resource's {{domxref("MediaMetadata")}}.
 
-<p>Its contents can be displayed by the {{Glossary("user agent")}} in appropriate contexts like in a player interface to show the current playing video or audio track.</p>
+Its contents can be displayed by the {{Glossary("user agent")}} in appropriate contexts like in a player interface to show the current playing video or audio track.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaImage.src", "src")}}</dt>
- <dd>The URL from which the user agent fetches the image's data.</dd>
- <dt>{{domxref("MediaImage.sizes", "sizes")}}</dt>
- <dd>Specifies the resource in multiple sizes so the user agent doesn't have to scale a single image.</dd>
- <dt>{{domxref("MediaImage.type", "type")}}</dt>
- <dd>The {{Glossary("MIME type")}} hint for the user agent that allows it to ignore images of types that it doesn't support. However, the user agent may still use MIME type sniffing after downloading the image to determine its type.</dd>
-</dl>
+- {{domxref("MediaImage.src", "src")}}
+  - : The URL from which the user agent fetches the image's data.
+- {{domxref("MediaImage.sizes", "sizes")}}
+  - : Specifies the resource in multiple sizes so the user agent doesn't have to scale a single image.
+- {{domxref("MediaImage.type", "type")}}
+  - : The {{Glossary("MIME type")}} hint for the user agent that allows it to ignore images of types that it doesn't support. However, the user agent may still use MIME type sniffing after downloading the image to determine its type.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaMetadata.artwork")}}</li>
-</ul>
+- {{domxref("MediaMetadata.artwork")}}

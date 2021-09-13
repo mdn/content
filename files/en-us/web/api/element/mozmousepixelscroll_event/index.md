@@ -16,52 +16,48 @@ tags:
   - Deprecated
 browser-compat: api.Element.MozMousePixelScroll_event
 ---
-<p>{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}</p>
+{{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
-<p>The Firefox-only, <em>non-standard</em>, and <em>obsolete</em> <strong><code>MozMousePixelScroll</code></strong> event is fired at an {{domxref("Element")}} asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseScrollEvent") }} interface.</p>
+The Firefox-only, _non-standard_, and _obsolete_ **`MozMousePixelScroll`** event is fired at an {{domxref("Element")}} asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseScrollEvent") }} interface.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Do not use this non-standard and obsolete event. Instead, you should always use the standard {{domxref("Element.wheel_event", "wheel")}} event.</p>
-</div>
+> **Note:** Do not use this non-standard and obsolete event. Instead, you should always use the standard {{domxref("Element.wheel_event", "wheel")}} event.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseScrollEvent")}} {{Deprecated_inline}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>
+        {{domxref("MouseScrollEvent")}} {{Deprecated_inline}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Getting_the_distance_scrolled">Getting the distance scrolled</h2>
+## Getting the distance scrolled
 
-<p>The event's {{domxref("UIEvent/detail", "detail")}} property indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.</p>
+The event's {{domxref("UIEvent/detail", "detail")}} property indicates the scroll distance in terms of lines, with negative values indicating the scrolling movement is either toward the bottom or toward the right, and positive values indicating scrolling to the top or left.
 
-<p>If the platform's native mouse wheel events indicate the scroll distance in terms of lines or pages, the value of <code>detail</code> is computed using that value and the line height or page width/height of the nearest ancestor scrollable element that contains the target element.</p>
+If the platform's native mouse wheel events indicate the scroll distance in terms of lines or pages, the value of `detail` is computed using that value and the line height or page width/height of the nearest ancestor scrollable element that contains the target element.
 
-<div class="notecard note">
-<p><strong>Note:</strong> On macOS, the scroll distance (and therefore the value of <code>detail</code>) is computed based on the accelerated scroll distance.</p>
-</div>
+> **Note:** On macOS, the scroll distance (and therefore the value of `detail`) is computed based on the accelerated scroll distance.
 
-<p>The value of <code>detail</code> is never 0 if the events are legitimate.</p>
+The value of `detail` is never 0 if the events are legitimate.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("MouseScrollEvent") }}</li>
- <li>Gecko's legacy line or page scroll event: <code>DOMMouseScroll</code></li>
- <li>Non-Gecko browsers' legacy mouse wheel event: <code>mousewheel</code></li>
- <li>Standardized wheel event: <code>wheel</code></li>
-</ul>
+- {{ domxref("MouseScrollEvent") }}
+- Gecko's legacy line or page scroll event: `DOMMouseScroll`
+- Non-Gecko browsers' legacy mouse wheel event: `mousewheel`
+- Standardized wheel event: `wheel`

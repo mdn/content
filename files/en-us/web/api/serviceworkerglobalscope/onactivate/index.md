@@ -12,20 +12,22 @@ tags:
   - onactivate
 browser-compat: api.ServiceWorkerGlobalScope.onactivate
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong>onactivate</strong> property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an <code>activate</code> event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes.</p>
+The **onactivate** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired whenever an `activate` event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.onactivate = function(event) { ... };
-</pre>
+```js
+ServiceWorkerGlobalScope.onactivate = function(event) { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet shows how you could use an <code>activate</code> event handler to upgrade a cache.</p>
+The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cacheAllowlist = ['v2'];
 
   event.waitUntil(
@@ -35,22 +37,21 @@ browser-compat: api.ServiceWorkerGlobalScope.onactivate
       }
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

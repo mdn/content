@@ -12,44 +12,39 @@ tags:
   - onstatechange
 browser-compat: api.BaseAudioContext.onstatechange
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>onstatechange</code> property of the {{ domxref("BaseAudioContext") }}
-    interface defines an event handler function to be called when the
-    {{Event("statechange")}} event fires: this occurs when the audio context's state
-    changes.</p>
-</div>
+The `onstatechange` property of the {{ domxref("BaseAudioContext") }}
+interface defines an event handler function to be called when the
+{{Event("statechange")}} event fires: this occurs when the audio context's state
+changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">baseAudioContext.onstatechange = function() { ... };</pre>
+```js
+baseAudioContext.onstatechange = function() { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is taken from our <a
-    href="https://github.com/mdn/webaudio-examples">AudioContext states demo</a> (<a
-    href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running
-    live</a>.) The <code>onstatechange</code> handler is used to log the current
-  {{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.</p>
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
+live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The `onstatechange` handler is used to log the current
+{{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.
 
-<pre class="brush: js">audioCtx.onstatechange = function() {
+```js
+audioCtx.onstatechange = function() {
   console.log(audioCtx.state);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

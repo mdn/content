@@ -9,31 +9,31 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.protocol
 ---
-<p>{{ApiRef("WorkerLocation")}}</p>
+{{ApiRef("WorkerLocation")}}
 
-<p>The <strong><code>protocol</code></strong> property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker’s location.</p>
+The **`protocol`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.protocol", "protocol")}} part of the worker’s location.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>string</em> = <em>location</em>.protocol;</pre>
+```js
+string = location.protocol;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
+```js
+// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
 var result = location.protocol; // Returns 'https:'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{domxref("WorkerLocation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("WorkerLocation")}} interface it belongs to.

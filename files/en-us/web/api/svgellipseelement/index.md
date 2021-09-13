@@ -8,43 +8,44 @@ tags:
   - SVG DOM
 browser-compat: api.SVGEllipseElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGEllipseElement</code></strong> interface provides access to the properties of {{SVGElement("ellipse")}} elements.</p>
+The **`SVGEllipseElement`** interface provides access to the properties of {{SVGElement("ellipse")}} elements.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGGeometryElement")}}._
 
-<dl>
- <dt>{{domxref("SVGEllipseElement.cx")}} {{readonlyInline}}</dt>
- <dd>This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.</dd>
- <dt>{{domxref("SVGEllipseElement.cy")}} {{readonlyInline}}</dt>
- <dd>This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cy")}} attribute of the given {{SVGElement("ellipse")}} element.</dd>
- <dt>{{domxref("SVGEllipseElement.rx")}} {{readonlyInline}}</dt>
- <dd>This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("rx")}} attribute of the given {{SVGElement("ellipse")}} element.</dd>
- <dt>{{domxref("SVGEllipseElement.ry")}} {{readonlyInline}}</dt>
- <dd>This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("ry")}} attribute of the given {{SVGElement("ellipse")}} element.</dd>
-</dl>
+- {{domxref("SVGEllipseElement.cx")}} {{readonlyInline}}
+  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.
+- {{domxref("SVGEllipseElement.cy")}} {{readonlyInline}}
+  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cy")}} attribute of the given {{SVGElement("ellipse")}} element.
+- {{domxref("SVGEllipseElement.rx")}} {{readonlyInline}}
+  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("rx")}} attribute of the given {{SVGElement("ellipse")}} element.
+- {{domxref("SVGEllipseElement.ry")}} {{readonlyInline}}
+  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("ry")}} attribute of the given {{SVGElement("ellipse")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG_content">SVG content</h3>
+### SVG content
 
-<pre class="brush: html">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;ellipse cx="100" cy="100" rx="100" ry="60" id="ellipse"
-      onclick="outputSize();"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="100" cy="100" rx="100" ry="60" id="ellipse"
+      onclick="outputSize();"/>
+</svg>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">function outputSize() {
+```js
+function outputSize() {
   var ellipse = document.getElementById("ellipse");
 
   // Outputs "horizontal radius: 100 vertical radius: 60"
@@ -52,22 +53,21 @@ browser-compat: api.SVGEllipseElement
     'horizontal radius: ' + ellipse.rx.baseVal.valueAsString,
     'vertical radius: ' + ellipse.ry.baseVal.valueAsString
   )
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 220, 220)}}</p>
+{{EmbedLiveSample("Example", 220, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("ellipse")}} SVG Element</li>
-</ul>
+- {{SVGElement("ellipse")}} SVG Element

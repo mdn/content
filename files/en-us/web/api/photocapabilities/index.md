@@ -13,33 +13,32 @@ tags:
   - Reference
 browser-compat: api.PhotoCapabilities
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>PhotoCapabilities</code></strong> interface of the <a href="/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</a> provides available configuration options for an attached photographic device. A <code>PhotoCapabilities</code> object is retrieved by calling {{domxref("ImageCapture.getPhotoCapabilities()")}}.</p>
+The **`PhotoCapabilities`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides available configuration options for an attached photographic device. A `PhotoCapabilities` object is retrieved by calling {{domxref("ImageCapture.getPhotoCapabilities()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PhotoCapabilities.redEyeReduction")}} {{readonlyinline}}</dt>
- <dd>Returns one of <code>"never"</code>, <code>"always"</code>, or <code>"controllable"</code>. The <code>"controllable"</code> value means the device's red-eye reduction is controllable by the user.</dd>
- <dt>{{domxref("PhotoCapabilities.imageHeight")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("MediaSettingsRange")}} object indicating the image height range supported by the user agent.</dd>
- <dt>{{domxref("PhotoCapabilities.imageWidth")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("MediaSettingsRange")}} object indicating the image width range supported by the user agent.</dd>
- <dt>{{domxref("PhotoCapabilities.fillLightMode")}} {{readonlyinline}}</dt>
- <dd>Returns an array of available fill light options. Options may include <code>auto</code>, <code>off</code>, or <code>flash</code>.</dd>
-</dl>
+- {{domxref("PhotoCapabilities.redEyeReduction")}} {{readonlyinline}}
+  - : Returns one of `"never"`, `"always"`, or `"controllable"`. The `"controllable"` value means the device's red-eye reduction is controllable by the user.
+- {{domxref("PhotoCapabilities.imageHeight")}} {{readonlyinline}}
+  - : Returns a {{domxref("MediaSettingsRange")}} object indicating the image height range supported by the user agent.
+- {{domxref("PhotoCapabilities.imageWidth")}} {{readonlyinline}}
+  - : Returns a {{domxref("MediaSettingsRange")}} object indicating the image width range supported by the user agent.
+- {{domxref("PhotoCapabilities.fillLightMode")}} {{readonlyinline}}
+  - : Returns an array of available fill light options. Options may include `auto`, `off`, or `flash`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example, extracted from <a href="https://googlechrome.github.io/samples/image-capture/photo-resolution.html">Chrome's Image Capture / Photo Resolution Sample</a>, uses the results from {{domxref("ImageCapture.getPhotoCapabilities()", "getPhotoCapabilities()")}} to modify the size of an input range. This example also shows how the {{domxref("ImageCapture")}} object is created using a {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}. </p>
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from {{domxref("ImageCapture.getPhotoCapabilities()", "getPhotoCapabilities()")}} to modify the size of an input range. This example also shows how the {{domxref("ImageCapture")}} object is created using a {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
 
-<pre class="brush: js">const input = document.querySelector('input[type="range"]');
+```js
+const input = document.querySelector('input[type="range"]');
 
 var imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream =&gt; {
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
@@ -47,7 +46,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoCapabilities();
 })
-.then(photoCapabilities =&gt; {
+.then(photoCapabilities => {
   const settings = imageCapture.track.getSettings();
 
   input.min = photoCapabilities.imageWidth.min;
@@ -56,15 +55,16 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoSettings();
 })
-.then(photoSettings =&gt; {
+.then(photoSettings => {
   input.value = photoSettings.imageWidth;
 })
-.catch(error =&gt; console.log('Argh!', error.name || error));</pre>
+.catch(error => console.log('Argh!', error.name || error));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,25 +3,26 @@ title: PaymentRequestEvent.modifiers
 slug: Web/API/PaymentRequestEvent/modifiers
 browser-compat: api.PaymentRequestEvent.modifiers
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>modifiers</code></strong> read-only property of the
-    {{domxref("PaymentRequestEvent")}} interface returns an array of objects containing
-    changes to payment details.</p>
+The **`modifiers`** read-only property of the
+{{domxref("PaymentRequestEvent")}} interface returns an array of objects containing
+changes to payment details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var <em>modifiers</em>[] = <em>paymentDetailsEvent</em>.modifiers</pre>
+```js
+var modifiers[] = paymentDetailsEvent.modifiers
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of modifier objects.</p>
+An array of modifier objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

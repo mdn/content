@@ -2,50 +2,51 @@
 title: GlobalEventHandlers.ondragenter
 slug: Web/API/GlobalEventHandlers/ondragenter
 tags:
-- API
-- HTML DOM
-- Reference
-- drag and drop
+  - API
+  - HTML DOM
+  - Reference
+  - drag and drop
 browser-compat: api.GlobalEventHandlers.ondragenter
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the
-  {{event("dragenter")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the
+{{event("dragenter")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>dragenterHandler</var> = <var>targetElement</var>.ondragenter;
-</pre>
+```js
+var dragenterHandler = targetElement.ondragenter;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>dragenterHandler</code></dt>
-  <dd>The <em>dragenter</em> event handler for element <code>targetElement</code>.</dd>
-</dl>
+- `dragenterHandler`
+  - : The _dragenter_ event handler for element `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates using the
-  {{domxref("GlobalEventHandlers.ondragenter","ondragenter")}} global event handler to set an
-  element's {{event("dragenter")}} event handler.</p>
+This example demonstrates using the
+{{domxref("GlobalEventHandlers.ondragenter","ondragenter")}} global event handler to set an
+element's {{event("dragenter")}} event handler.
 
-<h3 id="HTML">HTML</h3>
-  
-<pre class="brush: html">
-&lt;div&gt;
-  &lt;p id="source" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id="target"&gt;Drop Zone&lt;/div&gt;
+### HTML
 
-&lt;textarea readonly id="event-log"&gt;&lt;/textarea&gt;
-&lt;button id="reload"&gt;Reload&lt;/button&gt;</pre>
+```html
+<div>
+  <p id="source" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+</div>
+<div id="target">Drop Zone</div>
 
-<h3 id="CSS">CSS</h3>
+<textarea readonly id="event-log"></textarea>
+<button id="reload">Reload</button>
+```
 
-<pre class="brush: css">div, #event-log {
+### CSS
+
+```css
+div, #event-log {
     margin: 1em;
 }
 #source, #target {
@@ -61,11 +62,12 @@ browser-compat: api.GlobalEventHandlers.ondragenter
     margin-bottom: 0;
     padding: .2rem;
 }
-</pre>
+```
 
-<h3 id="JS">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const source = document.getElementById("source");
+```js
+const source = document.getElementById("source");
 const target = document.getElementById("target");
 const event_log = document.getElementById("event-log");
 
@@ -125,22 +127,20 @@ const button = document.getElementById("reload");
 button.addEventListener("click", () => {
   document.location.reload();
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', '100', '450') }}</p>
+{{ EmbedLiveSample('Example', '100', '450') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("dragenter")}}</li>
-</ul>
+- {{event("dragenter")}}

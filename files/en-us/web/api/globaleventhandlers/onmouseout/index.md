@@ -2,41 +2,45 @@
 title: GlobalEventHandlers.onmouseout
 slug: Web/API/GlobalEventHandlers/onmouseout
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onmouseout
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <code><strong>onmouseout</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("mouseout")}} events.</p>
+The **`onmouseout`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("mouseout")}} events.
 
-<p>The <code>mouseout</code> event fires when the mouse leaves an element. For example,
-  when the mouse moves off of an image in the web page, the <code>mouseout</code> event is
-  raised for that image element.</p>
+The `mouseout` event fires when the mouse leaves an element. For example,
+when the mouse moves off of an image in the web page, the `mouseout` event is
+raised for that image element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.onmouseout = <em>function</em>;
-</pre>
+```js
+element.onmouseout = function;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds an <code>onmouseout</code> and an <code>onmouseover</code> event to a
-  paragraph. Try moving your mouse over and out of the element.</p>
+This example adds an `onmouseout` and an `onmouseover` event to a
+paragraph. Try moving your mouse over and out of the element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Test your mouse on me!&lt;/p&gt;</pre>
+```html
+<p>Test your mouse on me!</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const p = document.querySelector('p');
+```js
+const p = document.querySelector('p');
 p.onmouseover = logMouseOver;
 p.onmouseout = logMouseOut;
 
@@ -46,16 +50,17 @@ function logMouseOver() {
 
 function logMouseOut() {
   p.textContent = 'MOUSE OUT detected';
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

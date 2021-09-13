@@ -2,56 +2,59 @@
 title: RTCRtpSender.getParameters()
 slug: Web/API/RTCRtpSender/getParameters
 tags:
-- API
-- Audio
-- Method
-- RTCRtpSender
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- getParameters()
+  - API
+  - Audio
+  - Method
+  - RTCRtpSender
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - getParameters()
 browser-compat: api.RTCRtpSender.getParameters
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <strong><code>getParameters()</code></strong> method of
-    the {{domxref("RTCRtpSender")}} interface returns an
-    {{domxref("RTCRtpSendParameters")}} object describing the current configuration for
-    the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.track",
-    "track")}}.</p>
+The **`getParameters()`** method of
+the {{domxref("RTCRtpSender")}} interface returns an
+{{domxref("RTCRtpSendParameters")}} object describing the current configuration for
+the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.track",
+    "track")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rtpSendParameters</em> = <em>rtpSender</em>.getParameters()</pre>
+```js
+var rtpSendParameters = rtpSender.getParameters()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("RTCRtpSendParameters")}} object indicating the current configuration of
-  the sender.</p>
+An {{domxref("RTCRtpSendParameters")}} object indicating the current configuration of
+the sender.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example gets the sender's current transaction ID; the transaction ID uniquely
-  identifies the current set of parameters, to ensure that calls to
-  {{domxref("RTCRtpSender.setParameters", "setParameters()")}} are always handled in the
-  correct order, avoiding inadvertently overwriting parameters with older parameters.</p>
+This example gets the sender's current transaction ID; the transaction ID uniquely
+identifies the current set of parameters, to ensure that calls to
+{{domxref("RTCRtpSender.setParameters", "setParameters()")}} are always handled in the
+correct order, avoiding inadvertently overwriting parameters with older parameters.
 
-<pre class="brush: js">function getSenderTransactionID(sender) {
+```js
+function getSenderTransactionID(sender) {
   let parameters = sender.getParameters();
 
   return parameters.transactionId;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

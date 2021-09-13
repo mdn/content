@@ -2,63 +2,61 @@
 title: TrackEvent()
 slug: Web/API/TrackEvent/TrackEvent
 tags:
-- API
-- Audio
-- Constructor
-- HTML DOM
-- Media
-- Reference
-- TrackEvent
-- Tracks
-- Video
+  - API
+  - Audio
+  - Constructor
+  - HTML DOM
+  - Media
+  - Reference
+  - TrackEvent
+  - Tracks
+  - Video
 browser-compat: api.TrackEvent.TrackEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>TrackEvent()</code></strong> constructor
-    creates and returns a new {{domxref("TrackEvent")}} object describing an event which
-    occurred on a list of tracks ({{domxref("AudioTrackList")}},
-    {{domxref("VideoTrackList")}}, or {{domxref("TextTrackList")}}).</p>
+The **`TrackEvent()`** constructor
+creates and returns a new {{domxref("TrackEvent")}} object describing an event which
+occurred on a list of tracks ({{domxref("AudioTrackList")}},
+{{domxref("VideoTrackList")}}, or {{domxref("TextTrackList")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>trackEvent</em> = new TrackEvent(<em>type</em>, <em>eventInfo</em>);</pre>
+```js
+trackEvent = new TrackEvent(type, eventInfo);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>The type of track event which is described by the object: <code>"addtrack"</code> or
-    <code>"removetrack"</code>.</dd>
-  <dt><code>eventInfo</code> {{optional_inline}}</dt>
-  <dd>An optional dictionary providing additional information configuring the new event;
+- `type`
+  - : The type of track event which is described by the object: `"addtrack"` or
+    `"removetrack"`.
+- `eventInfo` {{optional_inline}}
+
+  - : An optional dictionary providing additional information configuring the new event;
     it can contain the following fields in any combination:
-    <dl>
-      <dt><code>track</code> {{optional_inline}}</dt>
-      <dd>The track to which the event refers; this is <code>null</code> by default, but
+
+    - `track` {{optional_inline}}
+      - : The track to which the event refers; this is `null` by default, but
         should be set to a {{domxref("VideoTrack")}}, {{domxref("AudioTrack")}}, or
-        {{domxref("TextTrack")}} as appropriate given the type of track.</dd>
-      <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A Boolean indicating whether the event bubbles or not.</dd>
-      <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A Boolean indicating whether or not the event can be canceled.</dd>
-      <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A Boolean indicating whether or not the event will trigger listeners outside of
-        a shadow root; see {{domxref("Event.composed")}} for more details.</dd>
-    </dl>
-  </dd>
-</dl>
+        {{domxref("TextTrack")}} as appropriate given the type of track.
+    - `bubbles` {{optional_inline}}
+      - : A Boolean indicating whether the event bubbles or not.
+    - `cancelable` {{optional_inline}}
+      - : A Boolean indicating whether or not the event can be canceled.
+    - `composed` {{optional_inline}}
+      - : A Boolean indicating whether or not the event will trigger listeners outside of
+        a shadow root; see {{domxref("Event.composed")}} for more details.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A newly-created {{domxref("TrackEvent")}} object, initialized as described by the
-  inputs to the constructor.</p>
+A newly-created {{domxref("TrackEvent")}} object, initialized as described by the
+inputs to the constructor.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

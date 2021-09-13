@@ -14,36 +14,32 @@ tags:
   - Usage
 browser-compat: api.StorageEstimate
 ---
-<div>{{securecontext_header}}{{APIRef("Storage")}}</div>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>The <strong><code>StorageEstimate</code></strong> dictionary is used by the {{domxref("StorageManager")}} to provide estimates of the size of a site's or application's data store and how much of it is in use. The {{domxref("StorageManager.estimate", "estimate()")}} method returns an object that conforms to this dictionary when its {{jsxref("Promise")}} resolves.</p>
+The **`StorageEstimate`** dictionary is used by the {{domxref("StorageManager")}} to provide estimates of the size of a site's or application's data store and how much of it is in use. The {{domxref("StorageManager.estimate", "estimate()")}} method returns an object that conforms to this dictionary when its {{jsxref("Promise")}} resolves.
 
-<p>These values are only estimates for several reasons, including both performance and preventing storage capacity data from being used for fingerprinting purposes. See the individual property pages for details.</p>
+These values are only estimates for several reasons, including both performance and preventing storage capacity data from being used for fingerprinting purposes. See the individual property pages for details.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("StorageEstimate.quota", "quota")}} {{securecontext_inline}}</dt>
- <dd>A numeric value in bytes which provides a conservative approximation of the total storage the user's device or computer has available for the site origin or Web app. It's possible that there's more than this amount of space available though you can't rely on that being the case.</dd>
- <dt>{{domxref("StorageEstimate.usage", "usage")}} {{securecontext_inline}}</dt>
- <dd>A numeric value in bytes approximating the amount of storage space currently being used by the site or Web app, out of the available space as indicated by <code>quota</code>. Unit is byte.</dd>
- <dt>{{domxref("StorageEstimate.usageDetails", "usageDetails")}} {{securecontext_inline}}</dt>
- <dd>A dictionary containing a breakdown of <code>usage</code> by storage system. All included members will have a <code>usage</code> greater than 0 and any storage system with 0 <code>usage</code> will be excluded from the dictionary.</dd>
-</dl>
+- {{domxref("StorageEstimate.quota", "quota")}} {{securecontext_inline}}
+  - : A numeric value in bytes which provides a conservative approximation of the total storage the user's device or computer has available for the site origin or Web app. It's possible that there's more than this amount of space available though you can't rely on that being the case.
+- {{domxref("StorageEstimate.usage", "usage")}} {{securecontext_inline}}
+  - : A numeric value in bytes approximating the amount of storage space currently being used by the site or Web app, out of the available space as indicated by `quota`. Unit is byte.
+- {{domxref("StorageEstimate.usageDetails", "usageDetails")}} {{securecontext_inline}}
+  - : A dictionary containing a breakdown of `usage` by storage system. All included members will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the dictionary.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Storage_API">Storage API</a></li>
- <li>{{domxref("StorageManager")}}</li>
- <li>{{domxref("StorageManager.estimate()")}}</li>
- <li>{{domxref("navigator.storage")}}</li>
-</ul>
+- [Storage API](/en-US/docs/Web/API/Storage_API)
+- {{domxref("StorageManager")}}
+- {{domxref("StorageManager.estimate()")}}
+- {{domxref("navigator.storage")}}

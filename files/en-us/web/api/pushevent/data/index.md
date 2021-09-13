@@ -11,24 +11,27 @@ tags:
   - data
 browser-compat: api.PushEvent.data
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code>data</code> read-only property of the <strong><code>PushEvent</code></strong> interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.</p>
+The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myPushData = PushEvent.data;</pre>
+```js
+var myPushData = PushEvent.data;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("PushMessageData")}} object.</p>
+A {{domxref("PushMessageData")}} object.
 
-<p><strong>Examples</strong></p>
+**Examples**
 
-<p>The following example takes data from a PushEvent and displays it on all of the service workers' clients.</p>
+The following example takes data from a PushEvent and displays it on all of the service workers' clients.
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
-  if (!(self.Notification &amp;&amp; self.Notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
 
@@ -52,12 +55,12 @@ browser-compat: api.PushEvent.data
     }
   });
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

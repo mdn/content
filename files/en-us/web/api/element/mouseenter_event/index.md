@@ -15,89 +15,96 @@ tags:
   - pointer
 browser-compat: api.Element.mouseenter_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>mouseenter</code></strong> event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.</p>
+The **`mouseenter`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmouseenter", "onmouseenter")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, <code>mouseenter</code> differs in that it doesn't <a href="/en-US/docs/Web/API/Event/bubbles">bubble</a> and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.</p>
+Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.
 
-<h4>Behavior of <code>mouseenter</code> events:</h4>
+#### Behavior of `mouseenter` events:
 
-<img src="mouseenter.png">
-One <code>mouseenter</code> event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
+![](mouseenter.png)
+One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
-<h4>Behavior of <code>mouseover</code> events:</h4>
+#### Behavior of `mouseover` events:
 
-<img src="mouseover.png">
-A single <code>mouseover</code> event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.</div>
+![](mouseover.png)
+A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
 
-<p>With deep hierarchies, the number of <code>mouseover</code> events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for <code>mouseenter</code> events.</p>
+With deep hierarchies, the number of `mouseover` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseenter` events.
 
-<p>Combined with the corresponding <code>mouseleave</code> (which is fired at the element when the mouse exits its content area), the <code>mouseenter</code> event acts in a very similar way to the CSS {{cssxref(':hover')}} pseudo-class.</p>
+Combined with the corresponding `mouseleave` (which is fired at the element when the mouse exits its content area), the `mouseenter` event acts in a very similar way to the CSS {{cssxref(':hover')}} pseudo-class.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="/en-US/docs/Web/API/Element/mouseover_event#example"><code>mouseover</code></a> documentation has an example illustrating the difference between <code>mouseover</code> and <code>mouseenter</code>.</p>
+The [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event#example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
 
-<h3 id="mouseenter">mouseenter</h3>
+### mouseenter
 
-<p>The following trivial example uses the <code>mouseenter</code> event to change the border on the <code>div</code> when the mouse enters the space alloted to it. It then adds an item to the list with the number of the <code>mouseenter</code> or <code>mouseleave</code> event.</p>
+The following trivial example uses the `mouseenter` event to change the border on the `div` when the mouse enters the space alloted to it. It then adds an item to the list with the number of the `mouseenter` or `mouseleave` event.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id='mouseTarget'&gt;
- &lt;ul id="unorderedList"&gt;
-  &lt;li&gt;No events yet!&lt;/li&gt;
- &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div id='mouseTarget'>
+ <ul id="unorderedList">
+  <li>No events yet!</li>
+ </ul>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>Styling the <code>div</code> to make it more visible.</p>
+Styling the `div` to make it more visible.
 
-<pre class="brush: css">#mouseTarget {
+```css
+#mouseTarget {
   box-sizing: border-box;
   width:15rem;
   border:1px solid #333;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var enterEventCount = 0;
+```js
+var enterEventCount = 0;
 var leaveEventCount = 0;
 const mouseTarget = document.getElementById('mouseTarget');
 const unorderedList = document.getElementById('unorderedList');
 
-mouseTarget.addEventListener('mouseenter', e =&gt; {
+mouseTarget.addEventListener('mouseenter', e => {
   mouseTarget.style.border = '5px dotted orange';
   enterEventCount++;
   addListItem('This is mouseenter event ' + enterEventCount + '.');
 });
 
-mouseTarget.addEventListener('mouseleave', e =&gt; {
+mouseTarget.addEventListener('mouseleave', e => {
   mouseTarget.style.border = '1px solid #333';
   leaveEventCount++;
   addListItem('This is mouseleave event ' + leaveEventCount + '.');
@@ -115,32 +122,31 @@ function addListItem(text) {
 
   // Add the newly created list item to list
   unorderedList.appendChild(newListItem);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('mouseenter')}}</p>
+{{EmbedLiveSample('mouseenter')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

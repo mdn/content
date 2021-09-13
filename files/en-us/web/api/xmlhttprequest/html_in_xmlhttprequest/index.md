@@ -11,36 +11,38 @@ tags:
   - Web
   - XMLHttpRequest
 ---
-<div>{{APIRef("XMLHttpRequest")}}</div>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The W3C {{domxref("XMLHttpRequest")}} specification adds <a href="/en-US/docs/Web/HTML">HTML</a> parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using <code>XMLHttpRequest</code>.</p>
+The W3C {{domxref("XMLHttpRequest")}} specification adds [HTML](/en-US/docs/Web/HTML) parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using `XMLHttpRequest`.
 
-<p>To get an overview of how to use <code>XMLHttpRequest</code> in general, see <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a>.</p>
+To get an overview of how to use `XMLHttpRequest` in general, see [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 
-<h2 id="Limitations">Limitations</h2>
+## Limitations
 
-<p>To discourage the synchronous use of <code>XMLHttpRequest</code>, HTML support is not available in the synchronous mode. Also, HTML support is only available if the {{domxref("XMLHttpRequest.responseType", "responseType")}} property has been set to <code>"document"</code>. This limitation avoids wasting time parsing HTML uselessly when legacy code uses <code>XMLHttpRequest</code> in the default mode to retrieve {{domxref("XMLHttpRequest.responseText", "responseText")}} for <code>text/html</code> resources. Also, this limitation avoids problems with legacy code that assumes that {{domxref("XMLHttpRequest.responseXML", "responseXML")}} is <code>null</code> for HTTP error pages (which often have a <code>text/html</code> response body).</p>
+To discourage the synchronous use of `XMLHttpRequest`, HTML support is not available in the synchronous mode. Also, HTML support is only available if the {{domxref("XMLHttpRequest.responseType", "responseType")}} property has been set to `"document"`. This limitation avoids wasting time parsing HTML uselessly when legacy code uses `XMLHttpRequest` in the default mode to retrieve {{domxref("XMLHttpRequest.responseText", "responseText")}} for `text/html` resources. Also, this limitation avoids problems with legacy code that assumes that {{domxref("XMLHttpRequest.responseXML", "responseXML")}} is `null` for HTTP error pages (which often have a `text/html` response body).
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<p>Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works just like retrieving an XML resource as a DOM using <code>XMLHttpRequest</code>, except you can't use the synchronous mode and you have to explicitly request a document by assigning the string <code>"document"</code> to the {{domxref("XMLHttpRequest.responseType", "responseType")}} property of the <code>XMLHttpRequest</code> object after calling {{domxref("XMLHttpRequest.open", "open()")}} but before calling {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works just like retrieving an XML resource as a DOM using `XMLHttpRequest`, except you can't use the synchronous mode and you have to explicitly request a document by assigning the string `"document"` to the {{domxref("XMLHttpRequest.responseType", "responseType")}} property of the `XMLHttpRequest` object after calling {{domxref("XMLHttpRequest.open", "open()")}} but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.onload = function() {
   console.log(this.responseXML.title);
 }
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
 xhr.send();
-</pre>
+```
 
-<h2 id="Feature_detection">Feature detection</h2>
+## Feature detection
 
-<h3 id="Method_1">Method 1</h3>
+### Method 1
 
-<p>This method relies on the "force async" nature of the feature. When you try to set <code>responseType</code> of an <code>XMLHttpRequest</code> object after it is opened as "sync". This throws an error in the browsers that implement the feature and works on others.</p>
+This method relies on the "force async" nature of the feature. When you try to set `responseType` of an `XMLHttpRequest` object after it is opened as "sync". This throws an error in the browsers that implement the feature and works on others.
 
-<pre class="brush: js">function HTMLinXHR() {
+```js
+function HTMLinXHR() {
   if (!window.XMLHttpRequest)
     return false;
   var req = new window.XMLHttpRequest();
@@ -52,23 +54,26 @@ xhr.send();
   }
   return false;
 }
-</pre>
+```
 
-<p><a href="https://jsfiddle.net/HTcKP/1/">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/HTcKP/1/)
 
-<p>This method is synchronous, does not rely on external assets though it may not be as reliable as method 2 described below since it does not check the actual feature but an indication of that feature.</p>
+This method is synchronous, does not rely on external assets though it may not be as reliable as method 2 described below since it does not check the actual feature but an indication of that feature.
 
-<h3 id="Method_2">Method 2</h3>
+### Method 2
 
-<p>There are two challenges to detecting exactly if a browser supports HTML parsing in {{domxref("XMLHttpRequest")}}. First, the detection result is obtained asynchronously, because HTML support is only available in the asynchronous mode. Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code> URL support at the same time.</p>
+There are two challenges to detecting exactly if a browser supports HTML parsing in {{domxref("XMLHttpRequest")}}. First, the detection result is obtained asynchronously, because HTML support is only available in the asynchronous mode. Second, you have to actually fetch a test document over HTTP, because testing with a `data:` URL would end up testing `data:` URL support at the same time.
 
-<p>Thus, to detect HTML support, a test HTML file is needed on the server. This test file is small and is not well-formed XML:</p>
+Thus, to detect HTML support, a test HTML file is needed on the server. This test file is small and is not well-formed XML:
 
-<pre class="brush: js">&lt;title&gt;&amp;amp;&amp;&lt;&lt;/title&gt;</pre>
+```js
+<title>&amp;&<</title>
+```
 
-<p>If the file is named <code>detect.html</code>, the following function can be used for detecting HTML parsing support:</p>
+If the file is named `detect.html`, the following function can be used for detecting HTML parsing support:
 
-<pre class="brush: js">function detectHtmlInXhr(callback) {
+```js
+function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
     window.setTimeout(function() { callback(false); }, 0);
     return;
@@ -76,9 +81,9 @@ xhr.send();
   var done = false;
   var xhr = new window.XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if (this.readyState == 4 &amp;&amp; !done) {
+    if (this.readyState == 4 && !done) {
       done = true;
-      callback(!!(this.responseXML &amp;&amp; this.responseXML.title &amp;&amp; this.responseXML.title == "&amp;&amp;&lt;"));
+      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
     }
   }
   xhr.onabort = xhr.onerror = function() {
@@ -100,46 +105,45 @@ xhr.send();
     }, 0);
   }
 }
-</pre>
+```
 
-<p>The argument <code>callback</code> is a function that will be called asynchronously with <code>true</code> as the only argument if HTML parsing is supported and <code>false</code> as the only argument if HTML parsing is not supported.</p>
+The argument `callback` is a function that will be called asynchronously with `true` as the only argument if HTML parsing is supported and `false` as the only argument if HTML parsing is not supported.
 
-<p><a href="https://jsfiddle.net/xfvXR/1/">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/xfvXR/1/)
 
-<h2 id="Character_encoding">Character encoding</h2>
+## Character encoding
 
-<p>If the character encoding is declared in the HTTP {{HTTPHeader("Content-Type")}} header, that character encoding is used. Failing that, if there is a byte order mark, the encoding indicated by the byte order mark is used. Failing that, if there is a {{HTMLElement("meta")}} element that declares the encoding within the first 1024 bytes of the file, that encoding is used. Otherwise, the file is decoded as UTF-8.</p>
+If the character encoding is declared in the HTTP {{HTTPHeader("Content-Type")}} header, that character encoding is used. Failing that, if there is a byte order mark, the encoding indicated by the byte order mark is used. Failing that, if there is a {{HTMLElement("meta")}} element that declares the encoding within the first 1024 bytes of the file, that encoding is used. Otherwise, the file is decoded as UTF-8.
 
-<h2 id="Handling_HTML_on_older_browsers">Handling HTML on older browsers</h2>
+## Handling HTML on older browsers
 
-<p><code>XMLHttpRequest</code> originally supported only XML parsing. HTML parsing support is a recent addition. For older browsers, you can even use the {{domxref("XMLHttpRequest.responseText")}} property in association with <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a> in order to get, for example, the source code of an HTML element given its ID:</p>
+`XMLHttpRequest` originally supported only XML parsing. HTML parsing support is a recent addition. For older browsers, you can even use the {{domxref("XMLHttpRequest.responseText")}} property in association with [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in order to get, for example, the source code of an HTML element given its ID:
 
-<pre class="brush: js">function getHTML (oXHR, sTargetId) {
-  var  rOpen = new RegExp("&lt;(?!\!)\\s*([^\\s&gt;]+)[^&gt;]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^&gt;]*&gt;" ,"i"),
+```js
+function getHTML (oXHR, sTargetId) {
+  var  rOpen = new RegExp("<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^>]*>" ,"i"),
        sSrc = oXHR.responseText, aExec = rOpen.exec(sSrc);
 
-  return aExec ? (new RegExp("(?:(?:.(?!&lt;\\s*" + aExec[1] + "[^&gt;]*[&gt;]))*.?&lt;\\s*" + aExec[1] + "[^&gt;]*[&gt;](?:.(?!&lt;\\s*\/\\s*" + aExec[1] + "\\s*&gt;))*.?&lt;\\s*\/\\s*" + aExec[1] + "\\s*&gt;)*(?:.(?!&lt;\\s*\/\\s*" + aExec[1] + "\\s*&gt;))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
+  return aExec ? (new RegExp("(?:(?:.(?!<\\s*" + aExec[1] + "[^>]*[>]))*.?<\\s*" + aExec[1] + "[^>]*[>](?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?<\\s*\/\\s*" + aExec[1] + "\\s*>)*(?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
 }
 
 var oReq = new XMLHttpRequest();
 oReq.open("GET", "yourPage.html", true);
 oReq.onload = function () { console.log(getHTML(this, "intro")); };
 oReq.send(null);
-</pre>
+```
 
-<div class="note"><p><strong>Note:</strong> This solution is very expensive for the interpreter. <strong>Use it only when it is really necessary</strong>.</p></div>
+> **Note:** This solution is very expensive for the interpreter. **Use it only when it is really necessary**.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.XMLHttpRequest")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.XMLHttpRequest")}}</p>
+{{Compat("api.XMLHttpRequest")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
-</ul>
+- {{domxref("XMLHttpRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

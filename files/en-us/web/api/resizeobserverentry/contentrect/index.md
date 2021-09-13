@@ -2,54 +2,53 @@
 title: ResizeObserverEntry.contentRect
 slug: Web/API/ResizeObserverEntry/contentRect
 tags:
-- API
-- Bounding Box
-- Property
-- Reference
-- Resize Observer API
-- ResizeObserver
-- ResizeObserverEntry
-- content box
-- observers
+  - API
+  - Bounding Box
+  - Property
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - ResizeObserverEntry
+  - content box
+  - observers
 browser-compat: api.ResizeObserverEntry.contentRect
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <code>contentRect</code> read-only property of the
-  {{domxref("ResizeObserverEntry")}} interface returns a {{domxref('DOMRectReadOnly')}}
-  object containing the new size of the observed element when the callback is run. Note
-  that this is better supported than {{domxref("ResizeObserverEntry.borderBoxSize")}} or
-  {{domxref("ResizeObserverEntry.contentBoxSize")}}, but it is left over from an earlier
-  implementation of the Resize Observer API, is still included in the spec for web compat
-  reasons, and may be deprecated in future versions.</p>
+The `contentRect` read-only property of the
+{{domxref("ResizeObserverEntry")}} interface returns a {{domxref('DOMRectReadOnly')}}
+object containing the new size of the observed element when the callback is run. Note
+that this is better supported than {{domxref("ResizeObserverEntry.borderBoxSize")}} or
+{{domxref("ResizeObserverEntry.contentBoxSize")}}, but it is left over from an earlier
+implementation of the Resize Observer API, is still included in the spec for web compat
+reasons, and may be deprecated in future versions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>contentRect</em> = <em>resizeObserverEntry</em>.contentRect;</pre>
+```js
+var contentRect = resizeObserverEntry.contentRect;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMRectReadOnly')}} object containing the new size of the element
-  indicated by the {{domxref("ResizeObserverEntry.target", "target")}} property.</p>
+A {{domxref('DOMRectReadOnly')}} object containing the new size of the element
+indicated by the {{domxref("ResizeObserverEntry.target", "target")}} property.
 
-<p>If the <code>target</code> is an HTML {{domxref("Element")}}, the returned
-  <code>contentRect</code> is the element's content box. If the <code>target</code> is an
-  {{domxref("SVGElement")}}, the returned <code>contentRect</code> is the SVG's bounding
-  box.</p>
+If the `target` is an HTML {{domxref("Element")}}, the returned
+`contentRect` is the element's content box. If the `target` is an
+{{domxref("SVGElement")}}, the returned `contentRect` is the SVG's bounding
+box.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is taken from the <a
-    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
-  (<a
-    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
-    source</a>) example. This uses a simple feature detection test to see if the browser
-  supports the newer {{domxref("ResizeObserverEntry.contentBoxSize")}} property — if so,
-  it uses that to get the sizing data it needs. If not, it uses <code>contentRect</code>.
-</p>
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
+([see
+source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser
+supports the newer {{domxref("ResizeObserverEntry.contentBoxSize")}} property — if so,
+it uses that to get the sizing data it needs. If not, it uses `contentRect`.
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
@@ -61,12 +60,13 @@ browser-compat: api.ResizeObserverEntry.contentRect
   }
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

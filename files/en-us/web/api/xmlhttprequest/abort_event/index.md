@@ -10,46 +10,51 @@ tags:
   - abort
 browser-compat: api.XMLHttpRequest.abort_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>abort</code> event is fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.</p>
+The `abort` event is fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("XMLHttpRequestEventTarget/onabort", "onabort")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget/onabort", "onabort")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-    &lt;input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" /&gt;
-    &lt;input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" /&gt;
-    &lt;input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" /&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
+    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
+    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+</div>
 
-&lt;textarea readonly class="event-log"&gt;&lt;/textarea&gt;</pre>
+<textarea readonly class="event-log"></textarea>
+```
 
-<pre class="brush: css hidden">.event-log {
+```css hidden
+.event-log {
     width: 25rem;
     height: 4rem;
     border: 1px solid black;
@@ -61,11 +66,12 @@ input {
     width: 11rem;
     margin: .5rem;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const xhrButtonSuccess = document.querySelector('.xhr.success');
+```js
+const xhrButtonSuccess = document.querySelector('.xhr.success');
 const xhrButtonError = document.querySelector('.xhr.error');
 const xhrButtonAbort = document.querySelector('.xhr.abort');
 const log = document.querySelector('.event-log');
@@ -93,33 +99,32 @@ function runXHR(url) {
     return xhr;
 }
 
-xhrButtonSuccess.addEventListener('click', () =&gt; {
+xhrButtonSuccess.addEventListener('click', () => {
     runXHR('dgszyjnxcaipwzy.jpg');
 });
 
-xhrButtonError.addEventListener('click', () =&gt; {
+xhrButtonError.addEventListener('click', () => {
     runXHR('https://somewhere.org/i-dont-exist');
 });
 
-xhrButtonAbort.addEventListener('click', () =&gt; {
+xhrButtonAbort.addEventListener('click', () => {
     runXHR('dgszyjnxcaipwzy.jpg').abort();
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress">Monitoring progress</a></li>
-</ul>
+- Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

@@ -7,38 +7,36 @@ tags:
   - WebGL
 browser-compat: api.WebGLUniformLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLUniformLocation</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents the location of a uniform variable in a shader program.</p>
+The **WebGLUniformLocation** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the location of a uniform variable in a shader program.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>WebGLUniformLocation</code> object does not define any methods or properties of its own and its content is not directly accessible. When working with <code>WebGLUniformLocation</code> objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:</p>
+The `WebGLUniformLocation` object does not define any methods or properties of its own and its content is not directly accessible. When working with `WebGLUniformLocation` objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
- <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+- {{domxref("WebGLRenderingContext.uniform()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Getting_an_uniform_location">Getting an uniform location</h3>
+### Getting an uniform location
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
-var location = gl.getUniformLocation(WebGLProgram, 'uniformName');</pre>
+var location = gl.getUniformLocation(WebGLProgram, 'uniformName');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}

@@ -2,59 +2,58 @@
 title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
 tags:
-- API
-- Draft
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserver
-- NeedsExample
-- Property
-- Reference
+  - API
+  - Draft
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserver
+  - NeedsExample
+  - Property
+  - Reference
 browser-compat: api.IntersectionObserver.thresholds
 ---
-<div>{{APIRef("Intersection Observer API")}}{{draft}}</div>
+{{APIRef("Intersection Observer API")}}{{draft}}
 
-<p>The {{domxref("IntersectionObserver")}} interface's read-only
-  <strong><code>thresholds</code></strong> property returns the list of intersection
-  thresholds that was specified when the observer was instantiated with
-  {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If
-  only one threshold ratio was provided when instanitating the object, this will be an
-  array containing that single value.</p>
+The {{domxref("IntersectionObserver")}} interface's read-only
+**`thresholds`** property returns the list of intersection
+thresholds that was specified when the observer was instantiated with
+{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If
+only one threshold ratio was provided when instanitating the object, this will be an
+array containing that single value.
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
-  learn how thresholds work.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
+learn how thresholds work.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>thresholds</em> = </code>IntersectionObserver</var>.thresholds;
-</pre>
+```js
+var thresholds = IntersectionObserver.thresholds;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of intersection thresholds, originally specified using the
-  <code>threshold</code> property when instantiating the observer. If only one observer
-  was specified, without being in an array, this value is a one-entry array containing
-  that threshold. Regardless of the order your original <code>threshold</code> array was
-  in, this one is always sorted in numerically increasing order.</p>
+An array of intersection thresholds, originally specified using the
+`threshold` property when instantiating the observer. If only one observer
+was specified, without being in an array, this value is a one-entry array containing
+that threshold. Regardless of the order your original `threshold` array was
+in, this one is always sorted in numerically increasing order.
 
-<p>If no <code>threshold</code> option was included when
-  <code>IntersectionObserver()</code> was used to instantiate the observer, the value of
-  <code>thresholds</code> is <code>[0]</code>.</p>
+If no `threshold` option was included when
+`IntersectionObserver()` was used to instantiate the observer, the value of
+`thresholds` is `[0]`.
 
-<div class="note">
-  <p><strong>Note:</strong> Although the <code>options</code> object you can specify when creating an
-    {{domxref("IntersectionObserver")}} has a field named
-    {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called
-    <code>thresholds</code>. Confusing? Yes. If you accidentally use
-    <code>thresholds</code> as the name of the field in your <code>options</code>, the
-    <code>thresholds</code> array will wind up being <code>[0.0]</code>, which is likely
-    not what you expect. Debugging chaos may ensue.</p>
-</div>
+> **Note:** Although the `options` object you can specify when creating an
+> {{domxref("IntersectionObserver")}} has a field named
+> {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called
+> `thresholds`. Confusing? Yes. If you accidentally use
+> `thresholds` as the name of the field in your `options`, the
+> `thresholds` array will wind up being `[0.0]`, which is likely
+> not what you expect. Debugging chaos may ensue.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

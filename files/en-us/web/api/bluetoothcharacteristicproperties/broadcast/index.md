@@ -2,37 +2,38 @@
 title: BluetoothCharacteristicProperties.broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
 tags:
-- API
-- Bluetooth
-- BluetoothCharacteristicProperties
-- Experimental
-- NeedsExample
-- Property
-- Reference
-- Web Bluetooth API
-- broadcast
+  - API
+  - Bluetooth
+  - BluetoothCharacteristicProperties
+  - Experimental
+  - NeedsExample
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - broadcast
 browser-compat: api.BluetoothCharacteristicProperties.broadcast
 ---
-<div>{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}</div>
+{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
-<p>The <strong><code>broadcast</code></strong> read-only property of the
-  {{domxref("BluetoothCharacteristicProperties")}} interface returns a
-  <code>boolean</code> that is <code>true</code> if the broadcast of the characteristic
-  value is permitted using the Server Characteristic Configuration Descriptor.</p>
+The **`broadcast`** read-only property of the
+{{domxref("BluetoothCharacteristicProperties")}} interface returns a
+`boolean` that is `true` if the broadcast of the characteristic
+value is permitted using the Server Characteristic Configuration Descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aBoolean</em> = BluetoothCharacteristicProperties.broadcast;</pre>
+```js
+var aBoolean = BluetoothCharacteristicProperties.broadcast;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

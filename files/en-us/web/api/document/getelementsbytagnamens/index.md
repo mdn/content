@@ -11,137 +11,132 @@ tags:
   - getElementsByTagNameNS
 browser-compat: api.Document.getElementsByTagNameNS
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Returns a list of elements with the given tag name belonging to the given namespace.
-  The complete document is searched, including the root node.</p>
+Returns a list of elements with the given tag name belonging to the given namespace.
+The complete document is searched, including the root node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>elements</var> = document.getElementsByTagNameNS(<var>namespace</var>, <var>name</var>)
-</pre>
+```js
+elements = document.getElementsByTagNameNS(namespace, name)
+```
 
-<ul>
-  <li><var>elements</var> is a live {{DOMxRef("NodeList")}} (but see the note below) of
-    found elements in the order they appear in the tree.</li>
-  <li><var>namespace</var> is the namespace URI of elements to look for (see
-    {{domxref("Element.namespaceURI", "element.namespaceURI")}}).</li>
-  <li><var>name</var> is either the local name of elements to look for or the special
-    value <code>*</code>, which matches all elements (see {{domxref("Element.localName",
-    "element.localName")}}).</li>
-</ul>
+- _elements_ is a live {{DOMxRef("NodeList")}} (but see the note below) of
+  found elements in the order they appear in the tree.
+- _namespace_ is the namespace URI of elements to look for (see
+  {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
+- _name_ is either the local name of elements to look for or the special
+  value `*`, which matches all elements (see {{domxref("Element.localName",
+    "element.localName")}}).
 
-<p><strong>Note:</strong> While the W3C specification says
-  <code>elements</code> is a <code>NodeList</code>, this method returns a
-  {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer. Opera returns a
-  <code>NodeList</code>, but with a <code>namedItem</code> method implemented, which makes
-  it similar to a <code>HTMLCollection</code>. As of January 2012, only in WebKit browsers
-  is the returned value a pure <code>NodeList</code>. See <a class="link-https"
-    href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> for details.
-</p>
+**Note:** While the W3C specification says
+`elements` is a `NodeList`, this method returns a
+{{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer. Opera returns a
+`NodeList`, but with a `namedItem` method implemented, which makes
+it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers
+is the returned value a pure `NodeList`. See [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
 
-<p><strong>Note:</strong> Currently parameters in this method are
-  case-sensitive, but they were case-insensitive in Firefox 3.5 and before. See the <a
-    href="/en-US/docs/Mozilla/Firefox/Releases/3.6#dom">developer release note for Firefox
-    3.6</a> and a note in Browser compatibility section in
-  {{domxref("Element.getElementsByTagNameNS")}} for details.</p>
+**Note:** Currently parameters in this method are
+case-sensitive, but they were case-insensitive in Firefox 3.5 and before. See the [developer release note for Firefox
+3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in
+{{domxref("Element.getElementsByTagNameNS")}} for details.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example <code>getElementsByTagNameNS</code> starts from a particular
-  parent element, and searches topdown recursively through the DOM from that parent
-  element, looking for child elements matching the tag <code>name</code> parameter.</p>
+In the following example `getElementsByTagNameNS` starts from a particular
+parent element, and searches topdown recursively through the DOM from that parent
+element, looking for child elements matching the tag `name` parameter.
 
-<p>Note that when the node on which <code>getElementsByTagName</code> is invoked is not
-  the <code>document</code> node, in fact the
-  {{domxref("element.getElementsByTagNameNS")}} method is used.</p>
+Note that when the node on which `getElementsByTagName` is invoked is not
+the `document` node, in fact the
+{{domxref("element.getElementsByTagNameNS")}} method is used.
 
-<p>To use the following example, just copy/paste it into a new file saved with the .xhtml
-  extension.</p>
+To use the following example, just copy/paste it into a new file saved with the .xhtml
+extension.
 
-<pre class="brush: html">&lt;html xmlns="<a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"&gt;
+```html
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-&lt;head&gt;
-&lt;title&gt;getElementsByTagNameNS example&lt;/title&gt;
+<head>
+<title>getElementsByTagNameNS example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function getAllParaElems()
 {
-  var allParas = document.getElementsByTagNameNS("<a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = allParas.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in this document");
+  alert("There are " + num + " &lt;p&gt; elements in this document");
 }
 
 function div1ParaElems()
 {
   var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("<a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = div1Paras.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in div1 element");
+  alert("There are " + num + " &lt;p&gt; elements in div1 element");
 }
 
 function div2ParaElems()
 {
   var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("<a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
+  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
 
   var num = div2Paras.length;
 
-  alert("There are " + num + " &amp;lt;p&amp;gt; elements in div2 element");
+  alert("There are " + num + " &lt;p&gt; elements in div2 element");
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body style="border: solid green 3px"&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
+<body style="border: solid green 3px">
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-  &lt;div id="div1" style="border: solid blue 3px"&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
-    &lt;p&gt;Some div1 text&lt;/p&gt;
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
 
-    &lt;div id="div2" style="border: solid red 3px"&gt;
-    &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;p&gt;Some div2 text&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+    <div id="div2" style="border: solid red 3px">
+    <p>Some div2 text</p>
+    <p>Some div2 text</p>
+    </div>
+  </div>
 
-&lt;p&gt;Some outer text&lt;/p&gt;
-&lt;p&gt;Some outer text&lt;/p&gt;
+<p>Some outer text</p>
+<p>Some outer text</p>
 
-&lt;button onclick="getAllParaElems();"&gt;
- show all p elements in document&lt;/button&gt;&lt;br /&gt;
+<button onclick="getAllParaElems();">
+ show all p elements in document</button><br />
 
-&lt;button onclick="div1ParaElems();"&gt;
- show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
+<button onclick="div1ParaElems();">
+ show all p elements in div1 element</button><br />
 
-&lt;button onclick="div2ParaElems();"&gt;
- show all p elements in div2 element&lt;/button&gt;
+<button onclick="div2ParaElems();">
+ show all p elements in div2 element</button>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Potential_Workaround_for_other_browsers_which_do_not_support">Potential Workaround
-  for other browsers which do not support</h2>
+## Potential Workaround for other browsers which do not support
 
-<p>If the desired browser did not support XPath, another approach (such as traversing the
-  DOM through all its children, identifying all @xmlns instances, etc.) would be necessary
-  to find all tags with the desired local name and namespace, but XPath is much faster.
-  (To accommodate Explorer, one could call an XPath wrapper instead of the XPath in the
-  function below (as Explorer supports XPath with a different API), such as <a
-    class="external"
-    href="http://www.davidflanagan.com/javascript5/display.php?n=21-10&amp;f=21/10.js">this
-    wrapper class</a>.)</p>
+If the desired browser did not support XPath, another approach (such as traversing the
+DOM through all its children, identifying all @xmlns instances, etc.) would be necessary
+to find all tags with the desired local name and namespace, but XPath is much faster.
+(To accommodate Explorer, one could call an XPath wrapper instead of the XPath in the
+function below (as Explorer supports XPath with a different API), such as [this
+wrapper class](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js).)
 
-<pre class="brush: js">function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
+```js
+function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
  if (!doc) {
   doc = document;
  }
@@ -152,23 +147,21 @@ function div2ParaElems()
  var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
         var a = [];
-        for(var i = 0; i &lt; result.snapshotLength; i++) {
+        for(var i = 0; i < result.snapshotLength; i++) {
             a[i] = result.snapshotItem(i);
         }
         return a;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Element.getElementsByTagNameNS()")}}</li>
-</ul>
+- {{DOMxRef("Element.getElementsByTagNameNS()")}}

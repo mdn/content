@@ -2,67 +2,65 @@
 title: FontFace.display
 slug: Web/API/FontFace/display
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- display
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - display
 browser-compat: api.FontFace.display
 ---
-<p>{{APIRef("CSS Font Loading API")}}</p>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>display</code></strong> property of the {{domxref("FontFace")}}
-  interface determines how a font face is displayed based on whether and when it is
-  downloaded and ready to use. This property is equivalent to the CSS
-  <code>font-display</code> descriptor.</p>
+The **`display`** property of the {{domxref("FontFace")}}
+interface determines how a font face is displayed based on whether and when it is
+downloaded and ready to use. This property is equivalent to the CSS
+`font-display` descriptor.
 
-<p>When this property is used, font loading has a timeline with three periods. The lengths
-  of the first two periods depend on the value of the property and the user agent. (See
-  below.)</p>
+When this property is used, font loading has a timeline with three periods. The lengths
+of the first two periods depend on the value of the property and the user agent. (See
+below.)
 
-<dl>
-  <dt>block period</dt>
-  <dd>The browser invisibly prepares a fallback font. If the font face loads during this
-    time, it's used to display the text and display is complete. </dd>
-  <dt>swap period</dt>
-  <dd>If the font face is still not loaded, the fallback font will be shown. When the font
-    face loads, the fallback will be swapped for the downloaded font.</dd>
-  <dt>failure period</dt>
-  <dd>If the font face still is not loaded, the fallback font will be shown and no swap
-    will occur.</dd>
-</dl>
+- block period
+  - : The browser invisibly prepares a fallback font. If the font face loads during this
+    time, it's used to display the text and display is complete.
+- swap period
+  - : If the font face is still not loaded, the fallback font will be shown. When the font
+    face loads, the fallback will be swapped for the downloaded font.
+- failure period
+  - : If the font face still is not loaded, the fallback font will be shown and no swap
+    will occur.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let display = FontFace.display
-FontFace.display = display</pre>
+```js
+let display = FontFace.display
+FontFace.display = display
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CSSOMString")}} with one of the following values.</p>
+A {{domxref("CSSOMString")}} with one of the following values.
 
-<ul>
-  <li><code>'auto'</code>: Use the font display strategy provided by the user agent.</li>
-  <li><code>'block'</code>: Gives the font face a short block period and an infinite swap
-    period. The spec recommends 3 seconds for the block period, though this may vary from
-    browser to browser.</li>
-  <li><code>'fallback'</code>: Gives the font face a short block period and a short swap
-    period. The spec recommends 100 ms or less for the block period and 3 seconds for the
-    swap period, though these values may vary from browser to browser.</li>
-  <li><code>'optional'</code>: Gives the font face a short block period and no swap
-    period. The spec recommends 100 ms or less, though this may vary from browser to
-    browser.</li>
-  <li><code>'swap'</code>: Gives the font face a 0 second block period and an infinite
-    swap period.</li>
-</ul>
+- `'auto'`: Use the font display strategy provided by the user agent.
+- `'block'`: Gives the font face a short block period and an infinite swap
+  period. The spec recommends 3 seconds for the block period, though this may vary from
+  browser to browser.
+- `'fallback'`: Gives the font face a short block period and a short swap
+  period. The spec recommends 100 ms or less for the block period and 3 seconds for the
+  swap period, though these values may vary from browser to browser.
+- `'optional'`: Gives the font face a short block period and no swap
+  period. The spec recommends 100 ms or less, though this may vary from browser to
+  browser.
+- `'swap'`: Gives the font face a 0 second block period and an infinite
+  swap period.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

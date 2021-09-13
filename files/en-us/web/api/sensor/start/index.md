@@ -2,37 +2,39 @@
 title: Sensor.start()
 slug: Web/API/Sensor/start
 tags:
-- API
-- Generic Sensor API
-- Method
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- start()
+  - API
+  - Generic Sensor API
+  - Method
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - start()
 browser-compat: api.Sensor.start
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>start</code></strong> method activates one
-    of the sensors based on <code>Sensor</code>.</p>
+The **`start`** method activates one
+of the sensors based on `Sensor`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Sensor.start()</pre>
+```js
+Sensor.start()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

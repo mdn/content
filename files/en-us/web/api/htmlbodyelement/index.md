@@ -9,87 +9,81 @@ tags:
   - Reference
 browser-compat: api.HTMLBodyElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLBodyElement</code></strong> interface provides special properties (beyond those inherited from the regular {{ domxref("HTMLElement") }} interface) for manipulating {{HtmlElement("body")}} elements.</p>
+The **`HTMLBodyElement`** interface provides special properties (beyond those inherited from the regular {{ domxref("HTMLElement") }} interface) for manipulating {{HtmlElement("body")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
 
-<dl>
- <dt>{{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.</dd>
- <dt>{{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.</dd>
- <dt>{{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the background color for the document.</dd>
- <dt>{{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of unvisited links.</dd>
- <dt>{{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the foreground color of text.</dd>
- <dt>{{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}</dt>
- <dd>Is a {{ domxref("DOMString") }} that represents the color of visited links.</dd>
-</dl>
+- {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of active hyperlinks.
+- {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
+- {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the background color for the document.
+- {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of unvisited links.
+- {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the foreground color of text.
+- {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
+  - : Is a {{ domxref("DOMString") }} that represents the color of visited links.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("WindowEventHandlers")}}.</em></p>
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}, and from {{domxref("WindowEventHandlers")}}._
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<p><em>No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}.</em></p>
+_No specific event handlers; inherits event handlers from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._
 
-<dl>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("afterprint")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("beforeprint")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("beforeunload")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("hashchange")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("languagechange")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called whenever an object receives a {{event("message")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessageerror")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called whenever an object receives a {{event("messageerror")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("offline")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("online")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("pagehide")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("pageshow")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("popstate")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onrejectionhandled")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code executed when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.</dd>
- <dt>{{domxref("GlobalEventHandlers.onresize")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("resize")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("storage")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code executed when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("unload")}} event is raised.</dd>
-</dl>
+- {{domxref("WindowEventHandlers.onafterprint")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("afterprint")}} event is raised.
+- {{domxref("WindowEventHandlers.onbeforeprint")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeprint")}} event is raised.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("beforeunload")}} event is raised.
+- {{domxref("WindowEventHandlers.onhashchange")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("hashchange")}} event is raised.
+- {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("languagechange")}} event is raised.
+- {{domxref("WindowEventHandlers.onmessage")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever an object receives a {{event("message")}} event.
+- {{domxref("WindowEventHandlers.onmessageerror")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever an object receives a {{event("messageerror")}} event.
+- {{domxref("WindowEventHandlers.onoffline")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("offline")}} event is raised.
+- {{domxref("WindowEventHandlers.ononline")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("online")}} event is raised.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pagehide")}} event is raised.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("pageshow")}} event is raised.
+- {{domxref("WindowEventHandlers.onpopstate")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("popstate")}} event is raised.
+- {{domxref("WindowEventHandlers.onrejectionhandled")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code executed when the {{event("rejectionhandled")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected and the rejection has been handled.
+- {{domxref("GlobalEventHandlers.onresize")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("resize")}} event is raised.
+- {{domxref("WindowEventHandlers.onstorage")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("storage")}} event is raised.
+- {{domxref("WindowEventHandlers.onunhandledrejection")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code executed when the {{event("unhandledrejection")}} event is raised, indicating that a {{jsxref("Promise")}} was rejected but the rejection was not handled.
+- {{domxref("WindowEventHandlers.onunload")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("unload")}} event is raised.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("body") }}</li>
- <li>{{domxref("WindowEventHandlers")}}</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("body") }}
+- {{domxref("WindowEventHandlers")}}

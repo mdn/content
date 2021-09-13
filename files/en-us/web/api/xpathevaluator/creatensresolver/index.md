@@ -2,55 +2,52 @@
 title: XPathEvaluator.createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
 tags:
-- API
-- DOM
-- DOM XPath API
-- Method
-- NeedsExample
-- Reference
-- XPath
-- XPathEvaluator
+  - API
+  - DOM
+  - DOM XPath API
+  - Method
+  - NeedsExample
+  - Reference
+  - XPath
+  - XPathEvaluator
 browser-compat: api.XPathEvaluator.createNSResolver
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>This method adapts any DOM node to resolve namespaces so that an XPath expression can
-  be easily evaluated relative to the context of the node where it appeared within the
-  document.</p>
+This method adapts any DOM node to resolve namespaces so that an XPath expression can
+be easily evaluated relative to the context of the node where it appeared within the
+document.
 
-<p>This adapter works like the DOM Level 3 method {{domxref("Node.lookupNamespaceURI",
+This adapter works like the DOM Level 3 method {{domxref("Node.lookupNamespaceURI",
   "Node.lookupNamespaceURI()")}} in resolving the namespace URI from a given prefix using
-  the current information available in the node's hierarchy at the time the method is
-  called, also correctly resolving the implicit <code>xml</code> prefix.</p>
+the current information available in the node's hierarchy at the time the method is
+called, also correctly resolving the implicit `xml` prefix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>XPathNSResolver</var> <var>XPathEvaluator</var>.createNSResolver(<var>nodeResolver</var>);
-</pre>
+```js
+XPathNSResolver XPathEvaluator.createNSResolver(nodeResolver);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>nodeResolver</dt>
-  <dd>A {{domxref("Node")}} to be used as a context for namespace resolution.</dd>
-</dl>
+- nodeResolver
+  - : A {{domxref("Node")}} to be used as a context for namespace resolution.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("XPathNSResolver")}} object which resolves namespaces with respect to the
-  definitions in scope for a specified node.</p>
+An {{domxref("XPathNSResolver")}} object which resolves namespaces with respect to the
+definitions in scope for a specified node.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Document.createNSResolver()")}}</li>
-  <li>{{DOMxRef("XPathExpression")}}</li>
-</ul>
+- {{DOMxRef("Document.createNSResolver()")}}
+- {{DOMxRef("XPathExpression")}}

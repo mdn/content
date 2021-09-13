@@ -11,39 +11,37 @@ tags:
   - handle
 browser-compat: api.FileSystemHandle.kind
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>kind</code></strong> read-only property of the
-  {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
-  <code>'file'</code> if the associated entry is a file or <code>'directory'</code>. It is
-  used to distinguish files from directories when iterating over the contents of a
-  directory.</p>
+The **`kind`** read-only property of the
+{{domxref("FileSystemHandle")}} interface returns the type of entry. This is
+`'file'` if the associated entry is a file or `'directory'`. It is
+used to distinguish files from directories when iterating over the contents of a
+directory.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>FileSystemHandleKind</var> = FileSystemHandle.kind;</pre>
+```js
+var FileSystemHandleKind = FileSystemHandle.kind;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><em>FileSystemHandleKind</em></dt>
-  <dd>Can be either:
-    <ul>
-      <li><code>'file'</code>: If handle is a {{domxref('FileSystemFileHandle')}}.</li>
-      <li><code>'directory'</code>: If handle is a
-        {{domxref('FileSystemDirectoryHandle')}}.</li>
-    </ul>
-  </dd>
-</dl>
+- _FileSystemHandleKind_
 
-<h2 id="Examples">Examples</h2>
+  - : Can be either:
 
-<p>The following function allows the user to choose a file from the file picker and then
-  tests to see whether the handle returned is a file or directory</p>
+    - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
+    - `'directory'`: If handle is a
+      {{domxref('FileSystemDirectoryHandle')}}.
 
-<pre class="brush: js">// store a reference to our file handle
+## Examples
+
+The following function allows the user to choose a file from the file picker and then
+tests to see whether the handle returned is a file or directory
+
+```js
+// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -57,20 +55,18 @@ async function getFile() {
   }
 
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

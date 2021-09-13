@@ -13,46 +13,43 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.AnimationPlaybackEvent
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <strong><code>AnimationPlaybackEvent()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a new <code>{{domxref("AnimationPlaybackEvent")}}</code> object instance.</p>
+The **`AnimationPlaybackEvent()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new `{{domxref("AnimationPlaybackEvent")}}` object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var animationPlaybackEvent = new AnimationPlaybackEvent(<em>type, eventInitDict</em>);</pre>
+```js
+var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>{{domxref("Event.type", "type")}}</code></dt>
- <dd>A <a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the name of the event.</dd>
- <dt><code>eventInitDict </code>{{optional_inline}}</dt>
- <dd>An optional <code>EventInit</code> dictionary object containing the following fields:
- <dl>
-  <dt><code>bubbles</code> {{optional_inline}}</dt>
-  <dd>Defaults to <code>false</code>, of type <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a>, indicating if the event bubbles or not.</dd>
-  <dt><code>cancelable</code> {{optional_inline}}</dt>
-  <dd>Defaults to <code>false</code>, of type <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a>, indicating if the event can be canceled or not.</dd>
-  <dt><code>detail</code> {{optional_inline}}</dt>
-  <dd>Defaults to <code>null</code>, of type any — an event-dependent value associated with the event.</dd>
- </dl>
- </dd>
-</dl>
+- `{{domxref("Event.type", "type")}}`
+  - : A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") representing the name of the event.
+- `eventInitDict `{{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : An optional `EventInit` dictionary object containing the following fields:
+
+    - `bubbles` {{optional_inline}}
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event bubbles or not.
+    - `cancelable` {{optional_inline}}
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event can be canceled or not.
+    - `detail` {{optional_inline}}
+      - : Defaults to `null`, of type any — an event-dependent value associated with the event.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationPlayBackEvent")}}</li>
- <li>{{domxref("Animation.playState")}}</li>
- <li>{{domxref("CustomEvent.CustomEvent")}}</li>
- <li>{{domxref("Event.Event")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationPlayBackEvent")}}
+- {{domxref("Animation.playState")}}
+- {{domxref("CustomEvent.CustomEvent")}}
+- {{domxref("Event.Event")}}

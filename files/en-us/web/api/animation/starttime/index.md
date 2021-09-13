@@ -12,27 +12,30 @@ tags:
   - web animations api
 browser-compat: api.Animation.startTime
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code><strong>Animation.startTime</strong></code> property of the {{domxref("Animation")}} interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin. </p>
+The **`Animation.startTime`** property of the {{domxref("Animation")}} interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin.
 
-<p>An animation’s <strong>start time</strong> is the time value of its {{domxref("timeline", "DocumentTimeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation’s <strong>start time</strong> is initially unresolved (meaning that it's <code>null</code> because it has no value).</p>
+An animation’s **start time** is the time value of its {{domxref("timeline", "DocumentTimeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation’s **start time** is initially unresolved (meaning that it's `null` because it has no value).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animationStartedWhen</em> = <em>Animation</em>.startTime;
+```js
+var animationStartedWhen = Animation.startTime;
 
-<em>Animation</em>.startTime = <em>newStartTime</em>;</pre>
+Animation.startTime = newStartTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point number representing the current time in milliseconds, or <code>null</code> if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.</p>
+A floating-point number representing the current time in milliseconds, or `null` if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010">Running on Web Animations API example</a>, the we can sync all new animated cats by giving them all the same <code>startTime</code> as the original running cat:</p>
+In the [Running on Web Animations API example](http://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
-<pre class="brush: js">var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+```js
+var catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
 
 /* A function that makes new cats. */
 function addCat(){
@@ -50,19 +53,20 @@ function animateNewCatWithWAAPI() {
   var newAnimationPlayer = newCat.animate(keyframes, timing);
 
   // set the animation's start time to be the same as the original .cat#withWAAPI
-  newAnimationPlayer.startTime = catRunning.startTime;<em><strong>
-</strong></em>
+  newAnimationPlayer.startTime = catRunning.startTime;
+
   // Add the cat to the pile.
   WAAPICats.appendChild(newCat);
 }
-</pre>
+```
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of <code>animation.startTime</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of `animation.startTime` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 animation.startTime;
 // 23.404
 // 24.192
@@ -75,22 +79,20 @@ animation.startTime;
 // 50.6
 // 51.7
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enabled <code>privacy.resistFingerprinting</code>, the precision will be 100ms or the value of <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever is larger.</p>
+In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>{{domxref("Animation.currentTime")}} for the current time of the animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("Animation.currentTime")}} for the current time of the animation.

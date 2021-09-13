@@ -2,48 +2,48 @@
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
 browser-compat: api.Node.replaceChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Node.replaceChild()</code></strong> method replaces a child node
-	within the given (parent) node.</p>
+The **`Node.replaceChild()`** method replaces a child node
+within the given (parent) node.
 
-<p>Note the idiosyncratic argument order (new before old).
-	<code><a href="/en-US/docs/Web/API/Element/replaceWith">Element.replaceWith()</a></code>
-	may be easier to read and use.</p>
+Note the idiosyncratic argument order (new before old).
+[`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith)
+may be easier to read and use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>let oldChild = parentNode</em>.replaceChild(<em>newChild</em>, <em>oldChild</em>);
-</pre>
+```js
+let oldChild = parentNode.replaceChild(newChild, oldChild);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><strong>newChild</strong></dt>
-	<dd>The new node to replace <code>oldChild</code>. If it already exists in the DOM, it
-		is first removed.</dd>
-	<dt><strong>oldChild</strong></dt>
-	<dd>The child to be replaced.</dd>
-</dl>
+- **newChild**
+  - : The new node to replace `oldChild`. If it already exists in the DOM, it
+    is first removed.
+- **oldChild**
+  - : The child to be replaced.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The returned value is the replaced node. This is the same node as
-	<code>oldChild</code>.</p>
+The returned value is the replaced node. This is the same node as
+`oldChild`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Given:
-// &lt;div&gt;
-//  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
-// &lt;/div&gt;
+```js
+// Given:
+// <div>
+//  <span id="childSpan">foo bar</span>
+// </div>
 
 // Create an empty element node
 // without an ID, any attributes, or any content
@@ -66,22 +66,20 @@ var parentDiv = sp2.parentNode;
 parentDiv.replaceChild(sp1, sp2);
 
 // Result:
-// &lt;div&gt;
-//   &lt;span id="newSpan"&gt;new replacement span element.&lt;/span&gt;
-// &lt;/div&gt;
-</pre>
+// <div>
+//   <span id="newSpan">new replacement span element.</span>
+// </div>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("Node.removeChild")}}</li>
-	<li>{{domxref("Element.replaceWith")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("Element.replaceWith")}}

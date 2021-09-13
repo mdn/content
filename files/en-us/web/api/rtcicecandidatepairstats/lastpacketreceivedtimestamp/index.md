@@ -2,42 +2,43 @@
 title: RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp
 tags:
-- API
-- ICE
-- Networking
-- Packet
-- Property
-- RTCIceCandidatePairStats
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- lastPacketReceivedTimestamp
-- timeStamp
+  - API
+  - ICE
+  - Networking
+  - Packet
+  - Property
+  - RTCIceCandidatePairStats
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - lastPacketReceivedTimestamp
+  - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.lastPacketReceivedTimestamp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>lastPacketReceivedTimestamp</code></strong> indicates the time at which
-    the connection described by the candidate pair last received a packet.
-    {{Glossary("STUN")}} packets are not included.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`lastPacketReceivedTimestamp`** indicates the time at which
+the connection described by the candidate pair last received a packet.
+{{Glossary("STUN")}} packets are not included.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>lastPacketReceivedTimestamp</em> = <em>rtcIceCandidatePairStats</em>.lastPacketReceivedTimestamp;</pre>
+```js
+lastPacketReceivedTimestamp = rtcIceCandidatePairStats.lastPacketReceivedTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the
-  connection described by pair of candidates last received a packet, STUN packets
-  excluded.</p>
+A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the
+connection described by pair of candidates last received a packet, STUN packets
+excluded.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

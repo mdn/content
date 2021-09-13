@@ -14,20 +14,21 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.currentTime
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <strong><code>currentTime</code></strong> read-only property of the <code>{{domxref("AnimationPlaybackEvent")}}</code> interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was <code>idle</code> at the time the event was generated.</p>
+The **`currentTime`** read-only property of the `{{domxref("AnimationPlaybackEvent")}}` interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was `idle` at the time the event was generated.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A number representing the current time in milliseconds, or <code>null</code>.</p>
+A number representing the current time in milliseconds, or `null`.
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of <code>playbackEvent.currentTime</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of `playbackEvent.currentTime` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 playbackEvent.currentTime;
 // 23.404
 // 24.192
@@ -40,21 +41,19 @@ playbackEvent.currentTime;
 // 50.6
 // 51.7
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enabled <code>privacy.resistFingerprinting</code>, the precision will be 100ms or the value of <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever is larger.</p>
+In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationPlayBackEvent")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationPlayBackEvent")}}

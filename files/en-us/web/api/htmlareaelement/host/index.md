@@ -8,25 +8,26 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.host
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.host</code></strong> property is a
-  {{domxref("USVString")}} containing the host, that is the <em>hostname</em>, and then,
-  if the <em>port</em> of the URL is nonempty, a <code>':'</code>, and the <em>port</em>
-  of the URL.</p>
+The **`HTMLAreaElement.host`** property is a
+{{domxref("USVString")}} containing the host, that is the _hostname_, and then,
+if the _port_ of the URL is nonempty, a `':'`, and the _port_
+of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.host;
+string = area.host;
 // Setter
-<em>area</em>.host = <em>string</em>;
-</pre>
+area.host = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const area = document.createElement("area");
+```js
+const area = document.createElement("area");
 
 area.href = "https://developer.mozilla.org/en-US/HTMLAreaElement"
 area.host == "developer.mozilla.org"
@@ -37,18 +38,16 @@ area.host == "developer.mozilla.org"
 
 area.href = "https://developer.mozilla.org:4097/en-US/HTMLAreaElement"
 area.host == "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

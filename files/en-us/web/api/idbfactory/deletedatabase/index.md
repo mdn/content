@@ -12,60 +12,60 @@ tags:
   - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>deleteDatabase()</code></strong> method of the
-  {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
-  returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion
-  operation asynchronously.</p>
+The **`deleteDatabase()`** method of the
+{{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
+returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion
+operation asynchronously.
 
-<p>If the database is successfully deleted, then a <code>success</code> event is fired on
-  the request object returned from this method, with its <code>result</code> set to
-  <code>undefined</code>. If an error occurs while the database is being deleted, then an
-  <code>error</code> event is fired on the request object that is returned from this
-  method.</p>
+If the database is successfully deleted, then a `success` event is fired on
+the request object returned from this method, with its `result` set to
+`undefined`. If an error occurs while the database is being deleted, then an
+`error` event is fired on the request object that is returned from this
+method.
 
-<p>When <code>deleteDatabase()</code> is called, any other open connections to this
-  particular database will get a <a
-    href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange</a> event.</p>
+When `deleteDatabase()` is called, any other open connections to this
+particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>For the current standard:</p>
+For the current standard:
 
-<pre
-  class="brush: js">var <em>request</em> = <em>indexedDB</em>.deleteDatabase(<em>name</em>);</pre>
+```js
+var request = indexedDB.deleteDatabase(name);
+```
 
-<p>For the experimental version with <code>options</code> (see below):</p>
+For the experimental version with `options` (see below):
 
-<pre
-  class="brush: js">var <em>request</em> = <em>indexedDB</em>.deleteDatabase(name, options);</pre>
+```js
+var request = indexedDB.deleteDatabase(name, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the database you want to delete. Note that attempting to delete a
+- name
+  - : The name of the database you want to delete. Note that attempting to delete a
     database that doesn't exist does not throw an exception, in contrast to
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
-    named object store does not exist.</dd>
-  <dt>options{{NonStandardBadge}}</dt>
-  <dd>In Gecko, since <a href="/en-US/docs/Mozilla/Firefox/Releases/26">version 26</a>, you can include
+    named object store does not exist.
+- options{{NonStandardBadge}}
+  - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
-    <code>permanent</code> (the default value) IndexedDB, or an indexedDB in
-    <code>temporary</code> storage (aka shared pool.)</dd>
-</dl>
+    `permanent` (the default value) IndexedDB, or an indexedDB in
+    `temporary` storage (aka shared pool.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
-  are fired.</p>
+A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
+are fired.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+```js
+var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
 DBDeleteRequest.onerror = function(event) {
   console.log("Error deleting database.");
@@ -76,27 +76,23 @@ DBDeleteRequest.onsuccess = function(event) {
 
   console.log(event.result); // should be undefined
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{DOMxRef("IDBDatabase")}}</li>
-  <li>Using transactions: {{DOMxRef("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{DOMxRef("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{DOMxRef("IDBObjectStore")}}</li>
-  <li>Using cursors: {{DOMxRef("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{DOMxRef("IDBDatabase")}}
+- Using transactions: {{DOMxRef("IDBTransaction")}}
+- Setting a range of keys: {{DOMxRef("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{DOMxRef("IDBObjectStore")}}
+- Using cursors: {{DOMxRef("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

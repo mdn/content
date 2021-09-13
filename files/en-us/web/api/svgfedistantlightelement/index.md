@@ -9,37 +9,33 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDistantLightElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEDistantLightElement</code></strong> interface corresponds to the {{SVGElement("feDistantLight")}} element.</p>
+The **`SVGFEDistantLightElement`** interface corresponds to the {{SVGElement("feDistantLight")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFEDistantLightElement.azimuth")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("azimuth")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDistantLightElement.elevation")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("elevation")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFEDistantLightElement.azimuth")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("azimuth")}} attribute of the given element.
+- {{domxref("SVGFEDistantLightElement.elevation")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("elevation")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feDistantLight")}}</li>
-</ul>
+- {{SVGElement("feDistantLight")}}

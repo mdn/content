@@ -8,83 +8,90 @@ tags:
   - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>Range.commonAncestorContainer</strong></code> read-only property
-  returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
-  contains both <a
-    href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">boundary
-    points</a> of the {{domxref("Range")}}. This means that if
-  {{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
-  the same node, this node is the <strong>common ancestor container</strong>.</p>
+The **`Range.commonAncestorContainer`** read-only property
+returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
+contains both [boundary
+points](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3) of the {{domxref("Range")}}. This means that if
+{{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
+the same node, this node is the **common ancestor container**.
 
-<p>Since a <code>Range</code> need not be continuous, and may also partially select nodes,
-  this is a convenient way to find a <code>Node</code> which encloses a
-  <code>Range</code>.</p>
+Since a `Range` need not be continuous, and may also partially select nodes,
+this is a convenient way to find a `Node` which encloses a
+`Range`.
 
-<p>This property is read-only. To change the ancestor container of a <code>Node</code>,
-  consider using the various methods available to set the start and end positions of the
-  <code>Range</code>, such as {{domxref("Range.setStart()")}} and
-  {{domxref("Range.setEnd()")}}.</p>
+This property is read-only. To change the ancestor container of a `Node`,
+consider using the various methods available to set the start and end positions of the
+`Range`, such as {{domxref("Range.setStart()")}} and
+{{domxref("Range.setEnd()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>rangeAncestor</em> = <em>range</em>.commonAncestorContainer;</pre>
+```js
+rangeAncestor = range.commonAncestorContainer;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we create an event listener to handle {{Event("pointerup")}} events on
-  a list. The listener gets the common ancestors of each piece of selected text, and
-  triggers an animation to highlight them.</p>
+In this example, we create an event listener to handle {{Event("pointerup")}} events on
+a list. The listener gets the common ancestors of each piece of selected text, and
+triggers an animation to highlight them.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Strings
-    &lt;ul&gt;
-      &lt;li&gt;Cello&lt;/li&gt;
-      &lt;li&gt;Violin
-        &lt;ul&gt;
-          &lt;li&gt;First Chair&lt;/li&gt;
-          &lt;li&gt;Second Chair&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Woodwinds
-    &lt;ul&gt;
-      &lt;li&gt;Clarinet&lt;/li&gt;
-      &lt;li&gt;Oboe&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>Strings
+    <ul>
+      <li>Cello</li>
+      <li>Violin
+        <ul>
+          <li>First Chair</li>
+          <li>Second Chair</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Woodwinds
+    <ul>
+      <li>Clarinet</li>
+      <li>Oboe</li>
+    </ul>
+  </li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The <code>.highlight</code> class created below uses a set of CSS
-  {{cssxref("@keyframes")}} to animate a fading outline.</p>
+The `.highlight` class created below uses a set of CSS
+{{cssxref("@keyframes")}} to animate a fading outline.
 
-<pre class="brush: css">.highlight {
+```css
+.highlight {
   animation: highlight linear 1s;
 }
 
 @keyframes highlight {
   from { outline: 1px solid #f00f; }
   to   { outline: 1px solid #f000; }
-}</pre>
+}
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   padding: 1px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.addEventListener('pointerup', e =&gt; {
+```js
+document.addEventListener('pointerup', e => {
   const selection = window.getSelection();
 
   if (selection.type === 'Range') {
-    for (let i = 0; i &lt; selection.rangeCount; i++) {
+    for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
     }
@@ -97,25 +104,24 @@ function playAnimation(el) {
   }
 
   el.classList.remove('highlight');
-  setTimeout(() =&gt; {
+  setTimeout(() => {
     el.classList.add('highlight');
   }, 0);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 190)}}</p>
+{{EmbedLiveSample("Example", 700, 190)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

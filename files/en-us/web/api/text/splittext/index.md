@@ -2,96 +2,97 @@
 title: Text.splitText()
 slug: Web/API/Text/splitText
 tags:
-- API
-- DOM
-- Method
-- Text
-- splitText
+  - API
+  - DOM
+  - Method
+  - Text
+  - splitText
 browser-compat: api.Text.splitText
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Text.splitText()</code></strong> method breaks the
-  {{domxref("Text")}} node into two nodes at the specified offset, keeping both nodes in
-  the tree as siblings.</p>
+The **`Text.splitText()`** method breaks the
+{{domxref("Text")}} node into two nodes at the specified offset, keeping both nodes in
+the tree as siblings.
 
-<p>After the split, the current node contains all the content up to the specified offset
-  point, and a newly created node of the same type contains the remaining text. The newly
-  created node is returned to the caller. If the original node had a parent, the new node
-  is inserted as the next sibling of the original node. If the offset is equal to the
-  length of the original node, the newly created node has no data.</p>
+After the split, the current node contains all the content up to the specified offset
+point, and a newly created node of the same type contains the remaining text. The newly
+created node is returned to the caller. If the original node had a parent, the new node
+is inserted as the next sibling of the original node. If the offset is equal to the
+length of the original node, the newly created node has no data.
 
-<p>Separated text nodes can be concatenated using the {{domxref("Node.normalize()")}}
-  method.</p>
+Separated text nodes can be concatenated using the {{domxref("Node.normalize()")}}
+method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>newNode</var> = <var>textNode</var>.splitText(<var>offset</var>)
-</pre>
+```js
+newNode = textNode.splitText(offset)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>offset</var></code></dt>
-  <dd>The index immediately before which to break the text node.</dd>
-</dl>
+- `offset`
+  - : The index immediately before which to break the text node.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a newly created {{domxref("Text")}} node that contains the text after the
-  specified offset point.</p>
+Returns a newly created {{domxref("Text")}} node that contains the text after the
+specified offset point.
 
-<h3 id="Exceptions_thrown">Exceptions thrown</h3>
+### Exceptions thrown
 
-<p>A {{domxref("DOMException")}} with a value of <code>INDEX_SIZE_ERR</code> is thrown if
-  the specified offset is negative or is greater than the number of 16-bit units in the
-  node's text; a {{domxref("DOMException")}} with a value of
-  <code>NO_MODIFICATION_ALLOWED_ERR</code> is thrown if the node is read-only.</p>
+A {{domxref("DOMException")}} with a value of `INDEX_SIZE_ERR` is thrown if
+the specified offset is negative or is greater than the number of 16-bit units in the
+node's text; a {{domxref("DOMException")}} with a value of
+`NO_MODIFICATION_ALLOWED_ERR` is thrown if the node is read-only.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the text of a {{HTMLElement("p")}} is split into two text nodes, and a
-  {{HTMLElement("u")}} is inserted between them.</p>
+In this example, the text of a {{HTMLElement("p")}} is split into two text nodes, and a
+{{HTMLElement("u")}} is inserted between them.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;foobar&lt;/p&gt;</pre>
+```html
+<p>foobar</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const p = document.querySelector('p');
+```js
+const p = document.querySelector('p');
 
-// Get contents of &lt;p&gt; as a text node
+// Get contents of <p> as a text node
 const foobar = p.firstChild;
 
 // Split 'foobar' into two text nodes, 'foo' and 'bar',
 // and save 'bar' as a const
 const bar = foobar.splitText(3);
 
-// Create a &lt;u&gt; element containing ' new content '
+// Create a <u> element containing ' new content '
 const u = document.createElement('u');
 u.appendChild(document.createTextNode(' new content '));
 
-// Add &lt;u&gt; before 'bar'
+// Add <u> before 'bar'
 p.insertBefore(u, bar);
 
-// The result is: &lt;p&gt;foo&lt;u&gt; new content &lt;/u&gt;bar&lt;/p&gt;</pre>
+// The result is: <p>foo<u> new content </u>bar</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 70)}}</p>
+{{EmbedLiveSample("Example", 700, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Text")}} interface it belongs to.</li>
-  <li>The opposite method: {{domxref("Node.normalize")}}.</li>
-</ul>
+- The {{domxref("Text")}} interface it belongs to.
+- The opposite method: {{domxref("Node.normalize")}}.

@@ -9,40 +9,46 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.viewBox
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>viewBox</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.</p>
+The **`viewBox`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedRect")}} object which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let viewBox = SVGMarkerElement.viewBox;</pre>
+```js
+let viewBox = SVGMarkerElement.viewBox;
+```
 
-<h3>Value</h3>
-<p>An {{domxref("SVGAnimatedRect")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGRect")}} object, from which can be returned the <code>x</code> and <code>y</code> co-ordinates, plus the <code>width</code> and <code>height</code> of the {{SVGElement("marker")}} {{SVGattr("viewBox")}} attribute.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An {{domxref("SVGAnimatedRect")}} object. The `baseVal` property of this object returns an {{domxref("SVGRect")}} object, from which can be returned the `x` and `y` co-ordinates, plus the `width` and `height` of the {{SVGElement("marker")}} {{SVGattr("viewBox")}} attribute.
 
-<p>This example demonstrates how to return the value of the <code>width</code> set for the {{SVGattr("viewBox")}} attribute of {{SVGElement("marker")}}.</p>
+## Examples
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+This example demonstrates how to return the value of the `width` set for the {{SVGattr("viewBox")}} attribute of {{SVGElement("marker")}}.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         viewBox="xMidYMid meet"
         markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.viewBox.baseVal.width); //10</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.viewBox.baseVal.width); //10
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

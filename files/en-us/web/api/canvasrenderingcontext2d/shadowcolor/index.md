@@ -2,61 +2,60 @@
 title: CanvasRenderingContext2D.shadowColor
 slug: Web/API/CanvasRenderingContext2D/shadowColor
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowColor
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.shadowColor</code></strong>
-  property of the Canvas 2D API specifies the color of shadows.</p>
+The
+**`CanvasRenderingContext2D.shadowColor`**
+property of the Canvas 2D API specifies the color of shadows.
 
-<p>Be aware that the shadow's rendered opacity will be affected by the opacity of the
-  {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} color when filling, and
-  of the {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} color when
-  stroking.</p>
+Be aware that the shadow's rendered opacity will be affected by the opacity of the
+{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} color when filling, and
+of the {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} color when
+stroking.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Shadows are only drawn if the <code>shadowColor</code>
-    property is set to a non-transparent value. One of the
-    {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
-    {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or
-    {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
-    be non-zero, as well.</p>
-</div>
+> **Note:** Shadows are only drawn if the `shadowColor`
+> property is set to a non-transparent value. One of the
+> {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
+> {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or
+> {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
+> be non-zero, as well.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.shadowColor = <em>color</em>;
-</pre>
+```js
+ctx.shadowColor = color;
+```
 
-<dl>
-  <dt><code>color</code></dt>
-  <dd>A {{domxref("DOMString")}} parsed as a <a href="/en-US/docs/Web/CSS">CSS</a>
-    {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.</dd>
-</dl>
+- `color`
+  - : A {{domxref("DOMString")}} parsed as a [CSS](/en-US/docs/Web/CSS)
+    {{cssxref("&lt;color&gt;")}} value. The default value is fully-transparent black.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_a_shadow_to_shapes">Adding a shadow to shapes</h3>
+### Adding a shadow to shapes
 
-<p>This example adds a shadow to two squares; the first one is filled, and the second one
-  is stroked. The <code>shadowColor</code> property sets the shadows' color, while
-  <code>shadowOffsetX</code> and <code>shadowOffsetY</code> set their position relative to
-  the shapes.</p>
+This example adds a shadow to two squares; the first one is filled, and the second one
+is stroked. The `shadowColor` property sets the shadows' color, while
+`shadowOffsetX` and `shadowOffsetY` set their position relative to
+the shapes.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Shadow
@@ -70,29 +69,32 @@ ctx.fillRect(20, 20, 100, 100);
 // Stroked rectangle
 ctx.lineWidth = 6;
 ctx.strokeRect(170, 20, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Adding_a_shadow_to_shapes', 700, 180) }}</p>
+{{ EmbedLiveSample('Adding_a_shadow_to_shapes', 700, 180) }}
 
-<h3 id="Shadows_on_translucent_shapes">Shadows on translucent shapes</h3>
+### Shadows on translucent shapes
 
-<p>A shadow's opacity is affected by the transparency level of its parent object (even
-  when <code>shadowColor</code> specifies a completely opaque value). This example strokes
-  and fills a rectangle with translucent colors.</p>
+A shadow's opacity is affected by the transparency level of its parent object (even
+when `shadowColor` specifies a completely opaque value). This example strokes
+and fills a rectangle with translucent colors.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The resulting alpha value of the fill shadow is <code>.8 * .2</code>, or
-  <code>.16</code>. The alpha of the stroke shadow is <code>.8 * .6</code>, or
-  <code>.48</code>.</p>
+The resulting alpha value of the fill shadow is `.8 * .2`, or
+`.16`. The alpha of the stroke shadow is `.8 * .6`, or
+`.48`.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Shadow
@@ -108,33 +110,33 @@ ctx.fillRect(10, 10, 150, 100);
 // Stroked rectangle
 ctx.lineWidth = 10;
 ctx.strokeStyle = 'rgba(0, 0, 255, .6)';
-ctx.strokeRect(10, 10, 150, 100);</pre>
+ctx.strokeRect(10, 10, 150, 100);
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Shadows_on_translucent_shapes', 700, 180) }}</p>
+{{ EmbedLiveSample('Shadows_on_translucent_shapes', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<p>In WebKit- and Blink-based browsers, the non-standard and deprecated method
-  <code>ctx.setShadow()</code> is implemented besides this property.</p>
+In WebKit- and Blink-based browsers, the non-standard and deprecated method
+`ctx.setShadow()` is implemented besides this property.
 
-<pre class="brush: js">setShadow(width, height, blur, color, alpha);
+```js
+setShadow(width, height, blur, color, alpha);
 setShadow(width, height, blur, graylevel, alpha);
 setShadow(width, height, blur, r, g, b, a);
 setShadow(width, height, blur, c, m, y, k, a);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}

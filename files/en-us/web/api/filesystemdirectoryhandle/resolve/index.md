@@ -9,42 +9,41 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>resolve()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
-  directory names from the parent handle to the specified child entry, with the name of
-  the child entry as the last array item.</p>
+The **`resolve()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
+directory names from the parent handle to the specified child entry, with the name of
+the child entry as the last array item.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>pathArr</var> = FileSystemDirectoryHandle.resolve(possibleDescendant);</pre>
+```js
+var pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>possibleDescendant</dt>
-  <dd>The {{domxref('FileSystemHandle.name')}} of the {{domxref('FileSystemHandle')}} from
-    which to return the relative path.</dd>
-</dl>
+- possibleDescendant
+  - : The {{domxref('FileSystemHandle.name')}} of the {{domxref('FileSystemHandle')}} from
+    which to return the relative path.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of
-  {{jsxref('USVString','strings')}}.</p>
+A {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of
+{{jsxref('USVString','strings')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>No exceptions are thrown.</p>
+No exceptions are thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following asynchronous function uses <code>resolve()</code> to find the path to a
-  chosen file, relative to a specified directory handle.</p>
+The following asynchronous function uses `resolve()` to find the path to a
+chosen file, relative to a specified directory handle.
 
-<pre class="brush: js">async function returnPathDirectories(directoryHandle) {
+```js
+async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
@@ -67,20 +66,18 @@ browser-compat: api.FileSystemDirectoryHandle.resolve
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

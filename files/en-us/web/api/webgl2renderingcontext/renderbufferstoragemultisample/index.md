@@ -2,109 +2,107 @@
 title: WebGL2RenderingContext.renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The
-  <strong><code>WebGL2RenderingContext.renderbufferStorageMultisample()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns creates
-  and initializes a renderbuffer object's data store and allows specifying a number of
-  samples to be used.</p>
+The
+**`WebGL2RenderingContext.renderbufferStorageMultisample()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns creates
+and initializes a renderbuffer object's data store and allows specifying a number of
+samples to be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.renderbufferStorageMultisample(<var>target</var>, <var>samples</var>, <var>internalFormat</var>, <var>width</var>, <var>height</var>);
-</pre>
+```js
+void gl.renderbufferStorageMultisample(target, samples, internalFormat, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-    <ul>
-      <li><code>gl.RENDERBUFFER</code>: Buffer data storage for single images in a
-        renderable internal format.</li>
-    </ul>
-  </dd>
-  <dt>samples</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of samples to be used for the
-    renderbuffer storage.</dd>
-  <dt>internalFormat</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
-    values (`gl.DEPTH_STENCIL` is not supported):
-    <ul>
-      <li><code>gl.R8</code></li>
-      <li><code>gl.R8UI</code></li>
-      <li><code>gl.R8I</code></li>
-      <li><code>gl.R16UI</code></li>
-      <li><code>gl.R16I</code></li>
-      <li><code>gl.R32UI</code></li>
-      <li><code>gl.R32I</code></li>
-      <li><code>gl.RG8</code></li>
-      <li><code>gl.RG8UI</code></li>
-      <li><code>gl.RG8I</code></li>
-      <li><code>gl.RG16UI</code></li>
-      <li><code>gl.RG16I</code></li>
-      <li><code>gl.RG32UI</code></li>
-      <li><code>gl.RG32I</code></li>
-      <li><code>gl.RGB8</code></li>
-      <li><code>gl.RGBA8</code></li>
-      <li><code>gl.SRGB8_ALPHA8</code></li>
-      <li><code>gl.RGBA4</code></li>
-      <li><code>gl.RGB565</code></li>
-      <li><code>gl.RGB5_A1</code></li>
-      <li><code>gl.RGB10_A2</code></li>
-      <li><code>gl.RGBA8UI</code></li>
-      <li><code>gl.RGBA8I</code></li>
-      <li><code>gl.RGB10_A2UI</code></li>
-      <li><code>gl.RGBA16UI</code></li>
-      <li><code>gl.RGBA16I</code></li>
-      <li><code>gl.RGBA32I</code></li>
-      <li><code>gl.RGBA32UI</code></li>
-      <li><code>gl.DEPTH_COMPONENT16</code></li>
-      <li><code>gl.DEPTH_COMPONENT24</code></li>
-      <li><code>gl.DEPTH_COMPONENT32F</code></li>
-      <li><code>gl.DEPTH_STENCIL</code></li>
-      <li><code>gl.DEPTH24_STENCIL8</code></li>
-      <li><code>gl.DEPTH32F_STENCIL8</code></li>
-      <li><code>gl.STENCIL_INDEX8</code></li>
-    </ul>
-  </dd>
-  <dt>width</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.</dd>
-  <dt>height</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
-<p>None.</p>
+    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
+      renderable internal format.
 
-<h2 id="Examples">Examples</h2>
+- samples
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of samples to be used for the
+    renderbuffer storage.
+- internalFormat
 
-<pre class="brush: js">gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
-</pre>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
+    values (\`gl.DEPTH_STENCIL\` is not supported):
 
-<h2 id="Specifications">Specifications</h2>
+    - `gl.R8`
+    - `gl.R8UI`
+    - `gl.R8I`
+    - `gl.R16UI`
+    - `gl.R16I`
+    - `gl.R32UI`
+    - `gl.R32I`
+    - `gl.RG8`
+    - `gl.RG8UI`
+    - `gl.RG8I`
+    - `gl.RG16UI`
+    - `gl.RG16I`
+    - `gl.RG32UI`
+    - `gl.RG32I`
+    - `gl.RGB8`
+    - `gl.RGBA8`
+    - `gl.SRGB8_ALPHA8`
+    - `gl.RGBA4`
+    - `gl.RGB565`
+    - `gl.RGB5_A1`
+    - `gl.RGB10_A2`
+    - `gl.RGBA8UI`
+    - `gl.RGBA8I`
+    - `gl.RGB10_A2UI`
+    - `gl.RGBA16UI`
+    - `gl.RGBA16I`
+    - `gl.RGBA32I`
+    - `gl.RGBA32UI`
+    - `gl.DEPTH_COMPONENT16`
+    - `gl.DEPTH_COMPONENT24`
+    - `gl.DEPTH_COMPONENT32F`
+    - `gl.DEPTH_STENCIL`
+    - `gl.DEPTH24_STENCIL8`
+    - `gl.DEPTH32F_STENCIL8`
+    - `gl.STENCIL_INDEX8`
+
+- width
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.
+- height
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.
+
+### Return value
+
+None.
+
+## Examples
+
+```js
+gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}

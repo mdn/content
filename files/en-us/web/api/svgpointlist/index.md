@@ -8,57 +8,55 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGPointList</code></strong> interface represents a list of {{domxref("SVGPoint")}} objects.</p>
+The **`SVGPointList`** interface represents a list of {{domxref("SVGPoint")}} objects.
 
-<p>An <code>SVGPointList</code> can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.</p>
+An `SVGPointList` can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("SVGPointList.length")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the number of points in the list.</dd>
-  <dt>{{domxref("SVGPointList.numberOfItems")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the number of points in the list.</dd>
-</dl>
+- {{domxref("SVGPointList.length")}}{{ReadOnlyInline}}
+  - : Returns the number of points in the list.
+- {{domxref("SVGPointList.numberOfItems")}}{{ReadOnlyInline}}
+  - : Returns the number of points in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("SVGPointList.clear()")}}</dt>
-  <dd>Removes all items in the list.</dd>
-  <dt>{{domxref("SVGPointList.initialize()")}}</dt>
-  <dd>First removes all items in the list, then adds a single value to the list.</dd>
-  <dt>{{domxref("SVGPointList.getItem()")}}</dt>
-  <dd>Gets an item from the list at a specified position.</dd>
-  <dt>{{domxref("SVGPointList.insertItemBefore()")}}</dt>
-  <dd>Inserts an element into the list at a specified position.</dd>
-  <dt>{{domxref("SVGPointList.replaceItem()")}}</dt>
-  <dd>Replaces an item in the list with a new item.</dd>
-  <dt>{{domxref("SVGPointList.removeItem()")}}</dt>
-  <dd>Removes an item from the list.</dd>
-  <dt>{{domxref("SVGPointList.appendItem()")}}</dt>
-  <dd>Adds an item to the end of the list.</dd>
-</dl>
+- {{domxref("SVGPointList.clear()")}}
+  - : Removes all items in the list.
+- {{domxref("SVGPointList.initialize()")}}
+  - : First removes all items in the list, then adds a single value to the list.
+- {{domxref("SVGPointList.getItem()")}}
+  - : Gets an item from the list at a specified position.
+- {{domxref("SVGPointList.insertItemBefore()")}}
+  - : Inserts an element into the list at a specified position.
+- {{domxref("SVGPointList.replaceItem()")}}
+  - : Replaces an item in the list with a new item.
+- {{domxref("SVGPointList.removeItem()")}}
+  - : Removes an item from the list.
+- {{domxref("SVGPointList.appendItem()")}}
+  - : Adds an item to the end of the list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The <code>points</code> property returns an <code>SVGPointList</code>.</p>
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The `points` property returns an `SVGPointList`.
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-</svg></pre>
+```html
+<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+```
 
-<pre class="brush: js">let example = document.getElementById("example");
-console.log(example.points); //an SVGPointList</pre>
+```js
+let example = document.getElementById("example");
+console.log(example.points); //an SVGPointList
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

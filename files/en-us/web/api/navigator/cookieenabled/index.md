@@ -8,36 +8,36 @@ tags:
   - Property
 browser-compat: api.Navigator.cookieEnabled
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code>navigator.cookieEnabled</code> returns a Boolean value that indicates whether cookies are enabled or not.</p>
+`navigator.cookieEnabled` returns a Boolean value that indicates whether cookies are enabled or not.
 
-<p>The property is read-only.</p>
+The property is read-only.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var cookieEnabled = navigator.cookieEnabled;
-</pre>
+```js
+var cookieEnabled = navigator.cookieEnabled;
+```
 
-<ul>
- <li><code>cookieEnabled</code> is a <a href="/en-US/docs/Glossary/Boolean">Boolean</a>: <code>true</code> or <code>false</code>.</li>
-</ul>
+- `cookieEnabled` is a [Boolean](/en-US/docs/Glossary/Boolean): `true` or `false`.
 
-<div class="note"><p><strong>Note:</strong> When the browser is configured to block third-party cookies, and <code>navigator.cookieEnabled</code> is invoked inside a third-party iframe, it returns <code>true</code> in Safari, Edge Spartan and IE (while trying to set a cookie in such scenario would fail). It returns <code>false</code> in Firefox and Chromium-based browsers.</p></div>
+> **Note:** When the browser is configured to block third-party cookies, and `navigator.cookieEnabled` is invoked inside a third-party iframe, it returns `true` in Safari, Edge Spartan and IE (while trying to set a cookie in such scenario would fail). It returns `false` in Firefox and Chromium-based browsers.
 
-<div class="note"><p><strong>Note:</strong> Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome 80+ does not allow creating cookies with <code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite=None</a></code> attribute, <a href="https://www.chromestatus.com/feature/5633521622188032">unless they are created over HTTPS and with <code>Secure</code> attribute.</a></p></div>
+> **Note:** Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome 80+ does not allow creating cookies with [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute, [unless they are created over HTTPS and with `Secure` attribute.](https://www.chromestatus.com/feature/5633521622188032)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (!navigator.cookieEnabled) {
+```js
+if (!navigator.cookieEnabled) {
   // The browser does not support or is blocking cookies from being set.
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

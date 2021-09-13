@@ -2,43 +2,46 @@
 title: CanvasRenderingContext2D.resetTransform()
 slug: Web/API/CanvasRenderingContext2D/resetTransform
 tags:
-- Canvas
-- CanvasRenderingContext2D
-- Experimental
-- Method
-- Reference
+  - Canvas
+  - CanvasRenderingContext2D
+  - Experimental
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.resetTransform
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.resetTransform()</code></strong>
-  method of the Canvas 2D API resets the current transform to the identity matrix.</p>
+The
+**`CanvasRenderingContext2D.resetTransform()`**
+method of the Canvas 2D API resets the current transform to the identity matrix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.resetTransform();
-</pre>
+```js
+void ctx.resetTransform();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Resetting_the_matrix">Resetting the matrix</h3>
+### Resetting the matrix
 
-<p>This example draws a rotated rectangle after modifying the matrix, and then resets the
-  matrix using the <code>resetTransform()</code> method.</p>
+This example draws a rotated rectangle after modifying the matrix, and then resets the
+matrix using the `resetTransform()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method rotates the
-  transformation matrix by 45°. The {{domxref("CanvasRenderingContext2D.fillRect()",
-  "fillRect()")}} method draws a filled rectangle, adjusted according to that matrix.</p>
+The {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method rotates the
+transformation matrix by 45°. The {{domxref("CanvasRenderingContext2D.fillRect()",
+  "fillRect()")}} method draws a filled rectangle, adjusted according to that matrix.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw a rotated rectangle
@@ -47,27 +50,29 @@ ctx.fillRect(60, 0, 100, 30);
 
 // Reset transformation matrix to the identity matrix
 ctx.resetTransform();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Resetting_the_matrix', 700, 180) }}</p>
+{{ EmbedLiveSample('Resetting_the_matrix', 700, 180) }}
 
-<h3 id="Continuing_with_a_regular_matrix">Continuing with a regular matrix</h3>
+### Continuing with a regular matrix
 
-<p>Whenever you're done drawing transformed shapes, you should call
-  <code>resetTransform()</code> before rendering anything else. In this example, the first
-  two shapes are drawn with a skew transformation, and the last two are drawn with the
-  identity (regular) transformation.</p>
+Whenever you're done drawing transformed shapes, you should call
+`resetTransform()` before rendering anything else. In this example, the first
+two shapes are drawn with a skew transformation, and the last two are drawn with the
+identity (regular) transformation.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Skewed rectangles
@@ -80,32 +85,33 @@ ctx.fillRect(40, 90, 50, 20);
 ctx.resetTransform();
 ctx.fillStyle = 'red';
 ctx.fillRect(40, 40, 50, 20);
-ctx.fillRect(40, 90, 50, 20);</pre>
+ctx.fillRect(40, 90, 50, 20);
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>The skewed rectangles are gray, and the non-skewed rectangles are red.</p>
+The skewed rectangles are gray, and the non-skewed rectangles are red.
 
-<p>{{ EmbedLiveSample('Continuing_with_a_regular_matrix', 700, 180) }}</p>
+{{ EmbedLiveSample('Continuing_with_a_regular_matrix', 700, 180) }}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>You can also use the {{domxref("CanvasRenderingContext2D.setTransform()",
+You can also use the {{domxref("CanvasRenderingContext2D.setTransform()",
   "setTransform()")}} method to reset the current transform to the identity matrix, like
-  so:</p>
+so:
 
-<pre class="brush: js">ctx.setTransform(1, 0, 0, 1, 0, 0);</pre>
+```js
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

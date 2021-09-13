@@ -9,23 +9,26 @@ tags:
   - NDEFReadingEvent
 browser-compat: api.NDEFReadingEvent.message
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>message</code></strong> property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.</p>
+The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let aMessage = NDEFReadingEvent.message;
-</pre>
+```js
+let aMessage = NDEFReadingEvent.message;
+```
 
-<h3>Value</h3>
-<p>An {{domxref("NDEFMessage")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An {{domxref("NDEFMessage")}} object.
 
-<p>This example shows how to create a convenience function that reads a single tag and then stops polling, saving battery life by cutting unneeded work. The example could easily be extended to time out after a given amount of milliseconds.</p>
+## Examples
 
-<pre class="brush: js">const ndefReader = new NDEFReader();
+This example shows how to create a convenience function that reads a single tag and then stops polling, saving battery life by cutting unneeded work. The example could easily be extended to time out after a given amount of milliseconds.
+
+```js
+const ndefReader = new NDEFReader();
 
   function read() {
     return new Promise((resolve, reject) => {
@@ -41,14 +44,13 @@ browser-compat: api.NDEFReadingEvent.message
 
   read().then(({ serialNumber }) => {
     console.log(serialNumber);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

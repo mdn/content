@@ -14,103 +14,94 @@ tags:
   - picture
 browser-compat: api.HTMLImageElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLImageElement</code></strong> interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.</p>
+The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("HTMLImageElement.Image()", "Image()")}}</dt>
- <dd>The <code>Image()</code> constructor creates and returns a new <code>HTMLImageElement</code> object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, <code>new </code><code>Image()</code> is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.</dd>
-</dl>
+- {{domxref("HTMLImageElement.Image()", "Image()")}}
+  - : The `Image()` constructor creates and returns a new `HTMLImageElement` object representing an HTML {{HTMLElement("img")}} element which is not attached to any DOM tree. It accepts optional width and height parameters. When called without parameters, ` new ``Image() ` is equivalent to calling {{DOMxRef("Document.createElement()", 'document.createElement("img")')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLImageElement.alt")}}</dt>
- <dd>A {{domxref("DOMString")}} that reflects the {{htmlattrxref("alt", "img")}} HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.</dd>
- <dt>{{domxref("HTMLImageElement.complete")}} {{readonlyInline}}</dt>
- <dd>Returns a boolean value that is <code>true</code> if the browser has finished fetching the image, whether successful or not. That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
- <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the CORS setting for this image element. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for further details. This may be <code>null</code> if CORS is not used.</dd>
- <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("USVString")}} representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> which are in place.</dd>
- <dt>{{domxref("HTMLImageElement.decoding")}}</dt>
- <dd>An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: <code>sync</code> to decode the image synchronously, <code>async</code> to decode it asynchronously, or <code>auto</code> to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.</dd>
- <dt>{{domxref("HTMLImageElement.height")}}</dt>
- <dd>An integer value that reflects the {{htmlattrxref("height", "img")}} HTML attribute, indicating the rendered height of the image in CSS pixels.</dd>
- <dt>{{domxref("HTMLImageElement.isMap")}}</dt>
- <dd>A boolean value that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an <code>&lt;img&gt;</code> element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image <em>must</em> be contained within an {{HTMLElement("a")}} element; see the <code>ismap</code> page for details.</dd>
- <dt>{{domxref("HTMLImageElement.loading")}}</dt>
- <dd>A {{domxref("DOMString")}} providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (<code>eager</code>) or on an as-needed basis (<code>lazy</code>).</dd>
- <dt>{{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}</dt>
- <dd>Returns an integer value representing the intrinsic height of the image in CSS pixels, if it is available; else, it shows <code>0</code>. This is the height the image would be if it were rendered at its natural full size.</dd>
- <dt>{{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}</dt>
- <dd>An integer value representing the intrinsic width of the image in CSS pixels, if it is available; otherwise, it will show <code>0</code>. This is the width the image would be if it were rendered at its natural full size.</dd>
- <dt>{{domxref("HTMLImageElement.referrerPolicy")}}</dt>
- <dd>A {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "img")}} HTML attribute, which tells the {{Glossary("user agent")}} how to decide which referrer to use in order to fetch the image. Read this article for details on the possible values of this string.</dd>
- <dt>{{domxref("HTMLImageElement.sizes")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the {{htmlattrxref("sizes", "img")}} HTML attribute. This string specifies a list of comma-separated conditional sizes for the image; that is, for a given viewport size, a particular image size is to be used. Read the documentation on the {{domxref("HTMLImageElement.sizes", "sizes")}} page for details on the format of this string.</dd>
- <dt>{{domxref("HTMLImageElement.src")}}</dt>
- <dd>A {{domxref("USVString")}} that reflects the {{htmlattrxref("src", "img")}} HTML attribute, which contains the full URL of the image including base URI. You can load a different image into the element by changing the URL in the <code>src</code> attribute.</dd>
- <dt>{{domxref("HTMLImageElement.srcset")}}</dt>
- <dd>A {{domxref("USVString")}} reflecting the {{htmlattrxref("srcset", "img")}} HTML attribute. This specifies a list of candidate images, separated by commas (<code>',', U+002C COMMA</code>). Each candidate image is a URL followed by a space, followed by a specially-formatted string indicating the size of the image. The size may be specified either the width or a size multiple. Read the {{domxref("HTMLImageElement.srcset", "srcset")}} page for specifics on the format of the size substring.</dd>
- <dt>{{domxref("HTMLImageElement.useMap")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the {{htmlattrxref("usemap", "img")}} HTML attribute, containing the page-local URL of the {{HTMLElement("map")}} element describing the image map to use. The page-local URL is a pound (hash) symbol (<code>#</code>) followed by the ID of the <code>&lt;map&gt;</code> element, such as <code>#my-map-element</code>. The <code>&lt;map&gt;</code> in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.</dd>
- <dt>{{domxref("HTMLImageElement.width")}}</dt>
- <dd>An integer value that reflects the {{htmlattrxref("width", "img")}} HTML attribute, indicating the rendered width of the image in CSS pixels.</dd>
- <dt>{{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An integer indicating the horizontal offset of the left border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.</dd>
- <dt>{{domxref("HTMLImageElement.y")}} {{readonlyInline}}</dt>
- <dd>The integer vertical offset of the top border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.</dd>
-</dl>
+- {{domxref("HTMLImageElement.alt")}}
+  - : A {{domxref("DOMString")}} that reflects the {{htmlattrxref("alt", "img")}} HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.
+- {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
+  - : Returns a boolean value that is `true` if the browser has finished fetching the image, whether successful or not. That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
+- {{domxref("HTMLImageElement.crossOrigin")}}
+  - : A {{domxref("DOMString")}} specifying the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for further details. This may be `null` if CORS is not used.
+- {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
+  - : Returns a {{domxref("USVString")}} representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/Media_Queries) which are in place.
+- {{domxref("HTMLImageElement.decoding")}}
+  - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
+- {{domxref("HTMLImageElement.height")}}
+  - : An integer value that reflects the {{htmlattrxref("height", "img")}} HTML attribute, indicating the rendered height of the image in CSS pixels.
+- {{domxref("HTMLImageElement.isMap")}}
+  - : A boolean value that reflects the {{htmlattrxref("ismap", "img")}} HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
+- {{domxref("HTMLImageElement.loading")}}
+  - : A {{domxref("DOMString")}} providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (`eager`) or on an as-needed basis (`lazy`).
+- {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
+  - : Returns an integer value representing the intrinsic height of the image in CSS pixels, if it is available; else, it shows `0`. This is the height the image would be if it were rendered at its natural full size.
+- {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
+  - : An integer value representing the intrinsic width of the image in CSS pixels, if it is available; otherwise, it will show `0`. This is the width the image would be if it were rendered at its natural full size.
+- {{domxref("HTMLImageElement.referrerPolicy")}}
+  - : A {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "img")}} HTML attribute, which tells the {{Glossary("user agent")}} how to decide which referrer to use in order to fetch the image. Read this article for details on the possible values of this string.
+- {{domxref("HTMLImageElement.sizes")}}
+  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("sizes", "img")}} HTML attribute. This string specifies a list of comma-separated conditional sizes for the image; that is, for a given viewport size, a particular image size is to be used. Read the documentation on the {{domxref("HTMLImageElement.sizes", "sizes")}} page for details on the format of this string.
+- {{domxref("HTMLImageElement.src")}}
+  - : A {{domxref("USVString")}} that reflects the {{htmlattrxref("src", "img")}} HTML attribute, which contains the full URL of the image including base URI. You can load a different image into the element by changing the URL in the `src` attribute.
+- {{domxref("HTMLImageElement.srcset")}}
+  - : A {{domxref("USVString")}} reflecting the {{htmlattrxref("srcset", "img")}} HTML attribute. This specifies a list of candidate images, separated by commas (`',', U+002C COMMA`). Each candidate image is a URL followed by a space, followed by a specially-formatted string indicating the size of the image. The size may be specified either the width or a size multiple. Read the {{domxref("HTMLImageElement.srcset", "srcset")}} page for specifics on the format of the size substring.
+- {{domxref("HTMLImageElement.useMap")}}
+  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("usemap", "img")}} HTML attribute, containing the page-local URL of the {{HTMLElement("map")}} element describing the image map to use. The page-local URL is a pound (hash) symbol (`#`) followed by the ID of the `<map>` element, such as `#my-map-element`. The `<map>` in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.
+- {{domxref("HTMLImageElement.width")}}
+  - : An integer value that reflects the {{htmlattrxref("width", "img")}} HTML attribute, indicating the rendered width of the image in CSS pixels.
+- {{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}
+  - : An integer indicating the horizontal offset of the left border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.
+- {{domxref("HTMLImageElement.y")}} {{readonlyInline}}
+  - : The integer vertical offset of the top border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.
 
-<h2 id="Obsolete_properties">Obsolete properties</h2>
+## Obsolete properties
 
-<dl>
- <dt>{{domxref("HTMLImageElement.align")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the alignment of the image with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>. This is obsolete; you should instead use CSS (such as {{cssxref("text-align")}}, which works with images despite its name) to specify the alignment.</dd>
- <dt>{{domxref("HTMLImageElement.border")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} which defines the width of the border surrounding the image. This is deprecated; use the CSS {{cssxref("border")}} property instead.</dd>
- <dt>{{domxref("HTMLImageElement.hspace")}} {{deprecated_inline}}</dt>
- <dd>An integer value which specifies the amount of space (in pixels) to leave empty on the left and right sides of the image.</dd>
- <dt>{{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("USVString")}} specifying the URL at which a long description of the image's contents may be found. This is used to turn the image into a hyperlink automatically. Modern HTML should instead place an <code>&lt;img&gt;</code> inside an {{HTMLElement("a")}} element defining the hyperlink.</dd>
- <dt>{{domxref("HTMLImageElement.name")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the name of the element.</dd>
- <dt>{{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}</dt>
- <dd>An integer value specifying the amount of empty space, in pixels, to leave above and below the image.</dd>
-</dl>
+- {{domxref("HTMLImageElement.align")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} indicating the alignment of the image with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`. This is obsolete; you should instead use CSS (such as {{cssxref("text-align")}}, which works with images despite its name) to specify the alignment.
+- {{domxref("HTMLImageElement.border")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} which defines the width of the border surrounding the image. This is deprecated; use the CSS {{cssxref("border")}} property instead.
+- {{domxref("HTMLImageElement.hspace")}} {{deprecated_inline}}
+  - : An integer value which specifies the amount of space (in pixels) to leave empty on the left and right sides of the image.
+- {{domxref("HTMLImageElement.longDesc")}} {{deprecated_inline}}
+  - : A {{domxref("USVString")}} specifying the URL at which a long description of the image's contents may be found. This is used to turn the image into a hyperlink automatically. Modern HTML should instead place an `<img>` inside an {{HTMLElement("a")}} element defining the hyperlink.
+- {{domxref("HTMLImageElement.name")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} representing the name of the element.
+- {{domxref("HTMLImageElement.vspace")}} {{deprecated_inline}}
+  - : An integer value specifying the amount of empty space, in pixels, to leave above and below the image.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLImageElement.decode()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.</dd>
-</dl>
+- {{domxref("HTMLImageElement.decode()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.
 
-<h2 id="Errors">Errors</h2>
+## Errors
 
-<p>If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{event("error")}} event, that event handler will get called. This can happen in a number of situations, including:</p>
+If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the {{event("error")}} event, that event handler will get called. This can happen in a number of situations, including:
 
-<ul>
- <li>The {{htmlattrxref("src", "img")}} attribute is empty or <code>null</code>.</li>
- <li>The specified <code>src</code> URL is the same as the URL of the page the user is currently on.</li>
- <li>The specified image is corrupted in some way that prevents it from being loaded.</li>
- <li>The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the <code>&lt;img&gt;</code> element's attributes.</li>
- <li>The specified image is in a format not supported by the {{Glossary("user agent")}}.</li>
-</ul>
+- The {{htmlattrxref("src", "img")}} attribute is empty or `null`.
+- The specified `src` URL is the same as the URL of the page the user is currently on.
+- The specified image is corrupted in some way that prevents it from being loaded.
+- The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
+- The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var img1 = new Image(); // Image constructor
+```js
+var img1 = new Image(); // Image constructor
 img1.src = 'image1.png';
 img1.alt = 'alt';
 document.body.appendChild(img1);
@@ -122,18 +113,16 @@ document.body.appendChild(img2);
 
 // using first image in the document
 alert(document.images[0].src);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("img")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("img")}}

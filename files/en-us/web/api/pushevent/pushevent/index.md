@@ -2,65 +2,61 @@
 title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 tags:
-- API
-- Constructor
-- Experimental
-- Push
-- Push API
-- PushEvent
-- Reference
-- Service Workers
+  - API
+  - Constructor
+  - Experimental
+  - Push
+  - Push API
+  - PushEvent
+  - Reference
+  - Service Workers
 browser-compat: api.PushEvent.PushEvent
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>PushEvent()</strong></code> constructor creates a new
-	{{domxref("PushEvent")}} object. Note that the this constructor is exposed only to a
-	service worker context.</p>
+The **`PushEvent()`** constructor creates a new
+{{domxref("PushEvent")}} object. Note that the this constructor is exposed only to a
+service worker context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const myPushEvent = new PushEvent(type, eventInitDict);</pre>
+```js
+const myPushEvent = new PushEvent(type, eventInitDict);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><em>type</em></dt>
-	<dd>A {{domxref("DOMString")}} defining the type of <code>PushEvent</code>. This can
-		be {{event("push")}} or {{event("pushsubscriptionchange")}}.</dd>
-	<dt><em>eventInitDict</em> {{optional_inline}}</dt>
-	<dd>An options object containing any initialization data you want to populate the
-		<code>PushEvent</code> object with. The options are:
-		<ul>
-			<li><code>data</code>: The data you want the <code>PushEvent</code> to
-				contain, if any. When the constructor is invoked, the
-				{{domxref("PushEvent.data")}} property of the resulting object will be set
-				to a new {{domxref("PushMessageData")}} object containing bytes extracted
-				from the <code>eventInitDict data</code> member.</li>
-		</ul>
-	</dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString")}} defining the type of `PushEvent`. This can
+    be {{event("push")}} or {{event("pushsubscriptionchange")}}.
+- _eventInitDict_ {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+  - : An options object containing any initialization data you want to populate the
+    `PushEvent` object with. The options are:
 
-<pre class="brush: js">var dataInit = {
+    - `data`: The data you want the `PushEvent` to
+      contain, if any. When the constructor is invoked, the
+      {{domxref("PushEvent.data")}} property of the resulting object will be set
+      to a new {{domxref("PushMessageData")}} object containing bytes extracted
+      from the `eventInitDict data` member.
+
+## Example
+
+```js
+var dataInit = {
   data : 'Some sample text'
 }
 
 var myPushEvent = new PushEvent('push', dataInit);
 
-myPushEvent.data.text(); // should return 'Some sample text'</pre>
+myPushEvent.data.text(); // should return 'Some sample text'
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-	<p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
-	<li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Push API](/en-US/docs/Web/API/Push_API)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

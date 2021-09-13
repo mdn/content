@@ -2,43 +2,44 @@
 title: TrackEvent.track
 slug: Web/API/TrackEvent/track
 tags:
-- API
-- Audio
-- Event
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- TrackEvent
-- Video
-- track
+  - API
+  - Audio
+  - Event
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - TrackEvent
+  - Video
+  - track
 browser-compat: api.TrackEvent.track
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <code><strong>track</strong></code> property of
-    the {{domxref("TrackEvent")}} interface specifies the media track object to which the
-    event applies.</p>
+The read-only **`track`** property of
+the {{domxref("TrackEvent")}} interface specifies the media track object to which the
+event applies.
 
-<p>The media track will be an {{domxref("AudioTrack")}},
-  {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}} object.</p>
+The media track will be an {{domxref("AudioTrack")}},
+{{domxref("VideoTrack")}}, or {{domxref("TextTrack")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>track</em> = <em>TrackEvent</em>.track;</pre>
+```js
+track = TrackEvent.track;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An object which is one of the types {{domxref("AudioTrack")}},
-  {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}, depending on the type of media
-  represented by the track. This identifies the track to which the event applies.</p>
+An object which is one of the types {{domxref("AudioTrack")}},
+{{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}, depending on the type of media
+represented by the track. This identifies the track to which the event applies.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

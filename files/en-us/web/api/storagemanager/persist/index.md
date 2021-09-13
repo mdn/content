@@ -2,47 +2,50 @@
 title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 tags:
-- Method
-- Reference
-- Secure context
-- Storage API
-- persist()
+  - Method
+  - Reference
+  - Secure context
+  - Storage API
+  - persist()
 browser-compat: api.StorageManager.persist
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
-<p>The <strong><code>persist()</code></strong> method of the
-    {{domxref("StorageManager")}} interface requests permission to use persistent storage,
-    and returns a {{jsxref('Promise')}} that resolves to <code>true</code> if permission
-    is granted and box mode is persistent, and <code>false</code> otherwise.</p>
+The **`persist()`** method of the
+{{domxref("StorageManager")}} interface requests permission to use persistent storage,
+and returns a {{jsxref('Promise')}} that resolves to `true` if permission
+is granted and box mode is persistent, and `false` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">navigator.storage.persist().then(function(persistent) { ... })</pre>
+```js
+navigator.storage.persist().then(function(persistent) { ... })
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.</p>
+A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (navigator.storage &amp;&amp; navigator.storage.persist)
+```js
+if (navigator.storage && navigator.storage.persist)
   navigator.storage.persist().then(function(persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
       console.log("Storage may be cleared by the UA under storage pressure.");
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,83 +13,80 @@ tags:
   - sound
 browser-compat: api.HTMLAudioElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAudioElement</code></strong> interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.</p>
+The **`HTMLAudioElement`** interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.
 
-<p>This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.</p>
+This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("HTMLAudioElement.Audio", "Audio()")}}</dt>
- <dd>Creates and returns a new <code>HTMLAudioElement</code> object, optionally starting the process of loading an audio file into it if the file URL is given.</dd>
-</dl>
+- {{domxref("HTMLAudioElement.Audio", "Audio()")}}
+  - : Creates and returns a new `HTMLAudioElement` object, optionally starting the process of loading an audio file into it if the file URL is given.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>No specific properties; inherits properties from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. </em></p>
+_No specific properties; inherits properties from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{domxref("HTMLElement")}}. It offers no methods of its own._
 
-<h3 id="Obsolete_Mozilla-only_methods">Obsolete Mozilla-only methods</h3>
+### Obsolete Mozilla-only methods
 
-<p><em>The following methods are non-standard and should not be used.</em></p>
+_The following methods are non-standard and should not be used._
 
-<dl>
- <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.</dd>
- <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.</dd>
- <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.</dd>
-</dl>
+- {{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
+- {{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.
+- {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>You can create a <code>HTMLAudioElement</code> entirely with JavaScript using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor:</p>
+You can create a `HTMLAudioElement` entirely with JavaScript using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor:
 
-<pre class="brush: js">var audioElement = new Audio('car_horn.wav');
-</pre>
+```js
+var audioElement = new Audio('car_horn.wav');
+```
 
-<p>then you can invoke the <code>play()</code> method on the element</p>
+then you can invoke the `play()` method on the element
 
-<pre class="brush: js">audioElement.play();</pre>
+```js
+audioElement.play();
+```
 
-<div class="note">
-<p><strong>Note:</strong> A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> and <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> for best practices and work arounds.</p>
-</div>
+> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) for best practices and work arounds.
 
-<p>Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:</p>
+Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
-<pre class="brush: js">var audioElement = new Audio('car_horn.wav');
-audioElement.addEventListener('loadeddata', () =&gt; {
+```js
+var audioElement = new Audio('car_horn.wav');
+audioElement.addEventListener('loadeddata', () => {
   let duration = audioElement.duration;
   // The duration variable now holds the duration (in seconds) of the audio clip
-})</pre>
+})
+```
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}.</em> Listen to events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Web/Media/HTML_media">Using audio and video in HTML</a></li>
- <li>HTML element implementing this interface: {{HTMLElement("audio")}}.</li>
-</ul>
+- [Web media technologies](/en-US/docs/Web/Media)
+- [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
+- HTML element implementing this interface: {{HTMLElement("audio")}}.

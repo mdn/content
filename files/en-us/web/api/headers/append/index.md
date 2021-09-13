@@ -10,75 +10,76 @@ tags:
   - Reference
 browser-compat: api.Headers.append
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>append()</code></strong> method of the {{domxref("Headers")}}
-  interface appends a new value onto an existing header inside a <code>Headers</code>
-  object, or adds the header if it does not already exist.</p>
+The **`append()`** method of the {{domxref("Headers")}}
+interface appends a new value onto an existing header inside a `Headers`
+object, or adds the header if it does not already exist.
 
-<p>The difference between {{domxref("Headers.set", "set()")}} and <code>append()</code> is
-  that if the specified header already exists and accepts multiple values,
-  <code>set()</code> will overwrite the existing value with the new one, whereas
-  <code>append()</code> will append the new value onto the end of the set of values.</p>
+The difference between {{domxref("Headers.set", "set()")}} and `append()` is
+that if the specified header already exists and accepts multiple values,
+`set()` will overwrite the existing value with the new one, whereas
+`append()` will append the new value onto the end of the set of values.
 
-<p>For security reasons, some headers can only be controlled by the user agent. These
-  headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-  and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.</p>
+For security reasons, some headers can only be controlled by the user agent. These
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
+  1)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>myHeaders</em>.append(<em>name</em>, <em>value</em>);</pre>
+```js
+myHeaders.append(name, value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>The name of the HTTP header you want to add to the <code>Headers</code> object.</dd>
-  <dt><code>value</code></dt>
-  <dd>The value of the HTTP header you want to add.</dd>
-</dl>
+- `name`
+  - : The name of the HTTP header you want to add to the `Headers` object.
+- `value`
+  - : The value of the HTTP header you want to add.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Creating an empty <code>Headers</code> object is simple:</p>
+Creating an empty `Headers` object is simple:
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>You could add a header to this using <code>append()</code>:</p>
+You could add a header to this using `append()`:
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>If the specified header already exists, <code>append()</code> will change its value to
-  the specified value. If the specified header already exists and accepts multiple values,
-  <code>append()</code> will append the new value to the end of the value set:</p>
+If the specified header already exists, `append()` will change its value to
+the specified value. If the specified header already exists and accepts multiple values,
+`append()` will append the new value to the end of the value set:
 
-<pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
+```js
+myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'deflate, gzip'</pre>
+myHeaders.get('Accept-Encoding'); // Returns 'deflate, gzip'
+```
 
-<p>To overwrite the old value with a new one, use {{domxref("Headers.set")}}.</p>
+To overwrite the old value with a new one, use {{domxref("Headers.set")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

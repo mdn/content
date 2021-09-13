@@ -2,80 +2,77 @@
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 tags:
-- API
-- DOM
-- Document
-- Full
-- Full-screen
-- Fullscreen API
-- Method
-- Reference
-- exitFullscreen
-- fullscreen
-- screen
+  - API
+  - DOM
+  - Document
+  - Full
+  - Full-screen
+  - Fullscreen API
+  - Method
+  - Reference
+  - exitFullscreen
+  - fullscreen
+  - screen
 browser-compat: api.Document.exitFullscreen
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The {{domxref("Document")}} method
-    <code><strong>exitFullscreen()</strong></code> requests that the element on this
-    document which is currently being presented in full-screen mode be taken out of
-    full-screen mode, restoring the previous state of the screen. This usually
-  reverses the effects of a previous call to {{domxref("Element.requestFullscreen()")}}.
-</p>
+The {{domxref("Document")}} method
+**`exitFullscreen()`** requests that the element on this
+document which is currently being presented in full-screen mode be taken out of
+full-screen mode, restoring the previous state of the screen. This usually
+reverses the effects of a previous call to {{domxref("Element.requestFullscreen()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>exitPromise</em> = <em>document</em>.exitFullscreen();
-</pre>
+```js
+exitPromise = document.exitFullscreen();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is resolved once the {{Glossary("user agent")}} has
-  finished exiting full-screen mode. If an error occurs while attempting to exit
-  full-screen mode, the <code>catch()</code> handler for the promise is called.</p>
+A {{jsxref("Promise")}} which is resolved once the {{Glossary("user agent")}} has
+finished exiting full-screen mode. If an error occurs while attempting to exit
+full-screen mode, the `catch()` handler for the promise is called.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example causes the current document to toggle in and out of a full-screen
-  presentation whenever the mouse button is clicked within it.</p>
+This example causes the current document to toggle in and out of a full-screen
+presentation whenever the mouse button is clicked within it.
 
-<pre class="brush: js">document.onclick = function (event) {
+```js
+document.onclick = function (event) {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() =&gt; console.log("Document Exited from Full screen mode"))
-      .catch((err) =&gt; console.error(err))
+      .then(() => console.log("Document Exited from Full screen mode"))
+      .catch((err) => console.error(err))
   } else {
     document.documentElement.requestFullscreen();
   }
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> For a more complete example, see the
-    {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.</p>
-</div>
+> **Note:** For a more complete example, see the
+> {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{ domxref("Element.requestFullscreen()") }}</li>
-  <li>{{ domxref("Document.fullscreenElement") }}</li>
-  <li>{{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}</li>
-  <li>The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
-    attribute</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
+- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+  attribute

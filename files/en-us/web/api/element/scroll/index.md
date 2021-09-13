@@ -2,63 +2,63 @@
 title: Element.scroll()
 slug: Web/API/Element/scroll
 tags:
-- API
-- Element
-- Method
-- Reference
-- Scroll
+  - API
+  - Element
+  - Method
+  - Reference
+  - Scroll
 browser-compat: api.Element.scroll
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>scroll()</code></strong> method of the {{domxref("Element")}}
-	interface scrolls the element to a particular set of coordinates inside a given
-	element.</p>
+The **`scroll()`** method of the {{domxref("Element")}}
+interface scrolls the element to a particular set of coordinates inside a given
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>element</var>.scroll(<var>x-coord</var>, <var>y-coord</var>)
-<var>element</var>.scroll(<var>options</var>)
-</pre>
+```js
+element.scroll(x-coord, y-coord)
+element.scroll(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<h4 id="Calling_with_coordinates">Calling with coordinates</h4>
+#### Calling with coordinates
 
-<dl>
-	<dt><code><var>x-coord</var></code></dt>
-	<dd>The pixel along the horizontal axis of the element that you want displayed in the
-		upper left.</dd>
-	<dt><code><var>y-coord</var></code></dt>
-	<dd>The pixel along the vertical axis of the element that you want displayed in the
-		upper left.</dd>
-</dl>
+- `x-coord`
+  - : The pixel along the horizontal axis of the element that you want displayed in the
+    upper left.
+- `y-coord`
+  - : The pixel along the vertical axis of the element that you want displayed in the
+    upper left.
 
-<h4 id="Calling_with_options">Calling with <code><var>options</var></code></h4>
+#### Calling with `options`
 
-<dl>
-	<dt><code><var>options</var></code></dt>
-	<dd>A {{domxref("ScrollToOptions")}} dictionary.</dd>
-</dl>
+- `options`
+  - : A {{domxref("ScrollToOptions")}} dictionary.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Put the 1000th vertical pixel at the top of the element
+```js
+// Put the 1000th vertical pixel at the top of the element
 element.scroll(0, 1000);
-</pre>
+```
 
-<p>Using <code>options</code>:</p>
+Using `options`:
 
-<pre class="brush: js">element.scroll({
+```js
+element.scroll({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

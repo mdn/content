@@ -8,257 +8,222 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGL2RenderingContext</strong> interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.</p>
+The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
 
-<p>To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a <code>&lt;canvas&gt;</code> element, supplying "webgl2" as the argument:</p>
+To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl2" as the argument:
 
-<pre class="brush: js">var canvas = document.getElementById('myCanvas');
+```js
+var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl2');
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> WebGL 2 is an extension to WebGL 1. The <code>WebGL2RenderingContext</code> interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.</p>
-</div>
+> **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
 
-<p>The <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> has more information, examples, and resources on how to get started with WebGL.</p>
+The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>See the <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a> page.</p>
+See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
-<h2 id="State_information">State information</h2>
+## State information
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.getIndexedParameter()")}}</dt>
- <dd>Returns the indexed value for the given <code>target</code>.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}
+  - : Returns the indexed value for the given `target`.
 
-<h2 id="Buffers">Buffers</h2>
+## Buffers
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.bufferData()")}}</dt>
- <dd>Initializes and creates the buffer object's data store.</dd>
- <dt>{{domxref("WebGL2RenderingContext.bufferSubData()")}}</dt>
- <dd>Updates a subset of a buffer object's data store.</dd>
- <dt>{{domxref("WebGL2RenderingContext.copyBufferSubData()")}}</dt>
- <dd>Copies part of the data of a buffer to another buffer.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getBufferSubData()")}}</dt>
- <dd>Reads data from a buffer and writes them to an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.bufferData()")}}
+  - : Initializes and creates the buffer object's data store.
+- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
+  - : Updates a subset of a buffer object's data store.
+- {{domxref("WebGL2RenderingContext.copyBufferSubData()")}}
+  - : Copies part of the data of a buffer to another buffer.
+- {{domxref("WebGL2RenderingContext.getBufferSubData()")}}
+  - : Reads data from a buffer and writes them to an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
-<h2 id="Framebuffers">Framebuffers</h2>
+## Framebuffers
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.blitFramebuffer()")}}</dt>
- <dd>Transfers a block of pixels from the read framebuffer to the draw framebuffer.</dd>
- <dt>{{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}</dt>
- <dd>Attaches a single layer of a texture to a framebuffer.</dd>
- <dt>{{domxref("WebGL2RenderingContext.invalidateFramebuffer()")}}</dt>
- <dd>Invalidates the contents of attachments in a framebuffer.</dd>
- <dt>{{domxref("WebGL2RenderingContext.invalidateSubFramebuffer()")}}</dt>
- <dd>Invalidates portions of the contents of attachments in a framebuffer</dd>
- <dt>{{domxref("WebGL2RenderingContext.readBuffer()")}}</dt>
- <dd>Selects a color buffer as the source for pixels.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.blitFramebuffer()")}}
+  - : Transfers a block of pixels from the read framebuffer to the draw framebuffer.
+- {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}
+  - : Attaches a single layer of a texture to a framebuffer.
+- {{domxref("WebGL2RenderingContext.invalidateFramebuffer()")}}
+  - : Invalidates the contents of attachments in a framebuffer.
+- {{domxref("WebGL2RenderingContext.invalidateSubFramebuffer()")}}
+  - : Invalidates portions of the contents of attachments in a framebuffer
+- {{domxref("WebGL2RenderingContext.readBuffer()")}}
+  - : Selects a color buffer as the source for pixels.
 
-<h2 id="Renderbuffers">Renderbuffers</h2>
+## Renderbuffers
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.getInternalformatParameter()")}}</dt>
- <dd>Returns information about implementation-dependent support for internal formats.</dd>
- <dt>{{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}}</dt>
- <dd>Creates and initializes a renderbuffer object's data store and allows specifying the number of samples to be used.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.getInternalformatParameter()")}}
+  - : Returns information about implementation-dependent support for internal formats.
+- {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}}
+  - : Creates and initializes a renderbuffer object's data store and allows specifying the number of samples to be used.
 
-<h2 id="Textures">Textures</h2>
+## Textures
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.texStorage2D()")}}</dt>
- <dd>Specifies all levels of two-dimensional texture storage.</dd>
- <dt>{{domxref("WebGL2RenderingContext.texStorage3D()")}}</dt>
- <dd>Specifies all levels of a three-dimensional texture or two-dimensional array texture.</dd>
- <dt>{{domxref("WebGL2RenderingContext.texImage3D()")}}</dt>
- <dd>Specifies a three-dimensional texture image.</dd>
- <dt>{{domxref("WebGL2RenderingContext.texSubImage3D()")}}</dt>
- <dd>Specifies a sub-rectangle of the current 3D texture.</dd>
- <dt>{{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}</dt>
- <dd>Copies pixels from the current <a href="/en-US/docs/Web/API/WebGLFramebuffer" title="The WebGLFramebuffer interface is part of the WebGL API and represents a collection of buffers that serve as a rendering destination."><code>WebGLFramebuffer</code></a> into an existing 3D texture sub-image.</dd>
- <dt>{{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}</dt>
- <dd>Specifies a three-dimensional texture image in a compressed format.</dd>
- <dt>{{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}</dt>
- <dd>Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.texStorage2D()")}}
+  - : Specifies all levels of two-dimensional texture storage.
+- {{domxref("WebGL2RenderingContext.texStorage3D()")}}
+  - : Specifies all levels of a three-dimensional texture or two-dimensional array texture.
+- {{domxref("WebGL2RenderingContext.texImage3D()")}}
+  - : Specifies a three-dimensional texture image.
+- {{domxref("WebGL2RenderingContext.texSubImage3D()")}}
+  - : Specifies a sub-rectangle of the current 3D texture.
+- {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
+  - : Copies pixels from the current [`WebGLFramebuffer`](/en-US/docs/Web/API/WebGLFramebuffer "The WebGLFramebuffer interface is part of the WebGL API and represents a collection of buffers that serve as a rendering destination.") into an existing 3D texture sub-image.
+- {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
+  - : Specifies a three-dimensional texture image in a compressed format.
+- {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
+  - : Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
 
-<h2 id="Programs_and_shaders">Programs and shaders</h2>
+## Programs and shaders
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.getFragDataLocation()")}}</dt>
- <dd>Returns the binding of color numbers to user-defined varying out variables.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.getFragDataLocation()")}}
+  - : Returns the binding of color numbers to user-defined varying out variables.
 
-<h2 id="Uniforms_and_attributes">Uniforms and attributes</h2>
+## Uniforms and attributes
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}</dt>
- <dd>Methods specifying values of uniform variables.</dd>
- <dt>{{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}</dt>
- <dd>Methods specifying matrix values for uniform variables.</dd>
- <dt>{{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI4[u]i[v]()")}}</dt>
- <dd>Methods specifying integer values for generic vertex attributes.</dd>
- <dt>{{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}</dt>
- <dd>Specifies integer data formats and locations of vertex attributes in a vertex attributes array.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
+  - : Methods specifying values of uniform variables.
+- {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
+  - : Methods specifying matrix values for uniform variables.
+- {{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI4[u]i[v]()")}}
+  - : Methods specifying integer values for generic vertex attributes.
+- {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
+  - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
 
-<h2 id="Drawing_buffers">Drawing buffers</h2>
+## Drawing buffers
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</dt>
- <dd>Modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} and {{domxref("WebGL2RenderingContext.drawElementsInstanced()", "gl.drawElementsInstanced()")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</dt>
- <dd>Renders primitives from array data. In addition, it can execute multiple instances of the range of elements.</dd>
- <dt>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</dt>
- <dd>Renders primitives from array data. In addition, it can execute multiple instances of a set of elements.</dd>
- <dt>{{domxref("WebGL2RenderingContext.drawRangeElements()")}}</dt>
- <dd>Renders primitives from array data in a given range.</dd>
- <dt>{{domxref("WebGL2RenderingContext.drawBuffers()")}}</dt>
- <dd>Specifies a list of color buffers to be drawn into.</dd>
- <dt>{{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}</dt>
- <dd>Clears buffers from the currently bound framebuffer.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
+  - : Modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} and {{domxref("WebGL2RenderingContext.drawElementsInstanced()", "gl.drawElementsInstanced()")}}.
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+  - : Renders primitives from array data. In addition, it can execute multiple instances of the range of elements.
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+  - : Renders primitives from array data. In addition, it can execute multiple instances of a set of elements.
+- {{domxref("WebGL2RenderingContext.drawRangeElements()")}}
+  - : Renders primitives from array data in a given range.
+- {{domxref("WebGL2RenderingContext.drawBuffers()")}}
+  - : Specifies a list of color buffers to be drawn into.
+- {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
+  - : Clears buffers from the currently bound framebuffer.
 
-<h2 id="Query_objects">Query objects</h2>
+## Query objects
 
-<p>Methods for working with {{domxref("WebGLQuery")}} objects.</p>
+Methods for working with {{domxref("WebGLQuery")}} objects.
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.createQuery()")}}</dt>
- <dd>Creates a new {{domxref("WebGLQuery")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.deleteQuery()")}}</dt>
- <dd>Deletes a given {{domxref("WebGLQuery")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.isQuery()")}}</dt>
- <dd>Returns <code>true</code> if a given object is a valid {{domxref("WebGLQuery")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.beginQuery()")}}</dt>
- <dd>Begins an asynchronous query.</dd>
- <dt>{{domxref("WebGL2RenderingContext.endQuery()")}}</dt>
- <dd>Marks the end of an asynchronous query.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getQuery()")}}</dt>
- <dd>Returns a {{domxref("WebGLQuery")}} object for a given target.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getQueryParameter()")}}</dt>
- <dd>Returns information about a query.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.createQuery()")}}
+  - : Creates a new {{domxref("WebGLQuery")}} object.
+- {{domxref("WebGL2RenderingContext.deleteQuery()")}}
+  - : Deletes a given {{domxref("WebGLQuery")}} object.
+- {{domxref("WebGL2RenderingContext.isQuery()")}}
+  - : Returns `true` if a given object is a valid {{domxref("WebGLQuery")}} object.
+- {{domxref("WebGL2RenderingContext.beginQuery()")}}
+  - : Begins an asynchronous query.
+- {{domxref("WebGL2RenderingContext.endQuery()")}}
+  - : Marks the end of an asynchronous query.
+- {{domxref("WebGL2RenderingContext.getQuery()")}}
+  - : Returns a {{domxref("WebGLQuery")}} object for a given target.
+- {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
+  - : Returns information about a query.
 
-<h2 id="Sampler_objects">Sampler objects</h2>
+## Sampler objects
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.createSampler()")}}</dt>
- <dd>Creates a new {{domxref("WebGLSampler")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.deleteSampler()")}}</dt>
- <dd>Deletes a given {{domxref("WebGLSampler")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.bindSampler()")}}</dt>
- <dd>Binds a given {{domxref("WebGLSampler")}} to a texture unit.</dd>
- <dt>{{domxref("WebGL2RenderingContext.isSampler()")}}</dt>
- <dd>Returns <code>true</code> if a given object is a valid {{domxref("WebGLSampler")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}</dt>
- <dd>Sets sampler parameters.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getSamplerParameter()")}}</dt>
- <dd>Returns sampler parameter information.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.createSampler()")}}
+  - : Creates a new {{domxref("WebGLSampler")}} object.
+- {{domxref("WebGL2RenderingContext.deleteSampler()")}}
+  - : Deletes a given {{domxref("WebGLSampler")}} object.
+- {{domxref("WebGL2RenderingContext.bindSampler()")}}
+  - : Binds a given {{domxref("WebGLSampler")}} to a texture unit.
+- {{domxref("WebGL2RenderingContext.isSampler()")}}
+  - : Returns `true` if a given object is a valid {{domxref("WebGLSampler")}} object.
+- {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
+  - : Sets sampler parameters.
+- {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
+  - : Returns sampler parameter information.
 
-<h2 id="Sync_objects">Sync objects</h2>
+## Sync objects
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.fenceSync()")}}</dt>
- <dd>Creates a new {{domxref("WebGLSync")}} object and inserts it into the GL command stream.</dd>
- <dt>{{domxref("WebGL2RenderingContext.isSync()")}}</dt>
- <dd>Returns <code>true</code> if the passed object is a valid {{domxref("WebGLSync")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.deleteSync()")}}</dt>
- <dd>Deletes a given {{domxref("WebGLSync")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.clientWaitSync()")}}</dt>
- <dd>
- <p>Blocks and waits for a {{domxref("WebGLSync")}} object to become signaled or a given timeout to be passed.</p>
- </dd>
- <dt>{{domxref("WebGL2RenderingContext.waitSync()")}}</dt>
- <dd>Returns immediately, but waits on the GL server until the given {{domxref("WebGLSync")}} object is signaled.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getSyncParameter()")}}</dt>
- <dd>Returns parameter information of a {{domxref("WebGLSync")}} object.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.fenceSync()")}}
+  - : Creates a new {{domxref("WebGLSync")}} object and inserts it into the GL command stream.
+- {{domxref("WebGL2RenderingContext.isSync()")}}
+  - : Returns `true` if the passed object is a valid {{domxref("WebGLSync")}} object.
+- {{domxref("WebGL2RenderingContext.deleteSync()")}}
+  - : Deletes a given {{domxref("WebGLSync")}} object.
+- {{domxref("WebGL2RenderingContext.clientWaitSync()")}}
+  - : Blocks and waits for a {{domxref("WebGLSync")}} object to become signaled or a given timeout to be passed.
+- {{domxref("WebGL2RenderingContext.waitSync()")}}
+  - : Returns immediately, but waits on the GL server until the given {{domxref("WebGLSync")}} object is signaled.
+- {{domxref("WebGL2RenderingContext.getSyncParameter()")}}
+  - : Returns parameter information of a {{domxref("WebGLSync")}} object.
 
-<h2 id="Transform_feedback">Transform feedback</h2>
+## Transform feedback
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.createTransformFeedback()")}}</dt>
- <dd>Creates and initializes {{domxref("WebGLTransformFeedback")}} objects.</dd>
- <dt>{{domxref("WebGL2RenderingContext.deleteTransformFeedback()")}}</dt>
- <dd>Deletes a given {{domxref("WebGLTransformFeedback")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.isTransformFeedback()")}}</dt>
- <dd>Returns <code>true</code> if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.</dd>
- <dt>{{domxref("WebGL2RenderingContext.bindTransformFeedback()")}}</dt>
- <dd>Binds a passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.</dd>
- <dt>{{domxref("WebGL2RenderingContext.beginTransformFeedback()")}}</dt>
- <dd>Starts a transform feedback operation.</dd>
- <dt>{{domxref("WebGL2RenderingContext.endTransformFeedback()")}}</dt>
- <dd>Ends a transform feedback operation.</dd>
- <dt>{{domxref("WebGL2RenderingContext.transformFeedbackVaryings()")}}</dt>
- <dd>Specifies values to record in {{domxref("WebGLTransformFeedback")}} buffers.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}</dt>
- <dd>Returns information about varying variables from {{domxref("WebGLTransformFeedback")}} buffers.</dd>
- <dt>{{domxref("WebGL2RenderingContext.pauseTransformFeedback()")}}</dt>
- <dd>Pauses a transform feedback operation.</dd>
- <dt>{{domxref("WebGL2RenderingContext.resumeTransformFeedback()")}}</dt>
- <dd>Resumes a transform feedback operation.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.createTransformFeedback()")}}
+  - : Creates and initializes {{domxref("WebGLTransformFeedback")}} objects.
+- {{domxref("WebGL2RenderingContext.deleteTransformFeedback()")}}
+  - : Deletes a given {{domxref("WebGLTransformFeedback")}} object.
+- {{domxref("WebGL2RenderingContext.isTransformFeedback()")}}
+  - : Returns `true` if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
+- {{domxref("WebGL2RenderingContext.bindTransformFeedback()")}}
+  - : Binds a passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
+- {{domxref("WebGL2RenderingContext.beginTransformFeedback()")}}
+  - : Starts a transform feedback operation.
+- {{domxref("WebGL2RenderingContext.endTransformFeedback()")}}
+  - : Ends a transform feedback operation.
+- {{domxref("WebGL2RenderingContext.transformFeedbackVaryings()")}}
+  - : Specifies values to record in {{domxref("WebGLTransformFeedback")}} buffers.
+- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
+  - : Returns information about varying variables from {{domxref("WebGLTransformFeedback")}} buffers.
+- {{domxref("WebGL2RenderingContext.pauseTransformFeedback()")}}
+  - : Pauses a transform feedback operation.
+- {{domxref("WebGL2RenderingContext.resumeTransformFeedback()")}}
+  - : Resumes a transform feedback operation.
 
-<h2 id="Uniform_buffer_objects">Uniform buffer objects</h2>
+## Uniform buffer objects
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.bindBufferBase()")}}</dt>
- <dd>Binds a given {{domxref("WebGLBuffer")}} to a given binding point (<code>target</code>) at a given <code>index</code>.</dd>
- <dt>{{domxref("WebGL2RenderingContext.bindBufferRange()")}}</dt>
- <dd>Binds a range of a given {{domxref("WebGLBuffer")}} to a given binding point (<code>target</code>) at a given <code>index</code>.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getUniformIndices()")}}</dt>
- <dd>
- <p>Retrieves the indices of a number of uniforms within a {{domxref("WebGLProgram")}}.</p>
- </dd>
- <dt>{{domxref("WebGL2RenderingContext.getActiveUniforms()")}}</dt>
- <dd>Retrieves information about active uniforms within a {{domxref("WebGLProgram")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}</dt>
- <dd>Retrieves the index of a uniform block within a {{domxref("WebGLProgram")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}</dt>
- <dd>Retrieves information about an active uniform block within a {{domxref("WebGLProgram")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.getActiveUniformBlockName()")}}</dt>
- <dd>Retrieves the name of the active uniform block at a given index within a {{domxref("WebGLProgram")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.uniformBlockBinding()")}}</dt>
- <dd>Assigns binding points for active uniform blocks.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.bindBufferBase()")}}
+  - : Binds a given {{domxref("WebGLBuffer")}} to a given binding point (`target`) at a given `index`.
+- {{domxref("WebGL2RenderingContext.bindBufferRange()")}}
+  - : Binds a range of a given {{domxref("WebGLBuffer")}} to a given binding point (`target`) at a given `index`.
+- {{domxref("WebGL2RenderingContext.getUniformIndices()")}}
+  - : Retrieves the indices of a number of uniforms within a {{domxref("WebGLProgram")}}.
+- {{domxref("WebGL2RenderingContext.getActiveUniforms()")}}
+  - : Retrieves information about active uniforms within a {{domxref("WebGLProgram")}}.
+- {{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}
+  - : Retrieves the index of a uniform block within a {{domxref("WebGLProgram")}}.
+- {{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}
+  - : Retrieves information about an active uniform block within a {{domxref("WebGLProgram")}}.
+- {{domxref("WebGL2RenderingContext.getActiveUniformBlockName()")}}
+  - : Retrieves the name of the active uniform block at a given index within a {{domxref("WebGLProgram")}}.
+- {{domxref("WebGL2RenderingContext.uniformBlockBinding()")}}
+  - : Assigns binding points for active uniform blocks.
 
-<h2 id="Vertex_array_objects">Vertex array objects</h2>
+## Vertex array objects
 
-<p>Methods for working with {{domxref("WebGLVertexArrayObject")}} (VAO) objects.</p>
+Methods for working with {{domxref("WebGLVertexArrayObject")}} (VAO) objects.
 
-<dl>
- <dt>{{domxref("WebGL2RenderingContext.createVertexArray()")}}</dt>
- <dd>Creates a new {{domxref("WebGLVertexArrayObject")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.deleteVertexArray()")}}</dt>
- <dd>Deletes a given {{domxref("WebGLVertexArrayObject")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.isVertexArray()")}}</dt>
- <dd>Returns <code>true</code> if a given object is a valid {{domxref("WebGLVertexArrayObject")}}.</dd>
- <dt>{{domxref("WebGL2RenderingContext.bindVertexArray()")}}</dt>
- <dd>Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.</dd>
-</dl>
+- {{domxref("WebGL2RenderingContext.createVertexArray()")}}
+  - : Creates a new {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
+  - : Deletes a given {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("WebGL2RenderingContext.isVertexArray()")}}
+  - : Returns `true` if a given object is a valid {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
+  - : Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("WebGLRenderingContext")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("WebGLRenderingContext")}}

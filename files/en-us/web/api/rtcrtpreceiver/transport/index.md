@@ -2,60 +2,61 @@
 title: RTCRtpReceiver.transport
 slug: Web/API/RTCRtpReceiver/transport
 tags:
-- API
-- Communications
-- DTLS
-- Media
-- Networking
-- RTCP
-- RTCRtpReceiver
-- RTP
-- Reference
-- Transport
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- receiver
+  - API
+  - Communications
+  - DTLS
+  - Media
+  - Networking
+  - RTCP
+  - RTCRtpReceiver
+  - RTP
+  - Reference
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The read-only <code><strong>transport</strong></code> property of an
-  {{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object
-  used to interact with the underlying transport over which the receiver is exchanging
-  Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.</p>
+The read-only **`transport`** property of an
+{{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object
+used to interact with the underlying transport over which the receiver is exchanging
+Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.
 
-<p>This transport is responsible for receiving the data for the media on the receiver's
-  {{domxref("RTCRtpReceiver.track", "track")}}.</p>
+This transport is responsible for receiving the data for the media on the receiver's
+{{domxref("RTCRtpReceiver.track", "track")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>transport</em> = <em>rtcRtpReceiver</em>.transport;</pre>
+```js
+let transport = rtcRtpReceiver.transport;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCDtlsTransport")}} object representing the underlying transport being
-  used by the receiver to exchange packets with the remote peer, or <code>null</code> if
-  the receiver isn't yet connected to a transport.</p>
+An {{domxref("RTCDtlsTransport")}} object representing the underlying transport being
+used by the receiver to exchange packets with the remote peer, or `null` if
+the receiver isn't yet connected to a transport.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>When the <code>RTCRtpReceiver</code> is first created, the value of
-  <code>transport</code> is <code>null</code>. This is replaced with an
-  <code>RTCDtlsTransport</code> once the receiver's transport has been established.</p>
+When the `RTCRtpReceiver` is first created, the value of
+`transport` is `null`. This is replaced with an
+`RTCDtlsTransport` once the receiver's transport has been established.
 
-<p>Note that when bundling is in effect—that is, when the {{domxref("RTCPeerConnection")}}
-  was created with an {{domxref("RTCConfiguration")}} object whose
-  {{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} is <code>max-compat</code>
-  or <code>max-bundle</code>—multiple receivers may be sharing the same transport; in this
-  case, all of them are using the same connection to transmit and/or receive
-  {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets.</p>
+Note that when bundling is in effect—that is, when the {{domxref("RTCPeerConnection")}}
+was created with an {{domxref("RTCConfiguration")}} object whose
+{{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} is `max-compat`
+or `max-bundle`—multiple receivers may be sharing the same transport; in this
+case, all of them are using the same connection to transmit and/or receive
+{{Glossary("RTP")}} and {{Glossary("RTCP")}} packets.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

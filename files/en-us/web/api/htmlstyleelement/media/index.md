@@ -2,58 +2,58 @@
 title: HTMLStyleElement.media
 slug: Web/API/HTMLStyleElement/media
 tags:
-- API
-- HTML DOM
-- HTMLStyleElement
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLStyleElement
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.HTMLStyleElement.media
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLStyleElement.media</code></strong> property specifies the
-	intended destination medium for style information.</p>
+The **`HTMLStyleElement.media`** property specifies the
+intended destination medium for style information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>medium</var> = style.media
-style.media = <var>medium</var>
-</pre>
+```js
+medium = style.media
+style.media = medium
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-	<li><code>medium</code> is a string describing a single medium or a comma-separated
-		list.</li>
-</ul>
+- `medium` is a string describing a single medium or a comma-separated
+  list.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
+```html
+<!doctype html>
+<html>
+<head>
 
-&lt;link id="LinkedStyle" rel="stylesheet" href="document.css" type="text/css" media="screen" /&gt;
-&lt;style id="InlineStyle" rel="stylesheet" type="text/css" media="screen, print"&gt;
+<link id="LinkedStyle" rel="stylesheet" href="document.css" type="text/css" media="screen" />
+<style id="InlineStyle" rel="stylesheet" type="text/css" media="screen, print">
 p { color: blue; }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</style>
+</head>
+<body>
 
-&lt;script&gt;
+<script>
 alert('LinkedStyle: ' + document.getElementById('LinkedStyle').media); // 'screen'
 alert('InlineStyle: ' + document.getElementById('InlineStyle').media); // 'screen, print'
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

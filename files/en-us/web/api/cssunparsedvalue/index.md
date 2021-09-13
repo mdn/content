@@ -12,55 +12,47 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnparsedValue</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents property values that reference <a href="/en-US/docs/Web/CSS/CSS_Variables">custom properties</a>. It consists of a list of string fragments and variable references.</p>
+The **`CSSUnparsedValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents property values that reference [custom properties](/en-US/docs/Web/CSS/CSS_Variables). It consists of a list of string fragments and variable references.
 
-<p>Custom properties are represented by <code>CSSUnparsedValue</code> and {{cssxref('var()')}} references are represented using {{domxref('CSSVariableReferenceValue')}}.</p>
+Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}</dt>
- <dd>Creates a new <code>CSSUnparsedValue</code> object.</dd>
-</dl>
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+  - : Creates a new `CSSUnparsedValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSUnparsedValue.length')}}</dt>
- <dd>Returns the number of items in the <code>CSSUnparsedValue</code> object.</dd>
-</dl>
+- {{domxref('CSSUnparsedValue.length')}}
+  - : Returns the number of items in the `CSSUnparsedValue` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('CSSUnparsedValue.entries()')}}</dt>
- <dd>Returns an array of a given object's own enumerable property <code>[key, value]</code> pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).</dd>
- <dt>{{domxref('CSSUnparsedValue.forEach()')}}</dt>
- <dd>Executes a provided function once for each element of the <code>CSSUnparsedValue</code> object.</dd>
- <dt>{{domxref('CSSUnparsedValue.keys()')}}</dt>
- <dd>Returns a new <em>array iterator</em> object that contains the keys for each index in the <code>CSSUnparsedValue</code> object.</dd>
- <dt>{{domxref('CSSUnparsedValue.values()')}}</dt>
- <dd>Returns a new <em>array iterator</em> object that contains the values for each index in the <code>CSSUnparsedValue</code> object.</dd>
-</dl>
+- {{domxref('CSSUnparsedValue.entries()')}}
+  - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+- {{domxref('CSSUnparsedValue.forEach()')}}
+  - : Executes a provided function once for each element of the `CSSUnparsedValue` object.
+- {{domxref('CSSUnparsedValue.keys()')}}
+  - : Returns a new _array iterator_ object that contains the keys for each index in the `CSSUnparsedValue` object.
+- {{domxref('CSSUnparsedValue.values()')}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the `CSSUnparsedValue` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('CSSImageValue')}}</li>
- <li>{{domxref('CSSKeywordValue')}}</li>
- <li>{{domxref('CSSNumericValue')}}</li>
- <li>{{domxref('CSSPositionValue')}}</li>
- <li>{{domxref('CSSTransformValue')}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

@@ -11,43 +11,38 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <code><strong>RTCIceServer</strong></code> dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the <a href="/en-US/docs/Web/API/RTCConfiguration">configuration</a> of an {{domxref("RTCPeerConnection")}}, in the {{domxref("RTCConfiguration.iceServers", "iceServers")}} array.</p>
+The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCConfiguration) of an {{domxref("RTCPeerConnection")}}, in the {{domxref("RTCConfiguration.iceServers", "iceServers")}} array.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}</dt>
- <dd>The credential to use when logging into the server. This is only used if the <code>RTCIceServer</code> represents a TURN server.</dd>
- <dt>{{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}</dt>
- <dd>If the <code>RTCIceServer</code> represents a TURN server, this attribute specifies what kind of <code>credential</code> is to be used when connecting. This must be one of the values defined by the {{domxref("RTCIceCredentialType")}} enum. The default is <code>password</code>.</dd>
- <dt>{{domxref("RTCIceServer.urls", "urls")}}</dt>
- <dd>This <strong>required</strong> property is either a single {{domxref("DOMString")}} or an array of {{domxref("DOMString")}}s, each specifying a URL which can be used to connect to the server.</dd>
- <dt>{{domxref("RTCIceServer.username", "username")}} {{optional_inline}}</dt>
- <dd>If the <code>RTCIceServer</code> is a TURN server, then this is the username to use during the authentication process.</dd>
-</dl>
+- {{domxref("RTCIceServer.credential", "credential")}} {{optional_inline}}
+  - : The credential to use when logging into the server. This is only used if the `RTCIceServer` represents a TURN server.
+- {{domxref("RTCIceServer.credentialType", "credentialType")}} {{optional_inline}}
+  - : If the `RTCIceServer` represents a TURN server, this attribute specifies what kind of `credential` is to be used when connecting. This must be one of the values defined by the {{domxref("RTCIceCredentialType")}} enum. The default is `password`.
+- {{domxref("RTCIceServer.urls", "urls")}}
+  - : This **required** property is either a single {{domxref("DOMString")}} or an array of {{domxref("DOMString")}}s, each specifying a URL which can be used to connect to the server.
+- {{domxref("RTCIceServer.username", "username")}} {{optional_inline}}
+  - : If the `RTCIceServer` is a TURN server, then this is the username to use during the authentication process.
 
-<p>Avoid specifying an unnecessarily large number of URLs in the <code>urls</code> property; the startup time for your connection will go up substantially. Every server in the list will be contacted and tried out before one is selected to be used for negotiation.</p>
+Avoid specifying an unnecessarily large number of URLs in the `urls` property; the startup time for your connection will go up substantially. Every server in the list will be contacted and tried out before one is selected to be used for negotiation.
 
-<div class="note">
-<p><strong>Note:</strong> Older versions of the WebRTC specification included an <code>url</code> property instead of <code>urls</code>; this was changed in order to let you specify multiple addresses for each server in the list, as shown in the example below.</p>
-</div>
+> **Note:** Older versions of the WebRTC specification included an `url` property instead of `urls`; this was changed in order to let you specify multiple addresses for each server in the list, as shown in the example below.
 
-<h2 id="Obsolete_properties">Obsolete properties</h2>
+## Obsolete properties
 
-<p><em>The following properties have been removed from the specification and should not be used.</em></p>
+_The following properties have been removed from the specification and should not be used._
 
-<dl>
- <dt>{{domxref("RTCIceServer.url", "url")}} {{deprecated_inline}}</dt>
- <dd>This obsolete property is a string specifies a single ICE server's URL. <strong>Do not use this property; use {{domxref("RTCIceServer.urls", "urls")}} instead.</strong> Because many older books and examples still use this, we include it to help developers update their code or make sense of older examples.</dd>
-</dl>
+- {{domxref("RTCIceServer.url", "url")}} {{deprecated_inline}}
+  - : This obsolete property is a string specifies a single ICE server's URL. **Do not use this property; use {{domxref("RTCIceServer.urls", "urls")}} instead.** Because many older books and examples still use this, we include it to help developers update their code or make sense of older examples.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The configuration below establishes two ICE servers. The first one, <code>stun:stun.services.mozilla.com</code>, requires authentication, so the username and password are provided. The second server has two URLs: <code>stun:stun.example.com</code> and <code>stun:stun-1.example.com</code>.</p>
+The configuration below establishes two ICE servers. The first one, `stun:stun.services.mozilla.com`, requires authentication, so the username and password are provided. The second server has two URLs: `stun:stun.example.com` and `stun:stun-1.example.com`.
 
-<pre class="brush: js">var configuration = { iceServers: [{
+```js
+var configuration = { iceServers: [{
                           urls: "stun:stun.services.mozilla.com",
                           username: "louis@mozilla.com",
                           credential: "webrtcdemo"
@@ -59,19 +54,18 @@ browser-compat: api.RTCIceServer
                       }]
 };
 
-var pc = new RTCPeerConnection(configuration);</pre>
+var pc = new RTCPeerConnection(configuration);
+```
 
-<p>Once the configuration object has been created, it is passed into the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor to use it as the configuration for the new peer connection.</p>
+Once the configuration object has been created, it is passed into the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor to use it as the configuration for the new peer connection.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{domxref("RTCConfiguration")}}</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
-</ul>
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCConfiguration")}}
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)

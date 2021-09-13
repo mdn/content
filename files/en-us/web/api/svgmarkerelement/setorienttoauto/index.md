@@ -9,44 +9,45 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.setOrientToAuto
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>setOrientToAuto()</code></strong> method of the {{domxref("SVGMarkerElement")}} interface  sets the value of the <code>orient</code> attribute to <code>auto</code>.</p>
+The **`setOrientToAuto()`** method of the {{domxref("SVGMarkerElement")}} interface sets the value of the `orient` attribute to `auto`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">setOrientToAuto();</pre>
+    setOrientToAuto();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example the value of the <code>orient</code> attribute is updated using <code>setOrientToAuto()</code>.</p>
+In the following example the value of the `orient` attribute is updated using `setOrientToAuto()`.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient="90"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient="90">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
+```js
+let marker = document.getElementById("arrow");
 console.log(marker.orientAngle.baseVal.value);
 marker.setOrientToAuto();
-console.log(marker.orientAngle.baseVal.value);</pre>
+console.log(marker.orientAngle.baseVal.value);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

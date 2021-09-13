@@ -2,55 +2,55 @@
 title: ContactsManager.getProperties()
 slug: Web/API/ContactsManager/getProperties
 tags:
-- Contact Picker API
-- Contacts
-- ContactsManager
-- Method
-- PWA
-- contact picker
+  - Contact Picker API
+  - Contacts
+  - ContactsManager
+  - Method
+  - PWA
+  - contact picker
 browser-compat: api.ContactsManager.getProperties
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
-<p>The <strong><code>getProperties()</code></strong> method of the
-  {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
-  with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact
-  properties are available.</p>
+The **`getProperties()`** method of the
+{{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
+with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact
+properties are available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>ContactProperties</var> = ContactsManager.getProperties();</pre>
+```js
+var ContactProperties = ContactsManager.getProperties();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method receives no parameters.</p>
+This method receives no parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a {{jsxref('Promise')}} which when resolved returns an {{jsxref('Array')}} of
-  available contact properties as {{jsxref('String','strings')}}.</p>
+Returns a {{jsxref('Promise')}} which when resolved returns an {{jsxref('Array')}} of
+available contact properties as {{jsxref('String','strings')}}.
 
-<p>Properties can be any of the following:</p>
+Properties can be any of the following:
 
-<ul>
-  <li><code>'name'</code>: The contact's name.</li>
-  <li><code>'tel'</code>: The telephone number(s) of the contact.</li>
-  <li><code>'email'</code>: The email address of the contact.</li>
-  <li><code>'address'</code>: The contact's postal address.</li>
-  <li><code>'icon'</code>: The avatar of the contact.</li>
-</ul>
+- `'name'`: The contact's name.
+- `'tel'`: The telephone number(s) of the contact.
+- `'email'`: The email address of the contact.
+- `'address'`: The contact's postal address.
+- `'icon'`: The avatar of the contact.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>No exceptions are thrown.</p>
+No exceptions are thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following asynchronous function uses the <code>getProperties</code> method to check
-  for supported properties.</p>
+The following asynchronous function uses the `getProperties` method to check
+for supported properties.
 
-<pre class="brush: js">async function checkProperties() {
+```js
+async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -68,12 +68,12 @@ browser-compat: api.ContactsManager.getProperties
     // run code for avatar support
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

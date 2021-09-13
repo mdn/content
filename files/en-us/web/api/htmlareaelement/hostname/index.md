@@ -8,36 +8,36 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.hostname
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.hostname</code></strong> property is a
-  {{domxref("USVString")}} containing the domain of the URL.</p>
+The **`HTMLAreaElement.hostname`** property is a
+{{domxref("USVString")}} containing the domain of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.hostname;
+string = area.hostname;
 // Setter
-<em>area</em>.hostname = <em>string</em>;
-</pre>
+area.hostname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;area id="myArea" href="/en-US/docs/HTMLAreaElement"&gt; element is in the document
+```js
+// An <area id="myArea" href="/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementById("myArea");
-HTMLAreaElement.hostname; // returns 'developer.mozilla.org'</pre>
+HTMLAreaElement.hostname; // returns 'developer.mozilla.org'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

@@ -8,54 +8,54 @@ tags:
   - message
 browser-compat: api.WebSocket.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>message</code> event is fired when data is received through a <code>WebSocket</code>.</p>
+The `message` event is fired when data is received through a `WebSocket`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{ domxref("WebSocket.onmessage","onmessage")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{ domxref("WebSocket.onmessage","onmessage")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Create WebSocket connection.
+```js
+// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for messages
 socket.addEventListener('message', function (event) {
     console.log('Message from server ', event.data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebSocket/close_event">WebSocket: close event</a></li>
- <li><a href="/en-US/docs/Web/API/WebSocket/error_event">WebSocket: error event</a></li>
- <li><a href="/en-US/docs/Web/API/WebSocket/open_event">WebSocket: open event</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
-</ul>
+- [WebSocket: close event](/en-US/docs/Web/API/WebSocket/close_event)
+- [WebSocket: error event](/en-US/docs/Web/API/WebSocket/error_event)
+- [WebSocket: open event](/en-US/docs/Web/API/WebSocket/open_event)
+- [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

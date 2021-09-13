@@ -2,33 +2,34 @@
 title: PaymentRequest.payerName
 slug: Web/API/PaymentResponse/payerName
 tags:
-- API
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Property
-- Reference
-- Secure context
+  - API
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Property
+  - Reference
+  - Secure context
 browser-compat: api.PaymentResponse.payerName
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>payerName</code></strong> read-only property of the
-  {{domxref("PaymentResponse")}} interface returns the name supplied by the user. This
-  option is only present when the <code>requestPayerName</code> option is set to
-  <code>true</code> in the options parameter of the
-  {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.</p>
+The **`payerName`** read-only property of the
+{{domxref("PaymentResponse")}} interface returns the name supplied by the user. This
+option is only present when the `requestPayerName` option is set to
+`true` in the options parameter of the
+{{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>payerName</em> = PaymentResponse.payerName;</pre>
+```js
+var payerName = PaymentResponse.payerName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string containing the payer name.</p>
+A string containing the payer name.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

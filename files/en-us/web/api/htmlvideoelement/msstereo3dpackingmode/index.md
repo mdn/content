@@ -4,39 +4,33 @@ slug: Web/API/HTMLVideoElement/msStereo3DPackingMode
 tags:
   - msStereo3DPackingMode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msStereo3DPackingMode</strong></code> is a read/write property which gets
-  or sets the frame-packing mode for stereo 3-D video content.</p>
+**`msStereo3DPackingMode`** is a read/write property which gets
+or sets the frame-packing mode for stereo 3-D video content.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-<em>HTMLVideoElement</em>.msStereo3DPackingMode(topbottom, sidebyside, none);
+```js
+HTMLVideoElement.msStereo3DPackingMode(topbottom, sidebyside, none);
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+The following values return, or set, the stereo 3-D content packing as "topbottom",
+"sidebyside", or "none" for regular 2-D video.
 
-<p>The following values return, or set, the stereo 3-D content packing as "topbottom",
-  "sidebyside", or "none" for regular 2-D video.</p>
+- `none (0)`: Specifies regular 2-D video.
+- `topbottom (1)`: Specifies stereo 3-D content packing and that the views
+  are packed side-by-side in a single frame.
+- `sidebyside (2)`: Specifies sidebyside stereo 3-D content packing and
+  that the views are packed top-to-bottom in a single frame.
 
-<ul>
-  <li><code>none (0)</code>: Specifies regular 2-D video.</li>
-  <li><code>topbottom (1)</code>: Specifies stereo 3-D content packing and that the views
-    are packed side-by-side in a single frame.</li>
-  <li><code>sidebyside (2)</code>: Specifies sidebyside stereo 3-D content packing and
-    that the views are packed top-to-bottom in a single frame.</li>
-</ul>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

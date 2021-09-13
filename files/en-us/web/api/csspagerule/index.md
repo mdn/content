@@ -8,44 +8,44 @@ tags:
   - Reference
 browser-compat: api.CSSPageRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
+**`CSSPageRule`** represents a single CSS {{cssxref("@page")}} rule.
 
-<p><strong><code>CSSPageRule</code></strong> represents a single CSS {{cssxref("@page")}} rule. </p>
+{{InheritanceDiagram}}
 
-<p>{{InheritanceDiagram}}</p>
+## Properties
 
-<h2 id="Properties">Properties</h2>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+- {{domxref("CSSPageRule.selectorText")}}
+  - : Represents the text of the page selector associated with the at-rule.
+- {{domxref("CSSPageRule.style")}} {{readonlyinline}}
+  - : Returns the [declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) associated with the at-rule.
 
-<dl>
-	<dt>{{domxref("CSSPageRule.selectorText")}}</dt>
-	<dd>Represents the text of the page selector associated with the at-rule.</dd>
-	<dt>{{domxref("CSSPageRule.style")}} {{readonlyinline}}</dt>
-	<dd>Returns the <a href="/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block">declaration block</a> associated with the at-rule.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The stylesheet includes a single {{cssxref("@page")}} rule, therefore the first (and only) rule returned will be a `CSSPageRule`.
 
-<p>The stylesheet includes a single {{cssxref("@page")}} rule, therefore the first (and only) rule returned will be a <code>CSSPageRule</code>.</p>
-
-<pre class="brush: css">@page {
+```css
+@page {
   margin: 1cm;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0]); // a CSSPageRule
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

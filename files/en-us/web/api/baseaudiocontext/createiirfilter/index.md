@@ -13,66 +13,58 @@ tags:
   - filter
 browser-compat: api.BaseAudioContext.createIIRFilter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>createIIRFilter()</code></strong> method of the {{
+The **`createIIRFilter()`** method of the {{
   domxref("BaseAudioContext") }} interface creates an {{ domxref("IIRFilterNode") }},
-  which represents a general <strong>{{interwiki("wikipedia", "infinite impulse
-    response")}}</strong> (IIR) filter which can be configured to serve as various types
-  of filter.</p>
+which represents a general **{{interwiki("wikipedia", "infinite impulse
+    response")}}** (IIR) filter which can be configured to serve as various types
+of filter.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
-    constructor is the recommended way to create a {{domxref("IIRFilterNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
+> constructor is the recommended way to create a {{domxref("IIRFilterNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>iirFilter</em> = <em>AudioContext</em>.createIIRFilter(<em>feedforward</em>, <em>feedback</em>);</pre>
+```js
+var iirFilter = AudioContext.createIIRFilter(feedforward, feedback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>feedforward</code></dt>
-  <dd>An array of floating-point values specifying the feedforward (numerator)
+- `feedforward`
+  - : An array of floating-point values specifying the feedforward (numerator)
     coefficients for the transfer function of the IIR filter. The maximum length of this
-    array is 20, and at least one value must be nonzero.</dd>
-  <dt><code>feedback</code></dt>
-  <dd>An array of floating-point values specifying the feedback (denominator) coefficients
+    array is 20, and at least one value must be nonzero.
+- `feedback`
+  - : An array of floating-point values specifying the feedback (denominator) coefficients
     for the transfer function of the IIR filter. This array may have up to 20 members, the
-    first of which must not be zero.</dd>
-</dl>
+    first of which must not be zero.
 
-<h3 id="Description">Return value</h3>
+### Return value
 
-<p>An {{domxref("IIRFilterNode")}} implementing the filter with the specified feedback and
-  feedforward coefficient arrays.</p>
+An {{domxref("IIRFilterNode")}} implementing the filter with the specified feedback and
+feedforward coefficient arrays.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>All of the <code>feedforward</code> coefficients are 0, and/or the first
-    <code>feedback</code> coefficient is 0.</dd>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>One or both of the input arrays exceeds 20 members.</dd>
-</dl>
+- `InvalidStateError`
+  - : All of the `feedforward` coefficients are 0, and/or the first
+    `feedback` coefficient is 0.
+- `NotSupportedError`
+  - : One or both of the input arrays exceeds 20 members.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li>{{domxref("IIRFilterNode")}}</li>
-  <li>{{domxref("AudioNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("IIRFilterNode")}}
+- {{domxref("AudioNode")}}

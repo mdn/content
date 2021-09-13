@@ -2,51 +2,49 @@
 title: AuthenticatorAssertionResponse.userHandle
 slug: Web/API/AuthenticatorAssertionResponse/userHandle
 tags:
-- API
-- AuthenticatorAssertionResponse
-- Property
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - AuthenticatorAssertionResponse
+  - Property
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.userHandle
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>userHandle</code></strong> read-only property of the
-  {{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
-  object which is an opaque identifier for the given user. Such an identifier can be used
-  by the relying party's server to link the user account with its corresponding
-  credentials and other data.</p>
+The **`userHandle`** read-only property of the
+{{domxref("AuthenticatorAssertionResponse")}} interface is an {{jsxref("ArrayBuffer")}}
+object which is an opaque identifier for the given user. Such an identifier can be used
+by the relying party's server to link the user account with its corresponding
+credentials and other data.
 
-<p>The same value may be found on the <code>id</code> property of the
-  {{domxref("PublicKeyCredentialCreationOptions.user","options.user")}} object (used for
-  the creation of the <code>PublicKeyCredential</code> instance).</p>
+The same value may be found on the `id` property of the
+{{domxref("PublicKeyCredentialCreationOptions.user","options.user")}} object (used for
+the creation of the `PublicKeyCredential` instance).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An <code>AuthenticatorAssertionResponse</code> instance is
-    available on {{domxref("PublicKeyCredential.response")}} after calling
-    {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.</p>
-</div>
+> **Note:** An `AuthenticatorAssertionResponse` instance is
+> available on {{domxref("PublicKeyCredential.response")}} after calling
+> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This property may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>userHandle</em> = <em>authenticatorAssertionResponse</em>.userHandle</pre>
+```js
+userHandle = authenticatorAssertionResponse.userHandle
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
-  This is not human-readable and does <strong>not</strong> contain any personally
-  identifying information (e.g. username, e-mail, phone number, etc.)</p>
+An {{jsxref("ArrayBuffer")}} object which is an opaque identifier for the current user.
+This is not human-readable and does **not** contain any personally
+identifying information (e.g. username, e-mail, phone number, etc.)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
@@ -61,19 +59,17 @@ navigator.credentials.get({  publicKey: options })
 }).catch(function (err) {
    console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.user")}} and its <code>id</code>
-    property which contains the same data</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions.user")}} and its `id`
+  property which contains the same data

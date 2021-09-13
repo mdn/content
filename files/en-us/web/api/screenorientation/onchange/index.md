@@ -2,30 +2,32 @@
 title: ScreenOrientation.onchange
 slug: Web/API/ScreenOrientation/onchange
 tags:
-- API
-- Orientation
-- Property
-- Reference
-- Screen Orientation API
-- ScreenOrientation
-- Unlock
+  - API
+  - Orientation
+  - Property
+  - Reference
+  - Screen Orientation API
+  - ScreenOrientation
+  - Unlock
 browser-compat: api.ScreenOrientation.onchange
 ---
-<div>{{APIRef("Screen Orientation")}}</div>
+{{APIRef("Screen Orientation")}}
 
-<p>The <strong><code>onchange</code></strong> property of the
-  {{domxref("ScreenOrientation")}} is an event handler fired whenever is the
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when the screen changes orientation.</p>
+The **`onchange`** property of the
+{{domxref("ScreenOrientation")}} is an event handler fired whenever is the
+[event handler](/en-US/docs/Web/Events/Event_handlers) called when the screen changes orientation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">screen.orientation.addEventListener('change', function(e) { ... })
-screen.orientation.onchange = function(e) { ... }</pre>
+```js
+screen.orientation.addEventListener('change', function(e) { ... })
+screen.orientation.onchange = function(e) { ... }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

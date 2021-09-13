@@ -2,77 +2,77 @@
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
 tags:
-- API
-- Async Clipboard API
-- Clip
-- Clipboard
-- Clipboard API
-- Cut
-- Editing
-- Method
-- Pasteboard
-- Reference
-- Text
-- copy
-- paste
-- readText
+  - API
+  - Async Clipboard API
+  - Clip
+  - Clipboard
+  - Clipboard API
+  - Cut
+  - Editing
+  - Method
+  - Pasteboard
+  - Reference
+  - Text
+  - copy
+  - paste
+  - readText
 browser-compat: api.Clipboard.readText
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p>The <strong>{{domxref("Clipboard")}}</strong> interface's
-    <strong><code>readText()</code></strong> method returns a {{jsxref("Promise")}} which
-    resolves with a copy of the textual contents of the system clipboard.</p>
+The **{{domxref("Clipboard")}}** interface's
+**`readText()`** method returns a {{jsxref("Promise")}} which
+resolves with a copy of the textual contents of the system clipboard.
 
-<p>The
-  <code>"clipboard-read"</code> permission of the <a
-    href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> must be granted before
-  you can read data from the clipboard.</p>
+The
+`"clipboard-read"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) must be granted before
+you can read data from the clipboard.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = navigator.clipboard.readText()</pre>
+```js
+var promise = navigator.clipboard.readText()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the
-  textual contents of the clipboard. Returns an empty string if the clipboard is empty,
-  does not contain text, or does not include a textual representation among the
-  {{domxref("DataTransfer")}} objects representing the clipboard's contents.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the
+textual contents of the clipboard. Returns an empty string if the clipboard is empty,
+does not contain text, or does not include a textual representation among the
+{{domxref("DataTransfer")}} objects representing the clipboard's contents.
 
-<p>To read non-text contents from the clipboard, use the {{domxref("Clipboard.read",
+To read non-text contents from the clipboard, use the {{domxref("Clipboard.read",
   "read()")}} method instead. You can write text to the clipboard using
-  {{domxref("Clipboard.writeText", "writeText()")}}.</p>
+{{domxref("Clipboard.writeText", "writeText()")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example retrieves the textual contents of the clipboard and inserts the returned
-  text into an element's contents.</p>
+This example retrieves the textual contents of the clipboard and inserts the returned
+text into an element's contents.
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.getElementById("outbox").innerText = clipText);</pre>
+```js
+navigator.clipboard.readText().then(
+  clipText => document.getElementById("outbox").innerText = clipText);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-  <li>{{domxref("Clipboard.writeText()")}}</li>
-  <li>{{domxref("Clipboard.write()")}}</li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- {{domxref("Clipboard.writeText()")}}
+- {{domxref("Clipboard.write()")}}

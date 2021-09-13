@@ -9,38 +9,42 @@ tags:
   - CSSPageRule
 browser-compat: api.CSSPageRule.selectorText
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>selectorText</code></strong> property of the {{domxref("CSSPageRule")}} interface gets and sets the selectors associated with the <code>CSSPageRule</code>.</p>
+The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets and sets the selectors associated with the `CSSPageRule`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>text</var> = <var>CSSPageRule</var>.selectorText;
-<var>CSSPageRule</var>.selectorText = <var>text</var>;</pre>
+    var text = CSSPageRule.selectorText;
+    CSSPageRule.selectorText = text;
 
-<h3>Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref('CSSOMString')}}.
 
-<p>The stylesheet includes two {{cssxref("@page")}} rules. The <code>selectorText</code> property will return the literal selector text of <code>:first</code> as a string.</p>
+## Examples
 
-<pre class="brush: css">@page {
+The stylesheet includes two {{cssxref("@page")}} rules. The `selectorText` property will return the literal selector text of `:first` as a string.
+
+```css
+@page {
   margin: 1cm;
 }
 
 @page :first {
   margin: 2cm;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules; //returns two myRules
+```js
+let myRules = document.styleSheets[0].cssRules; //returns two myRules
 console.log(myRules[1].selectorText); // returns the string ":first"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

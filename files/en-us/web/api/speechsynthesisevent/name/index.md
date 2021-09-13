@@ -2,52 +2,52 @@
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesisEvent
-- Web Speech API
-- name
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesisEvent
+  - Web Speech API
+  - name
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>name</code></strong> read-only property of the
-	{{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with
-	certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}}
-	is being spoken: the name of the <a
-		href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML</a> marker reached in
-	the case of a {{event("mark")}} event, or the type of boundary reached in the case of
-	a {{event("boundary")}} event.</p>
+The **`name`** read-only property of the
+{{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with
+certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}}
+is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in
+the case of a {{event("mark")}} event, or the type of boundary reached in the case of
+a {{event("boundary")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">event.name;
-</pre>
+```js
+event.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">utterThis.onboundary = function(event) {
+```js
+utterThis.onboundary = function(event) {
   console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

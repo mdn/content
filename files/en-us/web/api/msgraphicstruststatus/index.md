@@ -2,27 +2,27 @@
 title: msGraphicsTrustStatus
 slug: Web/API/MsGraphicsTrustStatus
 tags:
-- msGraphicsTrustStatus
+  - msGraphicsTrustStatus
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msGraphicsTrustStatus</strong></code> is a read-only property which
-  returns an object containing information on protected video playback.</p>
+**`msGraphicsTrustStatus`** is a read-only property which
+returns an object containing information on protected video playback.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 status = object.msGraphicsTrustStatus;
+```
 
-</pre>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">    //Specifies the output device id that the audio will be sent to.
+```js
+    //Specifies the output device id that the audio will be sent to.
     msAudioDeviceType: string;
     readonly msGraphicsTrustStatus: MSGraphicsTrust;
-</pre>
+```

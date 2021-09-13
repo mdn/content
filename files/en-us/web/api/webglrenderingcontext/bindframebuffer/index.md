@@ -2,94 +2,87 @@
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindFramebuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.bindFramebuffer()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> binds a given
-  {{domxref("WebGLFramebuffer")}} to a target.</p>
+The **`WebGLRenderingContext.bindFramebuffer()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
+{{domxref("WebGLFramebuffer")}} to a target.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.bindFramebuffer(<var>target</var>, <var>framebuffer</var>);
-</pre>
+```js
+void gl.bindFramebuffer(target, framebuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha,
-        depth and stencil buffers used to render an image.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.DRAW_FRAMEBUFFER</code>: Equivalent to <code>gl.FRAMEBUFFER</code>.
-            Used as a destination for drawing, rendering, clearing, and writing
-            operations.</li>
-          <li><code>gl.READ_FRAMEBUFFER</code>: Used as a source for reading operations.
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>framebuffer</dt>
-  <dd>
-    A {{domxref("WebGLFramebuffer")}} object to bind.
-    If <code>framebuffer</code> is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
-  </dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-<p>None.</p>
+    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
+      depth and stencil buffers used to render an image.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `gl.DRAW_FRAMEBUFFER`: Equivalent to `gl.FRAMEBUFFER`.
+        Used as a destination for drawing, rendering, clearing, and writing
+        operations.
+      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
 
-<p>A <code>gl.INVALID_ENUM</code> error is thrown if <code>target</code> is not
-  <code>gl.FRAMEBUFFER</code>, <code>gl.DRAW_FRAMEBUFFER</code>, or
-  <code>gl.READ_FRAMEBUFFER</code>.</p>
+- framebuffer
+  - : A {{domxref("WebGLFramebuffer")}} object to bind.
+    If `framebuffer` is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<h3 id="Binding_a_frame_buffer">Binding a frame buffer</h3>
+None.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+### Exceptions
+
+A `gl.INVALID_ENUM` error is thrown if `target` is not
+`gl.FRAMEBUFFER`, `gl.DRAW_FRAMEBUFFER`, or
+`gl.READ_FRAMEBUFFER`.
+
+## Examples
+
+### Binding a frame buffer
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-</pre>
+```
 
-<h3 id="Getting_current_bindings">Getting current bindings</h3>
+### Getting current bindings
 
-<p>To check the current frame buffer binding, query the <code>FRAMEBUFFER_BINDING</code>
-  constant.</p>
+To check the current frame buffer binding, query the `FRAMEBUFFER_BINDING`
+constant.
 
-<pre class="brush: js">gl.getParameter(gl.FRAMEBUFFER_BINDING);
-</pre>
+```js
+gl.getParameter(gl.FRAMEBUFFER_BINDING);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}<br>
-     </li>
-</ul>
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

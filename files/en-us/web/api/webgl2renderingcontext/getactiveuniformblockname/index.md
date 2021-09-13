@@ -2,52 +2,51 @@
 title: WebGL2RenderingContext.getActiveUniformBlockName()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockName
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockName
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getActiveUniformBlockName()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> retrieves the name
-  of the active uniform block at a given index within a {{domxref("WebGLProgram")}}.</p>
+The **`WebGL2RenderingContext.getActiveUniformBlockName()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves the name
+of the active uniform block at a given index within a {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">DOMString <var>gl</var>.getActiveUniformBlockName(<var>program</var>, <var>uniformBlockIndex</var>);</pre>
+```js
+DOMString gl.getActiveUniformBlockName(program, uniformBlockIndex);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} containing the uniform block.</dd>
-  <dt><code>uniformBlockIndex</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform block to whose name to
-    retrieve.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} containing the uniform block.
+- `uniformBlockIndex`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform block to whose name to
+    retrieve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} indicating the active uniform block name.</p>
+A {{domxref("DOMString")}} indicating the active uniform block name.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var blockName = gl.getActiveUniformBlockName(program, 0);</pre>
+```js
+var blockName = gl.getActiveUniformBlockName(program, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}

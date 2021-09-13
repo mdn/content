@@ -9,34 +9,30 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAltGlyphDefElement
 ---
-<div>{{APIRef("SVG")}}{{deprecated_header}}</div>
+{{APIRef("SVG")}}{{deprecated_header}}
 
-<p>The <strong><code>SVGAltGlyphDefElement</code></strong> interface corresponds to the {{SVGElement("altGlyphDef")}} element.</p>
+The **`SVGAltGlyphDefElement`** interface corresponds to the {{SVGElement("altGlyphDef")}} element.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<div class="warning">
-<p><strong>Warning:</strong> This interface was removed in the SVG 2 specification.</p>
-</div>
+> **Warning:** This interface was removed in the SVG 2 specification.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("altGlyphDef")}}</li>
-</ul>
+- {{SVGElement("altGlyphDef")}}

@@ -2,41 +2,41 @@
 title: InputEvent.isComposing
 slug: Web/API/InputEvent/isComposing
 tags:
-- API
-- InputEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - InputEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.InputEvent.isComposing
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>InputEvent.isComposing</strong></code> read-only property returns a
-  boolean value indicating if the event is fired after
-  {{event("compositionstart")}} and before {{event("compositionend")}}.</p>
+The **`InputEvent.isComposing`** read-only property returns a
+boolean value indicating if the event is fired after
+{{event("compositionstart")}} and before {{event("compositionend")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>bool</em> = <em>event</em>.isComposing;</pre>
+```js
+var bool = event.isComposing;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var inputEvent = new InputEvent('syntheticInput', false);
+```js
+var inputEvent = new InputEvent('syntheticInput', false);
 console.log(inputEvent.isComposing); // return false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>
-  <li>{{domxref("InputEvent")}}</li>
-</ul>
+- {{ event("compositionstart") }} and {{ event("compositionend")}}
+- {{domxref("InputEvent")}}

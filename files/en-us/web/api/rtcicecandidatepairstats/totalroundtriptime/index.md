@@ -2,58 +2,59 @@
 title: RTCIceCandidatePairStats.totalRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/totalRoundTripTime
 tags:
-- API
-- Candidate
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- Time
-- WebRTC
-- WebRTC API
-- round-trip
-- rount trip time
-- rtt
-- totalRoundTripTime
+  - API
+  - Candidate
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - Time
+  - WebRTC
+  - WebRTC API
+  - round-trip
+  - rount trip time
+  - rtt
+  - totalRoundTripTime
 browser-compat: api.RTCIceCandidatePairStats.totalRoundTripTime
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-    <strong><code>totalRoundTripTime</code></strong> property is the total time that has
-    elapsed between sending {{Glossary("STUN")}} requests and receiving the responses, for
-    all such requests that have been made so far on the pair of candidates described by
-    this <code>RTCIceCandidatePairStats</code> object. This value includes both
-  connectivity check and consent check requests.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`totalRoundTripTime`** property is the total time that has
+elapsed between sending {{Glossary("STUN")}} requests and receiving the responses, for
+all such requests that have been made so far on the pair of candidates described by
+this `RTCIceCandidatePairStats` object. This value includes both
+connectivity check and consent check requests.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>totalRTT</em> = <em>rtcIceCandidatePairStats</em>.totalRoundTripTime;</pre>
+```js
+totalRTT = rtcIceCandidatePairStats.totalRoundTripTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
+This floating-point value indicates the total number of seconds which have elapsed
+between sending out STUN connectivity and consent check requests and receiving their
+responses, for all such requests made so far on the connection described by this
+candidate pair.
 
-<p>This floating-point value indicates the total number of seconds which have elapsed
-  between sending out STUN connectivity and consent check requests and receiving their
-  responses, for all such requests made so far on the connection described by this
-  candidate pair.</p>
+You can calculate the average round-trip time (RTT) by dividing this value by the value
+of the {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}}
+property:
 
-<p>You can calculate the average round-trip time (RTT) by dividing this value by the value
-  of the {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}}
-  property:</p>
+```js
+rtt = rtcIceCandidatePairStats.totalRoundTripTime /
+        rtcIceCandidatePairStats.responsesReceived;
+```
 
-<pre class="brush: js">rtt = rtcIceCandidatePairStats.totalRoundTripTime /
-        rtcIceCandidatePairStats.responsesReceived;</pre>
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

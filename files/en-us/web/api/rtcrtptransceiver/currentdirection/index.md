@@ -2,51 +2,50 @@
 title: RTCRtpTransceiver.currentDirection
 slug: Web/API/RTCRtpTransceiver/currentDirection
 tags:
-- API
-- Media
-- Property
-- RTCRtpTransceiver
-- RTP
-- Read-only
-- Reference
-- Transceiver
-- WebRTC
-- currentDirection
+  - API
+  - Media
+  - Property
+  - RTCRtpTransceiver
+  - RTP
+  - Read-only
+  - Reference
+  - Transceiver
+  - WebRTC
+  - currentDirection
 browser-compat: api.RTCRtpTransceiver.currentDirection
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only {{domxref("RTCRtpTransceiver")}} property
-    <code><strong>currentDirection</strong></code> is a string which indicates the current
-    directionality of the transceiver.</p>
+The read-only {{domxref("RTCRtpTransceiver")}} property
+**`currentDirection`** is a string which indicates the current
+directionality of the transceiver.
 
-<p>Its value is one of the strings defined by
-  the {{domxref("RTCRtpTransceiverDirection")}} enumeration.</p>
+Its value is one of the strings defined by
+the {{domxref("RTCRtpTransceiverDirection")}} enumeration.
 
-<p>You can examine and set the transceiver's preferred directionality using
-  {{domxref("RTCRtpTransceiver.direction", "direction")}} property.</p>
+You can examine and set the transceiver's preferred directionality using
+{{domxref("RTCRtpTransceiver.direction", "direction")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>direction</em> = <em>RTCRtpTransceiver</em>.currentDirection</pre>
+```js
+var direction = RTCRtpTransceiver.currentDirection
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
-  <code>RTCRtpTransceiverDirection</code> enumerated type.
-  {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection", "Values")}}</p>
+A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
+`RTCRtpTransceiverDirection` enumerated type.
+{{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection", "Values")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCRtpTransceiver.direction")}}</li>
-</ul>
+- {{domxref("RTCRtpTransceiver.direction")}}

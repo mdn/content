@@ -9,40 +9,36 @@ tags:
   - Reference
 browser-compat: api.Element.hasAttributeNS
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><code>hasAttributeNS</code> returns a boolean value indicating whether the current element has the specified attribute.</p>
+`hasAttributeNS` returns a boolean value indicating whether the current element has the specified attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>result</em> = <em>element</em>.hasAttributeNS(<em>namespace</em>,<em>localName</em>)
-</pre>
+    result = element.hasAttributeNS(namespace,localName)
 
-<ul>
- <li><code>result</code> is the boolean value <code>true</code> or <code>false</code>.</li>
- <li><code>namespace</code> is a string specifying the namespace of the attribute.</li>
- <li><code>localName</code> is the name of the attribute.</li>
-</ul>
+- `result` is the boolean value `true` or `false`.
+- `namespace` is a string specifying the namespace of the attribute.
+- `localName` is the name of the attribute.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>// Check that the attribute exists before you set a value
-var d = document.getElementById("div1");
-if (d.hasAttributeNS(
-       "http://www.mozilla.org/ns/specialspace/",
-       "special-align")) {
-  d.setAttribute("align", "center");
-}
-</pre>
+    // Check that the attribute exists before you set a value
+    var d = document.getElementById("div1");
+    if (d.hasAttributeNS(
+           "http://www.mozilla.org/ns/specialspace/",
+           "special-align")) {
+      d.setAttribute("align", "center");
+    }
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

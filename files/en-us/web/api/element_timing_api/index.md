@@ -8,72 +8,61 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong>Element Timing API</strong> provides features for monitoring the loading performance of large image elements and text nodes as they appear on screen.</p>
+The **Element Timing API** provides features for monitoring the loading performance of large image elements and text nodes as they appear on screen.
 
-<h2>Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>The aim of the Element Timing API is to give web developers or analytics tools the ability to measure rendering timestamps of critical elements on a page.</p>
+The aim of the Element Timing API is to give web developers or analytics tools the ability to measure rendering timestamps of critical elements on a page.
 
-<p>The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.</p>
+The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.
 
-<p>The author flags an element for observation by adding the <a href="/en-US/docs/Web/HTML/Attributes/for"><code>elementtiming</code></a> attribute on the element.</p>
+The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("PerformanceElementTiming")}}</dt>
-  <dd>Reports timing information about one associated element.</dd>
-</dl>
+- {{domxref("PerformanceElementTiming")}}
+  - : Reports timing information about one associated element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we have two elements which are being observed. We use the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events, in our case observing the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface from the Element Timing API.</p>
+In this example we have two elements which are being observed. We use the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events, in our case observing the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface from the Element Timing API.
 
-<p>Two entries will be output to the console, the first containing details of the image, the second with details of the text node.</p>
+Two entries will be output to the console, the first containing details of the image, the second with details of the text node.
 
-<pre class="brush: html">&lt;img src="image.jpg" elementtiming="big-image"&gt;
-&lt;p elementtiming="text" id="text-id"&gt;text here&lt;/p&gt;</pre>
+```html
+<img src="image.jpg" elementtiming="big-image">
+<p elementtiming="text" id="text-id">text here</p>
+```
 
-<pre class="brush: js">const observer = new PerformanceObserver((list) => {
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
       console.log(entry);
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Timing API')}}</td>
-   <td>{{Spec2('Element Timing API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Status                                   | Comment             |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('Element Timing API')}} | {{Spec2('Element Timing API')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3>PerformanceElementTiming</h3>
+### PerformanceElementTiming
 
-<p>{{Compat("api.PerformanceElementTiming")}}</p>
+{{Compat("api.PerformanceElementTiming")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PerformanceFrameTiming")}}</li>
-  <li>{{domxref("PerformanceNavigationTiming")}}</li>
-  <li>{{domxref("PerformanceResourceTiming")}}</li>
-  <li>{{domxref("PerformanceMark")}}</li>
-  <li>{{domxref("PerformanceMeasure")}}</li>
-  <li>{{domxref("PerformancePaintTiming")}}</li>
-  <li>{{domxref("PerformanceLongTaskTiming")}}</li>
-</ul>
+- {{domxref("PerformanceFrameTiming")}}
+- {{domxref("PerformanceNavigationTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+- {{domxref("PerformanceMark")}}
+- {{domxref("PerformanceMeasure")}}
+- {{domxref("PerformancePaintTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}

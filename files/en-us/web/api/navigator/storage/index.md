@@ -10,36 +10,35 @@ tags:
   - Storage
 browser-compat: api.Navigator.storage
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>The <code><strong>Navigator.storage</strong></code>
-    read-only property returns the singleton {{domxref("StorageManager")}} object used to
-    access the overall storage capabilities of the browser for the current site or app.
-  The returned object lets you examine and configure persistence of data stores and
-  learn approximately how much more space your browser has available for local storage
-  use.</p>
+The **`Navigator.storage`**
+read-only property returns the singleton {{domxref("StorageManager")}} object used to
+access the overall storage capabilities of the browser for the current site or app.
+The returned object lets you examine and configure persistence of data stores and
+learn approximately how much more space your browser has available for local storage
+use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>storageManager</em> = navigator.storage;
-</pre>
+```js
+var storageManager = navigator.storage;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("StorageManager")}} object you can use to maintain persistence for stored
-  data, as well as to determine roughly how much room there is for data to be stored.</p>
+A {{domxref("StorageManager")}} object you can use to maintain persistence for stored
+data, as well as to determine roughly how much room there is for data to be stored.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("StorageManager")}}</li>
-  <li>{{domxref("Navigator")}}</li>
-</ul>
+- {{domxref("StorageManager")}}
+- {{domxref("Navigator")}}

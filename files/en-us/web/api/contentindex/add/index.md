@@ -2,93 +2,86 @@
 title: ContentIndex.add()
 slug: Web/API/ContentIndex/add
 tags:
-- Content
-- Content Index API
-- Index
-- Interface
-- Method
-- PWA
-- content index
-- content indexing
+  - Content
+  - Content Index API
+  - Index
+  - Interface
+  - Method
+  - PWA
+  - content index
+  - content indexing
 browser-compat: api.ContentIndex.add
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The <strong><code>add()</code></strong> method of the
-  {{domxref("ContentIndex")}} interface registers an item with the {{domxref('Content
-  Index API','content index')}}.</p>
+The **`add()`** method of the
+{{domxref("ContentIndex")}} interface registers an item with the {{domxref('Content
+  Index API','content index')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">ContentIndex.add(<var>ContentDescription</var>).then(...);</pre>
+```js
+ContentIndex.add(ContentDescription).then(...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>ContentDescription</em></dt>
-  <dd>An {{jsxref('Object')}} containing the following data:
-    <ul>
-      <li><code>id</code>: A unique {{jsxref('String')}} identifier.</li>
-      <li><code>title</code>: A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.</li>
-      <li><code>title</code>: A {{jsxref('String')}} title of the item. Used in
-        user-visible lists of content.</li>
-      <li><code>description</code>: A {{jsxref('String')}} description of the item. Used
-        in user-visible lists of content.</li>
-      <li><code>url</code>: A {{jsxref('String')}} containing the url of the corresponding
-        HTML document. Needs to be under the scope of the current
-        {{domxref('ServiceWorker','service worker')}}.</li>
-      <li><code>category</code>: {{Optional_Inline}} A {{jsxref('String')}} defining the
-        category of content. Can be:
-        <ul>
-          <li><code>''</code> An empty {{jsxref('String')}}, this is the default.</li>
-          <li><code>homepage</code></li>
-          <li><code>article</code></li>
-          <li><code>video</code></li>
-          <li><code>audio</code></li>
-        </ul>
-      </li>
-      <li><code>icons</code>: {{Optional_Inline}} An {{jsxref('Array')}} of image
-        resources, defined as an {{jsxref('Object')}} with the following data:
-        <ul>
-          <li><code>src:</code> A url {{jsxref('String')}} of the source image.</li>
-          <li><code>sizes:</code> {{Optional_Inline}} A {{jsxref('String')}}
-            representation of the image size.</li>
-          <li><code>type:</code> {{Optional_Inline}} The {{Glossary("MIME type")}} of the
-            image.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- _ContentDescription_
 
-<h3 id="Return_value">Return value</h3>
+  - : An {{jsxref('Object')}} containing the following data:
 
-<p>Returns a {{jsxref("Promise")}} that resolves with <code>undefined</code></p>
+    - `id`: A unique {{jsxref('String')}} identifier.
+    - `title`: A {{jsxref('String')}} title for the item. Used in
+      user-visible lists of content.
+    - `title`: A {{jsxref('String')}} title of the item. Used in
+      user-visible lists of content.
+    - `description`: A {{jsxref('String')}} description of the item. Used
+      in user-visible lists of content.
+    - `url`: A {{jsxref('String')}} containing the url of the corresponding
+      HTML document. Needs to be under the scope of the current
+      {{domxref('ServiceWorker','service worker')}}.
+    - `category`: {{Optional_Inline}} A {{jsxref('String')}} defining the
+      category of content. Can be:
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `''` An empty {{jsxref('String')}}, this is the default.
+      - `homepage`
+      - `article`
+      - `video`
+      - `audio`
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd><p>This exception is thrown in the following conditions:</p>
-    <ul>
-      <li>The service worker's registration is not present or the service worker does not
-      contain a {{domxref('FetchEvent')}}.</li>
-      <li>The <code>id</code>, <code>title</code>, <code>description</code> or
-      <code>url</code> are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.</li>
-      <li>The items referenced by <code>icons</code> are not of image type.</li>
-    </ul>
-  </dd>
-</dl>
+    - `icons`: {{Optional_Inline}} An {{jsxref('Array')}} of image
+      resources, defined as an {{jsxref('Object')}} with the following data:
 
-<h2 id="Examples">Examples</h2>
+      - `src:` A url {{jsxref('String')}} of the source image.
+      - `sizes:` {{Optional_Inline}} A {{jsxref('String')}}
+        representation of the image size.
+      - `type:` {{Optional_Inline}} The {{Glossary("MIME type")}} of the
+        image.
 
-<p>Here we're declaring an item in the correct format and creating an asynchronous
-  function which uses the <code>add</code> method to register it with the
-  {{domxref('Content Index API','content index')}}.</p>
+### Return value
 
-<pre class="brush: js">// our content
+Returns a {{jsxref("Promise")}} that resolves with `undefined`
+
+### Exceptions
+
+- `TypeError`
+
+  - : This exception is thrown in the following conditions:
+
+    - The service worker's registration is not present or the service worker does not
+      contain a {{domxref('FetchEvent')}}.
+    - The `id`, `title`, `description` or
+      `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
+    - The items referenced by `icons` are not of image type.
+
+## Examples
+
+Here we're declaring an item in the correct format and creating an asynchronous
+function which uses the `add` method to register it with the
+{{domxref('Content Index API','content index')}}.
+
+```js
+// our content
 const item = {
   id: 'post-1',
   url: '/posts/amet.html',
@@ -118,12 +111,13 @@ async function registerContent(data) {
     console.log('Failed to register content: ', e.message);
   }
 }
-</pre>
+```
 
-<p>The <code>add</code> method can also be used within the
-  {{domxref('ServiceWorker','service worker')}} scope.</p>
+The `add` method can also be used within the
+{{domxref('ServiceWorker','service worker')}} scope.
 
-<pre class="brush: js">// our content
+```js
+// our content
 const item = {
   id: 'post-1',
   url: '/posts/amet.html',
@@ -138,23 +132,21 @@ const item = {
 };
 
 self.registration.index.add(item);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
-      Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
-      and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with
-      information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the
+  Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list
+  and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with
+  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

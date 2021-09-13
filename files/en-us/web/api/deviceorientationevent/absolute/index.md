@@ -11,42 +11,38 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
-<p>{{ apiref("Device Orientation Events") }}</p>
+{{ apiref("Device Orientation Events") }}
 
-<p>Indicates whether or not the device is providing orientation data absolutely (that is,
-  in reference to the Earth's coordinate frame) or using some arbitrary frame determined
-  by the device. See <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
-    title="Orientation and motion data explained">Orientation and motion data
-    explained</a> for details.</p>
+Indicates whether or not the device is providing orientation data absolutely (that is,
+in reference to the Earth's coordinate frame) or using some arbitrary frame determined
+by the device. See [Orientation and motion data
+explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var absolute = <em>instanceOfDeviceOrientationEvent</em>.absolute;
-</pre>
+```js
+var absolute = instanceOfDeviceOrientationEvent.absolute;
+```
 
-<p>On return, <em><code>absolute</code></em> is <code>true</code> if the orientation data
-  in <code>instanceOfDeviceOrientationEvent</code> is provided as the difference between
-  the Earth's coordinate frame and the device's coordinate frame, or <code>false</code> if
-  the orientation data is being provided in reference to some arbitrary, device-determined
-  coordinate frame.</p>
+On return, _`absolute`_ is `true` if the orientation data
+in `instanceOfDeviceOrientationEvent` is provided as the difference between
+the Earth's coordinate frame and the device's coordinate frame, or `false` if
+the orientation data is being provided in reference to some arbitrary, device-determined
+coordinate frame.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("DeviceOrientationEvent") }}</li>
-  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation"
-      title="Detecting device orientation">Detecting device orientation</a></li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
-      title="Orientation and motion data explained">Orientation and motion data
-      explained</a></li>
-  <li>{{ domxref("window.ondeviceorientation") }}</li>
-  <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation "Detecting device orientation")
+- [Orientation and motion data
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

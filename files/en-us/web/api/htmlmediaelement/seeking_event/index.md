@@ -10,99 +10,104 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.seeking_event
 ---
-<p>{{APIRef("HTMLMediaElement")}}</p>
+{{APIRef("HTMLMediaElement")}}
 
-<p>The <code>seeking</code> event is fired when a seek operation starts, meaning the Boolean <code>seeking</code> attribute has changed to <code>true</code> and the media is seeking a new position.</p>
+The `seeking` event is fired when a seek operation starts, meaning the Boolean `seeking` attribute has changed to `true` and the media is seeking a new position.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Target</th>
-   <td>Element</td>
-  </tr>
-  <tr>
-   <th scope="row">Default Action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onseeking")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Specification</th>
-   <td><a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Target</th>
+      <td>Element</td>
+    </tr>
+    <tr>
+      <th scope="row">Default Action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.onseeking")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <a
+          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
+          >HTML5 media</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples add an event listener for the HTMLMediaElement's <code>seeking</code> event, then post a message when that event handler has reacted to the event firing.</p>
+These examples add an event listener for the HTMLMediaElement's `seeking` event, then post a message when that event handler has reacted to the event firing.
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.addEventListener('seeking', (event) =&gt; {
+video.addEventListener('seeking', (event) => {
   console.log('Video is seeking a new position.');
-});</pre>
+});
+```
 
-<p>Using the <code>onseeking</code> event handler property:</p>
+Using the `onseeking` event handler property:
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 
-video.onseeking = (event) =&gt; {
+video.onseeking = (event) => {
   console.log('Video is seeking a new position.');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Related_Events">Related Events</h2>
+## Related Events
 
-<ul>
- <li>{{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}</li>
- <li>{{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}</li>
- <li>{{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}</li>
- <li>{{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}</li>
- <li>{{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}</li>
- <li>{{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}</li>
- <li>{{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}</li>
- <li>{{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}</li>
- <li>{{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}</li>
- <li>{{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}</li>
- <li>{{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}</li>
- <li>{{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}</li>
-</ul>
+- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
+- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
+- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
+- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
+- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
+- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
+- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
+- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
+- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
+- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
+- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
+- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
+- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
+- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
+- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
+- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
+- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

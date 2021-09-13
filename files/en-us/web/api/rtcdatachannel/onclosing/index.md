@@ -11,41 +11,40 @@ tags:
   - onclosing
 browser-compat: api.RTCDataChannel.onclosing
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <code><strong>RTCDataChannel.onclosing</strong></code> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called by the browser when
-  the {{DOMxRef("RTCDataChannel.closing_event", "closing")}} event is received by the {{DOMxRef("RTCDataChannel")}}. This is
-  a simple {{DOMxRef("Event")}} which indicates that the data channel is being closed,
-  that is, {{DOMxRef("RTCDataChannel")}} transitions to "closing" state. For example,
-  after {{DOMxRef("RTCDataChannel.close", "RTCDataChannel.close()")}} was called but the
-  underlying data transport might not have been closed yet.</p>
+The **`RTCDataChannel.onclosing`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called by the browser when
+the {{DOMxRef("RTCDataChannel.closing_event", "closing")}} event is received by the {{DOMxRef("RTCDataChannel")}}. This is
+a simple {{DOMxRef("Event")}} which indicates that the data channel is being closed,
+that is, {{DOMxRef("RTCDataChannel")}} transitions to "closing" state. For example,
+after {{DOMxRef("RTCDataChannel.close", "RTCDataChannel.close()")}} was called but the
+underlying data transport might not have been closed yet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDataChannel</em>.onclosing = <em>function</em>;</pre>
+```js
+RTCDataChannel.onclosing = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which the browser will call to handle the <code>closing</code> event. The
-  function receives as its sole input parameter the event itself, as an object of type
-  {{DOMxRef("Event")}}.</p>
+A function which the browser will call to handle the `closing` event. The
+function receives as its sole input parameter the event itself, as an object of type
+{{DOMxRef("Event")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{DOMxRef("RTCDataChannel.onclose")}} event handler and its {{DOMxRef("RTCDataChannel.close_event", "close")}}
-    event.</li>
-  <li>{{DOMxRef("RTCDataChannel.onopen")}}</li>
-  <li>The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{DOMxRef("Event")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{DOMxRef("RTCDataChannel.onclose")}} event handler and its {{DOMxRef("RTCDataChannel.close_event", "close")}}
+  event.
+- {{DOMxRef("RTCDataChannel.onopen")}}
+- The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{DOMxRef("Event")}}.

@@ -12,65 +12,69 @@ tags:
   - pointerup
 browser-compat: api.Document.pointerup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointerup</code> event is fired when a pointer is no longer active.</p>
+The `pointerup` event is fired when a pointer is no longer active.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">document.addEventListener('pointerup', (event) =&gt; {
+```js
+document.addEventListener('pointerup', (event) => {
   console.log('Pointer up');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointerup</code> event handler property:</p>
+Using the `onpointerup` event handler property:
 
-<pre class="brush: js">document.onpointerup = (event) =&gt; {
+```js
+document.onpointerup = (event) => {
   console.log('Pointer up');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document/gotpointercapture_event", "gotpointercapture")}}</li>
- <li>{{domxref("Document/lostpointercapture_event", "lostpointercapture")}}</li>
- <li>{{domxref("Document/pointerover_event", "pointerover")}}</li>
- <li>{{domxref("Document/pointerenter_event", "pointerenter")}}</li>
- <li>{{domxref("Document/pointerdown_event", "pointerdown")}}</li>
- <li>{{domxref("Document/pointermove_event", "pointermove")}}</li>
- <li>{{domxref("Document/pointercancel_event", "pointercancel")}}</li>
- <li>{{domxref("Document/pointerout_event", "pointerout")}}</li>
- <li>{{domxref("Document/pointerleave_event", "pointerleave")}}</li>
- <li>{{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}} event handler property</li>
- <li>This event on <code>HTMLElement</code> targets: {{domxref("HTMLElement/pointerup_event", "pointerup")}} event</li>
-</ul>
+- {{domxref("Document/gotpointercapture_event", "gotpointercapture")}}
+- {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+- {{domxref("Document/pointerover_event", "pointerover")}}
+- {{domxref("Document/pointerenter_event", "pointerenter")}}
+- {{domxref("Document/pointerdown_event", "pointerdown")}}
+- {{domxref("Document/pointermove_event", "pointermove")}}
+- {{domxref("Document/pointercancel_event", "pointercancel")}}
+- {{domxref("Document/pointerout_event", "pointerout")}}
+- {{domxref("Document/pointerleave_event", "pointerleave")}}
+- {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}} event handler property
+- This event on `HTMLElement` targets: {{domxref("HTMLElement/pointerup_event", "pointerup")}} event

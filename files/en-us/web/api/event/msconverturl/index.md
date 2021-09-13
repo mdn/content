@@ -9,44 +9,46 @@ tags:
   - Reference
   - msConvertURL
 ---
-<div>{{APIRef("DOM")}}{{Non-standard_Header}}</div>
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
-<p>The <code><strong>msConvertURL</strong></code> method instructs the HTML paste operation on how to modify the src attribute that corresponds to each file in the clipboardData.files collection, allowing otherwise inaccessible files to be converted to blob or data URIs.</p>
+The **`msConvertURL`** method instructs the HTML paste operation on how to modify the src attribute that corresponds to each file in the clipboardData.files collection, allowing otherwise inaccessible files to be converted to blob or data URIs.
 
-<p>This proprietary method is specific to Internet Explorer and the Microsoft Edge browser.</p>
+This proprietary method is specific to Internet Explorer and the Microsoft Edge browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var retVal = DragEvent.msConvertURL(file, targetType, targetURL);
-</pre>
+```js
+var retVal = DragEvent.msConvertURL(file, targetType, targetURL);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><strong>file</strong> [in]</p>
+**file** \[in]
 
-<p>Type: <em>File</em></p>
+Type: _File_
 
-<p>The file object to be converted.</p>
+The file object to be converted.
 
-<p><strong>targetType</strong> [in]</p>
+**targetType** \[in]
 
-<p>Type: <em>DOMString</em></p>
+Type: _DOMString_
 
-<p>One of the following values indicating the desired conversion type: "specified", "base64", or "unchanged".</p>
+One of the following values indicating the desired conversion type: "specified", "base64", or "unchanged".
 
-<p><strong>targetURL</strong> [in, optional]</p>
+**targetURL** \[in, optional]
 
-<p>Type: <em>URL</em></p>
+Type: _URL_
 
-<p>The target URL.</p>
+The target URL.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: js">  var blobList = [];
+```js
+  var blobList = [];
 
     document.getElementById("pasteZone").addEventListener('paste', handlePaste, false);
 
@@ -58,7 +60,7 @@ tags:
         return;
       }
 
-      for (var i = 0; i &lt; fileList.length; i++) {
+      for (var i = 0; i < fileList.length; i++) {
         var file = fileList[i];
         var url = URL.createObjectURL(file);
 
@@ -72,11 +74,8 @@ tags:
         blobList.push(file);
       } // for
     } // handlePaste
+```
 
-</pre>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

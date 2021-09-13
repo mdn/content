@@ -9,32 +9,35 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.activeCues
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>activeCues</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object listing the currently active cues.</p>
+The **`activeCues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object listing the currently active cues.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let activeCues = TextTrack.activeCues;</pre>
+```js
+let activeCues = TextTrack.activeCues;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("TextTrackCueList")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("TextTrackCueList")}} object.
 
-<p>The following example adds a new <code>TextTrack</code> to a video. The <code>activeCues</code> are printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+The following example adds a new `TextTrack` to a video. The `activeCues` are printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.activeCues);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

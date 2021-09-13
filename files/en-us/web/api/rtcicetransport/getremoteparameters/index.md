@@ -3,39 +3,40 @@ title: RTCIceTransport.getRemoteParameters()
 slug: Web/API/RTCIceTransport/getRemoteParameters
 browser-compat: api.RTCIceTransport.getRemoteParameters
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
-        <code><strong>getRemoteParameters()</strong></code> returns an
-        {{domxref("RTCIceParameters")}} object which provides information uniquely
-        identifying the remote peer for the duration of the ICE session.</p>
+The **{{domxref("RTCIceTransport")}}** method
+**`getRemoteParameters()`** returns an
+{{domxref("RTCIceParameters")}} object which provides information uniquely
+identifying the remote peer for the duration of the ICE session.
 
-<p>The remote peer's parameters are received during ICE signaling and delivered to the
-    transport when the client calls
-    {{domxref("RTCPeerConnection.setRemoteDescription()")}}.</p>
+The remote peer's parameters are received during ICE signaling and delivered to the
+transport when the client calls
+{{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js"><em>parameters</em> = <em>RTCIceTransport</em>.getRemoteParameters();</pre>
+```js
+parameters = RTCIceTransport.getRemoteParameters();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("RTCIceParameters")}} object indicating the
-    {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}} and
-    {{domxref("RTCIceParameters.password", "password")}} which uniquely identify the
-    remote peer for the duration of the ICE session.</p>
+An {{domxref("RTCIceParameters")}} object indicating the
+{{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}} and
+{{domxref("RTCIceParameters.password", "password")}} which uniquely identify the
+remote peer for the duration of the ICE session.
 
-<p>Returns <code>null</code> if the parameters haven't been received yet.</p>
+Returns `null` if the parameters haven't been received yet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

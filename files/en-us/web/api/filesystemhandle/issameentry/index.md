@@ -9,59 +9,56 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>isSameEntry()</code></strong> method of the
-  {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
-  "handles")}} to see if the associated entries (either a file or directory) match.</p>
+The **`isSameEntry()`** method of the
+{{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
+  "handles")}} to see if the associated entries (either a file or directory) match.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>Boolean</var> = FileSystemHandle1.isSameEntry(FileSystemHandle2);</pre>
+```js
+var Boolean = FileSystemHandle1.isSameEntry(FileSystemHandle2);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{{domxref("FileSystemHandle")}}</dt>
-  <dd>The <code>FileSystemHandle</code> to match against the handle on which the method is
-    invoked.</dd>
-</dl>
+- {{domxref("FileSystemHandle")}}
+  - : The `FileSystemHandle` to match against the handle on which the method is
+    invoked.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a {{jsxref('Boolean')}} which is <code>true</code> is the entries match.</p>
+Returns a {{jsxref('Boolean')}} which is `true` is the entries match.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>No exceptions are thrown.</p>
+No exceptions are thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following function compares a single entry with an array of entries, and returns a
-  new array with any matching entries removed.</p>
+The following function compares a single entry with an array of entries, and returns a
+new array with any matching entries removed.
 
-<pre class="brush: js">function removeMatches(fileEntry, entriesArr) {
+```js
+function removeMatches(fileEntry, entriesArr) {
 
-  let newArr = entriesArr.filter( entry =&gt; !fileEntry.isSameEntry(entry) )
+  let newArr = entriesArr.filter( entry => !fileEntry.isSameEntry(entry) )
 
   return newArr;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

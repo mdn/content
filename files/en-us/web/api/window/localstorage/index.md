@@ -13,69 +13,74 @@ tags:
   - localStorage
 browser-compat: api.Window.localStorage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>localStorage</code></strong> read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.</p>
+The **`localStorage`** read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.
 
-<p><code>localStorage</code> is similar to {{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while <code>localStorage</code> data has no expiration time, <code>sessionStorage</code> data gets cleared when the page session ends — that is, when the page is closed. (<code>localStorage</code> data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.) </p>
+`localStorage` is similar to {{DOMxRef("Window.sessionStorage", "sessionStorage")}}, except that while `localStorage` data has no expiration time, `sessionStorage` data gets cleared when the page session ends — that is, when the page is closed. (`localStorage` data for a document loaded in a "private browsing" or "incognito" session is cleared when the last "private" tab is closed.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
-<h3 id="Value">Value</h3>
+```js
+myStorage = window.localStorage;
+```
 
-<p>A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space.</p>
+### Value
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{DOMxRef("Storage")}} object which can be used to access the current origin's local storage space.
 
-<dl>
-  <dt><code>SecurityError</code></dt>
-  <dd>The request violates a policy decision, or the origin is not <a href="/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin">a valid scheme/host/port tuple</a> (this can happen if the origin uses the <code>file:</code> or <code>data:</code> schemes, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Description">Description</h2>
+- `SecurityError`
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` schemes, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.
 
-<p>The keys and the values stored with <code>localStorage</code> are <em>always</em> in the UTF-16 {{domxref("DOMString")}} format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.</p>
+## Description
 
-<p><code>localStorage</code> data <strong>is specific to the protocol of the document</strong>. In particular, for a site loaded over HTTP (e.g., <code>http://example.com</code>), <code>localStorage</code> returns a different object than <code>localStorage</code> for the corresponding site loaded over HTTPS (e.g., <code>https://example.com</code>).</p>
+The keys and the values stored with `localStorage` are _always_ in the UTF-16 {{domxref("DOMString")}} format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
 
-<p>For documents loaded from <code>file:</code> URLs (that is, files opened in the browser directly from the user’s local filesystem, rather than being served from a web server) the requirements for <code>localStorage</code> behavior are undefined and may vary among different browsers.</p>
+`localStorage` data **is specific to the protocol of the document**. In particular, for a site loaded over HTTP (e.g., `http://example.com`), `localStorage` returns a different object than `localStorage` for the corresponding site loaded over HTTPS (e.g., `https://example.com`).
 
-<p>In all current browsers, <code>localStorage</code> seems to return a different object for each <code>file:</code> URL. In other words, each <code>file:</code> URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn’t rely on it because, as mentioned above, the requirements for <code>file:</code> URLs remains undefined. So it’s possible that browsers may change their <code>file:</code> URL handling for <code>localStorage</code> at any time. In fact some browsers <em>have</em> changed their handling for it over time.</p>
+For documents loaded from `file:` URLs (that is, files opened in the browser directly from the user’s local filesystem, rather than being served from a web server) the requirements for `localStorage` behavior are undefined and may vary among different browsers.
 
-<h2 id="Example">Example</h2>
+In all current browsers, `localStorage` seems to return a different object for each `file:` URL. In other words, each `file:` URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn’t rely on it because, as mentioned above, the requirements for `file:` URLs remains undefined. So it’s possible that browsers may change their `file:` URL handling for `localStorage` at any time. In fact some browsers _have_ changed their handling for it over time.
 
-<p>The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.</p>
+## Example
 
-<pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
+The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.
 
-<p>The syntax for reading the <code>localStorage</code> item is as follows:</p>
+```js
+localStorage.setItem('myCat', 'Tom');
+```
 
-<pre class="brush: js">const cat = localStorage.getItem('myCat');</pre>
+The syntax for reading the `localStorage` item is as follows:
 
-<p>The syntax for removing the <code>localStorage</code> item is as follows:</p>
+```js
+const cat = localStorage.getItem('myCat');
+```
 
-<pre class="brush: js">localStorage.removeItem('myCat');</pre>
+The syntax for removing the `localStorage` item is as follows:
 
-<p>The syntax for removing all the <code>localStorage</code> items is as follows:</p>
+```js
+localStorage.removeItem('myCat');
+```
 
-<pre class="brush: js">localStorage.clear();
-</pre>
+The syntax for removing all the `localStorage` items is as follows:
 
-<div class="note"> <p><strong>Note:</strong> Please refer to the <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> article for a full example.</p>
-</div>
+```js
+localStorage.clear();
+```
 
-<h2 id="Specifications">Specifications</h2>
+> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
-  <li>{{DOMxRef("Window.sessionStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{DOMxRef("Window.sessionStorage")}}

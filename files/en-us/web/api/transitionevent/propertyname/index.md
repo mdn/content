@@ -11,26 +11,24 @@ tags:
   - TransitionEvent
 browser-compat: api.TransitionEvent.propertyName
 ---
-<p>{{ apiref("CSSOM") }}</p>
+{{ apiref("CSSOM") }}
 
-<p>The <code><strong>propertyName</strong></code> read-only property of {{domxref("TransitionEvent")}} objects is a {{domxref("DOMString")}} containing the name of the CSS property associated with the transition.</p>
+The **`propertyName`** read-only property of {{domxref("TransitionEvent")}} objects is a {{domxref("DOMString")}} containing the name of the CSS property associated with the transition.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>name</em> = <em>TransitionEvent</em>.propertyName</pre>
+```js
+name = TransitionEvent.propertyName
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a>
-  </li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)

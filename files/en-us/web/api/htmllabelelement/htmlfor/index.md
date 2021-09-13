@@ -9,46 +9,41 @@ tags:
   - htmlFor
 browser-compat: api.HTMLLabelElement.htmlFor
 ---
-<div>
-  <div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLLabelElement.htmlFor</code></strong> property reflects the value
-  of the {{htmlattrxref("for", "label")}} content property. That means that this
-  script-accessible property is used to set and read the value of the content property
-  <code>for</code>, which is the ID of the label's associated control element.</p>
+The **`HTMLLabelElement.htmlFor`** property reflects the value
+of the {{htmlattrxref("for", "label")}} content property. That means that this
+script-accessible property is used to set and read the value of the content property
+`for`, which is the ID of the label's associated control element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>controlId</em> = <em>HTMLLabelElement</em>.htmlFor
+```js
+controlId = HTMLLabelElement.htmlFor
 
-<em>HTMLLabelElement</em>.htmlFor = <em>newId</em>
-</pre>
+HTMLLabelElement.htmlFor = newId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which contains the ID string of the element which is
-  associated with the control.</p>
+A {{domxref("DOMString")}} which contains the ID string of the element which is
+associated with the control.
 
-<div class="note">
-  <p><strong>Note:</strong> If this property has a value, the {{domxref("HTMLLabelElement.control")}} property
-    must refer to the same control.</p>
-</div>
+> **Note:** If this property has a value, the {{domxref("HTMLLabelElement.control")}} property
+> must refer to the same control.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLLabelElement")}}</li>
-  <li>{{domxref("HTMLLabelElement.control")}}</li>
-  <li>{{domxref("HTMLElement")}}</li>
-  <li>{{HTMLElement("label")}}</li>
-  <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
-</ul>
+- {{domxref("HTMLLabelElement")}}
+- {{domxref("HTMLLabelElement.control")}}
+- {{domxref("HTMLElement")}}
+- {{HTMLElement("label")}}
+- [HTML forms guide](/en-US/docs/Learn/Forms)

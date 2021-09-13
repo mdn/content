@@ -2,57 +2,54 @@
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
 tags:
-- API
-- HTML DOM
-- Method
-- Window
-- Polyfill
+  - API
+  - HTML DOM
+  - Method
+  - Window
+  - Polyfill
 browser-compat: api.Window.clearImmediate
 ---
-<p>{{APIRef("HTML DOM")}}{{Non-standard_header}}</p>
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
-<p>This method clears the action specified by {{DOMxRef("window.setImmediate")}}.</p>
+This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method is not expected to become standard, and is only implemented by recent
-    builds of Internet Explorer and Node.js 0.10+. It meets resistance both from <a
-      href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) and
-    <a href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a>
-    (Google/Apple).</p>
-</div>
+> **Note:** This method is not expected to become standard, and is only implemented by recent
+> builds of Internet Explorer and Node.js 0.10+. It meets resistance both from [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) and
+> [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172)
+> (Google/Apple).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>window</var>.clearImmediate( <var>immediateID</var> )
-</pre>
+```js
+window.clearImmediate( immediateID )
+```
 
-<p>where immediateID is a ID returned by {{DOMxRef("window.setImmediate")}}.</p>
+where immediateID is a ID returned by {{DOMxRef("window.setImmediate")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let immediateID = setImmediate(() =&gt; {
+```js
+let immediateID = setImmediate(() => {
   // Run some code
 }
 
 document.getElementById("button")
-  .addEventListener(() =&gt; {
+  .addEventListener(() => {
   clearImmediate(immediateID);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specifications. The
-<a href="https://w3c.github.io/setImmediate/#si-setImmediate">Efficient Script Yielding</a>
-specification is no longer being worked on.</p>
+Not part of any current specifications. The
+[Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmediate)
+specification is no longer being worked on.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>clearImmediate</code> is available in <a href="https://github.com/zloirock/core-js#setimmediate"><code>core-js</code></a></li>
-  <li>{{DOMxRef("Window.setImmediate()")}}</li>
-</ul>
+- A polyfill of `clearImmediate` is available in [`core-js`](https://github.com/zloirock/core-js#setimmediate)
+- {{DOMxRef("Window.setImmediate()")}}

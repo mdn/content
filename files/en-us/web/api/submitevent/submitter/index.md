@@ -2,45 +2,47 @@
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
 tags:
-- API
-- Forms
-- HTML
-- HTML DOM
-- Property
-- Read-only
-- Reference
-- SubmitEvent
-- submission
-- submitter
+  - API
+  - Forms
+  - HTML
+  - HTML DOM
+  - Property
+  - Read-only
+  - Reference
+  - SubmitEvent
+  - submission
+  - submitter
 browser-compat: api.SubmitEvent.submitter
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <code><strong>submitter</strong></code> property found on
-  the {{domxref("SubmitEvent")}} interface specifies the submit button or other element
-  that was invoked to cause the form to be submitted.</p>
+The read-only **`submitter`** property found on
+the {{domxref("SubmitEvent")}} interface specifies the submit button or other element
+that was invoked to cause the form to be submitted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>submitter</em> = <em>submitEvent</em>.submitter;</pre>
+```js
+let submitter = submitEvent.submitter;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An element, indicating the element that sent
-  the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this
-  is often an {{HTMLElement("input")}} element whose <a href="/en-US/docs/Web/HTML/Element/input#htmlattrdeftype"><code>type</code></a> is <code>submit</code> or a {{HTMLElement("button")}} element whose <a href="/en-US/docs/Web/HTML/Element/input#htmlattrdeftype"><code>type</code></a> is <code>submit</code>, it could be some other element which has initiated a
-  submission process.</p>
+An element, indicating the element that sent
+the {{domxref("HTMLFormElement.submit_event", "submit")}} event to the form. While this
+is often an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#htmlattrdeftype) is `submit` or a {{HTMLElement("button")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#htmlattrdeftype) is `submit`, it could be some other element which has initiated a
+submission process.
 
-<p>If the submission was not triggered by a button of some kind, the value of <code>submitter</code> is <code>null</code>.</p>
+If the submission was not triggered by a button of some kind, the value of `submitter` is `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/SubmitEvent#examples"><code>SubmitEvent</code></a> for example code.</p>
+See [`SubmitEvent`](/en-US/docs/Web/API/SubmitEvent#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

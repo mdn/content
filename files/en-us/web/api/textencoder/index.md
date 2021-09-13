@@ -10,51 +10,47 @@ tags:
   - TextEncoder
 browser-compat: api.TextEncoder
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p><code><strong>TextEncoder</strong></code> takes a stream of code points as input and emits a stream of UTF-8 bytes.</p>
+**`TextEncoder`** takes a stream of code points as input and emits a stream of UTF-8 bytes.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const encoder = new TextEncoder()
+```js
+const encoder = new TextEncoder()
 const view = encoder.encode('€')
 console.log(view); // Uint8Array(3) [226, 130, 172]
-</pre>
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}}</dt>
- <dd>Returns a newly constructed <code>TextEncoder</code> that will generate a byte stream with UTF-8 encoding.</dd>
-</dl>
+- {{DOMxRef("TextEncoder.TextEncoder", "TextEncoder()")}}
+  - : Returns a newly constructed `TextEncoder` that will generate a byte stream with UTF-8 encoding.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>TextEncoder</code> interface doesn't inherit any property.</em></p>
+_The `TextEncoder` interface doesn't inherit any property._
 
-<dl>
- <dt>{{DOMxRef("TextEncoder.prototype.encoding")}}{{ReadOnlyInline}}</dt>
- <dd>Always returns "<code>utf-8</code>".</dd>
-</dl>
+- {{DOMxRef("TextEncoder.prototype.encoding")}}{{ReadOnlyInline}}
+  - : Always returns "`utf-8`".
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>TextEncoder</code> interface doesn't inherit any method</em>.</p>
+_The `TextEncoder` interface doesn't inherit any method_.
 
-<dl>
- <dt>{{DOMxRef("TextEncoder.prototype.encode()")}}</dt>
- <dd>Takes a {{domxref("USVString")}} as input, and returns a {{jsxref("Uint8Array")}} containing UTF-8 encoded text.</dd>
- <dt>{{DOMxRef("TextEncoder.prototype.encodeInto()")}}</dt>
- <dd>Takes a {{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older <code>encode()</code> method.</dd>
-</dl>
+- {{DOMxRef("TextEncoder.prototype.encode()")}}
+  - : Takes a {{domxref("USVString")}} as input, and returns a {{jsxref("Uint8Array")}} containing UTF-8 encoded text.
+- {{DOMxRef("TextEncoder.prototype.encodeInto()")}}
+  - : Takes a {{domxref("USVString")}} to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older `encode()` method.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The below polyfill is compliant with the standard and therefore only supports UTF-8. It is designed to work in IE5 "out of the box". However, in IE5-IE9, it will return a regular Array instead of a TypedArray. In those cases a polyfill might be impractical for large strings. Finally, note that you should run the below code through a minifier (especially closure compiler) to turn sequences like <code>0x1e &lt;&lt; 3</code> into <code>0xf0</code>. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.</p>
+The below polyfill is compliant with the standard and therefore only supports UTF-8. It is designed to work in IE5 "out of the box". However, in IE5-IE9, it will return a regular Array instead of a TypedArray. In those cases a polyfill might be impractical for large strings. Finally, note that you should run the below code through a minifier (especially closure compiler) to turn sequences like `0x1e << 3` into `0xf0`. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.
 
-<pre class="brush: js">if (typeof TextEncoder === "undefined") {
+```js
+if (typeof TextEncoder === "undefined") {
     TextEncoder=function TextEncoder(){};
     TextEncoder.prototype.encode = function encode(str) {
         "use strict";
@@ -65,21 +61,21 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
         var resArr = typeof Uint8Array === "undefined" ? new Array(Len * 1.5) : new Uint8Array(Len * 3);
         for (var point=0, nextcode=0, i = 0; i !== Len; ) {
             point = str.charCodeAt(i), i += 1;
-            if (point &gt;= 0xD800 &amp;&amp; point &lt;= 0xDBFF) {
+            if (point >= 0xD800 && point <= 0xDBFF) {
                 if (i === Len) {
                     resArr[resPos += 1] = 0xef/*0b11101111*/; resArr[resPos += 1] = 0xbf/*0b10111111*/;
                     resArr[resPos += 1] = 0xbd/*0b10111101*/; break;
                 }
                 // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
                 nextcode = str.charCodeAt(i);
-                if (nextcode &gt;= 0xDC00 &amp;&amp; nextcode &lt;= 0xDFFF) {
+                if (nextcode >= 0xDC00 && nextcode <= 0xDFFF) {
                     point = (point - 0xD800) * 0x400 + nextcode - 0xDC00 + 0x10000;
                     i += 1;
-                    if (point &gt; 0xffff) {
-                        resArr[resPos += 1] = (0x1e/*0b11110*/&lt;&lt;3) | (point&gt;&gt;&gt;18);
-                        resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6) | ((point&gt;&gt;&gt;12)&amp;0x3f/*0b00111111*/);
-                        resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6) | ((point&gt;&gt;&gt;6)&amp;0x3f/*0b00111111*/);
-                        resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6) | (point&amp;0x3f/*0b00111111*/);
+                    if (point > 0xffff) {
+                        resArr[resPos += 1] = (0x1e/*0b11110*/<<3) | (point>>>18);
+                        resArr[resPos += 1] = (0x2/*0b10*/<<6) | ((point>>>12)&0x3f/*0b00111111*/);
+                        resArr[resPos += 1] = (0x2/*0b10*/<<6) | ((point>>>6)&0x3f/*0b00111111*/);
+                        resArr[resPos += 1] = (0x2/*0b10*/<<6) | (point&0x3f/*0b00111111*/);
                         continue;
                     }
                 } else {
@@ -87,15 +83,15 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
                     resArr[resPos += 1] = 0xbd/*0b10111101*/; continue;
                 }
             }
-            if (point &lt;= 0x007f) {
-                resArr[resPos += 1] = (0x0/*0b0*/&lt;&lt;7) | point;
-            } else if (point &lt;= 0x07ff) {
-                resArr[resPos += 1] = (0x6/*0b110*/&lt;&lt;5) | (point&gt;&gt;&gt;6);
-                resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6)  | (point&amp;0x3f/*0b00111111*/);
+            if (point <= 0x007f) {
+                resArr[resPos += 1] = (0x0/*0b0*/<<7) | point;
+            } else if (point <= 0x07ff) {
+                resArr[resPos += 1] = (0x6/*0b110*/<<5) | (point>>>6);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6)  | (point&0x3f/*0b00111111*/);
             } else {
-                resArr[resPos += 1] = (0xe/*0b1110*/&lt;&lt;4) | (point&gt;&gt;&gt;12);
-                resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6)    | ((point&gt;&gt;&gt;6)&amp;0x3f/*0b00111111*/);
-                resArr[resPos += 1] = (0x2/*0b10*/&lt;&lt;6)    | (point&amp;0x3f/*0b00111111*/);
+                resArr[resPos += 1] = (0xe/*0b1110*/<<4) | (point>>>12);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6)    | ((point>>>6)&0x3f/*0b00111111*/);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6)    | (point&0x3f/*0b00111111*/);
             }
         }
         if (typeof Uint8Array !== "undefined") return resArr.subarray(0, resPos + 1);
@@ -112,21 +108,19 @@ console.log(view); // Uint8Array(3) [226, 130, 172]
     } catch(e) { /*IE6-8 fallback*/ TextEncoder.prototype.encoding = "utf-8"; }
     if(typeof Symbol!=="undefined")TextEncoder.prototype[Symbol.toStringTag]="TextEncoder";
 }
-</pre>
+```
 
-<p><small>Source: <a href="https://github.com/anonyco/FastestSmallestTextEncoderDecoder" rel="noopener">https://github.com/anonyco/FastestSmallestTextEncoderDecoder</a></small></p>
+Source: <https://github.com/anonyco/FastestSmallestTextEncoderDecoder>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.</li>
- <li><a href="https://nodejs.org/api/util.html#util_class_util_textencoder">Node.js supports global export from v11.0.0</a></li>
-</ul>
+- The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.
+- [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textencoder)

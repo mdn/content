@@ -2,94 +2,90 @@
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.rect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.rect()</code></strong>
-  method of the Canvas 2D API adds a rectangle to the current path.</p>
+The
+**`CanvasRenderingContext2D.rect()`**
+method of the Canvas 2D API adds a rectangle to the current path.
 
-<p>Like other methods that modify the current path, this method does not directly render
-  anything.  To draw the rectangle onto a canvas, you can use the
-  {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
-  {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.</p>
+Like other methods that modify the current path, this method does not directly render
+anything.  To draw the rectangle onto a canvas, you can use the
+{{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
+{{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> To both create and render a rectangle in one step, use the
-    {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or
-    {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} methods.</p>
-</div>
+> **Note:** To both create and render a rectangle in one step, use the
+> {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or
+> {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.rect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
-</pre>
+```js
+void ctx.rect(x, y, width, height);
+```
 
-<p>The <code>rect()</code> method creates a rectangular path whose starting point is at
-  <code>(x, y)</code> and whose size is specified by <code>width</code> and
-  <code>height</code>.</p>
+The `rect()` method creates a rectangular path whose starting point is at
+`(x, y)` and whose size is specified by `width` and
+`height`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>width</code></dt>
-  <dd>The rectangle's width. Positive values are to the right, and negative to the left.
-  </dd>
-  <dt><code>height</code></dt>
-  <dd>The rectangle's height. Positive values are down, and negative are up.</dd>
-</dl>
+- `x`
+  - : The x-axis coordinate of the rectangle's starting point.
+- `y`
+  - : The y-axis coordinate of the rectangle's starting point.
+- `width`
+  - : The rectangle's width. Positive values are to the right, and negative to the left.
+- `height`
+  - : The rectangle's height. Positive values are down, and negative are up.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_a_rectangle">Drawing a rectangle</h3>
+### Drawing a rectangle
 
-<p>This example creates a rectangular path using the <code>rect()</code> method. The path
-  is then rendered using the <code>fill()</code> method.</p>
+This example creates a rectangular path using the `rect()` method. The path
+is then rendered using the `fill()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The rectangle's corner is located at (10, 20). It has a width of 150 and a height of
-  100.</p>
+The rectangle's corner is located at (10, 20). It has a width of 150 and a height of
+100\.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_a_rectangle', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_a_rectangle', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.fillRect")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.fill()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- {{domxref("CanvasRenderingContext2D.fill()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

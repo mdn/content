@@ -8,53 +8,50 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The
-    <strong><code>HTMLAnchorElement.hash</code></strong> property returns a
-    {{domxref("USVString")}} containing a <code>'#'</code> followed by the fragment
-    identifier of the URL.</p>
+The
+**`HTMLAnchorElement.hash`** property returns a
+{{domxref("USVString")}} containing a `'#'` followed by the fragment
+identifier of the URL.
 
-<p>The fragment is not <a
-    href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
-  have a fragment identifier, this property contains an empty string, <code>""</code>.</p>
+The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+have a fragment identifier, this property contains an empty string, `""`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.hash;
+string = anchor.hash;
 // Setter
-<em>anchor</em>.hash = <em>string</em>;
-</pre>
+anchor.hash = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the hash from an anchor link</h3>
+### Getting the hash from an anchor link
 
 Given this HTML
 
-<pre class="brush: html">
-&lt;a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples"&gt;Examples&lt;/a&gt;
-</pre>
+```html
+<a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples">Examples</a>
+```
 
 you can get the hash of the anchor like this:
 
-<pre class="brush: js">
+```js
 const anchor = document.getElementById("myAnchor");
 anchor.hash; // returns '#Examples'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

@@ -11,42 +11,41 @@ tags:
   - removeStream
 browser-compat: api.RTCPeerConnection.removeStream
 ---
-<div>{{APIRef("WebRTC")}}{{deprecated_header}}</div>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The
-    <code><strong>RTCPeerConnection.removeStream()</strong></code> method removes a
-    {{domxref("MediaStream")}} as a local source of audio or video. If the negotiation
-    already happened, a new one will be needed for the remote peer to be able to use it.
-    Because this method has been deprecated, you should instead use
-    {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} if your target browser
-    versions have implemented it.</p>
+The
+**`RTCPeerConnection.removeStream()`** method removes a
+{{domxref("MediaStream")}} as a local source of audio or video. If the negotiation
+already happened, a new one will be needed for the remote peer to be able to use it.
+Because this method has been deprecated, you should instead use
+{{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} if your target browser
+versions have implemented it.
 
-<p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>"closed"</code>, an <code>InvalidStateError</code> is raised. If the
-  {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>"stable"</code>, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
-  {{domxref("RTCPeerConnection")}}.</p>
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
+`"closed"`, an `InvalidStateError` is raised. If the
+{{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
+`"stable"`, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
+{{domxref("RTCPeerConnection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RTCPeerConnection.removeStream(mediaStream);
-</pre>
+```js
+RTCPeerConnection.removeStream(mediaStream);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mediaStream</code></dt>
-  <dd>A {{domxref("MediaStream")}} specifying the stream to remove from the connection.
-  </dd>
-</dl>
+- `mediaStream`
+  - : A {{domxref("MediaStream")}} specifying the stream to remove from the connection.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc, videoStream;
+```js
+var pc, videoStream;
 navigator.getUserMedia({video: true}, function(stream) {
   pc = new RTCPeerConnection();
   videoStream = stream;
@@ -55,17 +54,16 @@ navigator.getUserMedia({video: true}, function(stream) {
 document.getElementById("closeButton").addEventListener("click", function(event) {
   pc.removeStream(videoStream);
   pc.close();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCPeerConnection.removeTrack()")}}</li>
-  <li>{{domxref("RTCPeerConnection.addTrack()")}}</li>
-  <li>{{domxref("RTCPeerConnection.addStream()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.removeTrack()")}}
+- {{domxref("RTCPeerConnection.addTrack()")}}
+- {{domxref("RTCPeerConnection.addStream()")}}

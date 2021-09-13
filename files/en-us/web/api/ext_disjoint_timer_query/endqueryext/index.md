@@ -9,51 +9,49 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.endQueryEXT
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>EXT_disjoint_timer_query.endQueryEXT()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> ends a timer query.</p>
+The **`EXT_disjoint_timer_query.endQueryEXT()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) ends a timer query.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>ext</var>.endQueryEXT(<var>target</var>);
-</pre>
+```js
+void ext.endQueryEXT(target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
-    <code>ext.TIME_ELAPSED_EXT</code>.</dd>
-</dl>
+- target
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
+    `ext.TIME_ELAPSED_EXT`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
 // ...
 
 ext.endQueryEXT(ext.TIME_ELAPSED_EXT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLQuery")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLQuery")}}
+- {{domxref("EXT_disjoint_timer_query")}}

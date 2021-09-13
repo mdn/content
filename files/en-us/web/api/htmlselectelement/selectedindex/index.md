@@ -2,60 +2,64 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 tags:
-- API
-- HTML DOM
-- HTML forms
-- HTMLSelectElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTML forms
+  - HTMLSelectElement
+  - Property
+  - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLSelectElement.selectedIndex</strong></code> is a
-  <code>long</code> that reflects the index of the first or last selected
-  {{HTMLElement("option")}} element, depending on the value of <code>multiple</code>. The
-  value <code>-1</code> indicates that no element is selected.</p>
+The **`HTMLSelectElement.selectedIndex`** is a
+`long` that reflects the index of the first or last selected
+{{HTMLElement("option")}} element, depending on the value of `multiple`. The
+value `-1` indicates that no element is selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>index</var> = <var>selectElem</var>.selectedIndex;
-<em>selectElem<code>.selectedIndex = </code>index;</em>
-</pre>
+```js
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="p"&gt;selectedIndex: 0&lt;/p&gt;
+```html
+<p id="p">selectedIndex: 0</p>
 
-&lt;select id="select"&gt;
-  &lt;option selected&gt;Option A&lt;/option&gt;
-  &lt;option&gt;Option B&lt;/option&gt;
-  &lt;option&gt;Option C&lt;/option&gt;
-  &lt;option&gt;Option D&lt;/option&gt;
-  &lt;option&gt;Option E&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select id="select">
+  <option selected>Option A</option>
+  <option>Option B</option>
+  <option>Option C</option>
+  <option>Option D</option>
+  <option>Option E</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">var selectElem = document.getElementById('select')
+```js
+var selectElem = document.getElementById('select')
 var pElem = document.getElementById('p')
 
-// When a new &lt;option&gt; is selected
+// When a new <option> is selected
 selectElem.addEventListener('change', function() {
   var index = selectElem.selectedIndex;
-  // Add that data to the &lt;p&gt;
+  // Add that data to the <p>
   pElem.innerHTML = 'selectedIndex: ' + index;
-})</pre>
+})
+```
 
-<p>{{EmbedLiveSample("Example", "200px", "80px")}}</p>
+{{EmbedLiveSample("Example", "200px", "80px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

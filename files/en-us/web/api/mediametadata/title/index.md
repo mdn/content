@@ -13,28 +13,30 @@ tags:
   - Video
 browser-compat: api.MediaMetadata.title
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>title</code></strong> property of the
-    {{domxref("MediaMetaData")}} interface returns or sets the title of the media to be
-    played.</p>
+The **`title`** property of the
+{{domxref("MediaMetaData")}} interface returns or sets the title of the media to be
+played.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var title = mediaMetaData.title
-mediaMetaData.title = title</pre>
+```js
+var title = mediaMetaData.title
+mediaMetaData.title = title
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} containing the title of the media.</p>
+A {{jsxref("String")}} containing the title of the media.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example checks for browser compatibility and sets the current metadata
-  for the media session.</p>
+The following example checks for browser compatibility and sets the current metadata
+for the media session.
 
-<pre
-  class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -47,12 +49,13 @@ mediaMetaData.title = title</pre>
       { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

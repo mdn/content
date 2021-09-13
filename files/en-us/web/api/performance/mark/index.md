@@ -2,57 +2,55 @@
 title: performance.mark()
 slug: Web/API/Performance/mark
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.Performance.mark
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p>The <strong><code>mark()</code></strong> method creates a
-  {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's <em>performance entry
-    buffer</em> with the given name.</p>
+The **`mark()`** method creates a
+{{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry
+buffer_ with the given name.
 
-<p>The application defined timestamp can also be retrieved by one of the
-  {{domxref("Performance")}} interface's <code>getEntries*()</code> methods
-  ({{domxref("Performance.getEntries","getEntries()")}},
-  {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
-  {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).</p>
+The application defined timestamp can also be retrieved by one of the
+{{domxref("Performance")}} interface's `getEntries*()` methods
+({{domxref("Performance.getEntries","getEntries()")}},
+{{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
+{{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-<p>The <code>mark()'s</code> stores its data internally as
-  {{domxref("PerformanceEntry")}}.</p>
+The `mark()'s` stores its data internally as
+{{domxref("PerformanceEntry")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>performance</em>.mark(name);
-</pre>
+```js
+performance.mark(name);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>name</dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the mark. If the
-    <code>name</code> given to this method already exists in the
-      {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
-      thrown.</dd>
-</dl>
+- name
+  - : A {{domxref("DOMString")}} representing the name of the mark. If the
+    `name` given to this method already exists in the
+    {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
+    thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>entry</dt>
-  <dd>The {{domxref("PerformanceMark")}} entry that was created.</dd>
-</dl>
+- entry
+  - : The {{domxref("PerformanceMark")}} entry that was created.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows how to use <code>mark()</code> to create and retrieve
-  {{domxref("PerformanceMark")}} entries.</p>
+The following example shows how to use `mark()` to create and retrieve
+{{domxref("PerformanceMark")}} entries.
 
-<pre class="brush:js">// Create a bunch of marks.
+```js
+// Create a bunch of marks.
 performance.mark("squirrel");
 performance.mark("squirrel");
 performance.mark("monkey");
@@ -72,12 +70,12 @@ console.log(monkeyEntries.length);
 
 // Clear out all of the marks.
 performance.clearMarks();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

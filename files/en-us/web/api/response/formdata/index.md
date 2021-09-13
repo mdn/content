@@ -12,51 +12,48 @@ tags:
   - Response
 browser-compat: api.Response.formData
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>formData()</code></strong> method of the {{domxref("Response")}} interface
-  takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
-  that resolves with a {{domxref("FormData")}} object.</p>
+The **`formData()`** method of the {{domxref("Response")}} interface
+takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
+that resolves with a {{domxref("FormData")}} object.
 
-<div class="note">
-  <p><strong>Note:</strong> This is mainly relevant to <a
-      href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>. If a user submits
-    a form and a service worker intercepts the request, you could for example call
-    <code>formData()</code> on it to obtain a key-value map, modify some fields, then send
-    the form onwards to the server (or use it locally).</p>
-</div>
+> **Note:** This is mainly relevant to [service workers](/en-US/docs/Web/API/Service_Worker_API). If a user submits
+> a form and a service worker intercepts the request, you could for example call
+> `formData()` on it to obtain a key-value map, modify some fields, then send
+> the form onwards to the server (or use it locally).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>response</em>.formData()
-.then(function(<em>formdata</em>) {
+```js
+response.formData()
+.then(function(formdata) {
   // do something with your formdata
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

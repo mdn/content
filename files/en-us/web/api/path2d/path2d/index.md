@@ -2,51 +2,51 @@
 title: Path2D()
 slug: Web/API/Path2D/Path2D
 tags:
-- API
-- Canvas
-- Constructor
-- Drawing
-- Graphics
-- Path2D
-- Paths
-- Reference
+  - API
+  - Canvas
+  - Constructor
+  - Drawing
+  - Graphics
+  - Path2D
+  - Paths
+  - Reference
 browser-compat: api.Path2D.Path2D
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <code><strong>Path2D()</strong></code> constructor returns a newly instantiated
-  <code>Path2D</code> object, optionally with another path as an argument (creates a
-  copy), or optionally with a string consisting of <a
-    href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> data.</p>
+The **`Path2D()`** constructor returns a newly instantiated
+`Path2D` object, optionally with another path as an argument (creates a
+copy), or optionally with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new Path2D();
-new Path2D(<em>path</em>);
-new Path2D(<em>d</em>);
-</pre>
+```js
+new Path2D();
+new Path2D(path);
+new Path2D(d);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>path</code> {{optional_inline}}</dt>
-  <dd>When invoked with another <code>Path2D</code> object, a copy of the
-    <code>path</code> argument is created.</dd>
-  <dt><code>d</code> {{optional_inline}}</dt>
-  <dd>When invoked with a string consisting of <a
-      href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> data, a new path is created
-    from that description.</dd>
-</dl>
+- `path` {{optional_inline}}
+  - : When invoked with another `Path2D` object, a copy of the
+    `path` argument is created.
+- `d` {{optional_inline}}
+  - : When invoked with a string consisting of [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) data, a new path is created
+    from that description.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_and_copying_paths">Creating and copying paths</h3>
+### Creating and copying paths
 
-<p>This example creates and copies a <code>Path2D</code> path.</p>
+This example creates and copies a `Path2D` path.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let path1 = new Path2D();
@@ -57,39 +57,39 @@ path2.moveTo(220, 60);
 path2.arc(170, 60, 50, 0, 2 * Math.PI);
 
 ctx.stroke(path2);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Creating_and_copying_paths', 700, 180) }}</p>
+{{ EmbedLiveSample('Creating_and_copying_paths', 700, 180) }}
 
-<h3 id="Using_SVG_paths">Using SVG paths</h3>
+### Using SVG paths
 
-<p>This example creates a <code>Path2D</code> path using <a
-    href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a>. The path will move to
-  point (<code>M10 10</code>) and then move horizontally 80 points to the right
-  (<code>h 80</code>), then 80 points down (<code>v 80</code>), then 80 points to the left
-  (<code>h -80</code>), and then back to the start (<code>Z</code>).</p>
+This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorial/Paths). The path will move to
+point (`M10 10`) and then move horizontally 80 points to the right
+(`h 80`), then 80 points down (`v 80`), then 80 points to the left
+(`h -80`), and then back to the start (`Z`).
 
-<pre class="brush: html hidden">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
 ctx.fill(p);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Using_SVG_paths', 700, 180) }}</p>
+{{ EmbedLiveSample('Using_SVG_paths', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Path2D")}}, the interface this constructor belongs to</li>
-</ul>
+- {{domxref("Path2D")}}, the interface this constructor belongs to

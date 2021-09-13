@@ -8,82 +8,76 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement</code></strong> interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HtmlElement("area")}} elements.</p>
+The **`HTMLAreaElement`** interface provides special properties and methods (beyond those of the regular object {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HtmlElement("area")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLElement.accessKey")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a single character that switches input focus to the control.</dd>
- <dt>{{domxref("HTMLAreaElement.alt")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("alt", "area") }} HTML attribute, containing alternative text for the element.</dd>
- <dt>{{domxref("HTMLAreaElement.coords")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("coords", "area") }} HTML attribute, containing coordinates to define the hot-spot region.</dd>
- <dt>{{domxref("HTMLAreaElement.download")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.</dd>
- <dt>{{domxref("HTMLAreaElement.hash")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the fragment identifier (including the leading hash mark (#)), if any, in the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.host")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the hostname and port (if it's not the default port) in the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.hostname")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the hostname in the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.href")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}</dt>
- <dd>Is a boolean flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
- <dt>{{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
- <dt>{{domxref("HTMLAreaElement.password")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("HTMLAreaElement.pathname")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the path name component, if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.port")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the port component, if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.protocol")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the protocol component (including trailing colon <code>':'</code>), of the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.referrerPolicy")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "area")}} HTML attribute indicating which referrer to use when fetching the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.rel")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMTokenList")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.</dd>
- <dt>{{domxref("HTMLAreaElement.search")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the search element (including leading question mark <code>'?'</code>), if any, of the referenced URL.</dd>
- <dt>{{domxref("HTMLAreaElement.shape")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("shape", "area") }} HTML attribute, indicating the shape of the hot-spot, limited to known values.</dd>
- <dt>{{domxref("HTMLElement.tabIndex")}}</dt>
- <dd>Is a <code>long</code> containing the element's position in the tabbing order.</dd>
- <dt>{{domxref("HTMLAreaElement.target")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.username")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing the username specified before the domain name.</dd>
-</dl>
+- {{domxref("HTMLElement.accessKey")}}
+  - : Is a {{domxref("DOMString")}} containing a single character that switches input focus to the control.
+- {{domxref("HTMLAreaElement.alt")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("alt", "area") }} HTML attribute, containing alternative text for the element.
+- {{domxref("HTMLAreaElement.coords")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("coords", "area") }} HTML attribute, containing coordinates to define the hot-spot region.
+- {{domxref("HTMLAreaElement.download")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represent the proposed name of the file. If the name is not a valid filename of the underlying OS, browser will adapt it.
+- {{domxref("HTMLAreaElement.hash")}}
+  - : Is a {{domxref("USVString")}} containing the fragment identifier (including the leading hash mark (#)), if any, in the referenced URL.
+- {{domxref("HTMLAreaElement.host")}}
+  - : Is a {{domxref("USVString")}} containing the hostname and port (if it's not the default port) in the referenced URL.
+- {{domxref("HTMLAreaElement.hostname")}}
+  - : Is a {{domxref("USVString")}} containing the hostname in the referenced URL.
+- {{domxref("HTMLAreaElement.href")}}
+  - : Is a {{domxref("USVString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.
+- {{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}
+  - : Is a boolean flag indicating if the area is inactive (`true`) or active (`false`).
+- {{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}
+  - : Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.
+- {{domxref("HTMLAreaElement.password")}}
+  - : Is a {{domxref("USVString")}} containing the password specified before the domain name.
+- {{domxref("HTMLAreaElement.pathname")}}
+  - : Is a {{domxref("USVString")}} containing the path name component, if any, of the referenced URL.
+- {{domxref("HTMLAreaElement.port")}}
+  - : Is a {{domxref("USVString")}} containing the port component, if any, of the referenced URL.
+- {{domxref("HTMLAreaElement.protocol")}}
+  - : Is a {{domxref("USVString")}} containing the protocol component (including trailing colon `':'`), of the referenced URL.
+- {{domxref("HTMLAreaElement.referrerPolicy")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "area")}} HTML attribute indicating which referrer to use when fetching the linked resource.
+- {{domxref("HTMLAreaElement.rel")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource.
+- {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the {{ htmlattrxref("rel", "area") }} HTML attribute, indicating relationships of the current document to the linked resource, as a list of tokens.
+- {{domxref("HTMLAreaElement.search")}}
+  - : Is a {{domxref("USVString")}} containing the search element (including leading question mark `'?'`), if any, of the referenced URL.
+- {{domxref("HTMLAreaElement.shape")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("shape", "area") }} HTML attribute, indicating the shape of the hot-spot, limited to known values.
+- {{domxref("HTMLElement.tabIndex")}}
+  - : Is a `long` containing the element's position in the tabbing order.
+- {{domxref("HTMLAreaElement.target")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.
+- {{domxref("HTMLAreaElement.username")}}
+  - : Is a {{domxref("USVString")}} containing the username specified before the domain name.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLAreaElement.toString()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL of the script executed in the {{domxref("Worker")}}. It is a synonym for {{domxref("HTMLAreaElement.href")}}.</dd>
-</dl>
+- {{domxref("HTMLAreaElement.toString()")}}
+  - : Returns a {{domxref("USVString")}} containing the whole URL of the script executed in the {{domxref("Worker")}}. It is a synonym for {{domxref("HTMLAreaElement.href")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("area") }}</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("area") }}

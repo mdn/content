@@ -2,74 +2,49 @@
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
 tags:
-- API
-- HTML DOM
-- Property
-- Read-only
-- Web
+  - API
+  - HTML DOM
+  - Property
+  - Read-only
+  - Web
 browser-compat: api.HTMLMediaElement.networkState
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The
-    <strong><code>HTMLMediaElement.networkState</code></strong> property indicates the
-    current state of the fetching of media over the network.</p>
+The
+**`HTMLMediaElement.networkState`** property indicates the
+current state of the fetching of media over the network.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var networkState = audioOrVideo.networkState;</pre>
+```js
+var networkState = audioOrVideo.networkState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>unsigned short</code>. Possible values are:</p>
+An `unsigned short`. Possible values are:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Constant</th>
-      <th scope="col">Value</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>NETWORK_EMPTY</code></td>
-      <td>0</td>
-      <td>There is no data yet. Also, <code>readyState</code> is
-        <code>HAVE_NOTHING</code>.</td>
-    </tr>
-    <tr>
-      <td><code>NETWORK_IDLE</code></td>
-      <td>1</td>
-      <td>HTMLMediaElement is active and has selected a resource, but is not using the
-        network.</td>
-    </tr>
-    <tr>
-      <td><code>NETWORK_LOADING</code></td>
-      <td>2</td>
-      <td>The browser is downloading HTMLMediaElement data.</td>
-    </tr>
-    <tr>
-      <td><code>NETWORK_NO_SOURCE</code></td>
-      <td>3</td>
-      <td>No HTMLMediaElement src found.</td>
-    </tr>
-  </tbody>
-</table>
+| Constant            | Value | Description                                                                           |
+| ------------------- | ----- | ------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0     | There is no data yet. Also, `readyState` is `HAVE_NOTHING`.                           |
+| `NETWORK_IDLE`      | 1     | HTMLMediaElement is active and has selected a resource, but is not using the network. |
+| `NETWORK_LOADING`   | 2     | The browser is downloading HTMLMediaElement data.                                     |
+| `NETWORK_NO_SOURCE` | 3     | No HTMLMediaElement src found.                                                        |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example will listen for the audio element to begin playing and then check if it is
-  still loading data.</p>
+This example will listen for the audio element to begin playing and then check if it is
+still loading data.
 
-<pre class="brush: html">&lt;audio id="example" preload="auto"&gt;
- &lt;source src="sound.ogg" type="audio/ogg" /&gt;
-&lt;/audio&gt;
+```html
+<audio id="example" preload="auto">
+ <source src="sound.ogg" type="audio/ogg" />
+</audio>
+```
 
-</pre>
-
-<pre class="brush: js">var obj = document.getElementById('example');
+```js
+var obj = document.getElementById('example');
 
 obj.addEventListener('playing', function() {
 
@@ -78,18 +53,16 @@ obj.addEventListener('playing', function() {
   }
 
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

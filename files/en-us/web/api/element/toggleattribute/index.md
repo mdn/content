@@ -2,78 +2,78 @@
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 tags:
-- API
-- Element
-- Method
-- Reference
+  - API
+  - Element
+  - Method
+  - Reference
 browser-compat: api.Element.toggleAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>toggleAttribute()</strong></code> method of the
-	{{domxref("Element")}} interface toggles a Boolean attribute (removing it if it is
-	present and adding it if it is not present) on the given element.</p>
+The **`toggleAttribute()`** method of the
+{{domxref("Element")}} interface toggles a Boolean attribute (removing it if it is
+present and adding it if it is not present) on the given element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>Element</em>.toggleAttribute(<em>name</em> [, <em>force</em>]);
-</pre>
+```js
+Element.toggleAttribute(name [, force]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>name</code></dt>
-	<dd>A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The
-		attribute name is automatically converted to all lower-case when
-		<code>toggleAttribute()</code> is called on an HTML element in an HTML document.
-	</dd>
-	<dt><code>force</code> {{optional_inline}}</dt>
-	<dd>A boolean value to determine whether the attribute should be added or removed, no
-		matter whether the attribute is present or not at the moment.</dd>
-</dl>
+- `name`
+  - : A {{domxref("DOMString")}} specifying the name of the attribute to be toggled. The
+    attribute name is automatically converted to all lower-case when
+    `toggleAttribute()` is called on an HTML element in an HTML document.
+- `force` {{optional_inline}}
+  - : A boolean value to determine whether the attribute should be added or removed, no
+    matter whether the attribute is present or not at the moment.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> if attribute <strong><code>name</code></strong> is eventually
-	present, and <code>false</code> otherwise.</p>
+`true` if attribute **`name`** is eventually
+present, and `false` otherwise.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-	<dt><code>InvalidCharacterError</code></dt>
-	<dd>The specified attribute <code>name</code> contains one or more characters which
-		are not valid in attribute names.</dd>
-</dl>
+- `InvalidCharacterError`
+  - : The specified attribute `name` contains one or more characters which
+    are not valid in attribute names.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, <code>toggleAttribute()</code> is used to toggle the
-	<code>disabled</code> attribute of an {{HTMLElement("input")}}.</p>
+In the following example, `toggleAttribute()` is used to toggle the
+`disabled` attribute of an {{HTMLElement("input")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input value="text"&gt;
-&lt;button&gt;toggleAttribute("disabled")&lt;/button&gt;</pre>
+```html
+<input value="text">
+<button>toggleAttribute("disabled")</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js">var button = document.querySelector("button");
+```js
+var button = document.querySelector("button");
 var input = document.querySelector("input");
 
 button.addEventListener("click", function(){
   input.toggleAttribute("disabled");
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', '300', '50') }}</p>
+{{ EmbedLiveSample('Example', '300', '50') }}
 
-<p>{{DOMAttributeMethods}}</p>
+{{DOMAttributeMethods}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Element.prototype.toggleAttribute) {
+```js
+if (!Element.prototype.toggleAttribute) {
   Element.prototype.toggleAttribute = function(name, force) {
     if(force !== void 0) force = !!force
 
@@ -89,12 +89,12 @@ button.addEventListener("click", function(){
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

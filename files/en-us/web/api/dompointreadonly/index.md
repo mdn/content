@@ -14,75 +14,69 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly
 ---
-<div>{{APIRef("Geometry Interfaces")}}</div>
+{{APIRef("Geometry Interfaces")}}
 
-<p>The <strong><code>DOMPointReadOnly</code></strong> interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.</p>
+The **`DOMPointReadOnly`** interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>There are two ways to create a new <code>DOMPointReadOnly</code> instance. First, you can use its constructor, passing in the values of the parameters for each dimension and, optionally, the perspective:</p>
+There are two ways to create a new `DOMPointReadOnly` instance. First, you can use its constructor, passing in the values of the parameters for each dimension and, optionally, the perspective:
 
-<pre class="brush: js">/* 2D */
+```js
+/* 2D */
 const point = new DOMPointReadOnly(50, 50);
 
 /* 3D */
 const point = new DOMPointReadOnly(50, 50, 25);
 
 /* 3D with perspective */
-const point = new DOMPointReadOnly(100, 100, 100, 1.0);</pre>
+const point = new DOMPointReadOnly(100, 100, 100, 1.0);
+```
 
-<p>The other option is to use the static {{domxref("DOMPointReadOnly.fromPoint()")}} method:</p>
+The other option is to use the static {{domxref("DOMPointReadOnly.fromPoint()")}} method:
 
-<pre class="brush: js">const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50; w: 1.0});</pre>
+```js
+const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50; w: 1.0});
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}</dt>
- <dd>Creates a new <code>DOMPointReadOnly</code> object given the values of its coordinates and perspective. To create a point using an object object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
+  - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.x")}} {{readonlyInline}}</dt>
- <dd>The point's horizontal coordinate, <code>x</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.y")}} {{readonlyInline}}</dt>
- <dd>The point's vertical coordinate, <code>y</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.z")}} {{readonlyInline}}</dt>
- <dd>The point's depth coordinate, <code>z</code>.</dd>
- <dt>{{domxref("DOMPointReadOnly.w")}} {{readonlyInline}}</dt>
- <dd>The point's perspective value, <code>w</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.x")}} {{readonlyInline}}
+  - : The point's horizontal coordinate, `x`.
+- {{domxref("DOMPointReadOnly.y")}} {{readonlyInline}}
+  - : The point's vertical coordinate, `y`.
+- {{domxref("DOMPointReadOnly.z")}} {{readonlyInline}}
+  - : The point's depth coordinate, `z`.
+- {{domxref("DOMPointReadOnly.w")}} {{readonlyInline}}
+  - : The point's perspective value, `w`.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.fromPoint()")}}</dt>
- <dd>A static method that creates a new <code>DOMPointReadOnly</code> object given the coordinates provided in the specified object.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.fromPoint()")}}
+  - : A static method that creates a new `DOMPointReadOnly` object given the coordinates provided in the specified object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}</dt>
- <dd>Applies a matrix transform specified as an object to the <code>DOMPointReadOnly</code> object.</dd>
- <dt>{{domxref("DOMPointReadOnly.toJSON()", "toJSON()")}}</dt>
- <dd>Returns a JSON representation of the <code>DOMPointReadOnly</code> object.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
+  - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.
+- {{domxref("DOMPointReadOnly.toJSON()", "toJSON()")}}
+  - : Returns a JSON representation of the `DOMPointReadOnly` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
- <li>{{domxref("DOMRect")}}</li>
- <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}
+- {{domxref("DOMMatrix")}}

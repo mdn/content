@@ -2,58 +2,52 @@
 title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 tags:
-- API
-- Constructor
-- Experimental
-- ReadableStreamBYOBReader
-- Reference
-- Streams
+  - API
+  - Constructor
+  - Experimental
+  - ReadableStreamBYOBReader
+  - Reference
+  - Streams
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>ReadableStreamBYOBReader()</code></strong>
-  constructor creates and returns a <code>ReadableStreamBYOBReader</code> object instance.
-</p>
+The **`ReadableStreamBYOBReader()`**
+constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 
-<div class="note">
-  <p><strong>Note:</strong> You generally wouldn't use this constructor manually; instead,
-    you'd use the {{domxref("ReadableStream.getReader()")}} method.</p>
-</div>
+> **Note:** You generally wouldn't use this constructor manually; instead,
+> you'd use the {{domxref("ReadableStream.getReader()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>readableStreamBYOBReader</em> = new ReadableStreamBYOBReader(<em>stream</em>);</pre>
+```js
+var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>stream</dt>
-  <dd>The {{domxref("ReadableStream")}} to be read.</dd>
-</dl>
+- stream
+  - : The {{domxref("ReadableStream")}} to be read.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An instance of the {{domxref("ReadableStreamBYOBReader")}} object.</p>
+An instance of the {{domxref("ReadableStreamBYOBReader")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The supplied <code>stream</code> parameter is not a {{domxref("ReadableStream")}},
+- TypeError
+  - : The supplied `stream` parameter is not a {{domxref("ReadableStream")}},
     or it is already locked for reading by another reader, or its stream controller is not
-    a {{domxref("ReadableByteStreamController")}}.</dd>
-</dl>
+    a {{domxref("ReadableByteStreamController")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,78 +2,74 @@
 title: MediaStreamTrackAudioSourceNode()
 slug: Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode
 tags:
-- API
-- Audio
-- AudioSource
-- Interface
-- Media
-- MediaStreamTrack
-- MediaStreamTrackAudioSourceNode
-- Node
-- Reference
-- Web Audio
-- Web Audio API
-- sound
-- source
-- track
+  - API
+  - Audio
+  - AudioSource
+  - Interface
+  - Media
+  - MediaStreamTrack
+  - MediaStreamTrackAudioSourceNode
+  - Node
+  - Reference
+  - Web Audio
+  - Web Audio API
+  - sound
+  - source
+  - track
 browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio
-      API</a>'s <code><strong>MediaStreamTrackAudioSourceNode()</strong></code>
-    constructor creates and returns a new {{domxref("MediaStreamTrackAudioSourceNode")}}
-    object whose audio is taken from the {{domxref("MediaStreamTrack")}} specified in the
-    given options object.</p>
+The [Web Audio
+API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamTrackAudioSourceNode()`**
+constructor creates and returns a new {{domxref("MediaStreamTrackAudioSourceNode")}}
+object whose audio is taken from the {{domxref("MediaStreamTrack")}} specified in the
+given options object.
 
-<p>Another way to create a <code>MediaStreamTrackAudioSourceNode</code> is to call
-  the{{domxref("AudioContext.createMediaStreamTrackSource()")}} method, specifying the
-  {{domxref("MediaStreamTrack")}}  from which you want to obtain audio.</p>
+Another way to create a `MediaStreamTrackAudioSourceNode` is to call
+the{{domxref("AudioContext.createMediaStreamTrackSource()")}} method, specifying the
+{{domxref("MediaStreamTrack")}}  from which you want to obtain audio.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>audioTrackNode</em> = new MediaStreamTrackAudioSourceNode(<em>context</em>, <em>options</em>);</pre>
+```js
+audioTrackNode = new MediaStreamTrackAudioSourceNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to
-    be associated with.</dd>
-  <dt><code>options</code></dt>
-  <dd>
-    <p>A {{domxref("MediaStreamTrackAudioSourceOptions")}} object defining the properties
-      you want the <code>MediaStreamTrackAudioSourceNode</code> to have:</p>
+- `context`
+  - : An {{domxref("AudioContext")}} representing the audio context you want the node to
+    be associated with.
+- `options`
 
-    <p>{{page("/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions", "Properties")}}
-    </p>
-  </dd>
-</dl>
+  - : A {{domxref("MediaStreamTrackAudioSourceOptions")}} object defining the properties
+    you want the `MediaStreamTrackAudioSourceNode` to have:
 
-<h3 id="Return_value">Return value</h3>
+    {{page("/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions", "Properties")}}
 
-<p>A new {{domxref("MediaStreamTrackAudioSourceNode")}} object representing the audio node
-  whose media is obtained from the specified media track.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A new {{domxref("MediaStreamTrackAudioSourceNode")}} object representing the audio node
+whose media is obtained from the specified media track.
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The specified <code>context</code> is not an {{domxref("AudioContext")}}.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its
-    {{domxref("MediaStreamTrack.kind", "kind")}} property isn't <code>audio</code>.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Example">Example</h2>
+- `NotSupportedError`
+  - : The specified `context` is not an {{domxref("AudioContext")}}.
+- `InvalidStateError`
+  - : The specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its
+    {{domxref("MediaStreamTrack.kind", "kind")}} property isn't `audio`.
 
-<p>This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain
-  access to the user's camera, then creates a new
-  {{domxref("MediaStreamAudioSourceNode")}} from the first audio track provided by the
-  device.</p>
+## Example
 
-<pre class="brush: js">let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain
+access to the user's camera, then creates a new
+{{domxref("MediaStreamAudioSourceNode")}} from the first audio track provided by the
+device.
+
+```js
+let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia (
@@ -92,12 +88,13 @@ if (navigator.mediaDevices.getUserMedia) {
     });
 } else {
   console.log('new getUserMedia not supported on your browser!');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

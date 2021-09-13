@@ -8,50 +8,48 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <strong><code>EcdhKeyDeriveParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}},  when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a> algorithm.</p>
+The **`EcdhKeyDeriveParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}},  when using the [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh) algorithm.
 
-<p>ECDH enables two people who each have a key pair consisting of a public and a private key to derive a shared secret. They exchange public keys and use the combination of their private key and the other entity's public key to derive a secret key that they — and noone else — share.</p>
+ECDH enables two people who each have a key pair consisting of a public and a private key to derive a shared secret. They exchange public keys and use the combination of their private key and the other entity's public key to derive a secret key that they — and noone else — share.
 
-<p>The parameters for ECDH <code>deriveKey()</code> therefore include the other entity's public key, which is combined with this entity's private key to derive the shared secret.</p>
+The parameters for ECDH `deriveKey()` therefore include the other entity's public key, which is combined with this entity's private key to derive the shared secret.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>ECDH</code>.</dd>
- <dt><code>public</code></dt>
- <dd>A {{domxref("CryptoKey")}} object representing the public key of the other entity.</dd>
-</dl>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `ECDH`.
+- `public`
+  - : A {{domxref("CryptoKey")}} object representing the public key of the other entity.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.</p>
+See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-EcdhKeyDeriveParams', 'SubtleCrypto.EcdhKeyDeriveParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-EcdhKeyDeriveParams', 'SubtleCrypto.EcdhKeyDeriveParams') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "ECDH" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.</p>
+Browsers that support the "ECDH" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SubtleCrypto.deriveKey()")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.deriveKey()")}}.

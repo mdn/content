@@ -2,40 +2,43 @@
 title: WindowClient.focus()
 slug: Web/API/WindowClient/focus
 tags:
-- API
-- Client
-- Experimental
-- Focus
-- Method
-- Reference
-- Service Workers
-- WindowClient
+  - API
+  - Client
+  - Experimental
+  - Focus
+  - Method
+  - Reference
+  - Service Workers
+  - WindowClient
 browser-compat: api.WindowClient.focus
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>focus()</code></strong> method of the {{domxref("WindowClient")}}
-  interface gives user input focus to the current client and returns a
-  {{jsxref("Promise")}} that resolves to the existing
-    {{domxref("WindowClient")}}.</p>
+The **`focus()`** method of the {{domxref("WindowClient")}}
+interface gives user input focus to the current client and returns a
+{{jsxref("Promise")}} that resolves to the existing
+{{domxref("WindowClient")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>windowClient</em>.focus().then(function(<em>windowClient</em>) {
+```js
+windowClient.focus().then(function(windowClient) {
   // do something with your WindowClient once it has been focused
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.</p>
+A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -44,20 +47,21 @@ browser-compat: api.WindowClient.focus
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

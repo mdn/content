@@ -15,41 +15,44 @@ tags:
   - matrix
 browser-compat: api.DOMMatrixReadOnly.flipX
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
+{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
 
-<p>The <code>flipX()</code> method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the original matrix flipped about the x-axis.</p>
+The `flipX()` method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the original matrix flipped about the x-axis.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>DOMMatrix.flipX()</pre>
+    DOMMatrix.flipX()
 
+### Return value
 
-<h3 class="highlight-spanned" id="Return_value"><span class="highlight-span">Return value</span></h3>
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.") containing a new matrix being the result of the original matrix flipped about the x-axis, which is equivalent to multiplying the matrix by `DOMMatrix(-1, 0, 0, 1, 0, 0)`.  The original matrix is not modified.
 
-<p>Returns a <a href="/en-US/docs/Web/API/DOMMatrix" title="The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations."><code>DOMMatrix</code></a> containing a new matrix being the result of the original matrix flipped about the x-axis, which is equivalent to multiplying the matrix by <code>DOMMatrix(-1, 0, 0, 1, 0, 0)</code>.  The original matrix is not modified.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+This SVG contains two paths in the shape of a triangle, both drawn to the same position.  Note that the x co-ordinate of the viewBox attribute is negative, showing us content from both sides of the x-axis.
 
-<p>This SVG contains two paths in the shape of a triangle, both drawn to the same position.  Note that the x co-ordinate of the viewBox attribute is negative, showing us content from both sides of the x-axis.</p>
+```html
+<svg width="100" height="100" viewBox="-50 0 100 100">
+  <path fill="red" d="M 0 50 L 50 0 L 50 100 Z" />
+  <path id="flipped" fill="blue" d="M 0 50 L 50 0 L 50 100 Z" />
+</svg>
+```
 
-<pre class="brush: html">&lt;svg width="100" height="100" viewBox="-50 0 100 100"&gt;
-  &lt;path fill="red" d="M 0 50 L 50 0 L 50 100 Z" /&gt;
-  &lt;path id="flipped" fill="blue" d="M 0 50 L 50 0 L 50 100 Z" /&gt;
-&lt;/svg&gt;</pre>
+This JavaScript first creates an identity matrix, then uses the \`flipX()\` method to create a new matrix, which is then applied to the blue triangle, inverting it across the x-axis.  The red triangle is left in place.
 
-<p>This JavaScript first creates an identity matrix, then uses the `flipX()` method to create a new matrix, which is then applied to the blue triangle, inverting it across the x-axis.  The red triangle is left in place.</p>
-
-<pre class="brush: js">const flipped = document.getElementById('flipped');
+```js
+const flipped = document.getElementById('flipped');
 const matrix = new DOMMatrixReadOnly();
 const flippedMatrix = matrix.flipX();
-flipped.setAttribute('transform', flippedMatrix.toString());</pre>
+flipped.setAttribute('transform', flippedMatrix.toString());
+```
 
-<p>{{ EmbedLiveSample('Examples', '100', '100', 'flipx.png', 'Web/API/DOMMatrixReadOnly/flipX') }}</p>
+{{ EmbedLiveSample('Examples', '100', '100', 'flipx.png', 'Web/API/DOMMatrixReadOnly/flipX') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

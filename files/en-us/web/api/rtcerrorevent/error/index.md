@@ -17,28 +17,30 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCErrorEvent.error
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The read-only {{domxref("RTCErrorEvent")}} property <code><strong>error</strong></code>
-  contains an {{domxref("RTCError")}} object describing the details of the error which the
-  event is announcing.</p>
+The read-only {{domxref("RTCErrorEvent")}} property **`error`**
+contains an {{domxref("RTCError")}} object describing the details of the error which the
+event is announcing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>errorInfo</em> = <em>rtcErrorEvent</em>.error;</pre>
+```js
+let errorInfo = rtcErrorEvent.error;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCError")}} object whose properties provide details about the error
-  which has occurred in the context of a {{Glossary("WebRTC")}} operation. 
+An {{domxref("RTCError")}} object whose properties provide details about the error
+which has occurred in the context of a {{Glossary("WebRTC")}} operation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s
-  {{domxref("RTCDataChannel.error_event", "error")}} event.</p>
+In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s
+{{domxref("RTCDataChannel.error_event", "error")}} event.
 
-<pre class="brush: js">dataChannel.addEventListener("error", (event) =&gt; {
+```js
+dataChannel.addEventListener("error", (event) => {
   let error = event.error;
 
   if (error.errorDetail === "sdp-syntax-error") {
@@ -51,34 +53,35 @@ browser-compat: api.RTCErrorEvent.error
     terminateMyConnection();
   }
 });
-</pre>
+```
 
-<p>If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} property being <code>sdp-syntax-error</code>—, a message string is
-  constructed to present the error message and the line number within the SDP at which the
-  error occurred. This message is then displayed using a function called
-  <code>showMyAlertMessage()</code>, which stands in for whatever output mechanism this
-  code might use.</p>
+If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail",
+  "errorDetail")}} property being `sdp-syntax-error`—, a message string is
+constructed to present the error message and the line number within the SDP at which the
+error occurred. This message is then displayed using a function called
+`showMyAlertMessage()`, which stands in for whatever output mechanism this
+code might use.
 
-<p>Any other error is treated as terminal, causing a <code>terminateMyConnection()</code>
-  function to be called.</p>
+Any other error is treated as terminal, causing a `terminateMyConnection()`
+function to be called.
 
-<p>The above example uses {{domxref("EventTarget.addEventListener",
-  "addEventListener()")}} to add the handler for <code>error</code> events. You can also
-  use the <code>RTCDataChannel</code> object's {{domxref("RTCDataChannel.onerror",
-  "onerror")}} event handler property, like this:</p>
+The above example uses {{domxref("EventTarget.addEventListener",
+  "addEventListener()")}} to add the handler for `error` events. You can also
+use the `RTCDataChannel` object's {{domxref("RTCDataChannel.onerror",
+  "onerror")}} event handler property, like this:
 
-<pre class="brush: js">dataChannel.onerror = (event) =&gt; {
+```js
+dataChannel.onerror = (event) => {
   let error = event.error;
 
   /* and so forth */
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

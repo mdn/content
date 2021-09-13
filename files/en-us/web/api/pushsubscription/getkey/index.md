@@ -2,54 +2,51 @@
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
 tags:
-- API
-- Experimental
-- Method
-- Push
-- Push API
-- PushSubscription
-- Reference
-- Service Workers
-- getKey
+  - API
+  - Experimental
+  - Method
+  - Push
+  - Push API
+  - PushSubscription
+  - Reference
+  - Service Workers
+  - getKey
 browser-compat: api.PushSubscription.getKey
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>The <code>getKey()</code> method of the {{domxref("PushSubscription")}} interface
-  returns an {{jsxref("ArrayBuffer")}} representing a client public key, which can then
-  be sent to a server and used in encrypting push message data.</p>
+The `getKey()` method of the {{domxref("PushSubscription")}} interface
+returns an {{jsxref("ArrayBuffer")}} representing a client public key, which can then
+be sent to a server and used in encrypting push message data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const key = subscription.getKey(name);</pre>
+```js
+const key = subscription.getKey(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>A {{domxref("DOMString")}} representing the encryption method used to generate a
+- name
+
+  - : A {{domxref("DOMString")}} representing the encryption method used to generate a
     client key.  The value can be:
-    <ul>
-      <li><code>p256dh</code>: An <a
-          href="https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman">Elliptic
-          curve Diffie–Hellman</a> public key on the P-256 curve (that is, the NIST
-        secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI
-        X9.62 format.</li>
-      <li><code>auth</code>: An authentication secret, as described in <a
-            href="https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08">Message
-            Encryption for Web Push</a>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Returns">Returns</h3>
+    - `p256dh`: An [Elliptic
+      curve Diffie–Hellman](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) public key on the P-256 curve (that is, the NIST
+      secp256r1 elliptic curve).  The resulting key is an uncompressed point in ANSI
+      X9.62 format.
+    - `auth`: An authentication secret, as described in [Message
+      Encryption for Web Push](https://datatracker.ietf.org/doc/html/draft-ietf-webpush-encryption-08).
 
-<p>An {{jsxref("ArrayBuffer")}}.</p>
+### Returns
 
-<h2 id="Example">Example</h2>
+An {{jsxref("ArrayBuffer")}}.
 
-<pre class="brush: js">reg.pushManager.getSubscription()
+## Example
+
+```js
+reg.pushManager.getSubscription()
   .then(function(subscription) {
   // Enable any UI which subscribes / unsubscribes from
   // push messages.
@@ -74,12 +71,13 @@ browser-compat: api.PushSubscription.getKey
   var key = subscription.getKey('p256dh');
   var auth = subscription.getKey('auth');
 
-    ...</pre>
+    ...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

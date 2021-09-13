@@ -2,51 +2,52 @@
 title: MutationObserverInit.attributeOldValue
 slug: Web/API/MutationObserverInit/attributeOldValue
 tags:
-- API
-- API Reference
-- Attributes
-- Changes
-- DOM
-- DOM WHATWG
-- Monitor
-- MutationObserverInit
-- Observer
-- Property
-- Reference
-- value
+  - API
+  - API Reference
+  - Attributes
+  - Changes
+  - DOM
+  - DOM WHATWG
+  - Monitor
+  - MutationObserverInit
+  - Observer
+  - Property
+  - Reference
+  - value
 browser-compat: api.MutationObserverInit.attributeOldValue
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong> dictionary's optional <strong><code>attributeOldValue</code></strong> property is used
-    to specify whether or not to record the prior value of the altered attribute in {{domxref("MutationRecord")}} objects denoting attribute value changes.</p>
+The **{{domxref("MutationObserverInit")}}** dictionary's optional **`attributeOldValue`** property is used
+to specify whether or not to record the prior value of the altered attribute in {{domxref("MutationRecord")}} objects denoting attribute value changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>attributeOldValue</em>: true | false
+```js
+var options = {
+  attributeOldValue: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not the prior value of a changed attribute should
-  be included in the {{domxref("MutationObserver.oldValue")}} property when reporting
-  attribute value changes. If <code>true</code>, <code>oldValue</code> is set accordingly.
-  If <code>false</code>, it is not.</p>
+A Boolean value indicating whether or not the prior value of a changed attribute should
+be included in the {{domxref("MutationObserver.oldValue")}} property when reporting
+attribute value changes. If `true`, `oldValue` is set accordingly.
+If `false`, it is not.
 
-<p>When using <code>attributeOldValue</code>, setting the
-  {{domxref("MutationObserverInit.attributes", "attributes")}} option to <code>true</code>
-  is optional.</p>
+When using `attributeOldValue`, setting the
+{{domxref("MutationObserverInit.attributes", "attributes")}} option to `true`
+is optional.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/MutationObserverInit/attributes#example"><code>MutationObserverInit.attributes</code></a> for example code that sets this property.</p>
+See [`MutationObserverInit.attributes`](/en-US/docs/Web/API/MutationObserverInit/attributes#example) for example code that sets this property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

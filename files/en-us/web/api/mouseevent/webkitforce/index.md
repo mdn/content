@@ -9,18 +9,16 @@ tags:
   - Property
   - Reference
 ---
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><strong><code>MouseEvent.webkitForce</code></strong> is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen.</p>
+**`MouseEvent.webkitForce`** is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any specification.</em> Apple has <a href="https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html">a description at the Mac Developer Library</a>.</p>
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}}</li>
- <li>{{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}}</li>
- <li>{{domxref("Force_Touch_events")}}</li>
-</ul>
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}}
+- {{domxref("Force_Touch_events")}}

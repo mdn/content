@@ -2,38 +2,40 @@
 title: CSSRotate.x
 slug: Web/API/CSSRotate/x
 tags:
-- API
-- CSS Typed Object Model API
-- CSSRotate
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSRotate
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSRotate.x
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>x</code></strong> property of the
-  {{domxref("CSSRotate")}} interface gets and sets the abscissa or x-axis of the
-  translating vector.</p>
+The **`x`** property of the
+{{domxref("CSSRotate")}} interface gets and sets the abscissa or x-axis of the
+translating vector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>rotateX</em> = CSSRotate.x;</pre>
+```js
+var rotateX = CSSRotate.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer or a {{domxref("CSSNumericValue")}}</p>
+A double integer or a {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,63 +2,60 @@
 title: OfflineAudioContext.suspend()
 slug: Web/API/OfflineAudioContext/suspend
 tags:
-- API
-- Method
-- NeedsExample
-- OfflineAudioContext
-- Reference
-- Web Audio API
-- suspend
+  - API
+  - Method
+  - NeedsExample
+  - OfflineAudioContext
+  - Reference
+  - Web Audio API
+  - suspend
 browser-compat: api.OfflineAudioContext.suspend
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>suspend()</code></strong> method of the {{
+The **`suspend()`** method of the {{
   domxref("OfflineAudioContext") }} interface schedules a suspension of the time
-  progression in the audio context at the specified time and returns a promise. This is
-  generally useful at the time of manipulating the audio graph synchronously on
-  OfflineAudioContext.</p>
+progression in the audio context at the specified time and returns a promise. This is
+generally useful at the time of manipulating the audio graph synchronously on
+OfflineAudioContext.
 
-<p>Note that the maximum precision of suspension is the size of the render quantum and the
-  specified suspension time will be rounded down to the nearest render quantum boundary.
-  For this reason, it is not allowed to schedule multiple suspends at the same quantized
-  frame. Also scheduling should be done while the context is not running to ensure the
-  precise suspension.</p>
+Note that the maximum precision of suspension is the size of the render quantum and the
+specified suspension time will be rounded down to the nearest render quantum boundary.
+For this reason, it is not allowed to schedule multiple suspends at the same quantized
+frame. Also scheduling should be done while the context is not running to ensure the
+precise suspension.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">OfflineAudioContext.suspend(<em>suspendTime</em>).then(function() { ... });</pre>
+```js
+OfflineAudioContext.suspend(suspendTime).then(function() { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>suspendTime</dt>
-  <dd>A {{jsxref("double")}} specifying the suspend time, in seconds.</dd>
-</dl>
+- suspendTime
+  - : A {{jsxref("double")}} specifying the suspend time, in seconds.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} resolving to void.</p>
+A {{jsxref("Promise")}} resolving to void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The promise is rejected when any exception is encountered.</p>
+The promise is rejected when any exception is encountered.
 
-<p>{{exception("InvalidStateError")}} if the quantized frame number is one of the
-  following:</p>
+{{exception("InvalidStateError")}} if the quantized frame number is one of the
+following:
 
-<ul>
-  <li>a negative number</li>
-  <li>is less than or equal to the current time</li>
-  <li>is greater than or equal to the total render duration</li>
-  <li>is scheduled by another suspend for the same time</li>
-</ul>
+- a negative number
+- is less than or equal to the current time
+- is greater than or equal to the total render duration
+- is scheduled by another suspend for the same time
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

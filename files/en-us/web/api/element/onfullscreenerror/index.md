@@ -2,46 +2,48 @@
 title: Element.onfullscreenerror
 slug: Web/API/Element/onfullscreenerror
 tags:
-- API
-- Element
-- Event Handler
-- Full
-- Full-screen API
-- Property
-- Reference
-- fullscreen
-- onfullscreenerror
-- screen
+  - API
+  - Element
+  - Event Handler
+  - Full
+  - Full-screen API
+  - Property
+  - Reference
+  - fullscreen
+  - onfullscreenerror
+  - screen
 browser-compat: api.Element.onfullscreenerror
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The {{domxref("Element")}} interface's
-    <code><strong>onfullscreenerror</strong></code> property is an event handler for the
-    {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event which is sent to
-    the element when an error occurs while attempting to transition into or out of
-    full-screen mode.</p>
+The {{domxref("Element")}} interface's
+**`onfullscreenerror`** property is an event handler for the
+{{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event which is sent to
+the element when an error occurs while attempting to transition into or out of
+full-screen mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
-</pre>
+```js
+targetElement.onfullscreenerror = fullscreenErrorHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An error handler for the {{domxref("Element/fullscreenerror_event",
-  "fullscreenerror")}} event.</p>
+An error handler for the {{domxref("Element/fullscreenerror_event",
+  "fullscreenerror")}} event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example attempts to switch into full-screen mode from outside a handler for a
-  user-initiated event (such as a {{domxref("Element/click_event", "click")}} or
-  {{domxref("Element/keypress_event", "keypress")}} event). Since full-screen mode changes
-  are only permitted in response to a user input, this causes an error to occur, which
-  triggers the delivery of the {{domxref("Element/fullscreenerror_event",
-  "fullscreenerror")}} event to the error handler,</p>
+This example attempts to switch into full-screen mode from outside a handler for a
+user-initiated event (such as a {{domxref("Element/click_event", "click")}} or
+{{domxref("Element/keypress_event", "keypress")}} event). Since full-screen mode changes
+are only permitted in response to a user input, this causes an error to occur, which
+triggers the delivery of the {{domxref("Element/fullscreenerror_event",
+  "fullscreenerror")}} event to the error handler,
 
-<pre class="brush: js">let elem = document.querySelector("video")}}
+```js
+let elem = document.querySelector("video")}}
 
 elem.onfullscreenerror = function ( event ) {
   displayWarning("Unable to switch into full-screen mode.");
@@ -49,23 +51,21 @@ elem.onfullscreenerror = function ( event ) {
 
 //....
 
-elem.requestFullscreen();</pre>
+elem.requestFullscreen();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{domxref("Element/fullscreenerror_event", "fullscreenerror")}}</li>
-  <li>{{domxref("Element.onfullscreenerror")}}</li>
-  <li>{{domxref("Document.onfullscreenerror")}}</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
+- {{domxref("Element.onfullscreenerror")}}
+- {{domxref("Document.onfullscreenerror")}}

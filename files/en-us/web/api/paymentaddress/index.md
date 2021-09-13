@@ -11,64 +11,57 @@ tags:
   - paymentAddress
 browser-compat: api.PaymentAddress
 ---
-<div>{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}</div>
+{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>PaymentAddress</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> is used to store shipping or payment address information.</p>
+The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is used to store shipping or payment address information.
 
-<p>It may be useful to refer to the Universal Postal Union web site's <a href="https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard">Addressing S42 standard</a> materials, which provide information about international standards for postal addresses.</p>
+It may be useful to refer to the Universal Postal Union web site's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('PaymentAddress.addressLine')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>An array of {{domxref("DOMString")}} objects providing each line of the address not included among the other properties. The exact size and content varies by country or location and can include, for example, a street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box number.</dd>
- <dt>{{domxref('PaymentAddress.country')}} {{readonlyinline}}{{deprecated_inline}} </dt>
- <dd>A {{domxref("DOMString")}} specifying the country in which the address is located, using the {{interwiki("wikipedia", "ISO-3166-1 alpha-2")}} standard. The string is always given in its canonical upper-case form. Some examples of valid <code>country</code> values: <code>"US"</code>, <code>"GB"</code>, <code>"CN"</code>, or <code>"JP"</code>.</dd>
- <dt>{{domxref('PaymentAddress.city')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} which contains the city or town portion of the address.</dd>
- <dt>{{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} giving the dependent locality or sublocality within a city, for example, a neighborhood, borough, district, or UK dependent locality.</dd>
- <dt>{{domxref('PaymentAddress.organization')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the name of the organization, firm, company, or institution at the payment address.</dd>
- <dt>{{domxref('PaymentAddress.phone')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the telephone number of the recipient or contact person.</dd>
- <dt>{{domxref('PaymentAddress.postalCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying a code used by a jurisdiction for mail routing, for example, the ZIP code in the United States or the PIN code in India.</dd>
- <dt>{{domxref('PaymentAddress.recipient')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} giving the name of the recipient, purchaser, or contact person at the payment address.</dd>
- <dt>{{domxref('PaymentAddress.region')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.</dd>
- <dt>{{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}{{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} providing a postal sorting code such as is used in France.</dd>
-</dl>
+- {{domxref('PaymentAddress.addressLine')}} {{readonlyinline}}{{deprecated_inline}}
+  - : An array of {{domxref("DOMString")}} objects providing each line of the address not included among the other properties. The exact size and content varies by country or location and can include, for example, a street name, house number, apartment number, rural delivery route, descriptive instructions, or post office box number.
+- {{domxref('PaymentAddress.country')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} specifying the country in which the address is located, using the {{interwiki("wikipedia", "ISO-3166-1 alpha-2")}} standard. The string is always given in its canonical upper-case form. Some examples of valid `country` values: `"US"`, `"GB"`, `"CN"`, or `"JP"`.
+- {{domxref('PaymentAddress.city')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} which contains the city or town portion of the address.
+- {{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} giving the dependent locality or sublocality within a city, for example, a neighborhood, borough, district, or UK dependent locality.
+- {{domxref('PaymentAddress.organization')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} specifying the name of the organization, firm, company, or institution at the payment address.
+- {{domxref('PaymentAddress.phone')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} specifying the telephone number of the recipient or contact person.
+- {{domxref('PaymentAddress.postalCode')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} specifying a code used by a jurisdiction for mail routing, for example, the ZIP code in the United States or the PIN code in India.
+- {{domxref('PaymentAddress.recipient')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} giving the name of the recipient, purchaser, or contact person at the payment address.
+- {{domxref('PaymentAddress.region')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing the top level administrative subdivision of the country, for example a state, province, oblast, or prefecture.
+- {{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}{{deprecated_inline}}
+  - : A {{domxref("DOMString")}} providing a postal sorting code such as is used in France.
 
-<div class="note">
-<p><strong>Note:</strong> Properties for which values were not specified contain empty strings.</p>
-</div>
+> **Note:** Properties for which values were not specified contain empty strings.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<p>The following properties are obsolete and should no longer be used, but may still be present in some browser versions.</p>
+The following properties are obsolete and should no longer be used, but may still be present in some browser versions.
 
-<dl>
- <dt>{{domxref("PaymentAddress.languageCode")}} {{ReadOnlyInline}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the language code of the address. This identifies the language in which the address is given, and is intended to aid in localization of the display of the address.</dd>
-</dl>
+- {{domxref("PaymentAddress.languageCode")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} indicating the language code of the address. This identifies the language in which the address is given, and is intended to aid in localization of the display of the address.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('PaymentAddress.toJSON()')}}{{deprecated_inline}}</dt>
- <dd>A standard serializer that returns a JSON representation of the <code>PaymentAddress</code> object's properties.</dd>
-</dl>
+- {{domxref('PaymentAddress.toJSON()')}}{{deprecated_inline}}
+  - : A standard serializer that returns a JSON representation of the `PaymentAddress` object's properties.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object containing further options.</p>
+In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object containing further options.
 
-<p>The first of these three (<code>supportedInstruments</code> in the example below) contains a <code>data</code> property that has to conform to the structure defined by the {{domxref("BasicCardRequest")}} dictionary.</p>
+The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the {{domxref("BasicCardRequest")}} dictionary.
 
-<pre class="brush:js">const supportedInstruments = [
+```js
+const supportedInstruments = [
   {
     supportedMethods: "basic-card",
   },
@@ -107,11 +100,12 @@ async function doPaymentRequest() {
   await response.complete(result);
 }
 doPaymentRequest();
-</pre>
+```
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (<code>instrumentResponse</code> above) will have a {{domxref("PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the <code>BasicCardResponse</code> dictionary, and may look something like this:</p>
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details")}} property that will contain response details. This has to conform to the structure defined by the `BasicCardResponse` dictionary, and may look something like this:
 
-<pre class="brush: js">{
+```js
+{
   "cardNumber' : '9999999999999999",
   "cardholderName' : 'Pat Straw",
   "cardSecurityCode" : "999",
@@ -119,10 +113,11 @@ doPaymentRequest();
   "expiryYear" : "2021",
   "billingAddress" : {
     "country" : "GB",
-    // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
+    // etc. billing address is a PaymentAddress object
   }
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

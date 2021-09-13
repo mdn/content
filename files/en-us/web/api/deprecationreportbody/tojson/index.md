@@ -9,27 +9,30 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.toJSON
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("DeprecationReportBody")}} interface is a <em>serializer</em>, and returns a JSON representation of the <code>InterventionReportBody</code> object.</p>
+The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">DeprecationReportBody.toJSON();</pre>
+```js
+DeprecationReportBody.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A JSON object that is the serialization of the {{domxref("DeprecationReportBody")}} object.</p>
+A JSON object that is the serialization of the {{domxref("DeprecationReportBody")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then return a JSON representation of the first entry.</p>
+In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then return a JSON representation of the first entry.
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -37,12 +40,13 @@ browser-compat: api.DeprecationReportBody.toJSON
 let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.toJSON());
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

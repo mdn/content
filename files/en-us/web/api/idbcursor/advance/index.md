@@ -2,81 +2,61 @@
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
 tags:
-- API
-- Database
-- IDBCursor
-- IndexedDB
-- Method
-- Reference
-- Storage
-- advance
+  - API
+  - Database
+  - IDBCursor
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - advance
 browser-compat: api.IDBCursor.advance
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>advance()</code></strong> method of the {{domxref("IDBCursor")}}
-  interface sets the number of times a cursor should move
-    its position forward.</p>
+The **`advance()`** method of the {{domxref("IDBCursor")}}
+interface sets the number of times a cursor should move
+its position forward.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cursor</em>.advance(<em>count</em>);</pre>
+```js
+cursor.advance(count);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>count</code></dt>
-  <dd>The number of times to move the cursor forward.</dd>
-</dl>
+- `count`
+  - : The number of times to move the cursor forward.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of
-    one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of
+one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The value passed into the <code>count</code> parameter was zero or a negative
-        number.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The cursor is currently being iterated or has iterated past its end.<br>
-         </td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                                |
+| -------------------------- | -------------------------------------------------------------------------- |
+| `TransactionInactiveError` | This IDBCursor's transaction is inactive.                                  |
+| `TypeError`                | The value passed into the `count` parameter was zero or a negative number. |
+| `InvalidStateError`        | The cursor is currently being iterated or has iterated past its end.       |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a
-  cursor to iterate through the records in the object store. Here we use
-  <code>cursor.advance(2)</code> to jump 2 places forward each time, meaning that only
-  every other result will be displayed. <code>advance()</code> works in a similar way to
-  {{domxref("IDBCursor.continue")}}, except that it allows you to jump multiple records at
-  a time, not just always go onto the next record.</p>
+In this simple fragment we create a transaction, retrieve an object store, then use a
+cursor to iterate through the records in the object store. Here we use
+`cursor.advance(2)` to jump 2 places forward each time, meaning that only
+every other result will be displayed. `advance()` works in a similar way to
+{{domxref("IDBCursor.continue")}}, except that it allows you to jump multiple records at
+a time, not just always go onto the next record.
 
-<p>Note that in each iteration of the loop, you can grab
-    data from the current record under the cursor object using <code
-    >cursor.value.foo</code>. For a complete working example, see our <a
-      href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor
-      example</a> (<a href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)></p>
+Note that in each iteration of the loop, you can grab
+data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
+example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)>
 
-<pre class="brush: js">function advanceResult() {
+```js
+function advanceResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -85,34 +65,31 @@ browser-compat: api.IDBCursor.advance
     const cursor = event.target.result;
     if(cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
+      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
       console.log('Every other entry displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

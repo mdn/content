@@ -2,34 +2,36 @@
 title: ScreenOrientation.type
 slug: Web/API/ScreenOrientation/type
 tags:
-- API
-- Orientation
-- Property
-- Reference
-- Screen Orientation API
-- ScreenOrientation
-- Type
+  - API
+  - Orientation
+  - Property
+  - Reference
+  - Screen Orientation API
+  - ScreenOrientation
+  - Type
 browser-compat: api.ScreenOrientation.type
 ---
-<div>{{APIRef("Screen Orientation")}}</div>
+{{APIRef("Screen Orientation")}}
 
-<p>The <strong><code>type</code></strong> read-only property of the
-  {{domxref("ScreenOrientation")}} interface returns the document's current orientation
-  type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or
-  "landscape-secondary".</p>
+The **`type`** read-only property of the
+{{domxref("ScreenOrientation")}} interface returns the document's current orientation
+type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or
+"landscape-secondary".
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">type = screen.orientation.type</pre>
+```js
+type = screen.orientation.type
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}}.</p>
+A {{jsxref("String")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

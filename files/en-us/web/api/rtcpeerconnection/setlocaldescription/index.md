@@ -15,151 +15,148 @@ tags:
   - setLocalDescription
 browser-compat: api.RTCPeerConnection.setLocalDescription
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}} method
-    {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} changes
-    the local description associated with the connection. This description specifies the
-    properties of the local end of the connection, including the media format.
-  The method takes a single parameter—the session description—and it returns a
-  {{jsxref("Promise")}} which is fulfilled once the description has been changed,
-  asynchronously.</p>
+The {{domxref("RTCPeerConnection")}} method
+{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} changes
+the local description associated with the connection. This description specifies the
+properties of the local end of the connection, including the media format.
+The method takes a single parameter—the session description—and it returns a
+{{jsxref("Promise")}} which is fulfilled once the description has been changed,
+asynchronously.
 
-<p>If <code>setLocalDescription()</code> is called while a connection is already in place,
-  it means renegotiation is underway (possibly to adapt to changing network conditions).
-  Because descriptions will be exchanged until the two peers agree on a configuration, the
-  description submitted by calling <code>setLocalDescription()</code> does not immediately
-  take effect. Instead, the current connection configuration remains in place until
-  negotiation is complete. Only then does the agreed-upon configuration take effect.</p>
+If `setLocalDescription()` is called while a connection is already in place,
+it means renegotiation is underway (possibly to adapt to changing network conditions).
+Because descriptions will be exchanged until the two peers agree on a configuration, the
+description submitted by calling `setLocalDescription()` does not immediately
+take effect. Instead, the current connection configuration remains in place until
+negotiation is complete. Only then does the agreed-upon configuration take effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">aPromise = <em>RTCPeerConnection</em>.setLocalDescription(<em>sessionDescription</em>);
+```js
+aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
 
-<em>pc</em>.setLocalDescription(<em>sessionDescription</em>, <em>successCallback</em>, <em>errorCallback</em>); {{deprecated_inline}}
-</pre>
+pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>sessionDescription</code> {{optional_inline}}</dt>
-  <dd>An {{domxref("RTCSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}}
+- `sessionDescription` {{optional_inline}}
+  - : An {{domxref("RTCSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}}
     which specifies the configuration to be applied to the local end of the connection. If
     the description is omitted, the WebRTC runtime tries to automatically do the right
-    thing.</dd>
-</dl>
+    thing.
 
-<h4 id="Implicit_description">Implicit description</h4>
+#### Implicit description
 
-<p>If you don't explicity provide a session description, the WebRTC runtime will try to
-  handle it correctly. If the signaling state is one of <code>stable</code>,
-  <code>have-local-offer</code>, or <code>have-remote-pranswer</code>, the WebRTC runtime
-  automatically creates a new offer and sets that as the new local description. Otherwise,
-  <code>setLocalDescription()</code> creates an answer, which becomes the new local
-  description.</p>
+If you don't explicity provide a session description, the WebRTC runtime will try to
+handle it correctly. If the signaling state is one of `stable`,
+`have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime
+automatically creates a new offer and sets that as the new local description. Otherwise,
+`setLocalDescription()` creates an answer, which becomes the new local
+description.
 
-<h4 id="Type_of_the_description_parameter">Type of the description parameter</h4>
+#### Type of the description parameter
 
-<p>The description is of type <code>RTCSessionDescriptionInit</code>, which is a
-  serialized version of a {{domxref("RTCSessionDescription")}} browser object. They're
-  interchangeable:</p>
+The description is of type `RTCSessionDescriptionInit`, which is a
+serialized version of a {{domxref("RTCSessionDescription")}} browser object. They're
+interchangeable:
 
-<pre class="brush: js">myPeerConnection.createOffer().then(function(offer) {
+```js
+myPeerConnection.createOffer().then(function(offer) {
   return myPeerConnection.setLocalDescription(offer);
 });
-</pre>
+```
 
-<p>This is equivalent to:</p>
+This is equivalent to:
 
-<pre class="brush: js">myPeerConnection.createOffer().then(function(offer) {
+```js
+myPeerConnection.createOffer().then(function(offer) {
   return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
 });
-</pre>
+```
 
-<p>For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-  "RTCSessionDescription()")}} constructor is deprecated.</p>
+For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
+  "RTCSessionDescription()")}} constructor is deprecated.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is fulfilled once the value of
-  {{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
-  the change cannot be applied (for example, if the specified description is incompatible
-  with one or both of the peers on the connection). The promise's fulfillment handler
-  receives no input parameters.</p>
+A {{jsxref("Promise")}} which is fulfilled once the value of
+{{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
+the change cannot be applied (for example, if the specified description is incompatible
+with one or both of the peers on the connection). The promise's fulfillment handler
+receives no input parameters.
 
-<div class="note">
-  <p><strong>Note:</strong> The process of changing descriptions actually involves intermediary steps handled by
-    the WebRTC layer to ensure that an active connection can be changed without losing the
-    connection if the change does not succeed. See
-    {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-    descriptions")}} for more details on this process.</p>
-</div>
+> **Note:** The process of changing descriptions actually involves intermediary steps handled by
+> the WebRTC layer to ensure that an active connection can be changed without losing the
+> connection if the change does not succeed. See
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
+    descriptions")}} for more details on this process.
 
-<h3 id="Deprecated_parameters">Deprecated parameters</h3>
+### Deprecated parameters
 
-<p>In older code and documentation, you may see a callback-based version of this function
-  used. This has been deprecated and its use is <strong>strongly</strong> discouraged, as
-  it will be removed in the future. You should update any existing code to use the
-  {{jsxref("Promise")}}-based version of <code>setLocalDescription()</code> instead. The
-  parameters for the older form of <code>setLocalDescription()</code> are described below,
-  to aid in updating existing code.</p>
+In older code and documentation, you may see a callback-based version of this function
+used. This has been deprecated and its use is **strongly** discouraged, as
+it will be removed in the future. You should update any existing code to use the
+{{jsxref("Promise")}}-based version of `setLocalDescription()` instead. The
+parameters for the older form of `setLocalDescription()` are described below,
+to aid in updating existing code.
 
-<dl>
-  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
-  <dd>A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called
+- `successCallback` {{deprecated_inline}}
+  - : A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called
     once the description has been successfully set. At that time, the offer can be sent to
-    a remote peer via the signaling server.</dd>
-  <dt><code>errorCallback</code> {{deprecated_inline}}</dt>
-  <dd>A function matching the signature <code>RTCPeerConnectionErrorCallback</code> which
+    a remote peer via the signaling server.
+- `errorCallback` {{deprecated_inline}}
+  - : A function matching the signature `RTCPeerConnectionErrorCallback` which
     gets called if the description can't be set. It is passed a single
-    {{domxref("DOMException")}} object explaining why the request failed.</dd>
-</dl>
+    {{domxref("DOMException")}} object explaining why the request failed.
 
-<p>This deprecated form of the method returns instantaneously without waiting for the
-  actual setting to be done: in case of success, the <code>successCallback</code> will be
-  called; in case of failure, the <code>errorCallback</code> will be called.</p>
+This deprecated form of the method returns instantaneously without waiting for the
+actual setting to be done: in case of success, the `successCallback` will be
+called; in case of failure, the `errorCallback` will be called.
 
-<h3 id="Deprecated_exceptions">Deprecated exceptions</h3>
+### Deprecated exceptions
 
-<p>When using the deprecated callback-based version of <code>setLocalDescription()</code>,
-  the following exceptions may occur:</p>
+When using the deprecated callback-based version of `setLocalDescription()`,
+the following exceptions may occur:
 
-<dl>
-  <dt><code>InvalidStateError</code> {{deprecated_inline}}</dt>
-  <dd>The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
-    is <code>"closed"</code>, indicating that the connection is not currently open, so
-    negotiation cannot take place.</dd>
-  <dt><code>InvalidSessionDescriptionError</code> {{deprecated_inline}}</dt>
-  <dd>The {{domxref("RTCSessionDescription")}} specified by the
-    <code>sessionDescription</code> parameter is invalid.</dd>
-</dl>
+- `InvalidStateError` {{deprecated_inline}}
+  - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
+    is `"closed"`, indicating that the connection is not currently open, so
+    negotiation cannot take place.
+- `InvalidSessionDescriptionError` {{deprecated_inline}}
+  - : The {{domxref("RTCSessionDescription")}} specified by the
+    `sessionDescription` parameter is invalid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Implicit_descriptions">Implicit descriptions</h3>
+### Implicit descriptions
 
-<p>One of the advantages of the parameter-free form
-  of <code>setLocalDescription()</code> is that it lets you simplify your negotiation code
-  substantially. This is all your {{domxref("RTCPeerConnection.negotiationneeded_event",
+One of the advantages of the parameter-free form
+of `setLocalDescription()` is that it lets you simplify your negotiation code
+substantially. This is all your {{domxref("RTCPeerConnection.negotiationneeded_event",
   "negotiationneeded")}} event handler needs to look like, for the most part. Just add the
-  signaling server code, which here is represented by the call to
-  <code>signalRemotePeer()</code>.</p>
+signaling server code, which here is represented by the call to
+`signalRemotePeer()`.
 
-<pre class="brush: js">pc.addEventListener("negotiationneeded", async (event) =&gt; {
+```js
+pc.addEventListener("negotiationneeded", async (event) => {
   await pc.setLocalDescription();
   signalRemotePeer({ description: pc.localDescription });
 });
-</pre>
+```
 
-<p>Other than error handling, that's about it!</p>
+Other than error handling, that's about it!
 
-<h3 id="Providing_your_own_offer_or_answer">Providing your own offer or answer</h3>
+### Providing your own offer or answer
 
-<p>The example below shows the implementation of a handler for the
-  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event that explicitly creates an offer, rather than
-  letting <code>setLocalDescription()</code> do it.</p>
+The example below shows the implementation of a handler for the
+{{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event that explicitly creates an offer, rather than
+letting `setLocalDescription()` do it.
 
-<pre class="brush: js">async function handleNegotiationNeededEvent() {
+```js
+async function handleNegotiationNeededEvent() {
   try {
     const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
@@ -167,24 +164,23 @@ browser-compat: api.RTCPeerConnection.setLocalDescription
   } catch(err) {
     reportError(err);
   }
-}</pre>
+}
+```
 
-<p>This begins by creating an offer by calling
-  {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}; when that succeeds, we
-  call <code>setLocalDescription()</code>. We can then send the newly-created offer along
-  to the other peer using the signaling server, which here is done by calling a function
-  called <code>signalRemotePeer()</code>.</p>
+This begins by creating an offer by calling
+{{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}; when that succeeds, we
+call `setLocalDescription()`. We can then send the newly-created offer along
+to the other peer using the signaling server, which here is done by calling a function
+called `signalRemotePeer()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

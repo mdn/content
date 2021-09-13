@@ -11,54 +11,47 @@ tags:
   - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>read()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves with an obect representing the next chunk in the stream's queue.</p>
+The **`read()`** method of the
+{{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves with an obect representing the next chunk in the stream's queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStreamBYOBReader</em>.read(<em>view</em>);</pre>
+```js
+var promise = readableStreamBYOBReader.read(view);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>view</dt>
-  <dd>The view to be read into.</dd>
-</dl>
+- view
+  - : The view to be read into.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
-  the stream. The following are possible:</p>
+A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
+the stream. The following are possible:
 
-<ul>
-  <li>If a chunk is available, the promise fulfills with an object of the form
-    <code>{ value: theChunk, done: false }</code>.</li>
-  <li>If the stream is closed, the promise fulfills with an object of the
-    form <code>{ value: undefined, done: true }</code>.</li>
-  <li>If the stream throws an error, the promise rejects with the relevant error.
-  </li>
-</ul>
+- If a chunk is available, the promise fulfills with an object of the form
+  `{ value: theChunk, done: false }`.
+- If the stream is closed, the promise fulfills with an object of the
+  form `{ value: undefined, done: true }`.
+- If the stream throws an error, the promise rejects with the relevant error.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamBYOBReader</code>, the stream has no
+- TypeError
+  - : The source object is not a `ReadableStreamBYOBReader`, the stream has no
     owner, the view is not an object or has become detached, or the view's length is 0.
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

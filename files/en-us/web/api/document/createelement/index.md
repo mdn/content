@@ -10,54 +10,53 @@ tags:
   - createElement
 browser-compat: api.Document.createElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>In an <a href="/en-US/docs/Web/HTML">HTML</a> document, the <strong><code>document.createElement()</code></strong> method creates the HTML element specified by <var>tagName</var>, or an {{domxref("HTMLUnknownElement")}} if <var>tagName</var> isn't recognized.</p>
+In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>element</var> = <var>document</var>.createElement(<var>tagName</var>[, <var>options</var>]);
-</pre>
+```js
+let element = document.createElement(tagName[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><var>tagName</var></dt>
- <dd>A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of <var>tagName</var>. Don't use qualified names (like "html:a") with this method. When called on an HTML document, <code>createElement()</code> converts <var>tagName</var> to lower case before creating the element. In Firefox, Opera, and Chrome, <code>createElement(null)</code> works like <code>createElement("null")</code>.</dd>
- <dt><var>options </var>{{optional_inline}}</dt>
- <dd>An optional <code>ElementCreationOptions</code> object, containing a single property named <code>is</code>, whose value is the tag name of a custom element previously defined via <code>customElements.define()</code>. See {{anch("Web component example")}} for more details.</dd>
-</dl>
+- _tagName_
+  - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
+- _options _{{optional_inline}}
+  - : An optional `ElementCreationOptions` object, containing a single property named `is`, whose value is the tag name of a custom element previously defined via `customElements.define()`. See {{anch("Web component example")}} for more details.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The new {{domxref("Element")}}.</p>
+The new {{domxref("Element")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.</p>
-</div>
+> **Note:** A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This creates a new <code>&lt;div&gt;</code> and inserts it before the element with the ID "<code>div1</code>".</p>
+This creates a new `<div>` and inserts it before the element with the ID "`div1`".
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;||Working with elements||&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id="div1"&gt;The text above has been created dynamically.&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>||Working with elements||</title>
+</head>
+<body>
+  <div id="div1">The text above has been created dynamically.</div>
+</body>
+</html>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush:js">document.body.onload = addElement;
+```js
+document.body.onload = addElement;
 
 function addElement () {
   // create a new div element
@@ -72,15 +71,17 @@ function addElement () {
   // add the newly created element and its content into the DOM
   const currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Basic_example", 500, 50)}}</p>
+{{EmbedLiveSample("Basic_example", 500, 50)}}
 
-<h3 id="Web_component_example">Web component example</h3>
+### Web component example
 
-<p>The following example snippet is taken from our expanding-list-web-component example (see it live also). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.</p>
+The following example snippet is taken from our expanding-list-web-component example (see it live also). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class ExpandingList extends HTMLUListElement {
   constructor() {
     // Always call super first in constructor
@@ -92,33 +93,32 @@ class ExpandingList extends HTMLUListElement {
 }
 
 // Define the new element
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });</pre>
+customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+```
 
-<p>If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:</p>
+If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:
 
-<pre class="brush: js">let expandingList = document.createElement('ul', { is : 'expanding-list' })</pre>
+```js
+let expandingList = document.createElement('ul', { is : 'expanding-list' })
+```
 
-<p>The new element will be given an <code><a href="/en-US/docs/Web/HTML/Global_attributes/is">is</a></code> attribute whose value is the custom element's tag name.</p>
+The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.
 
-<div class="note">
-<p><strong>Note:</strong> For backwards compatibility with previous versions of the <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.</p>
-</div>
+> **Note:** For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Node.removeChild()")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.hasChildNodes()")}}</li>
- <li>{{domxref("document.createElementNS()")}} — to explicitly specify the namespace URI for the element.</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("document.createElementNS()")}} — to explicitly specify the namespace URI for the element.

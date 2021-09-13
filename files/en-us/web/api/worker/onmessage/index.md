@@ -11,25 +11,26 @@ tags:
   - onmessage
 browser-compat: api.Worker.onmessage
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>onmessage</code></strong> property of the {{domxref("Worker")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>, that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).</p>
+The **`onmessage`** property of the {{domxref("Worker")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers), that is a function to be called when the {{event("message")}} event occurs. These events are of type {{domxref("MessageEvent")}} and will be called when the worker's parent receives a message (i.e. from the {{domxref("DedicatedWorkerGlobalScope.postMessage")}} method).
 
-<p>Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.</p>
+Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScope.postMessage", "postMessage()")}} blocks the thread receiving it.
 
-<div class="note">
-<p><strong>Note:</strong> The message payload is available in the {{event("message")}} event's <code>data</code> property.</p>
-</div>
+> **Note:** The message payload is available in the {{event("message")}} event's `data` property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myWorker.onmessage = function(e) { ... }</pre>
+```js
+myWorker.onmessage = function(e) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. Messages are passed to the worker when the value inside the form input <code>first</code> changes. An onmessage handler is also present, to deal with messages that are passed back from the worker.</p>
+The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. Messages are passed to the worker when the value inside the form input `first` changes. An onmessage handler is also present, to deal with messages that are passed back from the worker.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -40,29 +41,31 @@ myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
 }
-</pre>
+```
 
-<p>In the <code>worker.js</code> script, an <code>onmessage</code> handler is used to the handle messages from the main script:</p>
+In the `worker.js` script, an `onmessage` handler is used to the handle messages from the main script:
 
-<pre class="brush: js">onmessage = function(e) {
+```js
+onmessage = function(e) {
   console.log('Message received from main script');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p>Notice how in the main script, <code>onmessage</code> has to be called on <code>myWorker</code>, whereas inside the worker script you just need <code>onmessage</code> because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+Notice how in the main script, `onmessage` has to be called on `myWorker`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("Worker")}} interface it belongs to.</p>
+The {{domxref("Worker")}} interface it belongs to.

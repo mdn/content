@@ -12,36 +12,32 @@ tags:
   - Interface
 browser-compat: api.CSSTranslate
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSTranslate</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <a href="/en-US/docs/Web/CSS/transform-function/translate()">translate()</a> value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.</p>
+The **`CSSTranslate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [translate()](</en-US/docs/Web/CSS/transform-function/translate()>) value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSTranslate.CSSTranslate()")}}</dt>
- <dd>Creates a new <code>CSSTranslate</code> object.</dd>
-</dl>
+- {{domxref("CSSTranslate.CSSTranslate()")}}
+  - : Creates a new `CSSTranslate` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSTranslate.x','x')}}</dt>
- <dd>Returns or sets the x-axis value.</dd>
- <dt>{{domxref('CSSTranslate.y','y')}}</dt>
- <dd>Returns or sets the y-axis value.</dd>
- <dt>{{domxref('CSSTranslate.z','z')}}</dt>
- <dd>Returns or sets the z-axis value.</dd>
-</dl>
+- {{domxref('CSSTranslate.x','x')}}
+  - : Returns or sets the x-axis value.
+- {{domxref('CSSTranslate.y','y')}}
+  - : Returns or sets the y-axis value.
+- {{domxref('CSSTranslate.z','z')}}
+  - : Returns or sets the z-axis value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do.</p>
+To do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

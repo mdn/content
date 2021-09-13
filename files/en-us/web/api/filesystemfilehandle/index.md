@@ -10,34 +10,33 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>FileSystemFileHandle</code></strong> interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.</p>
+The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.
 
-<p>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.</p>
+Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}.</em></p>
+_Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}.</em></p>
+_Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
-<dl>
- <dt>{{domxref('FileSystemFileHandle.getFile', 'getFile()')}}</dt>
- <dd>Returns a {{domxref('File','file object')}} representing the state on disk of the entry represented by the handle.</dd>
- <dt>{{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}</dt>
- <dd>Creates a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.</dd>
-</dl>
+- {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
+  - : Returns a {{domxref('File','file object')}} representing the state on disk of the entry represented by the handle.
+- {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
+  - : Creates a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Reading_a_File">Reading a File</h3>
+### Reading a File
 
-<p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
+The following asynchronous function presents a file picker and once a file is chosen, uses the `getFile()` method to retrieve the contents.
 
-<pre class="brush: js">const pickerOpts = {
+```js
+const pickerOpts = {
   types: [
     {
       description: 'Images',
@@ -56,13 +55,15 @@ async function getTheFile() {
 
   // get file contents
   const fileData = await fileHandle.getFile();
-}</pre>
+}
+```
 
-<h3 id="Writing_a_File">Writing a File</h3>
+### Writing a File
 
-<p>The following asynchronous function writes the given contents to the file handle, and thus to disk.</p>
+The following asynchronous function writes the given contents to the file handle, and thus to disk.
 
-<pre class="brush: js">async function writeFile(fileHandle, contents) {
+```js
+async function writeFile(fileHandle, contents) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
 
@@ -72,19 +73,17 @@ async function getTheFile() {
   // Close the file and write the contents to disk.
   await writable.close();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

@@ -11,23 +11,21 @@ tags:
   - lock
 browser-compat: api.LockManager
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p>The <strong><code>LockManager</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Locks_API">Web Locks API</a> provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing <code>Lock</code> object. To get an instance of <code>LockManager</code>, call {{domxref('navigator.locks')}}.</p>
+The **`LockManager`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing `Lock` object. To get an instance of `LockManager`, call {{domxref('navigator.locks')}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('LockManager.request()')}}</dt>
- <dd>Requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.</dd>
- <dt>{{domxref('LockManager.query()')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves with a {{domxref('LockManagerSnapshot')}} which contains information about held and pending locks.</dd>
-</dl>
+- {{domxref('LockManager.request()')}}
+  - : Requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
+- {{domxref('LockManager.query()')}}
+  - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('LockManagerSnapshot')}} which contains information about held and pending locks.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

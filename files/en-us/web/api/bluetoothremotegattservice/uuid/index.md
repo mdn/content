@@ -2,36 +2,37 @@
 title: BluetoothRemoteGATTService.uuid
 slug: Web/API/BluetoothRemoteGATTService/uuid
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTService
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- uuid
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTService
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - uuid
 browser-compat: api.BluetoothRemoteGATTService.uuid
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothGATTService.uuid</code></strong> read-only property
-  returns a {{domxref("DOMString")}} representing the UUID of this service.</p>
+The **`BluetoothGATTService.uuid`** read-only property
+returns a {{domxref("DOMString")}} representing the UUID of this service.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>uuid</em> = BluetoothGATTService.<em>uuid</em></pre>
+```js
+var uuid = BluetoothGATTService.uuid
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

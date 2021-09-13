@@ -14,24 +14,27 @@ tags:
   - web animations api
 browser-compat: api.AnimationTimeline.currentTime
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>currentTime</code></strong> read-only property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or <code>null</code> if the timeline is inactive.</p>
+The **`currentTime`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("AnimationTimeline")}} interface returns the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>currentTime</em> = <em>AnimationTimeline</em>.currentTime;</pre>
+```js
+var currentTime = AnimationTimeline.currentTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number representing the timeline's current time in milliseconds, or <code>null</code> if the timeline is inactive.</p>
+A number representing the timeline's current time in milliseconds, or `null` if the timeline is inactive.
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of <code>animationTimeline.currentTime</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of `animationTimeline.currentTime` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 animationTimeline.currentTime;
 // 23.404
 // 24.192
@@ -44,23 +47,21 @@ animationTimeline.currentTime;
 // 50.6
 // 51.7
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enable <code>privacy.resistFingerprinting</code>; the precision will be 100ms or the value of <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever is larger.</p>
+In Firefox, you can also enable `privacy.resistFingerprinting`; the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationTimeline")}}</li>
- <li>{{domxref("DocumentTimeline")}} inherits this property</li>
- <li>{{domxref("Document.timeline")}} returns a timeline object which inherits this property</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationTimeline")}}
+- {{domxref("DocumentTimeline")}} inherits this property
+- {{domxref("Document.timeline")}} returns a timeline object which inherits this property

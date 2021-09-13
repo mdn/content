@@ -9,36 +9,39 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.close
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>close()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this <code>MIDIPort</code> unavailable.</p>
+The **`close()`** method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this `MIDIPort` unavailable.
 
-<p>If the port is successfully closed a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to <code>"closed"</code>.</p>
+If the port is successfully closed a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to `"closed"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MIDIPort.close();</pre>
+```js
+MIDIPort.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>Returns a {{jsxref("Promise")}} which resolves once the port has been closed.</p>
+Returns a {{jsxref("Promise")}} which resolves once the port has been closed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an output port being closed.</p>
+The following example shows an output port being closed.
 
-<pre class="brush: js">let output = midiAccess.outputs.get(portID);
-output.close(); // closes the port</pre>
+```js
+let output = midiAccess.outputs.get(portID);
+output.close(); // closes the port
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

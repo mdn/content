@@ -2,42 +2,40 @@
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
 tags:
-- API
-- File API
-- FileReader
-- Files
-- Method
-- Reference
-- abort
+  - API
+  - File API
+  - FileReader
+  - Files
+  - Method
+  - Reference
+  - abort
 browser-compat: api.FileReader.abort
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <strong><code>abort</code></strong> method aborts the read operation. Upon return,
-  the {{domxref("FileReader.readyState","readyState")}} will be <code>DONE</code>.</p>
+The **`abort`** method aborts the read operation. Upon return,
+the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>instanceOfFileReader</var>.abort();</pre>
+```js
+instanceOfFileReader.abort();
+```
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>DOM_FILE_ABORT_ERR</code></dt>
-  <dd>Thrown when <code>abort</code> is called while no read operation is in progress
-    (that is, the state isn't <code>LOADING</code>).</dd>
-</dl>
+- `DOM_FILE_ABORT_ERR`
+  - : Thrown when `abort` is called while no read operation is in progress
+    (that is, the state isn't `LOADING`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

@@ -3,56 +3,55 @@ title: HTMLImageElement.y
 slug: Web/API/HTMLImageElement/y
 browser-compat: api.HTMLImageElement.y
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only {{domxref("HTMLImageElement")}} property
-        <code><strong>y</strong></code> indicates the y-coordinate of the
-        {{HTMLElement("img")}} element's top border edge relative to the root element's
-        origin.</p>
+The read-only {{domxref("HTMLImageElement")}} property
+**`y`** indicates the y-coordinate of the
+{{HTMLElement("img")}} element's top border edge relative to the root element's
+origin.
 
-<p>The {{domxref("HTMLImageElement.x", "x")}} and <code>y</code> properties are only valid
-    for an image if its {{cssxref("display")}} property has the computed value
-    <code>table-column</code> or <code>table-column-group</code>. In other words: it has
-    either of those values set explicitly on it, or it has inherited it from a containing
-    element, or by being located within a column described by either
-    {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.</p>
+The {{domxref("HTMLImageElement.x", "x")}} and `y` properties are only valid
+for an image if its {{cssxref("display")}} property has the computed value
+`table-column` or `table-column-group`. In other words: it has
+either of those values set explicitly on it, or it has inherited it from a containing
+element, or by being located within a column described by either
+{{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>imageY</em> = <em>htmlImageElement</em>.y;</pre>
+```js
+let imageY = htmlImageElement.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the distance in pixels from the top edge of the element's
-    nearest root element to the top edge of the {{HTMLElement("img")}} element's border
-    box. The nearest root element is the outermost {{HTMLElement("html")}} element that
-    contains the image. If the image is in an {{HTMLElement("iframe")}}, its
-    <code>y</code> is relative to that frame.</p>
+An integer value indicating the distance in pixels from the top edge of the element's
+nearest root element to the top edge of the {{HTMLElement("img")}} element's border
+box. The nearest root element is the outermost {{HTMLElement("html")}} element that
+contains the image. If the image is in an {{HTMLElement("iframe")}}, its
+`y` is relative to that frame.
 
-<p>In the diagram below, the top border edge is the top edge of the blue padding area. So
-    the value returned by <code>y</code> would be the distance from that point to the top
-    edge of the content area.</p>
+In the diagram below, the top border edge is the top edge of the blue padding area. So
+the value returned by `y` would be the distance from that point to the top
+edge of the content area.
 
-<p><img alt="Diagram showing the relationships between the various boxes associated with an element"
-        src="boxmodel-3.png"></p>
+![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-<div class="notecard note">
-    <p><strong>Note:</strong> The <code>y</code> property is only valid if the computed
-        value of the image's {{cssxref("display")}} property is either
-        <code>table-column</code> or <code>table-column-group</code>; in other words,
-        either of those are set directly on the {{HTMLElement("img")}} or they're
-        inherited from a containing element or by being located within a column described
-        by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.</p>
-</div>
+> **Note:** The `y` property is only valid if the computed
+> value of the image's {{cssxref("display")}} property is either
+> `table-column` or `table-column-group`; in other words,
+> either of those are set directly on the {{HTMLElement("img")}} or they're
+> inherited from a containing element or by being located within a column described
+> by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/HTMLImageElement/x#example"><code>HTMLImageElement.x</code></a> for example code that demonstrates the use of the <code>HTMLImageElement.y</code> (and <code>HTMLImageElement.x</code>).</p>
+See [`HTMLImageElement.x`](/en-US/docs/Web/API/HTMLImageElement/x#example) for example code that demonstrates the use of the `HTMLImageElement.y` (and `HTMLImageElement.x`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,33 +12,29 @@ tags:
   - Video
 browser-compat: api.MediaCapabilities
 ---
-<p>{{APIRef("Media Capabilities API")}}</p>
+{{APIRef("Media Capabilities API")}}
 
-<p>The <code><strong>MediaCapabilities</strong></code> interface of the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> provides information about the decoding abilities of the device, system and browser. The API can be used to query the browser about the decoding abilities of the device based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient.</p>
+The **`MediaCapabilities`** interface of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides information about the decoding abilities of the device, system and browser. The API can be used to query the browser about the decoding abilities of the device based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient.
 
-<p>The information is accessed through the <code><strong>mediaCapabilities</strong></code> property of the {{domxref("Navigator")}} interface.</p>
+The information is accessed through the **`mediaCapabilities`** property of the {{domxref("Navigator")}} interface.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaCapabilities.encodingInfo()")}}</dt>
- <dd>When passed a valid media configuration, it returns a promise with information as to whether the media type is supported, and whether encoding such media would be smooth and power efficient.</dd>
- <dt>{{domxref("MediaCapabilities.decodingInfo()")}}</dt>
- <dd>When passed a valid media configuration, it returns a promise with information as to whether the media type is supported, and whether decoding such media would be smooth and power efficient.</dd>
-</dl>
+- {{domxref("MediaCapabilities.encodingInfo()")}}
+  - : When passed a valid media configuration, it returns a promise with information as to whether the media type is supported, and whether encoding such media would be smooth and power efficient.
+- {{domxref("MediaCapabilities.decodingInfo()")}}
+  - : When passed a valid media configuration, it returns a promise with information as to whether the media type is supported, and whether decoding such media would be smooth and power efficient.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a>'s method <a href="/en-US/docs/Web/API/HTMLMediaElement/canPlayType">canPlayType()</a></li>
- <li><a href="/en-US/docs/Web/API/MediaSource">MediaSource</a>'s method <a href="/en-US/docs/Web/API/MediaSource/isTypeSupported">isTypeSupported()</a></li>
- <li>{{domxref("Navigator")}} interface</li>
-</ul>
+- [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement)'s method [canPlayType()](/en-US/docs/Web/API/HTMLMediaElement/canPlayType)
+- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported)
+- {{domxref("Navigator")}} interface

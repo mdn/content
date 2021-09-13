@@ -13,94 +13,82 @@ tags:
   - createObjectURL
 browser-compat: api.URL.createObjectURL
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <strong><code>URL.createObjectURL()</code></strong> static
-    method creates a {{domxref("DOMString")}} containing a URL representing the object
-    given in the parameter.</p>
+The **`URL.createObjectURL()`** static
+method creates a {{domxref("DOMString")}} containing a URL representing the object
+given in the parameter.
 
-<p>The URL lifetime is tied to the {{domxref("document")}}
-  in the window on which it was created. The new object URL represents the specified
-  {{domxref("File")}} object or {{domxref("Blob")}} object.</p>
+The URL lifetime is tied to the {{domxref("document")}}
+in the window on which it was created. The new object URL represents the specified
+{{domxref("File")}} object or {{domxref("Blob")}} object.
 
-<p>To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}.
-</p>
+To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is <em>not</em> available in <a
-      href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> due to its
-    potential to create memory leaks.</p>
-</div>
+> **Note:** This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
+> potential to create memory leaks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>objectURL</em> = URL.createObjectURL(<em>object</em>)
-</pre>
+```js
+const objectURL = URL.createObjectURL(object)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>object</code></dt>
-  <dd>A {{domxref("File")}}, {{domxref("Blob")}}, or {{domxref("MediaSource")}} object to
-    create an object URL for.</dd>
-</dl>
+- `object`
+  - : A {{domxref("File")}}, {{domxref("Blob")}}, or {{domxref("MediaSource")}} object to
+    create an object URL for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing an object URL that can be used to reference the
-  contents of the specified source <code>object</code>.</p>
+A {{domxref("DOMString")}} containing an object URL that can be used to reference the
+contents of the specified source `object`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a
-    href="/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using
-    object URLs to display images</a>.</p>
+See [Using
+object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Memory_management">Memory management</h3>
+### Memory management
 
-<p>Each time you call <code>createObjectURL()</code>, a new object URL is created, even if
-  you've already created one for the same object. Each of these must be released by
-  calling {{domxref("URL.revokeObjectURL()")}} when you no longer need them.</p>
+Each time you call `createObjectURL()`, a new object URL is created, even if
+you've already created one for the same object. Each of these must be released by
+calling {{domxref("URL.revokeObjectURL()")}} when you no longer need them.
 
-<p>Browsers will release object URLs automatically when the document is unloaded; however,
-  for optimal performance and memory usage, if there are safe times when you can
-  explicitly unload them, you should do so.</p>
+Browsers will release object URLs automatically when the document is unloaded; however,
+for optimal performance and memory usage, if there are safe times when you can
+explicitly unload them, you should do so.
 
-<h3 id="Using_object_URLs_for_media_streams">Using object URLs for media streams</h3>
+### Using object URLs for media streams
 
-<p>In older versions of the Media Source specification, attaching a stream to a
-  {{HTMLElement("video")}} element required creating an object URL for the
-  {{domxref("MediaStream")}}. This is no longer necessary, and browsers are removing
-  support for doing this.</p>
+In older versions of the Media Source specification, attaching a stream to a
+{{HTMLElement("video")}} element required creating an object URL for the
+{{domxref("MediaStream")}}. This is no longer necessary, and browsers are removing
+support for doing this.
 
-<div class="warning">
-  <p><strong>Warning:</strong> If you still have code that relies on
-    {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
-    elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
-    "srcObject")}} to the <code>MediaStream</code> directly.</p>
-</div>
+> **Warning:** If you still have code that relies on
+> {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
+> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
+    "srcObject")}} to the `MediaStream` directly.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications"
-      title="Using files from web applications">Using files from web applications</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images">Using
-      object URLs to display images</a></li>
-  <li>{{domxref("URL.revokeObjectURL()")}}</li>
-  <li>{{domxref("HTMLMediaElement.srcObject")}}</li>
-  <li>{{domxref("FileReader.readAsDataURL()")}}</li>
-</ul>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [Using
+  object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- {{domxref("URL.revokeObjectURL()")}}
+- {{domxref("HTMLMediaElement.srcObject")}}
+- {{domxref("FileReader.readAsDataURL()")}}

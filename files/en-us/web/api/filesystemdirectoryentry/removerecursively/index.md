@@ -2,105 +2,97 @@
 title: FileSystemDirectoryEntry.removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- FileSystemDirectoryEntry
-- Files
-- Method
-- Non-standard
-- Reference
-- removeRecursively
-- Deprecated
+  - API
+  - File System API
+  - File and Directory Entries API
+  - FileSystemDirectoryEntry
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - removeRecursively
+  - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
-<p>{{APIRef("File System API")}}{{deprecated_header}}{{SeeCompatTable}}</p>
+{{APIRef("File System API")}}{{deprecated_header}}{{SeeCompatTable}}
 
-<p>The {{domxref("FileSystemDirectoryEntry")}} interface's method
-  <strong><code>removeRecursively()</code></strong> removes
-  the directory as well as all of its content, hierarchically iterating over its entire
-  subtree of descendant files and directories.</p>
+The {{domxref("FileSystemDirectoryEntry")}} interface's method
+**`removeRecursively()`** removes
+the directory as well as all of its content, hierarchically iterating over its entire
+subtree of descendant files and directories.
 
-<p>To remove a single file, or an empty directory, you can also use
-  {{domxref("FileSystemEntry.remove()")}}.</p>
+To remove a single file, or an empty directory, you can also use
+{{domxref("FileSystemEntry.remove()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemDirectoryEntry</em>.removeRecursively(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+```js
+FileSystemDirectoryEntry.removeRecursively(successCallback[, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>successCallback</code></dt>
-  <dd>A function to call once the directory removal process has completed. The callback
-    has no parameters.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>A function to be called if an error occurs while attempting to remove the directory
+- `successCallback`
+  - : A function to call once the directory removal process has completed. The callback
+    has no parameters.
+- `errorCallback` {{optional_inline}}
+  - : A function to be called if an error occurs while attempting to remove the directory
     subtree. Receives a {{domxref("FileError")}} describing the error which occurred as
-    input.</dd>
-</dl>
+    input.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<p>If an error occurs and an <code>errorCallback</code> was specified, it gets called with
-  a single parameter: a {{domxref("FileError")}} object describing the error. The
-  {{domxref("FileError.code")}} specifies what type of error occurred, as follows:</p>
+If an error occurs and an `errorCallback` was specified, it gets called with
+a single parameter: a {{domxref("FileError")}} object describing the error. The
+{{domxref("FileError.code")}} specifies what type of error occurred, as follows:
 
-<dl>
-  <dt><code>FileError.INVALID_MODIFICATION_ERR</code></dt>
-  <dd>An attempt was made to remove the root directory; this is not permitted.</dd>
-  <dt><code>FileError.NO_MODIFICATION_ALLOWED_ERR</code></dt>
-  <dd>The file system's state doesn't permit modification.</dd>
-  <dt><code>FileError.NOT_FOUND_ERR</code></dt>
-  <dd>The directory represented by the {{domxref("FileSystemDirectoryEntry")}} no longer
-    exists.</dd>
-  <dt><code>FileError.NOT_READABLE_ERR</code></dt>
-  <dd>The directory is not accessible; perhaps it's in use by another application or is
-    locked at the operating system level.</dd>
-  <dt><code>FileError.SECURITY_ERR</code></dt>
-  <dd>The directory could not be removed for security reasons. Possible reasons include:
-    <ul>
-      <li>The directory and/or its contents may not be safe to access from a Web
-        application.</li>
-      <li>Too many file system calls are being made.</li>
-      <li>Other security concerns as raised by the user agent or the operating system.
-      </li>
-    </ul>
-  </dd>
-</dl>
+- `FileError.INVALID_MODIFICATION_ERR`
+  - : An attempt was made to remove the root directory; this is not permitted.
+- `FileError.NO_MODIFICATION_ALLOWED_ERR`
+  - : The file system's state doesn't permit modification.
+- `FileError.NOT_FOUND_ERR`
+  - : The directory represented by the {{domxref("FileSystemDirectoryEntry")}} no longer
+    exists.
+- `FileError.NOT_READABLE_ERR`
+  - : The directory is not accessible; perhaps it's in use by another application or is
+    locked at the operating system level.
+- `FileError.SECURITY_ERR`
 
-<div class="note">
-  <p><strong>Note:</strong> If you try to delete a directory which contains one or more files that can't be
-    removed, or if an error occurs while deletion of a number of files is underway, some
-    files may not be deleted. You should provide an <code>errorCallback</code> to watch
-    for and handle this, perhaps by trying again.</p>
-</div>
+  - : The directory could not be removed for security reasons. Possible reasons include:
 
-<h2 id="Example">Example</h2>
+    - The directory and/or its contents may not be safe to access from a Web
+      application.
+    - Too many file system calls are being made.
+    - Other security concerns as raised by the user agent or the operating system.
 
-<pre class="brush: js">directory.removeRecursively(function() {
+> **Note:** If you try to delete a directory which contains one or more files that can't be
+> removed, or if an error occurs while deletion of a number of files is underway, some
+> files may not be deleted. You should provide an `errorCallback` to watch
+> for and handle this, perhaps by trying again.
+
+## Example
+
+```js
+directory.removeRecursively(function() {
   /* The directory was removed successfully */
 }, function() {
   /* an error occurred while removing the directory */
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemDirectoryEntry")}}</li>
-  <li>{{domxref("FileSystemEntry.remove()")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystemEntry.remove()")}}

@@ -2,54 +2,55 @@
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 tags:
-- API
-- Accessibility
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Accessibility
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.drawFocusIfNeeded()</code></strong>
-  method of the Canvas 2D API draws a focus ring around the current or given path, if the
-  specified element is focused.</p>
+The
+**`CanvasRenderingContext2D.drawFocusIfNeeded()`**
+method of the Canvas 2D API draws a focus ring around the current or given path, if the
+specified element is focused.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.drawFocusIfNeeded(<em>element</em>);
-void <em>ctx</em>.drawFocusIfNeeded(<em>path</em>, <em>element</em>);
-</pre>
+```js
+void ctx.drawFocusIfNeeded(element);
+void ctx.drawFocusIfNeeded(path, element);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>element</code></dt>
-  <dd>The element to check whether it is focused or not.</dd>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("Path2D")}} path to use.</dd>
-</dl>
+- `element`
+  - : The element to check whether it is focused or not.
+- `path`
+  - : A {{domxref("Path2D")}} path to use.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Managing_button_focus">Managing button focus</h3>
+### Managing button focus
 
-<p>This example draws two buttons on a canvas. The <code>drawFocusIfNeeded()</code> method
-  is used to draw a focus ring when appropriate.</p>
+This example draws two buttons on a canvas. The `drawFocusIfNeeded()` method
+is used to draw a focus ring when appropriate.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;
-  &lt;button id="button1"&gt;Continue&lt;/button&gt;
-  &lt;button id="button2"&gt;Quit&lt;/button&gt;
-&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas">
+  <button id="button1">Continue</button>
+  <button id="button2">Quit</button>
+</canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
@@ -106,22 +107,20 @@ function drawButton(el, x, y) {
   // Draw focus ring, if appropriate
   ctx.drawFocusIfNeeded(el);
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Managing_button_focus', 700, 180)}}</p>
+{{EmbedLiveSample('Managing_button_focus', 700, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

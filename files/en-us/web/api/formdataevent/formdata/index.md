@@ -2,38 +2,40 @@
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
 tags:
-- API
-- Experimental
-- FormDataEvent
-- Forms
-- Property
-- Reference
+  - API
+  - Experimental
+  - FormDataEvent
+  - Forms
+  - Property
+  - Reference
 browser-compat: api.FormDataEvent.formData
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code>formData</code> read only property of the {{domxref("FormDataEvent")}}
-  interface contains the {{domxref("FormData")}} object representing the data contained in
-  the form when the event was fired.</p>
+The `formData` read only property of the {{domxref("FormDataEvent")}}
+interface contains the {{domxref("FormData")}} object representing the data contained in
+the form when the event was fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>formData</em> = formDataEvent.formData</pre>
+```js
+formData = formDataEvent.formData
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("FormData")}} object.</p>
+A {{domxref("FormData")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// grab reference to form
+```js
+// grab reference to form
 
 const formElem = document.querySelector('form');
 
 // submit handler
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -43,7 +45,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // formdata handler to retrieve data
 
-formElem.addEventListener('formdata', (e) =&gt; {
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -56,23 +58,22 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XMLHTTPRequest")}}</li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData
-      objects</a></li>
-  <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData
+  objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

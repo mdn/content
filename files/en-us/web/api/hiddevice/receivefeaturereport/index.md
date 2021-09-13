@@ -9,46 +9,44 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.receiveFeatureReport
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>receiveFeatureReport()</code></strong> method of the {{domxref("HIDDevice")}} interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.</p>
+The **`receiveFeatureReport()`** method of the {{domxref("HIDDevice")}} interface receives a feature report from the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
 
-<p>The <code>reportId</code> for each of the report formats that this device supports can be retrieved from {{domxref("HIDDevice.collections")}}.</p>
+The `reportId` for each of the report formats that this device supports can be retrieved from {{domxref("HIDDevice.collections")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HIDDevice.receiveFeatureReport(reportId);</pre>
+```js
+HIDDevice.receiveFeatureReport(reportId);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>reportId</code></dt>
-  <dd>An 8-bit report ID. If the HID device does not use report IDs, send <code>0</code>.</dd>
-</dl>
+- `reportId`
+  - : An 8-bit report ID. If the HID device does not use report IDs, send `0`.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}} object containing the feature report.</p>
+A {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}} object containing the feature report.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>Thrown if receiving the report fails for any reason.</dd>
-</dl>
+- {{domxref("DOMException")}} `NotAllowedError`
+  - : Thrown if receiving the report fails for any reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example a report is received from a device using a <code>reportId</code> of <code>1</code>.</p>
+In the following example a report is received from a device using a `reportId` of `1`.
 
-<pre class="brush: js">const dataView = await device.receiveFeatureReport(1);</pre>
+```js
+const dataView = await device.receiveFeatureReport(1);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
+{{Compat}}

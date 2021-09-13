@@ -10,47 +10,44 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode.attack
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>attack</code> property of the {{ domxref("DynamicsCompressorNode") }} interface is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB. It defines how quickly the signal is adapted when its volume is increased.</p>
+The `attack` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB. It defines how quickly the signal is adapted when its volume is increased.
 
-<p>The <code>attack</code> property's default value is <code>0.003</code> and it can be set between <code>0</code> and <code>1</code>.</p>
-</div>
+The `attack` property's default value is `0.003` and it can be set between `0` and `1`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
 compressor.attack.value = 0;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}.</p>
+An {{domxref("AudioParam")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
-compressor.attack.value = 0;</pre>
+compressor.attack.value = 0;
+```
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

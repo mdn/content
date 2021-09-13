@@ -2,40 +2,39 @@
 title: CSSMathNegate()
 slug: Web/API/CSSMathNegate/CSSMathNegate
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathNegate
-- CSSNumericValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSMathNegate
+  - CSSNumericValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSMathNegate.CSSMathNegate
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMathNegate()</code></strong> constructor creates a
-  new {{domxref("CSSMathNegate")}} object which negates the value passed into it.</p>
+The **`CSSMathNegate()`** constructor creates a
+new {{domxref("CSSMathNegate")}} object which negates the value passed into it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMathNegate</var> = new CSSMathNegate(<em>arg</em>);</pre>
+```js
+var CSSMathNegate = new CSSMathNegate(arg);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>arg</dt>
-  <dd>A {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- arg
+  - : A {{domxref('CSSNumericValue')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

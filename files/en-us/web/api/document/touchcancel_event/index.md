@@ -10,47 +10,47 @@ tags:
   - touchcancel
 browser-compat: api.Document.touchcancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>touchcancel</code> event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).</p>
+The `touchcancel` event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Code samples for those events are available on the dedicated page: <a href="/en-US/docs/Web/API/Touch_events">Touch events</a>.</p>
+Code samples for those events are available on the dedicated page: [Touch events](/en-US/docs/Web/API/Touch_events).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>{{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}</li>
- <li>This event on {{domxref("Element")}} targets: {{domxref("Element/touchcancel_event", "touchcancel")}}</li>
-</ul>
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+- {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
+- This event on {{domxref("Element")}} targets: {{domxref("Element/touchcancel_event", "touchcancel")}}

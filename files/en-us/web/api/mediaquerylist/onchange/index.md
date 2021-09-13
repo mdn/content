@@ -11,26 +11,28 @@ tags:
   - onchange
 browser-compat: api.MediaQueryList.onchange
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>onchange</strong></code> property of the
-  {{DOMxRef("MediaQueryList")}} interface is an event handler property representing a
-  function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}}
-  event fires, i.e when the status of media query support changes. The event object is a
-  {{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a
-  <code>MediaListQuery</code> instance in older browsers, for backwards compatibility
-  purposes.</p>
+The **`onchange`** property of the
+{{DOMxRef("MediaQueryList")}} interface is an event handler property representing a
+function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}}
+event fires, i.e when the status of media query support changes. The event object is a
+{{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a
+`MediaListQuery` instance in older browsers, for backwards compatibility
+purposes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>MediaQueryList</var>.onchange = function() { ... };</pre>
+```js
+MediaQueryList.onchange = function() { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
+```js
+var mql = window.matchMedia('(max-width: 600px)');
 
-mql.onchange = (e) =&gt; {
+mql.onchange = (e) => {
     if (e.matches) {
     /* the viewport is 600 pixels wide or less */
     console.log('This is a narrow screen — less than 600px wide.')
@@ -39,24 +41,21 @@ mql.onchange = (e) =&gt; {
     console.log('This is a wide screen — more than 600px wide.')
   }
 }
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

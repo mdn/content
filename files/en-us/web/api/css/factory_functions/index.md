@@ -2,101 +2,103 @@
 title: CSS numeric factory functions
 slug: Web/API/CSS/factory_functions
 tags:
-- API
-- CSS
-- CSS API
-- Houdini
-- Reference
-- factory function
+  - API
+  - CSS
+  - CSS API
+  - Houdini
+  - Reference
+  - factory function
 ---
+{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+The **CSS numeric factory
+functions**, such as `CSS.em()` and
+`CSS.turn()` are methods that return [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) with the value being
+the numeric argument and the unit being the name of the method used. These
+functions create new numeric values less verbosely than using the
+{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.
 
-<p>The <strong>CSS numeric factory
-			functions</strong>, such as <code>CSS.em()</code> and
-	<code>CSS.turn()</code> are methods that return <a
-			href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a> with the value being
-		the numeric argument and the unit being the name of the method used. These
-	functions create new numeric values less verbosely than using the
-	{{domxref('CSSUnitValue.CSSUnitValue()')}} constructor.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+CSS.number(number);
+CSS.percent(number);
 
-<pre class="brush: js">CSS.number(<var>number</var>);
-CSS.percent(<var>number</var>);
+// <length>
+CSS.em(number);
+CSS.ex(number);
+CSS.ch(number);
+CSS.ic(number);
+CSS.rem(number);
+CSS.lh(number);
+CSS.rlh(number);
+CSS.vw(number);
+CSS.vh(number);
+CSS.vi(number);
+CSS.vb(number);
+CSS.vmin(number);
+CSS.vmax(number);
+CSS.cm(number);
+CSS.mm(number);
+CSS.Q(number);
+CSS.in(number);
+CSS.pt(number);
+CSS.pc(number);
+CSS.px(number);
 
-// &lt;length&gt;
-CSS.em(<var>number</var>);
-CSS.ex(<var>number</var>);
-CSS.ch(<var>number</var>);
-CSS.ic(<var>number</var>);
-CSS.rem(<var>number</var>);
-CSS.lh(<var>number</var>);
-CSS.rlh(<var>number</var>);
-CSS.vw(<var>number</var>);
-CSS.vh(<var>number</var>);
-CSS.vi(<var>number</var>);
-CSS.vb(<var>number</var>);
-CSS.vmin(<var>number</var>);
-CSS.vmax(<var>number</var>);
-CSS.cm(<var>number</var>);
-CSS.mm(<var>number</var>);
-CSS.Q(<var>number</var>);
-CSS.in(<var>number</var>);
-CSS.pt(<var>number</var>);
-CSS.pc(<var>number</var>);
-CSS.px(<var>number</var>);
+// <angle>
+CSS.deg(number);
+CSS.grad(number);
+CSS.rad(number);
+CSS.turn(number);
 
-// &lt;angle&gt;
-CSS.deg(<var>number</var>);
-CSS.grad(<var>number</var>);
-CSS.rad(<var>number</var>);
-CSS.turn(<var>number</var>);
+// <time>
+CSS.s(number);
+CSS.ms(number);
 
-// &lt;time&gt;
-CSS.s(<var>number</var>);
-CSS.ms(<var>number</var>);
+// <frequency>
+CSS.Hz(number);
+CSS.kHz(number);
 
-// &lt;frequency&gt;
-CSS.Hz(<var>number</var>);
-CSS.kHz(<var>number</var>);
+// <resolution>
+CSS.dpi(number);
+CSS.dpcm(number);
+CSS.dppx(number);
 
-// &lt;resolution&gt;
-CSS.dpi(<var>number</var>);
-CSS.dpcm(<var>number</var>);
-CSS.dppx(<var>number</var>);
+// <flex>
+CSS.fr(number);
+```
 
-// &lt;flex&gt;
-CSS.fr(<var>number</var>);</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+We use the `CSS.vmax()` numeric factory function to create a
+{{domxref('CSSUnitValue')}}:
 
-<p>We use the <code>CSS.vmax()</code> numeric factory function to create a
-	{{domxref('CSSUnitValue')}}:</p>
-
-<pre class="brush: js">let height = CSS.vmax(50);
+```js
+let height = CSS.vmax(50);
 
 console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
 console.log( height.value )  // 50
-console.log( height.unit )   // vmax</pre>
+console.log( height.unit )   // vmax
+```
 
-<p>In this example, we set the margin on our element using the<code> CSS.px()</code>
-	factory function:</p>
+In this example, we set the margin on our element using the` CSS.px()`
+factory function:
 
-<pre class="brush: js">myElement.attributeStyleMap.set('margin', CSS.px(40));
+```js
+myElement.attributeStyleMap.set('margin', CSS.px(40));
 let currentMargin = myElement.attributeStyleMap.get('margin');
-console.log(currentMargin.value, currentMargin.unit); // 40, 'px'</pre>
+console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.CSS")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.CSS")}}</p>
+{{Compat("api.CSS")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref('CSSUnitValue.CSSUnitValue()')}}</li>
-</ul>
+- {{domxref('CSSUnitValue.CSSUnitValue()')}}

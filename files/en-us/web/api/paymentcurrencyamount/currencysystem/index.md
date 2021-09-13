@@ -2,67 +2,59 @@
 title: PaymentCurrencyAmount.currencySystem
 slug: Web/API/PaymentCurrencyAmount/currencySystem
 tags:
-- API
-- Commerce
-- Currency
-- Currency System
-- Money
-- Deprecated
-- Payment Request
-- Payment Request API
-- PaymentCurrencyAmount
-- Property
-- Reference
-- payment
+  - API
+  - Commerce
+  - Currency
+  - Currency System
+  - Money
+  - Deprecated
+  - Payment Request
+  - Payment Request API
+  - PaymentCurrencyAmount
+  - Property
+  - Reference
+  - payment
 browser-compat: api.PaymentCurrencyAmount.currencySystem
 ---
-<p> {{APIRef("Payment Request API")}} {{Deprecated_Header}}</p>
+{{APIRef("Payment Request API")}} {{Deprecated_Header}}
 
-<p>{{securecontext_header}}</p>
+{{securecontext_header}}
 
-<p>The <em>obsolete</em> {{domxref("PaymentCurrencyAmount")}}
-    property <strong><code>currencySystem</code></strong> is a string which specifies the
-    standard being used to specify the {{domxref("PaymentCurrencyAmount.currency",
+The _obsolete_ {{domxref("PaymentCurrencyAmount")}}
+property **`currencySystem`** is a string which specifies the
+standard being used to specify the {{domxref("PaymentCurrencyAmount.currency",
     "currency")}} the {{domxref("PaymentCurrencyAmount.value", "value")}} is specified
-    in.</span> For example, the default is <code>urn:iso:std:iso:4217</code>, which
-  specifies that the standard used is {{interwiki("wikipedia", "ISO 4217")}}.</p>
+in. For example, the default is `urn:iso:std:iso:4217`, which
+specifies that the standard used is {{interwiki("wikipedia", "ISO 4217")}}.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This property has been removed from the specification and should no longer be used;
-    the currency is now <em>always</em> specified using ISO 4127.</p>
-</div>
+> **Warning:** This property has been removed from the specification and should no longer be used;
+> the currency is now _always_ specified using ISO 4127.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>currencySystem</em> = <em>paymentCurrencyAmount</em>.currencySystem;</pre>
+```js
+currencySystem = paymentCurrencyAmount.currencySystem;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which specifies the currency standard used to specify the
-  {{domxref("PaymentCurrencyAmount.currency", "currency")}} in which the payment value is
-  represented. The default, <code>urn:iso:std:iso:4217</code>, indicates the <a
-    href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217</a> standard.</p>
+A {{domxref("DOMString")}} which specifies the currency standard used to specify the
+{{domxref("PaymentCurrencyAmount.currency", "currency")}} in which the payment value is
+represented. The default, `urn:iso:std:iso:4217`, indicates the [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) standard.
 
+## Specifications
 
+This property was removed in the [May 3, 2018 update](https://www.w3.org/TR/2018/CR-payment-request-20180503)
+of the Payment Request API specification. This feature is no longer on track to become a standard.
 
-<h2 id="Specifications">Specifications</h2>
+## Browser compatibility
 
-<p>This property was removed in the <a
-  href="https://www.w3.org/TR/2018/CR-payment-request-20180503">May 3, 2018 update</a>
-of the Payment Request API specification. This feature is no longer on track to become a standard.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-      the Payment Request API</a></li>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing
-      concepts</a></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing
+  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

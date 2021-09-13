@@ -11,33 +11,38 @@ tags:
   - Element
 browser-compat: api.Element.ariaDescription
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaDescription</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-description</code> attribute, which defines a string value that describes or annotates the current element.</p>
+The **`ariaDescription`** property of the {{domxref("Element")}} interface reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaDescription</var> = element.ariaDescription;
-<var>element</var>.ariaDescription = <var>ariaDescription</var></pre>
+    var ariaDescription = element.ariaDescription;
+    element.ariaDescription = ariaDescription
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-description</code> attribute on the element with an ID of <code>close-button</code> is set to the string "A longer description of the function of this element". Using <code>ariaDescription</code> we can update the value.</p>
+## Examples
 
-<pre class="brush: html">&lt;button aria-label="Close" aria-description="A longer description of the function of this element" id="close-button"&gt;X&lt;/button&gt;</pre>
+In this example the `aria-description` attribute on the element with an ID of `close-button` is set to the string "A longer description of the function of this element". Using `ariaDescription` we can update the value.
 
-<pre class="brush: js">let el = document.getElementById('close-button');
+```html
+<button aria-label="Close" aria-description="A longer description of the function of this element" id="close-button">X</button>
+```
+
+```js
+let el = document.getElementById('close-button');
 console.log(el.ariaDescription); // "A longer description of the function of this element"
 el.ariaDescription = "A different description"
-console.log(el.ariaDescription); // "A different description"</pre>
+console.log(el.ariaDescription); // "A different description"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

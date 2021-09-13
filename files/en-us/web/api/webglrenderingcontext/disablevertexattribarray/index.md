@@ -2,51 +2,48 @@
 title: WebGLRenderingContext.disableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/disableVertexAttribArray
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.disableVertexAttribArray
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.disableVertexAttribArray()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> turns the generic
-  vertex attribute array off at a given index position.</p>
+The **`WebGLRenderingContext.disableVertexAttribArray()`**
+method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) turns the generic
+vertex attribute array off at a given index position.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.disableVertexAttribArray(<var>index</var>);
-</pre>
+```js
+void gl.disableVertexAttribArray(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>index</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute to disable.
-  </dd>
-</dl>
+- index
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute to disable.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.disableVertexAttribArray(0);
-</pre>
+```js
+gl.disableVertexAttribArray(0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}

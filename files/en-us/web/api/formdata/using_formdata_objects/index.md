@@ -10,15 +10,16 @@ tags:
   - XHR
   - XMLHttpRequest
 ---
-<div>{{APIRef("XMLHttpRequest")}}</div>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><a href="/en-US/docs/Web/API/FormData">FormData</a></code> object lets you compile a set of key/value pairs to send using <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>. It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to <code>multipart/form-data</code>.</p>
+The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
 
-<h2 id="Creating_a_FormData_object_from_scratch">Creating a FormData object from scratch</h2>
+## Creating a FormData object from scratch
 
-<p>You can build a <code>FormData</code> object yourself, instantiating it then appending fields to it by calling its {{domxref("FormData.append","append()")}} method, like this:</p>
+You can build a `FormData` object yourself, instantiating it then appending fields to it by calling its {{domxref("FormData.append","append()")}} method, like this:
 
-<pre class="brush: js">var formData = new FormData();
+```js
+var formData = new FormData();
 
 formData.append("username", "Groucho");
 formData.append("accountnum", 123456); // number 123456 is immediately converted to a string "123456"
@@ -27,7 +28,7 @@ formData.append("accountnum", 123456); // number 123456 is immediately converted
 formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like object
-var content = '&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;'; // the body of the new file...
+var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
 var blob = new Blob([content], { type: "text/xml"});
 
 formData.append("webmasterfile", blob);
@@ -35,61 +36,65 @@ formData.append("webmasterfile", blob);
 var request = new XMLHttpRequest();
 request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
-</pre>
+```
 
-<div class="note"><p><strong>Note:</strong> The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the <a href="/en-US/docs/Web/API/FormData#append()"><code>FormData.append()</code></a> method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: <strong>if the value is neither a Blob nor a File, the value is converted to a string</strong>).</p></div>
+> **Note:** The fields "userfile" and "webmasterfile" both contain a file. The number assigned to the field "accountnum" is immediately converted into a string by the [`FormData.append()`](</en-US/docs/Web/API/FormData#append()>) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string: **if the value is neither a Blob nor a File, the value is converted to a string**).
 
-<p>This example builds a <code>FormData</code> instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the <code>XMLHttpRequest</code> method <a href="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>send()</code></a> to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A <code>Blob</code> object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on <code>Blob</code>, inheriting blob functionality and expanding it to support files on the user's system. In order to build a <code>Blob</code> you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.</p>
+This example builds a `FormData` instance containing values for fields named "username", "accountnum", "userfile" and "webmasterfile", then uses the `XMLHttpRequest` method [`send()`](</en-US/docs/Web/API/XMLHttpRequest#send()>) to send the form's data. The field "webmasterfile" is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke the {{domxref("Blob.Blob","Blob() constructor")}}.
 
-<h2 id="Retrieving_a_FormData_object_from_an_HTML_form">Retrieving a FormData object from an HTML form</h2>
+## Retrieving a FormData object from an HTML form
 
-<p>To construct a <code>FormData</code> object that contains the data from an existing {{ HTMLElement("form") }}, specify that form element when creating the <code>FormData</code> object:</p>
+To construct a `FormData` object that contains the data from an existing {{ HTMLElement("form") }}, specify that form element when creating the `FormData` object:
 
-<div class="note">
-<p><strong>Note:</strong> FormData will only use input fields that use the name attribute.</p>
-</div>
+> **Note:** FormData will only use input fields that use the name attribute.
 
-<pre class="brush: js">var formData = new FormData(someFormElement);
-</pre>
+```js
+var formData = new FormData(someFormElement);
+```
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">var formElement = document.querySelector("form");
+```js
+var formElement = document.querySelector("form");
 var request = new XMLHttpRequest();
 request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
-</pre>
+```
 
-<p>You can also append additional data to the <code>FormData</code> object between retrieving it from a form and sending it, like this:</p>
+You can also append additional data to the `FormData` object between retrieving it from a form and sending it, like this:
 
-<pre class="brush: js">var formElement = document.querySelector("form");
+```js
+var formElement = document.querySelector("form");
 var formData = new FormData(formElement);
 var request = new XMLHttpRequest();
 request.open("POST", "submitform.php");
 formData.append("serialnumber", serialNumber++);
-request.send(formData);</pre>
+request.send(formData);
+```
 
-<p>This lets you augment the form's data before sending it along, to include additional information that's not necessarily user-editable.</p>
+This lets you augment the form's data before sending it along, to include additional information that's not necessarily user-editable.
 
-<h2 id="Sending_files_using_a_FormData_object">Sending files using a FormData object</h2>
+## Sending files using a FormData object
 
-<p>You can also send files using <code>FormData</code>. Include an {{ HTMLElement("input") }} element of type <code>file</code> in your {{htmlelement("form")}}:</p>
+You can also send files using `FormData`. Include an {{ HTMLElement("input") }} element of type `file` in your {{htmlelement("form")}}:
 
-<pre class="brush: html">&lt;form enctype="multipart/form-data" method="post" name="fileinfo"&gt;
-  &lt;label&gt;Your email address:&lt;/label&gt;
-  &lt;input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /&gt;&lt;br /&gt;
-  &lt;label&gt;Custom file label:&lt;/label&gt;
-  &lt;input type="text" name="filelabel" size="12" maxlength="32" /&gt;&lt;br /&gt;
-  &lt;label&gt;File to stash:&lt;/label&gt;
-  &lt;input type="file" name="file" required /&gt;
-  &lt;input type="submit" value="Stash the file!" /&gt;
-&lt;/form&gt;
-&lt;div&gt;&lt;/div&gt;
-</pre>
+```html
+<form enctype="multipart/form-data" method="post" name="fileinfo">
+  <label>Your email address:</label>
+  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
+  <label>Custom file label:</label>
+  <input type="text" name="filelabel" size="12" maxlength="32" /><br />
+  <label>File to stash:</label>
+  <input type="file" name="file" required />
+  <input type="submit" value="Stash the file!" />
+</form>
+<div></div>
+```
 
-<p>Then you can send it using code like the following:</p>
+Then you can send it using code like the following:
 
-<pre class="brush: js">var form = document.forms.namedItem("fileinfo");
+```js
+var form = document.forms.namedItem("fileinfo");
 form.addEventListener('submit', function(ev) {
 
   var oOutput = document.querySelector("div"),
@@ -103,53 +108,55 @@ form.addEventListener('submit', function(ev) {
     if (oReq.status == 200) {
       oOutput.innerHTML = "Uploaded!";
     } else {
-      oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.&lt;br \/&gt;";
+      oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
     }
   };
 
   oReq.send(oData);
   ev.preventDefault();
 }, false);
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> If you pass in a reference to the form, the <a href="/en-US/docs/Web/HTTP/Methods">request method</a> specified in the form will be used over the method specified in the open() call.</p>
-</div>
+> **Note:** If you pass in a reference to the form, the [request method](/en-US/docs/Web/HTTP/Methods) specified in the form will be used over the method specified in the open() call.
 
-<div class="warning">
-<p><strong>Warning:</strong> When using FormData to submit POST requests using {{ domxref("XMLHttpRequest") }} or the {{ domxref("Fetch_API") }} with the <code>multipart/form-data</code> Content-Type (e.g. when uploading Files and Blobs to the server), <em>do not</em> explicitly set the <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type</code></a> header on the request. Doing so will prevent the browser from being able to set the Content-Type header with the boundary expression it will use to delimit form fields in the request body.</p>
-</div>
+> **Warning:** When using FormData to submit POST requests using {{ domxref("XMLHttpRequest") }} or the {{ domxref("Fetch_API") }} with the `multipart/form-data` Content-Type (e.g. when uploading Files and Blobs to the server), _do not_ explicitly set the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header on the request. Doing so will prevent the browser from being able to set the Content-Type header with the boundary expression it will use to delimit form fields in the request body.
 
-<p>You can also append a {{ domxref("File") }} or {{ domxref("Blob") }} directly to the {{ domxref("FormData") }} object, like this:</p>
+You can also append a {{ domxref("File") }} or {{ domxref("Blob") }} directly to the {{ domxref("FormData") }} object, like this:
 
-<pre class="brush: js">data.append("myfile", myBlob, "filename.txt");
-</pre>
+```js
+data.append("myfile", myBlob, "filename.txt");
+```
 
-<p>When using the {{domxref("FormData.append","append()")}} method it is possible to use the third optional parameter to pass a filename inside the <code>Content-Disposition</code> header that is sent to the server. When no filename is specified (or the parameter isn't supported), the name "blob" is used.</p>
+When using the {{domxref("FormData.append","append()")}} method it is possible to use the third optional parameter to pass a filename inside the `Content-Disposition` header that is sent to the server. When no filename is specified (or the parameter isn't supported), the name "blob" is used.
 
-<h2 id="Using_a_formdata_event">Using a formdata event</h2>
+## Using a formdata event
 
-<p>A more recent addition to the platform than the {{domxref("FormData")}} object is the <a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> event</a> — this is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.</p>
+A more recent addition to the platform than the {{domxref("FormData")}} object is the [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event) — this is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
-<p>This allows a {{domxref("FormData")}} object to be quickly obtained in response to a <code>formdata</code> event firing, rather than needing to put it together yourself.</p>
+This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself.
 
-<p>Typically this is used as shown in our <a href="https://long-impatiens.glitch.me/">simple formdata event demo</a> — in the JavaScript  we reference a form:</p>
+Typically this is used as shown in our [simple formdata event demo](https://long-impatiens.glitch.me/) — in the JavaScript  we reference a form:
 
-<pre class="brush: js">const formElem = document.querySelector('form');</pre>
+```js
+const formElem = document.querySelector('form');
+```
 
-<p>In our <a href="/en-US/docs/Web/API/HTMLFormElement/submit_event"><code>submit</code> event</a> handler we use <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault</a></code> to stop the default form submission, then invoke a {{domxref("FormData")}} constructor to trigger the <code>formdata</code> event:</p>
+In our [`submit` event](/en-US/docs/Web/API/HTMLFormElement/submit_event) handler we use [`preventDefault`](/en-US/docs/Web/API/Event/preventDefault) to stop the default form submission, then invoke a {{domxref("FormData")}} constructor to trigger the `formdata` event:
 
-<pre class="brush: js">formElem.addEventListener('submit', (e) =&gt; {
+```js
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
   // construct a FormData object, which fires the formdata event
   new FormData(formElem);
-});</pre>
+});
+```
 
-<p>When the <code>formdata</code> event fires we can access the {{domxref("FormData")}} object using {{domxref("FormDataEvent.formData")}}, then do what we like with it (below we post it to the server using {{domxref("XMLHttpRequest")}}).</p>
+When the `formdata` event fires we can access the {{domxref("FormData")}} object using {{domxref("FormDataEvent.formData")}}, then do what we like with it (below we post it to the server using {{domxref("XMLHttpRequest")}}).
 
-<pre class="brush: js">formElem.addEventListener('formdata', (e) =&gt; {
+```js
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -162,21 +169,18 @@ form.addEventListener('submit', function(ev) {
   let request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>formdata</code> event and {{domxref("FormDataEvent")}} object are available in Chrome from version 77 (and other equivalent Chromiums), and Firefox 72 (first available behind the <code>dom.formdata.event.enabled</code> pref in Firefox 71).</p>
-</div>
+> **Note:** The `formdata` event and {{domxref("FormDataEvent")}} object are available in Chrome from version 77 (and other equivalent Chromiums), and Firefox 72 (first available behind the `dom.formdata.event.enabled` pref in Firefox 71).
 
-<h2 id="Submitting_forms_and_uploading_files_via_AJAX_without_FormData_objects">Submitting forms and uploading files via AJAX <em>without</em> <code>FormData</code> objects</h2>
+## Submitting forms and uploading files via AJAX _without_ `FormData` objects
 
-<p>If you want to know how to serialize and submit a form via <a href="/en-US/docs/Web/Guide/AJAX">AJAX</a> <em>without</em> using FormData objects, please read <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">this paragraph</a>.</p>
+If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li>{{domxref("HTMLFormElement")}}</li>
- <li>{{domxref("Blob")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a></li>
-</ul>
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- {{domxref("HTMLFormElement")}}
+- {{domxref("Blob")}}
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)

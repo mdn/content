@@ -13,37 +13,33 @@ tags:
   - Video
 browser-compat: api.MediaError
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>MediaError</strong></code> interface represents an error which occurred while handling media in an HTML media element based on {{domxref("HTMLMediaElement")}}, such as {{HTMLElement("audio")}} or {{HTMLElement("video")}}.</p>
+The **`MediaError`** interface represents an error which occurred while handling media in an HTML media element based on {{domxref("HTMLMediaElement")}}, such as {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
-<p>A <code>MediaError</code> object describes the error in general terms using a numeric <code>code</code> categorizing the kind of error, and a <code>message</code>, which provides specific diagnostics about what went wrong.</p>
+A `MediaError` object describes the error in general terms using a numeric `code` categorizing the kind of error, and a `message`, which provides specific diagnostics about what went wrong.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't inherit any properties.</em></p>
+_This interface doesn't inherit any properties._
 
-<dl>
- <dt>{{domxref("MediaError.code")}}</dt>
- <dd>A number which represents the general type of error that occurred, as follows: {{page("/en-US/docs/Web/API/MediaError/code", "Media error code constants")}}</dd>
- <dt>{{domxref("MediaError.message")}}</dt>
- <dd>A {{domxref("DOMString")}} object containing a human-readable string which provides <em>specific diagnostic information</em> to help the reader understand the error condition which occurred; specifically, it isn't a summary of what the error code means, but actual diagnostic information to help in understanding what exactly went wrong. This text and its format is not defined by the specification and will vary from one {{Glossary("user agent")}} to another. If no diagnostics are available, or no explanation can be provided, this value is an empty string (<code>""</code>).</dd>
-</dl>
+- {{domxref("MediaError.code")}}
+  - : A number which represents the general type of error that occurred, as follows: {{page("/en-US/docs/Web/API/MediaError/code", "Media error code constants")}}
+- {{domxref("MediaError.message")}}
+  - : A {{domxref("DOMString")}} object containing a human-readable string which provides _specific diagnostic information_ to help the reader understand the error condition which occurred; specifically, it isn't a summary of what the error code means, but actual diagnostic information to help in understanding what exactly went wrong. This text and its format is not defined by the specification and will vary from one {{Glossary("user agent")}} to another. If no diagnostics are available, or no explanation can be provided, this value is an empty string (`""`).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement or inherit any methods, and has none of its own.</em></p>
+_This interface doesn't implement or inherit any methods, and has none of its own._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLMediaElement.error")}}</li>
-</ul>
+- {{domxref("HTMLMediaElement.error")}}

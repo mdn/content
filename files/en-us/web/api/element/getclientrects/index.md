@@ -2,187 +2,193 @@
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
 tags:
-- API
-- CSSOM View
-- Element
-- Method
-- Reference
-- clientHeight
-- getBoundingClientRect
-- getClientRects
-- offsetHeight
-- scrollHeight
+  - API
+  - CSSOM View
+  - Element
+  - Method
+  - Reference
+  - clientHeight
+  - getBoundingClientRect
+  - getClientRects
+  - offsetHeight
+  - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getClientRects()</code></strong> method of the {{domxref("Element")}}
-  interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
-  bounding rectangles for each <a
-    href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS border
-    box</a> in a client.</p>
+The **`getClientRects()`** method of the {{domxref("Element")}}
+interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
+bounding rectangles for each [CSS border
+box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) in a client.
 
-<p>Most elements only have one border box each, but a multiline <a
-    href="/en-US/docs/Web/HTML/Inline_elements">inline element</a> (such as a multiline
-  {{HTMLElement("span")}} element, by default) has a border box around each line.</p>
+Most elements only have one border box each, but a multiline [inline element](/en-US/docs/Web/HTML/Inline_elements) (such as a multiline
+{{HTMLElement("span")}} element, by default) has a border box around each line.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>rectCollection</var> = <var>object</var>.getClientRects();</pre>
+```js
+let rectCollection = object.getClientRects();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The returned value is a collection of {{DOMxRef("DOMRect")}} objects, one for each CSS
-  border box associated with the element. Each {{DOMxRef("DOMRect")}} object contains
-  read-only <code>left</code>, <code>top</code>, <code>right</code> and
-  <code>bottom</code> properties describing the border box, in pixels, with the top-left
-  relative to the top-left of the viewport. For tables with captions, the caption is
-  included even though it's outside the border box of the table. When called on SVG
-  elements other than an outer-<code>&lt;svg&gt;</code>, the "viewport" that the resulting
-  rectangles are relative to is the viewport that the element's
-  outer-<code>&lt;svg&gt;</code> establishes (and to be clear, the rectangles are also
-  transformed by the outer-<code>&lt;svg&gt;</code>'s <code>viewBox</code> transform, if
-  any).</p>
+The returned value is a collection of {{DOMxRef("DOMRect")}} objects, one for each CSS
+border box associated with the element. Each {{DOMxRef("DOMRect")}} object contains
+read-only `left`, `top`, `right` and
+`bottom` properties describing the border box, in pixels, with the top-left
+relative to the top-left of the viewport. For tables with captions, the caption is
+included even though it's outside the border box of the table. When called on SVG
+elements other than an outer-`<svg>`, the "viewport" that the resulting
+rectangles are relative to is the viewport that the element's
+outer-`<svg>` establishes (and to be clear, the rectangles are also
+transformed by the outer-`<svg>`'s `viewBox` transform, if
+any).
 
-<p>Originally, Microsoft intended this method to return a <code>TextRectangle</code>
-  object for each <em>line</em> of text. However, the CSSOM working draft specifies that
-  it returns a {{DOMxRef("DOMRect")}} for each <em>border box</em>. For an inline element,
-  the two definitions are the same. But for a block element, Mozilla will return only a
-  single rectangle.</p>
+Originally, Microsoft intended this method to return a `TextRectangle`
+object for each _line_ of text. However, the CSSOM working draft specifies that
+it returns a {{DOMxRef("DOMRect")}} for each _border box_. For an inline element,
+the two definitions are the same. But for a block element, Mozilla will return only a
+single rectangle.
 
-<p>{{Fx_MinVersion_Note(3.5, "Firefox 3.5 adds <code>width</code> and <code>height</code>
-  properties to the <code>TextRectangle</code> object.")}}</p>
+{{Fx_MinVersion_Note(3.5, "Firefox 3.5 adds <code>width</code> and <code>height</code>
+  properties to the <code>TextRectangle</code> object.")}}
 
-<p>The amount of scrolling that has been done of the viewport area (or any other
-  scrollable element) is taken into account when computing the rectangles.</p>
+The amount of scrolling that has been done of the viewport area (or any other
+scrollable element) is taken into account when computing the rectangles.
 
-<p>The returned rectangles do not include the bounds of any child elements that might
-  happen to overflow.</p>
+The returned rectangles do not include the bounds of any child elements that might
+happen to overflow.
 
-<p>For HTML {{HtmlElement("area")}} elements, SVG elements that do not render anything
-  themselves, <code>display:none</code> elements, and generally any elements that are not
-  directly rendered, an empty list is returned.</p>
+For HTML {{HtmlElement("area")}} elements, SVG elements that do not render anything
+themselves, `display:none` elements, and generally any elements that are not
+directly rendered, an empty list is returned.
 
-<p>Rectangles are returned even for CSS boxes that have empty border-boxes. The
-  <code>left</code>, <code>top</code>, <code>right</code>, and <code>bottom</code>
-  coordinates can still be meaningful.</p>
+Rectangles are returned even for CSS boxes that have empty border-boxes. The
+`left`, `top`, `right`, and `bottom`
+coordinates can still be meaningful.
 
-<p>Fractional pixel offsets are possible.</p>
+Fractional pixel offsets are possible.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples draw client rects in various colors. Note that the JavaScript function
-  that paints the client rects is connected to the markup via the class
-  <code>withClientRectsOverlay</code>.</p>
+These examples draw client rects in various colors. Note that the JavaScript function
+that paints the client rects is connected to the markup via the class
+`withClientRectsOverlay`.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Example 1: This HTML creates three paragraphs with a <code>&lt;span&gt;</code> inside,
-  each embedded in a <code>&lt;div&gt;</code> block. Client rects are painted for the
-  paragraph in the second block, and for the <code>&lt;span&gt;</code> element in the
-  third block.</p>
+Example 1: This HTML creates three paragraphs with a `<span>` inside,
+each embedded in a `<div>` block. Client rects are painted for the
+paragraph in the second block, and for the `<span>` element in the
+third block.
 
-<pre class="brush: html">&lt;h3&gt;A paragraph with a span inside&lt;/h3&gt;
-&lt;p&gt;Both the span and the paragraph have a border set. The
+```html
+<h3>A paragraph with a span inside</h3>
+<p>Both the span and the paragraph have a border set. The
   client rects are in red. Note that the p has onlyone border
-  box, while the span has multiple border boxes.&lt;/p&gt;
+  box, while the span has multiple border boxes.</p>
 
-&lt;div&gt;
-  &lt;strong&gt;Original&lt;/strong&gt;
-  &lt;p&gt;
-    &lt;span&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
+<div>
+  <strong>Original</strong>
+  <p>
+    <span>Paragraph that spans multiple lines</span>
+  </p>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;p's rect&lt;/strong&gt;
-  &lt;p class="withClientRectsOverlay"&gt;
-    &lt;span&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
+<div>
+  <strong>p's rect</strong>
+  <p class="withClientRectsOverlay">
+    <span>Paragraph that spans multiple lines</span>
+  </p>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;span's rect&lt;/strong&gt;
-  &lt;p&gt;
-    &lt;span class="withClientRectsOverlay"&gt;Paragraph that spans multiple lines&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+<div>
+  <strong>span's rect</strong>
+  <p>
+    <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+  </p>
+</div>
+```
 
-<p>Example 2: This HTML creates three ordered lists. Client rects are painted for the
-  <code>&lt;ol&gt;</code> in the second block, and for each <code>&lt;li&gt;</code>
-  element in the third block.</p>
+Example 2: This HTML creates three ordered lists. Client rects are painted for the
+`<ol>` in the second block, and for each `<li>`
+element in the third block.
 
-<pre class="brush: html">&lt;h3&gt;A list&lt;/h3&gt;
-&lt;p&gt;Note that the border box doesn't include the number, so
-  neither do the client rects.&lt;/p&gt;
+```html
+<h3>A list</h3>
+<p>Note that the border box doesn't include the number, so
+  neither do the client rects.</p>
 
-&lt;div&gt;
-  &lt;strong&gt;Original&lt;/strong&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+<div>
+  <strong>Original</strong>
+  <ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ol>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;ol's rect&lt;/strong&gt;
-  &lt;ol class="withClientRectsOverlay"&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
+<div>
+  <strong>ol's rect</strong>
+  <ol class="withClientRectsOverlay">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ol>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;each li's rect&lt;/strong&gt;
-  &lt;ol&gt;
-    &lt;li class="withClientRectsOverlay"&gt;Item 1&lt;/li&gt;
-    &lt;li class="withClientRectsOverlay"&gt;Item 2&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</pre>
+<div>
+  <strong>each li's rect</strong>
+  <ol>
+    <li class="withClientRectsOverlay">Item 1</li>
+    <li class="withClientRectsOverlay">Item 2</li>
+  </ol>
+</div>
+```
 
-<p>Example 3: This HTML creates two tables with captions. Client rects are painted for the
-  <code>&lt;table&gt;</code> in the second block.</p>
+Example 3: This HTML creates two tables with captions. Client rects are painted for the
+`<table>` in the second block.
 
-<pre class="brush: html">&lt;h3&gt;A table with a caption&lt;/h3&gt;
-&lt;p&gt;Although the table's border box doesn't include the
-  caption, the client rects do include the caption.&lt;/p&gt;
+```html
+<h3>A table with a caption</h3>
+<p>Although the table's border box doesn't include the
+  caption, the client rects do include the caption.</p>
 
-&lt;div&gt;
-  &lt;strong&gt;Original&lt;/strong&gt;
-  &lt;table&gt;
-    &lt;caption&gt;caption&lt;/caption&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;&lt;th&gt;thead&lt;/th&gt;&lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;&lt;td&gt;tbody&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
+<div>
+  <strong>Original</strong>
+  <table>
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
+</div>
 
-&lt;div&gt;
-  &lt;strong&gt;table's rect&lt;/strong&gt;
-  &lt;table class="withClientRectsOverlay"&gt;
-    &lt;caption&gt;caption&lt;/caption&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;&lt;th&gt;thead&lt;/th&gt;&lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;&lt;td&gt;tbody&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</pre>
+<div>
+  <strong>table's rect</strong>
+  <table class="withClientRectsOverlay">
+    <caption>caption</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The CSS draws borders around the paragraph and the <code>&lt;span&gt;</code> inside
-  each <code>&lt;div&gt;</code> block for the first example, around the
-  <code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code> for the second example, and around
-  <code>&lt;table&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>
-  elements for the third example.</p>
+The CSS draws borders around the paragraph and the `<span>` inside
+each `<div>` block for the first example, around the
+`<ol>` and `<li>` for the second example, and around
+`<table>`, `<th>`, and `<td>`
+elements for the third example.
 
-<pre class="brush: css">strong {
+```css
+strong {
   text-align: center;
 }
 div {
@@ -194,14 +200,16 @@ div p, ol, table {
 }
 span, li, th, td {
   border: 1px solid green;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The JavaScript code draws the client rects for all HTML elements that have CSS class
-  <code>withClientRectsOverlay</code> assigned.</p>
+The JavaScript code draws the client rects for all HTML elements that have CSS class
+`withClientRectsOverlay` assigned.
 
-<pre class="brush: js">function addClientRectsOverlay(elt) {
+```js
+function addClientRectsOverlay(elt) {
   /* Absolutely position a div over each client rect so that its border width
      is the same as the rectangle's width.
      Note: the overlays will be out of place if the user resizes or zooms. */
@@ -227,29 +235,28 @@ span, li, th, td {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
   var elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (var i = 0; i &lt; elt.length; i++) {
+  for (var i = 0; i < elt.length; i++) {
     addClientRectsOverlay(elt[i]);
   }
-})();</pre>
+})();
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', 680, 650)}}</p>
+{{EmbedLiveSample('Examples', 680, 650)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>getClientRects()</code> was first introduced in the MS IE DHTML object model.</p>
+`getClientRects()` was first introduced in the MS IE DHTML object model.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Element.getBoundingClientRect()")}}</li>
-</ul>
+- {{DOMxRef("Element.getBoundingClientRect()")}}

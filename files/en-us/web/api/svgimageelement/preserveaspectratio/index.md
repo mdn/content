@@ -2,38 +2,39 @@
 title: SVGImageElement.preserveAspectRatio
 slug: Web/API/SVGImageElement/preserveAspectRatio
 tags:
-- API
-- Image
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- preserveAspectRatio
+  - API
+  - Image
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - preserveAspectRatio
 browser-compat: api.SVGImageElement.preserveAspectRatio
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>preserveAspectRatio</code></strong> read-only
-  property of the {{domxref("SVGImageElement")}} interface returns an
-  {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the
-  {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}}
-  element.</p>
+The **`preserveAspectRatio`** read-only
+property of the {{domxref("SVGImageElement")}} interface returns an
+{{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the
+{{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("image")}}
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var svgAnimatedPreerveAspectRatio = <em>svgImageElement</em>.preserveAspectRatio;</pre>
+```js
+var svgAnimatedPreerveAspectRatio = svgImageElement.preserveAspectRatio;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedPreserveAspectRatio")}}.</p>
+An {{domxref("SVGAnimatedPreserveAspectRatio")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,50 +2,49 @@
 title: IDBCursor.update()
 slug: Web/API/IDBCursor/update
 tags:
-- API
-- Database
-- IDBCursor
-- IndexedDB
-- Method
-- Reference
-- Storage
-- Update
+  - API
+  - Database
+  - IDBCursor
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - Update
 browser-compat: api.IDBCursor.update
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>update()</code></strong> method of the {{domxref("IDBCursor")}}
-  interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-  updates the value at the current position of the cursor in the object store. If the
-  cursor points to a record that has just been deleted, a new record is created.</p>
+The **`update()`** method of the {{domxref("IDBCursor")}}
+interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+updates the value at the current position of the cursor in the object store. If the
+cursor points to a record that has just been deleted, a new record is created.
 
-<p>Be aware that you can't call <code>update()</code> (or
-  {{domxref("IDBCursor.delete()")}}) on cursors obtained from
-  {{domxref("IDBIndex.openKeyCursor()")}}. For such needs, you have to use
-  {{domxref("IDBIndex.openCursor()")}} instead.</p>
+Be aware that you can't call `update()` (or
+{{domxref("IDBCursor.delete()")}}) on cursors obtained from
+{{domxref("IDBIndex.openKeyCursor()")}}. For such needs, you have to use
+{{domxref("IDBIndex.openCursor()")}} instead.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>anIDBRequest</em> = <em>myIDBCursor</em>.update(<em>value</em>);</pre>
+```js
+var anIDBRequest = myIDBCursor.update(value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>The new value to be stored at the current position.</dd>
-</dl>
+- value
+  - : The new value to be stored at the current position.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 <table class="no-markdown">
   <thead>
@@ -65,45 +64,50 @@ browser-compat: api.IDBCursor.update
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The cursor was created using {{domxref("IDBIndex.openKeyCursor")}}, is currently
-        being iterated, or has iterated past its end.</td>
+      <td>
+        The cursor was created using
+        {{domxref("IDBIndex.openKeyCursor")}}, is currently being
+        iterated, or has iterated past its end.
+      </td>
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>The underlying object store uses in-line keys and the property in the value at
-          the object store's key path does not match the key in this cursor's position.</td>
+      <td>
+        The underlying object store uses in-line keys and the property in the
+        value at the object store's key path does not match the key in this
+        cursor's position.
+      </td>
     </tr>
     <tr>
       <td><code>DataCloneError</code></td>
-      <td>The data being stored could not be cloned by the internal structured cloning
-        algorithm.</td>
+      <td>
+        The data being stored could not be cloned by the internal structured
+        cloning algorithm.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a
-  cursor to iterate through all the records in the object store. If the
-  <code>albumTitle</code> of the current cursor is "A farewell to kings", we update year
-  the album was released using <code>const request = cursor.update();</code>.</p>
+In this simple fragment we create a transaction, retrieve an object store, then use a
+cursor to iterate through all the records in the object store. If the
+`albumTitle` of the current cursor is "A farewell to kings", we update year
+the album was released using `const request = cursor.update();`.
 
-<p>Note that you cannot change primary keys using <code>cursor.update()</code>, hence us
-  not changing the album title; this would ruin the integrity of the data. In such a
-  situation, you would have to delete the record altogether and then add a new one using
-  {{domxref("IDBObjectStore.add")}}. Note also that you can't directly put
-  <code>cursor.value</code> into an update call, hence the below example using an
-  intermediary <code>updateData</code> variable.</p>
+Note that you cannot change primary keys using `cursor.update()`, hence us
+not changing the album title; this would ruin the integrity of the data. In such a
+situation, you would have to delete the record altogether and then add a new one using
+{{domxref("IDBObjectStore.add")}}. Note also that you can't directly put
+`cursor.value` into an update call, hence the below example using an
+intermediary `updateData` variable.
 
-<p>The cursor does not require us to select the data based
-    on a key; we can just grab all of it. Also note that in each iteration of the loop,
-    you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a
-      class="external external-icon"
-      href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor"
-      >IDBCursor example</a> (<a class="external external-icon"
-    href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
+The cursor does not require us to select the data based
+on a key; we can just grab all of it. Also note that in each iteration of the loop,
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
-<pre class="brush: js">function updateResult() {
+```js
+function updateResult() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -122,34 +126,31 @@ browser-compat: api.IDBCursor.update
       };
 
       const listItem = document.createElement('li');
-      listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
+      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
       list.appendChild(listItem);
       cursor.continue();
     } else {
       console.log('Entries displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -2,45 +2,41 @@
 title: mssitemodejumplistitemremoved event
 slug: Web/API/mssitemodejumplistitemremoved
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>mssitemodejumplistitemremoved</strong></code> event occurs when <code>msSiteModeShowJumpList</code> is called and an item has been removed from a <em>Jump List</em> by the user.</p>
+The **`mssitemodejumplistitemremoved`** event occurs when `msSiteModeShowJumpList` is called and an item has been removed from a _Jump List_ by the user.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">object.addEventListener("mssitemodejumplistitemremoved", handler, useCapture)</pre>
+```js
+object.addEventListener("mssitemodejumplistitemremoved", handler, useCapture)
+```
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt>Synchronous</dt>
- <dd>No</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
-</dl>
+- Synchronous
+  - : No
+- Bubbles
+  - : No
+- Cancelable
+  - : No
 
-<h3 id="Note">Note</h3>
+### Note
 
-<p>This event is raised once for every item that has been removed since the last time <code>msSiteModeShowJumpList </code>was called. This event is not triggered if <code>msSiteModeClearJumpList </code>has been called.</p>
+This event is raised once for every item that has been removed since the last time `msSiteModeShowJumpList `was called. This event is not triggered if `msSiteModeClearJumpList `has been called.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><strong>pEvtObj</strong> [in]</p>
+**pEvtObj** \[in]
 
-<p>Type: <em>IHTMLEventObj</em></p>
+Type: _IHTMLEventObj_
 
-<p>Pointer to an IHTMLEventObj interface for the current event.</p>
+Pointer to an IHTMLEventObj interface for the current event.
 
+## See also
 
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

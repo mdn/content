@@ -1,79 +1,75 @@
 ---
-title: 'WebGL2RenderingContext.clearBuffer[fiuv]()'
+title: WebGL2RenderingContext.clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.clearBufferiv
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.clearBuffer[fiuv]()</code></strong> methods of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> clear buffers from the
-  currently bound framebuffer.</p>
+The **`WebGL2RenderingContext.clearBuffer[fiuv]()`** methods of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) clear buffers from the
+currently bound framebuffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void gl.clearBufferfv(buffer, drawbuffer, values, optional srcOffset);
+```js
+void gl.clearBufferfv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferiv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferuiv(buffer, drawbuffer, values, optional srcOffset);
 void gl.clearBufferfi(buffer, drawbuffer, depth, stencil);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>buffer</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffer to clear. Possible values are:
-    <ul>
-      <li><code>gl.COLOR</code>: Color buffer.</li>
-      <li><code>gl.DEPTH</code>: Depth buffer.</li>
-      <li><code>gl.STENCIL</code>: Stencil buffer.</li>
-      <li><code>gl.DEPTH_STENCIL</code>: clears depth and stencil buffers (used with
-        <code>clearBufferfi</code>).</li>
-    </ul>
-  </dd>
-  <dt><code>drawBuffer</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the draw buffer to clear.</dd>
-  <dt><code>values</code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLint")}}, {{domxref("WebGL_API/Types", "GLuint")}}
-    or {{domxref("WebGL_API/Types", "GLfloat")}} values or<br>
+- `buffer`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffer to clear. Possible values are:
+
+    - `gl.COLOR`: Color buffer.
+    - `gl.DEPTH`: Depth buffer.
+    - `gl.STENCIL`: Stencil buffer.
+    - `gl.DEPTH_STENCIL`: clears depth and stencil buffers (used with
+      `clearBufferfi`).
+
+- `drawBuffer`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the draw buffer to clear.
+- `values`
+  - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLint")}}, {{domxref("WebGL_API/Types", "GLuint")}}
+    or {{domxref("WebGL_API/Types", "GLfloat")}} values or
     an {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}} or {{jsxref("Float32Array")}}
-    specifying the values to clear to.</dd>
-  <dt><code>depth</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the value to clear a depth render buffer to.
-  </dd>
-  <dt><code>stencil</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the value to clear the stencil render buffer to.
-  </dd>
-</dl>
+    specifying the values to clear to.
+- `depth`
+  - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the value to clear a depth render buffer to.
+- `stencil`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the value to clear the stencil render buffer to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.clearBufferiv(gl.COLOR, 0, new Int32Array([r, g, b, a]));
+```js
+gl.clearBufferiv(gl.COLOR, 0, new Int32Array([r, g, b, a]));
 gl.clearBufferuiv(gl.COLOR, 0, new Uint32Array([r, g, b, a]));
 gl.clearBufferfv(gl.COLOR, 0, new Float32Array([r, g, b, a]));
 gl.clearBufferfv(gl.COLOR, 0, [0.0, 0.0, 0.0, 0.0]);
 gl.clearBufferfi(gl.DEPTH_STENCIL, 0, 1.0, 0);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.drawBuffers()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.drawBuffers()")}}

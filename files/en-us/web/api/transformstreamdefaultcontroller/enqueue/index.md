@@ -9,40 +9,40 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.enqueue
 ---
-<div>{{DefaultAPISidebar("Streams API")}}</div>
+{{DefaultAPISidebar("Streams API")}}
 
-<p>The <strong><code>enqueue()</code></strong> method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.</p>
+The **`enqueue()`** method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.
 
-<p>For more information on readable streams and chunks see <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using Readable Streams</a>.</p>
+For more information on readable streams and chunks see [Using Readable Streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">TransformStreamDefaultController.enqueue(chunk);</pre>
+    TransformStreamDefaultController.enqueue(chunk);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>chunk</code></dt>
-  <dd>The chunk being queued. A chunk is a single piece of data. It can be any type of data, and a stream can contain chunks of different types.</dd>
-</dl>
+- `chunk`
+  - : The chunk being queued. A chunk is a single piece of data. It can be any type of data, and a stream can contain chunks of different types.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example an encoded chunk is passed to the queue using the <code>enqueue()</code> method.</p>
+In this example an encoded chunk is passed to the queue using the `enqueue()` method.
 
-<pre class="brush: js">const textEncoderStream = new TransformStream({
+```js
+const textEncoderStream = new TransformStream({
   transform(chunk, controller) {
     controller.enqueue(new TextEncoder().encode(chunk));
   },
   flush(controller) {
     controller.terminate();
   },
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

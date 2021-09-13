@@ -9,66 +9,68 @@ tags:
   - Reference
 browser-compat: api.Headers.Headers
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <code><strong>Headers()</strong></code> constructor creates a new
-  {{domxref("Headers")}} object.</p>
+The **`Headers()`** constructor creates a new
+{{domxref("Headers")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myHeaders</em> = new Headers(<em>init</em>);</pre>
+```js
+var myHeaders = new Headers(init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>init</code> {{optional_inline}}</dt>
-  <dd>An object containing any <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>
-    that you want to pre-populate your <code>Headers</code> object with. This can be a
+- `init` {{optional_inline}}
+  - : An object containing any [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+    that you want to pre-populate your `Headers` object with. This can be a
     simple object literal with {{jsxref("String")}} values; or an existing
-    <code>Headers</code> object. In the last case, the new <code>Headers</code> object
-    copies its data from the existing <code>Headers</code> object.</dd>
-</dl>
+    `Headers` object. In the last case, the new `Headers` object
+    copies its data from the existing `Headers` object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Creating an empty <code>Headers</code> object is simple:</p>
+Creating an empty `Headers` object is simple:
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>You could add a header to this using {{domxref("Headers.append")}}:</p>
+You could add a header to this using {{domxref("Headers.append")}}:
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>Or you can add the headers you want as the <code>Headers</code> object is created. In
-  the following snippet we create a new {{domxref("Headers")}} object, adding some headers
-  by passing the constructor an init object as an argument:</p>
+Or you can add the headers you want as the `Headers` object is created. In
+the following snippet we create a new {{domxref("Headers")}} object, adding some headers
+by passing the constructor an init object as an argument:
 
-<pre class="brush: js">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
-var myHeaders = new Headers(httpHeaders);</pre>
+```js
+var httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
+var myHeaders = new Headers(httpHeaders);
+```
 
-<p>You can now create another <code>Headers</code> object, passing it the first
-  <code>Headers</code> object as its init object:</p>
+You can now create another `Headers` object, passing it the first
+`Headers` object as its init object:
 
-<pre
-  class="brush: js">var secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>
+```js
+var secondHeadersObj = new Headers(myHeaders);
+secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

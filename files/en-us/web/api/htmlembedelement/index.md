@@ -9,49 +9,43 @@ tags:
   - Reference
 browser-compat: api.HTMLEmbedElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLEmbedElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("embed")}} elements.</p>
+The **`HTMLEmbedElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("embed")}} elements.
 
-<div class="note">
-<p><strong>Note:</strong> This topic describes the <code>HTMLEmbedElement</code> interface as defined in the standard. It does not address earlier, non-standardized version of the interface.</p>
-</div>
+> **Note:** This topic describes the `HTMLEmbedElement` interface as defined in the standard. It does not address earlier, non-standardized version of the interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"center"</code>, and <code>"justify"</code>.</dd>
- <dt>{{domxref("HTMLEmbedElement.height")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("height", "embed")}} HTML attribute, containing the displayed height of the resource.</dd>
- <dt>{{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of the embedded object.</dd>
- <dt>{{domxref("HTMLEmbedElement.src")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "embed")}} HTML attribute, containing the address of the resource.</dd>
- <dt>{{domxref("HTMLEmbedElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "embed")}} HTML attribute, containing the type of the resource.</dd>
- <dt>{{domxref("HTMLEmbedElement.width")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.</dd>
-</dl>
+- {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"center"`, and `"justify"`.
+- {{domxref("HTMLEmbedElement.height")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("height", "embed")}} HTML attribute, containing the displayed height of the resource.
+- {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the name of the embedded object.
+- {{domxref("HTMLEmbedElement.src")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "embed")}} HTML attribute, containing the address of the resource.
+- {{domxref("HTMLEmbedElement.type")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("type", "embed")}} HTML attribute, containing the type of the resource.
+- {{domxref("HTMLEmbedElement.width")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "embed")}} HTML attribute, containing the displayed width of the resource.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("embed") }}</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("embed") }}

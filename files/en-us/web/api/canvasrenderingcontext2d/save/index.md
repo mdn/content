@@ -2,70 +2,72 @@
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.save
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.save()</code></strong>
-  method of the Canvas 2D API saves the entire state of the canvas by pushing the current
-  state onto a stack.</p>
+The
+**`CanvasRenderingContext2D.save()`**
+method of the Canvas 2D API saves the entire state of the canvas by pushing the current
+state onto a stack.
 
-<h3 id="The_drawing_state">The drawing state</h3>
+### The drawing state
 
-<p>The drawing state that gets saved onto a stack consists of:</p>
+The drawing state that gets saved onto a stack consists of:
 
-<ul>
-  <li>The current transformation matrix.</li>
-  <li>The current clipping region.</li>
-  <li>The current dash list.</li>
-  <li>The current values of the following attributes:
-    {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}},
-    {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}},
-    {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}},
-    {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}},
-    {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}},
-    {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}},
-    {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}},
-    {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}},
-    {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}},
-    {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}},
-    {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
-    {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}},
-    {{domxref("CanvasRenderingContext2D.globalCompositeOperation",
+- The current transformation matrix.
+- The current clipping region.
+- The current dash list.
+- The current values of the following attributes:
+  {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}},
+  {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}},
+  {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}},
+  {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}},
+  {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}},
+  {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}},
+  {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}},
+  {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}},
+  {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}},
+  {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}},
+  {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
+  {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}},
+  {{domxref("CanvasRenderingContext2D.globalCompositeOperation",
     "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}},
-    {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}},
-    {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},
-    {{domxref("CanvasRenderingContext2D.direction", "direction")}},
-    {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled",
-    "imageSmoothingEnabled")}}.</li>
-</ul>
+  {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}},
+  {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},
+  {{domxref("CanvasRenderingContext2D.direction", "direction")}},
+  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled",
+    "imageSmoothingEnabled")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.save();</pre>
+```js
+void ctx.save();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Saving_the_drawing_state">Saving the drawing state</h3>
+### Saving the drawing state
 
-<p>This example uses the <code>save()</code> method to save the default state and
-  <code>restore()</code> to restore it later, so that you are able to draw a rect with the
-  default state later.</p>
+This example uses the `save()` method to save the default state and
+`restore()` to restore it later, so that you are able to draw a rect with the
+default state later.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Save the default state
@@ -78,23 +80,21 @@ ctx.fillRect(10, 10, 100, 100);
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Saving_the_drawing_state', 700, 180) }}</p>
+{{ EmbedLiveSample('Saving_the_drawing_state', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.restore()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.restore()")}}

@@ -2,140 +2,131 @@
 title: RTCRtpSender.replaceTrack()
 slug: Web/API/RTCRtpSender/replaceTrack
 tags:
-- Audio
-- Media
-- Method
-- RTCRtpSender
-- RTP
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- replace
-- replaceTrack
-- track
+  - Audio
+  - Media
+  - Method
+  - RTCRtpSender
+  - RTP
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - replace
+  - replaceTrack
+  - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpSender")}} method
-    <code><strong>replaceTrack()</strong></code> replaces the track currently being used
-    as the sender's source with a new {{domxref("MediaStreamTrack")}}.</p>
+The {{domxref("RTCRtpSender")}} method
+**`replaceTrack()`** replaces the track currently being used
+as the sender's source with a new {{domxref("MediaStreamTrack")}}.
 
-<p>The new
-  track must be of the same media kind (audio, video, etc) and switching the track should
-  not require negotiation.</p>
+The new
+track must be of the same media kind (audio, video, etc) and switching the track should
+not require negotiation.
 
-<p>Among the use cases for <code>replaceTrack()</code> is the common need to switch
-  between the rear- and front-facing cameras on a phone. With <code>replaceTrack()</code>,
-  you can have a track object for each camera and switch between the two as needed. See
-  the example {{anch("Switching cameras")}} below.</p>
+Among the use cases for `replaceTrack()` is the common need to switch
+between the rear- and front-facing cameras on a phone. With `replaceTrack()`,
+you can have a track object for each camera and switch between the two as needed. See
+the example {{anch("Switching cameras")}} below.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>trackReplacedPromise</em> = <em>sender</em>.replaceTrack(<em>newTrack</em>);</pre>
+```js
+trackReplacedPromise = sender.replaceTrack(newTrack);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newTrack</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("MediaStreamTrack")}} specifying the track with which to replace the
-    <code>RTCRtpSender</code>'s current source track. The new track's
+- `newTrack` {{optional_inline}}
+  - : A {{domxref("MediaStreamTrack")}} specifying the track with which to replace the
+    `RTCRtpSender`'s current source track. The new track's
     {{domxref("MediaStreamTrack.kind", "kind")}} must be the same as the current track's,
-    or the replace track request will fail.</dd>
-</dl>
+    or the replace track request will fail.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is fulfilled once the track has been successfully
-  replaced. The promise is rejected if the track cannot be replaced for any reason; this
-  is commonly because the change would require renegotiation of the codec, which is not
-  allowed (see {{anch("Things that require negotiation")}}).</p>
+A {{jsxref("Promise")}} which is fulfilled once the track has been successfully
+replaced. The promise is rejected if the track cannot be replaced for any reason; this
+is commonly because the change would require renegotiation of the codec, which is not
+allowed (see {{anch("Things that require negotiation")}}).
 
-<p>If <code>newTrack</code> was omitted or was <code>null</code>,
-  <code>replaceTrack()</code> stops the sender. No negotiation is required in this case.
-</p>
+If `newTrack` was omitted or was `null`,
+`replaceTrack()` stops the sender. No negotiation is required in this case.
 
-<p>When the promise is fulfilled, the fulfillment handler receives a value of
-  <code>undefined</code>.</p>
+When the promise is fulfilled, the fulfillment handler receives a value of
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If the returned promise is rejected, one of the following exceptions is provided to the
-  rejection handler:</p>
+If the returned promise is rejected, one of the following exceptions is provided to the
+rejection handler:
 
-<dl>
-  <dt><code>InvalidModificationError</code></dt>
-  <dd>Replacing the <code>RTCRtpSende<em>r</em></code>'s current track with the new one
-    would require negotiation.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The track on which this method was called is stopped rather than running.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>The new track's <code>kind</code> doesn't match the original track.</dd>
-</dl>
+- `InvalidModificationError`
+  - : Replacing the `RTCRtpSender`'s current track with the new one
+    would require negotiation.
+- `InvalidStateError`
+  - : The track on which this method was called is stopped rather than running.
+- `TypeError`
+  - : The new track's `kind` doesn't match the original track.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Things_that_trigger_negotiation">Things that trigger negotiation</h3>
+### Things that trigger negotiation
 
-<p>Not all track replacements require renegotiation. In fact, even changes that seem huge
-  can be done without requiring negotation. Here are the changes that can trigger
-  negotiaton:</p>
+Not all track replacements require renegotiation. In fact, even changes that seem huge
+can be done without requiring negotation. Here are the changes that can trigger
+negotiaton:
 
-<ul>
-  <li>The new track has a resolution which is outside the bounds of the current track;
-    that is, the new track is either wider or taller than the current one.</li>
-  <li>The new track's frame rate is high enough to cause the codec's block rate to be
-    exceeded.</li>
-  <li>The new track is a video track and its raw or pre-encoded state differs from that of
-    the original track.</li>
-  <li>The new track is an audio track with a different number of channels fom the
-    original.</li>
-  <li>Media sources that have built-in encoders — such as hardware encoders — may not be
-    able to provide the negotiated codec. Software sources may not implement the
-    negotiated codec.</li>
-</ul>
+- The new track has a resolution which is outside the bounds of the current track;
+  that is, the new track is either wider or taller than the current one.
+- The new track's frame rate is high enough to cause the codec's block rate to be
+  exceeded.
+- The new track is a video track and its raw or pre-encoded state differs from that of
+  the original track.
+- The new track is an audio track with a different number of channels fom the
+  original.
+- Media sources that have built-in encoders — such as hardware encoders — may not be
+  able to provide the negotiated codec. Software sources may not implement the
+  negotiated codec.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Switching_video_cameras">Switching video cameras</h3>
+### Switching video cameras
 
-<pre><code>// example to change video camera, suppose selected value saved into window.selectedCamera
+    // example to change video camera, suppose selected value saved into window.selectedCamera
 
-navigator.mediaDevices
-  .getUserMedia({
-    video: {
-      deviceId: {
-        exact: window.selectedCamera
-      }
-    }
-  })
-  .then(function(stream) {
-    let videoTrack = stream.getVideoTracks()[0];
-    PCs.forEach(function(pc) {
-      var sender = pc.getSenders().find(function(s) {
-        return s.track.kind == videoTrack.kind;
+    navigator.mediaDevices
+      .getUserMedia({
+        video: {
+          deviceId: {
+            exact: window.selectedCamera
+          }
+        }
+      })
+      .then(function(stream) {
+        let videoTrack = stream.getVideoTracks()[0];
+        PCs.forEach(function(pc) {
+          var sender = pc.getSenders().find(function(s) {
+            return s.track.kind == videoTrack.kind;
+          });
+          console.log('found sender:', sender);
+          sender.replaceTrack(videoTrack);
+        });
+      })
+      .catch(function(err) {
+        console.error('Error happens:', err);
       });
-      console.log('found sender:', sender);
-      sender.replaceTrack(videoTrack);
-    });
-  })
-  .catch(function(err) {
-    console.error('Error happens:', err);
-  });</code>
-</pre>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

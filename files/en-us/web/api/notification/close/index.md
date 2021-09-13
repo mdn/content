@@ -2,51 +2,52 @@
 title: Notification.close()
 slug: Web/API/Notification/close
 tags:
-- API
-- Method
-- Notification
-- Notifications
-- Notifications API
-- Reference
-- close
+  - API
+  - Method
+  - Notification
+  - Notifications
+  - Notifications API
+  - Reference
+  - close
 browser-compat: api.Notification.close
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code>close()</code> method of the {{domxref("Notification")}} interface is used to
-  close/remove a previously displayed notification.</p>
+The `close()` method of the {{domxref("Notification")}} interface is used to
+close/remove a previously displayed notification.
 
-<div class="note">
-  <p><strong>Note:</strong> This API shouldn't be used just to have the notification
-    removed from the screen after a fixed delay since this method will also remove the
-    notification from any notification tray, preventing users from interacting with it
-    after it was initially shown. A valid use for this API would be to remove a
-    notification that is no longer relevant (e.g. the user already read the notification
-    on the webpage in the case of a messaging app or the following song is already playing
-    in a music app).</p>
-</div>
+> **Note:** This API shouldn't be used just to have the notification
+> removed from the screen after a fixed delay since this method will also remove the
+> notification from any notification tray, preventing users from interacting with it
+> after it was initially shown. A valid use for this API would be to remove a
+> notification that is no longer relevant (e.g. the user already read the notification
+> on the webpage in the case of a messaging app or the following song is already playing
+> in a music app).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Notification.close();</pre>
+```js
+Notification.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, we have a simple function that when called creates an
-  <code>options</code> object and then a new notification. At the end of the function, it
-  also calls <code>close()</code> inside a
-  {{domxref("EventTarget.addEventListener","addEventListener()")}} function to remove the
-  notification when the relevant content has been read on the webpage.</p>
+In the following snippet, we have a simple function that when called creates an
+`options` object and then a new notification. At the end of the function, it
+also calls `close()` inside a
+{{domxref("EventTarget.addEventListener","addEventListener()")}} function to remove the
+notification when the relevant content has been read on the webpage.
 
-<pre class="brush:js">function spawnNotification(theBody, theIcon, theTitle) {
+```js
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
     body: theBody,
     icon: theIcon
@@ -60,19 +61,17 @@ browser-compat: api.Notification.close
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

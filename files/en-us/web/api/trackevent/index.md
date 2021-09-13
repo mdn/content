@@ -12,45 +12,40 @@ tags:
   - Video
 browser-compat: api.TrackEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>TrackEvent</code></strong> interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are {{event("addtrack")}} and {{event("removetrack")}}.</p>
+The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are {{event("addtrack")}} and {{event("removetrack")}}.
 
-<p>It's important not to confuse <code>TrackEvent</code> with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.</p>
+It's important not to confuse `TrackEvent` with the {{domxref("RTCTrackEvent")}} interface, which is used for tracks which are part of an {{domxref("RTCPeerConnection")}}.
 
-<p>Events based on <code>TrackEvent</code> are always sent to one of the media track list types:</p>
+Events based on `TrackEvent` are always sent to one of the media track list types:
 
-<ul>
- <li>Events involving video tracks are always sent to the {{domxref("VideoTrackList")}} found in {{domxref("HTMLMediaElement.videoTracks")}}</li>
- <li>Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}</li>
- <li>Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.</li>
-</ul>
+- Events involving video tracks are always sent to the {{domxref("VideoTrackList")}} found in {{domxref("HTMLMediaElement.videoTracks")}}
+- Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}
+- Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("TrackEvent.TrackEvent", "TrackEvent()")}}</dt>
- <dd>Creates and initializes a new <code>TrackEvent</code> object with the event type specified, as well as optional additional properties.</dd>
-</dl>
+- {{domxref("TrackEvent.TrackEvent", "TrackEvent()")}}
+  - : Creates and initializes a new `TrackEvent` object with the event type specified, as well as optional additional properties.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>TrackEvent</code> is based on {{domxref("Event")}}, so properties of <code>Event</code> are also available on <code>TrackEvent</code> objects.</em></p>
+_`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are also available on `TrackEvent` objects._
 
-<dl>
- <dt>{{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}</dt>
- <dd>The DOM track object the event is in reference to. If not <code>null</code>, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).</dd>
-</dl>
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The DOM track object the event is in reference to. If not `null`, this is always an object of one of the media track types: {{domxref("AudioTrack")}}, {{domxref("VideoTrack")}}, or {{domxref("TextTrack")}}).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>TrackEvent</code> has no methods of its own; however, it is based on {{domxref("Event")}}, so it provides the methods available on <code>Event</code> objects.</em></p>
+_`TrackEvent` has no methods of its own; however, it is based on {{domxref("Event")}}, so it provides the methods available on `Event` objects._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets up a function, <code>handleTrackEvent()</code>, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.</p>
+This example sets up a function, `handleTrackEvent()`, which is called for any {{event("addtrack")}} or {{event("removetrack")}} event on the first {{HTMLElement("video")}} element found in the document.
 
-<pre class="brush: js">var videoElem = document.querySelector("video");
+```js
+var videoElem = document.querySelector("video");
 
 videoElem.videoTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.videoTracks.addEventListener("removetrack", handleTrackEvent, false);
@@ -81,14 +76,14 @@ function handleTrackEvent(event) {
       break;
   }
 }
-</pre>
+```
 
-<p>The event handler uses the JavaScript <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></code> operator to determine which type of track the event occurred on, then outputs to console a message indicating what kind of track it is and whether it's being added to or removed from the element.</p>
+The event handler uses the JavaScript [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to determine which type of track the event occurred on, then outputs to console a message indicating what kind of track it is and whether it's being added to or removed from the element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

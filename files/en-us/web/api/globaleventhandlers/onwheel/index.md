@@ -2,55 +2,56 @@
 title: GlobalEventHandlers.onwheel
 slug: Web/API/GlobalEventHandlers/onwheel
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- onwheel
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - onwheel
 browser-compat: api.GlobalEventHandlers.onwheel
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <strong><code>onwheel</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes <code>wheel</code> events.</p>
+The **`onwheel`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes `wheel` events.
 
-<p>The <code>wheel</code> event fires when the user rotates the mouse (or other pointing
-  device) wheel.</p>
+The `wheel` event fires when the user rotates the mouse (or other pointing
+device) wheel.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Don't confuse <code>onwheel</code> with
-    {{domxref("GlobalEventHandlers.onscroll", "onscroll")}}: <code>onwheel</code> handles
-    general wheel rotation, while <code>onscroll</code> handles scrolling of an object's
-    content.</p>
-</div>
+> **Note:** Don't confuse `onwheel` with
+> {{domxref("GlobalEventHandlers.onscroll", "onscroll")}}: `onwheel` handles
+> general wheel rotation, while `onscroll` handles scrolling of an object's
+> content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onwheel = <em>functionRef</em>;
-</pre>
+```js
+target.onwheel = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code><var>functionRef</var></code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("WheelEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("WheelEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows how to scale an element using the mouse (or other pointing device)
-  wheel.</p>
+This example shows how to scale an element using the mouse (or other pointing device)
+wheel.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
+```html
+<div>Scale me with your mouse wheel.</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -64,14 +65,16 @@ div {
   background: #cdf;
   padding: 5px;
   transition: transform .3s;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function zoom(event) {
+```js
+function zoom(event) {
   event.preventDefault();
 
-  if (event.deltaY &lt; 0) {
+  if (event.deltaY < 0) {
     // Zoom in
     scale *= event.deltaY * -2;
   }
@@ -89,25 +92,24 @@ div {
 
 let scale = 1;
 const el = document.querySelector('div');
-document.onwheel = zoom;</pre>
+document.onwheel = zoom;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 700, 400)}}</p>
+{{EmbedLiveSample("Examples", 700, 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document/wheel_event">Document: <code>wheel</code>
-      event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/wheel_event">Element: <code>wheel</code>
-      event</a></li>
-</ul>
+- [Document: `wheel`
+  event](/en-US/docs/Web/API/Document/wheel_event)
+- [Element: `wheel`
+  event](/en-US/docs/Web/API/Element/wheel_event)

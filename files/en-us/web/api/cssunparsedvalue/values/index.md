@@ -2,52 +2,52 @@
 title: CSSUnparsedValue.values()
 slug: Web/API/CSSUnparsedValue/values
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- Method
-- NeedsExample
-- Reference
-- values()
+  - API
+  - CSS Typed Object Model API
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Method
+  - NeedsExample
+  - Reference
+  - values()
 browser-compat: api.CSSUnparsedValue.values
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnparsedValue.values()</code></strong> method
-  returns a new <em>array iterator</em> object that contains the
-  values for each index in the CSSUnparsedValue object.</p>
+The **`CSSUnparsedValue.values()`** method
+returns a new _array iterator_ object that contains the
+values for each index in the CSSUnparsedValue object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>CSSUnparsedValue</var>.values()</pre>
+```js
+CSSUnparsedValue.values()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("Array")}}.</p>
+A new {{jsxref("Array")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}</li>
-  <li>{{domxref("CSSUnparsedValue.entries")}}</li>
-  <li>{{domxref("CSSUnparsedValue.forEach")}}</li>
-  <li>{{domxref("CSSUnparsedValue.keys")}}</li>
-  <li>{{domxref("CSSUnparsedValue.length")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.entries")}}
+- {{domxref("CSSUnparsedValue.forEach")}}
+- {{domxref("CSSUnparsedValue.keys")}}
+- {{domxref("CSSUnparsedValue.length")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

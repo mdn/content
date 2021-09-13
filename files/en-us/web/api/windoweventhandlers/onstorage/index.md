@@ -2,58 +2,57 @@
 title: WindowEventHandlers.onstorage
 slug: Web/API/WindowEventHandlers/onstorage
 tags:
-- API
-- Event Handler
-- Property
-- Reference
-- Web Storage
-- WindowEventHandlers
+  - API
+  - Event Handler
+  - Property
+  - Reference
+  - Web Storage
+  - WindowEventHandlers
 browser-compat: api.WindowEventHandlers.onstorage
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>The <strong><code>onstorage</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing <code><a href="/en-US/docs/Web/API/Window/storage_event">storage</a></code>
-  events.</p>
+The **`onstorage`** property of the
+{{domxref("WindowEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing [`storage`](/en-US/docs/Web/API/Window/storage_event)
+events.
 
-<p>The <code>storage</code> event fires when a storage area has been changed in the
-  context of another document.</p>
+The `storage` event fires when a storage area has been changed in the
+context of another document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em> window</em>.onstorage = <em>functionRef</em>;</pre>
+```js
+ window.onstorage = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. This function receives a {{domxref("StorageEvent")}} as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). This function receives a {{domxref("StorageEvent")}} as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the value for a storage key whenever it changes in another document.
-</p>
+This example logs the value for a storage key whenever it changes in another document.
 
-<pre class="brush: js">window.onstorage = function(e) {
+```js
+window.onstorage = function(e) {
   console.log('The ' + e.key +
     ' key has been changed from ' + e.oldValue +
     ' to ' + e.newValue + '.');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Window/storage_event">Window: <code>storage</code>
-      event</a></li>
-</ul>
+- [Window: `storage`
+  event](/en-US/docs/Web/API/Window/storage_event)

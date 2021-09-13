@@ -12,36 +12,33 @@ tags:
   - Reference
 browser-compat: api.CSSTransformComponent
 ---
-<div>{{APIRef("CSS Typed OM")}}</div>
+{{APIRef("CSS Typed OM")}}
 
-<p>The <strong><code>CSSTransformComponent</code></strong> interface of the of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.</p>
+The **`CSSTransformComponent`** interface of the of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a boolean indicting whether the transform is 2D or 3D. </dd>
-</dl>
+- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicting whether the transform is 2D or 3D.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("CSSTransformComponent.toMatrix()")}}</dt>
- <dd>Returns a new {{domxref('DOMMatrix')}} object.</dd>
- <dt>{{domxref("CSSTransformComponent.toString()")}}</dt>
- <dd><p>A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}. </p>
+- {{domxref("CSSTransformComponent.toMatrix()")}}
+  - : Returns a new {{domxref('DOMMatrix')}} object.
+- {{domxref("CSSTransformComponent.toString()")}}
 
-  <p>This will use the value of <code>is2D</code> to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and <code>is2D</code> is false then the string returned will be in the form of the CSS transformation <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3D()</a></code> function. If true the string returned will be in the form of the 2-dimensional <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate3D()</a></code> function.</p></dd>
-</dl>
+  - : A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}.
 
-<h2 id="Examples">Examples</h2>
+    This will use the value of `is2D` to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and `is2D` is false then the string returned will be in the form of the CSS transformation [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>) function. If true the string returned will be in the form of the 2-dimensional [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate()>) function.
 
-<p>To do</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+To do
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

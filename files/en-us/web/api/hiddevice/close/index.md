@@ -9,35 +9,36 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.close
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>close()</code></strong> method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device.</p>
+The **`close()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HIDDevice.close();</pre>
+```js
+HIDDevice.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code> once the connection is closed.</p>
+A {{jsxref("Promise")}} that resolves with `undefined` once the connection is closed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we close the HID device, once all data has been sent and received.</p>
+In the following example we close the HID device, once all data has been sent and received.
 
-<pre class="brush: js">await device.close();</pre>
+```js
+await device.close();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

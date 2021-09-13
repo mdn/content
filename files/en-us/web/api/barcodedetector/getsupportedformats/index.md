@@ -9,46 +9,48 @@ tags:
   - shape detection
 browser-compat: api.BarcodeDetector.getSupportedFormats
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
 
-<p>The <strong><code>getSupportedFormats()</code></strong> static method
-  of the {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which
-  fulfills with an {{jsxref('Array')}} of supported barcode format types.</p>
+The **`getSupportedFormats()`** static method
+of the {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which
+fulfills with an {{jsxref('Array')}} of supported barcode format types.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>supportedFormats</var> = BarcodeDetector.getSupportedFormats();</pre>
+```js
+var supportedFormats = BarcodeDetector.getSupportedFormats();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method receives no parameters.</p>
+This method receives no parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref('Array')}} of <a
-    href="/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats">supported
-    barcode format types</a>.</p>
+An {{jsxref('Array')}} of [supported
+barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>No exceptions are thrown.</p>
+No exceptions are thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example calls the <code>getSupportFormat()</code> static method and logs
-  the results to the console.</p>
+The following example calls the `getSupportFormat()` static method and logs
+the results to the console.
 
-<pre class="brush: js">// check supported types
+```js
+// check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats =&gt; {
-    supportedFormats.forEach(format =&gt; console.log(format));
-  });</pre>
+  .then(supportedFormats => {
+    supportedFormats.forEach(format => console.log(format));
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

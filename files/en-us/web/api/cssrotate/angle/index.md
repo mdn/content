@@ -2,39 +2,41 @@
 title: CSSRotate.angle
 slug: Web/API/CSSRotate/angle
 tags:
-- API
-- CSS
-- CSS Types Object Model API
-- CSSRotate
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS
+  - CSS Types Object Model API
+  - CSSRotate
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSRotate.angle
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>angle</code></strong> property of the
-  {{domxref("CSSRotate")}} interface gets and sets the angle of rotation. A positive angle
-  denotes a clockwise rotation, a negative angle a counter-clockwise one.</p>
+The **`angle`** property of the
+{{domxref("CSSRotate")}} interface gets and sets the angle of rotation. A positive angle
+denotes a clockwise rotation, a negative angle a counter-clockwise one.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>rotateAngle</var> = CSSRotate.angle;</pre>
+```js
+var rotateAngle = CSSRotate.angle;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CSSNumericValue")}}</p>
+A {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

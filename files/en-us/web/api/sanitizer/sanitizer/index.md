@@ -2,82 +2,81 @@
 title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 tags:
-- Constructor
-- HTML Sanitizer API
-- sanitize
+  - Constructor
+  - HTML Sanitizer API
+  - sanitize
 browser-compat: api.Sanitizer.Sanitizer
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-<p>The <strong><code>Sanitizer()</code></strong> constructor creates a new
-  {{domxref("sanitizer")}} object which allows developers to take untrusted strings of
-  HTML, and sanitize them for safe insertion into a document’s DOM.</p>
+The **`Sanitizer()`** constructor creates a new
+{{domxref("sanitizer")}} object which allows developers to take untrusted strings of
+HTML, and sanitize them for safe insertion into a document’s DOM.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>sanitizer</var> = new Sanitizer();</pre>
+```js
+var sanitizer = new Sanitizer();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>config</code> {{optional_inline}}</dt>
-  <dd>An object in the format of SanitizerConfig. Options are as follows:
-    <ul>
-      <li><code>allowElements</code>: An {{jsxref('Array')}} of
-        {{jsxref('String','strings')}} representing elements the sanitizer should retain
-        in the input.</li>
-      <li><code>blockElements</code>: An {{jsxref('Array')}} of
-        {{jsxref('String','strings')}} representing elements the sanitizer should remove
-        in the input, but retain any of their children elements.</li>
-      <li><code>dropElements</code>: An {{jsxref('Array')}} of
-        {{jsxref('String','strings')}} representing elements the sanitizer should remove
-        in the input along with their children.</li>
-      <li><code>allowAttributes</code>: An {{jsxref('Array')}} of
-        {{jsxref('String','strings')}} representing attributes the sanitizer should retain
-        in the input.</li>
-      <li><code>dropAttributes</code>: An {{jsxref('Array')}} of
-        {{jsxref('String','strings')}} representing attributes the sanitizer should remove
-        in the input.</li>
-    </ul>
-  </dd>
-</dl>
+- `config` {{optional_inline}}
 
-<div class="note">
-  <p><strong>Note:</strong> At the time of writing the default elements within each configuration property above
-    are still under consideration. Due to this the above config parameter has not been
-    implemented.</p>
-</div>
+  - : An object in the format of SanitizerConfig. Options are as follows:
 
-<h2 id="Examples">Examples</h2>
+    - `allowElements`: An {{jsxref('Array')}} of
+      {{jsxref('String','strings')}} representing elements the sanitizer should retain
+      in the input.
+    - `blockElements`: An {{jsxref('Array')}} of
+      {{jsxref('String','strings')}} representing elements the sanitizer should remove
+      in the input, but retain any of their children elements.
+    - `dropElements`: An {{jsxref('Array')}} of
+      {{jsxref('String','strings')}} representing elements the sanitizer should remove
+      in the input along with their children.
+    - `allowAttributes`: An {{jsxref('Array')}} of
+      {{jsxref('String','strings')}} representing attributes the sanitizer should retain
+      in the input.
+    - `dropAttributes`: An {{jsxref('Array')}} of
+      {{jsxref('String','strings')}} representing attributes the sanitizer should remove
+      in the input.
 
-<p>This example shows the result of sanitizing a string with disallowed
-  <code>script</code> elements.</p>
+> **Note:** At the time of writing the default elements within each configuration property above
+> are still under consideration. Due to this the above config parameter has not been
+> implemented.
 
-<pre class="brush: js">new Sanitizer().sanitizeToString("abc &lt;script&gt;alert(1)&lt;/script&gt; def");
+## Examples
+
+This example shows the result of sanitizing a string with disallowed
+`script` elements.
+
+```js
+new Sanitizer().sanitizeToString("abc <script>alert(1)</script> def");
 // Result: script will be removed: "abc alert(1) def"
-</pre>
+```
 
-<p>This example shows how the different configuration options would return the same
-  string.</p>
+This example shows how the different configuration options would return the same
+string.
 
-<pre class="brush: js">const sample = "Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;.";
+```js
+const sample = "Some text <b><i>with</i></b> <blink>tags</blink>.";
 
 const allow = new Sanitizer({allowElements: [ "b" ]).sanitizeToString(sample);
 console.log(allow)
-// Logs: "Some text &lt;b&gt;with&lt;/b&gt; text tags."
+// Logs: "Some text <b>with</b> text tags."
 
 const block = new Sanitizer({blockElements: [ "b" ]).sanitizeToString(sample);
 console.log(block);
-// Logs: "Some text &lt;i&gt;with&lt;/i&gt; &lt;blink&gt;tags&lt;/blink&gt;."
+// Logs: "Some text <i>with</i> <blink>tags</blink>."
 
 const drop = new Sanitizer({dropElements: [ "b" ]).sanitizeToString(sample);
 // Logs: "Some text tags."
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

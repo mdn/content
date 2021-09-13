@@ -10,44 +10,50 @@ tags:
   - dump
 browser-compat: api.WorkerGlobalScope.dump
 ---
-<div>{{APIRef("Web Workers API")}} {{Deprecated_Header}} {{Non-standard_header}}</div>
+{{APIRef("Web Workers API")}} {{Deprecated_Header}} {{Non-standard_header}}
 
-<p>The <code><strong>dump()</strong></code> method of the {{domxref("WorkerGlobalScope")}} interface allows you to write a message to stdout — i.e. in your terminal, in Firefox only. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.</p>
+The **`dump()`** method of the {{domxref("WorkerGlobalScope")}} interface allows you to write a message to stdout — i.e. in your terminal, in Firefox only. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">dump('My message\n');</pre>
+```js
+dump('My message\n');
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>A {{domxref("DOMString")}} containing the message you want to send.</p>
+A {{domxref("DOMString")}} containing the message you want to send.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>To write an output from your worker to your computer's terminal, you first have to run an instance of Firefox started from your command line/terminal. For example, on Mac OS X you'd run it using something like this (assuming you are inside the <code>Applications</code> folder):</p>
+To write an output from your worker to your computer's terminal, you first have to run an instance of Firefox started from your command line/terminal. For example, on Mac OS X you'd run it using something like this (assuming you are inside the `Applications` folder):
 
-<pre class="brush: bash">./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote</pre>
+```bash
+./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote
+```
 
-<p>Now go into <code>about:config</code> and enable the <code>browser.dom.window.dump.enabled</code> pref.</p>
+Now go into `about:config` and enable the `browser.dom.window.dump.enabled` pref.
 
-<p>Next, run a worker containing the following line:</p>
+Next, run a worker containing the following line:
 
-<pre class="brush: js">dump('test\n');</pre>
+```js
+dump('test\n');
+```
 
-<p>This should result in a "test" message being output to the terminal.</p>
+This should result in a "test" message being output to the terminal.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method does not appear in any specification.</p>
+This method does not appear in any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

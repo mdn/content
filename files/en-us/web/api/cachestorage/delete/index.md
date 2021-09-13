@@ -12,47 +12,47 @@ tags:
   - delete
 browser-compat: api.CacheStorage.delete
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>delete()</code></strong> method of the
-  {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the
-  <code>cacheName</code>, and if found, deletes the {{domxref("Cache")}} object and
-  returns a {{jsxref("Promise")}} that resolves to <code>true</code>. If no
-  {{domxref("Cache")}} object is found, it resolves to <code>false</code>.</p>
+The **`delete()`** method of the
+{{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the
+`cacheName`, and if found, deletes the {{domxref("Cache")}} object and
+returns a {{jsxref("Promise")}} that resolves to `true`. If no
+{{domxref("Cache")}} object is found, it resolves to `false`.
 
-<p>You can access <code>CacheStorage</code> through the global
-  {{domxref("caches")}} property.</p>
+You can access `CacheStorage` through the global
+{{domxref("caches")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">caches.delete(<em>cacheName</em>).then(function(<em>boolean</em>) {
+```js
+caches.delete(cacheName).then(function(boolean) {
   // your cache is now deleted
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cacheName</code></dt>
-  <dd>The name of the cache you want to delete.</dd>
-</dl>
+- `cacheName`
+  - : The name of the cache you want to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>a {{jsxref("Promise")}} that resolves to <code>true</code> if the {{domxref("Cache")}}
-  object is found and deleted, and <code>false</code> otherwise.</p>
+a {{jsxref("Promise")}} that resolves to `true` if the {{domxref("Cache")}}
+object is found and deleted, and `false` otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this code snippet we wait for an activate event, and then run a
-  {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
-  unused caches before a new service worker is activated. Here we have an array of cache
-  names we want to keep (<code>cachesToKeep</code>). We return the keys of the caches in
-  the {{domxref("CacheStorage")}} object using {{domxref("CacheStorage.keys")}}, then
-  check each key to see if it is in the array. If not, we delete it using
-  <code>delete()</code>.</p>
+In this code snippet we wait for an activate event, and then run a
+{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
+unused caches before a new service worker is activated. Here we have an array of cache
+names we want to keep (`cachesToKeep`). We return the keys of the caches in
+the {{domxref("CacheStorage")}} object using {{domxref("CacheStorage.keys")}}, then
+check each key to see if it is in the array. If not, we delete it using
+`delete()`.
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cachesToKeep = ['v2'];
 
   event.waitUntil(
@@ -64,21 +64,20 @@ browser-compat: api.CacheStorage.delete
       }));
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

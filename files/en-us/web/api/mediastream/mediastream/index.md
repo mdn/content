@@ -2,64 +2,62 @@
 title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Media Capture and Streams
-- Media Capture and Streams API
-- MediaStream
-- Reference
-- Streams
-- Tracks
-- Video
-- WebRTC
-- streaming
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Media Capture and Streams
+  - Media Capture and Streams API
+  - MediaStream
+  - Reference
+  - Streams
+  - Tracks
+  - Video
+  - WebRTC
+  - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>MediaStream()</code></strong> constructor
-    returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of
-    media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.</p>
+The **`MediaStream()`** constructor
+returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of
+media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.
 
-<p>If
-  any parameters are given, the specified tracks are added to the new stream. Otherwise,
-  the stream has no tracks.</p>
+If
+any parameters are given, the specified tracks are added to the new stream. Otherwise,
+the stream has no tracks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new MediaStream();
+```js
+new MediaStream();
 new MediaStream(stream);
-new MediaStream(tracks);</pre>
+new MediaStream(tracks);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>stream</var></code></dt>
-  <dd>A different {{domxref("MediaStream")}} object whose tracks are added to the
+- `stream`
+  - : A different {{domxref("MediaStream")}} object whose tracks are added to the
     newly-created stream automatically. The tracks are not removed from the original
-    stream, so they're shared by the two streams.</dd>
-  <dt><code><var>tracks</var></code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("MediaStreamTrack")}} objects, one for each
-    track to add to the stream.</dd>
-</dl>
+    stream, so they're shared by the two streams.
+- `tracks`
+  - : An {{jsxref("Array")}} of {{domxref("MediaStreamTrack")}} objects, one for each
+    track to add to the stream.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A newly-created {{domxref("MediaStream")}} object, either empty, or containing the
-  tracks provided, if any.</p>
+A newly-created {{domxref("MediaStream")}} object, either empty, or containing the
+tracks provided, if any.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaStream")}}</li>
-</ul>
+- {{domxref("MediaStream")}}

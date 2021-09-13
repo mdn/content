@@ -9,44 +9,44 @@ tags:
   - crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
-<div>{{APIRef()}}{{SeeCompatTable}}</div>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>The global <code><strong>crossOriginIsolated</strong></code> read-only property returns a boolean value that
-  indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
-  {{DOMxRef("Window.postMessage()")}} call.</p>
+The global **`crossOriginIsolated`** read-only property returns a boolean value that
+indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
+{{DOMxRef("Window.postMessage()")}} call.
 
-<p>This value is dependant on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-  {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.</p>
+This value is dependant on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
+{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myCrossOriginIsolated</em> = self.crossOriginIsolated; // or just crossOriginIsolated
-</pre>
+```js
+var myCrossOriginIsolated = self.crossOriginIsolated; // or just crossOriginIsolated
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value</p>
+A boolean value
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">if(crossOriginIsolated) {
+```js
+if(crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
-</ul>
+- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

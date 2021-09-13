@@ -10,43 +10,37 @@ tags:
   - Secure context
 browser-compat: api.Geolocation
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>Geolocation</strong></code> interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.</p>
+The **`Geolocation`** interface represents an object able to programmatically obtain the position of the device. It gives Web content access to the location of the device. This allows a Web site or app to offer customized results based on the user's location.
 
-<p>An object with this interface is obtained using the {{domxref("navigator.geolocation")}} property implemented by the {{domxref("Navigator")}} object.</p>
+An object with this interface is obtained using the {{domxref("navigator.geolocation")}} property implemented by the {{domxref("Navigator")}} object.
 
-<div class="note">
-<p><strong>Note:</strong> For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.</p>
-</div>
+> **Note:** For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>Geolocation</code> interface neither implements, nor inherits any property.</em></p>
+_The `Geolocation` interface neither implements, nor inherits any property._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>Geolocation</code> interface doesn't inherit any method.</em></p>
+_The `Geolocation` interface doesn't inherit any method._
 
-<dl>
- <dt>{{domxref("Geolocation.getCurrentPosition()")}} {{securecontext_inline}}</dt>
- <dd>Determines the device's current location and gives back a {{domxref("GeolocationPosition")}} object with the data.</dd>
- <dt>{{domxref("Geolocation.watchPosition()")}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>long</code> value representing the newly established callback function to be invoked whenever the device location changes.</dd>
- <dt>{{domxref("Geolocation.clearWatch()")}} {{securecontext_inline}}</dt>
- <dd>Removes the particular handler previously installed using <code>watchPosition()</code>.</dd>
-</dl>
+- {{domxref("Geolocation.getCurrentPosition()")}} {{securecontext_inline}}
+  - : Determines the device's current location and gives back a {{domxref("GeolocationPosition")}} object with the data.
+- {{domxref("Geolocation.watchPosition()")}} {{securecontext_inline}}
+  - : Returns a `long` value representing the newly established callback function to be invoked whenever the device location changes.
+- {{domxref("Geolocation.clearWatch()")}} {{securecontext_inline}}
+  - : Removes the particular handler previously installed using `watchPosition()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</a></li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)

@@ -2,53 +2,53 @@
 title: PointerEvent.tiltY
 slug: Web/API/PointerEvent/tiltY
 tags:
-- API
-- DOM
-- Interface
-- PointerEvent
-- Property
-- Reference
+  - API
+  - DOM
+  - Interface
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.PointerEvent.tiltY
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p>The <strong><code>tiltY</code></strong> read-only property of the
-  {{domxref("PointerEvent")}} interface is the angle (in degrees) between the <em>X-Z
-    plane</em> of the pointer and the screen. This property is typically only useful for a
-  pen/stylus pointer type.</p>
+The **`tiltY`** read-only property of the
+{{domxref("PointerEvent")}} interface is the angle (in degrees) between the _X-Z
+plane_ of the pointer and the screen. This property is typically only useful for a
+pen/stylus pointer type.
 
-<p>For an illustration of this property, see <a
-    href="https://w3c.github.io/pointerevents/#dom-pointerevent-tilty">Figure 3 in the
-    specification</a>.</p>
+For an illustration of this property, see [Figure 3 in the
+specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tilty).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>tiltY</em> = pointerEvent.<em>tiltY</em>;
-</pre>
+```js
+var tiltY = pointerEvent.tiltY;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>tiltY</code></dt>
-  <dd>The angle in degrees between the X-Z plane of the pointer (stylus) and the screen.
-    The range of values is <code>-90</code> to <code>90</code>, inclusive, where a
+- `tiltY`
+  - : The angle in degrees between the X-Z plane of the pointer (stylus) and the screen.
+    The range of values is `-90` to `90`, inclusive, where a
     positive value is a tilt towards the user. For devices that do not support this
-    property, the value is <code>0</code>.</dd>
-</dl>
+    property, the value is `0`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates simple accessing of the
-  {{domxref("PointerEvent.tiltX","tiltX")}} and <code>tiltY</code> properties.</p>
+This example illustrates simple accessing of the
+{{domxref("PointerEvent.tiltX","tiltX")}} and `tiltY` properties.
 
-<pre class="brush: js">someElement.addEventListener("pointerdown", function(event) {
+```js
+someElement.addEventListener("pointerdown", function(event) {
   process_tilt(event.tiltX, event.tiltY);
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

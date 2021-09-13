@@ -2,39 +2,38 @@
 title: Selection.collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.collapseToEnd
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.collapseToEnd()</code></strong> method collapses the
-  selection to the end of the last range in the selection. If the content of the selection
-  is focused and editable, the caret will blink there.</p>
+The **`Selection.collapseToEnd()`** method collapses the
+selection to the end of the last range in the selection. If the content of the selection
+is focused and editable, the caret will blink there.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.collapseToEnd()
-</pre>
+```js
+sel.collapseToEnd()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

@@ -14,36 +14,39 @@ tags:
   - messaging
 browser-compat: api.ServiceWorkerGlobalScope.push_event
 ---
-<div>{{APIRef("Push API")}}</div>
+{{APIRef("Push API")}}
 
-<p>The <strong><code>push</code></strong> event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.</p>
+The **`push`** event is sent to a service worker's global scope (represented by the {{domxref("ServiceWorkerGlobalScope")}} interface) when the service worker has received a push message.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PushEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PushEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets up a handler for <code>push</code> events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.</p>
+This example sets up a handler for `push` events that takes {{Glossary("JSON")}} data, parses it, and dispatches the message for handling based on information contained within the message.
 
-<pre class="brush: js">self.addEventListener("push", event =&gt; {
+```js
+self.addEventListener("push", event => {
   let message = event.data.json();
 
   switch(message.type) {
@@ -54,20 +57,19 @@ browser-compat: api.ServiceWorkerGlobalScope.push_event
       doShutdown();
       break;
   }
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Using the Push API</a></li>
- <li>{{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} event handler property</li>
- <li>{{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event</li>
-</ul>
+- [Using the Push API](/en-US/docs/Web/API/Push_API)
+- {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} event handler property
+- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}} event

@@ -2,38 +2,41 @@
 title: File.lastModified
 slug: Web/API/File/lastModified
 tags:
-- API
-- File API
-- Files
-- Property
-- Reference
+  - API
+  - File API
+  - Files
+  - Property
+  - Reference
 browser-compat: api.File.lastModified
 ---
-<div>{{APIRef("File")}}</div>
+{{APIRef("File")}}
 
-<p>The <code><strong>File.lastModified</strong></code> read-only property provides the
-  last modified date of the file as the number of milliseconds since the Unix
-  epoch (January 1, 1970 at midnight). Files without a known last modified date return the
-  current date.</p>
+The **`File.lastModified`** read-only property provides the
+last modified date of the file as the number of milliseconds since the Unix
+epoch (January 1, 1970 at midnight). Files without a known last modified date return the
+current date.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>time</em> = <var>instanceOfFile</var>.lastModified;
-</pre>
+```js
+const time = instanceOfFile.lastModified;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number that represents the number of milliseconds since the Unix epoch.</p>
+A number that represents the number of milliseconds since the Unix epoch.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Reading_from_file_input">Reading from file input</h3>
+### Reading from file input
 
-<pre class="brush: html">&lt;input type="file" multiple id="fileInput"&gt;
-</pre>
+```html
+<input type="file" multiple id="fileInput">
+```
 
-<pre class="brush:js">const fileInput = document.querySelector('#fileInput');
-fileInput.addEventListener('change', (event) =&gt; {
+```js
+const fileInput = document.querySelector('#fileInput');
+fileInput.addEventListener('change', (event) => {
   // files is a FileList object (similar to NodeList)
   const files = event.target.files;
 
@@ -42,36 +45,38 @@ fileInput.addEventListener('change', (event) =&gt; {
     console.log(`${file.name} has a last modified date of ${date}`);
   }
 });
-</pre>
+```
 
-<p>Try the results out below:</p>
+Try the results out below:
 
-<p>{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}</p>
+{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}
 
-<h3 id="Dynamically_created_files">Dynamically created files</h3>
+### Dynamically created files
 
-<p>If a File is created dynamically, the last modified time can be supplied in the
-  {{domxref("File.File()", "new File()")}} constructor function. If it is missing,
-  <code>lastModified</code> inherits the current time from {{jsxref("Date.now()")}} at the
-  moment the <code>File</code> object gets created.</p>
+If a File is created dynamically, the last modified time can be supplied in the
+{{domxref("File.File()", "new File()")}} constructor function. If it is missing,
+`lastModified` inherits the current time from {{jsxref("Date.now()")}} at the
+moment the `File` object gets created.
 
-<pre class="brush:js">const fileWithDate = new File([], 'file.bin', {
+```js
+const fileWithDate = new File([], 'file.bin', {
   lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); //returns 1485903600000
 
 const fileWithoutDate = new File([], 'file.bin');
 console.log(fileWithoutDate.lastModified); //returns current time
-</pre>
+```
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of
-  <code>someFile.lastModified</code> might get rounded depending on browser settings.<br>
-  In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by
-  default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of
+`someFile.lastModified` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 someFile.lastModified;
 // 1519211809934
 // 1519211810362
@@ -84,23 +89,21 @@ someFile.lastModified;
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enabled <code>privacy.resistFingerprinting</code>, the
-  precision will be 100ms or the value of
-  <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever
-  is larger.</p>
+In Firefox, you can also enabled `privacy.resistFingerprinting`, the
+precision will be 100ms or the value of
+`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
+is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("File")}}</li>
-</ul>
+- {{domxref("File")}}

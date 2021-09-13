@@ -10,30 +10,27 @@ tags:
   - timeStamp
 browser-compat: api.GeolocationPosition.timestamp
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationPosition.timestamp</strong></code> read-only property returns a {{domxref("DOMTimeStamp")}} object, represents the date and the time of the creation of the {{domxref("GeolocationPosition")}} object it belongs to. The precision is to the millisecond.</p>
+The **`GeolocationPosition.timestamp`** read-only property returns a {{domxref("DOMTimeStamp")}} object, represents the date and the time of the creation of the {{domxref("GeolocationPosition")}} object it belongs to. The precision is to the millisecond.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var timestamp = geolocationPositionInstance.timestamp
-</pre>
+    var timestamp = geolocationPositionInstance.timestamp
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMTimeStamp")}} object instance.</p>
+A {{domxref("DOMTimeStamp")}} object instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a></li>
- <li>{{domxref("GeolocationPosition")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationPosition")}}

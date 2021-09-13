@@ -9,26 +9,28 @@ tags:
   - InterventionReportBody
 browser-compat: api.InterventionReportBody.columnNumber
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>columnNumber</code></strong> read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.</p>
+The **`columnNumber`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is most useful alongside {{domxref("InterventionReportBody.sourceFile")}} and {{domxref("InterventionReportBody.lineNumber")}} as it enables the location of the column in that file and line where the feature is used.</p>
-</div>
+> **Note:** This property is most useful alongside {{domxref("InterventionReportBody.sourceFile")}} and {{domxref("InterventionReportBody.lineNumber")}} as it enables the location of the column in that file and line where the feature is used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let columnNumber = InterventionReportBody.columnNumber;</pre>
+```js
+let columnNumber = InterventionReportBody.columnNumber;
+```
 
-<h3>Value</h3>
-<p>An integer, or <code>null</code> if the column is not known.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer, or `null` if the column is not known.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of <code>columnNumber</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `columnNumber` to the console.
+
+```js
+let options = {
   types: ['intervention'],
   buffered: true
 }
@@ -39,12 +41,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   console.log(firstReport.body.sourceFile); // the source file
   console.log(firstReport.body.lineNumber); // the line in that file
   console.log(firstReport.body.columnNumber); // the column in that file.
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

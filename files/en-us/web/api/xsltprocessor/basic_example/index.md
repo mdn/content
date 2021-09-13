@@ -4,47 +4,54 @@ slug: Web/API/XSLTProcessor/Basic_Example
 tags:
   - XSLT
 ---
-<h2 id="Basic_Example">Basic Example</h2>
+## Basic Example
 
-<p>This first example demonstrates the basics of setting up an XSLT transformation in a browser. The example will take an XML document that contains information (title, list of authors and body text) about an article and present it in an human readable form.</p>
-<p>Figure 1 shows the source of the basic XSLT example. The XML document (example.xml) contains the information about the article. Using the <code>?xml-stylesheet?</code> processing instruction, it links to the XSLT stylesheet (example.xsl) via its href attribute.</p>
-<p>An XSLT stylesheet starts with the <code>xsl:stylesheet</code> element, which contains all the templates used to create the final output. The example in Figure 1 has two templates - one that matches the root node and one that matches Author nodes. The template that matches the root node outputs the article's title and then says to process all templates (via <code>apply-templates</code>) that match Author nodes which are children of the Authors node.</p>
+This first example demonstrates the basics of setting up an XSLT transformation in a browser. The example will take an XML document that contains information (title, list of authors and body text) about an article and present it in an human readable form.
 
-<p>Figure 1 : Simple XSLT Example</p>
-<p>XML Document (example.xml) :</p>
+Figure 1 shows the source of the basic XSLT example. The XML document (example.xml) contains the information about the article. Using the `?xml-stylesheet?` processing instruction, it links to the XSLT stylesheet (example.xsl) via its href attribute.
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="example.xsl"?&gt;
-&lt;Article&gt;
-  &lt;Title&gt;My Article&lt;/Title&gt;
-  &lt;Authors&gt;
-    &lt;Author&gt;Mr. Foo&lt;/Author&gt;
-    &lt;Author&gt;Mr. Bar&lt;/Author&gt;
-  &lt;/Authors&gt;
-  &lt;Body&gt;This is my article text.&lt;/Body&gt;
-&lt;/Article&gt;</pre>
+An XSLT stylesheet starts with the `xsl:stylesheet` element, which contains all the templates used to create the final output. The example in Figure 1 has two templates - one that matches the root node and one that matches Author nodes. The template that matches the root node outputs the article's title and then says to process all templates (via `apply-templates`) that match Author nodes which are children of the Authors node.
 
-<p>XSL Stylesheet (example.xsl) :</p>
+Figure 1 : Simple XSLT Example
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+XML Document (example.xml) :
 
-  &lt;xsl:output method="text"/&gt;
+```xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="example.xsl"?>
+<Article>
+  <Title>My Article</Title>
+  <Authors>
+    <Author>Mr. Foo</Author>
+    <Author>Mr. Bar</Author>
+  </Authors>
+  <Body>This is my article text.</Body>
+</Article>
+```
 
-  &lt;xsl:template match="/"&gt;
-    Article - &lt;xsl:value-of select="/Article/Title"/&gt;
-    Authors: &lt;xsl:apply-templates select="/Article/Authors/Author"/&gt;
-  &lt;/xsl:template&gt;
+XSL Stylesheet (example.xsl) :
 
-  &lt;xsl:template match="Author"&gt;
-    - &lt;xsl:value-of select="." /&gt;
-  &lt;/xsl:template&gt;
+```xml
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-&lt;/xsl:stylesheet&gt;</pre>
+  <xsl:output method="text"/>
 
-<p>Browser Output :</p>
+  <xsl:template match="/">
+    Article - <xsl:value-of select="/Article/Title"/>
+    Authors: <xsl:apply-templates select="/Article/Authors/Author"/>
+  </xsl:template>
 
-<pre>Article - My Article
-Authors:
-- Mr. Foo
-- Mr. Bar</pre>
+  <xsl:template match="Author">
+    - <xsl:value-of select="." />
+  </xsl:template>
+
+</xsl:stylesheet>
+```
+
+Browser Output :
+
+    Article - My Article
+    Authors:
+    - Mr. Foo
+    - Mr. Bar

@@ -2,78 +2,74 @@
 title: MutationObserverInit.characterData
 slug: Web/API/MutationObserverInit/characterData
 tags:
-- API
-- Characters
-- DOM
-- DOM WHATWG
-- Mutation Observer
-- Mutation Observer API
-- MutationObserverInit
-- Observer
-- Property
-- Reference
-- Text
-- Watching
-- characterData
+  - API
+  - Characters
+  - DOM
+  - DOM WHATWG
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserverInit
+  - Observer
+  - Property
+  - Reference
+  - Text
+  - Watching
+  - characterData
 browser-compat: api.MutationObserverInit.characterData
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
-    dictionary's optional <strong><code>characterData</code></strong> property is used to
-    specify whether or not to monitor the node or nodes being observed for changes to
-    their textual contents.</p>
+The **{{domxref("MutationObserverInit")}}**
+dictionary's optional **`characterData`** property is used to
+specify whether or not to monitor the node or nodes being observed for changes to
+their textual contents.
 
-<p>Character data changes are detectable on any text node, including nodes based on the
-  {{domxref("Text")}}, {{domxref("ProcessingInstruction")}}, and {{domxref("Comment")}}
-  interfaces.</p>
+Character data changes are detectable on any text node, including nodes based on the
+{{domxref("Text")}}, {{domxref("ProcessingInstruction")}}, and {{domxref("Comment")}}
+interfaces.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This doesn't monitor content of an {{domxref("HTMLElement")}}, even if it
-    only contains text inside, as it only monitors text nodes themselves. So either pass
-    directly a text node to the {{domxref("MutationObserver.observe", "observe()")}}
-    method or you need to also set <code>subtree: true</code>.</p>
-</div>
+> **Note:** This doesn't monitor content of an {{domxref("HTMLElement")}}, even if it
+> only contains text inside, as it only monitors text nodes themselves. So either pass
+> directly a text node to the {{domxref("MutationObserver.observe", "observe()")}}
+> method or you need to also set `subtree: true`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>characterData</em>: true | false
+```js
+var options = {
+  characterData: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not to call the observer's callback function when
-  textual nodes' values change.</p>
+A Boolean value indicating whether or not to call the observer's callback function when
+textual nodes' values change.
 
-<p>If <code>true</code>, the callback specified when {{domxref("MutationObserver.observe",
+If `true`, the callback specified when {{domxref("MutationObserver.observe",
   "observe()")}} was used to start observing the node or subtree is called any time the
-  contents of a text node are changed.</p>
+contents of a text node are changed.
 
-<p>You can expand the capabilities of attribute mutation monitoring using other options:
-</p>
+You can expand the capabilities of attribute mutation monitoring using other options:
 
-<ul>
-  <li>{{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}}
-    lets you specify whether or not you want the previous value of changed text nodes to
-    be provided using the {{domxref("MutationRecord")}}'s
-    {{domxref("MutationRecord.oldValue", "oldValue")}} property.</li>
-  <li>{{domxref("MutationObserverInit.subtree", "subtree")}} lets you specify whether to
-    watch the target node and all of its descendants (<code>true</code>), or just the
-    target node (<code>false</code>).</li>
-</ul>
+- {{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}}
+  lets you specify whether or not you want the previous value of changed text nodes to
+  be provided using the {{domxref("MutationRecord")}}'s
+  {{domxref("MutationRecord.oldValue", "oldValue")}} property.
+- {{domxref("MutationObserverInit.subtree", "subtree")}} lets you specify whether to
+  watch the target node and all of its descendants (`true`), or just the
+  target node (`false`).
 
-<p>If you set <code>characterDataOldValue</code> to <code>true</code>,
-  <code>characterData</code> is automatically assumed to be <code>true</code>, even if you
-  don't expressly set it as such.</p>
+If you set `characterDataOldValue` to `true`,
+`characterData` is automatically assumed to be `true`, even if you
+don't expressly set it as such.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

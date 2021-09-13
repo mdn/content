@@ -10,180 +10,221 @@ tags:
   - Web
   - events
 ---
-<p>{{DefaultAPISidebar("Pointer Events")}}</p>
+{{DefaultAPISidebar("Pointer Events")}}
 
-<p>Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. <em><a href="#pointer_event">Pointer events</a></em> address that need.</p>
+Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. _[Pointer events](#pointer_event)_ address that need.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** Pointer events are _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<p>Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).</p>
+Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 
-<p>The <em><a href="#pointer">pointer</a></em> is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.</p>
+The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
 
-<p>The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (<code>mousedown</code>/<code>pointerdown</code>, <code>mousemove</code>/<code>pointermove</code>, etc.). Consequently, pointer event types are intentionally similar to mouse event types.</p>
+The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, etc.). Consequently, pointer event types are intentionally similar to mouse event types.
 
-<p>Additionally, a pointer event contains the usual properties present in mouse events (client coordinates, target element, button states, etc.) in addition to new properties for other forms of input: pressure, contact geometry, tilt, etc. In fact, the {{domxref("PointerEvent")}} interface inherits all of the {{domxref("MouseEvent")}} properties, thus facilitating the migration of content from mouse events to pointer events.</p>
+Additionally, a pointer event contains the usual properties present in mouse events (client coordinates, target element, button states, etc.) in addition to new properties for other forms of input: pressure, contact geometry, tilt, etc. In fact, the {{domxref("PointerEvent")}} interface inherits all of the {{domxref("MouseEvent")}} properties, thus facilitating the migration of content from mouse events to pointer events.
 
-<h2 id="Terminology">Terminology</h2>
+## Terminology
 
-<h3>active buttons state</h3>
+### active buttons state
 
-<p>The condition when a <em><a href="#pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</p>
+The condition when a _[pointer](#pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
 
-<h3>active pointer</h3>
+### active pointer
 
-<p>Any <em><a href="#pointer">pointer</a></em> input device that can produce events. A pointer is considered active if it can still produce further events. For example, a pen that is a down state is considered active because it can produce additional events when the pen is lifted or moved.</p>
+Any _[pointer](#pointer)_ input device that can produce events. A pointer is considered active if it can still produce further events. For example, a pen that is a down state is considered active because it can produce additional events when the pen is lifted or moved.
 
-<h3>digitizer</h3>
+### digitizer
 
-<p>A sensing device with a surface that can detect contact. Most commonly, the sensing device is a touch-enabled screen that can sense input from an input device such as a pen, stylus, or finger. Some sensing devices can detect the close proximity of the input device, and the state is expressed as a hover following the mouse.</p>
+A sensing device with a surface that can detect contact. Most commonly, the sensing device is a touch-enabled screen that can sense input from an input device such as a pen, stylus, or finger. Some sensing devices can detect the close proximity of the input device, and the state is expressed as a hover following the mouse.
 
-<h3>hit test</h3>
+### hit test
 
-<p>The process the browser uses to determine a target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.</p>
+The process the browser uses to determine a target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.
 
-<h3>pointer</h3>
+### pointer
 
-<p>A hardware-agnostic representation of input devices that can target a specific coordinate (or set of coordinates) on a screen. Examples of <em>pointer</em> input devices are mouse, pen/stylus, and touch contacts.</p>
+A hardware-agnostic representation of input devices that can target a specific coordinate (or set of coordinates) on a screen. Examples of _pointer_ input devices are mouse, pen/stylus, and touch contacts.
 
-<h3>pointer capture</h3>
+### pointer capture
 
-<p>Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location.</p>
+Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location.
 
-<h3>pointer event</h3>
+### pointer event
 
-<p>A DOM {{domxref("PointerEvent","event")}} fired for a <em><a href="#pointer">pointer</a></em>.</p>
+A DOM {{domxref("PointerEvent","event")}} fired for a _[pointer](#pointer)_.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<p>The primary interface is the {{domxref("PointerEvent")}} interface which has a {{domxref("PointerEvent.PointerEvent","constructor")}} plus several event types and associated global event handlers.</p>
+The primary interface is the {{domxref("PointerEvent")}} interface which has a {{domxref("PointerEvent.PointerEvent","constructor")}} plus several event types and associated global event handlers.
 
-<p>The standard also includes some extensions to the {{domxref("Element")}} and {{domxref("Navigator")}} interfaces.</p>
+The standard also includes some extensions to the {{domxref("Element")}} and {{domxref("Navigator")}} interfaces.
 
-<p>The following sub-sections contain short descriptions of each interface and property.</p>
+The following sub-sections contain short descriptions of each interface and property.
 
-<h3 id="PointerEvent_interface">PointerEvent interface</h3>
+### PointerEvent interface
 
-<p>The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{readonlyInline}}.)</p>
+The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties. (All of the following properties are {{readonlyInline}}.)
 
-<dl>
- <dt>{{ domxref('PointerEvent.pointerId','pointerId')}}</dt>
- <dd>A unique identifier for the pointer causing the event.</dd>
- <dt>{{ domxref('PointerEvent.width','width')}}</dt>
- <dd>The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.</dd>
- <dt>{{ domxref('PointerEvent.height','height')}}</dt>
- <dd>the height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.</dd>
- <dt>{{ domxref('PointerEvent.pressure','pressure')}}</dt>
- <dd>the normalized pressure of the pointer input in the range of <code>0</code> to <code>1</code>, where <code>0</code> and <code>1</code> represent the minimum and maximum pressure the hardware is capable of detecting, respectively.</dd>
- <dt>{{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}}</dt>
- <dd>The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range <code>-1</code> to <code>1</code>, where <code>0</code> is the neutral position of the control.</dd>
- <dt>{{ domxref('PointerEvent.tiltX','tiltX')}}</dt>
- <dd>The plane angle (in degrees, in the range of <code>-90</code> to <code>90</code>) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.</dd>
- <dt>{{ domxref('PointerEvent.tiltY','tiltY')}}</dt>
- <dd>the plane angle (in degrees, in the range of <code>-90</code> to <code>90</code>) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.</dd>
- <dt>{{ domxref('PointerEvent.twist','twist')}}</dt>
- <dd>The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range <code>0</code> to <code>359</code>.</dd>
- <dt>{{ domxref('PointerEvent.pointerType','pointerType')}}</dt>
- <dd>Indicates the device type that caused the event (mouse, pen, touch, etc.)</dd>
- <dt>{{ domxref('PointerEvent.isPrimary','isPrimary')}}</dt>
- <dd>Indicates if the pointer represents the primary pointer of this pointer type.</dd>
-</dl>
+- {{ domxref('PointerEvent.pointerId','pointerId')}}
+  - : A unique identifier for the pointer causing the event.
+- {{ domxref('PointerEvent.width','width')}}
+  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.height','height')}}
+  - : the height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
+- {{ domxref('PointerEvent.pressure','pressure')}}
+  - : the normalized pressure of the pointer input in the range of `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
+- {{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}}
+  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range `-1` to `1`, where `0` is the neutral position of the control.
+- {{ domxref('PointerEvent.tiltX','tiltX')}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+- {{ domxref('PointerEvent.tiltY','tiltY')}}
+  - : the plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+- {{ domxref('PointerEvent.twist','twist')}}
+  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+- {{ domxref('PointerEvent.pointerType','pointerType')}}
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+- {{ domxref('PointerEvent.isPrimary','isPrimary')}}
+  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
-<h3 id="Event_types_and_Global_Event_Handlers">Event types and Global Event Handlers</h3>
+### Event types and Global Event Handlers
 
-<p>Pointer events have ten event types, seven of which have similar semantics to their mouse event counterparts (<code>down</code>, <code>up</code>, <code>move</code>, <code>over</code>, <code>out</code>, <code>enter</code>, and <code>leave</code>).</p>
+Pointer events have ten event types, seven of which have similar semantics to their mouse event counterparts (`down`, `up`, `move`, `over`, `out`, `enter`, and `leave`).
 
-<p>Below is a short description of each event type and its associated {{domxref("GlobalEventHandlers","Global Event Handler")}}.</p>
+Below is a short description of each event type and its associated {{domxref("GlobalEventHandlers","Global Event Handler")}}.
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Event</th>
-   <th scope="col">On Event Handler</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{event('pointerover')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}</td>
-   <td>Fired when a pointer is moved into an element's <a href="#hit_test">hit test</a> boundaries.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerenter')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}</td>
-   <td>Fired when a pointer is moved into the <a href="#hit_test">hit test</a> boundaries of an element or one of its descendants, including as a result of a pointerdown event from a device that does not support hover (see <code>pointerdown</code>).</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerdown')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}</td>
-   <td>Fired when a pointer becomes <em>active buttons state</em>.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointermove')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}</td>
-   <td>Fired when a pointer changes coordinates. This event is also used if the change in pointer state can not be reported by other events.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerup')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}</td>
-   <td>Fired when a pointer is no longer <em>active buttons state</em>.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointercancel')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}</td>
-   <td>A browser fires this event if it concludes the pointer will no longer be able to generate events (for example the related device is deactivated).</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerout')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>Fired for several reasons including: pointer is moved out of the <a href="#hit_test">hit test</a> boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the <code>pointercancel</code> event (see <code>pointercancel</code>); when a pen stylus leaves the hover range detectable by the digitizer.</td>
-  </tr>
-  <tr>
-   <td>{{event('pointerleave')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}</td>
-   <td>Fired when a pointer is moved out of the <a href="#hit_test">hit test</a> boundaries of an element. For pen devices, this event is fired when the stylus leaves the hover range detectable by the digitizer.</td>
-  </tr>
-  <tr>
-   <td>{{event('gotpointercapture')}}</td>
-   <td>{{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}</td>
-   <td>Fired when an element receives pointer capture.</td>
-  </tr>
-  <tr>
-   <td>{{event('lostpointercapture')}}</td>
-   <td>{{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}</td>
-   <td>Fired after pointer capture is released for a pointer.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Event</th>
+      <th scope="col">On Event Handler</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{event('pointerover')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}
+      </td>
+      <td>
+        Fired when a pointer is moved into an element's
+        <a href="#hit_test">hit test</a> boundaries.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('pointerenter')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}
+      </td>
+      <td>
+        Fired when a pointer is moved into the
+        <a href="#hit_test">hit test</a> boundaries of an element or one of its
+        descendants, including as a result of a pointerdown event from a device
+        that does not support hover (see <code>pointerdown</code>).
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('pointerdown')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}
+      </td>
+      <td>Fired when a pointer becomes <em>active buttons state</em>.</td>
+    </tr>
+    <tr>
+      <td>{{event('pointermove')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}
+      </td>
+      <td>
+        Fired when a pointer changes coordinates. This event is also used if the
+        change in pointer state can not be reported by other events.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('pointerup')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}
+      </td>
+      <td>Fired when a pointer is no longer <em>active buttons state</em>.</td>
+    </tr>
+    <tr>
+      <td>{{event('pointercancel')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}
+      </td>
+      <td>
+        A browser fires this event if it concludes the pointer will no longer be
+        able to generate events (for example the related device is deactivated).
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('pointerout')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}
+      </td>
+      <td>
+        Fired for several reasons including: pointer is moved out of the
+        <a href="#hit_test">hit test</a> boundaries of an element; firing the
+        pointerup event for a device that does not support hover (see
+        pointerup); after firing the <code>pointercancel</code> event (see
+        <code>pointercancel</code>); when a pen stylus leaves the hover range
+        detectable by the digitizer.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('pointerleave')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}
+      </td>
+      <td>
+        Fired when a pointer is moved out of the
+        <a href="#hit_test">hit test</a> boundaries of an element. For pen
+        devices, this event is fired when the stylus leaves the hover range
+        detectable by the digitizer.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event('gotpointercapture')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}
+      </td>
+      <td>Fired when an element receives pointer capture.</td>
+    </tr>
+    <tr>
+      <td>{{event('lostpointercapture')}}</td>
+      <td>
+        {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}}
+      </td>
+      <td>Fired after pointer capture is released for a pointer.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Element_extensions">Element extensions</h3>
+### Element extensions
 
-<p>There are three extensions to the {{domxref("Element")}} interface:</p>
+There are three extensions to the {{domxref("Element")}} interface:
 
-<dl>
- <dt>{{domxref("Element.setPointerCapture()","setPointerCapture()")}}</dt>
- <dd>Designates a specific element as the <em>capture target</em> of future pointer events.</dd>
- <dt>{{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}</dt>
- <dd>This method releases (stops) <em>pointer capture</em> that was previously set for a specific pointer event.</dd>
-</dl>
+- {{domxref("Element.setPointerCapture()","setPointerCapture()")}}
+  - : Designates a specific element as the _capture target_ of future pointer events.
+- {{domxref("Element.releasePointerCapture()","releasePointerCapture()")}}
+  - : This method releases (stops) _pointer capture_ that was previously set for a specific pointer event.
 
-<h3 id="Navigator_extension">Navigator extension</h3>
+### Navigator extension
 
-<p>The {{domxref("Navigator.maxTouchPoints")}} property is used to determine the maximum number of simultaneous touch points that are supported at any single point in time.</p>
+The {{domxref("Navigator.maxTouchPoints")}} property is used to determine the maximum number of simultaneous touch points that are supported at any single point in time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This section contains examples of basic usage of using the pointer events interfaces.</p>
+This section contains examples of basic usage of using the pointer events interfaces.
 
-<h3 id="Registering_event_handlers">Registering event handlers</h3>
+### Registering event handlers
 
-<p>This example registers a handler for every event type for the given element.</p>
+This example registers a handler for every event type for the given element.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function over_handler(event) { }
     function enter_handler(event) { }
     function down_handler(event) { }
@@ -209,19 +250,20 @@ tags:
       el.gotpointercapture = gotcapture_handler;
       el.lostpointercapture = lostcapture_handler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h3 id="Event_properties">Event properties</h3>
+### Event properties
 
-<p>This example illustrates accessing all of a touch event's properties.</p>
+This example illustrates accessing all of a touch event's properties.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     var id = -1;
 
     function process_id(event) {
@@ -269,7 +311,7 @@ tags:
       }
 
       // Call the tilt handler
-      if (ev.tiltX != 0 &amp;&amp; ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
+      if (ev.tiltX != 0 && ev.tiltY != 0) process_tilt(ev.tiltX, ev.tiltY);
 
       // Call the pressure handler
       process_pressure(ev.pressure);
@@ -283,91 +325,49 @@ tags:
       // Register pointerdown handler
       el.onpointerdown = down_handler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h2 id="Determining_the_Primary_Pointer">Determining the Primary Pointer</h2>
+## Determining the Primary Pointer
 
-<p>In some scenarios there may be multiple pointers (for example a device with both a touchscreen and a mouse) or a pointer supports multiple contact points (for example a touchscreen that supports multiple finger touches). The application can use the {{domxref("PointerEvent.isPrimary","isPrimary")}} property to identify a master pointer among the set of <em>active pointers</em> for each pointer type. If an application only wants to support a primary pointer, it can ignore all pointer events that are not primary.</p>
+In some scenarios there may be multiple pointers (for example a device with both a touchscreen and a mouse) or a pointer supports multiple contact points (for example a touchscreen that supports multiple finger touches). The application can use the {{domxref("PointerEvent.isPrimary","isPrimary")}} property to identify a master pointer among the set of _active pointers_ for each pointer type. If an application only wants to support a primary pointer, it can ignore all pointer events that are not primary.
 
-<p>For mouse there is only one pointer, so it will always be the primary pointer. For touch input, a pointer is considered primary if the user touched the screen when there were no other active touches. For pen and stylus input, a pointer is considered primary if the user's pen initially contacted the screen when there were no other active pens contacting the screen.</p>
+For mouse there is only one pointer, so it will always be the primary pointer. For touch input, a pointer is considered primary if the user touched the screen when there were no other active touches. For pen and stylus input, a pointer is considered primary if the user's pen initially contacted the screen when there were no other active pens contacting the screen.
 
-<h2 id="Determining_button_states">Determining button states</h2>
+## Determining button states
 
-<p>Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be <em>chorded</em> i.e. depressing an additional button while another button on the pointer device is already depressed.</p>
+Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. depressing an additional button while another button on the pointer device is already depressed.
 
-<p>To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).</p>
+To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 
-<p>The following table provides the values of <code>button</code> and <code>buttons</code> for the various device button states.</p>
+The following table provides the values of `button` and `buttons` for the various device button states.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Device Button State</th>
-   <th scope="col">button</th>
-   <th scope="col">buttons</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Neither buttons nor touch/pen contact changed since last event</td>
-   <td><code>-1</code></td>
-   <td>—</td>
-  </tr>
-  <tr>
-   <td>Mouse move with no buttons pressed, Pen moved while hovering with no buttons pressed</td>
-   <td>—</td>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <td>Left Mouse, Touch Contact, Pen contact</td>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td>Middle Mouse</td>
-   <td><code>1</code></td>
-   <td><code>4</code></td>
-  </tr>
-  <tr>
-   <td>Right Mouse, Pen barrel button</td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td>X1 (back) Mouse</td>
-   <td><code>3</code></td>
-   <td><code>8</code></td>
-  </tr>
-  <tr>
-   <td>X2 (forward) Mouse</td>
-   <td><code>4</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <td>Pen eraser button</td>
-   <td><code>5</code></td>
-   <td><code>32</code></td>
-  </tr>
- </tbody>
-</table>
+| Device Button State                                                                  | button | buttons |
+| ------------------------------------------------------------------------------------ | ------ | ------- |
+| Neither buttons nor touch/pen contact changed since last event                       | `-1`   | —       |
+| Mouse move with no buttons pressed, Pen moved while hovering with no buttons pressed | —      | `0`     |
+| Left Mouse, Touch Contact, Pen contact                                               | `0`    | `1`     |
+| Middle Mouse                                                                         | `1`    | `4`     |
+| Right Mouse, Pen barrel button                                                       | `2`    | `2`     |
+| X1 (back) Mouse                                                                      | `3`    | `8`     |
+| X2 (forward) Mouse                                                                   | `4`    | `16`    |
+| Pen eraser button                                                                    | `5`    | `32`    |
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
-</div>
+> **Note:** The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
 
-<h2>Capturing the pointer</h2>
+## Capturing the pointer
 
-<p>Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal <a href="#hit_test">hit test</a> at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).</p>
+Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal [hit test](#hit_test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).
 
-<p>The following example shows pointer capture being set on an element.</p>
+The following example shows pointer capture being set on an element.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;script&gt;
+```html
+<html>
+<script>
   function downHandler(ev) {
     let el = document.getElementById("target");
     // Element 'target' will receive/capture further events
@@ -378,17 +378,18 @@ tags:
     let el = document.getElementById("target");
     el.onpointerdown = downHandler;
   }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-  &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+  <div id="target"> Touch me ... </div>
+</body>
+</html>
+```
 
-<p>The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.</p>
+The following example shows a pointer capture being released (when a {{event("pointercancel")}} event occurs. The browser does this automatically when a {{event("pointerup")}} or {{event("pointercancel")}} event occurs.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function downHandler(ev) {
       let el = document.getElementById("target");
       // Element "target" will receive/capture further events
@@ -407,96 +408,85 @@ tags:
       el.onpointerdown = downHandler;
       el.onpointercancel = cancelHandler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target"> Touch me ... </div>
+  </body>
+</html>
+```
 
-<h2 id="touch-action_CSS_property">touch-action CSS property</h2>
+## touch-action CSS property
 
-<p>The {{cssxref("touch-action")}} CSS property is used to specify whether or not the browser should apply its default (<em>native</em>) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.</p>
+The {{cssxref("touch-action")}} CSS property is used to specify whether or not the browser should apply its default (_native_) touch behavior (such as zooming or panning) to a region. This property may be applied to all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.
 
-<p>A value of <code>auto</code> means the browser is free to apply its default touch behavior (to the specified region) and the value of <code>none</code> disables the browser's default touch behavior for the region. The values <code>pan-x</code> and <code>pan-y</code>, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value <code>manipulation</code> means the browser may consider touches that begin on the element are only for scrolling and zooming.</p>
+A value of `auto` means the browser is free to apply its default touch behavior (to the specified region) and the value of `none` disables the browser's default touch behavior for the region. The values `pan-x` and `pan-y`, mean that touches that begin on the specified region are only for horizontal and vertical scrolling, respectively. The value `manipulation` means the browser may consider touches that begin on the element are only for scrolling and zooming.
 
-<p>In the following example, the browser's default touch behavior is disabled for the <code>div</code> element.</p>
+In the following example, the browser's default touch behavior is disabled for the `div` element.
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;body&gt;
-    &lt;div style="touch-action:none;"&gt;Can't touch this ... &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+  <body>
+    <div style="touch-action:none;">Can't touch this ... </div>
+  </body>
+</html>
+```
 
-<p>In the following example, default touch behavior is disabled for some <code>button</code> elements.</p>
+In the following example, default touch behavior is disabled for some `button` elements.
 
-<pre class="brush: css">button#tiny {
+```css
+button#tiny {
   touch-action: none;
 }
-</pre>
+```
 
-<p>In the following example, when the <code>target</code> element is touched, it will only pan in the horizontal direction.</p>
+In the following example, when the `target` element is touched, it will only pan in the horizontal direction.
 
-<pre class="brush: css">#target {
+```css
+#target {
   touch-action: pan-x;
 }
-</pre>
+```
 
-<h2 id="Compatibility_with_mouse_events">Compatibility with mouse events</h2>
+## Compatibility with mouse events
 
-<p>Although the pointer event interfaces enable applications to create enhanced user experiences on pointer enabled devices, the reality is the vast majority of today's web content is designed to only work with mouse input. Consequently, even if a browser supports pointer events, the browser must still process mouse events so content that assumes mouse-only input will work as is without direct modification. Ideally, a pointer enabled application does not need to explicitly handle mouse input. However, because the browser must process mouse events, there may be some compatibility issues that need to be handled. This section contains information about pointer event and mouse event interaction and the ramifications for application developers.</p>
+Although the pointer event interfaces enable applications to create enhanced user experiences on pointer enabled devices, the reality is the vast majority of today's web content is designed to only work with mouse input. Consequently, even if a browser supports pointer events, the browser must still process mouse events so content that assumes mouse-only input will work as is without direct modification. Ideally, a pointer enabled application does not need to explicitly handle mouse input. However, because the browser must process mouse events, there may be some compatibility issues that need to be handled. This section contains information about pointer event and mouse event interaction and the ramifications for application developers.
 
-<p>The browser <em>may map generic pointer input to mouse events for compatibility with mouse-based content</em>. This mapping of events is called <em>compatibility mouse events</em>. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:</p>
+The browser _may map generic pointer input to mouse events for compatibility with mouse-based content_. This mapping of events is called _compatibility mouse events_. Authors can prevent the production of certain compatibility mouse events by canceling the pointerdown event but note that:
 
-<ul>
- <li>Mouse events can only be prevented when the pointer is down.</li>
- <li>Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.</li>
- <li>The <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code>, and <code>mouseleave</code> events are never prevented (even if the pointer is down).</li>
-</ul>
+- Mouse events can only be prevented when the pointer is down.
+- Hovering pointers (e.g. a mouse with no buttons pressed) cannot have their mouse events prevented.
+- The `mouseover`, `mouseout`, `mouseenter`, and `mouseleave` events are never prevented (even if the pointer is down).
 
-<h2 id="Best_practices">Best practices</h2>
+## Best practices
 
-<p>Here are some <em>best practices</em> to consider when using pointer events:</p>
+Here are some _best practices_ to consider when using pointer events:
 
-<ul>
- <li>Minimize the amount of work performed in event handlers.</li>
- <li>Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).</li>
- <li>The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.</li>
-</ul>
+- Minimize the amount of work performed in event handlers.
+- Add the event handlers to a specific target element (rather than the entire document or nodes higher up in the document tree).
+- The target element (node) should be large enough to accommodate the largest contact surface area (typically a finger touch). If the target area is too small, touching it could result in firing other events for adjacent elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/pointerevents/">Pointer Events</a></td>
-  </tr>
-</table>
+| Specification                                          |
+| ------------------------------------------------------ |
+| [Pointer Events](https://w3c.github.io/pointerevents/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat("api.PointerEvent")}}</p>
+## Browser compatibility
 
-<p>Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.</p>
+{{Compat("api.PointerEvent")}}
 
-<h2 id="Demos_and_examples">Demos and examples</h2>
+Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.
 
-<ul>
- <li><a href="https://patrickhlauke.github.io/touch/">Touch/pointer tests and demos (by Patrick H. Lauke)</a></li>
-</ul>
+## Demos and examples
 
-<h2 id="Community">Community</h2>
+- [Touch/pointer tests and demos (by Patrick H. Lauke)](https://patrickhlauke.github.io/touch/)
 
-<ul>
- <li><a href="https://github.com/w3c/pointerevents">Pointer Events Working Group</a></li>
- <li><a href="https://lists.w3.org/Archives/Public/public-pointer-events/">Mail list</a></li>
- <li><a href="irc://irc.w3.org:6667/">W3C #pointerevents IRC channel</a></li>
-</ul>
+## Community
 
-<h2 id="Related_topics_and_resources">Related topics and resources</h2>
+- [Pointer Events Working Group](https://github.com/w3c/pointerevents)
+- [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
+- [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
-<ul>
- <li><a href="https://www.w3.org/TR/touch-events/">Touch Events Standard</a></li>
-</ul>
+## Related topics and resources
+
+- [Touch Events Standard](https://www.w3.org/TR/touch-events/)

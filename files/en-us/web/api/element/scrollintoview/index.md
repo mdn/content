@@ -2,92 +2,87 @@
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 tags:
-- API
-- CSSOM Views
-- DOM
-- Element
-- Method
-- Reference
-- View
-- scrollIntoView
-- scrolling
+  - API
+  - CSSOM Views
+  - DOM
+  - Element
+  - Method
+  - Reference
+  - View
+  - scrollIntoView
+  - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The {{domxref("Element")}} interface's
-    <code><strong>scrollIntoView()</strong></code> method scrolls the element's parent
-    container such that the element on which <code>scrollIntoView()</code> is called is
-    visible to the user.</p>
+The {{domxref("Element")}} interface's
+**`scrollIntoView()`** method scrolls the element's parent
+container such that the element on which `scrollIntoView()` is called is
+visible to the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.scrollIntoView();
-<em>element</em>.scrollIntoView(<var>alignToTop</var>); // Boolean parameter
-<em>element</em>.scrollIntoView(<var>scrollIntoViewOptions</var>); // Object parameter
-</pre>
+```js
+element.scrollIntoView();
+element.scrollIntoView(alignToTop); // Boolean parameter
+element.scrollIntoView(scrollIntoViewOptions); // Object parameter
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>alignToTop</var></code> {{optional_inline}}</dt>
-  <dd>Is a boolean value:
-    <ul>
-      <li>If <code>true</code>, the top of the element will be aligned to the top of the
-        visible area of the scrollable ancestor. Corresponds to
-        <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. This is
-        the default value.</li>
-      <li>If <code>false</code>, the bottom of the element will be aligned to the bottom
-        of the visible area of the scrollable ancestor. Corresponds to
-        <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>
-    </ul>
-  </dd>
-  <dt><code><var>scrollIntoViewOptions</var></code> {{optional_inline}}
-    {{experimental_inline}}</dt>
-  <dd>
-    <p>Is an Object with the following properties:</p>
-    <dl>
-      <dt><code>behavior</code> {{optional_inline}}</dt>
-      <dd>Defines the transition animation.<br>
-        One of <code>auto</code> or <code>smooth</code>. Defaults to <code>auto</code>.
-      </dd>
-      <dt><code>block</code> {{optional_inline}}</dt>
-      <dd>Defines vertical alignment.<br>
-        One of <code>start</code>, <code>center</code>, <code>end</code>, or
-        <code>nearest</code>. Defaults to <code>start</code>.</dd>
-      <dt><code>inline</code> {{optional_inline}}</dt>
-      <dd>Defines horizontal alignment.<br>
-        One of <code>start</code>, <code>center</code>, <code>end</code>, or
-        <code>nearest</code>. Defaults to <code>nearest</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+- `alignToTop` {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+  - : Is a boolean value:
 
-<pre class="brush: js">var element = document.getElementById("box");
+    - If `true`, the top of the element will be aligned to the top of the
+      visible area of the scrollable ancestor. Corresponds to
+      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is
+      the default value.
+    - If `false`, the bottom of the element will be aligned to the bottom
+      of the visible area of the scrollable ancestor. Corresponds to
+      `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
+
+- `scrollIntoViewOptions` {{optional_inline}}
+  {{experimental_inline}}
+
+  - : Is an Object with the following properties:
+
+    - `behavior` {{optional_inline}}
+      - : Defines the transition animation.
+        One of `auto` or `smooth`. Defaults to `auto`.
+    - `block` {{optional_inline}}
+      - : Defines vertical alignment.
+        One of `start`, `center`, `end`, or
+        `nearest`. Defaults to `start`.
+    - `inline` {{optional_inline}}
+      - : Defines horizontal alignment.
+        One of `start`, `center`, `end`, or
+        `nearest`. Defaults to `nearest`.
+
+## Example
+
+```js
+var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
 element.scrollIntoView({block: "end"});
 element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The element may not be scrolled completely to the top or bottom depending on the layout
-  of other elements.</p>
+The element may not be scrolled completely to the top or bottom depending on the layout
+of other elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}</li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

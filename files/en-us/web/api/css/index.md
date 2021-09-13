@@ -9,52 +9,49 @@ tags:
   - Reference
 browser-compat: api.CSS
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>CSS</strong></code> interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.</p>
+The **`CSS`** interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The CSS interface is a utility interface and no object of this type can be created: only static properties are defined on it.</em></p>
+_The CSS interface is a utility interface and no object of this type can be created: only static properties are defined on it._
 
-<h3 id="Static_properties">Static properties</h3>
+### Static properties
 
-<dl>
- <dt>{{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}}{{SecureContext_Inline}}</dt>
- <dd>Provides access to the Worklet responsible for all the classes related to painting.</dd>
-</dl>
+- {{DOMxRef("CSS.paintWorklet")}} {{Experimental_Inline}}{{SecureContext_Inline}}
+  - : Provides access to the Worklet responsible for all the classes related to painting.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The CSS interface is a utility interface and no object of this type can be created: only static methods are defined on it.</em></p>
+_The CSS interface is a utility interface and no object of this type can be created: only static methods are defined on it._
 
-<h3 id="Static_methods">Static methods</h3>
+### Static methods
 
-<p><em>No inherited static methods</em>.</p>
+_No inherited static methods_.
 
-<dl>
- <dt>{{DOMxRef("CSS.registerProperty()")}}</dt>
- <dd>Registers {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</dd>
- <dt>{{DOMxRef("CSS.supports()")}}</dt>
- <dd>Returns a {{JSxRef("Boolean")}} indicating if the pair <em>property-value</em>, or the condition, given in parameter is supported.</dd>
- <dt>{{DOMxRef("CSS.escape()")}}</dt>
- <dd>Can be used to escape a string mostly for use as part of a CSS selector.</dd>
- <dt>{{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}</dt>
- <dd><p>Can be used to return a new <code><a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a></code> with a value of the parameter number of the units of the name of the factory function method used.</p>
- <pre class="brush: js">CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}</pre>
- </dd>
-</dl>
+- {{DOMxRef("CSS.registerProperty()")}}
+  - : Registers {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
+- {{DOMxRef("CSS.supports()")}}
+  - : Returns a {{JSxRef("Boolean")}} indicating if the pair _property-value_, or the condition, given in parameter is supported.
+- {{DOMxRef("CSS.escape()")}}
+  - : Can be used to escape a string mostly for use as part of a CSS selector.
+- {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Can be used to return a new [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) with a value of the parameter number of the units of the name of the factory function method used.
+
+    ```js
+    CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
+    ```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

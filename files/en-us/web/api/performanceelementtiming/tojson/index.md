@@ -9,42 +9,44 @@ tags:
   - PerformanceElementTiming
 browser-compat: api.PerformanceElementTiming.toJSON
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.</p>
+The **`toJSON()`** method of the {{domxref("PerformanceElementTiming")}} interface is a standard serializer. It returns a JSON representation of the object's properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>json</var> = <var>PerformanceElementTiming</var>.toJSON();</pre>
+    var json = PerformanceElementTiming.toJSON();
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<dl>
-  <dt>json</dt>
-  <dd>A JSON object that is the serialization of the <code>PerformanceElementTiming</code> object.</dd>
-</dl>
+- json
+  - : A JSON object that is the serialization of the `PerformanceElementTiming` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example calling <code>entry.toJSON()</code> returns a JSON representation of the <code>PerformanceElementTiming</code> object, with the information about the image element.</p>
+In this example calling `entry.toJSON()` returns a JSON representation of the `PerformanceElementTiming` object, with the information about the image element.
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+```html
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+```
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.toJSON());
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
+> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

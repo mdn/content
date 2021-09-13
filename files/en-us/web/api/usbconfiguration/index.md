@@ -11,32 +11,28 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration
 ---
-<p>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</p>
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <code>USBConfiguration</code> interface of the <a href="/en-US/docs/Web/API/WebUSB_API">WebUSB API</a> provides information about a particular configuration of a USB device and the interfaces that it supports.</p>
+The `USBConfiguration` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about a particular configuration of a USB device and the interfaces that it supports.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("USBConfiguration.USBConfiguration()")}}</dt>
-	<dd>Creates a new <code>USBConfiguration</code> object which contains information about the configuration on the provided <code>USBDevice</code> with the given configuration value.</dd>
-</dl>
+- {{domxref("USBConfiguration.USBConfiguration()")}}
+  - : Creates a new `USBConfiguration` object which contains information about the configuration on the provided `USBDevice` with the given configuration value.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("USBConfiguration.configurationValue")}}{{readonlyInline}}</dt>
-	<dd>Returns the configuration value of this configuration. This is equal to the <a href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><code>bConfigurationValue</code></a> field of the configuration descriptor provided by the device defining this configuration.</dd>
-	<dt>{{domxref("USBConfiguration.configurationName")}}{{readonlyInline}}</dt>
-	<dd>Returns the name provided by the device to describe this configuration. This is equal to the value of the string descriptor with the index provided in the <a href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors"><code>iConfiguration</code></a> field of the configuration descriptor defining this configuration.</dd>
-	<dt>{{domxref("USBConfiguration.interfaces")}}{{readonlyInline}}</dt>
-	<dd>Returns an array containing instances of the {{domxref('USBInterface')}} describing each interface supported by this configuration.</dd>
-</dl>
+- {{domxref("USBConfiguration.configurationValue")}}{{readonlyInline}}
+  - : Returns the configuration value of this configuration. This is equal to the [`bConfigurationValue`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor provided by the device defining this configuration.
+- {{domxref("USBConfiguration.configurationName")}}{{readonlyInline}}
+  - : Returns the name provided by the device to describe this configuration. This is equal to the value of the string descriptor with the index provided in the [`iConfiguration`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor defining this configuration.
+- {{domxref("USBConfiguration.interfaces")}}{{readonlyInline}}
+  - : Returns an array containing instances of the {{domxref('USBInterface')}} describing each interface supported by this configuration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

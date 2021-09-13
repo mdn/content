@@ -10,41 +10,43 @@ tags:
   - getConfiguration
 browser-compat: api.RTCPeerConnection.getConfiguration
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCPeerConnection.getConfiguration()</code></strong> method returns
-  an {{domxref("RTCConfiguration")}} object which indicates the current configuration of
-  the {{domxref("RTCPeerConnection")}} on which the method is called.</p>
+The **`RTCPeerConnection.getConfiguration()`** method returns
+an {{domxref("RTCConfiguration")}} object which indicates the current configuration of
+the {{domxref("RTCPeerConnection")}} on which the method is called.
 
-<p>The returned configuration is the last configuration applied via
-  {{domxref("RTCPeerConnection.setConfiguration","setConfiguration()")}}, or if
-  <code>setConfiguration()</code> hasn't been called, the configuration the
-  <code>RTCPeerConnection</code> was constructed with. The configuration includes a list
-  of the ICE servers used by the connection, information about transport policies, and
-  identity information.</p>
+The returned configuration is the last configuration applied via
+{{domxref("RTCPeerConnection.setConfiguration","setConfiguration()")}}, or if
+`setConfiguration()` hasn't been called, the configuration the
+`RTCPeerConnection` was constructed with. The configuration includes a list
+of the ICE servers used by the connection, information about transport policies, and
+identity information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>configuration</em> = <em>RTCPeerConnection</em>.getConfiguration();</pre>
+```js
+var configuration = RTCPeerConnection.getConfiguration();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method takes no input parameters.</p>
+This method takes no input parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("RTCConfiguration")}} object describing the
-  {{domxref("RTCPeerConnection")}}'s current configuration.</p>
+An {{domxref("RTCConfiguration")}} object describing the
+{{domxref("RTCPeerConnection")}}'s current configuration.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds a new certificate to an active connection if it doesn't already have
-  one in use.</p>
+This example adds a new certificate to an active connection if it doesn't already have
+one in use.
 
-<pre class="brush: js">let configuration = myPeerConnection.getConfiguration();
+```js
+let configuration = myPeerConnection.getConfiguration();
 
-if ((configuration.certificates != undefined) &amp;&amp; (!configuration.certificates.length)) {
+if ((configuration.certificates != undefined) && (!configuration.certificates.length)) {
    RTCPeerConnection.generateCertificate({
       name: 'RSASSA-PKCS1-v1_5',
       hash: 'SHA-256',
@@ -55,32 +57,30 @@ if ((configuration.certificates != undefined) &amp;&amp; (!configuration.certifi
     myPeerConnection.setConfiguration(configuration);
   });
 }
-</pre>
+```
 
-<p>This example fetches the current configuration of the {{domxref("RTCPeerConnection")}},
-  then looks to see if it has any certificates set by examining whether or not (a) the
-  configuration has a value for <code>certificates</code>, and (b) whether its length is
-  zero.</p>
+This example fetches the current configuration of the {{domxref("RTCPeerConnection")}},
+then looks to see if it has any certificates set by examining whether or not (a) the
+configuration has a value for `certificates`, and (b) whether its length is
+zero.
 
-<p>If it's determined that there are no certificates in place,
-  {{domxref("RTCPeerConnection.generateCertificate()")}} is called to create a new
-  certificate; we provide a fulfillment handler which adds a new array containing the one
-  newly-created certificate to the current configuration and passes it to
-  {{domxref("RTCPeerConnect.setConfiguration", "setConfiguration()")}} to add the
-  certificate to the connection.</p>
+If it's determined that there are no certificates in place,
+{{domxref("RTCPeerConnection.generateCertificate()")}} is called to create a new
+certificate; we provide a fulfillment handler which adds a new array containing the one
+newly-created certificate to the current configuration and passes it to
+{{domxref("RTCPeerConnect.setConfiguration", "setConfiguration()")}} to add the
+certificate to the connection.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCPeerConnection.setConfiguration()")}}</li>
-  <li>{{domxref("RTCConfiguration")}}</li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- {{domxref("RTCPeerConnection.setConfiguration()")}}
+- {{domxref("RTCConfiguration")}}
+- {{domxref("RTCPeerConnection")}}

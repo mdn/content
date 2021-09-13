@@ -2,59 +2,57 @@
 title: CSSUnparsedValue.entries()
 slug: Web/API/CSSUnparsedValue/entries
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnparsedValue
-- Constructor
-- Entries
-- Experimental
-- Houdini
-- Method
-- NeedsExample
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSUnparsedValue
+  - Constructor
+  - Entries
+  - Experimental
+  - Houdini
+  - Method
+  - NeedsExample
+  - Reference
 browser-compat: api.CSSUnparsedValue.entries
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnparsedValue.entries()</code></strong> method
-  returns an array of a given object's own enumerable property <code>[key, value]</code>
-  pairs in the same order as that provided by a {{jsxref("Statements/for...in",
+The **`CSSUnparsedValue.entries()`** method
+returns an array of a given object's own enumerable property `[key, value]`
+pairs in the same order as that provided by a {{jsxref("Statements/for...in",
   "for...in")}} loop (the difference being that a for-in loop enumerates properties in the
-  prototype chain as well).</p>
+prototype chain as well).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSSUnparsedValue.entries(<var>obj</var>)</pre>
+```js
+CSSUnparsedValue.entries(obj)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The {{domxref('CSSUnparsedValue')}} whose enumerable own property
-    <code>[key, value]</code> pairs are to be returned.</dd>
-</dl>
+- `obj`
+  - : The {{domxref('CSSUnparsedValue')}} whose enumerable own property
+    `[key, value]` pairs are to be returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of the given <code>CSSUnparsedValue</code> object's own enumerable property
-  <code>[key, value]</code> pairs.</p>
+An array of the given `CSSUnparsedValue` object's own enumerable property
+`[key, value]` pairs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}</li>
-  <li>{{domxref("CSSUnparsedValue.forEach")}}</li>
-  <li>{{domxref("CSSUnparsedValue.keys")}}</li>
-  <li>{{domxref("CSSUnparsedValue.length")}}</li>
-  <li>{{domxref("CSSUnparsedValue.values")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.forEach")}}
+- {{domxref("CSSUnparsedValue.keys")}}
+- {{domxref("CSSUnparsedValue.length")}}
+- {{domxref("CSSUnparsedValue.values")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

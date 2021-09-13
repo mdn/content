@@ -10,52 +10,46 @@ tags:
   - web console
 browser-compat: api.console.warn
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.warn()</code></strong> method outputs a warning message to the Web
-  console.</p>
+The **`console.warn()`** method outputs a warning message to the Web
+console.
 
-<p>{{AvailableInWorkers}}</p>
-<div class="notecard note">
-  <p><strong>Note:</strong> In Chrome and Firefox, warnings have a small exclamation point icon next to them in the Web
-    console log.</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+> **Note:** In Chrome and Firefox, warnings have a small exclamation point icon next to them in the Web
+> console log.
 
-<pre class="brush: js">console.warn(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.warn(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+## Syntax
 
-<h2 id="Parameters">Parameters</h2>
+```js
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
-<dl>
-  <dt><code>obj1</code> ... <code>objN</code></dt>
-  <dd>A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output.</dd>
-  <dt><code>msg</code></dt>
-  <dd>A JavaScript string containing zero or more substitution strings.</dd>
-  <dt><code>subst1</code> ... <code>substN</code></dt>
-  <dd>JavaScript objects with which to replace substitution strings within
-    <code>msg</code>. This gives you additional control over the format of the output.
-  </dd>
-</dl>
+## Parameters
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting
-    text to the console</a> in the documentation of {{domxref("console")}} for details.
-</p>
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This gives you additional control over the format of the output.
 
-<h2 id="Specifications">Specifications</h2>
+See [Outputting
+text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
-      the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [MSDN: Using
+  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)

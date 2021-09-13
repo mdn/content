@@ -2,106 +2,110 @@
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 tags:
-- API
-- Elements
-- HTML DOM
-- HTMLFormControlsCollection
-- HTMLFormElement
-- Property
-- Reference
+  - API
+  - Elements
+  - HTML DOM
+  - HTMLFormControlsCollection
+  - HTMLFormElement
+  - Property
+  - Reference
 browser-compat: api.HTMLFormElement.elements
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLFormElement")}} property
-    <code><strong>elements</strong></code> returns an
-    {{domxref("HTMLFormControlsCollection")}} listing all the form controls contained in
-    the {{HTMLElement("form")}} element.</p>
+The {{domxref("HTMLFormElement")}} property
+**`elements`** returns an
+{{domxref("HTMLFormControlsCollection")}} listing all the form controls contained in
+the {{HTMLElement("form")}} element.
 
-<p>Independently, you can obtain just the
-  number of form controls using the {{domxref("HTMLFormElement.length", "length")}}
-  property.</p>
+Independently, you can obtain just the
+number of form controls using the {{domxref("HTMLFormElement.length", "length")}}
+property.
 
-<p>You can access a particular form control in the returned collection by using either an
-  index or the element's <code>name</code> or<code>id</code> attributes.</p>
+You can access a particular form control in the returned collection by using either an
+index or the element's `name` or`id` attributes.
 
-<p>Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
-  <code>HTMLFormControlsCollection</code> is based.</p>
+Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
+`HTMLFormControlsCollection` is based.
 
-<div class="note">
-  <p><strong>Note:</strong> Similarly, you can get a list of all of the forms contained
-    within a given document using the document's {{domxref("Document.forms", "forms")}}
-    property.</p>
-</div>
+> **Note:** Similarly, you can get a list of all of the forms contained
+> within a given document using the document's {{domxref("Document.forms", "forms")}}
+> property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeList</em> = <em>HTMLFormElement</em>.elements
-</pre>
+```js
+nodeList = HTMLFormElement.elements
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the
-  form. This is a live collection; if form controls are added to or removed from the form,
-  this collection will update to reflect the change.</p>
+An {{domxref("HTMLFormControlsCollection")}} containing all non-image controls in the
+form. This is a live collection; if form controls are added to or removed from the form,
+this collection will update to reflect the change.
 
-<p>The form controls in the returned collection are in the same order in which they appear
-  in the form by following a preorder, depth-first traversal of the tree. This is called
-  <strong>tree order</strong>.</p>
+The form controls in the returned collection are in the same order in which they appear
+in the form by following a preorder, depth-first traversal of the tree. This is called
+**tree order**.
 
-<p>{{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}</p>
+{{page("/en-US/docs/Web/API/HTMLFormElement", "Elements that are considered form controls")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Quick_syntax_example">Quick syntax example</h3>
+### Quick syntax example
 
-<p>In this example, we see how to obtain the list of form controls as well as how to
-  access its members by index and by name or ID.</p>
+In this example, we see how to obtain the list of form controls as well as how to
+access its members by index and by name or ID.
 
-<pre class="brush: html">&lt;form id="my-form"&gt;
-  &lt;input type="text" name="username"&gt;
-  &lt;input type="text" name="full-name"&gt;
-  &lt;input type="password" name="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="my-form">
+  <input type="text" name="username">
+  <input type="text" name="full-name">
+  <input type="password" name="password">
+</form>
+```
 
-<pre class="brush:js">var inputs = document.getElementById("my-form").elements;
+```js
+var inputs = document.getElementById("my-form").elements;
 var inputByIndex = inputs[0];
 var inputByName = inputs["username"];
-</pre>
+```
 
-<h3 id="Accessing_form_controls">Accessing form controls</h3>
+### Accessing form controls
 
-<p>This example gets the form's element list, then iterates over the list, looking for
-  {{HTMLElement("input")}} elements of type
-  <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> so that some
-  form of processing can be performed on them.</p>
+This example gets the form's element list, then iterates over the list, looking for
+{{HTMLElement("input")}} elements of type
+[`"text"`](/en-US/docs/Web/HTML/Element/input/text) so that some
+form of processing can be performed on them.
 
-<pre class="brush: js">var inputs = document.getElementById("my-form").elements;
+```js
+var inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i &lt; inputs.length; i++) {
-  if (inputs[i].nodeName === "INPUT" &amp;&amp; inputs[i].type === "text") {
+for (i = 0; i < inputs.length; i++) {
+  if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
     // Update text input
     inputs[i].value.toLocaleUpperCase();
   }
 }
-</pre>
+```
 
-<h3 id="Disabling_form_controls">Disabling form controls</h3>
+### Disabling form controls
 
-<pre class="brush: js">var inputs = document.getElementById("my-form").elements;
+```js
+var inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i &lt; inputs.length; i++) {
+for (i = 0; i < inputs.length; i++) {
   // Disable all form controls
   inputs[i].setAttribute("disabled", "");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,51 +7,52 @@ tags:
   - WebHID
   - WebHID API
 ---
-<div>{{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("WebHID API")}}{{SeeCompatTable}}
 
-<p>A Human Interface Device (HID) is a type of device that takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure. The HID protocol was originally developed for USB devices but has since been implemented over many other protocols, including Bluetooth.</p>
+A Human Interface Device (HID) is a type of device that takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure. The HID protocol was originally developed for USB devices but has since been implemented over many other protocols, including Bluetooth.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-    <dt>{{domxref("HID")}}</dt>
-    <dd>Provides methods for connecting to HID devices, listing attached HID devices and event handlers for connected HID devices.</dd>
-</dl>
-<dl>
-    <dt>{{domxref("HIDDevice")}}</dt>
-    <dd>Represents an HID device. It's possible for a single physical device to be represented by multiple <code>HIDDevice</code> obects.</dd>
-</dl>
-<dl>
-    <dt>{{domxref("HIDInputReportEvent")}}</dt>
-    <dd>Passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received from any associated HID device.</dd>
-</dl>
-<dl>
-    <dt>{{domxref("HIDConnectionEvent")}}</dt>
-    <dd>Passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when a device is connected or disconnected.</dd>
-</dl>
+- {{domxref("HID")}}
+  - : Provides methods for connecting to HID devices, listing attached HID devices and event handlers for connected HID devices.
 
-<h2 id="Examples">Examples</h2>
+<!---->
 
-<p>You can connect to a device with the {{domxref("HID.requestDevice","requestDevice()")}} method. In this case, we select from all the available devices.</p>
+- {{domxref("HIDDevice")}}
+  - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` obects.
 
-<pre class="brush: js">
+<!---->
+
+- {{domxref("HIDInputReportEvent")}}
+  - : Passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received from any associated HID device.
+
+<!---->
+
+- {{domxref("HIDConnectionEvent")}}
+  - : Passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when a device is connected or disconnected.
+
+## Examples
+
+You can connect to a device with the {{domxref("HID.requestDevice","requestDevice()")}} method. In this case, we select from all the available devices.
+
+```js
 const device = await navigator.hid.requestDevice({filters: []})
 // A popup titled `... wants to connect to a HID Device` with `Cancel` and `Connect` buttons will show up with a device list to select from.
 // Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
-</pre>
+```
 
-<p>We can retrieve all the connected devices and log the device names to the console.</p>
+We can retrieve all the connected devices and log the device names to the console.
 
-<pre class="brush: js">
+```js
 let devices = await navigator.hid.getDevices();
 devices.forEach(device => {
     console.log(`HID: ${device.productName}`);
 });
-</pre>
+```
 
-<p>We can register event listeners for disconnection of any HID devices.</p>
+We can register event listeners for disconnection of any HID devices.
 
-<pre class="brush: js">
+```js
 navigator.hid.addEventListener('disconnect', (event) => {
     console.log(`HID disconnected: ${event.device.productName}`);
     console.dir(event)
@@ -77,27 +78,14 @@ navigator.hid.addEventListener('disconnect', (event) => {
 // }
 
 // The event above is an instance of the HIDConnectionEvent interface.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-    <td>{{SpecName('WebHID')}}</td>
-    <td>{{Spec2('WebHID')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                | Status                   | Comment             |
+| ---------------------------- | ------------------------ | ------------------- |
+| {{SpecName('WebHID')}} | {{Spec2('WebHID')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.HID")}}</p>
+{{Compat("api.HID")}}

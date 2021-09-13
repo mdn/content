@@ -2,29 +2,28 @@
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
 tags:
-- DOM
-- Method
-- NamedNodeMap
-- Reference
+  - DOM
+  - Method
+  - NamedNodeMap
+  - Reference
 browser-compat: api.NamedNodeMap.getNamedItem
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>getNamedItem()</strong></code> method of the
-  {{domxref("NamedNodeMap")}} interface returns the {{domxref("Attr")}} corresponding to
-  the given name, or null if there is no corresponding attribute.</p>
+The **`getNamedItem()`** method of the
+{{domxref("NamedNodeMap")}} interface returns the {{domxref("Attr")}} corresponding to
+the given name, or null if there is no corresponding attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>myAttr</em> = attrs.getNamedItem(<em>name</em>)</pre>
+```js
+myAttr = attrs.getNamedItem(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>name</code> is the name of the desired attribute</li>
-</ul>
+- `name` is the name of the desired attribute
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

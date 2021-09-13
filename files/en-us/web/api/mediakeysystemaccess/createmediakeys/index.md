@@ -2,32 +2,33 @@
 title: MediaKeySystemAccess.createMediaKeys()
 slug: Web/API/MediaKeySystemAccess/createMediaKeys
 tags:
-- API
-- Audio
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemAccess
-- Method
-- NeedsExample
-- Reference
-- Video
-- createMediaKeys
+  - API
+  - Audio
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemAccess
+  - Method
+  - NeedsExample
+  - Reference
+  - Video
+  - createMediaKeys
 browser-compat: api.MediaKeySystemAccess.createMediaKeys
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemAccess.createMediaKeys()</code> method returns a
-  {{jsxref('Promise')}} that resolves to a new {{domxref('MediaKeys')}} object.</p>
+The `MediaKeySystemAccess.createMediaKeys()` method returns a
+{{jsxref('Promise')}} that resolves to a new {{domxref('MediaKeys')}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>mediaKeys</var> = await <var>mediaKeySystemAccess</var>.createMediaKeys();</pre>
+```js
+var mediaKeys = await mediaKeySystemAccess.createMediaKeys();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

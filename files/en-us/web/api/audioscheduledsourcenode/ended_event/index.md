@@ -14,73 +14,73 @@ tags:
   - ended
 browser-compat: api.AudioScheduledSourceNode.ended_event
 ---
-<p>{{DefaultAPISidebar("Web Audio API")}}</p>
+{{DefaultAPISidebar("Web Audio API")}}
 
-<p>The <code>ended</code> event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.</p>
+The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("AudioScheduledSourceNode.onended")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("AudioScheduledSourceNode.onended")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.</p>
+This event occurs when a {{domxref("AudioScheduledSourceNode")}} has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this simple example, an event listener for the <code>ended</code> event is set up to enable a "Start" button in the user interface when the node stops playing:</p>
+In this simple example, an event listener for the `ended` event is set up to enable a "Start" button in the user interface when the node stops playing:
 
-<pre class="brush: js">node.addEventListener('ended', () =&gt; {
+```js
+node.addEventListener('ended', () => {
   document.getElementById("startButton").disabled = false;
-})</pre>
+})
+```
 
-<p>You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:</p>
+You can also set up the event handler using the {{domxref("AudioScheduledSourceNode.onended")}} property:
 
-<pre class="brush: js">node.onended = function() {
+```js
+node.onended = function() {
   document.getElementById("startButton").disabled = false;
-}</pre>
+}
+```
 
-<p>For an example of the ended event in use, see our <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">audio-buffer example on GitHub</a>.</p>
+For an example of the ended event in use, see our [audio-buffer example on GitHub](https://mdn.github.io/webaudio-examples/audio-buffer/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Related_events">Related events</h2>
+## Related events
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess</a></li>
- <li><a href="/en-US/docs/Web/API/OfflineAudioContext/complete_event">complete</a></li>
-</ul>
+- [audioprocess](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+- [complete](/en-US/docs/Web/API/OfflineAudioContext/complete_event)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}</li>
- <li>{{domxref("MediaStreamTrack.ended_event", 'MediaStreamTrack: ended event')}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
+- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
+- {{domxref("MediaStreamTrack.ended_event", 'MediaStreamTrack: ended event')}}

@@ -2,69 +2,58 @@
 title: CSSPrimitiveValue.getStringValue()
 slug: Web/API/CSSPrimitiveValue/getStringValue
 tags:
-- API
-- CSSPrimitiveValue
-- Method
-- getStringValue
-- Deprecated
+  - API
+  - CSSPrimitiveValue
+  - Method
+  - getStringValue
+  - Deprecated
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
-<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The <code><strong>getStringValue()</strong></code> method of the
-  {{domxref("CSSPrimitiveValue")}} interface is used to get a string value. If this CSS
-  value doesn't contain a string value, a {{domxref("DOMException")}} is raised.</p>
+The **`getStringValue()`** method of the
+{{domxref("CSSPrimitiveValue")}} interface is used to get a string value. If this CSS
+value doesn't contain a string value, a {{domxref("DOMException")}} is raised.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>stringValue</var> = <var>cssPrimitiveValue</var>.getStringValue();</pre>
+```js
+var stringValue = cssPrimitiveValue.getStringValue();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>string</code> value.</p>
+A `string` value.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Type</strong></th>
-      <th scope="col"><strong>Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOMException</code></td>
-      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
-        string value.</td>
-    </tr>
-  </tbody>
-</table>
+| **Type**       | **Description**                                                                    |
+| -------------- | ---------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a string value. |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var cs = window.getComputedStyle(document.body);
+```js
+var cs = window.getComputedStyle(document.body);
 var cssValue = cs.getPropertyCSSValue("display");
-console.log(cssValue.getStringValue());</pre>
+console.log(cssValue.getStringValue());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

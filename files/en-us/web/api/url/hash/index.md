@@ -2,51 +2,50 @@
 title: URL.hash
 slug: Web/API/URL/hash
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
 browser-compat: api.URL.hash
 ---
-<div>{{ APIRef("URL API") }}</div>
+{{ APIRef("URL API") }}
 
-<p>The <strong><code>hash</code></strong> property of the
-    {{domxref("URL")}} interface is a {{domxref("USVString")}} containing a
-    <code>'#'</code> followed by the fragment identifier of the URL.</p>
+The **`hash`** property of the
+{{domxref("URL")}} interface is a {{domxref("USVString")}} containing a
+`'#'` followed by the fragment identifier of the URL.
 
-<p>The fragment is not <a
-    href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
-  have a fragment identifier, this property contains an empty string — <code>""</code>.
-</p>
+The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+have a fragment identifier, this property contains an empty string — `""`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>string</em> = <em>url</em>.hash
-<em>url</em>.hash = <em>newHash</em>
-</pre>
+```js
+const string = url.hash
+url.hash = newHash
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-console.log(url.hash); // Logs: '#Examples'</pre>
+```js
+const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
+console.log(url.hash); // Logs: '#Examples'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

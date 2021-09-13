@@ -11,47 +11,45 @@ tags:
   - Deprecated
 browser-compat: api.Element.setCapture
 ---
-<div>{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}</div>
+{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
-<p>Call this method during the handling of a mousedown event to retarget all mouse events
-  to this element until the mouse button is released or {{
-  domxref("document.releaseCapture()") }} is called.</p>
+Call this method during the handling of a mousedown event to retarget all mouse events
+to this element until the mouse button is released or {{
+  domxref("document.releaseCapture()") }} is called.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface never had much cross-browser
-  support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
-  from the Pointer Events API.</p>
-</div>
+> **Warning:** This interface never had much cross-browser
+> support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
+> from the Pointer Events API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.setCapture(<em>retargetToElement</em>);
-</pre>
+```js
+element.setCapture(retargetToElement);
+```
 
-<dl>
-  <dt><code>retargetToElement</code></dt>
-  <dd>If <code>true</code>, all events are targeted directly to this element; if
-    <code>false</code>, events can also fire at descendants of this element.</dd>
-</dl>
+- `retargetToElement`
+  - : If `true`, all events are targeted directly to this element; if
+    `false`, events can also fire at descendants of this element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the current mouse coordinates are drawn while you mouse around after
-  clicking and holding down on an element.</p>
+In this example, the current mouse coordinates are drawn while you mouse around after
+clicking and holding down on an element.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Mouse Capture Example&lt;/title&gt;
-  &lt;style type="text/css"&gt;
+```html
+<html>
+<head>
+  <title>Mouse Capture Example</title>
+  <style type="text/css">
     #myButton {
       border: solid black 1px;
       color: black;
       padding: 2px;
       box-shadow: black 2px 2px;
     }
-  &lt;/style&gt;
+  </style>
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript">
     function init() {
       var btn = document.getElementById("myButton");
       if (btn.setCapture) {
@@ -76,34 +74,32 @@ browser-compat: api.Element.setCapture
       var output = document.getElementById("output");
       output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-  &lt;p&gt;This is an example of how to use mouse capture on elements in Gecko 2.0.&lt;/p&gt;
-  &lt;p&gt;&lt;a id="myButton" href="#"&gt;Test Me&lt;/a&gt;&lt;/p&gt;
-  &lt;div id="output"&gt;No events yet&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body onload="init()">
+  <p>This is an example of how to use mouse capture on elements in Gecko 2.0.</p>
+  <p><a id="myButton" href="#">Test Me</a></p>
+  <div id="output">No events yet</div>
+</body>
+</html>
+```
 
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html">View Live Examples</a></p>
+[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The element may not be scrolled completely to the top or bottom, depending on the
-  layout of other elements.</p>
+The element may not be scrolled completely to the top or bottom, depending on the
+layout of other elements.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Based on Internet Explorer's implementation.</p>
+Based on Internet Explorer's implementation.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("document.releaseCapture()") }}</li>
-  <li>{{domxref("element.setPointerCapture")}}</li>
-</ul>
+- {{ domxref("document.releaseCapture()") }}
+- {{domxref("element.setPointerCapture")}}

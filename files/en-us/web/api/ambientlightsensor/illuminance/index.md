@@ -13,37 +13,41 @@ tags:
   - illuminance
 browser-compat: api.AmbientLightSensor.illuminance
 ---
-<p>{{APIRef("Sensor API")}}{{SeeCompatTable}}</p>
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>illuminance</code></strong> property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in <a href="https://en.wikipedia.org/wiki/Lux">lux</a> of the ambient light level around the hosting device.</p>
+The **`illuminance`** property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>level</em> = AmbientLightSensor.illuminance</pre>
+```js
+var level = AmbientLightSensor.illuminance
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Number')}} indicating the current light level in lux.</p>
+A {{jsxref('Number')}} indicating the current light level in lux.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if ( 'AmbientLightSensor' in window ) {
+```js
+if ( 'AmbientLightSensor' in window ) {
   const sensor = new AmbientLightSensor();
-  sensor.onreading = () =&gt; {
+  sensor.onreading = () => {
     console.log('Current light level:', sensor.illuminance);
   };
-  sensor.onerror = (event) =&gt; {
+  sensor.onerror = (event) => {
     console.log(event.error.name, event.error.message);
   };
   sensor.start();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

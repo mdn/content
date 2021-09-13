@@ -14,48 +14,45 @@ tags:
   - TaskAttributionTiming
   - Web Performance
 ---
-<p>{{DefaultAPISidebar("Long Tasks")}}</p>
+{{DefaultAPISidebar("Long Tasks")}}
 
-<h2 id="Motivation">Motivation</h2>
+## Motivation
 
-<p>The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more. The 50 ms threshold comes from the <a href="https://developers.google.com/web/fundamentals/performance/rail">RAIL Model</a>, in particular the <a href="https://developers.google.com/web/fundamentals/performance/rail#response">"Response: process events in under 50 ms"</a> section.</p>
+The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more. The 50 ms threshold comes from the [RAIL Model](https://developers.google.com/web/fundamentals/performance/rail), in particular the ["Response: process events in under 50 ms"](https://developers.google.com/web/fundamentals/performance/rail#response) section.
 
-<p>Tasks that block the main thread for 50 ms or more cause, among other issues:</p>
+Tasks that block the main thread for 50 ms or more cause, among other issues:
 
-<ul>
- <li>Delayed "{{glossary("Time to interactive")}}".</li>
- <li>High/variable input latency.</li>
- <li>High/variable event handling latency.</li>
- <li>Janky animations and scrolling.</li>
-</ul>
+- Delayed "{{glossary("Time to interactive")}}".
+- High/variable input latency.
+- High/variable event handling latency.
+- Janky animations and scrolling.
 
-<h2 id="Concepts">Concepts</h2>
+## Concepts
 
-<p>Some key terms or ideas that are utilized by the Long Tasks API.</p>
+Some key terms or ideas that are utilized by the Long Tasks API.
 
-<h3 id="Long_task">Long task</h3>
+### Long task
 
-<p>Any uninterrupted period where the main UI thread is busy for 50 ms or longer. Common examples include:</p>
+Any uninterrupted period where the main UI thread is busy for 50 ms or longer. Common examples include:
 
-<ul>
- <li>Long running event handlers.</li>
- <li>Expensive reflows and other re-renders.</li>
- <li>Work the browser does between different turns of the event loop that exceeds 50 ms.</li>
-</ul>
+- Long running event handlers.
+- Expensive reflows and other re-renders.
+- Work the browser does between different turns of the event loop that exceeds 50 ms.
 
-<h3 id="Culprit_browsing_context_container">Culprit browsing context container</h3>
+### Culprit browsing context container
 
-<p>The "culprit browsing context container", or "the container" for short, is the top level page, iframe, embed or object that the task occurred within.</p>
+The "culprit browsing context container", or "the container" for short, is the top level page, iframe, embed or object that the task occurred within.
 
-<h3 id="Attributions">Attributions</h3>
+### Attributions
 
-<p>A list of containers that the task occurred within. For tasks that don't occur within the top level page, the <code>containerId</code>, <code>containerName</code> and <code>containerSrc</code> fields may provide information as to the source of the task.</p>
+A list of containers that the task occurred within. For tasks that don't occur within the top level page, the `containerId`, `containerName` and `containerSrc` fields may provide information as to the source of the task.
 
-<h2 id="Usage">Usage</h2>
+## Usage
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list) {
+```js
+var observer = new PerformanceObserver(function(list) {
     var perfEntries = list.getEntries();
-    for (var i = 0; i &lt; perfEntries.length; i++) {
+    for (var i = 0; i < perfEntries.length; i++) {
         // Process long task notifications:
         // report back for analytics and monitoring
         // ...
@@ -65,52 +62,32 @@ tags:
 observer.observe({entryTypes: ["longtask"]});
 // Long script execution after this will result in queueing
 // and receiving "longtask" entries in the observer.
-</pre>
+```
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref('PerformanceLongTaskTiming')}}</dt>
- <dd>Reports instances of long tasks.</dd>
- <dt>{{domxref("TaskAttributionTiming")}}</dt>
- <dd>Returns information about the work involved in a long task and its associate frame context.</dd>
-</dl>
+- {{domxref('PerformanceLongTaskTiming')}}
+  - : Reports instances of long tasks.
+- {{domxref("TaskAttributionTiming")}}
+  - : Returns information about the work involved in a long task and its associate frame context.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Long Tasks')}}</td>
-   <td>{{Spec2('Long Tasks')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Long Tasks')}} | {{Spec2('Long Tasks')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="PerformanceLongTaskTiming"><code>PerformanceLongTaskTiming</code></h3>
+### `PerformanceLongTaskTiming`
 
-<div>
+{{Compat("api.PerformanceLongTaskTiming")}}
 
-<p>{{Compat("api.PerformanceLongTaskTiming")}}</p>
-</div>
+### `TaskAttributionTiming`
 
-<h3 id="TaskAttributionTiming"><code>TaskAttributionTiming</code></h3>
+{{Compat("api.TaskAttributionTiming")}}
 
-<div>
-<p>{{Compat("api.TaskAttributionTiming")}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://github.com/w3c/longtasks">GitHub repository</a> contains documentation and some code samples.</li>
- <li><a href="https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/">PerfPlanet article</a> on Long Tasks API from 20th December 2017.</li>
-</ul>
+- [GitHub repository](https://github.com/w3c/longtasks) contains documentation and some code samples.
+- [PerfPlanet article](https://calendar.perfplanet.com/2017/tracking-cpu-with-long-tasks-api/) on Long Tasks API from 20th December 2017.

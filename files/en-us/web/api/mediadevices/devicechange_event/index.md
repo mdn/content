@@ -13,55 +13,63 @@ tags:
   - events
 browser-compat: api.MediaDevices.devicechange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>A <code>devicechange</code> event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system. It's a generic {{domxref("Event")}} with no added properties.</p>
+A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system. It's a generic {{domxref("Event")}} with no added properties.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td><code><a href="/en-US/docs/Web/API/MediaDevices/ondevicechange">ondevicechange</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/MediaDevices/ondevicechange"
+            >ondevicechange</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>You can use the <code>devicechange</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `devicechange` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">navigator.mediaDevices.addEventListener('devicechange', function(event) {
+```js
+navigator.mediaDevices.addEventListener('devicechange', function(event) {
   updateDeviceList();
-});</pre>
+});
+```
 
-<p>Or use the <code>ondevicechange</code> event handler property:</p>
+Or use the `ondevicechange` event handler property:
 
-<pre class="brush: js">navigator.mediaDevices.ondevicechange = function(event) {
+```js
+navigator.mediaDevices.ondevicechange = function(event) {
   updateDeviceList();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaDevices.ondevicechange")}}</li>
-</ul>
+- {{domxref("MediaDevices.ondevicechange")}}

@@ -2,35 +2,34 @@
 title: WebSocket.protocol
 slug: Web/API/WebSocket/protocol
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.protocol
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.protocol</code></strong> read-only property returns the
-  name of the sub-protocol the server selected; this will be one of the strings specified
-  in the <code>protocols</code> parameter when creating the {{domxref("WebSocket")}}
-  object, or the empty string if no connection is established.</p>
+The **`WebSocket.protocol`** read-only property returns the
+name of the sub-protocol the server selected; this will be one of the strings specified
+in the `protocols` parameter when creating the {{domxref("WebSocket")}}
+object, or the empty string if no connection is established.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var protocol = <em>aWebSocket</em>.protocol;</pre>
+```js
+var protocol = aWebSocket.protocol;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A <a href="/en-US/docs/Web/API/DOMString"
-    title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a>.
-</p>
+A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.").
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

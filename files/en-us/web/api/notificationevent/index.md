@@ -12,44 +12,37 @@ tags:
   - ServiceWorker
 browser-compat: api.NotificationEvent
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} handler, the <code>NotificationEvent</code> interface represents a notification click event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.</p>
+The parameter passed into the {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}</dt>
- <dd>Creates a new <code>NotificationEvent</code> object.</dd>
-</dl>
+- {{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}
+  - : Creates a new `NotificationEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("NotificationEvent.notification")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.</dd>
- <dt>{{domxref("NotificationEvent.action")}} {{readonlyinline}}</dt>
- <dd>Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.</dd>
-</dl>
+- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+  - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
+- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+  - : Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Extends the lifetime of the event. Tells the browser that work is ongoing.</p>
- </dd>
-</dl>
+- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
+  - : Extends the lifetime of the event. Tells the browser that work is ongoing.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -58,25 +51,23 @@ browser-compat: api.NotificationEvent
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>Note:</strong> This interface is specified in the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a>, but accessed through {{domxref("ServiceWorkerGlobalScope")}}.</p>
-</div>
+> **Note:** This interface is specified in the [Notifications API](/en-US/docs/Web/API/Notifications_API), but accessed through {{domxref("ServiceWorkerGlobalScope")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

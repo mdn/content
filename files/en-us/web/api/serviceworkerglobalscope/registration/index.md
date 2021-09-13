@@ -11,33 +11,32 @@ tags:
   - registration
 browser-compat: api.ServiceWorkerGlobalScope.registration
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>registration</code></strong> read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.</p>
+The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorkerRegistration")}} object, which represents the service worker's registration.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">serviceWorkerRegistration = self.registration
-</pre>
+```js
+serviceWorkerRegistration = self.registration
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorkerRegistration")}} object.</p>
+A {{domxref("ServiceWorkerRegistration")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

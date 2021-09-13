@@ -9,47 +9,39 @@ tags:
   - TextEncoderStream
 browser-compat: api.TextEncoderStream
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextEncoderStream</code></strong> interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextEncoder")}}.</p>
+The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextEncoder")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("TextEncoderStream.TextEncoderStream()")}}</dt>
-  <dd>Creates a new <code>TextEncoderStream</code> object.</dd>
-</dl>
+- {{domxref("TextEncoderStream.TextEncoderStream()")}}
+  - : Creates a new `TextEncoderStream` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{DOMxRef("TextEncoderStream.encoding")}}{{ReadOnlyInline}}</dt>
-  <dd>Always returns "<code>utf-8</code>".</dd>
-  <dt>{{DOMxRef("TextEncoderStream.readable")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("ReadableStream")}} instance controlled by this object.</dd>
-  <dt>{{DOMxRef("TextEncoderStream.writable")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("WritableStream")}} instance controlled by this object.</dd>
-</dl>
+- {{DOMxRef("TextEncoderStream.encoding")}}{{ReadOnlyInline}}
+  - : Always returns "`utf-8`".
+- {{DOMxRef("TextEncoderStream.readable")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
+- {{DOMxRef("TextEncoderStream.writable")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<ul>
-  <li><a href="https://streams.spec.whatwg.org/demos/">Examples of streaming structured data and HTML</a></li>
-  <li><a href="https://glitch.com/~fetch-request-stream">An example of fetch request streams which uses <code>TextEncoderStream</code> to upload the data</a>.</li>
-</ul>
+- [Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
+- [An example of fetch request streams which uses `TextEncoderStream` to upload the data](https://glitch.com/~fetch-request-stream).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("TextDecoderStream")}}</li>
-  <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</a></li>
-  <li><a href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</a></li>
-</ul>
+- {{domxref("TextDecoderStream")}}
+- [Streams API Concepts](/en-US/docs/Web/API/Streams_API/Concepts)
+- [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)

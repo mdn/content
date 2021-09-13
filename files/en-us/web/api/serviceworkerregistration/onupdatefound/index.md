@@ -2,49 +2,45 @@
 title: ServiceWorkerRegistration.onupdatefound
 slug: Web/API/ServiceWorkerRegistration/onupdatefound
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- onupdatefound
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - onupdatefound
 browser-compat: api.ServiceWorkerRegistration.onupdatefound
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>onupdatefound</strong></code> property of the
-  {{domxref("ServiceWorkerRegistration")}} interface is an {{domxref("EventListener")}}
-  property called whenever an event of type <code>statechange</code> is fired; it is fired
-  any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new
-  service worker.</p>
+The **`onupdatefound`** property of the
+{{domxref("ServiceWorkerRegistration")}} interface is an {{domxref("EventListener")}}
+property called whenever an event of type `statechange` is fired; it is fired
+any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new
+service worker.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerRegistration</em>.onupdatefound = function() { ... };</pre>
+```js
+serviceWorkerRegistration.onupdatefound = function() { ... };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

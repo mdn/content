@@ -2,81 +2,80 @@
 title: FileSystemEntry.toURL()
 slug: Web/API/FileSystemEntry/toURL
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Method
-- Non-standard
-- Reference
-- toURL
-- Deprecated
+  - API
+  - File System API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - toURL
+  - Deprecated
 browser-compat: api.FileSystemEntry.toURL
 ---
-<p>{{APIRef("File System API")}}{{deprecated_header}}</p>
+{{APIRef("File System API")}}{{deprecated_header}}
 
-<p>The {{domxref("FileSystemEntry")}} interface's method
-    <strong><code>toURL()</code></strong> creates and
-    returns a string containing a URL which can be used to identify the file system entry.
-    This is done by exposing a new URL scheme—<code>filesystem:</code>—that can be used as
-    the value of <code>src</code> and <code>href</code> attributes.</p>
+The {{domxref("FileSystemEntry")}} interface's method
+**`toURL()`** creates and
+returns a string containing a URL which can be used to identify the file system entry.
+This is done by exposing a new URL scheme—`filesystem:`—that can be used as
+the value of `src` and `href` attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemEntry</em>.toURL([<em>mimeType</em>]);</pre>
+```js
+FileSystemEntry.toURL([mimeType]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mimeType</code> {{optional_inline}}</dt>
-  <dd>An optional string specifying the MIME type to use when interpreting the file. This
+- `mimeType` {{optional_inline}}
+  - : An optional string specifying the MIME type to use when interpreting the file. This
     can be used to help deal with files whose types aren't recognized automatically by the
     user agent. If this parameter is omitted, the user agent uses its standard algorithms
-    to identify the file.</dd>
-</dl>
+    to identify the file.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing a URL that can then be used as a document
-  reference in HTML content, or an empty string if the URL can't be generated (such as if
-  the file system implementation doesn't support <code>toURL()</code>).</p>
+A {{domxref("DOMString")}} containing a URL that can then be used as a document
+reference in HTML content, or an empty string if the URL can't be generated (such as if
+the file system implementation doesn't support `toURL()`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you have a {{domxref("FileSystemFileEntry")}} corresponding to an image file in a
-  file system available to your Web site or app, you can call <code>toURL()</code> to get
-  its URL for use in HTML. If your site is located at
-  <code>http://my-awesome-website.woot</code>, and you have a temporary file system that
-  contains an image file named <code>awesomesauce.jpg</code>, the URL returned by
-  <code>toURL()</code> might be (depending on the browser's implementation) something like
-  <code>"filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg"</code>.</p>
+If you have a {{domxref("FileSystemFileEntry")}} corresponding to an image file in a
+file system available to your Web site or app, you can call `toURL()` to get
+its URL for use in HTML. If your site is located at
+`http://my-awesome-website.woot`, and you have a temporary file system that
+contains an image file named `awesomesauce.jpg`, the URL returned by
+`toURL()` might be (depending on the browser's implementation) something like
+`"filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg"`.
 
-<p>Code that makes use of this might look like this:</p>
+Code that makes use of this might look like this:
 
-<pre class="brush: js">let img = document.createElement("img");
+```js
+let img = document.createElement("img");
 
 img.src = imageFileEntry.toURL();
-document.body.appendChild(img);</pre>
+document.body.appendChild(img);
+```
 
-<p>Assuming the scenario mentioned before the code, the result would be HTML that looks
-  like this being appended to the end of the document:</p>
+Assuming the scenario mentioned before the code, the result would be HTML that looks
+like this being appended to the end of the document:
 
-<pre
-  class="brush: html">&lt;img src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg"&gt;</pre>
+```html
+<img src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg">
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemDirectoryEntry.removeRecursively()")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry.removeRecursively()")}}

@@ -10,41 +10,39 @@ tags:
   - Reference
 browser-compat: api.Range.intersectsNode
 ---
-<div>{{ApiRef("DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>Range.intersectsNode()</code></strong> method returns a boolean
-  indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range")}}.
-</p>
+The **`Range.intersectsNode()`** method returns a boolean
+indicating whether the given {{domxref("Node")}} intersects the {{domxref("Range")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>bool</em> = <em>range</em>.intersectsNode( <em>referenceNode</em> )
-</pre>
+```js
+bool = range.intersectsNode( referenceNode )
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>referenceNode</em></dt>
-  <dd>The {{domxref("Node")}} to compare with the {{domxref("Range")}}.</dd>
-</dl>
+- _referenceNode_
+  - : The {{domxref("Node")}} to compare with the {{domxref("Range")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));</pre>
+var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

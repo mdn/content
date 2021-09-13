@@ -10,42 +10,40 @@ tags:
   - Reference
 browser-compat: api.MediaKeyMessageEvent
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>MediaKeyMessageEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">EncryptedMediaExtensions API</a> contains the content and related data when the content decryption module generates a message for the session.</p>
+The **`MediaKeyMessageEvent`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) contains the content and related data when the content decryption module generates a message for the session.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("MediaKeyMessageEvent.MediaKeyMessageEvent","MediaKeyMessageEvent()")}}</dt>
-	<dd>Creates a new instance of <code>MediaKeyMessageEvent</code>.</dd>
-</dl>
+- {{domxref("MediaKeyMessageEvent.MediaKeyMessageEvent","MediaKeyMessageEvent()")}}
+  - : Creates a new instance of `MediaKeyMessageEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>Inherits properties from its parent, {{domxref("Event")}}.</p>
+Inherits properties from its parent, {{domxref("Event")}}.
 
-<dl>
-	<dt>{{domxref("MediaKeyMessageEvent.message")}} {{readonlyinline}}</dt>
-	<dd>Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.</dd>
-	<dt>{{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}</dt>
-	<dd>Indicates the type of message. May be one of <code>license-request</code>, <code>license-renewal</code>, <code>license-release</code>, or <code>individualization-request</code>.</dd>
-</dl>
+- {{domxref("MediaKeyMessageEvent.message")}} {{readonlyinline}}
+  - : Returns an {{jsxref("ArrayBuffer")}} with a message from the content decryption module. Messages vary by key system.
+- {{domxref("MediaKeyMessageEvent.messageType")}} {{readonlyinline}}
+  - : Indicates the type of message. May be one of `license-request`, `license-renewal`, `license-release`, or `individualization-request`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>Inherits methods from its parent, {{domxref("Event")}}.</p>
+Inherits methods from its parent, {{domxref("Event")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

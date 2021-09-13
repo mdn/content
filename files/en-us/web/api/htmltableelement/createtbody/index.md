@@ -2,50 +2,47 @@
 title: 'HTMLTableElement: createTBody()'
 slug: Web/API/HTMLTableElement/createTBody
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.createTBody
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>createTBody()</strong></code> method of
-  {{domxref("HTMLTableElement")}} objects creates and returns a new
-  {{HTMLElement("tbody")}} element associated with a given {{HtmlElement("table")}}.</p>
+The **`createTBody()`** method of
+{{domxref("HTMLTableElement")}} objects creates and returns a new
+{{HTMLElement("tbody")}} element associated with a given {{HtmlElement("table")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Unlike {{domxref("HTMLTableElement.createTHead()")}} and
-    {{domxref("HTMLTableElement.createTFoot()")}}, <code>createTBody()</code>
-    systematically creates a new <code>&lt;tbody&gt;</code> element, even if the table
-    already contains one or more bodies. If so, the new one is inserted after the existing
-    ones.</p>
-</div>
+> **Note:** Unlike {{domxref("HTMLTableElement.createTHead()")}} and
+> {{domxref("HTMLTableElement.createTFoot()")}}, `createTBody()`
+> systematically creates a new `<tbody>` element, even if the table
+> already contains one or more bodies. If so, the new one is inserted after the existing
+> ones.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>table</var>.createTBody();</pre>
+```js
+table.createTBody();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("HTMLTableSectionElement")}}</p>
+{{domxref("HTMLTableSectionElement")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush:js">let mybody = mytable.createTBody();
-// Now this should be true: mybody == mytable.tBodies.item(mytable.tBodies.length - 1)</pre>
+```js
+let mybody = mytable.createTBody();
+// Now this should be true: mybody == mytable.tBodies.item(mytable.tBodies.length - 1)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-
-  <p>{{Compat}}</p>
-</div>
+{{Compat}}

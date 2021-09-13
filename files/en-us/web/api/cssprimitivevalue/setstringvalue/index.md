@@ -10,70 +10,49 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
-<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The <code><strong>setStringValue()</strong></code> method of the
-  {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the
-  property attached to this value can't accept the specified unit or the string value, the
-  value will be unchanged and a {{domxref("DOMException")}} will be raised.</p>
+The **`setStringValue()`** method of the
+{{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the
+property attached to this value can't accept the specified unit or the string value, the
+value will be unchanged and a {{domxref("DOMException")}} will be raised.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>cssPrimitiveValue</var>.setStringValue(<var>stringType</var>, <var>stringValue</var>);</pre>
+```js
+cssPrimitiveValue.setStringValue(stringType, stringValue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>stringType</dt>
-  <dd>An <code>unsigned short</code> representing the type of the value. Possible values
+- stringType
+
+  - : An `unsigned short` representing the type of the value. Possible values
     are:
-    <table>
-      <thead>
-        <tr>
-          <th>Constant</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>CSS_ATTR</code></td>
-          <td>The value is an {{cssxref("attr()")}} function.</td>
-        </tr>
-        <tr>
-          <td><code>CSS_IDENT</code></td>
-          <td>The value is an identifier.</td>
-        </tr>
-        <tr>
-          <td><code>CSS_STRING</code></td>
-          <td>The value is a {{cssxref("&lt;string&gt;")}}.</td>
-        </tr>
-        <tr>
-          <td><code>CSS_URI</code></td>
-          <td>The value is a {{cssxref("url()")}}.</td>
-        </tr>
-      </tbody>
-    </table>
-  </dd>
-  <dt>stringValue</dt>
-  <dd>A {{domxref("DOMString")}} representing the new string value.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    | Constant     | Description                                              |
+    | ------------ | -------------------------------------------------------- |
+    | `CSS_ATTR`   | The value is an {{cssxref("attr()")}} function.   |
+    | `CSS_IDENT`  | The value is an identifier.                              |
+    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}. |
+    | `CSS_URI`    | The value is a {{cssxref("url()")}}.             |
 
-<p>Void.</p>
+- stringValue
+  - : A {{domxref("DOMString")}} representing the new string value.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
+
+Void.
+
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -85,21 +64,23 @@ browser-compat: api.CSSPrimitiveValue.setStringValue
   <tbody>
     <tr>
       <td><code>DOMException</code></td>
-      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
-        string value or if the string value can't be converted into the specified
-        unit.<br>
-        An NO_MODIFICATION_ALLOWED_ERR is raised if this property is read-only.</td>
+      <td>
+        An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't
+        contain a string value or if the string value can't be converted into
+        the specified unit.<br />An NO_MODIFICATION_ALLOWED_ERR is raised if
+        this property is read-only.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

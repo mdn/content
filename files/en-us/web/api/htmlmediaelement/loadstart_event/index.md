@@ -10,50 +10,55 @@ tags:
   - loadstart
 browser-compat: api.HTMLMediaElement.loadstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>loadstart</code></strong> event is fired when the browser has started to load a resource.</p>
+The **`loadstart`** event is fired when the browser has started to load a resource.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;button type="button"&gt;Load video&lt;/button&gt;
-    &lt;video controls width="250"&gt;&lt;/video&gt;
+    <button type="button">Load video</button>
+    <video controls width="250"></video>
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css hidden">.event-log-contents {
+```css hidden
+.event-log-contents {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
@@ -82,14 +87,15 @@ video {
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const loadVideo = document.querySelector('button');
+```js
+const loadVideo = document.querySelector('button');
 const video = document.querySelector('video');
 const eventLog = document.querySelector('.event-log-contents');
 let source = null;
@@ -103,7 +109,7 @@ video.addEventListener('progress', handleEvent);
 video.addEventListener('canplay', handleEvent);
 video.addEventListener('canplaythrough', handleEvent);
 
-loadVideo.addEventListener('click', () =&gt; {
+loadVideo.addEventListener('click', () => {
 
     if (source) {
         document.location.reload();
@@ -115,25 +121,24 @@ loadVideo.addEventListener('click', () =&gt; {
 
         video.appendChild(source);
     }
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '200px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '200px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

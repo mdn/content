@@ -9,111 +9,111 @@ tags:
   - Reference
 browser-compat: api.Element.getAttributeNS
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getAttributeNS()</code></strong> method of the {{domxref("Element")}}
-  interface returns the string value of the attribute with the specified namespace and
-  name. If the named attribute does not exist, the value returned will either be
-  <code>null</code> or <code>""</code> (the empty string); see {{Anch("Notes")}} for
-  details.</p>
+The **`getAttributeNS()`** method of the {{domxref("Element")}}
+interface returns the string value of the attribute with the specified namespace and
+name. If the named attribute does not exist, the value returned will either be
+`null` or `""` (the empty string); see {{Anch("Notes")}} for
+details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>attrVal</em> = <em>element</em>.getAttributeNS(<em>namespace</em>, <em>name</em>)
-</pre>
+```js
+attrVal = element.getAttributeNS(namespace, name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>namespace</code></dt>
-  <dd>The namespace in which to look for the specified attribute.</dd>
-  <dt><code>name</code></dt>
-  <dd>The name of the attribute to look for.</dd>
-</dl>
+- `namespace`
+  - : The namespace in which to look for the specified attribute.
+- `name`
+  - : The name of the attribute to look for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The string value of the specified attribute. If the attribute doesn't exist, the result
-  is <code>null</code>.</p>
+The string value of the specified attribute. If the attribute doesn't exist, the result
+is `null`.
 
-<div class="note"><p><strong>Note:</strong> Earlier versions of the DOM specification had
-  this method described as returning an empty string for non-existent attributes, but it
-  was not typically implemented this way since null makes more sense. The DOM4
-  specification now says this method should return null for non-existent attributes.</p></div>
+> **Note:** Earlier versions of the DOM specification had
+> this method described as returning an empty string for non-existent attributes, but it
+> was not typically implemented this way since null makes more sense. The DOM4
+> specification now says this method should return null for non-existent attributes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following SVG document reads the value of the <code>foo</code> attribute in a
-  custom namespace.</p>
+The following SVG document reads the value of the `foo` attribute in a
+custom namespace.
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40"&gt;
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
 
-  &lt;circle id="target" cx="12" cy="12" r="10" stroke="#444"
-      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/&gt;
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444"
+      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript">
     var ns = 'http://www.example.com/2014/test';
     var circle = document.getElementById( 'target' );
 
     console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
-  &lt;/script&gt;
-&lt;/svg&gt;
-</pre>
+  </script>
+</svg>
+```
 
-<p>In an HTML5 document the attribute has to be accessed with <code>test:foo</code> since
-  namespaces are not supported.</p>
+In an HTML5 document the attribute has to be accessed with `test:foo` since
+namespaces are not supported.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+<body>
 
-&lt;svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40"&gt;
-  &lt;circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
-      fill="none" test:foo="Foo value"/&gt;
-&lt;/svg&gt;
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
+      fill="none" test:foo="Foo value"/>
+</svg>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var ns = 'http://www.example.com/2014/test';
   var circle = document.getElementById( 'target' );
   console.log('Attribute value: ' + circle.getAttribute('test:foo'));
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Namespaces are only supported in XML documents. HTML5 documents have to use
-  <code>getAttribute()</code> instead.</p>
+Namespaces are only supported in XML documents. HTML5 documents have to use
+`getAttribute()` instead.
 
-<p><code>getAttributeNS()</code> differs from {{domxref("element.getAttribute()",
+`getAttributeNS()` differs from {{domxref("element.getAttribute()",
   "getAttribute()")}} in that it allows you to further specify the requested attribute as
-  being part of a particular namespace, as in the example above, where the attribute is
-  part of the fictional "specialspace" namespace on Mozilla.</p>
+being part of a particular namespace, as in the example above, where the attribute is
+part of the fictional "specialspace" namespace on Mozilla.
 
-<p>Prior to the DOM4 specification, this method was specified to return an empty string
-  rather than null for non-existent attributes. However, most browsers instead returned
-  null. Starting with DOM4, the specification now says to return null. However, some older
-  browsers return an empty string. For that reason, you should use
-  {{domxref("element.hasAttributeNS()", "hasAttributeNS()")}} to check for an attribute's
-  existence prior to calling <code>getAttributeNS()</code> if it is possible that the
-  requested attribute does not exist on the specified element.</p>
+Prior to the DOM4 specification, this method was specified to return an empty string
+rather than null for non-existent attributes. However, most browsers instead returned
+null. Starting with DOM4, the specification now says to return null. However, some older
+browsers return an empty string. For that reason, you should use
+{{domxref("element.hasAttributeNS()", "hasAttributeNS()")}} to check for an attribute's
+existence prior to calling `getAttributeNS()` if it is possible that the
+requested attribute does not exist on the specified element.
 
-<p>{{DOMAttributeMethods}}</p>
+{{DOMAttributeMethods}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS">Code
-      snippets:getAttributeNS</a></li>
-</ul>
+- [Code
+  snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

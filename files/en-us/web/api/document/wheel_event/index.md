@@ -9,46 +9,47 @@ tags:
   - wheel
 browser-compat: api.Document.wheel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>wheel</code></strong> event fires when the user rotates a wheel button on a pointing device (typically a mouse).</p>
+The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("WheelEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onwheel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("WheelEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.onwheel")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This event replaces the non-standard deprecated <code><a href="/en-US/docs/Web/API/Element/mousewheel_event">mousewheel</a></code> event.</p>
+This event replaces the non-standard deprecated [`mousewheel`](/en-US/docs/Web/API/Element/mousewheel_event) event.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Don't confuse the <code>wheel</code> event with the <code><a href="/en-US/docs/Web/API/Document/scroll_event">scroll</a></code> event. The default action of a <code>wheel</code> event is implementation-specific, and doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, the <code>delta*</code> values in the <code>wheel</code> event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the <code>wheel</code> event's <code>delta*</code> properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} in the <code>scroll</code> event.</p>
-</div>
+> **Note:** Don't confuse the `wheel` event with the [`scroll`](/en-US/docs/Web/API/Document/scroll_event) event. The default action of a `wheel` event is implementation-specific, and doesn't necessarily dispatch a `scroll` event. Even when it does, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the `wheel` event's `delta*` properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} in the `scroll` event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scaling_an_element_via_the_wheel">Scaling an element via the wheel</h3>
+### Scaling an element via the wheel
 
-<p>This example shows how to scale an element using the mouse (or other pointing device) wheel.</p>
+This example shows how to scale an element using the mouse (or other pointing device) wheel.
 
-<pre class="brush: html">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
+```html
+<div>Scale me with your mouse wheel.</div>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -61,12 +62,14 @@ div {
   height: 105px;
   background: #cdf;
   padding: 5px;
-}</pre>
+}
+```
 
-<pre class="brush: js">function zoom(event) {
+```js
+function zoom(event) {
   event.preventDefault();
 
-  if (event.deltaY &lt; 0) {
+  if (event.deltaY < 0) {
     // Zoom in
     scale *= event.deltaY * -2;
   }
@@ -84,26 +87,27 @@ div {
 
 let scale = 1;
 const el = document.querySelector('div');
-document.onwheel = zoom;</pre>
+document.onwheel = zoom;
+```
 
-<p>{{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}</p>
+{{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}
 
-<h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
+### addEventListener equivalent
 
-<p>The event handler can also be set up using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
+The event handler can also be set up using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">document.addEventListener('wheel', zoom);</pre>
+```js
+document.addEventListener('wheel', zoom);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WheelEvent")}}</li>
-</ul>
+- {{domxref("WheelEvent")}}

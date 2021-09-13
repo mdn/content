@@ -11,40 +11,36 @@ tags:
   - web console
 browser-compat: api.console.timeStamp
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>The <strong><code>console.timeStamp</code></strong> method adds a single marker to the browser's <a
-    href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a>
-  or <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool. This lets you
-  correlate a point in your code with the other events recorded in the timeline, such as
-  layout and paint events.</p>
+The **`console.timeStamp`** method adds a single marker to the browser's [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
+or [Waterfall](/en-US/docs/Tools/Performance/Waterfall) tool. This lets you
+correlate a point in your code with the other events recorded in the timeline, such as
+layout and paint events.
 
-<p>You can optionally supply an argument to label the timestamp, and this label will then
-  be shown alongside the marker.</p>
+You can optionally supply an argument to label the timestamp, and this label will then
+be shown alongside the marker.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.timeStamp(label);
-</pre>
+```js
+console.timeStamp(label);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt><code>label</code></dt>
-  <dd>Label for the timestamp. Optional.</dd>
-</dl>
+- `label`
+  - : Label for the timestamp. Optional.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("console.time()")}}</li>
-  <li>{{domxref("console.timeEnd()")}}</li>
-  <li><a href="/en-US/docs/Tools/Performance/Waterfall#timestamp_markers">Adding
-      timestamps to the Waterfall</a></li>
-</ul>
+- {{domxref("console.time()")}}
+- {{domxref("console.timeEnd()")}}
+- [Adding
+  timestamps to the Waterfall](/en-US/docs/Tools/Performance/Waterfall#timestamp_markers)

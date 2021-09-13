@@ -2,31 +2,32 @@
 title: MediaKeySystemConfiguration.persistentState
 slug: Web/API/MediaKeySystemConfiguration/persistentState
 tags:
-- API
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemConfiguration
-- NeedsExample
-- Property
-- Reference
-- Video
-- persistentState
+  - API
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemConfiguration
+  - NeedsExample
+  - Property
+  - Reference
+  - Video
+  - persistentState
 browser-compat: api.MediaKeySystemConfiguration.persistentState
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemConfiguration.persistentState</code> read-only property
-  indicates whether the ability to persist state is required.</p>
+The `MediaKeySystemConfiguration.persistentState` read-only property
+indicates whether the ability to persist state is required.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>persistentState</var> = <var>mediaSystemConfiguration</var>.persistentSTate;</pre>
+```js
+var persistentState = mediaSystemConfiguration.persistentSTate;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

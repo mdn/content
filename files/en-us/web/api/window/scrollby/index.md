@@ -2,65 +2,61 @@
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
 tags:
-- API
-- CSSOM View
-- Method
-- Reference
+  - API
+  - CSSOM View
+  - Method
+  - Reference
 browser-compat: api.Window.scrollBy
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>The <code><strong>Window.scrollBy()</strong></code> method scrolls the document in the
-  window by the given amount.</p>
+The **`Window.scrollBy()`** method scrolls the document in the
+window by the given amount.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.scrollBy(<em>x-coord</em>, <em>y-coord</em>);
-window.scrollBy(<em>options</em>)
-</pre>
+```js
+window.scrollBy(x-coord, y-coord);
+window.scrollBy(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>x-coord</code> is the horizontal pixel value that you want to scroll by.</li>
-  <li><code>y-coord</code> is the vertical pixel value that you want to scroll by.</li>
-</ul>
+- `x-coord` is the horizontal pixel value that you want to scroll by.
+- `y-coord` is the vertical pixel value that you want to scroll by.
 
-<p>- or -</p>
+\- or -
 
-<ul>
-  <li><code>options</code> is a {{domxref("ScrollToOptions")}} dictionary.</li>
-</ul>
+- `options` is a {{domxref("ScrollToOptions")}} dictionary.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To scroll down one page:</p>
+To scroll down one page:
 
-<pre class="eval">window.scrollBy(0, window.innerHeight);
-</pre>
+    window.scrollBy(0, window.innerHeight);
 
-<p>To scroll up:</p>
+To scroll up:
 
-<pre>window.scrollBy(0, -window.innerHeight);</pre>
+    window.scrollBy(0, -window.innerHeight);
 
-<p>Using <code>options</code>:</p>
+Using `options`:
 
-<pre>window.scrollBy({
-  top: 100,
-  left: 100,
-  behavior: 'smooth'
-});</pre>
+    window.scrollBy({
+      top: 100,
+      left: 100,
+      behavior: 'smooth'
+    });
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>window.scrollBy()</code> scrolls by a particular amount, whereas
-  {{domxref("window.scroll()")}} scrolls to an absolute position in the document. See also
-  {{domxref("window.scrollByLines()")}} and {{domxref("window.scrollByPages()")}}.</p>
+`window.scrollBy()` scrolls by a particular amount, whereas
+{{domxref("window.scroll()")}} scrolls to an absolute position in the document. See also
+{{domxref("window.scrollByLines()")}} and {{domxref("window.scrollByPages()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

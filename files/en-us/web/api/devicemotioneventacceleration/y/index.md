@@ -9,44 +9,35 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventAcceleration.y
 ---
-<div>{{ APIRef("Device Orientation Events") }}</div>
+{{ APIRef("Device Orientation Events") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>This read-only property indicates the amount of acceleration that occurred along the Y
-  axis in a <a
-    href="/en-US/docs/Web/API/DeviceMotionEventAcceleration"><code>DeviceMotionEventAcceleration</code></a>
-  object.</p>
+This read-only property indicates the amount of acceleration that occurred along the Y
+axis in a [`DeviceMotionEventAcceleration`](/en-US/docs/Web/API/DeviceMotionEventAcceleration)
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>yAccel</var> = <em>DeviceMotionEventAcceleration</em>.y;
-</pre>
+```js
+var yAccel = DeviceMotionEventAcceleration.y;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>y</code></dt>
-  <dd>A <code>double</code> indicating the amount of acceleration along the Y axis. See <a
-      href="/en-US/docs/Web/API/Detecting_device_orientation">Accelerometer values
-      explained</a> for details.</dd>
-</dl>
+- `y`
+  - : A `double` indicating the amount of acceleration along the Y axis. See [Accelerometer values
+    explained](/en-US/docs/Web/API/Detecting_device_orientation) for details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/DeviceMotionEventAcceleration.x"><code>DeviceMotionEventAcceleration.x</code></a>
-  </li>
-  <li><a
-      href="/en-US/docs/Web/API/DeviceMotionEventAcceleration.z"><code>DeviceMotionEventAcceleration.z</code></a>
-  </li>
-</ul>
+- [`DeviceMotionEventAcceleration.x`](/en-US/docs/Web/API/DeviceMotionEventAcceleration.x)
+- [`DeviceMotionEventAcceleration.z`](/en-US/docs/Web/API/DeviceMotionEventAcceleration.z)

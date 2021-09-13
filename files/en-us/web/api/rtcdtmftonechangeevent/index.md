@@ -10,53 +10,49 @@ tags:
   - events
 browser-compat: api.RTCDTMFToneChangeEvent
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCDTMFToneChangeEvent</code></strong> interface represents events sent to indicate that {{Glossary("DTMF")}} tones have started or finished playing. This interface is used by the {{event("tonechange")}} event.</p>
+The **`RTCDTMFToneChangeEvent`** interface represents events sent to indicate that {{Glossary("DTMF")}} tones have started or finished playing. This interface is used by the {{event("tonechange")}} event.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties of {{domxref("Event")}}, this interface offers the following:</em></p>
+_In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-<dl>
- <dt>{{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (<code>""</code>) if the previous tone has finished playing.</dd>
-</dl>
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}</dt>
- <dd>Returns a new <code>RTCDTMFToneChangeEvent</code>. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event (always <code>"tonechange"</code>); the second a dictionary containing the initial state of the properties of the event.</dd>
-</dl>
+- {{domxref("RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent()", "RTCDTMFToneChangeEvent()")}}
+  - : Returns a new `RTCDTMFToneChangeEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event (always `"tonechange"`); the second a dictionary containing the initial state of the properties of the event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Supports the methods defined in {{domxref("Event")}}. There are no additional methods.</em></p>
+_Supports the methods defined in {{domxref("Event")}}. There are no additional methods._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This snippet is derived loosely from the full, working example you'll find in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_DTMF", "When a tone finishes playing")}}. It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DMTF string to be entered.</p>
+This snippet is derived loosely from the full, working example you'll find in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_DTMF", "When a tone finishes playing")}}. It appends each tone to a display box as it's played, and, once all tones have been sent, re-enabled a previously-disabled "Send" button, allowing the next DMTF string to be entered.
 
-<pre class="brush: js ">dtmfSender.addEventListener(&quot;change&quot;, function(event) {
-  if (event.tone !== &quot;&quot;) {
+```js
+dtmfSender.addEventListener("change", function(event) {
+  if (event.tone !== "") {
     dialStringBox.innerText += event.tone;
   } else {
     sendDTMFButton.disabled = false;
   }
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>Its usual target: {{domxref("RTCDTMFSender")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- Its usual target: {{domxref("RTCDTMFSender")}}.

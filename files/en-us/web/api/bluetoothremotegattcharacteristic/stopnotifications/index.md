@@ -2,38 +2,38 @@
 title: BluetoothRemoteGATTCharacteristic.stopNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- stopNotifications
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - stopNotifications
 browser-compat: api.BluetoothRemoteGATTCharacteristic.stopNotifications
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>
-  The <strong><code>BluetoothRemoteGATTCharacteristic.stopNotifications()</code></strong> method
-  returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
-  there is no longer an active notification on it.</p>
+The **`BluetoothRemoteGATTCharacteristic.stopNotifications()`** method
+returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
+there is no longer an active notification on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTCharacteristic.stopNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })</pre>
+```js
+BluetoothRemoteGATTCharacteristic.stopNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

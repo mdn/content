@@ -14,38 +14,45 @@ tags:
   - validate
 browser-compat: api.PaymentResponse.payerdetailchange_event
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p><code><strong>payerdetailchange</strong></code> events are delivered by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form.</p>
+**`payerdetailchange`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentResponse")}} object when the user makes changes to their personal information while filling out a payment request form.
 
-<p>The event handler for <code>payerdetailchange</code> should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the {{domxref("PaymentResponse.retry", "retry()")}} method should be called on the {{domxref("PaymentResponse")}} to ask the user to update the invalid entries.</p>
+The event handler for `payerdetailchange` should check each value in the form that has changed and ensure that the values are valid. If any are invalid, appropriate error messages should be configured and the {{domxref("PaymentResponse.retry", "retry()")}} method should be called on the {{domxref("PaymentResponse")}} to ask the user to update the invalid entries.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("PaymentRequestUpdateEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange">onpayerdetailchange</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("PaymentRequestUpdateEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/PaymentResponse/onpayerdetailchange"
+            >onpayerdetailchange</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the example below, <code>onpayerdetailchange</code> is used to set up a listener for the {{event("payerdetailchange")}} event in order to validate the information entered by the user, requesting that any mistakes be corrected</p>
+In the example below, `onpayerdetailchange` is used to set up a listener for the {{event("payerdetailchange")}} event in order to validate the information entered by the user, requesting that any mistakes be corrected
 
-<pre class="brush: js">// Options for PaymentRequest(), indicating that shipping address,
+```js
+// Options for PaymentRequest(), indicating that shipping address,
 // payer email address, name, and phone number all be collected.
 
 const options = {
@@ -68,7 +75,7 @@ let {
 // Set up a handler for payerdetailchange events, to
 // request corrections as needed.
 
-response.onpayerdetailchange = async ev =&gt; {
+response.onpayerdetailchange = async ev => {
   const promisesToValidate = [];
   const { payerName, payerEmail, payerPhone } = response;
 
@@ -92,7 +99,7 @@ response.onpayerdetailchange = async ev =&gt; {
   // As each validation promise resolves, add the results of the
   // validation to the errors list
 
-  const errors = await Promise.all(promisesToValidate).then(results =&gt;
+  const errors = await Promise.all(promisesToValidate).then(results =>
     results.reduce((errors, result), Object.assign(errors, result))
   );
 
@@ -113,28 +120,28 @@ await response.retry({
     phone: "invalid number.",
   },
 });
-</pre>
+```
 
-<h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
+### addEventListener equivalent
 
-<p>You could also set up the event handler using the <code>addEventListener()</code> method:</p>
+You could also set up the event handler using the `addEventListener()` method:
 
-<pre class="brush: js">response.addEventListener("payerdetailchange", async ev =&gt; {
+```js
+response.addEventListener("payerdetailchange", async ev => {
   ...
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
- <li>{{domxref("PaymentResponse")}}</li>
- <li><code><a href="/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event">payerdetailchange</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event">paymentmethodchange</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event">shippingaddresschange</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event">shippingoptionchange</a></code></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- {{domxref("PaymentResponse")}}
+- [`payerdetailchange`](/en-US/docs/Web/API/PaymentResponse/payerdetailchange_event)
+- [`paymentmethodchange`](/en-US/docs/Web/API/PaymentRequest/paymentmethodchange_event)
+- [`shippingaddresschange`](/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event)
+- [`shippingoptionchange`](/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event)

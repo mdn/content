@@ -2,48 +2,45 @@
 title: Bluetooth.getDevices()
 slug: Web/API/Bluetooth/getDevices
 tags:
-- API
-- Bluetooth
-- Reference
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - Reference
+  - Web Bluetooth API
 browser-compat: api.Bluetooth.getDevices
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
-<p>The <strong><code>getDevices()</code></strong> method of
-    {{DOMxRef("Bluetooth")}} interface of <a
-      href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> exposes the
-    Bluetooth devices this origin is allowed to access. This method does not display any
-    permission prompts.</p>
+The **`getDevices()`** method of
+{{DOMxRef("Bluetooth")}} interface of [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) exposes the
+Bluetooth devices this origin is allowed to access. This method does not display any
+permission prompts.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method returns a {{DOMxRef("BluetoothDevice")}} for each
-    device the origin is currently allowed to access, even the ones that are out of range
-    or powered off.</p>
-</div>
+> **Note:** This method returns a {{DOMxRef("BluetoothDevice")}} for each
+> device the origin is currently allowed to access, even the ones that are out of range
+> or powered off.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>readerPromise = Bluetooth</em>.getDevices();
-</pre>
+```js
+var readerPromise = Bluetooth.getDevices();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}}s.
-</p>
+A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}}s.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<p>This method doesn't throw any exceptions.</p>
+This method doesn't throw any exceptions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

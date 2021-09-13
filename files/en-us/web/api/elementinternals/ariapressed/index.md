@@ -11,49 +11,48 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaPressed
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaPressed</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-pressed</code> attribute, which indicates the current "pressed" state of toggle buttons.</p>
+The **`ariaPressed`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-pressed` attribute, which indicates the current "pressed" state of toggle buttons.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaPressed = ElementInternals.ariaPressed;
-ElementInternals.ariaPressed = ariaPressed;</pre>
+```js
+let ariaPressed = ElementInternals.ariaPressed;
+ElementInternals.ariaPressed = ariaPressed;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element is pressed.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element supports being pressed but is not currently pressed.</dd>
-  <dt><code>"mixed"</code></dt>
-  <dd>Indicates a mixed mode value for a tri-state toggle button.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The element does not support being pressed.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element is pressed.
+- `"false"`
+  - : The element supports being pressed but is not currently pressed.
+- `"mixed"`
+  - : Indicates a mixed mode value for a tri-state toggle button.
+- `"undefined"`
+  - : The element does not support being pressed.
 
-<p>In this example the value of <code>ariaPressed</code> is set to "true".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaPressed = "true";</pre>
+In this example the value of `ariaPressed` is set to "true".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaPressed = "true";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA: button role</a></li>
-</ul>
+- [ARIA: button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)

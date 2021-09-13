@@ -6,55 +6,59 @@ tags:
   - Reference
 browser-compat: api.Window.beforeprint_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>beforeprint</code></strong> event is fired when the associated document is about to be printed or previewed for printing.</p>
+The **`beforeprint`** event is fired when the associated document is about to be printed or previewed for printing.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">window.addEventListener('beforeprint', (event) =&gt; {
+```js
+window.addEventListener('beforeprint', (event) => {
   console.log('Before print');
-});</pre>
+});
+```
 
-<p>Using the <code>onbeforeprint</code> event handler property:</p>
+Using the `onbeforeprint` event handler property:
 
-<pre class="brush: js">window.onbeforeprint = (event) =&gt; {
+```js
+window.onbeforeprint = (event) => {
   console.log('Before print');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Window/afterprint_event", "afterprint")}}</li>
-</ul>
+- Related events: {{domxref("Window/afterprint_event", "afterprint")}}

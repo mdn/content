@@ -11,99 +11,103 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.transaction
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>transaction</code></strong> method of the
-    {{domxref("IDBDatabase")}} interface immediately
-      returns a transaction object ({{domxref("IDBTransaction")}}) containing the
-      {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
-      object store.</p>
+The **`transaction`** method of the
+{{domxref("IDBDatabase")}} interface immediately
+returns a transaction object ({{domxref("IDBTransaction")}}) containing the
+{{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
+object store.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>IDBDatabase</em>.transaction(<em>storeNames</em>);
-<em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode</em>);
-<em>IDBDatabase</em>.transaction(<em>storeNames</em>, <em>mode, options</em>);
-</pre>
+```js
+IDBDatabase.transaction(storeNames);
+IDBDatabase.transaction(storeNames, mode);
+IDBDatabase.transaction(storeNames, mode, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>storeNames</code></dt>
-  <dd>
-    <p>The names of object stores that are in the scope of the new transaction, declared as
-    an array of strings. Specify only the object stores that you need to access.<br>
+- `storeNames`
+
+  - : The names of object stores that are in the scope of the new transaction, declared as
+    an array of strings. Specify only the object stores that you need to access.
     If you need to access only one object store, you can specify its name as a string.
-    Therefore the following lines are equivalent:</p>
-    <pre class="brush: js">var transaction = db.transaction(['my-store-name']);
-var transaction = db.transaction('my-store-name');</pre>
-    <p>If you need to access all object stores in the database, you can use the property
-    {{domxref("IDBDatabase.objectStoreNames")}}:</p>
-    <pre
-      class="brush: js">var transaction = db.transaction(db.objectStoreNames);</pre>
-    <p>Passing an empty array will throw an exception.</p>
-  </dd>
-  <dt><code>mode</code> {{optional_inline}}</dt>
-  <dd>
-    <p>The types of access that can be performed in the transaction. Transactions are
-    opened in one of three modes: <code>readonly</code>, <code>readwrite</code> and
-    <code>readwriteflush</code> (non-standard, Firefox-only.) <code>versionchange</code>
+    Therefore the following lines are equivalent:
+
+    ```js
+    var transaction = db.transaction(['my-store-name']);
+    var transaction = db.transaction('my-store-name');
+    ```
+
+    If you need to access all object stores in the database, you can use the property
+    {{domxref("IDBDatabase.objectStoreNames")}}:
+
+    ```js
+    var transaction = db.transaction(db.objectStoreNames);
+    ```
+
+    Passing an empty array will throw an exception.
+
+- `mode` {{optional_inline}}
+
+  - : The types of access that can be performed in the transaction. Transactions are
+    opened in one of three modes: `readonly`, `readwrite` and
+    `readwriteflush` (non-standard, Firefox-only.) `versionchange`
     mode can't be specified here. If you don't provide the parameter, the default access
-    mode is <code>readonly</code>. To avoid slowing things down, don't open a
-    <code>readwrite</code> transaction unless you actually need to write into the
-    database.</p>
-    <p>If you need to open the object store in <code>readwrite</code> mode to change data,
-    you would use the following:</p>
-    <pre
-      class="brush:js;">var transaction = db.transaction('my-store-name', "readwrite");</pre>
+    mode is `readonly`. To avoid slowing things down, don't open a
+    `readwrite` transaction unless you actually need to write into the
+    database.
 
-    <p>As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
-      increase performance (see {{Bug("1112702")}}), which is the same behavior as other
-      IndexedDB-supporting browsers. Previously in a <code>readwrite</code> transaction
-      {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed
-      to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is
-      fired after the OS has been told to write the data but potentially before that data
-      has actually been flushed to disk. The <code>complete</code> event may thus be
-      delivered quicker than before, however, there exists a small chance that the entire
-      transaction will be lost if the OS crashes or there is a loss of system power before
-      the data is flushed to disk. Since such catastrophic events are rare most consumers
-      should not need to concern themselves further.</p>
+    If you need to open the object store in `readwrite` mode to change data,
+    you would use the following:
 
-    <div class="note">
-      <p><strong>Note:</strong> In Firefox, if you wish to ensure durability for some
-        reason (e.g. you're storing critical data that cannot be recomputed later) you can
-        force a transaction to flush to disk before delivering the <code>complete</code>
-        event by creating a transaction using the experimental (non-standard)
-        <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.)
-        This is currently experimental, and can only be used if the
-        <code>dom.indexedDB.experimental</code> pref is set to <code>true</code> in
-        <code>about:config</code>.</p>
-    </div>
-  </dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Dictionary of other options. Available options are:
-    <ul>
-      <li><code>durability</code>: <code>"default"</code>, <code>"strict"</code>, or
-        <code>"relaxed"</code>. The default is <code>"default"</code>. Using
-        <code>"relaxed"</code> provides better performance, but with fewer guarantees. Web
-        applications are encouraged to use <code>"relaxed"</code> for ephemeral data such
-        as caches or quickly changing records, and <code>"strict"</code> in cases where
-        reducing the risk of data loss outweighs the impact to performance and power.</li>
-    </ul>
-  </dd>
-</dl>
+    ```js
+    var transaction = db.transaction('my-store-name', "readwrite");
+    ```
 
-<h3 id="Return_value">Return value</h3>
+    As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to
+    increase performance (see {{Bug("1112702")}}), which is the same behavior as other
+    IndexedDB-supporting browsers. Previously in a `readwrite` transaction
+    {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed
+    to have been flushed to disk. In Firefox 40+ the `complete` event is
+    fired after the OS has been told to write the data but potentially before that data
+    has actually been flushed to disk. The `complete` event may thus be
+    delivered quicker than before, however, there exists a small chance that the entire
+    transaction will be lost if the OS crashes or there is a loss of system power before
+    the data is flushed to disk. Since such catastrophic events are rare most consumers
+    should not need to concern themselves further.
 
-<p>An {{domxref("IDBTransaction")}} object.</p>
+    > **Note:** In Firefox, if you wish to ensure durability for some
+    > reason (e.g. you're storing critical data that cannot be recomputed later) you can
+    > force a transaction to flush to disk before delivering the `complete`
+    > event by creating a transaction using the experimental (non-standard)
+    > `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.)
+    > This is currently experimental, and can only be used if the
+    > `dom.indexedDB.experimental` pref is set to `true` in
+    > `about:config`.
 
-<h3 id="Exceptions">Exceptions</h3>
+- `options` {{optional_inline}}
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+  - : Dictionary of other options. Available options are:
+
+    - `durability`: `"default"`, `"strict"`, or
+      `"relaxed"`. The default is `"default"`. Using
+      `"relaxed"` provides better performance, but with fewer guarantees. Web
+      applications are encouraged to use `"relaxed"` for ephemeral data such
+      as caches or quickly changing records, and `"strict"` in cases where
+      reducing the risk of data loss outweighs the impact to performance and power.
+
+### Return value
+
+An {{domxref("IDBTransaction")}} object.
+
+### Exceptions
+
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 <table class="no-markdown">
   <thead>
@@ -115,15 +119,23 @@ var transaction = db.transaction('my-store-name');</pre>
   <tbody>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err">InvalidStateError</a></code>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err"
+            >InvalidStateError</a
+          ></code
+        >
       </td>
-      <td>The <code>close()</code> method has previously been called on this
-          {{domxref("IDBDatabase")}} instance.</td>
+      <td>
+        The <code>close()</code> method has previously been called on this
+        {{domxref("IDBDatabase")}} instance.
+      </td>
     </tr>
     <tr>
       <td><code>NotFoundError</code></td>
-      <td>An object store specified in the <code>storeNames</code> parameter has been
-        deleted or removed.</td>
+      <td>
+        An object store specified in the <code>storeNames</code> parameter has
+        been deleted or removed.
+      </td>
     </tr>
     <tr>
       <td><code>TypeError</code></td>
@@ -136,22 +148,21 @@ var transaction = db.transaction('my-store-name');</pre>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we open a database connection, then use transaction() to open a
-  transaction on the database. For a complete example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do
-    Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view
-    example live</a>.)</p>
+In this example we open a database connection, then use transaction() to open a
+transaction on the database. For a complete example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -168,37 +179,34 @@ var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
 };
 
 transaction.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
 // you would then go on to do something to this database
 // via an object store
 var objectStore = transaction.objectStore("toDoList");
-// etc.</pre>
+// etc.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

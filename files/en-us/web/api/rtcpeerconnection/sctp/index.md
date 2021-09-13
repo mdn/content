@@ -9,30 +9,32 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong><code>sctp</code></strong> property on the
-  {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}}
-  describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and
-  received. If SCTP hasn't been negotiated, this value is <code>null</code>.</p>
+The read-only **`sctp`** property on the
+{{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}}
+describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and
+received. If SCTP hasn't been negotiated, this value is `null`.
 
-<p>The SCTP transport is used for transmitting and receiving data for any and all
-  {{domxref("RTCDataChannel")}}s on the peer connection.</p>
+The SCTP transport is used for transmitting and receiving data for any and all
+{{domxref("RTCDataChannel")}}s on the peer connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sctp</em> = <em>RTCPeerConnection</em>.sctp;</pre>
+```js
+var sctp = RTCPeerConnection.sctp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by
-  the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data
-  channels, or <code>null</code> if SCTP negotiation hasn't happened.</p>
+A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by
+the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data
+channels, or `null` if SCTP negotiation hasn't happened.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 
 var channel = pc.createDataChannel("Mydata");
 channel.onopen = function(event) {
@@ -46,21 +48,19 @@ channel.onmessage = function(event) {
 
 var sctp = pc.sctp;
 var maxMessageSize = sctp.maxMessageSize;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{Glossary("SCTP")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCDataChannel")}}
+- {{Glossary("SCTP")}}

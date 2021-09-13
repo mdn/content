@@ -11,34 +11,36 @@ tags:
   - close
 browser-compat: api.DedicatedWorkerGlobalScope.close
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>close()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface discards any tasks queued in the <code>DedicatedWorkerGlobalScope</code>'s event loop, effectively closing this particular scope.</p>
+The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">self.close();</pre>
+```js
+self.close();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you want to close your worker instance from inside the worker itself, you can call the following:</p>
+If you want to close your worker instance from inside the worker itself, you can call the following:
 
-<pre class="brush: js">close();</pre>
+```js
+close();
+```
 
-<p><code>close()</code> and <code>self.close()</code> are effectively equivalent — both represent <code>close()</code> being called from inside the worker's inner scope.</p>
+`close()` and `self.close()` are effectively equivalent — both represent `close()` being called from inside the worker's inner scope.
 
-<div class="note">
-<p><strong>Note:</strong> There is also a way to stop the worker from the main thread: the {{domxref("Worker.terminate")}} method.</p>
-</div>
+> **Note:** There is also a way to stop the worker from the main thread: the {{domxref("Worker.terminate")}} method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("DedicatedWorkerGlobalScope")}}</p>
+{{domxref("DedicatedWorkerGlobalScope")}}

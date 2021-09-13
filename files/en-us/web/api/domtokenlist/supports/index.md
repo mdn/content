@@ -8,32 +8,32 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.supports
 ---
-<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>supports()</code></strong> method of the
-    {{domxref("DOMTokenList")}} interface returns <code>true</code> if a
-    given <code><var>token</var></code> is in the associated attribute's supported tokens.
-    This method is intended to support feature detection.</p>
+The **`supports()`** method of the
+{{domxref("DOMTokenList")}} interface returns `true` if a
+given `token` is in the associated attribute's supported tokens.
+This method is intended to support feature detection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
+```js
+let trueOrFalse = element.supports(token)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>token</var></code></dt>
-  <dd>A {{domxref("DOMString")}} containing the token to query for.</dd>
-</dl>
+- `token`
+  - : A {{domxref("DOMString")}} containing the token to query for.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A boolean value indicating whether the token was found.</p>
+A boolean value indicating whether the token was found.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let iframe = document.getElementById('display');
+```js
+let iframe = document.getElementById('display');
 
 if (iframe.sandbox.supports('an-upcoming-feature')) {
   // support code for mystery future feature
@@ -46,12 +46,13 @@ if (iframe.sandbox.supports('allow-scripts')) {
   //
   // (NOTE: This feature is well-supported; this is just an example!)
   //
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

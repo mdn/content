@@ -10,35 +10,35 @@ tags:
   - smoothingTimeConstant
 browser-compat: api.AnalyserNode.smoothingTimeConstant
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>smoothingTimeConstant</code></strong> property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the <code>AnalyserNode</code> processed, and results in a much smoother set of value changes over time.</p>
+The **`smoothingTimeConstant`** property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the `AnalyserNode` processed, and results in a much smoother set of value changes over time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>smoothValue</em> = <em>analyserNode</em>.smoothingTimeConstant;
-<em>analyserNode</em>.smoothingTimeConstant = <em>newValue</em>;
-</pre>
+```js
+var smoothValue = analyserNode.smoothingTimeConstant;
+analyserNode.smoothingTimeConstant = newValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double within the range <code>0</code> to <code>1</code> (<code>0</code> meaning no time averaging). The default value is <code>0.8</code>.</p>
+A double within the range `0` to `1` (`0` meaning no time averaging). The default value is `0.8`.
 
-<p>If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the previous and current buffer quite a lot while computing the value", which essentially smooths the changes across {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} calls.</p>
+If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the previous and current buffer quite a lot while computing the value", which essentially smooths the changes across {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} calls.
 
-<p>In technical terms, we apply a <a href="https://webaudio.github.io/web-audio-api/#blackman-window">Blackman window</a> and smooth the values over time. The default value is good enough for most cases.</p>
+In technical terms, we apply a [Blackman window](https://webaudio.github.io/web-audio-api/#blackman-window) and smooth the values over time. The default value is good enough for most cases.
 
-<div class="note">
-<p><strong>Note:</strong> If a value outside the range 0–1 is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
-</div>
+> **Note:** If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<p>If you are curious about the effect the <code>smoothingTimeConstant()</code> has, try cloning the above example and setting <code>analyser.smoothingTimeConstant = 0;</code> instead. You'll notice that the value changes are much more jarring.</p>
+If you are curious about the effect the `smoothingTimeConstant()` has, try cloning the above example and setting `analyser.smoothingTimeConstant = 0;` instead. You'll notice that the value changes are much more jarring.
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -65,7 +65,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -75,18 +75,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

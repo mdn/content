@@ -12,48 +12,44 @@ tags:
   - spatialization
 browser-compat: api.BaseAudioContext.listener
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>listener</code> property of the {{ domxref("BaseAudioContext") }} interface
-  returns an {{ domxref("AudioListener") }} object that can then be used for
-  implementing 3D audio spatialization.</p>
+The `listener` property of the {{ domxref("BaseAudioContext") }} interface
+returns an {{ domxref("AudioListener") }} object that can then be used for
+implementing 3D audio spatialization.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.listener;
-</pre>
+```js
+baseAudioContext.listener;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{ domxref("AudioListener") }} object.</p>
+An {{ domxref("AudioListener") }} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="note">
-  <p><strong>Note:</strong> for a full Web Audio spatialization example, see our <a
-      href="https://github.com/mdn/panner-node">panner-node</a> demo.</p>
-</div>
+> **Note:** for a full Web Audio spatialization example, see our [panner-node](https://github.com/mdn/panner-node) demo.
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 ...
 
 var myListener = audioCtx.listener;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

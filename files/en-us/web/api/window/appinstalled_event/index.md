@@ -11,50 +11,55 @@ tags:
   - web manifest
 browser-compat: api.Window.appinstalled_event
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}
 
-<p>The <strong><code>appinstalled</code></strong> event of the <a href="/en-US/docs/Web/Manifest">Web Manifest API</a> is fired when the browser has successfully installed a page as an application.</p>
+The **`appinstalled`** event of the [Web Manifest API](/en-US/docs/Web/Manifest) is fired when the browser has successfully installed a page as an application.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("Window/onappinstalled", "onappinstalled")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("Window/onappinstalled", "onappinstalled")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>appinstalled</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
+You can use the `appinstalled` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
-<pre class="brush: js">window.addEventListener('appinstalled', function() {
+```js
+window.addEventListener('appinstalled', function() {
   console.log('Thank you for installing our app!');
-});</pre>
+});
+```
 
-<p>Or use the {{domxref("Window/onappinstalled", "onappinstalled")}} event handler property:</p>
+Or use the {{domxref("Window/onappinstalled", "onappinstalled")}} event handler property:
 
-<pre class="brush: js">window.onappinstalled = function() {
+```js
+window.onappinstalled = function() {
   console.log('Thank you for installing our app!');
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>The associated event handler, {{domxref("Window.onappinstalled")}}</li>
-</ul>
+## See also
+
+- The associated event handler, {{domxref("Window.onappinstalled")}}

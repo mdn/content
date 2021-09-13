@@ -2,34 +2,36 @@
 title: PresentationConnection.url
 slug: Web/API/PresentationConnection/url
 tags:
-- API
-- Experimental
-- Presentation
-- Presentation API
-- PresentationConnection
-- Property
-- Reference
-- URL
+  - API
+  - Experimental
+  - Presentation
+  - Presentation API
+  - PresentationConnection
+  - Property
+  - Reference
+  - URL
 browser-compat: api.PresentationConnection.url
 ---
-<p>{{SeeCompatTable}}{{APIRef("Presentation API")}}</p>
+{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
-<p>The <strong><code>url</code></strong> readonly property of the
-  {{domxref("PresentationConnection")}} interface returns the URL used to create or
-  reconnect to the presentation.</p>
+The **`url`** readonly property of the
+{{domxref("PresentationConnection")}} interface returns the URL used to create or
+reconnect to the presentation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var url = PresentationConnection.url</pre>
+```js
+var url = PresentationConnection.url
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing a URL.</p>
+A {{domxref("USVString")}} containing a URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

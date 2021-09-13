@@ -9,41 +9,35 @@ tags:
   - Reference
 browser-compat: api.HTMLLegendElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLLegendElement</code></strong> is an interface allowing to access properties of the {{HTMLElement("legend")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLLegendElement`** is an interface allowing to access properties of the {{HTMLElement("legend")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLLegendElement.form")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the <strong>form</strong> attribute on the parent fieldset element. Otherwise, it returns null. </dd>
+- {{domxref("HTMLLegendElement.form")}} {{readonlyInline}}
+  - : Is a {{domxref("HTMLFormElement")}} representing the form that this legend belongs to. If the legend has a fieldset element as its parent, then this attribute returns the same value as the **form** attribute on the parent fieldset element. Otherwise, it returns null.
+- {{domxref("HTMLLegendElement.accessKey")}}
+  - : Is a {{domxref("DOMString")}} representing a single-character access key to give access to the element.
+- {{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the alignment relative to the form set
 
- <dt>{{domxref("HTMLLegendElement.accessKey")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing a single-character access key to give access to the element.</dd>
+## Methods
 
- <dt>{{domxref("HTMLLegendElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the alignment relative to the form set</dd>
-</dl>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Methods">Methods</h2>
-
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("legend")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("legend")}}

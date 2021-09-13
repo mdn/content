@@ -9,44 +9,36 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> <code>OfflineAudioCompletionEvent</code> interface represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.</p>
+The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `OfflineAudioCompletionEvent` interface represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
 
-<div class="note">
-<p><strong>Note:</strong> This interface is marked as deprecated; it is still supported for legacy reasons, but it will soon be superseded when the promise version of {{domxref("OfflineAudioContext.startRendering")}} is supported in browsers, which will no longer need it.</p>
-</div>
+> **Note:** This interface is marked as deprecated; it is still supported for legacy reasons, but it will soon be superseded when the promise version of {{domxref("OfflineAudioContext.startRendering")}} is supported in browsers, which will no longer need it.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("OfflineAudioCompletionEvent.OfflineAudioCompletionEvent")}}</dt>
- <dd>Creates a new <code>OfflineAudioCompletionEvent</code> object instance.</dd>
-</dl>
+- {{domxref("OfflineAudioCompletionEvent.OfflineAudioCompletionEvent")}}
+  - : Creates a new `OfflineAudioCompletionEvent` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent, {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{readonlyinline}}</dt>
- <dd>An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.</dd>
-</dl>
+- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{readonlyinline}}
+  - : An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

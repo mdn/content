@@ -2,84 +2,86 @@
 title: Window.crypto
 slug: Web/API/Window/crypto
 tags:
-- API
-- Crypto
-- Cryptography
-- Encoding
-- Encryption
-- HTML DOM
-- Property
-- Read-only
-- Reference
-- Security
-- Window
+  - API
+  - Crypto
+  - Cryptography
+  - Encoding
+  - Encryption
+  - HTML DOM
+  - Property
+  - Read-only
+  - Reference
+  - Security
+  - Window
 browser-compat: api.Window.crypto
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The read-only <strong><code>Window.crypto</code></strong>
-    property returns the {{domxref("Crypto")}} object associated to the global object.
-    This object allows web pages access to certain cryptographic related services.</p>
+The read-only **`Window.crypto`**
+property returns the {{domxref("Crypto")}} object associated to the global object.
+This object allows web pages access to certain cryptographic related services.
 
-<p>Although the property itself is read-only, all of its methods (and the methods of its
-  child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
-  to attack by {{glossary("polyfill")}}.</p>
+Although the property itself is read-only, all of its methods (and the methods of its
+child object, {{domxref("SubtleCrypto")}}) are not read-only, and therefore vulnerable
+to attack by {{glossary("polyfill")}}.
 
-<p>Although <code>window.crypto</code> is available on all windows, the
-  returned <code>Crypto</code> object only has one usable feature in insecure contexts:
-  the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you
-  should use this API only in secure contexts.</p>
+Although `window.crypto` is available on all windows, the
+returned `Crypto` object only has one usable feature in insecure contexts:
+the {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method. In general, you
+should use this API only in secure contexts.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
-</pre>
+```js
+let cryptoObj = window.crypto || window.msCrypto; // for IE 11
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose
-  cryptography and a strong random-number generator.</p>
+An instance of the {{domxref("Crypto")}} interface, providing access to general-purpose
+cryptography and a strong random-number generator.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This
-  example uses the {{domxref("Window.crypto")}} property to access the
-  {{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.</p>
+This
+example uses the {{domxref("Window.crypto")}} property to access the
+{{domxref("Crypto.getRandomValues", "getRandomValues()")}} method.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
+```js
+genRandomNumbers = function getRandomNumbers() {
   const array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
   randText.textContent = "The random numbers are: "
-  for (let i = 0; i &lt; array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     randText.textContent += array[i] + " ";
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre
-  class="brush: html">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
-&lt;button type="button" onClick='genRandomNumbers()'&gt;Generate 10 random numbers&lt;/button&gt;</pre>
+```html
+<p id="myRandText">The random numbers are: </p>
+<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Window")}} global object</li>
-  <li>The {{domxref("Crypto")}} interface</li>
-</ul>
+- The {{domxref("Window")}} global object
+- The {{domxref("Crypto")}} interface

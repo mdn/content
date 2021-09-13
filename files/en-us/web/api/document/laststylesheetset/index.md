@@ -13,28 +13,29 @@ tags:
   - Deprecated
 browser-compat: api.Document.lastStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>Document.lastStyleSheetSet</code></strong> property returns the last enabled style sheet set. This property's
-  value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
-  changed.</p>
+The **`Document.lastStyleSheetSet`** property returns the last enabled style sheet set. This property's
+value changes whenever the {{domxref("document.selectedStyleSheetSet")}} property is
+changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>lastStyleSheetSet</var> = <var>document</var>.lastStyleSheetSet
-</pre>
+```js
+var lastStyleSheetSet = document.lastStyleSheetSet
+```
 
-<p>On return, <var>lastStyleSheetSet</var> indicates the style sheet set that was most
-  recently set. If the current style sheet set has not been changed by setting
-  {{domxref("document.selectedStyleSheetSet")}}, the returned value is <code>null</code>.
-</p>
+On return, _lastStyleSheetSet_ indicates the style sheet set that was most
+recently set. If the current style sheet set has not been changed by setting
+{{domxref("document.selectedStyleSheetSet")}}, the returned value is `null`.
 
-<div class="note"><p><strong>Note:</strong> This value doesn't change when
-  {{domxref("document.enableStyleSheetsForSet()")}} is called.</p></div>
+> **Note:** This value doesn't change when
+> {{domxref("document.enableStyleSheetsForSet()")}} is called.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let lastSheetSet = document.lastStyleSheetSet;
+```js
+let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
   lastSheetSet = 'Style sheet not yet changed';
@@ -42,17 +43,15 @@ if (!lastSheetSet) {
 else {
   console.log('The last style sheet set is: ' + lastSheetSet);
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.preferredStyleSheetSet")}}</li>
-  <li>{{domxref("document.selectedStyleSheetSet")}}</li>
-  <li>{{domxref("document.styleSheetSets")}}</li>
-  <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

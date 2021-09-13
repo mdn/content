@@ -2,86 +2,82 @@
 title: ContentIndex.getAll()
 slug: Web/API/ContentIndex/getAll
 tags:
-- Content
-- Content Index API
-- Index
-- Interface
-- Method
-- PWA
-- content indexing
-- getAll
+  - Content
+  - Content Index API
+  - Index
+  - Interface
+  - Method
+  - PWA
+  - content indexing
+  - getAll
 browser-compat: api.ContentIndex.getAll
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The <strong><code>getAll()</code></strong> method of the
-  {{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
-  an iterable list of content index entries.</p>
+The **`getAll()`** method of the
+{{domxref("ContentIndex")}} interface returns a {{jsxref('Promise')}} that resolves with
+an iterable list of content index entries.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>indexedContent</var> = ContentIndex.getAll();</pre>
+```js
+var indexedContent = ContentIndex.getAll();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method receives no parameters.</p>
+This method receives no parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
-  <code>ContentDescription</code> items.</p>
+Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
+`ContentDescription` items.
 
-<dl>
-  <dt><em>ContentDescription</em></dt>
-  <dd>Each item returned is an {{jsxref('Object')}} containing the following data:
-    <ul>
-      <li><code>id</code>: A unique {{jsxref('String')}} identifier.</li>
-      <li><code>title</code>: A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.</li>
-      <li><code>title</code>: A {{jsxref('String')}} title of the item. Used in
-        user-visible lists of content.</li>
-      <li><code>description</code>: A {{jsxref('String')}} description of the item. Used
-        in user-visible lists of content.</li>
-      <li><code>url</code>: A {{jsxref('String')}} containing the url of the corresponding
-        HTML document. Needs to be under the scope of the current
-        {{domxref('ServiceWorker','service worker')}}.</li>
-      <li><code>category</code>: {{Optional_Inline}} A {{jsxref('String')}} defining the
-        category of content. Can be:
-        <ul>
-          <li><code>''</code> An empty {{jsxref('String')}}, this is the default.</li>
-          <li><code>homepage</code></li>
-          <li><code>article</code></li>
-          <li><code>video</code></li>
-          <li><code>audio</code></li>
-        </ul>
-      </li>
-      <li><code>icons</code>: {{Optional_Inline}} An {{jsxref('Array')}} of image
-        resources, defined as an {{jsxref('Object')}} with the following data:
-        <ul>
-          <li><code>src:</code> A url {{jsxref('String')}} of the source image.</li>
-          <li><code>sizes:</code> {{Optional_Inline}} A {{jsxref('String')}}
-            representation of the image size.</li>
-          <li><code>type:</code> {{Optional_Inline}} The {{Glossary("MIME type")}} of the
-            image.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- _ContentDescription_
 
-<h3 id="Exceptions">Exceptions</h3>
+  - : Each item returned is an {{jsxref('Object')}} containing the following data:
 
-<p>No exceptions are thrown. If there are no items in the Content Index, an empty
-  {{jsxref('Array')}} is returned.</p>
+    - `id`: A unique {{jsxref('String')}} identifier.
+    - `title`: A {{jsxref('String')}} title for the item. Used in
+      user-visible lists of content.
+    - `title`: A {{jsxref('String')}} title of the item. Used in
+      user-visible lists of content.
+    - `description`: A {{jsxref('String')}} description of the item. Used
+      in user-visible lists of content.
+    - `url`: A {{jsxref('String')}} containing the url of the corresponding
+      HTML document. Needs to be under the scope of the current
+      {{domxref('ServiceWorker','service worker')}}.
+    - `category`: {{Optional_Inline}} A {{jsxref('String')}} defining the
+      category of content. Can be:
 
-<h2 id="Examples">Examples</h2>
+      - `''` An empty {{jsxref('String')}}, this is the default.
+      - `homepage`
+      - `article`
+      - `video`
+      - `audio`
 
-<p>The below example shows an asynchronous function that retrieves items within the
-  {{domxref('Content Index API','content index')}} and iterates over each entry, building
-  a list for the interface.</p>
+    - `icons`: {{Optional_Inline}} An {{jsxref('Array')}} of image
+      resources, defined as an {{jsxref('Object')}} with the following data:
 
-<pre class="brush: js">async function createReadingList() {
+      - `src:` A url {{jsxref('String')}} of the source image.
+      - `sizes:` {{Optional_Inline}} A {{jsxref('String')}}
+        representation of the image size.
+      - `type:` {{Optional_Inline}} The {{Glossary("MIME type")}} of the
+        image.
+
+### Exceptions
+
+No exceptions are thrown. If there are no items in the Content Index, an empty
+{{jsxref('Array')}} is returned.
+
+## Examples
+
+The below example shows an asynchronous function that retrieves items within the
+{{domxref('Content Index API','content index')}} and iterates over each entry, building
+a list for the interface.
+
+```js
+async function createReadingList() {
   // access our service worker registration
   const registration = await navigator.serviceWorker.ready;
 
@@ -120,23 +116,21 @@ browser-compat: api.ContentIndex.getAll
   }
 
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
-      Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
-      and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with
-      information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the
+  Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list
+  and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with
+  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

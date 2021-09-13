@@ -8,39 +8,46 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>cssFloat</strong></code> property of the {{domxref("CSSStyleDeclaration")}} interface returns the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} with <code>float</code> as an argument.</p>
-<p>When setting, it invokes {{DOMxRef("CSSStyleDeclaration.setProperty()")}} with <code>float</code> as the first argument, and the given value as the second argument. The given value must be a valid value for the {{cssxref("float")}} property.</p>
+The **`cssFloat`** property of the {{domxref("CSSStyleDeclaration")}} interface returns the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} with `float` as an argument.
 
-<h2 id="Syntax">Syntax</h2>
+When setting, it invokes {{DOMxRef("CSSStyleDeclaration.setProperty()")}} with `float` as the first argument, and the given value as the second argument. The given value must be a valid value for the {{cssxref("float")}} property.
 
-<pre class="brush: js">var <var>float</var> = <var>CSSStyleDeclaration</var>.cssFloat();
-<var>CSSStyleDeclaration</var>.cssFloat = <var>"right"</var></pre>
+## Syntax
 
-<h3>Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+```js
+var float = CSSStyleDeclaration.cssFloat();
+CSSStyleDeclaration.cssFloat = "right"
+```
 
-<h2 id="Example">Example</h2>
+### Value
 
-<p>In the below example, the stylesheet contains a single rule for <code>.box</code>, which has the {{cssxref("float")}} property with a value of <code>left</code>. This value will be returned by <code>cssFloat</code>. We then set the value to "right" using <code>cssFloat</code>, and return the new value.</p>
+A {{domxref('CSSOMString')}}.
 
-<pre class="brush: css">.box {
+## Example
+
+In the below example, the stylesheet contains a single rule for `.box`, which has the {{cssxref("float")}} property with a value of `left`. This value will be returned by `cssFloat`. We then set the value to "right" using `cssFloat`, and return the new value.
+
+```css
+.box {
   float: left;
   inline-size: 300px;
 }
-</pre>
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let rule = myRules[0];
 console.log(rule.style.cssFloat); // "left"
 rule.style.cssFloat = "right";
-console.log(rule.style.cssFloat); //right</pre>
+console.log(rule.style.cssFloat); //right
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

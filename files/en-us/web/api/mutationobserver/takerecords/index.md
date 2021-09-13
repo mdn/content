@@ -2,60 +2,60 @@
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 tags:
-- API
-- Attribute Changes
-- Changes
-- DOM Changes
-- DOM WHATWG
-- Method
-- Mutation Observer
-- Mutation Observer API
-- MutationObserver
-- MutationObserver API
-- Observer
-- mutation
-- takeRecords
+  - API
+  - Attribute Changes
+  - Changes
+  - DOM Changes
+  - DOM WHATWG
+  - Method
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserver
+  - MutationObserver API
+  - Observer
+  - mutation
+  - takeRecords
 browser-compat: api.MutationObserver.takeRecords
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The {{domxref("MutationObserver")}} method
-    <code><strong>takeRecords()</strong></code> returns a list of all matching DOM changes
-    that have been detected but not yet processed by the observer's callback function,
-    leaving the mutation queue empty.</p>
+The {{domxref("MutationObserver")}} method
+**`takeRecords()`** returns a list of all matching DOM changes
+that have been detected but not yet processed by the observer's callback function,
+leaving the mutation queue empty.
 
-<p>The most common use case for this is to
-  immediately fetch all pending mutation records immediately prior to disconnecting the
-  observer, so that any pending mutations can be processed when shutting down the
-  observer.</p>
+The most common use case for this is to
+immediately fetch all pending mutation records immediately prior to disconnecting the
+observer, so that any pending mutations can be processed when shutting down the
+observer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>mutationRecords</var> = <var>mutationObserver</var>.takeRecords()
-</pre>
+```js
+const mutationRecords = mutationObserver.takeRecords()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array {{domxref("MutationRecord")}} objects, each describing one change applied to
-  the observed portion of the document's DOM tree.</p>
+An array {{domxref("MutationRecord")}} objects, each describing one change applied to
+the observed portion of the document's DOM tree.
 
-<div class="note">
-  <p><strong>Note:</strong> The queue of mutations which have occurred, but not been
-    delivered to the observer's callback is left empty after calling
-    <code>takeRecords()</code>.</p>
-</div>
+> **Note:** The queue of mutations which have occurred, but not been
+> delivered to the observer's callback is left empty after calling
+> `takeRecords()`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we demonstrate how to handle any undelivered
-  {{domxref("MutationRecord")}}s by calling <code>takeRecords()</code> just before
-  disconnecting the observer.</p>
+In this example, we demonstrate how to handle any undelivered
+{{domxref("MutationRecord")}}s by calling `takeRecords()` just before
+disconnecting the observer.
 
-<pre class="brush: js;">const targetNode = document.querySelector("#someElement");
+```js
+const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true
@@ -75,17 +75,17 @@ observer.disconnect();
 if (mutations) {
   callback(mutations);
 }
-</pre>
+```
 
-<p>The code in lines 12–17 fetches any unprocessed mutation records, then invokes the
-  callback with the records so that they can be processed. This is done immediately prior
-  to calling {{domxref("MutationObserver.disconnect", "disconnect()")}} to stop observing
-  the DOM.</p>
+The code in lines 12–17 fetches any unprocessed mutation records, then invokes the
+callback with the records so that they can be processed. This is done immediately prior
+to calling {{domxref("MutationObserver.disconnect", "disconnect()")}} to stop observing
+the DOM.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

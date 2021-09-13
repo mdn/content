@@ -10,62 +10,62 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.offsetLeft</code></strong> read-only property returns the number of pixels that the <em>upper left corner</em> of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.</p>
+The **`HTMLElement.offsetLeft`** read-only property returns the number of pixels that the _upper left corner_ of the current element is offset to the left within the {{domxref("HTMLElement.offsetParent")}} node.
 
-<p>For block-level elements, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, and <code>offsetHeight</code> describe the border box of an element relative to the <code>offsetParent</code>.</p>
+For block-level elements, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight` describe the border box of an element relative to the `offsetParent`.
 
-<p>However, for inline-level elements (such as <strong>span</strong>) that can wrap from one line to the next, <code>offsetTop</code> and <code>offsetLeft</code> describe the positions of the <em>first</em> border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while <code>offsetWidth</code> and <code>offsetHeight</code> describe the dimensions of the <em>bounding</em> border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of <code>offsetLeft</code>, <code>offsetTop</code>, <code>offsetWidth</code> and <code>offsetHeight</code> will not be a bounding box for a span with wrapped text.</p>
+However, for inline-level elements (such as **span**) that can wrap from one line to the next, `offsetTop` and `offsetLeft` describe the positions of the _first_ border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while `offsetWidth` and `offsetHeight` describe the dimensions of the _bounding_ border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of `offsetLeft`, `offsetTop`, `offsetWidth` and `offsetHeight` will not be a bounding box for a span with wrapped text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><var>left</var> = <var>element</var>.offsetLeft;
-</pre>
+    left = element.offsetLeft;
 
-<p><code><var>left</var></code> is an integer representing the offset to the left in pixels <em>from the closest relatively positioned</em> parent element.</p>
+`left` is an integer representing the offset to the left in pixels _from the closest relatively positioned_ parent element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var colorTable = document.getElementById("t1");
+```js
+var colorTable = document.getElementById("t1");
 var tOLeft = colorTable.offsetLeft;
 
-if (tOLeft &gt; 5) {
+if (tOLeft > 5) {
   // large left offset: do something here
 }
-</pre>
+```
 
-<p>This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.</p>
+This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
-<p><img src="offsetleft.jpg"></p>
+![](offsetleft.jpg)
 
-<pre class="brush: html">&lt;div style="width: 300px; border-color:blue; border-style:solid; border-width:1;"&gt;
-  &lt;span&gt;Short span. &lt;/span&gt;
-  &lt;span id="longspan"&gt;Long span that wraps within this div.&lt;/span&gt;
-&lt;/div&gt;
+```html
+<div style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
+  <span>Short span. </span>
+  <span id="longspan">Long span that wraps within this div.</span>
+</div>
 
-&lt;div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"&gt;
-&lt;/div&gt;
+<div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
+</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var box = document.getElementById("box");
   var longspan = document.getElementById("longspan");
   box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";
   box.style.top = longspan.offsetTop + document.body.scrollTop + "px";
   box.style.width = longspan.offsetWidth + "px";
   box.style.height = longspan.offsetHeight + "px";
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}</li>
-</ul>
+- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}

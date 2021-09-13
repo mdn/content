@@ -15,10 +15,10 @@ tags:
   - id
 browser-compat: api.PresentationConnection.id
 ---
-<div>{{APIRef("Presentation API")}}</div>
+{{APIRef("Presentation API")}}
 
-<p>The <dfn><code>id</code></dfn> attribute specifies the <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier">presentation identifier</a> of a <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a>.</p>
+The _`id`_ attribute specifies the [presentation identifier](https://www.w3.org/TR/presentation-api/#dfn-presentation-identifier) of a [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

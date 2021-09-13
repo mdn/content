@@ -9,55 +9,63 @@ tags:
   - events
 browser-compat: api.VisualViewport.scroll_event
 ---
-<div>{{APIRef("Window")}}</div>
+{{APIRef("Window")}}
 
-<p>The <code><strong>scroll</strong></code> event of the <code><a href="/en-US/docs/Web/API/VisualViewport">VisualViewport</a></code> interface is fired when the visual viewport is scrolled.</p>
+The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is scrolled.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/VisualViewport/onscroll">onscroll</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/VisualViewport/onscroll"
+            >onscroll</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>scroll</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `scroll` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">visualViewport.addEventListener('scroll', function() {
+```js
+visualViewport.addEventListener('scroll', function() {
   ...
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/VisualViewport/onscroll">onscroll</a></code> event handler property:</p>
+Or use the [`onscroll`](/en-US/docs/Web/API/VisualViewport/onscroll) event handler property:
 
-<pre class="brush: js">visualViewport.onscroll = function() {
+```js
+visualViewport.onscroll = function() {
   ...
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API homepage</a></li>
-</ul>
+- [Visual Viewport API homepage](/en-US/docs/Web/API/Visual_Viewport_API)

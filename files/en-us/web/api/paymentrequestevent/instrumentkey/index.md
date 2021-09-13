@@ -3,27 +3,28 @@ title: PaymentRequestEvent.instrumentKey
 slug: Web/API/PaymentRequestEvent/instrumentKey
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
-<p>{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}
 
-<p>The <strong><code>instrumentKey</code></strong> read-only property of the
-    {{domxref("PaymentRequestEvent")}} interface returns a
-    <code>PaymentInstrument</code> object reflecting the payment instrument selected by
-    the user or an empty string if the user has not registered or chosen a payment
-    instrument.</p>
+The **`instrumentKey`** read-only property of the
+{{domxref("PaymentRequestEvent")}} interface returns a
+`PaymentInstrument` object reflecting the payment instrument selected by
+the user or an empty string if the user has not registered or chosen a payment
+instrument.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var <em>instrumentKey</em> = <em>paymentRequestEvent</em>.instrumentKey</pre>
+```js
+var instrumentKey = paymentRequestEvent.instrumentKey
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>PaymentInstrument</code> object.</p>
+A `PaymentInstrument` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer part of any specification.</p>
+This feature is no longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

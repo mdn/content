@@ -19,36 +19,37 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.open_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The WebRTC <code><strong>open</strong></code> event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.</p>
+The WebRTC **`open`** event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("RTCDataChannelEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("RTCDataChannel.onopen", "onopen")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("RTCDataChannelEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("RTCDataChannel.onopen", "onopen")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example adds to the {{domxref("RTCDataChannel")}} <code>dc</code> a handler for the <code>open</code> event that adjusts the user interface to indicate that a chat window is ready to be used after a connection has been established. It enables the message input box and send button as well as enabling the disconnect button and disabling the connect button. Finally, the message input box is focused so the user can immediately begin to type.</p>
+This example adds to the {{domxref("RTCDataChannel")}} `dc` a handler for the `open` event that adjusts the user interface to indicate that a chat window is ready to be used after a connection has been established. It enables the message input box and send button as well as enabling the disconnect button and disabling the connect button. Finally, the message input box is focused so the user can immediately begin to type.
 
-<pre class="brush: js">dc.addEventListener("open", ev =&gt; {
+```js
+dc.addEventListener("open", ev => {
   messageInputBox.disabled = false;
   sendMessageButton.disabled = false;
   disconnectButton.disabled = false;
@@ -56,11 +57,13 @@ browser-compat: api.RTCDataChannel.open_event
 
   messageInputBox.focus();
 
-}, false);</pre>
+}, false);
+```
 
-<p>This can also be done by directly setting the value of the channel's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler property.</p>
+This can also be done by directly setting the value of the channel's {{domxref("RTCDataChannel.onopen", "onopen")}} event handler property.
 
-<pre class="brush: js">dc.onopen = ev =&gt; {
+```js
+dc.onopen = ev => {
   messageInputBox.disabled = false;
   sendMessageButton.disabled = false;
   disconnectButton.disabled = false;
@@ -68,16 +71,14 @@ browser-compat: api.RTCDataChannel.open_event
 
   messageInputBox.focus();
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</a></li>
- <li>Related events: {{domxref("RTCDataChannel.message_event", "message")}}, {{domxref("RTCDataChannel.close_event", "close")}}, and {{domxref("RTCDataChannel.error_event", "error")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [A simple RTCDataChannel example](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- Related events: {{domxref("RTCDataChannel.message_event", "message")}}, {{domxref("RTCDataChannel.close_event", "close")}}, and {{domxref("RTCDataChannel.error_event", "error")}}

@@ -11,68 +11,68 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathValue</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.</p>
+The **`CSSMathValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.
 
-<h2 id="Interfaces_based_on_CSSMathValue">Interfaces based on CSSMathValue</h2>
+## Interfaces based on CSSMathValue
 
-<p>Below is a list of interfaces based on the CSSMathValue interface.</p>
+Below is a list of interfaces based on the CSSMathValue interface.
 
-<ul>
- <li>{{domxref('CSSMathInvert')}}</li>
- <li>{{domxref('CSSMathMax')}}</li>
- <li>{{domxref('CSSMathMin')}}</li>
- <li>{{domxref('CSSMathNegate')}}</li>
- <li>{{domxref('CSSMathProduct')}}</li>
- <li>{{domxref('CSSMathSum')}}</li>
-</ul>
+- {{domxref('CSSMathInvert')}}
+- {{domxref('CSSMathMax')}}
+- {{domxref('CSSMathMin')}}
+- {{domxref('CSSMathNegate')}}
+- {{domxref('CSSMathProduct')}}
+- {{domxref('CSSMathSum')}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMathValue.operator')}}</dt>
- <dd>Indicates the operator that the current subtype represents.</dd>
-</dl>
+- {{domxref('CSSMathValue.operator')}}
+  - : Indicates the operator that the current subtype represents.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>No</p>
+No
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We create an element with a <code><a href="/en-US/docs/Web/CSS/width">width</a></code> determined using a <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function, then {{DOMxRef("console.log()")}} the <code>operator</code>.</p>
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function, then {{DOMxRef("console.log()")}} the `operator`.
 
-<pre class="brush: html">&lt;div&gt;has width&lt;/div&gt;
-</pre>
+```html
+<div>has width</div>
+```
 
-<p>We assign a <code>width</code> with a calculation</p>
+We assign a `width` with a calculation
 
-<pre class="brush: css">div {
+```css
+div {
   width: calc(30% - 20px);
-}</pre>
+}
+```
 
-<p>We add the JavaScript</p>
+We add the JavaScript
 
-<pre class="brush: js">const styleMap = document.querySelector('div').computedStyleMap();
+```js
+const styleMap = document.querySelector('div').computedStyleMap();
 
 console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').operator );         // 'sum'
 console.log( styleMap.get('width').values[1].value );  // -20
-</pre>
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 300)}}</p>
+{{EmbedLiveSample("Examples", 120, 300)}}
 
-<p>The <code>CSSMathValue.operator</code> returns '<code>sum</code>' because <code>styleMap.get('width').values[1].value );</code> is <code>-20</code>: adding a negative number.</p>
+The `CSSMathValue.operator` returns '`sum`' because `styleMap.get('width').values[1].value );` is `-20`: adding a negative number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

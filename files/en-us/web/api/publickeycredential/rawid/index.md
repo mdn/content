@@ -10,36 +10,35 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.rawId
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>rawId</code></strong> read-only property of the
-  {{domxref("PublicKeyCredential")}} interface is an {{jsxref("ArrayBuffer")}} object
-  containing the identifier of the credentials.</p>
+The **`rawId`** read-only property of the
+{{domxref("PublicKeyCredential")}} interface is an {{jsxref("ArrayBuffer")}} object
+containing the identifier of the credentials.
 
-<p>The {{domxref("PublicKeyCredential.id")}} property is a <a
-    href="/en-US/docs/Glossary/Base64">base64url
-    encoded</a> version of this identifier.</p>
+The {{domxref("PublicKeyCredential.id")}} property is a [base64url
+encoded](/en-US/docs/Glossary/Base64) version of this identifier.
 
-<div class="note">
-  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This property may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>rawId</var> = <var>publicKeyCredential</var>.rawId</pre>
+```js
+rawId = publicKeyCredential.rawId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
-  identifier is expected to be globally unique and is appointed for the current
-  <code>PublicKeyCredential</code> and its associated
-  {{domxref("AuthenticatorAssertionResponse")}}.</p>
+A {{jsxref("ArrayBuffer")}} containing the identifier of the credentials. This
+identifier is expected to be globally unique and is appointed for the current
+`PublicKeyCredential` and its associated
+{{domxref("AuthenticatorAssertionResponse")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array(26) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -65,12 +64,12 @@ navigator.credentials.create({  publicKey: options })
 }).catch(function (err) {
   // Deal with any error
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

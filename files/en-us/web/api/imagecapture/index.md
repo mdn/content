@@ -13,75 +13,70 @@ tags:
   - Reference
 browser-compat: api.ImageCapture
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>ImageCapture</code></strong> interface of the <a href="/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</a> provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.</p>
+The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides methods to enable the capture of images or photos from a camera or other photographic device. It provides an interface for capturing images from a photographic device referenced through a valid {{domxref("MediaStreamTrack")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}</dt>
- <dd>Creates a new <code>ImageCapture</code> object which can be used to capture still frames (photos) from a given {{domxref("MediaStreamTrack")}} which represents a video stream.</dd>
-</dl>
+- {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}}
+  - : Creates a new `ImageCapture` object which can be used to capture still frames (photos) from a given {{domxref("MediaStreamTrack")}} which represents a video stream.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ImageCapture.track")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.</dd>
-</dl>
+- {{domxref("ImageCapture.track")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("MediaStreamTrack")}} passed to the constructor.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The <code>ImageCapture</code> interface is based on {{domxref("EventTarget")}}, so it includes the methods defined by that interface as well as the ones listed below.</p>
+The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it includes the methods defined by that interface as well as the ones listed below.
 
-<dl>
- <dt>{{domxref("ImageCapture.takePhoto()")}}</dt>
- <dd>Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.</dd>
- <dt>{{domxref("ImageCapture.getPhotoCapabilities()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.</dd>
- <dt>{{domxref("ImageCapture.getPhotoSettings()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.</dd>
- <dt>{{domxref("ImageCapture.grabFrame()")}}</dt>
- <dd>Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.</dd>
-</dl>
+- {{domxref("ImageCapture.takePhoto()")}}
+  - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
+- {{domxref("ImageCapture.getPhotoCapabilities()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of available configuration options.
+- {{domxref("ImageCapture.getPhotoSettings()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
+- {{domxref("ImageCapture.grabFrame()")}}
+  - : Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code is taken from <a href="https://googlechrome.github.io/samples/image-capture/grab-frame-take-photo.html">Chrome's Grab Frame - Take Photo Sample</a>. Since <code>ImageCapture</code> requires some place to capture an image from, the example below starts with a device's media device (in other words a camera).</p>
+The following code is taken from [Chrome's Grab Frame - Take Photo Sample](https://googlechrome.github.io/samples/image-capture/grab-frame-take-photo.html). Since `ImageCapture` requires some place to capture an image from, the example below starts with a device's media device (in other words a camera).
 
-<p>This example shows, roughly, a {{domxref("MediaStreamTrack")}} extracted from a device's {{domxref("MediaStream")}}. The track is then used to create an <code>ImageCapture</code> object so that <code>takePhoto()</code> and <code>grabFrame()</code> can be called. Finally, it shows how to apply the results of these calls to a canvas object.</p>
+This example shows, roughly, a {{domxref("MediaStreamTrack")}} extracted from a device's {{domxref("MediaStream")}}. The track is then used to create an `ImageCapture` object so that `takePhoto()` and `grabFrame()` can be called. Finally, it shows how to apply the results of these calls to a canvas object.
 
-<pre class="brush: js">var imageCapture;
+```js
+var imageCapture;
 
 function onGetUserMediaButtonClick() {
   navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream =&gt; {
+  .then(mediaStream => {
     document.querySelector('video').srcObject = mediaStream;
 
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch(error =&gt; console.log(error));
+  .catch(error => console.log(error));
 }
 
 function onGrabFrameButtonClick() {
   imageCapture.grabFrame()
-  .then(imageBitmap =&gt; {
+  .then(imageBitmap => {
     const canvas = document.querySelector('#grabFrameCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch(error =&gt; console.log(error));
+  .catch(error => console.log(error));
 }
 
 function onTakePhotoButtonClick() {
   imageCapture.takePhoto()
-  .then(blob =&gt; createImageBitmap(blob))
-  .then(imageBitmap =&gt; {
+  .then(blob => createImageBitmap(blob))
+  .then(imageBitmap => {
     const canvas = document.querySelector('#takePhotoCanvas');
     drawCanvas(canvas, imageBitmap);
   })
-  .catch(error =&gt; console.log(error));
+  .catch(error => console.log(error));
 }
 
 /* Utils */
@@ -100,12 +95,13 @@ function drawCanvas(canvas, img) {
 document.querySelector('video').addEventListener('play', function() {
   document.querySelector('#grabFrameButton').disabled = false;
   document.querySelector('#takePhotoButton').disabled = false;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

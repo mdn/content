@@ -8,41 +8,38 @@ tags:
   - BackgroundFetchEvent
 browser-compat: api.BackgroundFetchEvent
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>BackgroundFetchEvent</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.</p>
+The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.
 
-<p>It is the event type passed to <code>onbackgroundfetchabort</code> and <code>onbackgroundfetchclick</code>.</p>
+It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}}</dt>
- <dd>Creates a new <code>BackgroundFetchEvent</code> object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.</dd>
-</dl>
+- {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}}
+  - : Creates a new `BackgroundFetchEvent` object. This constructor is not typically used, as the browser creates these objects itself and provides them to background fetch event callbacks.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-<dl>
-  <dt>{{domxref("BackgroundFetchEvent.registration")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.</dd>
-</dl>
+- {{domxref("BackgroundFetchEvent.registration")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, if the user clicks on the user interface displaying the download progress, a new window will open. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling <code>event.registration</code>.</p>
+In this example, if the user clicks on the user interface displaying the download progress, a new window will open. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
 
-<pre class="brush: js">addEventListener('backgroundfetchclick', (event) => {
+```js
+addEventListener('backgroundfetchclick', (event) => {
   const bgFetch = event.registration;
 
   if (bgFetch.result === 'success') {
@@ -50,12 +47,13 @@ browser-compat: api.BackgroundFetchEvent
   } else {
     clients.openWindow('/download-progress');
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

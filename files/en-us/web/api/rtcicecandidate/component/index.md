@@ -17,62 +17,63 @@ tags:
   - component
 browser-compat: api.RTCIceCandidate.component
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong><code>component</code></strong> property
-    on the {{domxref("RTCIceCandidate")}} interface is a string which indicates whether
-    the candidate is an <a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">RTP</a> or
-    an RTCP candidate.</p>
+The read-only **`component`** property
+on the {{domxref("RTCIceCandidate")}} interface is a string which indicates whether
+the candidate is an [RTP](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP) or
+an RTCP candidate.
 
-<p>If a candidate represents both RTP and RTCP multiplexed together, it is reported as an
-  RTP candidate.</p>
+If a candidate represents both RTP and RTCP multiplexed together, it is reported as an
+RTP candidate.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>component</em> = <em>RTCIceCandidate</em>.component;</pre>
+```js
+var component = RTCIceCandidate.component;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string which is one of the following:</p>
+A string which is one of the following:
 
-<dl>
- <dt><code>rtp</code></dt>
- <dd>Identifies an ICE transport which is being used for the <a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Real-time Transport Protocol</a> (RTP), or for RTP multiplexed with the RTP Control Protocol (RTCP). RTP is defined in {{RFC(3550)}}. This value corresponds to the component ID field in the <code>candidate</code> a-line with the value 1.</dd>
- <dt><code>rtcp</code></dt>
- <dd>Identifies an ICE transport being used for RTCP, which is defined in {{RFC(3550, "", 6)}}. This value corresponds to the component ID 2.</dd>
-</dl>
+- `rtp`
+  - : Identifies an ICE transport which is being used for the [Real-time Transport Protocol](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP) (RTP), or for RTP multiplexed with the RTP Control Protocol (RTCP). RTP is defined in {{RFC(3550)}}. This value corresponds to the component ID field in the `candidate` a-line with the value 1.
+- `rtcp`
+  - : Identifies an ICE transport being used for RTCP, which is defined in {{RFC(3550, "", 6)}}. This value corresponds to the component ID 2.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Consider this {{Glossary("SDP")}} attribute line (a-line):</p>
+Consider this {{Glossary("SDP")}} attribute line (a-line):
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
-<p>This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",
-  "foundation")}} is 4234997325. The next field on the a-line, <code>"1"</code>, is the
-  component ID. A value of <code>"1"</code> indicates RTP, which is recorded in the
-  <code>component</code> property as <code>"rtp"</code>. If this value were instead
-  <code>"2"</code>, the a-line would be describing an RTCP candidate, and
-  <code>compoment</code> would be <code>"rtcp"</code>.</p>
+This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",
+  "foundation")}} is 4234997325. The next field on the a-line, `"1"`, is the
+component ID. A value of `"1"` indicates RTP, which is recorded in the
+`component` property as `"rtp"`. If this value were instead
+`"2"`, the a-line would be describing an RTCP candidate, and
+`compoment` would be `"rtcp"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet examines a candidate's component type and dispatches the candidate to
-  different handlers depending on the value.</p>
+This code snippet examines a candidate's component type and dispatches the candidate to
+different handlers depending on the value.
 
-<pre class="brush: js">if (candidate.component == "rtp") {
+```js
+if (candidate.component == "rtp") {
   handleRTPCandidate(candidate);
 } else if (candidate.component == "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

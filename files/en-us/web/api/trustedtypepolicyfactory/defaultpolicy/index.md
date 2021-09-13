@@ -9,33 +9,34 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.defaultPolicy
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>defaultPolicy</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.</p>
+The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Information about the creation and use of default policies can be found in the <code><a href="/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#default_policy">createPolicy()</a></code> documentation.</p>
-</div>
+> **Note:** Information about the creation and use of default policies can be found in the [`createPolicy()`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#default_policy) documentation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>defaultPolicy</var> = <var>TrustedTypePolicyFactory</var>.defaultPolicy;</pre>
+    var defaultPolicy = TrustedTypePolicyFactory.defaultPolicy;
 
-<h3>Value</h3>
-<p>A {{domxref("TrustedTypePolicy")}} or null.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("TrustedTypePolicy")}} or null.
 
-<p>The first line below returns null as no default policy has been created. Once a default policy is created, calling <code>defaultPolicy</code> returns that policy object.</p>
+## Examples
 
-<pre class="brush: js">console.log(trustedTypes.defaultPolicy); // null
+The first line below returns null as no default policy has been created. Once a default policy is created, calling `defaultPolicy` returns that policy object.
+
+```js
+console.log(trustedTypes.defaultPolicy); // null
 const dp = trustedTypes.createPolicy('default', {});
-console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object</pre>
+console.log(trustedTypes.defaultPolicy); // a TrustedTypePolicy object
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

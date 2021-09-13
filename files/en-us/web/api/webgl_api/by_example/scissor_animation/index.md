@@ -11,31 +11,34 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
-<p>A simple WebGL example in which we have some animation fun using scissoring and clearing operations.</p>
+A simple WebGL example in which we have some animation fun using scissoring and clearing operations.
 
-<h2 id="Animation_with_scissoring">Animation with scissoring</h2>
+## Animation with scissoring
 
-<p>{{EmbedLiveSample("Animation_with_scissoring",660,425)}}</p>
+{{EmbedLiveSample("Animation_with_scissoring",660,425)}}
 
-<p>In this example, we are animating squares using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}}. We again establish an animation loop using timers. Note that this time it is the position of the square (the scissoring area) that is updated every frame (we set frame rate to roughly one every 17ms, or roughly 60fps – frames per second).</p>
+In this example, we are animating squares using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}}. We again establish an animation loop using timers. Note that this time it is the position of the square (the scissoring area) that is updated every frame (we set frame rate to roughly one every 17ms, or roughly 60fps – frames per second).
 
-<p>In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.</p>
+In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.
 
-<pre class="brush: html hidden">&lt;p&gt;WebGL animation by clearing the drawing buffer with solid
-color and applying scissor test.&lt;/p&gt;
-&lt;button id="animation-onoff"&gt;
+```html hidden
+<p>WebGL animation by clearing the drawing buffer with solid
+color and applying scissor test.</p>
+<button id="animation-onoff">
   Press here to
-&lt;strong&gt;[verb goes here]&lt;/strong&gt;
-  the animation&lt;/button&gt;
-</pre>
+<strong>[verb goes here]</strong>
+  the animation</button>
+```
 
-<pre class="brush: html hidden">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -53,12 +56,14 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">;(function(){
-</pre>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupAnimation, false);
 // Variables to hold the WebGL context, and the color and
 // position of animated squares.
@@ -109,7 +114,7 @@ function drawAnimation () {
   // When the sqaure hits the bottom of the drawing buffer,
   // we override it with new square of different color and
   // velocity.
-  if (position[1] &lt; 0) {
+  if (position[1] < 0) {
     // Horizontal position chosen randomly, and vertical
     // position at the top of the drawing buffer.
     position = [
@@ -126,9 +131,10 @@ function drawAnimation () {
 function getRandomColor() {
   return [Math.random(), Math.random(), Math.random()];
 }
-</pre>
+```
 
-<pre class="brush: js hidden">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -146,11 +152,12 @@ function getRandomColor() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">})();
-</pre>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

@@ -2,51 +2,48 @@
 title: HTMLCanvasElement.mozFetchAsStream()
 slug: Web/API/HTMLCanvasElement/mozFetchAsStream
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Method
-- Reference
-- Deprecated
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Method
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLCanvasElement.mozFetchAsStream
 ---
-<div>{{APIRef("Canvas API")}} {{deprecated_header}}</div>
+{{APIRef("Canvas API")}} {{deprecated_header}}
 
-<p>The <strong><code>HTMLCanvasElement.mozFetchAsStream()</code></strong> internal method
-    used to create a new input stream that, when ready, would provide the contents of the
-    canvas as image data. However, this non-standard and internal method has been removed.
-</p>
+The **`HTMLCanvasElement.mozFetchAsStream()`** internal method
+used to create a new input stream that, when ready, would provide the contents of the
+canvas as image data. However, this non-standard and internal method has been removed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>void <em>canvas</em>.mozFetchAsStream(<em>callback</em>, <em>type</em>);</var>
-</pre>
+```js
+void canvas.mozFetchAsStream(callback, type);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code>callback</code></dt>
-    <dd>An {{interface("nsIInputStreamCallback")}}.</dd>
-    <dt><code>type</code> {{optional_inline}}</dt>
-    <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
-        <code>image/png</code>.</dd>
-</dl>
+- `callback`
+  - : An {{interface("nsIInputStreamCallback")}}.
+- `type` {{optional_inline}}
+  - : A {{domxref("DOMString")}} indicating the image format. The default type is
+    `image/png`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div>
-    <h3 id="Save_to_disk_with_mozFetchAsStream_(Chrome_context_only)">Save to disk with
-        <code>mozFetchAsStream</code> (Chrome context only)</h3>
+### Save to disk with `mozFetchAsStream` (Chrome context only)
 
-    <p>This technique also converts it to ico, however it will not work in Windows XP as
-        WinXP cannot convert from PNG to ICO. It saves to the desktop it uses
-        FileUtils.jsm. Also uses NetUtil.jsm</p>
+This technique also converts it to ico, however it will not work in Windows XP as
+WinXP cannot convert from PNG to ICO. It saves to the desktop it uses
+FileUtils.jsm. Also uses NetUtil.jsm
 
-    <pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -76,19 +73,17 @@ var mfasCallback = function(iconName) {
     }
 }
 
-canvas.mozFetchAsStream(mfasCallback('myIcon'), 'image/vnd.microsoft.icon');</pre>
-</div>
+canvas.mozFetchAsStream(mfasCallback('myIcon'), 'image/vnd.microsoft.icon');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.

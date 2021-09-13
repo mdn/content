@@ -11,30 +11,26 @@ tags:
   - events
 browser-compat: api.PresentationConnectionCloseEvent
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-<p>The <strong><code>PresentationConnectionCloseEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a> is fired on a {{domxref("PresentationConnection")}} when it is closed.</p>
+The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationConnection")}} when it is closed.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent()")}}</dt>
- <dd>Creates a new PresentationConnectionCloseEvent.</dd>
-</dl>
+- {{DOMxRef("PresentationConnectionCloseEvent.PresentationConnectionCloseEvent()")}}
+  - : Creates a new PresentationConnectionCloseEvent.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("PresentationConnectionCloseEvent.message")}} {{readonlyinline}}</dt>
- <dd>A human-readable message that provides more information about why the connection was closed.</dd>
- <dt>{{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{readonlyinline}}</dt>
- <dd>Indicates why the connection was closed. This property takes one of the following values: <code>error</code>, <code>closed</code>, or <code>wentaway</code>.</dd>
-</dl>
+- {{DOMxRef("PresentationConnectionCloseEvent.message")}} {{readonlyinline}}
+  - : A human-readable message that provides more information about why the connection was closed.
+- {{DOMxRef("PresentationConnectionCloseEvent.reason")}} {{readonlyinline}}
+  - : Indicates why the connection was closed. This property takes one of the following values: `error`, `closed`, or `wentaway`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

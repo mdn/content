@@ -2,55 +2,55 @@
 title: WebGLRenderingContext.createRenderbuffer()
 slug: Web/API/WebGLRenderingContext/createRenderbuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.createRenderbuffer()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes a
-  {{domxref("WebGLRenderbuffer")}} object.</p>
+The **`WebGLRenderingContext.createRenderbuffer()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+{{domxref("WebGLRenderbuffer")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLRenderbuffer <var>gl</var>.createRenderbuffer();
-</pre>
+```js
+WebGLRenderbuffer gl.createRenderbuffer();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLRenderbuffer")}} object that stores data such an image, or can be
-  source or target of an rendering operation.</p>
+A {{domxref("WebGLRenderbuffer")}} object that stores data such an image, or can be
+source or target of an rendering operation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_render_buffer">Creating a render buffer</h3>
+### Creating a render buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var renderBuffer = gl.createRenderbuffer();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

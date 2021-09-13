@@ -2,49 +2,51 @@
 title: Clients.get()
 slug: Web/API/Clients/get
 tags:
-- API
-- Clients
-- Experimental
-- Method
-- Reference
-- Service Workers
-- get
+  - API
+  - Clients
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - get
 browser-compat: api.Clients.get
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>get()</code></strong> method of the
-  {{domxref("Clients")}} interface gets a service worker client matching a given
-  <code>id</code> and returns it in a {{jsxref("Promise")}}.</p>
+The **`get()`** method of the
+{{domxref("Clients")}} interface gets a service worker client matching a given
+`id` and returns it in a {{jsxref("Promise")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">self.clients.get(<em>id</em>).then(function(<em>client</em>) {
+```js
+self.clients.get(id).then(function(client) {
   // do something with your returned client
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>id</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the id of the client you want to get.</dd>
-</dl>
+- `id`
+  - : A {{domxref("DOMString")}} representing the id of the client you want to get.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("Client")}} object or
-  <code>undefined</code>.</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("Client")}} object or
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.clients.get(id).then(function(client) {
+```js
+self.clients.get(id).then(function(client) {
   self.clients.openWindow(client.url);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

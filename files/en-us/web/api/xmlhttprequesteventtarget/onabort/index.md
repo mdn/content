@@ -2,51 +2,51 @@
 title: XMLHttpRequestEventTarget.onabort
 slug: Web/API/XMLHttpRequestEventTarget/onabort
 tags:
-- API
-- Event Handler
-- Property
-- Reference
-- Web
-- XHMLHttpRequestEventTarget
+  - API
+  - Event Handler
+  - Property
+  - Reference
+  - Web
+  - XHMLHttpRequestEventTarget
 browser-compat: api.XMLHttpRequestEventTarget.onabort
 ---
-<div>{{APIRef("XMLHttpRequest")}}</div>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <strong><code>XMLHttpRequestEventTarget.onabort</code></strong> is the function
-	called when an {{domxref("XMLHttpRequest")}} transaction is aborted, such as when the
-	{{domxref("XMLHttpRequest.abort()")}} function is called.</p>
+The **`XMLHttpRequestEventTarget.onabort`** is the function
+called when an {{domxref("XMLHttpRequest")}} transaction is aborted, such as when the
+{{domxref("XMLHttpRequest.abort()")}} function is called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>XMLHttpRequest</em>.onabort = <em>callback</em>;</pre>
+```js
+XMLHttpRequest.onabort = callback;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
-	<li><code><em>callback</em></code> is the function to be executed when the transaction
-		is aborted.</li>
-</ul>
+- `callback` is the function to be executed when the transaction
+  is aborted.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+```js
+var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 
-xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.open(method, url, true);
 xmlhttp.onabort = function () {
   console.log('** The request was aborted');
 };
 xmlhttp.send();
 //..
 xmlhttp.abort(); // This will invoke our onabort handler above
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

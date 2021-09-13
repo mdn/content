@@ -15,56 +15,48 @@ tags:
   - WebRTC API
 browser-compat: api.RTCDTMFSender
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCDTMFSender</code></strong> interface provides a mechanism for transmitting {{Glossary("DTMF")}} codes on a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}}. You gain access to the connection's <code>RTCDTMFSender</code> through the {{domxref("RTCRtpSender.dtmf")}} property on the audio track you wish to send DTMF with.</p>
+The **`RTCDTMFSender`** interface provides a mechanism for transmitting {{Glossary("DTMF")}} codes on a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}. You gain access to the connection's `RTCDTMFSender` through the {{domxref("RTCRtpSender.dtmf")}} property on the audio track you wish to send DTMF with.
 
-<p>The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communication clients to be connected to a {{interwiki("wikipedia", "public-switched telephone network")}} (PSTN) or other legacy telephone service, including extant voice over IP (VoIP) services. For that reason, DTMF can't be used between two WebRTC-based devices, because there is no mechanism provided by WebRTC for receiving DTMF codes.</p>
+The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communication clients to be connected to a {{interwiki("wikipedia", "public-switched telephone network")}} (PSTN) or other legacy telephone service, including extant voice over IP (VoIP) services. For that reason, DTMF can't be used between two WebRTC-based devices, because there is no mechanism provided by WebRTC for receiving DTMF codes.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCDTMFSender.toneBuffer")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} which contains the list of DTMF tones currently in the queue to be transmitted (tones which have already been played are no longer included in the string). See {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} for details on the format of the tone buffer.</dd>
-</dl>
+- {{domxref("RTCDTMFSender.toneBuffer")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} which contains the list of DTMF tones currently in the queue to be transmitted (tones which have already been played are no longer included in the string). See {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} for details on the format of the tone buffer.
 
-<h2 id="methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("RTCDTMFSender.insertDTMF()")}}</dt>
- <dd>Given a string describing a set of DTMF codes and, optionally, the duration of and inter-tone gap between the tones, <code>insertDTMF()</code> starts sending the specified tones. Calling <code>insertDTMF()</code> replaces any already-pending tones from the <code>toneBuffer</code>. You can abort sending queued tones by specifying an empty string (<code>""</code>) as the set of tones to play.</dd>
-</dl>
+- {{domxref("RTCDTMFSender.insertDTMF()")}}
+  - : Given a string describing a set of DTMF codes and, optionally, the duration of and inter-tone gap between the tones, `insertDTMF()` starts sending the specified tones. Calling `insertDTMF()` replaces any already-pending tones from the `toneBuffer`. You can abort sending queued tones by specifying an empty string (`""`) as the set of tones to play.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
- <dt>{{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}</dt>
- <dd>The <code>tonechange</code> event is sent to the <code>RTCDTMFSender</code> instance's event handler to indicate that a tone has either started or stopped playing.<br>
- Also available using the {{domxref("RTCDTMFSender.ontonechange", "ontonechange")}} event handler property.</dd>
-</dl>
+- {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
+  - : The `tonechange` event is sent to the `RTCDTMFSender` instance's event handler to indicate that a tone has either started or stopped playing.
+    Also available using the {{domxref("RTCDTMFSender.ontonechange", "ontonechange")}} event handler property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the article <a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a> for a full example.</p>
+See the article [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for a full example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a></li>
- <li>{{domxref("RTCRtpSender.dtmf")}}</li>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
+- {{domxref("RTCRtpSender.dtmf")}}
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCRtpSender")}}

@@ -2,27 +2,29 @@
 title: ImageBitmap.close()
 slug: Web/API/ImageBitmap/close
 tags:
-- API
-- Experimental
-- ImageBitmap
-- Method
-- OffscreenCanvas
-- Reference
+  - API
+  - Experimental
+  - ImageBitmap
+  - Method
+  - OffscreenCanvas
+  - Reference
 browser-compat: api.ImageBitmap.close
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <strong><code>ImageBitmap.close()</code></strong>
-  method disposes of all graphical resources associated with an <code>ImageBitmap</code>.
-</p>
+The **`ImageBitmap.close()`**
+method disposes of all graphical resources associated with an `ImageBitmap`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void ImageBitmap.close()</pre>
+```js
+void ImageBitmap.close()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext('webgl');
 
 // ... some drawing using the gl context ...
@@ -32,18 +34,16 @@ var bitmap = offscreen.transferToImageBitmap();
 
 bitmap.close();
 // ImageBitmap { width: 0, height: 0 } -- disposed
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method, {{domxref("ImageBitmap")}}.</li>
-</ul>
+- The interface defining this method, {{domxref("ImageBitmap")}}.

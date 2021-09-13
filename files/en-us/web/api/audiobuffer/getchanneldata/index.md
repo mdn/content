@@ -9,31 +9,32 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBuffer.getChannelData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>getChannelData()</code></strong> method of the {{ domxref("AudioBuffer") }} Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).</p>
+The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js;">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+var nowBuffering = myArrayBuffer.getChannelData(channel);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>channel</dt>
- <dd>The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the <code>channel</code> index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an <code>INDEX_SIZE_ERR</code> exception will be thrown.</dd>
-</dl>
+- channel
+  - : The channel property is an index representing the particular channel to get data for. An index value of 0 represents the first channel. If the `channel` index value is greater than of equal to {{domxref("AudioBuffer.numberOfChannels")}}, an `INDEX_SIZE_ERR` exception will be thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Float32Array")}}.</p>
+A {{jsxref("Float32Array")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example we create a two second buffer, fill it with white noise, and then play it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain what is going on. You can also <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a href="https://github.com/mdn/webaudio-examples">view the source</a>.</p>
+In the following example we create a two second buffer, fill it with white noise, and then play it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain what is going on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples).
 
-<pre class="brush: js;">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -51,10 +52,10 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -71,18 +72,17 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -12,121 +12,99 @@ tags:
   - Reference
 browser-compat: api.RTCDtlsTransport
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCDtlsTransport</code></strong> interface provides access to information about the Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.</p>
+The **`RTCDtlsTransport`** interface provides access to information about the Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.
 
-<p>A <code>RTCDtlsTransport</code> object is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's <a href="/en-US/docs/Web/API/RTCDataChannel">data channels</a>.</p>
+A `RTCDtlsTransport` object is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's [data channels](/en-US/docs/Web/API/RTCDataChannel).
 
-<p>Features of the DTLS transport include the addition of security to the underlying transport; the <code>RTCDtlsTransport</code> interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.</p>
+Features of the DTLS transport include the addition of security to the underlying transport; the `RTCDtlsTransport` interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from {{DOMxRef("EventTarget")}}.</em></p>
+_Also inherits properties from {{DOMxRef("EventTarget")}}._
 
-<dl>
-  <dt>{{DOMxRef("RTCDtlsTransport.iceTransport", "iceTransport")}} {{ReadOnlyInline}}</dt>
-  <dd>
-    Returns a reference to the underlying {{DOMxRef("RTCIceTransport")}} object.
-  </dd>
-
-  <dt>{{DOMxRef("RTCDtlsTransport.state", "state")}} {{ReadOnlyInline}}</dt>
-  <dd>
-    Returns a string
-    which describes the underlying Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport state.
+- {{DOMxRef("RTCDtlsTransport.iceTransport", "iceTransport")}} {{ReadOnlyInline}}
+  - : Returns a reference to the underlying {{DOMxRef("RTCIceTransport")}} object.
+- {{DOMxRef("RTCDtlsTransport.state", "state")}} {{ReadOnlyInline}}
+  - : Returns a string
+    which describes the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport state.
     It can be one of the following values:
-    <code>new</code>, <code>connecting</code>, <code>connected</code>, <code>closed</code>, or <code>failed</code>.
-  </dd>
-</dl>
+    `new`, `connecting`, `connected`, `closed`, or `failed`.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
-  <dt>{{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}</dt>
-  <dd>
-    Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
+- {{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
     when the{{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
-  </dd>
-
-  <dt>{{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}</dt>
-  <dd>
-    Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
+- {{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers)
     which specifies a function the browser calls
     when the{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
-  </dd>
-</dl>
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits properties from {{DOMxRef("EventTarget")}}.</em></p>
-<dl>
-  <dt>{{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}</dt>
-  <dd>
-    Returns an array of {{jsxref("ArrayBuffer")}} containing the certificates of the remote peer of the connectioin.
-  </dd>
-</dl>
+_Also inherits properties from {{DOMxRef("EventTarget")}}._
 
-<h2 id="Events">Events</h2>
+- {{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}
+  - : Returns an array of {{jsxref("ArrayBuffer")}} containing the certificates of the remote peer of the connectioin.
 
-<dl>
-  <dt>{{DOMxRef("RTCDtlsTransport.error_event", "error")}}</dt>
-  <dd>
-    Sent when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.</p>
+## Events
 
-  </dd>
+- {{DOMxRef("RTCDtlsTransport.error_event", "error")}}
 
-  <dt>{{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}}</dt>
-  <dd>
-    Sent when the {{DOMxRef("RTCDtlsTransport.state", "state")}} of the DTLS transport changes.
-  </dd>
+  - : Sent when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.
 
-</dl>
+- {{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}}
+  - : Sent when the {{DOMxRef("RTCDtlsTransport.state", "state")}} of the DTLS transport changes.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<h3 id="Allocation_of_DTLS_transports">Allocation of DTLS transports</h3>
+### Allocation of DTLS transports
 
-<p><code>RTCDtlsTransport</code> objects are created when an app calls either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}. The number of DTLS transports created and how they're used depends on the bundling mode used when creating the {{domxref("RTCPeerConnection")}}.</p>
+`RTCDtlsTransport` objects are created when an app calls either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}. The number of DTLS transports created and how they're used depends on the bundling mode used when creating the {{domxref("RTCPeerConnection")}}.
 
-<p>Whether bundling is used depends on what the other endpoint is able to negotiate. All browsers support bundling, so when both endpoints are browsers, you can rest assured that bundling will be used.</p>
+Whether bundling is used depends on what the other endpoint is able to negotiate. All browsers support bundling, so when both endpoints are browsers, you can rest assured that bundling will be used.
 
-<p>Some non-browser legacy endpoints, however, may not support bundle. To be able to negotiate with such endpoints (or to exclude them entirely), the {{domxref("RTCConfiguration")}} property {{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} may be provided when creating the connection. The <code>bundlePolicy</code> <a href="/en-US/docs/Web/API/RTCPeerConnection#rtcbundlepolicy_enum">lets you control</a> how to negotiate with these legacy endpoints. The default policy is <code>"balanced"</code>, which provides a balance between performance and compatibility.</p>
+Some non-browser legacy endpoints, however, may not support bundle. To be able to negotiate with such endpoints (or to exclude them entirely), the {{domxref("RTCConfiguration")}} property {{domxref("RTCConfiguration.bundlePolicy", "bundlePolicy")}} may be provided when creating the connection. The `bundlePolicy` [lets you control](/en-US/docs/Web/API/RTCPeerConnection#rtcbundlepolicy_enum) how to negotiate with these legacy endpoints. The default policy is `"balanced"`, which provides a balance between performance and compatibility.
 
-<p>For example, to create the connection using the highest level of bundling:</p>
+For example, to create the connection using the highest level of bundling:
 
-<pre class="brush: js">const rtcConfig = {
+```js
+const rtcConfig = {
   bundlePolicy: "max-bundle"
 };
 
 const pc = new RTCPeerConnection(rtcConfig);
-</pre>
+```
 
-<p><a href="https://webrtcstandards.info/sdp-bundle/">Bundling</a> lets you use one <code>RTCDtlsTransport</code> to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.</p>
+[Bundling](https://webrtcstandards.info/sdp-bundle/) lets you use one `RTCDtlsTransport` to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.
 
-<h4 id="When_not_using_BUNDLE">When not using BUNDLE</h4>
+#### When not using BUNDLE
 
-<p>When the connection is created without using BUNDLE, each RTP or RTCP component of each {{domxref("RTCRtpTransceiver")}} has its own <code>RTCDtlsTransport</code>; that is, every {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}, has its own transport, and all {{domxref("RTCDataChannel")}} objects share a transport dedicated to SCTP.</p>
+When the connection is created without using BUNDLE, each RTP or RTCP component of each {{domxref("RTCRtpTransceiver")}} has its own `RTCDtlsTransport`; that is, every {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}, has its own transport, and all {{domxref("RTCDataChannel")}} objects share a transport dedicated to SCTP.
 
-<h4 id="When_using_BUNDLE">When using BUNDLE</h4>
+#### When using BUNDLE
 
-<p>When the connection is using BUNDLE, each <code>RTCDtlsTransport</code> object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using <code>max-compat</code> mode, each transport is responsible for handling all of the communications for a given type of media (audio, video, or data channel). Thus, a connection that has any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.</p>
+When the connection is using BUNDLE, each `RTCDtlsTransport` object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using `max-compat` mode, each transport is responsible for handling all of the communications for a given type of media (audio, video, or data channel). Thus, a connection that has any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.
 
-<p>Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling or not. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining <code>RTCDtlsTransport</code> objects.</p>
+Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling or not. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining `RTCDtlsTransport` objects.
 
-<h3 id="Data_channels">Data channels</h3>
+### Data channels
 
-<p>{{domxref("RTCDataChannel")}}s use {{Glossary("SCTP")}} to communicate. All of a peer connection's data channels share a single {{domxref("RTCSctpTransport")}}, found in the connection's {{domxref("RTCPeerConnection.sctp", "sctp")}} property.</p>
+{{domxref("RTCDataChannel")}}s use {{Glossary("SCTP")}} to communicate. All of a peer connection's data channels share a single {{domxref("RTCSctpTransport")}}, found in the connection's {{domxref("RTCPeerConnection.sctp", "sctp")}} property.
 
-<p>You can, in turn, identify the <code>RTCDtlsTransport</code> used to securely encapsulate the data channels' SCTP communications by looking at the <code>RTCSctpTransport</code> object's {{domxref("RTCSctpTransport.transport", "transport")}} property.</p>
+You can, in turn, identify the `RTCDtlsTransport` used to securely encapsulate the data channels' SCTP communications by looking at the `RTCSctpTransport` object's {{domxref("RTCSctpTransport.transport", "transport")}} property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example presents a function, <code>tallySenders()</code>, which iterates over an <code>RTCPeerConnection</code>'s {{domxref("RTCRtpSender")}}s, tallying up how many of them are in various states. The function returns an object containing properties whose values indicate how many of the senders are in each state.</p>
+This example presents a function, `tallySenders()`, which iterates over an `RTCPeerConnection`'s {{domxref("RTCRtpSender")}}s, tallying up how many of them are in various states. The function returns an object containing properties whose values indicate how many of the senders are in each state.
 
-<pre class="brush: js">let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
+```js
+let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });
 
 /* ... */
 
@@ -141,7 +119,7 @@ function tallySenders(pc) {
   };
 
   let senderList = pc.getSenders();
-  senderList.forEach(sender =&gt; {
+  senderList.forEach(sender => {
     let transport = sender.transport;
 
     if (!transport) {
@@ -169,21 +147,19 @@ function tallySenders(pc) {
   });
   return results;
 }
-</pre>
+```
 
-<p>Note that in this code, the <code>new</code> and <code>connecting</code> states are being treated as a single <code>connectionPending</code> status in the returned object.</p>
+Note that in this code, the `new` and `connecting` states are being treated as a single `connectionPending` status in the returned object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("RTCRtpSender.transport")}} and {{domxref("RTCRtpReceiver.transport")}}</li>
- <li>{{DOMxRef("RTCSctpTransport.transport")}}</li>
-</ul>
+- {{domxref("RTCRtpSender.transport")}} and {{domxref("RTCRtpReceiver.transport")}}
+- {{DOMxRef("RTCSctpTransport.transport")}}

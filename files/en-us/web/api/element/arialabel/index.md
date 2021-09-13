@@ -11,33 +11,38 @@ tags:
   - Element
 browser-compat: api.Element.ariaLabel
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaLabel</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute"><code>aria-label</code></a> attribute, which defines a string value that labels the current element.</p>
+The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which defines a string value that labels the current element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaLabel</var> = element.ariaLabel;
-<var>element</var>.ariaLabel = <var>ariaLabel</var></pre>
+    var ariaLabel = element.ariaLabel;
+    element.ariaLabel = ariaLabel
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-label</code> attribute on the element with an ID of <code>close-button</code> is set to "Close". Using <code>ariaLabel</code> we update the value to "Close dialog".</p>
+## Examples
 
-<pre class="brush: html">&lt;button aria-label="Close" id="close-button"&gt;X&lt;/button&gt;</pre>
+In this example the `aria-label` attribute on the element with an ID of `close-button` is set to "Close". Using `ariaLabel` we update the value to "Close dialog".
 
-<pre class="brush: js">let el = document.getElementById('close-button');
+```html
+<button aria-label="Close" id="close-button">X</button>
+```
+
+```js
+let el = document.getElementById('close-button');
 console.log(el.ariaLabel); // "Close"
 el.ariaLabel = "Close dialog"
-console.log(el.ariaLabel); // "Close dialog"</pre>
+console.log(el.ariaLabel); // "Close dialog"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

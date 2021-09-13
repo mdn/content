@@ -9,55 +9,59 @@ tags:
   - pointerlockchange
 browser-compat: api.Document.pointerlockchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointerlockchange</code> event is fired when the pointer is locked/unlocked.</p>
+The `pointerlockchange` event is fired when the pointer is locked/unlocked.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document/onpointerlockchange", "onpointerlockchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document/onpointerlockchange", "onpointerlockchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">document.addEventListener('pointerlockchange', (event) =&gt; {
+```js
+document.addEventListener('pointerlockchange', (event) => {
   console.log('Pointer lock changed');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointerlockchange</code> event handler property:</p>
+Using the `onpointerlockchange` event handler property:
 
-<pre class="brush: js">document.onpointerlockchange = (event) =&gt; {
+```js
+document.onpointerlockchange = (event) => {
   console.log('Pointer lock changed');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Using Pointer Lock API</a></li>
-</ul>
+- [Using Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)

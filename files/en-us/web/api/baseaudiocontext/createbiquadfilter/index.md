@@ -11,36 +11,34 @@ tags:
   - createBiquadFilter
 browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>createBiquadFilter()</code> method of the {{ domxref("BaseAudioContext") }}
-    interface creates a {{ domxref("BiquadFilterNode") }}, which represents a second order
-    filter configurable as several different common filter types.</p>
-</div>
+The `createBiquadFilter()` method of the {{ domxref("BaseAudioContext") }}
+interface creates a {{ domxref("BiquadFilterNode") }}, which represents a second order
+filter configurable as several different common filter types.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
-    recommended way to create a {{domxref("BiquadFilterNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
+> recommended way to create a {{domxref("BiquadFilterNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.createBiquadFilter();</pre>
+```js
+baseAudioContext.createBiquadFilter();
+```
 
-<h3 id="Description">Returns</h3>
+### Returns
 
-<p>A {{domxref("BiquadFilterNode")}}.</p>
+A {{domxref("BiquadFilterNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an AudioContext to create a Biquad filter
-  node. For a complete working example, check out our <a
-    href="https://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> demo (look
-  at the <a href="https://github.com/mdn/voice-change-o-matic">source code</a> too).</p>
+The following example shows basic usage of an AudioContext to create a Biquad filter
+node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look
+at the [source code](https://github.com/mdn/voice-change-o-matic) too).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 //set up the different audio nodes we will use for the app
 var analyser = audioCtx.createAnalyser();
@@ -63,19 +61,17 @@ gainNode.connect(audioCtx.destination);
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
-biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);</pre>
+biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

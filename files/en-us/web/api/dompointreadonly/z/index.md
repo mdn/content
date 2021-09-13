@@ -2,57 +2,56 @@
 title: DOMPointReadOnly.z
 slug: Web/API/DOMPointReadOnly/z
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Depth
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Read-only
-- Reference
-- z
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Depth
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Read-only
+  - Reference
+  - z
 browser-compat: api.DOMPointReadOnly.z
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPointReadOnly</strong></code> interface's
-    <code><strong>z</strong></code> property holds the depth coordinate, z, for a
-    read-only point in space.</p>
+The **`DOMPointReadOnly`** interface's
+**`z`** property holds the depth coordinate, z, for a
+read-only point in space.
 
-<p>If your script needs to be able to change the value
-  of this property, you should instead use the {{domxref("DOMPoint")}} object.</p>
+If your script needs to be able to change the value
+of this property, you should instead use the {{domxref("DOMPoint")}} object.
 
-<p>In general, positive values of <code>z</code> mean toward the user (out from the
-  screen), and negative values of <code>z</code> mean away from the user (into the
-  screen), assuming no transforms have resulted in a reversal.</p>
+In general, positive values of `z` mean toward the user (out from the
+screen), and negative values of `z` mean away from the user (into the
+screen), assuming no transforms have resulted in a reversal.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>zPos</var> = <var>someDOMPointReadOnly</var>.z;</pre>
+```js
+const zPos = someDOMPointReadOnly.z;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the z coordinate's value for the
-  point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the z coordinate's value for the
+point. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
-    {{domxref("DOMPointReadOnly.y", "y")}}, and the perspective value,
-    {{domxref("DOMPointReadOnly.w", "w")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
+  {{domxref("DOMPointReadOnly.y", "y")}}, and the perspective value,
+  {{domxref("DOMPointReadOnly.w", "w")}}.

@@ -2,66 +2,68 @@
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
-- deleteFromDocument
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
+  - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>deleteFromDocument()</code></strong> method of the
-  {{domxref("Selection")}} interface deletes the selected text from the document's DOM.
-</p>
+The **`deleteFromDocument()`** method of the
+{{domxref("Selection")}} interface deletes the selected text from the document's DOM.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.deleteFromDocument()
-</pre>
+```js
+sel.deleteFromDocument()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example lets you delete selected text by clicking a button. Upon clicking the
-  button, the<br>
-  {{domxref("Window.getSelection()")}} method gets the selected text, and the
-  <code>deleteFromDocument()</code> method removes it.</p>
+This example lets you delete selected text by clicking a button. Upon clicking the
+button, the
+{{domxref("Window.getSelection()")}} method gets the selected text, and the
+`deleteFromDocument()` method removes it.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Try highlighting some of the text in this paragraph. Once you do, you can remove the selected content by clicking the button below.&lt;/p&gt;
-&lt;button&gt;Delete selected text&lt;/button&gt;</pre>
+```html
+<p>Try highlighting some of the text in this paragraph. Once you do, you can remove the selected content by clicking the button below.</p>
+<button>Delete selected text</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let button = document.querySelector('button');
+```js
+let button = document.querySelector('button');
 button.addEventListener('click', deleteSelection);
 
 function deleteSelection() {
   let selection = window.getSelection();
   selection.deleteFromDocument();
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface defining this method</li>
-</ul>
+- {{domxref("Selection")}}, the interface defining this method

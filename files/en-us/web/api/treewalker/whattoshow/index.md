@@ -2,18 +2,18 @@
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
 tags:
-- API
-- DOM
-- Property
-- TreeWalker
+  - API
+  - DOM
+  - Property
+  - TreeWalker
 browser-compat: api.TreeWalker.whatToShow
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>TreeWalker.whatToShow</strong></code> read-only property returns an
-  <code>unsigned long</code> being a bitmask made of constants describing the types of
-  {{domxref("Node")}} that must to be presented. Non-matching nodes are skipped, but their
-  children may be included, if relevant. The possible values are:</p>
+The **`TreeWalker.whatToShow`** read-only property returns an
+`unsigned long` being a bitmask made of constants describing the types of
+{{domxref("Node")}} that must to be presented. Non-matching nodes are skipped, but their
+children may be included, if relevant. The possible values are:
 
 <table class="no-markdown">
   <thead>
@@ -26,20 +26,29 @@ browser-compat: api.TreeWalker.whatToShow
   <tbody>
     <tr>
       <td><code>NodeFilter.SHOW_ALL</code></td>
-      <td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
+      <td>
+        <code>-1</code> (that is the max value of <code>unsigned long</code>)
+      </td>
       <td>Shows all nodes.</td>
     </tr>
     <tr>
-      <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
+      <td>
+        <code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}
+      </td>
       <td><code>2</code></td>
-      <td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when
-        creating a {{ domxref("TreeWalker") }} with an {{ domxref("Attr") }} node as its
-        root; in this case, it means that the attribute node will appear in the first
-        position of the iteration or traversal. Since attributes are never children of
-        other nodes, they do not appear when traversing over the document tree.</td>
+      <td>
+        Shows attribute {{ domxref("Attr") }} nodes. This is meaningful
+        only when creating a {{ domxref("TreeWalker") }} with an
+        {{ domxref("Attr") }} node as its root; in this case, it means
+        that the attribute node will appear in the first position of the
+        iteration or traversal. Since attributes are never children of other
+        nodes, they do not appear when traversing over the document tree.
+      </td>
     </tr>
     <tr>
-      <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}</td>
+      <td>
+        <code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
+      </td>
       <td><code>8</code></td>
       <td>Shows {{ domxref("CDATASection") }} nodes.</td>
     </tr>
@@ -74,12 +83,17 @@ browser-compat: api.TreeWalker.whatToShow
       <td>Legacy, no more used.</td>
     </tr>
     <tr>
-      <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
+      <td>
+        <code>NodeFilter.SHOW_ENTITY_REFERENCE</code>
+        {{deprecated_inline}}
+      </td>
       <td><code>16</code></td>
       <td>Legacy, no more used.</td>
     </tr>
     <tr>
-      <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
+      <td>
+        <code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}
+      </td>
       <td><code>2048</code></td>
       <td>Legacy, no more used.</td>
     </tr>
@@ -96,35 +110,35 @@ browser-compat: api.TreeWalker.whatToShow
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>nodeTypes</em> = treeWalker.whatToShow;</pre>
+```js
+nodeTypes = treeWalker.whatToShow;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 if( (treeWalker.whatToShow == NodeFilter.SHOW_ALL) ||
-    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) &gt;= NodeFilter.SHOW_COMMENT) {
+    (treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
     // treeWalker will show comments
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface.

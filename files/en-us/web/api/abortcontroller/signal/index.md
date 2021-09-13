@@ -11,27 +11,30 @@ tags:
   - signal
 browser-compat: api.AbortController.signal
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>signal</code></strong> read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.</p>
+The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var signal = abortController.signal;</pre>
+```js
+var signal = abortController.signal;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AbortSignal")}} object instance.</p>
+An {{domxref("AbortSignal")}} object instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, we aim to download a video using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-<p>We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.</p>
+We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-<p>When the <a href="/en-US/docs/Web/API/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (the <code>{signal}</code> below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
+When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -51,24 +54,21 @@ function fetchVideo() {
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with an <code>AbortError</code>.</p>
-</div>
+> **Note:** When `abort()` is called, the `fetch()` promise rejects with an `AbortError`.
 
-<p>You can find a <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">full working example on GitHub</a>; you can also see it  <a href="https://mdn.github.io/dom-examples/abort-api/">running live</a>.</p>
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

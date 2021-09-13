@@ -2,65 +2,61 @@
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
 tags:
-- API
-- Method
-- ReadableStreamDefaultController
-- Reference
-- Streams
-- close
+  - API
+  - Method
+  - ReadableStreamDefaultController
+  - Reference
+  - Streams
+  - close
 browser-compat: api.ReadableStreamDefaultController.close
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>close()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.
-</p>
+The **`close()`** method of the
+{{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.
 
-<div>
-  <p>Readers will still be able to read any previously-enqueued chunks from the stream,
-    but once those are read, the stream will become closed. If you want to completely get
-    rid of the stream and discard any enqueued chunks, you'd use
-    {{domxref("ReadableStream.cancel()")}} or
-    {{domxref("ReadableStreamDefaultReader.cancel()")}}.</p>
-</div>
+Readers will still be able to read any previously-enqueued chunks from the stream,
+but once those are read, the stream will become closed. If you want to completely get
+rid of the stream and discard any enqueued chunks, you'd use
+{{domxref("ReadableStream.cancel()")}} or
+{{domxref("ReadableStreamDefaultReader.cancel()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>readableStreamDefaultController</em>.close();</pre>
+```js
+readableStreamDefaultController.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamDefaultController</code>.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamDefaultController`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, a custom <code>ReadableStream</code> is created using
-  a constructor (see our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
-    stream example</a> for the full code). The <code>start()</code> function generates a
-  random string of text every second and enqueues it into the stream. A
-  <code>cancel()</code> function is also provided to stop the generation if
-  {{domxref("ReadableStream.cancel()")}} is called for any reason.</p>
+In the following simple example, a custom `ReadableStream` is created using
+a constructor (see our [Simple random
+stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+random string of text every second and enqueues it into the stream. A
+`cancel()` function is also provided to stop the generation if
+{{domxref("ReadableStream.cancel()")}} is called for any reason.
 
-<p>When a button is pressed, the generation is stopped, the stream is closed using
-  {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
-  which reads the data back out of the stream.</p>
+When a button is pressed, the generation is stopped, the stream is closed using
+{{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
+which reads the data back out of the stream.
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   start(controller) {
-    interval = setInterval(() =&gt; {
+    interval = setInterval(() => {
       let string = randomChars();
 
       // Add the string to the stream
@@ -86,12 +82,13 @@ browser-compat: api.ReadableStreamDefaultController.close
     // so we should stop generating strings
     clearInterval(interval);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,55 +2,53 @@
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
 tags:
-- API
-- Canvas
-- Constructor
-- Experimental
-- OffscreenCanvas
-- Reference
-- WebGL
+  - API
+  - Canvas
+  - Constructor
+  - Experimental
+  - OffscreenCanvas
+  - Reference
+  - WebGL
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>OffscreenCanvas()</strong></code> constructor returns a newly
-  instantiated {{domxref("OffscreenCanvas")}} object.</p>
+The **`OffscreenCanvas()`** constructor returns a newly
+instantiated {{domxref("OffscreenCanvas")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new OffscreenCanvas(<em>width</em>, <em>height</em>);
-</pre>
+```js
+new OffscreenCanvas(width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>width</code></dt>
-  <dd>The width of the offscreen canvas.</dd>
-  <dt><code>height</code></dt>
-  <dd>The height of the offscreen canvas.</dd>
-</dl>
+- `width`
+  - : The width of the offscreen canvas.
+- `height`
+  - : The height of the offscreen canvas.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a new offscreen canvas using the <code>OffscreenCanvas()</code>
-  constructor. We then initialize a <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>
-  context on it using the {{domxref("OffscreenCanvas.getContext()", "getContext()")}}
-  method.</p>
+This example creates a new offscreen canvas using the `OffscreenCanvas()`
+constructor. We then initialize a [WebGL](/en-US/docs/Web/API/WebGL_API)
+context on it using the {{domxref("OffscreenCanvas.getContext()", "getContext()")}}
+method.
 
-<pre class="brush: js">let offscreen = new OffscreenCanvas(256, 256);
+```js
+let offscreen = new OffscreenCanvas(256, 256);
 let gl = offscreen.getContext('webgl');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("OffscreenCanvas")}}, the interface this constructor belongs to</li>
-</ul>
+- {{domxref("OffscreenCanvas")}}, the interface this constructor belongs to

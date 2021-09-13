@@ -10,67 +10,63 @@ tags:
   - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The
-    <strong><code>Window.getComputedStyle()</code></strong> method returns an object
-    containing the values of all CSS properties of an element, after applying active
-    stylesheets and resolving any basic computation those values may contain.</p>
+The
+**`Window.getComputedStyle()`** method returns an object
+containing the values of all CSS properties of an element, after applying active
+stylesheets and resolving any basic computation those values may contain.
 
-<p>Individual CSS property values are accessed through APIs provided by the object, or by
-  indexing with CSS property names.</p>
+Individual CSS property values are accessed through APIs provided by the object, or by
+indexing with CSS property names.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.getComputedStyle(element);
+```js
+window.getComputedStyle(element);
 window.getComputedStyle(element, pseudoElt);
-</pre>
+```
 
-<dl>
-  <dt><code><var>element</var></code></dt>
-  <dd>The {{DOMxRef("Element")}} for which to get the computed style.</dd>
-  <dt><code><var>pseudoElt</var></code>{{Optional_Inline}}</dt>
-  <dd>A string specifying the pseudo-element to match. Omitted (or <code>null</code>) for
-    real elements.</dd>
-</dl>
+- `element`
+  - : The {{DOMxRef("Element")}} for which to get the computed style.
+- `pseudoElt`{{Optional_Inline}}
+  - : A string specifying the pseudo-element to match. Omitted (or `null`) for
+    real elements.
 
-<p>The returned <code>style</code> is a <em>live</em> {{DOMxRef("CSSStyleDeclaration")}}
-  object, which updates automatically when the element's styles are changed.</p>
+The returned `style` is a _live_ {{DOMxRef("CSSStyleDeclaration")}}
+object, which updates automatically when the element's styles are changed.
 
-<h3 id="Throws">Throws</h3>
+### Throws
 
-<dl>
-  <dt>{{JSxRef("TypeError")}}</dt>
-  <dd>
-    <p>If the passed object is not an {{DOMxRef("Element")}} or the
-    <code><var>pseudoElt</var></code> is not a valid pseudo-element selector or is
-    {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.</p>
-    <div class="notecard note">
-      <p><strong>Note:</strong> Valid pseudo-element selector refers to syntactic
-        validity, e.g. <code>::unsupported</code> is considered valid, even though the
-        pseudo-element itself is not supported.  Additionally, the latest W3 standard <a
-          href="https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle">explicitly
-          supports</a> only <code>::before</code> and <code>::after</code>, while the CSS
-        WG draft <a
-          href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">does not
-          restrict this value</a>.  Browser compatibility may vary.</p>
-    </div>
-  </dd>
-</dl>
+- {{JSxRef("TypeError")}}
 
-<h2 id="Examples">Examples</h2>
+  - : If the passed object is not an {{DOMxRef("Element")}} or the
+    `pseudoElt` is not a valid pseudo-element selector or is
+    {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.
 
-<p>In this example we style a {{HTMLElement("p")}} element, then retrieve those styles
-  using <code>getComputedStyle()</code>, and print them into the text content of the
-  <code>&lt;p&gt;</code>.</p>
+    > **Note:** Valid pseudo-element selector refers to syntactic
+    > validity, e.g. `::unsupported` is considered valid, even though the
+    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly
+    > supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
+    > WG draft [does not
+    > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
 
-<h3 id="HTML">HTML</h3>
+## Examples
 
-<pre class="brush: html no-line-numbers">&lt;p&gt;Hello&lt;/p&gt;</pre>
+In this example we style a {{HTMLElement("p")}} element, then retrieve those styles
+using `getComputedStyle()`, and print them into the text content of the
+`<p>`.
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<pre class="brush: css">p {
+```html
+<p>Hello</p>
+```
+
+### CSS
+
+```css
+p {
   width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -78,126 +74,121 @@ window.getComputedStyle(element, pseudoElt);
   text-align: center;
   background: purple;
   color: white;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let para = document.querySelector('p');
+```js
+let para = document.querySelector('p');
 let compStyles = window.getComputedStyle(para);
 para.textContent = 'My computed font-size is ' +
     compStyles.getPropertyValue('font-size') +
     ',\nand my computed line-height is ' +
     compStyles.getPropertyValue('line-height') +
-    '.';</pre>
+    '.';
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', '100%', '240px')}}</p>
+{{EmbedLiveSample('Examples', '100%', '240px')}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
-  returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However,
-  the two objects have different purposes:</p>
+The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
+returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However,
+the two objects have different purposes:
 
-<ul>
-  <li>The object from <code>getComputedStyle</code> is read-only, and should be used to
-    inspect the element's style — including those set by a <code>&lt;style&gt;</code>
-    element or an external stylesheet.</li>
-  <li>The <code><em>element</em>.style</code> object should be used to
-    <strong>set</strong> styles on that element, or inspect styles directly added to it
-    from JavaScript manipulation or the global <code>style</code> attribute.</li>
-</ul>
+- The object from `getComputedStyle` is read-only, and should be used to
+  inspect the element's style — including those set by a `<style>`
+  element or an external stylesheet.
+- The `element.style` object should be used to
+  **set** styles on that element, or inspect styles directly added to it
+  from JavaScript manipulation or the global `style` attribute.
 
-<p>The first argument must be an {{domxref("Element")}}. non-elements, like a
-  {{DOMxRef("Text")}} node, will throw an error.</p>
+The first argument must be an {{domxref("Element")}}. non-elements, like a
+{{DOMxRef("Text")}} node, will throw an error.
 
-<h2 id="defaultView">defaultView</h2>
+## defaultView
 
-<p>In many code samples, <code>getComputedStyle</code> is used from the
-  {{DOMxRef("document.defaultView")}} object. In nearly all cases, this is needless, as
-  <code>getComputedStyle</code> exists on the <code>window</code> object as well. It's
-  likely the <code>defaultView</code> pattern was a combination of folks not wanting to
-  write a testing spec for <code>window</code> and making an API that was also usable in
-  Java.</p>
+In many code samples, `getComputedStyle` is used from the
+{{DOMxRef("document.defaultView")}} object. In nearly all cases, this is needless, as
+`getComputedStyle` exists on the `window` object as well. It's
+likely the `defaultView` pattern was a combination of folks not wanting to
+write a testing spec for `window` and making an API that was also usable in
+Java.
 
-<h2 id="Use_with_pseudo-elements">Use with pseudo-elements</h2>
+## Use with pseudo-elements
 
-<p><code>getComputedStyle</code> can pull style info from pseudo-elements (such as
-  <code>::after</code>, <code>::before</code>, <code>::marker</code>,
-  <code>::line-marker</code> — see <a class="external"
-    href="https://www.w3.org/TR/css-pseudo-4/">the pseudo-element spec</a>).</p>
+`getComputedStyle` can pull style info from pseudo-elements (such as
+`::after`, `::before`, `::marker`,
+`::line-marker` — see [the pseudo-element spec](https://www.w3.org/TR/css-pseudo-4/)).
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
   h3::after {
     content: ' rocks!';
   }
-&lt;/style&gt;
+</style>
 
-&lt;h3&gt;Generated content&lt;/h3&gt;
+<h3>Generated content</h3>
 
-&lt;script&gt;
+<script>
   var h3 = document.querySelector('h3');
   var result = getComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns ' rocks!'
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
-  <li>The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
-    CSS property <em><strong>longhand</strong></em> names. For example,
-    <code>border-bottom-width</code> instead of the <code>border-width</code> and
-    <code>border</code> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand
-      property names</a>. It is safest to query values with only longhand names like
-    <code>font-size</code>. Shorthand names like <code>font</code> will not work with most
-    browsers.</li>
-  <li>CSS property values may be accessed using the
-    <code>getPropertyValue(propName)</code> API or by indexing directly into the object
-    such as <code>obj['z-index']</code> or <code>obj.zIndex</code>.</li>
-  <li>The values returned by <code>getComputedStyle</code> are {{CSSxRef("resolved_value",
+- The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
+  CSS property **_longhand_** names. For example,
+  `border-bottom-width` instead of the `border-width` and
+  `border` [shorthand
+  property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
+  `font-size`. Shorthand names like `font` will not work with most
+  browsers.
+- CSS property values may be accessed using the
+  `getPropertyValue(propName)` API or by indexing directly into the object
+  such as `obj['z-index']` or `obj.zIndex`.
+- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value",
     "resolved values", "", 1)}}. These are usually the same as CSS 2.1’s
-    {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
-    like <code>width</code>, <code>height</code>, or <code>padding</code>, they are
-    instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS
-    2.0 defined the <em>computed values</em> as the "ready to be used" final values of
-    properties after cascading and inheritance, but CSS 2.1 redefined them as pre-layout,
-    and <em>used values</em> as post-layout. For CSS 2.0 properties,
-    <code>getComputedStyle</code> returns the old meaning of computed values, now called
-    <strong>used values</strong>. An example difference between pre- and post-layout
-    values includes the resolution of percentages for <code>width</code> or
-    <code>height</code>, as those will be replaced by their pixel equivalent only for
-    <em>used values</em>.</li>
-  <li>Returned values are sometimes deliberately inaccurate. To avoid the “CSS History
-    Leak” security issue, browsers may lie about the computed styles for a visited link,
-    returning values as if the user never visited the linked URL. See <a class="external"
-      href="https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/">Plugging
-      the CSS History Leak</a> and <a class="external"
-      href="https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">Privacy-related
-      changes coming to CSS :visited</a> for examples of how this is implemented.</li>
-  <li>During <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>,
-    <code>getComputedStyle</code> returns the original property value in Firefox, but the
-    final property value in WebKit.</li>
-  <li>In Firefox, properties with the value <code>auto</code> return the used value, not
-    the value <code>auto</code>. So if you apply <code>top:auto</code> and
-    <code>bottom:0</code> on an element with <code>height:30px</code> and a containing
-    block of <code>height:100px</code>, Firefox's computed style for <code>top</code>
-    returns <code>70px</code>, as 100 − 30 = 70.</li>
-</ul>
+  {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
+  like `width`, `height`, or `padding`, they are
+  instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS
+  2.0 defined the _computed values_ as the "ready to be used" final values of
+  properties after cascading and inheritance, but CSS 2.1 redefined them as pre-layout,
+  and _used values_ as post-layout. For CSS 2.0 properties,
+  `getComputedStyle` returns the old meaning of computed values, now called
+  **used values**. An example difference between pre- and post-layout
+  values includes the resolution of percentages for `width` or
+  `height`, as those will be replaced by their pixel equivalent only for
+  _used values_.
+- Returned values are sometimes deliberately inaccurate. To avoid the “CSS History
+  Leak” security issue, browsers may lie about the computed styles for a visited link,
+  returning values as if the user never visited the linked URL. See [Plugging
+  the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related
+  changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
+- During [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions),
+  `getComputedStyle` returns the original property value in Firefox, but the
+  final property value in WebKit.
+- In Firefox, properties with the value `auto` return the used value, not
+  the value `auto`. So if you apply `top:auto` and
+  `bottom:0` on an element with `height:30px` and a containing
+  block of `height:100px`, Firefox's computed style for `top`
+  returns `70px`, as 100 − 30 = 70.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("window.getDefaultComputedStyle")}}</li>
-  <li>{{CSSxRef("resolved_value", "Resolved Value")}}</li>
-</ul>
+- {{DOMxRef("window.getDefaultComputedStyle")}}
+- {{CSSxRef("resolved_value", "Resolved Value")}}

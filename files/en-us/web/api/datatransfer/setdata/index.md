@@ -2,58 +2,58 @@
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- drag and drop
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.setData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <strong><code>DataTransfer.setData()</code></strong> method sets the drag
-  operation's {{domxref("DataTransfer","drag data")}} to the specified data and type. If
-  data for the given type does not exist, it is added at the end of the drag data store,
-  such that the last item in the {{domxref("DataTransfer.types","types")}} list will be
-  the new type. If data for the given type already exists, the existing data is replaced
-  in the same position. That is, the order of the
-  {{domxref("DataTransfer.types","types")}} list is not changed when replacing data of the
-  same type.</p>
+The **`DataTransfer.setData()`** method sets the drag
+operation's {{domxref("DataTransfer","drag data")}} to the specified data and type. If
+data for the given type does not exist, it is added at the end of the drag data store,
+such that the last item in the {{domxref("DataTransfer.types","types")}} list will be
+the new type. If data for the given type already exists, the existing data is replaced
+in the same position. That is, the order of the
+{{domxref("DataTransfer.types","types")}} list is not changed when replacing data of the
+same type.
 
-<p>Example data types are <code>text/plain</code> and <code>text/uri-list</code>.</p>
+Example data types are `text/plain` and `text/uri-list`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>dataTransfer</var>.setData(format, data);
-</pre>
+```js
+void dataTransfer.setData(format, data);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><em>format</em></dt>
-  <dd>A {{domxref("DOMString")}} representing the type of the drag data to add to the
-    {{domxref("DataTransfer","drag object")}}.</dd>
-  <dt><em>data</em></dt>
-  <dd>A {{domxref("DOMString")}} representing the data to add to the
-    {{domxref("DataTransfer","drag object")}}.</dd>
-</dl>
+- _format_
+  - : A {{domxref("DOMString")}} representing the type of the drag data to add to the
+    {{domxref("DataTransfer","drag object")}}.
+- _data_
+  - : A {{domxref("DOMString")}} representing the data to add to the
+    {{domxref("DataTransfer","drag object")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the {{domxref("DataTransfer")}} object's
-  {{domxref("DataTransfer.getData","getData()")}},
-  {{domxref("DataTransfer.setData","setData()")}} and
-  {{domxref("DataTransfer.clearData","clearData()")}} methods.</p>
+This example shows the use of the {{domxref("DataTransfer")}} object's
+{{domxref("DataTransfer.getData","getData()")}},
+{{domxref("DataTransfer.setData","setData()")}} and
+{{domxref("DataTransfer.clearData","clearData()")}} methods.
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of DataTransfer's setData(), getData() and clearData()&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of DataTransfer's setData(), getData() and clearData()</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -65,8 +65,8 @@ browser-compat: api.DataTransfer.setData
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart");
  // Change the source element's background color to signify drag has started
@@ -89,32 +89,30 @@ function drop_handler(ev) {
  // Clear the drag data cache (for all formats/types)
  ev.dataTransfer.clearData();
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;DataTransfer&lt;/code&gt;: &lt;code&gt;setData()&lt;/code&gt;, &lt;code&gt;getData()&lt;/code&gt;, &lt;code&gt;clearData()&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>DataTransfer</code>: <code>setData()</code>, <code>getData()</code>, <code>clearData()</code></h1>
+ <div>
+   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -2,89 +2,88 @@
 title: Selection.modify()
 slug: Web/API/Selection/modify
 tags:
-- API
-- 'API:Mozilla Extensions'
-- 'API:WebKit Extensions'
-- HTML Editing
-- Method
-- Non-standard
-- Reference
-- Selection
+  - API
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
+  - HTML Editing
+  - Method
+  - Non-standard
+  - Reference
+  - Selection
 browser-compat: api.Selection.modify
 ---
-<div>{{APIRef("DOM")}}{{Non-standard_Header}}</div>
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
-<p>The <strong><code>Selection.modify()</code></strong> method applies a change to the
-  current selection or cursor position, using simple textual commands.</p>
+The **`Selection.modify()`** method applies a change to the
+current selection or cursor position, using simple textual commands.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.modify(<em>alter</em>, <em>direction</em>, <em>granularity</em>)
-</pre>
+```js
+sel.modify(alter, direction, granularity)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>alter</code></dt>
-  <dd>The type of change to apply. Specify <code>"move"</code> to move the current cursor
-    position or <code>"extend"</code> to extend the current selection.</dd>
-  <dt><code>direction</code></dt>
-  <dd>The direction in which to adjust the current selection. You can specify
-    <code>"forward"</code> or <code>"backward"</code> to adjust in the appropriate
+- `alter`
+  - : The type of change to apply. Specify `"move"` to move the current cursor
+    position or `"extend"` to extend the current selection.
+- `direction`
+  - : The direction in which to adjust the current selection. You can specify
+    `"forward"` or `"backward"` to adjust in the appropriate
     direction based on the language at the selection point. If you want to adjust in a
-    specific direction, you can specify <code>"left"</code> or <code>"right"</code>.</dd>
-  <dt><code>granularity</code></dt>
-  <dd>The distance to adjust the current selection or cursor position. You can move by
-    <code>"character"</code>, <code>"word"</code>, <code>"sentence"</code>,
-    <code>"line"</code>, <code>"paragraph"</code>, <code>"lineboundary"</code>,
-    <code>"sentenceboundary"</code>, <code>"paragraphboundary"</code>, or
-    <code>"documentboundary"</code>.</dd>
-</dl>
+    specific direction, you can specify `"left"` or `"right"`.
+- `granularity`
+  - : The distance to adjust the current selection or cursor position. You can move by
+    `"character"`, `"word"`, `"sentence"`,
+    `"line"`, `"paragraph"`, `"lineboundary"`,
+    `"sentenceboundary"`, `"paragraphboundary"`, or
+    `"documentboundary"`.
 
-<div class="note"><p><strong>Note:</strong> Gecko does <strong>not</strong> implement
-  <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>,
-  <code>"paragraphboundary"</code>, or <code>"documentboundary"</code>. WebKit and Blink
-  do.</p></div>
+> **Note:** Gecko does **not** implement
+> `"sentence"`, `"paragraph"`, `"sentenceboundary"`,
+> `"paragraphboundary"`, or `"documentboundary"`. WebKit and Blink
+> do.
 
-<div class="note">
-  <p><strong>Note:</strong> Starting in {{Gecko("5.0")}}, the <code>"word"</code>
-    granularity no longer includes the following space, regardless of the default platform
-    behavior. This makes the behavior more consistent, as well as making it work the same
-    way WebKit used to work, but unfortunately they have recently changed their behavior.
-  </p>
-</div>
+> **Note:** Starting in {{Gecko("5.0")}}, the `"word"`
+> granularity no longer includes the following space, regardless of the default platform
+> behavior. This makes the behavior more consistent, as well as making it work the same
+> way WebKit used to work, but unfortunately they have recently changed their behavior.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates the various <code>granularity</code> options for modifying a
-  selection. Click somewhere inside the example (optionally selecting some text), and then
-  click the button to expand the selection.</p>
+This example demonstrates the various `granularity` options for modifying a
+selection. Click somewhere inside the example (optionally selecting some text), and then
+click the button to expand the selection.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Click somewhere in this example. Then click the button below to expand the selection. Watch what happens!&lt;/p&gt;
-&lt;p&gt;Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.&lt;/p&gt;
+```html
+<p>Click somewhere in this example. Then click the button below to expand the selection. Watch what happens!</p>
+<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
 
-&lt;label for="granularity"&gt;Granularity:&lt;/label&gt;
-&lt;select id="granularity"&gt;
-  &lt;option value="character"&gt;Character&lt;/option&gt;
-  &lt;option value="word"&gt;Word&lt;/option&gt;
-  &lt;option value="sentence"&gt;Sentence&lt;/option&gt;
-  &lt;option value="line"&gt;Line&lt;/option&gt;
-  &lt;option value="paragraph"&gt;Paragraph&lt;/option&gt;
-  &lt;option value="lineboundary"&gt;Line Boundary&lt;/option&gt;
-  &lt;option value="sentenceboundary"&gt;Sentence Boundary&lt;/option&gt;
-  &lt;option value="paragraphboundary"&gt;Paragraph Boundary&lt;/option&gt;
-  &lt;option value="documentboundary"&gt;Document Boundary&lt;/option&gt;
-&lt;/select&gt;
+<label for="granularity">Granularity:</label>
+<select id="granularity">
+  <option value="character">Character</option>
+  <option value="word">Word</option>
+  <option value="sentence">Sentence</option>
+  <option value="line">Line</option>
+  <option value="paragraph">Paragraph</option>
+  <option value="lineboundary">Line Boundary</option>
+  <option value="sentenceboundary">Sentence Boundary</option>
+  <option value="paragraphboundary">Paragraph Boundary</option>
+  <option value="documentboundary">Document Boundary</option>
+</select>
 
-&lt;br&gt;&lt;br&gt;
+<br><br>
 
-&lt;button&gt;Extend selection&lt;/button&gt;</pre>
+<button>Extend selection</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let select = document.querySelector('select');
+```js
+let select = document.querySelector('select');
 let button = document.querySelector('button');
 
 button.addEventListener('click', modify);
@@ -92,22 +91,21 @@ button.addEventListener('click', modify);
 function modify() {
   let selection = window.getSelection();
   selection.modify('extend', 'forward', select.value);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>This method is not part of any specification.</em></p>
+_This method is not part of any specification._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{DOMxRef("Selection")}}, the interface it belongs to.

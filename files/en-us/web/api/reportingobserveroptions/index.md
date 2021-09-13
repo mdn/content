@@ -10,40 +10,38 @@ tags:
   - ReportingObserverOptions
 browser-compat: api.ReportingObserverOptions
 ---
-<div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
+{{SeeCompatTable}}{{APIRef("Reporting API")}}
 
-<p>The <code>ReportingObserverOptions</code> dictionary of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> allows options to be set in the constructor when creating a {{domxref("ReportingObserver")}}.</p>
+The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows options to be set in the constructor when creating a {{domxref("ReportingObserver")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>types</code></dt>
- <dd>An array of strings representing the types of report to be collected by this observer. Available types include <code>deprecation</code>, <code>intervention</code>, and <code>crash</code>.</dd>
- <dt><code>buffered</code></dt>
- <dd>A boolean that defines whether the reports that were generated before the observer was able to be created should be observable (<code>true</code>) or not (<code>false</code>).</dd>
-</dl>
+- `types`
+  - : An array of strings representing the types of report to be collected by this observer. Available types include `deprecation`, `intervention`, and `crash`.
+- `buffered`
+  - : A boolean that defines whether the reports that were generated before the observer was able to be created should be observable (`true`) or not (`false`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
 
 let observer = new ReportingObserver(function(reports, observer) {
-  reportBtn.onclick = () =&gt; displayReports(reports);
-}, options);</pre>
+  reportBtn.onclick = () => displayReports(reports);
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

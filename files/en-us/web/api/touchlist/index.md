@@ -12,39 +12,33 @@ tags:
   - touch
 browser-compat: api.TouchList
 ---
-<p>{{APIRef("Touch Events")}}</p>
+{{APIRef("Touch Events")}}
 
-<p>The <strong><code>TouchList</code></strong> interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding <code>TouchList</code> object would have one {{domxref("Touch")}} object for each finger, for a total of three entries.</p>
+The **`TouchList`** interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding `TouchList` object would have one {{domxref("Touch")}} object for each finger, for a total of three entries.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("TouchList.length")}} {{readonlyInline}}</dt>
- <dd>The number of {{domxref("Touch")}} objects in the <code>TouchList</code>.</dd>
-</dl>
+- {{domxref("TouchList.length")}} {{readonlyInline}}
+  - : The number of {{domxref("Touch")}} objects in the `TouchList`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("TouchList.item()")}}</dt>
- <dd>Returns the {{domxref("Touch")}} object at the specified index in the list.</dd>
-</dl>
+- {{domxref("TouchList.item()")}}
+  - : Returns the {{domxref("Touch")}} object at the specified index in the list.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the <a href="/en-US/docs/Web/API/Touch_events#example">example on the main Touch events article</a>.</p>
+See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#example).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>{{domxref("Document.createTouchList()")}}</li>
-</ul>
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+- {{domxref("Document.createTouchList()")}}

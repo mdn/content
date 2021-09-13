@@ -2,76 +2,72 @@
 title: ContentIndexEvent()
 slug: Web/API/ContentIndexEvent/ContentIndexEvent
 tags:
-- Constructor
-- Content
-- Content Index API
-- Index
-- PWA
-- content index
-- content indexing
-- events
+  - Constructor
+  - Content
+  - Content Index API
+  - Index
+  - PWA
+  - content index
+  - content indexing
+  - events
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The <strong><code>ContentIndexEvent()</code></strong> constructor
-  creates a new {{domxref("ContentIndexEvent")}} object whose type and other options are
-  configured as specified.</p>
+The **`ContentIndexEvent()`** constructor
+creates a new {{domxref("ContentIndexEvent")}} object whose type and other options are
+configured as specified.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>ContentIndexEvent</var> = new ContentIndexEvent(<em>type</em>, <em>ContentIndexEventInit</em>);</pre>
+```js
+var ContentIndexEvent = new ContentIndexEvent(type, ContentIndexEventInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>A {{domxref("DOMString")}} indicating the event which occurred. For
-    <code>ContentIndexEvent</code>, this is always <code>delete</code>.</dd>
-  <dt><em>eventInitDict</em> {{optional_inline}}</dt>
-  <dd>An options object containing any initialization data you want to populate the
-    <code>ContentIndexEvent</code> object with. The options are:
-    <ul>
-      <li><code>id</code>: The id of the indexed content you want the
-        <code>ContentIndexEvent</code> to remove.</li>
-    </ul>
-  </dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+    `ContentIndexEvent`, this is always `delete`.
+- _eventInitDict_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An options object containing any initialization data you want to populate the
+    `ContentIndexEvent` object with. The options are:
 
-<p>A {{domxref("ContentIndexEvent")}} object configured using the given inputs.</p>
+    - `id`: The id of the indexed content you want the
+      `ContentIndexEvent` to remove.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevant id.
-</p>
+A {{domxref("ContentIndexEvent")}} object configured using the given inputs.
 
-<pre class="brush: js">var removeData = {
+## Examples
+
+This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevant id.
+
+```js
+var removeData = {
   id : 'unique-content-id'
 }
 
 var ciEvent = new ContentIndexEvent('contentdelete', removeData);
 
 ciEvent.id; // should return 'unique-content-id'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
-      Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
-      and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with
-      information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the
+  Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list
+  and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with
+  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

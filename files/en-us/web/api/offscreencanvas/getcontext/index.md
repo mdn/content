@@ -10,149 +10,133 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.getContext
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <strong><code>OffscreenCanvas.getContext()</code></strong> method returns a drawing
-  context for an offscreen canvas, or {{jsxref("null")}} if the context identifier is not
-  supported.</p>
+The **`OffscreenCanvas.getContext()`** method returns a drawing
+context for an offscreen canvas, or {{jsxref("null")}} if the context identifier is not
+supported.
 
-<div class="note">
-  <p><strong>Note:</strong> This API is currently implemented for <a
-      href="/en-US/docs/Web/API/WebGLRenderingContext">WebGL1</a> and <a
-      href="/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2</a> contexts only. See
-    {{bug(801176)}} for <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a> support
-    from workers.</p>
-</div>
+> **Note:** This API is currently implemented for [WebGL1](/en-US/docs/Web/API/WebGLRenderingContext) and [WebGL2](/en-US/docs/Web/API/WebGL2RenderingContext) contexts only. See
+> {{bug(801176)}} for [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) support
+> from workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>offscreen</em>.getContext(<em>contextType</em>, <em>contextAttributes</em>);
-</pre>
+```js
+offscreen.getContext(contextType, contextAttributes);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>contextType</code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the context identifier defining the drawing
+- `contextType`
+
+  - : Is a {{domxref("DOMString")}} containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
-    <ul>
-      <li><strong><code>"2d"</code></strong> creates a
-        {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
-        rendering context.</li>
-      <li><strong><code>"webgl"</code></strong> creates a
-        {{domxref("WebGLRenderingContext")}} object representing a three-dimensional
-        rendering context. This context is only available on browsers that implement <a
-          href="/en-US/docs/Web/API/WebGL_API">WebGL</a> version 1 (OpenGL ES 2.0).</li>
-      <li><strong><code>"webgl2"</code></strong> creates a
-        {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional
-        rendering context. This context is only available on browsers that implement <a
-          href="/en-US/docs/Web/API/WebGL_API">WebGL</a> version 2 (OpenGL ES 3.0).
-        {{experimental_inline}}</li>
-      <li>
-        <p><strong><code>"bitmaprenderer"</code></strong> creates a
-          {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
-          replace the content of the canvas with a given {{domxref("ImageBitmap")}}.</p>
-      </li>
-    </ul>
 
-    <p>Note: The identifiers <strong><code>"experimental-webgl"</code></strong> or
-      <strong><code>"experimental-webgl2"</code></strong> are also used in implementations
-      of WebGL. These implementations have not reached test suite conformance, or the
-      graphic drivers situation on the platform is not yet stable. The <a
-        href="https://www.khronos.org/">Khronos Group</a> certifies WebGL implementations
-      under certain <a
-        href="https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt">conformance
-        rules</a>.</p>
-  </dd>
-  <dt><code>contextAttributes</code></dt>
-  <dd>
-    <p>You can use several context attributes when creating your rendering context, for
-      example:</p>
+    - **`"2d"`** creates a
+      {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
+      rendering context.
+    - **`"webgl"`** creates a
+      {{domxref("WebGLRenderingContext")}} object representing a three-dimensional
+      rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
+    - **`"webgl2"`** creates a
+      {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional
+      rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0).
+      {{experimental_inline}}
+    - **`"bitmaprenderer"`** creates a
+      {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
+      replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
 
-    <pre class="brush: js">offscreen.getContext("webgl",
-                 { antialias: false,
-                   depth: false });</pre>
+    Note: The identifiers **`"experimental-webgl"`** or
+    **`"experimental-webgl2"`** are also used in implementations
+    of WebGL. These implementations have not reached test suite conformance, or the
+    graphic drivers situation on the platform is not yet stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations
+    under certain [conformance
+    rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+
+- `contextAttributes`
+
+  - : You can use several context attributes when creating your rendering context, for
+    example:
+
+    ```js
+    offscreen.getContext("webgl",
+                     { antialias: false,
+                       depth: false });
+    ```
+
     2d context attributes:
 
-    <ul>
-      <li><strong><code>alpha</code></strong>: Boolean that indicates if the canvas
-        contains an alpha channel. If set to <code>false</code>, the browser now knows
-        that the backdrop is always opaque, which can speed up drawing of transparent
-        content and images then.</li>
-      <li>{{non-standard_inline}} (Gecko only)
-        <strong><code>willReadFrequently</code></strong>: Boolean that indicates whether
-        or not a lot of read-back operations are planned. This will force the use of a
-        software (instead of hardware accelerated) 2D canvas and can save memory when
-        calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}
-        frequently. This option is only available, if the flag
-        <code>gfx.canvas.willReadFrequently.enable</code> is set to <code>true</code>
-        (which, by default, is only the case for B2G/Firefox OS).</li>
-      <li>{{non-standard_inline}} (Blink only) <strong><code>storage</code></strong>:
-        String that indicates which storage is used ("persistent" by default).</li>
-    </ul>
+    - **`alpha`**: Boolean that indicates if the canvas
+      contains an alpha channel. If set to `false`, the browser now knows
+      that the backdrop is always opaque, which can speed up drawing of transparent
+      content and images then.
+    - {{non-standard_inline}} (Gecko only)
+      **`willReadFrequently`**: Boolean that indicates whether
+      or not a lot of read-back operations are planned. This will force the use of a
+      software (instead of hardware accelerated) 2D canvas and can save memory when
+      calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}
+      frequently. This option is only available, if the flag
+      `gfx.canvas.willReadFrequently.enable` is set to `true`
+      (which, by default, is only the case for B2G/Firefox OS).
+    - {{non-standard_inline}} (Blink only) **`storage`**:
+      String that indicates which storage is used ("persistent" by default).
+
     WebGL context attributes:
 
-    <ul>
-      <li><strong><code>alpha</code></strong>: Boolean that indicates if the canvas
-        contains an alpha buffer.</li>
-      <li><strong><code>depth</code></strong>: Boolean that indicates that the drawing
-        buffer has a depth buffer of at least 16 bits.</li>
-      <li><strong><code>stencil</code></strong>: Boolean that indicates that the drawing
-        buffer has a stencil buffer of at least 8 bits.</li>
-      <li><strong><code>antialias</code></strong>: Boolean that indicates whether or not
-        to perform anti-aliasing.</li>
-      <li><strong><code>premultipliedAlpha</code></strong>: Boolean that indicates that
-        the page compositor will assume the drawing buffer contains colors with
-        pre-multiplied alpha.</li>
-      <li><strong><code>preserveDrawingBuffer</code></strong>: If the value is true the
-        buffers will not be cleared and will preserve their values until cleared or
-        overwritten by the author.</li>
-      <li>
-        <p><code><strong>failIfMajorPerformanceCaveat</strong></code>: Boolean that
-          indicates if a context will be created if the system performance is low.</p>
-      </li>
-    </ul>
-  </dd>
-</dl>
+    - **`alpha`**: Boolean that indicates if the canvas
+      contains an alpha buffer.
+    - **`depth`**: Boolean that indicates that the drawing
+      buffer has a depth buffer of at least 16 bits.
+    - **`stencil`**: Boolean that indicates that the drawing
+      buffer has a stencil buffer of at least 8 bits.
+    - **`antialias`**: Boolean that indicates whether or not
+      to perform anti-aliasing.
+    - **`premultipliedAlpha`**: Boolean that indicates that
+      the page compositor will assume the drawing buffer contains colors with
+      pre-multiplied alpha.
+    - **`preserveDrawingBuffer`**: If the value is true the
+      buffers will not be cleared and will preserve their values until cleared or
+      overwritten by the author.
+    - **`failIfMajorPerformanceCaveat`**: Boolean that
+      indicates if a context will be created if the system performance is low.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A rendering context which is either a</p>
+A rendering context which is either a
 
-<ul>
-  <li>{{domxref("CanvasRenderingContext2D")}} for <code>"2d"</code>,</li>
-  <li>{{domxref("WebGLRenderingContext")}} for <code>"webgl"</code> and
-    <code>"experimental-webgl"</code>,</li>
-  <li>{{domxref("WebGL2RenderingContext")}} for <code>"webgl2"</code> and
-    <code>"experimental-webgl2"</code> {{experimental_inline}}, or</li>
-  <li>{{domxref("ImageBitmapRenderingContext")}} for <code>"bitmaprenderer"</code>.</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
+- {{domxref("WebGLRenderingContext")}} for `"webgl"` and
+  `"experimental-webgl"`,
+- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` and
+  `"experimental-webgl2"` {{experimental_inline}}, or
+- {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
-<p>If the <code>contextType</code> doesn't match a possible drawing context,
-  <code>null</code> is returned.</p>
+If the `contextType` doesn't match a possible drawing context,
+`null` is returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
 gl; // WebGLRenderingContext
-gl.canvas; // OffscreenCanvas</pre>
+gl.canvas; // OffscreenCanvas
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("OffscreenCanvas")}}</li>
-  <li>{{domxref("HTMLCanvasElement.getContext()")}}</li>
-  <li>Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
-    {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, and
-    {{domxref("ImageBitmapRenderingContext")}}</li>
-</ul>
+- The interface defining this method: {{domxref("OffscreenCanvas")}}
+- {{domxref("HTMLCanvasElement.getContext()")}}
+- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
+  {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, and
+  {{domxref("ImageBitmapRenderingContext")}}

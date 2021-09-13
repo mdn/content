@@ -10,21 +10,19 @@ tags:
   - real-time communications
 browser-compat: api.RTCCertificate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The interface of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.</p>
+The interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides an object represents a certificate that an {{domxref("RTCPeerConnection")}} uses to authenticate.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCCertificate.expires")}} {{readonlyinline}}</dt>
- <dd>Returns the expiration date of the certificate.</dd>
-</dl>
+- {{domxref("RTCCertificate.expires")}} {{readonlyinline}}
+  - : Returns the expiration date of the certificate.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

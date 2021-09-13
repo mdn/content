@@ -2,56 +2,63 @@
 title: CSSImportRule.media
 slug: Web/API/CSSImportRule/media
 tags:
-- API
-- CSSOM
-- Property
-- Reference
-- CSSImportRule
-- Read-only
+  - API
+  - CSSOM
+  - Property
+  - Reference
+  - CSSImportRule
+  - Read-only
 browser-compat: api.CSSImportRule.media
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only <strong><code>media</code></strong> property of the
-	{{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
-	containing the value of the <code>media</code> attribute of the associated stylesheet.
-</p>
+The read-only **`media`** property of the
+{{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
+containing the value of the `media` attribute of the associated stylesheet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">let media = CSSImportRule.media;</pre>
+```js
+let media = CSSImportRule.media;
+```
 
-<h3>Value</h3>
-<p>Returns a {{domxref("MediaList")}} object.</p>
+### Value
 
-<p>The value of <code>media</code> can be set by passing a string containing the <code>media</code> attribute; for example <code>"print"</code>.</p>
+Returns a {{domxref("MediaList")}} object.
 
-<h2 id="Examples">Examples</h2>
+The value of `media` can be set by passing a string containing the `media` attribute; for example `"print"`.
 
-<h3>Getting the media property</h3>
+## Examples
 
-<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
-	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
-	<code>media</code> property returns a {{domxref("MediaList")}} object. This includes
-	the <code>mediaText</code> property with a value of <code>screen</code>.</p>
+### Getting the media property
 
-<pre class="brush:css">@import url("style.css") screen;</pre>
+The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
+first item in the list of CSS rules will be a `CSSImportRule`. The
+`media` property returns a {{domxref("MediaList")}} object. This includes
+the `mediaText` property with a value of `screen`.
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); //returns a MediaList</pre>
+```css
+@import url("style.css") screen;
+```
 
-<h3>Setting the media property</h3>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].media); //returns a MediaList
+```
 
-<p>To change the <code>media</code> attribute of the associated stylesheet, set the value of <code>media</code> to a string containing the new value.</p>
+### Setting the media property
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-myRules[0].media = "print";</pre>
+To change the `media` attribute of the associated stylesheet, set the value of `media` to a string containing the new value.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let myRules = document.styleSheets[0].cssRules;
+myRules[0].media = "print";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

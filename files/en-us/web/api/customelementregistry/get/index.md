@@ -2,43 +2,42 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 tags:
-- API
-- CustomElementRegistry
-- Experimental
-- Method
-- Reference
-- Web Components
-- custom elements
-- get
+  - API
+  - CustomElementRegistry
+  - Experimental
+  - Method
+  - Reference
+  - Web Components
+  - custom elements
+  - get
 browser-compat: api.CustomElementRegistry.get
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>The <code><strong>get()</strong></code> method of the
-    {{domxref("CustomElementRegistry")}} interface returns the constructor for a
-    previously-defined custom element.</p>
+The **`get()`** method of the
+{{domxref("CustomElementRegistry")}} interface returns the constructor for a
+previously-defined custom element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>constructor</em> = customElements.get(<em>name</em>);
-</pre>
+```js
+constructor = customElements.get(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the custom element whose constructor you want to return a reference to.
-  </dd>
-</dl>
+- name
+  - : The name of the custom element whose constructor you want to return a reference to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The constructor for the named custom element, or <code>undefined</code> if there is no
-  custom element definition with that name.</p>
+The constructor for the named custom element, or `undefined` if there is no
+custom element definition with that name.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">customElements.define('my-paragraph',
+```js
+customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
       let templateContent = document.getElementById('my-paragraph').content;
@@ -50,12 +49,12 @@ browser-compat: api.CustomElementRegistry.get
 
 // Return a reference to the my-paragraph constructor
 let ctor = customElements.get('my-paragraph');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

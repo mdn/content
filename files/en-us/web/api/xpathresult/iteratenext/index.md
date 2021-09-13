@@ -2,55 +2,58 @@
 title: XPathResult.iterateNext()
 slug: Web/API/XPathResult/iterateNext
 tags:
-- API
-- DOM XPath API
-- Method
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Method
+  - Reference
+  - XPath
+  - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The <strong><code>iterateNext()</code></strong> method of the
-  {{domxref("XPathResult")}} interface iterates over a node set result and returns the
-  next node from it or <code>null</code> if there are no more nodes.</p>
+The **`iterateNext()`** method of the
+{{domxref("XPathResult")}} interface iterates over a node set result and returns the
+next node from it or `null` if there are no more nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>node</var> = <var>result</var>.iterateNext();
-</pre>
+```js
+var node = result.iterateNext();
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The next {{domxref("Node")}} within the node set of the <code>XPathResult</code>.</p>
+The next {{domxref("Node")}} within the node set of the `XPathResult`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case {{domxref("XPathResult.resultType")}} is not
-  <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code>, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+In case {{domxref("XPathResult.resultType")}} is not
+`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE`, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-<h4 id="INVALID_STATE_ERR">INVALID_STATE_ERR</h4>
+#### INVALID_STATE_ERR
 
-<p>If the document is mutated since the result was returned, an
-  {{domxref("XPathException")}} of type <code>INVALID_STATE_ERR</code> is thrown.</p>
+If the document is mutated since the result was returned, an
+{{domxref("XPathException")}} of type `INVALID_STATE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>iterateNext()</code> method.</p>
+The following example shows the use of the `iterateNext()` method.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Tag names of the matched nodes: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Tag names of the matched nodes: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
 var node = null;
 var tagNames = [];
@@ -58,16 +61,16 @@ while(node = result.iterateNext()) {
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

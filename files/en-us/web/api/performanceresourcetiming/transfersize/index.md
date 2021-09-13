@@ -2,42 +2,42 @@
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceResourceTiming.transferSize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>transferSize</code></strong> read-only property represents the size
-  (in octets) of the fetched resource. The size includes the response header fields plus
-  the response payload body (as defined by <a
-    href="https://httpwg.github.io/specs/rfc7230.html#message.body">RFC7230</a>).</p>
+The **`transferSize`** read-only property represents the size
+(in octets) of the fetched resource. The size includes the response header fields plus
+the response payload body (as defined by [RFC7230](https://httpwg.github.io/specs/rfc7230.html#message.body)).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>If the resource is fetched from a local cache, or if it is a cross-origin resource,
-  this property returns zero.</p>
+If the resource is fetched from a local cache, or if it is a cross-origin resource,
+this property returns zero.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.transferSize;
-</pre>
+```js
+resource.transferSize;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A <code>number</code> representing the size (in octets) of the fetched resource. The
-  size includes the response header fields plus the <a
-    href="https://httpwg.github.io/specs/rfc7230.html#message.body">response payload
-    body</a> (RFC7230).</p>
+A `number` representing the size (in octets) of the fetched resource. The
+size includes the response header fields plus the [response payload
+body](https://httpwg.github.io/specs/rfc7230.html#message.body) (RFC7230).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example, the value of size properties of all "<code>resource</code>"
-  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+The following example, the value of size properties of all "`resource`"
+{{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
-<pre class="brush: js">function log_sizes(perfEntry){
+```js
+function log_sizes(perfEntry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
   if ("decodedBodySize" in perfEntry)
@@ -58,16 +58,16 @@ browser-compat: api.PerformanceResourceTiming.transferSize
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

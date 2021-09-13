@@ -10,86 +10,78 @@ tags:
   - Web Audio API
 browser-compat: api.ScriptProcessorNode
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>The <code>ScriptProcessorNode</code> interface allows the generation, processing, or analyzing of audio using JavaScript.</p>
+The `ScriptProcessorNode` interface allows the generation, processing, or analyzing of audio using JavaScript.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
-</div>
+> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<p>The <code>ScriptProcessorNode</code> interface is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</p>
+The `ScriptProcessorNode` interface is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
 
-<p><img alt="The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode." src="webaudioscriptprocessingnode.png"></p>
+![The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode.](webaudioscriptprocessingnode.png)
 
-<p>The size of the input and output buffer are defined at the creation time, when the {{domxref("BaseAudioContext.createScriptProcessor")}} method is called (both are defined by {{domxref("BaseAudioContext.createScriptProcessor")}}'s <code>bufferSize</code> parameter). The buffer size must be a power of 2 between <code>256</code> and <code>16384</code>, that is <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code> or <code>16384</code>. Small numbers lower the <em>latency</em>, but large number may be necessary to avoid audio breakup and glitches.</p>
+The size of the input and output buffer are defined at the creation time, when the {{domxref("BaseAudioContext.createScriptProcessor")}} method is called (both are defined by {{domxref("BaseAudioContext.createScriptProcessor")}}'s `bufferSize` parameter). The buffer size must be a power of 2 between `256` and `16384`, that is `256`, `512`, `1024`, `2048`, `4096`, `8192` or `16384`. Small numbers lower the _latency_, but large number may be necessary to avoid audio breakup and glitches.
 
-<p>If the buffer size is not defined, which is recommended, the browser will pick one that its heuristic deems appropriate.</p>
+If the buffer size is not defined, which is recommended, the browser will pick one that its heuristic deems appropriate.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}</dt>
- <dd>Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range <code>256</code>–<code>16384</code>.</dd>
-</dl>
+- {{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}
+  - : Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range `256`–`16384`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface:</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event">audioprocess</a></code></dt>
- <dd>Fired when an input buffer of a <code>ScriptProcessorNode</code> is ready to be processed.<br>
- Also available via the <code>onaudioprocess</code> event handler property.</dd>
-</dl>
+- [`audioprocess`](/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+  - : Fired when an input buffer of a `ScriptProcessorNode` is ready to be processed.
+    Also available via the `onaudioprocess` event handler property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
+See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
-<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
+It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

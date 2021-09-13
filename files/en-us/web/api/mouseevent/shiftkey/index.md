@@ -2,64 +2,67 @@
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 tags:
-- API
-- DOM
-- DOM Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - DOM Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.shiftKey
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.shiftKey</code></strong> read-only property is a
-  boolean value that indicates whether the <kbd>shift</kbd> key was pressed or not
-  when a given mouse event occurs.</p>
+The **`MouseEvent.shiftKey`** read-only property is a
+boolean value that indicates whether the <kbd>shift</kbd> key was pressed or not
+when a given mouse event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>shiftKeyPressed</em> = <em>instanceOfMouseEvent</em>.shiftKey
-</pre>
+```js
+var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value, where <code>true</code> indicates that the key is pressed, and
-  <code>false</code> indicates that the key is <em>not</em> pressed.</p>
+A boolean value, where `true` indicates that the key is pressed, and
+`false` indicates that the key is _not_ pressed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the <code>shiftKey</code> property when you trigger a
-  {{Event("click")}} event.</p>
+This example logs the `shiftKey` property when you trigger a
+{{Event("click")}} event.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Click anywhere to test the &lt;code&gt;shiftKey&lt;/code&gt; property.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Click anywhere to test the <code>shiftKey</code> property.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let log = document.querySelector('#log');
+```js
+let log = document.querySelector('#log');
 document.addEventListener('click', logKey);
 
 function logKey(e) {
   log.textContent = `The shift key is pressed: ${e.shiftKey}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

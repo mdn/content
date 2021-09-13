@@ -2,66 +2,65 @@
 title: IDBTransaction.oncomplete
 slug: Web/API/IDBTransaction/oncomplete
 tags:
-- API
-- Database
-- IDBTransaction
-- IndexedDB
-- Property
-- Reference
-- Storage
-- oncomplete
+  - API
+  - Database
+  - IDBTransaction
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - oncomplete
 browser-compat: api.IDBTransaction.oncomplete
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <strong><code>oncomplete</code></strong> event handler of the
-  {{domxref("IDBTransaction")}} interface handles the complete event, fired when the
-  transaction successfully completes.</p>
+The **`oncomplete`** event handler of the
+{{domxref("IDBTransaction")}} interface handles the complete event, fired when the
+transaction successfully completes.
 
-<p>As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase
-  performance (see {{Bug("1112702")}}), which is the same behavior as other
-  IndexedDB-supporting browsers. Previously in a <code>readwrite</code> transaction
-  {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to
-  have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after
-  the OS has been told to write the data but potentially before that data has actually
-  been flushed to disk. The <code>complete</code> event may thus be delivered quicker than
-  before, however, there exists a small chance that the entire transaction will be lost if
-  the OS crashes or there is a loss of system power before the data is flushed to disk.
-</p>
+As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase
+performance (see {{Bug("1112702")}}), which is the same behavior as other
+IndexedDB-supporting browsers. Previously in a `readwrite` transaction
+{{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to
+have been flushed to disk. In Firefox 40+ the `complete` event is fired after
+the OS has been told to write the data but potentially before that data has actually
+been flushed to disk. The `complete` event may thus be delivered quicker than
+before, however, there exists a small chance that the entire transaction will be lost if
+the OS crashes or there is a loss of system power before the data is flushed to disk.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="note">
-  <p><strong>Note:</strong> In Firefox, if you wish to ensure durability for some reason
-    (e.g. you're storing critical data that cannot be recomputed later) you can force a
-    transaction to flush to disk before delivering the <code>complete</code> event by
-    creating a transaction using the experimental (non-standard)
-    <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.) This is
-    currently experimental, and can only be used if the
-    <code>dom.indexedDB.experimental</code> pref is set to <code>true</code> in
-    <code>about:config</code>.</p>
-</div>
+> **Note:** In Firefox, if you wish to ensure durability for some reason
+> (e.g. you're storing critical data that cannot be recomputed later) you can force a
+> transaction to flush to disk before delivering the `complete` event by
+> creating a transaction using the experimental (non-standard)
+> `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.) This is
+> currently experimental, and can only be used if the
+> `dom.indexedDB.experimental` pref is set to `true` in
+> `about:config`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>transaction</em>.oncomplete = <em>function</em>(event) { ... };</pre>
+```js
+transaction.oncomplete = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code snippet, we open a read/write transaction on our database and add
-  some data to an object store. Note also the functions attached to transaction event
-  handlers to report on the outcome of the transaction opening in the event of success or
-  failure. Note the <code>transaction.oncomplete = function(event) { };</code> block,
-  which reports back when the transaction was successful. For a full working example, see
-  our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
-    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following code snippet, we open a read/write transaction on our database and add
+some data to an object store. Note also the functions attached to transaction event
+handlers to report on the outcome of the transaction opening in the event of success or
+failure. Note the `transaction.oncomplete = function(event) { };` block,
+which reports back when the transaction was successful. For a full working example, see
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -80,11 +79,11 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction not opened due to error: ' + transaction.error + '&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
   };
 
   // create an object store on the transaction
@@ -96,32 +95,28 @@ function addData() {
   objectStoreRequest.onsuccess = function(event) {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.oncomplete)
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+    note.innerHTML += '<li>Request successful.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/IDBTransaction/complete_event">complete</a></code>
-    event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`complete`](/en-US/docs/Web/API/IDBTransaction/complete_event)
+  event

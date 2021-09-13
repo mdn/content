@@ -2,48 +2,46 @@
 title: HTMLTableElement.tHead
 slug: Web/API/HTMLTableElement/tHead
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Property
+  - Reference
 browser-compat: api.HTMLTableElement.tHead
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLTableElement.tHead</strong></code> represents the
-  {{HTMLElement("thead")}} element of a {{HTMLElement("table")}} . Its value will be
-  <code>null</code> if there is no such element.</p>
+The **`HTMLTableElement.tHead`** represents the
+{{HTMLElement("thead")}} element of a {{HTMLElement("table")}} . Its value will be
+`null` if there is no such element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>thead_element</em> = <em>table</em>.tHead;
-<em>table</em>.tHead = <em>thead_element</em>;
-</pre>
+```js
+thead_element = table.tHead;
+table.tHead = thead_element;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>thead_element</code> is a {{domxref("HTMLTableSectionElement")}}.</li>
-</ul>
+- `thead_element` is a {{domxref("HTMLTableSectionElement")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (table.tHead == my_head_el) {
+```js
+if (table.tHead == my_head_el) {
   // ...
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface implementing this property: {{domxref("HTMLTableElement")}}.</li>
-</ul>
+- The interface implementing this property: {{domxref("HTMLTableElement")}}.

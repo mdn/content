@@ -11,23 +11,24 @@ tags:
   - Web
 browser-compat: api.HTMLIFrameElement.contentWindow
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>contentWindow</code></strong> property returns the <a href="/en-US/docs/Web/API/Window">Window</a> object of an <a href="/en-US/docs/Web/API/HTMLIFrameElement">HTMLIFrameElement</a>. You can use this <code>Window</code> object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global <code>Window</code> object.</p>
+The **`contentWindow`** property returns the [Window](/en-US/docs/Web/API/Window) object of an [HTMLIFrameElement](/en-US/docs/Web/API/HTMLIFrameElement). You can use this `Window` object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global `Window` object.
 
-<h2 id="Example_of_contentWindow">Example of contentWindow</h2>
+## Example of contentWindow
 
-<pre class="brush: js">var x = document.getElementsByTagName("iframe")[0].contentWindow;
+```js
+var x = document.getElementsByTagName("iframe")[0].contentWindow;
 //x = window.frames[0];
 
 x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
 // this would turn the 1st iframe in document blue.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,50 +2,45 @@
 title: Document.applets
 slug: Web/API/Document/applets
 tags:
-- API
-- Deprecated
-- Document
-- HTML DOM
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - Deprecated
+  - Document
+  - HTML DOM
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.Document.applets
 ---
-<div>{{APIRef("DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-<p>The <strong><code>applets</code></strong> property of the {{domxref("Document")}}
-  interface returns a list of the applets within a document.</p>
+The **`applets`** property of the {{domxref("Document")}}
+interface returns a list of the applets within a document.
 
-<div class="note">
-  <p><strong>Note:</strong> The {{htmlelement("applet")}} element was removed in <a
-      href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279218">Gecko 56</a> and <a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=470301">Chrome in late
-      2015</a>. Since then, calling <code>document.applets</code> in those browsers always
-    returns an empty {{domxref("HTMLCollection")}}. Removal is being considered in <a
-      href="https://bugs.webkit.org/show_bug.cgi?id=157926">WebKit</a> and <a
-      href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/">Edge</a>.
-  </p>
-</div>
+> **Note:** The {{htmlelement("applet")}} element was removed in [Gecko 56](https://bugzilla.mozilla.org/show_bug.cgi?id=1279218) and [Chrome in late
+> 2015](https://bugs.chromium.org/p/chromium/issues/detail?id=470301). Since then, calling `document.applets` in those browsers always
+> returns an empty {{domxref("HTMLCollection")}}. Removal is being considered in [WebKit](https://bugs.webkit.org/show_bug.cgi?id=157926) and [Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/11946645/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>nodeList</em> = <em>document</em>.applets;
-</pre>
+```js
+var nodeList = document.applets;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}}.</p>
+An {{domxref("HTMLCollection")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// When you know the second applet is the one you want
+```js
+// When you know the second applet is the one you want
 my_java_app = document.applets[1];
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

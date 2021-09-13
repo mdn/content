@@ -2,40 +2,40 @@
 title: UIEvent.layerY
 slug: Web/API/UIEvent/layerY
 tags:
-- API
-- DOM
-- Property
-- Read-only
-- Reference
-- UIEvent
+  - API
+  - DOM
+  - Property
+  - Read-only
+  - Reference
+  - UIEvent
 browser-compat: api.UIEvent.layerY
 ---
-<p>{{APIRef("DOM Events")}}{{Non-standard_header}}</p>
+{{APIRef("DOM Events")}}{{Non-standard_header}}
 
-<p>The <code><strong>UIEvent.layerY</strong></code> read-only property returns the
-  vertical coordinate of the event relative to the current layer.</p>
+The **`UIEvent.layerY`** read-only property returns the
+vertical coordinate of the event relative to the current layer.
 
-<p>This property takes scrolling of the page into account, and returns a value relative to
-  the whole of the document, unless the event occurs inside a positioned element, where
-  the returned value is relative to the top left of the positioned element.</p>
+This property takes scrolling of the page into account, and returns a value relative to
+the whole of the document, unless the event occurs inside a positioned element, where
+the returned value is relative to the top left of the positioned element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>ypos</em> = <em>event</em>.layerY;
-</pre>
+```js
+var ypos = event.layerY;
+```
 
-<ul>
-  <li><code>ypos</code> is an integer value in pixels for the y-coordinate of the mouse
-    pointer, when the mouse event fired.</li>
-</ul>
+- `ypos` is an integer value in pixels for the y-coordinate of the mouse
+  pointer, when the mouse event fired.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;pageX\pageY &amp; layerX\layerY example&lt;/title&gt;
+```html
+<html>
+<head>
+<title>pageX\pageY & layerX\layerY example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showCoords(evt){
   var form = document.forms.form_coords;
@@ -46,9 +46,9 @@ function showCoords(evt){
   form.layerXCoords.value = evt.layerX;
   form.layerYCoords.value = evt.layerY;
 }
-&lt;/script&gt;
+</script>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 
  #d1 {
   border: solid blue 1px;
@@ -74,51 +74,51 @@ function showCoords(evt){
   padding: 10px;
  }
 
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body onmousedown="showCoords(event)"&gt;
+<body onmousedown="showCoords(event)">
 
-&lt;p&gt;To display the mouse coordinates please click anywhere on the page.&lt;/p&gt;
+<p>To display the mouse coordinates please click anywhere on the page.</p>
 
-&lt;div id="d1"&gt;
-&lt;span&gt;This is an un-positioned div so clicking it will return
-layerX/layerY values almost the same as pageX/PageY values.&lt;/span&gt;
-&lt;/div&gt;
+<div id="d1">
+<span>This is an un-positioned div so clicking it will return
+layerX/layerY values almost the same as pageX/PageY values.</span>
+</div>
 
-&lt;div id="d2"&gt;
+<div id="d2">
 
-&lt;span&gt;This is a positioned div so clicking it will return layerX/layerY
+<span>This is a positioned div so clicking it will return layerX/layerY
 values that are relative to the top-left corner of this positioned
 element. Note the pageX\pageY properties still return the
-absolute position in the document, including page scrolling.&lt;/span&gt;
+absolute position in the document, including page scrolling.</span>
 
-&lt;span&gt;Make the page scroll more! This is a positioned div so clicking it
+<span>Make the page scroll more! This is a positioned div so clicking it
 will return layerX/layerY values that are relative to the top-left
 corner of this positioned element. Note the pageX\pageY properties still
 return the absolute position in the document, including page
-scrolling.&lt;/span&gt;
+scrolling.</span>
 
-&lt;/div&gt;
+</div>
 
-&lt;div id="d3"&gt;
-&lt;form name="form_coords" id="form1"&gt;
- Parent Element id: &lt;input type="text" name="parentId" size="7" /&gt;&lt;br /&gt;
- pageX:&lt;input type="text" name="pageXCoords" size="7" /&gt;
- pageY:&lt;input type="text" name="pageYCoords" size="7" /&gt;&lt;br /&gt;
- layerX:&lt;input type="text" name="layerXCoords" size="7" /&gt;
- layerY:&lt;input type="text" name="layerYCoords" size="7" /&gt;
-&lt;/form&gt;
-&lt;/div&gt;
+<div id="d3">
+<form name="form_coords" id="form1">
+ Parent Element id: <input type="text" name="parentId" size="7" /><br />
+ pageX:<input type="text" name="pageXCoords" size="7" />
+ pageY:<input type="text" name="pageYCoords" size="7" /><br />
+ layerX:<input type="text" name="layerXCoords" size="7" />
+ layerY:<input type="text" name="layerYCoords" size="7" />
+</form>
+</div>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>This property is not part of any specification.</em></p>
+_This property is not part of any specification._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

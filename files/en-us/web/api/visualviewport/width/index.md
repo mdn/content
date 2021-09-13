@@ -2,33 +2,35 @@
 title: VisualViewport.width
 slug: Web/API/VisualViewport/width
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- viewport
-- width
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - viewport
+  - width
 browser-compat: api.VisualViewport.width
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>width</code></strong> read-only property of the
-  {{domxref("VisualViewport")}} interface returns the width of the visual viewport, in CSS
-  pixels.</p>
+The **`width`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the width of the visual viewport, in CSS
+pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>width</em> = VisualViewport.width</pre>
+```js
+var width = VisualViewport.width
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

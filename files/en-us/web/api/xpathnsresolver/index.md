@@ -12,29 +12,25 @@ tags:
   - XPathNSResolver
 browser-compat: api.XPathNSResolver
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The <code>XPathNSResolver</code> interface permits prefix strings in an {{Glossary("XPath")}} expression to be properly bound to namespace URI strings.</p>
+The `XPathNSResolver` interface permits prefix strings in an {{Glossary("XPath")}} expression to be properly bound to namespace URI strings.
 
-<p>The {{domxref("XPathEvaluator")}} interface can construct an implementation of <code>XPathNSResolver</code> from a node, or the interface may be implemented by any application.</p>
+The {{domxref("XPathEvaluator")}} interface can construct an implementation of `XPathNSResolver` from a node, or the interface may be implemented by any application.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("XPathNSResolver.lookupNamespaceURI()")}}</dt>
- <dd>Looks up the namespace URI associated to the given namespace prefix.</dd>
-</dl>
+- {{DOMxRef("XPathNSResolver.lookupNamespaceURI()")}}
+  - : Looks up the namespace URI associated to the given namespace prefix.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XPathEvaluator")}}</li>
-</ul>
+- {{domxref("XPathEvaluator")}}

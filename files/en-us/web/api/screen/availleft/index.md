@@ -2,50 +2,52 @@
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
 tags:
-- API
-- 'API:Mozilla Extensions'
-- 'API:WebKit Extensions'
-- DOM
-- Non-standard
-- Property
+  - API
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
+  - DOM
+  - Non-standard
+  - Property
 browser-compat: api.Screen.availLeft
 ---
-<div>{{APIRef("CSSOM")}}{{Non-standard_Header}}</div>
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-<p>Returns the first available pixel available from the left side of the screen.</p>
+Returns the first available pixel available from the left side of the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>availLeft</var> = <var>window</var>.screen.availLeft;</pre>
+```js
+let availLeft = window.screen.availLeft;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let setX = window.screen.width - window.screen.availLeft;
+```js
+let setX = window.screen.width - window.screen.availLeft;
 let setY = window.screen.height - window.screen.availTop;
 window.moveTo(setX, setY);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>In most cases, this property returns 0.</p>
+In most cases, this property returns 0.
 
-<p>If you work with two screens this property, evaluated on the right screen, returns the
-  width of the left one in pixels (thereby indicating the X coordinate of the left edge of
-  the screen on the right).</p>
+If you work with two screens this property, evaluated on the right screen, returns the
+width of the left one in pixels (thereby indicating the X coordinate of the left edge of
+the screen on the right).
 
-<p>On Windows, this property depends on which screen is set as your primary, returning the
-  X coordinate of the leftmost available pixel relative to the primary screen. That is,
-  the primary screen's left edge always has the X coordinate 0, even if it's not the
-  leftmost screen. If the secondary screen is to the left of the primary screen, it has a
-  negative X coordinate to compensate:</p>
+On Windows, this property depends on which screen is set as your primary, returning the
+X coordinate of the leftmost available pixel relative to the primary screen. That is,
+the primary screen's left edge always has the X coordinate 0, even if it's not the
+leftmost screen. If the secondary screen is to the left of the primary screen, it has a
+negative X coordinate to compensate:
 
-<p>[1] [2] - on left screen <em>availLeft</em> returns <strong>0</strong>, on the right
-  screen it returns the <strong>width</strong> of the left one</p>
+\[1] \[2] - on left screen _availLeft_ returns **0**, on the right
+screen it returns the **width** of the left one
 
-<p>[2] [1] - on left screen <em>availLeft</em> returns <strong>-width</strong> of that
-  screen, on the right screen, it returns <strong>0</strong></p>
+\[2] \[1] - on left screen _availLeft_ returns **-width** of that
+screen, on the right screen, it returns **0**
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

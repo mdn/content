@@ -8,36 +8,35 @@ tags:
   - Payment Request API
   - PaymentRequest
 ---
-<div>{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}</div>
+{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
-<p>The <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>, with examples and suggested best practices.</p>
+The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a browser-based method of connecting users and their preferred payment systems and platforms to merchants that they want to pay for goods and services. This article is a guide to making use of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API), with examples and suggested best practices.
 
-<h2 id="The_basics_of_making_a_payment">The basics of making a payment</h2>
+## The basics of making a payment
 
-<p>This section details the basics of using the Payment Request API to make a payment.</p>
+This section details the basics of using the Payment Request API to make a payment.
 
-<div class="note">
-<p><strong>Note:</strong> The code snippets from this section are from our <a href="https://github.com/mdn/dom-examples/blob/master/payment-request/feature-detect-support.html">Feature detect support demo</a>.</p>
-</div>
+> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/master/payment-request/feature-detect-support.html).
 
-<h3 id="Creating_a_new_payment_request_object">Creating a new payment request object</h3>
+### Creating a new payment request object
 
-<p>A payment request always starts with the creation of a new {{domxref("PaymentRequest")}} object — using the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. This takes two mandatory parameters and one option parameter:</p>
+A payment request always starts with the creation of a new {{domxref("PaymentRequest")}} object — using the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. This takes two mandatory parameters and one option parameter:
 
-<ul>
- <li><code>methodData</code> — an object containing information concerning the payment provider, such as what payment methods are supported, etc.</li>
- <li><code>details</code> — an object containing information concerning the specific payment, such as the total payment amount, tax, shipping cost, etc.</li>
- <li><code>options</code> (optional) — an object containing addtional options related to the payment.</li>
-</ul>
+- `methodData` — an object containing information concerning the payment provider, such as what payment methods are supported, etc.
+- `details` — an object containing information concerning the specific payment, such as the total payment amount, tax, shipping cost, etc.
+- `options` (optional) — an object containing addtional options related to the payment.
 
-<p>So for example, you could create a new <code>PaymentRequest</code> instance like so:</p>
+So for example, you could create a new `PaymentRequest` instance like so:
 
-<pre class="brush: js">var request = new PaymentRequest(buildSupportedPaymentMethodData(),
-                                 buildShoppingCartDetails());</pre>
+```js
+var request = new PaymentRequest(buildSupportedPaymentMethodData(),
+                                 buildShoppingCartDetails());
+```
 
-<p>The functions invoked inside the constructor return the required object parameters:</p>
+The functions invoked inside the constructor return the required object parameters:
 
-<pre class="brush: js">function buildSupportedPaymentMethodData() {
+```js
+function buildSupportedPaymentMethodData() {
   // Example supported payment methods:
   return [{
     supportedMethods: 'basic-card',
@@ -63,13 +62,15 @@ function buildShoppingCartDetails() {
       amount: {currency: 'USD', value: '1.00'}
     }
   };
-}</pre>
+}
+```
 
-<h3 id="Starting_the_payment_process">Starting the payment process</h3>
+### Starting the payment process
 
-<p>Once the <code>PaymentRequest</code> object has been created, you call the {{domxref("PaymentRequest.show()")}} method on it to initiate the payment request. This returns a promise that fulfills with a {{domxref("PaymentResponse")}} object if the payment is successful:</p>
+Once the `PaymentRequest` object has been created, you call the {{domxref("PaymentRequest.show()")}} method on it to initiate the payment request. This returns a promise that fulfills with a {{domxref("PaymentResponse")}} object if the payment is successful:
 
-<pre class="brush: js">request.show().then(function(paymentResponse) {
+```js
+request.show().then(function(paymentResponse) {
   // Here we would process the payment. For this demo, simulate immediate success:
   paymentResponse.complete('success')
   .then(function() {
@@ -77,17 +78,19 @@ function buildShoppingCartDetails() {
     introPanel.style.display = 'none';
     successPanel.style.display = 'block';
   });
-})</pre>
+})
+```
 
-<p>This object provides the developer with access to details they can use to complete the logical steps required after the payment completes, such as an email address to contact the customer, a shipping address for mailing goods out to them, etc. In the code above, you'll see that we've called the {{domxref("PaymentResponse.complete()")}} method to signal that the interaction has finished — you'd use this to carry out finishing steps, like updating the user interface to tell the user the transaction is complete, etc.</p>
+This object provides the developer with access to details they can use to complete the logical steps required after the payment completes, such as an email address to contact the customer, a shipping address for mailing goods out to them, etc. In the code above, you'll see that we've called the {{domxref("PaymentResponse.complete()")}} method to signal that the interaction has finished — you'd use this to carry out finishing steps, like updating the user interface to tell the user the transaction is complete, etc.
 
-<h3 id="Other_useful_payment_request_methods">Other useful payment request methods</h3>
+### Other useful payment request methods
 
-<p>There are some other useful payment request methods worth knowing about.</p>
+There are some other useful payment request methods worth knowing about.
 
-<p>{{domxref("PaymentRequest.canMakePayment()")}} can be used to check whether the <code>PaymentRequest</code> object is capable of making a payment before you start the payment process. It returns a promise that fulfills with a boolean indicating whether it is or not, for example:</p>
+{{domxref("PaymentRequest.canMakePayment()")}} can be used to check whether the `PaymentRequest` object is capable of making a payment before you start the payment process. It returns a promise that fulfills with a boolean indicating whether it is or not, for example:
 
-<pre class="brush: js">// Dummy payment request to check whether payment can be made
+```js
+// Dummy payment request to check whether payment can be made
 new PaymentRequest(buildSupportedPaymentMethodData(),
       {total: {label: 'Stub', amount: {currency: 'USD', value: '0.01'}}})
       .canMakePayment()
@@ -106,17 +109,18 @@ new PaymentRequest(buildSupportedPaymentMethodData(),
           })
         }
       })
-</pre>
+```
 
-<p>{{domxref("PaymentRequest.abort()")}} can be used to abort the payment request if required.</p>
+{{domxref("PaymentRequest.abort()")}} can be used to abort the payment request if required.
 
-<h2 id="Detecting_availability_of_the_Payment_Request_API">Detecting availability of the Payment Request API</h2>
+## Detecting availability of the Payment Request API
 
-<p>You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e. <code>if (window.PaymentRequest)</code>.</p>
+You can effectively detect support for the Payment Request API by checking if the user's browser supports {{domxref("PaymentRequest")}}, i.e. `if (window.PaymentRequest)`.
 
-<p>In the following snippet, a merchant page performs this check, and if it returns <code>true</code> updates the checkout button to use <code>PaymentRequest</code> instead of legacy web forms.</p>
+In the following snippet, a merchant page performs this check, and if it returns `true` updates the checkout button to use `PaymentRequest` instead of legacy web forms.
 
-<pre class="brush: js">const checkoutButton = document.getElementById('checkout-button');
+```js
+const checkoutButton = document.getElementById('checkout-button');
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
@@ -135,51 +139,49 @@ if (window.PaymentRequest) {
         buildShoppingCartDetails());
   });
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html">Feature detect support demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Feature detect support demo](https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html) for the full code.
 
-<h2 id="Checking_whether_users_can_make_payments">Checking whether users can make payments</h2>
+## Checking whether users can make payments
 
-<p>Checking whether users can make payments is always useful. Here's a couple of related techniques.</p>
+Checking whether users can make payments is always useful. Here's a couple of related techniques.
 
-<h3 id="Customizing_the_payment_button">Customizing the payment button</h3>
+### Customizing the payment button
 
-<p>One useful technique to employ is customizing the payment request button depending on whether users can make payments.</p>
+One useful technique to employ is customizing the payment request button depending on whether users can make payments.
 
-<p>In the following snippet we do just this — depending on whether the user can make a fast payment or needs to add payment credentials first, the title of the checkout button changes between "Fast Checkout with W3C" and "Setup W3C Checkout". In both cases, the checkout button calls {{domxref("PaymentRequest.show()")}}.</p>
+In the following snippet we do just this — depending on whether the user can make a fast payment or needs to add payment credentials first, the title of the checkout button changes between "Fast Checkout with W3C" and "Setup W3C Checkout". In both cases, the checkout button calls {{domxref("PaymentRequest.show()")}}.
 
-<pre class="brush: js">const checkoutButton = document.getElementById('checkout-button');
-checkoutButton.innerText = &quot;Loading...&quot;;
+```js
+const checkoutButton = document.getElementById('checkout-button');
+checkoutButton.innerText = "Loading...";
 if (window.PaymentRequest) {
   let request = new PaymentRequest(buildSupportedPaymentMethodNames(),
       buildShoppingCartDetails());
   request.canMakePayment().then(function(canMakeAFastPayment) {
     if (canMakeAFastPayment) {
-      checkoutButton.innerText = &quot;Fast Checkout with W3C&quot;;
+      checkoutButton.innerText = "Fast Checkout with W3C";
     } else {
-      checkoutButton.innerText = &quot;Setup W3C Checkout&quot;;
+      checkoutButton.innerText = "Setup W3C Checkout";
     }
   }).catch(function(error) {
     // The user may have turned off the querying functionality in their
     // privacy settings. The website does not know whether they can make
     // a fast payment, so pick a generic title.
-    checkoutButton.innerText = &quot;Checkout with W3C&quot;;
+    checkoutButton.innerText = "Checkout with W3C";
   });
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html">Customizing the payment button demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Customizing the payment button demo](https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html) for the full code.
 
-<h3 id="Checking_before_all_prices_are_known">Checking before all prices are known</h3>
+### Checking before all prices are known
 
-<p>If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePayment()")}} will return <code>true</code> even before all line items and their prices are known, you can instantiate <code>PaymentRequest</code> with dummy data and pre-query <code>.canMakePayment()</code>. If you call <code>.canMakePayment()</code> multiple times, keep in mind that the first parameter to the <code>PaymentRequest</code> constructor should contain the same method names and data.</p>
+If the checkout flow needs to know whether {{domxref("PaymentRequest.canMakePayment()")}} will return `true` even before all line items and their prices are known, you can instantiate `PaymentRequest` with dummy data and pre-query `.canMakePayment()`. If you call `.canMakePayment()` multiple times, keep in mind that the first parameter to the `PaymentRequest` constructor should contain the same method names and data.
 
-<pre class="brush: js">// The page has loaded. Should the page use PaymentRequest?
+```js
+// The page has loaded. Should the page use PaymentRequest?
 // If PaymentRequest fails, should the page fallback to manual
 // web form checkout?
 const supportedPaymentMethods = ...
@@ -223,19 +225,19 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
   } else {
     window.location.href = '/legacy-web-form-checkout';
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html">Checking user can make payments before prices are known demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Checking user can make payments before prices are known demo](https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html) for the full code.
 
-<h2 id="Recommending_a_payment_app_when_user_has_no_apps">Recommending a payment app when user has no apps</h2>
+## Recommending a payment app when user has no apps
 
-<p>If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call <code>PaymentRequest.show()</code>, while intercepting the <code>NOTSUPPORTEDERR</code> exception. If this payment method is not supported, it redirects to the signup page for BobPay.</p>
+If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NOTSUPPORTEDERR` exception. If this payment method is not supported, it redirects to the signup page for BobPay.
 
-<p>The code looks something like this:</p>
+The code looks something like this:
 
-<pre class="brush: js">checkoutButton.addEventListener('click', function() {
+```js
+checkoutButton.addEventListener('click', function() {
   var request = new PaymentRequest(buildSupportedPaymentMethodData(),
     buildShoppingCartDetails());
     request.show().then(function(paymentResponse) {
@@ -256,17 +258,17 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
       legacyPanel.style.display = 'block';
     }
   });
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html">Recommending a payment app when user has no apps demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Recommending a payment app when user has no apps demo](https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html) for the full code.
 
-<h2 id="Showing_additional_user_interface_after_successful_payments">Showing additional user interface after successful payments</h2>
+## Showing additional user interface after successful payments
 
-<p>If the merchant desires to collect additional information not part of the API (e.g., additional delivery instructions), the merchant can show a page with additional <code>&lt;input type="text"&gt;</code> fields after the checkout.</p>
+If the merchant desires to collect additional information not part of the API (e.g., additional delivery instructions), the merchant can show a page with additional `<input type="text">` fields after the checkout.
 
-<pre class="brush: js">request.show()
+```js
+request.show()
 .then(function(paymentResponse) {
     // Process payment here.
     // Close the UI:
@@ -282,19 +284,18 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 .catch(function(error) {
     // Handle error.
 });
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html">Show additional user interface after successful payment demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Show additional user interface after successful payment demo](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html) for the full code.
 
-<h2 id="Pre-authorizing_transactions">Pre-authorizing transactions</h2>
+## Pre-authorizing transactions
 
-<p>Some use cases (e.g., paying for fuel at a service station) involve pre-authorization of payment. One way to do this is through a Payment Handler (see the <a href="https://w3c.github.io/payment-handler/">Payment Handler API</a>). At time of writing, that specification includes a <code>CanMakePayment</code> event that a Payment Handler could make use of to return authorization status.</p>
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorization of payment. One way to do this is through a Payment Handler (see the [Payment Handler API](https://w3c.github.io/payment-handler/)). At time of writing, that specification includes a `CanMakePayment` event that a Payment Handler could make use of to return authorization status.
 
-<p>The merchant code would look like this:</p>
+The merchant code would look like this:
 
-<pre class="brush: js">let paymentRequest = new PaymentRequest(
+```js
+let paymentRequest = new PaymentRequest(
     [{supportedMethods: 'https://example.com/preauth'}], ...);
 // Send `CanMakePayment` event to the payment handler.
 paymentRequest.canMakePayment()
@@ -309,28 +310,25 @@ paymentRequest.canMakePayment()
     .catch(function(ex1) {
       // Unexpected error occurred.
     });
-</pre>
+```
 
-<p>The payment handler would include the following code:</p>
+The payment handler would include the following code:
 
-<pre class="brush: js">self.addEventListener('canmakepayment', function(evt) {
+```js
+self.addEventListener('canmakepayment', function(evt) {
   // Pre-authorize here.
   let preAuthSuccess = ...;
   evt.respondWith(preAuthSuccess);
 });
-</pre>
+```
 
-<p>This payment handler would need to live in a service worker at <code>https://example.com/preauth</code> scope.</p>
+This payment handler would need to live in a service worker at `https://example.com/preauth` scope.
 
-<div class="note">
-<p><strong>Note:</strong> See our <a href="https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html">Pre-authorizing transactions demo</a> for the full code.</p>
-</div>
+> **Note:** See our [Pre-authorizing transactions demo](https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html) for the full code.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://googlechrome.github.io/samples/paymentrequest/">Google PaymentRequest Samples</a></li>
- <li><a href="https://g.co/PaymentRequestCodeLab">Google PaymentRequest codelab</a></li>
- <li>Ecommerce website demo and source code <a href="https://github.com/pjbazin/wpwg-demo">VeggieShop</a></li>
- <li>Web Payment App demo and source code <a href="https://github.com/pjbazin/wpwg-demo/tree/master/WhiteCollar">WhiteCollar</a></li>
-</ul>
+- [Google PaymentRequest Samples](https://googlechrome.github.io/samples/paymentrequest/)
+- [Google PaymentRequest codelab](https://g.co/PaymentRequestCodeLab)
+- Ecommerce website demo and source code [VeggieShop](https://github.com/pjbazin/wpwg-demo)
+- Web Payment App demo and source code [WhiteCollar](https://github.com/pjbazin/wpwg-demo/tree/master/WhiteCollar)

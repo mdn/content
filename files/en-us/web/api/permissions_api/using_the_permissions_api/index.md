@@ -8,54 +8,51 @@ tags:
   - Guide
   - Permissions
 ---
-<p>{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 
-<p>This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.</p>
+This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.
 
-<h2 id="The_trouble_with_asking_for_permission...">The trouble with asking for permission...</h2>
+## The trouble with asking for permission...
 
-<p>Let's face it, permissions on the Web are a necessary evil, and they are not much fun to deal with as developers.</p>
+Let's face it, permissions on the Web are a necessary evil, and they are not much fun to deal with as developers.
 
-<p>Historically, different APIs handle their own permissions inconsistently — for example the Notifications API allows for explicit checking of permission status and requesting permission, whereas the Geolocation API doesn't (which causes problems if the user denied the initial permission request, as we'll see below).</p>
+Historically, different APIs handle their own permissions inconsistently — for example the Notifications API allows for explicit checking of permission status and requesting permission, whereas the Geolocation API doesn't (which causes problems if the user denied the initial permission request, as we'll see below).
 
-<p>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> provides the tools to allow developers to implement a better user experience as far as permissions are concerned. For example, it can query whether permission to use a particular API is granted or denied, and specifically request permission to use an API.</p>
+The [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the tools to allow developers to implement a better user experience as far as permissions are concerned. For example, it can query whether permission to use a particular API is granted or denied, and specifically request permission to use an API.
 
-<p>At the moment, implementation of the API is at an early stage, so support in browsers is pretty spotty:</p>
+At the moment, implementation of the API is at an early stage, so support in browsers is pretty spotty:
 
-<ul>
- <li>It can only be found in Chrome 44 and later and Firefox 43 and later.</li>
- <li>The only supported method right now is {{domxref("Permissions.query()")}}, which queries permission status.</li>
- <li>The only two APIs currently recognized by the Permissions API in Chrome are <a href="/en-US/docs/Web/API/Geolocation">Geolocation</a> and Notification, with Firefox also recognizing <a href="/en-US/docs/Web/API/Push_API">Push</a> and WebMIDI.</li>
-</ul>
+- It can only be found in Chrome 44 and later and Firefox 43 and later.
+- The only supported method right now is {{domxref("Permissions.query()")}}, which queries permission status.
+- The only two APIs currently recognized by the Permissions API in Chrome are [Geolocation](/en-US/docs/Web/API/Geolocation) and Notification, with Firefox also recognizing [Push](/en-US/docs/Web/API/Push_API) and WebMIDI.
 
-<p>More features will be added as time progresses.</p>
+More features will be added as time progresses.
 
-<h2 id="A_simple_example">A simple example</h2>
+## A simple example
 
-<p>For this article, we have put together a simple demo called Location Finder. It uses Geolocation to query the user's current location and plot it out on a Google Map:</p>
+For this article, we have put together a simple demo called Location Finder. It uses Geolocation to query the user's current location and plot it out on a Google Map:
 
-<p><img alt="Screenshot showing a map of Greenfield, UK." src="location-finder-with-permissions-api.png"></p>
+![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
 
-<p>You can <a href="https://chrisdavidmills.github.io/location-finder-permissions-api/">run the example live</a>, or <a href="https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages">view the source code on Github</a>. Most of the code is simple and unremarkable — below we'll just be walking through the Permissions API-related code, so check the code yourself if you want to study any of the other parts.</p>
+You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages). Most of the code is simple and unremarkable — below we'll just be walking through the Permissions API-related code, so check the code yourself if you want to study any of the other parts.
 
-<h3 id="Accessing_the_Permissions_API">Accessing the Permissions API</h3>
+### Accessing the Permissions API
 
-<p>The {{domxref("Navigator.permissions")}} property has been added to the browser to allow access to the global {{domxref("Permissions")}} object. This object will eventually include methods for querying, requesting, and revoking permissions, although currently it only contains {{domxref("Permissions.query()")}}; see below.</p>
+The {{domxref("Navigator.permissions")}} property has been added to the browser to allow access to the global {{domxref("Permissions")}} object. This object will eventually include methods for querying, requesting, and revoking permissions, although currently it only contains {{domxref("Permissions.query()")}}; see below.
 
-<h3 id="Querying_permission_state">Querying permission state</h3>
+### Querying permission state
 
-<p>In our example, the Permissions functionality is handled by one function — <code>handlePermission()</code>. This starts off by querying the permission status using {{domxref("Permissions.query()")}}. Depending on the value of the {{domxref("PermissionStatus.state", "state")}} property of the  {{domxref("PermissionStatus")}} object returned when the promise resolves, it reacts differently:</p>
+In our example, the Permissions functionality is handled by one function — `handlePermission()`. This starts off by querying the permission status using {{domxref("Permissions.query()")}}. Depending on the value of the {{domxref("PermissionStatus.state", "state")}} property of the  {{domxref("PermissionStatus")}} object returned when the promise resolves, it reacts differently:
 
-<dl>
- <dt><code>"granted"</code></dt>
- <dd>The "Enable Geolocation" button is hidden, as it isn't needed if Geolocation is already active.</dd>
- <dt><code>"prompt"</code></dt>
- <dd>The "Enable Geolocation" button is hidden, as it isn't needed if the user will be prompted to grant permission for Geolocation. The {{domxref("Geolocation.getCurrentPosition()")}} function is then run, which prompts the user for permission; it runs the <code>revealPosition()</code> function if permission is granted (which shows the map), or the <code>positionDenied()</code> function if permission is denied (which makes the "Enable Geolocation" button appear).</dd>
- <dt><code>"denied"</code></dt>
- <dd>The "Enable Geolocation" button is revealed (this code needs to be here too, in case the permission state is already set to denied for this origin when the page is first loaded).</dd>
-</dl>
+- `"granted"`
+  - : The "Enable Geolocation" button is hidden, as it isn't needed if Geolocation is already active.
+- `"prompt"`
+  - : The "Enable Geolocation" button is hidden, as it isn't needed if the user will be prompted to grant permission for Geolocation. The {{domxref("Geolocation.getCurrentPosition()")}} function is then run, which prompts the user for permission; it runs the `revealPosition()` function if permission is granted (which shows the map), or the `positionDenied()` function if permission is denied (which makes the "Enable Geolocation" button appear).
+- `"denied"`
+  - : The "Enable Geolocation" button is revealed (this code needs to be here too, in case the permission state is already set to denied for this origin when the page is first loaded).
 
-<pre class="brush: js">function handlePermission() {
+```js
+function handlePermission() {
   navigator.permissions.query({name:'geolocation'}).then(function(result) {
     if (result.state == 'granted') {
       report(result.state);
@@ -78,17 +75,19 @@ function report(state) {
   console.log('Permission ' + state);
 }
 
-handlePermission();</pre>
+handlePermission();
+```
 
-<h3 id="Permission_descriptors">Permission descriptors</h3>
+### Permission descriptors
 
-<p>The {{domxref("Permissions.query()")}} method takes a <code>PermissionDescriptor</code> dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex <code>PermissionDescriptor</code>s containing additional information, which inherit from the default <code>PermissionDescriptor</code>. For example, the <code>PushPermissionDescriptor</code> should also contain a Boolean that specifies if <code><a href="/en-US/docs/Web/API/PushManager/subscribe#parameters">userVisibleOnly</a></code> is <code>true</code> or <code>false</code>.</p>
+The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex `PermissionDescriptor`s containing additional information, which inherit from the default `PermissionDescriptor`. For example, the `PushPermissionDescriptor` should also contain a Boolean that specifies if [`userVisibleOnly`](/en-US/docs/Web/API/PushManager/subscribe#parameters) is `true` or `false`.
 
-<h3 id="Revoking_permissions">Revoking permissions</h3>
+### Revoking permissions
 
-<p>Starting in Firefox 47, you can now revoke existing permissions, using the  {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually <code>prompt</code>). See the following code in our demo:</p>
+Starting in Firefox 47, you can now revoke existing permissions, using the  {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually `prompt`). See the following code in our demo:
 
-<pre class="brush: js">var revokeBtn = document.querySelector('.revoke');
+```js
+var revokeBtn = document.querySelector('.revoke');
 
   ...
 
@@ -102,23 +101,20 @@ function revokePermission() {
   navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
     report(result.state);
   });
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> The <code>revoke()</code> function has been disabled by default starting in Firefox 51, since its design has been brought into question in the <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a>. It can be re-enabled by setting the preference <code>dom.permissions.revoke.enable</code> to <code>true</code>.</p>
-</div>
+> **Note:** The `revoke()` function has been disabled by default starting in Firefox 51, since its design has been brought into question in the [Web Applications Security Working Group](https://www.w3.org/2011/webappsec/). It can be re-enabled by setting the preference `dom.permissions.revoke.enable` to `true`.
 
-<h3 id="Responding_to_permission_state_changes">Responding to permission state changes</h3>
+### Responding to permission state changes
 
-<p>You'll notice that there is an <code>onchange</code> event handler in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.</p>
+You'll notice that there is an `onchange` event handler in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
 
-<h2 id="Conclusion_and_future_work">Conclusion and future work</h2>
+## Conclusion and future work
 
-<p>At the moment this doesn't offer much more than what we had already. If we choose to never share our location from the permission prompt (deny permission), then we can't get back to the permission prompt without using the browser menu options:</p>
+At the moment this doesn't offer much more than what we had already. If we choose to never share our location from the permission prompt (deny permission), then we can't get back to the permission prompt without using the browser menu options:
 
-<ul>
- <li><strong>Firefox</strong>: <em>Tools &gt; Page Info &gt; Permissions &gt; Access Your Location</em>. Select <em>Always Ask</em>.</li>
- <li><strong>Chrome</strong>: <em>Hamburger Menu &gt; Settings &gt; Show advanced settings</em>. In the <em>Privacy</em> section, click <em>Content Settings</em>. In the resulting dialog, find the <em>Location</em> section and select <em>Ask when a site tries to...</em> . Finally, click <em>Manage Exceptions</em> and remove the permissions you granted to the sites you are interested in.</li>
-</ul>
+- **Firefox**: _Tools > Page Info > Permissions > Access Your Location_. Select _Always Ask_.
+- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to..._ . Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
 
-<p>However, future additions to browser functionality should provide the <code>request()</code> method, which will allow us to programmatically request permissions, any time we like. These should hopefully be available soon.</p>
+However, future additions to browser functionality should provide the `request()` method, which will allow us to programmatically request permissions, any time we like. These should hopefully be available soon.

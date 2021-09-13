@@ -8,33 +8,29 @@ tags:
   - ReportBody
 browser-compat: api.ReportBody
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>ReportBody</code></strong> interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.</p>
+The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
 
-<h3>Reports that inherit from <code>ReportBody</code></h3>
+### Reports that inherit from `ReportBody`
 
-<ul>
-  <li>{{domxref("CrashReportBody")}}</li>
-  <li>{{domxref("DeprecationReportBody")}}</li>
-  <li>{{domxref("InterventionReportBody")}}</li>
-</ul>
+- {{domxref("CrashReportBody")}}
+- {{domxref("DeprecationReportBody")}}
+- {{domxref("InterventionReportBody")}}
 
+An instance of `ReportBody` is returned as the value of {{domxref("Report.body")}}. The interface has no constructor.
 
-<p>An instance of <code>ReportBody</code> is returned as the value of {{domxref("Report.body")}}. The interface has no constructor.</p>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("ReportBody.toJSON()")}}
+  - : A _serializer_ which returns a JSON representation of the `ReportBody` object.
 
-<dl>
-  <dt>{{domxref("ReportBody.toJSON()")}}</dt>
-  <dd>A <em>serializer</em> which returns a JSON representation of the <code>ReportBody</code> object.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports. The {{domxref("InterventionReportBody")}} interface inherits from `ReportBody`.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports. The {{domxref("InterventionReportBody")}} interface inherits from <code>ReportBody</code>.</p>
-
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['intervention'],
   buffered: true
 }
@@ -42,12 +38,13 @@ browser-compat: api.ReportBody
 let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // intervention
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

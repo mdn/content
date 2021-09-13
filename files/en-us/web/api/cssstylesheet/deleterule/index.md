@@ -2,66 +2,63 @@
 title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 tags:
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Method
-- Object Model
-- Reference
-- Rule
-- StyleSheet
-- delete
-- deleteRule
-- remove
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Method
+  - Object Model
+  - Reference
+  - Rule
+  - StyleSheet
+  - delete
+  - deleteRule
+  - remove
 browser-compat: api.CSSStyleSheet.deleteRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The {{domxref("CSSStyleSheet")}} method
-    <code><strong>deleteRule()</strong></code> removes a rule from the stylesheet
-    object.</p>
+The {{domxref("CSSStyleSheet")}} method
+**`deleteRule()`** removes a rule from the stylesheet
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cssStyleSheet</em>.deleteRule(<em>index</em>)
-</pre>
+```js
+cssStyleSheet.deleteRule(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The index into the stylesheet's {{domxref("CSSRuleList")}} indicating the rule to be
-    removed.</dd>
-</dl>
+- `index`
+  - : The index into the stylesheet's {{domxref("CSSRuleList")}} indicating the rule to be
+    removed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example removes the first rule from the stylesheet <code>myStyles</code>.</p>
+This example removes the first rule from the stylesheet `myStyles`.
 
-<pre class="brush:js"> myStyles.deleteRule(0);
-</pre>
+```js
+ myStyles.deleteRule(0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-  <li>{{domxref("CSSStyleSheet.insertRule", "insertRule()")}}</li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

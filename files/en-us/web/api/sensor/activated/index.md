@@ -2,37 +2,39 @@
 title: Sensor.activated
 slug: Web/API/Sensor/activated
 tags:
-- API
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- activated
+  - API
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - activated
 browser-compat: api.Sensor.activated
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>activated</code></strong> read-only property
-    of the {{domxref("Sensor")}} interface returns a boolean value indicating
-    whether the sensor is active.</p>
+The **`activated`** read-only property
+of the {{domxref("Sensor")}} interface returns a boolean value indicating
+whether the sensor is active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>boolean</var> = <em>sensorInstance</em>.activated</pre>
+```js
+var boolean = sensorInstance.activated
+```
 
-<p>Because {{domxref('Sensor')}} is a base class, <code>activated</code> may only be read
-  from one of its derived classes.</p>
+Because {{domxref('Sensor')}} is a base class, `activated` may only be read
+from one of its derived classes.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

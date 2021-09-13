@@ -15,38 +15,41 @@ tags:
   - track
 browser-compat: api.RTCPeerConnection.track_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>track</code></strong> event is sent to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.</p>
+The **`track`** event is sent to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("RTCTrackEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("RTCPeerConnection.ontrack", "ontrack")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("RTCTrackEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("RTCPeerConnection.ontrack", "ontrack")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>By the time this event is delivered, the new track has been fully added to the peer connection. See {{SectionOnPage("/en-US/docs/Web/API/RTCTrackEvent", "Track event types")}} for details.</p>
+By the time this event is delivered, the new track has been fully added to the peer connection. See {{SectionOnPage("/en-US/docs/Web/API/RTCTrackEvent", "Track event types")}} for details.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows code that creates a new {{domxref("RTCPeerConnection")}}, then adds a new <code>track</code> event handler.</p>
+This example shows code that creates a new {{domxref("RTCPeerConnection")}}, then adds a new `track` event handler.
 
-<pre class="brush: js">pc = new RTCPeerConnection({
+```js
+pc = new RTCPeerConnection({
   iceServers: [
     {
       urls: "turn:fake.turnserver.url",
@@ -56,26 +59,28 @@ browser-compat: api.RTCPeerConnection.track_event
   ]
 });
 
-pc.addEventListener("track", e =&gt; {
+pc.addEventListener("track", e => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
-}, false);</pre>
+}, false);
+```
 
-<p>The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable <code>videoElement</code>.</p>
+The event handler assigns the new track's first stream to an existing {{HTMLElement("video")}} element, identified using the variable `videoElement`.
 
-<p>You can also assign the event handler function to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+You can also assign the event handler function to the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} property, rather than use {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<pre class="brush: js">pc.ontrack = e =&gt; {
+```js
+pc.ontrack = e => {
   videoElement.srcObject = e.streams[0];
   hangupButton.disabled = false;
   return false;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

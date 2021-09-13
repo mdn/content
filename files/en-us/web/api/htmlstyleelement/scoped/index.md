@@ -2,42 +2,37 @@
 title: HTMLStyleElement.scoped
 slug: Web/API/HTMLStyleElement/scoped
 tags:
-- API
-- HTML DOM
-- HTMLStyleElement
-- Non-standard
-- Property
-- Reference
-- scoped
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLStyleElement
+  - Non-standard
+  - Property
+  - Reference
+  - scoped
+  - Deprecated
 browser-compat: api.HTMLStyleElement.scoped
 ---
-<div>
-  <div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
-  <div>{{non-standard_header}}{{deprecated_header}}</div>
-</div>
+The **`HTMLStyleElement.scoped`** property is a [`Boolean`](/en-US/docs/Web/API/Boolean) value indicating if the
+element applies to the whole document (`false`) or only to the parent's
+sub-tree (`true`).
 
-<p>The <code><strong>HTMLStyleElement.scoped</strong></code> property is a <a
-    href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a> value indicating if the
-  element applies to the whole document (<code>false</code>) or only to the parent's
-  sub-tree (<code>true</code>).</p>
+By default it contains the value of the {{htmlattrxref("scoped", "style")}} content
+attribute.
 
-<p>By default it contains the value of the {{htmlattrxref("scoped", "style")}} content
-  attribute.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+value = style.scoped;
+style.scoped = true;
+```
 
-<pre class="brush: js"><var>value</var> = style.scoped;
-style.scoped = true;</pre>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>The {{HTMLElement("style")}} HTML Element.</li>
-  <li>The {{cssxref(":scope")}} CSS pseudo-class.</li>
-</ul>
+- The {{HTMLElement("style")}} HTML Element.
+- The {{cssxref(":scope")}} CSS pseudo-class.

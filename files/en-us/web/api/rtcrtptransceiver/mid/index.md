@@ -2,48 +2,47 @@
 title: RTCRtpTransceiver.mid
 slug: Web/API/RTCRtpTransceiver/mid
 tags:
-- API
-- Media
-- Media ID
-- Property
-- RTCRtpTransceiver
-- RTP
-- Read-only
-- Reference
-- SDP
-- WebRTC
-- mid
+  - API
+  - Media
+  - Media ID
+  - Property
+  - RTCRtpTransceiver
+  - RTP
+  - Read-only
+  - Reference
+  - SDP
+  - WebRTC
+  - mid
 browser-compat: api.RTCRtpTransceiver.mid
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only {{domxref("RTCRtpTransceiver")}} interface's
-    <code><strong>mid</strong></code> property specifies the negotiated media ID
-    (<code>mid</code>) which the local and remote peers have agreed upon to uniquely
-    identify the stream's pairing of sender and receiver.</p>
+The read-only {{domxref("RTCRtpTransceiver")}} interface's
+**`mid`** property specifies the negotiated media ID
+(`mid`) which the local and remote peers have agreed upon to uniquely
+identify the stream's pairing of sender and receiver.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaID</em> = <em>RTCRtpTransceiver</em>.mid;</pre>
+```js
+var mediaID = RTCRtpTransceiver.mid;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the pairing of source and
-  destination of the transceiver's stream. Its value is taken from the media ID of the SDP
-  m-line. This value is <code>null</code> if negotiation has not completed.</p>
+A {{domxref("DOMString")}} which uniquely identifies the pairing of source and
+destination of the transceiver's stream. Its value is taken from the media ID of the SDP
+m-line. This value is `null` if negotiation has not completed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-</ul>
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

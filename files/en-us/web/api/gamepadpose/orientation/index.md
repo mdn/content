@@ -13,48 +13,44 @@ tags:
   - WebVR
 browser-compat: api.GamepadPose.orientation
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>orientation</code></strong> read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.</p>
+The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.
 
-<p>The value is a {{jsxref("Float32Array")}}, made up of the following values:</p>
+The value is a {{jsxref("Float32Array")}}, made up of the following values:
 
-<ul>
- <li>pitch — rotation around the X axis.</li>
- <li>yaw — rotation around the Y axis.</li>
- <li>roll — rotation around the Z axis.</li>
- <li>w — the fourth dimension (usually 1).</li>
-</ul>
+- pitch — rotation around the X axis.
+- yaw — rotation around the Y axis.
+- roll — rotation around the Z axis.
+- w — the fourth dimension (usually 1).
 
-<p>The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read.</p>
+The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myGamepadOrientation = gamepadPoseInstance.orientation;</pre>
+```js
+var myGamepadOrientation = gamepadPoseInstance.orientation;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}}, or <code>null</code> if the VR sensor is not able to provide orientation data.</p>
+A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide orientation data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<div class="note">
-<p><strong>Note:</strong> An orientation of <code>{ x: 0, y: 0, z: 0, w: 1 }</code> is considered to be "forward".</p>
-</div>
+> **Note:** An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

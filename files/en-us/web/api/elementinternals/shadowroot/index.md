@@ -9,23 +9,26 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.shadowRoot
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>shadowRoot</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.</p>
+The **`shadowRoot`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("ShadowRoot")}} for this element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let shadowRoot = ElementInternals.shadowRoot;
-</pre>
+```js
+let shadowRoot = ElementInternals.shadowRoot;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("ShadowRoot")}} if the element has a shadow root, otherwise <code>null</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ShadowRoot")}} if the element has a shadow root, otherwise `null`.
 
-<p>The following example prints the value of <code>shadowRoot</code> to the console, immediately after calling {{domxref("HTMLElement.attachInternals()")}}. At this point the value is <code>null</code>. After calling {{domxref("Element.attachShadow()")}} the element has a Shadow Root, and <code>shadowRoot</code> returns the object representing it.</p>
+## Examples
 
-<pre class="brush: js">constructor() {
+The following example prints the value of `shadowRoot` to the console, immediately after calling {{domxref("HTMLElement.attachInternals()")}}. At this point the value is `null`. After calling {{domxref("Element.attachShadow()")}} the element has a Shadow Root, and `shadowRoot` returns the object representing it.
+
+```js
+constructor() {
   super();
   this.internals_ = this.attachInternals();
 
@@ -34,15 +37,13 @@ browser-compat: api.ElementInternals.shadowRoot
   this.attachShadow({ mode: "open" });
 
   console.log(this.internals_.shadowRoot); // a ShadowRoot object
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

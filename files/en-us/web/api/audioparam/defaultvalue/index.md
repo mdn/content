@@ -10,42 +10,41 @@ tags:
   - defaultValue
 browser-compat: api.AudioParam.defaultValue
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>defaultValue</code></strong>
-    read-only property of the {{ domxref("AudioParam") }} interface represents the initial
-    value of the attributes as defined by the specific {{domxref("AudioNode")}} creating
-    the <code>AudioParam</code>.</p>
+The **`defaultValue`**
+read-only property of the {{ domxref("AudioParam") }} interface represents the initial
+value of the attributes as defined by the specific {{domxref("AudioNode")}} creating
+the `AudioParam`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>defaultVal</em> = <em>audioParam</em>.defaultValue;</pre>
+```js
+var defaultVal = audioParam.defaultValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point {{jsxref("Number")}}.</p>
+A floating-point {{jsxref("Number")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 const defaultVal = gainNode.gain.defaultValue;
 console.log(defaultVal); // 1
 console.log(defaultVal === gainNode.gain.value); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,47 +2,44 @@
 title: PerformanceTiming.domainLookupEnd
 slug: Web/API/PerformanceTiming/domainLookupEnd
 tags:
-- API
-- Backwards compatibility
-- Deprecated
-- Navigation Timing
-- PerformanceTiming
-- Property
-- Reference
-- fetchStart
-- legacy
+  - API
+  - Backwards compatibility
+  - Deprecated
+  - Navigation Timing
+  - PerformanceTiming
+  - Property
+  - Reference
+  - fetchStart
+  - legacy
 browser-compat: api.PerformanceTiming.domainLookupEnd
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
-    interface instead.</p>
-</div>
+> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+> interface instead.
 
-<p>The legacy
-  <strong><code>PerformanceTiming.domainLookupEnd</code></strong>
-  read-only property returns an <code>unsigned long long</code> representing the moment,
-  in milliseconds since the UNIX epoch, where the domain lookup is finished. If a
-  persistent connection is used, or the information is stored in a cache or a local
-  resource, the value will be the same as {{domxref("PerformanceTiming.fetchStart")}}.</p>
+The legacy
+**`PerformanceTiming.domainLookupEnd`**
+read-only property returns an `unsigned long long` representing the moment,
+in milliseconds since the UNIX epoch, where the domain lookup is finished. If a
+persistent connection is used, or the information is stored in a cache or a local
+resource, the value will be the same as {{domxref("PerformanceTiming.fetchStart")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>time</em> = <em>performanceTiming</em>.domainLookupEnd;</pre>
+```js
+time = performanceTiming.domainLookupEnd;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("PerformanceTiming")}} interface it belongs to.

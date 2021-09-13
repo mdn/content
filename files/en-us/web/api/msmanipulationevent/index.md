@@ -11,52 +11,33 @@ tags:
   - Non-standard
   - Reference
 ---
-<div>{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}</div>
+{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
-<p><code><strong>MSManipulationEvent</strong></code> provides contextual information when contact is made to the screen and an element is manipulated.</p>
+**`MSManipulationEvent`** provides contextual information when contact is made to the screen and an element is manipulated.
 
-<p>This proprietary method is specific to Internet Explorer.</p>
+This proprietary method is specific to Internet Explorer.
 
-<h3 id="Events">Events</h3>
+### Events
 
-<p>{{Event("MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.</p>
+{{Event("MSManipulationStateChanged")}}: Event fires when the state of an element being manipulated has changed.
 
-<h3 id="Methods">Methods</h3>
+### Methods
 
-<p>{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.</p>
+{{DOMxRef("MSManipulationEvent.initMSManipulationEvent()")}}: Used to create a manipulation event that can be called from JavaScript.
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>currentState</code>{{ReadOnlyInline}}</td>
-   <td>Returns the current state of a manipulation event.</td>
-  </tr>
-  <tr>
-   <td><code>inertiaDestinationX</code>{{ReadOnlyInline}}</td>
-   <td>Represents the predicted horizontal scroll offset after the inertia phase completes.</td>
-  </tr>
-  <tr>
-   <td><code>inertiaDestinationY</code>{{ReadOnlyInline}}</td>
-   <td>Represents the predicted vertical scroll offset after the inertia phase completes.</td>
-  </tr>
-  <tr>
-   <td><code>lastState</code>{{ReadOnlyInline}}</td>
-   <td>Returns the last state after a manipulation change event.</td>
-  </tr>
- </tbody>
-</table>
+| Property                                      | Description                                                                          |
+| --------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `currentState`{{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
+| `inertiaDestinationX`{{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
+| `inertiaDestinationY`{{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |
+| `lastState`{{ReadOnlyInline}}           | Returns the last state after a manipulation change event.                            |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">interface MSManipulationEvent extends UIEvent {
+```js
+interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;
     readonly inertiaDestinationY: number;
@@ -71,12 +52,10 @@ tags:
     readonly MS_MANIPULATION_STATE_SELECTING: number;
     readonly MS_MANIPULATION_STATE_STOPPED: number;
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("TouchEvent")}}</li>
- <li>{{Event("MSManipulationStateChanged")}}</li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- {{DOMxRef("TouchEvent")}}
+- {{Event("MSManipulationStateChanged")}}
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

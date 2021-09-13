@@ -9,53 +9,51 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>reportValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface checks if the element meets any <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> rules applied to it.</p>
+The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
 
-<p>If <code>reportValidity</code> returns <code>false</code> then a cancelable <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid event</a> is fired on the element.</p>
+If `reportValidity` returns `false` then a cancelable [invalid event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) is fired on the element.
 
-<p>This method behaves in a similar way to {{domxref("ElementInternals.checkValidity()")}}, however it additionally sends the value of {{domxref("ElementInternals.validationMessage")}} to the user agent for display.</p>
+This method behaves in a similar way to {{domxref("ElementInternals.checkValidity()")}}, however it additionally sends the value of {{domxref("ElementInternals.validationMessage")}} to the user agent for display.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ElementInternals.reportValidity();</pre>
+```js
+ElementInternals.reportValidity();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A boolean value, <code>true</code> if the element meets all validation constraints.</p>
+A boolean value, `true` if the element meets all validation constraints.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
-</dl>
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
+In the following example {{domxref("ElementInternals.setValidity()")}} is used to indicate that the element does not meet validation rules. Calling `reportValidity()` returns `false`, and the value "my message" is sent to the user agent for display.
 
-<p>In the following example {{domxref("ElementInternals.setValidity()")}} is used to indicate that the element does not meet validation rules. Calling <code>reportValidity()</code> returns <code>false</code>, and the value "my message" is sent to the user agent for display.</p>
+After calling `setValidity` again, this time indicating that all rules are marked false, `reportValidity()` returns `true`.
 
-<p>After calling <code>setValidity</code> again, this time indicating that all rules are marked false, <code>reportValidity()</code> returns <code>true</code>.</p>
-
-<pre class="brush: js">let element = document.getElementById("join-checkbox");
+```js
+let element = document.getElementById("join-checkbox");
 element.internals_.setValidity({'valueMissing':true},"my message");
 console.log(element.internals_.reportValidity()); // false
 element.internals_.setValidity({});
-console.log(element.internals_.reportValidity()); // true</pre>
+console.log(element.internals_.reportValidity()); // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

@@ -10,31 +10,29 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>This property specifies a callback function to be run repeatedly while the operation represented by a {{ domxref("FileRequest") }} object is in progress.</p>
+This property specifies a callback function to be run repeatedly while the operation represented by a {{ domxref("FileRequest") }} object is in progress.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>instanceOfFileRequest</em>.onprogress = <em>function</em>;
-</pre>
+    instanceOfFileRequest.onprogress = function;
 
-<p>Where <code><em>instanceOfFileRequest</em></code> is a {{ domxref("FileRequest") }} object and <code><em>function</em></code> is the JavaScript function to execute.</p>
+Where `instanceOfFileRequest` is a {{ domxref("FileRequest") }} object and `function` is the JavaScript function to execute.
 
-<p>Each time the function callback is called, it gets an object as its first parameter. Those objects contain two properties:</p>
+Each time the function callback is called, it gets an object as its first parameter. Those objects contain two properties:
 
-<dl>
- <dt><code>loaded</code></dt>
- <dd>A number representing the current amount of bytes processed by the operation.</dd>
- <dt><code>total</code></dt>
- <dd>A number representing the total amount of bytes that will be processed by the operation.</dd>
-</dl>
+- `loaded`
+  - : A number representing the current amount of bytes processed by the operation.
+- `total`
+  - : A number representing the total amount of bytes that will be processed by the operation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Assuming 'request' which is a FileRequest object
+```js
+// Assuming 'request' which is a FileRequest object
 
 request.onprogress = function (status) {
   var progress = document.querySelector('progress');
@@ -42,15 +40,13 @@ request.onprogress = function (status) {
   progress.value = status.loaded;
   progress.max   = status.total;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification.</p>
+Not part of any current specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("DOMRequest") }}</li>
- <li>{{ domxref("LockedFile") }}</li>
-</ul>
+- {{ domxref("DOMRequest") }}
+- {{ domxref("LockedFile") }}

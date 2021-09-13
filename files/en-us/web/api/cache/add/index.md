@@ -12,78 +12,74 @@ tags:
   - ServiceWorker
 browser-compat: api.Cache.add
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>add()</code></strong> method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.</p>
+The **`add()`** method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
 
-<p>The <code>add()</code> method is functionally equivalent to the following:</p>
+The `add()` method is functionally equivalent to the following:
 
-<pre class="brush: js">fetch(url).then(function(response) {
+```js
+fetch(url).then(function(response) {
   if (!response.ok) {
     throw new TypeError('bad response status');
   }
   return cache.put(url, response);
-})</pre>
+})
+```
 
-<p>For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.</p>
+For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.
 
-<div class="note">
-<p><strong>Note:</strong> <code>add()</code> will overwrite any key/value pair previously stored in the cache that matches the request.</p>
-</div>
+> **Note:** `add()` will overwrite any key/value pair previously stored in the cache that matches the request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.add(<em>request</em>).then(function() {
+```js
+cache.add(request).then(function() {
   // request has been added to the cache
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>request</dt>
- <dd>The request you want to add to the cache. This can be a  {{domxref("Request")}} object or a URL.</dd>
-</dl>
+- request
+  - : The request you want to add to the cache. This can be a  {{domxref("Request")}} object or a URL.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>
-    <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
-    <p>The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a <em>cross-origin no-cors</em> request (in which case the reported status is always 0.)</p>
-  </dd>
-</dl>
+- `TypeError`
 
-<h2 id="Examples">Examples</h2>
+  - : The URL scheme is not `http` or `https`.
 
-<p>This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.</p>
+    The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a _cross-origin no-cors_ request (in which case the reported status is always 0.)
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+## Examples
+
+This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.
+
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.add('/sw-test/index.html');
     })
   );
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

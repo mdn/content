@@ -2,65 +2,63 @@
 title: MediaTrackSettings.frameRate
 slug: Web/API/MediaTrackSettings/frameRate
 tags:
-- API
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- Video
-- WebRTC
-- frameRate
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - Video
+  - WebRTC
+  - frameRate
 browser-compat: api.MediaTrackSettings.frameRate
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>frameRate</strong></code> property is a double-precision floating-point
-  number indicating the frame rate, in frames per second, of the
-  {{domxref("MediaStreamTrack")}} as currently configured. This lets you determine what
-  value was selected to comply with your specified constraints for this property's value
-  as described in the {{domxref("MediaTrackConstraints.frameRate")}} property you provided
-  when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`frameRate`** property is a double-precision floating-point
+number indicating the frame rate, in frames per second, of the
+{{domxref("MediaStreamTrack")}} as currently configured. This lets you determine what
+value was selected to comply with your specified constraints for this property's value
+as described in the {{domxref("MediaTrackConstraints.frameRate")}} property you provided
+when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.frameRate")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>frameRate</em> = <em>MediaTrackSettings</em>.frameRate;
-</pre>
+```js
+var frameRate = MediaTrackSettings.frameRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point number indicating the current configuration of the
-  track's frame rate, in frames per second.</p>
+A double-precision floating-point number indicating the current configuration of the
+track's frame rate, in frames per second.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.frameRate")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.frameRate")}}
+- {{domxref("MediaTrackSettings")}}

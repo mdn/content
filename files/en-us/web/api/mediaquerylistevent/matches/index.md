@@ -11,26 +11,28 @@ tags:
   - matches
 browser-compat: api.MediaQueryListEvent.matches
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>matches</code></strong> read-only property of the
-  {{DOMxRef("MediaQueryListEvent")}} interface is a boolean value that is
-  <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list,
-  or <code>false</code> if not.</p>
+The **`matches`** read-only property of the
+{{DOMxRef("MediaQueryListEvent")}} interface is a boolean value that is
+`true` if the {{DOMxRef("document")}} currently matches the media query list,
+or `false` if not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>matches</em> = <em>MediaQueryListEvent.matches;</em></pre>
+```js
+var matches = MediaQueryListEvent.matches;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value; returns <code>true</code> if the {{DOMxRef("document")}}
-  currently matches the media query list, <code>false</code> if not.</p>
+A boolean value; returns `true` if the {{DOMxRef("document")}}
+currently matches the media query list, `false` if not.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
+```js
+var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -45,23 +47,21 @@ function screenTest(e) {
 }
 
 mql.addListener(screenTest);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

@@ -9,50 +9,50 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.appendItem
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>appendItem()</code></strong> method of the {{domxref("SVGPointList")}} interface adds a {{domxref("SVGPoint","point")}} to the end of the list.</p>
+The **`appendItem()`** method of the {{domxref("SVGPointList")}} interface adds a {{domxref("SVGPoint","point")}} to the end of the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">SVGPointList.appendItem(obj);</pre>
+```js
+SVGPointList.appendItem(obj);
+```
 
-<dl>
-  <dt><code>obj</code></dt>
-  <dd>An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.</dd>
-</dl>
+- `obj`
+  - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be appended.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>The {{domxref("SVGPoint")}} object that was appended.</p>
+The {{domxref("SVGPoint")}} object that was appended.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
-  <dd>Thrown if the list is read-only.</dd>
-</dl>
+- {{domxref("DOMException")}} `NoModicationAllowedError`
+  - : Thrown if the list is read-only.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and appended to the list.</p>
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and appended to the list.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-</svg></pre>
+```html
+<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+```
 
-<pre class="brush: js">let example = document.getElementById("example");
+```js
+let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.appendItem(svgpoint));</pre>
+console.log(example.points.appendItem(svgpoint));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

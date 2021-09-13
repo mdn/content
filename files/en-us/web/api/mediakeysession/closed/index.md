@@ -2,36 +2,37 @@
 title: MediaKeySession.closed
 slug: Web/API/MediaKeySession/closed
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- MediaKeySession
-- NeedsExample
-- Property
-- Reference
-- closed
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - MediaKeySession
+  - NeedsExample
+  - Property
+  - Reference
+  - closed
 browser-compat: api.MediaKeySession.closed
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}</div>
+{{APIRef("EncryptedMediaExtensions")}}
 
-<p>The <code>MediaKeySession.closed</code> read-only property returns a
-  {{jsxref('Promise')}} signaling when a {{domxref('MediaKeySession')}} closes. This
-  promise can only be fulfilled and is never rejected. Closing a session means that
-  licenses and keys associated with it are no longer valid for decrypting media data.</p>
+The `MediaKeySession.closed` read-only property returns a
+{{jsxref('Promise')}} signaling when a {{domxref('MediaKeySession')}} closes. This
+promise can only be fulfilled and is never rejected. Closing a session means that
+licenses and keys associated with it are no longer valid for decrypting media data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = <var>mediaKeySessionObj</var>.closed;</pre>
+```js
+var promise = mediaKeySessionObj.closed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

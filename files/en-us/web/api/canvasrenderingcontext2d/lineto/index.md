@@ -2,84 +2,88 @@
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The {{domxref("CanvasRenderingContext2D")}} method
-  <code><strong>lineTo()</strong></code>, part of the Canvas 2D API, adds a straight line
-  to the current sub-path by connecting the sub-path's last point to the specified
-  <code>(x, y)</code> coordinates.</p>
+The {{domxref("CanvasRenderingContext2D")}} method
+**`lineTo()`**, part of the Canvas 2D API, adds a straight line
+to the current sub-path by connecting the sub-path's last point to the specified
+`(x, y)` coordinates.
 
-<p>Like other methods that modify the current path, this method does not directly render
-  anything. To draw the path onto a canvas, you can use the
-  {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
-  {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.</p>
+Like other methods that modify the current path, this method does not directly render
+anything. To draw the path onto a canvas, you can use the
+{{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
+{{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.lineTo(<em>x</em>, <em>y</em>);
-</pre>
+```js
+ctx.lineTo(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the line's end point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the line's end point.</dd>
-</dl>
+- `x`
+  - : The x-axis coordinate of the line's end point.
+- `y`
+  - : The y-axis coordinate of the line's end point.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_a_straight_line">Drawing a straight line</h3>
+### Drawing a straight line
 
-<p>This example draws a straight line using the <code>lineTo()</code> method.</p>
+This example draws a straight line using the `lineTo()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The line begins at (30, 50) and ends at (150, 100).</p>
+The line begins at (30, 50) and ends at (150, 100).
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();       // Start a new path
 ctx.moveTo(30, 50);    // Move the pen to (30, 50)
 ctx.lineTo(150, 100);  // Draw a line to (150, 100)
-ctx.stroke();          // Render the path</pre>
+ctx.stroke();          // Render the path
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_a_straight_line', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_a_straight_line', 700, 180) }}
 
-<h3 id="Drawing_connected_lines">Drawing connected lines</h3>
+### Drawing connected lines
 
-<p>Each call of <code>lineTo()</code> (and similar methods) automatically adds to the
-  current sub-path, which means that all the lines will all be stroked or filled together.
-  This example draws a letter 'M' with a single contiguous line.</p>
+Each call of `lineTo()` (and similar methods) automatically adds to the
+current sub-path, which means that all the lines will all be stroked or filled together.
+This example draws a letter 'M' with a single contiguous line.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.moveTo(90, 130);
@@ -88,24 +92,23 @@ ctx.lineTo(150, 80);
 ctx.lineTo(205, 25);
 ctx.lineTo(210, 130);
 ctx.lineWidth = 15;
-ctx.stroke();</pre>
+ctx.stroke();
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_connected_lines', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_connected_lines', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.moveTo()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.moveTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

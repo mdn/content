@@ -2,96 +2,86 @@
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 tags:
-- API
-- Element
-- Method
-- Reference
-- attachShadow
-- shadow dom
+  - API
+  - Element
+  - Method
+  - Reference
+  - attachShadow
+  - shadow dom
 browser-compat: api.Element.attachShadow
 ---
-<div>{{APIRef('Shadow DOM')}}</div>
+{{APIRef('Shadow DOM')}}
 
-<p>The <strong><code>Element.attachShadow()</code></strong> method attaches a shadow DOM
-  tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
-</p>
+The **`Element.attachShadow()`** method attaches a shadow DOM
+tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
 
-<h2 id="Elements_you_can_attach_a_shadow_to">Elements you can attach a shadow to</h2>
+## Elements you can attach a shadow to
 
-<p>Note that you can't attach a shadow root to every type of element. There are some that
-  can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}), and
-  more besides. The following is a list of elements you <strong>can</strong> attach a
-  shadow root to:</p>
+Note that you can't attach a shadow root to every type of element. There are some that
+can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}), and
+more besides. The following is a list of elements you **can** attach a
+shadow root to:
 
-<ul>
-  <li>Any autonomous custom element with a <a
-      href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid
-      name</a></li>
-  <li>{{htmlelement("article")}}</li>
-  <li>{{htmlelement("aside")}}</li>
-  <li>{{htmlelement("blockquote")}}</li>
-  <li>{{htmlelement("body")}}</li>
-  <li>{{htmlelement("div")}}</li>
-  <li>{{htmlelement("footer")}}</li>
-  <li>{{htmlelement("h1")}}</li>
-  <li>{{htmlelement("h2")}}</li>
-  <li>{{htmlelement("h3")}}</li>
-  <li>{{htmlelement("h4")}}</li>
-  <li>{{htmlelement("h5")}}</li>
-  <li>{{htmlelement("h6")}}</li>
-  <li>{{htmlelement("header")}}</li>
-  <li>{{htmlelement("main")}}</li>
-  <li>{{htmlelement("nav")}}</li>
-  <li>{{htmlelement("p")}}</li>
-  <li>{{htmlelement("section")}}</li>
-  <li>{{htmlelement("span")}}</li>
-</ul>
+- Any autonomous custom element with a [valid
+  name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+- {{htmlelement("article")}}
+- {{htmlelement("aside")}}
+- {{htmlelement("blockquote")}}
+- {{htmlelement("body")}}
+- {{htmlelement("div")}}
+- {{htmlelement("footer")}}
+- {{htmlelement("h1")}}
+- {{htmlelement("h2")}}
+- {{htmlelement("h3")}}
+- {{htmlelement("h4")}}
+- {{htmlelement("h5")}}
+- {{htmlelement("h6")}}
+- {{htmlelement("header")}}
+- {{htmlelement("main")}}
+- {{htmlelement("nav")}}
+- {{htmlelement("p")}}
+- {{htmlelement("section")}}
+- {{htmlelement("span")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>shadowroot</var> = <var>element</var>.attachShadow(<var>init</var>);
-</pre>
+```js
+var shadowroot = element.attachShadow(init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>init</code></dt>
-  <dd>A <code>ShadowRootInit</code> dictionary, which can contain the following fields:
-    <dl>
-      <dt><code>mode</code></dt>
-      <dd>
-        <p>A string specifying the <em>encapsulation mode</em> for the shadow DOM tree.
-          This can be one of:</p>
+- `init`
 
-        <ul>
-          <li><code>open</code>: Elements of the shadow root are accessible from
-            JavaScript outside the root, for example using
-            {{domxref("Element.shadowRoot")}}:<br>
+  - : A `ShadowRootInit` dictionary, which can contain the following fields:
 
-            <pre>element.shadowRoot; // Returns a ShadowRoot obj</pre>
-          </li>
-          <li><code>closed</code>: Denies access to the node(s) of a closed shadow root
-            from JavaScript outside it:<br>
+    - `mode`
 
-            <pre>element.shadowRoot; // Returns null
-</pre>
-          </li>
-        </ul>
-      </dd>
-      <dt><code>delegatesFocus</code></dt>
-      <dd>A boolean that, when set to <code>true</code>, specifies behavior that mitigates
+      - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
+        This can be one of:
+
+        - `open`: Elements of the shadow root are accessible from
+          JavaScript outside the root, for example using
+          {{domxref("Element.shadowRoot")}}:
+
+              element.shadowRoot; // Returns a ShadowRoot obj
+
+        - `closed`: Denies access to the node(s) of a closed shadow root
+          from JavaScript outside it:
+
+              element.shadowRoot; // Returns null
+
+    - `delegatesFocus`
+      - : A boolean that, when set to `true`, specifies behavior that mitigates
         custom element issues around focusability. When a non-focusable part of the shadow
         DOM is clicked, the first focusable part is given focus, and the shadow host is
-        given any available <code>:focus</code> styling.</dd>
-    </dl>
-  </dd>
-</dl>
+        given any available `:focus` styling.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a {{domxref("ShadowRoot")}} object.</p>
+Returns a {{domxref("ShadowRoot")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -107,24 +97,25 @@ browser-compat: api.Element.attachShadow
     </tr>
     <tr>
       <td><code>NotSupportedError</code></td>
-      <td>You are trying to attach a shadow root to an element outside the HTML namespace,
-        the element cannot have a shadow attached to it,
-        or the static property <code>disabledFeatures</code> has been given a value of <code>"shadow"</code> in the element definition.</td>
+      <td>
+        You are trying to attach a shadow root to an element outside the HTML
+        namespace, the element cannot have a shadow attached to it, or the
+        static property <code>disabledFeatures</code> has been given a value of
+        <code>"shadow"</code> in the element definition.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example is taken from our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>
-  demo (<a
-    href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it
-    live also</a>). You can see that we use <code>attachShadow()</code> in the middle of
-  the code to create a shadow root, which we then attach our custom element's contents to.
-</p>
+The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
+demo ([see it
+live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). You can see that we use `attachShadow()` in the middle of
+the code to create a shadow root, which we then attach our custom element's contents to.
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -159,12 +150,13 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

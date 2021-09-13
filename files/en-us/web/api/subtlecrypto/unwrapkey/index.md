@@ -10,32 +10,31 @@ tags:
   - unwrapKey
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>unwrapKey()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface "unwraps" a key. This means that it takes as its input a key that has been
-  exported and then encrypted (also called "wrapped"). It decrypts the key and then
-  imports it, returning a {{domxref("CryptoKey")}} object that can be used in the <a
-    href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>.</p>
+The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}}
+interface "unwraps" a key. This means that it takes as its input a key that has been
+exported and then encrypted (also called "wrapped"). It decrypts the key and then
+imports it, returning a {{domxref("CryptoKey")}} object that can be used in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
 
-<p>As with
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>,
-  you specify the key's <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">import format</a>
-  and other attributes of the key to import details such as whether it is extractable, and
-  which operations it can be used for.</p>
+As with
+[`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey),
+you specify the key's [import format](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats)
+and other attributes of the key to import details such as whether it is extractable, and
+which operations it can be used for.
 
-<p>But because <code>unwrapKey()</code> also decrypts the key to be imported, you also
-  need to pass in the key that must be used to decrypt it. This is sometimes called the
-  "unwrapping key".</p>
+But because `unwrapKey()` also decrypts the key to be imported, you also
+need to pass in the key that must be used to decrypt it. This is sometimes called the
+"unwrapping key".
 
-<p>The inverse of <code>unwrapKey()</code> is {{domxref("SubtleCrypto.wrapKey()")}}: while
-  <code>unwrapKey</code> is composed of decrypt + import, <code>wrapKey</code> is composed
-  of encrypt + export.</p>
+The inverse of `unwrapKey()` is {{domxref("SubtleCrypto.wrapKey()")}}: while
+`unwrapKey` is composed of decrypt + import, `wrapKey` is composed
+of encrypt + export.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.unwrapKey(
+```js
+const result = crypto.subtle.unwrapKey(
     format,
     wrappedKey,
     unwrappingKey,
@@ -44,189 +43,127 @@ browser-compat: api.SubtleCrypto.unwrapKey
     extractable,
     keyUsages
 );
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>format</code></em> is a string describing the data format of the key to
-    unwrap. It can be one of the following:
+- _`format`_ is a string describing the data format of the key to
+  unwrap. It can be one of the following:
 
-    <ul>
-      <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
-      <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
-      </li>
-      <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
-        format.</li>
-      <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
-        format.</li>
-    </ul>
-  </li>
-  <li><code><em>wrappedKey</em></code> is an {{jsxref("ArrayBuffer")}} containing the
-    wrapped key in the given format.</li>
-  <li><code><em>unwrappingKey</em></code> is the {{domxref("CryptoKey")}} to use to
-    decrypt the wrapped key. The key must have the <code>unwrapKey</code> usage set.</li>
-  <li><code><em>unwrapAlgo</em></code> is an object specifying the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">algorithm</a>
-    to be used to encrypt the exported key, and any extra parameters as required:
-    <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>,
-        pass an <a href="/en-US/docs/Web/API/RsaOaepParams"
-          title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm."><code>RsaOaepParams</code></a>
-        object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>,
-        pass an <a href="/en-US/docs/Web/API/AesCtrParams"
-          title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm."><code>AesCtrParams</code></a>
-        object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>,
-        pass an <a href="/en-US/docs/Web/API/AesCbcParams"
-          title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm."><code>AesCbcParams</code></a>
-        object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>,
-        pass an <a href="/en-US/docs/Web/API/AesGcmParams"
-          title="This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm."><code>AesGcmParams</code></a>
-        object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw">AES-KW</a>,
-        pass the string <code>"AES-KW"</code> or an object of the form
-        <code>{ "name": "AES-KW }</code>.</li>
-    </ul>
-  </li>
-  <li><code><em>unwrappedKeyAlgo</em></code> is a dictionary object defining the type of
-    key to unwrap and providing extra algorithm-specific parameters as required.
-    <ul>
-      <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: Pass an
-        <code><a href="/en-US/docs/Web/API/RsaHashedImportParams">RsaHashedImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: Pass
-        an <code><a href="/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: Pass an
-        <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: Pass the
-        string identifying the algorithm or an object of the form
-        <code>{ "name": ALGORITHM }</code>, where <code>ALGORITHM </code>is the name of
-        the algorithm.</li>
-    </ul>
-  </li>
-  <li><code><em>extractable</em></code> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
-      title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a>
-    indicating whether it will be possible to export  the key using <a
-      href="/en-US/docs/Web/API/SubtleCrypto/exportKey"
-      title="The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."><code>SubtleCrypto.exportKey()</code></a>
-    or <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey"
-      title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>SubtleCrypto.wrapKey()</code></a>.
-  </li>
-  <li><code><em>keyUsages</em></code> is an <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
-      title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects."><code>Array</code></a>
-    indicating what can be done with the key. Possible values of the array are:
-    <ul>
-      <li><code>encrypt</code>: The key may be used to <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt"
-          title="The SubtleCrypto.encrypt() method encrypts data."><code>encrypt</code></a>
-        messages.</li>
-      <li><code>decrypt</code>: The key may be used to <a
-          href="/en-US/docs/Web/API/SubtleCrypto/decrypt"
-          title='The SubtleCrypto.decrypt() method decrypts some encrypted data. It takes as arguments a key to decrypt with, some optional extra parameters, and the data to decrypt (also known as ciphertext). It returns a Promise which will be resolved with the decrypted data (also known as "plaintext").'><code>decrypt</code></a>
-        messages.</li>
-      <li><code>sign</code>: The key may be used to <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign"
-          title="The SubtleCrypto.sign() method generates a digital signature."><code>sign</code></a>
-        messages.</li>
-      <li><code>verify</code>: The key may be used to <a
-          href="/en-US/docs/Web/API/SubtleCrypto/verify"
-          title="The SubtleCrypto.verify() method verifies a digital signature."><code>verify</code></a>
-        signatures.</li>
-      <li><code>deriveKey</code>: The key may be used in <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey"
-          title="The SubtleCrypto.deriveKey() method can be used to derive a secret key from a master key."><code>deriving a new key</code></a>.
-      </li>
-      <li><code>deriveBits</code>: The key may be used in <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveBits"
-          title="The SubtleCrypto.deriveBits() method can be used to derive a collection of bits from a base key."><code>deriving bits</code></a>.
-      </li>
-      <li><code>wrapKey</code>: The key may be used to <a
-          href="/en-US/docs/Web/API/SubtleCrypto/wrapKey"
-          title='The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.'><code>wrap a key</code></a>.
-      </li>
-      <li><code>unwrapKey</code>: The key may be used to unwrap a key.
-      </li>
-    </ul>
-  </li>
-</ul>
+  - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+  - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+  - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo)
+    format.
+  - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key)
+    format.
 
-<h3 id="Return_value">Return value</h3>
+- `wrappedKey` is an {{jsxref("ArrayBuffer")}} containing the
+  wrapped key in the given format.
+- `unwrappingKey` is the {{domxref("CryptoKey")}} to use to
+  decrypt the wrapped key. The key must have the `unwrapKey` usage set.
+- `unwrapAlgo` is an object specifying the [algorithm](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
+  to be used to encrypt the exported key, and any extra parameters as required:
 
-<ul>
-  <li><code><em>result</em></code> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
-    that fulfills with the unwrapped key as a <a href="/en-US/docs/Web/API/CryptoKey"
-      title="The CryptoKey interface represents a cryptographic key derived from a specific key algorithm."><code>CryptoKey</code></a>
-    object.</li>
-</ul>
+  - To use [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep),
+    pass an [`RsaOaepParams`](/en-US/docs/Web/API/RsaOaepParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the RSA_OAEP algorithm.")
+    object.
+  - To use [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr),
+    pass an [`AesCtrParams`](/en-US/docs/Web/API/AesCtrParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-CTR algorithm.")
+    object.
+  - To use [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
+    pass an [`AesCbcParams`](/en-US/docs/Web/API/AesCbcParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CBC algorithm.")
+    object.
+  - To use [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm),
+    pass an [`AesGcmParams`](/en-US/docs/Web/API/AesGcmParams "This dictionary represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(),  when using the AES-GCM algorithm.")
+    object.
+  - To use [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw),
+    pass the string `"AES-KW"` or an object of the form
+    `{ "name": "AES-KW }`.
 
-<h3 id="Exceptions">Exceptions</h3>
+- `unwrappedKeyAlgo` is a dictionary object defining the type of
+  key to unwrap and providing extra algorithm-specific parameters as required.
 
-<p>The promise is rejected when one of the following exceptions is encountered:</p>
+  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
+    [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams)
+    object.
+  - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh): Pass
+    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
+    object.
+  - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): Pass an
+    [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams)
+    object.
+  - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): Pass the
+    string identifying the algorithm or an object of the form
+    `{ "name": ALGORITHM }`, where `ALGORITHM `is the name of
+    the algorithm.
 
-<dl>
-  <dt>{{exception("InvalidAccessError")}}</dt>
-  <dd>Raised when the unwrapping key is not a key for the requested unwrap algorithm or if
-    the <code><em>keyUsages</em></code> value of that key doesn't contain
-    <code>unwrap</code>.</dd>
-  <dt>{{exception("NotSupported")}}</dt>
-  <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
-    encryption or wrapping.</dd>
-  <dt>{{exception("SyntaxError")}}</dt>
-  <dd>Raised when <em><code>keyUsages</code></em> is empty but the unwrapped key is of
-    type <code>secret</code> or <code>private</code>.</dd>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised when trying to use an invalid format.</dd>
-</dl>
+- `extractable` is a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")
+  indicating whether it will be possible to export  the key using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey "The SubtleCrypto.exportKey() method exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format.")
+  or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.').
+- `keyUsages` is an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.")
+  indicating what can be done with the key. Possible values of the array are:
 
-<h2 id="Supported_algorithms">Supported algorithms</h2>
+  - `encrypt`: The key may be used to [`encrypt`](/en-US/docs/Web/API/SubtleCrypto/encrypt "The SubtleCrypto.encrypt() method encrypts data.")
+    messages.
+  - `decrypt`: The key may be used to [`decrypt`](/en-US/docs/Web/API/SubtleCrypto/decrypt 'The SubtleCrypto.decrypt() method decrypts some encrypted data. It takes as arguments a key to decrypt with, some optional extra parameters, and the data to decrypt (also known as ciphertext). It returns a Promise which will be resolved with the decrypted data (also known as "plaintext").')
+    messages.
+  - `sign`: The key may be used to [`sign`](/en-US/docs/Web/API/SubtleCrypto/sign "The SubtleCrypto.sign() method generates a digital signature.")
+    messages.
+  - `verify`: The key may be used to [`verify`](/en-US/docs/Web/API/SubtleCrypto/verify "The SubtleCrypto.verify() method verifies a digital signature.")
+    signatures.
+  - `deriveKey`: The key may be used in [`deriving a new key`](/en-US/docs/Web/API/SubtleCrypto/deriveKey "The SubtleCrypto.deriveKey() method can be used to derive a secret key from a master key.").
+  - `deriveBits`: The key may be used in [`deriving bits`](/en-US/docs/Web/API/SubtleCrypto/deriveBits "The SubtleCrypto.deriveBits() method can be used to derive a collection of bits from a base key.").
+  - `wrapKey`: The key may be used to [`wrap a key`](/en-US/docs/Web/API/SubtleCrypto/wrapKey 'The SubtleCrypto.wrapKey() method "wraps" a key. This means that it exports the key in an external, portable format, then encrypts the exported key. Wrapping a key helps protect it in untrusted environments, such as an otherwise unprotected data store or in transmission over an unprotected network.').
+  - `unwrapKey`: The key may be used to unwrap a key.
 
-<p>The <code>unwrapKey()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#supported_algorithms">wrapKey()</a></code>
-  method.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+  that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey "The CryptoKey interface represents a cryptographic key derived from a specific key algorithm.")
+  object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html">try the
-      working examples</a> on Github.</p>
-</div>
+### Exceptions
 
-<h3 id="Unwrapping_a_raw_key">Unwrapping a "raw" key</h3>
+The promise is rejected when one of the following exceptions is encountered:
 
-<p>In this example we unwrap an AES-GCM symmetric key. The key was exported in "raw"
-  format and encrypted using the AES-KW algorithm, with a key derived from a password.</p>
+- {{exception("InvalidAccessError")}}
+  - : Raised when the unwrapping key is not a key for the requested unwrap algorithm or if
+    the `keyUsages` value of that key doesn't contain
+    `unwrap`.
+- {{exception("NotSupported")}}
+  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
+    encryption or wrapping.
+- {{exception("SyntaxError")}}
+  - : Raised when _`keyUsages`_ is empty but the unwrapped key is of
+    type `secret` or `private`.
+- {{jsxref("TypeError")}}
+  - : Raised when trying to use an invalid format.
 
-<p>To unwrap, we ask the user for the password and use PBKDF2 and some salt to derive the
-  AES-KW unwrapping key. The salt needs to be the same as the salt that was used to derive
-  the original AES-KW key wrapping key.</p>
+## Supported algorithms
 
-<p>Once we have the unwrapping key we pass it into <code>unwrapKey()</code> with the
-  wrapped key and other parameters. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/raw.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+The `unwrapKey()` method supports the same algorithms as the
+[`wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey#supported_algorithms)
+method.
 
-<pre class="brush: js">/*
+## Examples
+
+> **Note:** You can [try the
+> working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on Github.
+
+### Unwrapping a "raw" key
+
+In this example we unwrap an AES-GCM symmetric key. The key was exported in "raw"
+format and encrypted using the AES-KW algorithm, with a key derived from a password.
+
+To unwrap, we ask the user for the password and use PBKDF2 and some salt to derive the
+AES-KW unwrapping key. The salt needs to be the same as the salt that was used to derive
+the original AES-KW key wrapping key.
+
+Once we have the unwrapping key we pass it into `unwrapKey()` with the
+wrapped key and other parameters. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/raw.js)
+
+```js
+/*
 Salt that is to be used in derivation of the key-wrapping key,
 alongside the password the user supplies.
 This must match the salt value that was originally used to derive
@@ -312,26 +249,26 @@ async function unwrapSecretKey(wrappedKey) {
     true,                  // extractability of key to unwrap
     ["encrypt", "decrypt"] // key usages for key to unwrap
   );
-}</pre>
+}
+```
 
-<h3 id="Unwrapping_a_pkcs8_key">Unwrapping a "pkcs8" key</h3>
+### Unwrapping a "pkcs8" key
 
-<p>In this example we unwrap an RSA-PSS private signing key. The key was exported in
-  "pkcs8" format and encrypted using the AES-GCM algorithm, with a key derived from a
-  password.</p>
+In this example we unwrap an RSA-PSS private signing key. The key was exported in
+"pkcs8" format and encrypted using the AES-GCM algorithm, with a key derived from a
+password.
 
-<p>To unwrap, we ask the user for the password and use PBKDF2 and some salt to derive the
-  AES-GCM unwrapping key. The salt needs to be the same as the salt that was used to
-  derive the original AES-GCM key wrapping key.</p>
+To unwrap, we ask the user for the password and use PBKDF2 and some salt to derive the
+AES-GCM unwrapping key. The salt needs to be the same as the salt that was used to
+derive the original AES-GCM key wrapping key.
 
-<p>Once we have the unwrapping key we pass it into <code>unwrapKey()</code> with the
-  wrapped key and other parameters. Note that when using AES-GCM we have to pass the iv
-  value into <code>unwrapKey()</code>, and this must be the same as the iv that was used
-  in the corresponding <code>wrapKey()</code> operation. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/pkcs8.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+Once we have the unwrapping key we pass it into `unwrapKey()` with the
+wrapped key and other parameters. Note that when using AES-GCM we have to pass the iv
+value into `unwrapKey()`, and this must be the same as the iv that was used
+in the corresponding `wrapKey()` operation. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/pkcs8.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Salt that is to be used in derivation of the key-wrapping key,
 alongside the password the user supplies.
 This must match the salt value that was originally used to derive
@@ -498,29 +435,20 @@ async function unwrapPrivateKey(wrappedKey) {
     ["sign"]               // key usages for key to unwrap
   );
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>
-  </li>
-  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc5208"
-      rel="noopener">PKCS #8 format</a>.</li>
-  <li><a class="external external-icon"
-      href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1"
-      rel="noopener">SubjectPublicKeyInfo format</a>.</li>
-  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc7517"
-      rel="noopener">JSON Web Key format</a>.</li>
-  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc3394"
-      rel="noopener">AES-KW specification</a>.</li>
-</ul>
+- [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
+- [PKCS #8 format](https://datatracker.ietf.org/doc/html/rfc5208).
+- [SubjectPublicKeyInfo format](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1).
+- [JSON Web Key format](https://datatracker.ietf.org/doc/html/rfc7517).
+- [AES-KW specification](https://datatracker.ietf.org/doc/html/rfc3394).

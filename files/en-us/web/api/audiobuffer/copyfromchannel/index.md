@@ -2,90 +2,84 @@
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 tags:
-- API
-- Audio
-- AudioBuffer
-- Copying
-- Frames
-- Method
-- Reference
-- Samples
-- Web Audio
-- Web Audio API
-- copy
-- copyFromChannel
-- sound
+  - API
+  - Audio
+  - AudioBuffer
+  - Copying
+  - Frames
+  - Method
+  - Reference
+  - Samples
+  - Web Audio
+  - Web Audio API
+  - copy
+  - copyFromChannel
+  - sound
 browser-compat: api.AudioBuffer.copyFromChannel
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The
-    <strong><code>copyFromChannel()</code></strong> method of the
-    {{domxref("AudioBuffer")}} interface copies the audio sample data from the specified
-    channel of the <code>AudioBuffer</code> to a specified
-    {{jsxref("Float32Array")}}.</p>
+The
+**`copyFromChannel()`** method of the
+{{domxref("AudioBuffer")}} interface copies the audio sample data from the specified
+channel of the `AudioBuffer` to a specified
+{{jsxref("Float32Array")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>myArrayBuffer</var>.copyFromChannel(<var>destination</var>, <var>channelNumber</var>, <var>startInChannel</var>);</pre>
+```js
+myArrayBuffer.copyFromChannel(destination, channelNumber, startInChannel);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>destination</var></code></dt>
-  <dd>A {{jsxref("Float32Array")}} to copy the channel's samples to.</dd>
-  <dt><code><var>channelNumber</var></code></dt>
-  <dd>The channel number of the current <code>AudioBuffer</code> to copy the channel data
-    from.</dd>
-  <dt><code><var>startInChannel</var></code> {{optional_inline}}</dt>
-  <dd>An optional offset into the source channel's buffer from which to begin copying
+- `destination`
+  - : A {{jsxref("Float32Array")}} to copy the channel's samples to.
+- `channelNumber`
+  - : The channel number of the current `AudioBuffer` to copy the channel data
+    from.
+- `startInChannel` {{optional_inline}}
+  - : An optional offset into the source channel's buffer from which to begin copying
     samples. If not specified, a value of 0 (the beginning of the buffer) is assumed by
-    default.</dd>
-</dl>
+    default.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>indexSizeError</code></dt>
-  <dd>One of the input parameters has a value that is outside the accepted range:
-    <ul>
-      <li>The value of <code><var>channelNumber</var></code> specifies a channel number
-        which doesn't exist (that is, it's greater than or equal to the value of
-        {{domxref("AudioBuffer.numberOfChannels", "numberOfChannels")}} on the channel).
-      </li>
-      <li>The value of <code><var>startInChannel</var></code> is outside the current range
-        of samples that already exist in the source buffer; that is, it's greater than its
-        current {{domxref("AudioBuffer.length", "length")}}.</li>
-    </ul>
-  </dd>
-</dl>
+- `indexSizeError`
 
-<h2 id="Example">Example</h2>
+  - : One of the input parameters has a value that is outside the accepted range:
 
-<p>This example creates a new audio buffer, then copies the samples from another channel
-  into it.</p>
+    - The value of `channelNumber` specifies a channel number
+      which doesn't exist (that is, it's greater than or equal to the value of
+      {{domxref("AudioBuffer.numberOfChannels", "numberOfChannels")}} on the channel).
+    - The value of `startInChannel` is outside the current range
+      of samples that already exist in the source buffer; that is, it's greater than its
+      current {{domxref("AudioBuffer.length", "length")}}.
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+## Example
+
+This example creates a new audio buffer, then copies the samples from another channel
+into it.
+
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 var anotherArray = new Float32Array(length);
 myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -10,32 +10,31 @@ tags:
   - content indexing
 browser-compat: api.ContentIndex
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The <strong><code>ContentIndex</code></strong> interface of the {{domxref('Content Index API')}} allows developers to register their offline enabled content with the browser.</p>
+The **`ContentIndex`** interface of the {{domxref('Content Index API')}} allows developers to register their offline enabled content with the browser.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>There are no properties of this interface.</p>
+There are no properties of this interface.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('ContentIndex.add()')}}</dt>
- <dd>Registers an item with the {{domxref('Content Index API','content index')}}.</dd>
- <dt>{{domxref('ContentIndex.delete()')}}</dt>
- <dd>Unregisters an item from the currently indexed content.</dd>
- <dt>{{domxref('ContentIndex.getAll()')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves with an iterable list of content index entries.</dd>
-</dl>
+- {{domxref('ContentIndex.add()')}}
+  - : Registers an item with the {{domxref('Content Index API','content index')}}.
+- {{domxref('ContentIndex.delete()')}}
+  - : Unregisters an item from the currently indexed content.
+- {{domxref('ContentIndex.getAll()')}}
+  - : Returns a {{jsxref('Promise')}} that resolves with an iterable list of content index entries.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Feature_Detection_and_Interface_Access">Feature Detection and Interface Access</h3>
+### Feature Detection and Interface Access
 
-<p>Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the <code>index</code> property, which gives us access to the content index interface.</p>
+Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the `index` property, which gives us access to the content index interface.
 
-<pre class="brush: js">// reference registration
+```js
+// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -45,13 +44,14 @@ if ('index' in registration) {
   const contentIndex = registration.index;
 
 }
-</pre>
+```
 
-<h3 id="Adding_to_the_Content_Index">Adding to the Content Index</h3>
+### Adding to the Content Index
 
-<p>Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.</p>
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
 
-<pre class="brush: js">// our content
+```js
+// our content
 const item = {
   id: 'post-1',
   url: '/posts/amet.html',
@@ -81,13 +81,14 @@ async function registerContent(data) {
     console.log('Failed to register content: ', e.message);
   }
 }
-</pre>
+```
 
-<h3 id="Retrieving_Items_Within_The_Current_Index">Retrieving Items Within The Current Index</h3>
+### Retrieving Items Within The Current Index
 
-<p>The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.</p>
+The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.
 
-<pre class="brush: js">async function createReadingList() {
+```js
+async function createReadingList() {
   // access our service worker registration
   const registration = await navigator.serviceWorker.ready;
 
@@ -126,13 +127,14 @@ async function registerContent(data) {
   }
 
 }
-</pre>
+```
 
-<h3 id="Unregistering_Indexed_Content">Unregistering Indexed Content</h3>
+### Unregistering Indexed Content
 
-<p>Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.</p>
+Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.
 
-<pre class="brush: js">async function unregisterContent(article) {
+```js
+async function unregisterContent(article) {
 
   // reference registration
   const registration = await navigator.serviceWorker.ready;
@@ -144,31 +146,30 @@ async function registerContent(data) {
   // unregister content from index
   await registration.index.delete(article.id);
 }
-</pre>
+```
 
-<p>All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:</p>
+All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
-<pre class="brush: js">// service worker script
+```js
+// service worker script
 
 self.registration.index.add(item);
 
 self.registration.index.delete(item.id);
 
 const contentIndexItems = self.registration.index.getAll();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</a></li>
- <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list and remove 'save for later' content</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

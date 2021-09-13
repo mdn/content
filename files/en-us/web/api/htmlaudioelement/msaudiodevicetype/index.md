@@ -4,52 +4,32 @@ slug: Web/API/HTMLAudioElement/msAudioDeviceType
 tags:
   - msAudioDeviceType
 ---
-<div>{{APIRef("Audio element")}}</div>
+{{APIRef("Audio element")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msAudioDeviceType</strong></code> property of the HTML <a href="/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a> element, is a read/write proprietary attribute, specific to Internet Explorer and Microsoft Edge.</p>
+The **`msAudioDeviceType`** property of the HTML [\<audio>](/en-US/docs/Web/HTML/Element/audio) element, is a read/write proprietary attribute, specific to Internet Explorer and Microsoft Edge.
 
-<p><code><strong>msAudioDeviceType</strong></code> specifies the output device id that the audio will be sent to.</p>
+**`msAudioDeviceType`** specifies the output device id that the audio will be sent to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">&lt;audio src="sound.mp3" msAudioDeviceType="Communications" /&gt;
-</pre>
+```html
+<audio src="sound.mp3" msAudioDeviceType="Communications" />
+```
 
-<p>By default, audio on your system will output to your default speakers and be considered a foreground element, meaning that the audio will play only when the element is active in the app. For real-time communications, you can use the <code>msAudioDeviceType</code> property with the value <code>Console</code>, <code>Multimedia</code>, or <code>Communications</code> to specify where the current audio should output.</p>
+By default, audio on your system will output to your default speakers and be considered a foreground element, meaning that the audio will play only when the element is active in the app. For real-time communications, you can use the `msAudioDeviceType` property with the value `Console`, `Multimedia`, or `Communications` to specify where the current audio should output.
 
+## Value
 
-<h2 id="Value">Value</h2>
+Include a description of the property's value, including data type and what it represents.
 
-<p>Include a description of the property's value, including data type and what it represents.</p>
+| Value          | Description                                                                |
+| -------------- | -------------------------------------------------------------------------- |
+| Console        | Specifies that the audio output will be sent to the console device.        |
+| Multimedia     | Specifies that the audio output will be sent to the multimedia device.     |
+| Communications | Specifies that the audio output will be sent to the communications device. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Console</td>
-   <td>Specifies that the audio output will be sent to the console device.</td>
-  </tr>
-  <tr>
-   <td>Multimedia</td>
-   <td>Specifies that the audio output will be sent to the multimedia device.</td>
-  </tr>
-  <tr>
-   <td>Communications</td>
-   <td>Specifies that the audio output will be sent to the communications device.</td>
-  </tr>
- </tbody>
-</table>
+## See also
 
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

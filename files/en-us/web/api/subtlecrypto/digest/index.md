@@ -10,53 +10,47 @@ tags:
   - digest
 browser-compat: api.SubtleCrypto.digest
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>digest()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface generates a {{Glossary("digest")}} of the given data. A digest is a short
-  fixed-length value derived from some variable-length input. Cryptographic digests should
-  exhibit collision-resistance, meaning that it's hard to come up with two different
-  inputs that have the same digest value.</p>
+The **`digest()`** method of the {{domxref("SubtleCrypto")}}
+interface generates a {{Glossary("digest")}} of the given data. A digest is a short
+fixed-length value derived from some variable-length input. Cryptographic digests should
+exhibit collision-resistance, meaning that it's hard to come up with two different
+inputs that have the same digest value.
 
-<p>It takes as its arguments an identifier for the digest algorithm to use and the data to
-  digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.</p>
+It takes as its arguments an identifier for the digest algorithm to use and the data to
+digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the digest.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const digest = crypto.subtle.digest(algorithm, data);
-</pre>
+```js
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>algorithm</var></code> is a {{domxref("DOMString")}} defining the hash
-    function to use. Supported values are:
+- `algorithm` is a {{domxref("DOMString")}} defining the hash
+  function to use. Supported values are:
 
-    <ul>
-      <li><code>SHA-1</code> (but don't use this in cryptographic applications)</li>
-      <li><code>SHA-256</code></li>
-      <li><code>SHA-384</code></li>
-      <li><code>SHA-512</code>.</li>
-    </ul>
-  </li>
-  <li><code><var>data</var></code> is an {{jsxref("ArrayBuffer")}} or
-    {{domxref("ArrayBufferView")}} containing the data to be digested.</li>
-</ul>
+  - `SHA-1` (but don't use this in cryptographic applications)
+  - `SHA-256`
+  - `SHA-384`
+  - `SHA-512`.
 
-<h3 id="Return_value">Return value</h3>
+- `data` is an {{jsxref("ArrayBuffer")}} or
+  {{domxref("ArrayBufferView")}} containing the data to be digested.
 
-<ul>
-  <li><code><var>digest</var></code> is a {{jsxref("Promise")}} that fulfills with an
-    {{jsxref("ArrayBuffer")}} containing the digest.</li>
-</ul>
+### Return value
 
-<h2 id="Supported_algorithms">Supported algorithms</h2>
+- `digest` is a {{jsxref("Promise")}} that fulfills with an
+  {{jsxref("ArrayBuffer")}} containing the digest.
 
-<p>Digest algorithms, also known as <a
-    href="/en-US/docs/Glossary/Cryptographic_hash_function">cryptographic hash
-    functions</a>, transform an arbitrarily large block of data into a fixed-size output,
-  usually much shorter than the input. They have a variety of applications in
-  cryptography.</p>
+## Supported algorithms
+
+Digest algorithms, also known as [cryptographic hash
+functions](/en-US/docs/Glossary/Cryptographic_hash_function), transform an arbitrarily large block of data into a fixed-size output,
+usually much shorter than the input. They have a variety of applications in
+cryptography.
 
 <table class="standard-table">
   <tbody>
@@ -66,60 +60,64 @@ browser-compat: api.SubtleCrypto.digest
       <th scope="col">Block size (bits)</th>
       <th scope="col">Specification</th>
     </tr>
-   <tr>
-    <th scope="row">SHA-1</th>
-    <td>160</td>
-    <td>512</td>
-    <td>
-      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1
-    </td>
-   </tr>
-   <tr>
-    <th scope="row">SHA-256</th>
-    <td>256</td>
-    <td>512</td>
-    <td>
-      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.2
-    </td>
-   </tr>
-   <tr>
-    <th scope="row">SHA-384</th>
-    <td>384</td>
-    <td>1024</td>
-    <td><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.5
-    </td>
-   </tr>
-   <tr>
-    <th scope="row">SHA-512</th>
-    <td>512</td>
-    <td>1024</td>
-    <td>
-      <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4
-    </td>
-   </tr>
+    <tr>
+      <th scope="row">SHA-1</th>
+      <td>160</td>
+      <td>512</td>
+      <td>
+        <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"
+          >FIPS 180-4</a
+        >, section 6.1
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">SHA-256</th>
+      <td>256</td>
+      <td>512</td>
+      <td>
+        <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"
+          >FIPS 180-4</a
+        >, section 6.2
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">SHA-384</th>
+      <td>384</td>
+      <td>1024</td>
+      <td>
+        <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"
+          >FIPS 180-4</a
+        >, section 6.5
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">SHA-512</th>
+      <td>512</td>
+      <td>1024</td>
+      <td>
+        <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"
+          >FIPS 180-4</a
+        >, section 6.4
+      </td>
+    </tr>
   </tbody>
- </table>
+</table>
 
- <div class="notecard warning">
-  <p><strong>Warning:</strong> SHA-1 is now considered vulnerable and should not
-    be used for cryptographic applications.</p>
-</div>
+> **Warning:** SHA-1 is now considered vulnerable and should not
+> be used for cryptographic applications.
 
- <div class="notecard note">
-  <p><strong>Note:</strong> If you are looking here for how to create an keyed-hash message authentication
-    code (<a href="/en-US/docs/Glossary/HMAC">HMAC</a>), you need to use the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">SubtleCrypto.sign()</a> instead.
-  </p>
-</div>
+> **Note:** If you are looking here for how to create an keyed-hash message authentication
+> code ([HMAC](/en-US/docs/Glossary/HMAC)), you need to use the [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This example encodes a message, then calculates its SHA-256 digest and logs the digest
-  length:</p>
+This example encodes a message, then calculates its SHA-256 digest and logs the digest
+length:
 
-<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+```js
+const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -130,47 +128,42 @@ async function digestMessage(message) {
 
 digestMessage(text)
   .then(digestBuffer => console.log(digestBuffer.byteLength));
-</pre>
+```
 
-<h3 id="Converting_a_digest_to_a_hex_string">Converting a digest to a hex string</h3>
+### Converting a digest to a hex string
 
-<p>The digest is returned as an <code>ArrayBuffer</code>, but for comparison and display
-  digests are often represented as hex strings. This example calculates a digest, then
-  converts the <code>ArrayBuffer</code> to a hex string:</p>
+The digest is returned as an `ArrayBuffer`, but for comparison and display
+digests are often represented as hex strings. This example calculates a digest, then
+converts the `ArrayBuffer` to a hex string:
 
-<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+```js
+const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
   return hashHex;
 }
 
 digestMessage(text)
   .then(digestHex => console.log(digestHex));
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Chrome 60 added a feature that disables crypto.subtle for non-TLS
-    connections.</p>
-</div>
+> **Note:** Chrome 60 added a feature that disables crypto.subtle for non-TLS
+> connections.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Chromium
-      secure origins specification</a></li>
-  <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf"
-      rel="noopener">FIPS 180-4</a> specifies the SHA family of digest algorithms.</li>
-</ul>
+- [Chromium
+  secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
+- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.

@@ -15,33 +15,33 @@ tags:
   - parameters
 browser-compat: api.RTCRtcpParameters
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <code><strong>RTCRtcpParameters</strong></code> dictionary provides parameters of an {{Glossary("RTCP")}} connection. It's used as the value of the {{domxref("RTCRtpParameters.rtcp", "rtcp")}} property of the <a href="/en-US/docs/Web/API/RTCRtpParameters">parameters</a> of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.</p>
+The **`RTCRtcpParameters`** dictionary provides parameters of an {{Glossary("RTCP")}} connection. It's used as the value of the {{domxref("RTCRtpParameters.rtcp", "rtcp")}} property of the [parameters](/en-US/docs/Web/API/RTCRtpParameters) of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCRtcpParameters.cname", "cname")}}</dt>
- <dd>The Canonical Name (CNAME) being used by RTCP. This is used, for example, in SDES (SDP security descriptions) messages, described in {{RFC(4568)}}. This property cannot be changed once initialized.</dd>
- <dt>{{domxref("RTCRtcpParameters.reducedSize", "reducedSize")}}</dt>
- <dd>A Boolean value indicating whether or not reduced size RTCP is configured. If this value is <code>true</code>, reduced size RTCP (described in {{RFC(5506)}}) is in effect. If <code>false</code>, compund RTCP is in use, as found in {{RFC(3550)}}. This property cannot be changed once initialized.</dd>
-</dl>
+- {{domxref("RTCRtcpParameters.cname", "cname")}}
+  - : The Canonical Name (CNAME) being used by RTCP. This is used, for example, in SDES (SDP security descriptions) messages, described in {{RFC(4568)}}. This property cannot be changed once initialized.
+- {{domxref("RTCRtcpParameters.reducedSize", "reducedSize")}}
+  - : A Boolean value indicating whether or not reduced size RTCP is configured. If this value is `true`, reduced size RTCP (described in {{RFC(5506)}}) is in effect. If `false`, compund RTCP is in use, as found in {{RFC(3550)}}. This property cannot be changed once initialized.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example obtains the canonical name (CNAME) being used for RTCP on an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.</p>
+This example obtains the canonical name (CNAME) being used for RTCP on an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}}.
 
-<pre class="brush: js">function getRtpCNAME(rtpObject) {
+```js
+function getRtpCNAME(rtpObject) {
   let parameters = rtpObject.getParameters();
 
   return parameters.rtcp.cname;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

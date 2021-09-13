@@ -8,44 +8,44 @@ tags:
   - WebGL extension
 browser-compat: api.OES_standard_derivatives
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>OES_standard_derivatives</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds the GLSL derivative functions <code>dFdx</code>, <code>dFdy</code>, and <code>fwidth</code>.</p>
+The **`OES_standard_derivatives`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the GLSL derivative functions `dFdx`, `dFdy`, and `fwidth`.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constant is available as <code>gl.FRAGMENT_SHADER_DERIVATIVE_HINT</code> and it requires GLSL <code>#version 300 es</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constant is available as `gl.FRAGMENT_SHADER_DERIVATIVE_HINT` and it requires GLSL `#version 300 es`.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.hint()", "hint()")}} and {{domxref("WebGLRenderingContext.getParameter()", "getParameter()")}} methods.</p>
+This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.hint()", "hint()")}} and {{domxref("WebGLRenderingContext.getParameter()", "getParameter()")}} methods.
 
-<dl>
- <dt><code>ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES</code></dt>
- <dd>A {{domxref("WebGL_API.Types")}} indicating the accuracy of the derivative calculation for the GLSL built-in functions: <code>dFdx</code>, <code>dFdy</code>, and <code>fwidth</code>.</dd>
-</dl>
+- `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+  - : A {{domxref("WebGL_API.Types")}} indicating the accuracy of the derivative calculation for the GLSL built-in functions: `dFdx`, `dFdy`, and `fwidth`.
 
-<h2 id="GLSL_built-in_functions">GLSL built-in functions</h2>
+## GLSL built-in functions
 
-<p>The following new functions can be used in GLSL shader code, if this extension is enabled:</p>
+The following new functions can be used in GLSL shader code, if this extension is enabled:
 
-<pre class="brush: cpp">genType dFdx(genType)
+```cpp
+genType dFdx(genType)
 genType dFdy(genType)
 genType fwidth(genType)
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Enabling the extensions:</p>
+Enabling the extensions:
 
-<pre class="brush: js">gl.getExtension('OES_standard_derivatives');
-gl.getExtension('EXT_shader_texture_lod');</pre>
+```js
+gl.getExtension('OES_standard_derivatives');
+gl.getExtension('EXT_shader_texture_lod');
+```
 
-<p>Shader code that avoids artifacts when wrapping texture coordinates:</p>
+Shader code that avoids artifacts when wrapping texture coordinates:
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment"&gt;
+```html
+<script type="x-shader/x-fragment">
 #extension GL_EXT_shader_texture_lod : enable
 #extension GL_OES_standard_derivatives : enable
 
@@ -56,19 +56,18 @@ void main(){
   gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
                                   dFdx(texcoord), dFdy(texcoord));
 }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("EXT_shader_texture_lod")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("EXT_shader_texture_lod")}}

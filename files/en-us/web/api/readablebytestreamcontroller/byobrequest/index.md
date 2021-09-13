@@ -2,39 +2,39 @@
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
 tags:
-- API
-- Experimental
-- Property
-- ReadableByteStreamController
-- Reference
-- Streams
-- byobRequest
+  - API
+  - Experimental
+  - Property
+  - ReadableByteStreamController
+  - Reference
+  - Streams
+  - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>byobRequest</code></strong> read-only property of the
-  {{domxref("ReadableByteStreamController")}} interface returns the current BYOB pull
-  request, or <code>undefined</code> if there are no pending requests.</p>
+The **`byobRequest`** read-only property of the
+{{domxref("ReadableByteStreamController")}} interface returns the current BYOB pull
+request, or `undefined` if there are no pending requests.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>request</em> = </code>readableByteStreamController</var>.byobRequest;</pre>
+```js
+var request = readableByteStreamController.byobRequest;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ReadableStreamBYOBRequest")}} object instance, or <code>undefined</code>.
-</p>
+A {{domxref("ReadableStreamBYOBRequest")}} object instance, or `undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

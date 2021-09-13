@@ -2,72 +2,72 @@
 title: RTCIceCandidateStats.networkType
 slug: Web/API/RTCIceCandidateStats/networkType
 tags:
-- API
-- Candidate
-- Connection
-- Connectivity
-- Network
-- Networking
-- Property
-- RTCIceCandidateStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- networkType
+  - API
+  - Candidate
+  - Connection
+  - Connectivity
+  - Network
+  - Networking
+  - Property
+  - RTCIceCandidateStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - networkType
 browser-compat: api.RTCIceCandidateStats.networkType
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-  <code><strong>networkType</strong></code> property specifies the type of network used by
-  a local candidate to communicate with a remote peer.</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`networkType`** property specifies the type of network used by
+a local candidate to communicate with a remote peer.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>networkType</code> property is only included in
-    <code>RTCIceCandidateStats</code> objects for local candidates (that is, candidates
-    generated locally and included in an {{Glossary("SDP")}} offer or answer that has been
-    sent to the remote peer).</p>
-</div>
+> **Note:** The `networkType` property is only included in
+> `RTCIceCandidateStats` objects for local candidates (that is, candidates
+> generated locally and included in an {{Glossary("SDP")}} offer or answer that has been
+> sent to the remote peer).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>networkType</em> = <em>rtcIceCandidateStats</em>.networkType;</pre>
+```js
+networkType = rtcIceCandidateStats.networkType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is taken from the {{domxref("RTCNetworkType")}}
-  enumerated type. The string indicates the type of network connection that the described
-  candidate would use to communicate with the other peer.</p>
+A {{domxref("DOMString")}} whose value is taken from the {{domxref("RTCNetworkType")}}
+enumerated type. The string indicates the type of network connection that the described
+candidate would use to communicate with the other peer.
 
-<p>The permitted values are:</p>
+The permitted values are:
 
-<p>{{page("/en-US/docs/Web/API/RTCNetworkType", "Values")}}</p>
+{{page("/en-US/docs/Web/API/RTCNetworkType", "Values")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets up a periodic function using
-  {{domxref("setInterval()")}} that outputs
-  statistics reports for candidates that use or would use a cellular data network to a log
-  view.</p>
+This example sets up a periodic function using
+{{domxref("setInterval()")}} that outputs
+statistics reports for candidates that use or would use a cellular data network to a log
+view.
 
-<pre class="brush: js;">window.setInterval(function() {
-  myPeerConnection.getStats(null).then(stats =&gt; {
+```js
+window.setInterval(function() {
+  myPeerConnection.getStats(null).then(stats => {
     let statsOutput = "";
 
-    stats.forEach(report =&gt; {
-      if ((stats.type === "local-candidate" || stats.type === "remote.candidate") &amp;&amp; stats.networkType === "cellular") {
-        statsOutput += `&lt;h2&gt;Report: ${report.type}&lt;/h3&gt;\n&lt;strong&gt;ID:&lt;/strong&gt; ${report.id}&lt;br&gt;\n` +
-                       `&lt;strong&gt;Timestamp:&lt;/strong&gt; ${report.timestamp}&lt;br&gt;\n`;
+    stats.forEach(report => {
+      if ((stats.type === "local-candidate" || stats.type === "remote.candidate") && stats.networkType === "cellular") {
+        statsOutput += `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
+                       `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
         // Now the statistics for this report; we intentially drop the ones we
         // sorted to the top above
 
-        Object.keys(report).forEach(statName =&gt; {
-          if (statName !== "id" &amp;&amp; statName !== "timestamp" &amp;&amp; statName !== "type") {
-            statsOutput += `&lt;strong&gt;${statName}:&lt;/strong&gt; ${report[statName]}&lt;br&gt;\n`;
+        Object.keys(report).forEach(statName => {
+          if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
+            statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
           }
         });
       }
@@ -75,8 +75,9 @@ browser-compat: api.RTCIceCandidateStats.networkType
 
     document.querySelector(".stats-box").innerHTML = statsOutput;
   });
-}, 1000);</pre>
+}, 1000);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

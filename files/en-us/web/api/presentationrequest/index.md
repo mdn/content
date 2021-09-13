@@ -10,45 +10,39 @@ tags:
   - Reference
 browser-compat: api.PresentationRequest
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-<p>A <code>PresentationRequest</code> object is used to initiate or reconnect to a presentation made by a <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context">controlling browsing context</a>. The <code>PresentationRequest</code> object <em>MUST</em> be implemented in a <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context">controlling browsing context</a> provided by a <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a>.</p>
+A `PresentationRequest` object is used to initiate or reconnect to a presentation made by a [controlling browsing context](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context). The `PresentationRequest` object _MUST_ be implemented in a [controlling browsing context](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context) provided by a [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent).
 
-<p>When a <code>PresentationRequest</code> is constructed, the given <code>urls</code> <em>MUST</em> be used as the list of <dfn>presentation request URLs</dfn> which are each a possible <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-url">presentation URL</a> for the <code>PresentationRequest</code> instance.</p>
+When a `PresentationRequest` is constructed, the given `urls` _MUST_ be used as the list of _presentation request URLs_ which are each a possible [presentation URL](https://www.w3.org/TR/presentation-api/#dfn-presentation-url) for the `PresentationRequest` instance.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}}</dt>
- <dd>Creates a <code>PresentationRequest</code>.</dd>
-</dl>
+- {{domxref("PresentationRequest.PresentationRequest","PresentationRequest()")}}
+  - : Creates a `PresentationRequest`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None</p>
+None
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("PresentationRequest.onconnectionavailable")}}</dt>
- <dd>Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.</dd>
-</dl>
+- {{domxref("PresentationRequest.onconnectionavailable")}}
+  - : Fires on a successful call to {{DOMxRef("PresentationRequest.start","PresentationRequest.start()")}} or {{DOMxRef("PresentationRequest.join","PresentationRequest.join()")}}. This method provides a object with a reference to the created or joined object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PresentationRequest.start()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.</dd>
- <dt>{{domxref("PresentationRequest.reconnect()")}}</dt>
- <dd>When the <code><dfn>reconnect</dfn>(presentationId)</code> method is called on a <code>PresentationRequest</code> <var>presentationRequest</var>, the <a href="https://www.w3.org/TR/presentation-api/#dfn-user-agents">user agent</a> <em>MUST</em> run the following steps to <dfn>reconnect to a presentation</dfn>.</dd>
- <dt>{{domxref("PresentationRequest.getAvailability()")}}</dt>
- <dd>When the <code><dfn>getAvailability</dfn>()</code> method is called, the user agent <em>MUST</em> run the steps as the link.</dd>
-</dl>
+- {{domxref("PresentationRequest.start()")}}
+  - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("PresentationConnection")}} after the user agent prompts the user to select a display and grant permission to use that display.
+- {{domxref("PresentationRequest.reconnect()")}}
+  - : When the `reconnect(presentationId)` method is called on a `PresentationRequest` _presentationRequest_, the [user agent](https://www.w3.org/TR/presentation-api/#dfn-user-agents) _MUST_ run the following steps to _reconnect to a presentation_.
+- {{domxref("PresentationRequest.getAvailability()")}}
+  - : When the `getAvailability()` method is called, the user agent _MUST_ run the steps as the link.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

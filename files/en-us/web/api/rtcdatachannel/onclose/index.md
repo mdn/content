@@ -10,33 +10,35 @@ tags:
   - onclose
 browser-compat: api.RTCDataChannel.onclose
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called by the browser when
-  the {{DOMxRef("RTCDataChannel.close_event", "close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
-  simple {{domxref("Event")}} which indicates that the data channel has closed down.</p>
+The **`RTCDataChannel.onclose`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called by the browser when
+the {{DOMxRef("RTCDataChannel.close_event", "close")}} event is received by the {{domxref("RTCDataChannel")}}. This is a
+simple {{domxref("Event")}} which indicates that the data channel has closed down.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDataChannel</em>.onclose = <em>function</em>;</pre>
+```js
+RTCDataChannel.onclose = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.close_event", "close")}} event. The
-  function receives as its sole input parameter the event itself, as an object of type
-  {{domxref("Event")}}.</p>
+A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.close_event", "close")}} event. The
+function receives as its sole input parameter the event itself, as an object of type
+{{domxref("Event")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this sample from a hypothetical instant messaging client, a data channel is created,
-  then handlers for the {{DOMxRef("RTCDataChannel.open_event", "open")}} and {{DOMxRef("RTCDataChannel.close_event", "close")}} events are set up to
-  enable and disable user interface objects based on the state of the channel. This way,
-  the message entry field and the send button are only enabled for use when the connection
-  is actually open.</p>
+In this sample from a hypothetical instant messaging client, a data channel is created,
+then handlers for the {{DOMxRef("RTCDataChannel.open_event", "open")}} and {{DOMxRef("RTCDataChannel.close_event", "close")}} events are set up to
+enable and disable user interface objects based on the state of the channel. This way,
+the message entry field and the send button are only enabled for use when the connection
+is actually open.
 
-<pre class="brush: js">let pc = new RTCPeerConnection();
+```js
+let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel("MessageChannel")}};
 
 dc.onopen = function(event) {
@@ -49,21 +51,20 @@ dc.onclose = function(event) {
   document.getElementById("sendButton").disabled = true;
 }
 
-/* Now negotiate the connection, etc... */</pre>
+/* Now negotiate the connection, etc... */
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("RTCDataChannel.onopen")}}</li>
-  <li>The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.
+- {{domxref("RTCDataChannel.onopen")}}
+- The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.

@@ -2,80 +2,79 @@
 title: WebGLRenderingContext.bindRenderbuffer()
 slug: Web/API/WebGLRenderingContext/bindRenderbuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.bindRenderbuffer()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> binds a given
-  {{domxref("WebGLRenderbuffer")}} to a target, which must be
-  <code>gl.RENDERBUFFER</code>.</p>
+The **`WebGLRenderingContext.bindRenderbuffer()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
+{{domxref("WebGLRenderbuffer")}} to a target, which must be
+`gl.RENDERBUFFER`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.bindRenderbuffer(<var>target</var>, <var>renderbuffer</var>);
-</pre>
+```js
+void gl.bindRenderbuffer(target, renderbuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.RENDERBUFFER</code>: Buffer data storage for single images in a
-        renderable internal format.</li>
-    </ul>
-  </dd>
-  <dt>renderbuffer</dt>
-  <dd>A {{domxref("WebGLRenderbuffer")}} object to bind.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-<p>None.</p>
+    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
+      renderable internal format.
 
-<h3 id="Exceptions">Exceptions</h3>
+- renderbuffer
+  - : A {{domxref("WebGLRenderbuffer")}} object to bind.
 
-<p>A <code>gl.INVALID_ENUM</code> error is thrown if <code>target</code> is not
-  <code>gl.RENDERBUFFER</code>.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<h3 id="Binding_a_renderbuffer">Binding a renderbuffer</h3>
+### Exceptions
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+A `gl.INVALID_ENUM` error is thrown if `target` is not
+`gl.RENDERBUFFER`.
+
+## Examples
+
+### Binding a renderbuffer
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var renderbuffer = gl.createRenderbuffer();
 
 gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);
-</pre>
+```
 
-<h3 id="Getting_current_bindings">Getting current bindings</h3>
+### Getting current bindings
 
-<p>To check the current renderbuffer binding, query the <code>RENDERBUFFER_BINDING</code>
-  constant.</p>
+To check the current renderbuffer binding, query the `RENDERBUFFER_BINDING`
+constant.
 
-<pre class="brush: js">gl.getParameter(gl.RENDERBUFFER_BINDING);
-</pre>
+```js
+gl.getParameter(gl.RENDERBUFFER_BINDING);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

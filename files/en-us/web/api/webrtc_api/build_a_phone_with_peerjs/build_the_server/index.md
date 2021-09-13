@@ -2,68 +2,68 @@
 title: Building the server
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server
 ---
-<p>{{WebRTCSidebar}}</p>
-<div>{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}</div>
-<p>In this article we'll set up the server for our phone app. The server file will look like a regular Express server file with one difference, the Peer server.</p>
+{{WebRTCSidebar}}
 
-<ol>
-  <li>
-    <p>First of all, create a file called <code>server.js</code> in the same location as the HTML and CSS files you created previously. This is the entry point of our app, as defined in our <code>package.json</code> file.</p>
-  </li>
-  <li>
-    <p>You'll need to start your code by requiring the peer server at the top of the <code>server.js</code> file, to ensure that we have access to the peer server:</p>
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}
 
-<pre class="brush: js">const {ExpressPeerServer} = require('peer');</pre>
-  </li>
-  <li>
-    <p>You then need to actually create the peer server. Add the following code below your previous line:</p>
+In this article we'll set up the server for our phone app. The server file will look like a regular Express server file with one difference, the Peer server.
 
-<pre class="brush: js">const peerServer = ExpressPeerServer(server, {
-    proxied: true,
-    debug: true,
-    path: '/myapp',
-    ssl: {}
-});</pre>
+1.  First of all, create a file called `server.js` in the same location as the HTML and CSS files you created previously. This is the entry point of our app, as defined in our `package.json` file.
+2.  You'll need to start your code by requiring the peer server at the top of the `server.js` file, to ensure that we have access to the peer server:
 
-    <p>We use the <code>ExpressPeerServer</code> object to create the peer server, passing it some options in the process. The peer server will handle the signalling required for WebRTC for us, so we don't have to worry about STUN/TURN servers or other protocols.</p>
-  </li>
-  <li>
-    <p>Finally, you'll need to tell your app to use the <code>peerServer</code> by calling <code>app.use(peerServer)</code>. Your finished <code>server.js</code> should include the other necessary dependencies you’d include in a server file, as well as serving the <code>index.html</code> file to the root path.</p>
+    ```js
+    const {ExpressPeerServer} = require('peer');
+    ```
 
-    <p>Update <code>server.js</code> so that it looks like this:</p>
+3.  You then need to actually create the peer server. Add the following code below your previous line:
 
-<pre class="brush: js">const express = require("express");
-const http = require('http');
-const path = require('path');
-const app = express();
-const server = http.createServer(app);
-const { ExpressPeerServer } = require('peer');
-const port = process.env.PORT || "8000";
+    ```js
+    const peerServer = ExpressPeerServer(server, {
+        proxied: true,
+        debug: true,
+        path: '/myapp',
+        ssl: {}
+    });
+    ```
 
-const peerServer = ExpressPeerServer(server, {
-    proxied: true,
-    debug: true,
-    path: '/myapp',
-    ssl: {}
-});
+    We use the `ExpressPeerServer` object to create the peer server, passing it some options in the process. The peer server will handle the signalling required for WebRTC for us, so we don't have to worry about STUN/TURN servers or other protocols.
 
-app.use(peerServer);
+4.  Finally, you'll need to tell your app to use the `peerServer` by calling `app.use(peerServer)`. Your finished `server.js` should include the other necessary dependencies you’d include in a server file, as well as serving the `index.html` file to the root path.
 
-app.use(express.static(path.join(__dirname)));
+    Update `server.js` so that it looks like this:
 
-app.get("/", (request, response) =&gt; {
-    response.sendFile(__dirname + "/index.html");
-});
+    ```js
+    const express = require("express");
+    const http = require('http');
+    const path = require('path');
+    const app = express();
+    const server = http.createServer(app);
+    const { ExpressPeerServer } = require('peer');
+    const port = process.env.PORT || "8000";
 
-server.listen(port);
-console.log('Listening on: ' + port);</pre>
-  </li>
-  <li>
-    <p>You should be able to connect to your app via <code>localhost</code> (in our <code>server.js</code> we're using port 8000 (defined on line 7) but you may be using another port number). Run <code>node .</code> in your terminal and visit <code>localhost:8000</code> in your browser and you should see a page that looks like this:</p>
+    const peerServer = ExpressPeerServer(server, {
+        proxied: true,
+        debug: true,
+        path: '/myapp',
+        ssl: {}
+    });
 
-    <p><img alt="A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Connecting...' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. " src="1ic3evvgnzvg1koquxo0mmw.png"></p>
-  </li>
-</ol>
+    app.use(peerServer);
 
-<p> If you want to learn more about Peer.js, check out the <a href="https://github.com/peers/peerjs-server">Peer.js Server repo on GitHub</a>.</p>
-<div>{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}</div>
+    app.use(express.static(path.join(__dirname)));
+
+    app.get("/", (request, response) => {
+        response.sendFile(__dirname + "/index.html");
+    });
+
+    server.listen(port);
+    console.log('Listening on: ' + port);
+    ```
+
+5.  You should be able to connect to your app via `localhost` (in our `server.js` we're using port 8000 (defined on line 7) but you may be using another port number). Run `node .` in your terminal and visit `localhost:8000` in your browser and you should see a page that looks like this:
+
+    ![A cream background with the words 'phone a friend' in bold, dark green font as the heading. 'Connecting...' is immediately below that and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. ](1ic3evvgnzvg1koquxo0mmw.png)
+
+If you want to learn more about Peer.js, check out the [Peer.js Server repo on GitHub](https://github.com/peers/peerjs-server).
+
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}

@@ -5,63 +5,71 @@ tags:
   - Event
 browser-compat: api.MediaStream.addtrack_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>addtrack</code> event is fired when a new <code><a href="/en-US/docs/Web/API/MediaStreamTrack">MediaStreamTrack</a></code> object has been added to a <code><a href="/en-US/docs/Web/API/MediaStream">MediaStream</a></code>.</p>
+The `addtrack` event is fired when a new [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) object has been added to a [`MediaStream`](/en-US/docs/Web/API/MediaStream).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MediaStreamTrackEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/MediaStream/onaddtrack">onaddtrack</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MediaStreamTrackEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/MediaStream/onaddtrack"
+            >onaddtrack</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">let stream = new MediaStream();
+```js
+let stream = new MediaStream();
 
-stream.addEventListener('addtrack', (event) =&gt; {
+stream.addEventListener('addtrack', (event) => {
   console.log(`New ${event.track.kind} track added`);
-});</pre>
+});
+```
 
-<p>Using the <code>onaddtrack</code> event handler property:</p>
+Using the `onaddtrack` event handler property:
 
-<pre class="brush: js">let stream = new MediaStream();
+```js
+let stream = new MediaStream();
 
-stream.onaddtrack = (event) =&gt; {
+stream.onaddtrack = (event) => {
   console.log(`New ${event.track.kind} track added`);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/VideoTrackList">VideoTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack</a></code></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- Related events: [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
+- This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event)
+- This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

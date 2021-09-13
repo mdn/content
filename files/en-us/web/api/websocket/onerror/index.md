@@ -2,47 +2,50 @@
 title: WebSocket.onerror
 slug: Web/API/WebSocket/onerror
 tags:
-- API
-- Connection
-- Error
-- Error Handler
-- Networking
-- Property
-- Reference
-- Web API
-- WebSocket
-- onerror
+  - API
+  - Connection
+  - Error
+  - Error Handler
+  - Networking
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
+  - onerror
 browser-compat: api.WebSocket.onerror
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>The {{domxref("WebSocket")}} interface's
-    <code><strong>onerror</strong></code> event handler property is a function which gets
-    called when an error occurs on the WebSocket.</p>
+The {{domxref("WebSocket")}} interface's
+**`onerror`** event handler property is a function which gets
+called when an error occurs on the WebSocket.
 
-<p>You can also add an <code>error</code> event handler using
-  {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+You can also add an `error` event handler using
+{{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>webSocket</em>.onerror = <em>eventHandler</em>;</pre>
+```js
+webSocket.onerror = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function or <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which is executed whenever an
-  <code>error</code> event occurs on the WebSocket connection.</p>
+A function or [event handler](/en-US/docs/Web/Events/Event_handlers) which is executed whenever an
+`error` event occurs on the WebSocket connection.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><em>webSocket</em>.onerror = function(event) {
+```js
+webSocket.onerror = function(event) {
   console.error("WebSocket error observed:", event);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

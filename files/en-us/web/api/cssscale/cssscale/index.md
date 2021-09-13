@@ -2,53 +2,50 @@
 title: CSSScale()
 slug: Web/API/CSSScale/CSSScale
 tags:
-- API
-- CSS Typed Object Model API
-- CSSScale
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSScale
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSScale.CSSScale
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSScale()</code></strong> constructor creates a new
-  {{domxref("CSSScale")}} object representing the <a
-    href="/en-US/docs/Web/CSS/transform-function/scale()">scale()</a> and <a
-    href="/en-US/docs/Web/CSS/transform-function/scale()">scale3d()</a> values of the
-  individual {{CSSXref('transform')}} property in CSS.</p>
+The **`CSSScale()`** constructor creates a new
+{{domxref("CSSScale")}} object representing the [scale()](</en-US/docs/Web/CSS/transform-function/scale()>) and [scale3d()](</en-US/docs/Web/CSS/transform-function/scale()>) values of the
+individual {{CSSXref('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSScale</var> = new CSSScale(<em>x</em>,<em>y[</em>,<em>z]</em>);</pre>
+```js
+var CSSScale = new CSSScale(x,y[,z]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{{domxref('CSSScale.x','x')}}</dt>
-  <dd>A value for the x-axis of the {{domxref('CSSScale')}} object to be constructed. This
-    must either be a double integer or a {{domxref('CSSNumericValue')}}.</dd>
-  <dt>{{domxref('CSSScale.y','y')}}</dt>
-  <dd>A value for the y-axis of the {{domxref('CSSScale')}} object to be constructed. This
-    must either be a double integer or a {{domxref('CSSNumericValue')}}.</dd>
-  <dt>{{domxref('CSSScale.z','z')}}{{optional_inline}}</dt>
-  <dd>A value for the z-axis of the {{domxref('CSSScale')}} object to be constructed. This
+- {{domxref('CSSScale.x','x')}}
+  - : A value for the x-axis of the {{domxref('CSSScale')}} object to be constructed. This
+    must either be a double integer or a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSScale.y','y')}}
+  - : A value for the y-axis of the {{domxref('CSSScale')}} object to be constructed. This
+    must either be a double integer or a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSScale.z','z')}}{{optional_inline}}
+  - : A value for the z-axis of the {{domxref('CSSScale')}} object to be constructed. This
     must either be a double integer or a {{domxref('CSSNumericValue')}}. If a value is
-    passed for the <code>z-axis</code> this is a 3d transform. The value of
-    <code>is2D</code> will be set to false.</dd>
-</dl>
+    passed for the `z-axis` this is a 3d transform. The value of
+    `is2D` will be set to false.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

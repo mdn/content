@@ -12,49 +12,44 @@ tags:
   - Workers
 browser-compat: api.ServiceWorkerMessageEvent
 ---
-<div>{{APIRef("Service Workers API")}}{{deprecated_header}}</div>
+{{APIRef("Service Workers API")}}{{deprecated_header}}
 
-<div class="warning">
-<p><strong>Warning:</strong> In modern browsers, this interface has been deprecated. Service worker messages will now use the {{domxref("MessageEvent")}} interface, for consistency with other web messaging features.</p>
-</div>
+> **Warning:** In modern browsers, this interface has been deprecated. Service worker messages will now use the {{domxref("MessageEvent")}} interface, for consistency with other web messaging features.
 
-<p>The <strong><code>ServiceWorkerMessageEvent</code></strong> interface of the {{domxref("Service_Worker_API", "ServiceWorker API")}} contains information about an event sent to a {{domxref("ServiceWorkerContainer")}} target. This extends the default {{event("message")}} event to allow setting a {{domxref("ServiceWorker")}} object as the source of a message. The event object is accessed via the handler function of a {{event("message_(ServiceWorker)","message")}} event, when fired by a message received from a service worker.</p>
+The **`ServiceWorkerMessageEvent`** interface of the {{domxref("Service_Worker_API", "ServiceWorker API")}} contains information about an event sent to a {{domxref("ServiceWorkerContainer")}} target. This extends the default {{event("message")}} event to allow setting a {{domxref("ServiceWorker")}} object as the source of a message. The event object is accessed via the handler function of a {{event("message_(ServiceWorker)","message")}} event, when fired by a message received from a service worker.
 
-<p>This interface inherits from the {{domxref("Event")}} interface.</p>
+This interface inherits from the {{domxref("Event")}} interface.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ServiceWorkerMessageEvent.ServiceWorkerMessageEvent()")}} {{deprecated_inline}}</dt>
- <dd>Creates a new <code>ServiceWorkerMessageEvent</code> object instance.</dd>
-</dl>
+- {{domxref("ServiceWorkerMessageEvent.ServiceWorkerMessageEvent()")}} {{deprecated_inline}}
+  - : Creates a new `ServiceWorkerMessageEvent` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ServiceWorkerMessageEvent.data")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns the event's data. It can be any data type.</dd>
- <dt>{{domxref("ServiceWorkerMessageEvent.origin")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns the origin of the service worker's environment settings object.</dd>
- <dt>{{domxref("ServiceWorkerMessageEvent.lastEventId")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Represents, in <a href="en-US/docs/Server-sent_events/Using_server-sent_events">server-sent events</a>, the last event ID of the event source.</dd>
- <dt>{{domxref("ServiceWorkerMessageEvent.source")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns a reference to the service worker that sent the message.</dd>
- <dt>{{domxref("ServiceWorkerMessageEvent.ports")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>Returns an array of {{domxref("MessagePort")}} objects.</dd>
-</dl>
+- {{domxref("ServiceWorkerMessageEvent.data")}} {{readonlyinline}} {{deprecated_inline}}
+  - : Returns the event's data. It can be any data type.
+- {{domxref("ServiceWorkerMessageEvent.origin")}} {{readonlyinline}} {{deprecated_inline}}
+  - : Returns the origin of the service worker's environment settings object.
+- {{domxref("ServiceWorkerMessageEvent.lastEventId")}} {{readonlyinline}} {{deprecated_inline}}
+  - : Represents, in [server-sent events](en-US/docs/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
+- {{domxref("ServiceWorkerMessageEvent.source")}} {{readonlyinline}} {{deprecated_inline}}
+  - : Returns a reference to the service worker that sent the message.
+- {{domxref("ServiceWorkerMessageEvent.ports")}} {{readonlyinline}} {{deprecated_inline}}
+  - : Returns an array of {{domxref("MessagePort")}} objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("Event")}}_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When the following code is used inside the main thread to set up a message channel between it and a service worker for sending messages between the two, the event object of <code>onmessage</code> will be a <code>ServiceWorkerMessageEvent</code>.</p>
+When the following code is used inside the main thread to set up a message channel between it and a service worker for sending messages between the two, the event object of `onmessage` will be a `ServiceWorkerMessageEvent`.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
 
   ...
 
@@ -67,17 +62,16 @@ browser-compat: api.ServiceWorkerMessageEvent
 
       mySW = reg.active;
       mySW.postMessage('hello', [channel.port2]);
-  });</pre>
+  });
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

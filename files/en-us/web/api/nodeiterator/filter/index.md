@@ -2,50 +2,51 @@
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
 tags:
-- API
-- DOM
-- NodeIterator
-- Property
+  - API
+  - DOM
+  - NodeIterator
+  - Property
 browser-compat: api.NodeIterator.filter
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>NodeIterator.filter</code></strong> read-only method returns a
-	{{domxref("NodeFilter")}} object, that is an object implement an
-	<code>acceptNode(<em>node</em>)</code> method, used to screen nodes.</p>
+The **`NodeIterator.filter`** read-only method returns a
+{{domxref("NodeFilter")}} object, that is an object implement an
+`acceptNode(node)` method, used to screen nodes.
 
-<p>When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the
-	third parameter, and the object method <code>acceptNode(<em>node</em>)</code> is
-	called on every single node to determine whether or not to accept it. This function
-	should return the constant <code>NodeFilter.FILTER_ACCEPT</code> for cases when the
-	node should be accepted and <code>NodeFilter.FILTER_REJECT</code> for cases when the
-	node should be rejected.</p>
+When creating the {{domxref("NodeIterator")}}, the filter object is passed in as the
+third parameter, and the object method `acceptNode(node)` is
+called on every single node to determine whether or not to accept it. This function
+should return the constant `NodeFilter.FILTER_ACCEPT` for cases when the
+node should be accepted and `NodeFilter.FILTER_REJECT` for cases when the
+node should be rejected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
-</pre>
+```js
+nodeFilter = nodeIterator.filter;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const nodeIterator = document.createNodeIterator(
+```js
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-nodeFilter = nodeIterator.filter;</pre>
+nodeFilter = nodeIterator.filter;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface this property belongs to: {{domxref("NodeIterator")}}.</li>
-</ul>
+- The interface this property belongs to: {{domxref("NodeIterator")}}.

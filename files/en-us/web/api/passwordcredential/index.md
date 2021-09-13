@@ -10,45 +10,40 @@ tags:
   - credential management
 browser-compat: api.PasswordCredential
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-<p>The interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the <code>credential</code> member of the <code>init</code> object for global {{domxref('fetch()')}}.</p>
+The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the `credential` member of the `init` object for global {{domxref('fetch()')}}.
 
-<div class="note">
-<p><strong>Note:</strong> This interface is restricted to top-level contexts and cannot be used from an {{HTMLElement("iframe")}}.</p>
-</div>
+> **Note:** This interface is restricted to top-level contexts and cannot be used from an {{HTMLElement("iframe")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}}{{securecontext_inline}}</dt>
- <dd>Creates a new <code>PasswordCredential</code> object.</dd>
-</dl>
+- {{domxref("PasswordCredential.PasswordCredential()","PasswordCredential()")}}{{securecontext_inline}}
+  - : Creates a new `PasswordCredential` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Credential")}}.</em></p>
+_Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-<dl>
- <dt>{{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.</dd>
- <dt>{{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.</dd>
- <dt>{{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} containing the password of the credential.</dd>
-</dl>
+- {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}{{securecontext_inline}}
+  - : A {{domxref("USVString")}} containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.
+- {{domxref("PasswordCredential.name")}} {{readonlyinline}}{{securecontext_inline}}
+  - : A {{domxref("USVString")}} containing a human-readable public name for display in a credential chooser.
+- {{domxref("PasswordCredential.password")}}{{readonlyinline}}{{securecontext_inline}}
+  - : A {{domxref("USVString")}} containing the password of the credential.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var cred = new PasswordCredential({
+```js
+var cred = new PasswordCredential({
   id: id,
   password: password,
   name: name,
@@ -59,12 +54,12 @@ navigator.credentials.store(cred)
  .then(function() {
  // Do something else.
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,45 +12,41 @@ tags:
   - pulse
 browser-compat: api.GamepadHapticActuator.pulse
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>The <strong><code>pulse()</code></strong> method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware pulse at a certain intensity for a specified duration.</p>
+The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware pulse at a certain intensity for a specified duration.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">gamepadHapticActuatorInstance.pulse(<em>value</em>, <em>duration</em>).then(function(result) { ... });</pre>
+```js
+gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>value</em></dt>
- <dd>A double representing the intensity of the pulse. This can vary depending on the hardware type, but generally takes a value between 0.0 (no intensity) and 1.0 (full intensity).</dd>
- <dt><em>duration</em></dt>
- <dd>A double representing the duration of the pulse, in milliseconds.</dd>
-</dl>
+- _value_
+  - : A double representing the intensity of the pulse. This can vary depending on the hardware type, but generally takes a value between 0.0 (no intensity) and 1.0 (full intensity).
+- _duration_
+  - : A double representing the duration of the pulse, in milliseconds.
 
-<div class="note">
-<p><strong>Note:</strong> Repeated calls to <code>pulse()</code> override the previous calls if they are still ongoing.</p>
-</div>
+> **Note:** Repeated calls to `pulse()` override the previous calls if they are still ongoing.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves with a value of <code>true</code> when the pulse has successfully completed.</p>
+A promise that resolves with a value of `true` when the pulse has successfully completed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBC</p>
+TBC
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

@@ -2,90 +2,54 @@
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 tags:
-- API
-- DOM
-- NeedsSpecTable
-- Node
-- Property
-- Reference
+  - API
+  - DOM
+  - NeedsSpecTable
+  - Node
+  - Property
+  - Reference
 browser-compat: api.Node.nodeValue
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>nodeValue</strong></code> property of the {{domxref("Node")}}
-  interface returns or sets the value of the current node.</p>
+The **`nodeValue`** property of the {{domxref("Node")}}
+interface returns or sets the value of the current node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>str</var> = <var>node</var>.nodeValue;
-<em>node</em>.nodeValue = <em>str</em>;
-</pre>
+```js
+str = node.nodeValue;
+node.nodeValue = str;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>str</code> is a string containing the value of the current node, if any. For the
-  document itself, <code>nodeValue</code> returns <code>null</code>. For text, comment,
-  and CDATA nodes, <code>nodeValue</code> returns the content of the node. For attribute
-  nodes, the value of the attribute is returned.</p>
+`str` is a string containing the value of the current node, if any. For the
+document itself, `nodeValue` returns `null`. For text, comment,
+and CDATA nodes, `nodeValue` returns the content of the node. For attribute
+nodes, the value of the attribute is returned.
 
-<p>The following table shows the return values for different elements:</p>
+The following table shows the return values for different elements:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Node</th>
-      <th scope="col">Value of nodeValue</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>{{domxref("CDATASection")}}</td>
-      <td>Content of the CDATA section</td>
-    </tr>
-    <tr>
-      <td>{{domxref("Comment")}}</td>
-      <td>Content of the comment</td>
-    </tr>
-    <tr>
-      <td>{{domxref("Document")}}</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>{{domxref("DocumentFragment")}}</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>{{domxref("DocumentType")}}</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>{{domxref("Element")}}</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>{{domxref("NamedNodeMap")}}</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>{{domxref("ProcessingInstruction")}}</td>
-      <td>Entire content excluding the target</td>
-    </tr>
-    <tr>
-      <td>{{domxref("Text")}}</td>
-      <td>Content of the text node</td>
-    </tr>
-  </tbody>
-</table>
+| Node                                             | Value of nodeValue                  |
+| ------------------------------------------------ | ----------------------------------- |
+| {{domxref("CDATASection")}}             | Content of the CDATA section        |
+| {{domxref("Comment")}}                     | Content of the comment              |
+| {{domxref("Document")}}                 | `null`                              |
+| {{domxref("DocumentFragment")}}         | `null`                              |
+| {{domxref("DocumentType")}}             | `null`                              |
+| {{domxref("Element")}}                     | `null`                              |
+| {{domxref("NamedNodeMap")}}             | `null`                              |
+| {{domxref("ProcessingInstruction")}} | Entire content excluding the target |
+| {{domxref("Text")}}                         | Content of the text node            |
 
-<p>When <code>nodeValue</code> is defined to be <code>null</code>, setting it has no
-  effect.</p>
+When `nodeValue` is defined to be `null`, setting it has no
+effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,33 +11,38 @@ tags:
   - Element
 browser-compat: api.Element.ariaKeyShortcuts
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaKeyShortcuts</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-keyshortcuts</code> attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.</p>
+The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface reflects the value of the `aria-keyshortcuts` attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaKeyShortcuts</var> = element.ariaKeyShortcuts;
-<var>element</var>.ariaKeyShortcuts = <var>ariaKeyShortcuts</var></pre>
+    var ariaKeyShortcuts = element.ariaKeyShortcuts;
+    element.ariaKeyShortcuts = ariaKeyShortcuts
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-keyshortcuts</code> attribute on the element with an ID of <code>skip-link</code> is set to "Alt+Shift+A". Using <code>ariaKeyShortcuts</code> we update the value to "Alt+Shift+M".</p>
+## Examples
 
-<pre class="brush: html">&lt;a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A"&gt;Skip to content&lt;/a&gt;</pre>
+In this example the `aria-keyshortcuts` attribute on the element with an ID of `skip-link` is set to "Alt+Shift+A". Using `ariaKeyShortcuts` we update the value to "Alt+Shift+M".
 
-<pre class="brush: js">let el = document.getElementById('saveChanges');
+```html
+<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+```
+
+```js
+let el = document.getElementById('saveChanges');
 console.log(el.ariaKeyShortcuts); // "Alt+Shift+A"
 el.ariaKeyShortcuts = "Alt+Shift+M"
-console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"</pre>
+console.log(el.ariaKeyShortcuts); // "Alt+Shift+M"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

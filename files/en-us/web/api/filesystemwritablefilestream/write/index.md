@@ -11,74 +11,69 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.write
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>write()</code></strong> method of the
-  {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the
-  method is called on, at the current file cursor offset.</p>
+The **`write()`** method of the
+{{domxref("FileSystemWritableFileStream")}} interface writes content into the file the
+method is called on, at the current file cursor offset.
 
-<p>No changes are written to the actual file on disk until the stream has been closed.
-  Changes are typically written to a temporary file instead. This method can also be used
-  to seek to a byte point within the stream and truncate to modify the total bytes the
-  file contains.</p>
+No changes are written to the actual file on disk until the stream has been closed.
+Changes are typically written to a temporary file instead. This method can also be used
+to seek to a byte point within the stream and truncate to modify the total bytes the
+file contains.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">FileSystemWritableFileStream.write(data).then(...);</pre>
+```js
+FileSystemWritableFileStream.write(data).then(...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
+- `data`
+
+  - : Can be either the file data to write, in the form of a {{domxref('BufferSource')}},
     {{domxref('Blob')}} or {{domxref('USVString')}}. Or an object containing the following
     properties:
-    <ul>
-      <li><strong><code>type</code></strong>: One of <code>'write'</code>,
-        <code>'seek'</code> or <code>'truncate'</code>. This is required if the object is
-        passed into the <code>write()</code> method.</li>
-      <li><strong><code>data</code></strong>: The file data to write. Can be a
-        {{domxref('BufferSource')}}, {{domxref('Blob')}} or {{domxref('USVString')}}. This
-        is required if the <code>type</code> is set to <code>'write'</code>.</li>
-      <li><strong><code>position</code></strong>: The byte position the current file
-        cursor should move to if type <code>'seek'</code> is used. Can also be set with
-        <code>'write'</code> in which case the write will start at the position.</li>
-      <li><strong><code>size</code></strong>: An unsigned long value representing the
-        amount of bytes the stream should contain. This is required if the
-        <code>type</code> is set to <code>'truncate'</code></li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - **`type`**: One of `'write'`,
+      `'seek'` or `'truncate'`. This is required if the object is
+      passed into the `write()` method.
+    - **`data`**: The file data to write. Can be a
+      {{domxref('BufferSource')}}, {{domxref('Blob')}} or {{domxref('USVString')}}. This
+      is required if the `type` is set to `'write'`.
+    - **`position`**: The byte position the current file
+      cursor should move to if type `'seek'` is used. Can also be set with
+      `'write'` in which case the write will start at the position.
+    - **`size`**: An unsigned long value representing the
+      amount of bytes the stream should contain. This is required if the
+      `type` is set to `'truncate'`
 
-<p>{{jsxref('Promise')}} which returns undefined</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+{{jsxref('Promise')}} which returns undefined
 
-<dl>
-  <dt>NotAllowedError</dt>
-  <dd>If {{domxref('PermissionStatus')}} is not granted.</dd>
-  <dt>TypeError</dt>
-  <dd>If data is undefined, or if <code>position</code> or <code>size</code> aren't valid.
-  </dd>
-  <dt>InvalidStateError</dt>
-  <dd>If the <code>position</code> is set and larger than the bytes available.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- NotAllowedError
+  - : If {{domxref('PermissionStatus')}} is not granted.
+- TypeError
+  - : If data is undefined, or if `position` or `size` aren't valid.
+- InvalidStateError
+  - : If the `position` is set and larger than the bytes available.
 
-<p>This asynchronous function opens the 'Save File' picker, which returns a
-  {{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable
-  stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}}
-  method.</p>
+## Examples
 
-<p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently
-  closed.</p>
+This asynchronous function opens the 'Save File' picker, which returns a
+{{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable
+stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}}
+method.
 
-<pre class="brush: js">async function saveFile() {
+A user defined {{domxref('Blob')}} is then written to the stream which is subsequently
+closed.
+
+```js
+async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -92,12 +87,13 @@ browser-compat: api.FileSystemWritableFileStream.write
   // close the file and write the contents to disk.
   await writableStream.close();
 }
-</pre>
+```
 
-<p>The following show different examples of options that can be passed into the
-  <code>write()</code> method.</p>
+The following show different examples of options that can be passed into the
+`write()` method.
 
-<pre class="brush: js">// just pass in the data (no options)
+```js
+// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position
@@ -108,20 +104,18 @@ writableStream.write({ type: "seek", position: position })
 
 // resizes the file to be size bytes long
 writableStream.write({ type: "truncate", size: size })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

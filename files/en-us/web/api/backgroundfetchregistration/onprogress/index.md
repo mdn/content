@@ -9,40 +9,40 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.onprogress
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>onprogress</code></strong> EventHandler of the {{domxref("BackgroundFetchRegistration")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes background fetch events.</p>
+The **`onprogress`** EventHandler of the {{domxref("BackgroundFetchRegistration")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes background fetch events.
 
-<p> The event fires when any of the following properties change:</p>
+The event fires when any of the following properties change:
 
-<ul>
-  <li><code>uploaded</code></li>
-  <li><code>downloaded</code></li>
-  <li><code>result</code></li>
-  <li><code>failureReason</code></li>
-</ul>
+- `uploaded`
+- `downloaded`
+- `result`
+- `failureReason`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">BackgroundFetchRegistration.onprogress = function;
-BackgroundRegistration.addEventListener('progress', function);</pre>
+    BackgroundFetchRegistration.onprogress = function;
+    BackgroundRegistration.addEventListener('progress', function);
 
-<p>Where <code>function</code> is the JavaScript function to execute.</p>
+Where `function` is the JavaScript function to execute.
 
-<h2>Example</h2>
+## Example
 
-<p>The following example demonstrates how to log the progress of a download. The code first checks that a <code>downloadTotal</code> was provided when the background fetch was registered. This is then used to calculate the percentage, based on the <code>downloaded</code> property.</p>
+The following example demonstrates how to log the progress of a download. The code first checks that a `downloadTotal` was provided when the background fetch was registered. This is then used to calculate the percentage, based on the `downloaded` property.
 
-<pre class="brush: js">bgFetch.addEventListener('progress', () => {
+```js
+bgFetch.addEventListener('progress', () => {
   if (!bgFetch.downloadTotal) return;
   const percent = Math.round(bgFetch.downloaded / bgFetch.downloadTotal * 100);
   console.log(`Download progress: ${percent}%`);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

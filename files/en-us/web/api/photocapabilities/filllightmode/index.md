@@ -2,52 +2,48 @@
 title: PhotoCapabilities.fillLightMode
 slug: Web/API/PhotoCapabilities/fillLightMode
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- Media
-- MediaStream Image Capture API
-- PhotoCapabilities
-- Property
-- Read-only
-- Reference
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - Media
+  - MediaStream Image Capture API
+  - PhotoCapabilities
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.PhotoCapabilities.fillLightMode
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>fillLightMode</code></strong> read-only
-		property of the {{domxref("PhotoCapabilities")}} interface returns all available
-		fill light options of the source device.</p>
+The **`fillLightMode`** read-only
+property of the {{domxref("PhotoCapabilities")}} interface returns all available
+fill light options of the source device.
 
-<p>Options may include
-	<code>auto</code>, <code>off</code>, or <code>flash</code>.</p>
+Options may include
+`auto`, `off`, or `flash`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">const <em>lightModes</em> = <em>photoCapabilities</em>.fillLightMode</pre>
+```js
+const lightModes = photoCapabilities.fillLightMode
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of available fill light modes.</p>
+An {{jsxref("Array")}} of available fill light modes.
 
-<dl>
-	<dt><code>auto</code></dt>
-	<dd>The device's fill light will be used automatically in low light conditions.</dd>
-	<dt><code>off</code></dt>
-	<dd>No fill light will be used.</dd>
-	<dt><code>flash</code></dt>
-	<dd>Always use the device's fill light.</dd>
-</dl>
+- `auto`
+  - : The device's fill light will be used automatically in low light conditions.
+- `off`
+  - : No fill light will be used.
+- `flash`
+  - : Always use the device's fill light.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

@@ -12,57 +12,51 @@ tags:
   - WebVR
 browser-compat: api.VRFieldOfView.VRFieldOfView
 ---
-<p>{{APIRef("WebVR API")}}{{Deprecated_Header}}</p>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRFieldOfView()</code></strong> constructor creates a new {{domxref("VRFieldOFView")}} object.</p>
+The **`VRFieldOfView()`** constructor creates a new {{domxref("VRFieldOFView")}} object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This constructor was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfView.upDegrees")}}, {{domxref("VRFieldOfView.rightDegrees")}}, {{domxref("VRFieldOfView.downDegrees")}}, and {{domxref("VRFieldOfView.leftDegrees")}} values you want the field of view to have</p>
+There are two forms of this constructor, which take their information in slightly different ways. The first one accepts four separate arguments — the {{domxref("VRFieldOfView.upDegrees")}}, {{domxref("VRFieldOfView.rightDegrees")}}, {{domxref("VRFieldOfView.downDegrees")}}, and {{domxref("VRFieldOfView.leftDegrees")}} values you want the field of view to have
 
-<pre class="brush: js">var myFOV = new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees);</pre>
+```js
+var myFOV = new VRFieldOfView(upDegrees, rightDegrees, downDegrees, leftDegrees);
+```
 
-<p>The second one takes a <code>VRFieldOfViewInit</code> object as a single argument, which is just a dictionary containing the four degree values mentioned above:</p>
+The second one takes a `VRFieldOfViewInit` object as a single argument, which is just a dictionary containing the four degree values mentioned above:
 
-<pre class="brush: js">var init = {upDegrees:up,rightDegrees:right,downDegrees:down,leftDegrees:left}
-var myFOV = new VRFieldOfView(init);</pre>
+```js
+var init = {upDegrees:up,rightDegrees:right,downDegrees:down,leftDegrees:left}
+var myFOV = new VRFieldOfView(init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li>
-  <p>Four argument version:</p>
+- Four argument version:
 
-  <dl>
-   <dt>upDegrees</dt>
-   <dd>The number of degrees upwards that the field of view will extend in.</dd>
-   <dt>rightDegrees</dt>
-   <dd>The number of degrees to the right that the field of view will extend in.</dd>
-   <dt>downDegrees</dt>
-   <dd>The number of degrees downwards that the field of view will extend in.</dd>
-   <dt>leftDegrees</dt>
-   <dd>The number of degrees to the left that the field of view will extend in.</dd>
-  </dl>
- </li>
- <li>
-  <p>One argument version:</p>
+  - upDegrees
+    - : The number of degrees upwards that the field of view will extend in.
+  - rightDegrees
+    - : The number of degrees to the right that the field of view will extend in.
+  - downDegrees
+    - : The number of degrees downwards that the field of view will extend in.
+  - leftDegrees
+    - : The number of degrees to the left that the field of view will extend in.
 
-  <dl>
-   <dt>init</dt>
-   <dd>A dictionary object containing the four degree values specified above.</dd>
-  </dl>
- </li>
-</ul>
+- One argument version:
 
-<h2 id="Examples">Examples</h2>
+  - init
+    - : A dictionary object containing the four degree values specified above.
 
-<p>The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The <code>VRFieldOfView()</code> constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the {{domxref("HMDVRDevice.setFieldOfView")}} method.</p>
+## Examples
 
-<pre class="brush: js">function setCustomFOV(up,right,down,left) {
+The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The `VRFieldOfView()` constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the {{domxref("HMDVRDevice.setFieldOfView")}} method.
+
+```js
+function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
@@ -71,24 +65,22 @@ var myFOV = new VRFieldOfView(init);</pre>
   var rEye = gHMD.getEyeParameters('right');
   console.log(lEye.currentFieldOfView);
   console.log(rEye.currentFieldOfView);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.fieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.</p>
-</div>
+> **Note:** When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.fieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This constructor was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This constructor was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

@@ -11,42 +11,42 @@ tags:
   - resume
 browser-compat: api.AudioContext.resume
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>resume()</code></strong> method of the {{ domxref("AudioContext") }}
-  interface resumes the progression of time in an audio context that has previously been
-  suspended.</p>
+The **`resume()`** method of the {{ domxref("AudioContext") }}
+interface resumes the progression of time in an audio context that has previously been
+suspended.
 
-<p>This method will cause an <code>INVALID_STATE_ERR</code> exception to be thrown if
-  called on an {{domxref("OfflineAudioContext")}}.</p>
+This method will cause an `INVALID_STATE_ERR` exception to be thrown if
+called on an {{domxref("OfflineAudioContext")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>completePromise</em> = <em>audioContext</em>.resume();
-</pre>
+```js
+completePromise = audioContext.resume();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves when the context has resumed. The promise is
-  rejected if the context has already been closed.</p>
+A {{jsxref("Promise")}} that resolves when the context has resumed. The promise is
+rejected if the context has already been closed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is taken from our <a
-    href="https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states">AudioContext
-    states demo</a> (<a
-    href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running
-    live</a>.) When the suspend/resume button is clicked, the
-  {{domxref("BaseAudioContext/state", "AudioContext.state")}} is queried — if it is <code>running</code>,
-  {{domxref("AudioContext.suspend()", "suspend()")}} is called; if it is
-  <code>suspended</code>, <code>resume()</code> is called. In each case, the text label of
-  the button is updated as appropriate once the promise resolves.</p>
+The following snippet is taken from our [AudioContext
+states demo](https://github.com/mdn/webaudio-examples/tree/master/audiocontext-states) ([see it running
+live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the suspend/resume button is clicked, the
+{{domxref("BaseAudioContext/state", "AudioContext.state")}} is queried — if it is `running`,
+{{domxref("AudioContext.suspend()", "suspend()")}} is called; if it is
+`suspended`, `resume()` is called. In each case, the text label of
+the button is updated as appropriate once the promise resolves.
 
-<pre class="brush: js">susresBtn.onclick = function() {
+```js
+susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -57,20 +57,17 @@ browser-compat: api.AudioContext.resume
     });
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

@@ -2,32 +2,34 @@
 title: Bluetooth.referringDevice
 slug: Web/API/Bluetooth/referringDevice
 tags:
-- API
-- Bluetooth
-- Reference
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - Reference
+  - Web Bluetooth API
 browser-compat: api.Bluetooth.referringDevice
 ---
-<p>{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>Bluetooth.referringDevice</code></strong>
-    attribute of the {{DOMxRef("Bluetooth")}} interface returns a
-    {{DOMxRef("BluetoothDevice")}} if the current document was opened in response to an
-    instruction sent by this device and <code>null</code> otherwise.</p>
+The **`Bluetooth.referringDevice`**
+attribute of the {{DOMxRef("Bluetooth")}} interface returns a
+{{DOMxRef("BluetoothDevice")}} if the current document was opened in response to an
+instruction sent by this device and `null` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>Bluetooth</em>.referringDevice</pre>
+```js
+Bluetooth.referringDevice
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("BluetoothDevice")}}, if the document was opened in response to an
-  instruction sent by this device and <code>null</code> otherwise.</p>
+A {{DOMxRef("BluetoothDevice")}}, if the document was opened in response to an
+instruction sent by this device and `null` otherwise.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

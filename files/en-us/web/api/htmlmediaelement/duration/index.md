@@ -2,54 +2,54 @@
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Read-only
-- Time
-- Web
-- duration
-- seconds
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Read-only
+  - Time
+  - Web
+  - duration
+  - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <em>read-only</em> {{domxref("HTMLMediaElement")}}
-    property <code><strong>duration</strong></code> indicates the length of the element's
-    media in seconds.</p>
+The _read-only_ {{domxref("HTMLMediaElement")}}
+property **`duration`** indicates the length of the element's
+media in seconds.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>myDuration</em> = <em>htmlMediaElement</em>.duration</pre>
+```js
+myDuration = htmlMediaElement.duration
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the duration of the media in
-  seconds. If no media data is available, the value <code>NaN</code> is returned. If the
-  element's media doesn't have a known duration—such as for live media streams—the value
-  of <code>duration</code> is <code>+Infinity</code>.</p>
+A double-precision floating-point value indicating the duration of the media in
+seconds. If no media data is available, the value `NaN` is returned. If the
+element's media doesn't have a known duration—such as for live media streams—the value
+of `duration` is `+Infinity`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.duration); // NaN
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
-  <li>{{domxref("HTMLMediaElement.currentTime")}}: The current playback position of the
-    media</li>
-  <li>The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
-</ul>
+- [Web media technologies](/en-US/docs/Web/Media)
+- {{domxref("HTMLMediaElement.currentTime")}}: The current playback position of the
+  media
+- The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements

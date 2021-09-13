@@ -17,56 +17,52 @@ tags:
   - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>createMediaStreamSource()</code> method of the {{ domxref("AudioContext") }}
-  Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }}
-  object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }}
-  instance), the audio from which can then be played and manipulated.</p>
+The `createMediaStreamSource()` method of the {{ domxref("AudioContext") }}
+Interface is used to create a new {{ domxref("MediaStreamAudioSourceNode") }}
+object, given a media stream (say, from a {{ domxref("MediaDevices.getUserMedia") }}
+instance), the audio from which can then be played and manipulated.
 
-<p>For more details about media stream audio source nodes, check out the {{
-    domxref("MediaStreamAudioSourceNode") }} reference page.</p>
+For more details about media stream audio source nodes, check out the {{
+    domxref("MediaStreamAudioSourceNode") }} reference page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js"><em>audioSourceNode</em> = <em>audioContext</em>.createMediaStreamSource(<em>stream</em>);</pre>
+```js
+audioSourceNode = audioContext.createMediaStreamSource(stream);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code>stream</code></dt>
-    <dd>A {{domxref("MediaStream")}} to serve as an audio source to be fed into an audio
-        processing graph for use and manipulation.</dd>
-</dl>
+- `stream`
+  - : A {{domxref("MediaStream")}} to serve as an audio source to be fed into an audio
+    processing graph for use and manipulation.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
-    whose media is obtained from the specified source stream.</p>
+A new {{domxref("MediaStreamAudioSourceNode")}} object representing the audio node
+whose media is obtained from the specified source stream.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we grab a media (audio + video) stream from {{
+In this example, we grab a media (audio + video) stream from {{
     domxref("navigator.getUserMedia") }}, feed the media into a {{ htmlelement("video") }}
-    element to play then mute the audio, but then also feed the audio into a {{
+element to play then mute the audio, but then also feed the audio into a {{
     domxref("MediaStreamAudioSourceNode") }}. Next, we feed this source audio into a low
-    pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
-    then a {{domxref("AudioDestinationNode") }}.</p>
+pass {{ domxref("BiquadFilterNode") }} (which effectively serves as a bass booster),
+then a {{domxref("AudioDestinationNode") }}.
 
-<p>The range slider below the {{ htmlelement("video") }} element controls the amount of
-    gain given to the lowpass filter — increase the value of the slider to make the audio
-    sound more bass heavy!</p>
+The range slider below the {{ htmlelement("video") }} element controls the amount of
+gain given to the lowpass filter — increase the value of the slider to make the audio
+sound more bass heavy!
 
-<div class="note">
-    <p><strong>Note:</strong> You can see this <a
-            href="https://mdn.github.io/webaudio-examples/stream-source-buffer/">example
-            running live</a>, or <a
-            href="https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer">view
-            the source</a>.</p>
-</div>
+> **Note:** You can see this [example
+> running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view
+> the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
 
-<pre class="brush: js;">var pre = document.querySelector('pre');
+```js
+var pre = document.querySelector('pre');
 var video = document.querySelector('video');
 var myScript = document.querySelector('script');
 var range = document.querySelector('input');
@@ -118,27 +114,24 @@ if (navigator.mediaDevices) {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;</pre>
+pre.innerHTML = myScript.innerHTML;
+```
 
-<div class="note">
-    <p><strong>Note:</strong> As a consequence of calling
-        <code>createMediaStreamSource()</code>, audio playback from the media stream will
-        be re-routed into the processing graph of the {{domxref("AudioContext")}}. So
-        playing/pausing the stream can still be done through the media element API and the
-        player controls.</p>
-</div>
+> **Note:** As a consequence of calling
+> `createMediaStreamSource()`, audio playback from the media stream will
+> be re-routed into the processing graph of the {{domxref("AudioContext")}}. So
+> playing/pausing the stream can still be done through the media element API and the
+> player controls.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-            API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

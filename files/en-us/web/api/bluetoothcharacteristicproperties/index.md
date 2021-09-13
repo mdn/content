@@ -11,40 +11,39 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothCharacteristicProperties
 ---
-<p>{{APIRef("Bluetooth API")}}{{Draft}}{{securecontext_header}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}}{{Draft}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothCharacteristicProperties</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> provides the operations that are valid on the given {{domxref('BluetoothRemoteGATTCharacteristic')}}.</p>
+The **`BluetoothCharacteristicProperties`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides the operations that are valid on the given {{domxref('BluetoothRemoteGATTCharacteristic')}}.
 
-<p>This interface is returned by calling {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}.</p>
+This interface is returned by calling {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.authenticatedSignedWrites","authenticatedSignedWrites")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if signed writing to the characteristic value is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.broadcast", "broadcast")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if the broadcast of the characteristic value is permitted using the Server Characteristic Configuration Descriptor.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.indicate","indicate")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if indications of the characteristic value with acknowledgement is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.notify","notify")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if notifications of the characteristic value without acknowledgement is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.read", "read")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if the reading of the characteristic value is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.reliableWrite","reliableWrite")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if reliable writes to the characteristic is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.writableAuxiliaries","writableAuxiliaries")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if reliable writes to the characteristic descriptor is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.write","write")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if the writing to the characteristic with response is permitted.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties.writeWithoutResponse","writeWithoutResponse")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>boolean</code> that is <code>true</code> if the writing to the characteristic without response is permitted.</dd>
-</dl>
+- {{DOMxRef("BluetoothCharacteristicProperties.authenticatedSignedWrites","authenticatedSignedWrites")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if signed writing to the characteristic value is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.broadcast", "broadcast")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if the broadcast of the characteristic value is permitted using the Server Characteristic Configuration Descriptor.
+- {{DOMxRef("BluetoothCharacteristicProperties.indicate","indicate")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if indications of the characteristic value with acknowledgement is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.notify","notify")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if notifications of the characteristic value without acknowledgement is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.read", "read")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if the reading of the characteristic value is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.reliableWrite","reliableWrite")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if reliable writes to the characteristic is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.writableAuxiliaries","writableAuxiliaries")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if reliable writes to the characteristic descriptor is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.write","write")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if the writing to the characteristic with response is permitted.
+- {{DOMxRef("BluetoothCharacteristicProperties.writeWithoutResponse","writeWithoutResponse")}}{{ReadOnlyInline}}
+  - : Returns a `boolean` that is `true` if the writing to the characteristic without response is permitted.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how tell if a GATT characteristic supports value change notifications.</p>
+The following example shows how tell if a GATT characteristic supports value change notifications.
 
-<pre class="brush: js">let device = await navigator.bluetooth.requestDevice({
+```js
+let device = await navigator.bluetooth.requestDevice({
   filters: [{services: ['heart_rate']}]
 });
 let gatt = await device.gatt.connect();
@@ -57,12 +56,12 @@ if (characteristic.properties.notify) {
   }
   await characteristic.startNotifications();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

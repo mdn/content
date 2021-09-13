@@ -2,40 +2,42 @@
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
 tags:
-- API
-- Experimental
-- Property
-- Push
-- Push API
-- PushSubscription
-- Reference
-- Service Workers
-- endPoint
+  - API
+  - Experimental
+  - Property
+  - Push
+  - Push API
+  - PushSubscription
+  - Reference
+  - Service Workers
+  - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>The <code><strong>endpoint</strong></code> read-only property of the
-  {{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
-  the endpoint associated with the push subscription.</p>
+The **`endpoint`** read-only property of the
+{{domxref("PushSubscription")}} interface returns a {{domxref("USVString")}} containing
+the endpoint associated with the push subscription.
 
-<p>The endpoint takes the form of a custom URL pointing to a push server, which can be
-  used to send a push message to the particular service worker instance that subscribed to
-  the push service. For this reason, it is a good idea to keep your endpoint a secret, so
-  others do not hijack it and abuse the push functionality.</p>
+The endpoint takes the form of a custom URL pointing to a push server, which can be
+used to send a push message to the particular service worker instance that subscribed to
+the push service. For this reason, it is a good idea to keep your endpoint a secret, so
+others do not hijack it and abuse the push functionality.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myEnd</em> = <em>pushSubscription</em>.endpoint;</pre>
+```js
+var myEnd = pushSubscription.endpoint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.subscribe({userVisibleOnly: true}).then(function(subscription) {
     console.log(subscription.endpoint);
 
@@ -44,12 +46,12 @@ browser-compat: api.PushSubscription.endpoint
       // push message at a later date
   })
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,33 +2,34 @@
 title: OfflineAudioCompletionEvent.renderedBuffer
 slug: Web/API/OfflineAudioCompletionEvent/renderedBuffer
 tags:
-- API
-- Audio
-- OfflineAudioCompletionEvent
-- Property
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - OfflineAudioCompletionEvent
+  - Property
+  - Reference
+  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent.renderedBuffer
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>renderedBuffer</strong></code> read-only property of the
-  {{domxref("OfflineAudioCompletionEvent")}} interface is an {{domxref("AudioBuffer")}}
-  containing the result of processing an {{domxref("OfflineAudioContext")}}.</p>
+The **`renderedBuffer`** read-only property of the
+{{domxref("OfflineAudioCompletionEvent")}} interface is an {{domxref("AudioBuffer")}}
+containing the result of processing an {{domxref("OfflineAudioContext")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var buffer = offlineAudioCompletionEventInstance.renderedBuffer;</pre>
+```js
+var buffer = offlineAudioCompletionEventInstance.renderedBuffer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioBuffer")}}.</p>
+An {{domxref("AudioBuffer")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

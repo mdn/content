@@ -2,41 +2,42 @@
 title: RTCIceParameters.password
 slug: Web/API/RTCIceParameters/password
 tags:
-- API
-- Candidates
-- Connectivity
-- ICE
-- Negotiation
-- Property
-- RTCIceParameters
-- Reference
-- WebRTC
-- WebRTC API
-- password
+  - API
+  - Candidates
+  - Connectivity
+  - ICE
+  - Negotiation
+  - Property
+  - RTCIceParameters
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - password
 browser-compat: api.RTCIceParameters.password
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceParameters")}}</strong>
-    dictionary's <strong><code>password</code></strong> property specifies the ICE
-    password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
+The **{{domxref("RTCIceParameters")}}**
+dictionary's **`password`** property specifies the ICE
+password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
     "usernameFragment")}}, uniquely identifies an ICE session for its entire
-    duration.</p>
+duration.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>password</em> = <em>RTCIceParameters</em>.password;</pre>
+```js
+password = RTCIceParameters.password;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the password that corresponds to the transport's
-  <code>usernameFragment</code> string</p>
+A {{domxref("DOMString")}} containing the password that corresponds to the transport's
+`usernameFragment` string
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

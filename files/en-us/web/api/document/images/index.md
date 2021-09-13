@@ -10,51 +10,54 @@ tags:
   - Reference
 browser-compat: api.Document.images
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>images</strong></code> read-only property of
-    the {{domxref("Document")}} interface returns a <a
-      href="/en-US/docs/Web/API/HTMLCollection">collection</a> of the <a
-      href="/en-US/docs/Web/API/HTMLImageElement/Image">images</a> in the current HTML document.</p>
+The **`images`** read-only property of
+the {{domxref("Document")}} interface returns a [collection](/en-US/docs/Web/API/HTMLCollection) of the [images](/en-US/docs/Web/API/HTMLImageElement/Image) in the current HTML document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>var imageCollection</em> = document.images;</pre>
+```js
+var imageCollection = document.images;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}} providing a live list of all of the images contained
-  in the current document. Each entry in the collection is an
-  {{domxref("HTMLImageElement")}} representing a single image element.</p>
+An {{domxref("HTMLCollection")}} providing a live list of all of the images contained
+in the current document. Each entry in the collection is an
+{{domxref("HTMLImageElement")}} representing a single image element.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You can use either JavaScript array notation or the {{domxref("HTMLCollection.item",
+You can use either JavaScript array notation or the {{domxref("HTMLCollection.item",
   "item()")}} method on the returned collection to access the items in the collection. The
-  following are equivalent:</p>
+following are equivalent:
 
-<pre class="brush: js">firstImage = imageCollection.item(0);
+```js
+firstImage = imageCollection.item(0);
 
-firstImage = imageCollection[0];</pre>
+firstImage = imageCollection[0];
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example looks through the list of images and finds one whose name is
-  <code>"banner.gif"</code>.</p>
+This example looks through the list of images and finds one whose name is
+`"banner.gif"`.
 
-<pre class="brush:js">var ilist = document.images;
+```js
+var ilist = document.images;
 
-for(var i = 0; i &lt; ilist.length; i++) {
+for(var i = 0; i < ilist.length; i++) {
     if(ilist[i].src == 'banner.gif') {
         // found the banner
     }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

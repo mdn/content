@@ -2,47 +2,44 @@
 title: Document.createExpression()
 slug: Web/API/Document/createExpression
 tags:
-- API
-- DOM
-- Method
-- Reference
-- XPath
-- createExpression
+  - API
+  - DOM
+  - Method
+  - Reference
+  - XPath
+  - createExpression
 browser-compat: api.Document.createExpression
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>This method compiles an {{DOMxRef("XPathExpression")}} which can then be used for
-  (repeated) evaluations.</p>
+This method compiles an {{DOMxRef("XPathExpression")}} which can then be used for
+(repeated) evaluations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>xpathExpr</var> = <var>document</var>.createExpression(<var>xpathText</var>, <var>namespaceURLMapper</var>);
-</pre>
+```js
+xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><var>xpathText</var> is a string which is the XPath expression to be compiled.</li>
-  <li><var>namespaceURLMapper</var> is a function which maps a namespace prefix to a
-    namespace URL (or null if none needed).</li>
-</ul>
+- _xpathText_ is a string which is the XPath expression to be compiled.
+- _namespaceURLMapper_ is a function which maps a namespace prefix to a
+  namespace URL (or null if none needed).
 
-<p>{{Fx_MinVersion_Note(3, "Prior to Firefox 3, you could call this method on documents
+{{Fx_MinVersion_Note(3, "Prior to Firefox 3, you could call this method on documents
   other than the one you planned to run the XPath against. Under Firefox 3, you must call
-  it on the same document.")}}</p>
+  it on the same document.")}}
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{DOMxRef("XPathExpression")}}</p>
+{{DOMxRef("XPathExpression")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Document.evaluate()")}}</li>
-  <li>{{DOMxRef("XPathExpression")}}</li>
-</ul>
+- {{DOMxRef("Document.evaluate()")}}
+- {{DOMxRef("XPathExpression")}}

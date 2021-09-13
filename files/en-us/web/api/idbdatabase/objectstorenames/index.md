@@ -12,41 +12,40 @@ tags:
   - objectStoreNames
 browser-compat: api.IDBDatabase.objectStoreNames
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>objectStoreNames</code></strong> read-only property of the
-    {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
-    list of the names of the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object
-      stores</a> currently in the connected database.</p>
+The **`objectStoreNames`** read-only property of the
+{{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
+list of the names of the [object
+stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>list</em>[] = <em>IDBDatabase</em>.objectStoreNames;</pre>
+```js
+var list[] = IDBDatabase.objectStoreNames;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{ domxref("DOMStringList") }} containing a list of
-    the names of the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store"
-   >object stores</a>currently
-    in the connected database.</p>
+A {{ domxref("DOMStringList") }} containing a list of
+the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store)currently
+in the connected database.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
@@ -54,27 +53,24 @@ DBOpenRequest.onsuccess = function(event) {
   // This line will log the version of the connected database, which should be
   // an object that looks like { ['my-store-name'] }
   console.log(db.objectStoreNames);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

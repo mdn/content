@@ -11,31 +11,30 @@ tags:
   - Secure context
 browser-compat: api.PositionOptions.timeout
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>PositionOptions.timeout</strong></code> property is a positive
-	<code>long</code> value representing the maximum length of time (in milliseconds) the
-	device is allowed to take in order to return a position. The default value is
-	<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>,
-	meaning that <code>getCurrentPosition()</code> won't return until the position is
-	available.</p>
+The **`PositionOptions.timeout`** property is a positive
+`long` value representing the maximum length of time (in milliseconds) the
+device is allowed to take in order to return a position. The default value is
+[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity),
+meaning that `getCurrentPosition()` won't return until the position is
+available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>positionOptions</var>.timeout = <var>timeLength</var>
-</pre>
+```js
+positionOptions.timeout = timeLength
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Geolocation_API">Using geolocation</a></li>
-	<li>The {{domxref("PositionOptions")}} interface it belongs to.</li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
+- The {{domxref("PositionOptions")}} interface it belongs to.

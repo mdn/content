@@ -2,57 +2,56 @@
 title: Storage.length
 slug: Web/API/Storage/length
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- Storage
-- Web Storage
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - Storage
+  - Web Storage
 browser-compat: api.Storage.length
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>length</code></strong> read-only property of the
-  {{domxref("Storage")}} interface returns the number of data items stored in a given
-  <code>Storage</code> object.</p>
+The **`length`** read-only property of the
+{{domxref("Storage")}} interface returns the number of data items stored in a given
+`Storage` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>length</em> = <em>storage</em>.length;</pre>
+```js
+length = storage.length;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The number of items stored in the <code>Storage</code> object.</p>
+The number of items stored in the `Storage` object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following function adds three data items to the local storage for the current
-  domain, then returns the number of items in the storage:</p>
+The following function adds three data items to the local storage for the current
+domain, then returns the number of items in the storage:
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'yellow');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
   return localStorage.length; // Should return 3
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> For a real world example, see our <a
-      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-      Web Storage API</a></li>
-</ul>
+- [Using the
+  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

@@ -10,36 +10,34 @@ tags:
   - accuracy
 browser-compat: api.GeolocationCoordinates.accuracy
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationCoordinates.accuracy</strong></code> read-only property is
-  a strictly positive <code>double</code> representing the accuracy, with a 95% confidence
-  level, of the {{domxref("GeolocationCoordinates.latitude")}} and
-  {{domxref("GeolocationCoordinates.longitude")}} properties expressed in meters.</p>
+The **`GeolocationCoordinates.accuracy`** read-only property is
+a strictly positive `double` representing the accuracy, with a 95% confidence
+level, of the {{domxref("GeolocationCoordinates.latitude")}} and
+{{domxref("GeolocationCoordinates.longitude")}} properties expressed in meters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>let acc</var> = <var>geolocationCoordinatesInstance</var>.accuracy
-</pre>
+```js
+let acc = geolocationCoordinatesInstance.accuracy
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A positive <code>double</code> representing the accuracy, with a 95% confidence level,
-  of the {{domxref("GeolocationCoordinates.latitude")}} and
-  {{domxref("GeolocationCoordinates.longitude")}} properties expressed in meters.</p>
+A positive `double` representing the accuracy, with a 95% confidence level,
+of the {{domxref("GeolocationCoordinates.latitude")}} and
+{{domxref("GeolocationCoordinates.longitude")}} properties expressed in meters.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>{{domxref("GeolocationCoordinates")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

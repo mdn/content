@@ -2,51 +2,48 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 tags:
-- API
-- Clipboard
-- Clipboard API
-- ClipboardEvent
-- Cut
-- Experimental
-- Property
-- Read-only
-- copy
-- paste
+  - API
+  - Clipboard
+  - Clipboard API
+  - ClipboardEvent
+  - Cut
+  - Experimental
+  - Property
+  - Read-only
+  - copy
+  - paste
 browser-compat: api.ClipboardEvent.clipboardData
 ---
-<p>{{ apiref("Clipboard API") }} {{SeeCompatTable}}</p>
+{{ apiref("Clipboard API") }} {{SeeCompatTable}}
 
-<p>The <code><strong>ClipboardEvent.clipboardData</strong></code> property holds a
-  {{domxref("DataTransfer")}} object, which can be used:</p>
+The **`ClipboardEvent.clipboardData`** property holds a
+{{domxref("DataTransfer")}} object, which can be used:
 
-<ul>
-  <li>to specify what data should be put into the clipboard from the {{event("cut")}} and
-    {{event("copy")}} event handlers, typically with a {{domxref("DataTransfer.setData",
-    "setData(format, data)")}} call;</li>
-  <li>to obtain the data to be pasted from the {{event("paste")}} event handler, typically
-    with a {{domxref("DataTransfer.getData", "getData(format)")}} call.</li>
-</ul>
+- to specify what data should be put into the clipboard from the {{event("cut")}} and
+  {{event("copy")}} event handlers, typically with a {{domxref("DataTransfer.setData",
+    "setData(format, data)")}} call;
+- to obtain the data to be pasted from the {{event("paste")}} event handler, typically
+  with a {{domxref("DataTransfer.getData", "getData(format)")}} call.
 
-<p>See the {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events
-  documentation for more information.</p>
+See the {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events
+documentation for more information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>data</em> = <em>ClipboardEvent</em>.clipboardData</pre>
+```js
+data = ClipboardEvent.clipboardData
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
-  <li>The {{domxref("ClipboardEvent")}} interface it belongs to.</li>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-</ul>
+- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- The {{domxref("ClipboardEvent")}} interface it belongs to.
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)

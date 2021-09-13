@@ -8,30 +8,32 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
 
-<p>This WebGL example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.</p>
+This WebGL example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
 
-<h2 id="Effect_of_canvas_size_on_rendering_with_WebGL">Effect of canvas size on rendering with WebGL</h2>
+## Effect of canvas size on rendering with WebGL
 
-<p>{{EmbedLiveSample("Effect_of_canvas_size_on_rendering_with_WebGL",660,180)}}</p>
+{{EmbedLiveSample("Effect_of_canvas_size_on_rendering_with_WebGL",660,180)}}
 
-<p>With {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}} we can demonstrate how the WebGL drawing buffer is affected by the size of the canvas.</p>
+With {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}} we can demonstrate how the WebGL drawing buffer is affected by the size of the canvas.
 
-<p>The size of the first canvas is set to the styled {{domxref("Element")}} size, determined by {{Glossary("CSS")}}. This is done by assigning the {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} properties of the canvas to the values of the {{domxref("Element.clientWidth","clientWidth")}} and {{domxref("Element.clientHeight","clientHeight")}} properties, respectively.</p>
+The size of the first canvas is set to the styled {{domxref("Element")}} size, determined by {{Glossary("CSS")}}. This is done by assigning the {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} properties of the canvas to the values of the {{domxref("Element.clientWidth","clientWidth")}} and {{domxref("Element.clientHeight","clientHeight")}} properties, respectively.
 
-<p>In contrast, no such assignment is done for the second canvas. The internal {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} properties of the canvas remain at default values, which are different than the actual size of the canvas {{domxref("Element")}} in the browser window.</p>
+In contrast, no such assignment is done for the second canvas. The internal {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} properties of the canvas remain at default values, which are different than the actual size of the canvas {{domxref("Element")}} in the browser window.
 
-<p>The effect is clearly visible when using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}} to draw a square in the center of the canvas, by specifying its position and size in pixels. In the first canvas, we get the desired result. In the second, the square has the wrong shape, size, and position.</p>
+The effect is clearly visible when using {{domxref("WebGLRenderingContext.scissor()","scissor()")}} and {{domxref("WebGLRenderingContext.clear()","clear()")}} to draw a square in the center of the canvas, by specifying its position and size in pixels. In the first canvas, we get the desired result. In the second, the square has the wrong shape, size, and position.
 
-<pre class="brush: html">&lt;p&gt;Compare the two canvases.&lt;/p&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>Compare the two canvases.</p>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -43,9 +45,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function() {
+```js
+window.addEventListener("load", function() {
   "use strict"
   var firstCanvas = document.getElementsByTagName("canvas")[0],
     secondCanvas = document.getElementsByTagName("canvas")[1];
@@ -68,8 +71,8 @@ canvas {
     gl.clear(gl.COLOR_BUFFER_BIT);
   });
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}

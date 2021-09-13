@@ -10,37 +10,33 @@ tags:
   - Reference
 browser-compat: api.HTMLOptGroupElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLOptGroupElement</code></strong> interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("optgroup")}} elements.</p>
+The **`HTMLOptGroupElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("optgroup")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLOptGroupElement.disabled")}}</dt>
- <dd>Is a boolean value representing whether or not the whole list of children {{HTMLElement("option")}} is disabled (true) or not (false).</dd>
- <dt>{{domxref("HTMLOptGroupElement.label")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the label for the group.</dd>
-</dl>
+- {{domxref("HTMLOptGroupElement.disabled")}}
+  - : Is a boolean value representing whether or not the whole list of children {{HTMLElement("option")}} is disabled (true) or not (false).
+- {{domxref("HTMLOptGroupElement.label")}}
+  - : Is a {{domxref("DOMString")}} representing the label for the group.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("optgroup") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("optgroup") }}.

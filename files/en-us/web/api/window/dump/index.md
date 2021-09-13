@@ -8,82 +8,72 @@ tags:
   - Non-standard
   - Window
 ---
-<div>{{ ApiRef() }} {{Non-standard_header}}</div>
+{{ ApiRef() }} {{Non-standard_header}}
 
-<p><code><strong>Window.dump()</strong></code> prints messages to the (native) console.
-</p>
+**`Window.dump()`** prints messages to the (native) console.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.dump(<em>message</em>);
+```js
+window.dump(message);
 
-dump(<em>message</em>);
-</pre>
+dump(message);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>message</code> is the string message to log.</li>
-</ul>
+- `message` is the string message to log.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>A common use of <code>dump()</code> is to debug JavaScript. The message passed to
-  <code>dump()</code> is sent to the System Console (Native Console) if the Firefox
-  process was started with the <code>-console</code> option. If the <code>-console</code>
-  option was not specified then the output goes to stderr. Output from dump() is not sent
-  to the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a>. Output can be
-  sent to the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> using <a
-    href="/en-US/docs/Web/API/console/log">console.log()</a>. Privileged code can also use
-  <code><a href="/en-US/docs/Components.utils.reportError">Components.utils.reportError</a></code>
-  and
-  <code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService</a></code>
-  to log messages to the <a href="/en-US/docs/Error_Console">Error Console</a>/<a
-    href="/en-US/docs/Tools/Browser_Console">Browser Console</a>.</p>
+A common use of `dump()` is to debug JavaScript. The message passed to
+`dump()` is sent to the System Console (Native Console) if the Firefox
+process was started with the `-console` option. If the `-console`
+option was not specified then the output goes to stderr. Output from dump() is not sent
+to the [Browser Console](/en-US/docs/Tools/Browser_Console). Output can be
+sent to the [Browser Console](/en-US/docs/Tools/Browser_Console) using [console.log()](/en-US/docs/Web/API/console/log). Privileged code can also use
+[`Components.utils.reportError`](/en-US/docs/Components.utils.reportError)
+and
+[`nsIConsoleService`](/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService)
+to log messages to the [Error Console](/en-US/docs/Error_Console)/[Browser Console](/en-US/docs/Tools/Browser_Console).
 
-<p><code>dump()</code> is also available to XPCOM components implemented in JavaScript,
-  even though {{domxref("window")}} is not the global object in components. It is also
-  explicitly made available in <a
-    href="/en-US/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object">sandboxes</a>. However, this use of
-  <code>dump</code> is not affected by the preference mentioned below -- it will always be
-  shown. It is therefore advisable to either check this preference yourself or use a
-  debugging preference of your own to make sure you don't send lots of debugging content
-  to a user's console when they might not be interested in it at all. Note that
-  <code>dump</code> output from XPCOM components goes to <code>stderr</code>, while
-  <code>dump </code>called elsewhere will output to <code>stdout</code>.</p>
+`dump()` is also available to XPCOM components implemented in JavaScript,
+even though {{domxref("window")}} is not the global object in components. It is also
+explicitly made available in [sandboxes](/en-US/docs/Components.utils.Sandbox#Methods_available_on_the_Sandbox_object). However, this use of
+`dump` is not affected by the preference mentioned below -- it will always be
+shown. It is therefore advisable to either check this preference yourself or use a
+debugging preference of your own to make sure you don't send lots of debugging content
+to a user's console when they might not be interested in it at all. Note that
+`dump` output from XPCOM components goes to `stderr`, while
+`dump `called elsewhere will output to `stdout`.
 
-<p>In <a href="/en-US/docs/Mozilla/Gecko">Gecko</a> <code>dump()</code> is <strong>disabled by
-    default</strong> – it doesn't do anything but doesn't raise an error either. To see
-  the <code>dump</code> output you have to enable it by setting the preference
-  <code>browser.dom.window.dump.enabled</code> to <code>true</code>. You can set the
-  preference in <a href="http://kb.mozillazine.org/About:config">about:config</a> or in a
-  <a href="http://kb.mozillazine.org/User.js_file">user.js file</a>. Note: this preference
-  is not listed in <code>about:config</code> by default, you may need to create it
-  (right-click the content area -&gt; New -&gt; Boolean).</p>
+In [Gecko](/en-US/docs/Mozilla/Gecko) `dump()` is **disabled by
+default** – it doesn't do anything but doesn't raise an error either. To see
+the `dump` output you have to enable it by setting the preference
+`browser.dom.window.dump.enabled` to `true`. You can set the
+preference in [about:config](http://kb.mozillazine.org/About:config) or in a
+[user.js file](http://kb.mozillazine.org/User.js_file). Note: this preference
+is not listed in `about:config` by default, you may need to create it
+(right-click the content area -> New -> Boolean).
 
-<p>On Windows, you will need a console to actually see anything. If you don't have one
-  already, closing the application and re-opening it with the command line parameter
-  <code>-console</code> should create the console or use <code>-attach-console</code> to
-  use the existing console. On other operating systems, it's enough to launch the
-  application from a terminal.</p>
+On Windows, you will need a console to actually see anything. If you don't have one
+already, closing the application and re-opening it with the command line parameter
+`-console` should create the console or use `-attach-console` to
+use the existing console. On other operating systems, it's enough to launch the
+application from a terminal.
 
-<p>To redirect the console output to a file, run firefox <em>without</em> the -console
-  option and use the syntax to redirect stderr and stdout to a file, i.e.:</p>
+To redirect the console output to a file, run firefox _without_ the -console
+option and use the syntax to redirect stderr and stdout to a file, i.e.:
 
-<pre>firefox &gt; console.txt 2&gt;&amp;1
-</pre>
+    firefox > console.txt 2>&1
 
-<div class="note">
-  <p><strong>Note:</strong> If you would like the console messages to appear in the console you used to launch
-    the application, you can use the <a
-      href="https://github.com/matthewkastor/Redirector">Gecko Console Redirector</a>.
-    Precompiled binaries are available in the zipped archive <a
-      href="https://github.com/matthewkastor/Redirector/archive/master.zip">https://github.com/matthewkastor/Redirector/archive/master.zip</a>
-    under <code>Redirector-master\Gecko\Console Redirector\bin\Release</code> Copy all the
-    dll's and the exe to wherever you want. Then run
-    <code>Console Redirector.exe /?</code></p>
-</div>
+> **Note:** If you would like the console messages to appear in the console you used to launch
+> the application, you can use the [Gecko Console Redirector](https://github.com/matthewkastor/Redirector).
+> Precompiled binaries are available in the zipped archive <https://github.com/matthewkastor/Redirector/archive/master.zip>
+> under `Redirector-master\Gecko\Console Redirector\bin\Release` Copy all the
+> dll's and the exe to wherever you want. Then run
+> `Console Redirector.exe /?`
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This is not part of any specification</p>
+This is not part of any specification

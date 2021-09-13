@@ -2,37 +2,41 @@
 title: Credential.type
 slug: Web/API/Credential/type
 tags:
-- API
-- Credential
-- Credential Management API
-- Property
-- Reference
-- credential management
+  - API
+  - Credential
+  - Credential Management API
+  - Property
+  - Reference
+  - credential management
 browser-compat: api.Credential.type
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>The <strong><code>type</code></strong> property of the
-    {{domxref("Credential")}} interface returns a {{domxref("DOMString")}} containing the
-    credential's type. Valid values are <code>password</code>, <code>federated</code> and
-    <code>public-key</code>.</p>
+The **`type`** property of the
+{{domxref("Credential")}} interface returns a {{domxref("DOMString")}} containing the
+credential's type. Valid values are `password`, `federated` and
+`public-key`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var credType = Credential.type;</pre>
+```js
+var credType = Credential.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} contains a credential's given name.</p>
+A {{domxref("DOMString")}} contains a credential's given name.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,144 +2,105 @@
 title: WebGLRenderingContext.framebufferRenderbuffer()
 slug: Web/API/WebGLRenderingContext/framebufferRenderbuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.framebufferRenderbuffer()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> attaches a
-  {{domxref("WebGLRenderbuffer")}} object to a {{domxref("WebGLFramebuffer")}} object.</p>
+The **`WebGLRenderingContext.framebufferRenderbuffer()`**
+method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches a
+{{domxref("WebGLRenderbuffer")}} object to a {{domxref("WebGLFramebuffer")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.framebufferRenderbuffer(<var>target</var>, <var>attachment</var>, <var>renderbuffertarget</var>, <var>renderbuffer</var>);
-</pre>
+```js
+void gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) for the framebuffer.
+- target
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) for the framebuffer.
     Possible values:
-    <ul>
-      <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha,
-        depth and stencil buffers used to render an image.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.DRAW_FRAMEBUFFER</code>: Equivalent to <code>gl.FRAMEBUFFER</code>.
-            Used as a destination for drawing, rendering, clearing, and writing
-            operations.</li>
-          <li><code>gl.READ_FRAMEBUFFER</code>: Used as a source for reading operations.
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>attachment</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the render buffer.
+
+    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
+      depth and stencil buffers used to render an image.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
+
+      - `gl.DRAW_FRAMEBUFFER`: Equivalent to `gl.FRAMEBUFFER`.
+        Used as a destination for drawing, rendering, clearing, and writing
+        operations.
+      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
+
+- attachment
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the render buffer.
     Possible values:
-    <ul>
-      <li><code>gl.COLOR_ATTACHMENT0</code>: color buffer.</li>
-      <li><code>gl.DEPTH_ATTACHMENT</code>: depth buffer.</li>
-      <li><code>gl.DEPTH_STENCIL_ATTACHMENT</code>: depth and stencil buffer.</li>
-      <li><code>gl.STENCIL_ATTACHMENT</code>: stencil buffer.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.COLOR_ATTACHMENT1<br>
-     gl.COLOR_ATTACHMENT2<br>
-     gl.COLOR_ATTACHMENT3<br>
-     gl.COLOR_ATTACHMENT4<br>
-     gl.COLOR_ATTACHMENT5<br>
-     gl.COLOR_ATTACHMENT6<br>
-     gl.COLOR_ATTACHMENT7<br>
-     gl.COLOR_ATTACHMENT8<br>
-     gl.COLOR_ATTACHMENT9<br>
-     gl.COLOR_ATTACHMENT10<br>
-     gl.COLOR_ATTACHMENT11<br>
-     gl.COLOR_ATTACHMENT12<br>
-     gl.COLOR_ATTACHMENT13<br>
-     gl.COLOR_ATTACHMENT14<br>
-     gl.COLOR_ATTACHMENT15</code></li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("WEBGL_draw_buffers")}} extension:
-        <ul>
-          <li><code>ext.COLOR_ATTACHMENT0_WEBGL</code> (same as
-            <code>gl.COLOR_ATTACHMENT0</code>)<br>
-            <code>ext.COLOR_ATTACHMENT1_WEBGL<br>
-     ext.COLOR_ATTACHMENT2_WEBGL<br>
-     ext.COLOR_ATTACHMENT3_WEBGL<br>
-     ext.COLOR_ATTACHMENT4_WEBGL<br>
-     ext.COLOR_ATTACHMENT5_WEBGL<br>
-     ext.COLOR_ATTACHMENT6_WEBGL<br>
-     ext.COLOR_ATTACHMENT7_WEBGL<br>
-     ext.COLOR_ATTACHMENT8_WEBGL<br>
-     ext.COLOR_ATTACHMENT9_WEBGL<br>
-     ext.COLOR_ATTACHMENT10_WEBGL<br>
-     ext.COLOR_ATTACHMENT11_WEBGL<br>
-     ext.COLOR_ATTACHMENT12_WEBGL<br>
-     ext.COLOR_ATTACHMENT13_WEBGL<br>
-     ext.COLOR_ATTACHMENT14_WEBGL<br>
-     ext.COLOR_ATTACHMENT15_WEBGL</code>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>renderbuffertarget</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) for the render buffer.
+
+    - `gl.COLOR_ATTACHMENT0`: color buffer.
+    - `gl.DEPTH_ATTACHMENT`: depth buffer.
+    - `gl.DEPTH_STENCIL_ATTACHMENT`: depth and stencil buffer.
+    - `gl.STENCIL_ATTACHMENT`: stencil buffer.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
+
+      - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
+
+    - When using the {{domxref("WEBGL_draw_buffers")}} extension:
+
+      - `ext.COLOR_ATTACHMENT0_WEBGL` (same as
+        `gl.COLOR_ATTACHMENT0`)
+        `ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
+
+- renderbuffertarget
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) for the render buffer.
     Possible values:
-    <ul>
-      <li><code>gl.RENDERBUFFER</code>: Buffer data storage for single images in a
-        renderable internal format.</li>
-    </ul>
-  </dd>
-  <dt>renderbuffer</dt>
-  <dd>A {{domxref("WebGLRenderbuffer")}} object to attach.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
+      renderable internal format.
 
-<p>None.</p>
+- renderbuffer
+  - : A {{domxref("WebGLRenderbuffer")}} object to attach.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<ul>
-  <li>A <code>gl.INVALID_ENUM</code> error is thrown if <code>target</code> is not
-    <code>gl.FRAMEBUFFER</code>, <code>gl.DRAW_FRAMEBUFFER</code>, or
-    <code>gl.READ_FRAMEBUFFER</code>.</li>
-  <li>A <code>gl.INVALID_ENUM</code> error is thrown if <code>renderbuffertarget</code> is
-    not <code>gl.RENDERBUFFER</code>.</li>
-  <li>A <code>gl.INVALID_ENUM</code> error is thrown if <code>attachment</code> is not one
-    of the allowed enums.</li>
-</ul>
+None.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<pre class="brush: js">gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.RENDERBUFFER, renderbuffer);
-</pre>
+- A `gl.INVALID_ENUM` error is thrown if `target` is not
+  `gl.FRAMEBUFFER`, `gl.DRAW_FRAMEBUFFER`, or
+  `gl.READ_FRAMEBUFFER`.
+- A `gl.INVALID_ENUM` error is thrown if `renderbuffertarget` is
+  not `gl.RENDERBUFFER`.
+- A `gl.INVALID_ENUM` error is thrown if `attachment` is not one
+  of the allowed enums.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.RENDERBUFFER, renderbuffer);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-  <li>{{domxref("WEBGL_draw_buffers")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxref("WEBGL_draw_buffers")}}

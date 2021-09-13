@@ -2,63 +2,62 @@
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearDepth
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.clearDepth()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the clear value for the
-  depth buffer.</p>
+The **`WebGLRenderingContext.clearDepth()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
+depth buffer.
 
-<p>This specifies what depth value to use when calling the
-  {{domxref("WebGLRenderingContext.clear", "clear()")}} method. The value is clamped
-  between 0 and 1.</p>
+This specifies what depth value to use when calling the
+{{domxref("WebGLRenderingContext.clear", "clear()")}} method. The value is clamped
+between 0 and 1.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.clearDepth(<var>depth</var>);
-</pre>
+```js
+void gl.clearDepth(depth);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>depth</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the depth value used when the depth buffer is
-    cleared. Default value: 1.</dd>
-</dl>
+- `depth`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the depth value used when the depth buffer is
+    cleared. Default value: 1.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.clearDepth(0.5);
-</pre>
+```js
+gl.clearDepth(0.5);
+```
 
-<p>To get the current depth clear value, query the <code>DEPTH_CLEAR_VALUE</code>
-  constant.</p>
+To get the current depth clear value, query the `DEPTH_CLEAR_VALUE`
+constant.
 
-<pre class="brush: js">gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-// 0.5</pre>
+```js
+gl.getParameter(gl.DEPTH_CLEAR_VALUE);
+// 0.5
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

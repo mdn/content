@@ -2,35 +2,37 @@
 title: URL.host
 slug: Web/API/URL/host
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
 browser-compat: api.URL.host
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>host</code></strong> property of the {{domxref("URL")}} interface is
-  a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname",
+The **`host`** property of the {{domxref("URL")}} interface is
+a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname",
   "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a
-  <code>':'</code>, followed by the {{domxref("URL.port", "port")}} of the URL.</p>
+`':'`, followed by the {{domxref("URL.port", "port")}} of the URL.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>host</em> = <em>url</em>.host
-<em>url.<code>host</code></em> = <em>newHost</em>
-</pre>
+```js
+const host = url.host
+url.host = newHost
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+```js
+let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org"
 
 url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
@@ -39,18 +41,16 @@ console.log(url.host); // "developer.mozilla.org"
 
 url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

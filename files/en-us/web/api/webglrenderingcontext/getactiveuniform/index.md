@@ -2,156 +2,145 @@
 title: WebGLRenderingContext.getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getActiveUniform()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns a
-  {{domxref("WebGLActiveInfo")}} object containing size, type, and name of a uniform
-  attribute. It is generally used when querying unknown uniforms either for debugging or
-  generic library creation.</p>
+The **`WebGLRenderingContext.getActiveUniform()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a
+{{domxref("WebGLActiveInfo")}} object containing size, type, and name of a uniform
+attribute. It is generally used when querying unknown uniforms either for debugging or
+generic library creation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>WebGLActiveInfo</em> <em>WebGLRenderingContext</em>.getActiveUniform(<em>program</em>, <em>index</em>);
-</pre>
+```js
+WebGLActiveInfo WebGLRenderingContext.getActiveUniform(program, index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} specifying the WebGL shader program from which to
-    obtain the uniform variable's information.</dd>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
+- `program`
+  - : A {{domxref("WebGLProgram")}} specifying the WebGL shader program from which to
+    obtain the uniform variable's information.
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
     value is an index 0 to N - 1 as returned
     by {{domxref("WebGLRenderingContext.getProgramParameter",
-    "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.</dd>
-</dl>
+    "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLActiveInfo")}} object describing the uniform.</p>
+A {{domxref("WebGLActiveInfo")}} object describing the uniform.
 
-<p>The <code>type</code> attribute of the return value will be one of the following:</p>
+The `type` attribute of the return value will be one of the following:
 
-<ul>
-  <li><code>gl.FLOAT</code></li>
-  <li><code>gl.FLOAT_VEC2</code></li>
-  <li><code>gl.FLOAT_VEC3</code></li>
-  <li><code>gl.FLOAT_VEC4</code></li>
-  <li><code>gl.INT</code></li>
-  <li><code>gl.INT_VEC2</code></li>
-  <li><code>gl.INT_VEC3</code></li>
-  <li><code>gl.INT_VEC4</code></li>
-  <li><code>gl.BOOL</code></li>
-  <li><code>gl.BOOL_VEC2</code></li>
-  <li><code>gl.BOOL_VEC3</code></li>
-  <li><code>gl.BOOL_VEC4</code></li>
-  <li><code>gl.FLOAT_MAT2</code></li>
-  <li><code>gl.FLOAT_MAT3</code></li>
-  <li><code>gl.FLOAT_MAT4</code></li>
-  <li><code>gl.SAMPLER_2D</code></li>
-  <li><code>gl.SAMPLER_CUBE</code></li>
-  <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-    following values are possible additionally:
-    <ul>
-      <li><code>gl.UNSIGNED_INT</code></li>
-      <li><code>gl.UNSIGNED_INT_VEC2</code></li>
-      <li><code>gl.UNSIGNED_INT_VEC3</code></li>
-      <li><code>gl.UNSIGNED_INT_VEC4</code></li>
-      <li><code>gl.FLOAT_MAT2x3</code></li>
-      <li><code>gl.FLOAT_MAT2x4</code></li>
-      <li><code>gl.FLOAT_MAT3x2</code></li>
-      <li><code>gl.FLOAT_MAT3x4</code></li>
-      <li><code>gl.FLOAT_MAT4x2</code></li>
-      <li><code>gl.FLOAT_MAT4x3</code></li>
-      <li><code>gl.SAMPLER_3D</code></li>
-      <li><code>gl.SAMPLER_2D_SHADOW</code></li>
-      <li><code>gl.SAMPLER_2D_ARRAY</code></li>
-      <li><code>gl.SAMPLER_2D_ARRAY_SHADOW</code></li>
-      <li><code>gl.SAMPLER_CUBE_SHADOW</code></li>
-      <li><code>gl.INT_SAMPLER_2D</code></li>
-      <li><code>gl.INT_SAMPLER_3D</code></li>
-      <li><code>gl.INT_SAMPLER_CUBE</code></li>
-      <li><code>gl.INT_SAMPLER_2D_ARRAY</code></li>
-      <li><code>gl.UNSIGNED_INT_SAMPLER_2D</code></li>
-      <li><code>gl.UNSIGNED_INT_SAMPLER_3D</code></li>
-      <li><code>gl.UNSIGNED_INT_SAMPLER_CUBE</code></li>
-      <li><code>gl.UNSIGNED_INT_SAMPLER_2D_ARRAY</code></li>
-    </ul>
-  </li>
-</ul>
+- `gl.FLOAT`
+- `gl.FLOAT_VEC2`
+- `gl.FLOAT_VEC3`
+- `gl.FLOAT_VEC4`
+- `gl.INT`
+- `gl.INT_VEC2`
+- `gl.INT_VEC3`
+- `gl.INT_VEC4`
+- `gl.BOOL`
+- `gl.BOOL_VEC2`
+- `gl.BOOL_VEC3`
+- `gl.BOOL_VEC4`
+- `gl.FLOAT_MAT2`
+- `gl.FLOAT_MAT3`
+- `gl.FLOAT_MAT4`
+- `gl.SAMPLER_2D`
+- `gl.SAMPLER_CUBE`
+- When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+  following values are possible additionally:
 
-<p>When <code>gl.linkProgram</code> is called, WebGL creates a list of active uniforms.
-  These are possible values of the <code>name</code> attribute of return values of
-  {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}. WebGL
-  generates one or more entries in the list depending on the declared type of the uniform
-  in the shader:</p>
+  - `gl.UNSIGNED_INT`
+  - `gl.UNSIGNED_INT_VEC2`
+  - `gl.UNSIGNED_INT_VEC3`
+  - `gl.UNSIGNED_INT_VEC4`
+  - `gl.FLOAT_MAT2x3`
+  - `gl.FLOAT_MAT2x4`
+  - `gl.FLOAT_MAT3x2`
+  - `gl.FLOAT_MAT3x4`
+  - `gl.FLOAT_MAT4x2`
+  - `gl.FLOAT_MAT4x3`
+  - `gl.SAMPLER_3D`
+  - `gl.SAMPLER_2D_SHADOW`
+  - `gl.SAMPLER_2D_ARRAY`
+  - `gl.SAMPLER_2D_ARRAY_SHADOW`
+  - `gl.SAMPLER_CUBE_SHADOW`
+  - `gl.INT_SAMPLER_2D`
+  - `gl.INT_SAMPLER_3D`
+  - `gl.INT_SAMPLER_CUBE`
+  - `gl.INT_SAMPLER_2D_ARRAY`
+  - `gl.UNSIGNED_INT_SAMPLER_2D`
+  - `gl.UNSIGNED_INT_SAMPLER_3D`
+  - `gl.UNSIGNED_INT_SAMPLER_CUBE`
+  - `gl.UNSIGNED_INT_SAMPLER_2D_ARRAY`
 
-<ul>
-  <li>Single basic type: one entry with the name of the uniform. E.g. 
-    <code>uniform vec4 a;</code> will result in  <code>a</code>.</li>
-  <li>Array of basic type: one entry with the name of the uniform suffixed with
-    <code>[0]</code>. E.g. <code>uniform vec4 b[];</code> will result in
-    <code>b[0]</code>.</li>
-  <li>Struct type: one entry for each member of the struct. E.g.
-    <code>uniform struct { float foo; vec4 bar; } c;</code> will result in
-    <code>c.foo</code> and <code>c.bar</code>.</li>
-  <li>Arrays of structs or arrays: each entry of the array will generate its own entries.
-    E.g. <code>uniform struct { float foo; vec4 bar; } d[2];</code> will result in:
-    <ul>
-      <li><code>d[0].foo</code></li>
-      <li><code>d[0].bar</code></li>
-      <li><code>d[1].foo</code></li>
-      <li><code>d[1].bar</code></li>
-    </ul>
-  </li>
-  <li>Uniform blocks: one entry for each member. If the uniform block has an instance
-    name, the block name is prefixed. E.g. <code>uniform Block { float foo; };</code> will
-    result in <code>foo</code>, and <code>uniform Block { float bar; } e;</code> will
-    result in <code>e.bar</code>.</li>
-</ul>
+When `gl.linkProgram` is called, WebGL creates a list of active uniforms.
+These are possible values of the `name` attribute of return values of
+{{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}. WebGL
+generates one or more entries in the list depending on the declared type of the uniform
+in the shader:
 
-<p>The <code>size</code> attribute of the return value corresponds to the length of the
-  array for uniforms declared as arrays. Otherwise, it is 1 (this includes interface
-  blocks instanced with arrays).</p>
+- Single basic type: one entry with the name of the uniform. E.g. 
+  `uniform vec4 a;` will result in  `a`.
+- Array of basic type: one entry with the name of the uniform suffixed with
+  `[0]`. E.g. `uniform vec4 b[];` will result in
+  `b[0]`.
+- Struct type: one entry for each member of the struct. E.g.
+  `uniform struct { float foo; vec4 bar; } c;` will result in
+  `c.foo` and `c.bar`.
+- Arrays of structs or arrays: each entry of the array will generate its own entries.
+  E.g. `uniform struct { float foo; vec4 bar; } d[2];` will result in:
 
-<h3 id="Exceptions">Exceptions</h3>
+  - `d[0].foo`
+  - `d[0].bar`
+  - `d[1].foo`
+  - `d[1].bar`
 
-<ul>
-  <li><code>gl.INVALID_VALUE</code> is generated if the program
-    {{domxref("WebGLProgram")}} is invalid (not linked, deleted, etc.).</li>
-  <li><code>gl.INVALID_VALUE</code> is generated if index is not in the range [0,
-    <code>gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)</code> - 1].</li>
-</ul>
+- Uniform blocks: one entry for each member. If the uniform block has an instance
+  name, the block name is prefixed. E.g. `uniform Block { float foo; };` will
+  result in `foo`, and `uniform Block { float bar; } e;` will
+  result in `e.bar`.
 
-<h2 id="Examples">Examples</h2>
+The `size` attribute of the return value corresponds to the length of the
+array for uniforms declared as arrays. Otherwise, it is 1 (this includes interface
+blocks instanced with arrays).
 
-<pre class="brush: js">const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
-for (let i = 0; i &lt; numUniforms; ++i) {
+### Exceptions
+
+- `gl.INVALID_VALUE` is generated if the program
+  {{domxref("WebGLProgram")}} is invalid (not linked, deleted, etc.).
+- `gl.INVALID_VALUE` is generated if index is not in the range \[0,
+  `gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)` - 1].
+
+## Examples
+
+```js
+const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
+for (let i = 0; i < numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
   console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLActiveInfo")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
-</ul>
+- {{domxref("WebGLActiveInfo")}}
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}

@@ -2,56 +2,55 @@
 title: TouchEvent.touches
 slug: Web/API/TouchEvent/touches
 tags:
-- API
-- DOM
-- DOM Reference
-- Mobile
-- Property
-- Read-only
-- Reference
-- TouchEvent
-- touch
+  - API
+  - DOM
+  - DOM Reference
+  - Mobile
+  - Property
+  - Read-only
+  - Reference
+  - TouchEvent
+  - touch
 browser-compat: api.TouchEvent.touches
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p><code><strong>touches</strong></code> is a read-only {{ domxref("TouchList") }} listing
-  all the {{ domxref("Touch") }} objects for touch points that are currently in contact
-  with the touch surface, regardless of whether or not they've changed or what their
-  target element was at {{event("touchstart")}} time.</p>
+**`touches`** is a read-only {{ domxref("TouchList") }} listing
+all the {{ domxref("Touch") }} objects for touch points that are currently in contact
+with the touch surface, regardless of whether or not they've changed or what their
+target element was at {{event("touchstart")}} time.
 
-<p>You can think of it as how many separate fingers are able to be identified as touching
-  the screen.</p>
+You can think of it as how many separate fingers are able to be identified as touching
+the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>touches</em> = <em>touchEvent</em>.touches;
-</pre>
+```js
+var touches = touchEvent.touches;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>touches</code></dt>
-  <dd>A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for
+- `touches`
+  - : A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for
     touch points that are still in contact with the touch surface, regardless of whether
-    or not they've changed or what their target element was at <code>touchstart</code>
-    time.</dd>
-</dl>
+    or not they've changed or what their target element was at `touchstart`
+    time.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates the {{domxref("TouchEvent")}} object's
-  {{domxref("TouchEvent.touches")}} property. The {{domxref("TouchEvent.touches")}}
-  property is a {{domxref("TouchList")}} object and containing a list of
-  {{domxref("Touch")}} objects for every point of contact currently touching the surface.
-</p>
+This example illustrates the {{domxref("TouchEvent")}} object's
+{{domxref("TouchEvent.touches")}} property. The {{domxref("TouchEvent.touches")}}
+property is a {{domxref("TouchList")}} object and containing a list of
+{{domxref("Touch")}} objects for every point of contact currently touching the surface.
 
-<p>In following code snippet, the {{event("touchstart")}} event handler checks the length
-  of the {{domxref("TouchEvent.touches")}} list to determine the number of touch points
-  that were activated and then invokes different handlers depending on the number of touch
-  points.</p>
+In following code snippet, the {{event("touchstart")}} event handler checks the length
+of the {{domxref("TouchEvent.touches")}} list to determine the number of touch points
+that were activated and then invokes different handlers depending on the number of touch
+points.
 
-<pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
+```js
+someElement.addEventListener('touchstart', function(e) {
    // Invoke the appropriate handler depending on the
    // number of touch points.
    switch (e.touches.length) {
@@ -61,12 +60,12 @@ browser-compat: api.TouchEvent.touches
      default: console.log("Not supported"); break;
    }
  }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

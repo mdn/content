@@ -10,30 +10,31 @@ tags:
   - Window
 browser-compat: api.Window.history
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window</strong>.<strong>history</strong></code> read-only property returns a reference to the {{domxref("History")}} object, which provides an interface for manipulating the browser <em>session history</em> (pages visited in the tab or frame that the current page is loaded in).</p>
+The `Window.history` read-only property returns a reference to the {{domxref("History")}} object, which provides an interface for manipulating the browser _session history_ (pages visited in the tab or frame that the current page is loaded in).
 
-<p>See <a href="/en-US/docs/Web/API/History_API">Manipulating the browser history</a> for examples and details. In particular, that article explains security features of the {{domxref("History.pushState", "pushState()")}} and {{domxref("History.replaceState", "replaceState()")}} methods that you should be aware of before using them.</p>
+See [Manipulating the browser history](/en-US/docs/Web/API/History_API) for examples and details. In particular, that article explains security features of the {{domxref("History.pushState", "pushState()")}} and {{domxref("History.replaceState", "replaceState()")}} methods that you should be aware of before using them.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">history.back();     // equivalent to clicking back button
+```js
+history.back();     // equivalent to clicking back button
 history.go(-1);     // equivalent to history.back();
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>For top-level pages you can see the list of pages in the session history, accessible via the <code>History</code> object, in the browser's dropdowns next to the back and forward buttons.</p>
+For top-level pages you can see the list of pages in the session history, accessible via the `History` object, in the browser's dropdowns next to the back and forward buttons.
 
-<p>For security reasons the <code>History</code> object doesn't allow the non-privileged code to access the {{glossary("URL", "URLs")}} of other pages in the session history, but it does allow it to navigate the session history.</p>
+For security reasons the `History` object doesn't allow the non-privileged code to access the {{glossary("URL", "URLs")}} of other pages in the session history, but it does allow it to navigate the session history.
 
-<p>There is no way to clear the session history or to disable the back/forward navigation from unprivileged code. The closest available solution is the {{domxref("Location.replace", "location.replace()")}} method, which replaces the current item of the session history with the provided URL.</p>
+There is no way to clear the session history or to disable the back/forward navigation from unprivileged code. The closest available solution is the {{domxref("Location.replace", "location.replace()")}} method, which replaces the current item of the session history with the provided URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

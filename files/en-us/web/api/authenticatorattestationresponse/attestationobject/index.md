@@ -2,78 +2,78 @@
 title: AuthenticatorAttestationResponse.attestationObject
 slug: Web/API/AuthenticatorAttestationResponse/attestationObject
 tags:
-- API
-- AuthenticatorAttestationResponse
-- Property
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - AuthenticatorAttestationResponse
+  - Property
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.attestationObject
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>attestationObject</strong></code> property of the
-  {{domxref("AuthenticatorAttestationResponse")}} interface returns an
-  {{jsxref("ArrayBuffer")}} containing the new public key, as well as signature over the
-  entire <code>attestationObject</code> with a private key that is stored in the
-  authenticator when it is manufactured.</p>
+The **`attestationObject`** property of the
+{{domxref("AuthenticatorAttestationResponse")}} interface returns an
+{{jsxref("ArrayBuffer")}} containing the new public key, as well as signature over the
+entire `attestationObject` with a private key that is stored in the
+authenticator when it is manufactured.
 
-<p>As part of the {{domxref("CredentialsContainer.create()")}} call, an authenticator will
-  create a new keypair as well as an attestationObject for that keypair. The public key
-  that corresponds to the private key that has created the attestation signature is well
-  known; however, there are various well known attestation public key chains for different
-  ecosystems (for example, Android or TPM attestations).</p>
+As part of the {{domxref("CredentialsContainer.create()")}} call, an authenticator will
+create a new keypair as well as an attestationObject for that keypair. The public key
+that corresponds to the private key that has created the attestation signature is well
+known; however, there are various well known attestation public key chains for different
+ecosystems (for example, Android or TPM attestations).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">attestObj = authenticatorAttestationResponse.attestationObject</pre>
+```js
+attestObj = authenticatorAttestationResponse.attestationObject
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>After decoding the <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> encoded
-  <code>ArrayBuffer</code>, the resulting JavaScript object will contain the following
-  properties:</p>
+After decoding the [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) encoded
+`ArrayBuffer`, the resulting JavaScript object will contain the following
+properties:
 
-<dl>
-  <dt><code>authData</code></dt>
-  <dd><p>The same as {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}. Note
+- `authData`
+
+  - : The same as {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}. Note
     that in {{domxref("AuthenticatorAssertionResponse")}}, the
-    <code>authenticatorData</code> is exposed as a property in a JavaScript object while
-    in {{domxref("AuthenticatorAttestationResponse")}}, the <code>authenticatorData</code>
-    is a property in a <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map.</p>
-  <p>The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is
-    used by both <code>AuthenticatorAttestationResponse</code> and by
-    <code>AuthenticatorAssertionResponse</code>. When used in attestation, it contains an
-    optional field, <code>attestedCredentialData</code>. This field is not included when
-    used in the <code>AuthenticatorAssertionResponse</code>. The attestedCredentialData
-    field contains the <code>credentialId</code> and <code>credentialPublicKey</code>.</p>
-  </dd>
-  <dt><code>fmt</code></dt>
-  <dd>A text string that indicates the format of the attStmt. The <a
-      href="https://www.w3.org/TR/webauthn/#defined-attestation-formats">WebAuthn
-      specification defines a number of formats</a>; however, formats may also be defined
-    in other specifications and registered in an <a
-      href="https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg">IANA registry</a>. Formats
+    `authenticatorData` is exposed as a property in a JavaScript object while
+    in {{domxref("AuthenticatorAttestationResponse")}}, the `authenticatorData`
+    is a property in a [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) map.
+
+    The same {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} field is
+    used by both `AuthenticatorAttestationResponse` and by
+    `AuthenticatorAssertionResponse`. When used in attestation, it contains an
+    optional field, `attestedCredentialData`. This field is not included when
+    used in the `AuthenticatorAssertionResponse`. The attestedCredentialData
+    field contains the `credentialId` and `credentialPublicKey`.
+
+- `fmt`
+
+  - : A text string that indicates the format of the attStmt. The [WebAuthn
+    specification defines a number of formats](https://www.w3.org/TR/webauthn/#defined-attestation-formats); however, formats may also be defined
+    in other specifications and registered in an [IANA registry](https://www.w3.org/TR/webauthn/#sctn-att-fmt-reg). Formats
     defined by WebAuthn are:
-    <ul>
-      <li><code>"packed"</code></li>
-      <li><code>"tpm"</code></li>
-      <li><code>"android-key"</code></li>
-      <li><code>"android-safetynet"</code></li>
-      <li><code>"fido-u2f"</code></li>
-      <li><code>"none"</code></li>
-    </ul>
-  </dd>
-  <dt><code>attStmt</code></dt>
-  <dd>A an attestation statement that is of the format defined by <code>"fmt"</code>. For
-    now, <a href="https://www.w3.org/TR/webauthn/#defined-attestation-formats">see the
-      WebAuthn specification for details on each format</a>.</dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+    - `"packed"`
+    - `"tpm"`
+    - `"android-key"`
+    - `"android-safetynet"`
+    - `"fido-u2f"`
+    - `"none"`
 
-<pre class="brush: js">var publicKey = {
+- `attStmt`
+  - : A an attestation statement that is of the format defined by `"fmt"`. For
+    now, [see the
+    WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
+
+## Examples
+
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -101,22 +101,20 @@ navigator.credentials.create({ publicKey })
     // (sending it back to the relying party server maybe?)
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.challenge")}}: the cryptographic
-    challenge which signature by the authenticator is contained in <code>attStmt</code>
-  </li>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.attestation")}}: the attestation
-    statement transport option specified for the creation</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}: the cryptographic
+  challenge which signature by the authenticator is contained in `attStmt`
+- {{domxref("PublicKeyCredentialCreationOptions.attestation")}}: the attestation
+  statement transport option specified for the creation

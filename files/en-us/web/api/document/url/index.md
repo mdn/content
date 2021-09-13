@@ -2,50 +2,53 @@
 title: Document.URL
 slug: Web/API/Document/URL
 tags:
-- API
-- DOM
-- Document
-- Property
-- Reference
+  - API
+  - DOM
+  - Document
+  - Property
+  - Reference
 browser-compat: api.Document.URL
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>URL</strong></code> read-only property of the {{domxref("Document")}}
-  interface returns the document location as a string.</p>
+The **`URL`** read-only property of the {{domxref("Document")}}
+interface returns the document location as a string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>url</em> = <em>document</em>.URL
-</pre>
+```js
+const url = document.URL
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("url").textContent = document.URL;</pre>
+```js
+document.getElementById("url").textContent = document.URL;
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="urlText"&gt;
-  URL:&lt;br/&gt;
-  &lt;span id="url"&gt;URL goes here&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p id="urlText">
+  URL:<br/>
+  <span id="url">URL goes here</span>
+</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("document.documentURI")}} property which returns the same value.</li>
-</ul>
+- The {{domxref("document.documentURI")}} property which returns the same value.

@@ -2,45 +2,48 @@
 title: GlobalEventHandlers.onresize
 slug: Web/API/GlobalEventHandlers/onresize
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- onresize
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - onresize
 browser-compat: api.GlobalEventHandlers.onresize
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>The <code><strong>onresize</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes <code><a href="/en-US/docs/Web/API/Window/resize_event">resize</a></code>
-  events.</p>
+The **`onresize`** property of the
+{{domxref("GlobalEventHandlers")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes [`resize`](/en-US/docs/Web/API/Window/resize_event)
+events.
 
-<p>The <code>resize</code> event fires after the window has been resized.</p>
+The `resize` event fires after the window has been resized.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>window</em>.onresize = <em>functionRef</em>;
-</pre>
+```js
+window.onresize = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Window_size_logger">Window size logger</h3>
+### Window size logger
 
-<pre class="brush: html">&lt;p&gt;Resize the browser window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
-&lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+```html
+<p>Resize the browser window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+```
 
-<pre class="brush: js">const heightOutput = document.querySelector('#height');
+```js
+const heightOutput = document.querySelector('#height');
 const widthOutput = document.querySelector('#width');
 
 function resize() {
@@ -48,21 +51,20 @@ function resize() {
   widthOutput.textContent = window.innerWidth;
 }
 
-window.onresize = resize;</pre>
+window.onresize = resize;
+```
 
-<p>{{EmbedLiveSample("Window_size_logger")}}</p>
+{{EmbedLiveSample("Window_size_logger")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Window/resize_event">Window: <code>resize</code>
-      event</a></li>
-</ul>
+- [Window: `resize`
+  event](/en-US/docs/Web/API/Window/resize_event)

@@ -2,132 +2,124 @@
 title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 tags:
-- API
-- Constructor
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Reference
-- Secure context
-- payment
+  - API
+  - Constructor
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Reference
+  - Secure context
+  - payment
 browser-compat: api.PaymentRequest.PaymentRequest
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>PaymentRequest()</code></strong> constructor
-    creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
-    process of generating, validating, and submitting a payment request.</p>
+The **`PaymentRequest()`** constructor
+creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
+process of generating, validating, and submitting a payment request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentRequest</em> = new PaymentRequest(<em>methodData</em>, <em>details</em>, [<em>options</em>]);</pre>
+```js
+var paymentRequest = new PaymentRequest(methodData, details, [options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>methodData</code></dt>
-  <dd>Contains an array of identifiers for the payment methods the merchant web site
+- `methodData`
+
+  - : Contains an array of identifiers for the payment methods the merchant web site
     accepts and any associated payment method specific data. Each item in the array
     contains the following fields:
-    <dl>
-      <dt><code>supportedMethods</code></dt>
-      <dd>For early implementations of the spec, this was a sequence of identifiers for
+
+    - `supportedMethods`
+      - : For early implementations of the spec, this was a sequence of identifiers for
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
-        {{domxref("DOMString")}}, and the meaning of the <code>data</code> parameter
-        changes with the <code>supportedMethods</code>. For example, the basic card
-        payment method is selected by specifying the string <code>basic-card</code> here.
-      </dd>
-      <dt><code>data</code></dt>
-      <dd>A JSON-serializable object that provides optional information that might be
+        {{domxref("DOMString")}}, and the meaning of the `data` parameter
+        changes with the `supportedMethods`. For example, the basic card
+        payment method is selected by specifying the string `basic-card` here.
+    - `data`
+      - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
-        by the payment handler indicated by <code>supportedMethods</code>. For basic
+        by the payment handler indicated by `supportedMethods`. For basic
         credit card services, this structure should match the
-        {{domxref("BasicCardRequest")}} dictionary.</dd>
-    </dl>
-  </dd>
-  <dt><code>details</code></dt>
-  <dd>Provides information about the requested transaction. This parameter contains the
+        {{domxref("BasicCardRequest")}} dictionary.
+
+- `details`
+
+  - : Provides information about the requested transaction. This parameter contains the
     following fields:
-    <dl>
-      <dt><code>total</code></dt>
-      <dd>The total amount of the payment request.</dd>
-      <dt><code>id</code> {{optional_inline}}</dt>
-      <dd>A free-form identifier for this payment request. If a value is not supplied, the
-        browser will construct one.</dd>
-      <dt><code>displayItems</code></dt>
-      <dd>An array of optional line items for the payment request that the user agent may
-        display, such as product details, tax, and shipping.</dd>
-      <dt><code>shippingOptions</code></dt>
-      <dd>The shipping options the user may choose from. If this sequence is blank, it
+
+    - `total`
+      - : The total amount of the payment request.
+    - `id` {{optional_inline}}
+      - : A free-form identifier for this payment request. If a value is not supplied, the
+        browser will construct one.
+    - `displayItems`
+      - : An array of optional line items for the payment request that the user agent may
+        display, such as product details, tax, and shipping.
+    - `shippingOptions`
+      - : The shipping options the user may choose from. If this sequence is blank, it
         indicates the merchant cannot ship to the current shipping address. The default
-        shipping option may be indicated in this sequence.</dd>
-      <dt><code>modifiers</code></dt>
-      <dd>Modifiers for specific payment methods; for example, adjusting the total amount
+        shipping option may be indicated in this sequence.
+    - `modifiers`
+
+      - : Modifiers for specific payment methods; for example, adjusting the total amount
         based on the payment method. This parameter contains the following fields:
-        <dl>
-          <dt><code>additionalDisplayItems</code></dt>
-          <dd>An array of items to be appended to the <code>details.displayItems</code>
+
+        - `additionalDisplayItems`
+          - : An array of items to be appended to the `details.displayItems`
             property. This property is commonly used to add a discount or surcharge line
-            item indicating the different amount in <code>details.modifiers.total</code>.
-          </dd>
-          <dt><code>data</code></dt>
-          <dd>A JSON-serializable object that provides optional information that might be
+            item indicating the different amount in `details.modifiers.total`.
+        - `data`
+          - : A JSON-serializable object that provides optional information that might be
             needed by the supported payment methods. This has to conform to the structure
-            defined in the {{domxref("BasicCardRequest")}} dictionary.</dd>
-          <dt><code>total</code></dt>
-          <dd>A total amount for the payment request that overrides value in
+            defined in the {{domxref("BasicCardRequest")}} dictionary.
+        - `total`
+          - : A total amount for the payment request that overrides value in
             details.total. This is typically used when
-            <code>details.modifiers.additionalItems</code> adds a discount or a surchase
-            to the request.</dd>
-        </dl>
-      </dd>
-    </dl>
-  </dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>
-    <p>Lets you set options that control the behavior of the user agent. This parameter
-    contains the following fields:</p>
-    <dl>
-      <dt><code>requestPayerName</code></dt>
-      <dd>A Boolean indicating whether the user agent should collect the payer's name and
-        submit it with the payment request. The default is <code>false</code>.</dd>
-      <dt><code>requestPayerEmail</code></dt>
-      <dd>A Boolean indicating whether the user agent should collect the payer's email
-        address and submit it with the payment request. The default is <code>false</code>.
-      </dd>
-      <dt><code>requestPayerPhone</code></dt>
-      <dd>A Boolean indicating whether the user agent should collect the payer's phone
-        number and submit it with the payment request. The default is <code>false</code>.
-      </dd>
-      <dt><code>requestShipping</code></dt>
-      <dd>A Boolean indicating whether the user agent should collect the payer's shipping
+            `details.modifiers.additionalItems` adds a discount or a surchase
+            to the request.
+
+- `options` {{optional_inline}}
+
+  - : Lets you set options that control the behavior of the user agent. This parameter
+    contains the following fields:
+
+    - `requestPayerName`
+      - : A Boolean indicating whether the user agent should collect the payer's name and
+        submit it with the payment request. The default is `false`.
+    - `requestPayerEmail`
+      - : A Boolean indicating whether the user agent should collect the payer's email
+        address and submit it with the payment request. The default is `false`.
+    - `requestPayerPhone`
+      - : A Boolean indicating whether the user agent should collect the payer's phone
+        number and submit it with the payment request. The default is `false`.
+    - `requestShipping`
+      - : A Boolean indicating whether the user agent should collect the payer's shipping
         address and submit it with the payment request. If you set this type to true, you
-        should select an appropriate <code>shippingType</code>. The default is
-        <code>false</code>.</dd>
-      <dt><code>shippingType</code></dt>
-      <dd>Lets you specify how the user interface refers to shipping when the word
+        should select an appropriate `shippingType`. The default is
+        `false`.
+    - `shippingType`
+      - : Lets you specify how the user interface refers to shipping when the word
         'shipping' isn't appropriate for your use case. For example, in English speaking
         countries you would say "pizza delivery" not "pizza shipping". Valid values are
-        <code>"shipping"</code>, <code>"delivery"</code>, and <code>"pickup"</code>.
-        Quotation marks must be included. The default value is <code>"shipping"</code>.
-      </dd>
-    </dl>
-  </dd>
-</dl>
+        `"shipping"`, `"delivery"`, and `"pickup"`.
+        Quotation marks must be included. The default value is `"shipping"`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("PaymentRequest")}} object, configured for use as configured by the
-  input parameters.</p>
+A new {{domxref("PaymentRequest")}} object, configured for use as configured by the
+input parameters.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows minimal functionality and focuses instead on showing the
-  complete context of instantiating a <code>PaymentRequest</code> object.</p>
+The following example shows minimal functionality and focuses instead on showing the
+complete context of instantiating a `PaymentRequest` object.
 
-<pre class="brush: js">var supportedInstruments = [{
+```js
+var supportedInstruments = [{
  supportedMethods: 'basic-card',
  data: {
    supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
@@ -167,12 +159,13 @@ try {
   });
 } catch (e) {
   // Catch any other errors.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

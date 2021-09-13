@@ -13,23 +13,21 @@ tags:
   - rtc
 browser-compat: api.RTCOfferOptions
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCOfferOptions</strong></code> dictionary is used to provide optional settings when creating an {{domxref("RTCPeerConnection")}} offer with the {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} method.</p>
+The **`RTCOfferOptions`** dictionary is used to provide optional settings when creating an {{domxref("RTCPeerConnection")}} offer with the {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This dictionary also inherits properties from the {{domxref("RTCOfferAnswerOptions")}} dictionary, on which it's based.</em></p>
+_This dictionary also inherits properties from the {{domxref("RTCOfferAnswerOptions")}} dictionary, on which it's based._
 
-<dl>
- <dt>{{domxref("RTCOfferOptions.iceRestart", "iceRestart")}} {{optional_inline}}</dt>
- <dd>A Boolean which, when set to <code>true</code>, tells <code>createOffer()</code> to generate and use new values for the identifying properties of the SDP it creates, resulting in a request that triggers renegotiation of the ICE connection. This is useful if network conditions have changed in a way that make the current configuration untenable or impractical, for instance.</dd>
-</dl>
+- {{domxref("RTCOfferOptions.iceRestart", "iceRestart")}} {{optional_inline}}
+  - : A Boolean which, when set to `true`, tells `createOffer()` to generate and use new values for the identifying properties of the SDP it creates, resulting in a request that triggers renegotiation of the ICE connection. This is useful if network conditions have changed in a way that make the current configuration untenable or impractical, for instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

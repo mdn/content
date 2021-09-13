@@ -17,42 +17,40 @@ tags:
   - sound
 browser-compat: api.AudioWorklet
 ---
-<p>{{APIRef("Web Audio API")}}{{securecontext_header}}</p>
+{{APIRef("Web Audio API")}}{{securecontext_header}}
 
-<p>The <strong><code>AudioWorklet</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.</p>
+The **`AudioWorklet`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.
 
-<p>The worklet's code is run in the {{domxref("AudioWorkletGlobalScope")}} global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.</p>
+The worklet's code is run in the {{domxref("AudioWorkletGlobalScope")}} global execution context, using a separate Web Audio thread which is shared by the worklet and other audio nodes.
 
-<p>Access the audio context's instance of <code>AudioWorklet</code> through the {{domxref("BaseAudioContext.audioWorklet")}} property.</p>
+Access the audio context's instance of `AudioWorklet` through the {{domxref("BaseAudioContext.audioWorklet")}} property.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>AudioWorklet</code> interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}.</em></p>
+_The `AudioWorklet` interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits methods from {{domxref('Worklet')}}. The <code>AudioWorklet</code> interface does not define any methods of its own.</em></p>
+_This interface inherits methods from {{domxref('Worklet')}}. The `AudioWorklet` interface does not define any methods of its own._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em><code>AudioWorklet</code> has no events to which it responds.</em></p>
+_`AudioWorklet` has no events to which it responds._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See {{domxref("AudioWorkletNode")}} for complete examples of custom audio node creation.</p>
+See {{domxref("AudioWorkletNode")}} for complete examples of custom audio node creation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("AudioWorkletGlobalScope")}} — the global execution context of an <code>AudioWorklet</code></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- {{domxref("AudioWorkletGlobalScope")}} — the global execution context of an `AudioWorklet`
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

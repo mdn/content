@@ -2,34 +2,35 @@
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
 tags:
-- API
-- Long Tasks API
-- Performance
-- Property
-- Reference
-- TaskAttributionTiming
+  - API
+  - Long Tasks API
+  - Performance
+  - Property
+  - Reference
+  - TaskAttributionTiming
 browser-compat: api.TaskAttributionTiming.containerType
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p>The <strong><code>containerType</code></strong> readonly property of the
-  {{domxref("TaskAttributionTiming")}} interface returns the type of frame container, one
-  of <code>iframe</code>, <code>embed</code>, or <code>object</code>.</p>
+The **`containerType`** readonly property of the
+{{domxref("TaskAttributionTiming")}} interface returns the type of frame container, one
+of `iframe`, `embed`, or `object`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>containerType</em> = TaskAttributionTiming.containerType;</pre>
+```js
+var containerType = TaskAttributionTiming.containerType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the container's type, one of <code>iframe</code>,
-  <code>embed</code>, or <code>object</code>.</p>
+A {{domxref("DOMString")}} containing the container's type, one of `iframe`,
+`embed`, or `object`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

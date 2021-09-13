@@ -11,74 +11,76 @@ tags:
   - Reference
 browser-compat: api.CSSMathSum
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathSum</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.</p>
+The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
-<p>A CSSMathSum is the object type returned when the  <code><a href="/en-US/docs/Web/API/StylePropertyMapReadOnly/get">StylePropertyMapReadOnly.get()</a></code> method is used on a CSS property whose value is created with a <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function.</p>
+A CSSMathSum is the object type returned when the  [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](</en-US/docs/Web/CSS/calc()>) function.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSMathSum.CSSMathSum()")}}</dt>
- <dd>Creates a new <code>CSSMathSum</code> object.</dd>
-</dl>
+- {{domxref("CSSMathSum.CSSMathSum()")}}
+  - : Creates a new `CSSMathSum` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMathSum.values')}}</dt>
- <dd>Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.</dd>
-</dl>
+- {{domxref('CSSMathSum.values')}}
+  - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>No</p>
+No
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We create an element with a <code><a href="/en-US/docs/Web/CSS/width">width</a></code> determined using a <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function, then {{DOMxRef("console.log()")}} the <code>operator</code> and <code>values</code>, and dig into the values a bit.</p>
+We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function, then {{DOMxRef("console.log()")}} the `operator` and `values`, and dig into the values a bit.
 
-<pre class="brush: html">&lt;div&gt;has width&lt;/div&gt;
-</pre>
+```html
+<div>has width</div>
+```
 
-<p>We assign a <code>width</code></p>
+We assign a `width`
 
-<pre class="brush: css">div {
+```css
+div {
   width: calc(30% - 20px);
-}</pre>
+}
+```
 
-<p>We add the JavaScript</p>
+We add the JavaScript
 
-<pre class="brush: js">const styleMap = document.querySelector('div').computedStyleMap();
+```js
+const styleMap = document.querySelector('div').computedStyleMap();
 
 console.log( styleMap.get('width') );                  // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').operator );         // 'sum'
 console.log( styleMap.get('width').values );           // CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, length: 2}
-console.log( styleMap.get('width').values[0] );        // <a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValue</a> {value: 30, unit: "percent"}
+console.log( styleMap.get('width').values[0] );        // CSSUnitValue {value: 30, unit: "percent"}
 console.log( styleMap.get('width').values[0].value );  // 30
 console.log( styleMap.get('width').values[0].unit );   // 'percent'
 console.log( styleMap.get('width').values[1] );        // CSSUnitValue {value: -20, unit: "px"}
 console.log( styleMap.get('width').values[1].value );  //  -20
 console.log( styleMap.get('width').values[1].unit );   // 'px'
-</pre>
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 300)}}</p>
+{{EmbedLiveSample("Examples", 120, 300)}}
 
-<p>The specification is still evolving. In the future we may write the last three lines as:</p>
+The specification is still evolving. In the future we may write the last three lines as:
 
-<pre class="brush: js">console.log( styleMap.get('width').values[1] );            // CSSMathNegate {value: CSSUnitValue, operator: "negate"}
+```js
+console.log( styleMap.get('width').values[1] );            // CSSMathNegate {value: CSSUnitValue, operator: "negate"}
 console.log( styleMap.get('width').values[1].value );      // CSSUnitValue {value: 20, unit: "px"}
-console.log( styleMap.get('width').values[1].value.unit ); // 'px'</pre>
+console.log( styleMap.get('width').values[1].value.unit ); // 'px'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

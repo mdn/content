@@ -9,76 +9,76 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRenderingIntent
 ---
-<div>{{APIRef("SVG")}}{{deprecated_header}}</div>
+{{APIRef("SVG")}}{{deprecated_header}}
 
-<p>The <strong><code>SVGRenderingIntent</code></strong> interface defines the enumerated list of possible values for {{SVGAttr("rendering-intent")}} attributes or descriptors.</p>
+The **`SVGRenderingIntent`** interface defines the enumerated list of possible values for {{SVGAttr("rendering-intent")}} attributes or descriptors.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<div class="warning">
-<p><strong>Warning:</strong> This interface was removed in the SVG 2 specification.</p>
-</div>
+> **Warning:** This interface was removed in the SVG 2 specification.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_AUTO</code></td>
-   <td>1</td>
-   <td>Corresponds to the value <code>auto</code>.</td>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_PERCEPTUAL</code></td>
-   <td>2</td>
-   <td>Corresponds to the value <code>perceptual</code>.</td>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_RELATIVE_COLORIMETRIC</code></td>
-   <td>3</td>
-   <td>Corresponds to the value <code>relative-colorimetric</code>.</td>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_SATURATION</code></td>
-   <td>4</td>
-   <td>Corresponds to the value <code>saturation</code>.</td>
-  </tr>
-  <tr>
-   <td><code>RENDERING_INTENT_ABSOLUTE_COLORIMETRIC</code></td>
-   <td>5</td>
-   <td>Corresponds to the value <code>absolute-colorimetric</code>.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_UNKNOWN</code></td>
+      <td>0</td>
+      <td>
+        The type is not one of predefined types. It is invalid to attempt to
+        define a new value of this type or to attempt to switch an existing
+        value to this type.
+      </td>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_AUTO</code></td>
+      <td>1</td>
+      <td>Corresponds to the value <code>auto</code>.</td>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_PERCEPTUAL</code></td>
+      <td>2</td>
+      <td>Corresponds to the value <code>perceptual</code>.</td>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_RELATIVE_COLORIMETRIC</code></td>
+      <td>3</td>
+      <td>Corresponds to the value <code>relative-colorimetric</code>.</td>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_SATURATION</code></td>
+      <td>4</td>
+      <td>Corresponds to the value <code>saturation</code>.</td>
+    </tr>
+    <tr>
+      <td><code>RENDERING_INTENT_ABSOLUTE_COLORIMETRIC</code></td>
+      <td>5</td>
+      <td>Corresponds to the value <code>absolute-colorimetric</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't implement any specific properties.</em></p>
+_This interface doesn't implement any specific properties._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods.</em></p>
+_This interface doesn't implement any specific methods._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("rendering-intent")}}</li>
-</ul>
+- {{SVGAttr("rendering-intent")}}

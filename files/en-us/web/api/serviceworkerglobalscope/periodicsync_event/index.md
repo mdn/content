@@ -9,60 +9,62 @@ tags:
   - events
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>periodicsync</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.</p>
+The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PeriodicSyncEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref('ServiceWorkerGlobalScope.onperiodicsync')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PeriodicSyncEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to respond to a periodic sync event in the service worker.</p>
+The following example shows how to respond to a periodic sync event in the service worker.
 
-<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
+```js
+self.addEventListener('periodicsync', event => {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
-</pre>
+```
 
-<p>You can also set up the event handler using the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} property:</p>
+You can also set up the event handler using the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} property:
 
-<pre class="brush: js">self.onperiodicsync = (event) =&gt; {
+```js
+self.onperiodicsync = (event) => {
   ...
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

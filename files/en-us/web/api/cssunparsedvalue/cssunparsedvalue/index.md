@@ -2,60 +2,58 @@
 title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- NeedsExample
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - NeedsExample
+  - Reference
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnparsedValue()</code></strong> constructor
-  creates a new {{domxref("CSSUnparsedValue")}} object which represents property values
-  that reference custom properties.</p>
+The **`CSSUnparsedValue()`** constructor
+creates a new {{domxref("CSSUnparsedValue")}} object which represents property values
+that reference custom properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSUnparsedValue</var> = new CSSUnparsedValue(members)</pre>
+```js
+var CSSUnparsedValue = new CSSUnparsedValue(members)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>members</dt>
-  <dd>An array whose values must be either a {{domxref('USVString')}} or a
-    {{domxref('CSSVariableReferenceValue')}}.</dd>
-</dl>
+- members
+  - : An array whose values must be either a {{domxref('USVString')}} or a
+    {{domxref('CSSVariableReferenceValue')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let value  = new CSSUnparsedValue( ['4deg'] ),
+```js
+let value  = new CSSUnparsedValue( ['4deg'] ),
     values = new CSSUnparsedValue( ['1em', '#445566', '-45px'] );
 
 console.log( value  ); // CSSUnparsedValue {0: "4deg", length: 1}
 console.log( values ); // CSSUnparsedValue {0: "1em", 1: "#445566", 2: "-45px", length: 3}
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSUnparsedValue.entries")}}</li>
-  <li>{{domxref("CSSUnparsedValue.forEach")}}</li>
-  <li>{{domxref("CSSUnparsedValue.keys")}}</li>
-  <li>{{domxref("CSSUnparsedValue.length")}}</li>
-  <li>{{domxref("CSSUnparsedValue.values")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSUnparsedValue.entries")}}
+- {{domxref("CSSUnparsedValue.forEach")}}
+- {{domxref("CSSUnparsedValue.keys")}}
+- {{domxref("CSSUnparsedValue.length")}}
+- {{domxref("CSSUnparsedValue.values")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

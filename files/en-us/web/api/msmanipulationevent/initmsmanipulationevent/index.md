@@ -10,68 +10,70 @@ tags:
   - Reference
   - initMSManipulationEvent
 ---
-<div>{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}{{Deprecated_Header}}</div>
+{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-<p>The <code><strong>initMSManipulationEvent</strong></code> method is used to create a {{DOMxRef("MSManipulationEvent")}} that can be called from JavaScript.</p>
+The **`initMSManipulationEvent`** method is used to create a {{DOMxRef("MSManipulationEvent")}} that can be called from JavaScript.
 
-<p>This proprietary method is specific to Internet Explorer. Beginning with the Microsoft Edge browser, the <a href="/en-US/docs/Web/API/Event/initEvent">initEvent()</a> constructor pattern for synthetic events is deprecated.</p>
+This proprietary method is specific to Internet Explorer. Beginning with the Microsoft Edge browser, the [initEvent()](/en-US/docs/Web/API/Event/initEvent) constructor pattern for synthetic events is deprecated.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="brush: js">MSManipulationEvent.initMSManipulationEvent(typeArg, canBubbleArg, cancelableArg, viewArg, detailArg, lastState, currentState);
-</pre>
+```js
+MSManipulationEvent.initMSManipulationEvent(typeArg, canBubbleArg, cancelableArg, viewArg, detailArg, lastState, currentState);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><strong>typeArg</strong> [in]</p>
+**typeArg** \[in]
 
-<p>Type: <em>DOMString</em></p>
+Type: _DOMString_
 
-<p>The type of the event being created.</p>
+The type of the event being created.
 
-<p><strong>canBubbleArg</strong> [in]</p>
+**canBubbleArg** \[in]
 
-<p>Type: <em>boolean</em></p>
+Type: _boolean_
 
-<p>Indicates whether the event can bubble. When true the event should propagate upward. When false the event does not propagate upward.</p>
+Indicates whether the event can bubble. When true the event should propagate upward. When false the event does not propagate upward.
 
-<p><strong>cancelableArg</strong> [in]</p>
+**cancelableArg** \[in]
 
-<p>Type: <em>boolean</em></p>
+Type: _boolean_
 
-<p>Indicates whether the event’s default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.</p>
+Indicates whether the event’s default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
 
-<p><strong>viewArg</strong> [in]</p>
+**viewArg** \[in]
 
-<p>Type: <em>AbstractView</em></p>
+Type: _AbstractView_
 
-<p>The view in which the event is taking place.</p>
+The view in which the event is taking place.
 
-<p><strong>detailArg</strong> [in]</p>
+**detailArg** \[in]
 
-<p>Type: <em>Integer</em></p>
+Type: _Integer_
 
-<p>Specifies some detailed information depending upon the event.</p>
+Specifies some detailed information depending upon the event.
 
-<p><strong>lastState</strong> [in]</p>
+**lastState** \[in]
 
-<p>Type: <em>Integer</em></p>
+Type: _Integer_
 
-<p>Indicates the last state of the manipulation event.</p>
+Indicates the last state of the manipulation event.
 
-<p><strong>currentState</strong> [in]</p>
+**currentState** \[in]
 
-<p>Type: <em>Integer</em></p>
+Type: _Integer_
 
-<p>Indicates the current state of the manipulation event.</p>
+Indicates the current state of the manipulation event.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: js">interface MSManipulationEvent extends UIEvent {
+```js
+interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;
     readonly inertiaDestinationY: number;
@@ -86,11 +88,9 @@ tags:
     readonly MS_MANIPULATION_STATE_SELECTING: number;
     readonly MS_MANIPULATION_STATE_STOPPED: number;
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/MSManipulationEvent">MSManipulationEvent</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [MSManipulationEvent](/en-US/docs/Web/API/MSManipulationEvent)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

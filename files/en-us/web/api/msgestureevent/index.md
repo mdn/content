@@ -9,85 +9,73 @@ tags:
   - Reference
 browser-compat: api.MSGestureEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>MSGestureEvent</strong></code> is a proprietary interface specific to Internet Explorer and Microsoft Edge which represents events that occur due to touch gestures. Events using this interface include {{event("MSGestureStart")}}, {{event("MSGestureEnd")}}, {{event("MSGestureTap")}}, {{event("MSGestureHold")}}, {{event("MSGestureChange")}}, and {{event("MSInertiaStart")}}.</p>
+The **`MSGestureEvent`** is a proprietary interface specific to Internet Explorer and Microsoft Edge which represents events that occur due to touch gestures. Events using this interface include {{event("MSGestureStart")}}, {{event("MSGestureEnd")}}, {{event("MSGestureTap")}}, {{event("MSGestureHold")}}, {{event("MSGestureChange")}}, and {{event("MSInertiaStart")}}.
 
-<p><code>MSGestureEvent</code> derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MSGestureEvent.initGestureEvent()")}} method is kept for backward compatibility, the creation of an <code>MSGestureEvent</code> object should be done using the {{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}} constructor.</p>
+`MSGestureEvent` derives from {{domxref("UIEvent")}}, which in turn derives from {{domxref("Event")}}. Though the {{domxref("MSGestureEvent.initGestureEvent()")}} method is kept for backward compatibility, the creation of an `MSGestureEvent` object should be done using the {{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}} constructor.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}}</dt>
- <dd>Creates an <code>MSGestureEvent</code> object.</dd>
-</dl>
+- {{domxref("MSGestureEvent.MSGestureEvent", "MSGestureEvent()")}}
+  - : Creates an `MSGestureEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("MSGestureEvent.expansion")}} {{readonlyinline}}</dt>
- <dd>The diameter of the gesture area. For example, the distance between fingers.</dd>
- <dt>{{domxref("MSGestureEvent.gestureObject")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("MSGesture")}} object for this gesture event.</dd>
- <dt>{{domxref("MSGestureEvent.rotation")}} {{readonlyinline}}</dt>
- <dd>Amount of rotation (in radians) since the previous {{domxref("MSGestureEvent")}} of the current gesture. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation.</dd>
- <dt>{{domxref("MSGestureEvent.scale")}} {{readonlyinline}}</dt>
- <dd>The difference in scale (for zoom gestures) from the previous {{domxref("MSGestureEvent")}} of the current gesture.</dd>
- <dt>{{domxref("MSGestureEvent.translationX")}} {{readonlyinline}}</dt>
- <dd>Distance traversed along the X-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture</dd>
- <dt>{{domxref("MSGestureEvent.translationY")}} {{readonlyinline}}</dt>
- <dd>Distance traversed along the Y-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture</dd>
- <dt>{{domxref("MSGestureEvent.velocityAngular")}} {{readonlyinline}}</dt>
- <dd>Angular velocity. Expressed in radians.</dd>
- <dt>{{domxref("MSGestureEvent.velocityExpansion")}} {{readonlyinline}}</dt>
- <dd>The velocity of the expansion of the gesture area.</dd>
- <dt>{{domxref("MSGestureEvent.velocityX")}} {{readonlyinline}}</dt>
- <dd>Velocity along the direction of the X-axis.</dd>
- <dt>{{domxref("MSGestureEvent.velocityY")}} {{readonlyinline}}</dt>
- <dd>Velocity along the direction of the Y-axis.</dd>
-</dl>
+- {{domxref("MSGestureEvent.expansion")}} {{readonlyinline}}
+  - : The diameter of the gesture area. For example, the distance between fingers.
+- {{domxref("MSGestureEvent.gestureObject")}} {{readonlyinline}}
+  - : Returns the {{domxref("MSGesture")}} object for this gesture event.
+- {{domxref("MSGestureEvent.rotation")}} {{readonlyinline}}
+  - : Amount of rotation (in radians) since the previous {{domxref("MSGestureEvent")}} of the current gesture. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation.
+- {{domxref("MSGestureEvent.scale")}} {{readonlyinline}}
+  - : The difference in scale (for zoom gestures) from the previous {{domxref("MSGestureEvent")}} of the current gesture.
+- {{domxref("MSGestureEvent.translationX")}} {{readonlyinline}}
+  - : Distance traversed along the X-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture
+- {{domxref("MSGestureEvent.translationY")}} {{readonlyinline}}
+  - : Distance traversed along the Y-axis since the previous {{domxref("MSGestureEvent")}} of the current gesture
+- {{domxref("MSGestureEvent.velocityAngular")}} {{readonlyinline}}
+  - : Angular velocity. Expressed in radians.
+- {{domxref("MSGestureEvent.velocityExpansion")}} {{readonlyinline}}
+  - : The velocity of the expansion of the gesture area.
+- {{domxref("MSGestureEvent.velocityX")}} {{readonlyinline}}
+  - : Velocity along the direction of the X-axis.
+- {{domxref("MSGestureEvent.velocityY")}} {{readonlyinline}}
+  - : Velocity along the direction of the Y-axis.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("MSGestureEvent.initGestureEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes the value of an <code>MSGestureEvent</code>. If the event has already being dispatched, this method does nothing. This method is deprecated as of Microsoft Edge.</dd>
-</dl>
+- {{domxref("MSGestureEvent.initGestureEvent()")}} {{deprecated_inline}}
+  - : Initializes the value of an `MSGestureEvent`. If the event has already being dispatched, this method does nothing. This method is deprecated as of Microsoft Edge.
 
-<h2 id="Gesture_event_types">Gesture event types</h2>
+## Gesture event types
 
-<ul>
- <li>{{event("MSGestureStart")}}</li>
- <li>{{event("MSGestureEnd")}}</li>
- <li>{{event("MSGestureTap")}}</li>
- <li>{{event("MSGestureHold")}}</li>
- <li>{{event("MSGestureChange")}}</li>
- <li>{{event("MSInertiaStart")}}</li>
-</ul>
+- {{event("MSGestureStart")}}
+- {{event("MSGestureEnd")}}
+- {{event("MSGestureTap")}}
+- {{event("MSGestureHold")}}
+- {{event("MSGestureChange")}}
+- {{event("MSInertiaStart")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any specification.</em> Microsoft has <a href="https://msdn.microsoft.com/en-us/library/hh772076(v=vs.85).aspx">a description on MSDN</a>.</p>
+_Not part of any specification._ Microsoft has [a description on MSDN](<https://msdn.microsoft.com/en-us/library/hh772076(v=vs.85).aspx>).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>WebKit equivalents:
-  <ul>
-   <li>{{domxref("GestureEvent")}}</li>
-   <li>{{event("gesturestart")}}</li>
-   <li>{{event("gesturechange")}}</li>
-   <li>{{event("gestureend")}}</li>
-  </ul>
- </li>
-</ul>
+- WebKit equivalents:
+
+  - {{domxref("GestureEvent")}}
+  - {{event("gesturestart")}}
+  - {{event("gesturechange")}}
+  - {{event("gestureend")}}

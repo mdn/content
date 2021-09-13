@@ -2,61 +2,59 @@
 title: CSSValue.cssText
 slug: Web/API/CSSValue/cssText
 tags:
-- API
-- CSSValue
-- Property
-- Reference
-- cssText
-- Deprecated
+  - API
+  - CSSValue
+  - Property
+  - Reference
+  - cssText
+  - Deprecated
 browser-compat: api.CSSValue.cssText
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>cssText</strong></code> property of the {{domxref("CSSValue")}}
-  interface represents the current computed CSS property value.</p>
+The **`cssText`** property of the {{domxref("CSSValue")}}
+interface represents the current computed CSS property value.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>cssText</var> = <var>cssValue</var>.cssText;
-</pre>
+```js
+cssText = cssValue.cssText;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the current CSS property value.</p>
+A {{domxref("DOMString")}} representing the current CSS property value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var styleDeclaration = document.styleSheets[0].cssRules[0].style;
+```js
+var styleDeclaration = document.styleSheets[0].cssRules[0].style;
 var cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssText);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}</li>
-</ul>
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}

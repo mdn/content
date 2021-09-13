@@ -9,35 +9,33 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLinearGradientElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGLinearGradientElement</code></strong> interface corresponds to the {{SVGElement("linearGradient")}} element.</p>
+The **`SVGLinearGradientElement`** interface corresponds to the {{SVGElement("linearGradient")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}._
 
-<dl>
- <dt>{{domxref("SVGLinearGradientElement.x1")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x1")}} attribute of the given {{SVGElement("linearGradient")}} element.</dd>
- <dt>{{domxref("SVGLinearGradientElement.y1")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y1")}} attribute of the given {{SVGElement("linearGradient")}} element.</dd>
- <dt>{{domxref("SVGLinearGradientElement.x2")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x2")}} attribute of the given {{SVGElement("linearGradient")}} element.</dd>
- <dt>{{domxref("SVGLinearGradientElement.y2")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y2")}} attribute of the given {{SVGElement("linearGradient")}} element.</dd>
-</dl>
+- {{domxref("SVGLinearGradientElement.x1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x1")}} attribute of the given {{SVGElement("linearGradient")}} element.
+- {{domxref("SVGLinearGradientElement.y1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y1")}} attribute of the given {{SVGElement("linearGradient")}} element.
+- {{domxref("SVGLinearGradientElement.x2")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x2")}} attribute of the given {{SVGElement("linearGradient")}} element.
+- {{domxref("SVGLinearGradientElement.y2")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y2")}} attribute of the given {{SVGElement("linearGradient")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

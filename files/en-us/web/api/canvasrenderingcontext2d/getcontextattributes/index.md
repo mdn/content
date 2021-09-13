@@ -2,80 +2,70 @@
 title: CanvasRenderingContext2D.getContextAttributes()
 slug: Web/API/CanvasRenderingContext2D/getContextAttributes
 tags:
-- API
-- Method
-- Reference
-- Canvas
-- CanvasRenderingContext2D
+  - API
+  - Method
+  - Reference
+  - Canvas
+  - CanvasRenderingContext2D
 browser-compat: api.CanvasRenderingContext2D.getContextAttributes
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>CanvasRenderingContext2D.getContextAttributes()</strong></code>
-  method
-  returns an object that contains the actual context parameters. Context attributes can be
-  requested with
-  <a
-    href="/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code></a>
-  on context creation.
-</p>
+The **`CanvasRenderingContext2D.getContextAttributes()`**
+method
+returns an object that contains the actual context parameters. Context attributes can be
+requested with
+[`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext)
+on context creation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><em>ctx</em></var>.getContextAttributes();</pre>
+```js
+ctx.getContextAttributes();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>CanvasRenderingContext2DSettings</code> object that contains the actual context
-  parameters.
-  It has the following members:</p>
-<dl>
-  <dt><code>alpha</code></dt>
-  <dd>A Boolean indicating if the canvas contains an alpha channel.
-    If <code>false</code>, the backdrop is always opaque, which can speed up drawing
-    of transparent content and images.</dd>
-  <dt><code>desynchronized</code></dt>
-  <dd>A Boolean indicating the user agent reduced the latency by desynchronizing
-    the canvas paint cycle from the event loop.</dd>
-</dl>
+A `CanvasRenderingContext2DSettings` object that contains the actual context
+parameters.
+It has the following members:
 
-<h2 id="Examples">Examples</h2>
+- `alpha`
+  - : A Boolean indicating if the canvas contains an alpha channel.
+    If `false`, the backdrop is always opaque, which can speed up drawing
+    of transparent content and images.
+- `desynchronized`
+  - : A Boolean indicating the user agent reduced the latency by desynchronizing
+    the canvas paint cycle from the event loop.
 
-<p>Given context attributes were provided on context creation using
-  <a
-    href="/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code></a>
-</p>
+## Examples
 
-<pre class="brush: js">
+Given context attributes were provided on context creation using
+[`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext)
+
+```js
 let canvas = document.createElement('canvas');
 let ctx = canvas.getContext('2d', {alpha: false});
-</pre>
+```
 
-<p>the <code>getContextAttributes()</code> method lets you read back actual attributes
-  used by
-  the user agent:</p>
+the `getContextAttributes()` method lets you read back actual attributes
+used by
+the user agent:
 
-<pre class="brush: js">
+```js
 ctx.getContextAttributes();
 // returns {alpha: false, desynchronized: false}
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/HTMLCanvasElement/getContext"><code>HTMLCanvasElement.getContext()</code></a>
-  </li>
-  <li><a
-      href="/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes"><code>WebGLRenderingContext.getContextAttributes()</code></a>
-  </li>
-</ul>
+- [`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext)
+- [`WebGLRenderingContext.getContextAttributes()`](/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes)

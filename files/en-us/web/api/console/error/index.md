@@ -10,53 +10,45 @@ tags:
   - web console
 browser-compat: api.console.error
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.error()</code></strong> method outputs an error message to the Web console.</p>
+The **`console.error()`** method outputs an error message to the Web console.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.error(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.error(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>obj1</code> ... <code>objN</code></dt>
-	<dd>A list of JavaScript objects to output. The string representations of each of
-		these objects are appended together in the order listed and output.</dd>
-	<dt><code>msg</code></dt>
-	<dd>A JavaScript string containing zero or more substitution strings.</dd>
-	<dt><code>subst1</code> ... <code>substN</code></dt>
-	<dd>JavaScript objects with which to replace substitution strings within
-		<code>msg</code>. This gives you additional control over the format of the output.
-	</dd>
-</dl>
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of
+    these objects are appended together in the order listed and output.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This gives you additional control over the format of the output.
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting
-		text to the console</a> in the documentation of {{domxref("console")}} for
-	details.</p>
+See [Outputting
+text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for
+details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-	<p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools
-			Console to View Errors and Status</a></li>
-	<li><a
-			href="https://developers.google.com/web/tools/chrome-devtools/console/api#error">Chrome
-			Developer Tools: Using the Console</a></li>
-</ul>
+- [MSDN: Using the F12 Tools
+  Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+- [Chrome
+  Developer Tools: Using the Console](https://developers.google.com/web/tools/chrome-devtools/console/api#error)

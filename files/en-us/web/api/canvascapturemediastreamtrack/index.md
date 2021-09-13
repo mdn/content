@@ -12,40 +12,34 @@ tags:
   - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>CanvasCaptureMediaStreamTrack</code></strong> interface represents the video track contained in a {{domxref("MediaStream")}} being generated from a {{HTMLElement("canvas")}} following a call to {{domxref("HTMLCanvasElement.captureStream()")}}.</p>
+The **`CanvasCaptureMediaStreamTrack`** interface represents the video track contained in a {{domxref("MediaStream")}} being generated from a {{HTMLElement("canvas")}} following a call to {{domxref("HTMLCanvasElement.captureStream()")}}.
 
-<p>Part of the <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>.</p>
+Part of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}.</em></p>
+_This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref("CanvasCaptureMediaStreamTrack.canvas")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("HTMLCanvasElement")}} object whose surface is captured in real-time.</dd>
-</dl>
+- {{domxref("CanvasCaptureMediaStreamTrack.canvas")}} {{readonlyInline}}
+  - : Returns the {{domxref("HTMLCanvasElement")}} object whose surface is captured in real-time.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of its parent, {{domxref("MediaStreamTrack")}}.</em></p>
+_This interface inherits the methods of its parent, {{domxref("MediaStreamTrack")}}._
 
-<dl>
- <dt>{{domxref("CanvasCaptureMediaStreamTrack.requestFrame()")}}</dt>
- <dd>Manually forces a frame to be captured and sent to the stream. This lets applications that wish to specify the frame capture times directly do so, if they specified a <code>frameRate</code> of 0 when calling {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}.</dd>
-</dl>
+- {{domxref("CanvasCaptureMediaStreamTrack.requestFrame()")}}
+  - : Manually forces a frame to be captured and sent to the stream. This lets applications that wish to specify the frame capture times directly do so, if they specified a `frameRate` of 0 when calling {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}} to begin capturing frames from a canvas</li>
-</ul>
+- {{domxref("HTMLCanvasElement.captureStream()")}} to begin capturing frames from a canvas

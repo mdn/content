@@ -2,65 +2,63 @@
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/GlobalEventHandlers/onauxclick
 tags:
-- API
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- Property
-- Reference
-- auxclick
+  - API
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - auxclick
 browser-compat: api.GlobalEventHandlers.onauxclick
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <code><strong>onauxclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("auxclick")}} events.</p>
+The **`onauxclick`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("auxclick")}} events.
 
-<p>The <code>auxclick</code> event is raised when a non-primary button has been pressed on
-  an input device (e.g., a middle mouse button). It fires after the {{event("mousedown")}}
-  and {{event("mouseup")}} events, in that order.</p>
+The `auxclick` event is raised when a non-primary button has been pressed on
+an input device (e.g., a middle mouse button). It fires after the {{event("mousedown")}}
+and {{event("mouseup")}} events, in that order.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Browser vendors are implementing this property as part of a
-    plan to improve compatibility with regards to button behaviors. Specifically, event
-    behavior is being updated so that {{Event("click")}} only fires for primary button
-    clicks (e.g., left mouse button), while {{Event("auxclick")}} fires for non-primary
-    button clicks. Historically, {{Event("click")}} has generally fired for the click of
-    <em>any</em> device input button, although with browser behavior being somewhat
-    inconsistent.</p>
-</div>
+> **Note:** Browser vendors are implementing this property as part of a
+> plan to improve compatibility with regards to button behaviors. Specifically, event
+> behavior is being updated so that {{Event("click")}} only fires for primary button
+> clicks (e.g., left mouse button), while {{Event("auxclick")}} fires for non-primary
+> button clicks. Historically, {{Event("click")}} has generally fired for the click of
+> _any_ device input button, although with browser behavior being somewhat
+> inconsistent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>target</var>.onauxclick = <var>functionRe<em>f</em></var>;
-</pre>
+```js
+target.onauxclick = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument. Within the function,
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> will
-  be the element upon which the event was triggered.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument. Within the function,
+[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) will
+be the element upon which the event was triggered.
 
-<p>Only one <code>onauxclick</code> handler can be assigned to an object at a time. You
-  may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
-  since it's more flexible.</p>
+Only one `onauxclick` handler can be assigned to an object at a time. You
+may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
+since it's more flexible.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we define functions for two event handlers —
-  {{domxref("GlobalEventHandlers.onclick", "onclick")}} and <code>onauxclick</code>. The
-  former changes the color of the button background, while the latter changes the button
-  foreground (text) color. You can see the two functions in action by trying the demo out
-  with a multi-button mouse (<a href="https://mdn.github.io/dom-examples/auxclick/">see it
-    live on GitHub</a>; also <a
-    href="https://github.com/mdn/dom-examples/blob/master/auxclick/index.html">see the
-    source code</a>).</p>
+In this example we define functions for two event handlers —
+{{domxref("GlobalEventHandlers.onclick", "onclick")}} and `onauxclick`. The
+former changes the color of the button background, while the latter changes the button
+foreground (text) color. You can see the two functions in action by trying the demo out
+with a multi-button mouse ([see it
+live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the
+source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
-<pre class="brush: js">var button = document.querySelector('button');
+```js
+var button = document.querySelector('button');
 var html = document.querySelector('html');
 
 function random(number) {
@@ -75,30 +73,25 @@ button.onclick = function() {
 button.onauxclick = function() {
   var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
   button.style.color = rndCol;
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> If you are using a three-button mouse, you'll notice that the
-    <code>onauxclick</code> handler is run when either of the non-left mouse buttons are
-    clicked.</p>
-</div>
+> **Note:** If you are using a three-button mouse, you'll notice that the
+> `onauxclick` handler is run when either of the non-left mouse buttons are
+> clicked.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("auxclick")}} event</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onclick")}}</li>
-      <li>{{domxref("GlobalEventHandlers.ondblclick")}}</li>
-    </ul>
-  </li>
-</ul>
+- {{event("auxclick")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onclick")}}
+  - {{domxref("GlobalEventHandlers.ondblclick")}}

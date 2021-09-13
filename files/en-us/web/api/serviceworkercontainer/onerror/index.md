@@ -2,34 +2,36 @@
 title: ServiceWorkerContainer.onerror
 slug: Web/API/ServiceWorkerContainer/onerror
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerContainer
-- onerror
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerContainer
+  - onerror
 browser-compat: api.ServiceWorkerContainer.onerror
 ---
-<p>{{APIRef("Service Workers API")}}{{Deprecated_header}}</p>
+{{APIRef("Service Workers API")}}{{Deprecated_header}}
 
-<p>The <strong><code>onerror</code></strong> property of the
-  {{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever an
-  {{Event("error")}} event occurs in the associated service workers.</p>
+The **`onerror`** property of the
+{{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever an
+{{Event("error")}} event occurs in the associated service workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerContainer</em>.onerror = function(<em>errorevent</em>) { ... }</pre>
+```js
+serviceWorkerContainer.onerror = function(errorevent) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.onerror = function(errorevent) {
+```js
+navigator.serviceWorker.onerror = function(errorevent) {
   console.log(`received error message: ${errorevent.message}`);
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

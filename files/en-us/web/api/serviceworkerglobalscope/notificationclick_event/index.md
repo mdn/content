@@ -10,36 +10,39 @@ tags:
   - notificationclick
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>notificationclick</code></strong> event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.</p>
+The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("NotificationEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("NotificationEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>notificationclick</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
+You can use the `notificationclick` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -48,20 +51,21 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<p>Or use the {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}} event handler property:</p>
+Or use the {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}} event handler property:
 
-<pre class="brush: js">self.onnotificationclick = function(event) {
+```js
+self.onnotificationclick = function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -70,27 +74,26 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
- <li><a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a></li>
-</ul>
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Notifications API](/en-US/docs/Web/API/Notifications_API)

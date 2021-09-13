@@ -13,46 +13,45 @@ tags:
   - underflow
 browser-compat: api.Element.underflow_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}{{Non-standard_header}}
 
-<div>{{Non-standard_header}}</div>
+The non-standard `underflow` event, which is specific to Firefox, is fired when an element is no longer overflowed by its content.
 
-<p>The non-standard <code>underflow</code> event, which is specific to Firefox, is fired when an element is no longer overflowed by its content.</p>
+This only works for elements for which {{cssxref("overflow")}} is _not_ set to `visible`.
 
-<p>This only works for elements for which {{cssxref("overflow")}} is <em>not</em> set to <code>visible</code>.</p>
-
-<p>The counterpart <code><a href="/en-US/docs/Web/API/Element/overflow_event">overflow</a></code> event is fired when overflow occurs.</p>
+The counterpart [`overflow`](/en-US/docs/Web/API/Element/overflow_event) event is fired when overflow occurs.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>Unknown</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>Unknown</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:html;">&lt;div id="wrapper"&gt;
-    &lt;div id="child"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;br/&gt;
-&lt;label&gt;&lt;input type="checkbox" id="toggle" checked/&gt; Overflow&lt;/label&gt;
+```html
+<div id="wrapper">
+    <div id="child"></div>
+</div>
+<br/>
+<label><input type="checkbox" id="toggle" checked/> Overflow</label>
 
-&lt;style&gt;
+<style>
  #wrapper {
     width: 20px;
     height: 20px;
@@ -67,9 +66,9 @@ browser-compat: api.Element.underflow_event
     border: 2px solid grey;
     background: #ccc;
   }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
   var wrapper = document.getElementById("wrapper"),
       child = document.getElementById("child"),
       toggle = document.getElementById("toggle");
@@ -92,19 +91,17 @@ browser-compat: api.Element.underflow_event
       }
 
   }, false);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <a href="/en-US/docs/Web/API/Element/overflow_event"><code>overflow</code></a></li>
-</ul>
+- Related events: [`overflow`](/en-US/docs/Web/API/Element/overflow_event)

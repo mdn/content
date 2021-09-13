@@ -2,44 +2,46 @@
 title: ShadowRoot.fullscreenElement
 slug: Web/API/ShadowRoot/fullscreenElement
 tags:
-- API
-- Property
-- Reference
-- ShadowRoot
-- Web Components
-- shadow dom
+  - API
+  - Property
+  - Reference
+  - ShadowRoot
+  - Web Components
+  - shadow dom
 browser-compat: api.ShadowRoot.fullscreenElement
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>fullscreenElement</code></strong> read-only property of the
-{{domxref("ShadowRoot")}} interface returns the element within the shadow tree that is currently displayed in full screen.</p>
+The **`fullscreenElement`** read-only property of the
+{{domxref("ShadowRoot")}} interface returns the element within the shadow tree that is currently displayed in full screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>shadowRoot</var>.fullscreenElement</pre>
+```js
+shadowRoot.fullscreenElement
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref('Element')}} which is currently is displayed in full screen mode,
-or <code>null</code> if there is no full screen element.</p>
+The {{domxref('Element')}} which is currently is displayed in full screen mode,
+or `null` if there is no full screen element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
-let fullscreenElem = shadow.fullscreenElement;</pre>
+let fullscreenElem = shadow.fullscreenElement;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.fullscreenElement")}}</li>
-</ul>
+- {{domxref("Document.fullscreenElement")}}

@@ -2,52 +2,50 @@
 title: WindowEventHandlers.onpopstate
 slug: Web/API/WindowEventHandlers/onpopstate
 tags:
-- API
-- Event Handler
-- HTML DOM
-- HTML5
-- NeedsSpecTable
-- Property
-- Window
-- events
+  - API
+  - Event Handler
+  - HTML DOM
+  - HTML5
+  - NeedsSpecTable
+  - Property
+  - Window
+  - events
 browser-compat: api.WindowEventHandlers.onpopstate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>onpopstate</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing <code><a href="/en-US/docs/Web/API/Window/popstate_event">popstate</a></code>
-  events on the window.</p>
+The **`onpopstate`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing [`popstate`](/en-US/docs/Web/API/Window/popstate_event)
+events on the window.
 
-<p>A <code>popstate</code> event is dispatched to the window each time the active history
-  entry changes between two history entries for the same document. If the activated
-  history entry was created by a call to <code>history.pushState()</code>, or was affected
-  by a call to <code>history.replaceState()</code>, the <code>popstate</code> event's
-  <code>state</code> property contains a copy of the history entry's state object.</p>
+A `popstate` event is dispatched to the window each time the active history
+entry changes between two history entries for the same document. If the activated
+history entry was created by a call to `history.pushState()`, or was affected
+by a call to `history.replaceState()`, the `popstate` event's
+`state` property contains a copy of the history entry's state object.
 
-<div class="note">
-  <p><strong>Note:</strong> Calling <code>history.pushState()</code> or
-    <code>history.replaceState()</code> won't trigger a <code>popstate</code> event. The
-    <code>popstate</code> event is only triggered by performing a browser action, such as
-    clicking on the back button (or calling <code>history.back()</code> in JavaScript),
-    when navigating between two history entries for the same document.</p>
-</div>
+> **Note:** Calling `history.pushState()` or
+> `history.replaceState()` won't trigger a `popstate` event. The
+> `popstate` event is only triggered by performing a browser action, such as
+> clicking on the back button (or calling `history.back()` in JavaScript),
+> when navigating between two history entries for the same document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.onpopstate = <em>funcRef</em>;
-</pre>
+```js
+window.onpopstate = funcRef;
+```
 
-<ul>
-  <li><code>funcRef</code> is a handler function.</li>
-</ul>
+- `funcRef` is a handler function.
 
-<h2 id="The_popstate_event">Examples</h2>
+## Examples
 
-<p>For example, a page at <code>http://example.com/example.html</code> running the
-  following code will generate alerts as indicated:</p>
+For example, a page at `http://example.com/example.html` running the
+following code will generate alerts as indicated:
 
-<pre class="brush:js">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
@@ -57,27 +55,25 @@ history.replaceState({page: 3}, "title 3", "?page=3");
 history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // alerts "location: http://example.com/example.html, state: null
 history.go(2);  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
-</pre>
+```
 
-<p>Note that even though the original history entry (for
-  <code>http://example.com/example.html</code>) has no state object associated with it, a
-  <code>popstate</code> event is still fired, when we activate that entry after the second
-  call to <code>history.back()</code>.</p>
+Note that even though the original history entry (for
+`http://example.com/example.html`) has no state object associated with it, a
+`popstate` event is still fired, when we activate that entry after the second
+call to `history.back()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.history")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history">Manipulating
-      the browser history</a></li>
-  <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">Ajax
-      navigation example</a></li>
-</ul>
+- {{domxref("window.history")}}
+- [Manipulating
+  the browser history](/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history)
+- [Ajax
+  navigation example](/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)

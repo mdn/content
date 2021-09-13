@@ -2,53 +2,55 @@
 title: RTCIceTransport.onselectedcandidatepairchange
 slug: Web/API/RTCIceTransport/onselectedcandidatepairchange
 tags:
-- API
-- Candidate
-- Candidate Pair
-- Connectivity
-- Event Handler
-- Negotiation
-- Property
-- RTCIceTransport
-- Reference
-- WebRTC
-- WebRTC API
-- onselectedcandidatepairchange
-- selectedcandidatepairchange
+  - API
+  - Candidate
+  - Candidate Pair
+  - Connectivity
+  - Event Handler
+  - Negotiation
+  - Property
+  - RTCIceTransport
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - onselectedcandidatepairchange
+  - selectedcandidatepairchange
 browser-compat: api.RTCIceTransport.onselectedcandidatepairchange
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceTransport")}} interface's <strong><code>onselectedcandidatepairchange</code></strong> event handler specifies a
-    function to be called to handle the {{event("selectedcandidatepairchange")}} event,
-    which is fired when the ICE agent selects a new candidate pair to be used for the connection.</p>
+The {{domxref("RTCIceTransport")}} interface's **`onselectedcandidatepairchange`** event handler specifies a
+function to be called to handle the {{event("selectedcandidatepairchange")}} event,
+which is fired when the ICE agent selects a new candidate pair to be used for the connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCIceTransport</em>.onselectedcandidatepairchange = <em>candidatePairHandler</em>;</pre>
+```js
+RTCIceTransport.onselectedcandidatepairchange = candidatePairHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This propoerty should be set to reference an event handler function to be called by the
-  ICE agent when it discovers a new candidate pair that the {{domxref("RTCIceTransport")}}
-  will be using for communication with the remote peer. This event will occur at least
-  once, and may occur more than once if the ICE agent continues to identify candidate
-  pairs that will work better, more closely match the requested parameters, and so forth.
-</p>
+This propoerty should be set to reference an event handler function to be called by the
+ICE agent when it discovers a new candidate pair that the {{domxref("RTCIceTransport")}}
+will be using for communication with the remote peer. This event will occur at least
+once, and may occur more than once if the ICE agent continues to identify candidate
+pairs that will work better, more closely match the requested parameters, and so forth.
 
-<p>The event handler can determine the current state by calling the transport's
-  {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}
-  method, which returns a {{domxref("RTCIceCandidatePair")}} whose
-  {{domxref("RTCIceCandidatePair.local")}} and {{domxref("RTCIceCandidatePair.global")}}
-  properties specify {{domxref("RTCIceCandidate")}} objects describing the local and
-  remote candidates that are currently being used.</p>
+The event handler can determine the current state by calling the transport's
+{{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}
+method, which returns a {{domxref("RTCIceCandidatePair")}} whose
+{{domxref("RTCIceCandidatePair.local")}} and {{domxref("RTCIceCandidatePair.global")}}
+properties specify {{domxref("RTCIceCandidate")}} objects describing the local and
+remote candidates that are currently being used.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, an event handler for {{event("selectedcandidatepairchange")}} is set
-  up to update an on-screen display showing the protocol used by the currently selected candidate pair.</p>
+In this example, an event handler for {{event("selectedcandidatepairchange")}} is set
+up to update an on-screen display showing the protocol used by the currently selected candidate pair.
 
-<pre class="brush: js">var iceTransport = pc.getSenders()[0].transport.iceTransport;
+```js
+var iceTransport = pc.getSenders()[0].transport.iceTransport;
 var localProto = document.getElementById("local-protocol");
 var remoteProto = document.getElementById("remote-protocol");
 
@@ -57,23 +59,19 @@ iceTransport.onselectedcandidatepairchange = function(event) {
   localProtocol.innerText = pair.local.protocol.toUpperCase();
   remoteProtocol.innerText = pair.remote.protocol.toUpperCase();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("selectedcandidatepair")}} event and its type, {{domxref("Event")}}.
-  </li>
-  <li>The other event handlers for <code>RTCIceTransport</code>:
-    {{domxref("RTCIceTransport.onstatechange", "onstatechange")}}
-    and{{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}}
-  </li>
-</ul>
+- The {{event("selectedcandidatepair")}} event and its type, {{domxref("Event")}}.
+- The other event handlers for `RTCIceTransport`:
+  {{domxref("RTCIceTransport.onstatechange", "onstatechange")}}
+  and{{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}}

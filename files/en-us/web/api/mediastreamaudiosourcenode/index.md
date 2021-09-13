@@ -20,90 +20,88 @@ tags:
   - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>MediaStreamAudioSourceNode</code></strong> interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.</p>
+The **`MediaStreamAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.
 
-<p>This media could be from a microphone (through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}) or from a remote peer on a WebRTC call (using the {{domxref("RTCPeerConnection")}}'s audio tracks).</p>
+This media could be from a microphone (through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}) or from a remote peer on a WebRTC call (using the {{domxref("RTCPeerConnection")}}'s audio tracks).
 
-<p>A <code>MediaStreamAudioSourceNode</code> has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.</p>
+A `MediaStreamAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-<p>The <code>MediaStreamAudioSourceNode</code> takes the audio from the <em>first</em> {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is <code>audio</code>. See {{anch("Track ordering")}} for more information about the order of tracks.</p>
+The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See {{anch("Track ordering")}} for more information about the order of tracks.
 
-<p>The number of channels output by the node matches the number of tracks found in the selected audio track.</p>
+The number of channels output by the node matches the number of tracks found in the selected audio track.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>defined by the first audio {{domxref("MediaStreamTrack")}} passed to the {{domxref("AudioContext.createMediaStreamSource()")}} method that created it.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>
+        defined by the first audio {{domxref("MediaStreamTrack")}}
+        passed to the
+        {{domxref("AudioContext.createMediaStreamSource()")}}
+        method that created it.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}</dt>
- <dd>Creates a new <code>MediaStreamAudioSourceNode</code> object instance with the specified options.</dd>
-</dl>
+- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
+  - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the following properties, <code>MediaStreamAudioSourceNode</code> inherits the properties of its parent, {{domxref("AudioNode")}}.</em></p>
+_In addition to the following properties, `MediaStreamAudioSourceNode` inherits the properties of its parent, {{domxref("AudioNode")}}._
 
-<dl>
- <dt>{{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("MediaStream")}} used when constructing this <code>MediaStreamAudioSourceNode</code>.</dd>
-</dl>
+- {{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}
+  - : The {{domxref("MediaStream")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>The stream specified by the <code>mediaStream</code> parameter does not contain any audio tracks.</dd>
-</dl>
+- `InvalidStateError`
+  - : The stream specified by the `mediaStream` parameter does not contain any audio tracks.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Track_ordering">Track ordering</h3>
+### Track ordering
 
-<p>For the purposes of the <code>MediaStreamTrackAudioSourceNode</code> interface, the order of the audio tracks on the stream is determined by taking the tracks whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code>, then sorting the tracks by their {{domxref("MediaStreamTrack.id", "id")}} property's values, in Unicode code point order (essentially, in alphabetical or lexicographical order, for IDs which are simple alphanumeric strings).</p>
+For the purposes of the `MediaStreamTrackAudioSourceNode` interface, the order of the audio tracks on the stream is determined by taking the tracks whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio`, then sorting the tracks by their {{domxref("MediaStreamTrack.id", "id")}} property's values, in Unicode code point order (essentially, in alphabetical or lexicographical order, for IDs which are simple alphanumeric strings).
 
-<p>The <strong>first</strong> track, then, is the track whose <code>id</code> comes first when the tracks' IDs are all sorted by Unicode code point.</p>
+The **first** track, then, is the track whose `id` comes first when the tracks' IDs are all sorted by Unicode code point.
 
-<p>However, it's important to note that the rule establishing this ordering was added long after this interface was first introduced into the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>. As such, you can't easily rely on the order matching between any two browsers or browser versions.</p>
-<p>The {{domxref("MediaStreamTrackAudioSourceNode")}} interface is similar to <code>MediaStreamAudioSourceNode</code>, but avoids this problem by letting you specify which track you want to use.</p>
+However, it's important to note that the rule establishing this ordering was added long after this interface was first introduced into the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). As such, you can't easily rely on the order matching between any two browsers or browser versions.
 
-<h2 id="Example">Example</h2>
+The {{domxref("MediaStreamTrackAudioSourceNode")}} interface is similar to `MediaStreamAudioSourceNode`, but avoids this problem by letting you specify which track you want to use.
 
-<p>See <a href="/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example"><code>AudioContext.createMediaStreamSource()</code></a> for example code that uses this object.</p>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example) for example code that uses this object.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API (Media Streams)</a></li>
- <li>{{domxref("MediaStreamTrackAudioSourceNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaStreamTrackAudioSourceNode")}}

@@ -2,62 +2,62 @@
 title: DataTransfer.mozItemCount
 slug: Web/API/DataTransfer/mozItemCount
 tags:
-- API
-- Non-standard
-- Property
-- Reference
-- drag and drop
-- Deprecated
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - drag and drop
+  - Deprecated
 browser-compat: api.DataTransfer.mozItemCount
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}{{deprecated_header}}</p>
+{{ Non-standard_header() }}{{deprecated_header}}
 
-<p>The <strong><code>DataTransfer.mozItemCount</code></strong> property returns the number
-  of items being dragged. This can be used, for example, to get the number of files being
-  dragged.</p>
+The **`DataTransfer.mozItemCount`** property returns the number
+of items being dragged. This can be used, for example, to get the number of files being
+dragged.
 
-<div class="note"><p><strong>Note:</strong> This property is Gecko-specific.</p></div>
+> **Note:** This property is Gecko-specific.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dataTransfer</em>.mozItemCount;
-</pre>
+```js
+dataTransfer.mozItemCount;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A <code>number</code> representing the number of items being dragged.</p>
+A `number` representing the number of items being dragged.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozItemCount</code> property.</p>
+This example shows the use of the `mozItemCount` property.
 
-<pre class="brush: js">function drop_handler(event)
+```js
+function drop_handler(event)
 {
   var files = [];
   var dt = event.dataTransfer;
-  for (var i = 0; i &lt; dt.mozItemCount; i++)
+  for (var i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property is not defined in any Web standard.</p>
+This property is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

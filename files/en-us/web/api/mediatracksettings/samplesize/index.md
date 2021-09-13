@@ -2,73 +2,71 @@
 title: MediaTrackSettings.sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
 tags:
-- API
-- Audio
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- WebRTC
-- sampleSize
+  - API
+  - Audio
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - WebRTC
+  - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>sampleSize</strong></code> property is an integer indicating the linear
-  sample size (in bits per sample) the {{domxref("MediaStreamTrack")}} is currently
-  configured for. This lets you determine what value was selected to comply with your
-  specified constraints for this property's value as described in the
-  {{domxref("MediaTrackConstraints.sampleSize")}} property you provided when calling
-  either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`sampleSize`** property is an integer indicating the linear
+sample size (in bits per sample) the {{domxref("MediaStreamTrack")}} is currently
+configured for. This lets you determine what value was selected to comply with your
+specified constraints for this property's value as described in the
+{{domxref("MediaTrackConstraints.sampleSize")}} property you provided when calling
+either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.sampleSize")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>sampleSize</em> = <em>MediaTrackSettings</em>.sampleSize;
-</pre>
+```js
+var sampleSize = MediaTrackSettings.sampleSize;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating how many bits each audio sample is represented by. The most
-  commonly used sample size for many years now is 16 bits per sample, which was used for
-  CD audio among others. Other common sample sizes are 8 (for reduced bandwidth
-  requirements) and 24 (for high-resolution professional audio).</p>
+An integer value indicating how many bits each audio sample is represented by. The most
+commonly used sample size for many years now is 16 bits per sample, which was used for
+CD audio among others. Other common sample sizes are 8 (for reduced bandwidth
+requirements) and 24 (for high-resolution professional audio).
 
-<p>Each audio channel on the track requires sampleSize bits. That means that a given
-  sample actually uses
-  (<code>sampleSize</code>/8)*{{domxref("MediaTrackSettings.channelCount",
-  "channelCount")}} bytes of data. For example, 16-bit stereo audio requires (16/8)*2 or 4
-  bytes per sample.</p>
+Each audio channel on the track requires sampleSize bits. That means that a given
+sample actually uses
+(`sampleSize`/8)\*{{domxref("MediaTrackSettings.channelCount",
+  "channelCount")}} bytes of data. For example, 16-bit stereo audio requires (16/8)\*2 or 4
+bytes per sample.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.sampleSize")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.sampleSize")}}
+- {{domxref("MediaTrackSettings")}}

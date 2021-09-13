@@ -8,25 +8,24 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_half_float_linear
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>OES_texture_half_float_linear</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows linear filtering with half floating-point pixel types for textures.</p>
+The **`OES_texture_half_float_linear`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows linear filtering with half floating-point pixel types for textures.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<h2 id="Linear_filtering">Linear filtering</h2>
+## Linear filtering
 
-<p>The {{domxref("OES_texture_half_float")}} extension alone does not allow linear filtering with half floating-point textures. This extension enables this ability.</p>
+The {{domxref("OES_texture_half_float")}} extension alone does not allow linear filtering with half floating-point textures. This extension enables this ability.
 
-<p>With the help of this extension, you can now set the magnification or minification filter in the {{domxref("WebGLRenderingContext.texParameter()")}} method to one of <code>gl.LINEAR</code>, <code>gl.LINEAR_MIPMAP_NEAREST</code>, <code>gl.NEAREST_MIPMAP_LINEAR</code>, or <code>gl.LINEAR_MIPMAP_LINEAR</code>, and use half floating-point textures.</p>
+With the help of this extension, you can now set the magnification or minification filter in the {{domxref("WebGLRenderingContext.texParameter()")}} method to one of `gl.LINEAR`, `gl.LINEAR_MIPMAP_NEAREST`, `gl.NEAREST_MIPMAP_LINEAR`, or `gl.LINEAR_MIPMAP_LINEAR`, and use half floating-point textures.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var halfFloat = gl.getExtension('OES_texture_half_float');
+```js
+var halfFloat = gl.getExtension('OES_texture_half_float');
 gl.getExtension('OES_texture_half_float_linear');
 
 var texture = gl.createTexture();
@@ -34,23 +33,21 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, halfFloat.HALF_FLOAT_OES, image);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("OES_texture_float")}}</li>
- <li>{{domxref("OES_texture_float_linear")}}</li>
- <li>{{domxref("OES_texture_half_float")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("OES_texture_float")}}
+- {{domxref("OES_texture_float_linear")}}
+- {{domxref("OES_texture_half_float")}}

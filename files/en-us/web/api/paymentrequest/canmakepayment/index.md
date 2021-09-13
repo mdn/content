@@ -13,58 +13,56 @@ tags:
   - canMakePayment
 browser-compat: api.PaymentRequest.canMakePayment
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The {{domxref("PaymentRequest")}} method
-    <code><strong>canMakePayment()</strong></code> determines whether or not the request
-    is configured in a way that is compatible with at least one payment method supported
-    by the {{Glossary("user agent")}}.</p>
+The {{domxref("PaymentRequest")}} method
+**`canMakePayment()`** determines whether or not the request
+is configured in a way that is compatible with at least one payment method supported
+by the {{Glossary("user agent")}}.
 
-<p>You can call this before calling
-  {{domxref("PaymentRequest.show", "show()")}} to provide a streamlined user experience
-  when the user's browser can't handle any of the payment methods you accept.</p>
+You can call this before calling
+{{domxref("PaymentRequest.show", "show()")}} to provide a streamlined user experience
+when the user's browser can't handle any of the payment methods you accept.
 
-<p>For instance, you might call <code>canMakePayment()</code> to determine if the browser
-  will let the user pay using Payment Request API, and if it won't, you could fall back to
-  another payment method, or offer a list of methods that aren't handled by Payment
-  Request API (or even provide instructions for paying by mail or by phone).</p>
+For instance, you might call `canMakePayment()` to determine if the browser
+will let the user pay using Payment Request API, and if it won't, you could fall back to
+another payment method, or offer a list of methods that aren't handled by Payment
+Request API (or even provide instructions for paying by mail or by phone).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">paymentRequest.canMakePayment()
-    .then( canPay =&gt; { ... })
-    .catch( error =&gt; { ... })
+```js
+paymentRequest.canMakePayment()
+    .then( canPay => { ... })
+    .catch( error => { ... })
 
 canPay = await paymentRequest.canMakePayment();
-</pre>
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} to a boolean value that resolves to <code>true</code>
-  if the user agent supports any of the payment methods supplied when instantiating the
-  request using the {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}}
-  constructor. If the payment can't be processed, the promise receives a value of
-  <code>false</code>.</p>
+A {{jsxref("Promise")}} to a boolean value that resolves to `true`
+if the user agent supports any of the payment methods supplied when instantiating the
+request using the {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest')}}
+constructor. If the payment can't be processed, the promise receives a value of
+`false`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If you call this too often, the browser may reject the
-    returned promise with a <code>DOMException</code>.</p>
-</div>
+> **Note:** If you call this too often, the browser may reject the
+> returned promise with a `DOMException`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, is <a
-    href="https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/">excerpted
-    from a demo</a> that asynchronously builds a <code>PaymentRequest</code> object for
-  both Apple Pay and credit cards. It wraps the call to <code>canMakePayment()</code> in
-  feature detection, and calls an appropriate callback depending on the resolution of the
-  <code>Promise</code>.</p>
+In the following example, is [excerpted
+from a demo](https://rsolomakhin.github.io/samples/paymentrequest/can-make-payment/) that asynchronously builds a `PaymentRequest` object for
+both Apple Pay and credit cards. It wraps the call to `canMakePayment()` in
+feature detection, and calls an appropriate callback depending on the resolution of the
+`Promise`.
 
-<pre class="brush:js">
+```js
 async function initPaymentRquest() {
   const details = {
     total: {
@@ -100,18 +98,16 @@ async function initPaymentRquest() {
 
   // Otherwise, make payments using HTML form element
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref('PaymentRequest.show','PaymentRequest.show()')}}</li>
-</ul>
+- {{domxref('PaymentRequest.show','PaymentRequest.show()')}}

@@ -8,42 +8,41 @@ tags:
   - Property
 browser-compat: api.DocumentFragment.firstElementChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>DocumentFragment.firstElementChild</code></strong> read-only property
-returns the document fragment's first child {{domxref("Element")}}, or <code>null</code> if there
-are no child elements.</p>
+The **`DocumentFragment.firstElementChild`** read-only property
+returns the document fragment's first child {{domxref("Element")}}, or `null` if there
+are no child elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
 element = fragment.firstElementChild;
 
 // No setter; read-only property
-</pre>
-<h2 id="Example">Example</h2>
+```
 
-<pre class="brush: js">
+## Example
+
+```js
 let fragment = new DocumentFragment();
 fragment.firstElementChild; // null
 
 let paragraph = document.createElement('p');
 fragment.appendChild(paragraph);
 
-fragment.firstElementChild; // &lt;p&gt;
-</pre>
+fragment.firstElementChild; // <p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{domxref("Element.firstElementChild")}}</li>
-</ul>
+- {{domxref("Element.firstElementChild")}}

@@ -11,24 +11,26 @@ tags:
   - locked
 browser-compat: api.WritableStream.locked
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>locked</code></strong> read-only property of the
-  {{domxref("WritableStream")}} interface returns a boolean indicating whether the
-  <code>WritableStream</code> is locked to a writer. </p>
+The **`locked`** read-only property of the
+{{domxref("WritableStream")}} interface returns a boolean indicating whether the
+`WritableStream` is locked to a writer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>locked</em> = </code>writableStream</var>.locked;</pre>
+```js
+var locked = writableStream.locked;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value indicating whether or not the writable stream is locked.</p>
+A boolean value indicating whether or not the writable stream is locked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   write(chunk) {
     ...
   },
@@ -45,12 +47,13 @@ browser-compat: api.WritableStream.locked
 const writer = writableStream.getWriter();
 
 writableStream.locked
-// should return true, as the stream has been locked to a writer</pre>
+// should return true, as the stream has been locked to a writer
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

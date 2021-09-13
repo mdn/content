@@ -9,74 +9,66 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.blendFuncSeparate()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> defines which function is used
-  for blending pixel arithmetic for RGB and alpha components separately.</p>
+The **`WebGLRenderingContext.blendFuncSeparate()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used
+for blending pixel arithmetic for RGB and alpha components separately.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
-</pre>
+```js
+void gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>srcRGB</code></dt>
-  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
-    source blending factors. The default value is <code>gl.ONE</code>. For possible
-    values, see below.</dd>
-  <dt><code>dstRGB</code></dt>
-  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
-    destination blending factors. The default value is <code>gl.ZERO</code>. For possible
-    values, see below.</dd>
-  <dt><code>srcAlpha</code></dt>
-  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha source blending
-    factor. The default value is <code>gl.ONE</code>. For possible values, see below.</dd>
-  <dt><code>dstAlpha</code></dt>
-  <dd>A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha destination blending
-    factor. The default value is <code>gl.ZERO</code>. For possible values, see below.
-  </dd>
-</dl>
+- `srcRGB`
+  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
+    source blending factors. The default value is `gl.ONE`. For possible
+    values, see below.
+- `dstRGB`
+  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the red, green and blue (RGB)
+    destination blending factors. The default value is `gl.ZERO`. For possible
+    values, see below.
+- `srcAlpha`
+  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha source blending
+    factor. The default value is `gl.ONE`. For possible values, see below.
+- `dstAlpha`
+  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the alpha destination blending
+    factor. The default value is `gl.ZERO`. For possible values, see below.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>If <em>srcRGB</em>, <em>dstRGB</em>, <em>srcAlpha</em>, or <em>dstAlpha</em> is not
-    one of the listed possible values, a <code>gl.INVALID_ENUM</code> error is thrown.
-  </li>
-  <li>If a constant color and a constant alpha value are used together as source
-    (<code>srcRGB</code>) and destination (<code>dstRGB</code>) factors, a
-    <code>gl.INVALID_ENUM</code> error is thrown.</li>
-</ul>
+- If _srcRGB_, _dstRGB_, _srcAlpha_, or _dstAlpha_ is not
+  one of the listed possible values, a `gl.INVALID_ENUM` error is thrown.
+- If a constant color and a constant alpha value are used together as source
+  (`srcRGB`) and destination (`dstRGB`) factors, a
+  `gl.INVALID_ENUM` error is thrown.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>The following constants can be used for <em>srcRGB</em>, <em>dstRGB</em>,
-  <em>srcAlpha</em>, and <em>dstAlpha</em></p>
+The following constants can be used for _srcRGB_, _dstRGB_,
+_srcAlpha_, and _dstAlpha_
 
-<p>The formulas for the blending factors can be described like this (all RGBA values are
-  between 0 and 1):</p>
+The formulas for the blending factors can be described like this (all RGBA values are
+between 0 and 1):
 
-<ul>
-  <li>color(RGB) = (sourceColor * <em>srcRGB</em>) + (destinationColor * <em>dstRGB</em>)
-  </li>
-  <li>color(A) = (sourceAlpha * <em>srcAlpha</em>) + (destinationAlpha *
-    <em>dstAlpha</em>)</li>
-</ul>
+- color(RGB) = (sourceColor \* _srcRGB_) + (destinationColor \* _dstRGB_)
+- color(A) = (sourceAlpha \* _srcAlpha_) + (destinationAlpha \*
+  _dstAlpha_)
 
-<p>In the following table, R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub> represent respectively
-the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of the source, while
+In the following table, R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub> represent respectively
+the _red_, _green_, _blue_ and _alpha_ component of the source, while
 R<sub>D</sub>, G<sub>D</sub>, B<sub>D</sub>, A<sub>D</sub> represent respectively
-the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of the destination.
+the _red_, _green_, _blue_ and _alpha_ component of the destination.
 Similarly, R<sub>C</sub>, G<sub>C</sub>, B<sub>C</sub>, A<sub>C</sub> represent respectively
-the <em>red</em>, <em>green</em>, <em>blue</em> and <em>alpha</em> component of a constant color.
-They are all values between 0 and 1, included.</p>
+the _red_, _green_, _blue_ and _alpha_ component of a constant color.
+They are all values between 0 and 1, included.
 
 <table class="no-markdown">
   <thead>
@@ -174,49 +166,50 @@ They are all values between 0 and 1, included.</p>
     </tr>
     <tr>
       <td><code>gl.SRC_ALPHA_SATURATE</code></td>
-      <td>min(A<sub>S</sub>, 1 - A<sub>D</sub>), min(A<sub>S</sub>, 1 - A<sub>D</sub>),
-          min(A<sub>S</sub>, 1 - A<sub>D</sub>)
+      <td>
+        min(A<sub>S</sub>, 1 - A<sub>D</sub>), min(A<sub>S</sub>, 1 -
+        A<sub>D</sub>), min(A<sub>S</sub>, 1 - A<sub>D</sub>)
       </td>
       <td>1</td>
-      <td>Multiplies the RGB colors by the smaller of either the source alpha color or the
-        value of 1 minus the destination alpha color. The alpha value is multiplied by 1.
+      <td>
+        Multiplies the RGB colors by the smaller of either the source alpha
+        color or the value of 1 minus the destination alpha color. The alpha
+        value is multiplied by 1.
       </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To use the blend function, you first have to activate blending with
-  {{domxref("WebGLRenderingContext.enable()")}} with the argument <code>gl.BLEND</code>.
-</p>
+To use the blend function, you first have to activate blending with
+{{domxref("WebGLRenderingContext.enable()")}} with the argument `gl.BLEND`.
 
-<pre class="brush: js">gl.enable(gl.BLEND);
+```js
+gl.enable(gl.BLEND);
 gl.blendFuncSeparate(gl.SRC_COLOR, gl.DST_COLOR, gl.ONE, gl.ZERO);
-</pre>
+```
 
-<p>To get the current blend function, query the <code>BLEND_SRC_RGB</code>,
-  <code>BLEND_SRC_ALPHA</code>, <code>BLEND_DST_RGB</code>, and
-  <code>BLEND_DST_ALPHA</code> constants which return one of the blend function constants.
-</p>
+To get the current blend function, query the `BLEND_SRC_RGB`,
+`BLEND_SRC_ALPHA`, `BLEND_DST_RGB`, and
+`BLEND_DST_ALPHA` constants which return one of the blend function constants.
 
-<pre class="brush: js">gl.enable(gl.BLEND);
+```js
+gl.enable(gl.BLEND);
 gl.blendFuncSeparate(gl.SRC_COLOR, gl.DST_COLOR, gl.ONE, gl.ZERO);
 gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
 // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.blendColor()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.blendEquation()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.blendColor()")}}
+- {{domxref("WebGLRenderingContext.blendEquation()")}}

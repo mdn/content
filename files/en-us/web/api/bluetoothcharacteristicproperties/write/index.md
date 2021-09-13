@@ -2,39 +2,40 @@
 title: BluetoothCharacteristicProperties.write
 slug: Web/API/BluetoothCharacteristicProperties/write
 tags:
-- API
-- Bluetooth
-- BluetoothCharacteristicProperties
-- Experimental
-- NeedsExample
-- Property
-- Reference
-- Web Bluetooth API
-- write
+  - API
+  - Bluetooth
+  - BluetoothCharacteristicProperties
+  - Experimental
+  - NeedsExample
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - write
 browser-compat: api.BluetoothCharacteristicProperties.write
 ---
-<div>{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}</div>
+{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
-<p>The <strong><code>write</code></strong> read-only property of the
-  {{domxref("BluetoothCharacteristicProperties")}} interface returns a
-  <code>boolean</code> that is <code>true</code> if the writing to the characteristic with
-  response is permitted.</p>
+The **`write`** read-only property of the
+{{domxref("BluetoothCharacteristicProperties")}} interface returns a
+`boolean` that is `true` if the writing to the characteristic with
+response is permitted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aBoolean</em> = BluetoothCharacteristicProperties.write;</pre>
+```js
+var aBoolean = BluetoothCharacteristicProperties.write;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>null</p>
+null

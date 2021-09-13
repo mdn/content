@@ -8,25 +8,22 @@ tags:
   - Read-only
 browser-compat: api.Navigator.vendor
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>The value of the {{DomXref("Navigator")}} <code><strong>vendor</strong></code> property is always either "<code>Google Inc.</code>", "<code>Apple Computer, Inc.</code>", or (in Firefox) the empty string.</p>
+The value of the {{DomXref("Navigator")}} **`vendor`** property is always either "`Google Inc.`", "`Apple Computer, Inc.`", or (in Firefox) the empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>venString</em> = navigator.vendor
-</pre>
+    venString = navigator.vendor
 
-<h3 id="Parameters">Value</h3>
+### Value
 
-<ul>
- <li>Either "<code>Google Inc.</code>", "<code>Apple Computer, Inc.</code>", or (in Firefox) the empty string.</li>
-</ul>
+- Either "`Google Inc.`", "`Apple Computer, Inc.`", or (in Firefox) the empty string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

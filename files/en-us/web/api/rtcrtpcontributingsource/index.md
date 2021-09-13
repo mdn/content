@@ -13,29 +13,27 @@ tags:
   - WebRTC
 browser-compat: api.RTCRtpContributingSource
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The <strong><code>RTCRtpContributingSource</code></strong> dictionary of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> is used by {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.</p>
+The **`RTCRtpContributingSource`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used by {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.
 
-<p>The information provided is based on the last ten seconds of media received.</p>
+The information provided is based on the last ten seconds of media received.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}} {{optional_inline}}</dt>
- <dd>A double-precision floating-point value between 0 and 1 specifying the audio level contained in the last RTP packet played from this source.</dd>
- <dt>{{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} {{optional_inline}}</dt>
- <dd>The RTP timestamp of the media played out at the time indicated by <code>timestamp</code>. This value is a source-generated time value which can be used to help with sequencing and synchronization.</dd>
- <dt>{{domxref("RTCRtpContributingSource.source", "source")}} {{optional_inline}}</dt>
- <dd>A 32-bit unsigned integer value specifying the CSRC identifier of the contributing source.</dd>
- <dt>{{domxref("RTCRtpContributingSource.timestamp", "timestamp")}} {{optional_inline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the most recent time at which a frame originating from this source was delivered to the receiver's {{domxref("MediaStreamTrack")}}</dd>
-</dl>
+- {{domxref("RTCRtpContributingSource.audioLevel", "audioLevel")}} {{optional_inline}}
+  - : A double-precision floating-point value between 0 and 1 specifying the audio level contained in the last RTP packet played from this source.
+- {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} {{optional_inline}}
+  - : The RTP timestamp of the media played out at the time indicated by `timestamp`. This value is a source-generated time value which can be used to help with sequencing and synchronization.
+- {{domxref("RTCRtpContributingSource.source", "source")}} {{optional_inline}}
+  - : A 32-bit unsigned integer value specifying the CSRC identifier of the contributing source.
+- {{domxref("RTCRtpContributingSource.timestamp", "timestamp")}} {{optional_inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the most recent time at which a frame originating from this source was delivered to the receiver's {{domxref("MediaStreamTrack")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

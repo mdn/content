@@ -2,42 +2,41 @@
 title: Notification.image
 slug: Web/API/Notification/image
 tags:
-- API
-- Image
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
+  - API
+  - Image
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
 browser-compat: api.Notification.image
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code>image</code> read-only property of the
-    {{domxref("Notification")}} interface contains the URL of an image to be displayed as
-    part of the notification, as specified in the <code>image</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The `image` read-only property of the
+{{domxref("Notification")}} interface contains the URL of an image to be displayed as
+part of the notification, as specified in the `image` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>image</var> = <var>Notification</var>.image;</pre>
+```js
+var image = Notification.image;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

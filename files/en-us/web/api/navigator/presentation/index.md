@@ -3,32 +3,31 @@ title: Navigator.presentation
 slug: Web/API/Navigator/presentation
 browser-compat: api.Navigator.presentation
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
-<p>The <code>presentation</code> property of {{DOMxRef("Navigator")}} serves as the entry
-    point for the <a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a> and
-    returns a reference to {{DOMxRef("Presentation")}} object.</p>
+The `presentation` property of {{DOMxRef("Navigator")}} serves as the entry
+point for the [Presentation API](/en-US/docs/Web/API/Presentation_API) and
+returns a reference to {{DOMxRef("Presentation")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const presentation = navigator.presentation
-</pre>
+```js
+const presentation = navigator.presentation
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A reference to {{DOMxRef("Presentation")}} object.</p>
+A reference to {{DOMxRef("Presentation")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li><a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a></li>
-    <li>{{DOMxRef("Presentation")}}</li>
-</ul>
+- [Presentation API](/en-US/docs/Web/API/Presentation_API)
+- {{DOMxRef("Presentation")}}

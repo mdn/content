@@ -2,102 +2,100 @@
 title: CanvasRenderingContext2D.isPointInPath()
 slug: Web/API/CanvasRenderingContext2D/isPointInPath
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInPath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.isPointInPath()</code></strong>
-  method of the Canvas 2D API reports whether or not the specified point is contained in
-  the current path.</p>
+The
+**`CanvasRenderingContext2D.isPointInPath()`**
+method of the Canvas 2D API reports whether or not the specified point is contained in
+the current path.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.isPointInPath(<em>x</em>, <em>y</em> [, <em>fillRule</em>]);
-<em>ctx</em>.isPointInPath(<em>path</em>, <em>x</em>, <em>y</em> [, <em>fillRule</em>]);
-</pre>
+```js
+ctx.isPointInPath(x, y [, fillRule]);
+ctx.isPointInPath(path, x, y [, fillRule]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the point to check, unaffected by the current
-    transformation of the context.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the point to check, unaffected by the current
-    transformation of the context.</dd>
-  <dt><code>fillRule</code></dt>
-  <dd>The algorithm by which to determine if a point is inside or outside the path.<br>
+- `x`
+  - : The x-axis coordinate of the point to check, unaffected by the current
+    transformation of the context.
+- `y`
+  - : The y-axis coordinate of the point to check, unaffected by the current
+    transformation of the context.
+- `fillRule`
+
+  - : The algorithm by which to determine if a point is inside or outside the path.
     Possible values:
-    <ul>
-      <li><strong><code>"nonzero"</code></strong>: The <a
-          href="https://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>.
-        Default rule.</li>
-      <li><strong><code>"evenodd"</code></strong>: The <a
-          href="https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding
-          rule</a>.</li>
-    </ul>
-  </dd>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("Path2D")}} path to check against. If unspecified, the current path is
-    used.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+      Default rule.
+    - **`"evenodd"`**: The [even-odd winding
+      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<dl>
-  <dt>A boolean value</dt>
-  <dd>A Boolean, which is <code>true</code> if the specified point is contained in the
-    current or specified path, otherwise <code>false</code>.</dd>
-</dl>
+- `path`
+  - : A {{domxref("Path2D")}} path to check against. If unspecified, the current path is
+    used.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<h3 id="Checking_a_point_in_the_current_path">Checking a point in the current path</h3>
+- A boolean value
+  - : A Boolean, which is `true` if the specified point is contained in the
+    current or specified path, otherwise `false`.
 
-<p>This example uses the <code>isPointInPath()</code> method to check if a point is within
-  the current path.</p>
+## Examples
 
-<h4 id="HTML">HTML</h4>
+### Checking a point in the current path
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-&lt;p&gt;In path: &lt;code id="result"&gt;false&lt;/code&gt;&lt;/p&gt;
-</pre>
+This example uses the `isPointInPath()` method to check if a point is within
+the current path.
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```html
+<canvas id="canvas"></canvas>
+<p>In path: <code id="result">false</code></p>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const result = document.getElementById('result');
 
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 result.innerText = ctx.isPointInPath(30, 70);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Checking_a_point_in_the_current_path', 700, 220) }}</p>
+{{ EmbedLiveSample('Checking_a_point_in_the_current_path', 700, 220) }}
 
-<h3 id="Checking_a_point_in_the_specified_path">Checking a point in the specified path
-</h3>
+### Checking a point in the specified path
 
-<p>Whenever you move the mouse, this example checks whether the cursor is in a circular
-  <code>Path2D</code> path. If yes, the circle becomes green, otherwise it is red.</p>
+Whenever you move the mouse, this example checks whether the cursor is in a circular
+`Path2D` path. If yes, the circle becomes green, otherwise it is red.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circle
@@ -120,31 +118,27 @@ canvas.addEventListener('mousemove', function(event) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fill(circle);
 });
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Checking_a_point_in_the_specified_path', 700, 180) }}</p>
+{{ EmbedLiveSample('Checking_a_point_in_the_specified_path', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_note">Gecko-specific note</h3>
+### Gecko-specific note
 
-<ul>
-  <li>Prior to Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), this method
-    incorrectly failed to multiply the specified point's coordinates by the current
-    transformation matrix before comparing it to the path. Now this method works correctly
-    even if the context is rotated, scaled, or otherwise transformed.</li>
-</ul>
+- Prior to Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), this method
+  incorrectly failed to multiply the specified point's coordinates by the current
+  transformation matrix before comparing it to the path. Now this method works correctly
+  even if the context is rotated, scaled, or otherwise transformed.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

@@ -9,32 +9,34 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.abort
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>abort()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.</p>
+The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} interface aborts an active background fetch.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let status = BackgroundFetchRegistration.abort();</pre>
+    let status = BackgroundFetchRegistration.abort();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>true</code> if the fetch is successfulled aborted.</p>
+A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfulled aborted.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Use <code>abort()</code> to terminate a background fetch that is in progress.</p>
+Use `abort()` to terminate a background fetch that is in progress.
 
-<pre class="brush: js">bgFetch.abort();</pre>
+```js
+bgFetch.abort();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

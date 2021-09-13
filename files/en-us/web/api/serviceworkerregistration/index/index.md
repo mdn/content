@@ -2,40 +2,42 @@
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
 tags:
-- Content
-- Content Index API
-- Index
-- PWA
-- Property
-- ServiceWorker
-- ServiceWorkerRegistration
-- content index
-- content indexing
+  - Content
+  - Content Index API
+  - Index
+  - PWA
+  - Property
+  - ServiceWorker
+  - ServiceWorkerRegistration
+  - content index
+  - content indexing
 browser-compat: api.ServiceWorkerRegistration.index
 ---
-<div>{{draft}}{{DefaultAPISidebar("Service Worker API")}}</div>
+{{draft}}{{DefaultAPISidebar("Service Worker API")}}
 
-<p>The <strong><code>index</code></strong> read-only property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-  {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.</p>
+The **`index`** read-only property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
+{{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>contentIndexObject</var> = ServiceWorkerRegistration.index;</pre>
+```js
+var contentIndexObject = ServiceWorkerRegistration.index;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A ContentIndex {{jsxref('Object')}}</p>
+A ContentIndex {{jsxref('Object')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can access the property from either your main script or the registered service
-  worker.</p>
+You can access the property from either your main script or the registered service
+worker.
 
-<p>Here is an example from the main script:</p>
+Here is an example from the main script:
 
-<pre class="brush: js">// reference registration
+```js
+// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -45,29 +47,28 @@ if ('index' in registration) {
   const contentIndex = registration.index;
 
 }
-</pre>
+```
 
-<p>From the {{domxref('ServiceWorker','service worker')}}:</p>
+From the {{domxref('ServiceWorker','service worker')}}:
 
-<pre class="brush: js">// service worker script
+```js
+// service worker script
 
 const contentIndex = self.registration.index;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Content Index API")}}</li>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
-      Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
-      and remove 'save for later' content</a></li>
-</ul>
+- {{domxref("Content Index API")}}
+- [An introductory article on the
+  Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list
+  and remove 'save for later' content](https://contentindex.dev/)

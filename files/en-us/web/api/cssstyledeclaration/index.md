@@ -9,58 +9,51 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSStyleDeclaration</code></strong> interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.</p>
+The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
 
-<p>A <code>CSSStyleDeclaration</code> object can be exposed using three different APIs:</p>
+A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
-<ul>
- <li>Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., <code>&lt;div style="..."&gt;</code>).</li>
- <li>Via the {{DOMxRef("CSSStyleSheet")}} API. For example, <code>document.styleSheets[0].cssRules[0].style</code> returns a <code>CSSStyleDeclaration</code> object on the first CSS rule in the document's first stylesheet.</li>
- <li>Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the <code>CSSStyleDeclaration</code> object as a <strong>read-only</strong> interface.</li>
-</ul>
+- Via {{DOMxRef("HTMLElement.style")}}, which deals with the inline styles of a single element (e.g., `<div style="...">`).
+- Via the {{DOMxRef("CSSStyleSheet")}} API. For example, `document.styleSheets[0].cssRules[0].style` returns a `CSSStyleDeclaration` object on the first CSS rule in the document's first stylesheet.
+- Via {{DOMxRef("Window.getComputedStyle()")}}, which exposes the `CSSStyleDeclaration` object as a **read-only** interface.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with <code>JSON.stringify()</code>.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}</dt>
- <dd>The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}</dt>
- <dd>The containing {{DOMxRef("CSSRule")}}.</dd>
-</dl>
+- {{DOMxRef("CSSStyleDeclaration.cssText")}}
+  - : Textual representation of the declaration block, if and only if it is exposed via {{DOMxRef("HTMLElement.style")}}. Setting this attribute changes the inline style. If you want a text representation of a computed declaration block, you can get it with `JSON.stringify()`.
+- {{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}
+  - : The number of properties. See the {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} method below.
+- {{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}
+  - : The containing {{DOMxRef("CSSRule")}}.
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}</dt>
- <dd>Special alias for the {{CSSxRef("float")}} CSS property.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}</dt>
- <dd>Dashed and camel-cased attributes for all supported CSS properties.</dd>
-</dl>
+- {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
+  - : Special alias for the {{CSSxRef("float")}} CSS property.
+- {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
+  - : Dashed and camel-cased attributes for all supported CSS properties.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>Returns the optional priority, "important".</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>Returns the property value given a property name.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.item()")}}</dt>
- <dd>Returns a CSS property name by its index, or the empty string if the index is out-of-bounds.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>Removes a property from the CSS declaration block.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>Modifies an existing CSS property or creates a new CSS property in the declaration block.</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}</dt>
- <dd><strong>Only supported via getComputedStyle in Firefox.</strong> Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or <code>null</code> for <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a>.</dd>
-</dl>
+- {{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}
+  - : Returns the optional priority, "important".
+- {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}}
+  - : Returns the property value given a property name.
+- {{DOMxRef("CSSStyleDeclaration.item()")}}
+  - : Returns a CSS property name by its index, or the empty string if the index is out-of-bounds.
+- {{DOMxRef("CSSStyleDeclaration.removeProperty()")}}
+  - : Removes a property from the CSS declaration block.
+- {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
+  - : Modifies an existing CSS property or creates a new CSS property in the declaration block.
+- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
+  - : **Only supported via getComputedStyle in Firefox.** Returns the property value as a {{DOMxRef("CSSPrimitiveValue")}} or `null` for [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var styleObj = document.styleSheets[0].cssRules[0].style;
+```js
+var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
 for (var i = styleObj.length; i--;) {
@@ -68,18 +61,17 @@ for (var i = styleObj.length; i--;) {
   styleObj.removeProperty(nameString);
 }
 
-console.log(styleObj.cssText);</pre>
+console.log(styleObj.cssText);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a></li>
-</ul>
+- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)

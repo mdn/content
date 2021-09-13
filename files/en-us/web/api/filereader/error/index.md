@@ -2,39 +2,38 @@
 title: FileReader.error
 slug: Web/API/FileReader/error
 tags:
-- API
-- File API
-- Files
-- Property
-- Reference
+  - API
+  - File API
+  - Files
+  - Property
+  - Reference
 browser-compat: api.FileReader.error
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The {{domxref("FileReader")}} <code><strong>error</strong></code> property returns the
-  error that occurred while reading the file.</p>
+The {{domxref("FileReader")}} **`error`** property returns the
+error that occurred while reading the file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>error</var> = <var>instanceOfFileReader</var>.error
-</pre>
+```js
+var error = instanceOfFileReader.error
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-  property returns a {{domxref("DOMException")}} because <code>DOMError</code> has been
-  removed from the DOM standard.</p>
+A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
+property returns a {{domxref("DOMException")}} because `DOMError` has been
+removed from the DOM standard.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

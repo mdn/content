@@ -2,55 +2,53 @@
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.createBuffer()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes a
-  {{domxref("WebGLBuffer")}} storing data such as vertices or colors.</p>
+The **`WebGLRenderingContext.createBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+{{domxref("WebGLBuffer")}} storing data such as vertices or colors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLBuffer <var>gl</var>.createBuffer();
-</pre>
+```js
+WebGLBuffer gl.createBuffer();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLBuffer")}} storing data such as vertices or colors.</p>
+A {{domxref("WebGLBuffer")}} storing data such as vertices or colors.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_buffer">Creating a buffer</h3>
+### Creating a buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
-  </li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

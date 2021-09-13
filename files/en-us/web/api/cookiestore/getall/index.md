@@ -9,61 +9,56 @@ tags:
   - CookieStore
 browser-compat: api.CookieStore.getAll
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-<p>The <strong><code>getAll()</code></strong> method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.</p>
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>list</var> = cookieStore.getAll(<var>name</var>);
-var <var>list</var> = cookieStore.getAll(<var>options</var>);</pre>
+    var list = cookieStore.getAll(name);
+    var list = cookieStore.getAll(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code>{{Optional_Inline}}</dt>
-  <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-  <dt><code>options</code>{{Optional_Inline}}</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>name</code></dt>
-      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-      <dt><code>url</code></dt>
-      <dd>A {{domxref("USVString")}} with the url of a cookie.</dd>
-    </dl>
-  </dd>
-</dl>
+- `name`{{Optional_Inline}}
+  - : A {{domxref("USVString")}} with the name of a cookie.
+- `options`{{Optional_Inline}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
-</div>
+  - : An object containing:
 
-<h3 id="Returns">Return value</h3>
+    - `name`
+      - : A {{domxref("USVString")}} with the name of a cookie.
+    - `url`
+      - : A {{domxref("USVString")}} with the url of a cookie.
 
-<p>A {{jsxref("Promise")}} that resolves with a list of cookies for the given name or options.</p>
+> **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if getting the cookie or cookies represented by the given <code>name</code> or <code>options</code> fails.</dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with a list of cookies for the given name or options.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>In this example we use <code>getAll()</code> with no parameters. This returns all of the cookies for this context as an array of objects.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if getting the cookie or cookies represented by the given `name` or `options` fails.
 
-<pre class="brush:js">let cookies = cookieStore.getAll();
+## Examples
+
+In this example we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+
+```js
+let cookies = cookieStore.getAll();
 if (cookies) {
   console.log(cookies);
 } else {
   console.log('Cookie not found');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

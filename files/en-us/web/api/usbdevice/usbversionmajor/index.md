@@ -2,37 +2,38 @@
 title: USBDevice.usbVersionMajor
 slug: Web/API/USBDevice/usbVersionMajor
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- usbVersionMajor
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - usbVersionMajor
 browser-compat: api.USBDevice.usbVersionMajor
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>usbVersionMajor</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface is one of three properties that declare the USB
-  protocol version supported by the device. The other two properties
-  are USBDevice.usbVersionMinor and USBDevice.usbVersionSubminor.</p>
+The **`usbVersionMajor`** read only property of the
+{{domxref("USBDevice")}} interface is one of three properties that declare the USB
+protocol version supported by the device. The other two properties
+are USBDevice.usbVersionMinor and USBDevice.usbVersionSubminor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var serialNumber = USBDevice.usbVersionMajor</pre>
+```js
+var serialNumber = USBDevice.usbVersionMajor
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The last of three properties that declare the USB protocol version supported by the
-  device.</p>
+The last of three properties that declare the USB protocol version supported by the
+device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

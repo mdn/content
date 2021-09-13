@@ -6,37 +6,31 @@ tags:
   - DOM
 browser-compat: api.ProcessingInstruction
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>ProcessingInstruction</strong></code> interface represents a <a href="https://www.w3.org/TR/xml/#sec-pi">processing instruction</a>; that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.</p>
+The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi); that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
 
-<p>A processing instruction is different from the <a href="/en-US/docs/Web/XML/XML_introduction#xml_declaration">XML declaration</a>.</p>
+A processing instruction is different from the [XML declaration](/en-US/docs/Web/XML/XML_introduction#xml_declaration).
 
-<div class="notecard note">
-<p><strong>Note:</strong> User-defined processing instructions cannot begin with "<code>xml</code>", as <code>xml</code>-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, <code><a href="/en-US/docs/XML/xml-stylesheet">&lt;?xml-stylesheet ?&gt;</a></code>).</p>
-</div>
+> **Note:** User-defined processing instructions cannot begin with "`xml`", as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, [`<?xml-stylesheet ?>`](/en-US/docs/XML/xml-stylesheet)).
 
-<p>The <code>ProcessingInstruction</code> interface inherits methods and properties from {{domxref("Node")}}.</p>
+The `ProcessingInstruction` interface inherits methods and properties from {{domxref("Node")}}.
 
-<p>{{InheritanceDiagram(700,70)}}</p>
+{{InheritanceDiagram(700,70)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>target</code> ({{domxref("DOMString")}}) {{readonlyInline}}</dt>
- <dd>A name identifying the application to which the instruction is targeted.</dd>
-</dl>
+- `target` ({{domxref("DOMString")}}) {{readonlyInline}}
+  - : A name identifying the application to which the instruction is targeted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document/createProcessingInstruction">document.createProcessingInstruction</a></li>
-</ul>
+- [document.createProcessingInstruction](/en-US/docs/Web/API/Document/createProcessingInstruction)

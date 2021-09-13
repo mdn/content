@@ -2,60 +2,59 @@
 title: Document.width
 slug: Web/API/Document/width
 tags:
-- API
-- Document
-- HTML DOM
-- NeedsBrowserAgnosticism
-- NeedsSpecTable
-- Property
-- Reference
-- Deprecated
+  - API
+  - Document
+  - HTML DOM
+  - NeedsBrowserAgnosticism
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.Document.width
 ---
-<div>{{APIRef("DOM")}} {{deprecated_header}}</div>
+{{APIRef("DOM")}} {{deprecated_header}}
 
-<div class="note">
-  <p><strong>Note:</strong> Starting in {{Gecko("6.0")}}, <code>document.width</code> is
-    no longer supported. Instead, use <code>document.body.clientWidth</code>. See
-    {{domxref("element.clientWidth")}}.</p>
-</div>
+> **Note:** Starting in {{Gecko("6.0")}}, `document.width` is
+> no longer supported. Instead, use `document.body.clientWidth`. See
+> {{domxref("element.clientWidth")}}.
 
-<p>Returns the width of the {{HTMLElement("body")}} element of the current document in
-  pixels.</p>
+Returns the width of the {{HTMLElement("body")}} element of the current document in
+pixels.
 
-<p>Not supported by Internet Explorer.</p>
+Not supported by Internet Explorer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>pixels</var> = document.width;
-</pre>
+```js
+pixels = document.width;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">function init() {
+```js
+function init() {
   alert("The width of the document is " + document.width + " pixels.");
 }
-</pre>
+```
 
-<h2 id="Alternatives">Alternatives</h2>
+## Alternatives
 
-<pre class="brush: js">document.body.clientWidth              /* width of &lt;body&gt; */
-document.documentElement.clientWidth   /* width of &lt;html&gt; */
+```js
+document.body.clientWidth              /* width of <body> */
+document.documentElement.clientWidth   /* width of <html> */
 window.innerWidth                      /* window's width */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.height")}}</li>
-  <li>{{domxref("Element.clientWidth")}}</li>
-  <li>{{domxref("Element.scrollWidth")}}</li>
-</ul>
+- {{domxref("document.height")}}
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollWidth")}}

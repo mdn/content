@@ -9,61 +9,54 @@ tags:
   - WebGL2
 browser-compat: api.EXT_color_buffer_float
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>EXT_color_buffer_float</strong></code> extension is part of <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> and adds the ability to render a variety of floating point formats.</p>
+The **`EXT_color_buffer_float`** extension is part of [WebGL](/en-US/docs/Web/API/WebGL_API) and adds the ability to render a variety of floating point formats.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts only.</p>
+> **Note:** This extension is available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts only.
+>
+> For {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, see the {{domxref("EXT_color_buffer_half_float")}} and {{domxref("WEBGL_color_buffer_float")}} extensions.
 
-<p>For {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, see the {{domxref("EXT_color_buffer_half_float")}} and {{domxref("WEBGL_color_buffer_float")}} extensions.</p>
-</div>
+## Extended methods
 
-<h2 id="Extended_methods">Extended methods</h2>
+The following sized formats become **color-renderable**:
 
-<p>The following sized formats become <strong>color-renderable</strong>:</p>
+- `gl.R16F`,
+- `gl.RG16F`,
+- `gl.RGBA16F`,
+- `gl.R32F`,
+- `gl.RG32F`,
+- `gl.RGBA32F`,
+- `gl.R11F_G11F_B10F`.
 
-<ul>
- <li><code>gl.R16F</code>,</li>
- <li><code>gl.RG16F</code>,</li>
- <li><code>gl.RGBA16F</code>,</li>
- <li><code>gl.R32F</code>,</li>
- <li><code>gl.RG32F</code>,</li>
- <li><code>gl.RGBA32F</code>,</li>
- <li><code>gl.R11F_G11F_B10F</code>.</li>
-</ul>
+**Color-renderable** means:
 
-<p><strong>Color-renderable</strong> means:</p>
+- The {{domxref("WebGLRenderingContext.renderbufferStorage()")}} method now accepts these formats.
+- Framebuffers with attached textures of these formats may now be **FRAMEBUFFER_COMPLETE**.
 
-<ul>
- <li>The {{domxref("WebGLRenderingContext.renderbufferStorage()")}} method now accepts these formats.</li>
- <li>Framebuffers with attached textures of these formats may now be <strong>FRAMEBUFFER_COMPLETE</strong>.</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+`gl` must be a {{domxref("WebGL2RenderingContext")}}. This extension does not work in WebGL 1 contexts.
 
-<p><code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. This extension does not work in WebGL 1 contexts.</p>
-
-<pre class="brush:js">var ext = gl.getExtension('EXT_color_buffer_float');
+```js
+var ext = gl.getExtension('EXT_color_buffer_float');
 
 gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA16F, 256, 256);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</li>
- <li>{{domxref("EXT_color_buffer_half_float")}}</li>
- <li>{{domxref("WEBGL_color_buffer_float")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+- {{domxref("EXT_color_buffer_half_float")}}
+- {{domxref("WEBGL_color_buffer_float")}}

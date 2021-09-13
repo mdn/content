@@ -10,39 +10,37 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>TextTrackCueList</code></strong> array-like object represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.</p>
+The **`TextTrackCueList`** array-like object represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
 
-<p>This interface has no constructor. Retrieve an instance of this object with {{domxref('TextTrack.cues')}} which returns all of the cues in a {{domxref("TextTrack")}} object.</p>
+This interface has no constructor. Retrieve an instance of this object with {{domxref('TextTrack.cues')}} which returns all of the cues in a {{domxref("TextTrack")}} object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref('TextTrackCueList.length')}}{{ReadOnlyInline}}</dt>
-	<dd>An <code>unsigned long</code> that is the number of cues in the list.</dd>
-</dl>
+- {{domxref('TextTrackCueList.length')}}{{ReadOnlyInline}}
+  - : An `unsigned long` that is the number of cues in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref('TextTrackCueList.getCueById()')}}</dt>
-	<dd>Returns the first {{domxref('TextTrackCue')}} object with the identifier passed to it.</dd>
-</dl>
+- {{domxref('TextTrackCueList.getCueById()')}}
+  - : Returns the first {{domxref('TextTrackCue')}} object with the identifier passed to it.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("TextTrackList")}} object listing all of the {{domxref("TextTrack")}} objects, one for each text track linked to the media. The {{domxref("TextTrack.cues")}} property then returns a <code>TextTrackCueList</code> containing the cues for that particular track.</p>
+The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("TextTrackList")}} object listing all of the {{domxref("TextTrack")}} objects, one for each text track linked to the media. The {{domxref("TextTrack.cues")}} property then returns a `TextTrackCueList` containing the cues for that particular track.
 
-<pre class="brush: js">let video = document.getElementById("video");
+```js
+let video = document.getElementById("video");
 video.onplay = function () {
   console.log(video.textTracks[0].cues);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

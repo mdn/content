@@ -2,58 +2,55 @@
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Property
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Property
 browser-compat: api.HTMLCanvasElement.width
 ---
-<div>
-  <div>
-    <div>{{APIRef("Canvas API")}}</div>
-  </div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p>The <strong><code>HTMLCanvasElement.width</code></strong> property is a
-  positive <code>integer</code> reflecting the {{htmlattrxref("width", "canvas")}} HTML
-  attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the
-  attribute is not specified, or if it is set to an invalid value, like a negative, the
-  default value of <code>300</code> is used.</p>
+The **`HTMLCanvasElement.width`** property is a
+positive `integer` reflecting the {{htmlattrxref("width", "canvas")}} HTML
+attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the
+attribute is not specified, or if it is set to an invalid value, like a negative, the
+default value of `300` is used.
 
-<p>This is one of the two properties, the other being
-  {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.</p>
+This is one of the two properties, the other being
+{{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var <em>pxl</em> = <em>canvas</em></var>.width;
-<em>canvas</em>.width = <em>pxl</em>;
-</pre>
+```js
+var pxl = canvas.width;
+canvas.width = pxl;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
 
-<p>You can get the width of the canvas with the following code:</p>
+You can get the width of the canvas with the following code:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 console.log(canvas.width); // 300
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-  <li>The other property controlling the size of the canvas,
-    {{domxref("HTMLCanvasElement.height")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- The other property controlling the size of the canvas,
+  {{domxref("HTMLCanvasElement.height")}}.

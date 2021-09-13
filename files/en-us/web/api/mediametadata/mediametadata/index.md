@@ -2,48 +2,48 @@
 title: MediaMetadata()
 slug: Web/API/MediaMetadata/MediaMetadata
 tags:
-- Audio
-- Media
-- Media Session API
-- MediaMetadata
-- MediaSession
-- Property
-- Reference
-- Video
-- artwork
+  - Audio
+  - Media
+  - Media Session API
+  - MediaMetadata
+  - MediaSession
+  - Property
+  - Reference
+  - Video
+  - artwork
 browser-compat: api.MediaMetadata.MediaMetadata
 ---
-<p>{{APIRef("Media Session API")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>MediaMetadata()</code></strong> constructor creates a new
-  {{domxref("MediaMetadata")}} object.</p>
+The **`MediaMetadata()`** constructor creates a new
+{{domxref("MediaMetadata")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mediaMetadata = new MediaMetadata([metadata])</pre>
+```js
+var mediaMetadata = new MediaMetadata([metadata])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>metadata</em> {{optional_inline}}</dt>
-  <dd>The metadata parameters are as follows:
-    <ul>
-      <li><code>title</code>: The title of the media to be played.</li>
-      <li><code>artist</code>: The name of the artist, group, creator, etc. of the media
-        to be played.</li>
-      <li><code>album</code>: The name of the album, or collection, containing the media
-        to be played.</li>
-      <li><code>artwork</code>: An array of images associated with the playing media.</li>
-    </ul>
-  </dd>
-</dl>
+- _metadata_ {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+  - : The metadata parameters are as follows:
 
-<p>The following example creates a new {{domxref("MediaMetadata")}} object using the
-  correct format of metadata.</p>
+    - `title`: The title of the media to be played.
+    - `artist`: The name of the artist, group, creator, etc. of the media
+      to be played.
+    - `album`: The name of the album, or collection, containing the media
+      to be played.
+    - `artwork`: An array of images associated with the playing media.
 
-<pre class="brush: js">if ('mediaSession' in navigator){
+## Example
+
+The following example creates a new {{domxref("MediaMetadata")}} object using the
+correct format of metadata.
+
+```js
+if ('mediaSession' in navigator){
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -57,12 +57,13 @@ browser-compat: api.MediaMetadata.MediaMetadata
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

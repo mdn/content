@@ -2,63 +2,61 @@
 title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
 tags:
-- API
-- Method
-- Reference
-- URL API
-- URLSearchParams
+  - API
+  - Method
+  - Reference
+  - URL API
+  - URLSearchParams
 browser-compat: api.URLSearchParams.keys
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>The <code><strong>keys()</strong></code> method of the {{domxref("URLSearchParams")}}
-  interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-  through all keys contained in this object. The keys are {{domxref("USVString")}}
-  objects.</p>
+The **`keys()`** method of the {{domxref("URLSearchParams")}}
+interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
+through all keys contained in this object. The keys are {{domxref("USVString")}}
+objects.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">searchParams.keys();</pre>
+```js
+searchParams.keys();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Display the keys
 for(var key of searchParams.keys()) {
   console.log(key);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>key1
-key2</pre>
+    key1
+    key2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface.</li>
-</ul>
+- The {{domxref("URL")}} interface.

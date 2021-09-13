@@ -15,79 +15,70 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>MediaSource</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a> represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A <code>MediaSource</code> object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.</p>
+The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>Constructs and returns a new <code>MediaSource</code> object with no associated source buffers.</dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
+  - : Constructs and returns a new `MediaSource` object with no associated source buffers.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this <code>MediaSource</code>.</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.</dd>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>Returns an enum representing the state of the current <code>MediaSource</code>, whether it is not currently attached to a media element (<code>closed</code>), attached and ready to receive {{domxref("SourceBuffer")}} objects (<code>open</code>), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (<code>ended</code>.)</dd>
- <dt>{{domxref("MediaSource.duration")}}</dt>
- <dd>Gets and sets the duration of the current media being presented.</dd>
-</dl>
+- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+  - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
+- {{domxref("MediaSource.duration")}}
+  - : Gets and sets the duration of the current media being presented.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("MediaSource.onsourceclose")}}</dt>
- <dd>The event handler for the <code>sourceclose</code> event.</dd>
- <dt>{{domxref("MediaSource.onsourceended")}}</dt>
- <dd>The event handler for the <code>sourceended</code> event.</dd>
- <dt>{{domxref("MediaSource.onsourceopen")}}</dt>
- <dd>The event handler for the <code>sourceopen</code> event.</dd>
-</dl>
+- {{domxref("MediaSource.onsourceclose")}}
+  - : The event handler for the `sourceclose` event.
+- {{domxref("MediaSource.onsourceended")}}
+  - : The event handler for the `sourceended` event.
+- {{domxref("MediaSource.onsourceopen")}}
+  - : The event handler for the `sourceopen` event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.</dd>
- <dt>{{domxref("MediaSource.clearLiveSeekableRange()")}}</dt>
- <dd>Clears a seekable range previously set with a call to <code>setLiveSeekableRange()</code>.</dd>
- <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
- <dd>Signals the end of the stream.</dd>
- <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
- <dd>Removes the given {{domxref("SourceBuffer")}} from the {{domxref("MediaSource.sourceBuffers")}} list.</dd>
- <dt>{{domxref("MediaSource.setLiveSeekableRange()")}}</dt>
- <dd>Sets the range that the user can seek to in the media element.</dd>
-</dl>
+- {{domxref("MediaSource.addSourceBuffer()")}}
+  - : Creates a new {{domxref("SourceBuffer")}} of the given MIME type and adds it to the {{domxref("MediaSource.sourceBuffers")}} list.
+- {{domxref("MediaSource.clearLiveSeekableRange()")}}
+  - : Clears a seekable range previously set with a call to `setLiveSeekableRange()`.
+- {{domxref("MediaSource.endOfStream()")}}
+  - : Signals the end of the stream.
+- {{domxref("MediaSource.removeSourceBuffer()")}}
+  - : Removes the given {{domxref("SourceBuffer")}} from the {{domxref("MediaSource.sourceBuffers")}} list.
+- {{domxref("MediaSource.setLiveSeekableRange()")}}
+  - : Sets the range that the user can seek to in the media element.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.</dd>
-</dl>
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : Returns a boolean value indicating if the given MIME type is supported by the current user agent — this is, if it can successfully create {{domxref("SourceBuffer")}} objects for that MIME type.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be <a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">viewed live here</a> (you can also <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+The following simple example loads a video with {{domxref("XMLHttpRequest")}}, playing it as soon as it can. This example was written by Nick Desaulniers and can be [viewed live here](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (you can also [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -119,19 +110,18 @@ function fetchAB (url, cb) {
     cb(xhr.response);
   };
   xhr.send();
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

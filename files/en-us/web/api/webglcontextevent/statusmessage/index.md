@@ -10,33 +10,32 @@ tags:
   - WebGLContextEvent
 browser-compat: api.WebGLContextEvent.statusMessage
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The read-only <code><strong>WebGLContextEvent.statusMessage</strong></code> property contains additional event status information, or is an empty string if no additional information is available.</p>
+The read-only **`WebGLContextEvent.statusMessage`** property contains additional event status information, or is an empty string if no additional information is available.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <code>statusMessage</code> property can contain a platform dependent string with details of an event. This can occur, for example, if the {{Event("webglcontextcreationerror")}} event is fired.</p>
+The `statusMessage` property can contain a platform dependent string with details of an event. This can occur, for example, if the {{Event("webglcontextcreationerror")}} event is fired.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextcreationerror', function(e) {
   console.log('WebGL context creation failed:' +
               e.statusMessage || 'Unknown error');
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></li>
-</ul>
+- [webglcontextcreationerror](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

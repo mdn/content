@@ -2,45 +2,48 @@
 title: Touch.identifier
 slug: Web/API/Touch/identifier
 tags:
-- API
-- DOM
-- Identifier
-- Property
-- Read-only
-- Reference
-- touch
+  - API
+  - DOM
+  - Identifier
+  - Property
+  - Read-only
+  - Reference
+  - touch
 browser-compat: api.Touch.identifier
 ---
-<p>{{ APIRef("Touch Events") }}{{SeeCompatTable}}</p>
+{{ APIRef("Touch Events") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Touch.identifier</code></strong> returns a value uniquely identifying
-  this point of contact with the touch surface. This value remains consistent for every
-  event involving this finger's (or stylus's) movement on the surface until it is lifted
-  off the surface.</p>
+The **`Touch.identifier`** returns a value uniquely identifying
+this point of contact with the touch surface. This value remains consistent for every
+event involving this finger's (or stylus's) movement on the surface until it is lifted
+off the surface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>touchItem</var>.identifier;</pre>
+```js
+touchItem.identifier;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>long</code> that represents the unique ID of the {{ domxref("Touch") }} object.
-</p>
+A `long` that represents the unique ID of the {{ domxref("Touch") }} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
+```js
+someElement.addEventListener('touchmove', function(e) {
 // Iterate through the list of touch points that changed
 // since the last event and print each touch point's identifier.
-  for (var i=0; i &lt; e.changedTouches.length; i++) {
+  for (var i=0; i < e.changedTouches.length; i++) {
     console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
   }
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

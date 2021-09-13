@@ -16,50 +16,47 @@ tags:
   - web animations api
 browser-compat: api.EffectTiming.endDelay
 ---
-<div>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</div>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>endDelay</code></strong> property of the {{domxref("EffectTiming")}}
-  dictionary (part of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations
-    API</a>) indicates the number of milliseconds to delay after the active period of an
-  animation sequence. The animation's <strong>end time</strong>—the time at which an
-  iteration is considered to have finished—is the time at which the animation finishes an
-  iteration (its initial delay, {{domxref("EffectTiming.delay", "delay")}}, plus
-  its duration,{{domxref("EffectTiming.duration", "duration")}}, plus its
-  end delay).</p>
+The **`endDelay`** property of the {{domxref("EffectTiming")}}
+dictionary (part of the [Web Animations
+API](/en-US/docs/Web/API/Web_Animations_API)) indicates the number of milliseconds to delay after the active period of an
+animation sequence. The animation's **end time**—the time at which an
+iteration is considered to have finished—is the time at which the animation finishes an
+iteration (its initial delay, {{domxref("EffectTiming.delay", "delay")}}, plus
+its duration,{{domxref("EffectTiming.duration", "duration")}}, plus its
+end delay).
 
-<p>This is useful for sequencing animations based on the end time of another animation;
-  note, however, that many of the sequence effects that will benefit most from this
-  property have not been defined in the specification yet. For now, its main purpose is to
-  represent the value of the <a href="/en-US/docs/Web/SVG">SVG</a> {{SVGAttr("min")}}
-  attribute.</p>
+This is useful for sequencing animations based on the end time of another animation;
+note, however, that many of the sequence effects that will benefit most from this
+property have not been defined in the specification yet. For now, its main purpose is to
+represent the value of the [SVG](/en-US/docs/Web/SVG) {{SVGAttr("min")}}
+attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var timingProperties = {
+```js
+var timingProperties = {
   endDelay: delayInMilliseconds
 }
 
 timingProperties.endDelay = delayInMilliseconds;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number representing the end delay, specified in milliseconds. The default value is 0.
-</p>
+A number representing the end delay, specified in milliseconds. The default value is 0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Element.animate()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
-    both accept an object of timing properties including this one.
-  </li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.animate()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+  both accept an object of timing properties including this one.

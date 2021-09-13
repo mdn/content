@@ -12,56 +12,54 @@ tags:
   - Refernce
 browser-compat: api.MediaSettingsRange
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Image")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>MediaSettingsRange</code></strong> interface of the <a href="/en-US/docs/Web/API/MediaStream_Image_Capture_API">MediaStream Image Capture API</a> provides the possible range and value size of {{domxref("PhotoCapabilities.imageHeight")}} and {{domxref("PhotoCapabilities.imageWidth")}}. A {{domxref("PhotoCapabilities")}} object can be retrieved by calling {{domxref("ImageCapture.PhotoCapabilities","ImageCapture.PhotoCapabilities()")}}.</p>
+The **`MediaSettingsRange`** interface of the [MediaStream Image Capture API](/en-US/docs/Web/API/MediaStream_Image_Capture_API) provides the possible range and value size of {{domxref("PhotoCapabilities.imageHeight")}} and {{domxref("PhotoCapabilities.imageWidth")}}. A {{domxref("PhotoCapabilities")}} object can be retrieved by calling {{domxref("ImageCapture.PhotoCapabilities","ImageCapture.PhotoCapabilities()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("MediaSettingsRange.max")}}</dt>
-	<dd>Returns the maximum value of this settings.</dd>
-	<dt>{{domxref("MediaSettingsRange.min")}}</dt>
-	<dd>Returns the minimum value of this setting.</dd>
-	<dt>{{domxref("MediaSettingsRange.step")}}</dt>
-	<dd>Returns the minimum difference between consecutive values of this setting.</dd>
-</dl>
+- {{domxref("MediaSettingsRange.max")}}
+  - : Returns the maximum value of this settings.
+- {{domxref("MediaSettingsRange.min")}}
+  - : Returns the minimum value of this setting.
+- {{domxref("MediaSettingsRange.step")}}
+  - : Returns the minimum difference between consecutive values of this setting.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example, extracted from <a href="https://googlechrome.github.io/samples/image-capture/photo-resolution.html">Chrome's Image Capture / Photo Resolution Sample</a>, uses the results from <code>getPhotoCapabilities().imageWidth</code> to modify the size of an input range.  </p>
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from `getPhotoCapabilities().imageWidth` to modify the size of an input range.
 
-<pre><code>const input = document.querySelector('input[type="range"]');
+    const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+    var imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream =&gt; {
-  document.querySelector('video').srcObject = mediaStream;
+    navigator.mediaDevices.getUserMedia({video: true})
+    .then(mediaStream => {
+      document.querySelector('video').srcObject = mediaStream;
 
-  const track = mediaStream.getVideoTracks()[0];
-  imageCapture = new ImageCapture(track);
+      const track = mediaStream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
 
-  return imageCapture.getPhotoCapabilities();
-})
-.then(photoCapabilities =&gt; {
-  const settings = imageCapture.track.getSettings();
+      return imageCapture.getPhotoCapabilities();
+    })
+    .then(photoCapabilities => {
+      const settings = imageCapture.track.getSettings();
 
-  input.min = photoCapabilities.imageWidth.min;
-  input.max = photoCapabilities.imageWidth.max;
-  input.step = photoCapabilities.imageWidth.step;
+      input.min = photoCapabilities.imageWidth.min;
+      input.max = photoCapabilities.imageWidth.max;
+      input.step = photoCapabilities.imageWidth.step;
 
-  return imageCapture.getPhotoSettings();
-})
-.then(photoSettings =&gt; {
-  input.value = photoSettings.imageWidth;
-})
-.catch(error =&gt; console.log('Argh!', error.name || error));</code></pre>
+      return imageCapture.getPhotoSettings();
+    })
+    .then(photoSettings => {
+      input.value = photoSettings.imageWidth;
+    })
+    .catch(error => console.log('Argh!', error.name || error));
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

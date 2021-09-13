@@ -2,57 +2,56 @@
 title: SpeechSynthesis.pause()
 slug: Web/API/SpeechSynthesis/pause
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- SpeechSynthesis
-- Web Speech API
-- pause
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - pause
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesis.pause
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>pause()</strong></code> method of the {{domxref("SpeechSynthesis")}}
-	interface puts the <code>SpeechSynthesis</code> object into a paused state.</p>
+The **`pause()`** method of the {{domxref("SpeechSynthesis")}}
+interface puts the `SpeechSynthesis` object into a paused state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">speechSynthesisInstance.pause();
-</pre>
+```js
+speechSynthesisInstance.pause();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>var synth = window.speechSynthesis;
+    var synth = window.speechSynthesis;
 
-var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+    var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
+    var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
 
-synth.speak(utterance1);
-synth.speak(utterance2);
+    synth.speak(utterance1);
+    synth.speak(utterance2);
 
-synth.pause(); // pauses utterances being spoken</pre>
+    synth.pause(); // pauses utterances being spoken
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

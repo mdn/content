@@ -8,28 +8,28 @@ tags:
   - closeEvent
 browser-compat: api.CloseEvent.wasClean
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p class="summary">The <strong><code>wasClean</code></strong> read-only property of the {{domxref("CloseEvent")}} interface returns <code>true</code> if the connection closed cleanly.</p>
+The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface returns `true` if the connection closed cleanly.
 
-<h3>Value</h3>
+### Value
 
-<p>A {{jsxref("Boolean")}}. True if the connection closed cleanly, false otherwise.</p>
+A {{jsxref("Boolean")}}. True if the connection closed cleanly, false otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example prints the value of <code>wasClean</code> to the console.</p>
+The following example prints the value of `wasClean` to the console.
 
-<pre class="brush: js">WebSocket.onclose = function(event) {
+```js
+WebSocket.onclose = function(event) {
   console.log(event.wasClean);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

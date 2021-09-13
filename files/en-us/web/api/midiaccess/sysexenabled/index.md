@@ -9,34 +9,37 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.sysexEnabled
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>sysexEnabled</code></strong> read-only property of the {{domxref("MIDIAccess")}} interface indicates whether system exclusive support is enabled on the current MIDIAccess instance.</p>
+The **`sysexEnabled`** read-only property of the {{domxref("MIDIAccess")}} interface indicates whether system exclusive support is enabled on the current MIDIAccess instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let sysexEnabled = MIDIAccess.sysexEnabled;</pre>
+```js
+let sysexEnabled = MIDIAccess.sysexEnabled;
+```
 
-<h3>Value</h3>
-<p>A boolean value.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A boolean value.
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of <code>sysexEnabled</code> to the console returns a boolean value, which is <code>true</code> if system exclusive supported is enabled.</p>
+## Examples
 
-<pre class="brush: js">navigator.requestMIDIAccess()
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `sysexEnabled` to the console returns a boolean value, which is `true` if system exclusive supported is enabled.
+
+```js
+navigator.requestMIDIAccess()
   .then(function(access) {
 
      console.log(access.sysexEnabled);
 
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

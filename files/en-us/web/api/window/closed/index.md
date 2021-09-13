@@ -2,60 +2,61 @@
 title: Window.closed
 slug: Web/API/Window/closed
 tags:
-- API
-- HTML DOM
-- NeedsCompatTable
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsCompatTable
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.closed
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.closed</strong></code> read-only property indicates whether
-  the referenced window is closed or not.</p>
+The **`Window.closed`** read-only property indicates whether
+the referenced window is closed or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>isClosed</em> = <em>windowRef</em>.closed;
-</pre>
+```js
+const isClosed = windowRef.closed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. Possible values:</p>
+A boolean value. Possible values:
 
-<ul>
-  <li><code>true</code>: The window has been closed.</li>
-  <li><code>false</code>: The window is open.</li>
-</ul>
+- `true`: The window has been closed.
+- `false`: The window is open.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Change_the_URL_of_a_window_from_a_popup">Change the URL of a window from a popup
-</h3>
+### Change the URL of a window from a popup
 
-<p>The following example demonstrates how a popup window can change the URL of the window
-  that opened it. Before attempting to change the URL, it checks that the current window
-  has an opener using the {{domxref("window.opener")}} property and that the opener isn't
-  closed:</p>
+The following example demonstrates how a popup window can change the URL of the window
+that opened it. Before attempting to change the URL, it checks that the current window
+has an opener using the {{domxref("window.opener")}} property and that the opener isn't
+closed:
 
-<pre class="brush:js">// Check that an opener exists and is not closed
-if (window.opener &amp;&amp; !window.opener.closed) {
+```js
+// Check that an opener exists and is not closed
+if (window.opener && !window.opener.closed) {
   window.opener.location.href = 'http://www.mozilla.org';
-}</pre>
+}
+```
 
-<p>Note that popups can only access the window that opened them.</p>
+Note that popups can only access the window that opened them.
 
-<h3 id="Refreshing_a_previously_opened_popup">Refreshing a previously opened popup</h3>
+### Refreshing a previously opened popup
 
-<p>In this example the function <code>refreshPopupWindow()</code> calls the
-  <code>reload()</code> method of the popup's location object to refresh its data. If the
-  popup hasn't been opened yet or the user has closed it a new window is opened.</p>
+In this example the function `refreshPopupWindow()` calls the
+`reload()` method of the popup's location object to refresh its data. If the
+popup hasn't been opened yet or the user has closed it a new window is opened.
 
-<pre class="brush:js">const popupWindow = null;
+```js
+const popupWindow = null;
 
 function refreshPopupWindow() {
-  if (popupWindow &amp;&amp; !popupWindow.closed) {
+  if (popupWindow && !popupWindow.closed) {
     // popupWindow is open, refresh it
     popupWindow.location.reload(true);
   } else {
@@ -63,12 +64,12 @@ function refreshPopupWindow() {
     popupWindow = window.open('popup.html', 'dataWindow');
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,68 +2,66 @@
 title: WebGLRenderingContext.colorMask()
 slug: Web/API/WebGLRenderingContext/colorMask
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.colorMask
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.colorMask()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets which color components to
-  enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer")}}.</p>
+The **`WebGLRenderingContext.colorMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets which color components to
+enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.colorMask(<var>red, green, blue, alpha</var>);
-</pre>
+```js
+void gl.colorMask(red, green, blue, alpha);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>red</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the red color component can be
-    written into the frame buffer. Default value: <code>true</code>.</dd>
-  <dt><code>green</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the green color component can
-    be written into the frame buffer. Default value: <code>true</code>.</dd>
-  <dt><code>blue</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the blue color component can be
-    written into the frame buffer. Default value: <code>true</code>.</dd>
-  <dt><code>alpha</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the alpha (transparency)
-    component can be written into the frame buffer. Default value: <code>true</code>.</dd>
-</dl>
+- `red`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the red color component can be
+    written into the frame buffer. Default value: `true`.
+- `green`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the green color component can
+    be written into the frame buffer. Default value: `true`.
+- `blue`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the blue color component can be
+    written into the frame buffer. Default value: `true`.
+- `alpha`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not the alpha (transparency)
+    component can be written into the frame buffer. Default value: `true`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.colorMask(true, true, true, false);
-</pre>
+```js
+gl.colorMask(true, true, true, false);
+```
 
-<p>To get the current color mask, query the <code>COLOR_WRITEMASK</code> constant which
-  returns an {{jsxref("Array")}}.</p>
+To get the current color mask, query the `COLOR_WRITEMASK` constant which
+returns an {{jsxref("Array")}}.
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_WRITEMASK);
+```js
+gl.getParameter(gl.COLOR_WRITEMASK);
 // [true, true, true, false]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.depthMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.depthMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}

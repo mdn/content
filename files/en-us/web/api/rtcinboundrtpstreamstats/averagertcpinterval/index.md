@@ -2,54 +2,55 @@
 title: RTCInboundRtpStreamStats.averageRtcpInterval
 slug: Web/API/RTCInboundRtpStreamStats/averageRtcpInterval
 tags:
-- API
-- Packet
-- Property
-- RTCInboundRtpStreamStats
-- RTCP
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- averageRtcpInterval
-- rate
+  - API
+  - Packet
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTCP
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - averageRtcpInterval
+  - rate
 browser-compat: api.RTCInboundRtpStreamStats.averageRtcpInterval
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>averageRtcpInterval</code></strong> property
-    of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a floating-point value
-    indicating the average {{Glossary("RTCP")}} transmission interval, in seconds.</p>
+The **`averageRtcpInterval`** property
+of the {{domxref("RTCInboundRtpStreamStats")}} dictionary is a floating-point value
+indicating the average {{Glossary("RTCP")}} transmission interval, in seconds.
 
-<p>The RTCP interval is the amount of time that should elapse between transmissions of RTCP
-  packets.</p>
+The RTCP interval is the amount of time that should elapse between transmissions of RTCP
+packets.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>averageRtcpInterval</em> = <em>rtcInboundRtpStreamStats</em>.averageRtcpInterval;</pre>
+```js
+var averageRtcpInterval = rtcInboundRtpStreamStats.averageRtcpInterval;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value indicating the average interval, in seconds, between
-  transmissions of RTCP packets. This interval is computed following the formula outlined
-  in {{RFC(1889, "A.7")}}.</p>
+A floating-point value indicating the average interval, in seconds, between
+transmissions of RTCP packets. This interval is computed following the formula outlined
+in {{RFC(1889, "A.7")}}.
 
-<p>Because the interval's value is determined in part by the number of active senders, it
-  will be different for each user of a service. Since this value is also used to determine
-  the number of seconds after a stream starts to flow before the first RTCP packet should
-  be sent, the result is that if many users try to start using the service at the same
-  time, the server won't be flooded with RTCP packets coming in all at once.</p>
+Because the interval's value is determined in part by the number of active senders, it
+will be different for each user of a service. Since this value is also used to determine
+the number of seconds after a stream starts to flow before the first RTCP packet should
+be sent, the result is that if many users try to start using the service at the same
+time, the server won't be flooded with RTCP packets coming in all at once.
 
-<p>The sending endpoint computes this value when sending compound RTCP packets, which must
-  contain at least an RTCP RR or SR packet and an SDES packet with the CNAME item.</p>
+The sending endpoint computes this value when sending compound RTCP packets, which must
+contain at least an RTCP RR or SR packet and an SDES packet with the CNAME item.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

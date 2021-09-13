@@ -7,51 +7,49 @@ tags:
   - WebVTT
 browser-compat: api.VTTRegion
 ---
-<p>{{APIRef("WebVTT")}}</p>
+{{APIRef("WebVTT")}}
 
-<p>The <code>VTTRegion</code> interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.</p>
+The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("VTTRegion.VTTRegion", "VTTRegion()")}}</dt>
- <dd>Returns a newly created <code>VTTRegion</code> object.</dd>
-</dl>
+- {{domxref("VTTRegion.VTTRegion", "VTTRegion()")}}
+  - : Returns a newly created `VTTRegion` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VTTRegion.id")}}</dt>
- <dd>A {{domxref("DOMString")}} that identifies the region.</dd>
- <dt>{{domxref("VTTRegion.width")}}</dt>
- <dd>A <code>double</code> representing the width of the region, as a percentage of the video.</dd>
- <dt>{{domxref("VTTRegion.lines")}}</dt>
- <dd>A <code>double</code> representing the height of the region, in number of lines.</dd>
- <dt>{{domxref("VTTRegion.regionAnchorX")}}</dt>
- <dd>A <code>double</code> representing the region anchor X offset, as a percentage of the region.</dd>
- <dt>{{domxref("VTTRegion.regionAnchorY")}}</dt>
- <dd>A <code>double</code> representing the region anchor Y offset, as a percentage of the region.</dd>
- <dt>{{domxref("VTTRegion.viewportAnchorX")}}</dt>
- <dd>A <code>double</code> representing the viewport anchor X offset, as a percentage of the video.</dd>
- <dt>{{domxref("VTTRegion.viewportAnchorY")}}</dt>
- <dd>A <code>double</code> representing the viewport anchor Y offset, as a percentage of the video.</dd>
- <dt>{{domxref("VTTRegion.scroll")}}</dt>
- <dd>An enum representing how adding new cues will move existing cues.</dd>
-</dl>
+- {{domxref("VTTRegion.id")}}
+  - : A {{domxref("DOMString")}} that identifies the region.
+- {{domxref("VTTRegion.width")}}
+  - : A `double` representing the width of the region, as a percentage of the video.
+- {{domxref("VTTRegion.lines")}}
+  - : A `double` representing the height of the region, in number of lines.
+- {{domxref("VTTRegion.regionAnchorX")}}
+  - : A `double` representing the region anchor X offset, as a percentage of the region.
+- {{domxref("VTTRegion.regionAnchorY")}}
+  - : A `double` representing the region anchor Y offset, as a percentage of the region.
+- {{domxref("VTTRegion.viewportAnchorX")}}
+  - : A `double` representing the viewport anchor X offset, as a percentage of the video.
+- {{domxref("VTTRegion.viewportAnchorY")}}
+  - : A `double` representing the viewport anchor Y offset, as a percentage of the video.
+- {{domxref("VTTRegion.scroll")}}
+  - : An enum representing how adding new cues will move existing cues.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var region = new VTTRegion();
+```js
+var region = new VTTRegion();
 region.width = 50;  // Use 50% of the video width
 region.lines = 4;  // Use 4 lines of height.
 region.viewportAnchorX = 25;  // Have the region start at 25% from the left.
 var cue = new VTTCue(2, 3, 'Cool text to be displayed');
-cue.region = region;  // This cue will be drawn only within this region.</pre>
+cue.region = region;  // This cue will be drawn only within this region.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

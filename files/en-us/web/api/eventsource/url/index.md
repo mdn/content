@@ -2,49 +2,48 @@
 title: EventSource.url
 slug: Web/API/EventSource/url
 tags:
-- API
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- URL
+  - API
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - URL
 browser-compat: api.EventSource.url
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <code><strong>url</strong></code> read-only property of the
-  {{domxref("EventSource")}} interface returns a {{domxref("DOMString")}} representing the
-  URL of the source.</p>
+The **`url`** read-only property of the
+{{domxref("EventSource")}} interface returns a {{domxref("DOMString")}} representing the
+URL of the source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myUrl = eventSource.url;</pre>
+```js
+var myUrl = eventSource.url;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the URL of the source.</p>
+A {{domxref("DOMString")}} representing the URL of the source.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
-console.log(evtSource.url);</pre>
+```js
+var evtSource = new EventSource('sse.php');
+console.log(evtSource.url);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

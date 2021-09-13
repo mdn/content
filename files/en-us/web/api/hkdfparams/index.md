@@ -8,57 +8,53 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<p>{{ APIRef("Web Crypto API") }}The <strong><code>HkdfParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a> algorithm.</p>
+{{ APIRef("Web Crypto API") }}The **`HkdfParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>HKDF</code>.</dd>
- <dt><code>hash</code></dt>
- <dd>
- <p>A {{domxref("DOMString")}} representing the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest algorithm</a> to use. This may be one of:</p>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `HKDF`.
+- `hash`
 
- <ul>
-  <li><code>SHA-1</code></li>
-  <li><code>SHA-256</code></li>
-  <li><code>SHA-384</code></li>
-  <li><code>SHA-512</code></li>
- </ul>
- </dd>
- <dt><code>salt</code></dt>
- <dd>A {{domxref("BufferSource")}}. The <a href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</a> states that adding salt "adds significantly to the strength of HKDF". Ideally, the salt is a random or pseudo-random value with the same length as the output of the digest function. Unlike the input key material passed into <code>deriveKey()</code>, salt does not need to be kept secret.</dd>
- <dt><code>info</code></dt>
- <dd>A {{domxref("BufferSource")}} representing application-specific contextual information. This is used to bind the derived key to an application or context, and enables you to derive different keys for different contexts while using the same input key material. It's important that this should be independent of the input key material itself. This property is required but may be an empty buffer.</dd>
-</dl>
+  - : A {{domxref("DOMString")}} representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
 
-<h2 id="Examples">Examples</h2>
+    - `SHA-1`
+    - `SHA-256`
+    - `SHA-384`
+    - `SHA-512`
 
-<p>See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.</p>
+- `salt`
+  - : A {{domxref("BufferSource")}}. The [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869) states that adding salt "adds significantly to the strength of HKDF". Ideally, the salt is a random or pseudo-random value with the same length as the output of the digest function. Unlike the input key material passed into `deriveKey()`, salt does not need to be kept secret.
+- `info`
+  - : A {{domxref("BufferSource")}} representing application-specific contextual information. This is used to bind the derived key to an application or context, and enables you to derive different keys for different contexts while using the same input key material. It's important that this should be independent of the input key material itself. This property is required but may be an empty buffer.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.
+
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-HkdfParams', 'SubtleCrypto.HkdfParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-HkdfParams', 'SubtleCrypto.HkdfParams') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "HKDF" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.</p>
+Browsers that support the "HKDF" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SubtleCrypto.deriveKey()")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.deriveKey()")}}.

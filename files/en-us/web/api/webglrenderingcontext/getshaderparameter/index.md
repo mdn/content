@@ -2,62 +2,59 @@
 title: WebGLRenderingContext.getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getShaderParameter()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns information about the
-  given shader.</p>
+The **`WebGLRenderingContext.getShaderParameter()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
+given shader.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getShaderParameter(<var>shader</var>, <var>pname</var>);
-</pre>
+```js
+any gl.getShaderParameter(shader, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>shader</dt>
-  <dd>A {{domxref("WebGLShader")}} to get parameter information from.</dd>
-  <dt>pname</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-    <ul>
-      <li><code>gl.DELETE_STATUS</code>: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-        whether or not the shader is flagged for deletion.</li>
-      <li><code>gl.COMPILE_STATUS</code>: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
-        whether or not the last shader compilation was successful.</li>
-      <li><code>gl.SHADER_TYPE</code>: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating whether
-        the shader is a vertex shader (<code>gl.VERTEX_SHADER</code>) or fragment shader
-        (<code>gl.FRAGMENT_SHADER</code>) object.</li>
-    </ul>
-  </dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} to get parameter information from.
+- pname
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
-<p>Returns the requested shader information (as specified with <code>pname</code>).</p>
+    - `gl.DELETE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+      whether or not the shader is flagged for deletion.
+    - `gl.COMPILE_STATUS`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
+      whether or not the last shader compilation was successful.
+    - `gl.SHADER_TYPE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating whether
+      the shader is a vertex shader (`gl.VERTEX_SHADER`) or fragment shader
+      (`gl.FRAGMENT_SHADER`) object.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.getShaderParameter(shader, gl.SHADER_TYPE);
-</pre>
+Returns the requested shader information (as specified with `pname`).
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.getShaderParameter(shader, gl.SHADER_TYPE);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}

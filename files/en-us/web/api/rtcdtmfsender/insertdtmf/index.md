@@ -2,90 +2,85 @@
 title: RTCDTMFSender.insertDTMF()
 slug: Web/API/RTCDTMFSender/insertDTMF
 tags:
-- API
-- DTMF
-- Media
-- Method
-- RTCDTMFSender
-- Reference
-- Telephony
-- Touch-tone
-- WebRTC
-- WebRTC API
-- insertDTMF
+  - API
+  - DTMF
+  - Media
+  - Method
+  - RTCDTMFSender
+  - Reference
+  - Telephony
+  - Touch-tone
+  - WebRTC
+  - WebRTC API
+  - insertDTMF
 browser-compat: api.RTCDTMFSender.insertDTMF
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The
-    <strong><code>insertDTMF()</code></strong> method on the
-    {{domxref("RTCDTMFSender")}} interface starts sending {{Glossary("DTMF")}} tones to the remote peer over the
-    {{domxref("RTCPeerConnection")}}.</p>
+The
+**`insertDTMF()`** method on the
+{{domxref("RTCDTMFSender")}} interface starts sending {{Glossary("DTMF")}} tones to the remote peer over the
+{{domxref("RTCPeerConnection")}}.
 
-<p>Sending of the tones is performed asynchronously,
-    with {{event("tonechange")}} events sent to the <code>RTCDTMFSender</code> every time
-    a tone starts or ends.</p>
+Sending of the tones is performed asynchronously,
+with {{event("tonechange")}} events sent to the `RTCDTMFSender` every time
+a tone starts or ends.
 
-<p>As long as the connection is active, you can send tones at any time. Calling
-  <code>insertDTMF()</code> replaces any already-pending tones from the <code>toneBuffer</code>.
-  You can abort sending queued tones by specifying an empty string (<code>""</code>) as the set of tones to play.
-  Since <code>insertDTMF()</code> replaces the tone buffer, in order to add to the DTMF tones being played, it is necessary to call
-  <code>insertDTMF</code> with a string containing both the remaining tones (stored in the <code>toneBuffer</code>) and the new tones appended together.</p>
+As long as the connection is active, you can send tones at any time. Calling
+`insertDTMF()` replaces any already-pending tones from the `toneBuffer`.
+You can abort sending queued tones by specifying an empty string (`""`) as the set of tones to play.
+Since `insertDTMF()` replaces the tone buffer, in order to add to the DTMF tones being played, it is necessary to call
+`insertDTMF` with a string containing both the remaining tones (stored in the `toneBuffer`) and the new tones appended together.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCDTMFSender</em>.insertDTMF(<em>tones</em>[, <em>duration</em>[, <em>interToneGap</em>]]);
-</pre>
+```js
+RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>tones</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the DTMF codes to be transmitted to the
-    recipient. Specifying an empty string as the <code>tones</code> parameter clears the
+- `tones`
+  - : A {{domxref("DOMString")}} containing the DTMF codes to be transmitted to the
+    recipient. Specifying an empty string as the `tones` parameter clears the
     tone buffer, aborting any currently queued tones. A "," character inserts a two second
-    delay.</dd>
-  <dt><code>duration</code> {{optional_inline}}</dt>
-  <dd>The amount of time, in milliseconds, that each DTMF tone should last. This value
-    must be between 40 ms and 6000 ms (6 seconds), inclusive. The default is 100 ms.</dd>
-  <dt><code>interToneGap</code> {{optional_inline}}</dt>
-  <dd>The length of time, in milliseconds, to wait between tones. The browser will enforce
+    delay.
+- `duration` {{optional_inline}}
+  - : The amount of time, in milliseconds, that each DTMF tone should last. This value
+    must be between 40 ms and 6000 ms (6 seconds), inclusive. The default is 100 ms.
+- `interToneGap` {{optional_inline}}
+  - : The length of time, in milliseconds, to wait between tones. The browser will enforce
     a minimum value of 30 ms (that is, if you specify a lower value, 30 ms will be used
-    instead); the default is 70 ms.</dd>
-</dl>
+    instead); the default is 70 ms.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The DTMF tones couldn't be sent because the track has been stopped, or is in a
-    read-only or inactive state.</dd>
-  <dt><code>InvalidCharacterError</code></dt>
-  <dd>One or more of the characters in <code>tones</code> is not valid DTMF.</dd>
-</dl>
+- `InvalidStateError`
+  - : The DTMF tones couldn't be sent because the track has been stopped, or is in a
+    read-only or inactive state.
+- `InvalidCharacterError`
+  - : One or more of the characters in `tones` is not valid DTMF.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>tbd</p>
+tbd
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li>{{domxref("RTCDTMFSender")}}</li>
-  <li>{{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCDTMFSender")}}
+- {{domxref("RTCRtpSender")}}

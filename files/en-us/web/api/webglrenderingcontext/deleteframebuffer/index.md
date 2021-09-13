@@ -2,61 +2,60 @@
 title: WebGLRenderingContext.deleteFramebuffer()
 slug: Web/API/WebGLRenderingContext/deleteFramebuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteFramebuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.deleteFramebuffer()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> deletes a given
-  {{domxref("WebGLFramebuffer")}} object. This method has no effect if the frame buffer
-  has already been deleted.</p>
+The **`WebGLRenderingContext.deleteFramebuffer()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLFramebuffer")}} object. This method has no effect if the frame buffer
+has already been deleted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteFramebuffer(<var>framebuffer</var>);
-</pre>
+```js
+void gl.deleteFramebuffer(framebuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>framebuffer</dt>
-  <dd>A {{domxref("WebGLFramebuffer")}} object to delete.</dd>
-</dl>
+- framebuffer
+  - : A {{domxref("WebGLFramebuffer")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Deleting_a_frame_buffer">Deleting a frame buffer</h3>
+### Deleting a frame buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var framebuffer = gl.createFramebuffer();
 
 // ...
 
-gl.deleteFramebuffer(framebuffer);</pre>
+gl.deleteFramebuffer(framebuffer);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

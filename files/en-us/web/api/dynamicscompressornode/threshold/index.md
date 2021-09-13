@@ -10,49 +10,46 @@ tags:
   - threshold
 browser-compat: api.DynamicsCompressorNode.threshold
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>threshold</code> property of the {{ domxref("DynamicsCompressorNode") }} interface is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.</p>
+The `threshold` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.
 
-<p>The <code>threshold</code> property's default value is <code>-24</code> and it can be set between <code>-100</code> and <code>0</code>.</p>
+The `threshold` property's default value is `-24` and it can be set between `-100` and `0`.
 
-<p><img alt="The threshold attribute has no effect on signals lowers than its value, but induce volume reduction on signal stronger than its value." src="webaudiothreshold.png"></p>
-</div>
+![The threshold attribute has no effect on signals lowers than its value, but induce volume reduction on signal stronger than its value.](webaudiothreshold.png)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.value = -50;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}.</p>
+An {{domxref("AudioParam")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
-compressor.threshold.value = -50;</pre>
+compressor.threshold.value = -50;
+```
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

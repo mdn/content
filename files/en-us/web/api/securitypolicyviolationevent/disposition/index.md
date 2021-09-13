@@ -2,51 +2,51 @@
 title: SecurityPolicyViolationEvent.disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
 tags:
-- API
-- CSP
-- Disposition
-- Experimental
-- HTTP
-- Property
-- Reference
-- Security
-- SecurityPolicyViolationEvent
+  - API
+  - CSP
+  - Disposition
+  - Experimental
+  - HTTP
+  - Property
+  - Reference
+  - Security
+  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
-<div>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</div>
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>disposition</strong></code> read-only property of the
-  {{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated policy
-  is configured to be treated by the user agent.</p>
+The **`disposition`** read-only property of the
+{{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated policy
+is configured to be treated by the user agent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>disposition</var> = <var>violationEventInstance</var>.disposition;</pre>
+```js
+let disposition = violationEventInstance.disposition;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A value defined in the <a
-    href="https://w3c.github.io/webappsec-csp/#enumdef-securitypolicyviolationeventdisposition">SecurityPolicyViolationEventDisposition
-    enum</a> representing the URI of the blocked resource. Possible values are
-  <code>"enforce"</code> or <code>"report"</code></p>
+A value defined in the [SecurityPolicyViolationEventDisposition
+enum](https://w3c.github.io/webappsec-csp/#enumdef-securitypolicyviolationeventdisposition) representing the URI of the blocked resource. Possible values are
+`"enforce"` or `"report"`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.addEventListener("securitypolicyviolation", (e) =&gt; {
+```js
+document.addEventListener("securitypolicyviolation", (e) => {
   console.log(e.disposition);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
-</ul>
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)

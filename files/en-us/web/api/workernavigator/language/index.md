@@ -10,47 +10,46 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>WorkerNavigator.language</code></strong> read-only property returns
-  a string representing the preferred language of the user, usually the language of the
-  browser UI.</p>
+The **`WorkerNavigator.language`** read-only property returns
+a string representing the preferred language of the user, usually the language of the
+browser UI.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>lang</em> = navigator.language
-</pre>
+```js
+const lang = navigator.language
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}. <em><code>lang</code></em> stores a string representing the
-  language version as defined in <a class="external"
-    href="https://tools.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>. Examples of valid language
-  codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.</p>
+A {{domxref("DOMString")}}. _`lang`_ stores a string representing the
+language version as defined in [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt). Examples of valid language
+codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
-<p>Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
-  "en-us", "fr-fr" etc.</p>
+Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:
+"en-us", "fr-fr" etc.
 
-<h2 id="Example">Example</h2>
+## Example
 
 You can run this insert a web worker:
 
-<pre class="brush: js">if (/^en\b/.test(navigator.language)) {
+```js
+if (/^en\b/.test(navigator.language)) {
   doLangSelect(window.navigator.language);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WorkerNavigator.languages")}}</li>
-  <li>{{domxref("WorkerNavigator")}}</li>
-</ul>
+- {{domxref("WorkerNavigator.languages")}}
+- {{domxref("WorkerNavigator")}}

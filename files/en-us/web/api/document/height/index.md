@@ -2,57 +2,56 @@
 title: Document.height
 slug: Web/API/Document/height
 tags:
-- API
-- Document
-- HTML DOM
-- NeedsMarkupWork
-- NeedsSpecTable
-- Property
-- Reference
-- Deprecated
+  - API
+  - Document
+  - HTML DOM
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.Document.height
 ---
-<div>{{APIRef("DOM")}} {{deprecated_header}}</div>
+{{APIRef("DOM")}} {{deprecated_header}}
 
-<div class="note">
-  <p><strong>Note:</strong> Starting in {{Gecko("6.0")}}, <code>document.height</code> is
-    no longer supported. Instead, use <code>document.body.clientHeight</code>. See
-    {{domxref("element.clientHeight")}}.</p>
-</div>
+> **Note:** Starting in {{Gecko("6.0")}}, `document.height` is
+> no longer supported. Instead, use `document.body.clientHeight`. See
+> {{domxref("element.clientHeight")}}.
 
-<p>Returns the height of the {{domxref("document")}} object. In most cases, this is equal
-  to the {{HTMLElement("body")}} element of the current document.</p>
+Returns the height of the {{domxref("document")}} object. In most cases, this is equal
+to the {{HTMLElement("body")}} element of the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>pixels</var> = document.height
-</pre>
+```js
+pixels = document.height
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// alert document height
+```js
+// alert document height
 alert(document.height);
-</pre>
+```
 
-<h2 id="Alternatives">Alternatives</h2>
+## Alternatives
 
-<pre class="brush: js">document.body.clientHeight
+```js
+document.body.clientHeight
 document.documentElement.clientHeight
 document.documentElement.scrollHeight
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.width")}}</li>
-  <li>{{domxref("Element.clientHeight")}}</li>
-  <li>{{domxref("Element.scrollHeight")}}</li>
-</ul>
+- {{domxref("document.width")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollHeight")}}

@@ -12,32 +12,32 @@ tags:
   - web animations api
 browser-compat: api.Animation.playbackRate
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Animation.playbackRate</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns or sets the playback rate of the animation.</p>
+The **`Animation.playbackRate`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets the playback rate of the animation.
 
-<p>Animations have a <strong>playback rate</strong> that provides a scaling factor from the rate of change of the animation's {{domxref("DocumentTimeline", "timeline")}} time values to the animation’s current time. The playback rate is initially <code>1</code>.</p>
+Animations have a **playback rate** that provides a scaling factor from the rate of change of the animation's {{domxref("DocumentTimeline", "timeline")}} time values to the animation’s current time. The playback rate is initially `1`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>currentPlaybackRate</em> = <em>Animation</em>.playbackRate;
+```js
+var currentPlaybackRate = Animation.playbackRate;
 
-<em>Animation</em>.playbackRate = <em>newRate</em>;
-</pre>
+Animation.playbackRate = newRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.</p>
+Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.
 
-<div class="note">
-<p><strong>Note:</strong> Setting an animation’s <code>playbackRate</code> to <code>0</code> effectively pauses the animation (however, its {{domxref("Animation.playstate", "playstate")}} does not necessarily become <code>paused</code>).</p>
-</div>
+> **Note:** Setting an animation’s `playbackRate` to `0` effectively pauses the animation (however, its {{domxref("Animation.playstate", "playstate")}} does not necessarily become `paused`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> example, clicking or tapping the bottle causes Alice's growing animation (<code>aliceChange</code>) to reverse, causing her to shrink:</p>
+In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to reverse, causing her to shrink:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -45,11 +45,12 @@ browser-compat: api.Animation.playbackRate
 // On tap or click, Alice will shrink.
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
-</pre>
+```
 
-<p>Contrariwise, clicking on the cake causes her to "grow," playing <code>aliceChange</code> forwards again:</p>
+Contrariwise, clicking on the cake causes her to "grow," playing `aliceChange` forwards again:
 
-<pre class="brush: js">var growAlice = function() {
+```js
+var growAlice = function() {
   aliceChange.playbackRate = 1;
   aliceChange.play();
 }
@@ -57,42 +58,42 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 // On tap or click, Alice will grow.
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
-</pre>
+```
 
-<p>In another example, the <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race Game</a>, Alice and the Red Queen are constantly slowing down:</p>
+In another example, the [Red Queen's Race Game](http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alice and the Red Queen are constantly slowing down:
 
-<pre class="brush: js">setInterval( function() {
+```js
+setInterval( function() {
 
   // Make sure the playback rate never falls below .4
 
-  if (redQueen_alice.playbackRate &gt; .4) {
+  if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.playbackRate *= .9;
   }
 
 }, 3000);
-</pre>
+```
 
-<p>But clicking or tapping on them causes them to speed up by multiplying their <code>playbackRate</code>:</p>
+But clicking or tapping on them causes them to speed up by multiplying their `playbackRate`:
 
-<pre class="brush: js">var goFaster = function() {
+```js
+var goFaster = function() {
   redQueen_alice.playbackRate *= 1.1;
 }
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

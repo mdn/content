@@ -2,33 +2,36 @@
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 tags:
-- API
-- AudioBuffer
-- Property
-- Reference
-- Web Audio API
-- sampleRate
+  - API
+  - AudioBuffer
+  - Property
+  - Reference
+  - Web Audio API
+  - sampleRate
 browser-compat: api.AudioBuffer.sampleRate
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>sampleRate</code></strong> property of the {{
+The **`sampleRate`** property of the {{
   domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
-  samples per second, of the PCM data stored in the buffer.</p>
+samples per second, of the PCM data stored in the buffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.sampleRate;</pre>
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+myArrayBuffer.sampleRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value indicating the current sample rate of the buffers data, in
-  samples per second.</p>
+A floating-point value indicating the current sample rate of the buffers data, in
+samples per second.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Stereo
+```js
+// Stereo
 var channels = 2;
 
 // Create an empty two second stereo buffer at the
@@ -39,10 +42,10 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 button.onclick = function() {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
     // This gives us the actual ArrayBuffer that contains the data
     var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i &lt; frameCount; i++) {
+    for (var i = 0; i < frameCount; i++) {
       // Math.random() is in [0; 1.0]
       // audio needs to be in [-1.0; 1.0]
       nowBuffering[i] = Math.random() * 2 - 1;
@@ -50,19 +53,18 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.sampleRate);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

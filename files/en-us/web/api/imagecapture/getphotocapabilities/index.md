@@ -2,51 +2,50 @@
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- ImageCapture
-- Media
-- MediaStream Image Capture API
-- Method
-- Reference
-- getPhotoCapabilities
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - ImageCapture
+  - Media
+  - MediaStream Image Capture API
+  - Method
+  - Reference
+  - getPhotoCapabilities
 browser-compat: api.ImageCapture.getPhotoCapabilities
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>getPhotoCapabilities()</code></strong>
-    method of the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}}
-    that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of
-    available configuration options.</p>
+The **`getPhotoCapabilities()`**
+method of the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}}
+that resolves with a {{domxref("PhotoCapabilities")}} object containing the ranges of
+available configuration options.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>capabilitiesPromise</em> = <em>imageCaptureObj</em>.getPhotoCapabilities()</pre>
+```js
+const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object.
-</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example, extracted from <a
-    href="https://googlechrome.github.io/samples/image-capture/photo-resolution.html">Chrome's
-    Image Capture / Photo Resolution Sample</a>, uses the results from
-  <code>getPhotoCapabilities()</code> to modify the size of an input range. This example
-  also shows how the {{domxref("ImageCapture")}} object is created using a
-  {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}. 
-</p>
+The following example, extracted from [Chrome's
+Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
+`getPhotoCapabilities()` to modify the size of an input range. This example
+also shows how the {{domxref("ImageCapture")}} object is created using a
+{{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
 
-<pre class="brush: js">const input = document.querySelector('input[type="range"]');
+```js
+const input = document.querySelector('input[type="range"]');
 
 var imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream =&gt; {
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
@@ -54,7 +53,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoCapabilities();
 })
-.then(photoCapabilities =&gt; {
+.then(photoCapabilities => {
   const settings = imageCapture.track.getSettings();
 
   input.min = photoCapabilities.imageWidth.min;
@@ -63,15 +62,16 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoSettings();
 })
-.then(photoSettings =&gt; {
+.then(photoSettings => {
   input.value = photoSettings.imageWidth;
 })
-.catch(error =&gt; console.log('Argh!', error.name || error));</pre>
+.catch(error => console.log('Argh!', error.name || error));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

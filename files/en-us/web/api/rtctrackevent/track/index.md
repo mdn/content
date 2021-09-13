@@ -2,41 +2,42 @@
 title: RTCTrackEvent.track
 slug: Web/API/RTCTrackEvent/track
 tags:
-- API
-- Media
-- Property
-- RTCTrackEvent
-- RTP
-- Read-only
-- Reference
-- Streams
-- WebRTC
-- WebRTC API
-- events
-- track
+  - API
+  - Media
+  - Property
+  - RTCTrackEvent
+  - RTP
+  - Read-only
+  - Reference
+  - Streams
+  - WebRTC
+  - WebRTC API
+  - events
+  - track
 browser-compat: api.RTCTrackEvent.track
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>
-    interface {{domxref("RTCTrackEvent")}}'s read-only <strong><code>track</code></strong>
-    property specifies the {{domxref("MediaStreamTrack")}} that has been added to the
-    {{domxref("RTCPeerConnection")}}.</p>
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+interface {{domxref("RTCTrackEvent")}}'s read-only **`track`**
+property specifies the {{domxref("MediaStreamTrack")}} that has been added to the
+{{domxref("RTCPeerConnection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>track</em> = <em>trackEvent</em>.track;</pre>
+```js
+var track = trackEvent.track;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStreamTrack")}} indicating the track which has been added to the
-  {{domxref("RTCPeerConnection")}}.</p>
+A {{domxref("MediaStreamTrack")}} indicating the track which has been added to the
+{{domxref("RTCPeerConnection")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,51 +2,52 @@
 title: RTCIceCandidatePairStats.writable
 slug: Web/API/RTCIceCandidatePairStats/writable
 tags:
-- API
-- Candidate
-- ICE
-- Deprecated
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- writable
+  - API
+  - Candidate
+  - ICE
+  - Deprecated
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - writable
 browser-compat: api.RTCIceCandidatePairStats.writable
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The <em>obsolete</em> {{domxref("RTCIceCandidatePairStats")}}
-    property <strong><code>writable</code></strong> reports whether or not the connection
-    described by the candidate pair is writable.</p>
+The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
+property **`writable`** reports whether or not the connection
+described by the candidate pair is writable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>isWritable</em> = <em>rtcIceCandidatePairStats</em>.writable;</pre>
+```js
+isWritable = rtcIceCandidatePairStats.writable;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the connection described by this
-  candidate pair has received acknowledgement of receipt (ACK) for at least one ICE
-  request <em>and</em> that {{Glossary("STUN")}} consent hasn't expired.</p>
+A Boolean value which is `true` if the connection described by this
+candidate pair has received acknowledgement of receipt (ACK) for at least one ICE
+request _and_ that {{Glossary("STUN")}} consent hasn't expired.
 
-<div class="note">
-  <p><strong>Note:</strong> This property was removed from the specification in early 2017
-    because you can determine whether or not an incoming ICE request is available to read
-    by checking to see if {{domxref("RTCIceCandidatePairStats.responsesReceived",
+> **Note:** This property was removed from the specification in early 2017
+> because you can determine whether or not an incoming ICE request is available to read
+> by checking to see if {{domxref("RTCIceCandidatePairStats.responsesReceived",
     "responsesReceived")}} is greater than 0 and that the time specified by
-    {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp",
-    "consentExpiredTimestamp")}} has not passed:</p>
+> {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp",
+    "consentExpiredTimestamp")}} has not passed:
+>
+> ```js
+> if (icpStats.responsesReceived > 0
+>     && icpStats.consentExpiredTimestamp < performance.now()) {
+>   /* at least one ICE response has been received */
+> }
+> ```
 
-  <pre class="brush: js">if (icpStats.responsesReceived &gt; 0
-    &amp;&amp; icpStats.consentExpiredTimestamp &lt; performance.now()) {
-  /* at least one ICE response has been received */
-}</pre>
-</div>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

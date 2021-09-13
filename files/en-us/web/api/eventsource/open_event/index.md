@@ -9,59 +9,58 @@ tags:
   - open
 browser-compat: api.EventSource.open_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>open</code> event of the {{domxref("EventSource")}} API is fired when a connection with an event source is opened.</p>
+The `open` event of the {{domxref("EventSource")}} API is fired when a connection with an event source is opened.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("EventSource.onopen")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("EventSource.onopen")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 
 // addEventListener version
-evtSource.addEventListener('open', (e) =&gt; {
+evtSource.addEventListener('open', (e) => {
   console.log("The connection has been established.");
 });
 
 // onopen version
-evtSource.onopen = (e) =&gt; {
+evtSource.onopen = (e) => {
   console.log("The connection has been established.");
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
- <li>{{event("open")}}</li>
- <li>{{event("error")}}</li>
- <li>{{event("message")}}</li>
-</ul>
+- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- {{event("open")}}
+- {{event("error")}}
+- {{event("message")}}

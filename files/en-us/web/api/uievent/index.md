@@ -11,62 +11,54 @@ tags:
   - events
 browser-compat: api.UIEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>UIEvent</code></strong> interface represents simple user interface events.</p>
+The **`UIEvent`** interface represents simple user interface events.
 
-<p><code>UIEvent</code> derives from {{domxref("Event")}}. Although the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, you should create a <code>UIEvent</code> object using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.</p>
+`UIEvent` derives from {{domxref("Event")}}. Although the {{domxref("UIEvent.initUIEvent()")}} method is kept for backward compatibility, you should create a `UIEvent` object using the {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor.
 
-<p>Several interfaces are direct or indirect descendants of this one: {{domxref("MouseEvent")}}, {{domxref("TouchEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}}, and {{domxref("CompositionEvent")}}.</p>
+Several interfaces are direct or indirect descendants of this one: {{domxref("MouseEvent")}}, {{domxref("TouchEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}}, and {{domxref("CompositionEvent")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("UIEvent.UIEvent()", "UIEvent()")}}</dt>
- <dd>Creates a <code>UIEvent</code> object.</dd>
-</dl>
+- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
+  - : Creates a `UIEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties of its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits properties of its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("UIEvent.detail")}}{{readonlyinline}}</dt>
- <dd>Returns a <code>long</code> with details about the event, depending on the event type.</dd>
- <dt>{{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the horizontal coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the vertical coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{readonlyinline}}</dt>
- <dd>Returns an instance of the <code>InputDeviceCapabilities</code> interface, which provides information about the physical device responsible for generating a touch event.</dd>
- <dt>{{domxref("UIEvent.view")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.</dd>
- <dt>{{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the numeric <code>keyCode</code> of the key pressed, or the character code (<code>charCode</code>) for an alphanumeric key pressed.</dd>
-</dl>
+- {{domxref("UIEvent.detail")}}{{readonlyinline}}
+  - : Returns a `long` with details about the event, depending on the event type.
+- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{readonlyinline}}
+  - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
+- {{domxref("UIEvent.view")}}{{readonlyinline}}
+  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods of its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits methods of its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes a <code>UIEvent</code> object. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
+  - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Event")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Event")}}

@@ -2,99 +2,99 @@
 title: HTMLVideoElement.videoHeight
 slug: Web/API/HTMLVideoElement/videoHeight
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLVideoElement
-- Intrinsic Height
-- Intrinsic Width
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- Video Dimensions
-- dimension
-- height
-- size
-- videoHeight
-- videoWidth
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLVideoElement
+  - Intrinsic Height
+  - Intrinsic Width
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - Video Dimensions
+  - dimension
+  - height
+  - size
+  - videoHeight
+  - videoWidth
 browser-compat: api.HTMLVideoElement.videoHeight
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLVideoElement")}} interface's read-only
-    <code><strong>videoHeight</strong></code> property indicates the <strong>intrinsic
-      height</strong> of the video, expressed in CSS pixels. In simple terms, this is the
-    height of the media in its natural size.</p>
+The {{domxref("HTMLVideoElement")}} interface's read-only
+**`videoHeight`** property indicates the **intrinsic
+height** of the video, expressed in CSS pixels. In simple terms, this is the
+height of the media in its natural size.
 
-<p>See {{anch("About intrinsic width and
-  height")}} for more details.</p>
+See {{anch("About intrinsic width and
+  height")}} for more details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>height</em> = <em>htmlVideoElement</em>.videoHeight;</pre>
+```js
+height = htmlVideoElement.videoHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value specifying the intrinsic height of the video in CSS pixels. If the
-  element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is
-  <code>HTMLMediaElement.HAVE_NOTHING</code>, then the value of this property is 0,
-  because neither video nor poster frame size information is yet available.</p>
+An integer value specifying the intrinsic height of the video in CSS pixels. If the
+element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is
+`HTMLMediaElement.HAVE_NOTHING`, then the value of this property is 0,
+because neither video nor poster frame size information is yet available.
 
-<h3 id="About_intrinsic_width_and_height">About intrinsic width and height</h3>
+### About intrinsic width and height
 
-<p>A {{Glossary("user agent")}} calculates the intrinsic width and height of the element's
-  media by starting with the media's raw pixel width and height, then taking into account
-  factors including:</p>
+A {{Glossary("user agent")}} calculates the intrinsic width and height of the element's
+media by starting with the media's raw pixel width and height, then taking into account
+factors including:
 
-<ul>
-  <li>The media's aspect ratio.</li>
-  <li>The media's clean aperture (the sub-rectangle centered within the media that matches
-    the target aspect ratio).</li>
-  <li>The target device's resolution.</li>
-  <li>Any other factors required by the media format.</li>
-</ul>
+- The media's aspect ratio.
+- The media's clean aperture (the sub-rectangle centered within the media that matches
+  the target aspect ratio).
+- The target device's resolution.
+- Any other factors required by the media format.
 
-<p>If the element is currently displaying the poster frame rather than rendered video, the
-  poster frame's intrinsic size is considered to be the size of the
-  <code>&lt;video&gt;</code> element.</p>
+If the element is currently displaying the poster frame rather than rendered video, the
+poster frame's intrinsic size is considered to be the size of the
+`<video>` element.
 
-<p>If at any time the intrinsic size of the media changes and the element's
-  {{domxref("HTMLMediaElement.readyState", "readyState")}} isn't
-  <code>HAVE_NOTHING</code>, a {{domxref("HTMLMediaElement.resize", "resize")}} event will
-  be sent to the <code>&lt;video&gt;</code> element. This can happen when the element
-  switches from displaying the poster frame to displaying video content, or when the
-  displayed video track changes.</p>
+If at any time the intrinsic size of the media changes and the element's
+{{domxref("HTMLMediaElement.readyState", "readyState")}} isn't
+`HAVE_NOTHING`, a {{domxref("HTMLMediaElement.resize", "resize")}} event will
+be sent to the `<video>` element. This can happen when the element
+switches from displaying the poster frame to displaying video content, or when the
+displayed video track changes.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a handler for the {{domxref("HTMLVideoElement.resize", "resize")}}
-  event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of
-  its contents.</p>
+This example creates a handler for the {{domxref("HTMLVideoElement.resize", "resize")}}
+event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of
+its contents.
 
-<pre class="brush: js">let v = document.getElementById("myVideo");
+```js
+let v = document.getElementById("myVideo");
 
-v.addEventListener("resize", ev =&gt; {
+v.addEventListener("resize", ev => {
   let w = v.videoWidth;
   let h = v.videoHeight;
 
-  if (w &amp;&amp; h) {
+  if (w && h) {
     v.style.width = w;
     v.style.height = h;
   }
 }, false);
-</pre>
+```
 
-<p>Note that this only applies the change if both the <code>videoWidth</code> and the
-  <code>videoHeight</code> are non-zero. This avoids applying invalid changes when there's
-  no true information available yet for dimensions.</p>
+Note that this only applies the change if both the `videoWidth` and the
+`videoHeight` are non-zero. This avoids applying invalid changes when there's
+no true information available yet for dimensions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

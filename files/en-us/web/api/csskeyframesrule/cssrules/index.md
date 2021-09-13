@@ -10,25 +10,25 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.cssRules
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The read-only <strong><code>cssRules</code></strong> property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes {{cssxref("at-rule")}}.</p>
+The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes {{cssxref("at-rule")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>cssRules</var> = <var>CSSKeyframesRule</var>.cssRules;</pre>
+    var cssRules = CSSKeyframesRule.cssRules;
 
-<h3 id="value">Value</h3>
-<p>A {{domxref('CSSRuleList')}}.</p>
+### Value
 
-<h2 id="Example">Example</h2>
+A {{domxref('CSSRuleList')}}.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. The <code>cssRules</code> property returns a {{domxref("CSSRuleList")}} containing two rules.
-</p>
+## Example
 
-<pre class="brush: css">@keyframes slidein {
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -36,16 +36,19 @@ browser-compat: api.CSSKeyframesRule.cssRules
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.cssRules); // a CSSRuleList object with two rules</pre>
+console.log(keyframes.cssRules); // a CSSRuleList object with two rules
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,12 +11,12 @@ tags:
   - Window
 browser-compat: api.Window.minimize
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.minimize()</strong></code> method sets the window to a minimized state.</p>
+The **`Window.minimize()`** method sets the window to a minimized state.
 
-<p>A way to undo this method programmatically is by calling {{ domxref("window.moveTo()") }}.</p>
+A way to undo this method programmatically is by calling {{ domxref("window.moveTo()") }}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

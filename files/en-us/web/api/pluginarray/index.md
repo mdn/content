@@ -10,63 +10,60 @@ tags:
   - Plugins
 browser-compat: api.PluginArray
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <code>PluginArray</code> interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available <a href="/en-US/docs/Mozilla/Add-ons/Plugins">plugins</a>; it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The <code>PluginArray</code> is not a JavaScript array, but has the <code>length</code> property and supports accessing individual items using bracket notation (<code>plugins[2]</code>), as well as via <code>item(<var>index</var>)</code> and <code>namedItem(<em>"name"</em>)</code> methods.</p>
+The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available [plugins](/en-US/docs/Mozilla/Add-ons/Plugins); it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
-<div class="note">
-<p><strong>Note:</strong> Own properties of <code>PluginArray</code> objects are no longer enumerable in the latest browser versions.</p>
-</div>
+> **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("PluginArray.length")}}{{ReadOnlyInline}}</dt>
- <dd>The number of plugins in the array.</dd>
-</dl>
+- {{DOMxRef("PluginArray.length")}}{{ReadOnlyInline}}
+  - : The number of plugins in the array.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("PluginArray.item")}}</dt>
- <dd>Returns the {{DOMxRef("Plugin")}} at the specified index into the array.</dd>
- <dt>{{DOMxRef("PluginArray.namedItem")}}</dt>
- <dd>Returns the {{DOMxRef("Plugin")}} with the specified name.</dd>
- <dt>{{DOMxRef("PluginArray.refresh")}}</dt>
- <dd>Refreshes all plugins on the current page, optionally reloading documents.</dd>
-</dl>
+- {{DOMxRef("PluginArray.item")}}
+  - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.
+- {{DOMxRef("PluginArray.namedItem")}}
+  - : Returns the {{DOMxRef("Plugin")}} with the specified name.
+- {{DOMxRef("PluginArray.refresh")}}
+  - : Refreshes all plugins on the current page, optionally reloading documents.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example function returns the version of the Shockwave Flash plugin.</p>
+The following example function returns the version of the Shockwave Flash plugin.
 
-<pre class="brush:js">var pluginsLength = navigator.plugins.length;
+```js
+var pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = pluginsLength + " Plugin(s)&lt;br&gt;"
-  + '&lt;table id="pluginTable"&gt;&lt;thead&gt;'
-  +'&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Filename&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;th&gt;version&lt;/th&gt;&lt;/tr&gt;'
-  +'&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;';
+document.body.innerHTML = pluginsLength + " Plugin(s)<br>"
+  + '<table id="pluginTable"><thead>'
+  +'<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>'
+  +'</thead><tbody></tbody></table>';
 
 var table = document.getElementById('pluginTable');
 
-for(var i = 0; i &lt; pluginsLength; i++) {
+for(var i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
   newRow.insertCell().textContent = navigator.plugins[i].description;
   newRow.insertCell().textContent = navigator.plugins[i].version?navigator.plugins[i].version:"";
-}</pre>
+}
+```
 
-<p>The following example displays information about the installed plugin(s).</p>
+The following example displays information about the installed plugin(s).
 
-<pre class="brush:js">var pluginsLength = navigator.plugins.length;
+```js
+var pluginsLength = navigator.plugins.length;
 
 document.write(
-  pluginsLength.toString() + " Plugin(s)&lt;br&gt;" +
-  "Name | Filename | description&lt;br&gt;"
+  pluginsLength.toString() + " Plugin(s)<br>" +
+  "Name | Filename | description<br>"
 );
 
-for(var i = 0; i &lt; pluginsLength; i++) {
+for(var i = 0; i < pluginsLength; i++) {
   document.write(
     navigator.plugins[i].name +
     " | " +
@@ -75,16 +72,17 @@ for(var i = 0; i &lt; pluginsLength; i++) {
     navigator.plugins[i].description +
     " | " +
     navigator.plugins[i].version +
-    "&lt;br&gt;"
+    "<br>"
   );
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>In addition to listing each plugin as a pseudo-array by zero-indexed numeric properties, Firefox provides properties that are the plugin name directly on the PluginArray object.</p>
+In addition to listing each plugin as a pseudo-array by zero-indexed numeric properties, Firefox provides properties that are the plugin name directly on the PluginArray object.

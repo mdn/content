@@ -2,53 +2,50 @@
 title: PublicKeyCredentialRequestOptions.challenge
 slug: Web/API/PublicKeyCredentialRequestOptions/challenge
 tags:
-- API
-- Property
-- PublicKeyCredentialRequestOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialRequestOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions.challenge
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>challenge</code></strong> property of the
-  {{domxref("PublicKeyCredentialRequestOptions")}} dictionary is a
-  {{domxref("BufferSource")}} used as <a
-    href="https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication">a
-    cryptographic challenge</a>. This is randomly generated then sent from the relying
-  party's server. This value (among other client data) will be signed by the
-  authenticator's private key and produce
-  {{domxref("AuthenticatorAssertionResponse.signature")}} which should be sent back to the
-  server as part of the response.</p>
+The **`challenge`** property of the
+{{domxref("PublicKeyCredentialRequestOptions")}} dictionary is a
+{{domxref("BufferSource")}} used as [a
+cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This is randomly generated then sent from the relying
+party's server. This value (among other client data) will be signed by the
+authenticator's private key and produce
+{{domxref("AuthenticatorAssertionResponse.signature")}} which should be sent back to the
+server as part of the response.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> When the credential is created with a
-    {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call,
-    the signature of the challenge is contained within
-    {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.</p>
-</div>
+> **Note:** When the credential is created with a
+> {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call,
+> the signature of the challenge is contained within
+> {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A challenge will be at least 16 bytes long.</p>
-</div>
+> **Note:** A challenge will be at least 16 bytes long.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>challenge </em>= <em>publicKeyCredentialRequestOptions</em>.challenge</pre>
+```js
+challenge = publicKeyCredentialRequestOptions.challenge
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("BufferSource")}} which is at least 16 bytes long. Contains a cryptographic
-  challenge emitted from the relying party's server which must be signed by the
-  authenticator's private key and sent back (within the
-  {{domxref("AuthenticatorAssertionResponse.signature","response","",1)}}) to the relying
-  party's server for verification.</p>
+A {{domxref("BufferSource")}} which is at least 16 bytes long. Contains a cryptographic
+challenge emitted from the relying party's server which must be signed by the
+authenticator's private key and sent back (within the
+{{domxref("AuthenticatorAssertionResponse.signature","response","",1)}}) to the relying
+party's server for verification.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
@@ -59,25 +56,22 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("AuthenticatorAssertionResponse.signature")}} which is produced using the
-    challenge and the private key of the authenticator when fetching a credential.</li>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.challenge")}}, the analogous option
-    property used when creating a credential.</li>
-  <li>{{domxref("AuthenticatorAttestationResponse.attestationObject")}} which contains the
-    signature of the challenge within its <code>attStmt</code> property when creating a
-    credential.</li>
-</ul>
+- {{domxref("AuthenticatorAssertionResponse.signature")}} which is produced using the
+  challenge and the private key of the authenticator when fetching a credential.
+- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}, the analogous option
+  property used when creating a credential.
+- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} which contains the
+  signature of the challenge within its `attStmt` property when creating a
+  credential.

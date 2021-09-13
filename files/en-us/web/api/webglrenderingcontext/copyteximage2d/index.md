@@ -2,103 +2,100 @@
 title: WebGLRenderingContext.copyTexImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexImage2D
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.copyTexImage2D()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> copies pixels from the current
-  {{domxref("WebGLFramebuffer")}} into a 2D texture image.</p>
+The **`WebGLRenderingContext.copyTexImage2D()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
+{{domxref("WebGLFramebuffer")}} into a 2D texture image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.copyTexImage2D(<var>target</var>, <var>level</var>, <var>internalformat</var>, <var>x</var>, <var>y</var>, <var>width</var>, <var>height</var>, <var>border</var>);
-</pre>
+```js
+void gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>: Positive X face for a cube-mapped
-        texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_X</code>: Negative X face for a cube-mapped
-        texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Y</code>: Positive Y face for a cube-mapped
-        texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Y</code>: Negative Y face for a cube-mapped
-        texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Z</code>: Positive Z face for a cube-mapped
-        texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Z</code>: Negative Z face for a cube-mapped
-        texture.</li>
-    </ul>
-  </dd>
-  <dt><code>level</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
-  <dt><code>internalformat</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture. Possible
+
+    - `gl.TEXTURE_2D`: A two-dimensional texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Positive X face for a cube-mapped
+      texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: Negative X face for a cube-mapped
+      texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: Positive Y face for a cube-mapped
+      texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: Negative Y face for a cube-mapped
+      texture.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: Positive Z face for a cube-mapped
+      texture.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Negative Z face for a cube-mapped
+      texture.
+
+- `level`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
+    level and level _n_ is the *n*th mipmap reduction level.
+- `internalformat`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture. Possible
     values:
-    <ul>
-      <li><code>gl.ALPHA</code>: Discards the red, green and blue components and reads the
-        alpha component.</li>
-      <li><code>gl.RGB</code>: Discards the alpha components and reads the red, green and
-        blue components.</li>
-      <li><code>gl.RGBA</code>: Red, green, blue and alpha components are read from the
-        color buffer.</li>
-      <li><code>gl.LUMINANCE</code>: Each color component is a luminance component, alpha
-        is 1.0.</li>
-      <li><code>gl.LUMINANCE_ALPHA</code>: Each component is a luminance/alpha component.
-      </li>
-    </ul>
-  </dd>
-  <dt><code>x</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the x coordinate of the lower left corner where to
-    start copying.</dd>
-  <dt><code>y</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the y coordinate of the lower left corner where to
-    start copying.</dd>
-  <dt><code>width</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
-  <dt><code>height</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
-  <dt><code>border</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.ALPHA`: Discards the red, green and blue components and reads the
+      alpha component.
+    - `gl.RGB`: Discards the alpha components and reads the red, green and
+      blue components.
+    - `gl.RGBA`: Red, green, blue and alpha components are read from the
+      color buffer.
+    - `gl.LUMINANCE`: Each color component is a luminance component, alpha
+      is 1.0.
+    - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
 
-<p>None.</p>
+- `x`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x coordinate of the lower left corner where to
+    start copying.
+- `y`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the y coordinate of the lower left corner where to
+    start copying.
+- `width`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
+- `height`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.
+- `border`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.copyTexImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 0, 0, 512, 512, 0);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.copyTexImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 0, 0, 512, 512, 0);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}

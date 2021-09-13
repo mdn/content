@@ -9,37 +9,37 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
-<p>{{ APIRef("Mountain View APIRef Project") }}</p>
+{{ APIRef("Mountain View APIRef Project") }}
 
-<p>The <strong><code>getByteTimeDomainData()</code></strong> method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</p>
+The **`getByteTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
-<p>If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</p>
+If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 const dataArray = new Uint8Array(analyser.fftSize); // Uint8Array should be the same length as the fftSize
 analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data returned from getByteTimeDomainData()
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>array</code></dt>
- <dd>The {{jsxref("Uint8Array")}} that the time domain data will be copied to.<br>
- If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
-</dl>
+- `array`
+  - : The {{jsxref("Uint8Array")}} that the time domain data will be copied to.
+    If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><strong><code>void</code></strong> | None</p>
+**`void`** | None
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
   ...
@@ -64,7 +64,7 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
@@ -81,18 +81,16 @@ function draw() {
 };
 
 draw();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

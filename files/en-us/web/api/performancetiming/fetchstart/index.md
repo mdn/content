@@ -2,49 +2,45 @@
 title: PerformanceTiming.fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
 tags:
-- API
-- Backwards compatibility
-- Deprecated
-- HTTP request
-- Navigation Timing
-- PerformanceTiming
-- Property
-- Read-only
-- Reference
-- legacy
+  - API
+  - Backwards compatibility
+  - Deprecated
+  - HTTP request
+  - Navigation Timing
+  - PerformanceTiming
+  - Property
+  - Read-only
+  - Reference
+  - legacy
 browser-compat: api.PerformanceTiming.fetchStart
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
-    interface instead.</p>
-</div>
+> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+> interface instead.
 
-<p>The legacy
-  <strong><code>PerformanceTiming.fetchStart</code></strong>
-  read-only property returns an <code>unsigned long long</code> representing the moment,
-  in milliseconds since the UNIX epoch, the browser is ready to fetch the document using
-  an HTTP request. This moment is <em>before</em> the check to any application cache.</p>
+The legacy
+**`PerformanceTiming.fetchStart`**
+read-only property returns an `unsigned long long` representing the moment,
+in milliseconds since the UNIX epoch, the browser is ready to fetch the document using
+an HTTP request. This moment is _before_ the check to any application cache.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>time</em> = <em>performance.timing</em>.fetchStart;</pre>
+```js
+time = performance.timing.fetchStart;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("PerformanceTiming")}} interface it belongs
-    to.<strong><code>PerformanceTiming.fetchStart</code></strong>
-  </li>
-</ul>
+- The {{domxref("PerformanceTiming")}} interface it belongs
+  to.**`PerformanceTiming.fetchStart`**

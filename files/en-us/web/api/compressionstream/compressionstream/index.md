@@ -8,43 +8,40 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.CompressionStream
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>CompressionStream()</code></strong> constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.</p>
+The **`CompressionStream()`** constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let CompressionStream = new CompressionStream(format);</pre>
+    let CompressionStream = new CompressionStream(format);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>format</code></dt>
-  <dd>One of the following allowed compression formats:
-    <ul>
-      <li><code>"gzip"</code></li>
-      <li><code>"deflate"</code></li>
-    </ul>
-  </dd>
-</dl>
+- `format`
 
-<h2 id="Exceptions">Exceptions</h2>
+  - : One of the following allowed compression formats:
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if the format passed to the constructor is not supported.</dd>
-</dl>
+    - `"gzip"`
+    - `"deflate"`
 
-<h2 id="Examples">Examples</h2>
+## Exceptions
 
-<p>In this example a stream is compressed using gzip compression.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if the format passed to the constructor is not supported.
 
-<pre class="brush: js">const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+In this example a stream is compressed using gzip compression.
+
+```js
+const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

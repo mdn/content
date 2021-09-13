@@ -7,52 +7,37 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{DefaultAPISidebar("Encoding API")}}</p>
+{{DefaultAPISidebar("Encoding API")}}
 
-<p>The <strong>Encoding API</strong> provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.</p>
+The **Encoding API** provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.
 
-<p>The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.</p>
+The API provides four interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} and {{domxref("TextEncoderStream")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<ul>
- <li>{{DOMxRef("TextDecoder")}}</li>
- <li>{{DOMxRef("TextEncoder")}}</li>
- <li>{{DOMxRef("TextDecoderStream")}}</li>
- <li>{{DOMxRef("TextEncoderStream")}}</li>
-</ul>
+- {{DOMxRef("TextDecoder")}}
+- {{DOMxRef("TextEncoder")}}
+- {{DOMxRef("TextDecoderStream")}}
+- {{DOMxRef("TextEncoderStream")}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<ul>
- <li>A <a href="https://code.google.com/p/stringencoding/">shim</a> allowing to use this interface in browsers that don't support it.</li>
-</ul>
+- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Encoding")}}</td>
-   <td>{{Spec2("Encoding")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                    | Status                       | Comment             |
+| -------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="TextDecoder"><code>TextDecoder</code></h3>
+### `TextDecoder`
 
-<p>{{Compat("api.TextDecoder")}}</p>
+{{Compat("api.TextDecoder")}}
 
-<h3 id="TextEncoder"><code>TextEncoder</code></h3>
+### `TextEncoder`
 
-<p>{{Compat("api.TextEncoder")}}</p>
+{{Compat("api.TextEncoder")}}

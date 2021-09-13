@@ -2,38 +2,34 @@
 title: PerformanceResourceTiming.serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
 tags:
-- API
-- PerformanceResourceTiming
-- Property
-- Reference
-- SecureContextOnly
-- ServerTiming
+  - API
+  - PerformanceResourceTiming
+  - Property
+  - Reference
+  - SecureContextOnly
+  - ServerTiming
 browser-compat: api.PerformanceResourceTiming.serverTiming
 ---
-<div>{{APIRef("Resource Timing API")}} {{securecontext_header}}</div>
+{{APIRef("Resource Timing API")}} {{securecontext_header}}
 
-<p>The <strong><code>serverTiming</code></strong> read-only property returns an array of
-  {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.</p>
+The **`serverTiming`** read-only property returns an array of
+{{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.serverTiming;
-</pre>
+```js
+resource.serverTiming;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+## See also
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li>{{domxref("PerformanceServerTiming")}}</li>
-    <li>{{HTTPHeader("Server-Timing")}}</li>
-  </ul>
-</div>
+- {{domxref("PerformanceServerTiming")}}
+- {{HTTPHeader("Server-Timing")}}

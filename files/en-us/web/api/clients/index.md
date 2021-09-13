@@ -13,28 +13,27 @@ tags:
   - Workers
 browser-compat: api.Clients
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code>Clients</code> interface provides access to {{domxref("Client")}} objects. Access it via <code>{{domxref("ServiceWorkerGlobalScope", "self")}}.clients</code> within a <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
+The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Clients.get()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.</dd>
- <dt>{{domxref("Clients.matchAll()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned. </dd>
- <dt>{{domxref("Clients.openWindow()")}}</dt>
- <dd>Opens a new browser window for a given url and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.</dd>
- <dt>{{domxref("Clients.claim()")}}</dt>
- <dd>Allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}. </dd>
-</dl>
+- {{domxref("Clients.get()")}}
+  - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.
+- {{domxref("Clients.matchAll()")}}
+  - : Returns a {{jsxref("Promise")}} for an array of {{domxref("Client")}} objects. An options argument allows you to control the types of clients returned.
+- {{domxref("Clients.openWindow()")}}
+  - : Opens a new browser window for a given url and returns a {{jsxref("Promise")}} for the new {{domxref("WindowClient")}}.
+- {{domxref("Clients.claim()")}}
+  - : Allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an existing chat window or creates a new one when the user clicks a notification.</p>
+The following example shows an existing chat window or creates a new one when the user clicks a notification.
 
-<pre class="brush: js">addEventListener('notificationclick', event =&gt; {
+```js
+addEventListener('notificationclick', event => {
   event.waitUntil(async function() {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
@@ -64,20 +63,18 @@ browser-compat: api.Clients
     chatClient.postMessage("New chat messages!");
   }());
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}

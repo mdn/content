@@ -10,73 +10,65 @@ tags:
   - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGCircleElement</code></strong> interface is an interface for the {{SVGElement("circle")}} element.</p>
+The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circle")}} element.
 
-<p>{{InheritanceDiagram(700, 140)}}</p>
+{{InheritanceDiagram(700, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-<dl>
- <dt>{{domxref("SVGCircleElement.cx")}} {{ReadOnlyInline}}</dt>
- <dd>
- <p>This property defines the x-coordinate of the center of the {{SVGElement("circle")}} element. It is denoted by the {{SVGAttr("cx")}} attribute of the element.</p>
- </dd>
- <dt>{{domxref("SVGCircleElement.cy")}} {{ReadOnlyInline}}</dt>
- <dd>
- <p>This property defines the y-coordinate of the center of the <code>&lt;circle&gt;</code> element. It is denoted by the {{SVGAttr("cy")}} attribute of the element.</p>
- </dd>
- <dt>{{domxref("SVGCircleElement.r")}} {{ReadOnlyInline}}</dt>
- <dd>
- <p>This property defines the radius of the <code>&lt;circle&gt;</code> element. It is denoted by the {{SVGAttr("r")}} of the element.</p>
- </dd>
-</dl>
+- {{domxref("SVGCircleElement.cx")}} {{ReadOnlyInline}}
+  - : This property defines the x-coordinate of the center of the {{SVGElement("circle")}} element. It is denoted by the {{SVGAttr("cx")}} attribute of the element.
+- {{domxref("SVGCircleElement.cy")}} {{ReadOnlyInline}}
+  - : This property defines the y-coordinate of the center of the `<circle>` element. It is denoted by the {{SVGAttr("cy")}} attribute of the element.
+- {{domxref("SVGCircleElement.r")}} {{ReadOnlyInline}}
+  - : This property defines the radius of the `<circle>` element. It is denoted by the {{SVGAttr("r")}} of the element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG_content">SVG content</h3>
+### SVG content
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250"&gt;
-  &lt;circle cx="100" cy="100" r="50" fill="gold" id="circle"
-      onclick="clickCircle();"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
+  <circle cx="100" cy="100" r="50" fill="gold" id="circle"
+      onclick="clickCircle();"/>
+</svg>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<p>This function <code>clickCircle()</code> is called when the circle is clicked. It randomly increases or decreases the radius of the circle element.</p>
+This function `clickCircle()` is called when the circle is clicked. It randomly increases or decreases the radius of the circle element.
 
-<pre class="brush: js">function clickCircle() {
+```js
+function clickCircle() {
   var circle = document.getElementById("circle");
   // Randomly determine if the circle radius will increase or decrease
-  var change = Math.random() &gt; 0.5 ? 10 : -10;
+  var change = Math.random() > 0.5 ? 10 : -10;
   // Clamp the circle radius to a minimum of 10 and a maximum of 250,
   // so it won't disappear or get bigger than the viewport
   var newValue = Math.min(Math.max(circle.r.baseVal.value + change, 10), 250);
   circle.setAttribute("r", newValue);
 }
-</pre>
+```
 
-<p><em>Click on the circle.</em><br>
- {{EmbedLiveSample('Example', '250', '250', '', 'Web/API/SVGCircleElement')}}</p>
+_Click on the circle._
+{{EmbedLiveSample('Example', '250', '250', '', 'Web/API/SVGCircleElement')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("circle")}} SVG element</li>
-</ul>
+- {{SVGElement("circle")}} SVG element

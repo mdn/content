@@ -11,42 +11,44 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaAutoComplete
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaAutoComplete</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-autocomplete</code> attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.</p>
+The **`ariaAutoComplete`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-autocomplete` attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaAutoComplete = ElementInternals.ariaAutoComplete;
-ElementInternals.ariaAutoComplete = ariaAutoComplete;</pre>
+```js
+let ariaAutoComplete = ElementInternals.ariaAutoComplete;
+ElementInternals.ariaAutoComplete = ariaAutoComplete;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
-<dl>
-  <dt><code>"inline"</code></dt>
-  <dd>When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret.</dd>
-  <dt><code>"list"</code></dt>
-  <dd>When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed.</dd>
-  <dt><code>"both"</code></dt>
-  <dd>When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. If displayed, one value in the collection is automatically selected, and the text needed to complete the automatically selected value appears after the caret in the input.</dd>
-  <dt><code>"none"</code></dt>
-  <dd>When a user is providing input, there is no display of an automatic suggestion that attempts to predict how the user intends to complete the input.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} with one of the following values:
 
-<p>In this example the value of <code>ariaAutoComplete</code> is set to "inline".</p>
+- `"inline"`
+  - : When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret.
+- `"list"`
+  - : When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed.
+- `"both"`
+  - : When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. If displayed, one value in the collection is automatically selected, and the text needed to complete the automatically selected value appears after the caret in the input.
+- `"none"`
+  - : When a user is providing input, there is no display of an automatic suggestion that attempts to predict how the user intends to complete the input.
 
-<pre class="brush: js">this.internals_.ariaAutoComplete = "inline";</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+In this example the value of `ariaAutoComplete` is set to "inline".
+
+```js
+this.internals_.ariaAutoComplete = "inline";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

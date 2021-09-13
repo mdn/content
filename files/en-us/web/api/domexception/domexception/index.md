@@ -2,52 +2,52 @@
 title: DOMException()
 slug: Web/API/DOMException/DOMException
 tags:
-- API
-- Constructor
-- DOMException
-- Reference
+  - API
+  - Constructor
+  - DOMException
+  - Reference
 browser-compat: api.DOMException.DOMException
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>DOMException()</code></strong> constructor returns a
-  <code>{{domxref("DOMException")}}</code> object with a specified message and name.</p>
+The **`DOMException()`** constructor returns a
+`{{domxref("DOMException")}}` object with a specified message and name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var domException = new DOMException();
+```js
+var domException = new DOMException();
 var domException = new DOMException(message);
-var domException = new DOMException(message, name);</pre>
+var domException = new DOMException(message, name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>A description of the exception. If not present, the empty string <code>''</code> is
-    used.</dd>
-  <dt><code>name</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}}. If the specified name is a <a href="/en-US/docs/Web/API/DOMException#error_names">standard error name</a>, then getting the <a href="/en-US/docs/Web/API/DOMException/code"><code>code</code></a> property of the <code>DOMException</code> object will return the code number corresponding to the specified name.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : A description of the exception. If not present, the empty string `''` is
+    used.
+- `name` {{optional_inline}}
+  - : A {{domxref("DOMString")}}. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A newly created {{domxref("DOMException")}} object.</p>
+A newly created {{domxref("DOMException")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, pressing the button causes a custom <code>DOMException</code> to be thrown, which is then caught and the custom error message shown in an alert.</p>
+In this example, pressing the button causes a custom `DOMException` to be thrown, which is then caught and the custom error message shown in an alert.
 
-<h3>HTML</h3>
+### HTML
 
-<pre class="brush: html">
-&lt;button&gt;Trigger DOM Exception&lt;/button&gt;
+```html
+<button>Trigger DOM Exception</button>
 
-&lt;p id="output"&gt;&lt;/p&gt;
-</pre>
+<p id="output"></p>
+```
 
-<h3>JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">
+```js
 const button = document.querySelector('button');
 
 button.onclick = function() {
@@ -57,16 +57,16 @@ button.onclick = function() {
         document.querySelector("#output").textContent = `Error: ${error.message}`;
     }
 }
-</pre>
+```
 
-<h3>Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples', '100%', 100) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 100) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

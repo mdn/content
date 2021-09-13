@@ -2,45 +2,47 @@
 title: IntersectionObserverEntry.isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 tags:
-- API
-- Experimental
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserverEntry
-- Property
-- Reference
-- isIntersecting
+  - API
+  - Experimental
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserverEntry
+  - Property
+  - Reference
+  - isIntersecting
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The {{domxref("IntersectionObserverEntry")}} interface's
-    read-only <strong><code>isIntersecting</code></strong> property is a Boolean value
-    which is <code>true</code> if the target element intersects with the intersection
-    observer's root. If this is <code>true</code>, then, the
-    <code>IntersectionObserverEntry</code> describes a transition into a state of
-    intersection; if it's <code>false</code>, then you know the transition is from
-    intersecting to not-intersecting.</p>
+The {{domxref("IntersectionObserverEntry")}} interface's
+read-only **`isIntersecting`** property is a Boolean value
+which is `true` if the target element intersects with the intersection
+observer's root. If this is `true`, then, the
+`IntersectionObserverEntry` describes a transition into a state of
+intersection; if it's `false`, then you know the transition is from
+intersecting to not-intersecting.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>isIntersecting</em> = </code>IntersectionObserverEntry</var>.isIntersecting;
-</pre>
+```js
+var isIntersecting = IntersectionObserverEntry.isIntersecting;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which indicates whether the
-  {{domxref("IntersectionObserverEntry.target", "target")}} element has transitioned into
-  a state of intersection (<code>true</code>) or out of a state of intersection
-  (<code>false</code>).</p>
+A Boolean value which indicates whether the
+{{domxref("IntersectionObserverEntry.target", "target")}} element has transitioned into
+a state of intersection (`true`) or out of a state of intersection
+(`false`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple example, an intersection callback is used to update a counter of how
-  many targeted elements are currently intersecting with the
-  {{domxref("IntersectionObserver.root", "intersection root", "", 1)}}.</p>
+In this simple example, an intersection callback is used to update a counter of how
+many targeted elements are currently intersecting with the
+{{domxref("IntersectionObserver.root", "intersection root", "", 1)}}.
 
-<pre class="brush: js">function intersectionCallback(entries) {
+```js
+function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       intersectingCount += 1;
@@ -48,16 +50,17 @@ browser-compat: api.IntersectionObserverEntry.isIntersecting
       intersectingCount -= 1;
     }
   });
-}</pre>
+}
+```
 
-<p>To see a more concrete example, take a look at
-  {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.</p>
+To see a more concrete example, take a look at
+{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
+  "Handling intersection changes")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,63 +2,60 @@
 title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.getRangeAt
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.getRangeAt()</code></strong> method returns a range object
-	representing one of the ranges currently selected.</p>
+The **`Selection.getRangeAt()`** method returns a range object
+representing one of the ranges currently selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em> = <em>sel</em>.getRangeAt(<em>index</em>)
-</pre>
+```js
+range = sel.getRangeAt(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>index</code></dt>
-	<dd>The zero-based index of the range to return. A negative number or a number greater
-		than or equal to {{domxref("Selection.rangeCount")}} will result in an error.</dd>
-</dl>
+- `index`
+  - : The zero-based index of the range to return. A negative number or a number greater
+    than or equal to {{domxref("Selection.rangeCount")}} will result in an error.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The specified {{domxref("Range")}} object.</p>
+The specified {{domxref("Range")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let ranges = [];
+```js
+let ranges = [];
 
 sel = window.getSelection();
 
-for(let i = 0; i &lt; sel.rangeCount; i++) {
+for(let i = 0; i < sel.rangeCount; i++) {
  ranges[i] = sel.getRangeAt(i);
 }
 /* Each item in the ranges array is now
  * a range object representing one of the
  * ranges in the current selection */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("Selection")}}, the interface it belongs to.</li>
-	<li><a href="/en-US/docs/XUL_Tutorial/Tree_Selection">Tree Selection</a> (for the
-		<code>getRangeAt()</code> method on the <code>nsITreeSelection</code> interface)
-	</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.
+- [Tree Selection](/en-US/docs/XUL_Tutorial/Tree_Selection) (for the
+  `getRangeAt()` method on the `nsITreeSelection` interface)

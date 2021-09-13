@@ -12,48 +12,46 @@ tags:
   - forEach
 browser-compat: api.CSSTransformValue.forEach
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>CSSTransformValue.forEach()</code></strong> method executes a provided function once for each element of the <code>CSSTransformValue</code>.</p>
+The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>CSSUnparsedValue</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+```js
+CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
     // your iterator
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>The function to execute for each element, taking three arguments:
- <dl>
-  <dt><code><var>currentValue</var></code></dt>
-  <dd>The value of the current element being processed.</dd>
-  <dt><code><var>index</var></code>{{optional_inline}}</dt>
-  <dd>The index of the current element being processed.</dd>
-  <dt><code><var>array</var></code>{{optional_inline}}</dt>
-  <dd>The <code>CSSTransformValue</code> that <code>forEach()</code> is being called on.</dd>
- </dl>
- </dd>
- <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
- <dd>
- <p>Value to use as <code><strong>this</strong></code> (i.e the reference <code>Object</code>) when executing <code><var>callback</var></code>.</p>
- </dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">Return value</h3>
+  - : The function to execute for each element, taking three arguments:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : The value of the current element being processed.
+    - `index`{{optional_inline}}
+      - : The index of the current element being processed.
+    - `array`{{optional_inline}}
+      - : The `CSSTransformValue` that `forEach()` is being called on.
 
-<h2 id="Examples">Examples</h2>
+- `thisArg` {{Optional_inline}}
+  - : Value to use as **`this`** (i.e the reference `Object`) when executing `callback`.
 
-<p>To Do</p>
+### Return value
 
-<h2 id="Specifications">Specifications</h2>
+{{jsxref("undefined")}}.
+
+## Examples
+
+To Do
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

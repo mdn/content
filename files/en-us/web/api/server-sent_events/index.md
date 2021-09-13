@@ -7,70 +7,52 @@ tags:
   - SSE
   - Server-sent events
 ---
-<p>{{DefaultAPISidebar("Server Sent Events")}}</p>
+{{DefaultAPISidebar("Server Sent Events")}}
 
-<p>Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as <em><a href="/en-US/docs/Web/API/Event">Events</a> + data</em> inside the web page.</p>
+Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.</p>
-</div>
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>To learn how to use server-sent events, see our article <a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a>.</p>
+To learn how to use server-sent events, see our article [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("EventSource")}}</dt>
- <dd>Defines all the features that handle connecting to a server, receiving events/data, errors, closing a connection, etc.</dd>
-</dl>
+- {{domxref("EventSource")}}
+  - : Defines all the features that handle connecting to a server, receiving events/data, errors, closing a connection, etc.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<ul>
- <li><a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP</a></li>
-</ul>
+- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events">HTML Living Standard<br/><small># server-sent-events</small></a></td>
-  </tr>
+| Specification                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------ |
+| [HTML Living Standard # server-sent-events](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events) |
 
-</table>
+## See also
 
-<h2 id="See_also">See also</h2>
+### Tools
 
-<h3 id="Tools">Tools</h3>
+- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
+- [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
+- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- intercooler.js [declarative SSE support](https://intercoolerjs.org/docs.html#sse)
 
-<ul>
- <li><a href="https://mercure.rocks">Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE</a></li>
- <li><a href="https://github.com/EventSource/eventsource">EventSource polyfill for Node.js</a></li>
- <li>Remy Sharp’s <a class="link-https" href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource polyfill</a></li>
- <li>Yaffle’s <a class="link-https" href="https://github.com/Yaffle/EventSource">EventSource polyfill</a></li>
- <li>Rick Waldron’s <a class="link-https" href="https://github.com/rwldrn/jquery.eventsource">jquery plugin</a></li>
- <li>intercooler.js <a href="https://intercoolerjs.org/docs.html#sse">declarative SSE support</a></li>
-</ul>
+### Related Topics
 
-<h3 id="Related_Topics">Related Topics</h3>
+- [AJAX](/en-US/docs/Web/Guide/AJAX)
+- [JavaScript](/en-US/docs/Web/JavaScript)
+- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/AJAX">AJAX</a></li>
- <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></li>
-</ul>
+### Other resources
 
-<h3 id="Other_resources">Other resources</h3>
-
-<ul>
- <li>A <a href="https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/">Twitter like application</a> powered by server-sent events and <a class="link-https" href="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline">its code on Github</a>.</li>
- <li><a href="https://dsheiko.com/weblog/html5-and-server-sent-events">HTML5 and Server-sent events</a></li>
- <li><a href="https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Server-sent events using Asp.Net</a></li>
-</ul>
+- A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events)
+- [Server-sent events using Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)

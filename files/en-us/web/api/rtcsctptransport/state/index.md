@@ -2,56 +2,52 @@
 title: RTCSctpTransport.state
 slug: Web/API/RTCSctpTransport/state
 tags:
-- API
-- Draft
-- Experimental
-- NeedsCompatTable
-- NeedsExample
-- Property
-- RTCSctpTransport
-- RTCSctpTransportState
-- Read-only
-- Reference
-- WebRTC
-- state
+  - API
+  - Draft
+  - Experimental
+  - NeedsCompatTable
+  - NeedsExample
+  - Property
+  - RTCSctpTransport
+  - RTCSctpTransportState
+  - Read-only
+  - Reference
+  - WebRTC
+  - state
 browser-compat: api.RTCSctpTransport.state
 ---
-<p>{{APIRef("WebRTC")}}{{Draft}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{Draft}}{{SeeCompatTable}}
 
-<p>The <strong><code>state</code></strong> read-only property of the
-  {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
-  Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) transport state.
-</p>
+The **`state`** read-only property of the
+{{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
+Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myState</var> = <var>sctpTransport</var>.state;</pre>
+```js
+var myState = sctpTransport.state;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string whose value is taken from the <code>RTCSctpTransportState</code> enumerated
-  type. Its value is one of the following:</p>
+A string whose value is taken from the `RTCSctpTransportState` enumerated
+type. Its value is one of the following:
 
-<dl>
-  <dt><code>connecting</code></dt>
-  <dd>The initial state when the connection is being estabilished.</dd>
-  <dt><code>connected</code></dt>
-  <dd>The connection is open for data transmission.</dd>
-  <dt><code>closed</code></dt>
-  <dd>The connection is closed and can no longer be used.</dd>
-</dl>
+- `connecting`
+  - : The initial state when the connection is being estabilished.
+- `connected`
+  - : The connection is open for data transmission.
+- `closed`
+  - : The connection is closed and can no longer be used.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("RTCSctpTransport")}}</li>
-</ul>
+- {{DOMxRef("RTCSctpTransport")}}

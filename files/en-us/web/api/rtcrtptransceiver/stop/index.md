@@ -2,88 +2,80 @@
 title: RTCRtpTransceiver.stop()
 slug: Web/API/RTCRtpTransceiver/stop
 tags:
-- API
-- Media
-- Method
-- RTCRtpTransceiver
-- RTP
-- Reference
-- Stopping a Transceiver
-- WebRTC
-- stop
+  - API
+  - Media
+  - Method
+  - RTCRtpTransceiver
+  - RTP
+  - Reference
+  - Stopping a Transceiver
+  - WebRTC
+  - stop
 browser-compat: api.RTCRtpTransceiver.stop
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>stop()</code></strong> method in the
-    {{domxref("RTCRtpTransceiver")}} interface permanently stops the transceiver by
-    stopping both the associated {{domxref("RTCRtpSender")}} and
-    {{domxref("RTCRtpReceiver")}}.</p>
+The **`stop()`** method in the
+{{domxref("RTCRtpTransceiver")}} interface permanently stops the transceiver by
+stopping both the associated {{domxref("RTCRtpSender")}} and
+{{domxref("RTCRtpReceiver")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Until recently, the {{domxref("RTCRtpTransceiver.stopped",
-    "stopped")}} property was provided to return <code>true</code> if the connection is
-    stopped. That property has been deprecated and will be removed at some point. Instead,
-    check the value of {{domxref("RTCRtpTransceiver.currentDirection",
-    "currentDirection")}}. If it's <code>stopped</code>, the transceiver has been stopped.
-  </p>
-</div>
+> **Note:** Until recently, the {{domxref("RTCRtpTransceiver.stopped",
+    "stopped")}} property was provided to return `true` if the connection is
+> stopped. That property has been deprecated and will be removed at some point. Instead,
+> check the value of {{domxref("RTCRtpTransceiver.currentDirection",
+    "currentDirection")}}. If it's `stopped`, the transceiver has been stopped.
 
-<p>This method does nothing if the transceiver is already stopped.</p>
+This method does nothing if the transceiver is already stopped.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCRtpTransceiver</em>.stop()</pre>
+```js
+RTCRtpTransceiver.stop()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The <code>RTCPeerConnection</code> of which the transceiver is a member is closed.
-  </dd>
-</dl>
+- `InvalidStateError`
+  - : The `RTCPeerConnection` of which the transceiver is a member is closed.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When you call <code>stop()</code> on a transceiver, the sender immediately stops
-  sending media and each of its RTP streams are closed using the {{Glossary("RTCP")}}
-  <code>"BYE"</code> message. The receiver then stops receiving media; the receiver's
-  {{domxref("RTCRtpReceiver.track", "track")}} is stopped, and the transceiver's
-  {{domxref("RTCRtpTransceiver.direction", "direction")}} is changed to
-  <code>stopped</code>, and renegotiation is triggered by sending a
-  <code>negotiationneeded</code> event to the <code>RTCPeerConnection</code>.</p>
+When you call `stop()` on a transceiver, the sender immediately stops
+sending media and each of its RTP streams are closed using the {{Glossary("RTCP")}}
+`"BYE"` message. The receiver then stops receiving media; the receiver's
+{{domxref("RTCRtpReceiver.track", "track")}} is stopped, and the transceiver's
+{{domxref("RTCRtpTransceiver.direction", "direction")}} is changed to
+`stopped`, and renegotiation is triggered by sending a
+`negotiationneeded` event to the `RTCPeerConnection`.
 
-<p>The negotiation process causes {{domxref("RTCRtpTransceiver.currentDirection",
-  "currentNegotiation")}} to be set to <code>stopped</code>, finally indicating that the
-  transceiver has been fully stopped.</p>
+The negotiation process causes {{domxref("RTCRtpTransceiver.currentDirection",
+  "currentNegotiation")}} to be set to `stopped`, finally indicating that the
+transceiver has been fully stopped.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Stopping the transceiver causes a
-    {{event("negotiationneeded")}} event to be sent to the transceiver's
-    {{domxref("RTCPeerConnection")}}, so the connection can adapt to the change.</p>
-</div>
+> **Note:** Stopping the transceiver causes a
+> {{event("negotiationneeded")}} event to be sent to the transceiver's
+> {{domxref("RTCPeerConnection")}}, so the connection can adapt to the change.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{domxref("MediaStreamTrack")}}

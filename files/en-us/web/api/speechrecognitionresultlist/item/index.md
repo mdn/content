@@ -2,41 +2,42 @@
 title: SpeechRecognitionResultList.item()
 slug: Web/API/SpeechRecognitionResultList/item
 tags:
-- API
-- Experimental
-- Getter
-- Method
-- Reference
-- SpeechRecognitionResultList
-- Web Speech API
-- item
-- recognition
-- speech
+  - API
+  - Experimental
+  - Getter
+  - Method
+  - Reference
+  - SpeechRecognitionResultList
+  - Web Speech API
+  - item
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognitionResultList.item
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>item</strong></code> getter of the
-  {{domxref("SpeechRecognitionResultList")}} interface is a standard getter — it allows
-  {{domxref("SpeechRecognitionResult")}} objects in the list to be accessed via array
-  syntax.</p>
+The **`item`** getter of the
+{{domxref("SpeechRecognitionResultList")}} interface is a standard getter — it allows
+{{domxref("SpeechRecognitionResult")}} objects in the list to be accessed via array
+syntax.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myResult = speechRecognitionResultListInstance[0];</pre>
+```js
+var myResult = speechRecognitionResultListInstance[0];
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("SpeechRecognitionResult")}} object.</p>
+A {{domxref("SpeechRecognitionResult")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code is excerpted from our <a
-    href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech
-    color changer</a> example.</p>
+This code is excerpted from our [Speech
+color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -48,36 +49,39 @@ browser-compat: api.SpeechRecognitionResultList.item
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -16,23 +16,21 @@ tags:
   - sound
 browser-compat: api.MediaStreamTrackAudioSourceOptions
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>MediaStreamTrackAudioSourceOptions</strong></code> dictionary is used when specifying options to the {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "MediaStreamTrackAudioSourceNode()")}} constructor.</p>
+The **`MediaStreamTrackAudioSourceOptions`** dictionary is used when specifying options to the {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "MediaStreamTrackAudioSourceNode()")}} constructor.
 
-<p>Note that this dictionary isn't needed when using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method.</p>
+Note that this dictionary isn't needed when using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaStreamTrackAudioSourceOptions.mediaStreamTrack", "mediaStreamTrack")}}</dt>
- <dd>The {{domxref("MediaStreamTrack")}} from which to take audio data for this node's output.</dd>
-</dl>
+- {{domxref("MediaStreamTrackAudioSourceOptions.mediaStreamTrack", "mediaStreamTrack")}}
+  - : The {{domxref("MediaStreamTrack")}} from which to take audio data for this node's output.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

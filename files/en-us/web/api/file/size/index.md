@@ -6,26 +6,24 @@ tags:
   - Guide
   - fileapi
 ---
-<p>{{APIRef("File API") }}</p>
+{{APIRef("File API") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Returns the size of a file in bytes.</p>
+Returns the size of a file in bytes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var size = <em>instanceOfFile</em>.size</pre>
+    var size = instanceOfFile.size
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A number</p>
+A number
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Blob.size")}}</li>
-</ul>
+- {{domxref("Blob.size")}}

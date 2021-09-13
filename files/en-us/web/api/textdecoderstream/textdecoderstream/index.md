@@ -8,38 +8,38 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextDecoderStream()</code></strong> constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.</p>
+The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>TextDecoderStream</var> = new TextDecoderStream(<var>label</var>,<var>options</var>);</pre>
+    var TextDecoderStream = new TextDecoderStream(label,options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>label</dt>
-  <dd>A {{domxref("DOMString")}} defaulting to <code>utf-8</code>. This may be <a href="/en-US/docs/Web/API/Encoding_API/Encodings">any valid label</a>.</dd>
-  <dt><code>options</code>{{optional_inline}}</dt>
-  <dd>A <code>TextDecoderOptions</code> dictionary with the property:
-  <dl>
-    <dt><code>fatal</code></dt>
-    <dd>A boolean value indicating the error mode. If true then a {{domxref("DOMException")}} will be thrown if the decoder encounters an error. Defaults to <code>false</code>.</dd>
-  </dl>
-</dl>
+- label
+  - : A {{domxref("DOMString")}} defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
+- `options`{{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : A `TextDecoderOptions` dictionary with the property:
 
-<p>The following example demonstrates how to decode binary data retrieved from a {{domxref("fetch()")}} call. The data will be interpreted as UTF-8, as no <code>label</code> has been passed.</p>
+    - `fatal`
+      - : A boolean value indicating the error mode. If true then a {{domxref("DOMException")}} will be thrown if the decoder encounters an error. Defaults to `false`.
 
-<pre class="brush: js">const response = await fetch("https://example.com");
-const stream = response.body.pipeThrough(new TextDecoderStream());</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+The following example demonstrates how to decode binary data retrieved from a {{domxref("fetch()")}} call. The data will be interpreted as UTF-8, as no `label` has been passed.
+
+```js
+const response = await fetch("https://example.com");
+const stream = response.body.pipeThrough(new TextDecoderStream());
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

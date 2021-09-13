@@ -2,82 +2,78 @@
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 tags:
-- API
-- Fetch Headers
-- Get Headers
-- HTTP
-- HTTP Header
-- Method
-- Reference
-- Response Header
-- XHR
-- XMLHttpRequest
-- getAllResponseHeaders
+  - API
+  - Fetch Headers
+  - Get Headers
+  - HTTP
+  - HTTP Header
+  - Method
+  - Reference
+  - Response Header
+  - XHR
+  - XMLHttpRequest
+  - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{domxref("XMLHttpRequest")}} method
-    <code><strong>getAllResponseHeaders()</strong></code> returns all the response
-    headers, separated by {{Glossary('CRLF')}}, as a string, or returns <code>null</code>
-    if no response has been received.</p>
+The {{domxref("XMLHttpRequest")}} method
+**`getAllResponseHeaders()`** returns all the response
+headers, separated by {{Glossary('CRLF')}}, as a string, or returns `null`
+if no response has been received.
 
-<p>If a network error happened, an empty string
-  is returned.</p>
+If a network error happened, an empty string
+is returned.
 
-<div class="note">
-  <p><strong>Note:</strong> For multipart requests, this returns the headers from the
-    <em>current</em> part of the request, not from the original channel.</p>
-</div>
+> **Note:** For multipart requests, this returns the headers from the
+> _current_ part of the request, not from the original channel.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var headers = <var>XMLHttpRequest</var>.getAllResponseHeaders();</pre>
+```js
+var headers = XMLHttpRequest.getAllResponseHeaders();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("String")}} representing all of the response's headers (except those
-  whose field name is <code>Set-Cookie</code> or <code>Set-Cookie2</code>) separated by
-  {{Glossary('CRLF')}}, or <code>null</code> if no response has been received. If a
-  network error happened, an empty string is returned.</p>
+A {{jsxref("String")}} representing all of the response's headers (except those
+whose field name is `Set-Cookie` or `Set-Cookie2`) separated by
+{{Glossary('CRLF')}}, or `null` if no response has been received. If a
+network error happened, an empty string is returned.
 
-<p>An example of what a raw header string looks like:</p>
+An example of what a raw header string looks like:
 
-<pre><span class="punctuation token">date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
-content-encoding: gzip\r\n
-x-content-type-options: nosniff\r\n
-server: meinheld/0.6.1\r\n
-x-frame-options: DENY\r\n
-content-type: text/html; charset=utf-8\r\n
-connection: keep-alive\r\n
-strict-transport-security: max-age=63072000\r\n
-vary: Cookie, Accept-Encoding\r\n
-content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n</span></pre>
+    date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+    content-encoding: gzip\r\n
+    x-content-type-options: nosniff\r\n
+    server: meinheld/0.6.1\r\n
+    x-frame-options: DENY\r\n
+    content-type: text/html; charset=utf-8\r\n
+    connection: keep-alive\r\n
+    strict-transport-security: max-age=63072000\r\n
+    vary: Cookie, Accept-Encoding\r\n
+    content-length: 6502\r\n
+    x-xss-protection: 1; mode=block\r\n
 
-<p>Each line is terminated by both carriage return and line feed characters
-  (<code>\r\n</code>). These are essentially delimiters separating each of the headers.
-</p>
+Each line is terminated by both carriage return and line feed characters
+(`\r\n`). These are essentially delimiters separating each of the headers.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In modern browsers, the header names are returned in all lower
-    case, as per the latest spec.</p>
-</div>
+> **Note:** In modern browsers, the header names are returned in all lower
+> case, as per the latest spec.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example examines the headers in the request's {{event("readystatechange")}} event
-  handler, {{domxref("XMLHttpRequest.onreadystatechange")}}. The code shows how to obtain
-  the raw header string, as well as how to convert it into an array of individual headers
-  and then how to take that array and create a mapping of header names to their values.
-</p>
+This example examines the headers in the request's {{event("readystatechange")}} event
+handler, {{domxref("XMLHttpRequest.onreadystatechange")}}. The code shows how to obtain
+the raw header string, as well as how to convert it into an array of individual headers
+and then how to take that array and create a mapping of header names to their values.
 
-<pre class="brush: html">var request = new XMLHttpRequest();
+```html
+var request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
@@ -100,28 +96,29 @@ request.onreadystatechange = function() {
       headerMap[header] = value;
     });
   }
-}</pre>
+}
+```
 
-<p>Once this is done, you can, for example:</p>
+Once this is done, you can, for example:
 
-<pre class="brush: js">var contentType = headerMap["content-type"];</pre>
+```js
+var contentType = headerMap["content-type"];
+```
 
-<p>This obtains the value of the {{httpheader("Content-Type")}} header into the variable
-  <code>contentType</code>.</p>
+This obtains the value of the {{httpheader("Content-Type")}} header into the variable
+`contentType`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li>Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}</li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
+    "setRequestHeader()")}}

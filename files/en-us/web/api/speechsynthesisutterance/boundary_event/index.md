@@ -7,56 +7,64 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.boundary_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>boundary</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is fired when the spoken utterance reaches a word or sentence boundary.</p>
+The **`boundary`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the spoken utterance reaches a word or sentence boundary.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SpeechSynthesisEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary">onboundary</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SpeechSynthesisEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary"
+            >onboundary</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>boundary</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `boundary` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">utterThis.addEventListener('boundary', function(event) {
+```js
+utterThis.addEventListener('boundary', function(event) {
   console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary">onboundary</a></code> event handler property:</p>
+Or use the [`onboundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary) event handler property:
 
-<pre class="brush: js">utterThis.onboundary = function(event) {
+```js
+utterThis.onboundary = function(event) {
   console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
- <li><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary">onboundary</a></code></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [`onboundary`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary)

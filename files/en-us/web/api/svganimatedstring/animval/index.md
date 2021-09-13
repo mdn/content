@@ -3,22 +3,20 @@ title: SVGAnimatedString.animVal
 slug: Web/API/SVGAnimatedString/animVal
 browser-compat: api.SVGAnimatedString.animVal
 ---
-<p>{{APIRef("SVG")}}</p>
+{{APIRef("SVG")}}
 
-<p>AnimVal attribute or animVal property contains the same value as the <a href="/en-US/docs/new?slug=baseVal&amp;parent=6389"><strong>baseVal</strong></a> property.If the given attribute or property is being animated, contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as baseVal</p>
+AnimVal attribute or animVal property contains the same value as the [**baseVal**](/en-US/docs/new?slug=baseVal&parent=6389) property.If the given attribute or property is being animated, contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as baseVal
 
-<div class="note">
-<p><strong>Note:</strong> The <strong>animVal</strong> property is a read only property. Internet Explorer 9 supports script-based SVG animation but it does not support declarative-based SVG animation. As a result, the <strong>animVal</strong> property contains the same value as the <strong>baseVal</strong> property.</p>
-</div>
+> **Note:** The **animVal** property is a read only property. Internet Explorer 9 supports script-based SVG animation but it does not support declarative-based SVG animation. As a result, the **animVal** property contains the same value as the **baseVal** property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre><em>var</em> = <em>object.</em><strong>animVal</strong></pre>
+    var = object.animVal
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

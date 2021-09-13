@@ -9,48 +9,44 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceMeasure
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><code><strong>PerformanceMeasure</strong></code> is an <em>abstract</em> interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>measure</code>". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a <em>named</em> {{domxref("DOMHighResTimeStamp")}} (the <em>measure</em>) between two <em>marks</em> to the browser's <em>performance timeline</em>.</p>
+**`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`measure`". Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constrainting the properties as follows:</p>
+This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constrainting the properties as follows:
 
-<dl>
- <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
- <dd>Returns "<code>measure</code>".</dd>
- <dt>{{domxref("PerformanceEntry.name")}}</dt>
- <dd>Returns the name given to the measure when it was created via a call to {{domxref("Performance.measure()","performance.measure()")}}.</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} given to the measure when {{domxref("Performance.measure()","performance.measure()")}} was called.</dd>
- <dt>{{domxref("PerformanceEntry.duration")}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).</dd>
-</dl>
+- {{domxref("PerformanceEntry.entryType")}}
+  - : Returns "`measure`".
+- {{domxref("PerformanceEntry.name")}}
+  - : Returns the name given to the measure when it was created via a call to {{domxref("Performance.measure()","performance.measure()")}}.
+- {{domxref("PerformanceEntry.startTime")}}
+  - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} given to the measure when {{domxref("Performance.measure()","performance.measure()")}} was called.
+- {{domxref("PerformanceEntry.duration")}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This interface has no methods.</p>
+This interface has no methods.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the example in <a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a>.</p>
+See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/User_Timing_API">User Timing (Overview)</a></li>
- <li><a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a></li>
-</ul>
+- [User Timing (Overview)](/en-US/docs/Web/API/User_Timing_API)
+- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)

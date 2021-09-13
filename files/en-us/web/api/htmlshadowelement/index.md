@@ -9,36 +9,32 @@ tags:
   - Deprecated
 browser-compat: api.HTMLShadowElement
 ---
-<div>{{APIRef("Web Components")}}{{Deprecated_header}}</div>
+{{APIRef("Web Components")}}{{Deprecated_header}}
 
-<p>The <code><strong>HTMLShadowElement</strong></code> interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a>.</p>
+The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM).
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the methods of {{domxref("HTMLElement")}}._
 
-<dl>
-	<dt>{{domxref("HTMLShadowElement.getDistributedNodes()")}}</dt>
-	<dd>Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this <code>&lt;shadow&gt;</code> element. </dd>
-</dl>
+- {{domxref("HTMLShadowElement.getDistributedNodes()")}}
+  - : Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<shadow>` element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer defined by any specifications.</p>
+This feature is no longer defined by any specifications.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{HTMLElement("shadow")}} HTML element, implementing this interface.</li>
-	<li><a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a></li>
-</ul>
+- The {{HTMLElement("shadow")}} HTML element, implementing this interface.
+- [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM)

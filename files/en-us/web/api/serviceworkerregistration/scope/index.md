@@ -2,48 +2,44 @@
 title: ServiceWorkerRegistration.scope
 slug: Web/API/ServiceWorkerRegistration/scope
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- scope
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - scope
 browser-compat: api.ServiceWorkerRegistration.scope
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>scope</strong></code> read-only property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
-  service worker registration. The service worker must be on the same origin as the
-  document that registers the {{domxref("ServiceWorker")}}.</p>
+The **`scope`** read-only property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
+service worker registration. The service worker must be on the same origin as the
+document that registers the {{domxref("ServiceWorker")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>swScope</em> = <em>serviceWorkerRegistration</em>.scope;</pre>
+```js
+var swScope = serviceWorkerRegistration.scope;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

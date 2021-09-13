@@ -14,61 +14,61 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenElement
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The
-    <code><strong>Document.fullscreenElement</strong></code> read-only
-    property returns the {{ domxref("Element") }} that is currently being presented in
-    full-screen mode in this document, or <code>null</code> if full-screen mode is not
-    currently in use.</p>
+The
+**`Document.fullscreenElement`** read-only
+property returns the {{ domxref("Element") }} that is currently being presented in
+full-screen mode in this document, or `null` if full-screen mode is not
+currently in use.
 
-<p>Although this property is read-only, it will not throw if it is modified (even in
-  strict mode); the setter is a no-operation and it will be ignored.</p>
+Although this property is read-only, it will not throw if it is modified (even in
+strict mode); the setter is a no-operation and it will be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>document</var>.fullscreenElement</pre>
+```js
+document.fullscreenElement
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The {{domxref("Element")}} object that's currently in full-screen mode; if full-screen
-  mode isn't currently in use by the <code><var>document</var></code>&gt;, the returned
-  value is <code>null</code>.</p>
+The {{domxref("Element")}} object that's currently in full-screen mode; if full-screen
+mode isn't currently in use by the `document`>, the returned
+value is `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example presents a function, <code>isVideoInFullscreen()</code>, which looks at
-  the value returned by <code>fullscreenElement</code>; if the document is in full-screen
-  mode (<code>fullscreenElement</code> isn't <code>null</code>) and the full-screen
-  element's {{domxref("Node.nodeName", "nodeName")}} is <code>VIDEO</code>, indicating a
-  {{HTMLElement("video")}} element, the function returns <code>true</code>, indicating
-  that the video is in full-screen mode.</p>
+This example presents a function, `isVideoInFullscreen()`, which looks at
+the value returned by `fullscreenElement`; if the document is in full-screen
+mode (`fullscreenElement` isn't `null`) and the full-screen
+element's {{domxref("Node.nodeName", "nodeName")}} is `VIDEO`, indicating a
+{{HTMLElement("video")}} element, the function returns `true`, indicating
+that the video is in full-screen mode.
 
-<pre class="brush: js">function isVideoInFullscreen() {
-  if (document.fullscreenElement &amp;&amp; document.fullscreenElement.nodeName == 'VIDEO') {
+```js
+function isVideoInFullscreen() {
+  if (document.fullscreenElement && document.fullscreenElement.nodeName == 'VIDEO') {
     return true;
   }
   return false;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{ domxref("Element.requestFullscreen()") }}</li>
-  <li>{{ domxref("Document.exitFullscreen()") }}</li>
-  <li>{{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}</li>
-  <li>The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
-    attribute</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.exitFullscreen()") }}
+- {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
+- The {{HTMLElement("iframe")}} {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+  attribute

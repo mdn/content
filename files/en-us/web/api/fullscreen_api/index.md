@@ -17,133 +17,116 @@ tags:
   - fullscreen
   - screen
 ---
-<div>{{DefaultAPISidebar("Fullscreen API")}}</div>
+{{DefaultAPISidebar("Fullscreen API")}}
 
-<p>The <strong>Fullscreen API</strong> adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in full-screen mode, and to exit full-screen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until full-screen mode is shut off.</p>
+The **Fullscreen API** adds methods to present a specific {{DOMxRef("Element")}} (and its descendants) in full-screen mode, and to exit full-screen mode once it is no longer needed. This makes it possible to present desired content—such as an online game—using the user's entire screen, removing all browser user interface elements and other applications from the screen until full-screen mode is shut off.
 
-<p>See the article <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a> for details on how to use the API.</p>
+See the article [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide) for details on how to use the API.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the {{anch("Browser compatibility")}} section below for details on support for this API. You may wish to consider using a library such as <a href="https://github.com/rafrex/fscreen">Fscreen</a> for vendor agnostic access to the Fullscreen API.</p>
-</div>
+> **Note:** Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the {{anch("Browser compatibility")}} section below for details on support for this API. You may wish to consider using a library such as [Fscreen](https://github.com/rafrex/fscreen) for vendor agnostic access to the Fullscreen API.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<p><em>The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide full-screen functionality. These are listed in the following sections.</em></p>
+_The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide full-screen functionality. These are listed in the following sections._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces to allow turning off and on full-screen mode.</p>
+The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces to allow turning off and on full-screen mode.
 
-<h3 id="Methods_on_the_Document_interface">Methods on the Document interface</h3>
+### Methods on the Document interface
 
-<dl>
- <dt>{{DOMxRef("Document.exitFullscreen()")}}</dt>
- <dd>Requests that the {{Glossary("user agent")}} switch from full-screen mode back to windowed mode. Returns a {{jsxref("Promise")}} which is resolved once full-screen mode has been completely shut off.</dd>
-</dl>
+- {{DOMxRef("Document.exitFullscreen()")}}
+  - : Requests that the {{Glossary("user agent")}} switch from full-screen mode back to windowed mode. Returns a {{jsxref("Promise")}} which is resolved once full-screen mode has been completely shut off.
 
-<h3 id="Methods_on_the_Element_interface">Methods on the Element interface</h3>
+### Methods on the Element interface
 
-<dl>
- <dt>{{DOMxRef("Element.requestFullscreen()")}}</dt>
- <dd>Asks the user agent to place the specified element (and, by extension, its descendants) into full-screen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a {{jsxref("Promise")}} which is resolved once full-screen mode has been activated.</dd>
-</dl>
+- {{DOMxRef("Element.requestFullscreen()")}}
+  - : Asks the user agent to place the specified element (and, by extension, its descendants) into full-screen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a {{jsxref("Promise")}} which is resolved once full-screen mode has been activated.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The {{DOMxRef("Document")}} interface provides properties that can be used to determine if full-screen mode is supported and available, and if full-screen mode is currently active, which element is using the screen.</em></p>
+_The {{DOMxRef("Document")}} interface provides properties that can be used to determine if full-screen mode is supported and available, and if full-screen mode is currently active, which element is using the screen._
 
-<dl>
- <dt>{{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}</dt>
- <dd>The <code>fullscreenElement</code> property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is <code>null</code>, the document (or shadow DOM) is not in full-screen mode.</dd>
- <dt>{{DOMxRef("document.fullscreenEnabled")}}</dt>
- <dd>The <code>fullscreenEnabled</code> property tells you whether or not it is possible to engage full-screen mode. This is <code>false</code> if full-screen mode is not available for any reason (such as the <code>"fullscreen"</code> feature not being allowed, or full-screen mode not being supported).</dd>
-</dl>
+- {{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}
+  - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed in full-screen mode on the DOM (or shadow DOM). If this is `null`, the document (or shadow DOM) is not in full-screen mode.
+- {{DOMxRef("document.fullscreenEnabled")}}
+  - : The `fullscreenEnabled` property tells you whether or not it is possible to engage full-screen mode. This is `false` if full-screen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or full-screen mode not being supported).
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p><em>The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes. Event handlers for these events are available on the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces.</em></p>
+_The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes. Event handlers for these events are available on the {{DOMxRef("Document")}} and {{DOMxRef("Element")}} interfaces._
 
-<div class="notecard note">
-<p><strong>Note:</strong> These event handler properties are <em>not</em> available as HTML content attributes. In other words, you cannot specify event handlers for {{Event("fullscreenchange")}} and {{Event("fullscreenerror")}} in the HTML content. They must be added by JavaScript code.</p>
-</div>
+> **Note:** These event handler properties are _not_ available as HTML content attributes. In other words, you cannot specify event handlers for {{Event("fullscreenchange")}} and {{Event("fullscreenerror")}} in the HTML content. They must be added by JavaScript code.
 
-<h4 id="Event_handlers_on_documents">Event handlers on documents</h4>
+#### Event handlers on documents
 
-<dl>
- <dt>{{DOMxRef("Document.onfullscreenchange")}}</dt>
- <dd>An event handler for the {{Event("fullscreenchange")}} event that's bubbled up to the {{DOMxRef("Document")}} when any {{DOMxRef("Element")}} in that document is placed into full-screen mode, or exits full-screen mode.</dd>
- <dt>{{DOMxRef("Document.onfullscreenerror")}}</dt>
- <dd>An event handler for the {{Event("fullscreenerror")}} event that gets bubbled up to the {{DOMxRef("Document")}} when an error occurs while trying to enable or disable full-screen mode for any {{DOMxRef("Element")}} in that document.</dd>
-</dl>
+- {{DOMxRef("Document.onfullscreenchange")}}
+  - : An event handler for the {{Event("fullscreenchange")}} event that's bubbled up to the {{DOMxRef("Document")}} when any {{DOMxRef("Element")}} in that document is placed into full-screen mode, or exits full-screen mode.
+- {{DOMxRef("Document.onfullscreenerror")}}
+  - : An event handler for the {{Event("fullscreenerror")}} event that gets bubbled up to the {{DOMxRef("Document")}} when an error occurs while trying to enable or disable full-screen mode for any {{DOMxRef("Element")}} in that document.
 
-<h4 id="Event_handlers_on_elements">Event handlers on elements</h4>
+#### Event handlers on elements
 
-<dl>
- <dt>{{DOMxRef("Element.onfullscreenchange")}}</dt>
- <dd>An event handler which is called when the {{Event("fullscreenchange")}} event is sent to the element, indicating that the element has been placed into, or removed from, full-screen mode.</dd>
- <dt>{{DOMxRef("Element.onfullscreenerror")}}</dt>
- <dd>An event handler for the {{Event("fullscreenerror")}} event when sent to an element which has encountered an error while transitioning into or out of full-screen mode.</dd>
-</dl>
+- {{DOMxRef("Element.onfullscreenchange")}}
+  - : An event handler which is called when the {{Event("fullscreenchange")}} event is sent to the element, indicating that the element has been placed into, or removed from, full-screen mode.
+- {{DOMxRef("Element.onfullscreenerror")}}
+  - : An event handler for the {{Event("fullscreenerror")}} event when sent to an element which has encountered an error while transitioning into or out of full-screen mode.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt>{{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
- <dd>A Boolean value which is <code>true</code> if the document has an element currently being displayed in full-screen mode; otherwise, this returns <code>false</code>.
- <div class="note"><p><strong>Note:</strong> Use the {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} property on the {{DOMxRef("Document")}} or {{DOMxRef("ShadowRoot")}} instead; if it's not <code>null</code>, then it's an {{DOMxRef("Element")}} currently being displayed in full-screen mode.</p></div>
- </dd>
-</dl>
+- {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
 
-<h2 id="Events">Events</h2>
+  - : A Boolean value which is `true` if the document has an element currently being displayed in full-screen mode; otherwise, this returns `false`.
 
-<p><em>The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes.</em></p>
+    > **Note:** Use the {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} property on the {{DOMxRef("Document")}} or {{DOMxRef("ShadowRoot")}} instead; if it's not `null`, then it's an {{DOMxRef("Element")}} currently being displayed in full-screen mode.
 
-<dl>
- <dt>{{Event("fullscreenchange")}}</dt>
- <dd>Sent to an {{DOMxRef("Element")}} when it transitions into or out of full-screen mode.</dd>
- <dt>{{Event("fullscreenerror")}}</dt>
- <dd>Sent to an <code>Element</code> if an error occurs while attempting to switch it into or out of full-screen mode.</dd>
-</dl>
+## Events
 
-<h2 id="Controlling_access">Controlling access</h2>
+_The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes._
 
-<p>The availability of full-screen mode can be controlled using <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. The full-screen mode feature is identified by the string <code>"fullscreen"</code>, with a default allow-list value of <code>"self"</code>, meaning that full-screen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.</p>
+- {{Event("fullscreenchange")}}
+  - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of full-screen mode.
+- {{Event("fullscreenerror")}}
+  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of full-screen mode.
 
-<p>See <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> to learn more about using Feature Policy to control access to an API.</p>
+## Controlling access
 
-<h2 id="Usage_notes">Usage notes</h2>
+The availability of full-screen mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The full-screen mode feature is identified by the string `"fullscreen"`, with a default allow-list value of `"self"`, meaning that full-screen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
-<p>Users can choose to exit full-screen mode by pressing the <kbd>ESC</kbd> (or <kbd>F11</kbd>) key, rather than waiting for the site or app to programmatically do so. Make sure you provide, somewhere in your user interface, appropriate user interface elements that inform the user that this option is available to them.</p>
+See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
 
-<div class="note">
-<p><strong>Note:</strong> Navigating to another page, changing tabs, or switching to another application using any application switcher (or <kbd>Alt</kbd>-<kbd>Tab</kbd>) will likewise exit full-screen mode.</p>
-</div>
+## Usage notes
 
-<h2 id="Examples">Examples</h2>
+Users can choose to exit full-screen mode by pressing the <kbd>ESC</kbd> (or <kbd>F11</kbd>) key, rather than waiting for the site or app to programmatically do so. Make sure you provide, somewhere in your user interface, appropriate user interface elements that inform the user that this option is available to them.
 
-<h3 id="Simple_fullscreen_usage">Simple fullscreen usage</h3>
+> **Note:** Navigating to another page, changing tabs, or switching to another application using any application switcher (or <kbd>Alt</kbd>-<kbd>Tab</kbd>) will likewise exit full-screen mode.
 
-<p>In this example, a video is presented in a web page. Pressing the <kbd>Enter</kbd> key lets the user toggle between windowed and full-screen presentation of the video.</p>
+## Examples
 
-<p><a href="https://mdn.github.io/dom-examples/fullscreen-api/index.html">View Live Example</a></p>
+### Simple fullscreen usage
 
-<h4 id="Watching_for_the_Enter_key">Watching for the Enter key</h4>
+In this example, a video is presented in a web page. Pressing the <kbd>Enter</kbd> key lets the user toggle between windowed and full-screen presentation of the video.
 
-<p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
+[View Live Example](https://mdn.github.io/dom-examples/fullscreen-api/index.html)
 
-<pre class="brush: js">document.addEventListener("keydown", function(e) {
+#### Watching for the Enter key
+
+When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
+
+```js
+document.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
     toggleFullScreen();
   }
 }, false);
-</pre>
+```
 
-<h4 id="Toggling_full-screen_mode">Toggling full-screen mode</h4>
+#### Toggling full-screen mode
 
-<p>This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.</p>
+This code is called by the event handler above when the user hits the <kbd>Enter</kbd> key.
 
-<pre class="brush: js">function toggleFullScreen() {
+```js
+function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
@@ -151,59 +134,47 @@ tags:
       document.exitFullscreen();
     }
   }
-}</pre>
+}
+```
 
-<p>This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s <code>fullscreenElement</code> attribute. In a real-world deployment, at this time, you'll want to check for prefixed versions of this (<code>mozFullScreenElement</code>, <code>msFullscreenElement</code>, or <code>webkitFullscreenElement</code>, for example). If the value is <code>null</code>, the document is currently in windowed mode, so we need to switch to full-screen mode; otherwise, it's the element that's currently in full-screen mode. Switching to full-screen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.</p>
+This starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `fullscreenElement` attribute. In a real-world deployment, at this time, you'll want to check for prefixed versions of this (`mozFullScreenElement`, `msFullscreenElement`, or `webkitFullscreenElement`, for example). If the value is `null`, the document is currently in windowed mode, so we need to switch to full-screen mode; otherwise, it's the element that's currently in full-screen mode. Switching to full-screen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}} on the {{HTMLElement("video")}} element.
 
-<p>If full-screen mode is already active (<code>fullscreenElement</code> is not <code>null</code>), we call {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}} on the <code>document</code> to shut off full-screen mode.</p>
+If full-screen mode is already active (`fullscreenElement` is not `null`), we call {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}} on the `document` to shut off full-screen mode.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fullscreen")}}</td>
-   <td>{{Spec2("Fullscreen")}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           |
+| ------------------------------------ | -------------------------------- |
+| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Document.fullscreen"><code>Document.fullscreen</code></h3>
+### `Document.fullscreen`
 
-<p>{{Compat("api.Document.fullscreen")}}</p>
+{{Compat("api.Document.fullscreen")}}
 
-<h3 id="Document.fullscreenElement"><code>Document.fullscreenElement</code></h3>
+### `Document.fullscreenElement`
 
-<p>{{Compat("api.Document.fullscreenElement")}}</p>
+{{Compat("api.Document.fullscreenElement")}}
 
-<h3 id="Document.fullscreenEnabled"><code>Document.fullscreenEnabled</code></h3>
+### `Document.fullscreenEnabled`
 
-<p>{{Compat("api.Document.fullscreenEnabled")}}</p>
+{{Compat("api.Document.fullscreenEnabled")}}
 
-<h3 id="Document.exitFullscreen"><code>Document.exitFullscreen</code></h3>
+### `Document.exitFullscreen`
 
-<p>{{Compat("api.Document.exitFullscreen")}}</p>
+{{Compat("api.Document.exitFullscreen")}}
 
-<h3 id="Element.requestFullscreen"><code>Element.requestFullscreen</code></h3>
+### `Element.requestFullscreen`
 
-<p>{{Compat("api.Element.requestFullscreen")}}</p>
+{{Compat("api.Element.requestFullscreen")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Using full-screen mode</a></li>
- <li>{{DOMxRef("Element.requestFullscreen()")}}</li>
- <li>{{DOMxRef("Document.exitFullscreen()")}}</li>
- <li>{{DOMxRef("Document.fullscreen")}}</li>
- <li>{{DOMxRef("Document.fullscreenElement")}}</li>
- <li>{{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}</li>
- <li>{{HTMLAttrXRef("allowfullscreen", "iframe")}}</li>
-</ul>
+- [Using full-screen mode](/en-US/docs/Web/API/Fullscreen_API)
+- {{DOMxRef("Element.requestFullscreen()")}}
+- {{DOMxRef("Document.exitFullscreen()")}}
+- {{DOMxRef("Document.fullscreen")}}
+- {{DOMxRef("Document.fullscreenElement")}}
+- {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
+- {{HTMLAttrXRef("allowfullscreen", "iframe")}}

@@ -9,159 +9,161 @@ tags:
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.filter</code></strong>
-  property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
-  It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.</p>
+The
+**`CanvasRenderingContext2D.filter`**
+property of the Canvas 2D API provides filter effects such as blurring and grayscaling.
+It is similar to the CSS {{cssxref("filter")}} property and accepts the same values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.filter = "<em>&lt;filter-function1&gt;</em> [<em>&lt;filter-function2&gt;</em>] [<em>&lt;filter-functionN&gt;</em>]";
-<em>ctx</em>.filter = "none";
-</pre>
+```js
+ctx.filter = "<filter-function1> [<filter-function2>] [<filter-functionN>]";
+ctx.filter = "none";
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>filter</code> property accepts a value of <code>"none"</code> or one or more
-  of the following filter functions in a {{domxref("DOMString")}}.</p>
+The `filter` property accepts a value of `"none"` or one or more
+of the following filter functions in a {{domxref("DOMString")}}.
 
-<dl>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#url()">url()</a></code></dt>
-  <dd>A CSS {{cssxref("url()")}}. Takes an IRI pointing to an SVG filter element,
-    which may be embedded in an external XML file.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#blur()">blur()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
+- [`url()`](</en-US/docs/Web/CSS/filter#url()>)
+  - : A CSS {{cssxref("url()")}}. Takes an IRI pointing to an SVG filter element,
+    which may be embedded in an external XML file.
+- [`blur()`](</en-US/docs/Web/CSS/filter#blur()>)
+  - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
     defines the value of the standard deviation to the Gaussian function, i.e., how many
     pixels on the screen blend into each other; thus, a larger value will create more
-    blur. A value of <code>0</code> leaves the input unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#brightness()">brightness()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Applies a linear multiplier to the drawing,
-    making it appear brighter or darker. A value under <code>100%</code> darkens the
-    image, while a value over <code>100%</code> brightens it. A value of <code>0%</code>
-    will create an image that is completely black, while a value of <code>100%</code>
-    leaves the input unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#contrast()">contrast()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Adjusts the contrast of the drawing. A
-    value of <code>0%</code> will create a drawing that is completely black. A value of
-    <code>100%</code> leaves the drawing unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#drop-shadow()">drop-shadow()</a></code>
-  </dt>
-  <dd>Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
+    blur. A value of `0` leaves the input unchanged.
+- [`brightness()`](</en-US/docs/Web/CSS/filter#brightness()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Applies a linear multiplier to the drawing,
+    making it appear brighter or darker. A value under `100%` darkens the
+    image, while a value over `100%` brightens it. A value of `0%`
+    will create an image that is completely black, while a value of `100%`
+    leaves the input unchanged.
+- [`contrast()`](</en-US/docs/Web/CSS/filter#contrast()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Adjusts the contrast of the drawing. A
+    value of `0%` will create a drawing that is completely black. A value of
+    `100%` leaves the drawing unchanged.
+- [`drop-shadow()`](</en-US/docs/Web/CSS/filter#drop-shadow()>)
+
+  - : Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
-    <ul>
-      <li><code>&lt;offset-x&gt;</code>: See {{cssxref("&lt;length&gt;")}} for possible
-        units. Specifies the horizontal distance of the shadow.</li>
-      <li><code>&lt;offset-y&gt;</code>: See {{cssxref("&lt;length&gt;")}} for possible
-        units. Specifies the vertical distance of the shadow.</li>
-      <li><code>&lt;blur-radius&gt;</code>: The larger this value, the bigger the blur, so
-        the shadow becomes bigger and lighter. Negative values are not allowed.</li>
-      <li><code>&lt;color&gt;</code>: See {{cssxref("&lt;color&gt;")}} values for possible
-        keywords and notations.</li>
-    </ul>
-  </dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#grayscale()">grayscale()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to grayscale. A value
-    of <code>100%</code> is completely grayscale. A value of <code>0%</code> leaves the
-    drawing unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#hue-rotate()">hue-rotate()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;angle&gt;")}}. Applies a hue rotation on the drawing. A value
-    of <code>0deg</code> leaves the input unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#invert()">invert()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Inverts the drawing. A value of
-    <code>100%</code> means complete inversion. A value of <code>0%</code> leaves the
-    drawing unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#opacity()">opacity()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Applies transparency to the drawing. A
-    value of <code>0%</code> means completely transparent. A value of <code>100%</code>
-    leaves the drawing unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#saturate()">saturate()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Saturates the drawing. A value of
-    <code>0%</code> means completely un-saturated. A value of <code>100%</code> leaves the
-    drawing unchanged.</dd>
-  <dt><code><a href="/en-US/docs/Web/CSS/filter#sepia()">sepia()</a></code></dt>
-  <dd>A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to sepia. A value of
-    <code>100%</code> means completely sepia. A value of <code>0%</code> leaves the
-    drawing unchanged.</dd>
-  <dt><code>none</code></dt>
-  <dd>No filter is applied. Initial value.</dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+    - `<offset-x>`: See {{cssxref("&lt;length&gt;")}} for possible
+      units. Specifies the horizontal distance of the shadow.
+    - `<offset-y>`: See {{cssxref("&lt;length&gt;")}} for possible
+      units. Specifies the vertical distance of the shadow.
+    - `<blur-radius>`: The larger this value, the bigger the blur, so
+      the shadow becomes bigger and lighter. Negative values are not allowed.
+    - `<color>`: See {{cssxref("&lt;color&gt;")}} values for possible
+      keywords and notations.
 
-<p>To view these examples, make sure to use a browser that supports this feature; see the
-  compatibility table below.</p>
+- [`grayscale()`](</en-US/docs/Web/CSS/filter#grayscale()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to grayscale. A value
+    of `100%` is completely grayscale. A value of `0%` leaves the
+    drawing unchanged.
+- [`hue-rotate()`](</en-US/docs/Web/CSS/filter#hue-rotate()>)
+  - : A CSS {{cssxref("&lt;angle&gt;")}}. Applies a hue rotation on the drawing. A value
+    of `0deg` leaves the input unchanged.
+- [`invert()`](</en-US/docs/Web/CSS/filter#invert()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Inverts the drawing. A value of
+    `100%` means complete inversion. A value of `0%` leaves the
+    drawing unchanged.
+- [`opacity()`](</en-US/docs/Web/CSS/filter#opacity()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Applies transparency to the drawing. A
+    value of `0%` means completely transparent. A value of `100%`
+    leaves the drawing unchanged.
+- [`saturate()`](</en-US/docs/Web/CSS/filter#saturate()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Saturates the drawing. A value of
+    `0%` means completely un-saturated. A value of `100%` leaves the
+    drawing unchanged.
+- [`sepia()`](</en-US/docs/Web/CSS/filter#sepia()>)
+  - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to sepia. A value of
+    `100%` means completely sepia. A value of `0%` leaves the
+    drawing unchanged.
+- `none`
+  - : No filter is applied. Initial value.
 
-<h3 id="Applying_a_blur">Applying a blur</h3>
+## Examples
 
-<p>This example blurs a piece of text using the <code>filter</code> property.</p>
+To view these examples, make sure to use a browser that supports this feature; see the
+compatibility table below.
 
-<h4 id="HTML">HTML</h4>
+### Applying a blur
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+This example blurs a piece of text using the `filter` property.
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.filter = 'blur(4px)';
 ctx.font = '48px serif';
 ctx.fillText('Hello world', 50, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Applying_a_blur', 700, 180) }}</p>
+{{ EmbedLiveSample('Applying_a_blur', 700, 180) }}
 
-<h3 id="Applying_multiple_filters">Applying multiple filters</h3>
+### Applying multiple filters
 
-<p>You can combine as many filters as you like. This example applies the
-  <code>contrast</code>, <code>sepia</code>, and <code>drop-shadow</code> filters to a
-  photo of a rhino.</p>
+You can combine as many filters as you like. This example applies the
+`contrast`, `sepia`, and `drop-shadow` filters to a
+photo of a rhino.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
-&lt;div style="display:none;"&gt;
-  &lt;img id="source"
-       src="rhino.jpg"&gt;
-&lt;/div&gt;</pre>
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+<div style="display:none;">
+  <img id="source"
+       src="rhino.jpg">
+</div>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e =&gt; {
+image.addEventListener('load', e => {
   // Draw unfiltered image
   ctx.drawImage(image, 0, 0, image.width * .6, image.height * .6);
 
   // Draw image with filter
   ctx.filter = 'contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)';
   ctx.drawImage(image, 400, 0, -image.width * .6, image.height * .6);
-});</pre>
+});
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Applying_multiple_filters', 700, 180) }}</p>
+{{ EmbedLiveSample('Applying_multiple_filters', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>CSS {{cssxref("filter")}}</li>
-  <li>CSS {{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- CSS {{cssxref("filter")}}
+- CSS {{cssxref("&lt;filter-function&gt;")}}

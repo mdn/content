@@ -11,36 +11,32 @@ tags:
   - Interface
 browser-compat: api.CSSMathMin
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMathMin</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min()','min()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.</p>
+The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min()','min()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSMathMin.CSSMathMin()")}}</dt>
- <dd>Creates a new <code>CSSMathMin</code> object.</dd>
-</dl>
+- {{domxref("CSSMathMin.CSSMathMin()")}}
+  - : Creates a new `CSSMathMin` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMathMin.values')}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.</dd>
-</dl>
+- {{domxref('CSSMathMin.values')}}{{ReadOnlyInline}}
+  - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

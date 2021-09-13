@@ -2,51 +2,53 @@
 title: CSSPositionValue.x
 slug: Web/API/CSSPositionValue/x
 tags:
-- API
-- CSS Typed Object Model API
-- CSSPositionValue
-- Experimental
-- Houdini
-- Property
-- Reference
-- Deprecated
-- x
+  - API
+  - CSS Typed Object Model API
+  - CSSPositionValue
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Deprecated
+  - x
 browser-compat: api.CSSPositionValue.x
 ---
-<div>{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>x</code></strong> property of the
-    {{domxref("CSSPositionValue")}} interface returns the item's position along the web
-    page's horizontal axis. </p>
+The **`x`** property of the
+{{domxref("CSSPositionValue")}} interface returns the item's position along the web
+page's horizontal axis.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>x</var> = CSSPositionValue.x</pre>
+```js
+var x = CSSPositionValue.x
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSNumericValue')}}.</p>
+A {{domxref('CSSNumericValue')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example positions a container <code>&lt;div&gt;</code> 5 pixels from the
-  top and 10 pixels from the left of the page. </p>
+The following example positions a container `<div>` 5 pixels from the
+top and 10 pixels from the left of the page.
 
-<pre class="brush: js">let someDiv = document.getElementById('container');
+```js
+let someDiv = document.getElementById('container');
 let position = new CSSPositionValue(CSS.px(5), CSS.px(10));
 
 someDiv.attributeStyleMap.set('object-position', position);
-console.log(position.x.value, position.y.value);</pre>
+console.log(position.x.value, position.y.value);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSPositionValue.CSSPositionValue()")}}</li>
-  <li>{{domxref("CSSPositionValue.y")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSPositionValue.CSSPositionValue()")}}
+- {{domxref("CSSPositionValue.y")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

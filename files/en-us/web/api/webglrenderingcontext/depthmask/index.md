@@ -2,59 +2,57 @@
 title: WebGLRenderingContext.depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthMask
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.depthMask()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets whether writing into the depth
-  buffer is enabled or disabled.</p>
+The **`WebGLRenderingContext.depthMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets whether writing into the depth
+buffer is enabled or disabled.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.depthMask(<var>flag</var>);
-</pre>
+```js
+void gl.depthMask(flag);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>flag</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not writing into the depth buffer
-    is enabled. Default value: <code>true</code>, meaning that writing is enabled.</dd>
-</dl>
+- `flag`
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether or not writing into the depth buffer
+    is enabled. Default value: `true`, meaning that writing is enabled.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.depthMask(false);
-</pre>
+```js
+gl.depthMask(false);
+```
 
-<p>To get the current depth mask, query the <code>DEPTH_WRITEMASK</code> constant which
-  returns a boolean value.</p>
+To get the current depth mask, query the `DEPTH_WRITEMASK` constant which
+returns a boolean value.
 
-<pre class="brush: js">gl.getParameter(gl.DEPTH_WRITEMASK);
+```js
+gl.getParameter(gl.DEPTH_WRITEMASK);
 // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.colorMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.colorMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}

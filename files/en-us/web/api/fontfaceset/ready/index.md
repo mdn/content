@@ -2,41 +2,42 @@
 title: FontFaceSet.ready
 slug: Web/API/FontFaceSet/ready
 tags:
-- API
-- CSSFontLoading API
-- CSSOM
-- Experimental
-- FontFaceSet
-- Fonts
-- Property
-- Ready
-- Reference
+  - API
+  - CSSFontLoading API
+  - CSSOM
+  - Experimental
+  - FontFaceSet
+  - Fonts
+  - Property
+  - Ready
+  - Reference
 browser-compat: api.FontFaceSet.ready
 ---
-<p>{{APIRef("CSSFontLoading")}}{{SeeCompatTable}}{{draft}}</p>
+{{APIRef("CSSFontLoading")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code>ready</code> readonly property of the {{domxref("FontFaceSet")}} interface
-  returns a {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
-</p>
+The `ready` readonly property of the {{domxref("FontFaceSet")}} interface
+returns a {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">fontFaceSet.ready.then(function(fontFaceSet) {
+```js
+fontFaceSet.ready.then(function(fontFaceSet) {
   // ...
-});</pre>
+});
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.</p>
+A {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

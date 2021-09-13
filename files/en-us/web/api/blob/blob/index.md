@@ -2,70 +2,65 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 tags:
-- API
-- Blob
-- Constructor
-- File API
-- Reference
+  - API
+  - Blob
+  - Constructor
+  - File API
+  - Reference
 browser-compat: api.Blob.Blob
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <code><strong>Blob()</strong></code> constructor returns a
-    new {{domxref("Blob")}} object. The content of the blob consists of the concatenation
-    of the values given in the parameter <code>array</code>.</p>
+The **`Blob()`** constructor returns a
+new {{domxref("Blob")}} object. The content of the blob consists of the concatenation
+of the values given in the parameter `array`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>newBlob</var> = new Blob(<var>array</var>, <var>options</var>);
-</pre>
+```js
+var newBlob = new Blob(array, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>array</var></code></dt>
-  <dd>An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
+- `array`
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
     {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("Blob")}}. <code>USVString</code>
-    objects are encoded as UTF-8.</dd>
-  <dt><code><var>options</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>An optional object of type {{domxref("BlobPropertyBag")}} which may specify any of
-      the following properties:</p>
+    objects, that will be put inside the {{domxref("Blob")}}. `USVString`
+    objects are encoded as UTF-8.
+- `options` {{optional_inline}}
 
-    <dl>
-      <dt><code>type</code> {{optional_inline}}</dt>
-      <dd>The {{Glossary("MIME type")}} of the data that will be stored into the blob. The
-        default value is the empty string, (<code>""</code>).</dd>
-      <dt><code>endings</code> {{optional_inline}} {{non-standard_inline}}</dt>
-      <dd>How to interpret newline characters (<code>\n</code>) within the contents, if
-        the data is text. The default value, <code>transparent</code>, copies newline
+  - : An optional object of type {{domxref("BlobPropertyBag")}} which may specify any of
+    the following properties:
+
+    - `type` {{optional_inline}}
+      - : The {{Glossary("MIME type")}} of the data that will be stored into the blob. The
+        default value is the empty string, (`""`).
+    - `endings` {{optional_inline}} {{non-standard_inline}}
+      - : How to interpret newline characters (`\n`) within the contents, if
+        the data is text. The default value, `transparent`, copies newline
         characters into the blob without changing them. To convert newlines to the host
-        system's native convention, specify the value <code>native</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        system's native convention, specify the value `native`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("Blob")}} object containing the specified data.</p>
+A new {{domxref("Blob")}} object containing the specified data.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js ">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
+```js
+var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
+var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.
-  </li>
-</ul>
+- The deprecated {{domxref("BlobBuilder")}} interface which this constructor replaces.

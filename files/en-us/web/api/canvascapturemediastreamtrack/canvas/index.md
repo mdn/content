@@ -2,36 +2,38 @@
 title: CanvasCaptureMediaStreamTrack.canvas
 slug: Web/API/CanvasCaptureMediaStreamTrack/canvas
 tags:
-- Canvas
-- CanvasCaptureMediaStreamTrack
-- Experimental
-- Frame Capture
-- Media Capture
-- Property
-- Read-only
-- Reference
-- Web
+  - Canvas
+  - CanvasCaptureMediaStreamTrack
+  - Experimental
+  - Frame Capture
+  - Media Capture
+  - Property
+  - Read-only
+  - Reference
+  - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} <strong><code>canvas</code></strong>
-  read-only property returns the {{domxref("HTMLCanvasElement")}} from which frames are
-  being captured.</p>
+The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**
+read-only property returns the {{domxref("HTMLCanvasElement")}} from which frames are
+being captured.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>elt</var> = <var>stream</var>.canvas;
-</pre>
+```js
+var elt = stream.canvas;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>HTMLCanvasElement</code> indicating the canvas which is the source of the
-  frames being captured.</p>
+An `HTMLCanvasElement` indicating the canvas which is the source of the
+frames being captured.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Find the canvas element to capture
+```js
+// Find the canvas element to capture
 var canvasElt = document.getElementsByTagName("canvas")[0];
 
 // Get the stream
@@ -42,20 +44,18 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 
 // Obtain the canvas associated with the stream
 var canvas = stream.canvas;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a
-    given canvas element.</li>
-  <li>{{HTMLElement("canvas")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a
+  given canvas element.
+- {{HTMLElement("canvas")}}

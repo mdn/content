@@ -14,62 +14,68 @@ tags:
   - pointer
 browser-compat: api.Element.mousemove_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>mousemove</code> event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.</p>
+The `mousemove` event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example uses the {{domxref("Element/mousedown_event", "mousedown")}}, <code>mousemove</code>, and {{domxref("Element/mouseup_event", "mouseup")}} events to allow the user to draw on an HTML5 <a href="/en-US/docs/Web/API/Canvas_API">canvas</a>. Its functionality is simple: the thickness of the line is set to 1, and the color is always black.</p>
+The following example uses the {{domxref("Element/mousedown_event", "mousedown")}}, `mousemove`, and {{domxref("Element/mouseup_event", "mouseup")}} events to allow the user to draw on an HTML5 [canvas](/en-US/docs/Web/API/Canvas_API). Its functionality is simple: the thickness of the line is set to 1, and the color is always black.
 
-<p>When the page loads, constants <code>myPics</code> and <code>context</code> are created to store a reference to the canvas and the 2d context we will use to draw.</p>
+When the page loads, constants `myPics` and `context` are created to store a reference to the canvas and the 2d context we will use to draw.
 
-<p>Drawing begins when the <code>mousedown</code> event fires. First we store the x and y coordinates of the mouse pointer in the variables <code>x</code> and <code>y</code>, and then set <code>isDrawing</code> to true.</p>
+Drawing begins when the `mousedown` event fires. First we store the x and y coordinates of the mouse pointer in the variables `x` and `y`, and then set `isDrawing` to true.
 
-<p>As the mouse moves over the page, the <code>mousemove</code> event fires. If <code>isDrawing</code> is true, the event handler calls the <code>drawLine</code> function to draw a line from the stored <code>x</code> and <code>y</code> values to the current location.</p>
+As the mouse moves over the page, the `mousemove` event fires. If `isDrawing` is true, the event handler calls the `drawLine` function to draw a line from the stored `x` and `y` values to the current location.
 
-<p>When the <code>drawLine()</code> function returns, we adjust the coordinates and then save them in <code>x</code> and <code>y</code>.</p>
+When the `drawLine()` function returns, we adjust the coordinates and then save them in `x` and `y`.
 
-<p>The <code>mouseup</code> event draws the final line segment, sets <code>x</code> and <code>y</code> to <code>0</code>, and stops further drawing by setting <code>isDrawing</code> to <code>false</code>.</p>
+The `mouseup` event draws the final line segment, sets `x` and `y` to `0`, and stops further drawing by setting `isDrawing` to `false`.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h1&gt;Drawing with mouse events&lt;/h1&gt;
-&lt;canvas id="myPics" width="560" height="360"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<h1>Drawing with mouse events</h1>
+<canvas id="myPics" width="560" height="360"></canvas>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">canvas {
+```css
+canvas {
   border: 1px solid black;
   width: 560px;
   height: 360px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// When true, moving the mouse draws on the canvas
+```js
+// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -80,13 +86,13 @@ const context = myPics.getContext('2d');
 // event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
 
 // Add the event listeners for mousedown, mousemove, and mouseup
-myPics.addEventListener('mousedown', e =&gt; {
+myPics.addEventListener('mousedown', e => {
   x = e.offsetX;
   y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', e =&gt; {
+myPics.addEventListener('mousemove', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = e.offsetX;
@@ -94,7 +100,7 @@ myPics.addEventListener('mousemove', e =&gt; {
   }
 });
 
-window.addEventListener('mouseup', e =&gt; {
+window.addEventListener('mouseup', e => {
   if (isDrawing === true) {
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
@@ -111,31 +117,30 @@ function drawLine(context, x1, y1, x2, y2) {
   context.lineTo(x2, y2);
   context.stroke();
   context.closePath();
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 640, 450)}}</p>
+{{EmbedLiveSample("Examples", 640, 450)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/dblclick_event", "dblclick")}}</li>
- <li>{{domxref("Element/mouseover_event", "mouseover")}}</li>
- <li>{{domxref("Element/mouseout_event", "mouseout")}}</li>
- <li>{{domxref("Element/mouseenter_event", "mouseenter")}}</li>
- <li>{{domxref("Element/mouseleave_event", "mouseleave")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

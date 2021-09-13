@@ -9,26 +9,28 @@ tags:
   - Web API
 browser-compat: api.PageTransitionEvent.persisted
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>persisted</strong></code> read-only property indicates if a webpage is loading from a cache.</p>
+The **`persisted`** read-only property indicates if a webpage is loading from a cache.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.addEventListener('pageshow', function(event) {
+```js
+window.addEventListener('pageshow', function(event) {
   if (event.persisted) {
     console.log('Page was loaded from cache.');
   }
-});</pre>
+});
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,108 +2,108 @@
 title: XPathEvaluator.evaluate()
 slug: Web/API/XPathEvaluator/evaluate
 tags:
-- API
-- DOM
-- DOM XPath API
-- Method
-- Reference
-- XPath
-- XPathEvaluator
+  - API
+  - DOM
+  - DOM XPath API
+  - Method
+  - Reference
+  - XPath
+  - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The <code>evaluate()</code> method of the {{domxref("XPathEvaluator")}} interface
-  executes an XPath expression on the given node or document and returns an
-  {{domxref("XPathResult")}}.</p>
+The `evaluate()` method of the {{domxref("XPathEvaluator")}} interface
+executes an XPath expression on the given node or document and returns an
+{{domxref("XPathResult")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>XPathResult</var> <var>XPathEvaluator</var>.evaluate(<var>expression</var>, <var>contextNode</var>, <var>resolver</var>, <var>type</var>, <var>result</var>);
-</pre>
+```js
+XPathResult XPathEvaluator.evaluate(expression, contextNode, resolver, type, result);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>expression</dt>
-  <dd>A {{domxref("DOMString")}} representing the XPath expression to be parsed and
-    evaluated.</dd>
-  <dt>contextNode</dt>
-  <dd>A {{domxref("Node")}} representing the context to use for evaluating the expression.
-  </dd>
-  <dt>resolver {{optional_inline}}</dt>
-  <dd>Permits translation of all prefixes, including the <code>xml</code> namespace
-    prefix, within the XPath expression into appropriate namespace URIs.</dd>
-  <dt>type {{optional_inline}}</dt>
-  <dd>Specifies the type of result to be returned by evaluating the expression. This must
-    be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.</dd>
-  <dt>result {{optional_inline}}</dt>
-  <dd>Allows to specify a result object which may be reused and returned by this method.
-    If this is specified as <code>null</code> or the implementation does not reuse the
-    specified result, a new result object will be returned.</dd>
-</dl>
+- expression
+  - : A {{domxref("DOMString")}} representing the XPath expression to be parsed and
+    evaluated.
+- contextNode
+  - : A {{domxref("Node")}} representing the context to use for evaluating the expression.
+- resolver {{optional_inline}}
+  - : Permits translation of all prefixes, including the `xml` namespace
+    prefix, within the XPath expression into appropriate namespace URIs.
+- type {{optional_inline}}
+  - : Specifies the type of result to be returned by evaluating the expression. This must
+    be one of the {{domxref("XPathResult", "XPathResult", "Constants")}}.
+- result {{optional_inline}}
+  - : Allows to specify a result object which may be reused and returned by this method.
+    If this is specified as `null` or the implementation does not reuse the
+    specified result, a new result object will be returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("XPathResult")}} object representing the result of evaluating the XPath
-  expression.</p>
+An {{domxref("XPathResult")}} object representing the result of evaluating the XPath
+expression.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="INVALID_EXPRESSION_ERR">INVALID_EXPRESSION_ERR</h4>
+#### INVALID_EXPRESSION_ERR
 
-<p>If the expression is not legal according to the rules of the
-  {{domxref("XPathEvaluator")}}, an {{domxref("XPathException")}} of type
-  <code>INVALID_EXPRESSION_ERR</code> is raised.</p>
+If the expression is not legal according to the rules of the
+{{domxref("XPathEvaluator")}}, an {{domxref("XPathException")}} of type
+`INVALID_EXPRESSION_ERR` is raised.
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case result cannot be converted to the specified type, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is raised.</p>
+In case result cannot be converted to the specified type, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is raised.
 
-<h4 id="NAMESPACE_ERR">NAMESPACE_ERR</h4>
+#### NAMESPACE_ERR
 
-<p>If the expression contains namespace prefixes which cannot be resolved by the specified
-  {{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
-  <code>NAMESPACE_ERROR</code> is raised.</p>
+If the expression contains namespace prefixes which cannot be resolved by the specified
+{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`NAMESPACE_ERROR` is raised.
 
-<h4 id="WRONG_DOCUMENT_ERR">WRONG_DOCUMENT_ERR</h4>
+#### WRONG_DOCUMENT_ERR
 
-<p>If the provided context node is from a document that is not supported by the
-  {{domxref("XPathEvaluator")}}, a {{domxref("DOMException")}} of type
-  <code>WRONG_DOCUMENT_ERR</code> is raised.</p>
+If the provided context node is from a document that is not supported by the
+{{domxref("XPathEvaluator")}}, a {{domxref("DOMException")}} of type
+`WRONG_DOCUMENT_ERR` is raised.
 
-<h4 id="NOT_SUPPORTED_ERR">NOT_SUPPORTED_ERR</h4>
+#### NOT_SUPPORTED_ERR
 
-<p>If the provided context node is not a type permitted as an XPath context node or the
-  request type is not permitted by the {{domxref("XPathEvaluator")}}, a
-  {{domxref("DOMException")}} of type <code>NOT_SUPPORTED_ERR</code> is raised.</p>
+If the provided context node is not a type permitted as an XPath context node or the
+request type is not permitted by the {{domxref("XPathEvaluator")}}, a
+{{domxref("DOMException")}} of type `NOT_SUPPORTED_ERR` is raised.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>evaluate()</code> method.</p>
+The following example shows the use of the `evaluate()` method.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Number of &amp;lt;div&amp;gt;s: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Number of &lt;div&gt;s: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var evaluator = new XPathEvaluator();
+```js
+var evaluator = new XPathEvaluator();
 var result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

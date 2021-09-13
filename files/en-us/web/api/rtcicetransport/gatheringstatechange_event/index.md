@@ -17,53 +17,58 @@ tags:
   - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>A <strong><code>gatheringstatechange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.</p>
+A **`gatheringstatechange`** event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.
 
-<p>The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.</p>
+The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The key difference between <code>gatheringstatechange</code> and {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} is that the latter represents the overall state of the connection including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection. In contrast, <code>gatheringstatechange</code> represents changes to the candidate gathering state for a single transport.</p>
+The key difference between `gatheringstatechange` and {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} is that the latter represents the overall state of the connection including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection. In contrast, `gatheringstatechange` represents changes to the candidate gathering state for a single transport.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a handler for <code>gatheringstatechange</code> events on each {{domxref("RTCRtpSender")}} associated with a given {{domxref("RTCPeerConnection")}}. Here, the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method is called to add a listener for <code>gatheringstatechange</code> events:</p>
+This example creates a handler for `gatheringstatechange` events on each {{domxref("RTCRtpSender")}} associated with a given {{domxref("RTCPeerConnection")}}. Here, the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method is called to add a listener for `gatheringstatechange` events:
 
-<pre class="brush: js">pc.getSenders().forEach(sender =&gt; {
-  sender.transport.iceTransport.addEventListener("gatheringstatechange", ev =&gt; {
+```js
+pc.getSenders().forEach(sender => {
+  sender.transport.iceTransport.addEventListener("gatheringstatechange", ev => {
   let transport = ev.target;
 
   if (transport.gatheringState === "complete") {
     /* this transport has finished gathering candidates,
        but others may still be working on it */
   }
-}, false);</pre>
+}, false);
+```
 
-<p>Likewise, you can use the {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} event handler property:</p>
+Likewise, you can use the {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} event handler property:
 
-<pre class="brush: js">pc.getSenders().forEach(sender =&gt; {
-  sender.transport.iceTransport.ongatheringstatechange = ev =&gt; {
+```js
+pc.getSenders().forEach(sender => {
+  sender.transport.iceTransport.ongatheringstatechange = ev => {
     let transport = ev.target;
 
     if (transport.gatheringState === "complete") {
@@ -71,37 +76,32 @@ browser-compat: api.RTCIceTransport.gatheringstatechange_event
          but others may still be working on it */
     }
   };
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
- <li>{{domxref("RTCIceTransport.ongatheringstatechange")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
+- {{domxref("RTCIceTransport.ongatheringstatechange")}}
 
-<h3 id="Related_RTCIceTransport_events">Related RTCIceTransport events</h3>
+### Related RTCIceTransport events
 
-<ul>
- <li>{{event("statechange")}}</li>
- <li>{{event("selectedcandidatepairchange")}}</li>
-</ul>
+- {{event("statechange")}}
+- {{event("selectedcandidatepairchange")}}
 
-<h3 id="Related_RTCPeerConnection_events">Related RTCPeerConnection events</h3>
+### Related RTCPeerConnection events
 
-<ul>
- <li>{{event("negotiationneeded")}}</li>
- <li>{{event("signalingstatechange")}}</li>
- <li>{{event("iceconnectionstatechange")}}</li>
- <li>{{event("icegatheringstatechange")}}</li>
- <li>{{event("connectionstatechange")}}</li>
-</ul>
+- {{event("negotiationneeded")}}
+- {{event("signalingstatechange")}}
+- {{event("iceconnectionstatechange")}}
+- {{event("icegatheringstatechange")}}
+- {{event("connectionstatechange")}}

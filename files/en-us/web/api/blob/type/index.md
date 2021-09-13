@@ -2,42 +2,44 @@
 title: Blob.type
 slug: Web/API/Blob/type
 tags:
-- API
-- Blob
-- DOM
-- File
-- File API
-- Format
-- MIME
-- MIME Type
-- Property
-- Reference
-- Type
+  - API
+  - Blob
+  - DOM
+  - File
+  - File API
+  - Format
+  - MIME
+  - MIME Type
+  - Property
+  - Reference
+  - Type
 browser-compat: api.Blob.type
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <strong><code>type</code></strong> property of a
-    {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.</p>
+The **`type`** property of a
+{{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mimetype</em> = <em>blob</em>.type</pre>
+```js
+var mimetype = blob.type
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
-  type could not be determined.</p>
+A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
+type could not be determined.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example asks the user to select a number of files, then checks each file to make
-  sure it's one of a given set of image file types.</p>
+This example asks the user to select a number of files, then checks each file to make
+sure it's one of a given set of image file types.
 
-<pre class="brush:js">var i, fileInput, files, allowedFileTypes;
+```js
+var i, fileInput, files, allowedFileTypes;
 
-// fileInput is a HTMLInputElement: &lt;input type="file" multiple id="myfileinput"&gt;
+// fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
 fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
@@ -46,26 +48,24 @@ files = fileInput.files;
 // our application only allows GIF, PNG, and JPEG images
 allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-for (i = 0; i &lt; files.length; i++) {
+for (i = 0; i < files.length; i++) {
   // Test if file.type is an allowed file type.
-  if (allowedFileTypes.indexOf(<strong>files[i].type</strong>) &gt; -1) {
+  if (allowedFileTypes.indexOf(files[i].type) > -1) {
     // file type matched is one of allowed file types. Do something here.
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Blob")}}</li>
-  <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files
-      from web applications</a></li>
-</ul>
+- {{domxref("Blob")}}
+- [Using files
+  from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

@@ -2,65 +2,61 @@
 title: ResizeObserver.observe()
 slug: Web/API/ResizeObserver/observe
 tags:
-- API
-- Method
-- Reference
-- Resize Observer API
-- ResizeObserver
-- observe()
-- observers
+  - API
+  - Method
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - observe()
+  - observers
 browser-compat: api.ResizeObserver.observe
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>observe()</code></strong> method of the
-  {{domxref("ResizeObserver")}} interface starts observing the specified
-  {{domxref('Element')}} or {{domxref('SVGElement')}}.</p>
+The **`observe()`** method of the
+{{domxref("ResizeObserver")}} interface starts observing the specified
+{{domxref('Element')}} or {{domxref('SVGElement')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>resizeObserver</em>.observe(<em>target</em>, <em>options</em>);</pre>
+```js
+resizeObserver.observe(target, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
-    observed.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An options object allowing you to set options for the observation. Currently this
+- `target`
+  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
+    observed.
+- options {{optional_inline}}
+
+  - : An options object allowing you to set options for the observation. Currently this
     only has one possible option that can be set:
-    <dl>
-      <dt><code>box</code></dt>
-      <dd>Sets which box model the observer will observe changes to. Possible values are:
-        <ul>
-          <li><code>content-box</code> (the default): Size of the content area as defined in CSS.</li>
-          <li><code>border-box</code>: Size of the box border area as defined in CSS.</li>
-          <li><code>device-pixel-content-box</code>: The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.</li>
-        </ul>
-      </dd>
-    </dl>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `box`
 
-<p>Void.</p>
+      - : Sets which box model the observer will observe changes to. Possible values are:
 
-<h3 id="Exceptions">Exceptions</h3>
+        - `content-box` (the default): Size of the content area as defined in CSS.
+        - `border-box`: Size of the box border area as defined in CSS.
+        - `device-pixel-content-box`: The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.
 
-<p>None.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+Void.
 
-<p>The following snippet is taken from the <a
-    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
-  (<a
-    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
-    source</a>) example:</p>
+### Exceptions
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+None.
+
+## Examples
+
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
+([see
+source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
@@ -79,17 +75,19 @@ browser-compat: api.ResizeObserver.observe
   console.log('Size changed');
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<p>An <code>observe()</code> call with an options object would look like so:</p>
+An `observe()` call with an options object would look like so:
 
-<pre
-  class="brush: js">resizeObserver.observe(divElem, { box : 'border-box' });</pre>
+```js
+resizeObserver.observe(divElem, { box : 'border-box' });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

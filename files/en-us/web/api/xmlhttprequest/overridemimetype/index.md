@@ -2,82 +2,78 @@
 title: XMLHttpRequest.overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
 tags:
-- API
-- File Type
-- MIME Type
-- Method
-- Reference
-- XHR
-- XHR MIME Type
-- XMLHttpRequest
-- overrideMimeType
+  - API
+  - File Type
+  - MIME Type
+  - Method
+  - Reference
+  - XHR
+  - XHR MIME Type
+  - XMLHttpRequest
+  - overrideMimeType
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{domxref("XMLHttpRequest")}} method
-    <code><strong>overrideMimeType()</strong></code> specifies a MIME type other than the
-    one provided by the server to be used instead when interpreting the data being
-    transferred in a request.</p>
+The {{domxref("XMLHttpRequest")}} method
+**`overrideMimeType()`** specifies a MIME type other than the
+one provided by the server to be used instead when interpreting the data being
+transferred in a request.
 
-<p>This may be used, for example, to force a stream to
-  be treated and parsed as <code>"text/xml"</code>, even if the server does not report it
-  as such. This method must be called before calling {{domxref("XMLHttpRequest.send",
-  "send()")}}.</p>
+This may be used, for example, to force a stream to
+be treated and parsed as `"text/xml"`, even if the server does not report it
+as such. This method must be called before calling {{domxref("XMLHttpRequest.send",
+  "send()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>XMLHttpRequest</em>.overrideMimeType(<var>mimeType</var>)</pre>
+```js
+XMLHttpRequest.overrideMimeType(mimeType)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mimeType</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the MIME type to use instead of the one
+- `mimeType`
+  - : A {{domxref("DOMString")}} specifying the MIME type to use instead of the one
     specified by the server. If the server doesn't specify a type,
-    <code>XMLHttpRequest</code> assumes <code>"text/xml"</code>.</dd>
-</dl>
+    `XMLHttpRequest` assumes `"text/xml"`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example specifies a MIME type of <code>"text/plain"</code>, overriding the
-  server's stated type for the data being received.</p>
+This example specifies a MIME type of `"text/plain"`, overriding the
+server's stated type for the data being received.
 
-<div class="note">
-  <p><strong>Note:</strong> If the server doesn't provide a
-    <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>
-    header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is
-    <code>"text/xml"</code>. If the content isn't valid XML, an "XML Parsing Error: not
-    well-formed" error occurs. You can avoid this by calling
-    <code>overrideMimeType()</code> to specify a different type.</p>
-</div>
+> **Note:** If the server doesn't provide a
+> [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type)
+> header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is
+> `"text/xml"`. If the content isn't valid XML, an "XML Parsing Error: not
+> well-formed" error occurs. You can avoid this by calling
+> `overrideMimeType()` to specify a different type.
 
-<pre class="brush: js">// Interpret the received data as plain text
+```js
+// Interpret the received data as plain text
 
 req = new XMLHttpRequest();
 req.overrideMimeType("text/plain");
 req.addEventListener("load", callback, false);
 req.open("get", url);
 req.send();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li>{{domxref("XMLHttpRequest.responseType")}}</li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- {{domxref("XMLHttpRequest.responseType")}}

@@ -2,53 +2,50 @@
 title: ReadableStreamBYOBRequest.respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 tags:
-- API
-- Experimental
-- Method
-- ReadableStreamBYOBRequest
-- Reference
-- Streams
-- respondWithNewView
+  - API
+  - Experimental
+  - Method
+  - ReadableStreamBYOBRequest
+  - Reference
+  - Streams
+  - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>respondWithNewView()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBRequest")}} interface xxx</p>
+The **`respondWithNewView()`** method of the
+{{domxref("ReadableStreamBYOBRequest")}} interface xxx
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">readableStreamBYOBRequestInstance.respondWithNewView(<em>view</em>);</pre>
+```js
+readableStreamBYOBRequestInstance.respondWithNewView(view);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>view</em></dt>
-  <dd>xxx</dd>
-</dl>
+- _view_
+  - : xxx
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamBYOBRequest</code>, or there is no
+- TypeError
+  - : The source object is not a `ReadableStreamBYOBRequest`, or there is no
     associated controller, or the associated internal array buffer is non-existent or
-    detached.</dd>
-</dl>
+    detached.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

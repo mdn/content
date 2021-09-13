@@ -10,45 +10,43 @@ tags:
   - Reference
 browser-compat: api.Range.isPointInRange
 ---
-<p>{{ApiRef("DOM")}}{{SeeCompatTable}}</p>
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Range.isPointInRange()</code></strong> method returns a boolean
-  indicating whether the given point is in the {{domxref("Range")}}. It returns
-  <code>true</code> if the point (cursor position) at <code>offset</code> within
-  <code>ReferenceNode</code> is within this range.</p>
+The **`Range.isPointInRange()`** method returns a boolean
+indicating whether the given point is in the {{domxref("Range")}}. It returns
+`true` if the point (cursor position) at `offset` within
+`ReferenceNode` is within this range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>bool</em> = <em>range</em>.isPointInRange( <em>referenceNode</em>, <em>offset</em> )
-</pre>
+```js
+bool = range.isPointInRange( referenceNode, offset )
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>referenceNode</em></dt>
-  <dd>The {{domxref("Node")}} to compare with the {{domxref("Range")}}.</dd>
-  <dt><em>offset</em></dt>
-  <dd>The offset into {{domxref("Node")}} of the point to compare with the
-    {{domxref("Range")}}.</dd>
-</dl>
+- _referenceNode_
+  - : The {{domxref("Node")}} to compare with the {{domxref("Range")}}.
+- _offset_
+  - : The offset into {{domxref("Node")}} of the point to compare with the
+    {{domxref("Range")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 bool = range.isPointInRange(document.getElementsByTagName("p").item(0),1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

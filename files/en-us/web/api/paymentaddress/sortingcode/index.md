@@ -2,34 +2,35 @@
 title: PaymentAddress.sortingCode
 slug: Web/API/PaymentAddress/sortingCode
 tags:
-- API
-- Address
-- Payment Request
-- Payment Request API
-- Property
-- Read-only
-- Reference
-- Sorting Code
-- payment
-- paymentAddress
-- sortingCode
+  - API
+  - Address
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Read-only
+  - Reference
+  - Sorting Code
+  - payment
+  - paymentAddress
+  - sortingCode
 browser-compat: api.PaymentAddress.sortingCode
 ---
-<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>sortingCode</code></strong> read-only property of the
-  {{domxref('PaymentAddress')}} interface returns a string containing a postal sorting
-  code such as is used in France.</p>
+The **`sortingCode`** read-only property of the
+{{domxref('PaymentAddress')}} interface returns a string containing a postal sorting
+code such as is used in France.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sortingCode</em> = <em>PaymentAddress</em>.sortingCode;</pre>
+```js
+var sortingCode = PaymentAddress.sortingCode;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the sorting code portion of the address.</p>
+A {{domxref("DOMString")}} containing the sorting code portion of the address.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

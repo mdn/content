@@ -9,52 +9,50 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.watchAvailability
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>watchAvailability()</code></strong> method of the {{domxref("RemotePlayback")}} interface watches the list of available remote playment devices and returns a {{jsxref("Promise")}} that resolves with the <code>callbackId</code> of a remote playback device.</p>
+The **`watchAvailability()`** method of the {{domxref("RemotePlayback")}} interface watches the list of available remote playment devices and returns a {{jsxref("Promise")}} that resolves with the `callbackId` of a remote playback device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RemotePlayback.watchAvailability(RemotePlaybackAvailabilityCallback);</pre>
+```js
+RemotePlayback.watchAvailability(RemotePlaybackAvailabilityCallback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>RemotePlaybackAvailabilityCallback(boolean)</code></dt>
-  <dd>A callback that allows the page to obtain the remote playback device availability for the corresponding media element. It is passed a boolean which, if true, indicates that remote playback is available.</dd>
-</dl>
+- `RemotePlaybackAvailabilityCallback(boolean)`
+  - : A callback that allows the page to obtain the remote playback device availability for the corresponding media element. It is passed a boolean which, if true, indicates that remote playback is available.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with an integer. This is the <code>callbackId</code> for the identified remote playback device.</p>
+A {{jsxref("Promise")}} that resolves with an integer. This is the `callbackId` for the identified remote playback device.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the user agent is unable to continuously monitor the list of available remote playback devices.</dd>
-</dl>
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is `true` for the media element.
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the user agent is unable to continuously monitor the list of available remote playback devices.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, after checking that there is no currently connected device, <code>watchAvailability()</code> is used to watch for remote devices becoming available. <a href="https://beaufortfrancois.github.io/sandbox/media/remote-playback.html">See the working example</a> (Requires a supported device and a connected remote playback device).</p>
+In the following example, after checking that there is no currently connected device, `watchAvailability()` is used to watch for remote devices becoming available. [See the working example](https://beaufortfrancois.github.io/sandbox/media/remote-playback.html) (Requires a supported device and a connected remote playback device).
 
-<pre class="brush: js"> if (video.remote.state == 'disconnected') {
+```js
+ if (video.remote.state == 'disconnected') {
   video.remote.watchAvailability(handleAvailabilityChange)
   .then(id => {
     log('> Started watching remote device availability: ' + id);
     callbackId = id
   });
 }
-</pre>
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

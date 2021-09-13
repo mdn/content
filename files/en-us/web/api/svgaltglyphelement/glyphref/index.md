@@ -11,40 +11,41 @@ tags:
   - SVGAltGlyphRefElement
 browser-compat: api.SVGAltGlyphElement.glyphRef
 ---
-<p>{{APIRef("SVGAltGlyphElement")}}</p>
+{{APIRef("SVGAltGlyphElement")}}
 
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p>The <strong><code>SVGAltGlyphElement.glyphRef</code></strong> property is a
-  {{domxref("DOMString")}} representing a glyph identifier. It has the same meaning as the
-  ‘glyphRef’ property on the {{domxref("SVGGlyphRefElement")}} interface of the
-  {{SVGElement("glyphRef")}} element.</p>
+The **`SVGAltGlyphElement.glyphRef`** property is a
+{{domxref("DOMString")}} representing a glyph identifier. It has the same meaning as the
+‘glyphRef’ property on the {{domxref("SVGGlyphRefElement")}} interface of the
+{{SVGElement("glyphRef")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">string = <em>myGlyph</em>.glyphRef;
-<em>myGlyph</em>.glyphRef = string;
-</pre>
+```js
+string = myGlyph.glyphRef;
+myGlyph.glyphRef = string;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The return value is a Glyph Identifier, the value of which depends on the
-  format of the given font.</p>
+The return value is a Glyph Identifier, the value of which depends on the
+format of the given font.
 
-<h2 id="Example">Example </h2>
+## Example
 
-<pre class="brush: js">myGlyph.glypRef = &quot;#glyphID&quot;;</pre>
+```js
+myGlyph.glypRef = "#glyphID";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SVGAltGlyphElement")}}</li>
-</ul>
+- {{domxref("SVGAltGlyphElement")}}

@@ -19,36 +19,37 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.error_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onerror", "onerror")}} error handler when an error occurs on the data channel.</p>
+A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's {{domxref("RTCDataChannel.onerror", "onerror")}} error handler when an error occurs on the data channel.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("RTCErrorEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCDataChannel.onerror", "onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("RTCErrorEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("RTCDataChannel.onerror", "onerror")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.</p>
+The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Strings for each of the SCTP cause codes found in RFC
+```js
+// Strings for each of the SCTP cause codes found in RFC
 // 4960, section 3.3.10:
 // https://datatracker.ietf.org/doc/html/rfc4960#section-3.3.10
 
@@ -69,7 +70,7 @@ const sctpCauseCodes = [
   "Protocol violation"
 ];
 
-dc.addEventListener("error", ev =&gt; {
+dc.addEventListener("error", ev => {
   const err = ev.error;
 
   console.error("WebRTC error: ", err.message);
@@ -85,7 +86,7 @@ dc.addEventListener("error", ev =&gt; {
                     err.httpRequestStatusCode);
       break;
     case "sctp-failure":
-      if (err.sctpCauseCode &lt; sctpCauseCodes.length) {
+      if (err.sctpCauseCode < sctpCauseCodes.length) {
         console.error("    SCTP failure: ", err.sctpCauseCode);
       } else {
         console.error("    Unknown SCTP error");
@@ -106,38 +107,36 @@ dc.addEventListener("error", ev =&gt; {
   console.error("    Error in file ", err.filename, " at line ", err.lineNumber,
                 ", column ", err.columnNumber);
 }, false);
-</pre>
+```
 
-<p>The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; <code>RTCError</code> is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is <code>RTCError</code> and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.</p>
+The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; `RTCError` is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is `RTCError` and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.
 
-<p>Error information is output to the console using {{domxref("console.error()")}}. The <code>message</code> string is always output, as is information about the source file's name, line number, and column number at which the error occurred.</p>
+Error information is output to the console using {{domxref("console.error()")}}. The `message` string is always output, as is information about the source file's name, line number, and column number at which the error occurred.
 
-<p>In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.</p>
+In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
-<p>You can also set up an event handler for <code>error</code> events using the <code>RTCDataChannel</code> interface's {{domxref("RTCDataChannel.onerror", "onerror")}} event handler property:</p>
+You can also set up an event handler for `error` events using the `RTCDataChannel` interface's {{domxref("RTCDataChannel.onerror", "onerror")}} event handler property:
 
-<pre class="brush: js">dc.onerror = ev =&gt; {
+```js
+dc.onerror = ev => {
   const err = ev.error;
 
   /* ... */
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Since <code>RTCError</code> is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.</p>
-</div>
+> **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</a></li>
- <li>Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.message_event", "message")}}, and {{domxref("RTCDataChannel.close_event", "close")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [A simple RTCDataChannel example](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.message_event", "message")}}, and {{domxref("RTCDataChannel.close_event", "close")}}

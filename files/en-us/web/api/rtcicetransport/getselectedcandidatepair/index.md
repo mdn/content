@@ -2,73 +2,72 @@
 title: RTCIceTransport.getSelectedCandidatePair()
 slug: Web/API/RTCIceTransport/getSelectedCandidatePair
 tags:
-- API
-- Candidates
-- Connectivity
-- Gathering
-- ICE
-- Method
-- Negotiation
-- Pair
-- RTCIceTransport
-- Reference
-- WebRTC
-- WebRTC API
-- getSelectedCandidatePair
+  - API
+  - Candidates
+  - Connectivity
+  - Gathering
+  - ICE
+  - Method
+  - Negotiation
+  - Pair
+  - RTCIceTransport
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - getSelectedCandidatePair
 browser-compat: api.RTCIceTransport.getSelectedCandidatePair
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceTransport")}} method
-		<code><strong>getSelectedCandidatePair()</strong></code> returns an
-		{{domxref("RTCIceCandidatePair")}} object containing the current best-choice pair
-		of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.</p>
+The {{domxref("RTCIceTransport")}} method
+**`getSelectedCandidatePair()`** returns an
+{{domxref("RTCIceCandidatePair")}} object containing the current best-choice pair
+of {{Glossary("ICE")}} candidates describing the configuration of the endpoints of the transport.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>candidatePair</em> = <em>RTCIceTransport</em>.getSelectedCandidatePair();</pre>
+```js
+candidatePair = RTCIceTransport.getSelectedCandidatePair();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("RTCIceCandidatePair")}} object describing the configurations of the
-	currently-selected candidate pair's two endpoints.
-	{{domxref("RTCIceCandidatePair.local", "local")}} describes the configuration of the
-	local end of the connection, while {{domxref("RTCIceCandidatePair.remote", "remote")}}
-	describes the remote peer's configuration.</p>
+A {{domxref("RTCIceCandidatePair")}} object describing the configurations of the
+currently-selected candidate pair's two endpoints.
+{{domxref("RTCIceCandidatePair.local", "local")}} describes the configuration of the
+local end of the connection, while {{domxref("RTCIceCandidatePair.remote", "remote")}}
+describes the remote peer's configuration.
 
-<p>The return value is <code>null</code> if no pair of candidates has been selected yet.
-</p>
+The return value is `null` if no pair of candidates has been selected yet.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers
-	and analyzes candidate configurations from each the two peers. As soon as it finds an
-	acceptable matching pair of candidates, meeting the requirements for the connection, a
-	{{event("selectedcandidatepairchange")}} event is fired at the
-	{{domxref("RTCIceTransport")}}. From that time forward, the best matching pair of
-	candidates will always be available by calling
-	<code>getSelectedCandidatePair()</code>.</p>
+As the ICE agent performs negotiation of a {{domxref("RTCPeerConnection")}}, it gathers
+and analyzes candidate configurations from each the two peers. As soon as it finds an
+acceptable matching pair of candidates, meeting the requirements for the connection, a
+{{event("selectedcandidatepairchange")}} event is fired at the
+{{domxref("RTCIceTransport")}}. From that time forward, the best matching pair of
+candidates will always be available by calling
+`getSelectedCandidatePair()`.
 
-<p>As ICE negotiation continues, any time a pair of candidates is discovered that is
-	better than the currently-selected pair, the new pair is selected, replacing the
-	previous pairing, and the <code>selectedcandidatepairchange</code> event is fired again.</p>
+As ICE negotiation continues, any time a pair of candidates is discovered that is
+better than the currently-selected pair, the new pair is selected, replacing the
+previous pairing, and the `selectedcandidatepairchange` event is fired again.
 
-<div class="note">
-	<p><strong>Note:</strong> It's possible for one of the configurations in the selected candidate pair to remain unchanged when a new pairing is chosen.</p>
-</div>
+> **Note:** It's possible for one of the configurations in the selected candidate pair to remain unchanged when a new pairing is chosen.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example"><code>RTCIceTransport.onselectedcandidatepairchange</code></a> for example code.</p>
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

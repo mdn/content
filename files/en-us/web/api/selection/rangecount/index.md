@@ -2,79 +2,76 @@
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
 tags:
-- API
-- Experimental
-- HTML Editing
-- Property
-- Read-only
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Property
+  - Read-only
+  - Reference
+  - Selection
 browser-compat: api.Selection.rangeCount
 ---
-<div>
-  <div>
-    <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-  </div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.rangeCount</code></strong> read-only property returns the
-  number of ranges in the selection.</p>
+The **`Selection.rangeCount`** read-only property returns the
+number of ranges in the selection.
 
-<p>Before the user has clicked a freshly loaded page, the <code>rangeCount</code> is
-  <code>0</code>. After the user clicks on the page, <code>rangeCount</code> is
-  <code>1</code>, even if no selection is visible.</p>
+Before the user has clicked a freshly loaded page, the `rangeCount` is
+`0`. After the user clicks on the page, `rangeCount` is
+`1`, even if no selection is visible.
 
-<p>A user can normally only select one range at a time, so the <code>rangeCount</code>
-  will usually be <code>1</code>. Scripting can be used to make the selection contain more
-  than one range.</p>
+A user can normally only select one range at a time, so the `rangeCount`
+will usually be `1`. Scripting can be used to make the selection contain more
+than one range.
 
-<p>Gecko browsers allow multiple selections across table cells. Firefox allows to select
-  multiple ranges in the document by using Ctrl+click (unless the click occurs within an
-  element that has the <code>display: table-cell</code> CSS property assigned).</p>
+Gecko browsers allow multiple selections across table cells. Firefox allows to select
+multiple ranges in the document by using Ctrl+click (unless the click occurs within an
+element that has the `display: table-cell` CSS property assigned).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>value</em> =<em> sel</em>.rangeCount
-</pre>
+```js
+value = sel.rangeCount
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example will show the <code>rangeCount</code> every second. Select text
-  in the browser to see it change.</p>
+The following example will show the `rangeCount` every second. Select text
+in the browser to see it change.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;&lt;td&gt;a.1&lt;td&gt;a.2
-  &lt;tr&gt;&lt;td&gt;b.1&lt;td&gt;b.2
-  &lt;tr&gt;&lt;td&gt;c.1&lt;td&gt;c.2
-</pre>
+```html
+<table>
+  <tr><td>a.1<td>a.2
+  <tr><td>b.1<td>b.2
+  <tr><td>c.1<td>c.2
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.setInterval(function () {
+```js
+window.setInterval(function () {
   console.log(window.getSelection().rangeCount);
 }, 1000);
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Open your console to see how many ranges are in the selection. In Gecko browsers, you
-  can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
-  dragging with the mouse.</p>
+Open your console to see how many ranges are in the selection. In Gecko browsers, you
+can select multiple ranges across table cells by holding down <kbd>Ctrl</kbd> while
+dragging with the mouse.
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

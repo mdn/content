@@ -2,65 +2,64 @@
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Dashes
-- LInes
-- Method
-- Reference
-- patterns
-- setLineDash
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Dashes
+  - LInes
+  - Method
+  - Reference
+  - patterns
+  - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>setLineDash()</code></strong> method of the Canvas 2D API's
-	{{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
-	stroking lines. It uses an array of values that specify alternating lengths of lines
-	and gaps which describe the pattern.</p>
+The **`setLineDash()`** method of the Canvas 2D API's
+{{domxref("CanvasRenderingContext2D")}} interface sets the line dash pattern used when
+stroking lines. It uses an array of values that specify alternating lengths of lines
+and gaps which describe the pattern.
 
-<div class="note">
-	<p><strong>Note:</strong> To return to using solid lines, set the line dash list to an
-		empty array.</p>
-</div>
+> **Note:** To return to using solid lines, set the line dash list to an
+> empty array.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.setLineDash(<em>segments</em>);
-</pre>
+```js
+ctx.setLineDash(segments);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>segments</code></dt>
-	<dd>An {{jsxref("Array")}} of numbers that specify distances to alternately draw a
-		line and a gap (in coordinate space units). If the number of elements in the array
-		is odd, the elements of the array get copied and concatenated. For example,
-		<code>[5, 15, 25]</code> will become <code>[5, 15, 25, 5, 15, 25]</code>. If the
-		array is empty, the line dash list is cleared and line strokes return to being
-		solid.</dd>
-</dl>
+- `segments`
+  - : An {{jsxref("Array")}} of numbers that specify distances to alternately draw a
+    line and a gap (in coordinate space units). If the number of elements in the array
+    is odd, the elements of the array get copied and concatenated. For example,
+    `[5, 15, 25]` will become `[5, 15, 25, 5, 15, 25]`. If the
+    array is empty, the line dash list is cleared and line strokes return to being
+    solid.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This example uses the <code>setLineDash()</code> method to draw a dashed line above a
-	solid line.</p>
+This example uses the `setLineDash()` method to draw a dashed line above a
+solid line.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Dashed line
@@ -76,27 +75,29 @@ ctx.setLineDash([]);
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Basic_example', 700, 180) }}</p>
+{{ EmbedLiveSample('Basic_example', 700, 180) }}
 
-<h3 id="Some_common_patterns">Some common patterns</h3>
+### Some common patterns
 
-<p>This example illustrates a variety of common line dash patterns.</p>
+This example illustrates a variety of common line dash patterns.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The <code>drawDashedLine()</code> function created below makes the drawing of multiple
-	dashed lines simple. It receives a pattern array as its only parameter.</p>
+The `drawDashedLine()` function created below makes the drawing of multiple
+dashed lines simple. It receives a pattern array as its only parameter.
 
-<pre class="brush: js">function drawDashedLine(pattern) {
+```js
+function drawDashedLine(pattern) {
   ctx.beginPath();
   ctx.setLineDash(pattern);
   ctx.moveTo(0, y);
@@ -116,25 +117,22 @@ drawDashedLine([20, 5]);
 drawDashedLine([15, 3, 3, 3]);
 drawDashedLine([20, 3, 3, 3, 3, 3, 3, 3]);
 drawDashedLine([12, 3, 3]);  // Equals [12, 3, 3, 12, 3, 3]
+```
 
-</pre>
+#### Result
 
-<h4 id="Result_2">Result</h4>
+{{ EmbedLiveSample('Some_common_patterns', 700, 180) }}
 
-<p>{{ EmbedLiveSample('Some_common_patterns', 700, 180) }}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-	<li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
-	<li>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

@@ -10,25 +10,23 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.outerText
 ---
-<div>{{APIRef("DOM")}} {{ Non-standard_header() }}</div>
+{{APIRef("DOM")}} {{ Non-standard_header() }}
 
-<p><strong><code>HTMLElement.outerText</code></strong> is a non-standard property. As a getter, it returns the same value as {{domxref("HTMLElement.innerText")}}. As a setter, it removes the current node and replaces it with the given text.</p>
+**`HTMLElement.outerText`** is a non-standard property. As a getter, it returns the same value as {{domxref("HTMLElement.innerText")}}. As a setter, it removes the current node and replaces it with the given text.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p><a href="http://stackoverflow.com/a/18481435">See this StackOverflow answer.</a></p>
+[See this StackOverflow answer.](http://stackoverflow.com/a/18481435)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification. Standards discussion: <a href="https://github.com/whatwg/html/issues/668">whatwg/html#668</a>.</p>
+Not part of any specification. Standards discussion: [whatwg/html#668](https://github.com/whatwg/html/issues/668).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLElement.innerText")}}</li>
- <li>{{domxref("Element.outerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.outerHTML")}}

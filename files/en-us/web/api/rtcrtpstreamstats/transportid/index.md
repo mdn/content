@@ -2,42 +2,42 @@
 title: RTCRtpStreamStats.transportId
 slug: Web/API/RTCRtpStreamStats/transportId
 tags:
-- API
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Transport
-- WebRTC
-- WebRTC API
-- id
-- rtc
-- transportID
+  - API
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - id
+  - rtc
+  - transportID
 browser-compat: api.RTCRtpStreamStats.transportId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpStreamStats")}} dictionary's
-    <code><strong>transportId</strong></code> property is a string which uniquely
-    identifies the object from which the statistics contained in the
-    {{domxref("RTCTransportStats")}} properties in the
-    {{domxref("RTCStatsReport")}}.</p>
+The {{domxref("RTCRtpStreamStats")}} dictionary's
+**`transportId`** property is a string which uniquely
+identifies the object from which the statistics contained in the
+{{domxref("RTCTransportStats")}} properties in the
+{{domxref("RTCStatsReport")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>transportID</em> = <em>RTCRtpStreamStats</em>.transportId;</pre>
+```js
+var transportID = RTCRtpStreamStats.transportId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} uniquely identifying the source of the statistics contained
-  the {{domxref("RTCTransportStats")}} properties in the {{domxref("RTCStatsReport")}}.
-</p>
+A {{domxref("DOMString")}} uniquely identifying the source of the statistics contained
+the {{domxref("RTCTransportStats")}} properties in the {{domxref("RTCStatsReport")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

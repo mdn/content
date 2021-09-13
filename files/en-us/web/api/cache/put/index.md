@@ -14,84 +14,75 @@ tags:
   - put
 browser-compat: api.Cache.put
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>put()</code></strong> method of the
-    {{domxref("Cache")}} interface allows key/value pairs to be added to the current
-    {{domxref("Cache")}} object.</p>
+The **`put()`** method of the
+{{domxref("Cache")}} interface allows key/value pairs to be added to the current
+{{domxref("Cache")}} object.
 
-<p>Often, you will just want to {{domxref("fetch()")}}
-  one or more requests, then add the result straight to your cache. In such cases you are
-  better off using
-  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}, as
-  they are shorthand functions for one or more of these operations.</p>
+Often, you will just want to {{domxref("fetch()")}}
+one or more requests, then add the result straight to your cache. In such cases you are
+better off using
+{{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}, as
+they are shorthand functions for one or more of these operations.
 
-<pre class="brush: js">fetch(url).then(function(response) {
+```js
+fetch(url).then(function(response) {
   if (!response.ok) {
     throw new TypeError('Bad response status');
   }
   return cache.put(url, response);
 })
+```
 
-</pre>
+> **Note:** `put()` will overwrite any key/value pair
+> previously stored in the cache that matches the request.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>put()</code> will overwrite any key/value pair
-    previously stored in the cache that matches the request.</p>
-</div>
+> **Note:** {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} do not
+> cache responses with `Response.status` values that are not in the 200
+> range, whereas {{domxref("Cache.put")}} lets you store any request/response pair. As a
+> result, {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} can't be used to store
+> opaque responses, whereas {{domxref("Cache.put")}} can.
 
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} do not
-    cache responses with <code>Response.status</code> values that are not in the 200
-    range, whereas {{domxref("Cache.put")}} lets you store any request/response pair. As a
-    result, {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} can't be used to store
-    opaque responses, whereas {{domxref("Cache.put")}} can.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js"><em>cache</em>.put(<em>request</em>, <em>response</em>).then(function() {
+```js
+cache.put(request, response).then(function() {
   // request/response pair has been added to the cache
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request</dt>
-  <dd>The {{domxref("Request")}} object or URL that you want to add to the cache.</dd>
-  <dt>response</dt>
-  <dd>The {{domxref("Response")}} you want to match up to the request.</dd>
-</dl>
+- request
+  - : The {{domxref("Request")}} object or URL that you want to add to the cache.
+- response
+  - : The {{domxref("Response")}} you want to match up to the request.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
-<div class="note">
-  <p><strong>Note:</strong> The promise will reject with a <code>TypeError</code> if the
-    URL scheme is not <code>http</code> or <code>https</code>.</p>
-</div>
+> **Note:** The promise will reject with a `TypeError` if the
+> URL scheme is not `http` or `https`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test
-    example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>).
-  Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
-  like so:</p>
+This example is from the MDN [sw-test
+example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
+like so:
 
-<ol>
-  <li>Check whether a match for the request is found in the {{domxref("CacheStorage")}}
+1.  Check whether a match for the request is found in the {{domxref("CacheStorage")}}
     using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
-  </li>
-  <li>If not, open the <code>v1</code> cache using <code>open()</code>, put the default
+2.  If not, open the `v1` cache using `open()`, put the default
     network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a
-    clone of the default network request using <code>return response.clone()</code>. Clone
-    is needed because <code>put()</code> consumes the response body.</li>
-  <li>If this fails (e.g., because the network is down), return a fallback response.</li>
-</ol>
+    clone of the default network request using `return response.clone()`. Clone
+    is needed because `put()` consumes the response body.
+3.  If this fails (e.g., because the network is down), return a fallback response.
 
-<pre class="brush: js">var response;
+```js
+var response;
 var cachedResponse = caches.match(event.request).catch(function() {
   return fetch(event.request);
 }).then(function(r) {
@@ -102,21 +93,20 @@ var cachedResponse = caches.match(event.request).catch(function() {
   return response.clone();
 }).catch(function() {
   return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

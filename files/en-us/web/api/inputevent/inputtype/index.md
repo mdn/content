@@ -2,84 +2,83 @@
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
 tags:
-- API
-- DOM
-- DOM Events
-- Input
-- InputEvent
-- Property
-- Reference
-- events
-- inputType
+  - API
+  - DOM
+  - DOM Events
+  - Input
+  - InputEvent
+  - Property
+  - Reference
+  - events
+  - inputType
 browser-compat: api.InputEvent.inputType
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>inputType</code></strong> read-only property of the
-  {{domxref("InputEvent")}} interface returns the type of change made to editable content.
-  Possible changes include for example inserting, deleting, and formatting text.</p>
+The **`inputType`** read-only property of the
+{{domxref("InputEvent")}} interface returns the type of change made to editable content.
+Possible changes include for example inserting, deleting, and formatting text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aString</em> = <em>inputEvent</em>.inputType;</pre>
+```js
+var aString = inputEvent.inputType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the type of input that was made. There are many
-  possible values, such as <code>insertText</code>, <code>deleteContentBackward</code>,
-  <code>insertFromPaste</code>, and <code>formatBold</code>. For a complete list of the
-  available input types, see the <a
-    href="https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes">Attributes
-    section of the Input Events Level 1 spec</a>.</p>
+A {{domxref("DOMString")}} containing the type of input that was made. There are many
+possible values, such as `insertText`, `deleteContentBackward`,
+`insertFromPaste`, and `formatBold`. For a complete list of the
+available input types, see the [Attributes
+section of the Input Events Level 1 spec](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example logs the <code>inputType</code> for <a
-    href="/en-US/docs/Web/API/HTMLElement/input_event">input events</a> on an editable
-  {{htmlElement("div")}}.</p>
+This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLElement/input_event) on an editable
+{{htmlElement("div")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Input type: &lt;/p&gt;
-&lt;div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;"&gt;
-  &lt;p&gt;Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.&lt;/p&gt;
-  &lt;hr&gt;
-  &lt;ul&gt;
-    &lt;li&gt;A sample&lt;/li&gt;
-    &lt;li&gt;bulleted&lt;/li&gt;
-    &lt;li&gt;list.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;Another paragraph.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p id="log">Input type: </p>
+<div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;">
+  <p>Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.</p>
+  <hr>
+  <ul>
+    <li>A sample</li>
+    <li>bulleted</li>
+    <li>list.</li>
+  </ul>
+  <p>Another paragraph.</p>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const log = document.getElementById('log');
+```js
+const log = document.getElementById('log');
 const editable = document.querySelector('div[contenteditable]');
 editable.addEventListener('input', logInputType);
 
 function logInputType(event) {
   log.textContent = `Input type: ${event.inputType}`;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Try editing the text inside the <code>&lt;div&gt;</code> and see what happens.</p>
+Try editing the text inside the `<div>` and see what happens.
 
-<p>{{EmbedLiveSample("Examples", '100%', 500)}}</p>
+{{EmbedLiveSample("Examples", '100%', 500)}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> See also <a
-      href="https://d-toybox.com/studio/lib/input_event_viewer.html">Masayuki Nakano's
-      InputEvent test suite</a> for a more detailed example.</p>
-</div>
+> **Note:** See also [Masayuki Nakano's
+> InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) for a more detailed example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

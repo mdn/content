@@ -9,38 +9,39 @@ tags:
   - ResizeObserverSize
 browser-compat: api.ResizeObserverSize.inlineSize
 ---
-<div>{{DefaultAPISidebar("Resize Observer API")}}</div>
+{{DefaultAPISidebar("Resize Observer API")}}
 
-<p>The <strong><code>inlineSize</code></strong> read-only property of the {{domxref("ResizeObserverSize")}} interface returns the length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.</p>
+The **`inlineSize`** read-only property of the {{domxref("ResizeObserverSize")}} interface returns the length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For more explanation of writing modes and block and inline dimensions, read <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a>.</p>
-</div>
+> **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>inlineSize</var> = <var>ResizeObserverSize</var>.inlineSize;</pre>
+    var inlineSize = ResizeObserverSize.inlineSize;
 
-<h3>Value</h3>
-<p>A decimal representing the inline size in pixels.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A decimal representing the inline size in pixels.
 
-<p>In this example we return an array of sizing information with {{domxref("ResizeObserverEntry.contentBoxSize")}}. The <code>inlineSize</code> property returns the inline dimension size of the observed element.</p>
+## Examples
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+In this example we return an array of sizing information with {{domxref("ResizeObserverEntry.contentBoxSize")}}. The `inlineSize` property returns the inline dimension size of the observed element.
+
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     let elemSize = entry.contentBoxSize[0];
     console.log(elemSize.inlineSize); // a decimal
   }
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

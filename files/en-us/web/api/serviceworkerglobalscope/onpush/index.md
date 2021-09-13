@@ -2,37 +2,39 @@
 title: ServiceWorkerGlobalScope.onpush
 slug: Web/API/ServiceWorkerGlobalScope/onpush
 tags:
-- API
-- Property
-- Push
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerGlobalScope
-- onpush
+  - API
+  - Property
+  - Push
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerGlobalScope
+  - onpush
 browser-compat: api.ServiceWorkerGlobalScope.onpush
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>ServiceWorkerGlobalScope.onpush</strong></code> event of the
-  {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a push message is
-  received by a service worker via a push server.</p>
+The **`ServiceWorkerGlobalScope.onpush`** event of the
+{{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a push message is
+received by a service worker via a push server.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
+```js
+ServiceWorkerGlobalScope.onpush = function(PushEvent) { ... }
 self.addEventListener('push', function(PushEvent) { ... })
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example takes data from a {{domxref("PushEvent")}} and displays it on all
-  of the service worker's clients. The data payload of the push message is available in
-  the event object's <code>data</code> property ({{domxref("PushEvent.data")}}, which
-  contains a {{domxref("PushMessageData")}} object.)</p>
+The following example takes data from a {{domxref("PushEvent")}} and displays it on all
+of the service worker's clients. The data payload of the push message is available in
+the event object's `data` property ({{domxref("PushEvent.data")}}, which
+contains a {{domxref("PushMessageData")}} object.)
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
-  if (!(self.Notification &amp;&amp; self.Notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
 
@@ -55,18 +57,17 @@ self.addEventListener('push', function(PushEvent) { ... })
       clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
     }
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [Push API](/en-US/docs/Web/API/Push_API)

@@ -11,46 +11,46 @@ tags:
   - web console
 browser-compat: api.console.assert
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <code><strong>console.assert()</strong></code> method writes an error message to
-  the console if the assertion is false. If the assertion is true, nothing happens.</p>
+The **`console.assert()`** method writes an error message to
+the console if the assertion is false. If the assertion is true, nothing happens.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.assert(<em>assertion</em>, <em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.assert(<em>assertion</em>, <em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]); // C-like message formatting
-</pre>
+```js
+console.assert(assertion, obj1 [, obj2, ..., objN]);
+console.assert(assertion, msg [, subst1, ..., substN]); // C-like message formatting
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>assertion</code></dt>
-  <dd>Any boolean expression. If the assertion is false, the message is written to the
-    console.</dd>
-  <dt><code>obj1</code> ... <code>objN</code></dt>
-  <dd>A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output.</dd>
-  <dt><code>msg</code></dt>
-  <dd>A JavaScript string containing zero or more substitution strings.</dd>
-  <dt><code>subst1</code> ... <code>substN</code></dt>
-  <dd>JavaScript objects with which to replace substitution strings within
-    <code>msg</code>. This parameter gives you additional control over the format of the
-    output.</dd>
-</dl>
+- `assertion`
+  - : Any boolean expression. If the assertion is false, the message is written to the
+    console.
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This parameter gives you additional control over the format of the
+    output.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code example demonstrates the use of a JavaScript object following the
-  assertion:</p>
+The following code example demonstrates the use of a JavaScript object following the
+assertion:
 
-<pre class="brush: js">const errorMsg = 'the # is not even';
-for (let number = 2; number &lt;= 5; number += 1) {
+```js
+const errorMsg = 'the # is not even';
+for (let number = 2; number <= 5; number += 1) {
     console.log('the # is ' + number);
     console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // or, using <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#new_notations_in_ecmascript_2015">ES2015 object property shorthand</a>:
+    // or, using ES2015 object property shorthand:
     // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // output:
@@ -60,35 +60,37 @@ for (let number = 2; number &lt;= 5; number += 1) {
 // the # is 4
 // the # is 5
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
-</pre>
+```
 
-<p>Note that, while a string containing a substitution string works as a parameter for
-  <code>console.log</code> in Node and many, if not most, browsers...</p>
+Note that, while a string containing a substitution string works as a parameter for
+`console.log` in Node and many, if not most, browsers...
 
-<pre class="brush: js">console.log('the word is %s', 'foo');
+```js
+console.log('the word is %s', 'foo');
 // output: the word is foo
-</pre>
+```
 
-<p>...the use of such a string does not currently work as intended as a parameter for
-  <code>console.assert</code> in all browsers:</p>
+...the use of such a string does not currently work as intended as a parameter for
+`console.assert` in all browsers:
 
-<pre class="brush: js">console.assert(false, 'the word is %s', 'foo');
+```js
+console.assert(false, 'the word is %s', 'foo');
 // correct output in Node.js and some browsers
 //     (e.g. Firefox v60.0.2):
 // Assertion failed: the word is foo
 // incorrect output in some browsers
 //     (e.g. Chrome v67.0.3396.87):
 // Assertion failed: the word is %s foo
-</pre>
+```
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting
-    text to the console</a> in the documentation of {{domxref("console")}} for further
-  details.</p>
+See [Outputting
+text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further
+details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

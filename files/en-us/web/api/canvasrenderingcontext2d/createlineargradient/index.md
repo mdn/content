@@ -10,73 +10,68 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.createLinearGradient()</code></strong>
-  method of the Canvas 2D API creates a gradient along the line connecting two given
-  coordinates.</p>
+The
+**`CanvasRenderingContext2D.createLinearGradient()`**
+method of the Canvas 2D API creates a gradient along the line connecting two given
+coordinates.
 
-<p><img alt=""
-    src="mdn-canvas-lineargradient.png"></p>
+![](mdn-canvas-lineargradient.png)
 
-<p>This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
-  the gradient must first be assigned to the
-  {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or
-  {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.</p>
+This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
+the gradient must first be assigned to the
+{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or
+{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-<div class="note">
-  <p><strong>Note:</strong> Gradient coordinates are global, i.e., relative to the current
-    coordinate space. When applied to a shape, the coordinates are NOT relative to the
-    shape's coordinates.</p>
-</div>
+> **Note:** Gradient coordinates are global, i.e., relative to the current
+> coordinate space. When applied to a shape, the coordinates are NOT relative to the
+> shape's coordinates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CanvasGradient <var>ctx</var>.createLinearGradient(<var>x0</var>, <var>y0</var>, <var>x1</var>, <var>y1</var>);
-</pre>
+```js
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
-<p>The <code>createLinearGradient()</code> method is specified by four parameters defining
-  the start and end points of the gradient line.</p>
+The `createLinearGradient()` method is specified by four parameters defining
+the start and end points of the gradient line.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x0</code></dt>
-  <dd>The x-axis coordinate of the start point.</dd>
-  <dt><code>y0</code></dt>
-  <dd>The y-axis coordinate of the start point.</dd>
-  <dt><code>x1</code></dt>
-  <dd>The x-axis coordinate of the end point.</dd>
-  <dt><code>y1</code></dt>
-  <dd>The y-axis coordinate of the end point.</dd>
-</dl>
+- `x0`
+  - : The x-axis coordinate of the start point.
+- `y0`
+  - : The y-axis coordinate of the start point.
+- `x1`
+  - : The x-axis coordinate of the end point.
+- `y1`
+  - : The y-axis coordinate of the end point.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>{{domxref("CanvasGradient")}}</dt>
-  <dd>A linear <code>CanvasGradient</code> initialized with the specified line.</dd>
-</dl>
+- {{domxref("CanvasGradient")}}
+  - : A linear `CanvasGradient` initialized with the specified line.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Filling_a_rectangle_with_a_linear_gradient">Filling a rectangle with a linear
-  gradient</h3>
+### Filling a rectangle with a linear gradient
 
-<p>This example initializes a linear gradient using the
-  <code>createLinearGradient()</code> method. Three color stops between the gradient's
-  start and end points are then created. Finally, the gradient is assigned to the canvas
-  context, and is rendered to a filled rectangle.</p>
+This example initializes a linear gradient using the
+`createLinearGradient()` method. Three color stops between the gradient's
+start and end points are then created. Finally, the gradient is assigned to the canvas
+context, and is rendered to a filled rectangle.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Create a linear gradient
@@ -92,31 +87,27 @@ gradient.addColorStop(1, 'green');
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 200, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Filling_a_rectangle_with_a_linear_gradient', 700, 180) }}</p>
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_linear_gradient', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-    throws <code>NOT_SUPPORTED_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
-</ul>
+- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
+  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createConicGradient()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createConicGradient()")}}

@@ -4,33 +4,30 @@ slug: Web/API/msCachingEnabled
 tags:
   - msCachingEnabled
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>msCachingEnabled</code></strong> method gets the current caching state for an <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>.</p>
+The **`msCachingEnabled`** method gets the current caching state for an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest).
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> var cacheState = XMLHttpRequest.msCachingEnabled();
-</pre>
+```js
+ var cacheState = XMLHttpRequest.msCachingEnabled();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>cacheState</em>[out, retval]</dt>
- <dd>Type = <strong>boolean</strong>. If true, <code>XMLHttpRequest </code>is cached to disk. If false, it is not written to disk.</dd>
-</dl>
+- _cacheState_\[out, retval]
+  - : Type = **boolean**. If true, `XMLHttpRequest `is cached to disk. If false, it is not written to disk.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Type: <strong>boolean</strong>. If true, <code>XMLHttpRequest </code>is cached to disk. If false, it is not written to disk.</p>
+Type: **boolean**. If true, `XMLHttpRequest `is cached to disk. If false, it is not written to disk.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/msCaching">msCaching property</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [msCaching property](/en-US/docs/Web/API/msCaching)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

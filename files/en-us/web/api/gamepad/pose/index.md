@@ -11,33 +11,33 @@ tags:
   - pose
 browser-compat: api.Gamepad.pose
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>The <strong><code>pose</code></strong> read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).</p>
+The **`pose`** read-only property of the {{domxref("Gamepad")}} interface returns a {{domxref("GamepadPose")}} object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myGamepadPose = gamepadInstance.pose;</pre>
+```js
+var myGamepadPose = gamepadInstance.pose;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("GamepadPose")}} object.</p>
+A {{domxref("GamepadPose")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBC</p>
+TBC
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

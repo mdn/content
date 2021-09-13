@@ -2,54 +2,54 @@
 title: Sanitizer.sanitizeToString()
 slug: Web/API/Sanitizer/sanitizeToString
 tags:
-- HTML Sanitizer API
-- Method
-- sanitize
+  - HTML Sanitizer API
+  - Method
+  - sanitize
 browser-compat: api.Sanitizer.sanitizeToString
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-<p>The <strong><code>sanitizeToString()</code></strong> method of the
-  {{domxref("Sanitizer")}} interface returns a sanitized {{jsxref('String')}} from an
-  input, removing any offending elements or attributes.</p>
+The **`sanitizeToString()`** method of the
+{{domxref("Sanitizer")}} interface returns a sanitized {{jsxref('String')}} from an
+input, removing any offending elements or attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>String</var> = sanitizer.sanitizeToString(input);</pre>
+```js
+var String = sanitizer.sanitizeToString(input);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>input</code></dt>
-  <dd>A {{jsxref('String')}} to be sanitized.</dd>
-</dl>
+- `input`
+  - : A {{jsxref('String')}} to be sanitized.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('String')}}.</p>
+A {{jsxref('String')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses the <code>sanitizeToString</code> method to remove disallowed
-  <code>script</code> and <code>blink</code> elements from a string input.</p>
+This example uses the `sanitizeToString` method to remove disallowed
+`script` and `blink` elements from a string input.
 
-<pre class="brush: js">// our input string to clean
-const stringToClean = 'Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;, including a rogue script &lt;script&gt;alert(1)&lt;/script&gt; def.';
+```js
+// our input string to clean
+const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
 
 const result = new Sanitizer().sanitizeToString(stringToClean);
 console.log(result);
-// Logs: "Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; tags, including a rogue script def."
-</pre>
+// Logs: "Some text <b><i>with</i></b> tags, including a rogue script def."
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

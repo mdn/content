@@ -9,37 +9,41 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.additiveSymbols
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
-<p>The <strong><code>additiveSymbols</code></strong>  property of the {{domxref("CSSCounterStyleRule")}} interface  gets and sets the value of the {{cssxref("@counter-style/additive-symbols","additive-symbols")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.</p>
+The **`additiveSymbols`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/additive-symbols","additive-symbols")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let additiveSymbols = CSSCounterStyleRule.additiveSymbols;
+```js
+let additiveSymbols = CSSCounterStyleRule.additiveSymbols;
 CSSCounterStyleRule.additiveSymbols = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}.
 
-<p>The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, <code>myRules[0]</code> is this <code>@counter-style</code> rule, returning <code>additiveSymbols</code> gives us the value " V 5, IV 4, I 1".</p>
+## Examples
 
-<pre class="brush: css">@counter-style additive-symbols-example {
+The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, `myRules[0]` is this `@counter-style` rule, returning `additiveSymbols` gives us the value " V 5, IV 4, I 1".
+
+```css
+@counter-style additive-symbols-example {
   system: additive;
   additive-symbols: V 5, IV 4, I 1;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].additiveSymbols); // " V 5, IV 4, I 1"</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].additiveSymbols); // " V 5, IV 4, I 1"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

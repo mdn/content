@@ -2,48 +2,44 @@
 title: console.profile()
 slug: Web/API/console/profile
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Non-standard
-- Reference
-- Web Development
-- profile
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Non-standard
+  - Reference
+  - Web Development
+  - profile
+  - web console
 browser-compat: api.console.profile
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>The <strong><code>console.profile()</code></strong> starts recording a performance profile (for example, the <a
-    href="/en-US/docs/Tools/Performance">Firefox performance tool</a>).</p>
+The **`console.profile()`** starts recording a performance profile (for example, the [Firefox performance tool](/en-US/docs/Tools/Performance)).
 
-<p>You can optionally supply an argument to name the profile and this then enables you to
-  stop only that profile if multiple profiles being recorded. See
-  {{domxref("console.profileEnd()")}} to see how this argument is interpreted.</p>
+You can optionally supply an argument to name the profile and this then enables you to
+stop only that profile if multiple profiles being recorded. See
+{{domxref("console.profileEnd()")}} to see how this argument is interpreted.
 
-<p>To stop recording call {{domxref("console.profileEnd()")}}.</p>
+To stop recording call {{domxref("console.profileEnd()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.profile(<em>profileName</em>);
-</pre>
+```js
+console.profile(profileName);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt><code>profileName</code></dt>
-  <dd>The name to give the profile. Optional.</dd>
-</dl>
+- `profileName`
+  - : The name to give the profile. Optional.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("console.profileEnd()")}}</li>
-</ul>
+- {{domxref("console.profileEnd()")}}

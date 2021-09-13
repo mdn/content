@@ -2,51 +2,51 @@
 title: ReadableStreamDefaultReader.releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
 tags:
-- API
-- Method
-- ReadableStreamDefaultReader
-- Reference
-- Streams
-- releaseLock
+  - API
+  - Method
+  - ReadableStreamDefaultReader
+  - Reference
+  - Streams
+  - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>releaseLock()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the
-  stream.</p>
+The **`releaseLock()`** method of the
+{{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the
+stream.
 
-<p>If the associated stream is errored when the lock is released, the reader will appear
-  errored in that same way subsequently; otherwise, the reader will appear closed.</p>
+If the associated stream is errored when the lock is released, the reader will appear
+errored in that same way subsequently; otherwise, the reader will appear closed.
 
-<p>A reader’s lock cannot be released while it still has a pending read request, i.e., if
-  a promise returned by the reader’s {{domxref("ReadableStreamDefaultReader.read()")}}
-  method has not finished. This will result in a <code>TypeError</code> being thrown.</p>
+A reader’s lock cannot be released while it still has a pending read request, i.e., if
+a promise returned by the reader’s {{domxref("ReadableStreamDefaultReader.read()")}}
+method has not finished. This will result in a `TypeError` being thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>readableStreamDefaultReader</em>.releaseLock();</pre>
+```js
+readableStreamDefaultReader.releaseLock();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamDefaultReader</code>, or a read
-    request is pending.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamDefaultReader`, or a read
+    request is pending.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
 
   ...
@@ -54,12 +54,13 @@ browser-compat: api.ReadableStreamDefaultReader.releaseLock
   reader.releaseLock()
 
   ...
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,51 +2,51 @@
 title: IDBDatabase.onversionchange
 slug: Web/API/IDBDatabase/onversionchange
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Property
-- Reference
-- Storage
-- onversionchange
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - onversionchange
 browser-compat: api.IDBDatabase.onversionchange
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>onversionchange</code></strong> event handler of the
-    {{domxref("IDBDatabase")}} interface handles the versionchange event, fired when a
-    database structure change ({{ domxref("IDBOpenDBRequest.onupgradeneeded")}} event or
-    {{ domxref("IDBFactory.deleteDatabase")}}) was requested elsewhere (most probably in
-    another window/tab on the same computer).</p>
+The **`onversionchange`** event handler of the
+{{domxref("IDBDatabase")}} interface handles the versionchange event, fired when a
+database structure change ({{ domxref("IDBOpenDBRequest.onupgradeneeded")}} event or
+{{ domxref("IDBFactory.deleteDatabase")}}) was requested elsewhere (most probably in
+another window/tab on the same computer).
 
-  <p>This is different from the <code>versionchange</code> transaction (but it is
-    related).</p>
+This is different from the `versionchange` transaction (but it is
+related).
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IDBDatabase</em>.onversionchange = <em>function</em>(event) { ... }</pre>
+```js
+IDBDatabase.onversionchange = function(event) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
-  creates a new object store; it also includes <code>onerror</code> and <code>onabort</code> functions to handle non-success cases, and
-  an onversionchange function to notify when a database structure change has occurred.</p>
+This example shows an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} block that
+creates a new object store; it also includes `onerror` and `onabort` functions to handle non-success cases, and
+an onversionchange function to notify when a database structure change has occurred.
 
-<pre class="brush: js;">request.onupgradeneeded = function(event) {
+```js
+request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error opening database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error opening database.</li>';
   };
 
   db.onabort = function(event) {
-    note.innerHTML += '&lt;li&gt;Database opening aborted!&lt;/li&gt;';
+    note.innerHTML += '<li>Database opening aborted!</li>';
   };
 
   // Create an objectStore for this database
@@ -63,37 +63,33 @@ browser-compat: api.IDBDatabase.onversionchange
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
+  note.innerHTML += '<li>Object store created.</li>';
 
   db.onversionchange = function(event) {
-    note.innerHTML += '&lt;li&gt;a database change has occurred; you should refresh this
+    note.innerHTML += '<li>a database change has occurred; you should refresh this
                        browser window, or close it down and use the other open version of
-                       this application, wherever it exists.&lt;/li&gt;';
+                       this application, wherever it exists.</li>';
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/IDBDatabase/versionchange_event">versionchange</a></code>
-    event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
+  event

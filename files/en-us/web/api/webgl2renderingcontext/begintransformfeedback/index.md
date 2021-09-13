@@ -2,61 +2,58 @@
 title: WebGL2RenderingContext.beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.beginTransformFeedback
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.beginTransformFeedback()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> starts a transform
-  feedback operation.</p>
+The **`WebGL2RenderingContext.beginTransformFeedback()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) starts a transform
+feedback operation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.beginTransformFeedback(<var>primitiveMode</var>);
-</pre>
+```js
+void gl.beginTransformFeedback(primitiveMode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>primitiveMode</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the output type of the primitives that will be
+- `primitiveMode`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the output type of the primitives that will be
     recorded into the buffer objects that are bound for transform feedback. Possible
     values:
-    <ul>
-      <li><code>gl.POINTS</code></li>
-      <li><code>gl.LINES</code></li>
-      <li><code>gl.TRIANGLES</code></li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.POINTS`
+    - `gl.LINES`
+    - `gl.TRIANGLES`
 
-<p>None.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<pre class="brush: js">var transformFeedback = gl.createTransformFeedback();
+## Examples
+
+```js
+var transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 gl.beginTransformFeedback(gl.TRIANGLES);
 gl.drawArrays(gl.TRIANGLES, 0, 3);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLTransformFeedback")}}</li>
-</ul>
+- {{domxref("WebGLTransformFeedback")}}

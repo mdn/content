@@ -11,35 +11,33 @@ tags:
   - shadow dom
 browser-compat: api.Element.createShadowRoot
 ---
-<p>{{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}{{draft}}</p>
+{{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}{{draft}}
 
-<p>Use <code>Element.createShadowRoot</code> to create an instance of <a
-    href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a>. When shadow DOM is
-  created, it is always attached to an existing element. After the shadow DOM is created,
-  the element that it is attached to is called the {{glossary("shadow root")}}.</p>
+Use `Element.createShadowRoot` to create an instance of [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). When shadow DOM is
+created, it is always attached to an existing element. After the shadow DOM is created,
+the element that it is attached to is called the {{glossary("shadow root")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This method has been deprecated in favor of
-    {{DOMxRef("Element.attachShadow()","attachShadow()")}}.</p>
-</div>
+> **Note:** This method has been deprecated in favor of
+> {{DOMxRef("Element.attachShadow()","attachShadow()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>shadowroot = element</em>.createShadowRoot();
-</pre>
+```js
+var shadowroot = element.createShadowRoot();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>No parameters.</p>
+No parameters.
 
-<h3 id="Result_value">Result value</h3>
+### Result value
 
-<p>Returns a {{DOMxRef("ShadowRoot")}}.</p>
+Returns a {{DOMxRef("ShadowRoot")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer defined by any specifications.</p>
+This feature is no longer defined by any specifications.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

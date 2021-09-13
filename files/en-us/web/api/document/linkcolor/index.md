@@ -2,63 +2,59 @@
 title: Document.linkColor
 slug: Web/API/Document/linkColor
 tags:
-- API
-- Deprecated
-- Document
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Deprecated
+  - Document
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.Document.linkColor
 ---
-<div>{{APIRef("DOM")}} {{Deprecated_header}}</div>
+{{APIRef("DOM")}} {{Deprecated_header}}
 
-<p>The <strong><code>Document.linkColor</code></strong> property gets/sets the color of
-  links within the document.</p>
+The **`Document.linkColor`** property gets/sets the color of
+links within the document.
 
-<p>This property is deprecated. As an alternative, you can set the CSS
-  {{cssxref("color")}} property on either HTML anchor links ({{HtmlElement("a")}}) or on
-  {{cssxref(":link")}} pseudo-classes. Another alternative is
-  <code>document.body.link</code>, although this is <a class="external"
-    href="https://www.w3.org/TR/html401/struct/global.html#adef-link">deprecated in HTML
-    4.01</a>.</p>
+This property is deprecated. As an alternative, you can set the CSS
+{{cssxref("color")}} property on either HTML anchor links ({{HtmlElement("a")}}) or on
+{{cssxref(":link")}} pseudo-classes. Another alternative is
+`document.body.link`, although this is [deprecated in HTML
+4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>color</var> = document.linkColor
-document.linkColor = <var>color</var>
-</pre>
+```js
+color = document.linkColor
+document.linkColor = color
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>color</var></code> is a string representing the color as a word (e.g.,
-    <code>red</code>) or hexadecimal value (e.g., <code>#ff0000</code>).</li>
-</ul>
+- `color` is a string representing the color as a word (e.g.,
+  `red`) or hexadecimal value (e.g., `#ff0000`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">document.linkColor = 'blue';
-</pre>
+```js
+document.linkColor = 'blue';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>HTML5</p>
+HTML5
 
-<p><code>Document.linkColor</code> is <a class="external"
-    href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">deprecated in DOM
-    Level 2 HTML</a>.</p>
+`Document.linkColor` is [deprecated in DOM
+Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>The default value for this property in Mozilla Firefox is blue (<code>#0000ee</code> in
-  hexadecimal).</p>
+The default value for this property in Mozilla Firefox is blue (`#0000ee` in
+hexadecimal).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.vlinkColor")}}</li>
-  <li>{{domxref("document.alinkColor")}}</li>
-</ul>
+- {{domxref("document.vlinkColor")}}
+- {{domxref("document.alinkColor")}}

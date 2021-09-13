@@ -2,37 +2,39 @@
 title: FontFace.variant
 slug: Web/API/FontFace/variant
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- variant
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - variant
 browser-compat: api.FontFace.variant
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>variant</code></strong> property of the
-  {{domxref("FontFace")}} interface programmatically retrieves or sets font variant
-  values. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}}
-  descriptor.</p>
+The **`variant`** property of the
+{{domxref("FontFace")}} interface programmatically retrieves or sets font variant
+values. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}}
+descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var variantSubProperty = FontFace.variant;
-FontFace.variant = <em>variantSubProperty</em>;</pre>
+```js
+var variantSubProperty = FontFace.variant;
+FontFace.variant = variantSubProperty;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
-  sheet's <code>@font-face</code> rule.</p>
+A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+sheet's `@font-face` rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

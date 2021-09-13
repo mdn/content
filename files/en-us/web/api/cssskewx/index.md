@@ -12,32 +12,28 @@ tags:
   - Interface
 browser-compat: api.CSSSkewX
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSSkewX</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <code><a href="/en-US/docs/Web/CSS/transform-function/skewX()">skewX()</a></code> value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.</p>
+The **`CSSSkewX`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [`skewX()`](</en-US/docs/Web/CSS/transform-function/skewX()>) value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSSkewX.CSSSkewX()")}}</dt>
- <dd>Creates a new <code>CSSSkewX</code> object.</dd>
-</dl>
+- {{domxref("CSSSkewX.CSSSkewX()")}}
+  - : Creates a new `CSSSkewX` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSSkewX.ax','ax')}}</dt>
- <dd>Returns or sets the x-axis value.</dd>
-</dl>
+- {{domxref('CSSSkewX.ax','ax')}}
+  - : Returns or sets the x-axis value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

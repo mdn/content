@@ -2,100 +2,93 @@
 title: WebGLRenderingContext.getVertexAttrib()
 slug: Web/API/WebGLRenderingContext/getVertexAttrib
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttrib
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getVertexAttrib()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns information about a vertex
-  attribute at a given position.</p>
+The **`WebGLRenderingContext.getVertexAttrib()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about a vertex
+attribute at a given position.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getVertexAttrib(<var>index</var>, <var>pname</var>);
-</pre>
+```js
+any gl.getVertexAttrib(index, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.</dd>
-  <dt><code>pname</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-    <ul>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING</code>: Returns the currently bound
-        {{domxref("WebGLBuffer")}}.</li>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_ENABLED</code>: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
-        that is <code>true</code> if the vertex attribute is enabled at this
-        <code>index</code>. Otherwise <code>false</code>.</li>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_SIZE</code>: Returns a {{domxref("WebGL_API/Types", "GLint")}}
-        indicating the size of an element of the vertex array.</li>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_STRIDE</code>: Returns a {{domxref("WebGL_API/Types", "GLint")}}
-        indicating the number of bytes between successive elements in the array. 0 means
-        that the elements are sequential.</li>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_TYPE</code>: Returns a {{domxref("WebGL_API/Types", "GLenum")}}
-        representing the array type. One of
-        <ul>
-          <li><code>gl.BYTE</code>,</li>
-          <li><code>gl.UNSIGNED_BYTE</code>,</li>
-          <li><code>gl.SHORT</code>,</li>
-          <li><code>gl.UNSIGNED_SHORT</code>,</li>
-          <li><code>gl.FLOAT</code>.</li>
-        </ul>
-      </li>
-      <li><code>gl.VERTEX_ATTRIB_ARRAY_NORMALIZED</code>: Returns a
-        {{domxref("WebGL_API/Types", "GLboolean")}} that is true if fixed-point data types are normalized for
-        the vertex attribute array at the given <code>index</code>.</li>
-      <li><code>gl.CURRENT_VERTEX_ATTRIB</code>: Returns a {{jsxref("Float32Array")}}
-        (with 4 elements) representing the current value of the vertex attribute at the
-        given <code>index</code>.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.VERTEX_ATTRIB_ARRAY_INTEGER</code>: Returns a
-            {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not an integer data type is in
-            the vertex attribute array at the given <code>index</code>.</li>
-          <li><code>gl.VERTEX_ATTRIB_ARRAY_DIVISOR</code>: Returns a {{domxref("WebGL_API/Types", "GLint")}}
-            describing the frequency divisor used for instanced rendering.</li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("ANGLE_instanced_arrays")}} extension:
-        <ul>
-          <li><code>ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE</code>: Returns a
-            {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced
-            rendering.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.
+- `pname`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
 
-<p>Returns the requested vertex attribute information (as specified with
-  <code>pname</code>).</p>
+    - `gl.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING`: Returns the currently bound
+      {{domxref("WebGLBuffer")}}.
+    - `gl.VERTEX_ATTRIB_ARRAY_ENABLED`: Returns a {{domxref("WebGL_API/Types", "GLboolean")}}
+      that is `true` if the vertex attribute is enabled at this
+      `index`. Otherwise `false`.
+    - `gl.VERTEX_ATTRIB_ARRAY_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLint")}}
+      indicating the size of an element of the vertex array.
+    - `gl.VERTEX_ATTRIB_ARRAY_STRIDE`: Returns a {{domxref("WebGL_API/Types", "GLint")}}
+      indicating the number of bytes between successive elements in the array. 0 means
+      that the elements are sequential.
+    - `gl.VERTEX_ATTRIB_ARRAY_TYPE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}}
+      representing the array type. One of
 
-<h2 id="Examples">Examples</h2>
+      - `gl.BYTE`,
+      - `gl.UNSIGNED_BYTE`,
+      - `gl.SHORT`,
+      - `gl.UNSIGNED_SHORT`,
+      - `gl.FLOAT`.
 
-<pre class="brush: js">gl.getVertexAttrib(0, gl.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING);
-</pre>
+    - `gl.VERTEX_ATTRIB_ARRAY_NORMALIZED`: Returns a
+      {{domxref("WebGL_API/Types", "GLboolean")}} that is true if fixed-point data types are normalized for
+      the vertex attribute array at the given `index`.
+    - `gl.CURRENT_VERTEX_ATTRIB`: Returns a {{jsxref("Float32Array")}}
+      (with 4 elements) representing the current value of the vertex attribute at the
+      given `index`.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<h2 id="Specifications">Specifications</h2>
+      - `gl.VERTEX_ATTRIB_ARRAY_INTEGER`: Returns a
+        {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not an integer data type is in
+        the vertex attribute array at the given `index`.
+      - `gl.VERTEX_ATTRIB_ARRAY_DIVISOR`: Returns a {{domxref("WebGL_API/Types", "GLint")}}
+        describing the frequency divisor used for instanced rendering.
+
+    - When using the {{domxref("ANGLE_instanced_arrays")}} extension:
+
+      - `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`: Returns a
+        {{domxref("WebGL_API/Types", "GLint")}} describing the frequency divisor used for instanced
+        rendering.
+
+### Return value
+
+Returns the requested vertex attribute information (as specified with
+`pname`).
+
+## Examples
+
+```js
+gl.getVertexAttrib(0, gl.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}</li>
-  <li>{{domxref("ANGLE_instanced_arrays")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
+- {{domxref("ANGLE_instanced_arrays")}}

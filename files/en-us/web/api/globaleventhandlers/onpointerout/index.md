@@ -2,43 +2,42 @@
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/GlobalEventHandlers/onpointerout
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- PointerEvent
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onpointerout
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onpointerout</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("pointerout")}} events.</p>
+The **`onpointerout`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("pointerout")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onpointerout = <var>outHandler</var>;
+```js
+targetElement.onpointerout = outHandler;
 
-var <var>outHandler</var> = <var>targetElement</var>.onpointerout;
-</pre>
+var outHandler = targetElement.onpointerout;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code>outHandler</code></dt>
-  <dd>The <code>pointerout</code> event handler for element <code>targetElement</code>.
-  </dd>
-</dl>
+- `outHandler`
+  - : The `pointerout` event handler for element `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointerout</code> to set an element's
-  <code>pointerout</code> event handler.</p>
+This example shows two ways to use `onpointerout` to set an element's
+`pointerout` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function outHandler(ev) {
   // Process the pointerout event
 }
@@ -46,30 +45,26 @@ function init() {
   let el=document.getElementById('target1');
   el.onpointerout = outHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointerout="outHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointerout="outHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointerout_event">Document: pointerout</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">HTMLElement: pointerout</a></code>
-    event</li>
-</ul>
+- [`Document: pointerout`](/en-US/docs/Web/API/Document/pointerout_event)
+  event
+- [`HTMLElement: pointerout`](/en-US/docs/Web/API/HTMLElement/pointerout_event)
+  event

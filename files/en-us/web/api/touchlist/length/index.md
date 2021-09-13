@@ -2,40 +2,40 @@
 title: TouchList.length
 slug: Web/API/TouchList/length
 tags:
-- API
-- DOM
-- DOM Reference
-- Mobile
-- Property
-- Reference
-- TouchList
-- touch
+  - API
+  - DOM
+  - DOM Reference
+  - Mobile
+  - Property
+  - Reference
+  - TouchList
+  - touch
 browser-compat: api.TouchList.length
 ---
-<div>{{ APIRef("Touch Events") }}</div>
+{{ APIRef("Touch Events") }}
 
-<p>The <code><strong>length</strong></code> read-only property indicates the number of
-  items (touch points) in a given {{domxref("TouchList")}}.</p>
+The **`length`** read-only property indicates the number of
+items (touch points) in a given {{domxref("TouchList")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>numTouches</em> = <em>touchList</em>.length;
-</pre>
+```js
+var numTouches = touchList.length;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>numTouches</code></dt>
-  <dd>The number of touch points in <code>touchList</code>.</dd>
-</dl>
+- `numTouches`
+  - : The number of touch points in `touchList`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code example illustrates the use of the {{domxref("TouchList")}} interface's
-  {{domxref("TouchList.item()","item")}} method and the
-  {{domxref("TouchList.length","length")}} property.</p>
+This code example illustrates the use of the {{domxref("TouchList")}} interface's
+{{domxref("TouchList.item()","item")}} method and the
+{{domxref("TouchList.length","length")}} property.
 
-<pre class="brush: js">target = document.getElementById("target");
+```js
+target = document.getElementById("target");
 
 target.addEventListener('touchstart', function(ev) {
 
@@ -44,17 +44,17 @@ target.addEventListener('touchstart', function(ev) {
   // otherwise set touch to the first item in the touches list
   var touch;
 
-  if (ev.targetTouches.length &gt;= 1)
+  if (ev.targetTouches.length >= 1)
      touch = ev.targetTouches.item(0);
   else
      touch = ev.touches.item(0);
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

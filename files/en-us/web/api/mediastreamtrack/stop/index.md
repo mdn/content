@@ -2,49 +2,51 @@
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
 tags:
-- API
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaStreamTrack
-- Method
-- Reference
-- Streams
-- WebRTC
-- stop
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaStreamTrack
+  - Method
+  - Reference
+  - Streams
+  - WebRTC
+  - stop
 browser-compat: api.MediaStreamTrack.stop
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <code><strong>MediaStreamTrack.stop()</strong></code> method stops the track.</p>
+The **`MediaStreamTrack.stop()`** method stops the track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>track</em>.stop()
-</pre>
+```js
+track.stop()
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Calling <code>stop()</code> tells the {{glossary("user agent")}} that the track's
-  source—whatever that source may be, including files, network streams, or a local camera
-  or microphone—is no longer needed by the {{domxref("MediaStreamTrack")}}. Since multiple
-  tracks may use the same source (for example, if two tabs are using the device's
-  microphone), the source itself isn't necessarily immediately stopped. It is instead
-  disassociated from the track and the track object is stopped. Once no media tracks are
-  using the source, the source may actually be completely stopped.</p>
+Calling `stop()` tells the {{glossary("user agent")}} that the track's
+source—whatever that source may be, including files, network streams, or a local camera
+or microphone—is no longer needed by the {{domxref("MediaStreamTrack")}}. Since multiple
+tracks may use the same source (for example, if two tabs are using the device's
+microphone), the source itself isn't necessarily immediately stopped. It is instead
+disassociated from the track and the track object is stopped. Once no media tracks are
+using the source, the source may actually be completely stopped.
 
-<p>Immediately after calling <code>stop()</code>, the
-  {{domxref("MediaStreamTrack.readyState", "readyState")}} property is set to
-  <code>ended</code>.</p>
+Immediately after calling `stop()`, the
+{{domxref("MediaStreamTrack.readyState", "readyState")}} property is set to
+`ended`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Stopping_a_video_stream">Stopping a video stream</h3>
+### Stopping a video stream
 
-<p>In this example, we see a function which stops a streamed video by calling
-  <code>stop()</code> on every track on a given {{HTMLElement("video")}}.</p>
+In this example, we see a function which stops a streamed video by calling
+`stop()` on every track on a given {{HTMLElement("video")}}.
 
-<pre class="brush: js">function stopStreamedVideo(videoElem) {
+```js
+function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
@@ -53,30 +55,29 @@ browser-compat: api.MediaStreamTrack.stop
   });
 
   videoElem.srcObject = null;
-}</pre>
+}
+```
 
-<p>This works by obtaining the video element's stream from its
-  {{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. Then the stream's track
-  list is obtained by calling its {{domxref("MediaStream.getTracks", "getTracks()")}}
-  method. From there, all that remains to do is to iterate over the track list using
-  {{jsxref("Array.forEach", "forEach()")}} and calling each track's <code>stop()</code>
-  method.</p>
+This works by obtaining the video element's stream from its
+{{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. Then the stream's track
+list is obtained by calling its {{domxref("MediaStream.getTracks", "getTracks()")}}
+method. From there, all that remains to do is to iterate over the track list using
+{{jsxref("Array.forEach", "forEach()")}} and calling each track's `stop()`
+method.
 
-<p>Finally, <code>srcObject</code> is set to <code>null</code> to sever the link to the
-  {{domxref("MediaStream")}} object so it can be released.</p>
+Finally, `srcObject` is set to `null` to sever the link to the
+{{domxref("MediaStream")}} object so it can be released.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaStreamTrack")}}, the interface it belongs to.</li>
-  <li>{{domxref("MediaStreamTrack.readyState")}}</li>
-  <li>{{event("ended")}}</li>
-</ul>
+- {{domxref("MediaStreamTrack")}}, the interface it belongs to.
+- {{domxref("MediaStreamTrack.readyState")}}
+- {{event("ended")}}

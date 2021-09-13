@@ -2,45 +2,44 @@
 title: HTMLImageElement.name
 slug: Web/API/HTMLImageElement/name
 tags:
-- API
-- Deprecated
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- img
-- name
+  - API
+  - Deprecated
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - img
+  - name
 browser-compat: api.HTMLImageElement.name
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The {{domxref("HTMLImageElement")}}
-    interface's <em>deprecated</em> <code><strong>name</strong></code> property specifies
-    a name for the element. This has been replaced by the {{domxref("Element.id", "id")}}
-    property available on all elements.</p>
+The {{domxref("HTMLImageElement")}}
+interface's *deprecated* **`name`** property specifies
+a name for the element. This has been replaced by the {{domxref("Element.id", "id")}}
+property available on all elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.name = <em>nameString</em>;
-<em>nameString</em> = <em>htmlImageElement</em>.name;
-</pre>
+```js
+htmlImageElement.name = nameString;
+nameString = htmlImageElement.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} providing a name by which the image can be referenced.</p>
+A {{domxref("DOMString")}} providing a name by which the image can be referenced.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This property is deprecated and is only in the
-    specification still for backward compatibility purposes. Since it functions
-    identically to {{htmlattrxref("id")}}, you can and should use it instead.</p>
-</div>
+> **Warning:** This property is deprecated and is only in the
+> specification still for backward compatibility purposes. Since it functions
+> identically to {{htmlattrxref("id")}}, you can and should use it instead.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,88 +12,85 @@ tags:
   - sound
 browser-compat: api.AudioParam
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The Web Audio API's <code>AudioParam</code> interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).</p>
+The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).
 
-<p>An <code>AudioParam</code> can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.</p>
+An `AudioParam` can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.
 
-<p>Each <code>AudioParam</code> has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the <code>AudioParam.value</code> attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.</p>
+Each `AudioParam` has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the `AudioParam.value` attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 
-<h2>AudioParam types</h2>
+## AudioParam types
 
-<p>There are two kinds of <code>AudioParam</code>: <em>a-rate</em> and <em>k-rate</em> parameters. Each {{domxref("AudioNode")}} defines which of its parameters are <em>a-rate</em> or <em>k-rate</em> in the spec.</p>
+There are two kinds of `AudioParam`: _a-rate_ and _k-rate_ parameters. Each {{domxref("AudioNode")}} defines which of its parameters are _a-rate_ or _k-rate_ in the spec.
 
-<h3>a-rate</h3>
+### a-rate
 
-<p>An <em>a-rate</em> <code>AudioParam</code> takes the current audio parameter value for each <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">sample frame</a> of the audio signal.</p>
+An _a-rate_ `AudioParam` takes the current audio parameter value for each [sample frame](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) of the audio signal.
 
-<h3>k-rate</h3>
+### k-rate
 
-<p>A <em>k-rate</em> <code>AudioParam</code> uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.</li>
-</p>
+A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AudioParam.defaultValue")}} {{readonlyInline}}</dt>
- <dd>Represents the initial volume of the attribute as defined by the specific {{domxref("AudioNode")}} creating the <code>AudioParam</code>.</dd>
- <dt>{{domxref("AudioParam.maxValue")}} {{readonlyInline}}</dt>
- <dd>Represents the maximum possible value for the parameter's nominal (effective) range. </dd>
- <dt>{{domxref("AudioParam.minValue")}} {{readonlyinline}}</dt>
- <dd>Represents the minimum possible value for the parameter's nominal (effective) range. </dd>
- <dt>{{domxref("AudioParam.value")}}</dt>
- <dd>Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.</dd>
-</dl>
+- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+  - : Represents the initial volume of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Represents the maximum possible value for the parameter's nominal (effective) range.
+- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+  - : Represents the minimum possible value for the parameter's nominal (effective) range.
+- {{domxref("AudioParam.value")}}
+  - : Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AudioParam.setValueAtTime()")}}</dt>
- <dd>Schedules an instant change to the value of the <code>AudioParam</code> at a precise time, as measured against {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given by the <code>value</code> parameter.</dd>
- <dt>{{domxref("AudioParam.linearRampToValueAtTime()")}}</dt>
- <dd>Schedules a gradual linear change in the value of the <code>AudioParam</code>. The change starts at the time specified for the <em>previous</em> event, follows a linear ramp to the new value given in the <code>value</code> parameter, and reaches the new value at the time given in the <code>endTime</code> parameter.</dd>
- <dt>{{domxref("AudioParam.exponentialRampToValueAtTime()")}}</dt>
- <dd>Schedules a gradual exponential change in the value of the <code>AudioParam</code>. The change starts at the time specified for the <em>previous</em> event, follows an exponential ramp to the new value given in the <code>value</code> parameter, and reaches the new value at the time given in the <code>endTime</code> parameter.</dd>
- <dt>{{domxref("AudioParam.setTargetAtTime()")}}</dt>
- <dd>Schedules the start of a change to the value of the <code>AudioParam</code>. The change starts at the time specified in <code>startTime</code> and exponentially moves towards the value given by the <code>target</code> parameter. The exponential decay rate is defined by the <code>timeConstant</code> parameter, which is a time measured in seconds.</dd>
- <dt>{{domxref("AudioParam.setValueCurveAtTime()")}}</dt>
- <dd>Schedules the values of the <code>AudioParam</code> to follow a set of values, defined by an array of floating-point numbers scaled to fit into the given interval, starting at a given start time and spanning a given duration of time.</dd>
- <dt>{{domxref("AudioParam.cancelScheduledValues()")}}</dt>
- <dd>Cancels all scheduled future changes to the <code>AudioParam</code>.</dd>
- <dt>{{domxref("AudioParam.cancelAndHoldAtTime()")}}</dt>
- <dd>Cancels all scheduled future changes to the <code>AudioParam</code> but holds its value at a given time until further changes are made using other methods.</dd>
-</dl>
+- {{domxref("AudioParam.setValueAtTime()")}}
+  - : Schedules an instant change to the value of the `AudioParam` at a precise time, as measured against {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given by the `value` parameter.
+- {{domxref("AudioParam.linearRampToValueAtTime()")}}
+  - : Schedules a gradual linear change in the value of the `AudioParam`. The change starts at the time specified for the _previous_ event, follows a linear ramp to the new value given in the `value` parameter, and reaches the new value at the time given in the `endTime` parameter.
+- {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
+  - : Schedules a gradual exponential change in the value of the `AudioParam`. The change starts at the time specified for the _previous_ event, follows an exponential ramp to the new value given in the `value` parameter, and reaches the new value at the time given in the `endTime` parameter.
+- {{domxref("AudioParam.setTargetAtTime()")}}
+  - : Schedules the start of a change to the value of the `AudioParam`. The change starts at the time specified in `startTime` and exponentially moves towards the value given by the `target` parameter. The exponential decay rate is defined by the `timeConstant` parameter, which is a time measured in seconds.
+- {{domxref("AudioParam.setValueCurveAtTime()")}}
+  - : Schedules the values of the `AudioParam` to follow a set of values, defined by an array of floating-point numbers scaled to fit into the given interval, starting at a given start time and spanning a given duration of time.
+- {{domxref("AudioParam.cancelScheduledValues()")}}
+  - : Cancels all scheduled future changes to the `AudioParam`.
+- {{domxref("AudioParam.cancelAndHoldAtTime()")}}
+  - : Cancels all scheduled future changes to the `AudioParam` but holds its value at a given time until further changes are made using other methods.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>First, a basic example showing a {{domxref("GainNode")}} having its <code>gain</code> value set. <code>gain</code> is an example of an a-rate AudioParam, as the value can potentially be set differently for each sample frame of the audio.</p>
+First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an a-rate AudioParam, as the value can potentially be set differently for each sample frame of the audio.
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0;</pre>
+gainNode.gain.value = 0;
+```
 
-<p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
+Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.
 
-<pre class="brush: js">var compressor = audioCtx.createDynamicsCompressor();
+```js
+var compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
 compressor.attack.setValueAtTime(0, audioCtx.currentTime);
-compressor.release.setValueAtTime(0.25, audioCtx.currentTime);</pre>
+compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

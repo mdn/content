@@ -14,34 +14,33 @@ tags:
   - activeSourceBuffers
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
-<div>{{APIRef("Media Source Extensions")}}</div>
+{{APIRef("Media Source Extensions")}}
 
-<p>The <code><strong>activeSourceBuffers</strong></code> read-only property of the
-  {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object
-  containing a subset of the {{domxref("SourceBuffer")}} objects contained within
-  {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects
-  providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
-</p>
+The **`activeSourceBuffers`** read-only property of the
+{{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object
+containing a subset of the {{domxref("SourceBuffer")}} objects contained within
+{{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} — the list of objects
+providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myActiveSourceBuffers</em> = <em>mediaSource</em>.activeSourceBuffers;</pre>
+```js
+var myActiveSourceBuffers = mediaSource.activeSourceBuffers;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("SourceBufferList")}} containing the {{domxref("SourceBuffer")}} objects
-  for each of the active tracks.</p>
+A {{domxref("SourceBufferList")}} containing the {{domxref("SourceBuffer")}} objects
+for each of the active tracks.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is based on a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is based on a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre class="brush: js ">function sourceOpen (_) {
+```js
+function sourceOpen (_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
@@ -58,19 +57,18 @@ browser-compat: api.MediaSource.activeSourceBuffers
   });
 };
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

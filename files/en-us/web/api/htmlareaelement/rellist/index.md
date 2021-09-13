@@ -2,59 +2,58 @@
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
 tags:
-- API
-- HTML DOM
-- HTMLAreaElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLAreaElement
+  - Property
+  - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLAreaElement.relList</strong></code> read-only property reflects
-  the {{htmlattrxref("rel", "area")}} attribute. It is a live {{domxref("DOMTokenList")}}
-  containing the set of <a href="/en-US/docs/Web/HTML/Link_types">link types</a>
-  indicating the relationship between the resource represented by the
-  {{HTMLElement("area")}} element and the current document.</p>
+The **`HTMLAreaElement.relList`** read-only property reflects
+the {{htmlattrxref("rel", "area")}} attribute. It is a live {{domxref("DOMTokenList")}}
+containing the set of [link types](/en-US/docs/Web/HTML/Link_types)
+indicating the relationship between the resource represented by the
+{{HTMLElement("area")}} element and the current document.
 
-<p>The property itself is read-only, meaning you can't substitute the
-  {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
-  changed.</p>
+The property itself is read-only, meaning you can't substitute the
+{{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
+changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>relstr</em> = <em>areaElt</em>.relList;
-</pre>
+```js
+var relstr = areaElt.relList;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var areas = document.getElementsByTagName("area");
+```js
+var areas = document.getElementsByTagName("area");
 var length = areas.length;
 
-for (var i = 0; i &lt; length; i++) {
+for (var i = 0; i < length; i++) {
   var list = areas[i].relList;
   var listLength = list.length;
   console.log("New area found.");
-  for (var j = 0; j &lt; listLength; j++) {
+  for (var j = 0; j < listLength; j++) {
     console.log(list[j]);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
-    {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-  </li>
-  <li>The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
-    {{domxref("HTMLAreaElement.rel")}}</li>
-</ul>
+- The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
+  {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
+- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+  {{domxref("HTMLAreaElement.rel")}}

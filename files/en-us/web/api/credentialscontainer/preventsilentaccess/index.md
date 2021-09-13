@@ -11,41 +11,41 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
-<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>preventSilentAccess()</code></strong> method
-    of the {{domxref("CredentialsContainer")}} interface sets a flag that specifies
-    whether automatic log in is allowed for future visits to the current origin, then
-    returns an empty <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>. For
-  example, you might call this, after a user signs out of a website to ensure that
-  they aren't automatically signed in on the next site visit. Mediation varies by origin,
-  and is an added check point of browser stored credentials, informing a user of an
-  account login status. This method is typically called after a user signs out of a
-  website, ensuring this user's login information is not automatically passed on the next
-  site visit.</p>
+The **`preventSilentAccess()`** method
+of the {{domxref("CredentialsContainer")}} interface sets a flag that specifies
+whether automatic log in is allowed for future visits to the current origin, then
+returns an empty [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."). For
+example, you might call this, after a user signs out of a website to ensure that
+they aren't automatically signed in on the next site visit. Mediation varies by origin,
+and is an added check point of browser stored credentials, informing a user of an
+account login status. This method is typically called after a user signs out of a
+website, ensuring this user's login information is not automatically passed on the next
+site visit.
 
-<p>Earlier versions of the spec called this method<code>requireUserMediation()</code>.
-  The <a href="/en-US/docs/Web/API/CredentialsContainer#browser_compatibility">Browser
-    compatibility</a> section has support details.</p>
+Earlier versions of the spec called this method`requireUserMediation()`.
+The [Browser
+compatibility](/en-US/docs/Web/API/CredentialsContainer#browser_compatibility) section has support details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var Promise = CredentialsContainer.preventSilentAccess()</pre>
+```js
+var Promise = CredentialsContainer.preventSilentAccess()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3>Returns</h3>
+### Returns
 
-<p>An empty {{jsxref("Promise")}}.</p>
+An empty {{jsxref("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,40 +2,42 @@
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 tags:
-- API
-- Experimental
-- PeriodicSyncManager
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- periodicSync
+  - API
+  - Experimental
+  - PeriodicSyncManager
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - periodicSync
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
-<div>{{draft}}{{DefaultAPISidebar("Service Worker API")}}</div>
+{{draft}}{{DefaultAPISidebar("Service Worker API")}}
 
-<p>The <strong><code>periodicSync</code></strong> read-only property of
-  the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-  {{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
-  run at specific intervals.</p>
+The **`periodicSync`** read-only property of
+the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
+{{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
+run at specific intervals.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>PeriodicSyncManagerObject</var> = ServiceWorkerRegistration.periodicSync;</pre>
+```js
+var PeriodicSyncManagerObject = ServiceWorkerRegistration.periodicSync;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A PeriodicSyncManager {{jsxref('Object')}}.</p>
+A PeriodicSyncManager {{jsxref('Object')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can access the property from either your main script or the registered service
-  worker.</p>
+You can access the property from either your main script or the registered service
+worker.
 
-<p>Here is an example from the main script:</p>
+Here is an example from the main script:
 
-<pre class="brush: js">// reference registration
+```js
+// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -45,28 +47,27 @@ if ('periodicSync' in registration) {
   const periodicSync = registration.periodicSync;
 
 }
-</pre>
+```
 
-<p>From the {{domxref('Service Worker API','service worker')}}:</p>
+From the {{domxref('Service Worker API','service worker')}}:
 
-<pre class="brush: js">// service worker script
+```js
+// service worker script
 
 const periodicSync = self.registration.periodicSync;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
-      the Periodic Background Sync API</a></li>
-  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
-      Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with
+  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A
+  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

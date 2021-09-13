@@ -9,25 +9,24 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimateTransformElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code>SVGAnimateTransformElement</code> interface corresponds to the {{SVGElement("animateTransform")}} element.</p>
+The `SVGAnimateTransformElement` interface corresponds to the {{SVGElement("animateTransform")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no properties but inherits properties from its parent, {{domxref("SVGAnimationElement")}}.</em></p>
+_This interface has no properties but inherits properties from its parent, {{domxref("SVGAnimationElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGAnimationElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGAnimationElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

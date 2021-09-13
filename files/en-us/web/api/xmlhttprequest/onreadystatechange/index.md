@@ -2,54 +2,52 @@
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/onreadystatechange
 tags:
-- API
-- Event
-- Handler
-- Property
-- Reference
-- XHR
-- XMLHttpRequest
+  - API
+  - Event
+  - Handler
+  - Property
+  - Reference
+  - XHR
+  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.onreadystatechange
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that is called whenever the <code>readyState</code>
-  attribute changes. The callback is called from the user interface thread. The
-  <strong><code>XMLHttpRequest.onreadystatechange</code></strong> property contains the
-  event handler to be called when the {{domxref("Document/readystatechange_event",
+An [event handler](/en-US/docs/Web/Events/Event_handlers) that is called whenever the `readyState`
+attribute changes. The callback is called from the user interface thread. The
+**`XMLHttpRequest.onreadystatechange`** property contains the
+event handler to be called when the {{domxref("Document/readystatechange_event",
   "readystatechange")}} event is fired, that is every time the
-  {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the
-  {{domxref("XMLHttpRequest")}} changes.</p>
+{{domxref("XMLHttpRequest.readyState", "readyState")}} property of the
+{{domxref("XMLHttpRequest")}} changes.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This should not be used with synchronous requests and must
-    not be used from native code.</p>
-</div>
+> **Warning:** This should not be used with synchronous requests and must
+> not be used from native code.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+```js
+XMLHttpRequest.onreadystatechange = callback;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
-  <li><code><em>callback</em></code> is the function to be executed when the
-    <code>readyState</code> changes.</li>
-</ul>
+- `callback` is the function to be executed when the
+  `readyState` changes.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<pre class="brush: js">const xhr = new XMLHttpRequest(),
+```js
+const xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 
-xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
   // In local files, status is 0 upon success in Mozilla Firefox
   if(xhr.readyState === XMLHttpRequest.DONE) {
     var status = xhr.status;
-    if (status === 0 || (status &gt;= 200 &amp;&amp; status &lt; 400)) {
+    if (status === 0 || (status >= 200 && status < 400)) {
       // The request has been completed successfully
       console.log(xhr.responseText);
     } else {
@@ -57,12 +55,13 @@ xhr.onreadystatechange = function () {
     }
   }
 };
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

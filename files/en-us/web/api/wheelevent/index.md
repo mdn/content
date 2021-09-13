@@ -9,102 +9,66 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>WheelEvent</code></strong> interface represents events that occur due to the user moving a mouse wheel or similar input device.</p>
+The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible {{DOMxRef("MouseWheelEvent")}} and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.</p>
-</div>
+> **Note:** This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible {{DOMxRef("MouseWheelEvent")}} and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Do not confuse the {{domxref("Element/wheel_event", "wheel")}} event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a <code>wheel</code> event is implementation-defined. Thus, a <code>wheel</code> event doesn't necessarily dispatch a <code>scroll</code> event. Even when it does, that doesn't mean that the <code>delta*</code> values in the <code>wheel</code> event necessarily reflect the content's scrolling direction. Therefore, do not rely on <code>delta*</code> properties to get the content's scrolling direction. Instead, detect value changes to {{DOMxRef("Element.scrollLeft", "scrollLeft")}} and {{DOMxRef("Element.scrollTop", "scrollTop")}} of the target in the <code>scroll</code> event.</p>
-</div>
+> **Note:** Do not confuse the {{domxref("Element/wheel_event", "wheel")}} event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a `wheel` event is implementation-defined. Thus, a `wheel` event doesn't necessarily dispatch a `scroll` event. Even when it does, that doesn't mean that the `delta*` values in the `wheel` event necessarily reflect the content's scrolling direction. Therefore, do not rely on `delta*` properties to get the content's scrolling direction. Instead, detect value changes to {{DOMxRef("Element.scrollLeft", "scrollLeft")}} and {{DOMxRef("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}</dt>
- <dd>Creates a <code>WheelEvent</code> object.</dd>
-</dl>
+- {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
+  - : Creates a `WheelEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}.</em></p>
+_This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 
-<dl>
- <dt>{{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the horizontal scroll amount.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the vertical scroll amount.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the scroll amount for the z-axis.</dd>
- <dt>{{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}</dt>
- <dd>Returns an <code>unsigned long</code> representing the unit of the <code>delta*</code> values' scroll amount. Permitted values are:
- <table class="standard-table">
-  <thead>
-    <tr>
-      <th>Constant</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_PIXEL</code></td>
-    <td><code>0x00</code></td>
-    <td>The <code>delta*</code> values are specified in pixels.</td>
-   </tr>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_LINE</code></td>
-    <td><code>0x01</code></td>
-    <td>The <code>delta*</code> values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent.</td>
-   </tr>
-   <tr>
-    <td><code>WheelEvent.DOM_DELTA_PAGE</code></td>
-    <td><code>0x02</code></td>
-    <td>The <code>delta*</code> values are specified in pages. Each mouse click scrolls a page of content.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
+- {{DOMxRef("WheelEvent.deltaX")}}{{ReadOnlyInline}}
+  - : Returns a `double` representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.deltaY")}}{{ReadOnlyInline}}
+  - : Returns a `double` representing the vertical scroll amount.
+- {{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}
+  - : Returns a `double` representing the scroll amount for the z-axis.
+- {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
 
- <dt>{{DOMxRef("WheelEvent.wheelDelta")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns an integer (32-bit) representing the distance in pixels.</dd>
- <dt>{{DOMxRef("WheelEvent.wheelDeltaX")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns an integer representing the horizontal scroll amount.</dd>
- <dt>{{DOMxRef("WheelEvent.wheelDeltaY")}}{{ReadOnlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns an integer representing the vertical scroll amount.</dd>
-</dl>
+  - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
 
+    | Constant                     | Value  | Description                                                                                                                                                  |
+    | ---------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | The `delta*` values are specified in pixels.                                                                                                                 |
+    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | The `delta*` values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent. |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | The `delta*` values are specified in pages. Each mouse click scrolls a page of content.                                                                      |
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <a href="/en-US/docs/Web/API/Element/mousewheel_event">Element: mousewheel event</a> has additional documentation about the deprecated properties <code>wheelDelta</code>, <code>wheelDeltaX</code>, <code>wheelDeltaY</code>.
-  </p>
-</div>
+- {{DOMxRef("WheelEvent.wheelDelta")}}{{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer (32-bit) representing the distance in pixels.
+- {{DOMxRef("WheelEvent.wheelDeltaX")}}{{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.wheelDeltaY")}}{{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the vertical scroll amount.
 
-<h2 id="Methods">Methods</h2>
+> **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
 
-<p><em>This interface doesn't define any specific methods, but inherits methods from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}.</em></p>
+## Methods
 
-<h2 id="Specifications">Specifications</h2>
+_This interface doesn't define any specific methods, but inherits methods from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("Element/wheel_event", "wheel")}} event</li>
- <li>Interfaces replaced by this one:
-  <ul>
-   <li>Gecko's legacy mouse wheel event object: {{DOMxRef("MouseScrollEvent")}}</li>
-   <li>Non-gecko browsers' legacy mouse wheel event object: {{DOMxRef("MouseWheelEvent")}}</li>
-  </ul>
- </li>
-</ul>
+## See also
+
+- {{domxref("Element/wheel_event", "wheel")}} event
+- Interfaces replaced by this one:
+
+  - Gecko's legacy mouse wheel event object: {{DOMxRef("MouseScrollEvent")}}
+  - Non-gecko browsers' legacy mouse wheel event object: {{DOMxRef("MouseWheelEvent")}}

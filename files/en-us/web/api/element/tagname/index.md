@@ -2,74 +2,75 @@
 title: Element.tagName
 slug: Web/API/Element/tagName
 tags:
-- API
-- DOM
-- DOM Reference
-- Element
-- Gecko
-- NeedsBrowserCompatibility
-- Property
-- Read-only
-- Reference
-- tagName
+  - API
+  - DOM
+  - DOM Reference
+  - Element
+  - Gecko
+  - NeedsBrowserCompatibility
+  - Property
+  - Read-only
+  - Reference
+  - tagName
 browser-compat: api.Element.tagName
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>tagName</code></strong> read-only property
-    of the {{domxref("Element")}} interface returns the tag name of the element on which
-    it's called.</p>
+The **`tagName`** read-only property
+of the {{domxref("Element")}} interface returns the tag name of the element on which
+it's called.
 
-<p>For example, if the element is an {{HTMLElement("img")}}, its
-  <code>tagName</code> property is <code>"IMG"</code> (for HTML documents; it may be cased
-  differently for XML/XHTML documents).</p>
+For example, if the element is an {{HTMLElement("img")}}, its
+`tagName` property is `"IMG"` (for HTML documents; it may be cased
+differently for XML/XHTML documents).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>elementName</em> = <em>Element</em>.tagName;
-</pre>
+```js
+elementName = Element.tagName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string indicating the element's tag name. This string's capitalization depends on the
-  document type:</p>
+A string indicating the element's tag name. This string's capitalization depends on the
+document type:
 
-<ul>
-  <li>For DOM trees which represent HTML documents, the returned tag name is always in the
-    canonical upper-case form. For example, <code>tagName</code> called on a
-    {{HTMLElement("div")}} element returns <code>"DIV"</code>.</li>
-  <li>The tag names of elements in an XML DOM tree are returned in the same case in which
-    they're written in the original XML file. If an XML document includes a tag
-    <code>"&lt;SomeTag&gt;"</code>, then the <code>tagName</code> property's value is
-    <code>"SomeTag"</code>.</li>
-</ul>
+- For DOM trees which represent HTML documents, the returned tag name is always in the
+  canonical upper-case form. For example, `tagName` called on a
+  {{HTMLElement("div")}} element returns `"DIV"`.
+- The tag names of elements in an XML DOM tree are returned in the same case in which
+  they're written in the original XML file. If an XML document includes a tag
+  `"<SomeTag>"`, then the `tagName` property's value is
+  `"SomeTag"`.
 
-<p>For {{domxref("Element")}} objects, the value of <code>tagName</code> is the same as
-  the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object
-  inherits from {{domxref("Node")}}.</p>
+For {{domxref("Element")}} objects, the value of `tagName` is the same as
+the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object
+inherits from {{domxref("Node")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span id="born"&gt;When I was born...&lt;/span&gt;
-</pre>
+```html
+<span id="born">When I was born...</span>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var span = document.getElementById("born");
+```js
+var span = document.getElementById("born");
 console.log(span.tagName);
-</pre>
+```
 
-<p>In XHTML (or any other XML format), the original case will be maintained, so
-  <code>"span"</code> would be output in case the original tag name was created lowercase.
-  In HTML, <code>"SPAN"</code> would be output instead regardless of the case used while
-  creating the original document.</p>
+In XHTML (or any other XML format), the original case will be maintained, so
+`"span"` would be output in case the original tag name was created lowercase.
+In HTML, `"SPAN"` would be output instead regardless of the case used while
+creating the original document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

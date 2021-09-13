@@ -14,41 +14,41 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>GravitySensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides on each reading the gravity applied to the device along all three axes.</p>
+The **`GravitySensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the gravity applied to the device along all three axes.
 
-<p>To use this sensor, the user must grant permission to the <code>'accelerometer'</code> device sensor through the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
+To use this sensor, the user must grant permission to the `'accelerometer'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}</dt>
-	<dd>Creates a new <code>GravitySensor</code> object.</dd>
-</dl>
+- {{domxref("GravitySensor.GravitySensor", "GravitySensor()")}}
+  - : Creates a new `GravitySensor` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref('Accelerometer')}}.</em></p>
+_Inherits properties from its ancestor, {{domxref('Accelerometer')}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Gravity is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
+Gravity is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
 
-<pre class="brush: js">let gravitySensor = new GravitySensor({frequency: 60});
+```js
+let gravitySensor = new GravitySensor({frequency: 60});
 
-gravitySensor.addEventListener("reading", e =&gt; {
+gravitySensor.addEventListener("reading", e => {
   console.log(`Gravity along the X-axis ${gravitySensor.x}`);
   console.log(`Gravity along the Y-axis ${gravitySensor.y}`);
   console.log(`Gravity along the Z-axis ${gravitySensor.z}`);
 });
 
-gravitySensor.start();</pre>
+gravitySensor.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -6,67 +6,30 @@ tags:
   - CSSOM
   - Reference
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>CSSOMString</code></strong> is used to denote string data in <a href="/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a> specifications and can refer to either {{domxref("DOMString")}} or {{domxref("USVString")}}. When a specification says <code>CSSOMString</code>, it depends on the browser vendors to choose whether to use <code>DOMString</code> or <code>USVString</code>. While browser implementations that use UTF-8 internally to represent strings in memory can use <code>USVString</code> when the specification says <code>CSSOMString</code>, implementations that already represent strings as 16-bit sequences might choose to use <code>DOMString</code> instead.</p>
+**`CSSOMString`** is used to denote string data in [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) specifications and can refer to either {{domxref("DOMString")}} or {{domxref("USVString")}}. When a specification says `CSSOMString`, it depends on the browser vendors to choose whether to use `DOMString` or `USVString`. While browser implementations that use UTF-8 internally to represent strings in memory can use `USVString` when the specification says `CSSOMString`, implementations that already represent strings as 16-bit sequences might choose to use `DOMString` instead.
 
-<h4 id="Implementation_differences">Implementation differences</h4>
+#### Implementation differences
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Browser</th>
-      <th>DOMString or USVString for CSSOMString</th>
-    </tr>
- <tbody>
-  <tr>
-   <td>Firefox (Gecko)</td>
-   <td>USVString</td>
-  </tr>
-  <tr>
-   <td>Chrome (Blink)</td>
-   <td>USVString</td>
-  </tr>
-  <tr>
-   <td>Safari (WebKit)</td>
-   <td>USVString</td>
-  </tr>
-  <tr>
-   <td>Edge (EdgeHTML)</td>
-   <td>-</td>
-  </tr>
-  <tr>
-   <td>Opera (Blink)</td>
-   <td>USVString</td>
-  </tr>
- </tbody>
-</table>
+| Browser         | DOMString or USVString for CSSOMString |
+| --------------- | -------------------------------------- |
+| Firefox (Gecko) | USVString                              |
+| Chrome (Blink)  | USVString                              |
+| Safari (WebKit) | USVString                              |
+| Edge (EdgeHTML) | -                                      |
+| Opera (Blink)   | USVString                              |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#cssomstring-type', 'CSSOMString')}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                | Status                   | Comment             |
+| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('CSSOM', '#cssomstring-type', 'CSSOMString')}} | {{Spec2("CSSOM")}} | Initial definition. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("CSS_Object_Model")}}</li>
- <li>{{domxref("DOMString")}}</li>
- <li>{{domxref("USVString")}}</li>
- <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
-</ul>
+- {{jsxref("Global_Objects/String", "String")}}
+- {{domxref("CSS_Object_Model")}}
+- {{domxref("DOMString")}}
+- {{domxref("USVString")}}
+- [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

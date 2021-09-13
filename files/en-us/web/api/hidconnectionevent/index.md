@@ -8,44 +8,40 @@ tags:
   - HIDConnectionEvent
 browser-compat: api.HIDConnectionEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>HIDConnectionEvent</code></strong> interface of the {{domxref('WebHID API')}} represents HID connection events, and is the event type passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when an input report is received.</p>
+The **`HIDConnectionEvent`** interface of the {{domxref('WebHID API')}} represents HID connection events, and is the event type passed to {{domxref("HID.onconnect")}} and {{domxref("HID.ondisconnect")}} when an input report is received.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("HIDConnectionEvent.HIDConnectionEvent()")}}</dt>
-	<dd>Returns a new <code>HIDConnectionEvent</code> object. Typically this constructor is not used as events are created when an input report is received.</dd>
-</dl>
+- {{domxref("HIDConnectionEvent.HIDConnectionEvent()")}}
+  - : Returns a new `HIDConnectionEvent` object. Typically this constructor is not used as events are created when an input report is received.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("Event")}}.</em></p>
+_This interface also inherits properties from {{domxref("Event")}}._
 
-<dl>
-  <dt>{{domxref("HIDConnectionEvent.device")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("HIDDevice")}} instance representing the device associated with the connection event.</dd>
-</dl>
+- {{domxref("HIDConnectionEvent.device")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("HIDDevice")}} instance representing the device associated with the connection event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example registers event listeners for <code>connect</code> and <code>disconnect</code> events, then prints the {{domxref("HIDDevice.productName")}} to the console.</p>
+The following example registers event listeners for `connect` and `disconnect` events, then prints the {{domxref("HIDDevice.productName")}} to the console.
 
-<pre class="brush: js">navigator.hid.addEventListener('connect', ({device}) => {
+```js
+navigator.hid.addEventListener('connect', ({device}) => {
   console.log(`HID connected: ${device.productName}`);
 });
 
 navigator.hid.addEventListener('disconnect', ({device}) => {
   console.log(`HID disconnected: ${device.productName}`);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

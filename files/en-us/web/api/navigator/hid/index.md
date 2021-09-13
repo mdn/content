@@ -2,40 +2,39 @@
 title: Navigator.hid
 slug: Web/API/Navigator/hid
 tags:
-- API
-- Advanced
-- WebHID
-- WebHID API
-- Property
-- Reference
+  - API
+  - Advanced
+  - WebHID
+  - WebHID API
+  - Property
+  - Reference
 browser-compat: api.Navigator.hid
 ---
-<div>{{APIRef("WebHID API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>Navigator.hid</strong></code>
-    read-only property returns an {{domxref("HID")}} object providing methods
-    for connecting to HID devices, listing attached HID devices, and event
-    handlers for connected HID devices.</p>
+The **`Navigator.hid`**
+read-only property returns an {{domxref("HID")}} object providing methods
+for connecting to HID devices, listing attached HID devices, and event
+handlers for connected HID devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>var hidVar</var> = navigator.hid</pre>
+```js
+var hidVar = navigator.hid
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HID")}} object.</p>
+An {{domxref("HID")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebHID_API">WebHID API</a></li>
-</ul>
+- [WebHID API](/en-US/docs/Web/API/WebHID_API)

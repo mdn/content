@@ -9,58 +9,60 @@ tags:
   - Reference
 browser-compat: api.Range.selectNodeContents
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.selectNodeContents()</code></strong> method sets the {{
-  domxref("Range") }} to contain the contents of a {{ domxref("Node") }}.</p>
+The **`Range.selectNodeContents()`** method sets the {{
+  domxref("Range") }} to contain the contents of a {{ domxref("Node") }}.
 
-<p>The parent <code>Node</code> of the start and end of the <code>Range</code> will be the
-  reference node. The <code>startOffset</code> is 0, and the <code>endOffset</code> is the
-  number of child <code>Node</code>s or number of characters contained in the reference
-  node.</p>
+The parent `Node` of the start and end of the `Range` will be the
+reference node. The `startOffset` is 0, and the `endOffset` is the
+number of child `Node`s or number of characters contained in the reference
+node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.selectNodeContents(<em>referenceNode</em>);
-</pre>
+```js
+range.selectNodeContents(referenceNode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>referenceNode</code></dt>
-  <dd>The {{ domxref("Node") }} whose contents will be selected within a {{
-    domxref("Range") }}.</dd>
-</dl>
+- `referenceNode`
+  - : The {{ domxref("Node") }} whose contents will be selected within a {{
+    domxref("Range") }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 referenceNode = document.getElementsByTagName("div")[0];
 range.selectNodeContents(referenceNode);
-</pre>
+```
 
-<h3 id="Live_sample">Live sample</h3>
+### Live sample
 
-<p>This example lets the user select and deselect a paragraph with buttons.
-  {{domxref("Document.createRange()")}}, <code>Range.selectNodeContents()</code>, and
-  {{domxref("Selection.addRange()")}} are used to select the content.
-  {{domxref("Window.getSelection()")}} and {{domxref("Selection.removeAllRanges()")}} are
-  used to deselect it.</p>
+This example lets the user select and deselect a paragraph with buttons.
+{{domxref("Document.createRange()")}}, `Range.selectNodeContents()`, and
+{{domxref("Selection.addRange()")}} are used to select the content.
+{{domxref("Window.getSelection()")}} and {{domxref("Selection.removeAllRanges()")}} are
+used to deselect it.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="p"&gt;&lt;b&gt;Use the buttons below&lt;/b&gt; to select or deselect the contents of this paragraph.&lt;/p&gt;
-&lt;button id="select-button"&gt;Select paragraph&lt;/button&gt;
-&lt;button id="deselect-button"&gt;Deselect paragraph&lt;/button&gt;
-</pre>
+```html
+<p id="p"><b>Use the buttons below</b> to select or deselect the contents of this paragraph.</p>
+<button id="select-button">Select paragraph</button>
+<button id="deselect-button">Deselect paragraph</button>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const p = document.getElementById('p');
+```js
+const p = document.getElementById('p');
 const selectButton = document.getElementById('select-button');
 const deselectButton = document.getElementById('deselect-button');
 
-selectButton.addEventListener('click', e =&gt; {
+selectButton.addEventListener('click', e => {
   // Clear any current selection
   const selection = window.getSelection();
   selection.removeAllRanges();
@@ -71,25 +73,24 @@ selectButton.addEventListener('click', e =&gt; {
   selection.addRange(range);
 });
 
-deselectButton.addEventListener('click', e =&gt; {
+deselectButton.addEventListener('click', e => {
   const selection = window.getSelection();
   selection.removeAllRanges();
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Live_sample")}}</p>
+{{EmbedLiveSample("Live_sample")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

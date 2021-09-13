@@ -10,42 +10,42 @@ tags:
   - Reference
 browser-compat: api.Range.collapsed
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>Range.collapsed</strong></code> read-only property returns a
-  boolean flag indicating whether the start and end points of the
-  {{domxref("Range")}} are at the same position. It returns <code>true</code> if the start
-  and end boundary points of the {{domxref("Range")}} are the same point in the DOM,
-  <code>false</code> if not.</p>
+The **`Range.collapsed`** read-only property returns a
+boolean flag indicating whether the start and end points of the
+{{domxref("Range")}} are at the same position. It returns `true` if the start
+and end boundary points of the {{domxref("Range")}} are the same point in the DOM,
+`false` if not.
 
-<p>A collapsed {{domxref("Range")}} is empty (containing no content), and specifies a
-  single point in a DOM tree. To collapse a range, see the {{domxref("Range.collapse()")}}
-  method.</p>
+A collapsed {{domxref("Range")}} is empty (containing no content), and specifies a
+single point in a DOM tree. To collapse a range, see the {{domxref("Range.collapse()")}}
+method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>isCollapsed</em> = <em>range</em>.collapsed;
-</pre>
+```js
+isCollapsed = range.collapsed;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let range = document.createRange();
+```js
+let range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

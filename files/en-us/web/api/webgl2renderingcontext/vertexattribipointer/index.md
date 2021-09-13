@@ -2,63 +2,63 @@
 title: WebGL2RenderingContext.vertexAttribIPointer()
 slug: Web/API/WebGL2RenderingContext/vertexAttribIPointer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.vertexAttribIPointer()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> specifies integer data
-  formats and locations of vertex attributes in a vertex attributes array.</p>
+The **`WebGL2RenderingContext.vertexAttribIPointer()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specifies integer data
+formats and locations of vertex attributes in a vertex attributes array.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.vertexAttribIPointer(<var>index</var>, <var>size</var>, <var>type</var>, <var>stride</var>, <var>offset</var>);
-</pre>
+```js
+void gl.vertexAttribIPointer(index, size, type, stride, offset);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute that is to be
-    modified.</dd>
-  <dt><code>size</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of components per vertex attribute.
-    Must be 1, 2, 3, or 4.</dd>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of each component in the array.
-    Must be one of: <code>gl.BYTE</code>, <code>gl.UNSIGNED_BYTE</code>,
-    <code>gl.SHORT</code>, <code>gl.UNSIGNED_SHORT</code>, <code>gl.INT</code>, or
-    <code>gl.UNSIGNED_INT</code>.</dd>
-  <dt><code>stride</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the offset in bytes between the beginning of
-    consecutive vertex attributes.</dd>
-  <dt><code>offset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes of the first component in
-    the vertex attribute array. Must be a multiple of <code>type</code>.</dd>
-</dl>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute that is to be
+    modified.
+- `size`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of components per vertex attribute.
+    Must be 1, 2, 3, or 4.
+- `type`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of each component in the array.
+    Must be one of: `gl.BYTE`, `gl.UNSIGNED_BYTE`,
+    `gl.SHORT`, `gl.UNSIGNED_SHORT`, `gl.INT`, or
+    `gl.UNSIGNED_INT`.
+- `stride`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the offset in bytes between the beginning of
+    consecutive vertex attributes.
+- `offset`
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in bytes of the first component in
+    the vertex attribute array. Must be a multiple of `type`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Very similar to {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}. The main
-  difference is that while values specified by <code>vertexAttribPointer</code> are
-  always  interpreted as floating-point values in the shader (even if they were originally
-  specified as integers in the buffer), this method allows specifying values which are
-  interpreted as integers in the shader.</p>
+Very similar to {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}. The main
+difference is that while values specified by `vertexAttribPointer` are
+always  interpreted as floating-point values in the shader (even if they were originally
+specified as integers in the buffer), this method allows specifying values which are
+interpreted as integers in the shader.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Linear_Blend_Skinning">Linear Blend Skinning</h3>
+### Linear Blend Skinning
 
-<pre class="brush: js">//Describe the layout of the buffer:
+```js
+//Describe the layout of the buffer:
 //1. position
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -73,9 +73,10 @@ gl.enableVertexAttribArray(2);
 gl.bindAttribLocation(shaderProgram, 0, "position");
 gl.bindAttribLocation(shaderProgram, 1, "boneWeights");
 gl.bindAttribLocation(shaderProgram, 2, "boneIndices");
-</pre>
+```
 
-<pre class="brush: html">&lt;script id="shader-vs" type="x-shader/x-vertex"&gt;#version 300 es
+```html
+<script id="shader-vs" type="x-shader/x-vertex">#version 300 es
 
 uniform mat4 mvMatrix;
 uniform mat4 bones[120];
@@ -92,19 +93,17 @@ void main() {
         bones[boneIndices.q] * vec4(position, 1.0) * boneWeights.q;
     gl_Position = mvMatrix * skinnedPosition;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}

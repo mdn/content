@@ -2,83 +2,78 @@
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 tags:
-- API
-- Audio
-- Capability
-- Compatibility
-- Format
-- HTML DOM
-- HTMLMediaElement
-- MIME Types
-- Media
-- Media Types
-- Method
-- Reference
-- Type
-- Video
-- Web
-- canPlayType
-- support
+  - API
+  - Audio
+  - Capability
+  - Compatibility
+  - Format
+  - HTML DOM
+  - HTMLMediaElement
+  - MIME Types
+  - Media
+  - Media Types
+  - Method
+  - Reference
+  - Type
+  - Video
+  - Web
+  - canPlayType
+  - support
 browser-compat: api.HTMLMediaElement.canPlayType
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLMediaElement")}} method
-    <code><strong>canPlayType()</strong></code> reports how likely it is that the current
-    browser will be able to play media of a given MIME type.</p>
+The {{domxref("HTMLMediaElement")}} method
+**`canPlayType()`** reports how likely it is that the current
+browser will be able to play media of a given MIME type.
 
-<div class="note"><p><strong>Note:</strong> This feature is not available in <a
-    href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></div>
+> **Note:** This feature is not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>canPlayResponse</em> = <em>audioOrVideo</em>.canPlayType(<em>mediaType</em>);
-</pre>
+```js
+canPlayResponse = audioOrVideo.canPlayType(mediaType);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mediaType</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the MIME type of the media.</dd>
-</dl>
+- `mediaType`
+  - : A {{domxref("DOMString")}} containing the MIME type of the media.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} indicating how likely it is that the media can be played.
-  The string will be one of the following values:</p>
+A {{domxref("DOMString")}} indicating how likely it is that the media can be played.
+The string will be one of the following values:
 
-<dl>
-  <dt><code>probably</code></dt>
-  <dd>Media of the type indicated by the <code>mediaType</code> parameter is probably
-    playable on this device.</dd>
-  <dt><code>maybe</code></dt>
-  <dd>Not enough information is available to determine for sure whether or not the media
-    will play until playback is actually attempted.</dd>
-  <dt><code>""</code> (empty string)</dt>
-  <dd>Media of the given type definitely can't be played on the current device.</dd>
-</dl>
+- `probably`
+  - : Media of the type indicated by the `mediaType` parameter is probably
+    playable on this device.
+- `maybe`
+  - : Not enough information is available to determine for sure whether or not the media
+    will play until playback is actually attempted.
+- `""` (empty string)
+  - : Media of the given type definitely can't be played on the current device.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.canPlayType('video/mp4')); // "maybe"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-  <li>{{domxref("MediaCapabilities")}} in the Media Capabilities API</li>
-  <li><a href="/en-US/docs/Web/Media/Formats/Support_issues">Handling media support
-      issues in web content</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the
-      web</a></li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("MediaCapabilities")}} in the Media Capabilities API
+- [Handling media support
+  issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
+- [Guide to media types and formats on the
+  web](/en-US/docs/Web/Media/Formats)

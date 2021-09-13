@@ -14,34 +14,36 @@ tags:
   - matches
 browser-compat: api.MediaQueryList.matches
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>matches</code></strong> read-only property of the
-  {{DOMxRef("MediaQueryList")}} interface is a boolean value that returns
-  <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list,
-  or <code>false</code> if not.</p>
+The **`matches`** read-only property of the
+{{DOMxRef("MediaQueryList")}} interface is a boolean value that returns
+`true` if the {{DOMxRef("document")}} currently matches the media query list,
+or `false` if not.
 
-<p>You can be notified when the value of <code>matches</code> changes by watching for the
-  {{domxref("MediaQueryList.change_event", "change")}} event to be fired at the
-  <code>MediaQueryList</code>.</p>
+You can be notified when the value of `matches` changes by watching for the
+{{domxref("MediaQueryList.change_event", "change")}} event to be fired at the
+`MediaQueryList`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>matches</var> = &lt;varm&gt;MediaQueryList.matches;</pre>
+```js
+var matches = <varm>MediaQueryList.matches;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value that is <code>true</code> if the {{DOMxRef("document")}}
-  currently matches the media query list; otherwise, it's <code>false</code>.</p>
+A boolean value that is `true` if the {{DOMxRef("document")}}
+currently matches the media query list; otherwise, it's `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example detects viewport orientation changes by creating a media query using the
-  <code><a href="/en-US/docs/Web/CSS/@media/orientation">orientation</a></code> media
-  feature:</p>
+This example detects viewport orientation changes by creating a media query using the
+[`orientation`](/en-US/docs/Web/CSS/@media/orientation) media
+feature:
 
-<pre class="brush: js">function addMQListener(mq, callback) {
+```js
+function addMQListener(mq, callback) {
   if (mq.addEventListener) {
     mq.addEventListener("change", callback);
   } else {
@@ -50,7 +52,7 @@ browser-compat: api.MediaQueryList.matches
 }
 
 addMQListener(window.matchMedia("(orientation:landscape)"),
-  event =&gt; {
+  event => {
     if (event.matches) {
       /* now in landscape orientation */
     } else {
@@ -58,23 +60,21 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
     }
   }
 );
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

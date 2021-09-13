@@ -11,48 +11,45 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItemList
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <code><strong>DataTransferItemList</strong></code> object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a <em>drag operation</em>, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a <code>DataTransferItemList</code>.</p>
+The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
 
-<p>The individual items can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
+The individual items can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
 
-<p>This interface has no constructor.</p>
+This interface has no constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DataTransferItemList.length")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned long</code> that is the number of drag items in the list.</dd>
-</dl>
+- {{domxref("DataTransferItemList.length")}} {{readonlyInline}}
+  - : An `unsigned long` that is the number of drag items in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("DataTransferItemList.add()")}}</dt>
- <dd>Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.</dd>
- <dt>{{domxref("DataTransferItemList.remove()")}}</dt>
- <dd>Removes the drag item from the list at the given index.</dd>
- <dt>{{domxref("DataTransferItemList.clear()")}}</dt>
- <dd>Removes all of the drag items from the list.</dd>
- <dt>{{domxref("DataTransferItemList.DataTransferItem()")}}</dt>
- <dd>Getter that returns a {{domxref("DataTransferItem")}} at the given index.</dd>
-</dl>
+- {{domxref("DataTransferItemList.add()")}}
+  - : Adds an item (either a {{domxref("File")}} object or a {{domxref("DOMString","string")}}) to the drag item list and returns a {{domxref("DataTransferItem")}} object for the new item.
+- {{domxref("DataTransferItemList.remove()")}}
+  - : Removes the drag item from the list at the given index.
+- {{domxref("DataTransferItemList.clear()")}}
+  - : Removes all of the drag items from the list.
+- {{domxref("DataTransferItemList.DataTransferItem()")}}
+  - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how to use drag and drop.</p>
+This example shows how to use drag and drop.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function dragstart_handler(ev) {
+```js
+function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   var dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
+  dataList.add("<p>... paragraph ...</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -61,18 +58,18 @@ function drop_handler(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i &lt; data.length; i++) {
-    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
+  for (var i = 0; i < data.length; i++) {
+    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
       data[i].getAsString(function (s){
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
         console.log("... Drop: HTML = " + s);
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
         console.log("... Drop: URI = " + s);
@@ -94,21 +91,22 @@ function dragend_handler(ev) {
   // Clear any remaining drag data
   dataList.clear();
 }
+```
 
-</pre>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div>
+  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+</div>
+<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">div {
+```css
+div {
   margin: 0em;
   padding: 2em;
 }
@@ -121,17 +119,16 @@ function dragend_handler(ev) {
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', '35%', '250px')}}</p>
+{{EmbedLiveSample('Example', '35%', '250px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

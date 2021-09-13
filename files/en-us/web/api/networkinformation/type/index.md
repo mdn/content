@@ -2,45 +2,45 @@
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
 tags:
-- API
-- Experimental
-- Network Information API
-- NetworkInformation
-- Property
-- Read-only
-- Reference
+  - API
+  - Experimental
+  - Network Information API
+  - NetworkInformation
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.NetworkInformation.type
 ---
-<p>{{apiref("Network Information API")}}{{SeeCompatTable}}</p>
+{{apiref("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>NetworkInformation.type</strong></code> read-only property returns
-  the type of connection a device is using to communicate with the network.</p>
+The **`NetworkInformation.type`** read-only property returns
+the type of connection a device is using to communicate with the network.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>type</em> = <em>netInfo</em>.type</pre>
+```js
+var type = netInfo.type
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An enumerated value that is one of the following values:</p>
+An enumerated value that is one of the following values:
 
-<ul>
-  <li><code>"bluetooth"</code></li>
-  <li><code>"cellular"</code></li>
-  <li><code>"ethernet"</code></li>
-  <li><code>"none</code>"</li>
-  <li><code>"wifi"</code></li>
-  <li><code>"wimax"</code></li>
-  <li><code>"other"</code></li>
-  <li><code>"unknown"</code></li>
-</ul>
+- `"bluetooth"`
+- `"cellular"`
+- `"ethernet"`
+- `"none`"
+- `"wifi"`
+- `"wimax"`
+- `"other"`
+- `"unknown"`
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,46 +11,44 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnitValue</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents values that contain a single unit type. For example, "42px" would be represented by a <code>CSSNumericValue</code>.</p>
+The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents values that contain a single unit type. For example, "42px" would be represented by a `CSSNumericValue`.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("CSSUnitValue/CSSUnitValue", "CSSStyleValue.CSSUnitValue()")}}</dt>
-	<dd>Creates a new <code>CSSUnitValue</code> object.</dd>
-</dl>
+- {{domxref("CSSUnitValue/CSSUnitValue", "CSSStyleValue.CSSUnitValue()")}}
+  - : Creates a new `CSSUnitValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref('CSSUnitValue.value')}}</dt>
-	<dd>Returns a double indicating the number of units.</dd>
-	<dt>{{domxref('CSSUnitValue.unit')}}</dt>
-	<dd>Returns a {{jsxref('USVString')}} indicating the type of unit.</dd>
-</dl>
+- {{domxref('CSSUnitValue.value')}}
+  - : Returns a double indicating the number of units.
+- {{domxref('CSSUnitValue.unit')}}
+  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following shows a method of creating a {{domxref('CSSPositionValue')}} from individual <code>CSSUnitValue</code> constructors.</p>
+The following shows a method of creating a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors.
 
-<pre class="brush: js">let pos = new CSSPositionValue(
+```js
+let pos = new CSSPositionValue(
     new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));</pre>
+    new CSSUnitValue(10, "px"));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

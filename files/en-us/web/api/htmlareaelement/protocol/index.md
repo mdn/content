@@ -7,41 +7,40 @@ tags:
   - Property
 browser-compat: api.HTMLAreaElement.protocol
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The
-  <strong><code>HTMLAreaElement.protocol</code></strong>
-  property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
-  including the final <code>':'</code>.</p>
+The
+**`HTMLAreaElement.protocol`**
+property is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+including the final `':'`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.protocol;
+string = area.protocol;
 // Setter
-<em>area</em>.protocol = <em>string</em>;
-</pre>
+area.protocol = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the protocol of an area link</h3>
+### Getting the protocol of an area link
 
-<pre class="brush: js">// An &lt;area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"&gt; element is in the document
+```js
+// An <area id="myArea" href="https://developer.mozilla.org/en-US/HTMLAreaElement"> element is in the document
 const area = document.getElementById("myArea");
 area.protocol; // returns 'https:'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

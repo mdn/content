@@ -14,89 +14,80 @@ tags:
   - web console
 browser-compat: api.console.log
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.log()</code></strong> method outputs a message to the web console.
-   The message may be a single string (with optional substitution values), or it may be any one
-   or more JavaScript objects.</p>
+The **`console.log()`** method outputs a message to the web console.
+The message may be a single string (with optional substitution values), or it may be any one
+or more JavaScript objects.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.log(<var>obj1</var> [, <var>obj2</var>, ..., <var>objN</var>]);
-console.log(<var>msg</var> [, <var>subst1</var>, ..., <var>substN</var>]);
-</pre>
+```js
+console.log(obj1 [, obj2, ..., objN]);
+console.log(msg [, subst1, ..., substN]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>obj1</code> ... <code>objN</code></dt>
-  <dd>A list of JavaScript objects to output. The string representations of each of these
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of these
     objects are appended together in the order listed and output. Please be warned that if
     you log objects in the latest versions of Chrome and Firefox what you get logged on
-    the console is a <em>reference to the object</em>, which is not necessarily the
-    'value' of the object at the moment in time you call <code>console.log()</code>, but
-    it is the value of the object at the moment you open the console.</dd>
-  <dt><code>msg</code></dt>
-  <dd>A JavaScript string containing zero or more substitution strings.</dd>
-  <dt><code>subst1</code> ... <code>substN</code></dt>
-  <dd>JavaScript objects with which to replace substitution strings within
-    <code>msg</code>. This gives you additional control over the format of the output.
-  </dd>
-</dl>
+    the console is a _reference to the object_, which is not necessarily the
+    'value' of the object at the moment in time you call `console.log()`, but
+    it is the value of the object at the moment you open the console.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This gives you additional control over the format of the output.
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting text to
-    the console</a> in the documentation of {{domxref("console")}} for details.</p>
+See [Outputting text to
+the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 
-<h2 id="Difference_between_log_and_dir">Difference between log() and dir()</h2>
+## Difference between log() and dir()
 
-<p>You might ask yourself what's the difference between {{domxref("console.dir()")}} and
-  <code>console.log()</code>.</p>
+You might ask yourself what's the difference between {{domxref("console.dir()")}} and
+`console.log()`.
 
-<p>Another useful difference in Chrome exists when sending DOM elements to the console.
-</p>
+Another useful difference in Chrome exists when sending DOM elements to the console.
 
-<p><img alt="" src="dozdcyr.png"></p>
+![](dozdcyr.png)
 
-<p>Notice:</p>
+Notice:
 
-<ul>
-  <li><code>console.log</code> prints the element in an HTML-like tree</li>
-  <li><code>console.dir</code> prints the element in a JSON-like tree</li>
-</ul>
+- `console.log` prints the element in an HTML-like tree
+- `console.dir` prints the element in a JSON-like tree
 
-<p>Specifically, <code>console.log</code> gives special treatment to DOM elements, whereas
-  <code>console.dir</code> does not. This is often useful when trying to see the full
-  representation of the DOM JS object.</p>
+Specifically, `console.log` gives special treatment to DOM elements, whereas
+`console.dir` does not. This is often useful when trying to see the full
+representation of the DOM JS object.
 
-<p>There's more information in the <a
-    href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome
-    Console API reference</a> about this and other functions.</p>
+There's more information in the [Chrome
+Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject) about this and other functions.
 
-<h2 id="Logging_objects">Logging objects</h2>
+## Logging objects
 
-<p>Don't use <code>console.log(obj)</code>, use
-  <code>console.log(JSON.parse(JSON.stringify(obj)))</code>.</p>
+Don't use `console.log(obj)`, use
+`console.log(JSON.parse(JSON.stringify(obj)))`.
 
-<p>This way you are sure you are seeing the value of <code>obj</code> at the moment you
-  log it. Otherwise, many browsers provide a live view that constantly updates as values
-  change. This may not be what you want.</p>
+This way you are sure you are seeing the value of `obj` at the moment you
+log it. Otherwise, many browsers provide a live view that constantly updates as values
+change. This may not be what you want.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
-      the F12 Tools Console to View Errors and Status</a></li>
-  <li><a
-      href="https://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS:
-      Console API</a></li>
-</ul>
+- [MSDN: Using
+  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+- [NodeJS:
+  Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

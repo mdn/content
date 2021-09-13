@@ -2,37 +2,38 @@
 title: KeyboardLayoutMap.values
 slug: Web/API/KeyboardLayoutMap/values
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- KeyboardLayoutMap
-- Property
-- Reference
-- keyboard
-- values
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - KeyboardLayoutMap
+  - Property
+  - Reference
+  - keyboard
+  - values
 browser-compat: api.KeyboardLayoutMap.values
 ---
-<div>{{SeeCompatTable}}{{APIRef("Keyboard API")}}</div>
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-<p>The <strong><code>values</code></strong> read-only property of
-    the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
-  Iterator object that contains the values for each index in the
-  map.</p>
+The **`values`** read-only property of
+the {{domxref("KeyboardLayoutMap")}} interface returns a new Array
+Iterator object that contains the values for each index in the
+map.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>iterator</var> = KeyboardLayoutMap.values</pre>
+```js
+var iterator = KeyboardLayoutMap.values
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An iterator.</p>
+An iterator.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

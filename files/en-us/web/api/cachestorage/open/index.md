@@ -13,49 +13,47 @@ tags:
   - open
 browser-compat: api.CacheStorage.open
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>open()</code></strong> method of the
-    {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
-    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</p>
+The **`open()`** method of the
+{{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
+the {{domxref("Cache")}} object matching the `cacheName`.
 
-<p>You can access <code>CacheStorage</code> through the global
-  {{domxref("caches")}} property.</p>
+You can access `CacheStorage` through the global
+{{domxref("caches")}} property.
 
-<div class="note">
-  <p><strong>Note:</strong> If the specified {{domxref("Cache")}} does not exist, a new
-    cache is created with that <code>cacheName</code> and a {{jsxref("Promise")}} that
-    resolves to this new {{domxref("Cache")}} object is returned.</p>
-</div>
+> **Note:** If the specified {{domxref("Cache")}} does not exist, a new
+> cache is created with that `cacheName` and a {{jsxref("Promise")}} that
+> resolves to this new {{domxref("Cache")}} object is returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">caches.open(<em>cacheName</em>).then(function(<em>cache</em>) {
+```js
+caches.open(cacheName).then(function(cache) {
   // Do something with your cache
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>cacheName</dt>
-  <dd>The name of the cache you want to open.</dd>
-</dl>
+- cacheName
+  - : The name of the cache you want to open.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} object.</p>
+A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test
-    example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>).
-  Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
-  {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
-  the app. This consists of calling <code>CacheStorage.open()</code> to create a new
-  cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.</p>
+This example is from the MDN [sw-test
+example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
+{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
+the app. This consists of calling `CacheStorage.open()` to create a new
+cache, then using {{domxref("Cache.addAll()")}} to add a series of assets to it.
 
-<pre class="brush: js">self.addEventListener('install', function(event) {
+```js
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -71,21 +69,19 @@ browser-compat: api.CacheStorage.open
       ]);
     })
   );
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

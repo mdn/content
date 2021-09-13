@@ -13,30 +13,26 @@ tags:
   - Video
 browser-compat: api.MediaKeySystemAccess
 ---
-<p>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>MediaKeySystemAccess</strong></code> interface of the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">EncryptedMediaExtensions API</a> provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} method.</p>
+The **`MediaKeySystemAccess`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the {{domxref("Navigator.requestMediaKeySystemAccess","Navigator.requestMediaKeySystemAccess()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaKeySystemAccess.keySystem")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref('DOMString')}} identifying the key system being used.</dd>
-</dl>
+- {{domxref("MediaKeySystemAccess.keySystem")}} {{readonlyinline}}
+  - : Returns a {{domxref('DOMString')}} identifying the key system being used.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaKeySystemAccess.createMediaKeys()")}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves to a new {{domxref("MediaKeys")}} object.</dd>
- <dt>{{domxref("MediaKeySystemAccess.getConfiguration()")}}</dt>
- <dd>Returns a {{domxref("MediaKeySystemConfiguration")}} object with the supported combination of configuration options.</dd>
-</dl>
+- {{domxref("MediaKeySystemAccess.createMediaKeys()")}}
+  - : Returns a {{jsxref('Promise')}} that resolves to a new {{domxref("MediaKeys")}} object.
+- {{domxref("MediaKeySystemAccess.getConfiguration()")}}
+  - : Returns a {{domxref("MediaKeySystemConfiguration")}} object with the supported combination of configuration options.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

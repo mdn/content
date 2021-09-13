@@ -2,64 +2,60 @@
 title: WebGL2RenderingContext.readBuffer()
 slug: Web/API/WebGL2RenderingContext/readBuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.readBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.readBuffer()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> selects a color buffer as the
-  source for pixels for subsequent calls to
-  {{domxref("WebGLRenderingContext.copyTexImage2D", "copyTexImage2D")}},
-  {{domxref("WebGLRenderingContext.copyTexSubImage2D", "copyTexSubImage2D")}},
-  {{domxref("WebGL2RenderingContext.copyTexSubImage3D", "copyTexSubImage3D")}} or
-  {{domxref("WebGLRenderingContext.readPixels", "readPixels")}}.</p>
+The **`WebGL2RenderingContext.readBuffer()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) selects a color buffer as the
+source for pixels for subsequent calls to
+{{domxref("WebGLRenderingContext.copyTexImage2D", "copyTexImage2D")}},
+{{domxref("WebGLRenderingContext.copyTexSubImage2D", "copyTexSubImage2D")}},
+{{domxref("WebGL2RenderingContext.copyTexSubImage3D", "copyTexSubImage3D")}} or
+{{domxref("WebGLRenderingContext.readPixels", "readPixels")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.readBuffer(<var>src</var>);</pre>
+```js
+void gl.readBuffer(src);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>src</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer. Possible values:
-    <ul>
-      <li><code>gl.BACK</code>: Reads from the back color buffer.</li>
-      <li><code>gl.NONE</code>: Reads from no color buffer.</li>
-      <li><code>gl.COLOR_ATTACHMENT{0-15}</code>: Reads from one of the 16 color
-        attachment buffers.</li>
-    </ul>
-  </dd>
-</dl>
+- `src`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer. Possible values:
 
-<p>None.</p>
+    - `gl.BACK`: Reads from the back color buffer.
+    - `gl.NONE`: Reads from no color buffer.
+    - `gl.COLOR_ATTACHMENT{0-15}`: Reads from one of the 16 color
+      attachment buffers.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.readBuffer(gl.COLOR_ATTACHMENT0);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.readBuffer(gl.COLOR_ATTACHMENT0);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.readPixels()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+- {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
+- {{domxref("WebGLRenderingContext.readPixels()")}}

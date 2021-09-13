@@ -2,36 +2,38 @@
 title: FontFace.status
 slug: Web/API/FontFace/status
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- status
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - status
 browser-compat: api.FontFace.status
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>status</code></strong> read-only property of the
-  {{domxref("FontFace")}} interface returns an enumerated value indicating the status of
-  the font, one of <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>,
-  or <code>"error"</code>.</p>
+The **`status`** read-only property of the
+{{domxref("FontFace")}} interface returns an enumerated value indicating the status of
+the font, one of `"unloaded"`, `"loading"`, `"loaded"`,
+or `"error"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let status = FontFace.status;</pre>
+```js
+let status = FontFace.status;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>One of <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>, or
-  <code>"error"</code>.</p>
+One of `"unloaded"`, `"loading"`, `"loaded"`, or
+`"error"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

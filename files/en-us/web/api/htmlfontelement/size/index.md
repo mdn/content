@@ -2,26 +2,24 @@
 title: HTMLFontElement.size
 slug: Web/API/HTMLFontElement/size
 tags:
-- API
-- HTML DOM
-- HTMLFontElement
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLFontElement
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLFontElement.size
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}{{ APIRef("HTML DOM") }}
 
-<div>{{ APIRef("HTML DOM") }}</div>
+The obsolete
+**`HTMLFontElement.size`** property is a
+{{domxref("DOMString")}} that reflects the {{ htmlattrxref("size", "font") }} HTML
+attribute. It contains either an integer number in the range of 1-7 or a relative
+value to increase/decrease the value of the {{htmlattrxref("size", "basefont")}}
+attribute of the {{HTMLElement("basefont")}} element.
 
-<p>The obsolete
-    <code><strong>HTMLFontElement.size</strong></code> property is a
-    {{domxref("DOMString")}} that reflects the {{ htmlattrxref("size", "font") }} HTML
-    attribute. It contains either an integer number in the range of 1-7 or a relative
-    value to increase/decrease the value of the {{htmlattrxref("size", "basefont")}}
-    attribute of the {{HTMLElement("basefont")}} element.</p>
-
-<p>The format of the string must follow one of the following HTML microsyntaxes:</p>
+The format of the string must follow one of the following HTML microsyntaxes:
 
 <table class="no-markdown">
   <thead>
@@ -39,42 +37,45 @@ browser-compat: api.HTMLFontElement.size
     </tr>
     <tr>
       <td>Relative size string</td>
-      <td><em>+x or -x, where  x is the number relative to the value of the
+      <td>
+        <em
+          >+x or -x, where  x is the number relative to the value of the
           {{htmlattrxref("size", "basefont")}} attribute of the
-          {{HTMLElement("basefont")}} element</em><br>
-        <em>(the result should be in the same range of 1-7)</em>
+          {{HTMLElement("basefont")}} element</em
+        ><br /><em>(the result should be in the same range of 1-7)</em>
       </td>
-      <td><code>+2<br>
-    -1</code></td>
+      <td>
+        <code>+2<br />-1</code>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sizeString</em> = <em>fontObj</em>.size;
-<em><code>fontObj.size = sizeString;</code></em>
-</pre>
+```js
+sizeString = fontObj.size;
+fontObj.size = sizeString;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Assumes there is &lt;font id="f"&gt; element in the HTML
+```js
+// Assumes there is <font id="f"> element in the HTML
 
 var f = document.getElementById("f");
 f.size = "6";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>The &lt;font&gt; tag is not supported in HTML5 and as a result neither is
-  <code>&lt;font&gt;.size </code>.</p>
+The \<font> tag is not supported in HTML5 and as a result neither is
+`<font>.size `.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLFontElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLFontElement")}} interface it belongs to.

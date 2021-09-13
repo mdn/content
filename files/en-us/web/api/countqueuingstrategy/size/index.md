@@ -11,29 +11,30 @@ tags:
   - size
 browser-compat: api.CountQueuingStrategy.size
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>size()</code></strong> method of the
-  {{domxref("CountQueuingStrategy")}} interface always returns <code>1</code>, so that the
-  total queue size is a count of the number of chunks in the queue.</p>
+The **`size()`** method of the
+{{domxref("CountQueuingStrategy")}} interface always returns `1`, so that the
+total queue size is a count of the number of chunks in the queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>size</em> = </code>countQueuingStrategy</var>.size();</pre>
+```js
+var size = countQueuingStrategy.size();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>1</code>.</p>
+`1`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush: js ">const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+```js
+const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
 const writableStream = new WritableStream({
   // Implement the sink
@@ -44,16 +45,17 @@ const writableStream = new WritableStream({
     ...
   },
   abort(err) {
-    console.log(&quot;Sink error:&quot;, err);
+    console.log("Sink error:", err);
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size();</pre>
+var size = queuingStrategy.size();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

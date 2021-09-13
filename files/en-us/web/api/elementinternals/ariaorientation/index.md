@@ -11,41 +11,42 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaOrientation
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaOrientation</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute"><code>aria-orientation</code></a> attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.</p>
+The **`ariaOrientation`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaOrientation = ElementInternals.ariaOrientation;
-ElementInternals.ariaOrientation = ariaOrientation;</pre>
+```js
+let ariaOrientation = ElementInternals.ariaOrientation;
+ElementInternals.ariaOrientation = ariaOrientation;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"horizontal"</code></dt>
-  <dd>The element is horizontal.</dd>
-  <dt><code>"vertical"</code></dt>
-  <dd>The element is vertical.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The element's orientation is unknown.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"horizontal"`
+  - : The element is horizontal.
+- `"vertical"`
+  - : The element is vertical.
+- `"undefined"`
+  - : The element's orientation is unknown.
 
-<p>In this example the value of <code>ariaOrientation</code> is set to "vertical".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaOrientation = "vertical";</pre>
+In this example the value of `ariaOrientation` is set to "vertical".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaOrientation = "vertical";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,37 +2,38 @@
 title: SVGImageElement.height
 slug: Web/API/SVGImageElement/height
 tags:
-- API
-- Image
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- height
+  - API
+  - Image
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - height
 browser-compat: api.SVGImageElement.height
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>height</code></strong> read-only property of the
-  {{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
-  corresponding to the {{SVGAttr("height")}} attribute of the given
-  {{SVGElement("image")}} element.</p>
+The **`height`** read-only property of the
+{{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
+corresponding to the {{SVGAttr("height")}} attribute of the given
+{{SVGElement("image")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var height = <em>svgImageElement</em>.height</pre>
+```js
+var height = svgImageElement.height
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedLength")}}.</p>
+An {{domxref("SVGAnimatedLength")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,60 +10,57 @@ tags:
   - read
 browser-compat: api.ReadableStreamDefaultReader.read
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>read()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} providing access
-  to the next chunk in the stream's internal queue.</p>
+The **`read()`** method of the
+{{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} providing access
+to the next chunk in the stream's internal queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStreamDefaultReader</em>.read();</pre>
+```js
+var promise = readableStreamDefaultReader.read();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
-  the stream. The different possibilities are as follows:</p>
+A {{jsxref("Promise")}}, which fulfills/rejects with a result depending on the state of
+the stream. The different possibilities are as follows:
 
-<ul>
-  <li>If a chunk is available, the promise will be fulfilled with an object of the form
-    <code>{ value: theChunk, done: false }</code>.</li>
-  <li>If the stream becomes closed, the promise will be fulfilled with an object of the
-    form <code>{ value: undefined, done: true }</code>.</li>
-  <li>If the stream becomes errored, the promise will be rejected with the relevant error.
-  </li>
-</ul>
+- If a chunk is available, the promise will be fulfilled with an object of the form
+  `{ value: theChunk, done: false }`.
+- If the stream becomes closed, the promise will be fulfilled with an object of the
+  form `{ value: undefined, done: true }`.
+- If the stream becomes errored, the promise will be rejected with the relevant error.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamDefaultReader</code>, or the stream
-    has no owner.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamDefaultReader`, or the stream
+    has no owner.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1_-_simple_example">Example 1 - simple example</h3>
+### Example 1 - simple example
 
-<p>This example shows the basic API usage, but doesn't try to deal with complications like
-  stream chunks not ending on line boundaries for example.</p>
+This example shows the basic API usage, but doesn't try to deal with complications like
+stream chunks not ending on line boundaries for example.
 
-<p>In this example <code>stream</code> is a previously-created custom
-  <code>ReadableStream</code>. It is read using a
-  {{domxref("ReadableStreamDefaultReader")}} created using <code>getReader()</code>. (see
-  our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple
-    random stream example</a> for the full code). Each chunk is read sequentially and
-  output to the UI as an array of UTF-8 bytes, until the stream has finished being read,
-  at which point we return out of the recursive function and print the entire stream to
-  another part of the UI.</p>
+In this example `stream` is a previously-created custom
+`ReadableStream`. It is read using a
+{{domxref("ReadableStreamDefaultReader")}} created using `getReader()`. (see
+our [Simple
+random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). Each chunk is read sequentially and
+output to the UI as an array of UTF-8 bytes, until the stream has finished being read,
+at which point we return out of the recursive function and print the entire stream to
+another part of the UI.
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -91,16 +88,17 @@ browser-compat: api.ReadableStreamDefaultReader.read
     // Read some more, and call this function again
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h3 id="Example_2_-_handling_text_line_by_line">Example 2 - handling text line by line
-</h3>
+### Example 2 - handling text line by line
 
-<p>This example shows how you might fetch a text file and handle it as a stream of text
-  lines. It deals with stream chunks not ending on line boundaries and converting from
-  Uint8Array to strings.</p>
+This example shows how you might fetch a text file and handle it as a stream of text
+lines. It deals with stream chunks not ending on line boundaries and converting from
+Uint8Array to strings.
 
-<pre class="brush: js">async function* makeTextFileLineIterator(fileURL) {
+```js
+async function* makeTextFileLineIterator(fileURL) {
   const utf8Decoder = new TextDecoder("utf-8");
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
@@ -125,7 +123,7 @@ browser-compat: api.ReadableStreamDefaultReader.read
     yield chunk.substring(startIndex, result.index);
     startIndex = re.lastIndex;
   }
-  if (startIndex &lt; chunk.length) {
+  if (startIndex < chunk.length) {
     // last line didn't end in a newline char
     yield chunk.substr(startIndex);
   }
@@ -133,12 +131,13 @@ browser-compat: api.ReadableStreamDefaultReader.read
 
 for await (let line of makeTextFileLineIterator(urlOfFile)) {
   processLine(line);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

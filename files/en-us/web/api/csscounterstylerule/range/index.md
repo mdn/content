@@ -9,36 +9,42 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.range
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
-<p>The <strong><code>range</code></strong>  property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/range","range")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.</p>
+The **`range`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/range","range")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let range = CSSCounterStyleRule.range;
+```js
+let range = CSSCounterStyleRule.range;
 CSSCounterStyleRule.range = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}
 
-<p>The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, <code>myRules[0]</code> is this <code>@counter-style</code> rule, returning <code>range</code> gives us the value "2 4, 7 9".</p>
+## Examples
 
-<pre class="brush: css">@counter-style range-multi-example {
+The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, `myRules[0]` is this `@counter-style` rule, returning `range` gives us the value "2 4, 7 9".
+
+```css
+@counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
   range: 2 4, 7 9;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].range); // "2 4, 7 9" </pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].range); // "2 4, 7 9"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

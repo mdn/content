@@ -2,108 +2,103 @@
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
 tags:
-- API
-- HTML DOM
-- HTMLInputElement
-- Method
-- Reference
-- Text Field Selection API
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - Method
+  - Reference
+  - Text Field Selection API
 browser-compat: api.HTMLInputElement.setSelectionRange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLInputElement.setSelectionRange()</code></strong> method sets the
-  start and end positions of the current text selection in an {{HTMLElement("input")}}
-  or {{HTMLElement("textarea")}} element.</p>
+The **`HTMLInputElement.setSelectionRange()`** method sets the
+start and end positions of the current text selection in an {{HTMLElement("input")}}
+or {{HTMLElement("textarea")}} element.
 
-<p>Optionally, in newer browser versions, you can specify the direction in which selection
-  should be considered to have occurred. This lets you indicate, for example, that the
-  selection was set by the user clicking and dragging from the end of the selected text
-  toward the beginning.</p>
+Optionally, in newer browser versions, you can specify the direction in which selection
+should be considered to have occurred. This lets you indicate, for example, that the
+selection was set by the user clicking and dragging from the end of the selected text
+toward the beginning.
 
-<p>This method updates the <code>HTMLInputElement.selectionStart</code>,
-  <code>selectionEnd</code>, and <code>selectionDirection</code> properties in one call.
-</p>
+This method updates the `HTMLInputElement.selectionStart`,
+`selectionEnd`, and `selectionDirection` properties in one call.
 
-<p>Note that according to the <a
-    href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG
-    forms spec</a> <code>selectionStart</code>, <code>selectionEnd</code> properties and
-  <code>setSelectionRange</code> method apply only to inputs of types text, search, URL,
-  tel and password. Chrome, starting from version 33, throws an exception while accessing
-  those properties and method on the rest of input types. For example, on input of type
-  number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input
-  element's type ('number') does not support selection".</p>
+Note that according to the [WHATWG
+forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart`, `selectionEnd` properties and
+`setSelectionRange` method apply only to inputs of types text, search, URL,
+tel and password. Chrome, starting from version 33, throws an exception while accessing
+those properties and method on the rest of input types. For example, on input of type
+number: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input
+element's type ('number') does not support selection".
 
-<p>If you wish to select <strong>all</strong> text of an input element, you can use the <a
-    href="/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</a>
-  method instead.</p>
+If you wish to select **all** text of an input element, you can use the [HTMLInputElement.select()](/en-US/docs/Web/API/HTMLInputElement/select)
+method instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.setSelectionRange(<em>selectionStart</em>, <em>selectionEnd</em> [, <em>selectionDirection</em>]);
-</pre>
+```js
+element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>If <code>selectionEnd</code> is less than <code>selectionStart</code>, then both are
-  treated as the value of <code>selectionEnd</code>.</p>
+If `selectionEnd` is less than `selectionStart`, then both are
+treated as the value of `selectionEnd`.
 
-<dl>
-  <dt><code>selectionStart</code></dt>
-  <dd>The 0-based index of the first selected character. An index greater than the length
-    of the element's value is treated as pointing to the end of the value.</dd>
-  <dt><code>selectionEnd</code></dt>
-  <dd>The 0-based index of the character <em>after</em> the last selected character. An
+- `selectionStart`
+  - : The 0-based index of the first selected character. An index greater than the length
+    of the element's value is treated as pointing to the end of the value.
+- `selectionEnd`
+  - : The 0-based index of the character _after_ the last selected character. An
     index greater than the length of the element's value is treated as pointing to the end
-    of the value.</dd>
-  <dt><code>selectionDirection</code> {{optional_inline}}</dt>
-  <dd>A string indicating the direction in which the selection is considered to have been
+    of the value.
+- `selectionDirection` {{optional_inline}}
+
+  - : A string indicating the direction in which the selection is considered to have been
     performed. Possible values:
-    <ul>
-      <li><code>"forward"</code></li>
-      <li><code>"backward"</code></li>
-      <li><code>"none"</code> if the direction is unknown or irrelevant. Default value.
-      </li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+    - `"forward"`
+    - `"backward"`
+    - `"none"` if the direction is unknown or irrelevant. Default value.
 
-<p>Click the button in this example to select the third, fourth, and fifth characters in
-  the text box ("zil" in the word "Mozilla").</p>
+## Example
 
-<h3 id="HTML">HTML</h3>
+Click the button in this example to select the third, fourth, and fifth characters in
+the text box ("zil" in the word "Mozilla").
 
-<pre class="brush: html">&lt;input type="text" id="text-box" size="20" value="Mozilla"&gt;
-&lt;button onclick="selectText()"&gt;Select text&lt;/button&gt;
-</pre>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+```html
+<input type="text" id="text-box" size="20" value="Mozilla">
+<button onclick="selectText()">Select text</button>
+```
 
-<pre class="brush: js">function selectText() {
+### JavaScript
+
+```js
+function selectText() {
   const input = document.getElementById('text-box');
   input.focus();
   input.setSelectionRange(2, 5);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("input")}}</li>
-  <li>{{HTMLElement("textarea")}}</li>
-  <li>{{domxref("HTMLInputElement")}}</li>
-  <li>{{domxref("Selection")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{HTMLElement("textarea")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Selection")}}

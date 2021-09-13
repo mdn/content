@@ -2,46 +2,45 @@
 title: RTCRtpTransceiver.receiver
 slug: Web/API/RTCRtpTransceiver/receiver
 tags:
-- API
-- Media
-- Property
-- RTCRtpTransceiver
-- RTP
-- Reference
-- WebRTC
-- receiver
+  - API
+  - Media
+  - Property
+  - RTCRtpTransceiver
+  - RTP
+  - Reference
+  - WebRTC
+  - receiver
 browser-compat: api.RTCRtpTransceiver.receiver
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only  <code><strong>receiver</strong></code> property
-    of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
-    {{domxref("RTCRtpReceiver")}} responsible for receiving and decoding incoming media
-    data for the transceiver's stream.</p>
+The read-only  **`receiver`** property
+of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
+{{domxref("RTCRtpReceiver")}} responsible for receiving and decoding incoming media
+data for the transceiver's stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rtpReceiver</em> = <em>RTCRtpTransceiver</em>.receiver;</pre>
+```js
+var rtpReceiver = RTCRtpTransceiver.receiver;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCRtpReceiver")}} object which is responsible for receiving and decoding
-  incoming media data whose media ID is the same as the current value of
-  {{domxref("RTCRtpTransceiver.mid", "mid")}}.</p>
+An {{domxref("RTCRtpReceiver")}} object which is responsible for receiving and decoding
+incoming media data whose media ID is the same as the current value of
+{{domxref("RTCRtpTransceiver.mid", "mid")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-  <li>{{domxref("RTCRtpReceiver")}}</li>
-</ul>
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{domxref("RTCRtpReceiver")}}

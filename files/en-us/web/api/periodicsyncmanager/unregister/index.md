@@ -2,65 +2,63 @@
 title: PeriodicSyncManager.unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 tags:
-- Background Sync
-- Method
-- Offline
-- PWA
-- PeriodicSyncManager
-- Service Worker
-- Web Periodic Background Synchronization API
+  - Background Sync
+  - Method
+  - Offline
+  - PWA
+  - PeriodicSyncManager
+  - Service Worker
+  - Web Periodic Background Synchronization API
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>unregister()</code></strong> method of the
-  {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
-  corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves
-  when unregistration completes.</p>
+The **`unregister()`** method of the
+{{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
+corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves
+when unregistration completes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>unregister</var> = PeriodicSyncManager.unregister(tag);</pre>
+```js
+var unregister = PeriodicSyncManager.unregister(tag);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>tag</dt>
-  <dd>The unique {{jsxref('String')}} descriptor for the specific background sync.</dd>
-</dl>
+- tag
+  - : The unique {{jsxref('String')}} descriptor for the specific background sync.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A resolved {{jsxref("Promise")}}.</p>
+A resolved {{jsxref("Promise")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example removes a periodic sync to stop syncing articles in the
-  background.</p>
+The following example removes a periodic sync to stop syncing articles in the
+background.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
+```js
+navigator.serviceWorker.ready.then(registration => {
   registration.periodicSync.unregister('get-latest-news');
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
-      the Periodic Background Sync API</a></li>
-  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
-      Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with
+  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A
+  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

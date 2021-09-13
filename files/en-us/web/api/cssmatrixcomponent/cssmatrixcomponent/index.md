@@ -2,44 +2,41 @@
 title: CSSMatrixComponent()
 slug: Web/API/CSSMatrixComponent/CSSMatrixComponent
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMatrixComponent
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSMatrixComponent
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMatrixComponent()</code></strong> constructor
-  creates a new {{domxref("CSSMatrixComponent")}} object representing the <a
-    href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix()</a> and <a
-    href="/en-US/docs/Web/CSS/transform-function/matrix()">matrix3d()</a> values of the
-  individual {{CSSXRef('transform')}} property in CSS.</p>
+The **`CSSMatrixComponent()`** constructor
+creates a new {{domxref("CSSMatrixComponent")}} object representing the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix()>) values of the
+individual {{CSSXRef('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMatrixComponent</var> = new CSSMatrixComponent(<em>matrix[,options]</em>);</pre>
+```js
+var CSSMatrixComponent = new CSSMatrixComponent(matrix[,options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{{domxref('CSSMatrixComponent.matrix','matrix')}}</dt>
-  <dd>A 2d or 3d matrix. </dd>
-</dl>
+- {{domxref('CSSMatrixComponent.matrix','matrix')}}
+  - : A 2d or 3d matrix.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

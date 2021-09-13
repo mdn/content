@@ -2,48 +2,49 @@
 title: Videotrack.language
 slug: Web/API/VideoTrack/language
 tags:
-- API
-- HTML DOM
-- Language
-- Localization
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- VideoTrack
-- track
+  - API
+  - HTML DOM
+  - Language
+  - Localization
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - VideoTrack
+  - track
 browser-compat: api.VideoTrack.language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("VideoTrack")}}</strong>
-    property <strong><code>language</code></strong> returns a string identifying the
-    language used in the video track.</p>
+The read-only **{{domxref("VideoTrack")}}**
+property **`language`** returns a string identifying the
+language used in the video track.
 
-<p>For tracks that include multiple languages
-  (such as a movie in English in which a few lines are spoken in other languages), this
-  should be the video's primary language.</p>
+For tracks that include multiple languages
+(such as a movie in English in which a few lines are spoken in other languages), this
+should be the video's primary language.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>videoTrackLanguage</em> = <em>VideoTrack</em>.language;</pre>
+```js
+var videoTrackLanguage = VideoTrack.language;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
-  the primary language used in the video track, or an empty string (<code>""</code>) if
-  the language is not specified or known, or if the track doesn't contain speech.</p>
+A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+the primary language used in the video track, or an empty string (`""`) if
+the language is not specified or known, or if the track doesn't contain speech.
 
-<p>For example, if the primary language used in the track is United States English, this
-  value would be <code>"en-US"</code>. For Brazilian Portuguese, the value would be
-  <code>"pt-BR"</code>.</p>
+For example, if the primary language used in the track is United States English, this
+value would be `"en-US"`. For Brazilian Portuguese, the value would be
+`"pt-BR"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

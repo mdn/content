@@ -2,35 +2,37 @@
 title: SpeechSynthesis.pending
 slug: Web/API/SpeechSynthesis/pending
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesis
-- Web Speech API
-- pending
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - pending
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesis.pending
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>pending</code></strong> read-only property of the
-  {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
-  <code>true</code> if the utterance queue contains as-yet-unspoken utterances.</p>
+The **`pending`** read-only property of the
+{{domxref("SpeechSynthesis")}} interface is a boolean value that returns
+`true` if the utterance queue contains as-yet-unspoken utterances.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var amIPending = speechSynthesisInstance.pending;
-</pre>
+```js
+var amIPending = speechSynthesisInstance.pending;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
 var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
@@ -39,18 +41,16 @@ synth.speak(utterance1);
 synth.speak(utterance2);
 
 var amIPending = synth.pending; // will return true if utterance 1 is still being spoken and utterance 2 is in the queue
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

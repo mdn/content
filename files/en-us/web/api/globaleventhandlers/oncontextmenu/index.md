@@ -2,75 +2,80 @@
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/GlobalEventHandlers/oncontextmenu
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.oncontextmenu
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>oncontextmenu</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("contextmenu")}} events.</p>
+The **`oncontextmenu`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("contextmenu")}} events.
 
-<p>The <code>contextmenu</code> event typically fires when the right mouse button is
-  clicked on the window. Unless the default behavior is prevented, the browser context
-  menu will activate.</p>
+The `contextmenu` event typically fires when the right mouse button is
+clicked on the window. Unless the default behavior is prevented, the browser context
+menu will activate.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.oncontextmenu = <em>functionRef</em>;
-</pre>
+```js
+target.oncontextmenu = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives an {{domxref("Event")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+argument.
 
-<p>Only one <code>oncontextmenu</code> handler can be assigned to an object at a time. You
-  may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
-  since it's more flexible.</p>
+Only one `oncontextmenu` handler can be assigned to an object at a time. You
+may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
+since it's more flexible.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Disabling_context_menus">Disabling context menus</h3>
+### Disabling context menus
 
-<p>This snippet prevents context menus from opening in the window. The context menu
-  typically appears upon a right click.</p>
+This snippet prevents context menus from opening in the window. The context menu
+typically appears upon a right click.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre
-  class="brush: html">&lt;p&gt;Try opening the context menu. Is it disabled?&lt;p&gt;</pre>
+```html
+<p>Try opening the context menu. Is it disabled?<p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush:js;">window.oncontextmenu = (e) =&gt; {
+```js
+window.oncontextmenu = (e) => {
   e.preventDefault();
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Disabling_context_menus")}}</p>
+{{EmbedLiveSample("Disabling_context_menus")}}
 
-<h3 id="Pausing_an_animation">Pausing an animation</h3>
+### Pausing an animation
 
-<p>This example pauses a spinning shape whenever you open the context menu.</p>
+This example pauses a spinning shape whenever you open the context menu.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="shape"&gt;Spinning&lt;/div&gt;
-&lt;p class="note" hidden&gt;Click to unpause.&lt;/p&gt;</pre>
+```html
+<div class="shape">Spinning</div>
+<p class="note" hidden>Click to unpause.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@keyframes spin {
+```css
+@keyframes spin {
   from {
     transform: rotate(0);
   }
@@ -97,11 +102,13 @@ browser-compat: api.GlobalEventHandlers.oncontextmenu
 
 .paused .shape {
   animation-play-state: paused;
-}</pre>
+}
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function pause(e) {
+```js
+function pause(e) {
   body.classList.add('paused');
   note.removeAttribute('hidden');
 }
@@ -115,29 +122,25 @@ const body = document.querySelector('body');
 const note = document.querySelector('.note');
 
 window.oncontextmenu = pause;
-window.onpointerdown = play;</pre>
+window.onpointerdown = play;
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Pausing_an_animation", 700, 200)}}</p>
+{{EmbedLiveSample("Pausing_an_animation", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+Unless the default behavior is prevented, the browser context menu will activate upon
+right-click. However, IE8 has a bug with this and will not activate the context menu
+if a `contextmenu` event handler is defined.
 
-  <p>Unless the default behavior is prevented, the browser context menu will activate upon
-    right-click. However, IE8 has a bug with this and will not activate the context menu
-    if a <code>contextmenu</code> event handler is defined.</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{event("contextmenu")}} event</li>
-</ul>
+- {{event("contextmenu")}} event

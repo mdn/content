@@ -8,43 +8,40 @@ tags:
   - Method
 browser-compat: api.DocumentType.remove
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DocumentType.remove()</strong></code> method removes a document's <code>doctype</code>.</p>
+The **`DocumentType.remove()`** method removes a document's `doctype`.
 
-<div class="note">
-  <p><strong>Note:</strong> Removing the document's doctype will set the rendering mode to
-    <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>!
-    Please don’t do this. Willfully designing for quirks mode is not going to help you.
-    If you need to work around issues with old Internet Explorer browsers, you might want to look into using
-    <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments">conditional comments</a>, or other workarounds.</p>
-</div>
+> **Note:** Removing the document's doctype will set the rendering mode to
+> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)!
+> Please don’t do this. Willfully designing for quirks mode is not going to help you.
+> If you need to work around issues with old Internet Explorer browsers, you might want to look into using
+> [conditional comments](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments), or other workarounds.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">remove()</pre>
+```js
+remove()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_remove">Using <code>remove()</code></h3>
+### Using `remove()`
 
-<pre class="brush: js">
-document.doctype; // "&lt;!DOCTYPE html&gt;'
+```js
+document.doctype; // "<!DOCTYPE html>'
 document.doctype.remove();
 document.doctype; // null
-</pre>
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.doctype")}}</li>
-</ul>
+- {{domxref("Document.doctype")}}

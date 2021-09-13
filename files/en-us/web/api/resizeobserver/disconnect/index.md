@@ -2,47 +2,51 @@
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
 tags:
-- API
-- Method
-- Reference
-- Resize Observer API
-- ResizeObserver
-- disconnect()
-- observers
+  - API
+  - Method
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - disconnect()
+  - observers
 browser-compat: api.ResizeObserver.disconnect
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>disconnect()</code></strong> method of the
-  {{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}}
-  or {{domxref('SVGElement')}} targets.</p>
+The **`disconnect()`** method of the
+{{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}}
+or {{domxref('SVGElement')}} targets.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>resizeObserver</var>.disconnect();</pre>
+```js
+resizeObserver.disconnect();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">btn.addEventListener('click', () =&gt; {
+```js
+btn.addEventListener('click', () => {
   resizeObserver.disconnect();
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

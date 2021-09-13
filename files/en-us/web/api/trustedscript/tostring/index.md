@@ -9,30 +9,31 @@ tags:
   - TrustedScript
 browser-compat: api.TrustedScript.toString
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>toString()</code></strong> method of the {{domxref("TrustedScript")}} interface returns a string which may safely inserted into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a>.</p>
+The **`toString()`** method of the {{domxref("TrustedScript")}} interface returns a string which may safely inserted into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>str</var> = <var>TrustedScript</var>.toString();</pre>
+    var str = TrustedScript.toString();
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString","string")}} containing the sanitized script.</p>
+A {{domxref("DOMString","string")}} containing the sanitized script.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The constant <code>sanitized</code> is an object created via a Trusted Types policy. The <code>toString()</code> method returns a string to safely execute as a script.</p>
+The constant `sanitized` is an object created via a Trusted Types policy. The `toString()` method returns a string to safely execute as a script.
 
-<pre class="brush: js">const sanitized = scriptPolicy.createScript("eval('2 + 2')");
+```js
+const sanitized = scriptPolicy.createScript("eval('2 + 2')");
 console.log(sanitized.toString());
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

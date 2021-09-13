@@ -8,45 +8,44 @@ tags:
   - Reference
 browser-compat: api.Document.caretPositionFromPoint
 ---
-<p>{{APIRef("CSSOM View")}} {{SeeCompatTable}}</p>
+{{APIRef("CSSOM View")}} {{SeeCompatTable}}
 
-<p>The <strong><code>caretPositionFromPoint()</code></strong>
-    property of the {{domxref("Document")}} interface returns a
-    {{domxref('CaretPosition')}} object, containing the DOM node, along with the caret and
-    caret's character offset within that node.</p>
+The **`caretPositionFromPoint()`**
+property of the {{domxref("Document")}} interface returns a
+{{domxref('CaretPosition')}} object, containing the DOM node, along with the caret and
+caret's character offset within that node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">caretPositionFromPoint(x, y);</pre>
+```js
+caretPositionFromPoint(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The horizontal coordinate of a point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The vertical coordinate of a point.</dd>
-</dl>
+- `x`
+  - : The horizontal coordinate of a point.
+- `y`
+  - : The vertical coordinate of a point.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref('CaretPosition')}} object.</p>
+A {{domxref('CaretPosition')}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Click anywhere in the <strong>Demo</strong> paragraph below to insert a line break at the point where you click. The code for it is below the demo.</p>
+Click anywhere in the **Demo** paragraph below to insert a line break at the point where you click. The code for it is below the demo.
 
+### Demo
 
-<h3 id="Demo">Demo</h3>
+{{EmbedLiveSample('Example', '100%', '100px')}}
 
-<p>{{EmbedLiveSample('Example', '100%', '100px')}}</p>
+The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn’t support that, the code then checks for `document.caretPositionFromPoint`, and uses that instead.
 
-<p>The code below first checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} support, but if the browser doesn’t support that, the code then checks for <code>document.caretPositionFromPoint</code>, and uses that instead.</p>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function insertBreakAtPoint(e) {
+```js
+function insertBreakAtPoint(e) {
   let range;
   let textNode;
   let offset;
@@ -66,7 +65,7 @@ browser-compat: api.Document.caretPositionFromPoint
     return;
   }
   // Only split TEXT_NODEs
-  if (textNode &amp;&amp; textNode.nodeType == 3) {
+  if (textNode && textNode.nodeType == 3) {
     let replacement = textNode.splitText(offset);
     let br = document.createElement('br');
     textNode.parentNode.insertBefore(br, replacement);
@@ -74,29 +73,28 @@ browser-compat: api.Document.caretPositionFromPoint
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i &lt; paragraphs.length; i++) {
+for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre
-  class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</pre>
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{domxref('CaretPosition')}}</li>
-</ul>
+- {{domxref('CaretPosition')}}

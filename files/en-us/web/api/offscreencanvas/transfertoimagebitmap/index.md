@@ -10,42 +10,43 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <strong><code>OffscreenCanvas.transferToImageBitmap()</code></strong> method
-  creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of
-  the <code>OffscreenCanvas</code>.</p>
+The **`OffscreenCanvas.transferToImageBitmap()`** method
+creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of
+the `OffscreenCanvas`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">ImageBitmap OffscreenCanvas.transferToImageBitmap()</pre>
+```js
+ImageBitmap OffscreenCanvas.transferToImageBitmap()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("ImageBitmap")}}.</p>
+An {{domxref("ImageBitmap")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
 // ... some drawing using the gl context ...
 
 offscreen.transferToImageBitmap();
-// ImageBitmap { width: 256, height: 256 }</pre>
+// ImageBitmap { width: 256, height: 256 }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method, {{domxref("OffscreenCanvas")}}</li>
-  <li>{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap")}}</li>
-</ul>
+- The interface defining this method, {{domxref("OffscreenCanvas")}}
+- {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap")}}

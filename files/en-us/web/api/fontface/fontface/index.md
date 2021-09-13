@@ -2,69 +2,69 @@
 title: FontFace()
 slug: Web/API/FontFace/FontFace
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- Constructor
-- FontFace
-- Fonts
-- Reference
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - Constructor
+  - FontFace
+  - Fonts
+  - Reference
 browser-compat: api.FontFace.FontFace
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <code><strong>FontFace()</strong></code> constructor creates a new
-  {{domxref("FontFace")}} object.</p>
+The **`FontFace()`** constructor creates a new
+{{domxref("FontFace")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new FontFace(family, source);
-new FontFace(family, source, descriptors);</pre>
+```js
+new FontFace(family, source);
+new FontFace(family, source, descriptors);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>family</em></dt>
-  <dd>Specifies a name that will be used as the font face value for font properties. Takes
+- _family_
+  - : Specifies a name that will be used as the font face value for font properties. Takes
     the same type of values as the {{cssxref("@font-face/font-family", "font-family")}}
-    descriptor of {{cssxref("@font-face")}} .</dd>
-  <dt><em>source</em></dt>
-  <dd>The font source. This can be either:
-    <ul>
-      <li>A URL</li>
-      <li>Binary font data</li>
-    </ul>
-  </dd>
-  <dt>descriptors {{optional_inline}}</dt>
-  <dd>A set of optional descriptors passed as an object. It can contain any of the descriptors available for <code>@font-face</code>:
-    <dl>
-      <dt><code>ascentOverride</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/ascent-override")}}.</dd>
-      <dt><code>descentOverride</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/descent-override")}}.</dd>
-      <dt><code>featureSettings</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-feature-settings")}}.</dd>
-      <dt><code>lineGapOverride</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/line-gap-override")}}.</dd>
-      <dt><code>stretch</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-stretch")}}.</dd>
-      <dt><code>style</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-style")}}.</dd>
-      <dt><code>unicodeRange</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/unicode-range")}}.</dd>
-      <dt><code>variant</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-variant")}}.</dd>
-      <dt><code>variationSettings</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.</dd>
-      <dt><code>weight</code></dt>
-      <dd>With an allowable value for {{cssxref("@font-face/font-weight")}}.</dd>
-    </ul>
-  </dd>
-</dl>
+    descriptor of {{cssxref("@font-face")}} .
+- _source_
 
-<h2 id="Example">Example</h2>
+  - : The font source. This can be either:
 
-<pre class="brush: js">async function loadFonts() {
+    - A URL
+    - Binary font data
+
+- descriptors {{optional_inline}}
+
+  - : A set of optional descriptors passed as an object. It can contain any of the descriptors available for `@font-face`:
+
+    - `ascentOverride`
+      - : With an allowable value for {{cssxref("@font-face/ascent-override")}}.
+    - `descentOverride`
+      - : With an allowable value for {{cssxref("@font-face/descent-override")}}.
+    - `featureSettings`
+      - : With an allowable value for {{cssxref("@font-face/font-feature-settings")}}.
+    - `lineGapOverride`
+      - : With an allowable value for {{cssxref("@font-face/line-gap-override")}}.
+    - `stretch`
+      - : With an allowable value for {{cssxref("@font-face/font-stretch")}}.
+    - `style`
+      - : With an allowable value for {{cssxref("@font-face/font-style")}}.
+    - `unicodeRange`
+      - : With an allowable value for {{cssxref("@font-face/unicode-range")}}.
+    - `variant`
+      - : With an allowable value for {{cssxref("@font-face/font-variant")}}.
+    - `variationSettings`
+      - : With an allowable value for {{cssxref("@font-face/font-variation-settings")}}.
+    - `weight`
+      - : With an allowable value for {{cssxref("@font-face/font-weight")}}.
+
+## Example
+
+```js
+async function loadFonts() {
     const font = new FontFace('myfont', 'url(myfont.woff)');
     // wait for font to be loaded
     await font.load();
@@ -73,18 +73,16 @@ new FontFace(family, source, descriptors);</pre>
     // enable font with CSS class
     document.body.classList.add('fonts-loaded');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("@font-face")}}</li>
-</ul>
+- {{cssxref("@font-face")}}

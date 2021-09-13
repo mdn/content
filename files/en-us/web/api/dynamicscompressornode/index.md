@@ -11,81 +11,73 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>DynamicsCompressorNode</code> interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. <code>DynamicsCompressorNode</code> is an {{domxref("AudioNode")}} that has exactly one input and one output.</p>
-</div>
+The `DynamicsCompressorNode` interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once. This is often used in musical production and game audio. `DynamicsCompressorNode` is an {{domxref("AudioNode")}} that has exactly one input and one output.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"clamped-max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}</dt>
- <dd>Creates a new instance of an <code>DynamicsCompressorNode</code> object.</dd>
-</dl>
+- {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
+  - : Creates a new instance of an `DynamicsCompressorNode` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.</dd>
- <dt>{{domxref("DynamicsCompressorNode.knee")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.</dd>
- <dt>{{domxref("DynamicsCompressorNode.ratio")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.</dd>
- <dt>{{domxref("DynamicsCompressorNode.reduction")}} {{readonlyInline}}</dt>
- <dd>Is a <code>float</code> representing the amount of gain reduction currently applied by the compressor to the signal.</dd>
- <dt>{{domxref("DynamicsCompressorNode.attack")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB.</dd>
- <dt>{{domxref("DynamicsCompressorNode.release")}} {{readonlyInline}}</dt>
- <dd>Is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.</dd>
-</dl>
+- {{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}
+  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the decibel value above which the compression will start taking effect.
+- {{domxref("DynamicsCompressorNode.knee")}} {{readonlyInline}}
+  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.
+- {{domxref("DynamicsCompressorNode.ratio")}} {{readonlyInline}}
+  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of change, in dB, needed in the input for a 1 dB change in the output.
+- {{domxref("DynamicsCompressorNode.reduction")}} {{readonlyInline}}
+  - : Is a `float` representing the amount of gain reduction currently applied by the compressor to the signal.
+- {{domxref("DynamicsCompressorNode.attack")}} {{readonlyInline}}
+  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to reduce the gain by 10 dB.
+- {{domxref("DynamicsCompressorNode.release")}} {{readonlyInline}}
+  - : Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> example code.</p>
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

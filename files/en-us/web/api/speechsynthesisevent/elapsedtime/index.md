@@ -2,49 +2,50 @@
 title: SpeechSynthesisEvent.elapsedTime
 slug: Web/API/SpeechSynthesisEvent/elapsedTime
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesisEvent
-- Web Speech API
-- elapsedTime
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesisEvent
+  - Web Speech API
+  - elapsedTime
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesisEvent.elapsedTime
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>elapsedTime</code></strong> read-only property of the
-	{{domxref("SpeechSynthesisUtterance")}} interface returns the elapsed time in seconds
-	after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the
-	event was triggered at.</p>
+The **`elapsedTime`** read-only property of the
+{{domxref("SpeechSynthesisUtterance")}} interface returns the elapsed time in seconds
+after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the
+event was triggered at.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">event.elapsedTime;
-</pre>
+```js
+event.elapsedTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A float.</p>
+A float.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">utterThis.onboundary = function(event) {
+```js
+utterThis.onboundary = function(event) {
   console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

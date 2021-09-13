@@ -8,34 +8,31 @@ tags:
   - Reference
 browser-compat: api.Document.createEvent
 ---
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Many methods used with <code>createEvent</code>, such as <code>initCustomEvent</code>, are deprecated.
-    Use <a href="/en-US/docs/Web/API/CustomEvent">event constructors</a> instead.</p>
-</div>
+> **Warning:** Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
+> Use [event constructors](/en-US/docs/Web/API/CustomEvent) instead.
 
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Creates an <a href="/en-US/docs/Web/API/Event">event</a> of the type specified. The
-  returned object should be first initialized and can then be passed to
-  {{domxref("EventTarget.dispatchEvent")}}.</p>
+Creates an [event](/en-US/docs/Web/API/Event) of the type specified. The
+returned object should be first initialized and can then be passed to
+{{domxref("EventTarget.dispatchEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>event</var> = <var>document</var>.createEvent(<var>type</var>);
-</pre>
+```js
+var event = document.createEvent(type);
+```
 
-<ul>
-  <li><code><var>event</var></code> is the created <a
-      href="/en-US/docs/Web/API/Event">Event</a> object.</li>
-  <li><code><var>type</var></code> is a string that represents the type of event to be
-    created. Possible event types include <code>"UIEvents"</code>,
-    <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, and
-    <code>"HTMLEvents"</code>. See {{Anch("Notes")}} section for details.</li>
-</ul>
+- `event` is the created [Event](/en-US/docs/Web/API/Event) object.
+- `type` is a string that represents the type of event to be
+  created. Possible event types include `"UIEvents"`,
+  `"MouseEvents"`, `"MutationEvents"`, and
+  `"HTMLEvents"`. See {{Anch("Notes")}} section for details.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Create the event.
+```js
+// Create the event.
 var event = document.createEvent('Event');
 
 // Define that the event name is 'build'.
@@ -48,16 +45,16 @@ elem.addEventListener('build', function (e) {
 
 // Target can be any Element or other EventTarget.
 elem.dispatchEvent(event);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Event type strings suitable for passing to <code>createEvent()</code> are listed in the
-  <a href="https://dom.spec.whatwg.org/#dom-document-createevent">DOM standard — see the
-    table in step 2</a>. Bear in mind that most event objects now have constructors, which
-  are the modern recommended way to create event object instances.</p>
+Event type strings suitable for passing to `createEvent()` are listed in the
+[DOM standard — see the
+table in step 2](https://dom.spec.whatwg.org/#dom-document-createevent). Bear in mind that most event objects now have constructors, which
+are the modern recommended way to create event object instances.
 
-<p>Gecko supports some non-standard event object aliases, which are listed below.</p>
+Gecko supports some non-standard event object aliases, which are listed below.
 
 <table class="fullwidth-table">
   <tbody>
@@ -84,16 +81,14 @@ elem.dispatchEvent(event);
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-</ul>
+- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)

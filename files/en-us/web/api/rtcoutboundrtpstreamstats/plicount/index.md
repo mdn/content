@@ -2,70 +2,67 @@
 title: RTCOutboundRtpStreamStats.pliCount
 slug: Web/API/RTCOutboundRtpStreamStats/pliCount
 tags:
-- API
-- Media
-- PLI
-- Property
-- RTCOutboundRtpStreamStats
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- pliCount
-- stream
+  - API
+  - Media
+  - PLI
+  - Property
+  - RTCOutboundRtpStreamStats
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - pliCount
+  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.pliCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>pliCount</code></strong> property of the
-    {{domxref("RTCOutboundRtpStreamStats")}} dictionary states the number of times the
-    remote peer's {{domxref("RTCRtpReceiver")}} sent a <strong>Picture Loss
-      Indication</strong> (<strong>PLI</strong>) packet to the {{domxref("RTCRtpSender")}}
-    for which this object provides statistics.</p>
+The **`pliCount`** property of the
+{{domxref("RTCOutboundRtpStreamStats")}} dictionary states the number of times the
+remote peer's {{domxref("RTCRtpReceiver")}} sent a **Picture Loss
+Indication** (**PLI**) packet to the {{domxref("RTCRtpSender")}}
+for which this object provides statistics.
 
-<p>A PLI packet indicates that some
-  amount of encoded video data has been lost for one or more frames.</p>
+A PLI packet indicates that some
+amount of encoded video data has been lost for one or more frames.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>pliCount</em> = <em>RTCOutboundRtpStreamStats</em>.pliCount;</pre>
+```js
+var pliCount = RTCOutboundRtpStreamStats.pliCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of times a PLI packet was sent to this sender by
-  the remote peer's {{domxref("RTCRtpReceiver")}}. These are sent by the receiver's
-  decoder to notify the sender's encoder that an undefined amount of coded video data,
-  which may span frame boundaries, has been lost.</p>
+An integer value indicating the number of times a PLI packet was sent to this sender by
+the remote peer's {{domxref("RTCRtpReceiver")}}. These are sent by the receiver's
+decoder to notify the sender's encoder that an undefined amount of coded video data,
+which may span frame boundaries, has been lost.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is only used for video streams.</p>
-</div>
+> **Note:** This property is only used for video streams.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Upon receiving a PLI packet, the sender may have responded by sending a full frame to
-  the remote peer to allow it to re-synchronize with the media. However, the primary
-  purpose of a PLI packet is to allow the <code>RTCRtpSender</code> for which this
-  <code>RTCOutboundRtpStreamStats</code> object provides statistics to consider techniques
-  to mitigate network performance issues. This is often achieved by methods such as
-  increasing the compression or lowering resolution, although the mechanisms available to
-  reduce the bit rate of the stream vary from codec to codec.</p>
+Upon receiving a PLI packet, the sender may have responded by sending a full frame to
+the remote peer to allow it to re-synchronize with the media. However, the primary
+purpose of a PLI packet is to allow the `RTCRtpSender` for which this
+`RTCOutboundRtpStreamStats` object provides statistics to consider techniques
+to mitigate network performance issues. This is often achieved by methods such as
+increasing the compression or lowering resolution, although the mechanisms available to
+reduce the bit rate of the stream vary from codec to codec.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document <em>Extended
-      RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
-      (RTP/AVPF)</em>.</li>
-</ul>
+- {{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document _Extended
+  RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
+  (RTP/AVPF)_.

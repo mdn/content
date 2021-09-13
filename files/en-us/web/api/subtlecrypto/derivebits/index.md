@@ -10,126 +10,102 @@ tags:
   - deriveBits
 browser-compat: api.SubtleCrypto.deriveBits
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>deriveBits()</strong></code> method of the
-  {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base
-  key.</p>
+The **`deriveBits()`** method of the
+{{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base
+key.
 
-<p>It takes as its arguments the base key, the derivation algorithm to use, and the length
-  of the bit string to derive. It returns a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-    title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
-  which will be fulfilled with an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the derived bits.</p>
+It takes as its arguments the base key, the derivation algorithm to use, and the length
+of the bit string to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+which will be fulfilled with an
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the derived bits.
 
-<p>This method is very similar to
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">SubtleCrypto.deriveKey()</a></code>,
-  except that <code>deriveKey()</code> returns a
-  <code><a href="/en-US/docs/Web/API/CryptoKey">CryptoKey</a></code> object rather than an
-  <code>ArrayBuffer</code>. Essentially <code>deriveKey()</code> is composed of
-  <code>deriveBits()</code> followed by
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a></code>.</p>
+This method is very similar to
+[`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey),
+except that `deriveKey()` returns a
+[`CryptoKey`](/en-US/docs/Web/API/CryptoKey) object rather than an
+`ArrayBuffer`. Essentially `deriveKey()` is composed of
+`deriveBits()` followed by
+[`importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 
-<p>This function supports the same derivation algorithms as <code>deriveKey()</code>:
-  ECDH, HKDF, and PBKDF2. See <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
-    algorithms</a> for some more detail on these algorithms.</p>
+This function supports the same derivation algorithms as `deriveKey()`:
+ECDH, HKDF, and PBKDF2. See [Supported
+algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) for some more detail on these algorithms.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>result</em> = crypto.subtle.deriveBits(
-    <em>algorithm</em>,
-    <em>baseKey</em>,
-    <em>length
-</em>);
-</pre>
+```js
+const result = crypto.subtle.deriveBits(
+    algorithm,
+    baseKey,
+    length
+);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><em>algorithm</em></code> is an object defining the <a
-      href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">derivation
-      algorithm</a> to use.
+- `algorithm` is an object defining the [derivation
+  algorithm](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) to use.
 
-    <ul>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>, pass
-        an
-        <code><a href="/en-US/docs/Web/API/EcdhKeyDeriveParams">EcdhKeyDeriveParams</a></code>
-        object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>, pass
-        an <code><a href="/en-US/docs/Web/API/HkdfParams">HkdfParams</a></code> object.
-      </li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a>,
-        pass a <code><a href="/en-US/docs/Web/API/Pbkdf2Params">Pbkdf2Params</a></code>
-        object.</li>
-    </ul>
-  </li>
-  <li><em><code>baseKey</code></em> is a {{domxref("CryptoKey")}} representing the input
-    to the derivation algorithm. If <code>algorithm</code> is ECDH, this will be the ECDH
-    private key. Otherwise it will be the initial key material for the derivation
-    function: for example, for PBKDF2 it might be a password, imported as a
-    <code>CryptoKey</code> using
-    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>.
-  </li>
-  <li><code><em>length</em></code> is a number representing the number of bits to derive. To be compatible with all browsers, the number should be a multiple of 8.
-  </li>
-</ul>
+  - To use [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh), pass
+    an
+    [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams)
+    object.
+  - To use [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf), pass
+    an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+  - To use [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2),
+    pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params)
+    object.
 
-<h3 id="Return_value">Return value</h3>
+- _`baseKey`_ is a {{domxref("CryptoKey")}} representing the input
+  to the derivation algorithm. If `algorithm` is ECDH, this will be the ECDH
+  private key. Otherwise it will be the initial key material for the derivation
+  function: for example, for PBKDF2 it might be a password, imported as a
+  `CryptoKey` using
+  [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
+- `length` is a number representing the number of bits to derive. To be compatible with all browsers, the number should be a multiple of 8.
 
-<ul>
-  <li><code><em>result</em></code> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
-    that fulfills with an <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"
-      title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a>
-    containing the derived bits.</li>
-</ul>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+  that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.")
+  containing the derived bits.
 
-<p>The promise is rejected when one of the following exceptions are encountered:</p>
+### Exceptions
 
-<dl>
-  <dt>{{exception("OperationError")}}</dt>
-  <dd>Raised if the <em>length</em> parameter of the <code>deriveBits()</code> call is null, and also in some cases if the <em>length</em> parameter is not a multiple of 8.</dd>
-  <dt>{{exception("InvalidAccessError")}}</dt>
-  <dd>Raised when the base key is not a key for the requested derivation algorithm or if
-    the <a href="/en-US/docs/Web/API/CryptoKey"><code>CryptoKey.usages</code></a> value of that key doesn't contain
-    <code>deriveKey</code>.</dd>
-  <dt>{{exception("NotSupported")}}</dt>
-  <dd>Raised when trying to use an algorithm that is either unknown or isn't suitable for
+The promise is rejected when one of the following exceptions are encountered:
+
+- {{exception("OperationError")}}
+  - : Raised if the _length_ parameter of the `deriveBits()` call is null, and also in some cases if the _length_ parameter is not a multiple of 8.
+- {{exception("InvalidAccessError")}}
+  - : Raised when the base key is not a key for the requested derivation algorithm or if
+    the [`CryptoKey.usages`](/en-US/docs/Web/API/CryptoKey) value of that key doesn't contain
+    `deriveKey`.
+- {{exception("NotSupported")}}
+  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
     derivation, or if the algorithm requested for the derived key doesn't define a key
-    length.</dd>
-</dl>
+    length.
 
-<h2 id="Supported_algorithms">Supported algorithms</h2>
+## Supported algorithms
 
-<p>See the <a
-    href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms">Supported
-    algorithms section of the <code>deriveKey()</code> documentation</a>.</p>
+See the [Supported
+algorithms section of the `deriveKey()` documentation](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html">try the
-      working examples</a> on GitHub.</p>
-</div>
+> **Note:** You can [try the
+> working examples](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html) on GitHub.
 
-<h3 id="ECDH">ECDH</h3>
+### ECDH
 
-<p>In this example Alice and Bob each generate an ECDH key pair.</p>
+In this example Alice and Bob each generate an ECDH key pair.
 
-<p>We then use Alice's private key and Bob's public key to derive a shared secret. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js)
 
-<pre class="brush: js">async function deriveSharedSecret(privateKey, publicKey) {
+```js
+async function deriveSharedSecret(privateKey, publicKey) {
   const sharedSecret = await window.crypto.subtle.deriveBits(
     {
       name: "ECDH",
@@ -143,7 +119,7 @@ browser-compat: api.SubtleCrypto.deriveBits
   const buffer = new Uint8Array(sharedSecret, 0, 5);
   const sharedSecretValue = document.querySelector(".ecdh .derived-bits-value");
   sharedSecretValue.classList.add("fade-in");
-  sharedSecretValue.addEventListener("animationend", () =&gt; {
+  sharedSecretValue.addEventListener("animationend", () => {
     sharedSecretValue.classList.remove("fade-in");
   });
   sharedSecretValue.textContent = `${buffer}...[${sharedSecret.byteLength} bytes total]`;
@@ -170,26 +146,26 @@ const generateBobsKeyPair = window.crypto.subtle.generateKey(
   ["deriveBits"]
 );
 
-Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then(values =&gt; {
+Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then(values => {
   const alicesKeyPair = values[0];
   const bobsKeyPair = values[1];
 
   const deriveBitsButton = document.querySelector(".ecdh .derive-bits-button");
-  deriveBitsButton.addEventListener("click", () =&gt; {
+  deriveBitsButton.addEventListener("click", () => {
     // Alice then generates a secret using her private key and Bob's public key.
     // Bob could generate the same secret using his private key and Alice's public key.
     deriveSharedSecret(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
   });
-});</pre>
+});
+```
 
-<h3 id="PBKDF2">PBKDF2</h3>
+### PBKDF2
 
-<p>In this example we ask the user for a password, then use it to derive some bits using
-  PBKDF2. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+In this example we ask the user for a password, then use it to derive some bits using
+PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js)
 
-<pre class="brush: js">let salt;
+```js
+let salt;
 
 /*
 Get some key material to use as input to the deriveBits method.
@@ -227,34 +203,32 @@ async function getDerivedBits() {
   const buffer = new Uint8Array(derivedBits, 0, 5);
   const derivedBitsValue = document.querySelector(".pbkdf2 .derived-bits-value");
   derivedBitsValue.classList.add("fade-in");
-  derivedBitsValue.addEventListener("animationend", () =&gt; {
+  derivedBitsValue.addEventListener("animationend", () => {
     derivedBitsValue.classList.remove("fade-in");
   });
   derivedBitsValue.textContent = `${buffer}...[${derivedBits.byteLength} bytes total]`;
 }
 
 const deriveBitsButton = document.querySelector(".pbkdf2 .derive-bits-button");
-deriveBitsButton.addEventListener("click", () =&gt; {
+deriveBitsButton.addEventListener("click", () => {
   getDerivedBits();
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc5869">HKDF specification</a>.</li>
-  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-132/final">NIST guidelines
-      for password-based key derivation</a>.</li>
-  <li><a href="https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet">Password
-      storage cheat sheet</a>.</li>
-  <li><a
-      href="https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993">Advice
-      on choosing an iteration count for PBKDF2</a>.</li>
-</ul>
+- [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869).
+- [NIST guidelines
+  for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
+- [Password
+  storage cheat sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet).
+- [Advice
+  on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pkbdf2-sha256/3993#3993).

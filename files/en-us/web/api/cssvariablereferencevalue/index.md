@@ -11,34 +11,30 @@ tags:
   - Reference
 browser-compat: api.CSSVariableReferenceValue
 ---
-<div>{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSVariableReferenceValue</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the {{cssxref('var()')}} function. The custom name must begin with two dashes.</p>
+The **`CSSVariableReferenceValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the {{cssxref('var()')}} function. The custom name must begin with two dashes.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}</dt>
- <dd>Creates a new <code>CSSVariableReferenceValue</code> object.</dd>
-</dl>
+- {{domxref("CSSVariableReferenceValue.CSSVariableReferenceValue()")}}
+  - : Creates a new `CSSVariableReferenceValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSVariableReferenceValue.variable')}}</dt>
- <dd>Returns the custom name passed to the constructor.</dd>
- <dt>{{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}</dt>
- <dd>Returns the built-in CSS value for the custom name.</dd>
-</dl>
+- {{domxref('CSSVariableReferenceValue.variable')}}
+  - : Returns the custom name passed to the constructor.
+- {{domxref('CSSVariableReferenceValue.fallback')}} {{readonlyinline}}
+  - : Returns the built-in CSS value for the custom name.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

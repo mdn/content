@@ -2,44 +2,46 @@
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
 tags:
-- API
-- Directive
-- Feature Policy
-- Feature-Policy
-- FeaturePolicy
-- Reference
+  - API
+  - Directive
+  - Feature Policy
+  - Feature-Policy
+  - FeaturePolicy
+  - Reference
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
-<p>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</p>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>allowedFeatures()</code></strong> method of
-    the {{DOMxRef("FeaturePolicy")}} interface returns a list of directive names of all
-    features allowed by the feature policy.enables introspection of individual directives
-    of the Feature Policy it is run on. As such, <code>allowedFeatures()</code> method
-    returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
-    "features()")}}.</p>
+The **`allowedFeatures()`** method of
+the {{DOMxRef("FeaturePolicy")}} interface returns a list of directive names of all
+features allowed by the feature policy.enables introspection of individual directives
+of the Feature Policy it is run on. As such, `allowedFeatures()` method
+returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
+    "features()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const allowed = <em>FeaturePolicy</em>.allowedFeatures()
-</pre>
+```js
+const allowed = FeaturePolicy.allowedFeatures()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of strings representing the Feature Policy directive names that are allowed by
-  the Feature Policy this method is called on.</p>
+An array of strings representing the Feature Policy directive names that are allowed by
+the Feature Policy this method is called on.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example logs all the allowed directives for the current document. Please
-  note that these features might be restricted by the Permissions API, if the user did not
-  grant the corresponding permission yet.</p>
+The following example logs all the allowed directives for the current document. Please
+note that these features might be restricted by the Permissions API, if the user did not
+grant the corresponding permission yet.
 
-<pre class="brush: js">// First, get the Feature Policy object
+```js
+// First, get the Feature Policy object
 const featurePolicy = document.featurePolicy
 
 // Then query feature for specific
@@ -48,12 +50,12 @@ const allowed = featurePolicy.allowedFeatures()
 for (const directive of allowed){
   console.log(directive)
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

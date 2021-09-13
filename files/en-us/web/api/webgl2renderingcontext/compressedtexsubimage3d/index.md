@@ -9,95 +9,90 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.compressedTexSubImage3D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.compressedTexSubImage3D()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>specifies a
-  three-dimensional sub-rectangle for a texture image in a compressed format.</p>
+The **`WebGL2RenderingContext.compressedTexSubImage3D()`**
+method of the [WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies a
+three-dimensional sub-rectangle for a texture image in a compressed format.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// read from the buffer bound to gl.PIXEL_UNPACK_BUFFER
+```js
+// read from the buffer bound to gl.PIXEL_UNPACK_BUFFER
 void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, offset);
 
 void gl.compressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, ArrayBufferView srcData, optional srcOffset, optional srcLengthOverride);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
-      <li><code>gl.TEXTURE_2D_ARRAY</code>: A two-dimensional array texture.</li>
-    </ul>
-  </dd>
-  <dt><code>level</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
-  <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the compressed texture image.
-  </dd>
-  <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the compressed texture image.
-  </dd>
-  <dt><code>zoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the compressed texture image.
-  </dd>
-  <dt><code>width</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
-  <dt><code>height</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
-  <dt><code>depth</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.</dd>
-  <dt><code>format</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Possible values:
-    <ul>
-      <li><code>gl.COMPRESSED_R11_EAC</code></li>
-      <li><code>gl.COMPRESSED_SIGNED_R11_EAC</code></li>
-      <li><code>gl.COMPRESSED_RG11_EAC</code></li>
-      <li><code>gl.COMPRESSED_SIGNED_RG11_EAC</code></li>
-      <li><code>gl.COMPRESSED_RGB8_ETC2</code></li>
-      <li><code>gl.COMPRESSED_RGBA8_ETC2_EAC</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_ETC2</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></li>
-      <li><code>gl.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
-    </ul>
-  </dd>
-  <dt><code>imageSize</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of bytes to read from the buffer bound
-    to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
-  <dt><code>offset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the offset in bytes from which to read from the
-    buffer bound to <code>gl.PIXEL_UNPACK_BUFFER</code>.</dd>
-  <dt><code>srcData</code></dt>
-  <dd>An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
-    image data in memory.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-<p>None.</p>
+- `level`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
+    level and level _n_ is the *n*th mipmap reduction level.
+- `xoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the compressed texture image.
+- `yoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the compressed texture image.
+- `zoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the compressed texture image.
+- `width`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
+- `height`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.
+- `depth`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.
+- `format`
 
-<h2 id="Examples">Examples</h2>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the compressed image format. Possible values:
 
-<pre class="brush: js">gl.compressedTexSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 512, 512, 512, gl.COMPRESSED_R11_EAC, textureData);
-</pre>
+    - `gl.COMPRESSED_R11_EAC`
+    - `gl.COMPRESSED_SIGNED_R11_EAC`
+    - `gl.COMPRESSED_RG11_EAC`
+    - `gl.COMPRESSED_SIGNED_RG11_EAC`
+    - `gl.COMPRESSED_RGB8_ETC2`
+    - `gl.COMPRESSED_RGBA8_ETC2_EAC`
+    - `gl.COMPRESSED_SRGB8_ETC2`
+    - `gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
+    - `gl.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`
+    - `gl.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
 
-<h2 id="Specifications">Specifications</h2>
+- `imageSize`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of bytes to read from the buffer bound
+    to `gl.PIXEL_UNPACK_BUFFER`.
+- `offset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the offset in bytes from which to read from the
+    buffer bound to `gl.PIXEL_UNPACK_BUFFER`.
+- `srcData`
+  - : An {{domxref("ArrayBufferView")}} that be used as a data store for the compressed
+    image data in memory.
+
+### Return value
+
+None.
+
+## Examples
+
+```js
+gl.compressedTexSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 512, 512, 512, gl.COMPRESSED_R11_EAC, textureData);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.compressedTexImage2D", "WebGL2RenderingContext.compressedTexImage3D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D", "WebGL2RenderingContext.compressedTexImage3D()")}}

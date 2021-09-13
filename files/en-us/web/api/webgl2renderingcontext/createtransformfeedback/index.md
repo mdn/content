@@ -2,50 +2,50 @@
 title: WebGL2RenderingContext.createTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/createTransformFeedback
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createTransformFeedback
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGL2RenderingContext.createTransformFeedback()</strong></code>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> creates and
-  initializes {{domxref("WebGLTransformFeedback")}} objects.</p>
+The **`WebGL2RenderingContext.createTransformFeedback()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates and
+initializes {{domxref("WebGLTransformFeedback")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLTransformFeedback <var>gl</var>.createTransformFeedback();
-</pre>
+```js
+WebGLTransformFeedback gl.createTransformFeedback();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLTransformFeedback")}} object.</p>
+A {{domxref("WebGLTransformFeedback")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}.
-  <code>WebGLTransformFeedback</code> objects are not available in WebGL 1.</p>
+`gl` must be a {{domxref("WebGL2RenderingContext")}}.
+`WebGLTransformFeedback` objects are not available in WebGL 1.
 
-<pre class="brush: js">var transformFeedback = gl.createTransformFeedback();
-</pre>
+```js
+var transformFeedback = gl.createTransformFeedback();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLTransformFeedback")}}</li>
-</ul>
+- {{domxref("WebGLTransformFeedback")}}

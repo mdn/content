@@ -2,48 +2,49 @@
 title: Metadata.modificationTime
 slug: Web/API/Metadata/modificationTime
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- Files
-- Non-standard
-- Offline
-- Property
-- Reference
-- metadata
-- modificationTime
+  - API
+  - File System API
+  - File and Directory Entries API
+  - Files
+  - Non-standard
+  - Offline
+  - Property
+  - Reference
+  - metadata
+  - modificationTime
 browser-compat: api.Metadata.modificationTime
 ---
-<p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
+{{APIRef("File System API")}}{{Non-standard_header}}
 
-<p>The read-only <strong><code>modificationTime</code></strong>
-    property of the {{domxref("Metadata")}} interface is a {{jsxref("Date")}} object which
-    specifies the date and time the file system entry (or the data referenced by the
-    entry) was last modified. A file system entry is considered to have been
-  modified if the metadata or the contents of the referenced file (or directory, or
-  whatever other kind of file system entry might exist on the platform in use) has
-  changed.</p>
+The read-only **`modificationTime`**
+property of the {{domxref("Metadata")}} interface is a {{jsxref("Date")}} object which
+specifies the date and time the file system entry (or the data referenced by the
+entry) was last modified. A file system entry is considered to have been
+modified if the metadata or the contents of the referenced file (or directory, or
+whatever other kind of file system entry might exist on the platform in use) has
+changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>modificationTime</em> = <em>Metadata</em>.modificationTime;</pre>
+```js
+var modificationTime = Metadata.modificationTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Date")}} timestamp indicating when the file system entry was last changed.
-</p>
+A {{jsxref("Date")}} timestamp indicating when the file system entry was last changed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example tries to get a particular working file at <code>tmp/workfile.json</code>.
-  Once that file has been found, its metadata is obtained and the file's modification
-  timestamp year is compared to the current year. If it was last modified in a year at
-  least five prior to the current year, the file is removed and a new one is created.</p>
+This example tries to get a particular working file at `tmp/workfile.json`.
+Once that file has been found, its metadata is obtained and the file's modification
+timestamp year is compared to the current year. If it was last modified in a year at
+least five prior to the current year, the file is removed and a new one is created.
 
-<pre class="brush: js">workingDirectory.getFile("tmp/workfile.json", { create: true }, function(fileEntry) {
+```js
+workingDirectory.getFile("tmp/workfile.json", { create: true }, function(fileEntry) {
   fileEntry.getMetadata(function(metadata) {
-    if ((new Date().getFullYear() - metadata.modificationTime.getFullYear()) &gt;= 5) {
+    if ((new Date().getFullYear() - metadata.modificationTime.getFullYear()) >= 5) {
       fileEntry.remove(function() {
         workingDirectory.getFile("tmp/workfile.json", { create: true }, function(newEntry) {
           fileEntry = newEntry;
@@ -51,25 +52,23 @@ browser-compat: api.Metadata.modificationTime
       });
     }
   });
-}, handleError); </pre>
+}, handleError);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("Metadata")}}</li>
-  <li>{{domxref("FileSystemEntry.getMetadata()")}}</li>
-  <li>{{domxref("FileSystemFileEntry")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("Metadata")}}
+- {{domxref("FileSystemEntry.getMetadata()")}}
+- {{domxref("FileSystemFileEntry")}}

@@ -9,22 +9,26 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>anticipatedRemoval</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns <code>null</code> because the date is unknown, then the deprecation should be considered low priority.</p>
+The **`anticipatedRemoval`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns `null` because the date is unknown, then the deprecation should be considered low priority.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let anticipatedRemoval = DeprecationReportBody.anticipatedRemoval;</pre>
+```js
+let anticipatedRemoval = DeprecationReportBody.anticipatedRemoval;
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("date")}} object, or <code>null</code> if the date is not known.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("date")}} object, or `null` if the date is not known.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>anticipatedRemoval</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of `anticipatedRemoval` to the console.
+
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -33,12 +37,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.anticipatedRemoval);
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

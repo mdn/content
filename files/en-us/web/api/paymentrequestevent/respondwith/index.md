@@ -2,44 +2,43 @@
 title: PaymentRequestEvent.respondWith()
 slug: Web/API/PaymentRequestEvent/respondWith
 tags:
-- API
-- Method
-- Payment Request API
-- PaymentRequestEvent
-- Reference
-- payment
-- respondWith()
+  - API
+  - Method
+  - Payment Request API
+  - PaymentRequestEvent
+  - Reference
+  - payment
+  - respondWith()
 browser-compat: api.PaymentRequestEvent.respondWith
 ---
-<p>{{APIRef("Payment Request API")}}{{SeeCompatTable}}</p>
+{{APIRef("Payment Request API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>respondWith</code></strong> property of the
-  {{domxref("PaymentRequestEvent")}} interface prevents the default event handling and
-  allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}}
-  object yourself.</p>
+The **`respondWith`** property of the
+{{domxref("PaymentRequestEvent")}} interface prevents the default event handling and
+allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}}
+object yourself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">paymentRequestEvent.respondWith(
+```js
+paymentRequestEvent.respondWith(
   // Promise that resolves with a PaymentResponse.
-)</pre>
+)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>promise</dt>
-  <dd>A {{jsxref('Promise')}} that resolves with a {{domxref("PaymentResponse")}} object.
-  </dd>
-</dl>
+- promise
+  - : A {{jsxref('Promise')}} that resolves with a {{domxref("PaymentResponse")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("PaymentResponse")}} object.</p>
+A {{domxref("PaymentResponse")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

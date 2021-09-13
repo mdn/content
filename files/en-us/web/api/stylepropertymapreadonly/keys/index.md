@@ -2,40 +2,43 @@
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
 tags:
-- API
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Method
-- Reference
-- StylePropertyMapReadOnly
-- keys()
+  - API
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMapReadOnly
+  - keys()
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>StylePropertyMapReadOnly.keys()</code></strong> method returns a new
-  <em>array iterator</em> containing the keys for each item
-  in <code>StylePropertyMapReadOnly</code></p>
+The **`StylePropertyMapReadOnly.keys()`** method returns a new
+_array iterator_ containing the keys for each item
+in `StylePropertyMapReadOnly`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>StylePropertyMapReadOnly</var>.keys()</pre>
+```js
+StylePropertyMapReadOnly.keys()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("Array")}}.</p>
+A new {{jsxref("Array")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we use the <code>keys()</code> method to be able to access the
-  properties within our {{domxref('Element.computedStyleMap()')}}.</p>
+In this example we use the `keys()` method to be able to access the
+properties within our {{domxref('Element.computedStyleMap()')}}.
 
-<pre class="brush: js">// get a button element
+```js
+// get a button element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`
@@ -44,12 +47,12 @@ const allComputedStyles = buttonEl.computedStyleMap();
 // keys returns an iterable list of properties
 const props = allComputedStyles.keys();
 console.log(props.next().value); // returns align-content
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

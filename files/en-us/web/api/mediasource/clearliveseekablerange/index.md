@@ -2,41 +2,42 @@
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
 tags:
-- API
-- Audio
-- Extensions
-- Media
-- MediaSource
-- MediaSource Extensions
-- Method
-- Reference
-- Video
-- clearLiveSeekableRange()
+  - API
+  - Audio
+  - Extensions
+  - Media
+  - MediaSource
+  - MediaSource Extensions
+  - Method
+  - Reference
+  - Video
+  - clearLiveSeekableRange()
 browser-compat: api.MediaSource.clearLiveSeekableRange
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>clearLiveSeekableRange()</code></strong> method of the
-  {{domxref("MediaSource")}} interface clears a seekable range previously set with a call
-  to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.</p>
+The **`clearLiveSeekableRange()`** method of the
+{{domxref("MediaSource")}} interface clears a seekable range previously set with a call
+to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>mediaSource</var>.clearLiveSeekableRange()</pre>
+```js
+mediaSource.clearLiveSeekableRange()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

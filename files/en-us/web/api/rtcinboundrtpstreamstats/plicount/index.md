@@ -2,65 +2,64 @@
 title: RTCInboundRtpStreamStats.pliCount
 slug: Web/API/RTCInboundRtpStreamStats/pliCount
 tags:
-- API
-- Media
-- PLI
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- pliCount
-- stream
+  - API
+  - Media
+  - PLI
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - pliCount
+  - stream
 browser-compat: api.RTCInboundRtpStreamStats.pliCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>pliCount</code></strong> property of the
-    {{domxref("RTCInboundRtpStreamStats")}} dictionary states the number of times the
-    {{domxref("RTCRtpReceiver")}} described by these statistics sent a <strong>Picture
-      Loss Indication</strong> (<strong>PLI</strong>) packet to the sender.</p>
+The **`pliCount`** property of the
+{{domxref("RTCInboundRtpStreamStats")}} dictionary states the number of times the
+{{domxref("RTCRtpReceiver")}} described by these statistics sent a **Picture
+Loss Indication** (**PLI**) packet to the sender.
 
-  <p>A PLI
-  packet indicates that some amount of encoded video data has been lost for one or more
-  frames.</p>
+A PLI
+packet indicates that some amount of encoded video data has been lost for one or more
+frames.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>pliCount</em> = <em>RTCInboundRtpStreamStats</em>.pliCount;</pre>
+```js
+var pliCount = RTCInboundRtpStreamStats.pliCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of times a PLI packet was sent by the
-  {{domxref("RTCRtpReceiver")}} to the sender. These are sent by the receiver's decoder to
-  notify the encoder (the sender) that an undefined amount of coded video data, which may
-  span frame boundaries, has been lost. This information is only available for video
-  streams.</p>
+An integer value indicating the number of times a PLI packet was sent by the
+{{domxref("RTCRtpReceiver")}} to the sender. These are sent by the receiver's decoder to
+notify the encoder (the sender) that an undefined amount of coded video data, which may
+span frame boundaries, has been lost. This information is only available for video
+streams.
 
-<p>This may trigger the sender to send a full frame in order to allow the receiver to
-  re-synchronize, since lost data may be an irrecoverable situation for decoding media.
-  However, the primary purpose of this message is to allow the sender to consider
-  techniques to mitigate network performance issues. This is often achieved by methods
-  such as increasing the compression, lowering resolution, or finding other ways to reduce
-  the bit rate of the stream.</p>
+This may trigger the sender to send a full frame in order to allow the receiver to
+re-synchronize, since lost data may be an irrecoverable situation for decoding media.
+However, the primary purpose of this message is to allow the sender to consider
+techniques to mitigate network performance issues. This is often achieved by methods
+such as increasing the compression, lowering resolution, or finding other ways to reduce
+the bit rate of the stream.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document <em>Extended
-      RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
-      (RTP/AVPF)</em>.</li>
-</ul>
+- {{RFC(4585, "6.3.1")}}: Definition of "PLI messages" in the document _Extended
+  RTP Profile for Real-time Transport Control Protocol (RTCP)-Based Feedback
+  (RTP/AVPF)_.

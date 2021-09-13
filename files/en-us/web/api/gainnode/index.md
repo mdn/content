@@ -9,73 +9,67 @@ tags:
   - Web Audio API
 browser-compat: api.GainNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>GainNode</code> interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A <code>GainNode</code> always has exactly one input and one output, both with the same number of channels.</p>
+The `GainNode` interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A `GainNode` always has exactly one input and one output, both with the same number of channels.
 
-<p>The gain is a unitless value, changing with time, that is multiplied to each corresponding sample of all input channels. If modified, the new gain is instantly applied, causing unaesthetic 'clicks' in the resulting audio. To prevent this from happening, never change the value directly but use the exponential interpolation methods on the {{domxref("AudioParam")}} interface.</p>
+The gain is a unitless value, changing with time, that is multiplied to each corresponding sample of all input channels. If modified, the new gain is instantly applied, causing unaesthetic 'clicks' in the resulting audio. To prevent this from happening, never change the value directly but use the exponential interpolation methods on the {{domxref("AudioParam")}} interface.
 
-<p><img alt="The GainNode is increasing the gain of the output." src="webaudiogainnode.png"></p>
+![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd>Creates and returns a new <code>GainNode</code> object. As an alternative, you can use the {{domxref("BaseAudioContext.createGain()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
-</dl>
+- {{domxref("GainNode.GainNode", "GainNode()")}}
+  - : Creates and returns a new `GainNode` object. As an alternative, you can use the {{domxref("BaseAudioContext.createGain()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("GainNode.gain")}} {{readonlyinline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of <code>AudioParam</code> to change the effect of gain.</dd>
-</dl>
+- {{domxref("GainNode.gain")}} {{readonlyinline}}
+  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createGain#example"><code>BaseAudioContext.createGain()</code></a> for example code showing how to use an <code>AudioContext</code> to create a <code>GainNode</code>.</p>
+See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

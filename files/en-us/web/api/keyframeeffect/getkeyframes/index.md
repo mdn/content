@@ -13,66 +13,54 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.getKeyframes
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code><strong>getKeyframes()</strong></code> method of a {{domxref("KeyframeEffect")}} returns an Array of the computed keyframes that make up this animation along with their computed offsets.</p>
+The **`getKeyframes()`** method of a {{domxref("KeyframeEffect")}} returns an Array of the computed keyframes that make up this animation along with their computed offsets.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var keyframes = keyframeEffect.<em><code>getKeyframes()</code></em>;
-</pre>
+```js
+var keyframes = keyframeEffect.getKeyframes();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a sequence of objects with the following format:</p>
+Returns a sequence of objects with the following format:
 
-<dl>
- <dt>property value pairs</dt>
- <dd>
- <p>As many property value pairs as are contained in each keyframe of the animation.</p>
- </dd>
- <dt>offset</dt>
- <dd>
- <p>The offset of the keyframe specified as a number between <code>0.0</code> and <code>1.0</code> inclusive or <code>null</code>. This is equivalent to specifying start and end states in percentages in CSS stylesheets using <code>@keyframes</code>. This will be <code>null</code> if the keyframe is automatically spaced using <code>{{domxref("KeyframeEffect.spacing")}}</code>.</p>
- </dd>
- <dt>computedOffset</dt>
- <dd>
- <p>The computed offset for this keyframe, calculated when the list of computed keyframes was produced according to <code>{{domxref("KeyframeEffect.spacing")}}</code>. Unlike <strong><code>offset</code>,</strong> above, the <strong><code>computedOffset</code></strong> is never <code>null</code>.</p>
- </dd>
- <dt>easing</dt>
- <dd>
- <p>The <a href="/en-US/docs/Web/CSS/easing-function">easing function</a> used from this keyframe until the next keyframe in the series.</p>
- </dd>
- <dt>composite</dt>
- <dd>
- <p>The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be absent if the composite operation specified on the effect is being used.</p>
- </dd>
-</dl>
+- property value pairs
+  - : As many property value pairs as are contained in each keyframe of the animation.
+- offset
+  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced using `{{domxref("KeyframeEffect.spacing")}}`.
+- computedOffset
+  - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced according to `{{domxref("KeyframeEffect.spacing")}}`. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
+- easing
+  - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+- composite
+  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be absent if the composite operation specified on the effect is being used.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNGGaV">Red Queen Race</a> example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:</p>
+In the [Red Queen Race](http://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
 
-<pre class="brush: js">// Return the array of keyframes
+```js
+// Return the array of keyframes
 
 redQueen_alice.effect.getKeyframes();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>Method of {{domxref("KeyframeEffect")}} objects.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- Method of {{domxref("KeyframeEffect")}} objects.

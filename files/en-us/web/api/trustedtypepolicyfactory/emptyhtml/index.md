@@ -9,29 +9,32 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyHTML
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>emptyHTML</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedHTML")}} object containing an empty string.</p>
+The **`emptyHTML`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedHTML")}} object containing an empty string.
 
-<p>This object can be used when the application requires an empty string to be inserted into an injection sink.</p>
+This object can be used when the application requires an empty string to be inserted into an injection sink.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>emptyHTML</var> = <var>TrustedTypePolicyFactory</var>.emptyHTML;</pre>
+    var emptyHTML = TrustedTypePolicyFactory.emptyHTML;
 
-<h3>Value</h3>
-<p>A {{domxref("TrustedHTML")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("TrustedHTML")}} object.
 
-<p>In the below example an empty string is to be inserted into the element. Therefore there is no need to create a policy, and the <code>emptyHTML</code> property can be used to insert the empty element when a Trusted Types object is expected.</p>
+## Examples
 
-<pre class="brush: js">el.innerHTML = trustedTypes.emptyHTML;</pre>
+In the below example an empty string is to be inserted into the element. Therefore there is no need to create a policy, and the `emptyHTML` property can be used to insert the empty element when a Trusted Types object is expected.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+el.innerHTML = trustedTypes.emptyHTML;
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

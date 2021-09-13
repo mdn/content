@@ -9,49 +9,53 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.blur
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLElement.blur()</strong></code> method
-    removes keyboard focus from the current element.</p>
+The **`HTMLElement.blur()`** method
+removes keyboard focus from the current element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.blur();</pre>
+```js
+element.blur();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Remove_focus_from_a_text_input">Remove focus from a text input</h3>
+### Remove focus from a text input
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="text" id="myText" value="Sample Text"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;button type="button" onclick="focusInput()"&gt;Click me to gain focus&lt;/button&gt;
-&lt;button type="button" onclick="blurInput()"&gt;Click me to lose focus&lt;/button&gt;</pre>
+```html
+<input type="text" id="myText" value="Sample Text">
+<br><br>
+<button type="button" onclick="focusInput()">Click me to gain focus</button>
+<button type="button" onclick="blurInput()">Click me to lose focus</button>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function focusInput() {
+```js
+function focusInput() {
   document.getElementById('myText').focus();
 }
 function blurInput() {
   document.getElementById('myText').blur();
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Remove_focus_from_a_text_input') }}</p>
+{{ EmbedLiveSample('Remove_focus_from_a_text_input') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLElement.focus")}}</li>
-</ul>
+- {{domxref("HTMLElement.focus")}}

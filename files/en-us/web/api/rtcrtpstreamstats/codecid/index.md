@@ -2,44 +2,45 @@
 title: RTCRtpStreamStats.codecId
 slug: Web/API/RTCRtpStreamStats/codecId
 tags:
-- API
-- Codec
-- Dictionary
-- Interface
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- WebRTC
-- WebRTC API
-- WebRTC Statistics
-- codecId
-- id
-- rtc
+  - API
+  - Codec
+  - Dictionary
+  - Interface
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - WebRTC
+  - WebRTC API
+  - WebRTC Statistics
+  - codecId
+  - id
+  - rtc
 browser-compat: api.RTCRtpStreamStats.codecId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpStreamStats")}} dictionary's
-    <code><strong>codecId</strong></code> property is a string which uniquely identifies
-    the object that was inspected to produce the data in the {{domxref("RTCCodecStats")}}
-    for the {{Glossary("RTP")}} stream.</p>
+The {{domxref("RTCRtpStreamStats")}} dictionary's
+**`codecId`** property is a string which uniquely identifies
+the object that was inspected to produce the data in the {{domxref("RTCCodecStats")}}
+for the {{Glossary("RTP")}} stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>codecID</em> = <em>RTCRtpStreamStats</em>.codecId;</pre>
+```js
+var codecID = RTCRtpStreamStats.codecId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the object from which the contents
-  of the stream's {{domxref("RTCCodecStats")}} are derived.</p>
+A {{domxref("DOMString")}} which uniquely identifies the object from which the contents
+of the stream's {{domxref("RTCCodecStats")}} are derived.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

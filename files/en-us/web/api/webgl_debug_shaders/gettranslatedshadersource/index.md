@@ -2,46 +2,43 @@
 title: WEBGL_debug_shaders.getTranslatedShaderSource()
 slug: Web/API/WEBGL_debug_shaders/getTranslatedShaderSource
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL extension
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
 browser-compat: api.WEBGL_debug_shaders.getTranslatedShaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_debug_shaders.getTranslatedShaderSource()</strong></code>
-  method is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows
-  you to debug a translated shader.</p>
+The **`WEBGL_debug_shaders.getTranslatedShaderSource()`**
+method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows
+you to debug a translated shader.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(shader);</pre>
+```js
+gl.getExtension('WEBGL_debug_shaders').getTranslatedShaderSource(shader);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>shader</dt>
-  <dd>A {{domxref("WebGLShader")}} to get the translated source from.</dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} to get the translated source from.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("String")}} containing the translated shader source. An empty string is
-  returned, if:</p>
+A {{jsxref("String")}} containing the translated shader source. An empty string is
+returned, if:
 
-<ul>
-  <li>no source has been defined or,</li>
-  <li>{{domxref("WebGLRenderingContext.compileShader()")}} has not yet been called or,
-  </li>
-  <li>the translation for the shader failed.</li>
-</ul>
+- no source has been defined or,
+- {{domxref("WebGLRenderingContext.compileShader()")}} has not yet been called or,
+- the translation for the shader failed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 var shader = gl.createShader(gl.FRAGMENT_SHADER);
@@ -53,19 +50,17 @@ console.log(src);
 // "void main(){
 // (gl_FragColor = vec4(gl_FragCoord.x, 0.0, 0.0, 1.0));
 // }"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLShader")}}</li>
-  <li>{{domxref("WebGLRenderingContext.compileShader()")}}</li>
-</ul>
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLRenderingContext.compileShader()")}}

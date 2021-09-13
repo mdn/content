@@ -9,92 +9,92 @@ tags:
   - SVG DOM
 browser-compat: api.SVGComponentTransferFunctionElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGComponentTransferFunctionElement</code></strong> interface defines a base interface used by the component transfer function interfaces.</p>
+The **`SVGComponentTransferFunctionElement`** interface defines a base interface used by the component transfer function interfaces.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th>Name</th>
-   <th>Value</th>
-   <th>Description</th>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN</code></td>
-   <td>0</td>
-   <td>The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY</code></td>
-   <td>1</td>
-   <td>Corresponds to the value <code>identity</code>.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_TABLE</code></td>
-   <td>2</td>
-   <td>Corresponds to the value <code>table</code>.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE</code></td>
-   <td>3</td>
-   <td>Corresponds to the value <code>discrete</code>.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_LINEAR</code></td>
-   <td>4</td>
-   <td>Corresponds to the value <code>linear</code>.</td>
-  </tr>
-  <tr>
-   <td><code>SVG_FECOMPONENTTRANSFER_TYPE_GAMMA</code></td>
-   <td>5</td>
-   <td>Corresponds to the value <code>gamma</code>.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN</code></td>
+      <td>0</td>
+      <td>
+        The type is not one of predefined types. It is invalid to attempt to
+        define a new value of this type or to attempt to switch an existing
+        value to this type.
+      </td>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY</code></td>
+      <td>1</td>
+      <td>Corresponds to the value <code>identity</code>.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_TABLE</code></td>
+      <td>2</td>
+      <td>Corresponds to the value <code>table</code>.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE</code></td>
+      <td>3</td>
+      <td>Corresponds to the value <code>discrete</code>.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_LINEAR</code></td>
+      <td>4</td>
+      <td>Corresponds to the value <code>linear</code>.</td>
+    </tr>
+    <tr>
+      <td><code>SVG_FECOMPONENTTRANSFER_TYPE_GAMMA</code></td>
+      <td>5</td>
+      <td>Corresponds to the value <code>gamma</code>.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGComponentTransferFunctionElement.type")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the <code>SVG_FECOMPONENTTRANSFER_TYPE_*</code> constants defined on this interface.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.tableValues")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumberList")}} corresponding to the {{SVGAttr("tableValues")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.slope")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("slope")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.intercept")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("intercept")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.amplitude")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("amplitude")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.exponent")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("exponent")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGComponentTransferFunctionElement.type")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("type")}} attribute of the given element. It takes one of the `SVG_FECOMPONENTTRANSFER_TYPE_*` constants defined on this interface.
+- {{domxref("SVGComponentTransferFunctionElement.tableValues")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumberList")}} corresponding to the {{SVGAttr("tableValues")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.slope")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("slope")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.intercept")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("intercept")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.amplitude")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("amplitude")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.exponent")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("exponent")}} attribute of the given element.
+- {{domxref("SVGComponentTransferFunctionElement.offset")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("offset")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SVGFEFuncAElement")}}</li>
- <li>{{domxref("SVGFEFuncBElement")}}</li>
- <li>{{domxref("SVGFEFuncGElement")}}</li>
- <li>{{domxref("SVGFEFuncRElement")}}</li>
-</ul>
+- {{domxref("SVGFEFuncAElement")}}
+- {{domxref("SVGFEFuncBElement")}}
+- {{domxref("SVGFEFuncGElement")}}
+- {{domxref("SVGFEFuncRElement")}}

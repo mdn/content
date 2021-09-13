@@ -2,76 +2,79 @@
 title: Document.title
 slug: Web/API/Document/title
 tags:
-- API
-- Command API
-- Document
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Command API
+  - Document
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.Document.title
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>document.title</code></strong> property gets
-    or sets the current <a href="/en-US/docs/Web/HTML/Element/title">title</a> of the
-    document.</p>
+The **`document.title`** property gets
+or sets the current [title](/en-US/docs/Web/HTML/Element/title) of the
+document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>docTitle</var> = <var>document</var>.title;
-</pre>
+```js
+var docTitle = document.title;
+```
 
-<p><var>docTitle</var> is a string containing the <var>document</var>'s title. If the
-  title was overridden by setting <code>document.title</code>, it contains that value.
-  Otherwise, it contains the title specified in the markup (see the {{Anch("Notes")}}
-  below).</p>
+_docTitle_ is a string containing the _document_'s title. If the
+title was overridden by setting `document.title`, it contains that value.
+Otherwise, it contains the title specified in the markup (see the {{Anch("Notes")}}
+below).
 
-<pre class="brush: js"><var>document</var>.title = <var>newTitle</var>;
-</pre>
+```js
+document.title = newTitle;
+```
 
-<p><code><var>newTitle</var></code> is the new title of the document. The assignment
-  affects the return value of <code>document.title</code>, the title displayed for the
-  document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the
-  document (e.g. the content of the <code>&lt;title&gt;</code> element in an HTML
-  document).</p>
+`newTitle` is the new title of the document. The assignment
+affects the return value of `document.title`, the title displayed for the
+document (e.g. in the titlebar of the window or tab), and it also affects the DOM of the
+document (e.g. the content of the `<title>` element in an HTML
+document).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Hello World!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```js
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World!</title>
+</head>
+<body>
 
-  &lt;script&gt;
+  <script>
     alert(document.title); // displays "Hello World!"
     document.title = "Goodbye World!";
     alert(document.title); // displays "Goodbye World!"
-  &lt;/script&gt;
+  </script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>This property applies to HTML, SVG, XUL, and other documents in Gecko.</p>
+This property applies to HTML, SVG, XUL, and other documents in Gecko.
 
-<p>For HTML documents the initial value of <code>document.title</code> is the text content
-  of the <code>&lt;title&gt;</code> element. For XUL it's the value of the
-  {{XULAttr("title")}} attribute of the {{XULElem("window")}} or other top-level XUL
-  element.</p>
+For HTML documents the initial value of `document.title` is the text content
+of the `<title>` element. For XUL it's the value of the
+{{XULAttr("title")}} attribute of the {{XULElem("window")}} or other top-level XUL
+element.
 
-<p>In XUL, accessing <code>document.title</code> before the document is fully loaded has
-  undefined behavior: <code>document.title</code> may return an empty string and setting
-  <code>document.title</code> may have no effect.</p>
+In XUL, accessing `document.title` before the document is fully loaded has
+undefined behavior: `document.title` may return an empty string and setting
+`document.title` may have no effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

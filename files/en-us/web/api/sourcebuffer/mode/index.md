@@ -2,64 +2,63 @@
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- mode
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - mode
 browser-compat: api.SourceBuffer.mode
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>mode</strong></code> property of the {{domxref("SourceBuffer")}}
-  interface controls whether media segments can be appended to the
-  <code>SourceBuffer</code> in any order, or in a strict sequence.</p>
+The **`mode`** property of the {{domxref("SourceBuffer")}}
+interface controls whether media segments can be appended to the
+`SourceBuffer` in any order, or in a strict sequence.
 
-<p>The two available values are:</p>
+The two available values are:
 
-<ul>
-  <li><code>segments</code>: The media segment timestamps determine the order in which the
-    segments are played. The segments can be appended to the <code>SourceBuffer</code> in
-    any order.</li>
-  <li><code>sequence</code>: The order in which the segments are appended to the
-    <code>SourceBuffer</code> determines the order in which they are played. Segment
-    timestamps are generated automatically for the segments that observe this order.</li>
-</ul>
+- `segments`: The media segment timestamps determine the order in which the
+  segments are played. The segments can be appended to the `SourceBuffer` in
+  any order.
+- `sequence`: The order in which the segments are appended to the
+  `SourceBuffer` determines the order in which they are played. Segment
+  timestamps are generated automatically for the segments that observe this order.
 
-<p>The mode value is initially set when the <code>SourceBuffer</code> is created using
-  <code>MediaSource.addSourceBuffer()</code>. If timestamps already exist for the media
-  segments, then the value will be set to <code>segments</code>; if they don't, then the
-  value will be set to <code>sequence</code>.</p>
+The mode value is initially set when the `SourceBuffer` is created using
+`MediaSource.addSourceBuffer()`. If timestamps already exist for the media
+segments, then the value will be set to `segments`; if they don't, then the
+value will be set to `sequence`.
 
-<p>If you try to set the <code>mode</code> property value to <code>segments</code> when
-  the initial value is <code>sequence</code>, an exception will be thrown. The existing
-  segment order must be maintained in <code>sequence</code> mode. You can, however, change
-  the value from <code>segments</code> to <code>sequence</code>. It just means the play
-  order will be fixed, and new timestamps generated to reflect this.</p>
+If you try to set the `mode` property value to `segments` when
+the initial value is `sequence`, an exception will be thrown. The existing
+segment order must be maintained in `sequence` mode. You can, however, change
+the value from `segments` to `sequence`. It just means the play
+order will be fixed, and new timestamps generated to reflect this.
 
-<p>This property cannot be changed during while the <code>SourceBuffer</code> is
-  processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} or
-  {{domxref("SourceBuffer.remove","remove()")}} call.</p>
+This property cannot be changed during while the `SourceBuffer` is
+processing either an {{domxref("SourceBuffer.appendBuffer","appendBuffer()")}} or
+{{domxref("SourceBuffer.remove","remove()")}} call.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myMode</em> = <em>sourceBuffer</em>.mode;
+```js
+var myMode = sourceBuffer.mode;
 
-<em>sourceBuffer</em>.mode = 'sequence';
-</pre>
+sourceBuffer.mode = 'sequence';
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions may be thrown when setting a new value for this property.</p>
+The following exceptions may be thrown when setting a new value for this property.
 
 <table class="no-markdown">
   <thead>
@@ -71,42 +70,47 @@ browser-compat: api.SourceBuffer.mode
   <tbody>
     <tr>
       <td><code>InvalidAccessError</code></td>
-      <td>An attempt was made to set the value to <code>segments</code> when the initial
-        value is <code>sequence</code>.</td>
+      <td>
+        An attempt was made to set the value to <code>segments</code> when the
+        initial value is <code>sequence</code>.
+      </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("SourceBuffer")}} object is being updated (i.e. its
-        {{domxref("SourceBuffer.updating")}} property is currently <code>true</code>), the
-        last media segment appended to this <code>SourceBuffer</code> is incomplete, or
-        this <code>SourceBuffer</code> has been removed from the
-        {{domxref("MediaSource")}}.</td>
+      <td>
+        The {{domxref("SourceBuffer")}} object is being updated (i.e.
+        its {{domxref("SourceBuffer.updating")}} property is
+        currently <code>true</code>), the last media segment appended to this
+        <code>SourceBuffer</code> is incomplete, or this
+        <code>SourceBuffer</code> has been removed from the
+        {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet sets the <code>sourceBuffer</code> mode to <code>'sequence'</code> if it
-  is currently set to <code>'segments'</code>, thus setting the play order to the sequence
-  in which media segments are appended.</p>
+This snippet sets the `sourceBuffer` mode to `'sequence'` if it
+is currently set to `'segments'`, thus setting the play order to the sequence
+in which media segments are appended.
 
-<pre class="brush: js">var curMode = sourceBuffer.mode;
+```js
+var curMode = sourceBuffer.mode;
 if (curMode == 'segments') {
   sourceBuffer.mode = 'sequence';
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

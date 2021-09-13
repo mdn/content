@@ -2,106 +2,88 @@
 title: IDBIndex.getAll()
 slug: Web/API/IDBIndex/getAll
 tags:
-- API
-- IDBIndex
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - IDBIndex
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 browser-compat: api.IDBIndex.getAll
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>getAll()</code></strong> method of the {{domxref("IDBIndex")}}
-    interface retrieves all objects that are inside the index.</p>
-</div>
+The **`getAll()`** method of the {{domxref("IDBIndex")}}
+interface retrieves all objects that are inside the index.
 
-<p>There is a performance cost associated with looking at the <code>value</code> property
-  of a cursor, because the object is created lazily. To use a feature
-  like <code>getAll()</code>, the browser has to create all the objects at once. If you
-  are just interested in looking at each of the keys, for instance, it is more efficient
-  to use a <a href="/en-US/docs/Web/API/IDBCursor">cursor</a>. If you are trying to get an
-  array of all the objects in an object store, though, you should
-  use <code>getAll()</code>.</p>
+There is a performance cost associated with looking at the `value` property
+of a cursor, because the object is created lazily. To use a feature
+like `getAll()`, the browser has to create all the objects at once. If you
+are just interested in looking at each of the keys, for instance, it is more efficient
+to use a [cursor](/en-US/docs/Web/API/IDBCursor). If you are trying to get an
+array of all the objects in an object store, though, you should
+use `getAll()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var getAllKeysRequest = <em>IDBIndex</em>.getAll();
-var getAllKeysRequest = <em>IDBIndex</em>.getAll(<em>query</em>);
-var getAllKeysRequest = <em>IDBIndex</em>.getAll(<em>query</em>, <em>count</em>);</pre>
+```js
+var getAllKeysRequest = IDBIndex.getAll();
+var getAllKeysRequest = IDBIndex.getAll(query);
+var getAllKeysRequest = IDBIndex.getAll(query, count);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>query</em> {{optional_inline}}</dt>
-  <dd>A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this
-    value is null or missing, the browser will use an unbound key range.</dd>
-  <dt><em>count</em> {{optional_inline}}</dt>
-  <dd>The number of records to return. If this value exceeds the number of records in the
+- *query* {{optional_inline}}
+  - : A key or an {{domxref("IDBKeyRange")}} identifying the records to retrieve. If this
+    value is null or missing, the browser will use an unbound key range.
+- _count_ {{optional_inline}}
+  - : The number of records to return. If this value exceeds the number of records in the
     query, the browser will only retrieve the queried records. If it is lower than
-    <code>0</code> or greater than <code>2^32 - 1</code> a {{jsxref("TypeError")}}
-    exception will be thrown.</dd>
-</dl>
+    `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}}
+    exception will be thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBIndex")}}'s transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("IDBIndex")}} has been deleted or removed.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                       |
+| -------------------------- | ----------------------------------------------------------------- |
+| `TransactionInactiveError` | This {{domxref("IDBIndex")}}'s transaction is inactive.  |
+| `InvalidStateError`        | The {{domxref("IDBIndex")}} has been deleted or removed. |
 
-<p>A {{jsxref("TypeError")}} exception is thrown if the <code>count</code> parameter is
-  not between <code>0</code> and <code>2^32> - 1</code> included.</p>
+A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
+not between `0` and `2^32> - 1` included.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var myIndex = objectStore.index('index');
+```js
+var myIndex = objectStore.index('index');
 var getAllRequest = myIndex.getAll();
 getAllRequest.onsuccess = function() {
   console.log(getAllRequest.result);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

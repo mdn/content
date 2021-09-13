@@ -11,48 +11,46 @@ tags:
   - request
 browser-compat: api.Request.referrer
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>referrer</code></strong> read-only property of the
-  {{domxref("Request")}} interface is set by the user agent to be the referrer of the
-  Request. (e.g., <code>client</code>, <code>no-referrer</code>, or a URL.)</p>
+The **`referrer`** read-only property of the
+{{domxref("Request")}} interface is set by the user agent to be the referrer of the
+Request. (e.g., `client`, `no-referrer`, or a URL.)
 
-<div class="note">
-  <p><strong>Note:</strong> If <code>referrer</code>'s value is <code>no-referrer</code>,
-    it returns an empty string.</p>
-</div>
+> **Note:** If `referrer`'s value is `no-referrer`,
+> it returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myReferrer</var> = <var>request</var>.referrer;</pre>
+```js
+var myReferrer = request.referrer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the request's referrer.</p>
+A {{domxref("DOMString")}} representing the request's referrer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the request referrer in a variable:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the request referrer in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrer; // returns "about:client" by default</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myReferrer = myRequest.referrer; // returns "about:client" by default
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

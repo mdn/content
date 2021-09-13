@@ -2,37 +2,38 @@
 title: SourceBuffer.abort()
 slug: Web/API/SourceBuffer/abort
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Method
-- Reference
-- SourceBuffer
-- Video
-- abort
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Method
+  - Reference
+  - SourceBuffer
+  - Video
+  - abort
 browser-compat: api.SourceBuffer.abort
 ---
-<div>{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>abort()</strong></code> method of the {{domxref("SourceBuffer")}}
-  interface aborts the current segment and resets the segment parser.</p>
+The **`abort()`** method of the {{domxref("SourceBuffer")}}
+interface aborts the current segment and resets the segment parser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sourceBuffer</em>.abort();
-</pre>
+```js
+sourceBuffer.abort();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -44,66 +45,63 @@ browser-compat: api.SourceBuffer.abort
   <tbody>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("MediaSource.readyState")}} property of the parent media source is
-        not equal to <code>open</code>, or this <code>SourceBuffer</code> has been removed
-        from the {{domxref("MediaSource")}}.</td>
+      <td>
+        The {{domxref("MediaSource.readyState")}} property of the
+        parent media source is not equal to <code>open</code>, or this
+        <code>SourceBuffer</code> has been removed from the
+        {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The spec description of <code>abort()</code> is somewhat confusing — consider for
-  example step 1 of <a
-    href="https://w3c.github.io/media-source/index.html#sourcebuffer-reset-parser-state">reset
-    parser state</a>. The MSE API is fully asynchronous, but this step seems to suggest a
-  synchronous (blocking) operation, which doesn't make sense.</p>
+The spec description of `abort()` is somewhat confusing — consider for
+example step 1 of [reset
+parser state](https://w3c.github.io/media-source/index.html#sourcebuffer-reset-parser-state). The MSE API is fully asynchronous, but this step seems to suggest a
+synchronous (blocking) operation, which doesn't make sense.
 
-<p>Saying that, current implementations can be useful in certain situations, when you want
-  to stop the current append (or whatever) operation occurring on a sourcebuffer, and then
-  immediately start performing operations on it again. For example, consider this code:
-</p>
+Saying that, current implementations can be useful in certain situations, when you want
+to stop the current append (or whatever) operation occurring on a sourcebuffer, and then
+immediately start performing operations on it again. For example, consider this code:
 
-<pre class="brush: js">sourceBuffer.addEventListener('updateend', function (_) {
+```js
+sourceBuffer.addEventListener('updateend', function (_) {
   ...
 });
 
-sourceBuffer.appendBuffer(buf);</pre>
+sourceBuffer.appendBuffer(buf);
+```
 
-<p>Let's say that after the call to <code>appendBuffer</code> BUT before the
-  <code>updateend</code> event fires (i.e. a buffer is being appended but the operation
-  has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
-  this case you would want to manually call <code>abort()</code> on the source buffer to
-  stop the decoding of the current buffer, then fetch and append the newly requested
-  segment that relates to the current new position of the video.</p>
+Let's say that after the call to `appendBuffer` BUT before the
+`updateend` event fires (i.e. a buffer is being appended but the operation
+has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
+this case you would want to manually call `abort()` on the source buffer to
+stop the decoding of the current buffer, then fetch and append the newly requested
+segment that relates to the current new position of the video.
 
-<p>You can see something similar in action in Nick Desaulnier's <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html">bufferWhenNeeded
-    demo</a> — in <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48">line
-    48, an event listener is added to the playing video</a> so a function called
-  <code>seek()</code> is run when the <code>seeking</code> event fires. In <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101">lines
-    92-101, the seek() function is defined</a> — note that <code>abort()</code> is called
-  if {{domxref("MediaSource.readyState")}} is set to <code>open</code>, which means that
-  it is ready to receive new source buffers — at this point it is worth aborting the
-  current segment and just getting the one for the new seek position (see
-  <code><a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L78-L90">checkBuffer()</a></code>
-  and
-  <code><a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L103-L105">getCurrentSegment()</a></code>.)
-</p>
+You can see something similar in action in Nick Desaulnier's [bufferWhenNeeded
+demo](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html) — in [line
+48, an event listener is added to the playing video](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48) so a function called
+`seek()` is run when the `seeking` event fires. In [lines
+92-101, the seek() function is defined](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101) — note that `abort()` is called
+if {{domxref("MediaSource.readyState")}} is set to `open`, which means that
+it is ready to receive new source buffers — at this point it is worth aborting the
+current segment and just getting the one for the new seek position (see
+[`checkBuffer()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L78-L90)
+and
+[`getCurrentSegment()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L103-L105).)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

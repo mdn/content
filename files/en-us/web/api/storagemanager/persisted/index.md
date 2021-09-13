@@ -9,39 +9,42 @@ tags:
   - persisted()
 browser-compat: api.StorageManager.persisted
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
-<p>The <strong><code>persisted()</code></strong> method of the
-    {{domxref("StorageManager")}} interface returns a {{jsxref('Promise')}} that resolves
-    to <code>true</code> if box mode is persistent for your site's storage.</p>
+The **`persisted()`** method of the
+{{domxref("StorageManager")}} interface returns a {{jsxref('Promise')}} that resolves
+to `true` if box mode is persistent for your site's storage.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">navigator.storage.persisted().then(function(persistent) { ... })</pre>
+```js
+navigator.storage.persisted().then(function(persistent) { ... })
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.</p>
+A {{jsxref('Promise')}} that resolves to a {{jsxref('Boolean')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (navigator.storage &amp;&amp; navigator.storage.persist)
+```js
+if (navigator.storage && navigator.storage.persist)
   navigator.storage.persisted().then(function(persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
       console.log("Storage may be cleared by the UA under storage pressure.");
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

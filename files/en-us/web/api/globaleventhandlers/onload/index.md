@@ -2,94 +2,93 @@
 title: GlobalEventHandlers.onload
 slug: Web/API/GlobalEventHandlers/onload
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- onload
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - onload
 browser-compat: api.GlobalEventHandlers.onload
 ---
-<div>{{ApiRef()}}</div>
+{{ApiRef()}}
 
-<p>The <strong><code>onload</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("load")}} events on a {{domxref("Window")}},
-  {{domxref("XMLHttpRequest")}}, {{htmlelement("img")}} element, etc.</p>
+The **`onload`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("load")}} events on a {{domxref("Window")}},
+{{domxref("XMLHttpRequest")}}, {{htmlelement("img")}} element, etc.
 
-<p>The <code>load</code> event fires when a given resource has loaded.</p>
+The `load` event fires when a given resource has loaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onload = <em>functionRef</em>;
-</pre>
+```js
+target.onload = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is the handler function to be called when the window’s
-  <code>load</code> event fires.</p>
+`functionRef` is the handler function to be called when the window’s
+`load` event fires.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">window.onload = function() {
+```js
+window.onload = function() {
   init();
   doSomethingElse();
 };
-</pre>
+```
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;onload test&lt;/title&gt;
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>onload test</title>
     // ES5
-    &lt;script&gt;
+    <script>
       function load() {
         console.log("load event detected!");
       }
       window.onload = load;
-    &lt;/script&gt;
+    </script>
     // ES2015
-    &lt;script&gt;
-      const load = () =&gt; {
+    <script>
+      const load = () => {
         console.log("load event detected!");
       }
       window.onload = load;
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;The load event fires when the document has finished loading!&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body>
+    <p>The load event fires when the document has finished loading!</p>
+  </body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The <code>load</code> event fires at the end of the document loading process. At this
-  point, all of the objects in the document are in the DOM, and all the images, scripts,
-  links and sub-frames have finished loading.</p>
+The `load` event fires at the end of the document loading process. At this
+point, all of the objects in the document are in the DOM, and all the images, scripts,
+links and sub-frames have finished loading.
 
-<p>There are also <a href="/en-US/docs/Web/Events">DOM Events</a> like
-  <code>DOMContentLoaded</code> and <code>DOMFrameContentLoaded</code> (which can be
-  handled using {{domxref("EventTarget.addEventListener()")}}) which are fired after the
-  DOM for the page has been constructed, but do not wait for other resources to finish
-  loading.</p>
+There are also [DOM Events](/en-US/docs/Web/Events) like
+`DOMContentLoaded` and `DOMFrameContentLoaded` (which can be
+handled using {{domxref("EventTarget.addEventListener()")}}) which are fired after the
+DOM for the page has been constructed, but do not wait for other resources to finish
+loading.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Event("load")}} event</li>
-  <li><code>DOMContentLoaded</code> event in <a
-      href="/en-US/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events">Listening
-      to events: Simple DOM events</a></li>
-  <li>IIFE <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression"
-      rel="nofollow noreferrer">Immediately-invoked function expression</a></li>
-</ul>
+- {{Event("load")}} event
+- `DOMContentLoaded` event in [Listening
+  to events: Simple DOM events](/en-US/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events)
+- IIFE [Immediately-invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)

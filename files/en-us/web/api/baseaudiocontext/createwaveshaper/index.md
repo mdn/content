@@ -11,46 +11,39 @@ tags:
   - createWaveShaper
 browser-compat: api.BaseAudioContext.createWaveShaper
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>createWaveShaper()</code> method of the {{ domxref("BaseAudioContext") }}
-    interface creates a {{ domxref("WaveShaperNode") }}, which represents a non-linear
-    distortion. It is used to apply distortion effects to your audio.</p>
-</div>
+The `createWaveShaper()` method of the {{ domxref("BaseAudioContext") }}
+interface creates a {{ domxref("WaveShaperNode") }}, which represents a non-linear
+distortion. It is used to apply distortion effects to your audio.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
-    constructor is the recommended way to create a {{domxref("WaveShaperNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
+> constructor is the recommended way to create a {{domxref("WaveShaperNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioCtx.createWaveShaper();</pre>
+```js
+baseAudioCtx.createWaveShaper();
+```
 
-<h3 id="Description">Returns</h3>
+### Returns
 
-<p>A {{domxref("WaveShaperNode")}}.</p>
+A {{domxref("WaveShaperNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an AudioContext to create a wave shaper
-  node. For applied examples/information, check out our <a
-    href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a><a
-    href="https://mdn.github.io/voice-change-o-matic/"> demo</a> (<a
-    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">see
-    app.js</a> for relevant code).</p>
+The following example shows basic usage of an AudioContext to create a wave shaper
+node. For applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)[ demo](https://mdn.github.io/voice-change-o-matic/) ([see
+app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
-<div class="note">
-  <p><strong>Note:</strong> Sigmoid functions are commonly used for distortion curves
-    because of their natural properties. Their S-shape, for instance, helps create a
-    smoother sounding result. We found the below distortion curve code on <a
-      href="http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion">Stack
-      Overflow</a>.</p>
-</div>
+> **Note:** Sigmoid functions are commonly used for distortion curves
+> because of their natural properties. Their S-shape, for instance, helps create a
+> smoother sounding result. We found the below distortion curve code on [Stack
+> Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var distortion = audioCtx.createWaveShaper();
 
   ...
@@ -62,7 +55,7 @@ function makeDistortionCurve(amount) {
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i &lt; n_samples; ++i ) {
+  for ( ; i < n_samples; ++i ) {
     x = i * 2 / n_samples - 1;
     curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
   }
@@ -72,19 +65,17 @@ function makeDistortionCurve(amount) {
   ...
 
 distortion.curve = makeDistortionCurve(400);
-distortion.oversample = '4x';</pre>
+distortion.oversample = '4x';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

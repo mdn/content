@@ -2,55 +2,54 @@
 title: CSSNumericValue.div()
 slug: Web/API/CSSNumericValue/div
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- div()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - div()
 browser-compat: api.CSSNumericValue.div
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>div()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface divides the <code>CSSNumericValue</code> by the
-  supplied value.</p>
+The **`div()`** method of the
+{{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the
+supplied value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssNumericValue = CSSNumericValue.div(<em>number</em>);</pre>
+```js
+var cssNumericValue = CSSNumericValue.div(number);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>number</dt>
-  <dd>Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- number
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSMathProduct')}}.</p>
+A {{domxref('CSSMathProduct')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-</dl>
+- TypeError
+  - : Indicates that an invalid type was passed to the method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let mathProduct = CSS.px("24").div(CSS.percent("4"));
+```js
+let mathProduct = CSS.px("24").div(CSS.percent("4"));
 // Prints "calc(24px / 4%)"
-mathProduct.toString();</pre>
+mathProduct.toString();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

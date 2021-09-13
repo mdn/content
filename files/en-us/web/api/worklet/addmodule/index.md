@@ -2,95 +2,95 @@
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
 tags:
-- API
-- Background
-- Experimental
-- Houdini
-- Method
-- Multiprocessor
-- Processes
-- Reference
-- Tasks
-- Worklets
-- addModule
+  - API
+  - Background
+  - Experimental
+  - Houdini
+  - Method
+  - Multiprocessor
+  - Processes
+  - Reference
+  - Tasks
+  - Worklets
+  - addModule
 browser-compat: api.Worklet.addModule
 ---
-<div>{{APIRef("Worklets")}}{{SeeCompatTable}}</div>
+{{APIRef("Worklets")}}{{SeeCompatTable}}
 
-<p>The <code><strong>addModule()</strong></code> method of the
-    {{domxref("Worklet")}} interface loads the module in the given JavaScript file and
-    adds it to the current <code>Worklet</code>.</p>
+The **`addModule()`** method of the
+{{domxref("Worklet")}} interface loads the module in the given JavaScript file and
+adds it to the current `Worklet`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>addPromise</em> = <em>worklet</em>.addModule(<em>moduleURL</em>);
-<em>addPromise =</em> <em>worklet</em>.addModule(<em>moduleURL</em>, <em>options</em>);
-</pre>
+```js
+addPromise = worklet.addModule(moduleURL);
+addPromise = worklet.addModule(moduleURL, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>moduleURL</code></dt>
-  <dd>A {{jsxref("String")}} containing the URL of a JavaScript file with the module to
-    add.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object with any of the following options:
-    <ul>
-      <li><code>credentials</code>: A {{domxref("RequestCredentials")}} value that
-        indicates whether to send credentials (e.g. cookies and HTTP authentification)
-        when loading the module. Can be one of <code>"omit"</code>,
-        <code>"same-origin"</code>, or <code>"include"</code>. Defaults to
-        <code>"same-origin"</code>. See also {{domxref("Request.credentials")}}.</li>
-    </ul>
-  </dd>
-</dl>
+- `moduleURL`
+  - : A {{jsxref("String")}} containing the URL of a JavaScript file with the module to
+    add.
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with any of the following options:
 
-<p>A {{jsxref("Promise")}} that resolves once the module from the given URL has been
-  added. The promise doesn't return any value.</p>
+    - `credentials`: A {{domxref("RequestCredentials")}} value that
+      indicates whether to send credentials (e.g. cookies and HTTP authentification)
+      when loading the module. Can be one of `"omit"`,
+      `"same-origin"`, or `"include"`. Defaults to
+      `"same-origin"`. See also {{domxref("Request.credentials")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<p>If <code>addModule()</code> fails, it rejects the promise, delivering one of the
-  following errors to the rejection handler.</p>
+A {{jsxref("Promise")}} that resolves once the module from the given URL has been
+added. The promise doesn't return any value.
 
-<dl>
-  <dt><code>AbortError</code></dt>
-  <dd>The specified script is invalid or could not be loaded.</dd>
-  <dt><code>SyntaxError</code></dt>
-  <dd>The specified <code>moduleURL</code> is invalid.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+If `addModule()` fails, it rejects the promise, delivering one of the
+following errors to the rejection handler.
 
-<h3 id="AudioWorklet_example">AudioWorklet example</h3>
+- `AbortError`
+  - : The specified script is invalid or could not be loaded.
+- `SyntaxError`
+  - : The specified `moduleURL` is invalid.
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+## Examples
+
+### AudioWorklet example
+
+```js
+const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
 await audioWorklet.addModule('modules/bypassFilter.js', {
   credentials: 'omit',
 });
-</pre>
+```
 
-<h3 id="PaintWorklet_example">PaintWorklet example</h3>
+### PaintWorklet example
 
-<pre
-  class="brush: js">CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');</pre>
+```js
+CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+```
 
-<p>Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('paint()')}} function
-  can be used to include the image created by the worklet:</p>
+Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref('paint()')}} function
+can be used to include the image created by the worklet:
 
-<pre class="brush: css">@supports (background-image: paint(id)) {
+```css
+@supports (background-image: paint(id)) {
   h1 {
       background-image: paint(hollowHighlights, filled, 3px);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

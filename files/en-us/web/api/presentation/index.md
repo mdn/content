@@ -10,29 +10,27 @@ tags:
   - Reference
 browser-compat: api.Presentation
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
-<p>The <dfn><code>Presentation</code></dfn> can be defined as two possible user agents in the context: <em>Controlling user agent</em> and <em>Receiving user agent</em>.</p>
+The _`Presentation`_ can be defined as two possible user agents in the context: _Controlling user agent_ and _Receiving user agent_.
 
-<p>In controlling browsing context, the <code>Presentation</code> interface provides a mechanism to override the browser default behavior of launching presentation to external screen. In receiving browsing context, <code>Presentation</code> interface provides the access to the available presentation connections.</p>
+In controlling browsing context, the `Presentation` interface provides a mechanism to override the browser default behavior of launching presentation to external screen. In receiving browsing context, `Presentation` interface provides the access to the available presentation connections.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("Presentation.defaultRequest")}}</dt>
- <dd>In a <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a>, the <dfn><code>defaultRequest</code></dfn> attribute <em>MUST</em> return the <a href="https://www.w3.org/TR/presentation-api/#dfn-default-presentation-request">default presentation request</a> if any, <code>null</code> otherwise. In a <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context">receiving browsing context</a>, it <em>MUST</em> return <code>null</code>.</dd>
- <dt>{{DOMxRef("Presentation.receiver")}}</dt>
- <dd>In a <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent">receiving user agent</a>, the <dfn><code>receiver</code></dfn> attribute <em>MUST</em> return the {{DOMxRef("PresentationReceiver")}} instance associated with the <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context">receiving browsing context</a> and created by the <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent">receiving user agent</a> when the <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context">receiving browsing context</a> is created.</dd>
-</dl>
+- {{DOMxRef("Presentation.defaultRequest")}}
+  - : In a [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent), the _`defaultRequest`_ attribute _MUST_ return the [default presentation request](https://www.w3.org/TR/presentation-api/#dfn-default-presentation-request) if any, `null` otherwise. In a [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context), it _MUST_ return `null`.
+- {{DOMxRef("Presentation.receiver")}}
+  - : In a [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent), the _`receiver`_ attribute _MUST_ return the {{DOMxRef("PresentationReceiver")}} instance associated with the [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) and created by the [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent) when the [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) is created.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

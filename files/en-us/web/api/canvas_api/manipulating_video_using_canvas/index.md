@@ -11,67 +11,65 @@ tags:
   - Video
   - effects
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p>By combining the capabilities of the <a href="/en-US/docs/Web/HTML/Element/video"><code>video</code></a> element with a <a href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a>, you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.</p>
+By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
 
-<p>{{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}</p>
+{{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
-<h2 id="The_document_content">The document content</h2>
+## The document content
 
-<p>The HTML document used to render this content is shown below.</p>
+The HTML document used to render this content is shown below.
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;style&gt;
-      body {
-        background: black;
-        color: #CCCCCC;
-      }
-      #c2 {
-        background-image: url(media/foo.png);
-        background-repeat: no-repeat;
-      }
-      div {
-        float: left;
-        border : 1px solid #444444;
-        padding: 10px;
-        margin: 10px;
-        background: #3B3B3B;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body {
+            background: black;
+            color: #CCCCCC;
+          }
+          #c2 {
+            background-image: url(media/foo.png);
+            background-repeat: no-repeat;
+          }
+          div {
+            float: left;
+            border : 1px solid #444444;
+            padding: 10px;
+            margin: 10px;
+            background: #3B3B3B;
+          }
+        </style>
+      </head>
 
-  &lt;body&gt;
-    &lt;div&gt;
-      &lt;video id="video" src="media/video.mp4" controls="true" crossorigin="anonymous"/&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;canvas id="c1" width="160" height="96"&gt;&lt;/canvas&gt;
-      &lt;canvas id="c2" width="160" height="96"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-  &lt;script type="text/javascript" src="processor.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+      <body>
+        <div>
+          <video id="video" src="media/video.mp4" controls="true" crossorigin="anonymous"/>
+        </div>
+        <div>
+          <canvas id="c1" width="160" height="96"></canvas>
+          <canvas id="c2" width="160" height="96"></canvas>
+        </div>
+      <script type="text/javascript" src="processor.js"></script>
+      </body>
+    </html>
 
-<p>The key bits to take away from this are:</p>
+The key bits to take away from this are:
 
-<ol>
- <li>This document establishes two <a href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a> elements, with the IDs <code>c1</code> and <code>c2</code>.  Canvas <code>c1</code> is used to display the current frame of the original video, while <code>c2</code> is used to display the video after performing the chroma-keying effect; <code>c2</code> is preloaded with the still image that will be used to replace the green background in the video.</li>
- <li>The JavaScript code is imported from a script named <code>processor.js</code>.</li>
-</ol>
+1.  This document establishes two [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements, with the IDs `c1` and `c2`.  Canvas `c1` is used to display the current frame of the original video, while `c2` is used to display the video after performing the chroma-keying effect; `c2` is preloaded with the still image that will be used to replace the green background in the video.
+2.  The JavaScript code is imported from a script named `processor.js`.
 
-<h2 id="The_JavaScript_code">The JavaScript code</h2>
+## The JavaScript code
 
-<p>The JavaScript code in <code>processor.js</code> consists of three methods.</p>
+The JavaScript code in `processor.js` consists of three methods.
 
-<h3 id="Initializing_the_chroma-key_player">Initializing the chroma-key player</h3>
+### Initializing the chroma-key player
 
-<p>The <code>doLoad()</code> method is called when the HTML document initially loads.  This method's job is to prepare the variables needed by the chroma-key processing code, and to set up an event listener so we can detect when the user starts playing the video.</p>
+The `doLoad()` method is called when the HTML document initially loads.  This method's job is to prepare the variables needed by the chroma-key processing code, and to set up an event listener so we can detect when the user starts playing the video.
 
-<pre class="brush: js">  const processor = {};
+```js
+  const processor = {};
 
   processor.doLoad = function doLoad() {
     const video = document.getElementById('video');
@@ -89,17 +87,18 @@ tags:
         this.timerCallback();
       }, false);
   };
-</pre>
+```
 
-<p>This code grabs references to the elements in the HTML document that are of particular interest, namely the <code>video</code> element and the two <code>canvas</code> elements.  It also fetches references to the graphics contexts for each of the two canvases.  These will be used when we're actually doing the chroma-keying effect.</p>
+This code grabs references to the elements in the HTML document that are of particular interest, namely the `video` element and the two `canvas` elements.  It also fetches references to the graphics contexts for each of the two canvases.  These will be used when we're actually doing the chroma-keying effect.
 
-<p>Then <code>addEventListener()</code> is called to begin watching the <code>video</code> element so that we obtain notification when the user presses the play button on the video.  In response to the user beginning playback, this code fetches the width and height of the video, halving each (we will be halving the size of the video when we perform the chroma-keying effect), then calls the <code>timerCallback()</code> method to start watching the video and computing the visual effect.</p>
+Then `addEventListener()` is called to begin watching the `video` element so that we obtain notification when the user presses the play button on the video.  In response to the user beginning playback, this code fetches the width and height of the video, halving each (we will be halving the size of the video when we perform the chroma-keying effect), then calls the `timerCallback()` method to start watching the video and computing the visual effect.
 
-<h3 id="The_timer_callback">The timer callback</h3>
+### The timer callback
 
-<p>The timer callback is called initially when the video starts playing (when the "play" event occurs), then takes responsibility for establishing itself to be called periodically in order to launch the keying effect for each frame.</p>
+The timer callback is called initially when the video starts playing (when the "play" event occurs), then takes responsibility for establishing itself to be called periodically in order to launch the keying effect for each frame.
 
-<pre class="brush: js">  processor.timerCallback = function timerCallback() {
+```js
+  processor.timerCallback = function timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
@@ -108,61 +107,60 @@ tags:
         this.timerCallback();
       }, 0);
   };
-</pre>
+```
 
-<p>The first thing the callback does is check to see if the video is even playing; if it's not, the callback returns immediately without doing anything.</p>
+The first thing the callback does is check to see if the video is even playing; if it's not, the callback returns immediately without doing anything.
 
-<p>Then it calls the <code>computeFrame()</code> method, which performs the chroma-keying effect on the current video frame.</p>
+Then it calls the `computeFrame()` method, which performs the chroma-keying effect on the current video frame.
 
-<p>The last thing the callback does is call <code>setTimeout()</code> to schedule itself to be called again as soon as possible.  In the real world, you would probably schedule this to be done based on knowledge of the video's frame rate.</p>
+The last thing the callback does is call `setTimeout()` to schedule itself to be called again as soon as possible.  In the real world, you would probably schedule this to be done based on knowledge of the video's frame rate.
 
-<h3 id="Manipulating_the_video_frame_data">Manipulating the video frame data</h3>
+### Manipulating the video frame data
 
-<p>The <code>computeFrame()</code> method, shown below, is responsible for actually fetching a frame of data and performing the chroma-keying effect.</p>
+The `computeFrame()` method, shown below, is responsible for actually fetching a frame of data and performing the chroma-keying effect.
 
-<pre class="brush: js">  processor.computeFrame = function computeFrame() {
+```js
+  processor.computeFrame = function computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     const length = frame.data.length;
 
-    for (let i = 0; i &lt; length; i += 4) {
+    for (let i = 0; i < length; i += 4) {
       const red = data[i + 0];
       const green = data[i + 1];
       const blue = data[i + 2];
-      if (green &gt; 100 &amp;&amp; red &gt; 100 &amp;&amp; blue &lt; 43) {
+      if (green > 100 && red > 100 && blue < 43) {
         data[i + 3] = 0;
       }
     }
     this.ctx2.putImageData(frame, 0, 0);
   };
-</pre>
+```
 
-<p>When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:</p>
+When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:
 
-<p><img src="video.png"></p>
+![](video.png)
 
-<p>In line 2, that frame of video is copied into the graphics context <code>ctx1</code> of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size.  Note that you can pass the video element into the context's <code>drawImage()</code> method to draw the current video frame into the context.  The result is:</p>
+In line 2, that frame of video is copied into the graphics context `ctx1` of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size.  Note that you can pass the video element into the context's `drawImage()` method to draw the current video frame into the context.  The result is:
 
-<p><img src="sourcectx.png"></p>
+![](sourcectx.png)
 
-<p>Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the <code>getImageData()</code> method on the first context.  This provides raw 32-bit pixel image data we can then manipulate.  Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.</p>
+Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the `getImageData()` method on the first context.  This provides raw 32-bit pixel image data we can then manipulate.  Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.
 
-<p>The <code>for</code> loop that begins on line 6 scans through the frame's pixels, pulling out the red, green, and blue values for each pixel, and compares the values against predetermined numbers that are used to detect the green screen that will be replaced with the still background image imported from <code>foo.png</code>.</p>
+The `for` loop that begins on line 6 scans through the frame's pixels, pulling out the red, green, and blue values for each pixel, and compares the values against predetermined numbers that are used to detect the green screen that will be replaced with the still background image imported from `foo.png`.
 
-<p>Every pixel in the frame's image data that is found that is within the parameters that are considered to be part of the green screen has its alpha value replaced with a zero, indicating that the pixel is entirely transparent.  As a result, the final image has the entire green screen area 100% transparent, so that when it's drawn into the destination context in line 13, the result is an overlay onto the static backdrop.</p>
+Every pixel in the frame's image data that is found that is within the parameters that are considered to be part of the green screen has its alpha value replaced with a zero, indicating that the pixel is entirely transparent.  As a result, the final image has the entire green screen area 100% transparent, so that when it's drawn into the destination context in line 13, the result is an overlay onto the static backdrop.
 
-<p>The resulting image looks like this:</p>
+The resulting image looks like this:
 
-<p><img src="output.png"></p>
+![](output.png)
 
-<p>This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.</p>
+This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.
 
-<p><a href="https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying">View the full source for this example</a>.</p>
+[View the full source for this example](https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Learning area: Video and audio content</a></li>
-</ul>
+- [Web media technologies](/en-US/docs/Web/Media)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)

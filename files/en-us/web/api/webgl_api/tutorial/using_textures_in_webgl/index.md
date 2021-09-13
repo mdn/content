@@ -5,23 +5,22 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
-<p>Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.</p>
+Now that our sample program has a rotating 3D cube, let's map a texture onto it instead of having its faces be solid colors.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example uses the <a href="https://glmatrix.net/">glMatrix</a> library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Loading_textures">Loading textures</h2>
+## Loading textures
 
-<p>The first thing to do is add code to load the textures. In our case, we'll be using a single texture, mapped onto all six sides of our rotating cube, but the same technique can be used for any number of textures.</p>
+The first thing to do is add code to load the textures. In our case, we'll be using a single texture, mapped onto all six sides of our rotating cube, but the same technique can be used for any number of textures.
 
-<div class="note"><p><strong>Note:</strong> It's important to note that the loading of textures follows <a href="/en-US/docs/Web/HTTP/Access_control_CORS">cross-domain rules</a>; that is, you can only load textures from sites for which your content has CORS approval. See <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures">Cross-domain textures below</a> for details.</p></div>
+> **Note:** It's important to note that the loading of textures follows [cross-domain rules](/en-US/docs/Web/HTTP/Access_control_CORS); that is, you can only load textures from sites for which your content has CORS approval. See [Cross-domain textures below](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures) for details.
 
-<p>The code that loads the texture looks like this:</p>
+The code that loads the texture looks like this:
 
-<pre class="brush: js">//
+```js
+//
 // Initialize a texture and load an image.
 // When the image finished loading copy it into the texture.
 //
@@ -55,7 +54,7 @@ function loadTexture(gl, url) {
     // WebGL1 has different requirements for power of 2 images
     // vs non power of 2 images so check if the image is a
     // power of 2 in both dimensions.
-    if (isPowerOf2(image.width) &amp;&amp; isPowerOf2(image.height)) {
+    if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
        // Yes, it's a power of 2. Generate mips.
        gl.generateMipmap(gl.TEXTURE_2D);
     } else {
@@ -72,39 +71,44 @@ function loadTexture(gl, url) {
 }
 
 function isPowerOf2(value) {
-  return (value &amp; (value - 1)) == 0;
+  return (value & (value - 1)) == 0;
 }
-</pre>
+```
 
-<p>The <code>loadTexture()</code> routine starts by creating a WebGL texture object <code>texture</code> by calling the WebGL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} function. It then uploads a single blue pixel using {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}. This makes the texture immediately usable as a solid blue color even though it may take a few moments for our image to download.</p>
+The `loadTexture()` routine starts by creating a WebGL texture object `texture` by calling the WebGL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} function. It then uploads a single blue pixel using {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}. This makes the texture immediately usable as a solid blue color even though it may take a few moments for our image to download.
 
-<p>To load the texture from the image file, it then creates an <code>Image</code> object and assigns the <code>src</code> to the url for our image we wish to use as our texture. The function we assign to <code>image.onload</code> will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we setup filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.</p>
+To load the texture from the image file, it then creates an `Image` object and assigns the `src` to the url for our image we wish to use as our texture. The function we assign to `image.onload` will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we setup filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.
 
-<p>WebGL1 can only use non power of 2 textures with filtering set to <code>NEAREST</code> or <code>LINEAR</code> and it can not generate a mipmap for them. Their wrapping mode must also be set to <code>CLAMP_TO_EDGE</code>. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to <code>REPEAT</code> or <code>MIRRORED_REPEAT</code>.</p>
+WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it can not generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
 
-<p>An example of a repeated texture is tiling an image of a few bricks to cover a brick wall.</p>
+An example of a repeated texture is tiling an image of a few bricks to cover a brick wall.
 
-<p>Mipmapping and UV repeating can be disabled with {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}}. This will allow non-power-of-two (NPOT) textures at the expense of mipmapping, UV wrapping, UV tiling, and your control over how the device will handle your texture.</p>
+Mipmapping and UV repeating can be disabled with {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}}. This will allow non-power-of-two (NPOT) textures at the expense of mipmapping, UV wrapping, UV tiling, and your control over how the device will handle your texture.
 
-<pre class="brush: js">// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
+```js
+// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 // Prevents s-coordinate wrapping (repeating).
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 // Prevents t-coordinate wrapping (repeating).
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</pre>
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+```
 
-<p>Again, with these parameters, compatible WebGL devices will automatically accept any resolution for that texture (up to their maximum dimensions). Without performing the above configuration, WebGL requires all samples of NPOT textures to fail by returning transparent black: <code>rgba(0,0,0,0)</code>.</p>
+Again, with these parameters, compatible WebGL devices will automatically accept any resolution for that texture (up to their maximum dimensions). Without performing the above configuration, WebGL requires all samples of NPOT textures to fail by returning transparent black: `rgba(0,0,0,0)`.
 
-<p>To load the image, add a call to our <code>loadTexture()</code> function within our <code>main()</code> function. This can be added after the <code>initBuffers(gl)</code> call.</p>
+To load the image, add a call to our `loadTexture()` function within our `main()` function. This can be added after the `initBuffers(gl)` call.
 
-<pre class="brush: js">// Load texture
-const texture = loadTexture(gl, 'cubetexture.png');</pre>
+```js
+// Load texture
+const texture = loadTexture(gl, 'cubetexture.png');
+```
 
-<h2 id="Mapping_the_texture_onto_the_faces">Mapping the texture onto the faces</h2>
+## Mapping the texture onto the faces
 
-<p>At this point, the texture is loaded and ready to use. But before we can use it, we need to establish the mapping of the texture coordinates to the vertices of the faces of our cube. This replaces all the previously existing code for configuring colors for each of the cube's faces in <code>initBuffers()</code>.</p>
+At this point, the texture is loaded and ready to use. But before we can use it, we need to establish the mapping of the texture coordinates to the vertices of the faces of our cube. This replaces all the previously existing code for configuring colors for each of the cube's faces in `initBuffers()`.
 
-<pre class="brush: js">  const textureCoordBuffer = gl.createBuffer();
+```js
+  const textureCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
   const textureCoordinates = [
@@ -149,23 +153,24 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
     textureCoord: textureCoordBuffer,
     indices: indexBuffer,
   };
-</pre>
+```
 
-<p>First, this code creates a WebGL buffer into which we'll store the texture coordinates for each face, then we bind that buffer as the array we'll be writing into.</p>
+First, this code creates a WebGL buffer into which we'll store the texture coordinates for each face, then we bind that buffer as the array we'll be writing into.
 
-<p>The <code>textureCoordinates</code> array defines the texture coordinates corresponding to each vertex of each face. Note that the texture coordinates range from 0.0 to 1.0; the dimensions of textures are normalized to a range of 0.0 to 1.0 regardless of their actual size, for the purpose of texture mapping.</p>
+The `textureCoordinates` array defines the texture coordinates corresponding to each vertex of each face. Note that the texture coordinates range from 0.0 to 1.0; the dimensions of textures are normalized to a range of 0.0 to 1.0 regardless of their actual size, for the purpose of texture mapping.
 
-<p>Once we've set up the texture mapping array, we pass the array into the buffer, so that WebGL has that data ready for its use.</p>
+Once we've set up the texture mapping array, we pass the array into the buffer, so that WebGL has that data ready for its use.
 
-<h2 id="Updating_the_shaders">Updating the shaders</h2>
+## Updating the shaders
 
-<p>The shader program also needs to be updated to use the textures instead of solid colors.</p>
+The shader program also needs to be updated to use the textures instead of solid colors.
 
-<h3 id="The_vertex_shader">The vertex shader</h3>
+### The vertex shader
 
-<p>We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.</p>
+We need to replace the vertex shader so that instead of fetching color data, it instead fetches the texture coordinate data.
 
-<pre class="brush: js">  const vsSource = `
+```js
+  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec2 aTextureCoord;
 
@@ -179,15 +184,16 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
       vTextureCoord = aTextureCoord;
     }
   `;
-</pre>
+```
 
-<p>The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the vertex shader; this will indicate the location within the texture corresponding to the vertex.</p>
+The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the vertex shader; this will indicate the location within the texture corresponding to the vertex.
 
-<h3 id="The_fragment_shader">The fragment shader</h3>
+### The fragment shader
 
-<p>The fragment shader likewise needs to be updated:</p>
+The fragment shader likewise needs to be updated:
 
-<pre class="brush: js">  const fsSource = `
+```js
+  const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
@@ -196,15 +202,16 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
       gl_FragColor = texture2D(uSampler, vTextureCoord);
     }
   `;
-</pre>
+```
 
-<p>Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the <strong>texel</strong> (that is, the pixel within the texture) based on the value of <code>vTextureCoord</code> which like the colors is interpolated bewteen vertices.</p>
+Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the **texel** (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated bewteen vertices.
 
-<h3 id="Attribute_and_Uniform_Locations">Attribute and Uniform Locations</h3>
+### Attribute and Uniform Locations
 
-<p>Because we changed an attribute and added a uniform we need to look up their locations</p>
+Because we changed an attribute and added a uniform we need to look up their locations
 
-<pre class="brush: js">  const programInfo = {
+```js
+  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -215,15 +222,17 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
       modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
       uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
     },
-  };</pre>
+  };
+```
 
-<h2 id="Drawing_the_textured_cube">Drawing the textured cube</h2>
+## Drawing the textured cube
 
-<p>The changes to the <code>drawScene()</code> function are simple.</p>
+The changes to the `drawScene()` function are simple.
 
-<p>First, the code to specify the colors buffer is gone, replaced with this:</p>
+First, the code to specify the colors buffer is gone, replaced with this:
 
-<pre class="brush: js">// tell webgl how to pull out the texture coordinates from buffer
+```js
+// tell webgl how to pull out the texture coordinates from buffer
 {
     const num = 2; // every coordinate composed of 2 values
     const type = gl.FLOAT; // the data in the buffer is 32 bit float
@@ -234,11 +243,12 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
     gl.vertexAttribPointer(programInfo.attribLocations.textureCoord, num, type, normalize, stride, offset);
     gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }
-</pre>
+```
 
-<p>Then add code to specify the texture to map onto the faces, just before draw:</p>
+Then add code to specify the texture to map onto the faces, just before draw:
 
-<pre class="brush: js">  // Tell WebGL we want to affect texture unit 0
+```js
+  // Tell WebGL we want to affect texture unit 0
   gl.activeTexture(gl.TEXTURE0);
 
   // Bind the texture to texture unit 0
@@ -246,43 +256,38 @@ const texture = loadTexture(gl, 'cubetexture.png');</pre>
 
   // Tell the shader we bound the texture to texture unit 0
   gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
-</pre>
+```
 
-<p>WebGL provides a minimum of 8 texture units; the first of these is <code>gl.TEXTURE0</code>. We tell WebGL we want to affect unit 0. We then call {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} which binds the texture to the <code>TEXTURE_2D</code> bind point of texture unit 0. We then tell the shader that for the <code>uSampler</code> use texture unit 0.</p>
+WebGL provides a minimum of 8 texture units; the first of these is `gl.TEXTURE0`. We tell WebGL we want to affect unit 0. We then call {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} which binds the texture to the `TEXTURE_2D` bind point of texture unit 0. We then tell the shader that for the `uSampler` use texture unit 0.
 
-<p>Lastly, add <code>texture</code> as a parameter to the <code>drawScene()</code> function, both where it is defined and where it is called.</p>
+Lastly, add `texture` as a parameter to the `drawScene()` function, both where it is defined and where it is called.
 
-<pre class="brush: js">drawScene(gl, programInfo, buffers, texture, deltaTime);
+```js
+drawScene(gl, programInfo, buffers, texture, deltaTime);
 ...
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {
-</pre>
+```
 
-<p>At this point, the rotating cube should be good to go.</p>
+At this point, the rotating cube should be good to go.
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample6/">Open this demo on a new page</a></p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample6/)
 
-<h2 id="Cross-domain_textures">Cross-domain textures</h2>
+## Cross-domain textures
 
-<p>Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See <a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control</a> for details on CORS.</p>
+Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/Access_control_CORS) for details on CORS.
 
-<p>Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from <code>file:///</code> URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">How do you set up a local testing server?</a> for help.</p>
+Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server) for help.
 
-<p>See this <a href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">hacks.mozilla.org article</a> for an explanation of how to use CORS-approved images as WebGL textures, with <a href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">a self-contained example</a>.</p>
+See this [hacks.mozilla.org article](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures, with [a self-contained example](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-<div class="note">
-<p><strong>Note:</strong> CORS support for WebGL textures and the <code>crossOrigin</code> attribute for image elements is implemented in {{Gecko("8.0")}}.</p>
-</div>
+> **Note:** CORS support for WebGL textures and the `crossOrigin` attribute for image elements is implemented in {{Gecko("8.0")}}.
 
-<p>Tainted (write-only) 2D canvases can't be used as WebGL textures. A 2D {{ HTMLElement("canvas") }} becomes tainted, for example, when a cross-domain image is drawn on it.</p>
+Tainted (write-only) 2D canvases can't be used as WebGL textures. A 2D {{ HTMLElement("canvas") }} becomes tainted, for example, when a cross-domain image is drawn on it.
 
-<div class="note">
-<p><strong>Note:</strong> CORS support for Canvas 2D <code>drawImage</code> is implemented in {{Gecko("9.0")}}. This means that using a cross-domain image with CORS approval does no longer taint the 2D canvas, so the 2D canvas remains usable as the source of a WebGL texture.</p>
-</div>
+> **Note:** CORS support for Canvas 2D `drawImage` is implemented in {{Gecko("9.0")}}. This means that using a cross-domain image with CORS approval does no longer taint the 2D canvas, so the 2D canvas remains usable as the source of a WebGL texture.
 
-<div class="note">
-<p><strong>Note:</strong> CORS support for cross-domain videos and the <code>crossorigin</code> attribute for {{ HTMLElement("video") }} elements is implemented in {{Gecko("12.0")}}.</p>
-</div>
+> **Note:** CORS support for cross-domain videos and the `crossorigin` attribute for {{ HTMLElement("video") }} elements is implemented in {{Gecko("12.0")}}.
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

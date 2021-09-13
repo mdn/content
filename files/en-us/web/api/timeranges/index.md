@@ -10,38 +10,34 @@ tags:
   - Reference
 browser-compat: api.TimeRanges
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>When loading a media resource for use by an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the <strong><code>TimeRanges</code></strong> interface is used for representing the time ranges of the media resource that have been buffered, the time ranges that have been played, and the time ranges that are seekable.</p>
+When loading a media resource for use by an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the **`TimeRanges`** interface is used for representing the time ranges of the media resource that have been buffered, the time ranges that have been played, and the time ranges that are seekable.
 
-<p>A <code>TimeRanges</code> object includes one or more ranges of time, each specified by a starting time offset and an ending time offset. You reference each time range by using the <code>start()</code> and <code>end()</code> methods, passing the index number of the time range you want to retrieve.</p>
+A `TimeRanges` object includes one or more ranges of time, each specified by a starting time offset and an ending time offset. You reference each time range by using the `start()` and `end()` methods, passing the index number of the time range you want to retrieve.
 
-<h2>Normalized TimeRanges objects</h2>
+## Normalized TimeRanges objects
 
-<p>Several members of {{domxref("HTMLMediaElement")}} objects return a <strong>normalized TimeRanges object</strong> — which <a href="https://html.spec.whatwg.org/multipage/media.html#normalised-timeranges-object">the spec describes</a> as having the following characteristics:</p>
+Several members of {{domxref("HTMLMediaElement")}} objects return a **normalized TimeRanges object** — which [the spec describes](https://html.spec.whatwg.org/multipage/media.html#normalised-timeranges-object) as having the following characteristics:
 
-<p><em>The ranges in such an object are ordered, don't overlap, and don't touch (adjacent ranges are folded into one bigger range). A range can be empty (referencing just a single moment in time).</em></p>
+_The ranges in such an object are ordered, don't overlap, and don't touch (adjacent ranges are folded into one bigger range). A range can be empty (referencing just a single moment in time)._
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("TimeRanges.length")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an <code>unsigned long</code> representing the number of time ranges represented by the time range object.</dd>
-</dl>
+- {{domxref("TimeRanges.length")}} {{ReadOnlyInline}}
+  - : Returns an `unsigned long` representing the number of time ranges represented by the time range object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("TimeRanges.start()")}}</dt>
- <dd>Returns the time for the start of the range with the specified index.</dd>
- <dt>{{domxref("TimeRanges.end()")}}</dt>
- <dd>Returns the time for the end of the specified range.</dd>
-</dl>
+- {{domxref("TimeRanges.start()")}}
+  - : Returns the time for the start of the range with the specified index.
+- {{domxref("TimeRanges.end()")}}
+  - : Returns the time for the end of the specified range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

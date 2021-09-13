@@ -2,46 +2,49 @@
 title: PerformanceObserver.supportedEntryTypes
 slug: Web/API/PerformanceObserver/supportedEntryTypes
 tags:
-- API
-- Property
-- Reference
-- Web Performance
-- PerformanceObserver
-- supportedEntryTypes
+  - API
+  - Property
+  - Reference
+  - Web Performance
+  - PerformanceObserver
+  - supportedEntryTypes
 browser-compat: api.PerformanceObserver.supportedEntryTypes
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>supportedEntryTypes</code></strong> read-only property of the
-    {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.</p>
+The **`supportedEntryTypes`** read-only property of the
+{{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
-<p>As the list of supported entries varies per browser and is evolving, this property allows web developers to check which are available.</p>
+As the list of supported entries varies per browser and is evolving, this property allows web developers to check which are available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var supportedEntryTypes = PerformanceObserver.supportedEntryTypes;
-</pre>
+```js
+var supportedEntryTypes = PerformanceObserver.supportedEntryTypes;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("PerformanceEntry.entryType")}} values.</p>
+An array of {{domxref("PerformanceEntry.entryType")}} values.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3>Using the console to check supported types</h3>
+### Using the console to check supported types
 
-<p>To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a browser supports enter <kbd>PerformanceObserver.supportedEntryTypes</kbd> into the console. This will return an array of <code>EntryType</code> values.</p>
+To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a browser supports enter <kbd>PerformanceObserver.supportedEntryTypes</kbd> into the console. This will return an array of `EntryType` values.
 
-<pre class="brush: js">PerformanceObserver.supportedEntryTypes
+```js
+PerformanceObserver.supportedEntryTypes
 
 // returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "longtask", "mark", "measure", "navigation", "paint", "resource"] in Chrome 89
-</pre>
+```
 
-<h3>Checking for unsupported types</h3>
+### Checking for unsupported types
 
-<p>The following function checks for support of an array of possible entry types. The unsupported types are logged to the console, however this information could be logged to client-side analytics to indicate that the particular type could not be observed.</p>
+The following function checks for support of an array of possible entry types. The unsupported types are logged to the console, however this information could be logged to client-side analytics to indicate that the particular type could not be observed.
 
-<pre class="brush:js">function detectSupport(entryTypes) {
+```js
+function detectSupport(entryTypes) {
   for (const entryType of entryTypes) {
     if (!PerformanceObserver.supportedEntryTypes.includes(entryType)) {
       console.log(entryType);
@@ -49,12 +52,13 @@ browser-compat: api.PerformanceObserver.supportedEntryTypes
   }
 }
 
-detectSupport(["resource", "mark", "frame"]);</pre>
+detectSupport(["resource", "mark", "frame"]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
- <h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
- <p>{{Compat}}</p>
+{{Compat}}

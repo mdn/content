@@ -2,65 +2,65 @@
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
 tags:
-- API
-- CSSOM View
-- Method
-- NeedsMarkupWork
-- Reference
+  - API
+  - CSSOM View
+  - Method
+  - NeedsMarkupWork
+  - Reference
 browser-compat: api.Window.scrollTo
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>Window.scrollTo()</code></strong> scrolls to a particular set of
-  coordinates in the document.</p>
+**`Window.scrollTo()`** scrolls to a particular set of
+coordinates in the document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.scrollTo(<var>x-coord</var>, <var>y-coord</var>)
-window.scrollTo(<var>options</var>)
-</pre>
+```js
+window.scrollTo(x-coord, y-coord)
+window.scrollTo(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>x-coord</var></code> is the pixel along the horizontal axis of the
-    document that you want displayed in the upper left.</li>
-  <li><code><var>y-coord</var></code> is the pixel along the vertical axis of the document
-    that you want displayed in the upper left.</li>
-</ul>
+- `x-coord` is the pixel along the horizontal axis of the
+  document that you want displayed in the upper left.
+- `y-coord` is the pixel along the vertical axis of the document
+  that you want displayed in the upper left.
 
-<p>- or -</p>
+\- or -
 
-<ul>
-  <li><code><var>options</var></code> is a {{domxref("ScrollToOptions")}} dictionary.</li>
-</ul>
+- `options` is a {{domxref("ScrollToOptions")}} dictionary.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">window.scrollTo(0, 1000);
-</pre>
+```js
+window.scrollTo(0, 1000);
+```
 
-<p>Using <code><var>options</var></code>:</p>
+Using `options`:
 
-<pre class="brush: js">window.scrollTo({
+```js
+window.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{domxref("Window.scroll()")}} is effectively the same as this method. For relative
-  scrolling, see {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}},
-  and {{domxref("Window.scrollByPages()")}}.</p>
+{{domxref("Window.scroll()")}} is effectively the same as this method. For relative
+scrolling, see {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}},
+and {{domxref("Window.scrollByPages()")}}.
 
-<p>For scrolling elements, see {{domxref("Element.scrollTop")}} and
-  {{domxref("Element.scrollLeft")}}.</p>
+For scrolling elements, see {{domxref("Element.scrollTop")}} and
+{{domxref("Element.scrollLeft")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

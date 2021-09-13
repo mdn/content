@@ -8,33 +8,30 @@ tags:
   - BackgroundFetchUpdateUIEvent
 browser-compat: api.BackgroundFetchUpdateUIEvent
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>BackgroundFetchUpdateUIEvent</code></strong> interface of the {{domxref('Background Fetch API','','',' ')}} is an event type passed to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch. </p>
+The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is an event type passed to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}, and provides a method for updating the title and icon of the app to inform a user of the success or failure of a background fetch.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}}</dt>
- <dd>Creates a new <code>BackgroundFetchUIEvent</code> object. This constructor is not typically used, as the browser creates these objects itself and passed them to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}.</dd>
-</dl>
+- {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}}
+  - : Creates a new `BackgroundFetchUIEvent` object. This constructor is not typically used, as the browser creates these objects itself and passed them to {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.onbackgroundfetchfail")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}.</em></p>
+_This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}</dt>
-  <dd>Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.</dd>
-</dl>
+- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}}
+  - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the <code>backgroundfetchsuccess</code> event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.</p>
+In this example, the `backgroundfetchsuccess` event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.
 
-<pre class="brush: js">addEventListener('backgroundfetchsuccess', (event) => {
+```js
+addEventListener('backgroundfetchsuccess', (event) => {
   const bgFetch = event.registration;
 
   event.waitUntil(async function() {
@@ -54,12 +51,13 @@ browser-compat: api.BackgroundFetchUpdateUIEvent
     // Update the progress notification.
     event.updateUI({ title: 'Episode 5 ready to listen!' });
   }());
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

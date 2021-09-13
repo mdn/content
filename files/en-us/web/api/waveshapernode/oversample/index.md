@@ -10,63 +10,43 @@ tags:
   - oversample
 browser-compat: api.WaveShaperNode.oversample
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>oversample</code> property of the {{ domxref("WaveShaperNode") }} interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.</p>
+The `oversample` property of the {{ domxref("WaveShaperNode") }} interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.
 
-<p>Once applied, the number of samples is reduced to its initial numbers. This leads to better results by avoiding some aliasing, but comes at the expense of a lower precision shaping curve.</p>
+Once applied, the number of samples is reduced to its initial numbers. This leads to better results by avoiding some aliasing, but comes at the expense of a lower precision shaping curve.
 
-<p>The possible <code>oversample</code> values are:</p>
+The possible `oversample` values are:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Effect</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>'none'</code></td>
-   <td>Do not perform any oversampling.</td>
-  </tr>
-  <tr>
-   <td><code>'2x'</code></td>
-   <td>Double the amount of samples before applying the shaping curve.</td>
-  </tr>
-  <tr>
-   <td><code>'4x'</code></td>
-   <td>Multiply by 4 the amount of samples before applying the shaping curve.</td>
-  </tr>
- </tbody>
-</table>
+| Value    | Effect                                                                 |
+| -------- | ---------------------------------------------------------------------- |
+| `'none'` | Do not perform any oversampling.                                       |
+| `'2x'`   | Double the amount of samples before applying the shaping curve.        |
+| `'4x'`   | Multiply by 4 the amount of samples before applying the shaping curve. |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>distortion</em>.oversample = <em>enumeratedValue</em>;
-</pre>
+```js
+distortion.oversample = enumeratedValue;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
- <li><em>distortion</em> is a {{domxref("WaveShaperNode")}}.</li>
- <li><em>enumeratedValue</em> is one of <code>'none'</code>, <code>'2x'</code>, or <code>'4x'</code>.</li>
-</ul>
+- _distortion_ is a {{domxref("WaveShaperNode")}}.
+- _enumeratedValue_ is one of `'none'`, `'2x'`, or `'4x'`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example"><code>BaseAudioContext.createWaveShaper()</code></a> for example code.</p>
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

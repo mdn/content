@@ -6,42 +6,27 @@ tags:
   - Reference
   - Web NFC
 ---
-<p>{{DefaultAPISidebar("Web NFC API")}}{{Draft}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Web NFC API")}}{{Draft}}{{SeeCompatTable}}
 
-<p>The Web NFC API allows exchanging data over NFC via light-weight NFC Data Exchange Format (NDEF) messages.</p>
+The Web NFC API allows exchanging data over NFC via light-weight NFC Data Exchange Format (NDEF) messages.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Devices and tags have to be formatted and recorded specifically to support NDEF record format to be used with Web NFC. Low-level operations are currently not supported by the API, however there is a public discussion about API that would add such functuionality.</p>
-</div>
+> **Note:** Devices and tags have to be formatted and recorded specifically to support NDEF record format to be used with Web NFC. Low-level operations are currently not supported by the API, however there is a public discussion about API that would add such functuionality.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{DOMxRef("NDEFMessage")}}</dt>
- <dd>Interface that represents NDEF messages that can be received from or sent to a compatible tag via a <code>NDEFReader</code> object. A message is composed of metadata and NDEF Records.</dd>
- <dt>{{DOMxRef("NDEFReader")}}</dt>
- <dd>Interface that enables reading and writing messages from compatible NFC tags. The messages are represented as <code>NDEFMessage</code> objects.</dd>
- <dt>{{DOMxRef("NDEFRecord")}}</dt>
- <dd>Interface that represents NDEF records that can be included in an NDEF message.</dd>
-</dl>
+- {{DOMxRef("NDEFMessage")}}
+  - : Interface that represents NDEF messages that can be received from or sent to a compatible tag via a `NDEFReader` object. A message is composed of metadata and NDEF Records.
+- {{DOMxRef("NDEFReader")}}
+  - : Interface that enables reading and writing messages from compatible NFC tags. The messages are represented as `NDEFMessage` objects.
+- {{DOMxRef("NDEFRecord")}}
+  - : Interface that represents NDEF records that can be included in an NDEF message.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/web-nfc/">Web NFC</a></td>
-   <td>Draft</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                             | Status | Comment |
+| ----------------------------------------- | ------ | ------- |
+| [Web NFC](https://w3c.github.io/web-nfc/) | Draft  |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.NDEFReader")}}</p>
+{{Compat("api.NDEFReader")}}

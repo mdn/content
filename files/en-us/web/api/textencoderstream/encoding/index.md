@@ -10,29 +10,32 @@ tags:
   - Read-only
 browser-compat: api.TextEncoderStream.encoding
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>encoding</code></strong> read-only property of the {{domxref("TextEncoderStream")}} interface returns a
-  {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the current <code>TextEncoderStream</code> object.</p>
+The **`encoding`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a
+{{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the current `TextEncoderStream` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>encoding</var> = <var>TextEncoderStream</var>.encoding;</pre>
+    var encoding = TextEncoderStream.encoding;
 
-<h3>Value</h3>
-<p>A {{DOMxRef("DOMString")}} containing <code>utf-8</code> encoded data.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{DOMxRef("DOMString")}} containing `utf-8` encoded data.
 
-<p>The following example demonstrates how to return <code>encoding</code> from a <code>TextEncoderStream</code> object.</p>
+## Examples
 
-<pre class="brush:js">stream = new TextEncoderStream();
-console.log(stream.encoding);</pre>
+The following example demonstrates how to return `encoding` from a `TextEncoderStream` object.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextEncoderStream();
+console.log(stream.encoding);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

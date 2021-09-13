@@ -2,70 +2,68 @@
 title: MediaTrackSettings.sampleRate
 slug: Web/API/MediaTrackSettings/sampleRate
 tags:
-- API
-- Audio
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- WebRTC
-- sampleRate
+  - API
+  - Audio
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - WebRTC
+  - sampleRate
 browser-compat: api.MediaTrackSettings.sampleRate
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>sampleRate</strong></code> property is an integer indicating how many
-  audio samples per second the {{domxref("MediaStreamTrack")}} is currently configured
-  for. This lets you determine what value was selected to comply with your specified
-  constraints for this property's value as described in the
-  {{domxref("MediaTrackConstraints.sampleRate")}} property you provided when calling
-  either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`sampleRate`** property is an integer indicating how many
+audio samples per second the {{domxref("MediaStreamTrack")}} is currently configured
+for. This lets you determine what value was selected to comply with your specified
+constraints for this property's value as described in the
+{{domxref("MediaTrackConstraints.sampleRate")}} property you provided when calling
+either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.sampleRate")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>sampleRate</em> = <em>MediaTrackSettings</em>.sampleRate;
-</pre>
+```js
+var sampleRate = MediaTrackSettings.sampleRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating how many samples each second of audio data includes. Common
-  values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000
-  (commonly used in audio mastering and post-production), and 192,000 (used for
-  high-resolution audio in professional recording and mastering sessions). However, lower
-  values are often used to reduce bandwidth requirements; 8,000 samples per second is
-  adequate for comprehensible albeit imperfect human speech, and both 11,025 FPS and
-  22,050 FPS are often used for low-bandwidth, reduced quality sound and music.</p>
+An integer value indicating how many samples each second of audio data includes. Common
+values include 44,100 (standard CD audio), 48,000 (standard digital audio), 96,000
+(commonly used in audio mastering and post-production), and 192,000 (used for
+high-resolution audio in professional recording and mastering sessions). However, lower
+values are often used to reduce bandwidth requirements; 8,000 samples per second is
+adequate for comprehensible albeit imperfect human speech, and both 11,025 FPS and
+22,050 FPS are often used for low-bandwidth, reduced quality sound and music.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.sampleRate")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.sampleRate")}}
+- {{domxref("MediaTrackSettings")}}

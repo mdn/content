@@ -2,105 +2,104 @@
 title: RTCRtpReceiver.getCapabilities() static function
 slug: Web/API/RTCRtpReceiver/getCapabilities
 tags:
-- API
-- Audio
-- Codecs
-- Compatibility
-- Media
-- Method
-- Negotiation
-- RTCRtpReceiver
-- Reference
-- Static
-- Static Function
-- Video
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- capabilities
-- getCapabilities
+  - API
+  - Audio
+  - Codecs
+  - Compatibility
+  - Media
+  - Method
+  - Negotiation
+  - RTCRtpReceiver
+  - Reference
+  - Static
+  - Static Function
+  - Video
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - capabilities
+  - getCapabilities
 browser-compat: api.RTCRtpReceiver.getCapabilities
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <em>static function</em>
-  <strong><code>RTCRtpReceiver.getCapabilities()</code></strong> returns
-  an {{domxref("RTCRtpCapabilities")}} object describing the codecs and capabilities
-  supported by {{domxref("RTCRtpReceiver")}}s on the current device.</p>
+The _static function_
+**`RTCRtpReceiver.getCapabilities()`** returns
+an {{domxref("RTCRtpCapabilities")}} object describing the codecs and capabilities
+supported by {{domxref("RTCRtpReceiver")}}s on the current device.
 
-<p>You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}}s by calling
-  the static function {{domxref("RTCRtpSender.getCapabilities()")}}.</p>
+You can, similarly, obtain the capabilities of {{domxref("RTCRtpSender")}}s by calling
+the static function {{domxref("RTCRtpSender.getCapabilities()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>rtpCapabilities</em> = RTCRtpReceiver.getCapabilities(<em>kind</em>);</pre>
+```js
+let rtpCapabilities = RTCRtpReceiver.getCapabilities(kind);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>kind</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the type of media for which you wish to get
+- `kind`
+  - : A {{domxref("DOMString")}} indicating the type of media for which you wish to get
     the device's capability to receive. All browsers support the primary media kinds:
-    <code>audio</code> and <code>video</code>.</dd>
-</dl>
+    `audio` and `video`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("RTCRtpCapabilities")}} object stating what capabilities the browser has
-  for receiving the specified media kind over an {{domxref("RTCPeerConnection")}}. If the
-  browser doesn't have any support for the given media kind, the returned value is
-  <code>null</code>.</p>
+An {{domxref("RTCRtpCapabilities")}} object stating what capabilities the browser has
+for receiving the specified media kind over an {{domxref("RTCPeerConnection")}}. If the
+browser doesn't have any support for the given media kind, the returned value is
+`null`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>As a static function, this is always called using the form:</p>
+As a static function, this is always called using the form:
 
-<pre
-  class="brush: js">capabilities = RTCRtpReceiver.getCapabilities("audio");</pre>
+```js
+capabilities = RTCRtpReceiver.getCapabilities("audio");
+```
 
-<p>The returned set of capabilities is the most optimistic possible list. It is entirely
-  possible that certain combinations of options may fail to work when you actually try to
-  use them.</p>
+The returned set of capabilities is the most optimistic possible list. It is entirely
+possible that certain combinations of options may fail to work when you actually try to
+use them.
 
-<p>Calling <code>RTCRtpReceiver.getCapabilities()</code> doesn't prime the browser in any
-  way to handle media. Nothing is loaded, fetched, or otherwise prepared. It's a means of
-  determining what might be usable before starting to try to access media.</p>
+Calling `RTCRtpReceiver.getCapabilities()` doesn't prime the browser in any
+way to handle media. Nothing is loaded, fetched, or otherwise prepared. It's a means of
+determining what might be usable before starting to try to access media.
 
-<p>Because the set of capabilities available tend to be stable for a length of time
-  (people don't install and uninstall codecs and the like very often), the media
-  capabilities can in whole or in part provide a cross-origin method for identifying a
-  user. For that reason, in privacy-sensitive contexts, the browser may choose to obscure
-  the capabilities; this might be done, for example, by leaving out rarely-used codec
-  configurations.</p>
+Because the set of capabilities available tend to be stable for a length of time
+(people don't install and uninstall codecs and the like very often), the media
+capabilities can in whole or in part provide a cross-origin method for identifying a
+user. For that reason, in privacy-sensitive contexts, the browser may choose to obscure
+the capabilities; this might be done, for example, by leaving out rarely-used codec
+configurations.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The function below returns a Boolean indicating whether or not the device supports
-  receiving H.264 video on a WebRTC connection.</p>
+The function below returns a Boolean indicating whether or not the device supports
+receiving H.264 video on a WebRTC connection.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Since <code>RTCRtpReceiver.getCapabilities()</code> actually only indicates
-    <em>probable</em> support, attempting to receive H.264 video might still fail even
-    after getting a positive response from this function.</p>
-</div>
+> **Note:** Since `RTCRtpReceiver.getCapabilities()` actually only indicates
+> _probable_ support, attempting to receive H.264 video might still fail even
+> after getting a positive response from this function.
 
-<pre class="brush: js">function canReceiveH264() {
+```js
+function canReceiveH264() {
   let capabilities = RTCRtpReceiver.getCapabilities("video");
 
-  capabilities.codecs.forEach((codec) =&gt; {
+  capabilities.codecs.forEach((codec) => {
     if (codec.mimeType === "video/H264") {
       return true;
     }
   });
   return false;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

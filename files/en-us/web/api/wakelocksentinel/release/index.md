@@ -2,60 +2,61 @@
 title: WakeLockSentinel.release()
 slug: Web/API/WakeLockSentinel/release
 tags:
-- API
-- Method
-- Reference
-- Screen Wake Lock API
-- Wake Lock
-- WakeLockSentinel
-- screen
+  - API
+  - Method
+  - Reference
+  - Screen Wake Lock API
+  - Wake Lock
+  - WakeLockSentinel
+  - screen
 browser-compat: api.WakeLockSentinel.release
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The <strong><code>release()</code></strong> method of the
-	{{domxref("WakeLockSentinel")}} interface releases the
-	{{domxref("WakeLockSentinel")}}, returning a {{jsxref("Promise")}} that is resolved
-	once the sentinel has been successfully released.</p>
+The **`release()`** method of the
+{{domxref("WakeLockSentinel")}} interface releases the
+{{domxref("WakeLockSentinel")}}, returning a {{jsxref("Promise")}} that is resolved
+once the sentinel has been successfully released.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WakeLockSentinel.release().then(...);</pre>
+```js
+WakeLockSentinel.release().then(...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a {{jsxref("Promise")}} that resolves with <code>undefined</code></p>
+Returns a {{jsxref("Promise")}} that resolves with `undefined`
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>No exceptions are thrown. You should always listen for the {{domxref('onrelease')}}
-	event to check if a wake lock has been released.</p>
+No exceptions are thrown. You should always listen for the {{domxref('onrelease')}}
+event to check if a wake lock has been released.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}} is
-	released.</p>
+In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}} is
+released.
 
-<pre class="brush: js">wakeLockOffButton.addEventListener('click', () =&gt; {
+```js
+wakeLockOffButton.addEventListener('click', () => {
   WakeLockSentinel.release();
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{DOMxRef("WakeLockSentinel")}}</li>
-	<li>{{DOMxRef("WakeLock.request", "navigator.wakeLock.request()")}}</li>
-</ul>
+- {{DOMxRef("WakeLockSentinel")}}
+- {{DOMxRef("WakeLock.request", "navigator.wakeLock.request()")}}

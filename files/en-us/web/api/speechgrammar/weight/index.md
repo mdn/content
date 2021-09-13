@@ -2,35 +2,37 @@
 title: SpeechGrammar.weight
 slug: Web/API/SpeechGrammar/weight
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechGrammar
-- Web Speech API
-- recognition
-- speech
-- weight
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechGrammar
+  - Web Speech API
+  - recognition
+  - speech
+  - weight
 browser-compat: api.SpeechGrammar.weight
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The optional <strong><code>weight</code></strong> property of the
-  {{domxref("SpeechGrammar")}} interface sets and returns the weight of the
-  <code>SpeechGrammar</code> object.</p>
+The optional **`weight`** property of the
+{{domxref("SpeechGrammar")}} interface sets and returns the weight of the
+`SpeechGrammar` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myGrammarWeight = speechGrammarInstance.weight;</pre>
+```js
+var myGrammarWeight = speechGrammarInstance.weight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A float representing the weight of the grammar, in the range 0.0–1.0.</p>
+A float representing the weight of the grammar, in the range 0.0–1.0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -38,18 +40,16 @@ recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // should return the same as the contents of the grammar variable
 console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in line 4.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

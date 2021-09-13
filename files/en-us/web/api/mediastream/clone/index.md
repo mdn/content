@@ -2,42 +2,43 @@
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
 tags:
-- API
-- Media Capture and Streams
-- Media Stream API
-- MediaStream
-- Method
-- Reference
-- clone
+  - API
+  - Media Capture and Streams
+  - Media Stream API
+  - MediaStream
+  - Method
+  - Reference
+  - clone
 browser-compat: api.MediaStream.clone
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>clone()</code></strong> method of the {{domxref("MediaStream")}}
-  interface creates a duplicate of the <code>MediaStream</code>. This new
-  <code>MediaStream</code> object has a new unique {{domxref("MediaStream.id", "id")}} and
-  contains clones of every {{domxref("MediaStreamTrack")}} contained by the
-  <code>MediaStream</code> on which <code>clone()</code> was called.</p>
+The **`clone()`** method of the {{domxref("MediaStream")}}
+interface creates a duplicate of the `MediaStream`. This new
+`MediaStream` object has a new unique {{domxref("MediaStream.id", "id")}} and
+contains clones of every {{domxref("MediaStreamTrack")}} contained by the
+`MediaStream` on which `clone()` was called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>stream</em> = <em>MediaStream</em>.clone();</pre>
+```js
+var stream = MediaStream.clone();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("MediaStream")}} instance which has a new unique ID and contains clones
-  of every {{domxref("MediaStreamTrack")}} contained by the <code>MediaStream</code> on
-  which <code>clone()</code> was called.</p>
+A new {{domxref("MediaStream")}} instance which has a new unique ID and contains clones
+of every {{domxref("MediaStreamTrack")}} contained by the `MediaStream` on
+which `clone()` was called.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

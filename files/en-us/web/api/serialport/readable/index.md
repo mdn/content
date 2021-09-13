@@ -9,22 +9,24 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort.readable
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>readable</code></strong> read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.</p>
+The **`readable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>readableStream</var> = <var>SerialPort</var>.readable;</pre>
+    var readableStream = SerialPort.readable;
 
-<h3>Value</h3>
-<p>A {{domxref("ReadableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ReadableStream")}}.
 
-<p>The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and <code>readable</code> becomes <code>null</code>.</p>
+## Examples
 
-<pre class="brush: js notranslate">while (port.readable) {
+The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and `readable` becomes `null`.
+
+```js
+while (port.readable) {
   const reader = port.readable.getReader();
   try {
     while (true) {
@@ -40,12 +42,13 @@ browser-compat: api.SerialPort.readable
   } finally {
     reader.releaseLock();
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

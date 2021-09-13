@@ -2,135 +2,132 @@
 title: WritableStream()
 slug: Web/API/WritableStream/WritableStream
 tags:
-- API
-- Constructor
-- Experimental
-- Reference
-- Streams
-- WritableStream
+  - API
+  - Constructor
+  - Experimental
+  - Reference
+  - Streams
+  - WritableStream
 browser-compat: api.WritableStream.WritableStream
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>WritableStream()</code></strong> constructor creates
-  a new {{domxref("WritableStream")}} object instance.</p>
+The **`WritableStream()`** constructor creates
+a new {{domxref("WritableStream")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>writableStream</em> = new WritableStream(<em>underlyingSink</em>[, <em>queuingStrategy</em>]);</pre>
+```js
+var writableStream = new WritableStream(underlyingSink[, queuingStrategy]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>underlyingSink {{optional_inline}}</dt>
-  <dd>An object containing methods and properties that define how the constructed stream
-    instance will behave. <code>underlyingSink</code> can contain the following:
-    <dl>
-      <dt>start(controller) {{optional_inline}}</dt>
-      <dd>This is a method, called immediately when the object is constructed. The
+- underlyingSink {{optional_inline}}
+
+  - : An object containing methods and properties that define how the constructed stream
+    instance will behave. `underlyingSink` can contain the following:
+
+    - start(controller) {{optional_inline}}
+      - : This is a method, called immediately when the object is constructed. The
         contents of this method are defined by the developer, and should aim to get access
         to the underlying sink. If this process is to be done asynchronously, it can
-        return a promise to signal success or failure. The <code>controller</code>
+        return a promise to signal success or failure. The `controller`
         parameter passed to this method is a
         {{domxref("WritableStreamDefaultController")}}. This can be used by the developer
-        to control the stream during set up.</dd>
-      <dt>write(chunk, controller) {{optional_inline}}</dt>
-      <dd>This method, also defined by the developer, will be called when a new chunk of
-        data (specified in the <code>chunk</code> parameter) is ready to be written to the
+        to control the stream during set up.
+    - write(chunk, controller) {{optional_inline}}
+      - : This method, also defined by the developer, will be called when a new chunk of
+        data (specified in the `chunk` parameter) is ready to be written to the
         underlying sink. It can return a promise to signal success or failure of the write
-        operation. The <code>controller</code> parameter passed to this method is a
+        operation. The `controller` parameter passed to this method is a
         {{domxref("WritableStreamDefaultController")}} that can be used by the developer
         to control the stream as more chunks are submitted for writing. This method will
         be called only after previous writes have succeeded, and never after the stream is
-        closed or aborted (see below).</dd>
-      <dt>close(controller) {{optional_inline}}</dt>
-      <dd>This method, also defined by the developer, will be called if the app signals
+        closed or aborted (see below).
+    - close(controller) {{optional_inline}}
+      - : This method, also defined by the developer, will be called if the app signals
         that it has finished writing chunks to the stream. The contents should do whatever
         is necessary to finalize writes to the underlying sink, and release access to it.
         If this process is asynchronous, it can return a promise to signal success or
         failure. This method will be called only after all queued-up writes have
-        succeeded. The <code>controller</code> parameter passed to this method is a
+        succeeded. The `controller` parameter passed to this method is a
         {{domxref("WritableStreamDefaultController")}}, which can be used to control the
-        stream at the end of writing.</dd>
-      <dt>abort(reason) {{optional_inline}}</dt>
-      <dd>This method, also defined by the developer, will be called if the app signals
+        stream at the end of writing.
+    - abort(reason) {{optional_inline}}
+      - : This method, also defined by the developer, will be called if the app signals
         that it wishes to abruptly close the stream and put it in an errored state. It can
-        clean up any held resources, much like <code>close()</code>, but
-        <code>abort()</code> will be called even if writes are queued up — those chunks
+        clean up any held resources, much like `close()`, but
+        `abort()` will be called even if writes are queued up — those chunks
         will be thrown away. If this process is asynchronous, it can return a promise to
-        signal success or failure. The <code>reason</code> parameter contains a
-        {{domxref("DOMString")}} describing why the stream was aborted.</dd>
-    </dl>
-  </dd>
-  <dt>queuingStrategy {{optional_inline}}</dt>
-  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+        signal success or failure. The `reason` parameter contains a
+        {{domxref("DOMString")}} describing why the stream was aborted.
+
+- queuingStrategy {{optional_inline}}
+
+  - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-    <dl>
-      <dt>highWaterMark</dt>
-      <dd>A non-negative integer — this defines the total number of chunks that can be
-        contained in the internal queue before backpressure is applied.</dd>
-      <dt>size(chunk)</dt>
-      <dd>A method containing a parameter <code>chunk</code> — this indicates the size to
-        use for each chunk, in bytes.</dd>
-    </dl>
 
-    <div class="note">
-      <p><strong>Note:</strong> You could define your own custom
-        <code>queuingStrategy</code>, or use an instance of
-        {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
-        for this object value. If no <code>queuingStrategy</code> is supplied, the default
-        used is the same as a <code>CountQueuingStrategy</code> with a high water mark of
-        1.</p>
-    </div>
-  </dd>
-</dl>
+    - highWaterMark
+      - : A non-negative integer — this defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.
+    - size(chunk)
+      - : A method containing a parameter `chunk` — this indicates the size to
+        use for each chunk, in bytes.
 
-<h3 id="Return_value">Return value</h3>
+    > **Note:** You could define your own custom
+    > `queuingStrategy`, or use an instance of
+    > {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
+    > for this object value. If no `queuingStrategy` is supplied, the default
+    > used is the same as a `CountQueuingStrategy` with a high water mark of
+    > 1\.
 
-<p>An instance of the {{domxref("WritableStream")}} object.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+An instance of the {{domxref("WritableStream")}} object.
 
-<p>The following example illustrates several features of this interface.  It shows the
-  creation of the <code>WritableStream</code> with a custom sink and an API-supplied
-  queuing strategy. It then calls a function called <code>sendMessage()</code>, passing
-  the newly created stream and a string. Inside this function it calls the stream's
-  <code>getWriter()</code> method, which returns an instance of
-  {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to
-  write each chunk of the string to the stream. Finally, <code>write()</code> and
-  <code>close()</code> return promises that are processed to deal with success or failure
-  of chunks and streams.</p>
+## Examples
 
-<pre class="brush: js">const list = document.querySelector('ul');
+The following example illustrates several features of this interface.  It shows the
+creation of the `WritableStream` with a custom sink and an API-supplied
+queuing strategy. It then calls a function called `sendMessage()`, passing
+the newly created stream and a string. Inside this function it calls the stream's
+`getWriter()` method, which returns an instance of
+{{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to
+write each chunk of the string to the stream. Finally, `write()` and
+`close()` return promises that are processed to deal with success or failure
+of chunks and streams.
+
+```js
+const list = document.querySelector('ul');
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) =&gt; {
+  encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() =&gt; {
+      .then(() => {
         return defaultWriter.write(chunk);
       })
-      .then(() =&gt; {
+      .then(() => {
         console.log("Chunk written to sink.");
       })
-      .catch((err) =&gt; {
+      .catch((err) => {
         console.log("Chunk error:", err);
       });
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() =&gt; {
+    .then(() => {
       defaultWriter.close();
     })
-    .then(() =&gt; {
+    .then(() => {
       console.log("All chunks written");
     })
-    .catch((err) =&gt; {
+    .catch((err) => {
       console.log("Stream error:", err);
     });
 }
@@ -141,7 +138,7 @@ let result = "";
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    return new Promise((resolve, reject) =&gt; {
+    return new Promise((resolve, reject) => {
       var buffer = new ArrayBuffer(2);
       var view = new Uint16Array(buffer);
       view[0] = chunk;
@@ -163,38 +160,36 @@ const writableStream = new WritableStream({
   }
 }, queuingStrategy);
 
-sendMessage("Hello, world.", writableStream);</pre>
+sendMessage("Hello, world.", writableStream);
+```
 
-<p>You can find the full code in our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer
-    example</a>.</p>
+You can find the full code in our [Simple writer
+example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
-<h3 id="Backpressure">Backpressure</h3>
+### Backpressure
 
-<p>Because of how backpressure is supported in the API, its implementation in code may be
-  less than obvious. To see how backpressure is implemented look for three things.</p>
+Because of how backpressure is supported in the API, its implementation in code may be
+less than obvious. To see how backpressure is implemented look for three things.
 
-<ul>
-  <li>The <code>highWaterMark</code> property, which is set when creating the counting
-    strategy (line 35), sets the maximum amount of data that the
-    <code>WritableStream</code> instance will handle in a single <code>write()</code>
-    operation. In this example, it's the maximum amount of data that can be sent to
-    <code>defaultWriter.write()</code> (line 11).</li>
-  <li>The <code>defaultWriter.ready</code> property returns a promise that resolves when
-    the sink (the first property of the <code>WritableStream</code> constructor) is done
-    writing data. The data source can wither write more data (line 11) or call
-    <code>close()</code> (line 24). Calling <code>close()</code> too early can prevent
-    data from being written. This is why the example calls
-    <code>defaultWriter.ready</code> twice (lines 9 and 22). </li>
-  <li>The {{jsxref("Promise")}} returned by the sink's <code>write()</code> method (line
-    40) tells the <code>WritableStream</code> and its writer when to resolve
-    <code>defaultWriter.ready</code>.</li>
-</ul>
+- The `highWaterMark` property, which is set when creating the counting
+  strategy (line 35), sets the maximum amount of data that the
+  `WritableStream` instance will handle in a single `write()`
+  operation. In this example, it's the maximum amount of data that can be sent to
+  `defaultWriter.write()` (line 11).
+- The `defaultWriter.ready` property returns a promise that resolves when
+  the sink (the first property of the `WritableStream` constructor) is done
+  writing data. The data source can wither write more data (line 11) or call
+  `close()` (line 24). Calling `close()` too early can prevent
+  data from being written. This is why the example calls
+  `defaultWriter.ready` twice (lines 9 and 22).
+- The {{jsxref("Promise")}} returned by the sink's `write()` method (line
+  40\) tells the `WritableStream` and its writer when to resolve
+  `defaultWriter.ready`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

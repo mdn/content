@@ -15,91 +15,92 @@ tags:
   - frameRate
 browser-compat: api.MediaTrackSupportedConstraints.frameRate
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-    <strong><code>frameRate</code></strong> property is a read-only Boolean value which is
-    present (and set to <code>true</code>) in the object returned by
-    {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
-    {{Glossary("user agent")}} supports the {{domxref("MediaTrackConstraints.frameRate",
-    "frameRate")}} constraint.</p>
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+**`frameRate`** property is a read-only Boolean value which is
+present (and set to `true`) in the object returned by
+{{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
+{{Glossary("user agent")}} supports the {{domxref("MediaTrackConstraints.frameRate",
+    "frameRate")}} constraint.
 
-<p>If the constraint isn't supported, it's not included
-  in the list, so this value will never be <code>false</code>.</p>
+If the constraint isn't supported, it's not included
+in the list, so this value will never be `false`.
 
-<p>The <code>frameRate</code> constraint can be used to establish acceptable upper and
-  lower bounds on the video frame rate for a new video track, or to specify an exact frame
-  rate that must be provided for the request to succeed. Checking the value of this
-  property lets you determine if the user agent allows constraining the video track
-  configuration by frame rate. See the {{anch("Example", "example")}} to see how this can
-  be used.</p>
+The `frameRate` constraint can be used to establish acceptable upper and
+lower bounds on the video frame rate for a new video track, or to specify an exact frame
+rate that must be provided for the request to succeed. Checking the value of this
+property lets you determine if the user agent allows constraining the video track
+configuration by frame rate. See the {{anch("Example", "example")}} to see how this can
+be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>frameRateConstraintSupported</em> = <em>supportedConstraintsDictionary</em>.frameRate;</pre>
+```js
+frameRateConstraintSupported = supportedConstraintsDictionary.frameRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This property is present in the dictionary if the user agent supports the
-  <code>frameRate</code> constraint. If the property isn't present, the user agent doesn't
-  allow specifying limits on the frame rate for video tracks.</p>
+This property is present in the dictionary if the user agent supports the
+`frameRate` constraint. If the property isn't present, the user agent doesn't
+allow specifying limits on the frame rate for video tracks.
 
-<div class="note">
-  <p><strong>Note:</strong> If this property is present, its value is always <code>true</code>.</p>
-</div>
+> **Note:** If this property is present, its value is always `true`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example looks to see if your browser supports constraining the frame rate
-  when requesting video tracks.</p>
+This simple example looks to see if your browser supports constraining the frame rate
+when requesting video tracks.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let result = document.getElementById("result");
+```js
+let result = document.getElementById("result");
 
 if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
     result.textContent = "Supported!";
 } else {
     result.textContent = "Not supported!";
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="result"&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="result">
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#result {
+```css
+#result {
   font: 14px "Arial", sans-serif;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>The output, showing if your browser supports the <code>frameRate</code> constraint, is:
-</p>
+The output, showing if your browser supports the `frameRate` constraint, is:
 
-<p>{{ EmbedLiveSample('Example', 600, 80) }}</p>
+{{ EmbedLiveSample('Example', 600, 80) }}
 
-<p>While this example is trivial, you can replace the simple output of "Supported" vs.
-  "Not supported" with code to provide alternative methods for presenting the audiovisual
-  information you want to share with the user or otherwise work with.</p>
+While this example is trivial, you can replace the simple output of "Supported" vs.
+"Not supported" with code to provide alternative methods for presenting the audiovisual
+information you want to share with the user or otherwise work with.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

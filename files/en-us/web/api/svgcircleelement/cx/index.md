@@ -10,50 +10,50 @@ tags:
   - cx
 browser-compat: api.SVGCircleElement.cx
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p></p>
+The **`cx`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("cx")}} attribute of a {{SVGElement("circle")}} element and by that defines the x-coordinate of the circle's center.<
 
-<p>The <code><strong>cx</strong></code> read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("cx")}} attribute of a {{SVGElement("circle")}} element and by that defines the x-coordinate of the circle's center.<</p>
+If unspecified, the effect is as if the value is set to `0`.
 
-<p>If unspecified, the effect is as if the value is set to <code>0</code>.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var xCoordinate = element.cx;
+```
 
-<pre class="brush: js">var <var>xCoordinate</var> = <var>element</var>.cx;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+An {{domxref("SVGAnimatedLength")}} representing the x-coordinate of the circle's center.
 
-<p>An {{domxref("SVGAnimatedLength")}} representing the x-coordinate of the circle's center.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+### SVG
 
-<h3 id="SVG">SVG</h3>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <circle cx="50" cy="50" r="50" fill="gold" id="circle"/>
+</svg>
+```
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"&gt;
-  &lt;circle cx="50" cy="50" r="50" fill="gold" id="circle"/&gt;
-&lt;/svg&gt;
-</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js;">const circle = document.getElementById('circle');
+```js
+const circle = document.getElementById('circle');
 console.log(circle.cx);
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SVGCircleElement.cy")}}</li>
- <li>{{domxref("SVGCircleElement.r")}}</li>
-</ul>
+- {{domxref("SVGCircleElement.cy")}}
+- {{domxref("SVGCircleElement.r")}}

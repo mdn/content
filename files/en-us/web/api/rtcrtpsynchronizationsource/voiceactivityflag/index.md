@@ -2,45 +2,43 @@
 title: RTCRtpSynchronizationSource.voiceActivityFlag
 slug: Web/API/RTCRtpSynchronizationSource/voiceActivityFlag
 tags:
-- API
-- Media
-- Property
-- RTCRtpSynchronizationSource
-- RTP
-- Voice Activity Detection
-- Voice Detection
-- WebRTC
-- voiceActivityFlag
+  - API
+  - Media
+  - Property
+  - RTCRtpSynchronizationSource
+  - RTP
+  - Voice Activity Detection
+  - Voice Detection
+  - WebRTC
+  - voiceActivityFlag
 browser-compat: api.RTCRtpSynchronizationSource.voiceActivityFlag
 ---
-<div>{{APIRef("WebRTC API")}}{{non-standard_header}}{{deprecated_header}}</div>
+{{APIRef("WebRTC API")}}{{non-standard_header}}{{deprecated_header}}
 
-<p>The read-only <strong><code>voiceActivityFlag</code></strong>
-    property of the {{domxref("RTCRtpSynchronizationSource")}} interface indicates whether
-    or not the most recent RTP packet on the source includes voice activity.</p>
+The read-only **`voiceActivityFlag`**
+property of the {{domxref("RTCRtpSynchronizationSource")}} interface indicates whether
+or not the most recent RTP packet on the source includes voice activity.
 
-<p>This
-  is only present if the stream is using the voice activity detection feature; see the
-  <code>RTCOfferOptions</code> flag
-  <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createOffer#RTCOfferOptions_dictionary">voiceActivityDetection</a></code>.
-</p>
+This
+is only present if the stream is using the voice activity detection feature; see the
+`RTCOfferOptions` flag
+[`voiceActivityDetection`](/en-US/docs/Web/API/RTCPeerConnection/createOffer#RTCOfferOptions_dictionary).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>voiceActivity</em> = <em>RTCRtpSynchronizationSource</em>.voiceActivityFlag</pre>
+```js
+var voiceActivity = RTCRtpSynchronizationSource.voiceActivityFlag
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if voice activity is present in the most
-  recently received RTP packet played by the associated source, or <code>false</code> if
-  voice activity is not present.</p>
+A Boolean value which is `true` if voice activity is present in the most
+recently received RTP packet played by the associated source, or `false` if
+voice activity is not present.
 
-<div class="note">
-  <p><strong>Note:</strong> This property is omitted entirely if voice activity detection is not enabled on the
-    source, or if the {{RFC(6464)}} extension header isn't present.</p>
-</div>
+> **Note:** This property is omitted entirely if voice activity detection is not enabled on the
+> source, or if the {{RFC(6464)}} extension header isn't present.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

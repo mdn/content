@@ -2,54 +2,53 @@
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 tags:
-- API
-- Experimental
-- Method
-- Notifications
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
-- ServiceWorkerRegistration
-- getNotifications
+  - API
+  - Experimental
+  - Method
+  - Notifications
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
+  - ServiceWorkerRegistration
+  - getNotifications
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>getNotifications()</code></strong> method of
-    the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
-    notifications in the order that they were created from the current origin via the
-    current service worker registration. Origins can have many active but
-    differently-scoped service worker registrations. Notifications created by one service
-    worker on the same origin will not be available to other active services workers on
-    that same origin.</p>
+The **`getNotifications()`** method of
+the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
+notifications in the order that they were created from the current origin via the
+current service worker registration. Origins can have many active but
+differently-scoped service worker registrations. Notifications created by one service
+worker on the same origin will not be available to other active services workers on
+that same origin.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serviceWorkerRegistration</em>.getNotifications(<em>options</em>)
-.then(function(<em>notificationsList</em>) { ... });</pre>
+```js
+serviceWorkerRegistration.getNotifications(options)
+.then(function(notificationsList) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object containing options to filter the notifications returned. The available
+- options {{optional_inline}}
+
+  - : An object containing options to filter the notifications returned. The available
     options are:
-    <ul>
-      <li><code>tag</code>: A {{domxref("DOMString")}} representing a notification tag. If
-        specified, only notifications that have this tag will be returned.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `tag`: A {{domxref("DOMString")}} representing a notification tag. If
+      specified, only notifications that have this tag will be returned.
 
-<p>A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} objects.
-</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+A {{jsxref("Promise")}} that resolves to a list of {{domxref("Notification")}} objects.
 
-<pre class="brush: js">navigator.serviceWorker.register('sw.js');
+## Example
+
+```js
+navigator.serviceWorker.register('sw.js');
 
 var options = { tag : 'user_alerts' };
 
@@ -57,12 +56,13 @@ navigator.serviceWorker.ready.then(function(registration) {
   registration.getNotifications(options).then(function(notifications) {
     // do something with your notifications
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

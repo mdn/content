@@ -2,39 +2,38 @@
 title: Notification.onerror
 slug: Web/API/Notification/onerror
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- onerror
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - onerror
 browser-compat: api.Notification.onerror
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>onerror</code></strong> property of the {{domxref("Notification")}}
-  interface specifies an event listener to receive {{domxref("Element/error_event", "error")}} events.
-  These events occur when something goes wrong with a {{domxref("Notification")}} 
-  (in many cases an error preventing the notification from being displayed.)</p>
+The **`onerror`** property of the {{domxref("Notification")}}
+interface specifies an event listener to receive {{domxref("Element/error_event", "error")}} events.
+These events occur when something goes wrong with a {{domxref("Notification")}}
+(in many cases an error preventing the notification from being displayed.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>Notification</var>.onerror = function() { ... };</pre>
+```js
+Notification.onerror = function() { ... };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Notification")}}</li>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

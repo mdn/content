@@ -14,53 +14,53 @@ tags:
   - setActionHandler
 browser-compat: api.MediaSession.setActionHandler
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The <strong><code>setActionHandler()</code></strong> method of the
-  {{domxref("MediaSession")}} interface sets a handler for a media session action. These
-  actions let a web app receive notifications when the user engages a device's built-in
-  physical or onscreen media controls, such as play, stop, or seek buttons.</p>
+The **`setActionHandler()`** method of the
+{{domxref("MediaSession")}} interface sets a handler for a media session action. These
+actions let a web app receive notifications when the user engages a device's built-in
+physical or onscreen media controls, such as play, stop, or seek buttons.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">navigator.mediaSession.setActionHandler(<em>type</em>, <em>callback</em>)</pre>
+```js
+navigator.mediaSession.setActionHandler(type, callback)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} representing an action type to listen for. It will be one
-    of <code>{{anch("play")}}</code>,
-    <code>{{anch("pause")}}</code>, <code>{{anch("stop")}}</code>,
-    <code>{{anch("seekbackward")}}</code>,<code> {{anch("seekforward")}}</code>, <code>{{anch("seekto")}}</code>, <code>{{anch("skipad")}}</code>,<code>{{anch("previoustrack")}}</code>,
-    or <code>{{anch("nexttrack")}}</code>. Further details on the action types can be
-    found below under {{anch("Media session actions")}}.</dd>
-  <dt><code>callback</code></dt>
-  <dd>A function to call when the specified action type is invoked. The callback receives
-    no input parameters, and should not return a value.</dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} representing an action type to listen for. It will be one
+    of `{{anch("play")}}`,
+    `{{anch("pause")}}`, `{{anch("stop")}}`,
+    `{{anch("seekbackward")}}`,` {{anch("seekforward")}}`, `{{anch("seekto")}}`, `{{anch("skipad")}}`,`{{anch("previoustrack")}}`,
+    or `{{anch("nexttrack")}}`. Further details on the action types can be
+    found below under {{anch("Media session actions")}}.
+- `callback`
+  - : A function to call when the specified action type is invoked. The callback receives
+    no input parameters, and should not return a value.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>To remove a previously-established action handler, call <code>setActionHandler()</code>
-  again, specifying <code>null</code> as the <code>callback</code>.</p>
+To remove a previously-established action handler, call `setActionHandler()`
+again, specifying `null` as the `callback`.
 
-<p>The action handler receives as input a single parameter: an object conforming to
-  the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
-  type (so the same function can handle multiple action types), as well as data needed in
-  order to perform the action.</p>
+The action handler receives as input a single parameter: an object conforming to
+the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
+type (so the same function can handle multiple action types), as well as data needed in
+order to perform the action.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a new media session and assigns action handlers (which don't do
-  anything) to it.</p>
+This example creates a new media session and assigns action handlers (which don't do
+anything) to it.
 
-<pre class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -84,12 +84,14 @@ browser-compat: api.MediaSession.setActionHandler
   navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
-}</pre>
+}
+```
 
-<p>The following example sets up two functions for playing and pausing, then uses them as
-  callbacks with the relevant action handlers.</p>
+The following example sets up two functions for playing and pausing, then uses them as
+callbacks with the relevant action handlers.
 
-<pre class="brush: js">const actionHandlers = [
+```js
+const actionHandlers = [
   // play
   [
     'play',
@@ -97,18 +99,18 @@ browser-compat: api.MediaSession.setActionHandler
       // play our audio
       await audioEl.play();
       // set playback state
-      navigator.mediaSession.playbackState = &quot;playing&quot;;
+      navigator.mediaSession.playbackState = "playing";
       // update our status element
       updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
     }
   ],
   [
     'pause',
-    () =&gt; {
+    () => {
       // pause out audio
       audioEl.pause();
       // set playback state
-      navigator.mediaSession.playbackState = &quot;paused&quot;;
+      navigator.mediaSession.playbackState = "paused";
       // update our status element
       updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
     }
@@ -119,39 +121,43 @@ for (const [action, handler] of actionHandlers) {
   try {
     navigator.mediaSession.setActionHandler(action, handler);
   } catch (error) {
-    console.log(`The media session action &quot;${action}&quot; is not supported yet.`);
+    console.log(`The media session action "${action}" is not supported yet.`);
   }
-}</pre>
+}
+```
 
-<p>This example uses appropriate action handlers to allow seeking in either direction
-  through the playing media.</p>
+This example uses appropriate action handlers to allow seeking in either direction
+through the playing media.
 
-<pre class="brush: js">let skipTime = 10; // Time to skip in seconds
+```js
+let skipTime = 10; // Time to skip in seconds
 
-navigator.mediaSession.setActionHandler('seekbackward', evt =&gt; {
+navigator.mediaSession.setActionHandler('seekbackward', evt => {
  // User clicked "Seek Backward" media notification icon.
  audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
 });
 
-navigator.mediaSession.setActionHandler('seekforward', evt =&gt; {
+navigator.mediaSession.setActionHandler('seekforward', evt => {
  // User clicked "Seek Forward" media notification icon.
  audio.currentTime = Math.min(audio.currentTime + skipTime,
                audio.duration);
-});</pre>
+});
+```
 
-<p>To remove a media action handler, assign it to null.</p>
+To remove a media action handler, assign it to null.
 
-<pre
-  class="brush: js">navigator.mediaSession.setActionHandler('nexttrack', null);</pre>
+```js
+navigator.mediaSession.setActionHandler('nexttrack', null);
+```
 
-<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions
-  in one handler function</h3>
+### Supporting multiple actions in one handler function
 
-<p>You can also, if you prefer, use a single function to handle multiple action types, by
-  checking the value of the <code>MediaSessionActionDetails</code> object's
-  {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
+You can also, if you prefer, use a single function to handle multiple action types, by
+checking the value of the `MediaSessionActionDetails` object's
+{{domxref("MediaSessionActionDetails.action", "action")}} property:
 
-<pre class="brush: js">let skipTime = 7;
+```js
+let skipTime = 7;
 
 navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
@@ -167,15 +173,15 @@ function handleSeek(details) {
       break;
   }
 }
-</pre>
+```
 
-<p>Here, the <code>handleSeek()</code> function handles
-  both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
+Here, the `handleSeek()` function handles
+both `seekbackward` and `seekforward` actions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

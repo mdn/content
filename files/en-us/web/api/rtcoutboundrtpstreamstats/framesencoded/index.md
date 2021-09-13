@@ -2,48 +2,47 @@
 title: RTCOutboundRtpStreamStats.framesEncoded
 slug: Web/API/RTCOutboundRtpStreamStats/framesEncoded
 tags:
-- API
-- Encoding
-- Frames
-- Media
-- Property
-- RTCOutboundRtpStreamStats
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- encode
-- framesEncoded
-- stream
+  - API
+  - Encoding
+  - Frames
+  - Media
+  - Property
+  - RTCOutboundRtpStreamStats
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - encode
+  - framesEncoded
+  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.framesEncoded
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>framesEncoded</code></strong> property of
-    the {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the total number of
-    frames that have been encoded by this {{domxref("RTCRtpSender")}} for this media
-    source.</p>
+The **`framesEncoded`** property of
+the {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the total number of
+frames that have been encoded by this {{domxref("RTCRtpSender")}} for this media
+source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>framesEncoded</em> = <em>RTCOutboundRtpStreamStats</em>.framesEncoded;</pre>
+```js
+var framesEncoded = RTCOutboundRtpStreamStats.framesEncoded;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the total number of video frames that this sender has
-  encoded so far for this stream.</p>
+An integer value indicating the total number of video frames that this sender has
+encoded so far for this stream.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is only valid for video streams.</p>
-</div>
+> **Note:** This property is only valid for video streams.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

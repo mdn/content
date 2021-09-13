@@ -2,39 +2,40 @@
 title: BluetoothRemoteGATTCharacteristic.uuid
 slug: Web/API/BluetoothRemoteGATTCharacteristic/uuid
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Service
-- Web Bluetooth API
-- uuid
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Service
+  - Web Bluetooth API
+  - uuid
 browser-compat: api.BluetoothRemoteGATTCharacteristic.uuid
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.uuid</code></strong> read-only
-  property returns {{domxref("DOMString")}} containing the UUID of the characteristic, for
-  example <code>'00002a37-0000-1000-8000-00805f9b34fb'</code> for the Heart Rate
-  Measurement characteristic.</p>
+The **`BluetoothRemoteGATTCharacteristic.uuid`** read-only
+property returns {{domxref("DOMString")}} containing the UUID of the characteristic, for
+example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
+Measurement characteristic.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>uuid</em> = BluetoothRemoteGATTCharacteristic.uuid</pre>
+```js
+var uuid = BluetoothRemoteGATTCharacteristic.uuid
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

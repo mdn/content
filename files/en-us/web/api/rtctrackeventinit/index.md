@@ -14,29 +14,27 @@ tags:
   - track
 browser-compat: api.RTCTrackEventInit
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The WebRTC API's <code><strong>RTCTrackEventInit</strong></code> dictionary is used to provide information describing an {{domxref("RTCTrackEvent")}} when instantiating a new {{event("track")}} event using {{domxref("RTCTrackEvent.RTCTrackEvent", "new RTCTrackEvent()")}}.</p>
+The WebRTC API's **`RTCTrackEventInit`** dictionary is used to provide information describing an {{domxref("RTCTrackEvent")}} when instantiating a new {{event("track")}} event using {{domxref("RTCTrackEvent.RTCTrackEvent", "new RTCTrackEvent()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>RTCTrackEventInit</code> inherits properties from the {{domxref("EventInit")}} dictionary, and also includes the following properties:</em></p>
+_`RTCTrackEventInit` inherits properties from the {{domxref("EventInit")}} dictionary, and also includes the following properties:_
 
-<dl>
- <dt>{{domxref("RTCTrackEventInit.receiver", "receiver")}}</dt>
- <dd>The {{domxref("RTCRtpReceiver")}} which is being used to receive the track's media.</dd>
- <dt>{{domxref("RTCTrackEventInit.streams", "streams")}} {{optional_inline}}</dt>
- <dd>An array of {{domxref("MediaStream")}} objects representing each of the streams that comprise the event's corresponding track.</dd>
- <dt>{{domxref("RTCTrackEventInit.track", "track")}}</dt>
- <dd>The {{domxref("MediaStreamTrack")}} the event is associated with.</dd>
- <dt>{{domxref("RTCTrackEvent.transceiver", "transceiver")}}</dt>
- <dd>The {{domxref("RTCRtpTransceiver")}} associated with the event.</dd>
-</dl>
+- {{domxref("RTCTrackEventInit.receiver", "receiver")}}
+  - : The {{domxref("RTCRtpReceiver")}} which is being used to receive the track's media.
+- {{domxref("RTCTrackEventInit.streams", "streams")}} {{optional_inline}}
+  - : An array of {{domxref("MediaStream")}} objects representing each of the streams that comprise the event's corresponding track.
+- {{domxref("RTCTrackEventInit.track", "track")}}
+  - : The {{domxref("MediaStreamTrack")}} the event is associated with.
+- {{domxref("RTCTrackEvent.transceiver", "transceiver")}}
+  - : The {{domxref("RTCRtpTransceiver")}} associated with the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,58 +2,58 @@
 title: Window.locationbar
 slug: Web/API/Window/locationbar
 tags:
-- API
-- HTML DOM
-- NeedsExample
-- NeedsMarkupWork
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsExample
+  - NeedsMarkupWork
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.locationbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Returns the <code>locationbar</code> object, whose visibility can be checked.</p>
+Returns the `locationbar` object, whose visibility can be checked.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>objRef</var> = window.locationbar
-</pre>
+```js
+objRef = window.locationbar
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following complete HTML example shows how the <code>visible</code> property of the
-  <code>locationbar</code> object is used.</p>
+The following complete HTML example shows how the `visible` property of the
+`locationbar` object is used.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Various DOM Tests</title>
 
-&lt;script&gt;
+<script>
 var visible = window.locationbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.locationbar")}}, {{domxref("window.menubar")}},
-    {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}},
-    {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}</li>
-</ul>
+- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}},
+  {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}},
+  {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

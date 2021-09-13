@@ -13,45 +13,43 @@ tags:
   - Sensors
 browser-compat: api.AmbientLightSensor
 ---
-<p>{{APIRef("Sensor API")}}{{SeeCompatTable}}</p>
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>AmbientLightSensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> returns the current light level or illuminance of the ambient light around the hosting device.</p>
+The **`AmbientLightSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) returns the current light level or illuminance of the ambient light around the hosting device.
 
-<p>To use this sensor, the user must grant permission to the <code>'ambient-light-sensor'</code> device sensor through the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
+To use this sensor, the user must grant permission to the `'ambient-light-sensor'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}}</dt>
- <dd>Creates a new <code>AmbientLightSensor</code> object.</dd>
-</dl>
+- {{domxref("AmbientLightSensor.AmbientLightSensor()", "AmbientLightSensor()")}}
+  - : Creates a new `AmbientLightSensor` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('AmbientLightSensor.illuminance')}}</dt>
- <dd>Returns the current light level in <a href="https://en.wikipedia.org/wiki/Lux">lux</a> of the ambient light level around the hosting device.</dd>
-</dl>
+- {{domxref('AmbientLightSensor.illuminance')}}
+  - : Returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if ( 'AmbientLightSensor' in window ) {
+```js
+if ( 'AmbientLightSensor' in window ) {
   const sensor = new AmbientLightSensor();
-  sensor.onreading = () =&gt; {
+  sensor.onreading = () => {
     console.log('Current light level:', sensor.illuminance);
   };
-  sensor.onerror = (event) =&gt; {
+  sensor.onerror = (event) => {
     console.log(event.error.name, event.error.message);
   };
   sensor.start();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

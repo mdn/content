@@ -11,31 +11,30 @@ tags:
   - isSecureContext
 browser-compat: api.isSecureContext
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The global <code><strong>isSecureContext</strong></code> read-only property returns a boolean indicating whether
-  the current <a href="/en-US/docs/Web/Security/Secure_Contexts">context is secure</a>
-  (<code>true</code>) or not (<code>false</code>).</p>
+The global **`isSecureContext`** read-only property returns a boolean indicating whether
+the current [context is secure](/en-US/docs/Web/Security/Secure_Contexts)
+(`true`) or not (`false`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isItSecure</em> = self.isSecureContext; // or just isSecureContext
-</pre>
+```js
+var isItSecure = self.isSecureContext; // or just isSecureContext
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Boolean <code>true</code> or <code>false</code>.</p>
+Boolean `true` or `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a></li>
-</ul>
+- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)

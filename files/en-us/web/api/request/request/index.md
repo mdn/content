@@ -10,73 +10,67 @@ tags:
   - request
 browser-compat: api.Request.Request
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>The <code><strong>Request()</strong></code> constructor creates a new
-  {{domxref("Request")}} object.</p>
+The **`Request()`** constructor creates a new
+{{domxref("Request")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myRequest = new Request(input[, init]);</pre>
+```js
+var myRequest = new Request(input[, init]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>input</em></dt>
-  <dd>Defines the resource that you wish to fetch. This can either be:
-    <ul>
-      <li>A {{domxref("USVString")}} containing the direct URL of the resource you want to
-        fetch.</li>
-      <li>A {{domxref("Request")}} object, effectively creating a copy. Note the following
-        behavioral updates to retain security while making the constructor less likely to
-        throw exceptions:
-        <ul>
-          <li>If this object exists on another origin to the constructor call, the
-            {{domxref("Request.referrer")}} is stripped out.</li>
-          <li>If this object has a {{domxref("Request.mode")}} of <code>navigate</code>,
-            the <code>mode</code> value is converted to <code>same-origin</code>.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt><em>init</em> {{optional_inline}}</dt>
-  <dd>An options object containing any custom settings that you want to apply to the
+- _input_
+
+  - : Defines the resource that you wish to fetch. This can either be:
+
+    - A {{domxref("USVString")}} containing the direct URL of the resource you want to
+      fetch.
+    - A {{domxref("Request")}} object, effectively creating a copy. Note the following
+      behavioral updates to retain security while making the constructor less likely to
+      throw exceptions:
+
+      - If this object exists on another origin to the constructor call, the
+        {{domxref("Request.referrer")}} is stripped out.
+      - If this object has a {{domxref("Request.mode")}} of `navigate`,
+        the `mode` value is converted to `same-origin`.
+
+- _init_ {{optional_inline}}
+
+  - : An options object containing any custom settings that you want to apply to the
     request. The possible options are:
-    <ul>
-      <li><code>method</code>: The request method, e.g., <code>GET</code>,
-        <code>POST</code>. The default is <code>GET</code>.</li>
-      <li><code>headers</code>: Any headers you want to add to your request, contained
-        within a {{domxref("Headers")}} object or an object literal with
-        {{jsxref("String")}} values.</li>
-      <li><code>body</code>: Any body that you want to add to your request: this can be a
-        {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
-        {{domxref("ReadableStream")}} object. Note that a request using the
-        <code>GET</code> or <code>HEAD</code> method cannot have a body.</li>
-      <li><code>mode</code>: The mode you want to use for the request, e.g.,
-        <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, or
-        <code>navigate</code>. The default is <code>cors</code>.</li>
-      <li><code>credentials</code>: The request credentials you want to use for the
-        request: <code>omit</code>, <code>same-origin</code>, or <code>include</code>. The
-        default is <code>same-origin</code>.</li>
-      <li><code>cache</code>: The <a href="/en-US/docs/Web/API/Request/cache">cache
-          mode</a> you want to use for the request.</li>
-      <li><code>redirect</code>: The redirect mode to use: <code>follow</code>,
-        <code>error</code>, or <code>manual</code>. The default is <code>follow</code>.
-      </li>
-      <li><code>referrer</code>: A {{domxref("USVString")}} specifying
-        <code>no-referrer</code>, <code>client</code>, or a URL. The default is
-        <code>about:client</code>.</li>
-      <li><code>integrity</code>: Contains the <a
-          href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a>
-        value of the request (e.g.,
-        <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Errors">Errors</h2>
+    - `method`: The request method, e.g., `GET`,
+      `POST`. The default is `GET`.
+    - `headers`: Any headers you want to add to your request, contained
+      within a {{domxref("Headers")}} object or an object literal with
+      {{jsxref("String")}} values.
+    - `body`: Any body that you want to add to your request: this can be a
+      {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
+      {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
+      {{domxref("ReadableStream")}} object. Note that a request using the
+      `GET` or `HEAD` method cannot have a body.
+    - `mode`: The mode you want to use for the request, e.g.,
+      `cors`, `no-cors`, `same-origin`, or
+      `navigate`. The default is `cors`.
+    - `credentials`: The request credentials you want to use for the
+      request: `omit`, `same-origin`, or `include`. The
+      default is `same-origin`.
+    - `cache`: The [cache
+      mode](/en-US/docs/Web/API/Request/cache) you want to use for the request.
+    - `redirect`: The redirect mode to use: `follow`,
+      `error`, or `manual`. The default is `follow`.
+    - `referrer`: A {{domxref("USVString")}} specifying
+      `no-referrer`, `client`, or a URL. The default is
+      `about:client`.
+    - `integrity`: Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+      value of the request (e.g.,
+      `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+
+## Errors
 
 <table class="no-markdown">
   <thead>
@@ -88,25 +82,27 @@ browser-compat: api.Request.Request
   <tbody>
     <tr>
       <td><code>TypeError</code></td>
-      <td>Since <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>,
-        <code>Request()</code> will throw a TypeError if the URL has credentials, such as
-        http://user:password@example.com.</td>
+      <td>
+        Since <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>,
+        <code>Request()</code> will throw a TypeError if the URL has
+        credentials, such as http://user:password@example.com.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch
-    Request example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
-  create a new <code>Request</code> object using the constructor, then fetch it using a
-  {{domxref("fetch()")}} call. Since we are fetching an image, we run
-  {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
-  handled properly, then create an Object URL of it and display it in an
-  {{htmlelement("img")}} element.</p>
+In our [Fetch
+Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+create a new `Request` object using the constructor, then fetch it using a
+{{domxref("fetch()")}} call. Since we are fetching an image, we run
+{{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
+handled properly, then create an Object URL of it and display it in an
+{{htmlelement("img")}} element.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -115,16 +111,16 @@ fetch(myRequest).then(function(response) {
 }).then(function(response) {
   var objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>In our <a
-    href="https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init">Fetch
-    Request with init example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-request-with-init/">Fetch Request
-    init live</a>) we do the same thing except that we pass in an init object when we
-  invoke <code>fetch()</code>:</p>
+In our [Fetch
+Request with init example](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init) (see [Fetch Request
+init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) we do the same thing except that we pass in an init object when we
+invoke `fetch()`:
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'image/jpeg');
@@ -138,18 +134,22 @@ var myRequest = new Request('flowers.jpg',myInit);
 
 fetch(myRequest).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>Note that you could also pass the init object into the <code>fetch</code> call to get
-  the same effect, e.g.:</p>
+Note that you could also pass the init object into the `fetch` call to get
+the same effect, e.g.:
 
-<pre class="brush: js">fetch(myRequest,myInit).then(function(response) {
+```js
+fetch(myRequest,myInit).then(function(response) {
   ...
-});</pre>
+});
+```
 
-<p>You can also use an object literal as <code>headers</code> in <code>init</code>.</p>
+You can also use an object literal as `headers` in `init`.
 
-<pre class="brush: js">var myInit = { method: 'GET',
+```js
+var myInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },
@@ -157,31 +157,28 @@ fetch(myRequest).then(function(response) {
                cache: 'default' };
 
 var myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<p>You may also pass a {{domxref("Request")}} object to the <code>Request()</code>
-  constructor to create a copy of the Request (This is similar to calling the
-  {{domxref("Request.clone","clone()")}} method.)</p>
+You may also pass a {{domxref("Request")}} object to the `Request()`
+constructor to create a copy of the Request (This is similar to calling the
+{{domxref("Request.clone","clone()")}} method.)
 
-<pre class="brush: js">var copy = new Request(myRequest);</pre>
+```js
+var copy = new Request(myRequest);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> This last usage is probably only useful in <a
-      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>.</p>
-</div>
+> **Note:** This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

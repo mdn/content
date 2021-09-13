@@ -2,69 +2,72 @@
 title: RTCIceTransport.getRemoteCandidates()
 slug: Web/API/RTCIceTransport/getRemoteCandidates
 tags:
-- API
-- Candidates
-- Connectivity
-- ICE
-- Negotiation
-- Property
-- RTCIceTransport
-- Reference
-- Remote
-- WebRTC
-- WebRTC API
-- getRemoteCandidates
-- rtc
+  - API
+  - Candidates
+  - Connectivity
+  - ICE
+  - Negotiation
+  - Property
+  - RTCIceTransport
+  - Reference
+  - Remote
+  - WebRTC
+  - WebRTC API
+  - getRemoteCandidates
+  - rtc
 browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
-    <code><strong>getRemoteCandidates()</strong></code> returns an array which contains
-    one {{domxref("RTCIceCandidate")}} for each of the candidates that have been received
-    from the remote peer so far during the current {{Glossary("ICE")}} gathering
-    session.</p>
+The **{{domxref("RTCIceTransport")}}** method
+**`getRemoteCandidates()`** returns an array which contains
+one {{domxref("RTCIceCandidate")}} for each of the candidates that have been received
+from the remote peer so far during the current {{Glossary("ICE")}} gathering
+session.
 
-<p>Each time your signaling code calls {{domxref("RTCPeerConnection.addIceCandidate()")}}
-  to add a received candidate to the ICE session, the ICE agent places it in the list
-  returned by this function.</p>
+Each time your signaling code calls {{domxref("RTCPeerConnection.addIceCandidate()")}}
+to add a received candidate to the ICE session, the ICE agent places it in the list
+returned by this function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>remoteCandidates</em> = <em>RTCIceTransport</em>.getRemoteCandidates();</pre>
+```js
+remoteCandidates = RTCIceTransport.getRemoteCandidates();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array containing one {{domxref("RTCIceCandidate")}} object for each candidate that
-  has been received so far from the remote peer during the current ICE candidate gathering
-  session.</p>
+An array containing one {{domxref("RTCIceCandidate")}} object for each candidate that
+has been received so far from the remote peer during the current ICE candidate gathering
+session.
 
-<p>It's important to keep in mind that there's no way to correlate these remote candidates
-  with compatible local candidates. To find the best match found so far, call
-  {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.</p>
+It's important to keep in mind that there's no way to correlate these remote candidates
+with compatible local candidates. To find the best match found so far, call
+{{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example gets the remote candidate list from the
-  {{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the
-  {{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in
-  the list.</p>
+This simple example gets the remote candidate list from the
+{{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the
+{{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in
+the list.
 
-<pre class="brush: js">var remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
+```js
+var remoteCandidates = pc.getSenders()[0].transport.transport.getRemoteCandidates();
 
 remoteCandidates.forEach(function(candidate, index)) {
   console.log("Candidate " + index + ": " + candidate.candidate);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

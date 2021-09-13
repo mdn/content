@@ -12,100 +12,91 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>SpeechRecognition</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.</p>
+The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 
-<div class="note">
-<p><strong>Note:</strong> On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.</p>
-</div>
+> **Note:** On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("SpeechRecognition.SpeechRecognition()")}}</dt>
- <dd>Creates a new <code>SpeechRecognition</code> object.</dd>
-</dl>
+- {{domxref("SpeechRecognition.SpeechRecognition()")}}
+  - : Creates a new `SpeechRecognition` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>SpeechRecognition</code> also inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_`SpeechRecognition` also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechRecognition.grammars")}}</dt>
- <dd>Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current <code>SpeechRecognition</code>.</dd>
- <dt>{{domxref("SpeechRecognition.lang")}}</dt>
- <dd>Returns and sets the language of the current <code>SpeechRecognition</code>. If not specified, this defaults to the HTML {{htmlattrxref("lang","html")}} attribute value, or the user agent's language setting if that isn't set either.</dd>
- <dt>{{domxref("SpeechRecognition.continuous")}}</dt>
- <dd>Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (<code>false</code>.)</dd>
- <dt>{{domxref("SpeechRecognition.interimResults")}}</dt>
- <dd>Controls whether interim results should be returned (<code>true</code>) or not (<code>false</code>.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is <code>false</code>.)</dd>
- <dt>{{domxref("SpeechRecognition.maxAlternatives")}}</dt>
- <dd>Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.</dd>
- <dt>{{domxref("SpeechRecognition.serviceURI")}} {{deprecated_inline}}</dt>
- <dd>Specifies the location of the speech recognition service used by the current <code>SpeechRecognition</code> to handle the actual recognition. The default is the user agent's default speech service.</dd>
-</dl>
+- {{domxref("SpeechRecognition.grammars")}}
+  - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.
+- {{domxref("SpeechRecognition.lang")}}
+  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML {{htmlattrxref("lang","html")}} attribute value, or the user agent's language setting if that isn't set either.
+- {{domxref("SpeechRecognition.continuous")}}
+  - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
+- {{domxref("SpeechRecognition.interimResults")}}
+  - : Controls whether interim results should be returned (`true`) or not (`false`.) Interim results are results that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property is `false`.)
+- {{domxref("SpeechRecognition.maxAlternatives")}}
+  - : Sets the maximum number of {{domxref("SpeechRecognitionAlternative")}}s provided per result. The default value is 1.
+- {{domxref("SpeechRecognition.serviceURI")}} {{deprecated_inline}}
+  - : Specifies the location of the speech recognition service used by the current `SpeechRecognition` to handle the actual recognition. The default is the user agent's default speech service.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>SpeechRecognition</code> also inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_`SpeechRecognition` also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechRecognition.abort()")}}</dt>
- <dd>Stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a {{domxref("SpeechRecognitionResult")}}.</dd>
- <dt>{{domxref("SpeechRecognition.start()")}}</dt>
- <dd>Starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current <code>SpeechRecognition</code>.</dd>
- <dt>{{domxref("SpeechRecognition.stop()")}}</dt>
- <dd>Stops the speech recognition service from listening to incoming audio, and attempts to return a {{domxref("SpeechRecognitionResult")}} using the audio captured so far.</dd>
-</dl>
+- {{domxref("SpeechRecognition.abort()")}}
+  - : Stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a {{domxref("SpeechRecognitionResult")}}.
+- {{domxref("SpeechRecognition.start()")}}
+  - : Starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
+- {{domxref("SpeechRecognition.stop()")}}
+  - : Stops the speech recognition service from listening to incoming audio, and attempts to return a {{domxref("SpeechRecognitionResult")}} using the audio captured so far.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/SpeechRecognition/audiostart_event"><code>audiostart</code></a></dt>
- <dd>Fired when the user agent has started to capture audio.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onaudiostart">onaudiostart</a></code> property.</dd>
- <dt><a href="/en-US/docs/Web/API/SpeechRecognition/audioend_event"><code>audioend</code></a></dt>
- <dd>Fired when the user agent has finished capturing audio.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend">onaudioend</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/end_event">end</a></code></dt>
- <dd>Fired when the speech recognition service has disconnected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/error_event">error</a></code></dt>
- <dd>Fired when a speech recognition error occurs.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onerror">onerror</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/nomatch_event">nomatch</a></code></dt>
- <dd>Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onnomatch">onnomatch</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/result_event">result</a></code></dt>
- <dd>Fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onresult">onresult</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/soundstart_event">soundstart</a></code></dt>
- <dd>Fired when any sound — recognisable speech or not — has been detected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onsoundstart">onsoundstart</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/soundend_event">soundend</a></code></dt>
- <dd>Fired when any sound — recognisable speech or not — has stopped being detected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onsoundend">onsoundend</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/speechstart_event">speechstart</a></code></dt>
- <dd>Fired when sound that is recognized by the speech recognition service as speech has been detected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onspeechstart">onspeechstart</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/speechend_event">speechend</a></code></dt>
- <dd>Fired when speech recognized by the speech recognition service has stopped being detected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onspeechend">onspeechend</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SpeechRecognition/start_event">start</a></code></dt>
- <dd>Fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current <code>SpeechRecognition</code>.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart">onstart</a></code> property.</dd>
-</dl>
+- [`audiostart`](/en-US/docs/Web/API/SpeechRecognition/audiostart_event)
+  - : Fired when the user agent has started to capture audio.
+    Also available via the [`onaudiostart`](/en-US/docs/Web/API/SpeechRecognition/onaudiostart) property.
+- [`audioend`](/en-US/docs/Web/API/SpeechRecognition/audioend_event)
+  - : Fired when the user agent has finished capturing audio.
+    Also available via the [`onaudioend`](/en-US/docs/Web/API/SpeechRecognition/onaudioend) property.
+- [`end`](/en-US/docs/Web/API/SpeechRecognition/end_event)
+  - : Fired when the speech recognition service has disconnected.
+    Also available via the [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend) property.
+- [`error`](/en-US/docs/Web/API/SpeechRecognition/error_event)
+  - : Fired when a speech recognition error occurs.
+    Also available via the [`onerror`](/en-US/docs/Web/API/SpeechRecognition/onerror) property.
+- [`nomatch`](/en-US/docs/Web/API/SpeechRecognition/nomatch_event)
+  - : Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
+    Also available via the [`onnomatch`](/en-US/docs/Web/API/SpeechRecognition/onnomatch) property.
+- [`result`](/en-US/docs/Web/API/SpeechRecognition/result_event)
+  - : Fired when the speech recognition service returns a result — a word or phrase has been positively recognized and this has been communicated back to the app.
+    Also available via the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) property.
+- [`soundstart`](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
+  - : Fired when any sound — recognisable speech or not — has been detected.
+    Also available via the [`onsoundstart`](/en-US/docs/Web/API/SpeechRecognition/onsoundstart) property.
+- [`soundend`](/en-US/docs/Web/API/SpeechRecognition/soundend_event)
+  - : Fired when any sound — recognisable speech or not — has stopped being detected.
+    Also available via the [`onsoundend`](/en-US/docs/Web/API/SpeechRecognition/onsoundend) property.
+- [`speechstart`](/en-US/docs/Web/API/SpeechRecognition/speechstart_event)
+  - : Fired when sound that is recognized by the speech recognition service as speech has been detected.
+    Also available via the [`onspeechstart`](/en-US/docs/Web/API/SpeechRecognition/onspeechstart) property.
+- [`speechend`](/en-US/docs/Web/API/SpeechRecognition/speechend_event)
+  - : Fired when speech recognized by the speech recognition service has stopped being detected.
+    Also available via the [`onspeechend`](/en-US/docs/Web/API/SpeechRecognition/onspeechend) property.
+- [`start`](/en-US/docs/Web/API/SpeechRecognition/start_event)
+  - : Fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
+    Also available via the [`onstart`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart) property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our simple <a href="https://github.com/mdn/web-speech-api/tree/master/speech-color-changer">Speech color changer</a> example, we create a new <code>SpeechRecognition</code> object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognized by the <code>SpeechRecognition</code> instance using the {{domxref("SpeechRecognition.grammars")}} property.</p>
+In our simple [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognized by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
-<p>After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognized, the {{domxref("SpeechRecognition.onresult")}} handler fires,  we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.</p>
+After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognized, the {{domxref("SpeechRecognition.onresult")}} handler fires,  we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -127,18 +118,17 @@ recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color;
   bg.style.backgroundColor = color;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

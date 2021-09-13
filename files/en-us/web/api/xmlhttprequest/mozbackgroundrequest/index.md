@@ -12,16 +12,12 @@ tags:
   - XMLHttpRequest
   - mozBackgroundRequest
 ---
-<p>{{draft}}{{APIRef('XMLHttpRequest')}}</p>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<div class="note">
-<p><strong>Note:</strong> This method is not available from Web content. It requires elevated privileges to access.</p>
-</div>
+> **Note:** This method is not available from Web content. It requires elevated privileges to access.
 
-<p><strong><code>XMLHttpRequest.mozBackgroundRequest</code></strong> is a Boolean, indicating if the object represents a background service request. If <code>true</code>, no load group is associated with the request, with security dialogs prevented from being shown to the user.</p>
+**`XMLHttpRequest.mozBackgroundRequest`** is a Boolean, indicating if the object represents a background service request. If `true`, no load group is associated with the request, with security dialogs prevented from being shown to the user.
 
-<p>In cases in where a security dialog (such as authentication or a bad certificate notification) would normally be shown, this request fails instead.</p>
+In cases in where a security dialog (such as authentication or a bad certificate notification) would normally be shown, this request fails instead.
 
-<div class="note">
-<p><strong>Note:</strong> This property must be set before calling <code>open()</code>.</p>
-</div>
+> **Note:** This property must be set before calling `open()`.

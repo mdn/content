@@ -2,44 +2,45 @@
 title: SpeechRecognition.continuous
 slug: Web/API/SpeechRecognition/continuous
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- continuous
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - continuous
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.continuous
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>continuous</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface controls whether continuous results are
-  returned for each recognition, or only a single result.</p>
+The **`continuous`** property of the
+{{domxref("SpeechRecognition")}} interface controls whether continuous results are
+returned for each recognition, or only a single result.
 
-<p>It defaults to single results (<code>false</code>.)</p>
+It defaults to single results (`false`.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myContinuous = mySpeechRecognition.continuous;
+```js
+var myContinuous = mySpeechRecognition.continuous;
 mySpeechRecognition.continuous = true;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value representing the current <code>SpeechRecognition</code>'s
-  continuous status. <code>true</code> means continuous, and <code>false</code> means not
-  continuous (single result each time.)</p>
+A boolean value representing the current `SpeechRecognition`'s
+continuous status. `true` means continuous, and `false` means not
+continuous (single result each time.)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code is excerpted from our <a
-    href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech
-    color changer</a> example.</p>
+This code is excerpted from our [Speech
+color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -49,18 +50,17 @@ recognition.lang = 'en-US';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

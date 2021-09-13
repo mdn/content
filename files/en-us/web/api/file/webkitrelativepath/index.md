@@ -14,66 +14,69 @@ tags:
   - webkitRelativePath
 browser-compat: api.File.webkitRelativePath
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}
 
-<p>The <code><strong>File.webkitRelativePath</strong></code> is a read-only property that
-  contains a {{domxref("USVString")}} which specifies the file's path relative to the
-  directory selected by the user in an {{HTMLElement("input")}} element with its
-  {{htmlattrxref("webkitdirectory", "input")}} attribute set.</p>
+The **`File.webkitRelativePath`** is a read-only property that
+contains a {{domxref("USVString")}} which specifies the file's path relative to the
+directory selected by the user in an {{HTMLElement("input")}} element with its
+{{htmlattrxref("webkitdirectory", "input")}} attribute set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">relativePath = File.webkitRelativePath</pre>
+```js
+relativePath = File.webkitRelativePath
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing the path of the file relative to the ancestor
-  directory the user selected.</p>
+A {{domxref("USVString")}} containing the path of the file relative to the ancestor
+directory the user selected.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a directory picker is presented which lets the user choose one or more
-  directories. When the {{event("change")}} event occurs, a list of all files contained
-  within the selected directory hierarchies is generated and displayed.</p>
+In this example, a directory picker is presented which lets the user choose one or more
+directories. When the {{event("change")}} event occurs, a list of all files contained
+within the selected directory hierarchies is generated and displayed.
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
-&lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
+```html
+<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<ul id="listing"></ul>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
+```js
+document.getElementById("filepicker").addEventListener("change", function(event) {
   let output = document.getElementById("listing");
   let files = event.target.files;
 
-  for (let i=0; i&lt;files.length; i++) {
+  for (let i=0; i<files.length; i++) {
     let item = document.createElement("li");
     item.innerHTML = files[i].webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
-  <li>{{domxref("HTMLInputElement.webkitdirectory")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- {{domxref("HTMLInputElement.webkitEntries")}}
+- {{domxref("HTMLInputElement.webkitdirectory")}}

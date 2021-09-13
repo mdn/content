@@ -2,43 +2,42 @@
 title: GlobalEventHandlers.onpointercancel
 slug: Web/API/GlobalEventHandlers/onpointercancel
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- PointerEvent
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onpointercancel
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onpointercancel</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("pointercancel")}} events.</p>
+The **`onpointercancel`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("pointercancel")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onpointercancel = <var>cancelHandler</var>;
+```js
+targetElement.onpointercancel = cancelHandler;
 
-var <var>cancelHandler</var> = <var>targetElement</var>.onpointercancel;
-</pre>
+var cancelHandler = targetElement.onpointercancel;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code>cancelHandler</code></dt>
-  <dd>The <code>pointercancel</code> event handler for element <code>targetElement</code>.
-  </dd>
-</dl>
+- `cancelHandler`
+  - : The `pointercancel` event handler for element `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointercancel</code> to handle an element's
-  <code>pointercancel</code> events.</p>
+This example shows two ways to use `onpointercancel` to handle an element's
+`pointercancel` events.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function cancelHandler(ev) {
   // Process the pointercancel event
 }
@@ -46,30 +45,26 @@ function init() {
   var el = document.getElementById('target1');
   el.onpointercancel = cancelHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointercancel="cancelHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointercancel="cancelHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointercancel_event">Document: pointercancel</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">HTMLElement: pointercancel</a></code>
-    event</li>
-</ul>
+- [`Document: pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event)
+  event
+- [`HTMLElement: pointercancel`](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
+  event

@@ -8,44 +8,41 @@ tags:
   - HIDConnectionEvent
 browser-compat: api.HIDConnectionEvent.HIDConnectionEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>HIDConnectionEvent()</code></strong> constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when an input report is received.</p>
+The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when an input report is received.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new HIDConnectionEvent(type, HIDConnectionEventInit);</pre>
+```js
+new HIDConnectionEvent(type, HIDConnectionEventInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>type</code></dt>
-	<dd>A {{domxref("DOMString")}} with one of <code>"connect"</code> or <code>"disconnect"</code>.</dd>
-	<dt><code>HIDConnectionEventInit</code></dt>
-  <dd>A dictionary including the following fields:
-    <dl>
-      <dt><code>device</code></dt>
-      <dd>The {{domxref("HIDDevice")}} instance representing the device sending the input report.</dd>
-      <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event bubbles. The default is
-        <code>false</code>.</dd>
-      <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event can be cancelled. The
-        default is <code>false</code>.</dd>
-      <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event will trigger listeners
+- `type`
+  - : A {{domxref("DOMString")}} with one of `"connect"` or `"disconnect"`.
+- `HIDConnectionEventInit`
+
+  - : A dictionary including the following fields:
+
+    - `device`
+      - : The {{domxref("HIDDevice")}} instance representing the device sending the input report.
+    - `bubbles` {{optional_inline}}
+      - : A boolean value indicating whether the event bubbles. The default is
+        `false`.
+    - `cancelable` {{optional_inline}}
+      - : A boolean value indicating whether the event can be cancelled. The
+        default is `false`.
+    - `composed` {{optional_inline}}
+      - : A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
-        default is <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        default is `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
+{{Compat}}

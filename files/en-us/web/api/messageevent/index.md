@@ -12,76 +12,72 @@ tags:
   - messaging
 browser-compat: api.MessageEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>MessageEvent</strong></code> interface represents a message received by a target object.</p>
+The **`MessageEvent`** interface represents a message received by a target object.
 
-<p>This is used to represent messages in:</p>
+This is used to represent messages in:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a> (see {{domxref("EventSource.onmessage")}}).</li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> (see the <code>onmessage</code> property of the <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> interface).</li>
- <li>Cross-document messaging (see {{domxref("Window.postMessage()")}} and {{domxref("Window.onmessage")}}).</li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel messaging</a> (see {{domxref("MessagePort.postMessage()")}} and {{domxref("MessagePort.onmessage")}}).</li>
- <li>Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)</li>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast channels</a> (see {{domxref("Broadcastchannel.postMessage()")}}) and {{domxref("BroadcastChannel.onmessage")}}).</li>
- <li>WebRTC data channels (see {{domxref("RTCDataChannel.onmessage")}}).</li>
-</ul>
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) (see {{domxref("EventSource.onmessage")}}).
+- [Web sockets](/en-US/docs/Web/API/WebSockets_API) (see the `onmessage` property of the [WebSocket](/en-US/docs/Web/API/WebSocket) interface).
+- Cross-document messaging (see {{domxref("Window.postMessage()")}} and {{domxref("Window.onmessage")}}).
+- [Channel messaging](/en-US/docs/Web/API/Channel_Messaging_API) (see {{domxref("MessagePort.postMessage()")}} and {{domxref("MessagePort.onmessage")}}).
+- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)
+- [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("Broadcastchannel.postMessage()")}}) and {{domxref("BroadcastChannel.onmessage")}}).
+- WebRTC data channels (see {{domxref("RTCDataChannel.onmessage")}}).
 
-<p>The action triggered by this event is defined in a function set as the event handler for the relevant {{event("message")}} event (e.g. using an <code>onmessage</code> handler as listed above).</p>
+The action triggered by this event is defined in a function set as the event handler for the relevant {{event("message")}} event (e.g. using an `onmessage` handler as listed above).
 
-<p>{{AvailableInWorkers}}<br>
- {{InheritanceDiagram(600, 80)}}</p>
+{{AvailableInWorkers}}
+{{InheritanceDiagram(600, 80)}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}</dt>
- <dd>Creates a new <code>MessageEvent</code>.</dd>
-</dl>
+- {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
+  - : Creates a new `MessageEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("MessageEvent.data")}} {{readonlyInline}}</dt>
- <dd>The data sent by the message emitter.</dd>
- <dt>{{domxref("MessageEvent.origin")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the origin of the message emitter.</dd>
- <dt>{{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing a unique ID for the event.</dd>
- <dt>{{domxref("MessageEvent.source")}} {{readonlyInline}}</dt>
- <dd>A <code>MessageEventSource</code> (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.</dd>
- <dt>{{domxref("MessageEvent.ports")}} {{readonlyInline}}</dt>
- <dd>An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).</dd>
-</dl>
+- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+  - : The data sent by the message emitter.
+- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing a unique ID for the event.
+- {{domxref("MessageEvent.source")}} {{readonlyInline}}
+  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("MessageEvent.initMessageEvent","initMessageEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes a message event. <strong>Do not use this anymore</strong> — <strong>use the {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} constructor instead.</strong></dd>
-</dl>
+- {{domxref("MessageEvent.initMessageEvent","initMessageEvent()")}} {{deprecated_inline}}
+  - : Initializes a message event. **Do not use this anymore** — **use the {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} constructor instead.**
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.</p>
+In our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 
-<p>The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:</p>
+The following code snippet shows creation of a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
-</pre>
+```js
+var myWorker = new SharedWorker('worker.js');
+```
 
-<p>Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its <code>start()</code> method:</p>
+Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
 
-<pre class="brush: js">myWorker.port.start();</pre>
+```js
+myWorker.port.start();
+```
 
-<p>When the port is started, both scripts post messages to the worker and handle messages sent from it using <code>port.postMessage()</code> and <code>port.onmessage</code>, respectively:</p>
+When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
-<pre class="brush: js">first.onchange = function() {
+```js
+first.onchange = function() {
   myWorker.port.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
@@ -94,11 +90,13 @@ second.onchange = function() {
 myWorker.port.onmessage = function(e) {
   result1.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's <code>ports</code> property — we then use {{domxref("MessagePort")}} <code>start()</code> method to start the port, and the <code>onmessage</code> handler to deal with messages sent from the main threads.</p>
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
-<pre class="brush: js">onconnect = function(e) {
+```js
+onconnect = function(e) {
   var port = e.ports[0];
 
   port.addEventListener('message', function(e) {
@@ -107,18 +105,17 @@ myWorker.port.onmessage = function(e) {
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.

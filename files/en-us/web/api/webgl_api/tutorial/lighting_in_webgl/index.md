@@ -15,42 +15,39 @@ tags:
   - lighting
   - vertices
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
-<p>As should be clear by now, WebGL doesn't have much built-in knowledge. It just runs two functions you supply — a vertex shader and a fragment shader — and expects you to write creative functions to get the results you want. In other words, if you want lighting you have to calculate it yourself. Fortunately, it's not all that hard to do, and this article will cover some of the basics.</p>
+As should be clear by now, WebGL doesn't have much built-in knowledge. It just runs two functions you supply — a vertex shader and a fragment shader — and expects you to write creative functions to get the results you want. In other words, if you want lighting you have to calculate it yourself. Fortunately, it's not all that hard to do, and this article will cover some of the basics.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example uses the <a href="https://glmatrix.net/">glMatrix</a> library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This example uses the [glMatrix](https://glmatrix.net/) library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Simulating_lighting_and_shading_in_3D">Simulating lighting and shading in 3D</h2>
+## Simulating lighting and shading in 3D
 
-<p>Although going into detail about the theory behind simulated lighting in 3D graphics is far beyond the scope of this article, it's helpful to know a bit about how it works. Instead of discussing it in depth here, take a look at the article on <a href="https://en.wikipedia.org/wiki/Phong_shading">Phong shading</a> at Wikipedia, which provides a good overview of the most commonly used lighting model or if you'd like to see a WebGL based explanation <a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html">see this artcle</a>.</p>
+Although going into detail about the theory behind simulated lighting in 3D graphics is far beyond the scope of this article, it's helpful to know a bit about how it works. Instead of discussing it in depth here, take a look at the article on [Phong shading](https://en.wikipedia.org/wiki/Phong_shading) at Wikipedia, which provides a good overview of the most commonly used lighting model or if you'd like to see a WebGL based explanation [see this artcle](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html).
 
-<p>There are three basic types of lighting:</p>
+There are three basic types of lighting:
 
-<p><strong>Ambient light</strong> is the light that permeates the scene; it's non-directional and affects every face in the scene equally, regardless of which direction it's facing.</p>
+**Ambient light** is the light that permeates the scene; it's non-directional and affects every face in the scene equally, regardless of which direction it's facing.
 
-<p><strong>Directional light</strong> is light that is emitted from a specific direction. This is light that's coming from so far away that every photon is moving parallel to every other photon. Sunlight, for example, is considered directional light.</p>
+**Directional light** is light that is emitted from a specific direction. This is light that's coming from so far away that every photon is moving parallel to every other photon. Sunlight, for example, is considered directional light.
 
-<p><strong>Point light</strong> is light that is being emitted from a point, radiating in all directions. This is how many real-world light sources usually work. A light bulb emits light in all directions, for example.</p>
+**Point light** is light that is being emitted from a point, radiating in all directions. This is how many real-world light sources usually work. A light bulb emits light in all directions, for example.
 
-<p>For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any {{interwiki("wikipedia", "specular highlights")}} or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">previous demo</a>.</p>
+For our purposes, we're going to simplify the lighting model by only considering simple directional and ambient lighting; we won't have any {{interwiki("wikipedia", "specular highlights")}} or point light sources in this scene. Instead, we'll have our ambient lighting plus a single directional light source, aimed at the rotating cube from the [previous demo](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
-<p>Once you drop out the concept of point sources and specular lighting, there are two pieces of information we'll need in order to implement our directional lighting:</p>
+Once you drop out the concept of point sources and specular lighting, there are two pieces of information we'll need in order to implement our directional lighting:
 
-<ol>
- <li>We need to associate a <strong>surface normal</strong> with each vertex. This is a vector that's perpendicular to the face at that vertex.</li>
- <li>We need to know the direction in which the light is traveling; this is defined by the <strong>direction vector</strong>.</li>
-</ol>
+1.  We need to associate a **surface normal** with each vertex. This is a vector that's perpendicular to the face at that vertex.
+2.  We need to know the direction in which the light is traveling; this is defined by the **direction vector**.
 
-<p>Then we update the vertex shader to adjust the color of each vertex, taking into account the ambient lighting as well as the effect of the directional lighting given the angle at which it's striking the face. We'll see how to do that when we look at the code for the shader.</p>
+Then we update the vertex shader to adjust the color of each vertex, taking into account the ambient lighting as well as the effect of the directional lighting given the angle at which it's striking the face. We'll see how to do that when we look at the code for the shader.
 
-<h2 id="Building_the_normals_for_the_vertices">Building the normals for the vertices</h2>
+## Building the normals for the vertices
 
-<p>The first thing we need to do is generate the array of normals for all the vertices that comprise our cube. Since a cube is a very simple object, this is easy to do; obviously for more complex objects, calculating the normals will be more involved.</p>
+The first thing we need to do is generate the array of normals for all the vertices that comprise our cube. Since a cube is a very simple object, this is easy to do; obviously for more complex objects, calculating the normals will be more involved.
 
-<pre class="brush: js">  const normalBuffer = gl.createBuffer();
+```js
+  const normalBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, normalBuffer);
 
   const vertexNormals = [
@@ -102,14 +99,14 @@ tags:
     textureCoord: textureCoordBuffer,
     indices: indexBuffer,
   };
+```
 
-</pre>
+This should look pretty familiar by now; we create a new buffer, bind it to be the buffer we're working with, then send along our array of vertex normals into the buffer by calling `bufferData()`.
 
-<p>This should look pretty familiar by now; we create a new buffer, bind it to be the buffer we're working with, then send along our array of vertex normals into the buffer by calling <code>bufferData()</code>.</p>
+Then we add the code to `drawScene()` to bind the normals array to a shader attribute so the shader code can get access to it:
 
-<p>Then we add the code to <code>drawScene()</code> to bind the normals array to a shader attribute so the shader code can get access to it:</p>
-
-<pre class="brush: js">  // Tell WebGL how to pull out the normals from
+```js
+  // Tell WebGL how to pull out the normals from
   // the normal buffer into the vertexNormal attribute.
   {
     const numComponents = 3;
@@ -128,11 +125,12 @@ tags:
     gl.enableVertexAttribArray(
         programInfo.attribLocations.vertexNormal);
   }
-</pre>
+```
 
-<p>Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a <strong>normal matrix</strong>, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source:</p>
+Finally, we need to update the code that builds the uniform matrices to generate and deliver to the shader a **normal matrix**, which is used to transform the normals when dealing with the current orientation of the cube in relation to the light source:
 
-<pre class="brush: js">  const normalMatrix = mat4.create();
+```js
+  const normalMatrix = mat4.create();
   mat4.invert(normalMatrix, modelViewMatrix);
   mat4.transpose(normalMatrix, normalMatrix);
 
@@ -142,17 +140,18 @@ tags:
       programInfo.uniformLocations.normalMatrix,
       false,
       normalMatrix);
-</pre>
+```
 
-<h2 id="Update_the_shaders">Update the shaders</h2>
+## Update the shaders
 
-<p>Now that all the data the shaders need is available to them, we need to update the code in the shaders themselves.</p>
+Now that all the data the shaders need is available to them, we need to update the code in the shaders themselves.
 
-<h3 id="The_vertex_shader">The vertex shader</h3>
+### The vertex shader
 
-<p>The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting. Let's take a look at the code:</p>
+The first thing to do is update the vertex shader so it generates a shading value for each vertex based on the ambient lighting as well as the directional lighting. Let's take a look at the code:
 
-<pre class="brush: js">  const vsSource = `
+```js
+  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec3 aVertexNormal;
     attribute vec2 aTextureCoord;
@@ -180,19 +179,20 @@ tags:
       vLighting = ambientLight + (directionalLightColor * directional);
     }
   `;
-</pre>
+```
 
-<p>Once the position of the vertex is computed, and we pass the coordinates of the {{Glossary("texel")}} corresponding to the vertex to the fragment shader, we can work on computing the shading for the vertex.</p>
+Once the position of the vertex is computed, and we pass the coordinates of the {{Glossary("texel")}} corresponding to the vertex to the fragment shader, we can work on computing the shading for the vertex.
 
-<p>The first thing we do is transform the normal based on the current orientation of the cube, by multiplying the vertex's normal by the normal matrix. We can then compute the amount of directional lighting that needs to be applied to the vertex by calculating the dot product of the transformed normal and the directional vector (that is, the direction from which the light is coming). If this value is less than zero, then we pin the value to zero, since you can't have less than zero light.</p>
+The first thing we do is transform the normal based on the current orientation of the cube, by multiplying the vertex's normal by the normal matrix. We can then compute the amount of directional lighting that needs to be applied to the vertex by calculating the dot product of the transformed normal and the directional vector (that is, the direction from which the light is coming). If this value is less than zero, then we pin the value to zero, since you can't have less than zero light.
 
-<p>Once the amount of directional lighting is computed, we can generate the lighting value by taking the ambient light and adding in the product of the directional light's color and the amount of directional lighting to provide. As a result, we now have an RGB value that will be used by the fragment shader to adjust the color of each pixel we render.</p>
+Once the amount of directional lighting is computed, we can generate the lighting value by taking the ambient light and adding in the product of the directional light's color and the amount of directional lighting to provide. As a result, we now have an RGB value that will be used by the fragment shader to adjust the color of each pixel we render.
 
-<h3 id="The_fragment_shader">The fragment shader</h3>
+### The fragment shader
 
-<p>The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader:</p>
+The fragment shader now needs to be updated to take into account the lighting value computed by the vertex shader:
 
-<pre class="brush: js">  const fsSource = `
+```js
+  const fsSource = `
     varying highp vec2 vTextureCoord;
     varying highp vec3 vLighting;
 
@@ -204,13 +204,14 @@ tags:
       gl_FragColor = vec4(texelColor.rgb * vLighting, texelColor.a);
     }
   `;
-</pre>
+```
 
-<p>Here we fetch the color of the texel, just like we did in the previous example, but before setting the color of the fragment, we multiply the texel's color by the lighting value to adjust the texel's color to take into account the effect of our light sources.</p>
+Here we fetch the color of the texel, just like we did in the previous example, but before setting the color of the fragment, we multiply the texel's color by the lighting value to adjust the texel's color to take into account the effect of our light sources.
 
-<p>The only thing left is to look up the location of the <code>aVertexNormal</code> attribute and the <code>uNormalMatrix</code> uniform.</p>
+The only thing left is to look up the location of the `aVertexNormal` attribute and the `uNormalMatrix` uniform.
 
-<pre class="brush: js">  const programInfo = {
+```js
+  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -224,18 +225,18 @@ tags:
       uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
     },
   };
-</pre>
+```
 
-<p>And that's it!</p>
+And that's it!
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample7/">Open this demo on a new page</a></p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample7/)
 
-<h2 id="Exercises_for_the_reader">Exercises for the reader</h2>
+## Exercises for the reader
 
-<p>Obviously, this is a simple example, implementing basic per-vertex lighting. For more advanced graphics, you'll want to implement per-pixel lighting, but this will get you headed in the right direction.</p>
+Obviously, this is a simple example, implementing basic per-vertex lighting. For more advanced graphics, you'll want to implement per-pixel lighting, but this will get you headed in the right direction.
 
-<p>You might also try experimenting with the direction of the light source, the colors of the light sources, and so forth.</p>
+You might also try experimenting with the direction of the light source, the colors of the light sources, and so forth.
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}

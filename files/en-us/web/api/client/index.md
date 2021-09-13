@@ -13,40 +13,34 @@ tags:
   - ServiceWorkers
 browser-compat: api.Client
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code>Client</code> interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get <code>Client</code>/<code>WindowClient</code> objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.</p>
+The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Client.postMessage()")}}</dt>
- <dd>Sends a message to the client.</dd>
-</dl>
+- {{domxref("Client.postMessage()")}}
+  - : Sends a message to the client.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Client.id")}} {{readonlyInline}}</dt>
- <dd>The universally unique identifier of the client as a string.</dd>
- <dt>{{domxref("Client.type")}} {{readonlyInline}}</dt>
- <dd>The client's type as a string. It can be "<code>window"</code>, "<code>worker"</code>, or "<code>sharedworker"</code>.</dd>
- <dt>{{domxref("Client.url")}} {{readonlyInline}}</dt>
- <dd>The URL of the client as a string.</dd>
-</dl>
+- {{domxref("Client.id")}} {{readonlyInline}}
+  - : The universally unique identifier of the client as a string.
+- {{domxref("Client.type")}} {{readonlyInline}}
+  - : The client's type as a string. It can be "`window"`, "`worker"`, or "`sharedworker"`.
+- {{domxref("Client.url")}} {{readonlyInline}}
+  - : The URL of the client as a string.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -2,67 +2,65 @@
 title: WebGL2RenderingContext.bindBufferRange()
 slug: Web/API/WebGL2RenderingContext/bindBufferRange
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindBufferRange
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.bindBufferRange()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> binds a range of a given
-  {{domxref("WebGLBuffer")}} to a given binding point (<code>target</code>) at a given
-  <code>index</code>.</p>
+The **`WebGL2RenderingContext.bindBufferRange()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) binds a range of a given
+{{domxref("WebGLBuffer")}} to a given binding point (`target`) at a given
+`index`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.bindBufferRange(<var>target</var>, <var>index</var>, <var>buffer</var>, <var>offset</var>, <var>size</var>);</pre>
+```js
+void gl.bindBufferRange(target, index, buffer, offset, size);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for the bind operation. Possible
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for the bind operation. Possible
     values:
-    <ul>
-      <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code></li>
-      <li><code>gl.UNIFORM_BUFFER</code></li>
-    </ul>
-  </dd>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the <code>target</code>.</dd>
-  <dt><code>buffer</code></dt>
-  <dd>A {{domxref("WebGLBuffer")}} which to bind to the binding point
-    (<code>target</code>).</dd>
-  <dt>offset</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the starting offset.</dd>
-  <dt>size</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizeiptr")}} specifying the amount of data that can be read from the
-    buffer.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+    - `gl.UNIFORM_BUFFER`
 
-<p>None.</p>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the `target`.
+- `buffer`
+  - : A {{domxref("WebGLBuffer")}} which to bind to the binding point
+    (`target`).
+- offset
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the starting offset.
+- size
+  - : A {{domxref("WebGL_API/Types", "GLsizeiptr")}} specifying the amount of data that can be read from the
+    buffer.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.bindBufferRange(gl.TRANSFORM_FEEDBACK_BUFFER, 1, buffer, 0, 4);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.bindBufferRange(gl.TRANSFORM_FEEDBACK_BUFFER, 1, buffer, 0, 4);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.bindBufferBase()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.bindBufferBase()")}}

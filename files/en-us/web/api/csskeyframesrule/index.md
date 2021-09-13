@@ -9,43 +9,39 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSKeyframesRule</code></strong> interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.</p>
+The **`CSSKeyframesRule`** interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contents of a whole {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSKeyframesRule.name")}}</dt>
- <dd>Represents the name of the keyframes, used by the {{cssxref("animation-name")}} property.</dd>
- <dt>{{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.</dd>
-</dl>
+- {{domxref("CSSKeyframesRule.name")}}
+  - : Represents the name of the keyframes, used by the {{cssxref("animation-name")}} property.
+- {{domxref("CSSKeyframesRule.cssRules")}} {{readOnlyInline}}
+  - : Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
- <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
- <dt>{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
- <dd>Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between <code>0%</code> and <code>100%</code>.</dd>
- <dt>{{domxref("CSSKeyframesRule.findRule()")}}</dt>
- <dd>Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between <code>0%</code> and <code>100%</code>. If no such keyframe exists, <code>findRule</code> returns <code>null</code>.</dd>
-</dl>
+- {{domxref("CSSKeyframesRule.appendRule()")}}
+  - : Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is thrown.
+- {{domxref("CSSKeyframesRule.deleteRule()")}}
+  - : Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between `0%` and `100%`.
+- {{domxref("CSSKeyframesRule.findRule()")}}
+  - : Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between `0%` and `100%`. If no such keyframe exists, `findRule` returns `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object.</p>
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object.
 
-<pre class="brush: css">@keyframes slidein {
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -53,22 +49,23 @@ browser-compat: api.CSSKeyframesRule
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule </pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+let keyframes = myRules[0]; // a CSSKeyframesRule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@keyframes")}}</li>
- <li>{{domxref("CSSKeyFrameRule")}}</li>
-</ul>
+- {{cssxref("@keyframes")}}
+- {{domxref("CSSKeyFrameRule")}}

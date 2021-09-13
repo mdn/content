@@ -11,67 +11,60 @@ tags:
   - Experimental
 browser-compat: api.MediaDevices.selectAudioOutput
 ---
-<div>{{APIRef("WebRTC")}} {{SeeCompatTable}}</div>
+{{APIRef("WebRTC")}} {{SeeCompatTable}}
 
-<p>The {{domxref("MediaDevices")}} method <strong><code>selectAudioOutput()</code></strong> prompts the user to select a specific audio output device, for example a speaker or headset.
-  On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.</p>
+The {{domxref("MediaDevices")}} method **`selectAudioOutput()`** prompts the user to select a specific audio output device, for example a speaker or headset.
+On success, the returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} describing the selected device.
 
-<p>The method must be triggered from some UI interaction like a button click (more precisely, it <em>requires</em> {{Glossary("transient activation")}}).</p>
+The method must be triggered from some UI interaction like a button click (more precisely, it _requires_ {{Glossary("transient activation")}}).
 
-<p>Access to audio output devices is gated by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.
-    The prompt will not be displayed if the <code>speaker-selection</code> permission has not been granted.</p>
+Access to audio output devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+The prompt will not be displayed if the `speaker-selection` permission has not been granted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.mediaDevices.selectAudioOutput()
+```js
+navigator.mediaDevices.selectAudioOutput()
 navigator.mediaDevices.selectAudioOutput(options)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options</code> {{Optional_Inline}}</dt>
- <dd><p>An object that configures what device(s) may be offered in the user prompt.</p>
+- `options` {{Optional_Inline}}
 
-  <dl>
-    <dt><code>deviceId</code> {{Optional_Inline}}</dt>
-    <dd>A {{domxref("DOMString")}} representing the id of the (only) device to display in the prompt (with default value: "").
-      
-      <div class="notecard note">
-        <p><strong>Note:</strong> A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by <code>selectAudioOutput()</code> in an earlier session. 
-          In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.</p>
+  - : An object that configures what device(s) may be offered in the user prompt.
 
-        <p>This is intended for applications that want to use persisted device ids.
-          The ids <em>must be passed</em> through <code>selectAudioOutput()</code> successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.</p>
-      </div>
-    </dd>
-   </dl>
+    - `deviceId` {{Optional_Inline}}
 
- </dd>
-</dl>
+      - : A {{domxref("DOMString")}} representing the id of the (only) device to display in the prompt (with default value: "").
 
+        > **Note:** A user agent may choose to skip prompting the user if a specified non-null id was previously exposed to the user by `selectAudioOutput()` in an earlier session.
+        > In this case the user agent may simply resolve with this device id, or a new id for the same device if it has changed.
+        >
+        > This is intended for applications that want to use persisted device ids.
+        > The ids _must be passed_ through `selectAudioOutput()` successfully before they will work with {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{ jsxref("Promise") }} that receives a {{domxref("MediaDeviceInfo")}} object when the promise is fulfilled.
-  The object describes the user-selected audio output device.</p>
+A {{ jsxref("Promise") }} that receives a {{domxref("MediaDeviceInfo")}} object when the promise is fulfilled.
+The object describes the user-selected audio output device.
 
-<p>The promise may be rejected with one of the following errors:</p>
-<dl>
- <dt><code>NotAllowedError</code></dt>
- <dd>The current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.</dd>
- <dt><code>NotFoundError</code></dt>
- <dd>There are no available audio output devices.</dd>
- <dt><code>InvalidStateError</code></dt>
- <dd><code>selectAudioOutput</code> requires {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).</dd>
-</dl>
+The promise may be rejected with one of the following errors:
 
-<h2 id="Example">Example</h2>
+- `NotAllowedError`
+  - : The current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
+- `NotFoundError`
+  - : There are no available audio output devices.
+- `InvalidStateError`
+  - : `selectAudioOutput` requires {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
 
-<p>Here's an example of using <code>selectAudioOutput()</code>, which you might call within a function that is triggered by a button click.
-  It outputs the selected <a href="/en-US/docs/Web/API/MediaDeviceInfo/deviceId">device IDs</a> and labels (if available) or an error message.</p>
+## Example
 
-<pre class="brush: js">if (!navigator.mediaDevices.selectAudioOutput) {
+Here's an example of using `selectAudioOutput()`, which you might call within a function that is triggered by a button click.
+It outputs the selected [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId) and labels (if available) or an error message.
+
+```js
+if (!navigator.mediaDevices.selectAudioOutput) {
   console.log("selectAudioOutput() not supported.");
   return;
 }
@@ -84,22 +77,22 @@ navigator.mediaDevices.selectAudioOutput()
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<p>On selection of an output this might produce:</p>
+On selection of an output this might produce:
 
-<pre class="brush: bash">audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=</pre>
+```bash
+audiooutput: Realtek Digital Output (Realtek(R) Audio) id = 0wE6fURSZ20H0N2NbxqgowQJLWbwo+5ablCVVJwRM3k=
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> - the introductory page to the API</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API

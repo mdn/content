@@ -2,48 +2,45 @@
 title: BlobEvent()
 slug: Web/API/BlobEvent/BlobEvent
 tags:
-- API
-- BlobEvent
-- Constructor
-- DOM
-- DOM Reference
-- Experimental
-- Media Stream Encoding
-- Reference
+  - API
+  - BlobEvent
+  - Constructor
+  - DOM
+  - DOM Reference
+  - Experimental
+  - Media Stream Encoding
+  - Reference
 browser-compat: api.BlobEvent.BlobEvent
 ---
-<p>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>The <code><strong>BlobEvent()</strong></code> constructor returns a newly created
-  {{domxref("BlobEvent")}} object with an associated {{domxref("Blob")}}.</p>
+The **`BlobEvent()`** constructor returns a newly created
+{{domxref("BlobEvent")}} object with an associated {{domxref("Blob")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>blobEvent</em> = new BlobEvent({data: <em>aSpecificBlob</em>}[, timecode]);
-</pre>
+```js
+blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<p><em>The <code>BlobEvent()</code> constructor also inherits arguments from
-    {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `BlobEvent()` constructor also inherits arguments from
+{{domxref("Event.Event", "Event()")}}._
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>Is a {{domxref("Blob")}} associated with the event.</dd>
-  <dt><code>timecode</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMHighResTimeStamp")}} to be used in initializing the blob event.</dd>
-</dl>
+- `data`
+  - : Is a {{domxref("Blob")}} associated with the event.
+- `timecode` {{optional_inline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} to be used in initializing the blob event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("BlobEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("BlobEvent")}} interface it belongs to.

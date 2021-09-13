@@ -10,62 +10,55 @@ tags:
   - playbackRate
 browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <strong><code>playbackRate</code></strong> property of
-      the {{ domxref("AudioBufferSourceNode") }} interface Is a <a
-        href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} that
-      defines the speed at which the audio asset will be played.</p>
+The **`playbackRate`** property of
+the {{ domxref("AudioBufferSourceNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} that
+defines the speed at which the audio asset will be played.
 
-  <p>A value of 1.0 indicates it should play at the same speed as its sampling rate,
-    values less than 1.0 cause the sound to play more slowly, while values greater than
-    1.0 result in audio playing faster than normal. The default value is <code>1.0</code>.
-    When set to another value, the <code>AudioBufferSourceNode</code> resamples the audio
-    before sending it to the output.</p>
-</div>
+A value of 1.0 indicates it should play at the same speed as its sampling rate,
+values less than 1.0 cause the sound to play more slowly, while values greater than
+1.0 result in audio playing faster than normal. The default value is `1.0`.
+When set to another value, the `AudioBufferSourceNode` resamples the audio
+before sending it to the output.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioBufferSourceNode</em>.playbackRate.value = <em>playbackRateProportion</em>;
-</pre>
+```js
+AudioBufferSourceNode.playbackRate.value = playbackRateProportion;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}} whose {{domxref("AudioParam.value", "value")}} is a
-  floating-point value indicating the playback rate of the audio as a decimal proportion
-  of the original sampling rate.</p>
+An {{domxref("AudioParam")}} whose {{domxref("AudioParam.value", "value")}} is a
+floating-point value indicating the playback rate of the audio as a decimal proportion
+of the original sampling rate.
 
-<p>Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per
-  second). Let's see what a few values of <code>playbackRate</code> do:</p>
+Consider a sound buffer containing audio sampled at 44.1 kHz (44,100 samples per
+second). Let's see what a few values of `playbackRate` do:
 
-<ul>
-  <li>A <code>playbackRate</code> of 1.0 plays the audio at full speed, or 44,100 Hz.</li>
-  <li>A <code>playbackRate</code> of 0.5 plays the audio at half speed, or 22,050 Hz.</li>
-  <li>A <code>playbackRate</code> of 2.0 doubles the audio's playback rate to 88,200 Hz.
-  </li>
-</ul>
+- A `playbackRate` of 1.0 plays the audio at full speed, or 44,100 Hz.
+- A `playbackRate` of 0.5 plays the audio at half speed, or 22,050 Hz.
+- A `playbackRate` of 2.0 doubles the audio's playback rate to 88,200 Hz.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
-  decode an audio track, and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
-  are provided to play and stop the audio playback, and a slider control is used to change
-  the <code>playbackRate</code> property value on the fly.</p>
+In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
+decode an audio track, and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
+are provided to play and stop the audio playback, and a slider control is used to change
+the `playbackRate` property value on the fly.
 
-<div class="note">
-  <p><strong>Note:</strong> You can <a class="external external-icon"
-      href="https://mdn.github.io/webaudio-examples/decode-audio-data/">run the example
-      live</a> (or <a class="external external-icon"
-      href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">view
-      the source</a>.) Play the song and alter the playback rate for some fun results.</p>
-</div>
+> **Note:** You can [run the example
+> live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
+> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).) Play the song and alter the playback rate for some fun results.
 
-<pre class="brush: html">&lt;input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1"&gt;
-&lt;span class="playback-rate-value"&gt;1.0&lt;/span&gt;
-</pre>
+```html
+<input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
+<span class="playback-rate-value">1.0</span>
+```
 
-<pre class="brush: js;">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -109,19 +102,18 @@ stop.onclick = function() {
 playbackControl.oninput = function() {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- </ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

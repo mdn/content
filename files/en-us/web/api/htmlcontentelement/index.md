@@ -9,41 +9,35 @@ tags:
   - Reference
 browser-compat: api.HTMLContentElement
 ---
-<p>{{ APIRef("Web Components") }}</p>
+{{ APIRef("Web Components") }}
 
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p>The <code><strong>HTMLContentElement</strong></code> interface represents a {{HTMLElement("content")}} HTML Element, which is used in <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. </p>
+The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} HTML Element, which is used in [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-<dl>
-	<dt>{{domxref("HTMLContentElement.select")}}</dt>
-	<dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("select", "content") }} HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the <code>&lt;content&gt;</code> element.</dd>
-</dl>
+- {{domxref("HTMLContentElement.select")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("select", "content") }} HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the methods of {{domxref("HTMLElement")}}._
 
-<dl>
-	<dt>{{domxref("HTMLContentElement.getDistributedNodes()")}}</dt>
-	<dd>Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this <code>&lt;content&gt;</code> element. </dd>
-</dl>
+- {{domxref("HTMLContentElement.getDistributedNodes()")}}
+  - : Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<content>` element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer defined by any standards.</p>
+This feature is no longer defined by any standards.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{HTMLElement("content")}} HTML element, implementing this interface.</li>
-	<li><a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a></li>
-</ul>
+- The {{HTMLElement("content")}} HTML element, implementing this interface.
+- [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)

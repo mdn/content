@@ -12,48 +12,48 @@ tags:
   - touchmove
 browser-compat: api.Element.touchmove_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>touchmove</code> event is fired when one or more touch points are moved along the touch surface.</p>
+The `touchmove` event is fired when one or more touch points are moved along the touch surface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TouchEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TouchEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Code samples for those events are available on the dedicated page: <a href="/en-US/docs/Web/API/Touch_events">Touch events</a>.</p>
+Code samples for those events are available on the dedicated page: [Touch events](/en-US/docs/Web/API/Touch_events).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
- <li>{{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}</li>
- <li>{{domxref("Element/mousemove_event", "mousemove")}} and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/touchmove_event", "touchmove")}}</li>
-</ul>
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+- {{ domxref("GlobalEventHandlers.ontouchmove","ontouchmove")}}
+- {{domxref("Element/mousemove_event", "mousemove")}} and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/touchmove_event", "touchmove")}}

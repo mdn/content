@@ -2,38 +2,40 @@
 title: CSSScale.x
 slug: Web/API/CSSScale/x
 tags:
-- API
-- CSS Typed Object Model API
-- CSSScale
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSScale
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSScale.x
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>x</code></strong> property of the
-  {{domxref("CSSScale")}} interface gets and sets the abscissa or x-axis of the
-  translating vector.</p>
+The **`x`** property of the
+{{domxref("CSSScale")}} interface gets and sets the abscissa or x-axis of the
+translating vector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>scaleX</em> = CSSScale.x;</pre>
+```js
+var scaleX = CSSScale.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer or a {{domxref("CSSNumericValue")}}</p>
+A double integer or a {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

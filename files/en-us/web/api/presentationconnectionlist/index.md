@@ -11,28 +11,24 @@ tags:
   - Reference
 browser-compat: api.PresentationConnectionList
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
-<p><code>PresentationConnectionList</code><dfn> is the collection of </dfn><dfn>incoming presentation connections</dfn>.</p>
+`PresentationConnectionList`_ is the collection of \*\*incoming presentation connections_.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('PresentationConnectionList.connections')}} {{readonlyinline}}</dt>
- <dd>Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the <a href="https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers">set of presentation controllers</a>.</dd>
-</dl>
+- {{domxref('PresentationConnectionList.connections')}} {{readonlyinline}}
+  - : Returns the non-terminated set of {{DOMxRef("PresentationConnection")}}s in the [set of presentation controllers](https://www.w3.org/TR/presentation-api/#dfn-set-of-presentation-controllers).
 
-<h3 id="Event_Handlers">Event Handlers</h3>
+### Event Handlers
 
-<dl>
- <dt>{{domxref('PresentationConnectionList.onconnectionavailable')}}</dt>
- <dd>Fired whenever a new <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a> becomes available.</dd>
-</dl>
+- {{domxref('PresentationConnectionList.onconnectionavailable')}}
+  - : Fired whenever a new [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) becomes available.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

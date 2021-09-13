@@ -2,41 +2,43 @@
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
 browser-compat: api.Element.setAttributeNode
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>setAttributeNode()</code></strong> method adds a new
-  <code>Attr</code> node to the specified element.</p>
+The **`setAttributeNode()`** method adds a new
+`Attr` node to the specified element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>replacedAttr</em> = <em>element</em>.setAttributeNode(<em>attribute</em>);
-</pre>
+```js
+var replacedAttr = element.setAttributeNode(attribute);
+```
 
-<ul>
-  <li><code>attribute</code> is the <code>Attr</code> node to set on the element.</li>
-  <li><code>replacedAttr</code> is the replaced attribute node, if any, returned by this
-    function.</li>
-</ul>
+- `attribute` is the `Attr` node to set on the element.
+- `replacedAttr` is the replaced attribute node, if any, returned by this
+  function.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example copies the <code>align</code> attribute from one element to another.</p>
+This example copies the `align` attribute from one element to another.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="one" align="left"&gt;one&lt;/div&gt;
-&lt;div id="two"&gt;two&lt;/div&gt;</pre>
+```html
+<div id="one" align="left">one</div>
+<div id="two">two</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let d1 = document.getElementById('one');
+```js
+let d1 = document.getElementById('one');
 let d2 = document.getElementById('two');
 let a = d1.getAttributeNode('align');
 
@@ -44,22 +46,22 @@ d2.setAttributeNode(a.cloneNode(true));
 
 // Returns: 'left'
 alert(d2.attributes[1].value);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>If the attribute named already exists on the element, that attribute is replaced with
-  the new one and the replaced one is returned.</p>
+If the attribute named already exists on the element, that attribute is replaced with
+the new one and the replaced one is returned.
 
-<p>This method is seldom used, with {{domxref("Element.setAttribute()")}} usually being
-  used to change element's attributes.</p>
+This method is seldom used, with {{domxref("Element.setAttribute()")}} usually being
+used to change element's attributes.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

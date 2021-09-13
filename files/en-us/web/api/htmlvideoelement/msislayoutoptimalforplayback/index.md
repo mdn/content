@@ -2,52 +2,46 @@
 title: HTMLVideoElement.msIsLayoutOptimalForPlayback
 slug: Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback
 tags:
-- API
-- 'API:Microsoft Extensions'
-- Non-standard
-- Property
-- Reference
-- msIsLayoutOptimalForPlayback
-- onMSVideoOptimalLayoutChanged
+  - API
+  - API:Microsoft Extensions
+  - Non-standard
+  - Property
+  - Reference
+  - msIsLayoutOptimalForPlayback
+  - onMSVideoOptimalLayoutChanged
 ---
-<div>{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}</div>
+{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
-<p><code><strong>msIsLayoutOptimalForPlayback</strong></code> is a read-only property
-  which indicates whether the video can be rendered more efficiently.</p>
+**`msIsLayoutOptimalForPlayback`** is a read-only property
+which indicates whether the video can be rendered more efficiently.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLVideoElement</em>.msIsLayoutOptimalForPlayback: {{DOMxRef("DOMString")}};
-</pre>
+```js
+HTMLVideoElement.msIsLayoutOptimalForPlayback: {{DOMxRef("DOMString")}};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>Boolean value set to <em>true</em> indicates that video is being rendered optimally
-  (better performance and using less battery power). If <em>false</em>, improvements can
-  be made to optimize performance.</p>
+Boolean value set to _true_ indicates that video is being rendered optimally
+(better performance and using less battery power). If _false_, improvements can
+be made to optimize performance.
 
-<p>For <code>msIsLayoutOptimalForPlayback</code> to be true, avoid the following:</p>
+For `msIsLayoutOptimalForPlayback` to be true, avoid the following:
 
-<ul>
-  <li>Video elements with Cascading Style Sheets (CSS) outlines set.</li>
-  <li>Rendering a video element through a canvas element.</li>
-  <li>Embedding video elements in a Scalable Vector Graphics (SVG).</li>
-</ul>
+- Video elements with Cascading Style Sheets (CSS) outlines set.
+- Rendering a video element through a canvas element.
+- Embedding video elements in a Scalable Vector Graphics (SVG).
 
-<p>You can listen to the <a
-    href="/en-US/docs/Web/API/OnMSVideoOptimalLayoutChanged">onMSVideoOptimalLayoutChanged</a>
-  event to be notified when the <code>msIsLayoutOptimalForPlayback</code> property
-  changes.</p>
+You can listen to the [onMSVideoOptimalLayoutChanged](/en-US/docs/Web/API/OnMSVideoOptimalLayoutChanged)
+event to be notified when the `msIsLayoutOptimalForPlayback` property
+changes.
 
-<p>*To enable Stereo 3D playback, <code>msIsLayoutOptimalForPlayback</code> must be true.
-</p>
+\*To enable Stereo 3D playback, `msIsLayoutOptimalForPlayback` must be true.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLVideoElement")}}</li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- {{DOMxRef("HTMLVideoElement")}}
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)

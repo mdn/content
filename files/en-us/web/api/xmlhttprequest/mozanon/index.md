@@ -12,6 +12,6 @@ tags:
   - XMLHttpRequest
   - mozAnon
 ---
-<div>{{draft}}{{APIRef('XMLHttpRequest')}}</div>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<p><strong><code>XMLHttpRequest.mozAnon</code></strong> is a boolean. If true, the request will be sent without cookies or authentication headers.</p>
+**`XMLHttpRequest.mozAnon`** is a boolean. If true, the request will be sent without cookies or authentication headers.

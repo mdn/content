@@ -2,32 +2,34 @@
 title: Client.url
 slug: Web/API/Client/url
 tags:
-- API
-- Client
-- Experimental
-- Property
-- Reference
-- Service Workers
-- URL
+  - API
+  - Client
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - URL
 browser-compat: api.Client.url
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>url</strong></code> read-only property of the {{domxref("Client")}}
-  interface returns the URL of the current service worker client.</p>
+The **`url`** read-only property of the {{domxref("Client")}}
+interface returns the URL of the current service worker client.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>clientUrl</em> = <em>client</em>.url;</pre>
+```js
+var clientUrl = client.url;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -36,20 +38,21 @@ browser-compat: api.Client.url
   event.waitUntil(clients.matchAll({
     type: 'window'
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

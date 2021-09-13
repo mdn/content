@@ -2,44 +2,45 @@
 title: RTCIceCandidatePairStats.responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
 tags:
-- API
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Received
-- Reference
-- Responses
-- STUN
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- responsesReceived
+  - API
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Received
+  - Reference
+  - Responses
+  - STUN
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - responsesReceived
 browser-compat: api.RTCIceCandidatePairStats.responsesReceived
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>responsesReceived</strong></code> property
-    in the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number
-    of {{Glossary("STUN")}} connectivity check responses that have been received on the
-    connection described by this pair of candidates.</p>
+The **`responsesReceived`** property
+in the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number
+of {{Glossary("STUN")}} connectivity check responses that have been received on the
+connection described by this pair of candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>responsesReceived</em> = <em>rtcIceCandidatePairStats</em>.responsesReceived;</pre>
+```js
+responsesReceived = rtcIceCandidatePairStats.responsesReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value which specifies the number of STUN connectivity request responses that
-  have been received on the connection described by this pair of candidates so far.</p>
+An integer value which specifies the number of STUN connectivity request responses that
+have been received on the connection described by this pair of candidates so far.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

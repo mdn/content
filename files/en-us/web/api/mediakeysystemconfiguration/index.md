@@ -14,29 +14,27 @@ tags:
   - Reference
 browser-compat: api.MediaKeySystemConfiguration
 ---
-<div>{{APIRef("Encrypted Media Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Encrypted Media Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>MediaKeySystemConfiguration</strong></code> dictionary holds configuration information about the media key system in use.</p>
+The **`MediaKeySystemConfiguration`** dictionary holds configuration information about the media key system in use.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaKeySystemConfiguration.initDataTypes")}} {{readonlyinline}}</dt>
- <dd>Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.</dd>
- <dt>{{domxref("MediaKeySystemConfiguration.audioCapabilities")}} {{readonlyinline}}</dt>
- <dd>Returns a list of supported audio type and capability pairs.</dd>
- <dt>{{domxref("MediaKeySystemConfiguration.videoCapabilities")}} {{readonlyinline}}</dt>
- <dd>Returns a list of supported video type and capability pairs.</dd>
- <dt>{{domxref("MediaKeySystemConfiguration.distinctiveIdentifier")}} {{readonlyinline}}</dt>
- <dd>Indicates whether a persistent distinctive identifier is required.</dd>
- <dt>{{domxref("MediaKeySystemConfiguration.persistentState")}} {{readonlyinline}}</dt>
- <dd>Indicates whether the ability to persist state is required.</dd>
-</dl>
+- {{domxref("MediaKeySystemConfiguration.initDataTypes")}} {{readonlyinline}}
+  - : Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
+- {{domxref("MediaKeySystemConfiguration.audioCapabilities")}} {{readonlyinline}}
+  - : Returns a list of supported audio type and capability pairs.
+- {{domxref("MediaKeySystemConfiguration.videoCapabilities")}} {{readonlyinline}}
+  - : Returns a list of supported video type and capability pairs.
+- {{domxref("MediaKeySystemConfiguration.distinctiveIdentifier")}} {{readonlyinline}}
+  - : Indicates whether a persistent distinctive identifier is required.
+- {{domxref("MediaKeySystemConfiguration.persistentState")}} {{readonlyinline}}
+  - : Indicates whether the ability to persist state is required.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

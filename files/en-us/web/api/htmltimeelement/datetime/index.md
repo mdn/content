@@ -2,22 +2,22 @@
 title: HTMLTimeElement.dateTime
 slug: Web/API/HTMLTimeElement/dateTime
 tags:
-- API
-- HTML DOM
-- HTMLTimeElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTimeElement
+  - Property
+  - Reference
 browser-compat: api.HTMLTimeElement.dateTime
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The
-  <strong><code>HTMLTimeElement.dateTime</code></strong>
-  property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime",
+The
+**`HTMLTimeElement.dateTime`**
+property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("datetime",
   "time") }} HTML attribute, containing a machine-readable form of the element's date and
-  time value.</p>
+time value.
 
-<p>The format of the string must follow one of the following HTML microsyntaxes:</p>
+The format of the string must follow one of the following HTML microsyntaxes:
 
 <table class="no-markdown">
   <thead>
@@ -45,56 +45,67 @@ browser-compat: api.HTMLTimeElement.dateTime
     </tr>
     <tr>
       <td>Valid time string</td>
-      <td><em>HH</em><code>:</code><em>MM</em><br>
-        <em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><br>
-        <em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em>
+      <td>
+        <em>HH</em><code>:</code><em>MM</em><br /><em>HH</em><code>:</code
+        ><em>MM</em><code>:</code><em>SS</em><br /><em>HH</em><code>:</code
+        ><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em>
       </td>
-      <td><code>23:59</code><br>
-        <code>12:15:47</code><br>
-        <code>12:15:52.998</code>
+      <td>
+        <code>23:59</code><br /><code>12:15:47</code><br /><code
+          >12:15:52.998</code
+        >
       </td>
     </tr>
     <tr>
       <td>Valid local date and time string</td>
-      <td><em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em>
-        <em>HH</em><code>:</code><em>MM</em><br>
+      <td>
         <em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em>
-        <em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><br>
-        <em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em>
-        <em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em><br>
-        <em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code><em>HH</em><code>:</code><em>MM</em><br>
-        <em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code><em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><br>
-        <em>YYYY</em><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code><em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em>
+        <em>HH</em><code>:</code><em>MM</em><br /><em>YYYY</em><code>-</code
+        ><em>MM</em><code>-</code><em>DD</em> <em>HH</em><code>:</code
+        ><em>MM</em><code>:</code><em>SS</em><br /><em>YYYY</em><code>-</code
+        ><em>MM</em><code>-</code><em>DD</em> <em>HH</em><code>:</code
+        ><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em><br /><em
+          >YYYY</em
+        ><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code
+        ><em>HH</em><code>:</code><em>MM</em><br /><em>YYYY</em><code>-</code
+        ><em>MM</em><code>-</code><em>DD</em><code>T</code><em>HH</em
+        ><code>:</code><em>MM</em><code>:</code><em>SS</em><br /><em>YYYY</em
+        ><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code
+        ><em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em
+        ><code>.</code><em>mmm</em>
       </td>
-      <td><code>2013-12-25 11:12<br>
-    1972-07-25 13:43:07<br>
-    1941-03-15 07:06:23.678<br>
-    2013-12-25T11:12<br>
-    1972-07-25T13:43:07<br>
-    1941-03-15T07:06:23.678</code></td>
+      <td>
+        <code
+          >2013-12-25 11:12<br />1972-07-25 13:43:07<br />1941-03-15
+          07:06:23.678<br />2013-12-25T11:12<br />1972-07-25T13:43:07<br />1941-03-15T07:06:23.678</code
+        >
+      </td>
     </tr>
     <tr>
       <td>Valid time-zone offset string</td>
-      <td><code>Z</code><br>
-        <code>+</code><em>HHMM</em><br>
-        <code>+</code><em>HH</em><code>:</code><em>MM</em><br>
-        <code>-</code><em>HHMM</em><br>
-        <code>-</code><em>HH</em><code>:</code><em>MM</em>
+      <td>
+        <code>Z</code><br /><code>+</code><em>HHMM</em><br /><code>+</code
+        ><em>HH</em><code>:</code><em>MM</em><br /><code>-</code><em>HHMM</em
+        ><br /><code>-</code><em>HH</em><code>:</code><em>MM</em>
       </td>
-      <td><code>Z<br>
-    +0200<br>
-    +04:30<br>
-    -0300<br>
-    -08:00</code></td>
+      <td>
+        <code>Z<br />+0200<br />+04:30<br />-0300<br />-08:00</code>
+      </td>
     </tr>
     <tr>
       <td>Valid global date and time string</td>
-      <td><em>Any combination of a valid local date and time string followed by a valid
-          time-zone offset string</em></td>
-      <td><code>2013-12-25 11:12+0200<br>
-    1972-07-25 13:43:07+04:30<br>
-    1941-03-15 07:06:23.678Z<br>
-    2013-12-25T11:12-08:00</code></td>
+      <td>
+        <em
+          >Any combination of a valid local date and time string followed by a
+          valid time-zone offset string</em
+        >
+      </td>
+      <td>
+        <code
+          >2013-12-25 11:12+0200<br />1972-07-25 13:43:07+04:30<br />1941-03-15
+          07:06:23.678Z<br />2013-12-25T11:12-08:00</code
+        >
+      </td>
     </tr>
     <tr>
       <td>Valid week string</td>
@@ -109,53 +120,62 @@ browser-compat: api.HTMLTimeElement.dateTime
     <tr>
       <td>Valid duration string</td>
       <td>
-        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>S</code><br>
-        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>X<code>S</code><br>
-        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XX<code>S</code><br>
-        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XXX<code>S</code><br>
-        <code>P</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>S</code><br>
-        <code>P</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>X<code>S</code><br>
-        <code>P</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XX<code>S</code><br>
-        <code>P</code><code>T</code><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XXX<code>S</code><br>
-        <em>w</em><code>w </code><em>d</em><code>d </code><em>h</em><code>h </code><em>m</em><code>m </code><em>s</em><code>s</code>
+        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
+        ><code>H</code><em>m</em><code>M</code><em>s</em><code>S</code
+        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
+        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>X<code
+          >S</code
+        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
+        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XX<code
+          >S</code
+        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
+        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XXX<code
+          >S</code
+        ><br /><code>P</code><code>T</code><em>h</em><code>H</code><em>m</em
+        ><code>M</code><em>s</em><code>S</code><br /><code>P</code><code>T</code
+        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
+        ><code>.</code>X<code>S</code><br /><code>P</code><code>T</code
+        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
+        ><code>.</code>XX<code>S</code><br /><code>P</code><code>T</code
+        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
+        ><code>.</code>XXX<code>S</code><br /><em>w</em><code>w </code><em>d</em
+        ><code>d </code><em>h</em><code>h </code><em>m</em><code>m </code
+        ><em>s</em><code>s</code>
       </td>
-      <td><code>P12DT7H12M13S<br>
-    P12DT7H12M13.3S<br>
-    P12DT7H12M13.45S<br>
-    P12DT7H12M13.455S<br>
-    PT7H12M13S<br>
-    PT7H12M13.2S<br>
-    PT7H12M13.56S<br>
-    PT7H12M13.999S<br>
-    7d 5h 24m 13s</code></td>
+      <td>
+        <code
+          >P12DT7H12M13S<br />P12DT7H12M13.3S<br />P12DT7H12M13.45S<br />P12DT7H12M13.455S<br />PT7H12M13S<br />PT7H12M13.2S<br />PT7H12M13.56S<br />PT7H12M13.999S<br />7d
+          5h 24m 13s</code
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dateTimeString</em> = <em>timeElt</em>.dateTime;
-<em>timeElt.dateTime = dateTimeString</em>
-</pre>
+```js
+dateTimeString = timeElt.dateTime;
+timeElt.dateTime = dateTimeString
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Assumes there is &lt;time id="t"&gt; element in the HTML
+```js
+// Assumes there is <time id="t"> element in the HTML
 
 var t = document.getElementById("t");
 t.dateTime = "6w 5h 34m 5s";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLTimeElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLTimeElement")}} interface it belongs to.

@@ -9,58 +9,53 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBuffer
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AudioBuffer</code></strong> interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()") }} method, or from raw data using {{ domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()") }}. Once put into an AudioBuffer, the audio can then be played by being passed into an {{ domxref("AudioBufferSourceNode") }}.</p>
+The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()") }} method, or from raw data using {{ domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()") }}. Once put into an AudioBuffer, the audio can then be played by being passed into an {{ domxref("AudioBufferSourceNode") }}.
 
-<p>Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the {{domxref("MediaElementAudioSourceNode")}} are more suitable. The buffer contains data in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between <code>-1</code> and <code>+1</code>, that is, a 32-bit floating point buffer, with each sample between -1.0 and 1.0. If the {{domxref("AudioBuffer")}} has multiple channels, they are stored in separate buffers.</p>
+Objects of these types are designed to hold small audio snippets, typically less than 45 s. For longer sounds, objects implementing the {{domxref("MediaElementAudioSourceNode")}} are more suitable. The buffer contains data in the following format: non-interleaved IEEE754 32-bit linear PCM with a nominal range between `-1` and `+1`, that is, a 32-bit floating point buffer, with each sample between -1.0 and 1.0. If the {{domxref("AudioBuffer")}} has multiple channels, they are stored in separate buffers.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
- <dd>Creates and returns a new <code>AudioBuffer</code> object instance.</dd>
-</dl>
+- {{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}
+  - : Creates and returns a new `AudioBuffer` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
- <dd>Returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.</dd>
- <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
- <dd>Returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.</dd>
- <dt>{{domxref("AudioBuffer.duration")}} {{readonlyInline}}</dt>
- <dd>Returns a double representing the duration, in seconds, of the PCM data stored in the buffer.</dd>
- <dt>{{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}</dt>
- <dd>Returns an integer representing the number of discrete audio channels described by the PCM data stored in the buffer.</dd>
-</dl>
+- {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
+  - : Returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.
+- {{domxref("AudioBuffer.length")}} {{readonlyInline}}
+  - : Returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.
+- {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
+  - : Returns a double representing the duration, in seconds, of the PCM data stored in the buffer.
+- {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
+  - : Returns an integer representing the number of discrete audio channels described by the PCM data stored in the buffer.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AudioBuffer.getChannelData()")}}</dt>
- <dd>Returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the <code>channel</code> parameter (with <code>0</code> representing the first channel).</dd>
- <dt>{{domxref("AudioBuffer.copyFromChannel()")}}</dt>
- <dd>Copies the samples from the specified channel of the <code>AudioBuffer</code> to the <code>destination</code> array.</dd>
- <dt>{{domxref("AudioBuffer.copyToChannel()")}}</dt>
- <dd>Copies the samples to the specified channel of the <code>AudioBuffer</code>, from the <code>source</code> array.</dd>
-</dl>
+- {{domxref("AudioBuffer.getChannelData()")}}
+  - : Returns a {{jsxref("Float32Array")}} containing the PCM data associated with the channel, defined by the `channel` parameter (with `0` representing the first channel).
+- {{domxref("AudioBuffer.copyFromChannel()")}}
+  - : Copies the samples from the specified channel of the `AudioBuffer` to the `destination` array.
+- {{domxref("AudioBuffer.copyToChannel()")}}
+  - : Copies the samples to the specified channel of the `AudioBuffer`, from the `source` array.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following simple example shows how to create an <code>AudioBuffer</code> and fill it with random white noise. You can find the full source code at our <a href="https://github.com/mdn/webaudio-examples">webaudio-examples</a> repository; a <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">running live</a> version is also available.</p>
+The following simple example shows how to create an `AudioBuffer` and fill it with random white noise. You can find the full source code at our [webaudio-examples](https://github.com/mdn/webaudio-examples) repository; a [running live](https://mdn.github.io/webaudio-examples/audio-buffer/) version is also available.
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0
-for (var channel = 0; channel &lt; myArrayBuffer.numberOfChannels; channel++) {
+for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
   // This gives us the actual array that contains the data
   var nowBuffering = myArrayBuffer.getChannelData(channel);
-  for (var i = 0; i &lt; myArrayBuffer.length; i++) {
+  for (var i = 0; i < myArrayBuffer.length; i++) {
     // Math.random() is in [0; 1.0]
     // audio needs to be in [-1.0; 1.0]
     nowBuffering[i] = Math.random() * 2 - 1;
@@ -80,18 +75,16 @@ source.connect(audioCtx.destination);
 
 // start the source playing
 source.start();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

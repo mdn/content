@@ -9,30 +9,33 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.onenter
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>onenter</code></strong> EventHandler of the {{domxref("TextTrackCue")}} interface processes the <code>enter</code> event.</p>
+The **`onenter`** EventHandler of the {{domxref("TextTrackCue")}} interface processes the `enter` event.
 
-<p> The <code>enter</code> event fires when a cue becomes active. In the case of subtitles or a caption this is when it displays over the media.</p>
+The `enter` event fires when a cue becomes active. In the case of subtitles or a caption this is when it displays over the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">TextTrackCue.onenter = function;
-TextTrackCue.addEventListener('enter', function);</pre>
+```js
+TextTrackCue.onenter = function;
+TextTrackCue.addEventListener('enter', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example, <code>onenter</code> is used to print to the console when <code>cue1</code> is the active cue.</p>
+In the following example, `onenter` is used to print to the console when `cue1` is the active cue.
 
-<pre class="brush: js">cue1.onenter = function() {
+```js
+cue1.onenter = function() {
   console.log('Cue 1 has displayed');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

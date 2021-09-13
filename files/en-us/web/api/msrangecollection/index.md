@@ -4,17 +4,15 @@ slug: Web/API/MSRangeCollection
 tags:
   - MSRangeCollection
 ---
-<div>{{non-standard_header}}{{APIRef}}</div>
+{{non-standard_header}}{{APIRef}}
 
-<p>The <strong><code>MSRangeCollection</code></strong> object is an array of one or more Range objects.</p>
+The **`MSRangeCollection`** object is an array of one or more Range objects.
 
-<h3 id="Remarks">Remarks</h3>
+### Remarks
 
-<p>The MSRangeCollection object does not inherit from any class or interface and does not define any members.</p>
+The MSRangeCollection object does not inherit from any class or interface and does not define any members.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Glossary/array">Array Object</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Array Object](/en-US/docs/Glossary/array)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

@@ -2,63 +2,61 @@
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 tags:
-- API
-- DOM
-- Document
-- Method
-- Reference
-- editor
-- Deprecated
+  - API
+  - DOM
+  - Document
+  - Method
+  - Reference
+  - editor
+  - Deprecated
 browser-compat: api.Document.queryCommandSupported
 ---
-<div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>Document.queryCommandSupported()</code></strong> method reports
-  whether or not the specified editor command is supported by the browser.</p>
+The **`Document.queryCommandSupported()`** method reports
+whether or not the specified editor command is supported by the browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>isSupported</var> = document.queryCommandSupported(<var>command</var>);
-</pre>
+```js
+isSupported = document.queryCommandSupported(command);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>command</var></code></dt>
-  <dd>The command for which to determine support.</dd>
-</dl>
+- `command`
+  - : The command for which to determine support.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a boolean value which is <code>true</code> if the command is supported
-  and <code>false</code> if the command isn't.</p>
+Returns a boolean value which is `true` if the command is supported
+and `false` if the command isn't.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The <code>'paste'</code> command return <code>false</code> not only if the feature is
-  unavailable, but also if the script calling it has insufficient privileges to perform
-  the action.</p>
+The `'paste'` command return `false` not only if the feature is
+unavailable, but also if the script calling it has insufficient privileges to perform
+the action.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var flg = document.queryCommandSupported("SelectAll");
+```js
+var flg = document.queryCommandSupported("SelectAll");
 
 if(flg) {
   // ...Do something
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.execCommand()")}}</li>
-  <li>{{domxref("Document.queryCommandEnabled()")}}</li>
-</ul>
+- {{domxref("Document.execCommand()")}}
+- {{domxref("Document.queryCommandEnabled()")}}

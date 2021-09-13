@@ -9,37 +9,40 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.state
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>state</code></strong> read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.</p>
+The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let state = MIDIPort.state;
-</pre>
+```js
+let state = MIDIPort.state;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the state of the port, one of:</p>
-<dl>
-  <dt><code>"disconnected"</code></dt>
-  <dd>The device that this <code>MIDIPort</code> represents is disconnected from the system.</dd>
-  <dt><code>"connected"</code></dt>
-  <dd>The device that this <code>MIDIPort</code> represents is currently connected.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the state of the port, one of:
 
-<p>The following example loops through all input ports and prints the state of each to the console.</p>
+- `"disconnected"`
+  - : The device that this `MIDIPort` represents is disconnected from the system.
+- `"connected"`
+  - : The device that this `MIDIPort` represents is currently connected.
 
-<pre class="brush: js">for (let entry of midiAccess.inputs) {
+## Examples
+
+The following example loops through all input ports and prints the state of each to the console.
+
+```js
+for (let entry of midiAccess.inputs) {
   let input = entry[1];
   console.log(input.state);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

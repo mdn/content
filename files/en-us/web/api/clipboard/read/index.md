@@ -2,78 +2,77 @@
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
 tags:
-- API
-- Clip
-- Clipboard
-- Clipboard API
-- Cut
-- Editing
-- Method
-- Reference
-- Scrap
-- Text
-- copy
-- paste
-- read
+  - API
+  - Clip
+  - Clipboard
+  - Clipboard API
+  - Cut
+  - Editing
+  - Method
+  - Reference
+  - Scrap
+  - Text
+  - copy
+  - paste
+  - read
 browser-compat: api.Clipboard.read
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p>The <strong><code>read()</code></strong> method of the
-    {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents,
-    delivering the data to the returned {{jsxref("Promise")}} when the promise is
-    resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the
-    <code>read()</code> method can return arbitrary data, such as images. This method can
-    also return text.</p>
+The **`read()`** method of the
+{{domxref("Clipboard")}} interface requests a copy of the clipboard's contents,
+delivering the data to the returned {{jsxref("Promise")}} when the promise is
+resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the
+`read()` method can return arbitrary data, such as images. This method can
+also return text.
 
-<p>To read from the clipboard, you must first have the <code>"clipboard-read"</code>
-  permission.</p>
+To read from the clipboard, you must first have the `"clipboard-read"`
+permission.
 
-<div class="note">
-  <p><strong>Note:</strong> The asynchronous Clipboard and <a
-      href="/en-US/docs/Web/API/Permissions_API">Permissions APIs</a> are still in the
-    process of being integrated into most browsers, so they often deviate from the
-    official rules for permissions and the like. Be sure to review the {{anch("Browser
-    compatibility", "compatibility table")}} before using these methods.</p>
-</div>
+> **Note:** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the
+> process of being integrated into most browsers, so they often deviate from the
+> official rules for permissions and the like. Be sure to review the {{anch("Browser
+    compatibility", "compatibility table")}} before using these methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = navigator.clipboard.read();</pre>
+```js
+var promise = navigator.clipboard.read();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a sequence of {{domxref("ClipboardItem")}} objects
-  containing the clipboard's contents. The promise is rejected if permission to access the
-  clipboard is not granted.</p>
+A {{jsxref("Promise")}} that resolves with a sequence of {{domxref("ClipboardItem")}} objects
+containing the clipboard's contents. The promise is rejected if permission to access the
+clipboard is not granted.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>After using {{domxref("Permissions.query", "navigator.permissions.query()")}} to find
-  out if we have (or if the user will be prompted to allow) <code>"clipboard-read"</code>
-  access, this example fetches the data currently on the clipboard. If it's not a png
-  image, an error message is presented. Otherwise, an image element referred to using the
-  variable <code>imgElem</code> has its source replaced with the clipboard's contents.</p>
+After using {{domxref("Permissions.query", "navigator.permissions.query()")}} to find
+out if we have (or if the user will be prompted to allow) `"clipboard-read"`
+access, this example fetches the data currently on the clipboard. If it's not a png
+image, an error message is presented. Otherwise, an image element referred to using the
+variable `imgElem` has its source replaced with the clipboard's contents.
 
-<pre class="brush: js">// First, ask the Permissions API if we have some kind of access to
+```js
+// First, ask the Permissions API if we have some kind of access to
 // the "clipboard-read" feature.
 
-navigator.permissions.query({ name: "clipboard-read" }).then((result) =&gt {
+navigator.permissions.query({ name: "clipboard-read" }).then((result) => {
     // If permission to read the clipboard is granted or if the user will
     // be prompted to allow it, we proceed.
-  
+
     if (result.state == "granted" || result.state == "prompt") {
-      navigator.clipboard.read().then((data) =&gt {
-        for (let i = 0; i &lt data.length; i++) {
+      navigator.clipboard.read().then((data) => {
+        for (let i = 0; i < data.length; i++) {
           if (!data[i].types.includes("image/png")) {
             alert("Clipboard contains non-image data. Unable to access it.");
           } else {
-            data[i].getType("image/png").then((blob) =&gt {
+            data[i].getType("image/png").then((blob) => {
               imgElem.src = URL.createObjectURL(blob);
             });
           }
@@ -81,30 +80,25 @@ navigator.permissions.query({ name: "clipboard-read" }).then((result) =&gt {
       });
     }
   });
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> At this time, while Firefox does implement
-    <code>read()</code>, it does not recognize the <code>"clipboard-read"</code>
-    permission, so attempting to use the <a
-      href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> to manage access to
-    the API will not work.</p>
-</div>
+> **Note:** At this time, while Firefox does implement
+> `read()`, it does not recognize the `"clipboard-read"`
+> permission, so attempting to use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to manage access to
+> the API will not work.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

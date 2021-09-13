@@ -2,45 +2,48 @@
 title: FontFace.family
 slug: Web/API/FontFace/family
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- family
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - family
 browser-compat: api.FontFace.family
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <code><strong>FontFace.family</strong></code> property
-    allows the author to get or set the font family of a {{domxref("FontFace")}} object.
-    This is equivalent to the {{cssxref("@font-face/font-family", "font-family")}}
-    descriptor of {{cssxref("@font-face")}}.</p>
+The **`FontFace.family`** property
+allows the author to get or set the font family of a {{domxref("FontFace")}} object.
+This is equivalent to the {{cssxref("@font-face/font-family", "font-family")}}
+descriptor of {{cssxref("@font-face")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">instanceOfFontFace.family = 'font family name';
-let fontFace = instanceOfFontFace.family; // "font family name"</pre>
+```js
+instanceOfFontFace.family = 'font family name';
+let fontFace = instanceOfFontFace.family; // "font family name"
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');
+```js
+let fontFace = new FontFace('Roboto', 'url(https://fonts.example.com/roboto.woff2)');
 console.log(fontFace.family); // 'Roboto'
 
 fontFace.family = 'newRoboto';
 console.log(fontFace.family); // 'newRoboto'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

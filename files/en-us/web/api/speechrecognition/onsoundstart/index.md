@@ -2,47 +2,46 @@
 title: SpeechRecognition.onsoundstart
 slug: Web/API/SpeechRecognition/onsoundstart
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onsoundstart
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onsoundstart
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onsoundstart
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onsoundstart</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when any sound — recognisable speech or not — has been detected (when the <a
-    href="/en-US/docs/Web/API/SpeechRecognition/soundstart_event">soundstart event</a>
-  fires.)</p>
+The **`onsoundstart`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when any sound — recognisable speech or not — has been detected (when the [soundstart event](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
+fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onsoundstart = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onsoundstart = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onsoundstart = function() {
+```js
+recognition.onsoundstart = function() {
   console.log('Some sound is being received');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -2,48 +2,50 @@
 title: StylePropertyMap.clear()
 slug: Web/API/StylePropertyMap/clear
 tags:
-- API
-- CSS Typed Object Model API
-- Houdini
-- Method
-- Reference
-- StylePropertyMap
-- clear()
+  - API
+  - CSS Typed Object Model API
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMap
+  - clear()
 browser-compat: api.StylePropertyMap.clear
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("StylePropertyMap")}}
-  interface removes all declarations in the <code>StylePropertyMap</code>.</p>
+The **`clear()`** method of the {{domxref("StylePropertyMap")}}
+interface removes all declarations in the `StylePropertyMap`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">StylePropertMap.clear()</pre>
+```js
+StylePropertMap.clear()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example removes all styles within the elements <a
-    href="/en-US/docs/Web/HTML/Global_attributes/style">style attribute</a>.</p>
+The following example removes all styles within the elements [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
-<pre class="brush: js">// get the button element
+```js
+// get the button element
 const buttonEl = document.querySelector('.example');
 
 // remove all styles from the style attribute
 buttonEl.attributeStyleMap.clear();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

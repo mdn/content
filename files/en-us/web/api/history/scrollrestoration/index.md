@@ -2,58 +2,57 @@
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
 tags:
-- API
-- HTML DOM
-- History
-- History API
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - History
+  - History API
+  - Property
+  - Reference
 browser-compat: api.History.scrollRestoration
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>The <strong><code>scrollRestoration</code></strong> property of {{DOMxRef("History")}}
-  interface allows web applications to explicitly set default scroll restoration behavior
-  on history navigation.</p>
+The **`scrollRestoration`** property of {{DOMxRef("History")}}
+interface allows web applications to explicitly set default scroll restoration behavior
+on history navigation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>scrollRestore</em> = history.scrollRestoration</pre>
+```js
+const scrollRestore = history.scrollRestoration
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>auto</code></dt>
-  <dd>The location on the page to which the user has scrolled will be restored.</dd>
-  <dt><code>manual</code></dt>
-  <dd>The location on the page is not restored. The user will have to scroll to the
-    location manually.</dd>
-</dl>
+- `auto`
+  - : The location on the page to which the user has scrolled will be restored.
+- `manual`
+  - : The location on the page is not restored. The user will have to scroll to the
+    location manually.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Query_the_current_scroll_restoration_behavior.">Query the current scroll
-  restoration behavior.</h3>
+### Query the current scroll restoration behavior.
 
-<pre class="brush: js">const scrollRestoration = history.scrollRestoration
+```js
+const scrollRestoration = history.scrollRestoration
 if (scrollRestoration === 'manual') {
   console.log('The location on the page is not restored, user will need to scroll manually.');
 }
-</pre>
+```
 
-<h3 id="Prevent_automatic_page_location_restoration">Prevent automatic page location
-  restoration</h3>
+### Prevent automatic page location restoration
 
-<pre class="brush: js">if (history.scrollRestoration) {
+```js
+if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,65 +2,66 @@
 title: MutationObserverInit.characterDataOldValue
 slug: Web/API/MutationObserverInit/characterDataOldValue
 tags:
-- API
-- Changes
-- Monitoring
-- Mutation Observer
-- Mutation Observer API
-- MutationObserverInit
-- Nodes
-- Reference
-- Textr
-- characterDataOldValue
-- mutation
-- value
+  - API
+  - Changes
+  - Monitoring
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserverInit
+  - Nodes
+  - Reference
+  - Textr
+  - characterDataOldValue
+  - mutation
+  - value
 browser-compat: api.MutationObserverInit.characterDataOldValue
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
-    dictionary's optional <strong><code>characterDataOldValue</code></strong> property is
-    used to specify whether or not the {{domxref("MutationRecord.oldValue")}} property for
-    DOM mutations should be set to the previous value of text nodes which changed.</p>
+The **{{domxref("MutationObserverInit")}}**
+dictionary's optional **`characterDataOldValue`** property is
+used to specify whether or not the {{domxref("MutationRecord.oldValue")}} property for
+DOM mutations should be set to the previous value of text nodes which changed.
 
-<p>If you set the {{domxref("MutationObserverInit.characterData")}} property to
-  <code>true</code> but don't set <code>characterDataOldValue</code> to <code>true</code>
-  as well, the <code>MutationRecord</code> will not include information describing the
-  prior state of the text node's contents.</p>
+If you set the {{domxref("MutationObserverInit.characterData")}} property to
+`true` but don't set `characterDataOldValue` to `true`
+as well, the `MutationRecord` will not include information describing the
+prior state of the text node's contents.
 
-<p>Character data changes are detectable on any text node, including nodes based on the
-  {{domxref("Text")}}, {{domxref("ProcessingInstruction")}}, and {{domxref("Comment")}}
-  interfaces.</p>
+Character data changes are detectable on any text node, including nodes based on the
+{{domxref("Text")}}, {{domxref("ProcessingInstruction")}}, and {{domxref("Comment")}}
+interfaces.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>characterDataOldValue</em>: true | false
+```js
+var options = {
+  characterDataOldValue: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not to set the <code>MutationRecord</code>'s
-  <code>oldValue</code> property to be a string containing the value of the character
-  node's contents prior to the change represented by the mutation record.</p>
+A Boolean value indicating whether or not to set the `MutationRecord`'s
+`oldValue` property to be a string containing the value of the character
+node's contents prior to the change represented by the mutation record.
 
-<p>By default, only changes to the text of the node specified as the <code>target</code>
-  parameter when you called {{domxref("MutationObserver.observe", "observe()")}} are
-  monitored. To watch for changes to the text contents of all descendants of
-  <code>target</code>, set the {{domxref("MutationObserverInit.subtree", "subtree")}}
-  option to <code>true</code>.</p>
+By default, only changes to the text of the node specified as the `target`
+parameter when you called {{domxref("MutationObserver.observe", "observe()")}} are
+monitored. To watch for changes to the text contents of all descendants of
+`target`, set the {{domxref("MutationObserverInit.subtree", "subtree")}}
+option to `true`.
 
-<p>If you set <code>characterDataOldValue</code> to <code>true</code>,
-  <code>characterData</code> is automatically assumed to be <code>true</code>, even if you
-  don't expressly set it as such.</p>
+If you set `characterDataOldValue` to `true`,
+`characterData` is automatically assumed to be `true`, even if you
+don't expressly set it as such.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

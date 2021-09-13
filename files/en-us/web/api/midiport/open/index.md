@@ -9,46 +9,47 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.open
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>open()</code></strong> method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this <code>MIDIPort</code> explicitly available.</p>
+The **`open()`** method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this `MIDIPort` explicitly available.
 
-<p>If the port is successfully opened a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to <code>"open"</code>.</p>
+If the port is successfully opened a new {{domxref("MIDICOnnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to `"open"`.
 
-<p>If the port is already open when this method is called, then the promise will resolve successfully.</p>
+If the port is already open when this method is called, then the promise will resolve successfully.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var output = midiAccess.outputs.get(portID);
-output.open(); // opens the port</pre>
+```js
+var output = midiAccess.outputs.get(portID);
+output.open(); // opens the port
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which resolves once access to the port has been successfully obtained.</p>
+A {{jsxref("Promise")}} which resolves once access to the port has been successfully obtained.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidAccessError</code></dt>
-  <dd>The promise is rejected with this error if the port is unavailable and cannot be opened.</dd>
-</dl>
+- {{domxref("DOMException")}} `InvalidAccessError`
+  - : The promise is rejected with this error if the port is unavailable and cannot be opened.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an output port being opened.</p>
+The following example shows an output port being opened.
 
-<pre class="brush:js"><pre class="brush: js">var output = midiAccess.outputs.get(portID);
-output.open(); // opens the port</pre></pre>
+```js
+var output = midiAccess.outputs.get(portID);
+output.open(); // opens the port
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

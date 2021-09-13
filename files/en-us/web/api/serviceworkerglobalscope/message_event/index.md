@@ -9,75 +9,83 @@ tags:
   - message
 browser-compat: api.ServiceWorkerGlobalScope.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>message</strong></code> event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.<br>
- The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.</p>
+The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
+The service worker can optionally send a response back via the {{domxref("Client.postMessage()")}}, corresponding to the controlled page.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ExtendableMessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ExtendableMessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its <code>postMessage()</code> function.</p>
+In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.
 
-<pre class="brush: js">// in the page being controlled
+```js
+// in the page being controlled
 if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
 
-  navigator.serviceWorker.addEventListener('message', event =&gt; {
+  navigator.serviceWorker.addEventListener('message', event => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration =&gt; {
+  navigator.serviceWorker.ready.then( registration => {
     registration.active.postMessage("Hi service worker");
   });
 
-}</pre>
+}
+```
 
-<p>The service worker can receive the message by listening to the <code>message</code> event:</p>
+The service worker can receive the message by listening to the `message` event:
 
-<pre class="brush: js">// in the service worker
-addEventListener('message', event =&gt; {
+```js
+// in the service worker
+addEventListener('message', event => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 
   event.source.postMessage("Hi client");
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

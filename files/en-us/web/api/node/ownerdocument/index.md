@@ -2,42 +2,44 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 tags:
-- API
-- DOM
-- Node
-- Property
-- Reference
+  - API
+  - DOM
+  - Node
+  - Property
+  - Reference
 browser-compat: api.Node.ownerDocument
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>ownerDocument</strong></code> read-only property of the
-  {{domxref("Node")}} interface returns the top-level document object of the node.</p>
+The **`ownerDocument`** read-only property of the
+{{domxref("Node")}} interface returns the top-level document object of the node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>document</em> = <var>element</var>.ownerDocument;
-</pre>
+```js
+var document = element.ownerDocument;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>document</code> is the top-level {{domxref("Document")}} object in which all the
-  child nodes are created. If this property is used on a node that is itself a document,
-  the value is <code>null</code>.</p>
+`document` is the top-level {{domxref("Document")}} object in which all the
+child nodes are created. If this property is used on a node that is itself a document,
+the value is `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Given a node "p", get the top-level HTML
+```js
+// Given a node "p", get the top-level HTML
 // child of the document object
 
 var d = p.ownerDocument;
 var html = d.documentElement;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

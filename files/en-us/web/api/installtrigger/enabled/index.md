@@ -2,34 +2,39 @@
 title: InstallTrigger.enabled
 slug: Web/API/InstallTrigger/enabled
 ---
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Indicates whether or not Software Installation is enabled for this client machine.</p>
+Indicates whether or not Software Installation is enabled for this client machine.
 
-<h2 id="Method_of">Method of</h2>
+## Method of
 
-<p><a href="/en-US/docs/Web/API/InstallTrigger">InstallTrigger</a>
-    object</p>
+[InstallTrigger](/en-US/docs/Web/API/InstallTrigger)
+object
 
-<h2 id="Syntax">Syntax</h2>
-<pre class="brush: js">Boolean enabled (); </pre>
+## Syntax
 
-<h3 id="Parameters">Parameters</h3>
-<p>None</p>
+```js
+Boolean enabled ();
+```
 
-<h3 id="Returns">Returns</h3>
-<p>True if Software Installation is enabled for this client machine; otherwise, false. The
-    method reflects the value of the Software Installation preference in the user
-    interface, and of the <code>xpinstall.enabled </code>preference in pref.js.</p>
+### Parameters
 
-<h2 id="Example">Example</h2>
+None
 
-<p>The following code uses the <a
-        href="/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate">
-        startSoftwareUpdate</a> method to unconditionally trigger a download from
-    <code><a href="http://royalairways/royalpkg.xpi">http://royalairways/royalpkg.xpi</a></code>
-    as long as Software Installation is enabled on the browser:</p>
+### Returns
 
-<pre class="brush: js">if (InstallTrigger.enabled() ) {
+True if Software Installation is enabled for this client machine; otherwise, false. The
+method reflects the value of the Software Installation preference in the user
+interface, and of the `xpinstall.enabled `preference in pref.js.
+
+## Example
+
+The following code uses the [startSoftwareUpdate](/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate) method to unconditionally trigger a download from
+[`http://royalairways/royalpkg.xpi`](http://royalairways/royalpkg.xpi)
+as long as Software Installation is enabled on the browser:
+
+```js
+if (InstallTrigger.enabled() ) {
     InstallTrigger.startSoftwareUpdate ("http://royalair.com/rasoft.xpi");
-}</pre>
+}
+```

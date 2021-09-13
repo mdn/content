@@ -8,39 +8,38 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.pathname
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.pathname</code></strong> property is a
-  {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of
-  the URL not including the query string or fragment (or the empty string if there is no
-  path).</p>
+The **`HTMLAreaElement.pathname`** property is a
+{{domxref("USVString")}} containing an initial `'/'` followed by the path of
+the URL not including the query string or fragment (or the empty string if there is no
+path).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.pathname;
+string = area.pathname;
 // Setter
-<em>area</em>.pathname = <em>string</em>;
-</pre>
+area.pathname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;area id="myArea" href="/en-US/docs/HTMLAreaElement"&gt; element is in the document
+```js
+// An <area id="myArea" href="/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementById("myArea");
 area.pathname; // returns '/en-US/docs/HTMLAreaElement'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

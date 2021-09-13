@@ -3,56 +3,55 @@ title: HTMLElement.inert
 slug: Web/API/HTMLElement/inert
 browser-compat: api.HTMLElement.inert
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>The {{domxref("HTMLElement")}} property <strong><code>inert</code></strong> is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.</p>
+The {{domxref("HTMLElement")}} property **`inert`** is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre><em>isInert</em> = <em>HTMLElement</em>.inert;
+    isInert = HTMLElement.inert;
 
-<em>HTMLElement</em>.inert = true | false;</pre>
+    HTMLElement.inert = true | false;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean which is <code>true</code> if the element is inert; otherwise, the value is <code>false</code>.</p>
+A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;label for="button1"&gt;Button 1&lt;/label&gt;
-  &lt;button id="button1"&gt;I am not inert&lt;/button&gt;
-&lt;/div&gt;
-&lt;div inert&gt;
-  &lt;label for="button2"&gt;Button 2&lt;/label&gt;
-  &lt;button id="button2"&gt;I am inert&lt;/button&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <label for="button1">Button 1</label>
+  <button id="button1">I am not inert</button>
+</div>
+<div inert>
+  <label for="button2">Button 2</label>
+  <button id="button2">I am inert</button>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">[inert] &gt; * {
+```css
+[inert] > * {
   opacity: .5;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', 560, 200) }}</p>
+{{ EmbedLiveSample('Example', 560, 200) }}
 
-<div class="notecard note">
-<p><strong>Note:</strong> This attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.</p>
-</div>
+> **Note:** This attribute, by itself, will not cause any visual change to the content as displayed in the browser. In the example above, CSS has been applied so that any direct descendant of an element with the inert attribute is rendered semi-opaque.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://github.com/WICG/inert">Inert Polyfill</a></li>
-</ul>
+- [Inert Polyfill](https://github.com/WICG/inert)

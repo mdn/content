@@ -2,42 +2,43 @@
 title: RTCRtpContributingSource.source
 slug: Web/API/RTCRtpContributingSource/source
 tags:
-- API
-- Media
-- Property
-- RTCRtpContributingSource
-- Reference
-- WebRTC
-- source
+  - API
+  - Media
+  - Property
+  - RTCRtpContributingSource
+  - Reference
+  - WebRTC
+  - source
 browser-compat: api.RTCRtpContributingSource.source
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The read-only <strong><code>source</code></strong> property of
-    the {{domxref("RTCRtpContributingSource")}} dictionary contains the source identifier of
-    a particular stream of RTP packets.</p>
+The read-only **`source`** property of
+the {{domxref("RTCRtpContributingSource")}} dictionary contains the source identifier of
+a particular stream of RTP packets.
 
-<p>The value is the contributing source (CSRC)
-  or synchronization source (SSRC) identifier, depending on whether the object is an
-  <code>RTCRtpContributingSource</code> or {{domxref("RTCRtpSynchronizationSource")}},
-  which is based on the former.</p>
+The value is the contributing source (CSRC)
+or synchronization source (SSRC) identifier, depending on whether the object is an
+`RTCRtpContributingSource` or {{domxref("RTCRtpSynchronizationSource")}},
+which is based on the former.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sourceID</em> = <em>RTCRtpContributingSource</em>.source</pre>
+```js
+var sourceID = RTCRtpContributingSource.source
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned, 32-bit integer value which uniquely identifies the source of RTP packets
-  described by this <code>RTCRtpContributingSource</code> (in which case the value is a
-  CSRC identifier) or <code>RTCRtpSynchronizationSource</code> (the value is an SSRC
-  identifier).</p>
+An unsigned, 32-bit integer value which uniquely identifies the source of RTP packets
+described by this `RTCRtpContributingSource` (in which case the value is a
+CSRC identifier) or `RTCRtpSynchronizationSource` (the value is an SSRC
+identifier).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,39 +3,39 @@ title: HTMLIFrameElement.src
 slug: Web/API/HTMLIFrameElement/src
 browser-compat: api.HTMLIFrameElement.src
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>HTMLIFrameElement.src</code></strong>
-    property reflects the HTML {{htmlattrxref("referrerpolicy","src")}} attribute of the
-    {{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
-    resource.</p>
+The **`HTMLIFrameElement.src`**
+property reflects the HTML {{htmlattrxref("referrerpolicy","src")}} attribute of the
+{{HTMLElement("iframe")}} element defining which referrer is sent when fetching the
+resource.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>refStr</var> = <var>iframeElt</var>.src;
-<var>iframeElt</var>.src= <var>refStr</var>;
-</pre>
+```js
+refStr = iframeElt.src;
+iframeElt.src= refStr;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var iframe = document.createElement("iframe");
+```js
+var iframe = document.createElement("iframe");
 iframe.src = "/";
 var body = document.getElementsByTagName("body")[0];
 body.appendChild(iframe); // Fetch the image using the complete URL as the referrer
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{DOMxRef("HTMLAnchorElement.src")}}</li>
-    <li>{{DOMxRef("HTMLAreaElement.src")}}</li>
-    <li>{{DOMxRef("HTMLAreaElement.src")}}.</li>
-</ul>
+- {{DOMxRef("HTMLAnchorElement.src")}}
+- {{DOMxRef("HTMLAreaElement.src")}}
+- {{DOMxRef("HTMLAreaElement.src")}}.

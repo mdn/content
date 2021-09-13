@@ -8,38 +8,33 @@ tags:
   - CookieChangeEvent
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The <strong><code>CookieChangeEvent()</code></strong> constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.onchange()")}}. This constructor is called by the browser when a change event occurs.</p>
+The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.onchange()")}}. This constructor is called by the browser when a change event occurs.
 
-<div class="notecard note">
-    <p><strong>Note:</strong> This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.</p>
-</div>
+> **Note:** This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);</pre>
+    var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} with the value <code>"changed"</code> or <code>"deleted"</code>.</dd>
-  <dt><code>eventInitDict</code>{{Optional_Inline}}</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>changed</code></dt>
-      <dd>An array containing a changed cookie.</dd>
-      <dt><code>deleted</code></dt>
-      <dd>An array containing a deleted cookie.</dd>
-    </dl>
-  </dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
+- `eventInitDict`{{Optional_Inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : An object containing:
+
+    - `changed`
+      - : An array containing a changed cookie.
+    - `deleted`
+      - : An array containing a deleted cookie.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

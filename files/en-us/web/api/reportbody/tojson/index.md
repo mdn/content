@@ -9,27 +9,30 @@ tags:
   - ReportBody
 browser-compat: api.ReportBody.toJSON
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("ReportBody")}} interface is a <em>serializer</em>, and returns a JSON representation of the <code>ReportBody</code> object.</p>
+The **`toJSON()`** method of the {{domxref("ReportBody")}} interface is a _serializer_, and returns a JSON representation of the `ReportBody` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ReportBody.toJSON();</pre>
+```js
+ReportBody.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A JSON object that is the serialization of the {{domxref("ReportBody")}} object.</p>
+A JSON object that is the serialization of the {{domxref("ReportBody")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then return a JSON representation of the first entry. The report, and therefore the JSON object returned will be an instance of {{domxref("InterventionReportBody")}} which inherits from <code>ReportBody</code>.</p>
+In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then return a JSON representation of the first entry. The report, and therefore the JSON object returned will be an instance of {{domxref("InterventionReportBody")}} which inherits from `ReportBody`.
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['intervention'],
   buffered: true
 }
@@ -37,12 +40,13 @@ browser-compat: api.ReportBody.toJSON
 let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.toJSON());
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,113 +2,114 @@
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.strokeRect()</code></strong>
-  method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to
-  the current {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} and other
-  context settings.</p>
+The
+**`CanvasRenderingContext2D.strokeRect()`**
+method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to
+the current {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} and other
+context settings.
 
-<p>This method draws directly to the canvas without modifying the current path, so any
-  subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
-  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} calls will have no effect
-  on it.</p>
+This method draws directly to the canvas without modifying the current path, so any
+subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
+{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} calls will have no effect
+on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.strokeRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
-</pre>
+```js
+void ctx.strokeRect(x, y, width, height);
+```
 
-<p>The <code>strokeRect()</code> method draws a stroked rectangle whose starting point is
-  at <code>(x, y)</code> and whose size is specified by <code>width</code> and
-  <code>height</code>.</p>
+The `strokeRect()` method draws a stroked rectangle whose starting point is
+at `(x, y)` and whose size is specified by `width` and
+`height`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>width</code></dt>
-  <dd>The rectangle's width. Positive values are to the right, and negative to the left.
-  </dd>
-  <dt><code>height</code></dt>
-  <dd>The rectangle's height. Positive values are down, and negative are up.</dd>
-</dl>
+- `x`
+  - : The x-axis coordinate of the rectangle's starting point.
+- `y`
+  - : The y-axis coordinate of the rectangle's starting point.
+- `width`
+  - : The rectangle's width. Positive values are to the right, and negative to the left.
+- `height`
+  - : The rectangle's height. Positive values are down, and negative are up.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_simple_stroked_rectangle">A simple stroked rectangle</h3>
+### A simple stroked rectangle
 
-<p>This example draws a rectangle with a green outline using the <code>strokeRect()</code>
-  method.</p>
+This example draws a rectangle with a green outline using the `strokeRect()`
+method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The rectangle's top-left corner is at (20, 10). It has a width of 160 and a height of
-  100.</p>
+The rectangle's top-left corner is at (20, 10). It has a width of 160 and a height of
+100\.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'green';
 ctx.strokeRect(20, 10, 160, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('A_simple_stroked_rectangle', 700, 180) }}</p>
+{{ EmbedLiveSample('A_simple_stroked_rectangle', 700, 180) }}
 
-<h3 id="Applying_various_context_settings">Applying various context settings</h3>
+### Applying various context settings
 
-<p>This example draws a rectangle with a drop shadow and thick, beveled outlines.</p>
+This example draws a rectangle with a drop shadow and thick, beveled outlines.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.shadowColor = '#d53';
 ctx.shadowBlur = 20;
 ctx.lineJoin = 'bevel';
 ctx.lineWidth = 15;
 ctx.strokeStyle = '#38f';
-ctx.strokeRect(30, 30, 160, 90);</pre>
+ctx.strokeRect(30, 30, 160, 90);
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Applying_various_context_settings', 700, 180) }}</p>
+{{ EmbedLiveSample('Applying_various_context_settings', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}

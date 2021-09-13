@@ -8,29 +8,28 @@ tags:
   - Reference
 browser-compat: api.Navigator.mimeTypes
 ---
-<div>{{ ApiRef("HTML DOM") }}{{deprecated_header}}</div>
+{{ ApiRef("HTML DOM") }}{{deprecated_header}}
 
-<p>Returns a {{domxref("MimeTypeArray")}} object, which contains a list of
-	{{domxref("MimeType")}} objects representing the MIME types recognized by the browser.
-</p>
+Returns a {{domxref("MimeTypeArray")}} object, which contains a list of
+{{domxref("MimeType")}} objects representing the MIME types recognized by the browser.
 
-<div class="note">
-	<p><strong>Note:</strong> Named properties of {{domxref("MimeTypeArray")}} objects are
-		no longer enumerable in the latest browser versions.</p>
-</div>
+> **Note:** Named properties of {{domxref("MimeTypeArray")}} objects are
+> no longer enumerable in the latest browser versions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>mimeTypes</var>[] = navigator.mimeTypes;
-</pre>
+```js
+var mimeTypes[] = navigator.mimeTypes;
+```
 
-<p><code>mimeTypes</code> is a <code>MimeTypeArray</code> object which has a
-	<code>length</code> property as well as <code>item(index)</code> and
-	<code>namedItem(name)</code> methods.</p>
+`mimeTypes` is a `MimeTypeArray` object which has a
+`length` property as well as `item(index)` and
+`namedItem(name)` methods.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">function isJavaPresent() {
+```js
+function isJavaPresent() {
   return 'application/x-java-applet' in navigator.mimeTypes;
 }
 
@@ -42,12 +41,12 @@ function getJavaPluginDescription() {
   }
   return mimetype.enabledPlugin.description;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

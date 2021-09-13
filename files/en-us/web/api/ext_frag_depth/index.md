@@ -9,41 +9,41 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_frag_depth
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>EXT_frag_depth</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and enables to set a depth value of a fragment from within the fragment shader.</p>
+The **`EXT_frag_depth`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables to set a depth value of a fragment from within the fragment shader.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. It requires GLSL <code>#version 300 es</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. It requires GLSL `#version 300 es`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Enable the extension:</p>
+Enable the extension:
 
-<pre class="brush: js">gl.getExtension('EXT_frag_depth');</pre>
+```js
+gl.getExtension('EXT_frag_depth');
+```
 
-<p>Now the output variable <code>gl_FragDepthEXT</code> is available to set a depth value of a fragment from within the fragment shader:</p>
+Now the output variable `gl_FragDepthEXT` is available to set a depth value of a fragment from within the fragment shader:
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment"&gt;
+```html
+<script type="x-shader/x-fragment">
 void main() {
   gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
   gl_FragDepthEXT = 0.5;
 }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}

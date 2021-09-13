@@ -2,72 +2,70 @@
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
 tags:
-- API
-- Non-standard
-- Property
-- Reference
-- drag and drop
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.mozCursor
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p>The <strong><code>DataTransfer.mozCursor</code></strong> property returns or sets the
-  drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
+The **`DataTransfer.mozCursor`** property returns or sets the
+drag cursor's state. This is primarily used to control the cursor during tab drags.
 
-<p>The possible values are:</p>
+The possible values are:
 
-<dl>
-  <dt>auto</dt>
-  <dd>Uses the default system behavior.</dd>
-  <dt>default</dt>
-  <dd>Uses the default Gecko behavior, which is to set the cursor to an arrow during the
-    drag operation.</dd>
-</dl>
+- auto
+  - : Uses the default system behavior.
+- default
+  - : Uses the default Gecko behavior, which is to set the cursor to an arrow during the
+    drag operation.
 
-<div class="note"><p><strong>Note:</strong> If any value other than <code>default</code> is
-  set, <code>auto</code> is assumed.</p></div>
+> **Note:** If any value other than `default` is
+> set, `auto` is assumed.
 
-<div class="note"><p><strong>Note:</strong> This property is currently only implemented on
-  Windows.</p></div>
+> **Note:** This property is currently only implemented on
+> Windows.
 
-<div class="note"><p><strong>Note:</strong> This property is Gecko-specific.</p></div>
+> **Note:** This property is Gecko-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dataTransfer</em>.mozCursor;
-</pre>
+```js
+dataTransfer.mozCursor;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing one of the values listed above.</p>
+A {{domxref("DOMString")}} representing one of the values listed above.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozCursor</code> property.</p>
+This example shows the use of the `mozCursor` property.
 
-<pre class="brush: js">function drop_handler(event)
+```js
+function drop_handler(event)
 {
   var dragData = event.dataTransfer;
   console.log("mozCursor = " + dragData.mozCursor);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property is not defined in any Web standard.</p>
+This property is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

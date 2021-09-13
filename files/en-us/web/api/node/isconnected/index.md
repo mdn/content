@@ -2,47 +2,50 @@
 title: Node.isConnected
 slug: Web/API/Node/isConnected
 tags:
-- API
-- DOM
-- Node
-- Property
-- Reference
+  - API
+  - DOM
+  - Node
+  - Property
+  - Reference
 browser-compat: api.Node.isConnected
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>isConnected</code></strong> read-only property of the
-  {{domxref("Node")}} interface returns a boolean indicating whether the node is connected
-  (directly or indirectly) to the context object, for example the {{domxref("Document")}}
-  object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a
-  shadow DOM.</p>
+The **`isConnected`** read-only property of the
+{{domxref("Node")}} interface returns a boolean indicating whether the node is connected
+(directly or indirectly) to the context object, for example the {{domxref("Document")}}
+object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a
+shadow DOM.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>isItConnected</em> = <em>nodeObjectInstance</em>.isConnected</pre>
+```js
+var isItConnected = nodeObjectInstance.isConnected
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> if the node is connected to its relevant context object, and <code>false</code> if not.</p>
+`true` if the node is connected to its relevant context object, and `false` if not.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Standard_DOM">Standard DOM</h3>
+### Standard DOM
 
-<p>A standard DOM example:</p>
+A standard DOM example:
 
-<pre class="brush: js">let test = document.createElement('p');
+```js
+let test = document.createElement('p');
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
-</pre>
+```
 
-<h3 id="Shadow_DOM">Shadow DOM</h3>
+### Shadow DOM
 
-<p>A shadow DOM example:</p>
+A shadow DOM example:
 
-<pre class="brush: js">// Create a shadow root
+```js
+// Create a shadow root
 var shadow = this.attachShadow({mode: 'open'});
 
 // Create some CSS to apply to the shadow dom
@@ -74,18 +77,17 @@ style.textContent = `
 // Attach the created style element to the shadow dom
 
 shadow.appendChild(style);
-console.log(style.isConnected); // Returns true</pre>
+console.log(style.isConnected); // Returns true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f">Node.prototype.isConnected polyfill</a></li>
-</ul>
+- [Node.prototype.isConnected polyfill](https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f)

@@ -10,29 +10,31 @@ tags:
   - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>fftSize</code></strong> property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> (FFT) to get frequency domain data.</p>
+The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a [Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) to get frequency domain data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>curValue</em> = <em>analyserNode</em>.fftSize;
-<em>analyserNode</em>.fftSize = <em>newValue</em>;
-</pre>
+```js
+var curValue = analyserNode.fftSize;
+analyserNode.fftSize = newValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.</p>
+An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
 
-<p>Must be a power of 2 between <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math> and <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math>, so one of: <code>32</code>, <code>64</code>, <code>128</code>, <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code>, <code>16384</code>, and <code>32768</code>. Defaults to <code>2048</code>.</p>
+Must be a power of 2 between <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math> and <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math>, so one of: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, and `32768`. Defaults to `2048`.
 
-<p><strong>Note</strong>: If its value is not a power of 2, or it is outside the specified range, a {{domxref("DOMException")}} with the name <code>IndexSizeError</code> is thrown.</p>
+**Note**: If its value is not a power of 2, or it is outside the specified range, a {{domxref("DOMException")}} with the name `IndexSizeError` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -61,7 +63,7 @@ function draw() {
       var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -79,18 +81,17 @@ function draw() {
       canvasCtx.stroke();
     };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

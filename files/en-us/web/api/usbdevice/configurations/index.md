@@ -2,35 +2,36 @@
 title: USBDevice.configurations
 slug: Web/API/USBDevice/configurations
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- configurations
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - configurations
 browser-compat: api.USBDevice.configurations
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>configurations</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface an {{jsxref("array")}} of device-specific interfaces
-  for controlling a paired USB device.</p>
+The **`configurations`** read only property of the
+{{domxref("USBDevice")}} interface an {{jsxref("array")}} of device-specific interfaces
+for controlling a paired USB device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var USBConfiguration[] = USBDevice.configurations</pre>
+```js
+var USBConfiguration[] = USBDevice.configurations
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("array")}} of {{domxref("USBConfiguration")}} objects.</p>
+An {{jsxref("array")}} of {{domxref("USBConfiguration")}} objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

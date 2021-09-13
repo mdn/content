@@ -2,47 +2,48 @@
 title: RTCInboundRtpStreamStats.trackId
 slug: Web/API/RTCInboundRtpStreamStats/trackId
 tags:
-- API
-- Audio
-- Media
-- MediaStreamTrack
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- trackId
+  - API
+  - Audio
+  - Media
+  - MediaStreamTrack
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - trackId
 browser-compat: api.RTCInboundRtpStreamStats.trackId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>trackId</code></strong> property of the
-    {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the
-    {{domxref("RTCStats.id", "id")}} of the
-    {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
-    {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the
-    {{domxref("MediaStreamTrack")}} which is receiving the incoming media.</p>
+The **`trackId`** property of the
+{{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the
+{{domxref("RTCStats.id", "id")}} of the
+{{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
+{{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the
+{{domxref("MediaStreamTrack")}} which is receiving the incoming media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackStatsId</em> = <em>rtcInboundRtpStreamStats</em>.trackId;</pre>
+```js
+var trackStatsId = rtcInboundRtpStreamStats.trackId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the ID of the
-  {{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
-  {{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the track which
-  is receiving the media from this RTP session.</p>
+A {{domxref("DOMString")}} containing the ID of the
+{{domxref("RTCReceiverAudioTrackAttachmentStats")}} or
+{{domxref("RTCReceiverVideoTrackAttachmentStats")}} object representing the track which
+is receiving the media from this RTP session.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

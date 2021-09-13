@@ -2,53 +2,51 @@
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 tags:
-- API
-- Deprecated
-- HTML DOM
-- HTMLTableElement
-- NeedsMarkupWork
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Deprecated
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.HTMLTableElement.align
 ---
-<p>{{APIRef("HTML DOM")}}{{Deprecated_Header}}</p>
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-<p>The <strong><code>HTMLTableElement.align</code></strong> property represents the
-  alignment of the table.</p>
+The **`HTMLTableElement.align`** property represents the
+alignment of the table.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.align = <em>alignment</em>;
-var <em>alignment</em> = <em>HTMLTableElement</em>.align;</pre>
+```js
+HTMLTableElement.align = alignment;
+var alignment = HTMLTableElement.align;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>alignment</code></dt>
-  <dd>{{DOMxRef("DOMString")}} with one of the following values:
-    <ul>
-      <li>left</li>
-      <li>center</li>
-      <li>right</li>
-    </ul>
-  </dd>
-</dl>
+- `alignment`
 
-<h2 id="Example">Example</h2>
+  - : {{DOMxRef("DOMString")}} with one of the following values:
 
-<pre class="brush:js">// Set the alignment of a table
+    - left
+    - center
+    - right
+
+## Example
+
+```js
+// Set the alignment of a table
 var t = document.getElementById('TableA');
-t.align = 'center';</pre>
+t.align = 'center';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification <a class="external"
-      href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977"><em>HTMLTableElement</em>
-      .align</a>.</li>
-</ul>
+- W3C DOM 2 HTML Specification [_HTMLTableElement_
+  .align](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

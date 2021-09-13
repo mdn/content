@@ -11,14 +11,14 @@ tags:
   - events
 browser-compat: api.KeyboardEvent.keyIdentifier
 ---
-<p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
+{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}
 
-<p>The deprecated <strong><code>KeyboardEvent.keyIdentifier</code></strong> read-only property returns a "key identifier" string that can be used to determine what key was pressed. Its non-deprecated replacement is {{domxref("KeyboardEvent.key")}}.</p>
+The deprecated **`KeyboardEvent.keyIdentifier`** read-only property returns a "key identifier" string that can be used to determine what key was pressed. Its non-deprecated replacement is {{domxref("KeyboardEvent.key")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any current specification.</em> This property was part of <a href="https://www.w3.org/TR/2009/WD-DOM-Level-3-Events-20090908/#events-Events-KeyboardEvent-keyIdentifier">an old draft of the DOM Level 3 Events Specification</a>, but it was removed in later drafts in favor of {{domxref("KeyboardEvent.key")}}.</p>
+_Not part of any current specification._ This property was part of [an old draft of the DOM Level 3 Events Specification](https://www.w3.org/TR/2009/WD-DOM-Level-3-Events-20090908/#events-Events-KeyboardEvent-keyIdentifier), but it was removed in later drafts in favor of {{domxref("KeyboardEvent.key")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

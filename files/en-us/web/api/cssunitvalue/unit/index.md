@@ -2,57 +2,57 @@
 title: CSSUnitValue.unit
 slug: Web/API/CSSUnitValue/unit
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnitValue
-- Experimental
-- Houdini
-- Property
-- Reference
-- unit
+  - API
+  - CSS Typed Object Model API
+  - CSSUnitValue
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - unit
 browser-compat: api.CSSUnitValue.unit
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnitValue.unit</code></strong> read-only property
-	of the {{domxref("CSSUnitValue")}} interface returns a {{jsxref('USVString')}}
-	indicating the type of unit.</p>
+The **`CSSUnitValue.unit`** read-only property
+of the {{domxref("CSSUnitValue")}} interface returns a {{jsxref('USVString')}}
+indicating the type of unit.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>aString</em> = CSSUnitValue.unit;</pre>
+```js
+var aString = CSSUnitValue.unit;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('USVString')}}.</p>
+A {{jsxref('USVString')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following creates a {{domxref('CSSPositionValue')}} from individual
-	<code>CSSUnitValue</code> constructors, then queries the
-	<code>CSSUnitValue.unit</code>.</p>
+The following creates a {{domxref('CSSPositionValue')}} from individual
+`CSSUnitValue` constructors, then queries the
+`CSSUnitValue.unit`.
 
-<pre class="brush: js">let pos = new CSSPositionValue(
+```js
+let pos = new CSSPositionValue(
     new CSSUnitValue( 5, "px" ),
     new CSSUnitValue( 10, "em" ));
 
 console.log( pos.x.unit ); // "px"
 console.log( pos.y.unit ); // "em"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref('CSSUnitValue.value')}}</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a>
-	</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref('CSSUnitValue.value')}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

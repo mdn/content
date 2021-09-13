@@ -9,48 +9,42 @@ tags:
   - Reference
 browser-compat: api.HTMLStyleElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLStyleElement</code></strong> interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}.</p>
+The **`HTMLStyleElement`** interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}.
 
-<p>This interface doesn't allow to manipulate the CSS it contains (in most case). To manipulate CSS, see <a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a> for an overview of the objects used to manipulate specified CSS properties using the DOM.</p>
+This interface doesn't allow to manipulate the CSS it contains (in most case). To manipulate CSS, see [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) for an overview of the objects used to manipulate specified CSS properties using the DOM.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLStyleElement.media")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the intended destination medium for style information.</dd>
- <dt>{{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.</dd>
- <dt>{{domxref("HTMLStyleElement.disabled")}}</dt>
- <dd>Is a boolean value representing whether or not the stylesheet is disabled (true) or not (false).</dd>
- <dt>{{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("StyleSheet")}} object associated with the given element, or <code>null</code> if there is none</dd>
- <dt>{{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Is a boolean value indicating if the element applies to the whole document (<code>false</code>) or only to the parent's sub-tree (<code>true</code>).</dd>
-</dl>
+- {{domxref("HTMLStyleElement.media")}}
+  - : Is a {{domxref("DOMString")}} representing the intended destination medium for style information.
+- {{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.
+- {{domxref("HTMLStyleElement.disabled")}}
+  - : Is a boolean value representing whether or not the stylesheet is disabled (true) or not (false).
+- {{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}
+  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none
+- {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Is a boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("style")}}.</li>
- <li><a href="/en-US/docs/DOM/Using_dynamic_styling_information">Using dynamic styling information</a> to see how to manipulate CSS.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("style")}}.
+- [Using dynamic styling information](/en-US/docs/DOM/Using_dynamic_styling_information) to see how to manipulate CSS.

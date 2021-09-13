@@ -10,38 +10,38 @@ tags:
   - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>KeyboardEvent.getModifierState()</strong></code> method returns the
-  current state of the specified modifier key: <code>true</code> if the modifier is active
-  (that is the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
+The **`KeyboardEvent.getModifierState()`** method returns the
+current state of the specified modifier key: `true` if the modifier is active
+(that is the modifier key is pressed or locked), otherwise, `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var active = event.getModifierState(keyArg);</pre>
+```js
+var active = event.getModifierState(keyArg);
+```
 
-<h3 id="Returns">Returns </h3>
+### Returns
 
-<p>A boolean value</p>
+A boolean value
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>keyArg</code></em></dt>
-  <dd>A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
-    values which represent modifier keys, or the string <code>"Accel"</code>
-    {{deprecated_inline}}. This is case-sensitive.</dd>
-</dl>
+- _`keyArg`_
+  - : A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
+    values which represent modifier keys, or the string `"Accel"`
+    {{deprecated_inline}}. This is case-sensitive.
 
-<h2 id="Modifier_keys_on_Internet_Explorer">Modifier keys on Internet Explorer</h2>
+## Modifier keys on Internet Explorer
 
-<p>IE9 uses <code>"Scroll"</code> for <code>"ScrollLock"</code> and <code>"Win"</code> for
-  <code>"OS"</code>.</p>
+IE9 uses `"Scroll"` for `"ScrollLock"` and `"Win"` for
+`"OS"`.
 
-<h2 id="Modifier_keys_on_Gecko">Modifier keys on Gecko</h2>
+## Modifier keys on Gecko
 
-When <code>getModifierState()</code> returns true on Gecko?
+When `getModifierState()` returns true on Gecko?
+
 <table class="standard-table">
   <thead>
     <tr>
@@ -64,18 +64,21 @@ When <code>getModifierState()</code> returns true on Gecko?
     <tr>
       <th scope="row"><code>"AltGraph"</code></th>
       <td>
-        <p>Both <kbd>Alt</kbd> and <kbd>Ctrl</kbd> keys are pressed, or <kbd>AltGr</kbd>
-          key is pressed</p>
+        <p>
+          Both <kbd>Alt</kbd> and <kbd>Ctrl</kbd> keys are pressed, or
+          <kbd>AltGr</kbd> key is pressed
+        </p>
       </td>
-      <td><kbd>Level 3 Shift</kbd> key (or <kbd>Level 5 Shift</kbd> key) pressed</td>
+      <td>
+        <kbd>Level 3 Shift</kbd> key (or <kbd>Level 5 Shift</kbd> key) pressed
+      </td>
       <td><kbd>⌥ Option</kbd> key pressed</td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
     </tr>
     <tr>
       <th scope="row"><code>"CapsLock"</code></th>
-      <td colspan="3">During LED for <kbd>⇪ Caps Lock</kbd>
-        turned on</td>
+      <td colspan="3">During LED for <kbd>⇪ Caps Lock</kbd> turned on</td>
       <td>❌ <em>Not supported</em></td>
       <td>While <kbd>CapsLock</kbd> is locked</td>
     </tr>
@@ -85,7 +88,10 @@ When <code>getModifierState()</code> returns true on Gecko?
       <td><kbd>Ctrl</kbd> key pressed</td>
       <td><kbd>control</kbd> key pressed</td>
       <td><kbd>menu</kbd> key pressed.</td>
-      <td><kbd>Ctrl</kbd> key, <kbd>control</kbd> key or <kbd>menu</kbd> key pressed.</td>
+      <td>
+        <kbd>Ctrl</kbd> key, <kbd>control</kbd> key or <kbd>menu</kbd> key
+        pressed.
+      </td>
     </tr>
     <tr>
       <th scope="row"><code>"Fn"</code></th>
@@ -93,9 +99,11 @@ When <code>getModifierState()</code> returns true on Gecko?
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
-      <td><kbd>Function</kbd> key is pressed, but we're not sure what key makes the
-        modifier state active. <kbd>Fn</kbd> key on Mac keyboard doesn't cause this
-        active.</td>
+      <td>
+        <kbd>Function</kbd> key is pressed, but we're not sure what key makes
+        the modifier state active. <kbd>Fn</kbd> key on Mac keyboard doesn't
+        cause this active.
+      </td>
     </tr>
     <tr>
       <th scope="row"><code>"FnLock"</code></th>
@@ -104,6 +112,7 @@ When <code>getModifierState()</code> returns true on Gecko?
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
+    </tr>
     <tr>
       <th scope="row"><code>"Hyper"</code></th>
       <td>❌ <em>Not supported</em></td>
@@ -130,7 +139,10 @@ When <code>getModifierState()</code> returns true on Gecko?
     <tr>
       <th scope="row"><code>"OS"</code></th>
       <td><kbd>⊞ Windows Logo</kbd> key pressed</td>
-      <td><kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped to <kbd>⊞ Windows Logo</kbd> key)</td>
+      <td>
+        <kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped
+        to <kbd>⊞ Windows Logo</kbd> key)
+      </td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
@@ -138,7 +150,10 @@ When <code>getModifierState()</code> returns true on Gecko?
     <tr>
       <th scope="row"><code>"ScrollLock"</code></th>
       <td>During LED for <kbd>Scroll Lock</kbd> turned on</td>
-      <td>During LED for <kbd>Scroll Lock</kbd> turned on, but typically this isn't supported by platform</td>
+      <td>
+        During LED for <kbd>Scroll Lock</kbd> turned on, but typically this
+        isn't supported by platform
+      </td>
       <td>❌ <em>Not supported</em></td>
       <td>❌ <em>Not supported</em></td>
       <td>While <kbd>ScrollLock</kbd> is locked</td>
@@ -174,36 +189,35 @@ When <code>getModifierState()</code> returns true on Gecko?
   </tbody>
 </table>
 
-<ul>
-  <li>On the other platforms, "Alt", "Control" and "Shift" may be supported.</li>
-  <li>All modifiers (except <code>"FnLock"</code>, <code>"Hyper"</code>,
-    <code>"Super"</code> and <code>"Symbol"</code> which are defined after Gecko
-    implements this) are always supported for untrusted events on Gecko. This doesn't
-    depend on the platform.</li>
-</ul>
+- On the other platforms, "Alt", "Control" and "Shift" may be supported.
+- All modifiers (except `"FnLock"`, `"Hyper"`,
+  `"Super"` and `"Symbol"` which are defined after Gecko
+  implements this) are always supported for untrusted events on Gecko. This doesn't
+  depend on the platform.
 
-<h2 id="Accel_virtual_modifier"><code>"Accel"</code> virtual modifier</h2>
+## `"Accel"` virtual modifier
 
-<div class="note"><p><strong>Note:</strong> The <code>"Accel"</code> virtual modifier has
-  been effectively <strong>deprecated</strong> in current drafts of the DOM3 Events
-  specification.</p></div>
+> **Note:** The `"Accel"` virtual modifier has
+> been effectively **deprecated** in current drafts of the DOM3 Events
+> specification.
 
-<p><code>getModifierState()</code> also accepts a deprecated virtual modifier named
-  <code>"Accel"</code>. <code>event.getModifierState("Accel")</code> returns
-  <code>true</code> when at least one of {{domxref("KeyboardEvent.ctrlKey")}} or
-  {{domxref("KeyboardEvent.metaKey")}} is <code>true</code>.</p>
+`getModifierState()` also accepts a deprecated virtual modifier named
+`"Accel"`. `event.getModifierState("Accel")` returns
+`true` when at least one of {{domxref("KeyboardEvent.ctrlKey")}} or
+{{domxref("KeyboardEvent.metaKey")}} is `true`.
 
-<p>In old implementations and outdated specifications, it returned <code>true</code> when
-  a modifier which is the typical modifier key for the shortcut key is pressed. For
-  example, on Windows, pressing <kbd>Ctrl</kbd> key may make it return <code>true</code>.
-  However, on Mac, pressing <kbd>⌘ Command</kbd> key may make it return <code>true</code>.
-  Note that which modifier key makes it return true depends on platforms, browsers, and
-  user settings. For example, Firefox users can customize this with a pref,
-  <code>"ui.key.accelKey"</code>.</p>
+In old implementations and outdated specifications, it returned `true` when
+a modifier which is the typical modifier key for the shortcut key is pressed. For
+example, on Windows, pressing <kbd>Ctrl</kbd> key may make it return `true`.
+However, on Mac, pressing <kbd>⌘ Command</kbd> key may make it return `true`.
+Note that which modifier key makes it return true depends on platforms, browsers, and
+user settings. For example, Firefox users can customize this with a pref,
+`"ui.key.accelKey"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Ignore if following modifier is active.
+```js
+// Ignore if following modifier is active.
 if (event.getModifierState("Fn") ||
     event.getModifierState("Hyper") ||
     event.getModifierState("OS") ||
@@ -215,7 +229,7 @@ if (event.getModifierState("Fn") ||
 // Also ignore if two or more modifiers except Shift are active.
 if (event.getModifierState("Control") +
     event.getModifierState("Alt") +
-    event.getModifierState("Meta") &gt; 1) {
+    event.getModifierState("Meta") > 1) {
   return;
 }
 
@@ -240,9 +254,9 @@ if (event.getModifierState("Accel")) {
 
 // Do something different for arrow keys if ScrollLock is locked.
 if ((event.getModifierState("ScrollLock") ||
-       event.getModifierState("Scroll") /* hack for IE */) &amp;&amp;
-    !event.getModifierState("Control") &amp;&amp;
-    !event.getModifierState("Alt") &amp;&amp;
+       event.getModifierState("Scroll") /* hack for IE */) &&
+    !event.getModifierState("Control") &&
+    !event.getModifierState("Alt") &&
     !event.getModifierState("Meta")) {
   switch (event.key) {
     case "ArrowDown":
@@ -266,26 +280,22 @@ if ((event.getModifierState("ScrollLock") ||
       break;
   }
 }
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Although this example uses <code>.getModifierState()</code> with <code>"Alt"</code>,
-    <code>"Control"</code>, <code>"Meta"</code> and <code>"Shift"</code>, using
-    <code>event.altKey</code>, <code>event.ctrlKey</code>, <code>event.metaKey</code> and
-    <code>event.shiftKey</code> may be more preferable.</p>
-</div>
+> **Note:** Although this example uses `.getModifierState()` with `"Alt"`,
+> `"Control"`, `"Meta"` and `"Shift"`, using
+> `event.altKey`, `event.ctrlKey`, `event.metaKey` and
+> `event.shiftKey` may be more preferable.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("KeyboardEvent")}} this method belongs to.</li>
-  <li>{{domxref("MouseEvent.getModifierState")}}</li>
-</ul>
+- The {{domxref("KeyboardEvent")}} this method belongs to.
+- {{domxref("MouseEvent.getModifierState")}}

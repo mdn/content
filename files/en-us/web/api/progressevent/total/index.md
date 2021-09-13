@@ -2,39 +2,38 @@
 title: ProgressEvent.total
 slug: Web/API/ProgressEvent/total
 tags:
-- API
-- Progress Event
-- ProgressEvent
-- Property
-- Reference
+  - API
+  - Progress Event
+  - ProgressEvent
+  - Property
+  - Reference
 browser-compat: api.ProgressEvent.total
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>ProgressEvent.total</strong></code> read-only property is an unsigned
-  64-bit integer value indicating the total size of the data being processed or
-  transmitted. In the case of an HTTP transmission, this is the size of the body of the
-  message (the <code>Content-Length</code>), and does not include headers and other
-  overhead.</p>
+The **`ProgressEvent.total`** read-only property is an unsigned
+64-bit integer value indicating the total size of the data being processed or
+transmitted. In the case of an HTTP transmission, this is the size of the body of the
+message (the `Content-Length`), and does not include headers and other
+overhead.
 
-<p>If the event's {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}}
-  property is <code>false</code>, this value is meaningless and should be ignored.</p>
+If the event's {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}}
+property is `false`, this value is meaningless and should be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>value</em> = <em>progressEvent</em>.total;</pre>
+```js
+let value = progressEvent.total;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("ProgressEvent")}} interface it belongs to.

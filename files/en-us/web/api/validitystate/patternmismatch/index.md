@@ -9,50 +9,50 @@ tags:
   - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
-<p>{{draft}}The read-only <strong><code>patternMismatch</code></strong> property of a <strong><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></strong> object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute.</p>
+{{draft}}The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
 
-<p>If the field supports the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute -- which means the {{HTMLElement("input")}} is of <code>type</code> {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}},  or {{HTMLElement("input/search", "search")}} -- and the pattern value is set to a valid regular expression, if the value don't doesn't conform to the constraints set by the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> value, the <code>patternMismatch</code> property will be true.</p>
+If the field supports the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute -- which means the {{HTMLElement("input")}} is of `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}},  or {{HTMLElement("input/search", "search")}} -- and the pattern value is set to a valid regular expression, if the value don't doesn't conform to the constraints set by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) value, the `patternMismatch` property will be true.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given the following:</p>
+Given the following:
 
-<pre class="brush: html">&lt;p&gt;
- &lt;label&gt;Enter your phone number in the format (123)456-7890
-  (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
-   &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
-   &lt;input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/&gt;
- &lt;/label&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+ <label>Enter your phone number in the format (123)456-7890
+  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
+   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
+   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
+ </label>
+</p>
+```
 
-<p>Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute set on each.</p>
+Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
 
-<p>If the values are too long or too short, or contain characters that aren't digits, <code>patternMismatch</code> will be true. When <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.</p>
+If the values are too long or too short, or contain characters that aren't digits, `patternMismatch` will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   border: red solid 3px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 300, 40)}}</p>
+{{EmbedLiveSample("Examples", 300, 40)}}
 
-<p>Note, in this case, we get a <code>patternMismatch</code> not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
+Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>{{HTMLElement("input/email", "email")}}</code> input type requires, at minimum, a match of <code>x@y</code> and the <code>{{HTMLElement("input/url", "url")}}</code> type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).</p>
-</div>
+> **Note:** The `{{HTMLElement("input/email", "email")}}` input type requires, at minimum, a match of `x@y` and the `{{HTMLElement("input/url", "url")}}` type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a></li>
-</ul>
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)

@@ -2,40 +2,41 @@
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
 tags:
-- API
-- Document
-- Property
-- Reference
-- scrollingElement
+  - API
+  - Document
+  - Property
+  - Reference
+  - scrollingElement
 browser-compat: api.Document.scrollingElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>scrollingElement</code></strong> read-only property of the
-  {{domxref("Document")}} interface returns a reference to the {{domxref("Element")}} that
-  scrolls the document. In standards mode, this is the root element of the
-  document, {{domxref("document.documentElement")}}.</p>
+The **`scrollingElement`** read-only property of the
+{{domxref("Document")}} interface returns a reference to the {{domxref("Element")}} that
+scrolls the document. In standards mode, this is the root element of the
+document, {{domxref("document.documentElement")}}.
 
-<p>When in quirks mode, the <code>scrollingElement</code> attribute returns the HTML
-  <code>body</code> element if it exists and is <a
-    href="https://drafts.csswg.org/cssom-view/#potentially-scrollable">potentially
-    scrollable</a>, otherwise it returns null.</p>
+When in quirks mode, the `scrollingElement` attribute returns the HTML
+`body` element if it exists and is [potentially
+scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>element</var> = document.scrollingElement;</pre>
+```js
+var element = document.scrollingElement;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var scrollElm = document.scrollingElement;
+```js
+var scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

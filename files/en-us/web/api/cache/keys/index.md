@@ -12,84 +12,79 @@ tags:
   - keys
 browser-compat: api.Cache.keys
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>keys()</code></strong> method of the {{domxref("Cache")}} interface
-  returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Cache")}} keys.
-</p>
+The **`keys()`** method of the {{domxref("Cache")}} interface
+returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Cache")}} keys.
 
-<p>The requests are returned in the same order that they were inserted.</p>
+The requests are returned in the same order that they were inserted.
 
-<div class="note">
-  <p><strong>Note:</strong> Requests with duplicate URLs but different headers can be
-    returned if their responses have the <code>VARY</code> header set on them.</p>
-</div>
+> **Note:** Requests with duplicate URLs but different headers can be
+> returned if their responses have the `VARY` header set on them.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.keys(<em>request</em>, {<em>options</em>}).then(function(<em>keys</em>) {
+```js
+cache.keys(request, {options}).then(function(keys) {
   // do something with your array of requests
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request {{optional_inline}}</dt>
-  <dd>The {{domxref("Request")}} want to return, if a specific key is desired. This can be
-    a <code>Request</code> object or a URL.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object whose properties control how matching is done in the <code>keys</code>
+- request {{optional_inline}}
+  - : The {{domxref("Request")}} want to return, if a specific key is desired. This can be
+    a `Request` object or a URL.
+- options {{optional_inline}}
+
+  - : An object whose properties control how matching is done in the `keys`
     operation. The available options are:
-    <ul>
-      <li><code>ignoreSearch</code>: A boolean value that specifies whether the
-        matching process should ignore the query string in the url.  If set to
-        <code>true</code>, the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A boolean value that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>HTTP</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A boolean value that, when set to
-        <code>true,</code> tells the matching operation not to perform <code>VARY</code>
-        header matching.  In other words, if the URL matches you will get a match
-        regardless of  whether the {{domxref("Response")}} object has a <code>VARY</code>
-        header. It defaults to <code>false</code>.</li>
-      <li><code>cacheName</code>: A {{domxref("DOMString")}} that represents a specific
-        cache to search within. Note that this option is ignored by
-        <code>Cache.keys()</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `ignoreSearch`: A boolean value that specifies whether the
+      matching process should ignore the query string in the url.  If set to
+      `true`, the `?value=bar` part of
+      `http://foo.com/?value=bar` would be ignored when performing a match.
+      It defaults to `false`.
+    - `ignoreMethod`: A boolean value that, when set to
+      `true`, prevents matching operations from validating the
+      {{domxref("Request")}} `HTTP` method (normally only `GET`
+      and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`: A boolean value that, when set to
+      `true,` tells the matching operation not to perform `VARY`
+      header matching.  In other words, if the URL matches you will get a match
+      regardless of  whether the {{domxref("Response")}} object has a `VARY`
+      header. It defaults to `false`.
+    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+      cache to search within. Note that this option is ignored by
+      `Cache.keys()`.
 
-<p>A {{jsxref("Promise")}} that resolves to an array of {{domxref("Cache")}} keys.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Promise")}} that resolves to an array of {{domxref("Cache")}} keys.
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+## Examples
+
+```js
+caches.open('v1').then(function(cache) {
   cache.keys().then(function(keys) {
     keys.forEach(function(request, index, array) {
       cache.delete(request);
     });
   });
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

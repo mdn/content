@@ -15,24 +15,26 @@ tags:
   - payment
 browser-compat: api.AddressErrors.city
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+{{APIRef("Payment Request API")}}
 
-<p>An object based on {{domxref("AddressErrors")}} includes a <code><strong>city</strong></code> property when validation of the address fails for the value given for the address's {{domxref("PaymentAddress.city", "city")}} property. The returned string explains the error and should offer suggestions for how to correct it.</p>
+An object based on {{domxref("AddressErrors")}} includes a **`city`** property when validation of the address fails for the value given for the address's {{domxref("PaymentAddress.city", "city")}} property. The returned string explains the error and should offer suggestions for how to correct it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>cityError</em> = <em>AddressErrors</em>.city;</pre>
+```js
+var cityError = AddressErrors.city;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.city", "city")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.</p>
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.city", "city")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
-<p>If the city value was validated successfully, this property is not included in the <code>AddressErrors</code> object.</p>
+If the city value was validated successfully, this property is not included in the `AddressErrors` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

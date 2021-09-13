@@ -2,45 +2,47 @@
 title: RTCTrackEventInit.transceiver
 slug: Web/API/RTCTrackEventInit/transceiver
 tags:
-- API
-- Media
-- RTCTrackEventInit
-- RTP
-- Reference
-- Transceiver
-- WebRTC
-- WebRTC API
-- events
+  - API
+  - Media
+  - RTCTrackEventInit
+  - RTP
+  - Reference
+  - Transceiver
+  - WebRTC
+  - WebRTC API
+  - events
 browser-compat: api.RTCTrackEventInit.transceiver
 ---
-<div>{{APIRef("WebAPI")}}</div>
+{{APIRef("WebAPI")}}
 
-<p>The {{domxref("RTCTrackEventInit")}} dictionary's
-    <strong><code>transceiver</code></strong> property specifies the
-    {{domxref("RTCRtpTransceiver")}} associated with the {{event("track")}} event.</p>
+The {{domxref("RTCTrackEventInit")}} dictionary's
+**`transceiver`** property specifies the
+{{domxref("RTCRtpTransceiver")}} associated with the {{event("track")}} event.
 
-<p>The transceiver pairs the track's {{domxref("RTCTrackEvent.receiver", "receiver")}} with
-  an {{domxref("RTCRtpSender")}} to allow bidirectional communication.</p>
+The transceiver pairs the track's {{domxref("RTCTrackEvent.receiver", "receiver")}} with
+an {{domxref("RTCRtpSender")}} to allow bidirectional communication.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>trackEventInit</em> = {
-  receiver: <em>rtpReceiver</em>,
-  track: <em>mediaStreamTrack</em>,
-  streams: [<em>videoStream</em>],
-  transceiver: <em>rtpTransceiver</em>
+```js
+var trackEventInit = {
+  receiver: rtpReceiver,
+  track: mediaStreamTrack,
+  streams: [videoStream],
+  transceiver: rtpTransceiver
 };
 
-var <em>rtpTransceiver</em> = <em>trackEventInit</em>.transceiver;</pre>
+var rtpTransceiver = trackEventInit.transceiver;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{page("/en-US/docs/Web/API/RTCTrackEvent/transceiver", "Value")}}</p>
+{{page("/en-US/docs/Web/API/RTCTrackEvent/transceiver", "Value")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

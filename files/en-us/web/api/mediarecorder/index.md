@@ -14,93 +14,80 @@ tags:
   - Video
 browser-compat: api.MediaRecorder
 ---
-<div>{{APIRef("Media Recorder API")}}</div>
+{{APIRef("Media Recorder API")}}
 
-<p>The <strong><code>MediaRecorder</code></strong> interface of the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> provides functionality to easily record media. It is created using the {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor.</p>
+The **`MediaRecorder`** interface of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) provides functionality to easily record media. It is created using the {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}}</dt>
- <dd>Creates a new <code>MediaRecorder</code> object, given a {{domxref("MediaStream")}} to record. Options are available to do things like set the container's MIME type (such as <code>"video/webm"</code> or <code>"video/mp4"</code>) and the bit rates of the audio and video tracks or a single overall bit rate.</dd>
-</dl>
+- {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}}
+  - : Creates a new `MediaRecorder` object, given a {{domxref("MediaStream")}} to record. Options are available to do things like set the container's MIME type (such as `"video/webm"` or `"video/mp4"`) and the bit rates of the audio and video tracks or a single overall bit rate.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}</dt>
- <dd>Returns the MIME type that was selected as the recording container for the <code>MediaRecorder</code> object when it was created.</dd>
- <dt>{{domxref("MediaRecorder.state")}} {{readonlyInline}}</dt>
- <dd>Returns the current state of the <code>MediaRecorder</code> object (<code>inactive</code>, <code>recording</code>, or <code>paused</code>.)</dd>
- <dt>{{domxref("MediaRecorder.stream")}} {{readonlyInline}}</dt>
- <dd>Returns the stream that was passed into the constructor when the <code>MediaRecorder</code> was created.</dd>
- <dt>{{domxref("MediaRecorder.ignoreMutedMedia")}} {{deprecated_inline}} {{non-standard_inline}}</dt>
- <dd>Indicates whether the <code>MediaRecorder</code> instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is <code>false</code>, <code>MediaRecorder</code> will record silence for audio and black frames for video. The default is <code>false</code>.</dd>
- <dt>{{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).</dd>
- <dt>{{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).</dd>
-</dl>
+- {{domxref("MediaRecorder.mimeType")}} {{readonlyInline}}
+  - : Returns the MIME type that was selected as the recording container for the `MediaRecorder` object when it was created.
+- {{domxref("MediaRecorder.state")}} {{readonlyInline}}
+  - : Returns the current state of the `MediaRecorder` object (`inactive`, `recording`, or `paused`.)
+- {{domxref("MediaRecorder.stream")}} {{readonlyInline}}
+  - : Returns the stream that was passed into the constructor when the `MediaRecorder` was created.
+- {{domxref("MediaRecorder.ignoreMutedMedia")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Indicates whether the `MediaRecorder` instance will record input when the input {{domxref("MediaStreamTrack")}} is muted. If this attribute is `false`, `MediaRecorder` will record silence for audio and black frames for video. The default is `false`.
+- {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the video encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
+- {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the audio encoding bit rate in use. This may differ from the bit rate specified in the constructor (if it was provided).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaRecorder.pause()")}}</dt>
- <dd>Pauses the recording of media.</dd>
- <dt>{{domxref("MediaRecorder.requestData()")}}</dt>
- <dd>Requests a {{domxref("Blob")}} containing the saved data received thus far (or since the last time <code>requestData()</code> was called. After calling this method, recording continues, but in a new <code>Blob</code>.</dd>
- <dt>{{domxref("MediaRecorder.resume()")}}</dt>
- <dd>Resumes recording of media after having been paused.</dd>
- <dt>{{domxref("MediaRecorder.start()")}}</dt>
- <dd>Begins recording media; this method can optionally be passed a <code>timeslice</code> argument with a value in milliseconds. If this is specified, the media will be captured in separate chunks of that duration, rather than the default behavior of recording the media in a single large chunk.</dd>
- <dt>{{domxref("MediaRecorder.stop()")}}</dt>
- <dd>Stops recording, at which point a {{event("dataavailable")}} event containing the final <code>Blob</code> of saved data is fired. No more recording occurs.</dd>
-</dl>
+- {{domxref("MediaRecorder.pause()")}}
+  - : Pauses the recording of media.
+- {{domxref("MediaRecorder.requestData()")}}
+  - : Requests a {{domxref("Blob")}} containing the saved data received thus far (or since the last time `requestData()` was called. After calling this method, recording continues, but in a new `Blob`.
+- {{domxref("MediaRecorder.resume()")}}
+  - : Resumes recording of media after having been paused.
+- {{domxref("MediaRecorder.start()")}}
+  - : Begins recording media; this method can optionally be passed a `timeslice` argument with a value in milliseconds. If this is specified, the media will be captured in separate chunks of that duration, rather than the default behavior of recording the media in a single large chunk.
+- {{domxref("MediaRecorder.stop()")}}
+  - : Stops recording, at which point a {{event("dataavailable")}} event containing the final `Blob` of saved data is fired. No more recording occurs.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("MediaRecorder.isTypeSupported()")}}</dt>
- <dd>A static method which returns a <code>true</code> or <code>false</code> value indicating if the given MIME media type is supported by the current user agent. </dd>
-</dl>
+- {{domxref("MediaRecorder.isTypeSupported()")}}
+  - : A static method which returns a `true` or `false` value indicating if the given MIME media type is supported by the current user agent.
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<dl>
- <dt>{{domxref("MediaRecorder.ondataavailable")}}</dt>
- <dd>Called to handle the {{event("dataavailable")}} event, which is periodically triggered each time <code>timeslice</code> milliseconds of media have been recorded (or when the entire media has been recorded, if <code>timeslice</code> wasn't specified). The event, of type {{domxref("BlobEvent")}}, contains the recorded media in its {{domxref("BlobEvent.data", "data")}} property. You can then collect and act upon that recorded media data using this event handler.</dd>
- <dt>{{domxref("MediaRecorder.onerror")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("error")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording. The received event is based on the {{domxref("MediaRecorderErrorEvent")}} interface, whose {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} that describes the actual error that occurred.</dd> 
- <dt>{{domxref("MediaRecorder.onpause")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("pause")}} event, which occurs when media recording is paused.</dd>
- <dt>{{domxref("MediaRecorder.onresume")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("resume")}} event, which occurs when media recording resumes after being paused.</dd>
- <dt>{{domxref("MediaRecorder.onstart")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("start")}} event, which occurs when media recording starts.</dd>
- <dt>{{domxref("MediaRecorder.onstop")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("stop")}} event, which occurs when media recording ends, either when the {{domxref("MediaStream")}} ends — or after the {{domxref("MediaRecorder.stop()")}} method is called.</dd>
+- {{domxref("MediaRecorder.ondataavailable")}}
+  - : Called to handle the {{event("dataavailable")}} event, which is periodically triggered each time `timeslice` milliseconds of media have been recorded (or when the entire media has been recorded, if `timeslice` wasn't specified). The event, of type {{domxref("BlobEvent")}}, contains the recorded media in its {{domxref("BlobEvent.data", "data")}} property. You can then collect and act upon that recorded media data using this event handler.
+- {{domxref("MediaRecorder.onerror")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("error")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording. The received event is based on the {{domxref("MediaRecorderErrorEvent")}} interface, whose {{domxref("MediaRecorderErrorEvent.error", "error")}} property contains a {{domxref("DOMException")}} that describes the actual error that occurred.
+- {{domxref("MediaRecorder.onpause")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("pause")}} event, which occurs when media recording is paused.
+- {{domxref("MediaRecorder.onresume")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("resume")}} event, which occurs when media recording resumes after being paused.
+- {{domxref("MediaRecorder.onstart")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("start")}} event, which occurs when media recording starts.
+- {{domxref("MediaRecorder.onstop")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("stop")}} event, which occurs when media recording ends, either when the {{domxref("MediaStream")}} ends — or after the {{domxref("MediaRecorder.stop()")}} method is called.
+- {{domxref("MediaRecorder.onwarning")}} {{deprecated_inline}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called to handle the {{event("warning")}} event, which occurs when media recording has a non-fatal error, or after the {{domxref("MediaRecorder.onwarning()")}} method is called.
 
- <dt>{{domxref("MediaRecorder.onwarning")}} {{deprecated_inline}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called to handle the {{event("warning")}} event, which occurs when media recording has a non-fatal error, or after the {{domxref("MediaRecorder.onwarning()")}} method is called.</dd>
-</dl>
+## Events
 
-<h2 id="Events">Events</h2>
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-<p>Listen to these events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+- [`error`](/en-US/docs/Web/API/MediaRecorder/error_event)
+  - : Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
+    Also available via the [`onerror`](/en-US/docs/Web/API/MediaRecorder/onerror) property.
+- [`warning`](/en-US/docs/Web/API/MediaRecorder/warning_event){{deprecated_inline}}
+  - : Fired when a problem occurs that does not halt recording.
+    Also available via the [`onwarning`](/en-US/docs/Web/API/MediaRecorder/onwarning) property.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/MediaRecorder/error_event">error</a></code></dt>
- <dd>Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/MediaRecorder/onerror">onerror</a></code> property.</dd>
+## Example
 
- <dt><code><a href="/en-US/docs/Web/API/MediaRecorder/warning_event">warning</a></code>{{deprecated_inline}}</dt>
- <dd>Fired when a problem occurs that does not halt recording.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/MediaRecorder/onwarning">onwarning</a></code> property.</dd>
-</dl>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">if (navigator.mediaDevices) {
+```js
+if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
 
   var constraints = { audio: true };
@@ -170,28 +157,23 @@ browser-compat: api.MediaRecorder
     console.log('The following error occurred: ' + err);
   })
 }
+```
 
-</pre>
+> **Note:** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/web-dictaphone/) for the complete code.
 
-<div class="note">
-<p><strong>Note:</strong> This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; <a href="https://github.com/mdn/web-dictaphone/">refer to the source</a> for the complete code.</p>
-</div>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaRecorder API</a></li>
- <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder + getUserMedia + Web Audio API visualization demo, by <a href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">Recording a media element</a></li>
- <li><a href="https://simpl.info/mediarecorder/">simpl.info MediaStream Recording demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
- <li>{{domxref("MediaDevices.getUserMedia")}}</li>
- <li><a href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording (<a href="https://github.com/chrisjohndigital/OpenLang">source on GitHub</a>)</li>
-</ul>
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("MediaDevices.getUserMedia")}}
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

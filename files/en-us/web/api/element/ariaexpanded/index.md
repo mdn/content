@@ -11,50 +11,53 @@ tags:
   - Element
 browser-compat: api.Element.ariaExpanded
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaExpanded</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-expanded</code> attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.</p>
+The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the `aria-expanded` attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaExpanded</var> = element.ariaExpanded;
-<var>element</var>.ariaExpanded = <var>ariaExpanded</var></pre>
+    var ariaExpanded = element.ariaExpanded;
+    element.ariaExpanded = ariaExpanded
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The grouping element this element owns or controls is expanded.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The grouping element this element owns or controls is collapsed.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The element does not own or control a grouping element that is expandable.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The grouping element this element owns or controls is expanded.
+- `"false"`
+  - : The grouping element this element owns or controls is collapsed.
+- `"undefined"`
+  - : The element does not own or control a grouping element that is expandable.
 
-<p>In this example the <code>aria-expanded</code> attribute on the element with an ID of <code>animal</code> is set to "false". Using <code>ariaExpanded</code> we update the value to "true".</p>
+## Examples
 
-<pre class="brush: html">&lt;div class="animals-combobox"&gt;
-  &lt;label for="animal"&gt;Animal&lt;/label&gt;
-  &lt;input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true"&gt;
-  &lt;button id="animals-button" tabindex="-1" aria-label="Open"&gt;&#9661;&lt;/button&gt;
-  &lt;ul id="animals-listbox" role="listbox" aria-label="Animals"&gt;
-    &lt;li id="animal-cat" role="option">Cat&lt;/li&gt;
-    &lt;li id="animal-dog" role="option">Dog&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+In this example the `aria-expanded` attribute on the element with an ID of `animal` is set to "false". Using `ariaExpanded` we update the value to "true".
 
-<pre class="brush: js">let el = document.getElementById('animal');
+```html
+<div class="animals-combobox">
+  <label for="animal">Animal</label>
+  <input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true">
+  <button id="animals-button" tabindex="-1" aria-label="Open">▽</button>
+  <ul id="animals-listbox" role="listbox" aria-label="Animals">
+    <li id="animal-cat" role="option">Cat</li>
+    <li id="animal-dog" role="option">Dog</li>
+  </ul>
+</div>
+```
+
+```js
+let el = document.getElementById('animal');
 console.log(el.ariaExpanded); // false
 el.ariaExpanded = "true";
-console.log(el.ariaExpanded); // true</pre>
+console.log(el.ariaExpanded); // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

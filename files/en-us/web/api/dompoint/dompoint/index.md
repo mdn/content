@@ -2,69 +2,67 @@
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 tags:
-- API
-- Constructor
-- Coordinates
-- DOM
-- DOMPoint
-- Geometry
-- Geometry Interfaces
-- Point
-- Reference
+  - API
+  - Constructor
+  - Coordinates
+  - DOM
+  - DOMPoint
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Reference
 browser-compat: api.DOMPoint.DOMPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>DOMPoint()</code></strong> constructor
-    creates and returns a new {{domxref("DOMPoint")}} object, given the values for some or
-    all of its properties.</p>
+The **`DOMPoint()`** constructor
+creates and returns a new {{domxref("DOMPoint")}} object, given the values for some or
+all of its properties.
 
-<p>You can also create a <code>DOMPoint</code> by calling the
-  {{domxref("DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a <code>DOMPoint</code> or
-  {{domxref("DOMPointReadOnly")}}.</p>
+You can also create a `DOMPoint` by calling the
+{{domxref("DOMPoint.fromPoint()")}} static function. That function accepts any object with the required parameters, including a `DOMPoint` or
+{{domxref("DOMPointReadOnly")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>point</em> = new DOMPoint(<em>x</em>, <em>y</em>, <em>z</em>, <em>w</em>);</pre>
+```js
+point = new DOMPoint(x, y, z, w);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code> {{optional_inline}}</dt>
-  <dd>The <code>x</code> coordinate for the new <code>DOMPoint</code>.</dd>
-  <dt><code>y</code> {{optional_inline}}</dt>
-  <dd>The <code>y</code> coordinate for the new <code>DOMPoint</code>.</dd>
-  <dt><code>z</code> {{optional_inline}}</dt>
-  <dd>The <code>z</code> coordinate for the new <code>DOMPoint</code>.</dd>
-  <dt><code>w</code> {{optional_inline}}</dt>
-  <dd>The perspective value of the new <code>DOMPoint</code>.</dd>
-</dl>
+- `x` {{optional_inline}}
+  - : The `x` coordinate for the new `DOMPoint`.
+- `y` {{optional_inline}}
+  - : The `y` coordinate for the new `DOMPoint`.
+- `z` {{optional_inline}}
+  - : The `z` coordinate for the new `DOMPoint`.
+- `w` {{optional_inline}}
+  - : The perspective value of the new `DOMPoint`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a <code>DOMPoint</code> representing the top-left corner of the
-  current window, then creates a second point based on the first, which is then offset by
-  100 pixels both vertically and horizontally.</p>
+This example creates a `DOMPoint` representing the top-left corner of the
+current window, then creates a second point based on the first, which is then offset by
+100 pixels both vertically and horizontally.
 
-<pre class="brush: js">var windTopLeft = new DOMPoint(window.screenX, window.screenY);
+```js
+var windTopLeft = new DOMPoint(window.screenX, window.screenY);
 var newTopLeft = DOMPoint.fromPoint(windTopLeft);
 newTopLeft.x += 100;
 newTopLeft.y += 100;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}</li>
-  <li>{{domxref("DOMRect")}}</li>
-  <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
+- {{domxref("DOMRect")}}
+- {{domxref("DOMMatrix")}}

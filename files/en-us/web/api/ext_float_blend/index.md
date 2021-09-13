@@ -15,25 +15,24 @@ tags:
   - float
 browser-compat: api.EXT_float_blend
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>'s <code>EXT_float_blend</code> extension allows blending and draw buffers with 32-bit floating-point components.</p>
+The [WebGL API](/en-US/docs/Web/API/WebGL_API)'s `EXT_float_blend` extension allows blending and draw buffers with 32-bit floating-point components.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts. However, to use it, you need to enable the use of 32-bit floating-point draw buffers by  enabling the extension {{domxref("WEBGL_color_buffer_float")}} (for WebGL1) or {{domxref("EXT_color_buffer_float")}} (for WebGL2). Doing so automatically enables <code>EXT_float_blend</code> as well.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts. However, to use it, you need to enable the use of 32-bit floating-point draw buffers by  enabling the extension {{domxref("WEBGL_color_buffer_float")}} (for WebGL1) or {{domxref("EXT_color_buffer_float")}} (for WebGL2). Doing so automatically enables `EXT_float_blend` as well.
 
-<p>With this extension enabled, calling {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} or {{domxref("WebGLRenderingContext.drawElements", "drawElements()")}} with blending enabled and a draw buffer with 32-bit floating-point components will no longer result in an <code>INVALID_OPERATION</code> error.</p>
+With this extension enabled, calling {{domxref("WebGLRenderingContext.drawArrays", "drawArrays()")}} or {{domxref("WebGLRenderingContext.drawElements", "drawElements()")}} with blending enabled and a draw buffer with 32-bit floating-point components will no longer result in an `INVALID_OPERATION` error.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>On devices that support the <code>EXT_float_blend</code> extension, it is automatically, implicitly, enabled when any one or more of {{domxref("EXT_color_buffer_float")}}, {{domxref("OES_texture_float")}}, or {{domxref("WEBGL_color_buffer_float")}} are enabled. This ensures that content written before <code>EXT_float_blend</code> was exposed by WebGL will function as expected.</p>
+On devices that support the `EXT_float_blend` extension, it is automatically, implicitly, enabled when any one or more of {{domxref("EXT_color_buffer_float")}}, {{domxref("OES_texture_float")}}, or {{domxref("WEBGL_color_buffer_float")}} are enabled. This ensures that content written before `EXT_float_blend` was exposed by WebGL will function as expected.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">const gl = canvas.getContext('webgl2');
+```js
+const gl = canvas.getContext('webgl2');
 
 // enable necessary extensions
 gl.getExtension('EXT_color_buffer_float');
@@ -54,25 +53,23 @@ gl.enable(gl.BLEND);
 
 gl.drawArrays(gl.POINTS, 0, 1);
 // won't throw gl.INVALID_OPERATION with the extension enabled
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using WebGL extensions</a></li>
- <li><a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a></li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("EXT_color_buffer_float")}}</li>
- <li>{{domxref("WEBGL_color_buffer_float")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawArrays()")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
-</ul>
+- [WebGL API](/en-US/docs/Web/API/WebGL_API)
+- [Using WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
+- [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("EXT_color_buffer_float")}}
+- {{domxref("WEBGL_color_buffer_float")}}
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxref("WebGLRenderingContext.drawElements()")}}

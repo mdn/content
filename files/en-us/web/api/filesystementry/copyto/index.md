@@ -2,96 +2,88 @@
 title: FileSystemEntry.copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 tags:
-- API
-- File System API
-- File and Directory Entries APIs
-- FileSystemEntry
-- Files
-- Method
-- Non-standard
-- Reference
-- copyTo
-- Deprecated
+  - API
+  - File System API
+  - File and Directory Entries APIs
+  - FileSystemEntry
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - copyTo
+  - Deprecated
 browser-compat: api.FileSystemEntry.copyTo
 ---
-<p>{{APIRef("File System API")}}{{deprecated_header}}</p>
+{{APIRef("File System API")}}{{deprecated_header}}
 
-<p>The {{domxref("FileSystemEntry")}} interface's method
-    <strong><code>copyTo()</code></strong> copies the file
-    specified by the entry to a new location on the file system.</p>
+The {{domxref("FileSystemEntry")}} interface's method
+**`copyTo()`** copies the file
+specified by the entry to a new location on the file system.
 
-<p>There are some
-  typical restrictions on what you can do:</p>
+There are some
+typical restrictions on what you can do:
 
-<ul>
-  <li>A directory can't be copied into itself.</li>
-  <li>An entry can't be copied into its parent directory unless you specify a new name.
-  </li>
-  <li>When copying a directory, the copy is always recursive; you can't leave out
-    subfolders.</li>
-</ul>
+- A directory can't be copied into itself.
+- An entry can't be copied into its parent directory unless you specify a new name.
+- When copying a directory, the copy is always recursive; you can't leave out
+  subfolders.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemEntry</em>.copyTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+```js
+FileSystemEntry.copyTo(newParent[, newName][, successCallback][, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newParent</code></dt>
-  <dd>A {{domxref("FileSystemDirectoryEntry")}} object specifying the destination
-    directory for the copy operation.</dd>
-  <dt><code>newName</code> {{optional_inline}}</dt>
-  <dd>If this parameter is provided, the copy is given this string as its new file or
-    directory name.</dd>
-  <dt><code>successCallback</code> {{optional_inline}}</dt>
-  <dd>A function which is called when the copy operation is successfully completed.
+- `newParent`
+  - : A {{domxref("FileSystemDirectoryEntry")}} object specifying the destination
+    directory for the copy operation.
+- `newName` {{optional_inline}}
+  - : If this parameter is provided, the copy is given this string as its new file or
+    directory name.
+- `successCallback` {{optional_inline}}
+  - : A function which is called when the copy operation is successfully completed.
     Receives a single input parameter: a {{domxref("FileSystemEntry")}} based object
-    providing the copied item's new details.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>An optional callback which is executed if an error occurs while copying the items.
+    providing the copied item's new details.
+- `errorCallback` {{optional_inline}}
+  - : An optional callback which is executed if an error occurs while copying the items.
     There's a single parameter: a {{domxref("FileError")}} describing what went wrong.
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
-  <dt><code>FileError.INVALID_MODIFICATION_ERR</code></dt>
-  <dd>The requested operation involves an impossible change, such as moving a directory
+- `FileError.INVALID_MODIFICATION_ERR`
+  - : The requested operation involves an impossible change, such as moving a directory
     inside itself or one of its own child directories, or copying an item within the same
-    directory without renaming it.</dd>
-  <dt><code>FileError.QUOTA_EXCEEDED_ERR</code></dt>
-  <dd>The operation exceeded the user's storage quota, or there isn't enough storage space
-    left to complete the operation.</dd>
-</dl>
+    directory without renaming it.
+- `FileError.QUOTA_EXCEEDED_ERR`
+  - : The operation exceeded the user's storage quota, or there isn't enough storage space
+    left to complete the operation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how a temporary log file might be moved into a more permanent "log"
-  directory.</p>
+This example shows how a temporary log file might be moved into a more permanent "log"
+directory.
 
-<pre class="brush: js">workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
+```js
+workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
   workingDirectory.getDirectory("log", {}, function(dirEntry) {
     fileEntry.copyTo(dirEntry);
   }, handleError);
-}, handleError);</pre>
+}, handleError);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -2,41 +2,41 @@
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 tags:
-- API
-- File API
-- Files
-- Method
-- Reference
+  - API
+  - File API
+  - Files
+  - Method
+  - Reference
 browser-compat: api.FileReader.readAsBinaryString
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <code>readAsBinaryString</code> method is used to start reading the contents of the
-  specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
-  finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-  <code>DONE</code>, and the {{event("loadend")}} is triggered. At that time, the
-  {{domxref("FileReader.result","result")}} attribute contains the raw binary data from
-  the file.</p>
+The `readAsBinaryString` method is used to start reading the contents of the
+specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
+finished, the {{domxref("FileReader.readyState","readyState")}} becomes
+`DONE`, and the {{event("loadend")}} is triggered. At that time, the
+{{domxref("FileReader.result","result")}} attribute contains the raw binary data from
+the file.
 
-<p>Note that this method was once removed from the File API specification, but
-  re-introduced for backward compatibility.<br>
-  Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.</p>
+Note that this method was once removed from the File API specification, but
+re-introduced for backward compatibility.
+Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+```js
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>blob</code></dt>
-  <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
-</dl>
+- `blob`
+  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var canvas = document.createElement('canvas');
+```js
+var canvas = document.createElement('canvas');
 var height = 200;
 var width  = 200;
 
@@ -58,18 +58,17 @@ canvas.toBlob(function (blob) {
   }
 
   reader.readAsBinaryString(blob);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

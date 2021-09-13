@@ -10,48 +10,50 @@ tags:
   - r
 browser-compat: api.SVGCircleElement.r
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>r</strong></code> read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("r")}} attribute of a {{SVGElement("circle")}} element and by that defines the radius of the circle.</p>
+The **`r`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("r")}} attribute of a {{SVGElement("circle")}} element and by that defines the radius of the circle.
 
-<p>If unspecified, the effect is as if the value is set to <code>0</code>.</p>
+If unspecified, the effect is as if the value is set to `0`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>radius</var> = <var>element</var>.r;</pre>
+```js
+var radius = element.r;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.</p>
+An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200"&gt;
-  &lt;circle r="50" r="50" r="50" fill="gold" id="circle"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <circle r="50" r="50" r="50" fill="gold" id="circle"/>
+</svg>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">const circle = document.getElementById('circle');
+```js
+const circle = document.getElementById('circle');
 console.log(circle.r);
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SVGCircleElement.cx")}}</li>
- <li>{{domxref("SVGCircleElement.cy")}}</li>
-</ul>
+- {{domxref("SVGCircleElement.cx")}}
+- {{domxref("SVGCircleElement.cy")}}

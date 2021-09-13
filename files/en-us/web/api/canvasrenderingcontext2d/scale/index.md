@@ -2,64 +2,65 @@
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.scale
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.scale()</code></strong>
-  method of the Canvas 2D API adds a scaling transformation to the canvas units
-  horizontally and/or vertically.</p>
+The
+**`CanvasRenderingContext2D.scale()`**
+method of the Canvas 2D API adds a scaling transformation to the canvas units
+horizontally and/or vertically.
 
-<p>By default, one unit on the canvas is exactly one pixel. A scaling transformation
-  modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of
-  0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor
-  of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus
-  drawn at twice the normal size.</p>
+By default, one unit on the canvas is exactly one pixel. A scaling transformation
+modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of
+0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor
+of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus
+drawn at twice the normal size.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.scale(<em>x</em>, <em>y</em>);
-</pre>
+```js
+void ctx.scale(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>Scaling factor in the horizontal direction. A negative value flips pixels across the
-    vertical axis. A value of <code>1</code> results in no horizontal scaling.</dd>
-  <dt><code>y</code></dt>
-  <dd>Scaling factor in the vertical direction. A negative value flips pixels across the
-    horizontal axis. A value of <code>1</code> results in no vertical scaling.</dd>
-</dl>
+- `x`
+  - : Scaling factor in the horizontal direction. A negative value flips pixels across the
+    vertical axis. A value of `1` results in no horizontal scaling.
+- `y`
+  - : Scaling factor in the vertical direction. A negative value flips pixels across the
+    horizontal axis. A value of `1` results in no vertical scaling.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scaling_a_shape">Scaling a shape</h3>
+### Scaling a shape
 
-<p>This example draws a scaled rectangle. A non-scaled rectangle is then drawn for
-  comparison.</p>
+This example draws a scaled rectangle. A non-scaled rectangle is then drawn for
+comparison.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The rectangle has a specified width of 8 and a height of 20. The transformation matrix
-  scales it by 9x horizontally and by 3x vertically. Thus, its final size is a width of 72
-  and a height of 60.</p>
+The rectangle has a specified width of 8 and a height of 20. The transformation matrix
+scales it by 9x horizontally and by 3x vertically. Thus, its final size is a width of 72
+and a height of 60.
 
-<p>Notice that its position on the canvas also changes. Since its specified corner is (10,
-  10), its rendered corner becomes (90, 30).</p>
+Notice that its position on the canvas also changes. Since its specified corner is (10,
+10\), its rendered corner becomes (90, 30).
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Scaled rectangle
@@ -73,56 +74,55 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 // Non-scaled rectangle
 ctx.fillStyle = 'gray';
 ctx.fillRect(10, 10, 8, 20);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The scaled rectangle is red, and the non-scaled rectangle is gray.</p>
+The scaled rectangle is red, and the non-scaled rectangle is gray.
 
-<p>{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
 
-<h3 id="Flipping_things_horizontally_or_vertically">Flipping things horizontally or
-  vertically</h3>
+### Flipping things horizontally or vertically
 
-<p>You can use <code>scale(-1, 1)</code> to flip the context horizontally and
-  <code>scale(1, -1)</code> to flip it vertically. In this example, the words "Hello
-  world!" are flipped horizontally.</p>
+You can use `scale(-1, 1)` to flip the context horizontally and
+`scale(1, -1)` to flip it vertically. In this example, the words "Hello
+world!" are flipped horizontally.
 
-<p>Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}}
-  specifies a negative x coordinate. This is to adjust for the negative scaling factor:
-  <code>-280 * -1</code> becomes <code>280</code>, and text is drawn leftwards from that
-  point.</p>
+Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}}
+specifies a negative x coordinate. This is to adjust for the negative scaling factor:
+`-280 * -1` becomes `280`, and text is drawn leftwards from that
+point.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.scale(-1, 1);
 ctx.font = '48px serif';
 ctx.fillText('Hello world!', -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}</p>
+{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

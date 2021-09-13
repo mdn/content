@@ -9,75 +9,72 @@ tags:
   - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The property <code><strong>binaryType</strong></code> on the
-    {{domxref("RTCDataChannel")}} interface is a {{domxref("DOMString")}} which specifies
-    the type of object which should be used to represent binary data received
-    on the {{domxref("RTCDataChannel")}}. Values allowed by the
-    {{domxref("WebSocket.binaryType")}} property are also permitted here:
-    <code>blob</code> if {{domxref("Blob")}} objects are being used or
-    <code>arraybuffer</code> if {{jsxref("ArrayBuffer")}} objects are being used. The
-    default is <code>blob</code>.</p>
+The property **`binaryType`** on the
+{{domxref("RTCDataChannel")}} interface is a {{domxref("DOMString")}} which specifies
+the type of object which should be used to represent binary data received
+on the {{domxref("RTCDataChannel")}}. Values allowed by the
+{{domxref("WebSocket.binaryType")}} property are also permitted here:
+`blob` if {{domxref("Blob")}} objects are being used or
+`arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used. The
+default is `blob`.
 
-<p>When a binary message is received on the data channel, the resulting
-  {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
-  the type specified by the <code>binaryType</code>.</p>
+When a binary message is received on the data channel, the resulting
+{{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
+the type specified by the `binaryType`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>type</em> = <em>aDataChannel</em>.binaryType;
+```js
+var type = aDataChannel.binaryType;
 
-<em>aDataChannel</em>.binaryType = <em>type</em>;
-</pre>
+aDataChannel.binaryType = type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} that can have one of these values:</p>
+A {{domxref("DOMString")}} that can have one of these values:
 
-<dl>
-  <dt><code>"blob"</code></dt>
-  <dd>Received binary messages' contents will be contained in {{domxref("Blob")}} objects.
-  </dd>
-  <dt><code>"arraybuffer"</code></dt>
-  <dd>Received binary messages' contents will be contained in {{jsxref("ArrayBuffer")}}
-    objects.</dd>
-</dl>
+- `"blob"`
+  - : Received binary messages' contents will be contained in {{domxref("Blob")}} objects.
+- `"arraybuffer"`
+  - : Received binary messages' contents will be contained in {{jsxref("ArrayBuffer")}}
+    objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code configures a data channel to receive binary data in
-  {{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{DOMxRef("RTCDataChannel.message_event", "message")}}
-  events which constructs a string representing the received data as a list of hexadecimal
-  byte values.</p>
+This code configures a data channel to receive binary data in
+{{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{DOMxRef("RTCDataChannel.message_event", "message")}}
+events which constructs a string representing the received data as a list of hexadecimal
+byte values.
 
-<pre class="brush: js">var dc = peerConnection.createDataChannel(&quot;Binary&quot;);
-dc.binaryType = &quot;arraybuffer&quot;;
+```js
+var dc = peerConnection.createDataChannel("Binary");
+dc.binaryType = "arraybuffer";
 
 dc.onmessage = function(event) {
   let byteArray = new Uint8Array(event.data);
-  let hexString = &quot;&quot;;
+  let hexString = "";
 
   byteArray.forEach(function(byte) {
-    hexString += byte.toString(16) + &quot; &quot;;
+    hexString += byte.toString(16) + " ";
   });
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
-      channels</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.send()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC data
+  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.send()")}}

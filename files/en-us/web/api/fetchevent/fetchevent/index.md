@@ -2,74 +2,67 @@
 title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
 tags:
-- API
-- Communication
-- Constructor
-- Fetch
-- FetchEvent
-- Networking
-- Reference
-- Service Workers
-- ServiceWorker
+  - API
+  - Communication
+  - Constructor
+  - Fetch
+  - FetchEvent
+  - Networking
+  - Reference
+  - Service Workers
+  - ServiceWorker
 browser-compat: api.FetchEvent.FetchEvent
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>FetchEvent()</strong></code> constructor creates a new
-  {{domxref("FetchEvent")}} object.</p>
+The **`FetchEvent()`** constructor creates a new
+{{domxref("FetchEvent")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>fetchEvent</em> = new FetchEvent(<em>type</em>, <em>init</em>);</pre>
+```js
+var fetchEvent = new FetchEvent(type, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} object specifying which event the object represents. This
-    is always <code>fetch</code> for Fetch events.</dd>
-  <dt><code>init</code> {{optional_inline}}</dt>
-  <dd>
-    <p>An object conforming to the {{domxref("FetchEventInit")}} dictionary, containing
-      options to apply to the event object. Options are as follows:</p>
+- `type`
+  - : A {{domxref("DOMString")}} object specifying which event the object represents. This
+    is always `fetch` for Fetch events.
+- `init` {{optional_inline}}
 
-    <dl>
-      <dt><code>clientId</code> {{ReadOnlyInline}}</dt>
-      <dd>The {{domxref("Client")}} that the current service worker is controlling.</dd>
-      <dt><code>isReload</code> {{deprecated_inline}} {{ReadOnlyInline}}</dt>
-      <dd>A boolean value that signifies whether the page was reloaded or not when
-        the event was dispatched. <code>true</code> if yes, and <code>false</code> if not.
+  - : An object conforming to the {{domxref("FetchEventInit")}} dictionary, containing
+    options to apply to the event object. Options are as follows:
+
+    - `clientId` {{ReadOnlyInline}}
+      - : The {{domxref("Client")}} that the current service worker is controlling.
+    - `isReload` {{deprecated_inline}} {{ReadOnlyInline}}
+      - : A boolean value that signifies whether the page was reloaded or not when
+        the event was dispatched. `true` if yes, and `false` if not.
         Typically, pressing the refresh button in a browser is a reload, while clicking a
         link and pressing the back button is not. If not present, it defaults to
-        <code>false</code>.</dd>
-      <dt><code>preloadResponse</code> {{ReadOnlyInline}}</dt>
-      <dd>A {{jsxref("Promise")}} which returns a previously-loaded response to the
-        client.</dd>
-      <dt><code>replacesClientId</code> {{ReadOnlyInline}}</dt>
-      <dd>A {{domxref("DOMString")}} which identifies the client which is being replaced
-        by <code>resultingClientId</code>.</dd>
-      <dt><code>resultingClientId</code> {{ReadOnlyInline}}</dt>
-      <dd>A {{domxref("DOMString")}} containing the new <code>clientId</code> if the
-        client changes as a result of the page load.</dd>
-      <dt><code>request</code> {{ReadOnlyInline}}</dt>
-      <dd>The {{domxref("Request")}} object that would have triggered the event handler.
-      </dd>
-    </dl>
-  </dd>
-</dl>
+        `false`.
+    - `preloadResponse` {{ReadOnlyInline}}
+      - : A {{jsxref("Promise")}} which returns a previously-loaded response to the
+        client.
+    - `replacesClientId` {{ReadOnlyInline}}
+      - : A {{domxref("DOMString")}} which identifies the client which is being replaced
+        by `resultingClientId`.
+    - `resultingClientId` {{ReadOnlyInline}}
+      - : A {{domxref("DOMString")}} containing the new `clientId` if the
+        client changes as a result of the page load.
+    - `request` {{ReadOnlyInline}}
+      - : The {{domxref("Request")}} object that would have triggered the event handler.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

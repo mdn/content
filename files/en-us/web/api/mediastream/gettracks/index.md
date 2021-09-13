@@ -2,54 +2,56 @@
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
 tags:
-- API
-- Experimental
-- Media Streams API
-- MediaStream
-- MediaStreamTrack
-- Method
-- Reference
-- getTracks
+  - API
+  - Experimental
+  - Media Streams API
+  - MediaStream
+  - MediaStreamTrack
+  - Method
+  - Reference
+  - getTracks
 browser-compat: api.MediaStream.getTracks
 ---
-<p>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><dfn><code>getTracks()</code></dfn></strong> method of the
-  {{domxref("MediaStream")}} interface returns a sequence that represents all the
-  {{domxref("MediaStreamTrack")}} objects in this
-  stream's <code><a href="https://www.w3.org/TR/mediacapture-streams/#track-set">track set</a></code>,
-  regardless of {{domxref("MediaStreamTrack.kind")}}.</p>
+The **_`getTracks()`_** method of the
+{{domxref("MediaStream")}} interface returns a sequence that represents all the
+{{domxref("MediaStreamTrack")}} objects in this
+stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set),
+regardless of {{domxref("MediaStreamTrack.kind")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaStreamTracks</em> = <em>mediaStream</em>.getTracks()</pre>
+```js
+var mediaStreamTracks = mediaStream.getTracks()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("MediaStreamTrack")}} objects.</p>
+An array of {{domxref("MediaStreamTrack")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then(mediaStream =&gt; {
+```js
+navigator.mediaDevices.getUserMedia({audio: false, video: true})
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the stream after 5 seconds
-  setTimeout(() =&gt; {
+  setTimeout(() => {
     const tracks = mediaStream.getTracks()
     tracks[0].stop()
   }, 5000)
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

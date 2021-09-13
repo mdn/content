@@ -10,65 +10,66 @@ tags:
   - slotchange
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>slotchange</strong></code> event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.</p>
+The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
 
-<div class="note">
-<p><strong>Note:</strong> the <code>slotchange</code> event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.</p>
-</div>
+> **Note:** the `slotchange` event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>In order to trigger a <strong>slotchange</strong> event, one has to set or remove the <code>slot </code>attribute.</p>
+In order to trigger a **slotchange** event, one has to set or remove the `slot `attribute.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">element.setAttribute('slot', slotName);
+```js
+element.setAttribute('slot', slotName);
 // element.assignedSlot = $slot
 element.removeAttribute('slot');
 // element.assignedSlot = null
-</pre>
+```
 
-<p>The following snippet is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see it live also</a>).</p>
+The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
 
-<pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
+```js
+let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
-});</pre>
+});
+```
 
-<p>Here we grab references to all the <code>&lt;slot&gt;</code>s, then add a <code>slotchange</code> event listener to the template's second slot — which is the one which has its contents changed in the example.</p>
+Here we grab references to all the `<slot>`s, then add a `slotchange` event listener to the template's second slot — which is the one which has its contents changed in the example.
 
-<p>Every time the element inserted in the slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.</p>
+Every time the element inserted in the slot changes, we log a report to the console saying which slot has changed, and what the new node inside the slot is.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("HTMLSlotElement")}}</p>
+{{domxref("HTMLSlotElement")}}

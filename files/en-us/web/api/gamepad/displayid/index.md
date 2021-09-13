@@ -14,48 +14,49 @@ tags:
   - Deprecated
 browser-compat: api.Gamepad.displayId
 ---
-<p>{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}</p>
+{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>displayId</code></strong> read-only property of the {{domxref("Gamepad")}} interface <dfn>returns the {{domxref("VRDisplay.displayId")}} of the associated {{domxref("VRDisplay")}} — the <code>VRDisplay</code> that the gamepad is controlling the displayed scene of.</dfn></p>
+The **`displayId`** read-only property of the {{domxref("Gamepad")}} interface _returns the {{domxref("VRDisplay.displayId")}} of the associated {{domxref("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
 
-<p>A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it reports a pose that is in the same space as the {{domxref("VRDisplay.pose")}}.</p>
+A Gamepad is considered to be associated with a {{domxref("VRDisplay")}} if it reports a pose that is in the same space as the {{domxref("VRDisplay.pose")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr-gamepads-module/">WebXR Gamepads Module</a>.</p>
-  <p>There is no direct replacement for this property. The {{domxref("Gamepad")}} object associated with an {{domxref("XRInputSource")}} can be obtained using the {{domxref("XRInputSource.gamepad")}} property.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute). It has been superseded by the [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/).
+>
+> There is no direct replacement for this property. The {{domxref("Gamepad")}} object associated with an {{domxref("XRInputSource")}} can be obtained using the {{domxref("XRInputSource.gamepad")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const displayId = gamepadInstance.displayId;</pre>
+```js
+const displayId = gamepadInstance.displayId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number representing the associated {{domxref("VRDisplay.displayId")}}. If the number is 0, then the gamepad is not associated with a VR display.</p>
+A number representing the associated {{domxref("VRDisplay.displayId")}}. If the number is 0, then the gamepad is not associated with a VR display.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   if(!e.gamepad.displayId) {
     console.log('Gamepad connected');
   } else {
     console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr-gamepads-module/">WebXR Gamepads Module</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute) that has been superseded by the [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

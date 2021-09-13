@@ -11,48 +11,42 @@ tags:
   - createBufferSource
 browser-compat: api.BaseAudioContext.createBufferSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>createBufferSource()</code> method of the {{ domxref("BaseAudioContext") }}
-    Interface is used to create a new {{ domxref("AudioBufferSourceNode") }}, which can be
-    used to play audio data contained within an {{ domxref("AudioBuffer") }} object. {{
+The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}
+Interface is used to create a new {{ domxref("AudioBufferSourceNode") }}, which can be
+used to play audio data contained within an {{ domxref("AudioBuffer") }} object. {{
     domxref("AudioBuffer") }}s are created using
-    {{domxref("BaseAudioContext.createBuffer")}} or returned by
-    {{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio
-    track.</p>
-</div>
+{{domxref("BaseAudioContext.createBuffer")}} or returned by
+{{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio
+track.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
-    constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
+> constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>source</var> = <var>baseAudioContext</var>.createBufferSource();</pre>
+```js
+var source = baseAudioContext.createBufferSource();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An {{domxref("AudioBufferSourceNode")}}.</p>
+An {{domxref("AudioBufferSourceNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we create a two second buffer, fill it with white noise, and then play
-  it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain
-  what is going on.</p>
+In this example, we create a two second buffer, fill it with white noise, and then play
+it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain
+what is going on.
 
-<div class="note">
-  <p><strong>Note:</strong> You can also <a
-      href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>,
-    or <a
-      href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
-      the source</a>.</p>
-</div>
+> **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
+> or [view
+> the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -70,10 +64,10 @@ var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleR
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -90,19 +84,17 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

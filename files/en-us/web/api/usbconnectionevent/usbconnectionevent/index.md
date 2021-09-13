@@ -8,47 +8,46 @@ tags:
   - USBConnectionEvent
 browser-compat: api.USBConnectionEvent.USBConnectionEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <strong><code>USBConnectionEvent()</code></strong> constructor creates a new {{domxref("USBConnectionEvent")}} object which is passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}}. This constructor is not typically used, it is created by the browser in response to the connection and disconnection of a USB device.</p>
+The **`USBConnectionEvent()`** constructor creates a new {{domxref("USBConnectionEvent")}} object which is passed to {{domxref("USB.onconnect")}} and {{domxref("USB.ondisconnect")}}. This constructor is not typically used, it is created by the browser in response to the connection and disconnection of a USB device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new USBConnectionEvent(type, USBConnectionEventInit);</pre>
+```js
+new USBConnectionEvent(type, USBConnectionEventInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString","string")}} representing the name of the event. One of:
-    <ul>
-      <li><code>connect</code></li>
-      <li><code>disconnect</code></li>
-    </ul>
-  </dd>
-  <dt><code>USBConnectionEventInit</code></dt>
-  <dd>An object including the following:
-    <dl>
-      <dt>A {{domxref("USBDevice")}}</dt>
-      <dd>An object representing the USB device being connected or disconnected.</dd>
-      <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event bubbles. The default is
-        <code>false</code>.</dd>
-      <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event can be cancelled. The
-        default is <code>false</code>.</dd>
-      <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event will trigger listeners
+- `type`
+
+  - : A {{domxref("DOMString","string")}} representing the name of the event. One of:
+
+    - `connect`
+    - `disconnect`
+
+- `USBConnectionEventInit`
+
+  - : An object including the following:
+
+    - A {{domxref("USBDevice")}}
+      - : An object representing the USB device being connected or disconnected.
+    - `bubbles` {{optional_inline}}
+      - : A boolean value indicating whether the event bubbles. The default is
+        `false`.
+    - `cancelable` {{optional_inline}}
+      - : A boolean value indicating whether the event can be cancelled. The
+        default is `false`.
+    - `composed` {{optional_inline}}
+      - : A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
-        default is <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        default is `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

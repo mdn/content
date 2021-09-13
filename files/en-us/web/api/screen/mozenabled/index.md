@@ -2,29 +2,30 @@
 title: Screen.mozEnabled
 slug: Web/API/Screen/mozEnabled
 tags:
-- API
-- 'API:Mozilla Extensions'
-- DOM
-- Deprecated
-- Non-standard
-- Property
-- Reference
+  - API
+  - API:Mozilla Extensions
+  - DOM
+  - Deprecated
+  - Non-standard
+  - Property
+  - Reference
 browser-compat: api.Screen.mozEnabled
 ---
-<p>{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-<p>This Boolean attribute controls the device's screen. Setting it to <code>false</code>
-  will turn off the screen.</p>
+This Boolean attribute controls the device's screen. Setting it to `false`
+will turn off the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>screenEnabled</var> = window.screen.mozEnabled</pre>
+```js
+let screenEnabled = window.screen.mozEnabled
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of specification.</p>
+Not part of specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

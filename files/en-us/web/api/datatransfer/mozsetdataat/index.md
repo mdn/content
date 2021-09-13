@@ -2,92 +2,89 @@
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
 tags:
-- API
-- Method
-- Non-standard
-- Reference
-- drag and drop
-- Deprecated
+  - API
+  - Method
+  - Non-standard
+  - Reference
+  - drag and drop
+  - Deprecated
 browser-compat: api.DataTransfer.mozSetDataAt
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{deprecated_header}}{{Non-standard_header()}}</p>
+{{deprecated_header}}{{Non-standard_header()}}
 
-<p>The <strong><code>DataTransfer.mozSetDataAt()</code></strong> method is used to add
-  data to a specific index in the drag event's {{domxref("DataTransfer","data transfer")}}
-  object.</p>
+The **`DataTransfer.mozSetDataAt()`** method is used to add
+data to a specific index in the drag event's {{domxref("DataTransfer","data transfer")}}
+object.
 
-<p>A data transfer may store multiple items, each at a given zero-based index.
-  <code>mozSetDataAt()</code> may only be called with an index argument less than
-  {{domxref("DataTransfer.mozItemCount","mozItemCount")}} in which case an existing item
-  is modified, or equal to {{domxref("DataTransfer.mozItemCount","mozItemCount")}} in
-  which case a new item is added, and the
-  {{domxref("DataTransfer.mozItemCount","mozItemCount")}} is incremented by one.</p>
+A data transfer may store multiple items, each at a given zero-based index.
+`mozSetDataAt()` may only be called with an index argument less than
+{{domxref("DataTransfer.mozItemCount","mozItemCount")}} in which case an existing item
+is modified, or equal to {{domxref("DataTransfer.mozItemCount","mozItemCount")}} in
+which case a new item is added, and the
+{{domxref("DataTransfer.mozItemCount","mozItemCount")}} is incremented by one.
 
-<p>Data should be added in order of preference, with the most specific format added first
-  and the least specific format added last. If data of the given format already exists, it
-  is replaced in the same position as the old data.</p>
+Data should be added in order of preference, with the most specific format added first
+and the least specific format added last. If data of the given format already exists, it
+is replaced in the same position as the old data.
 
-<p>The data should be either a {{domxref("DOMString","string")}}, a boolean value
-  or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.</p>
+The data should be either a {{domxref("DOMString","string")}}, a boolean value
+or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method is Firefox-specific.</p>
-</div>
+> **Note:** This method is Firefox-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>dataTransfer</em>.mozSetDataAt([type], data, index);</pre>
+```js
+void dataTransfer.mozSetDataAt([type], data, index);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>A {{domxref("DOMString","string")}} representing the type of the drag data to add to
-    the {{domxref("DataTransfer","drag data object")}}.</dd>
-  <dt><em>data</em></dt>
-  <dd>A {{ interface("nsIVariant") }} representing the data to add to the
-    {{domxref("DataTransfer","drag data object")}}.</dd>
-  <dt><em>index</em></dt>
-  <dd>A <code>unsigned long</code> representing the index of the data to add.</dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString","string")}} representing the type of the drag data to add to
+    the {{domxref("DataTransfer","drag data object")}}.
+- _data_
+  - : A {{ interface("nsIVariant") }} representing the data to add to the
+    {{domxref("DataTransfer","drag data object")}}.
+- _index_
+  - : A `unsigned long` representing the index of the data to add.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozSetDataAt()</code> method in a
-  {{event("dragstart")}} handler.</p>
+This example shows the use of the `mozSetDataAt()` method in a
+{{event("dragstart")}} handler.
 
-<pre class="brush: js">function dragstart_handler(event)
+```js
+function dragstart_handler(event)
 {
   var dt = event.dataTransfer;
   var idx = dt.mozItemCount;
   // Add two new items to the drag transfer
-  if (idx &gt;= 0) {
+  if (idx >= 0) {
     dt.mozSetDataAt("text/uri-list","http://www.example.com/", idx);
-    dt.mozSetDataAt("text/html", "Hello <strong>World</strong>", idx+1);
+    dt.mozSetDataAt("text/html", "Hello World", idx+1);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method is not defined in any Web standard.</p>
+This method is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

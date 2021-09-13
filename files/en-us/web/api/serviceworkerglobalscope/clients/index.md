@@ -11,40 +11,36 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.clients
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>clients</code></strong> read-only property of the
-  {{domxref("ServiceWorkerGlobalScope")}} interface returns the <a
-    href="/en-US/docs/Web/API/Clients"
-    title="The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects."><code>Clients</code></a>
-  object associated with the service worker.</p>
+The **`clients`** read-only property of the
+{{domxref("ServiceWorkerGlobalScope")}} interface returns the [`Clients`](/en-US/docs/Web/API/Clients "The ServiceWorkerClients interface of the ServiceWorker API represents a container for a list of ServiceWorkerClient objects.")
+object associated with the service worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">swClients = self.clients
-</pre>
+```js
+swClients = self.clients
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("Clients")}} object associated with the specific worker.</p>
+The {{domxref("Clients")}} object associated with the specific worker.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a>
-  </li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

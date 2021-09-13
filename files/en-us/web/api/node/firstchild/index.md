@@ -2,73 +2,77 @@
 title: Node.firstChild
 slug: Web/API/Node/firstChild
 tags:
-- API
-- DOM
-- Node
-- Property
-- Reference
+  - API
+  - DOM
+  - Node
+  - Property
+  - Reference
 browser-compat: api.Node.firstChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.firstChild</strong></code> read-only
-    property returns the node's first child in the tree, or <code>null</code> if the node
-    has no children.</p>
+The **`Node.firstChild`** read-only
+property returns the node's first child in the tree, or `null` if the node
+has no children.
 
-<p>If the node is a <code>Document</code>, it returns the first
-  node in the list of its direct children.</p>
+If the node is a `Document`, it returns the first
+node in the list of its direct children.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>childNode</var> = <var>node</var>.firstChild;
-</pre>
+```js
+var childNode = node.firstChild;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates the use of <code>firstChild</code> and how whitespace nodes
-  might interfere with using this property.</p>
+This example demonstrates the use of `firstChild` and how whitespace nodes
+might interfere with using this property.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;
-  &lt;span&gt;First span&lt;/span&gt;
-&lt;/p&gt;
+```html
+<p id="para-01">
+  <span>First span</span>
+</p>
 
-&lt;script&gt;
+<script>
   var p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>In the above, the <a href="/en-US/docs/Web/API/console">console</a> will show '#text'
-  because a text node is inserted to maintain the whitespace between the end of the
-  opening <code>&lt;p&gt;</code> and <code>&lt;span&gt;</code> tags. <strong>Any</strong>
-  <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM">whitespace</a>
-  will create a <code>#text</code> node, from a single space to multiple spaces, returns,
-  tabs, and so on.</p>
+In the above, the [console](/en-US/docs/Web/API/console) will show '#text'
+because a text node is inserted to maintain the whitespace between the end of the
+opening `<p>` and `<span>` tags. **Any**
+[whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+will create a `#text` node, from a single space to multiple spaces, returns,
+tabs, and so on.
 
-<p>Another <code>#text</code> node is inserted between the closing
-  <code>&lt;/span&gt;</code> and <code>&lt;/p&gt;</code>tags.</p>
+Another `#text` node is inserted between the closing
+`</span>` and `</p>`tags.
 
-<p>If this whitespace is removed from the source, the #text nodes are not inserted and the
-  span element becomes the paragraph's first child.</p>
+If this whitespace is removed from the source, the #text nodes are not inserted and the
+span element becomes the paragraph's first child.
 
-<pre class="brush:html">&lt;p id="para-01"&gt;&lt;span&gt;First span&lt;/span&gt;&lt;/p&gt;
+```html
+<p id="para-01"><span>First span</span></p>
 
-&lt;script&gt;
+<script>
   var p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Now the console will show 'SPAN'.</p>
+Now the console will show 'SPAN'.
 
-<p>To avoid the issue with <code>node.firstChild</code> returning <code>#text</code> or
-  <code>#comment</code> nodes, {{domxref("Element.firstElementChild")}} can be used to
-  return only the first element node. However, <code>node.firstElementChild</code>
-  requires a shim for Internet Explorer 9 and earlier.</p>
+To avoid the issue with `node.firstChild` returning `#text` or
+`#comment` nodes, {{domxref("Element.firstElementChild")}} can be used to
+return only the first element node. However, `node.firstElementChild`
+requires a shim for Internet Explorer 9 and earlier.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

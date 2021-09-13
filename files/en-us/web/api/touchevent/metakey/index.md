@@ -10,38 +10,33 @@ tags:
   - touch
 browser-compat: api.TouchEvent.metaKey
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>A boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is <code>true</code>. Otherwise, it is <code>false</code>.</p>
+A boolean value indicating whether or not the <kbd>Meta</kbd> key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<div class="note">
-<p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).</p>
-</div>
+> **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>metaEnabled</em> = <em>touchEvent</em>.metaKey;
-</pre>
+    var metaEnabled = touchEvent.metaKey;
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>metaEnabled</code></dt>
- <dd><code>true</code> if the <kbd>Meta</kbd> key is enabled for this event; and <code>false</code> if the <kbd>Meta</kbd> is not enabled.</dd>
-</dl>
+- `metaEnabled`
+  - : `true` if the <kbd>Meta</kbd> key is enabled for this event; and `false` if the <kbd>Meta</kbd> is not enabled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <a href="/en-US/docs/Web/API/TouchEvent/altKey#example">TouchEvent.altKey example</a> includes an example of this property's usage.</p>
+The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#example) includes an example of this property's usage.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

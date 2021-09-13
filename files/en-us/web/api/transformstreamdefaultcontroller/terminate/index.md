@@ -9,28 +9,30 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.terminate
 ---
-<div>{{DefaultAPISidebar("Streams API")}}</div>
+{{DefaultAPISidebar("Streams API")}}
 
-<p>The <strong><code>terminate()</code></strong> method of the {{domxref("TransformStreamDefaultController")}} interface Closes the readable side and errors the writable side of the stream.</p>
+The **`terminate()`** method of the {{domxref("TransformStreamDefaultController")}} interface Closes the readable side and errors the writable side of the stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">TransformStreamDefaultController.terminate();</pre>
+    TransformStreamDefaultController.terminate();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example the <code>terminate()</code> method is called on a {{domxref("TransformStreamDefaultController")}}.</p>
+In the below example the `terminate()` method is called on a {{domxref("TransformStreamDefaultController")}}.
 
-<pre class="brush: js">controller.terminate()</pre>
+```js
+controller.terminate()
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

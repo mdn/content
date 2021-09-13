@@ -10,55 +10,49 @@ tags:
   - exponentialRampToValueAtTime
 browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <strong><code>exponentialRampToValueAtTime()</code></strong> method of the {{
+The **`exponentialRampToValueAtTime()`** method of the {{
     domxref("AudioParam") }} Interface schedules a gradual exponential change in the value
-    of the {{domxref("AudioParam")}}. The change starts at the time specified for the
-    <em>previous</em> event, follows an exponential ramp to the new value given in the
-    <code>value</code> parameter, and reaches the new value at the time given in the
-    <code>endTime</code> parameter.</p>
-</div>
+of the {{domxref("AudioParam")}}. The change starts at the time specified for the
+_previous_ event, follows an exponential ramp to the new value given in the
+`value` parameter, and reaches the new value at the time given in the
+`endTime` parameter.
 
-<div class="note">
-  <p><strong>Note:</strong> Exponential ramps are considered more useful when changing
-    frequencies or playback rates than linear ramps because of the way the human ear
-    works.</p>
-</div>
+> **Note:** Exponential ramps are considered more useful when changing
+> frequencies or playback rates than linear ramps because of the way the human ear
+> works.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var AudioParam = AudioParam.exponentialRampToValueAtTime(<em>value</em>, <em>endTime</em>)</pre>
+```js
+var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>A floating point number representing the value the <code>AudioParam</code> will ramp
-    to by the given time.</dd>
-  <dt>endTime</dt>
-  <dd>A double representing the exact time (in seconds) after the ramping starts that the
-    changing of the value will stop.</dd>
-</dl>
+- value
+  - : A floating point number representing the value the `AudioParam` will ramp
+    to by the given time.
+- endTime
+  - : A double representing the exact time (in seconds) after the ramping starts that the
+    changing of the value will stop.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A reference to this <code>AudioParam</code> object. In some browsers older
-  implementations of this interface return void.</p>
+A reference to this `AudioParam` object. In some browsers older
+implementations of this interface return void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we have a media source with two control buttons (see the <a
-    href="https://github.com/mdn/webaudio-examples/tree/master/audio-param">audio-param
-    repo</a> for the source code, or <a
-    href="https://mdn.github.io/webaudio-examples/audio-param/">view the example
-    live</a>.) When these buttons are pressed, <code>exponentialRampToValueAtTime()</code>
-  is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
-  useful for fade in/fade out effects:</p>
+In this example, we have a media source with two control buttons (see the [audio-param
+repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param) for the source code, or [view the example
+live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
+is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
+useful for fade in/fade out effects:
 
-<pre class="brush: js;">// create audio context
+```js
+// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -93,25 +87,20 @@ expRampPlus.onclick = function() {
 expRampMinus.onclick = function() {
   gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> A value of 0.01 was used for the value to ramp down to in the
-    last function rather than 0, as an <em>invalid or illegal string</em> error is thrown
-    if 0 is used — the value needs to be positive.</p>
-</div>
+> **Note:** A value of 0.01 was used for the value to ramp down to in the
+> last function rather than 0, as an _invalid or illegal string_ error is thrown
+> if 0 is used — the value needs to be positive.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

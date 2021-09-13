@@ -8,27 +8,31 @@ tags:
   - Method
 browser-compat: api.Window.blur
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>Shifts focus away from the window.</p>
+Shifts focus away from the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.blur()</pre>
+```js
+window.blur()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">window.blur();</pre>
+```js
+window.blur();
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The window.blur() method is the programmatic equivalent of the user shifting focus away
-  from the current window.</p>
+The window\.blur() method is the programmatic equivalent of the user shifting focus away
+from the current window.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

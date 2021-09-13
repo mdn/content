@@ -2,44 +2,47 @@
 title: MessageChannel.port1
 slug: Web/API/MessageChannel/port1
 tags:
-- API
-- Channel messaging
-- HTML5
-- Message Channel API
-- MessageChannel
-- Property
-- Reference
+  - API
+  - Channel messaging
+  - HTML5
+  - Message Channel API
+  - MessageChannel
+  - Property
+  - Reference
 browser-compat: api.MessageChannel.port1
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>port1</strong></code> read-only property of the
-  {{domxref("MessageChannel")}} interface returns the first port of the message channel —
-  the port attached to the context that originated the channel.</p>
+The **`port1`** read-only property of the
+{{domxref("MessageChannel")}} interface returns the first port of the message channel —
+the port attached to the context that originated the channel.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">channel.port1;</pre>
+```js
+channel.port1;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MessagePort")}} object, the first port of the channel, that is the port
-  attached to the context that originated the channel.</p>
+A {{domxref("MessagePort")}} object, the first port of the channel, that is the port
+attached to the context that originated the channel.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code block, you can see a new channel being created using the
-  {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
-  {{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2")}} to the
-  {{HTMLElement("iframe")}} using {{domxref("MessagePort.postMessage")}} along with a
-  message. The <code>handleMessage</code> handler then responds to a message being sent
-  back from the <code>&lt;iframe&gt;</code> (using {{domxref("MessagePort.onmessage")}}),
-  putting it into a paragraph. The <code>handleMessage</code> method is associated to the
-  <code>port1</code> to listen when the message arrives.</p>
+In the following code block, you can see a new channel being created using the
+{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
+{{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2")}} to the
+{{HTMLElement("iframe")}} using {{domxref("MessagePort.postMessage")}} along with a
+message. The `handleMessage` handler then responds to a message being sent
+back from the `<iframe>` (using {{domxref("MessagePort.onmessage")}}),
+putting it into a paragraph. The `handleMessage` method is associated to the
+`port1` to listen when the message arrives.
 
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -55,19 +58,17 @@ channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using
-      channel messaging</a></li>
-</ul>
+- [Using
+  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

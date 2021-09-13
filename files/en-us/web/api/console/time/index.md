@@ -10,43 +10,40 @@ tags:
   - web console
 browser-compat: api.console.time
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.time()</code></strong> method starts a timer you can use to track
-  how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers
-  running on a given page. When you call {{domxref("console.timeEnd()")}} with the same name, the
-  browser will output the time, in milliseconds, that elapsed since the timer was started.</p>
+The **`console.time()`** method starts a timer you can use to track
+how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers
+running on a given page. When you call {{domxref("console.timeEnd()")}} with the same name, the
+browser will output the time, in milliseconds, that elapsed since the timer was started.
 
-<p>See <a href="/en-US/docs/Web/API/console#timers">Timers</a> in the
-  {{domxref("console")}} documentation for details and examples.</p>
+See [Timers](/en-US/docs/Web/API/console#timers) in the
+{{domxref("console")}} documentation for details and examples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.time(<var>label</var>);
-</pre>
+```js
+console.time(label);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt><code><var>label</var></code></dt>
-  <dd>The name to give the new timer. This will identify the timer; use the same name when
+- `label`
+  - : The name to give the new timer. This will identify the timer; use the same name when
     calling {{domxref("console.timeEnd()")}} to stop the timer and get the time output to
-    the console.</dd>
-</dl>
+    the console.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("console.timeEnd()")}}</li>
-  <li>{{domxref("console.timeLog()")}}</li>
-</ul>
+- {{domxref("console.timeEnd()")}}
+- {{domxref("console.timeLog()")}}

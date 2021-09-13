@@ -14,57 +14,54 @@ tags:
   - WebAudio API
   - sound
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>This article explains how to create an audio worklet processor and use it in a Web Audio application.</p>
+This article explains how to create an audio worklet processor and use it in a Web Audio application.
 
-<p>When the Web Audio API was first introduced to browsers, it included the ability to use JavaScript code to create custom audio processors that would be invoked to perform real-time audio manipulations. The drawback to <code>ScriptProcessorNode</code> was that it ran on the main thread, thus blocking everything else going on until it completed execution. This was far less than ideal, especially for something that can be as computationally expensive as audio processing.</p>
+When the Web Audio API was first introduced to browsers, it included the ability to use JavaScript code to create custom audio processors that would be invoked to perform real-time audio manipulations. The drawback to `ScriptProcessorNode` was that it ran on the main thread, thus blocking everything else going on until it completed execution. This was far less than ideal, especially for something that can be as computationally expensive as audio processing.
 
-<p>Enter {{domxref("AudioWorklet")}}. An audio context's audio worklet is a {{domxref("Worklet")}} which runs off the main thread, executing audio processing code added to it by calling the context's {{domxref("Worklet.addModule", "audioWorklet.addModule()")}} method. Calling <code>addModule()</code> loads the specified JavaScript file, which should contain the implementation of the audio processor. With the processor registered, you can create a new {{domxref("AudioWorkletNode")}} which passes the audio through the processor's code when the node is linked into the chain of audio nodes along with any other audio nodes.</p>
+Enter {{domxref("AudioWorklet")}}. An audio context's audio worklet is a {{domxref("Worklet")}} which runs off the main thread, executing audio processing code added to it by calling the context's {{domxref("Worklet.addModule", "audioWorklet.addModule()")}} method. Calling `addModule()` loads the specified JavaScript file, which should contain the implementation of the audio processor. With the processor registered, you can create a new {{domxref("AudioWorkletNode")}} which passes the audio through the processor's code when the node is linked into the chain of audio nodes along with any other audio nodes.
 
-<p>It's worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using <a href="/en-US/docs/WebAssembly">WebAssembly</a>, which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.</p>
+It's worth noting that because audio processing can often involve substantial computation, your processor may benefit greatly from being built using [WebAssembly](/en-US/docs/WebAssembly), which brings near-native or fully native performance to web apps. Implementing your audio processing algorithm using WebAssembly can make it perform markedly better.
 
-<h2 id="High_level_overview">High level overview</h2>
+## High level overview
 
-<p>Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.</p>
+Before we start looking at the use of AudioWorklet on a step-by-step basis, let's start with a brief high-level overview of what's involved.
 
-<ol>
- <li>Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.</li>
- <li>Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.</li>
- <li>As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.</li>
- <li>Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.</li>
- <li>Connect the created <code>AudioWorkletNode</code>s into your audio processing pipeline as you would any other node, then use your audio pipeline as usual.</li>
-</ol>
+1.  Create module that defines a audio worklet processor class, based on {{domxref("AudioWorkletProcessor")}} which takes audio from one or more incoming sources, performs its operation on the data, and outputs the resulting audio data.
+2.  Access the audio context's {{domxref("AudioWorklet")}} through its {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property, and call the audio worklet's {{domxref("Worklet.addModule", "addModule()")}} method to install the audio worklet processor module.
+3.  As needed, create audio processing nodes by passing the processor's name (which is defined by the module) to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor.
+4.  Set up any audio parameters the {{domxref("AudioWorkletNode")}} needs, or that you wish to configure. These are defined in the audio worklet processor module.
+5.  Connect the created `AudioWorkletNode`s into your audio processing pipeline as you would any other node, then use your audio pipeline as usual.
 
-<p>Throughout the remainder of this article, we'll look at these steps in more detail, with examples (including working examples you can try out on your own).</p>
+Throughout the remainder of this article, we'll look at these steps in more detail, with examples (including working examples you can try out on your own).
 
-<p>The example code found on this page is derived from <a href="https://mdn.github.io/webaudio-examples/audioworklet/">this working example</a> which is part of MDN's <a href="https://github.com/mdn/webaudio-examples/">GitHub repository of Web Audio examples</a>. The example creates an oscillator node and adds white noise to it using an {{domxref("AudioWorkletNode")}} before playing the resulting sound out. Slider controls are available to allow controlling the gain of both the oscillator and the audio worklet's output.</p>
+The example code found on this page is derived from [this working example](https://mdn.github.io/webaudio-examples/audioworklet/) which is part of MDN's [GitHub repository of Web Audio examples](https://github.com/mdn/webaudio-examples/). The example creates an oscillator node and adds white noise to it using an {{domxref("AudioWorkletNode")}} before playing the resulting sound out. Slider controls are available to allow controlling the gain of both the oscillator and the audio worklet's output.
 
-<p><a href="https://github.com/mdn/webaudio-examples/tree/master/audioworklet"><strong>See the code</strong></a></p>
+[**See the code**](https://github.com/mdn/webaudio-examples/tree/master/audioworklet)
 
-<p><a href="https://mdn.github.io/webaudio-examples/audioworklet/"><strong>Try it live</strong></a></p>
+[**Try it live**](https://mdn.github.io/webaudio-examples/audioworklet/)
 
-<h2 id="Creating_an_audio_worklet_processor">Creating an audio worklet processor</h2>
+## Creating an audio worklet processor
 
-<p>Fundamentally, an audio worklet processor (which we'll refer to usually as either an "audio processor" or as a "processor" because otherwise this article will be about twice as long) is implemented using a JavaScript module that defines and installs the custom audio processor class.</p>
+Fundamentally, an audio worklet processor (which we'll refer to usually as either an "audio processor" or as a "processor" because otherwise this article will be about twice as long) is implemented using a JavaScript module that defines and installs the custom audio processor class.
 
-<h3 id="Structure_of_an_audio_worklet_processor">Structure of an audio worklet processor</h3>
+### Structure of an audio worklet processor
 
-<p>An audio worklet processor is a JavaScript module which consists of the following:</p>
+An audio worklet processor is a JavaScript module which consists of the following:
 
-<ul>
- <li>A JavaScript class which defines the audio processor. This class extends the {{domxref("AudioWorkletProcessor")}} class.</li>
- <li>The audio processor class must implement a {{domxref("AudioWorkletProcessor.process", "process()")}} method, which receives incoming audio data and writes back out the data as manipulated by the processor.</li>
- <li>The module installs the new audio worklet processor class by calling {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}, specifying a name for the audio processor and the class that defines the processor.</li>
-</ul>
+- A JavaScript class which defines the audio processor. This class extends the {{domxref("AudioWorkletProcessor")}} class.
+- The audio processor class must implement a {{domxref("AudioWorkletProcessor.process", "process()")}} method, which receives incoming audio data and writes back out the data as manipulated by the processor.
+- The module installs the new audio worklet processor class by calling {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}, specifying a name for the audio processor and the class that defines the processor.
 
-<p>A single audio worklet processor module may define multiple processor classes, registering each of them with individual calls to <code>registerProcessor()</code>. As long as each has its own unique name, this will work just fine. It's also more efficient than loading multiple modules from over the network or even the user's local disk.</p>
+A single audio worklet processor module may define multiple processor classes, registering each of them with individual calls to `registerProcessor()`. As long as each has its own unique name, this will work just fine. It's also more efficient than loading multiple modules from over the network or even the user's local disk.
 
-<h3 id="Basic_code_framework">Basic code framework</h3>
+### Basic code framework
 
-<p>The barest framework of an audio processor class looks like this:</p>
+The barest framework of an audio processor class looks like this:
 
-<pre class="brush: js">class MyAudioProcessor extends AudioWorkletProcessor {
+```js
+class MyAudioProcessor extends AudioWorkletProcessor {
   constructor() {
     super();
   }
@@ -78,25 +75,26 @@ tags:
 };
 
 registerProcessor("my-audio-processor", MyAudioProcessor);
-</pre>
+```
 
-<p>After the implementation of the processor comes a call to the global function {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}, which is only available within the scope of the audio context's {{domxref("AudioWorklet")}}, which is the invoker of the processor script as a result of your call to {{domxref("Worklet.addModule", "audioWorklet.addModule()")}}. This call to <code>registerProcessor()</code> registers your class as the basis for any {{domxref("AudioWorkletProcessor")}}s created when {{domxref("AudioWorkletNode")}}s are set up.</p>
+After the implementation of the processor comes a call to the global function {{domxref("AudioWorkletGlobalScope.registerProcessor", "registerProcessor()")}}, which is only available within the scope of the audio context's {{domxref("AudioWorklet")}}, which is the invoker of the processor script as a result of your call to {{domxref("Worklet.addModule", "audioWorklet.addModule()")}}. This call to `registerProcessor()` registers your class as the basis for any {{domxref("AudioWorkletProcessor")}}s created when {{domxref("AudioWorkletNode")}}s are set up.
 
-<p>This is the barest framework and actually has no effect until code is added into <code>process()</code> to do something with those inputs and outputs. Which brings us to talking about those inputs and outputs.</p>
+This is the barest framework and actually has no effect until code is added into `process()` to do something with those inputs and outputs. Which brings us to talking about those inputs and outputs.
 
-<h3 id="The_input_and_output_lists">The input and output lists</h3>
+### The input and output lists
 
-<p>The lists of inputs and outputs can be a little confusing at first, even though they're actually very simple once you realize what's going on.</p>
+The lists of inputs and outputs can be a little confusing at first, even though they're actually very simple once you realize what's going on.
 
-<p>Let's start at the inside and work our way out. Fundamentally, the audio for a single audio channel (such as the left speaker or the subwoofer, for example) is represented as a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a></code> whose values are the individual audio samples. By specification, each block of audio your <code>process()</code> function receives contains 128 frames (that is, 128 samples for each channel), but it is planned that <em>this value will change in the future</em>, and may in fact vary depending on circumstances, so you should <em>always</em> check the array's <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length">length</a></code> rather than assuming a particular size. It is, however, guaranteed that the inputs and outputs will have the same block length.</p>
+Let's start at the inside and work our way out. Fundamentally, the audio for a single audio channel (such as the left speaker or the subwoofer, for example) is represented as a [`Float32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) whose values are the individual audio samples. By specification, each block of audio your `process()` function receives contains 128 frames (that is, 128 samples for each channel), but it is planned that _this value will change in the future_, and may in fact vary depending on circumstances, so you should _always_ check the array's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length) rather than assuming a particular size. It is, however, guaranteed that the inputs and outputs will have the same block length.
 
-<p>Each input can have a number of channels. A mono input has a single channel; stereo input has two channels. Surround sound might have six or more channels. So each input is, in turn, an array of channels. That is, an array of <code>Float32Array</code> objects.</p>
+Each input can have a number of channels. A mono input has a single channel; stereo input has two channels. Surround sound might have six or more channels. So each input is, in turn, an array of channels. That is, an array of `Float32Array` objects.
 
-<p>Then, there can be multiple inputs, so the <code>inputList</code> is an array of arrays of <code>Float32Array</code> objects. Each input may have a different number of channels, and each channel has its own array of samples.</p>
+Then, there can be multiple inputs, so the `inputList` is an array of arrays of `Float32Array` objects. Each input may have a different number of channels, and each channel has its own array of samples.
 
-<p>Thus, given the input list <code>inputList</code>:</p>
+Thus, given the input list `inputList`:
 
-<pre class="brush: js">const numberOfInputs = inputList.length;
+```js
+const numberOfInputs = inputList.length;
 const firstInput = inputList[0];
 
 const firstInputChannelCount = firstInput.length;
@@ -104,30 +102,31 @@ const firstInputFirstChannel = firstInput[0]; // (or inputList[0][0])
 
 const firstChannelByteCount = firstInputFirstChannel.length;
 const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0][0])
-</pre>
+```
 
-<p>The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of <code>Float32Array</code> objects, which contain the samples for that channel.</p>
+The output list is structured in exactly the same way; it's an array of outputs, each of which is an array of channels, each of which is an array of `Float32Array` objects, which contain the samples for that channel.
 
-<p>How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).</p>
+How you use the inputs and how you generate the outputs depends very much on your processor. If your processor is just a generator, it can ignore the inputs and just replace the contents of the outputs with the generated data. Or you can process each input independently, applying an algorithm to the incoming data on each channel of each input and writing the results into the corresponding outputs' channels (keeping in mind that the number of inputs and outputs may differ, and the channel counts on those inputs and outputs may also differ). Or you can take all the inputs and perform mixing or other computations that result in a single output being filled with data (or all the outputs being filled with the same data).
 
-<p>It's entirely up to you. This is a very powerful tool in your audio programming toolkit.</p>
+It's entirely up to you. This is a very powerful tool in your audio programming toolkit.
 
-<h3 id="Processing_multiple_inputs">Processing multiple inputs</h3>
+### Processing multiple inputs
 
-<p>Let's take a look at an implementation of <code>process()</code> that can process multiple inputs, with each input being used to generate the corresponding output. Any excess inputs are ignored.</p>
+Let's take a look at an implementation of `process()` that can process multiple inputs, with each input being used to generate the corresponding output. Any excess inputs are ignored.
 
-<pre class="brush: js">process(inputList, outputList, parameters) {
+```js
+process(inputList, outputList, parameters) {
   const sourceLimit = Math.min(inputList.length, outputList.length);
 
-  for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
+  for (let inputNum = 0; inputNum < sourceLimit; inputNum++) {
     let input = inputList[inputNum];
     let output = outputList[inputNum];
     let channelCount = Math.min(input.length, output.length);
 
-    for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
+    for (let channelNum = 0; channelNum < channelCount; channelNum++) {
       let sampleCount = input[channelNum].length;
 
-      for (let i = 0; i &lt; sampleCount; i++) {
+      for (let i = 0; i < sampleCount; i++) {
         let sample = input[channelNum][i];
 
         /* Manipulate the sample */
@@ -139,30 +138,31 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
   return true;
 }
-</pre>
+```
 
-<p>Note that when determining the number of sources to process and send through to the corresponding outputs, we use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></code> to ensure that we only process as many channels as we have room for in the output list. The same check is performed when determining how many channels to process in the current input; we only process as many as there are room for in the destination output. This avoids errors due to overrunning these arrays.</p>
+Note that when determining the number of sources to process and send through to the corresponding outputs, we use [`Math.min()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min) to ensure that we only process as many channels as we have room for in the output list. The same check is performed when determining how many channels to process in the current input; we only process as many as there are room for in the destination output. This avoids errors due to overrunning these arrays.
 
-<h3 id="Mixing_inputs">Mixing inputs</h3>
+### Mixing inputs
 
-<p>Many nodes perform <strong>mixing</strong> operations, where the inputs are combined in some way into a single output. This is demonstrated in the following example.</p>
+Many nodes perform **mixing** operations, where the inputs are combined in some way into a single output. This is demonstrated in the following example.
 
-<pre class="brush: js">process(inputList, outputList, parameters) {
+```js
+process(inputList, outputList, parameters) {
   const sourceLimit = Math.min(inputList.length, outputList.length);
-   for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
+   for (let inputNum = 0; inputNum < sourceLimit; inputNum++) {
      let input = inputList[inputNum];
      let output = outputList[0];
      let channelCount = Math.min(input.length, output.length);
 
-     for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
+     for (let channelNum = 0; channelNum < channelCount; channelNum++) {
        let sampleCount = input[channelNum].length;
 
-       for (let i = 0; i &lt; sampleCount; i++) {
+       for (let i = 0; i < sampleCount; i++) {
          let sample = output[channelNum][i] + input[channelNum][i];
 
-         if (sample &gt; 1.0) {
+         if (sample > 1.0) {
            sample = 1.0;
-         } else if (sample &lt; -1.0) {
+         } else if (sample < -1.0) {
            sample = -1.0;
          }
 
@@ -173,37 +173,34 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (or inputList[0][0
 
   return true;
 }
-</pre>
+```
 
-<p>This is similar code to the previous sample in many ways, but only the first output—<code>outputList[0]</code>—is altered. Each sample is added to the corresponding sample in the output buffer, with a simple code fragment in place to prevent the samples from exceeding the legal range of -1.0 to 1.0 by capping the values; there are other ways to avoid clipping that are perhaps less prone to distortion, but this is a simple example that's better than nothing.</p>
+This is similar code to the previous sample in many ways, but only the first output—`outputList[0]`—is altered. Each sample is added to the corresponding sample in the output buffer, with a simple code fragment in place to prevent the samples from exceeding the legal range of -1.0 to 1.0 by capping the values; there are other ways to avoid clipping that are perhaps less prone to distortion, but this is a simple example that's better than nothing.
 
-<h2 id="Lifetime_of_an_audio_worklet_processor">Lifetime of an audio worklet processor</h2>
+## Lifetime of an audio worklet processor
 
-<p>The only means by which you can influence the lifespan of your audio worklet processor is through the value returned by <code>process()</code>, which should be a Boolean value indicating whether or not to override the {{Glossary("user agent")}}'s decision-making as to whether or not your node is still in use.</p>
+The only means by which you can influence the lifespan of your audio worklet processor is through the value returned by `process()`, which should be a Boolean value indicating whether or not to override the {{Glossary("user agent")}}'s decision-making as to whether or not your node is still in use.
 
-<p>In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its <code>process()</code> function returns <code>true</code> <em>and</em> the node is either generating content as a source for audio data, or is receiving data from one or more inputs.</p>
+In general, the lifetime policy of any audio node is simple: if the node is still considered to be actively processing audio, it will continue to be used. In the case of an {{domxref("AudioWorkletNode")}}, the node is considered to be active if its `process()` function returns `true` *and* the node is either generating content as a source for audio data, or is receiving data from one or more inputs.
 
-<p>Specifying a value of <code>true</code> as the result from your <code>process()</code> function in essence tells the Web Audio API that your processor needs to keep being called even if the API doesn't think there's anything left for you to do. In other words, <code>true</code> overrides the API's logic and gives you control over your processor's lifetime policy, keeping the processor's owning {{domxref("AudioWorkletNode")}} running even when it would otherwise decide to shut down the node.</p>
+Specifying a value of `true` as the result from your `process()` function in essence tells the Web Audio API that your processor needs to keep being called even if the API doesn't think there's anything left for you to do. In other words, `true` overrides the API's logic and gives you control over your processor's lifetime policy, keeping the processor's owning {{domxref("AudioWorkletNode")}} running even when it would otherwise decide to shut down the node.
 
-<p>Returning <code>false</code> from the <code>process()</code> method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, <code>process()</code> will not be called again.</p>
+Returning `false` from the `process()` method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, `process()` will not be called again.
 
-<div class="notecard note">
-<p><strong>Note:</strong> At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return <code>true</code> and shuts it down if you return <code>false</code>. Thus for compatibility reasons you must always return <code>true</code> from <code>process()</code>, at least on Chrome. However, once <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">this Chrome issue</a> is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.</p>
-</div>
+> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://bugs.chromium.org/p/chromium/issues/detail?id=921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
 
-<h2 id="Creating_an_audio_processor_worklet_node">Creating an audio processor worklet node</h2>
+## Creating an audio processor worklet node
 
-<p>To create an audio node that pumps blocks of audio data through an {{domxref("AudioWorkletProcessor")}}, you need to follow these simple steps:</p>
+To create an audio node that pumps blocks of audio data through an {{domxref("AudioWorkletProcessor")}}, you need to follow these simple steps:
 
-<ol>
- <li>Load and install the audio processor module</li>
- <li>Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name</li>
- <li>Connect inputs to the <code>AudioWorkletNode</code> and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.</li>
-</ol>
+1.  Load and install the audio processor module
+2.  Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name
+3.  Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.
 
-<p>To use an audio worklet processor, you can use code similar to the following:</p>
+To use an audio worklet processor, you can use code similar to the following:
 
-<pre class="brush: js">let audioContext = null;
+```js
+let audioContext = null;
 
 async function createMyAudioProcessor() {
   if (!audioContext) {
@@ -218,29 +215,32 @@ async function createMyAudioProcessor() {
 
   return new AudioWorkletNode(audioContext, "processor-name");
 }
-</pre>
+```
 
-<p>This <code>createMyAudioProcessor()</code> function creates and returns a new instance of {{domxref("AudioWorkletNode")}} configured to use your audio processor. It also handles creating the audio context if it hasn't already been done.</p>
+This `createMyAudioProcessor()` function creates and returns a new instance of {{domxref("AudioWorkletNode")}} configured to use your audio processor. It also handles creating the audio context if it hasn't already been done.
 
-<p>In order to ensure the context is usable, this starts by creating the context if it's not already available, then adds the module containing the processor to the worklet. Once that's done, it instantiates and returns a new <code>AudioWorkletNode</code>. Once you have that in hand, you connect it to other nodes and otherwise use it just like any other node.</p>
+In order to ensure the context is usable, this starts by creating the context if it's not already available, then adds the module containing the processor to the worklet. Once that's done, it instantiates and returns a new `AudioWorkletNode`. Once you have that in hand, you connect it to other nodes and otherwise use it just like any other node.
 
-<p>You can then create a new audio processor node by doing this:</p>
+You can then create a new audio processor node by doing this:
 
-<pre class="brush: js">let newProcessorNode = createMyAudioProcessor();</pre>
+```js
+let newProcessorNode = createMyAudioProcessor();
+```
 
-<p>If the returned value, <code>newProcessorNode</code>, is non-<code>null</code>, we have a valid audio context with its hiss processor node in place and ready to use.</p>
+If the returned value, `newProcessorNode`, is non-`null`, we have a valid audio context with its hiss processor node in place and ready to use.
 
-<h2 id="Supporting_audio_parameters">Supporting audio parameters</h2>
+## Supporting audio parameters
 
-<p>Just like any other Web Audio node, {{domxref("AudioWorkletNode")}} supports parameters, which are shared with the {{domxref("AudioWorkletProcessor")}} that does the actual work.</p>
+Just like any other Web Audio node, {{domxref("AudioWorkletNode")}} supports parameters, which are shared with the {{domxref("AudioWorkletProcessor")}} that does the actual work.
 
-<h3 id="Adding_parameter_support_to_the_processor">Adding parameter support to the processor</h3>
+### Adding parameter support to the processor
 
-<p>To add parameters to an {{domxref("AudioWorkletNode")}}, you need to define them within your {{domxref("AudioWorkletProcessor")}}-based processor class in your module. This is done by adding the static getter {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} to your class. This function should return an array of {{domxref("AudioParam")}} objects, one for each parameter supported by the processor.</p>
+To add parameters to an {{domxref("AudioWorkletNode")}}, you need to define them within your {{domxref("AudioWorkletProcessor")}}-based processor class in your module. This is done by adding the static getter {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} to your class. This function should return an array of {{domxref("AudioParam")}} objects, one for each parameter supported by the processor.
 
-<p>In the following implementation of <code>parameterDescriptors()</code>, the returned array has two <code>AudioParam</code> objects. The first defines <code>gain</code> as a value between 0 and 1, with a default value of 0.5. The second parameter is named <code>frequency</code> and defaults to 440.0, with a range from 27.5 to 4186.009, inclusively.</p>
+In the following implementation of `parameterDescriptors()`, the returned array has two `AudioParam` objects. The first defines `gain` as a value between 0 and 1, with a default value of 0.5. The second parameter is named `frequency` and defaults to 440.0, with a range from 27.5 to 4186.009, inclusively.
 
-<pre class="brush: js">static get parameterDescriptors() {
+```js
+static get parameterDescriptors() {
   return [
    {
       name: "gain",
@@ -255,25 +255,25 @@ async function createMyAudioProcessor() {
       maxValue: 4186.009
     }
   ];
-}</pre>
+}
+```
 
-<p>Accessing your processor node's parameters is as simple as looking them up in the <code>parameters</code> object passed into your implementation of {{domxref("AudioWorkletProcessor.process", "process()")}}. Within the <code>parameters</code> object are arrays, one for each of your parameters, and sharing the same names as your parameters.</p>
+Accessing your processor node's parameters is as simple as looking them up in the `parameters` object passed into your implementation of {{domxref("AudioWorkletProcessor.process", "process()")}}. Within the `parameters` object are arrays, one for each of your parameters, and sharing the same names as your parameters.
 
-<dl>
- <dt>A-rate parameters</dt>
- <dd>For a-rate parameters—parameters whose values automatically change over time—the parameter's entry in the <code>parameters</code> object is an array of {{domxref("AudioParam")}} objects, one for each frame in the block being processed. These values are to be applied to the corresponding frames.</dd>
- <dt>K-rate parameters</dt>
- <dd>K-rate parameters, on the other hand, can only change once per block, so the parameter's array has only a single entry. Use that value for every frame in the block.</dd>
-</dl>
+- A-rate parameters
+  - : For a-rate parameters—parameters whose values automatically change over time—the parameter's entry in the `parameters` object is an array of {{domxref("AudioParam")}} objects, one for each frame in the block being processed. These values are to be applied to the corresponding frames.
+- K-rate parameters
+  - : K-rate parameters, on the other hand, can only change once per block, so the parameter's array has only a single entry. Use that value for every frame in the block.
 
-<p>In the code below, we see a <code>process()</code> function that handles a <code>gain</code> parameter which can be used as either an a-rate or k-rate parameter. Our node only supports one input, so it just takes the first input in the list, applies the gain to it, and writes the resulting data to the first output's buffer.</p>
+In the code below, we see a `process()` function that handles a `gain` parameter which can be used as either an a-rate or k-rate parameter. Our node only supports one input, so it just takes the first input in the list, applies the gain to it, and writes the resulting data to the first output's buffer.
 
-<pre class="brush: js">process(inputList, outputList, parameters) {
+```js
+process(inputList, outputList, parameters) {
   const input = inputList[0];
   const output = outputList[0];
   const gain = parameters.gain;
 
-  for (let channelNum = 0; channelNum &lt; input.length; channel++) {
+  for (let channelNum = 0; channelNum < input.length; channel++) {
     const inputChannel = input[channel];
     const outputChannel = output[channel];
 
@@ -282,11 +282,11 @@ async function createMyAudioProcessor() {
     // entry to the corresponding frame.
 
     if (gain.length === 1) {
-      for (let i = 0; i &lt; inputChannel.length; i++) {
+      for (let i = 0; i < inputChannel.length; i++) {
         outputChannel[i] = inputChannel[i] * gain[0];
       }
     } else {
-      for (let i = 0; i &lt; inputChannel.length; i++) {
+      for (let i = 0; i < inputChannel.length; i++) {
         outputChannel[i] = inputChannel[i] * gain[i];
       }
     }
@@ -294,32 +294,35 @@ async function createMyAudioProcessor() {
 
   return true;
 }
-</pre>
+```
 
-<p>Here, if <code>gain.length</code> indicates that there's only a single value in the <code>gain</code> parameter's array of values, the first entry in the array is applied to every frame in the block. Otherwise, for each frame in the block, the corresponding entry in <code>gain[]</code> is applied.</p>
+Here, if `gain.length` indicates that there's only a single value in the `gain` parameter's array of values, the first entry in the array is applied to every frame in the block. Otherwise, for each frame in the block, the corresponding entry in `gain[]` is applied.
 
-<h3 id="Accessing_parameters_from_the_main_thread_script">Accessing parameters from the main thread script</h3>
+### Accessing parameters from the main thread script
 
-<p>Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap.get", "get()")}} method:</p>
+Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap.get", "get()")}} method:
 
-<pre class="brush: js">let gainParam = myAudioWorkletNode.parameters.get("gain");
-</pre>
+```js
+let gainParam = myAudioWorkletNode.parameters.get("gain");
+```
 
-<p>The value returned and stored in <code>gainParam</code> is the {{domxref("AudioParam")}} used to store the <code>gain</code> parameter. You can then change its value effective at a given time using the {{domxref("AudioParam")}} method {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}.</p>
+The value returned and stored in `gainParam` is the {{domxref("AudioParam")}} used to store the `gain` parameter. You can then change its value effective at a given time using the {{domxref("AudioParam")}} method {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}.
 
-<p>Here, for example, we set the value to <code>newValue</code>, effective immediately.</p>
+Here, for example, we set the value to `newValue`, effective immediately.
 
-<pre class="brush: js">gainParam.setValueAtTime(newValue, audioContext.currentTime);</pre>
+```js
+gainParam.setValueAtTime(newValue, audioContext.currentTime);
+```
 
-<p>You can similarly use any of the other methods in the {{domxref("AudioParam")}} interface to apply changes over time, to cancel scheduled changes, and so forth.</p>
+You can similarly use any of the other methods in the {{domxref("AudioParam")}} interface to apply changes over time, to cancel scheduled changes, and so forth.
 
-<p>Reading the value of a parameter is as simple as looking at its {{domxref("AudioParam.value", "value")}} property:</p>
+Reading the value of a parameter is as simple as looking at its {{domxref("AudioParam.value", "value")}} property:
 
-<pre class="brush: js">let currentGain = gainParam.value;</pre>
+```js
+let currentGain = gainParam.value;
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/12/audio-worklet">Enter Audio Worklet</a> (Google Developers blog)</li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Enter Audio Worklet](https://developers.google.com/web/updates/2017/12/audio-worklet) (Google Developers blog)

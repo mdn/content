@@ -2,74 +2,74 @@
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
 tags:
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Object Model
-- Property
-- Read-only
-- Reference
-- StyleSheet
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Object Model
+  - Property
+  - Read-only
+  - Reference
+  - StyleSheet
 browser-compat: api.CSSStyleSheet.cssRules
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only {{domxref("CSSStyleSheet")}} property
-    <code><strong>cssRules</strong></code> returns a live {{domxref("CSSRuleList")}} which
-    provides a real-time, up-to-date list of every CSS rule which comprises the
-    stylesheet. Each item in the list is a {{domxref("CSSRule")}} defining a single
-  rule.</p>
+The read-only {{domxref("CSSStyleSheet")}} property
+**`cssRules`** returns a live {{domxref("CSSRuleList")}} which
+provides a real-time, up-to-date list of every CSS rule which comprises the
+stylesheet. Each item in the list is a {{domxref("CSSRule")}} defining a single
+rule.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rules</em> = <em>cssStyleSheet</em>.cssRules;</pre>
+```js
+var rules = cssStyleSheet.cssRules;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
-  the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object
-  describing one rule making up the stylesheet.</p>
+A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
+the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object
+describing one rule making up the stylesheet.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Individual rules within the stylesheet can then be accessed by index:</p>
+Individual rules within the stylesheet can then be accessed by index:
 
-<pre class="brush: js">let ruleList = document.styleSheets[0].cssRules;
+```js
+let ruleList = document.styleSheets[0].cssRules;
 
-for (let i=0; i &lt; ruleList.length; i++) {
+for (let i=0; i < ruleList.length; i++) {
   processRule(ruleList[i]);
 }
-</pre>
+```
 
-<p>Rules can also be accessed using {{jsxref("for...of")}}:</p>
+Rules can also be accessed using {{jsxref("for...of")}}:
 
-<pre class="brush: js">let ruleList = document.styleSheets[0].cssRules;
+```js
+let ruleList = document.styleSheets[0].cssRules;
 
 for (let rule of ruleList) {
   processRule(rule);
 }
-</pre>
+```
 
-<p>However, because <code>CSSRule</code> is not a proper array, you can't use
-  {{jsxref("Array.forEach", "forEach()")}}.</p>
+However, because `CSSRule` is not a proper array, you can't use
+{{jsxref("Array.forEach", "forEach()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

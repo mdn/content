@@ -2,28 +2,31 @@
 title: WebGLRenderingContext.commit()
 slug: Web/API/WebGLRenderingContext/commit
 tags:
-- API
-- Experimental
-- Method
-- OffscreenCanvas
-- Reference
-- WebGL
+  - API
+  - Experimental
+  - Method
+  - OffscreenCanvas
+  - Reference
+  - WebGL
 browser-compat: api.WebGLRenderingContext.commit
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The
-  <strong><code>WebGLRenderingContext.commit()</code></strong>
-  method pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the
-  context is not directly fixed to a specific canvas.</p>
+The
+**`WebGLRenderingContext.commit()`**
+method pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the
+context is not directly fixed to a specific canvas.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void WebGLRenderingContext.commit()</pre>
+```js
+void WebGLRenderingContext.commit()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var htmlCanvas = document.createElement('canvas');
+```js
+var htmlCanvas = document.createElement('canvas');
 var offscreen = htmlCanvas.transferControlToOffscreen();
 var gl = offscreen.getContext('webgl');
 
@@ -31,20 +34,18 @@ var gl = offscreen.getContext('webgl');
 
 // Push frames back to the original HTMLCanvasElement
 gl.commit();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method, {{domxref("WebGLRenderingContext")}}</li>
-  <li>{{domxref("OffscreenCanvas")}}</li>
-  <li>{{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}</li>
-</ul>
+- The interface defining this method, {{domxref("WebGLRenderingContext")}}
+- {{domxref("OffscreenCanvas")}}
+- {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}

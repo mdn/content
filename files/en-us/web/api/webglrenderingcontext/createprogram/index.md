@@ -2,39 +2,41 @@
 title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.createProgram()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes a
-  {{domxref("WebGLProgram")}} object.</p>
+The **`WebGLRenderingContext.createProgram()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+{{domxref("WebGLProgram")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLProgram <var>gl</var>.createProgram();
-</pre>
+```js
+WebGLProgram gl.createProgram();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLProgram")}} object that is a combination of two compiled
-  {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both
-  written in GLSL). These are then linked into a usable program..</p>
+A {{domxref("WebGLProgram")}} object that is a combination of two compiled
+{{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both
+written in GLSL). These are then linked into a usable program..
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_WebGL_program">Creating a WebGL program</h3>
+### Creating a WebGL program
 
-<pre class="brush: js">var program = gl.createProgram();
+```js
+var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -46,27 +48,25 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
   throw 'Could not compile WebGL program. \n\n' + info;
 }
-</pre>
+```
 
-<p>See {{domxref("WebGLShader")}} for information on creating the
-  <code>vertexShader</code> and <code>fragmentShader</code> in the above example.</p>
+See {{domxref("WebGLShader")}} for information on creating the
+`vertexShader` and `fragmentShader` in the above example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

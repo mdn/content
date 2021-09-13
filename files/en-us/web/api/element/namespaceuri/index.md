@@ -10,60 +10,59 @@ tags:
   - Reference
 browser-compat: api.Element.namespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.namespaceURI</strong></code> read-only property returns the
-  namespace URI of the element, or <code>null</code> if the element is not in a namespace.
-</p>
+The **`Element.namespaceURI`** read-only property returns the
+namespace URI of the element, or `null` if the element is not in a namespace.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>namespace</var> = <var>element</var>.namespaceURI</pre>
+```js
+namespace = element.namespaceURI
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this snippet, an element is being examined for its {{domxref("localName")}} and its
-  <code>namespaceURI</code>. If the <code>namespaceURI</code> returns the XUL namespace
-  and the <code>localName</code> returns "browser", then the node is understood to be a
-  XUL <code>&lt;browser/&gt;</code>.</p>
+In this snippet, an element is being examined for its {{domxref("localName")}} and its
+`namespaceURI`. If the `namespaceURI` returns the XUL namespace
+and the `localName` returns "browser", then the node is understood to be a
+XUL `<browser/>`.
 
-<pre class="brush:js">if (element.localName == "browser" &amp;&amp;
+```js
+if (element.localName == "browser" &&
     element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // this is a XUL browser
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>This is not a computed value that is the result of a namespace lookup based on an
-  examination of the namespace declarations in scope. The namespace URI of a node is
-  frozen at the node creation time.</p>
+This is not a computed value that is the result of a namespace lookup based on an
+examination of the namespace declarations in scope. The namespace URI of a node is
+frozen at the node creation time.
 
-<p>In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
-  <code>null</code>. In later versions, in compliance with HTML5, it is
-  <code><a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>
-  as in XHTML.</p>
+In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML documents is
+`null`. In later versions, in compliance with HTML5, it is
+[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
+as in XHTML.
 
-<p>You can create an element with the specified <code>namespaceURI</code> using the DOM
-  Level 2 method <a href="/en-US/docs/Web/API/Document/createElementNS"
-    title="Document.createElementNS">document.createElementNS</a>.</p>
+You can create an element with the specified `namespaceURI` using the DOM
+Level 2 method [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS "Document.createElementNS").
 
-<p>The DOM does not handle or enforce namespace validation per se. It is up to the DOM
-  application to do any validation necessary. Also note that the namespace prefix, once it
-  is associated with a particular element, cannot be changed.</p>
+The DOM does not handle or enforce namespace validation per se. It is up to the DOM
+application to do any validation necessary. Also note that the namespace prefix, once it
+is associated with a particular element, cannot be changed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.localName")}}</li>
-  <li>{{domxref("Element.prefix")}}</li>
-  <li>{{domxref("Attr.namespaceURI")}}</li>
-</ul>
+- {{domxref("Element.localName")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.namespaceURI")}}

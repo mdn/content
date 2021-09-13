@@ -8,69 +8,63 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannelEvent()</strong></code> constructor
-  creates a new {{domxref("RTCDataChannelEvent")}}.</p>
+The **`RTCDataChannelEvent()`** constructor
+creates a new {{domxref("RTCDataChannelEvent")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> You will rarely if ever construct an <code>RTCDataChannelEvent</code> by hand; these
-    events are normally created and sent by the WebRTC layer itself.</p>
-</div>
+> **Note:** You will rarely if ever construct an `RTCDataChannelEvent` by hand; these
+> events are normally created and sent by the WebRTC layer itself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var <em>event</em> = new RTCDataChannelEvent(<em>type</em>, <em>rtcDataChannelEventInit</em>);</pre>
+```js
+ var event = new RTCDataChannelEvent(type, rtcDataChannelEventInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A string which specifies the name of the event. There is only one
-    type of <code>RTCDataChannelEvent</code>, so this will always be
-    <code>"datachannel"</code>.</dd>
-  <dt><code>rtcDataChannelEventInit</code></dt>
-  <dd>An object with the following fields:
-    <ul>
-      <li><code>channel</code> of type {{domxref("RTCDataChannel")}}, representing the
-        data channel being concerned by the event.</li>
-      <li><code>bubbles</code>, optional, inherited from <code>EventInit</code>.
-        Indicates if the event must bubble or not. <strong>Default is
-          <code>false</code></strong>.</li>
-      <li><code>cancelable</code>, optional, inherited from <code>EventInit</code>.
-        Indicates if the event can be canceled or not. <strong>Default is false.</strong>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- `type`
+  - : A string which specifies the name of the event. There is only one
+    type of `RTCDataChannelEvent`, so this will always be
+    `"datachannel"`.
+- `rtcDataChannelEventInit`
 
-<h3 id="Value">Value</h3>
+  - : An object with the following fields:
 
-<p>A new {{domxref("RTCDataChannelEvent")}} configured as specified.</p>
+    - `channel` of type {{domxref("RTCDataChannel")}}, representing the
+      data channel being concerned by the event.
+    - `bubbles`, optional, inherited from `EventInit`.
+      Indicates if the event must bubble or not. **Default is
+      `false`**.
+    - `cancelable`, optional, inherited from `EventInit`.
+      Indicates if the event can be canceled or not. **Default is false.**
 
-<h2 id="Example">Example</h2>
+### Value
 
-<p>In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event is created. <code>dc</code> is a
-  data channel which already exists.</p>
+A new {{domxref("RTCDataChannelEvent")}} configured as specified.
 
-<pre
-  class="brush: js">var event = new RTCDataChannelEvent("datachannel", {"channel": dc});</pre>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event is created. `dc` is a
+data channel which already exists.
+
+```js
+var event = new RTCDataChannelEvent("datachannel", {"channel": dc});
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple
-      RTCDataChannel sample</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCPeerConnection")}}
+- [A simple
+  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

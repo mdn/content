@@ -10,89 +10,79 @@ tags:
   - Web Audio API
 browser-compat: api.IIRFilterNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>IIRFilterNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is a {{domxref("AudioNode")}} processor which implements a general <strong>{{interwiki("wikipedia", "infinite impulse response")}}</strong> (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.</p>
+The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **{{interwiki("wikipedia", "infinite impulse response")}}** (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>Same as on the input</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>Same as on the input</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Typically, it's best to use the {{domxref("BiquadFilterNode")}} interface to implement higher-order filters. There are several reasons why:</p>
+Typically, it's best to use the {{domxref("BiquadFilterNode")}} interface to implement higher-order filters. There are several reasons why:
 
-<ul>
- <li>Biquad filters are typically less sensitive to numeric quirks.</li>
- <li>The filter parameters of biquad filters can be automated.</li>
- <li>All even-ordered IIR filters can be created using {{domxref("BiquadFilterNode")}}.</li>
-</ul>
+- Biquad filters are typically less sensitive to numeric quirks.
+- The filter parameters of biquad filters can be automated.
+- All even-ordered IIR filters can be created using {{domxref("BiquadFilterNode")}}.
 
-<p>However, if you need to create an odd-ordered IIR filter, you'll need to use <code>IIRFilterNode</code>. You may also find this interface useful if you don't need automation, or for other reasons.</p>
+However, if you need to create an odd-ordered IIR filter, you'll need to use `IIRFilterNode`. You may also find this interface useful if you don't need automation, or for other reasons.
 
-<div class="note">
-<p><strong>Note:</strong> Once the node has been created, you can't change its coefficients.</p>
-</div>
+> **Note:** Once the node has been created, you can't change its coefficients.
 
-<p><code>IIRFilterNode</code>s have a tail-time reference; they continue to output non-silent audio with zero input. As an IIR filter, the non-zero input continues forever, but this can be limited after some finite time in practice, when the output has approached zero closely enough. The actual time that takes depends on the filter coefficients provided.</p>
+`IIRFilterNode`s have a tail-time reference; they continue to output non-silent audio with zero input. As an IIR filter, the non-zero input continues forever, but this can be limited after some finite time in practice, when the output has approached zero closely enough. The actual time that takes depends on the filter coefficients provided.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}</dt>
- <dd>Creates a new instance of an IIRFilterNode object.</dd>
-</dl>
+- {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
+  - : Creates a new instance of an IIRFilterNode object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no properties of its own; however, it inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_This interface has no properties of its own; however, it inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the following additional methods:</em></p>
+_Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the following additional methods:_
 
-<dl>
- <dt>{{domxref("IIRFilterNode.getFrequencyResponse", "getFrequencyResponse()")}}</dt>
- <dd>Uses the filter's current parameter settings to calculate the response for frequencies specified in the provided array of frequencies.</dd>
-</dl>
+- {{domxref("IIRFilterNode.getFrequencyResponse", "getFrequencyResponse()")}}
+  - : Uses the filter's current parameter settings to calculate the response for frequencies specified in the provided array of frequencies.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can find a simple IIR filter demo live <a href="https://codepen.io/Rumyra/pen/oPxvYB/">on Codepen</a>. Also see the <a href="https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node">source code on GitHub</a>. It includes some different coefficient values for different lowpass frequencies — you can change the value of the <code>filterNumber</code> constant to a value between 0 and 3 to check out the different available effects.</p>
+You can find a simple IIR filter demo live [on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
-<p>Also see our <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> guide for a full explanation.</p>
+Also see our [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters) guide for a full explanation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioNode")}}</li>
- <li>{{domxref("BiquadFilterNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioNode")}}
+- {{domxref("BiquadFilterNode")}}

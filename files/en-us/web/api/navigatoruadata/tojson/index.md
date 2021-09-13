@@ -9,38 +9,38 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.toJSON
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("NavigatorUAData")}} interface is a <em>serializer</em> that returns a JSON representation of the <em>low entropy</em> properties of the <code>NavigatorUAData</code> object.</p>
+The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _serializer_ that returns a JSON representation of the _low entropy_ properties of the `NavigatorUAData` object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The terms <em>high entropy</em> and <em>low entropy</em> refer to the amount of information these values reveal about the browser. The low entropy values returned by this method are those which do not reveal information able to identify a user. High entropy values can only be returned by the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method.</p>
-</div>
+> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The low entropy values returned by this method are those which do not reveal information able to identify a user. High entropy values can only be returned by the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NavigatorUAData.toJSON();</pre>
+```js
+NavigatorUAData.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A JSON object.</p>
+A JSON object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example prints the JSON object to the console.</p>
+The following example prints the JSON object to the console.
 
-<pre class="brush:js">console.log(navigator.userAgentData.toJSON());</pre>
+```js
+console.log(navigator.userAgentData.toJSON());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

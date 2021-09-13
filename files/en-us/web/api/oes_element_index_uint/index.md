@@ -8,42 +8,37 @@ tags:
   - WebGL extension
 browser-compat: api.OES_element_index_uint
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>OES_element_index_uint</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds support for <code>gl.UNSIGNED_INT</code> types to {{domxref("WebGLRenderingContext.drawElements()")}}.</p>
+The **`OES_element_index_uint`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds support for `gl.UNSIGNED_INT` types to {{domxref("WebGLRenderingContext.drawElements()")}}.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.
 
-<h2 id="Extended_methods">Extended methods</h2>
+## Extended methods
 
-<p>This extension extends {{domxref("WebGLRenderingContext.drawElements()")}}:</p>
+This extension extends {{domxref("WebGLRenderingContext.drawElements()")}}:
 
-<ul>
- <li>The <code>type</code> parameter now accepts <code>gl.UNSIGNED_INT</code>.</li>
-</ul>
+- The `type` parameter now accepts `gl.UNSIGNED_INT`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('OES_element_index_uint');
+```js
+var ext = gl.getExtension('OES_element_index_uint');
 
 gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_INT, 0);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.drawElements()")}}

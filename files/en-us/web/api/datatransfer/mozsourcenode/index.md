@@ -2,45 +2,45 @@
 title: DataTransfer.mozSourceNode
 slug: Web/API/DataTransfer/mozSourceNode
 tags:
-- API
-- Non-standard
-- Property
-- Reference
-- drag and drop
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.mozSourceNode
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p>The <strong><code>DataTransfer.mozSourceNode</code></strong> property is used to
-  determine the {{domxref("Node")}} over which the mouse cursor was located when the drag
-  operation was initiated (for example, when a {{HTMLElement("button")}} was clicked). For
-  external drags or if the calling function cannot reach the node, <code>null</code> is
-  returned.</p>
+The **`DataTransfer.mozSourceNode`** property is used to
+determine the {{domxref("Node")}} over which the mouse cursor was located when the drag
+operation was initiated (for example, when a {{HTMLElement("button")}} was clicked). For
+external drags or if the calling function cannot reach the node, `null` is
+returned.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is Firefox-specific.</p>
-</div>
+> **Note:** This property is Firefox-specific.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dataTransfer</em>.mozSourceNode;
-</pre>
+```js
+dataTransfer.mozSourceNode;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Node")}} representing <code>node</code> where the drag originated. Returns
-  <code>null</code> for external drags or if the node cannot be accessed.</p>
+A {{domxref("Node")}} representing `node` where the drag originated. Returns
+`null` for external drags or if the node cannot be accessed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozSourceNode</code> property in the
-  {{event("dragend")}} event handler.</p>
+This example shows the use of the `mozSourceNode` property in the
+{{event("dragend")}} event handler.
 
-<pre class="brush: js">function dragend_handler(event)
+```js
+function dragend_handler(event)
 {
   var dragData = event.dataTransfer;
   var node = dragData.mozSourceNode;
@@ -49,22 +49,20 @@ browser-compat: api.DataTransfer.mozSourceNode
   else
     console.log("mozSourceNode is null");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property is not defined in any Web standard.</p>
+This property is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

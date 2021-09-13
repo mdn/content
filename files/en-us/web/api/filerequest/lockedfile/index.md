@@ -2,50 +2,38 @@
 title: FileRequest.lockedFile
 slug: Web/API/FileRequest/lockedFile
 tags:
-- API
-- DOM
-- Files
-- Non Standard
-- Property
-- Reference
-- WebAPI
+  - API
+  - DOM
+  - Files
+  - Non Standard
+  - Property
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>lockedFile</code> property represents the {{domxref("LockedFile")}} object
-  from which the request was started.</p>
+The `lockedFile` property represents the {{domxref("LockedFile")}} object
+from which the request was started.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var lockedFile = <em>instanceOfFileRequest</em>.lockedFile
-</pre>
+```js
+var lockedFile = instanceOfFileRequest.lockedFile
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("LockedFile")}} object.</p>
+A {{domxref("LockedFile")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft proposal.</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileRequest")}}</li>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("FileRequest")}}
+- {{domxref("LockedFile")}}

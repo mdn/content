@@ -8,31 +8,31 @@ tags:
   - Reference
 browser-compat: api.GlobalEventHandlers.ontouchmove
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var moveHandler = someElement.ontouchmove;
-</pre>
+```js
+var moveHandler = someElement.ontouchmove;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>moveHandler</code></dt>
- <dd>The <em>touchmove</em> event handler for element <code>someElement</code>.</dd>
-</dl>
+- `moveHandler`
+  - : The _touchmove_ event handler for element `someElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <em>ontouchmove</em> to set an element's <em>touchmove</em> event handler.</p>
+This example shows two ways to use _ontouchmove_ to set an element's _touchmove_ event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;script&gt;
+```js
+<html>
+<head>
+<script>
 
 function moveTouch(ev) {
  // Process the event
@@ -43,26 +43,24 @@ function init() {
  el.ontouchmove = moveTouch;
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" ontouchmove="moveTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" ontouchmove="moveTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("touchmove") }}</li>
-</ul>
+- {{ event("touchmove") }}

@@ -10,37 +10,37 @@ tags:
   - oncomplete
 browser-compat: api.OfflineAudioContext.oncomplete
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>oncomplete</code> event handler of the <code>OfflineAudioContext</code> interface is called when the audio processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised.</p>
-</div>
+The `oncomplete` event handler of the `OfflineAudioContext` interface is called when the audio processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var offlineAudioCtx = new OfflineAudioContext();
-offlineAudioCtx.oncomplete = function() { ... }</pre>
+```js
+var offlineAudioCtx = new OfflineAudioContext();
+offlineAudioCtx.oncomplete = function() { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>When processing is complete, you might want to use the <code>oncomplete</code> handler the prompt the user that the audio can now be played, and enable the play button.</p>
+When processing is complete, you might want to use the `oncomplete` handler the prompt the user that the audio can now be played, and enable the play button.
 
-<pre class="brush: js">offlineAudioCtx.oncomplete = function() {
+```js
+offlineAudioCtx.oncomplete = function() {
   console.log('Offline audio processing now complete');
   showModalDialog('Song processed and ready to play');
   playBtn.disabled = false;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

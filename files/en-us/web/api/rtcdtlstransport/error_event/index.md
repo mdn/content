@@ -17,68 +17,66 @@ tags:
   - Event
 browser-compat: api.RTCDtlsTransport.error_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>An {{domxref("RTCDtlsTransport")}} receives an <code>error</code> event when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.</p>
+An {{domxref("RTCDtlsTransport")}} receives an `error` event when a transport-level error occurs on the {{domxref("RTCPeerConnection")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("RTCErrorEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("RTCErrorEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.</p>
+The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Transport-level errors will have one of the following values for the specified error's {{domxref("RTCError")}} property {{domxref("RTCError.errorDetail", "errorDetail")}}:</p>
+Transport-level errors will have one of the following values for the specified error's {{domxref("RTCError")}} property {{domxref("RTCError.errorDetail", "errorDetail")}}:
 
-<dl>
- <dt><code>dtls-failure</code></dt>
- <dd>The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}} contains details about the nature of the error. If a fatal error is <em>received</em>, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLSL alert received. If, on the other hand, a fatal error was <em>sent</em>, the {{domxref("RTCError.sentAlert", "sentAlert")}} is set to the alert's value.</dd>
- <dt><code>fingerprint-failure</code></dt>
- <dd>The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the SDP. If the remote peer can't match the local certificate against the provided fingerprints, this error doesn't occur, though this situation may result instead in a <code>dtls-failure</code> error.</dd>
-</dl>
+- `dtls-failure`
+  - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}} contains details about the nature of the error. If a fatal error is _received_, the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is set to the value of the DTLSL alert received. If, on the other hand, a fatal error was _sent_, the {{domxref("RTCError.sentAlert", "sentAlert")}} is set to the alert's value.
+- `fingerprint-failure`
+  - : The remote certificate for the {{domxref("RTCDtlsTransport")}} didn't match any of the fingerprints listed in the SDP. If the remote peer can't match the local certificate against the provided fingerprints, this error doesn't occur, though this situation may result instead in a `dtls-failure` error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the <code>error</code> event.</p>
+In this example, the {{domxref("RTCDtlsTransport.onerror", "onerror")}} event handler property is used to set the handler for the `error` event.
 
-<pre class="brush: js">transport.onerror = ev =&gt; {
+```js
+transport.onerror = ev => {
   const err = ev.error;
 
   /* ... */
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Since <code>RTCError</code> is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.</p>
-</div>
+> **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

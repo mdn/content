@@ -13,47 +13,43 @@ tags:
   - requestPresent()
 browser-compat: api.VRDisplay.requestPresent
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <code><strong>requestPresent()</strong></code> method of the {{domxref("VRDisplay")}} interface starts the <code>VRDisplay</code> presenting a scene.</p>
+The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface starts the `VRDisplay` presenting a scene.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">vrDisplayInstance.requestPresent(<em>layers</em>).then(function() {
+```js
+vrDisplayInstance.requestPresent(layers).then(function() {
   // Do something after the presentation has begun
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>layers</dt>
- <dd>An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.</dd>
-</dl>
+- layers
+  - : An array of {{domxref("VRLayerInit")}} objects representing the scene you want to present. At the moment, this can be a minimum of 0 and a maximum of 1.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves once the presentation has begun. there are a number of rules surrounding the promise's fulfillment or rejection:</p>
+A promise that resolves once the presentation has begun. there are a number of rules surrounding the promise's fulfillment or rejection:
 
-<ul>
- <li>If {{domxref("VRDisplayCapabilities.canPresent")}} is false, or if the VRLayer array contains more than {{domxref("VRDisplayCapabilities.maxLayers")}} layers, the promise will be rejected.</li>
- <li>If the {{domxref("VRDisplay")}} is already presenting when <code>requestPresent()</code> is called, the <code>VRDisplay</code> will update the <code>VRLayer</code> array being presented.</li>
- <li>If a call to <code>requestPresent()</code> is rejected while the <code>VRDisplay</code> is already presenting it will end its presentation.</li>
- <li>If <code>requestPresent()</code> is called outside of an engagement gesture the promise will be rejected unless the <code>VRDisplay</code> was already presenting. This engagement gesture is also sufficient to allow <code><a href="/en-US/docs/Web/API/Element/requestPointerLock">requestPointerLock()</a></code> calls until presentation has ended.</li>
-</ul>
+- If {{domxref("VRDisplayCapabilities.canPresent")}} is false, or if the VRLayer array contains more than {{domxref("VRDisplayCapabilities.maxLayers")}} layers, the promise will be rejected.
+- If the {{domxref("VRDisplay")}} is already presenting when `requestPresent()` is called, the `VRDisplay` will update the `VRLayer` array being presented.
+- If a call to `requestPresent()` is rejected while the `VRDisplay` is already presenting it will end its presentation.
+- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">if(navigator.getVRDisplays) {
+```js
+if(navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
@@ -89,24 +85,22 @@ browser-compat: api.VRDisplay.requestPresent
       });
     }
   });
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

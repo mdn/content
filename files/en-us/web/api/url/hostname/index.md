@@ -2,45 +2,46 @@
 title: URL.hostname
 slug: Web/API/URL/hostname
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
 browser-compat: api.URL.hostname
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>hostname</code></strong> property of the {{domxref("URL")}} interface
-  is a {{domxref("USVString")}} containing the {{glossary("domain name")}} of the URL.</p>
+The **`hostname`** property of the {{domxref("URL")}} interface
+is a {{domxref("USVString")}} containing the {{glossary("domain name")}} of the URL.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>domain</em> = <em>url</em>.hostname
-<em>url.</em>hostname = <em>domain</em>
-</pre>
+```js
+const domain = url.hostname
+url.hostname = domain
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname');
-console.log(url.hostname); // Logs: 'developer.mozilla.org'</pre>
+```js
+const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname');
+console.log(url.hostname); // Logs: 'developer.mozilla.org'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

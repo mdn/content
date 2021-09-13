@@ -2,33 +2,34 @@
 title: Screen.mozBrightness
 slug: Web/API/Screen/mozBrightness
 tags:
-- API
-- 'API:Mozilla Extensions'
-- Deprecated
-- Non-standard
-- Property
+  - API
+  - API:Mozilla Extensions
+  - Deprecated
+  - Non-standard
+  - Property
 browser-compat: api.Screen.mozBrightness
 ---
-<p>{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-<p>Indicates how bright the screen's backlight is, on a scale from 0 (very dim) to 1 (full
-  brightness); this value is a double-precision float.</p>
+Indicates how bright the screen's backlight is, on a scale from 0 (very dim) to 1 (full
+brightness); this value is a double-precision float.
 
-<p>You can read and write this attribute even when the screen is disabled, but the
-  backlight is off while the screen is disabled. If you write a value of X into this
-  attribute, the attribute may not have the same value X when you later read it. Most
-  screens don't support as many different brightness levels as there are doubles between 0
-  and 1. The value's precision might be reduced before storing it.</p>
+You can read and write this attribute even when the screen is disabled, but the
+backlight is off while the screen is disabled. If you write a value of X into this
+attribute, the attribute may not have the same value X when you later read it. Most
+screens don't support as many different brightness levels as there are doubles between 0
+and 1. The value's precision might be reduced before storing it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>screenBrightness</var> = window.screen.mozBrightness;</pre>
+```js
+let screenBrightness = window.screen.mozBrightness;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of specification.</p>
+Not part of specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

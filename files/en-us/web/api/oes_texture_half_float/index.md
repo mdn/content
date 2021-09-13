@@ -8,66 +8,59 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_half_float
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>OES_texture_half_float</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds texture formats with 16- (aka half float) and 32-bit floating-point components.</p>
+The **`OES_texture_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds texture formats with 16- (aka half float) and 32-bit floating-point components.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constant in WebGL2 is <code>gl.HALF_FLOAT</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constant in WebGL2 is `gl.HALF_FLOAT`.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<dl>
- <dt><code>ext.HALF_FLOAT_OES</code></dt>
- <dd>Half floating-point type (16-bit).</dd>
-</dl>
+- `ext.HALF_FLOAT_OES`
+  - : Half floating-point type (16-bit).
 
-<h2 id="Extended_methods">Extended methods</h2>
+## Extended methods
 
-<p>This extension extends {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}}:</p>
+This extension extends {{domxref("WebGLRenderingContext.texImage2D()")}} and {{domxref("WebGLRenderingContext.texSubImage2D()")}}:
 
-<ul>
- <li>The <code>type</code> parameter now accepts <code>ext.HALF_FLOAT_OES</code>.</li>
-</ul>
+- The `type` parameter now accepts `ext.HALF_FLOAT_OES`.
 
-<h2 id="Limitation_Linear_filtering">Limitation: Linear filtering</h2>
+## Limitation: Linear filtering
 
-<p>Linear filtering on half floating-point textures is not allowed with this extension. If you set the magnification or minification filter in the {{domxref("WebGLRenderingContext.texParameter()")}} method to one of <code>gl.LINEAR</code>, <code>gl.LINEAR_MIPMAP_NEAREST</code>, <code>gl.NEAREST_MIPMAP_LINEAR</code>, or <code>gl.LINEAR_MIPMAP_LINEAR</code>, and use half floating-point textures, the texture will be marked as incomplete.</p>
+Linear filtering on half floating-point textures is not allowed with this extension. If you set the magnification or minification filter in the {{domxref("WebGLRenderingContext.texParameter()")}} method to one of `gl.LINEAR`, `gl.LINEAR_MIPMAP_NEAREST`, `gl.NEAREST_MIPMAP_LINEAR`, or `gl.LINEAR_MIPMAP_LINEAR`, and use half floating-point textures, the texture will be marked as incomplete.
 
-<p>To use linear filtering on half floating-point textures, enable the {{domxref("OES_texture_half_float_linear")}} extension in addition to this extension.</p>
+To use linear filtering on half floating-point textures, enable the {{domxref("OES_texture_half_float_linear")}} extension in addition to this extension.
 
-<h2 id="Half_floating-point_color_buffers">Half floating-point color buffers</h2>
+## Half floating-point color buffers
 
-<p>This extension implicitly enables the {{domxref("EXT_color_buffer_half_float")}} extension (if supported), which allows rendering to 16-bit floating point formats.</p>
+This extension implicitly enables the {{domxref("EXT_color_buffer_half_float")}} extension (if supported), which allows rendering to 16-bit floating point formats.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('OES_texture_half_float');
+```js
+var ext = gl.getExtension('OES_texture_half_float');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, ext.HALF_FLOAT_OES, image);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("OES_texture_float")}}</li>
- <li>{{domxref("OES_texture_float_linear")}}</li>
- <li>{{domxref("OES_texture_half_float_linear")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("OES_texture_float")}}
+- {{domxref("OES_texture_float_linear")}}
+- {{domxref("OES_texture_half_float_linear")}}

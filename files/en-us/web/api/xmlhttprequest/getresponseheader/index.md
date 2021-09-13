@@ -2,68 +2,66 @@
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 tags:
-- API
-- Examine Header
-- Get Header
-- HTTP
-- HTTP Header
-- Headers
-- Method
-- Reference
-- XHR
-- XHR Header
-- XMLHttpRequest
-- getResponseHeader
+  - API
+  - Examine Header
+  - Get Header
+  - HTTP
+  - HTTP Header
+  - Headers
+  - Method
+  - Reference
+  - XHR
+  - XHR Header
+  - XMLHttpRequest
+  - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{DOMxRef("XMLHttpRequest")}} method
-    <strong><code>getResponseHeader()</code></strong> returns the string containing the
-    text of a particular header's value.</p>
+The {{DOMxRef("XMLHttpRequest")}} method
+**`getResponseHeader()`** returns the string containing the
+text of a particular header's value.
 
-<p>If there are multiple response headers
-  with the same name, then their values are returned as a single concatenated string,
-  where each value is separated from the previous one by a pair of comma and space. The
-  <code>getResponseHeader()</code> method returns the value as a UTF byte sequence.</p>
+If there are multiple response headers
+with the same name, then their values are returned as a single concatenated string,
+where each value is separated from the previous one by a pair of comma and space. The
+`getResponseHeader()` method returns the value as a UTF byte sequence.
 
-<div class="note">
-  <p><strong>Note:</strong> The search for the header name is case-insensitive.</p>
-</div>
+> **Note:** The search for the header name is case-insensitive.
 
-<p>If you need to get the raw string of all of the headers, use the
-  {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}} method,
-  which returns the entire raw header string.</p>
+If you need to get the raw string of all of the headers, use the
+{{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}} method,
+which returns the entire raw header string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myHeader</var> = <var>XMLHttpRequest</var>.getResponseHeader(<var>headerName</var>);</pre>
+```js
+var myHeader = XMLHttpRequest.getResponseHeader(headerName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><var>headerName</var></dt>
-  <dd>A {{jsxref("String")}} indicating the name of the header you want to return the
-    text value of.</dd>
-</dl>
+- _headerName_
+  - : A {{jsxref("String")}} indicating the name of the header you want to return the
+    text value of.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("String")}} representing the header's text value, or <code>null</code>
-  if either the response has not yet been received or the header doesn't exist in the
-  response.</p>
+A {{jsxref("String")}} representing the header's text value, or `null`
+if either the response has not yet been received or the header doesn't exist in the
+response.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a request is created and sent, and a {{Event("readystatechange")}}
-  handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
+In this example, a request is created and sent, and a {{Event("readystatechange")}}
+handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
   "readyState")}} to indicate that the headers have been received; when that is the case,
-  the value of the {{httpheader("Content-Type")}} header is fetched. If the
-  <code>Content-Type</code> isn't the desired value, the {{DOMxRef("XMLHttpRequest")}} is
-  canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.</p>
+the value of the {{httpheader("Content-Type")}} header is fetched. If the
+`Content-Type` isn't the desired value, the {{DOMxRef("XMLHttpRequest")}} is
+canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
-<pre class="brush: js">var client = new XMLHttpRequest();
+```js
+var client = new XMLHttpRequest();
 client.open("GET", "unicorns-are-teh-awesome.txt", true);
 client.send();
 
@@ -74,24 +72,23 @@ client.onreadystatechange = function() {
       client.abort();
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
-  <li>{{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}</li>
-  <li>{{DOMxRef("XMLHttpRequest.response", "response")}}</li>
-  <li>Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}</li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
+- {{DOMxRef("XMLHttpRequest.response", "response")}}
+- Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader",
+    "setRequestHeader()")}}

@@ -2,52 +2,53 @@
 title: ServiceWorkerGlobalScope.onnotificationclose
 slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
 tags:
-- API
-- Experimental
-- Interface
-- Property
-- Reference
-- ServiceWorkerGlobalScope
-- onnotificationclose
+  - API
+  - Experimental
+  - Interface
+  - Property
+  - Reference
+  - ServiceWorkerGlobalScope
+  - onnotificationclose
 browser-compat: api.ServiceWorkerGlobalScope.onnotificationclose
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>ServiceWorkerGlobalScope.onnotificationclose</strong></code> property
-  is an event handler called whenever the {{Event("notificationclose")}} event is
-  dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user
-  closes a displayed notification spawned by
-  {{domxref("ServiceWorkerRegistration.showNotification()")}}.</p>
+The **`ServiceWorkerGlobalScope.onnotificationclose`** property
+is an event handler called whenever the {{Event("notificationclose")}} event is
+dispatched on the {{domxref("ServiceWorkerGlobalScope")}} object, that is when a user
+closes a displayed notification spawned by
+{{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
-<p>Notifications created on the main thread or in workers which aren't service workers
-  using the {{domxref("Notification.Notification","Notification()")}} constructor will
-  instead receive a {{Event("close")}} event on the <code>Notification</code> object
-  itself.</p>
+Notifications created on the main thread or in workers which aren't service workers
+using the {{domxref("Notification.Notification","Notification()")}} constructor will
+instead receive a {{Event("close")}} event on the `Notification` object
+itself.
 
-<div class="note">
-  <p><strong>Note:</strong> Trying to create a notification inside the
-    {{domxref("ServiceWorkerGlobalScope")}} using the
-    {{domxref("Notification.Notification","Notification()")}} constructor will throw an
-    error.</p>
-</div>
+> **Note:** Trying to create a notification inside the
+> {{domxref("ServiceWorkerGlobalScope")}} using the
+> {{domxref("Notification.Notification","Notification()")}} constructor will throw an
+> error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
-ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { ... });</pre>
+```js
+ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
+ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { ... });
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">//Inside a service worker.
+```js
+//Inside a service worker.
 self.onnotificationclose = function(event) {
   console.log('On notification close: ', event.notification.tag);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,45 +2,50 @@
 title: CSSPropertyRule.syntax
 slug: Web/API/CSSPropertyRule/syntax
 tags:
-- API
-- CSS
-- CSS Properties and Values API
-- CSSPropertyRule
-- Experimental
-- Houdini
-- Property
-- Reference
-- Read-only
+  - API
+  - CSS
+  - CSS Properties and Values API
+  - CSSPropertyRule
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Read-only
 browser-compat: api.CSSPropertyRule.syntax
 ---
-<div>{{APIRef("CSS Properties and Values API")}}</div>
+{{APIRef("CSS Properties and Values API")}}
 
-<p>The read-only <strong><code>syntax</code></strong> property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.</p>
+The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interface returns the literal syntax of the custom property registration represented by the {{cssxref("@property")}} rule, controlling how the property’s value is parsed at computed-value time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <var>syntax</var> = <var>CSSPropertyRule</var>.syntax;</pre>
+    const syntax = CSSPropertyRule.syntax;
 
-<h3>Value</h3>
-<p>A {{domxref("USVString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("USVString")}}.
 
-<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>syntax</code> property returns the literal string <code>"&lt;color&gt;"</code>.</p>
+## Examples
 
-<pre class="brush:css">@property --property-name {
-  syntax: '&lt;color&gt;';
+This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a `CSSPropertyRule` representing this rule. The `syntax` property returns the literal string `"<color>"`.
+
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].syntax); //the string "&lt;color&gt;"</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].syntax); //the string "<color>"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

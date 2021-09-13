@@ -2,58 +2,57 @@
 title: VideoTrackList.getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
 tags:
-- API
-- HTML DOM
-- Media
-- Method
-- Reference
-- Track ID
-- Track List
-- Tracks
-- Video
-- VideoTrackList
-- getTrackById
-- id
-- track
+  - API
+  - HTML DOM
+  - Media
+  - Method
+  - Reference
+  - Track ID
+  - Track List
+  - Tracks
+  - Video
+  - VideoTrackList
+  - getTrackById
+  - id
+  - track
 browser-compat: api.VideoTrackList.getTrackById
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("VideoTrackList")}}</strong> method
-    <strong><code>getTrackById()</code></strong> returns the first
-    {{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
-    "id")}} matches the specified string.</p>
+The **{{domxref("VideoTrackList")}}** method
+**`getTrackById()`** returns the first
+{{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
+    "id")}} matches the specified string.
 
-<p>This lets you find a specified track if
-  you know its ID string.</p>
+This lets you find a specified track if
+you know its ID string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>theTrack</em> = <em>VideoTrackList</em>.getTrackById(<em>id</em>);</pre>
+```js
+var theTrack = VideoTrackList.getTrackById(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>id</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
-    list.</dd>
-</dl>
+- `id`
+  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+    list.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("VideoTrack")}} object indicating the first track found within the
-  <code>VideoTrackList</code> whose <code>id</code> matches the specified string. If no
-  match is found, this method returns <code>null</code>.</p>
+A {{domxref("VideoTrack")}} object indicating the first track found within the
+`VideoTrackList` whose `id` matches the specified string. If no
+match is found, this method returns `null`.
 
-<p>The tracks are searched in their natural order; that is, in the order defined by the
-  media resource itself, or, if the resource doesn't define an order, the relative order
-  in which the tracks are declared by the media resource.</p>
+The tracks are searched in their natural order; that is, in the order defined by the
+media resource itself, or, if the resource doesn't define an order, the relative order
+in which the tracks are declared by the media resource.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,75 +2,70 @@
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
 tags:
-- API
-- Method
-- Reference
-- Storage
-- Web Storage
+  - API
+  - Method
+  - Reference
+  - Storage
+  - Web Storage
 browser-compat: api.Storage.setItem
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>setItem()</code></strong> method of the {{domxref("Storage")}}
-  interface, when passed a key name and value, will add that key to the given
-  <code>Storage</code> object, or update that key's value if it already exists.</p>
+The **`setItem()`** method of the {{domxref("Storage")}}
+interface, when passed a key name and value, will add that key to the given
+`Storage` object, or update that key's value if it already exists.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>storage</em>.setItem(<em>keyName</em>, <em>keyValue</em>);</pre>
+```js
+storage.setItem(keyName, keyValue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>keyName</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the name of the key you want to create/update.
-  </dd>
-  <dt><code>keyValue</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the value you want to give the key you are
-    creating/updating.</dd>
-</dl>
+- `keyName`
+  - : A {{domxref("DOMString")}} containing the name of the key you want to create/update.
+- `keyValue`
+  - : A {{domxref("DOMString")}} containing the value you want to give the key you are
+    creating/updating.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p><code>setItem()</code> may throw an exception if the storage is full. Particularly, in
-  Mobile Safari (since iOS 5) it always throws when the user enters private mode. (Safari
-  sets the quota to 0 bytes in private mode, unlike other browsers, which allow storage in
-  private mode using separate data containers.) Hence developers should make sure to
-  <strong>always catch possible exceptions from <code>setItem()</code></strong>.</p>
+`setItem()` may throw an exception if the storage is full. Particularly, in
+Mobile Safari (since iOS 5) it always throws when the user enters private mode. (Safari
+sets the quota to 0 bytes in private mode, unlike other browsers, which allow storage in
+private mode using separate data containers.) Hence developers should make sure to
+**always catch possible exceptions from `setItem()`**.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following function creates three data items inside local storage.</p>
+The following function creates three data items inside local storage.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> To see this used within a real world example, see our <a
-      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Storage/getItem">Storage.getItem()</a></li>
-  <li><a href="/en-US/docs/Web/API/Storage/removeItem">Storage.removeItem()</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-      Web Storage API</a></li>
-</ul>
+- [Storage.getItem()](/en-US/docs/Web/API/Storage/getItem)
+- [Storage.removeItem()](/en-US/docs/Web/API/Storage/removeItem)
+- [Using the
+  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

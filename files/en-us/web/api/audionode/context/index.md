@@ -2,34 +2,36 @@
 title: AudioNode.context
 slug: Web/API/AudioNode/context
 tags:
-- API
-- AudioNode
-- Context
-- Property
-- Reference
-- Web Audio API
+  - API
+  - AudioNode
+  - Context
+  - Property
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioNode.context
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The read-only <code>context</code> property of the
-  {{domxref("AudioNode")}} interface returns the associated
-  {{domxref("BaseAudioContext")}}, that is the object representing the processing graph
-  the node is participating in.</p>
+The read-only `context` property of the
+{{domxref("AudioNode")}} interface returns the associated
+{{domxref("BaseAudioContext")}}, that is the object representing the processing graph
+the node is participating in.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aContext</em> = <em>anAudioNode</em>.context;</pre>
+```js
+var aContext = anAudioNode.context;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
-  used to construct this <code>AudioNode</code>.</p>
+The {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}} object that was
+used to construct this `AudioNode`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();
@@ -38,19 +40,17 @@ oscillator.connect(gainNode).connect(audioCtx.destination);
 
 console.log(oscillator.context); // AudioContext
 console.log(oscillator.context === audioCtx); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

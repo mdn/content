@@ -2,41 +2,40 @@
 title: NetworkInformation.saveData
 slug: Web/API/NetworkInformation/saveData
 tags:
-- API
-- Experimental
-- Network Information API
-- NetworkInformation
-- Property
-- Read-only
-- Reference
-- saveData
+  - API
+  - Experimental
+  - Network Information API
+  - NetworkInformation
+  - Property
+  - Read-only
+  - Reference
+  - saveData
 browser-compat: api.NetworkInformation.saveData
 ---
-<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>NetworkInformation.saveData</code></strong> read-only
-  property of the {{domxref("NetworkInformation")}} interface returns <code>true</code> if
-  the user has set a reduced data usage option on the user agent.</p>
+The **`NetworkInformation.saveData`** read-only
+property of the {{domxref("NetworkInformation")}} interface returns `true` if
+the user has set a reduced data usage option on the user agent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var saveData = NetworkInformation.saveData;</pre>
+```js
+var saveData = NetworkInformation.saveData;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Boolean')}}.</p>
+A {{jsxref('Boolean')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Save-Data")}}</li>
-</ul>
+- {{HTTPHeader("Save-Data")}}

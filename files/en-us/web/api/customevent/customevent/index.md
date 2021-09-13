@@ -2,53 +2,50 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 tags:
-- API
-- Constructor
-- CustomEvent
-- Reference
-- events
+  - API
+  - Constructor
+  - CustomEvent
+  - Reference
+  - events
 browser-compat: api.CustomEvent.CustomEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>CustomEvent()</strong></code> constructor creates a new
-  {{domxref("CustomEvent")}}.</p>
+The **`CustomEvent()`** constructor creates a new
+{{domxref("CustomEvent")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> <var>event</var> = new CustomEvent(<var>typeArg</var>, <var>customEventInit</var>);</pre>
+```js
+ event = new CustomEvent(typeArg, customEventInit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>typeArg</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code>customEventInit</code> {{optional_inline}}</dt>
-  <dd>A <code>CustomEventInit</code> dictionary, having the following fields:
-    <ul>
-      <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type
-        any, that is an event-dependent value associated with the event.</li>
-    </ul>
+- `typeArg`
+  - : A {{domxref("DOMString")}} representing the name of the event.
+- `customEventInit` {{optional_inline}}
 
-    <div class="note">
-      <p><strong>Note:</strong> <var>The <code>CustomEventInit</code></var><var> dictionary also accepts fields
-          from the {{domxref("Event.Event", "EventInit")}} dictionary.</var></p>
-    </div>
-  </dd>
-</dl>
+  - : A `CustomEventInit` dictionary, having the following fields:
 
-<h3 id="Return_value">Return value</h3>
+    - `"detail"`, optional and defaulting to `null`, of type
+      any, that is an event-dependent value associated with the event.
 
-<p>A new <code>CustomEvent</code> object of the specified type, with any other properties
-  configured according to the <code>CustomEventInit</code> dictionary (if one was
-  provided).</p>
+    > **Note:** _The `CustomEventInit`\*\* dictionary also accepts fields
+    > from the {{domxref("Event.Event", "EventInit")}} dictionary._
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js">// add an appropriate event listener
+A new `CustomEvent` object of the specified type, with any other properties
+configured according to the `CustomEventInit` dictionary (if one was
+provided).
+
+## Example
+
+```js
+// add an appropriate event listener
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // create and dispatch the event
@@ -57,24 +54,26 @@ var event = new CustomEvent("cat", {
     hazcheeseburger: true
   }
 });
-obj.dispatchEvent(event);</pre>
+obj.dispatchEvent(event);
+```
 
-<p>Additional examples can be found at <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
+Additional examples can be found at [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>You can polyfill the <code>CustomEvent()</code> constructor functionality in Internet
-  Explorer 9 and higher with the following code:</p>
+You can polyfill the `CustomEvent()` constructor functionality in Internet
+Explorer 9 and higher with the following code:
 
-<pre class="brush: js">(function () {
+```js
+(function () {
 
   if ( typeof window.CustomEvent === "function" ) return false;
 
@@ -86,14 +85,13 @@ obj.dispatchEvent(event);</pre>
    }
 
   window.CustomEvent = CustomEvent;
-})();</pre>
+})();
+```
 
-<p>Internet Explorer &gt;= 9 adds a CustomEvent object to the window, but with correct
-  implementations, this is a function.</p>
+Internet Explorer >= 9 adds a CustomEvent object to the window, but with correct
+implementations, this is a function.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CustomEvent")}}</li>
-  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-</ul>
+- {{domxref("CustomEvent")}}
+- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)

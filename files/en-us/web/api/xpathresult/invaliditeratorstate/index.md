@@ -2,61 +2,63 @@
 title: XPathResult.invalidIteratorState
 slug: Web/API/XPathResult/invalidIteratorState
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
 browser-compat: api.XPathResult.invalidIteratorState
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The read-only <strong><code>invalidIteratorState</code></strong> property of the
-  {{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It
-  is <code>true</code> if {{domxref("XPathResult.resultType")}} is
-  <code>UNORDERED_NODE_ITERATOR_TYPE</code> or <code>ORDERED_NODE_ITERATOR_TYPE</code> and
-  the document has been modified since this result was returned.</p>
+The read-only **`invalidIteratorState`** property of the
+{{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It
+is `true` if {{domxref("XPathResult.resultType")}} is
+`UNORDERED_NODE_ITERATOR_TYPE` or `ORDERED_NODE_ITERATOR_TYPE` and
+the document has been modified since this result was returned.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>iteratorState</em> = <em>result</em>.invalidIteratorState;
-</pre>
+```js
+var iteratorState = result.invalidIteratorState;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A boolean value indicating whether the iterator has become invalid.</p>
+A boolean value indicating whether the iterator has become invalid.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>invalidIteratorState</code> property.
-</p>
+The following example shows the use of the `invalidIteratorState` property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;p&gt;Iterator state: &lt;output&gt;&lt;/output&gt;&lt;/p&gt;
-</pre>
+```html
+<div>XPath example</div>
+<p>Iterator state: <output></output></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
 // Invalidates the iterator state
 document.querySelector("div").remove();
 document.querySelector("output").textContent = result.invalidIteratorState ? "invalid" : "valid";
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

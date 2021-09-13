@@ -2,67 +2,53 @@
 title: CSSPrimitiveValue.getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
 tags:
-- API
-- CSSPrimitiveValue
-- Method
-- NeedsExample
-- getCounterValue
-- Deprecated
+  - API
+  - CSSPrimitiveValue
+  - Method
+  - NeedsExample
+  - getCounterValue
+  - Deprecated
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
-<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The <code><strong>getCounterValue()</strong></code> method of the
-  {{domxref("CSSPrimitiveValue")}} interface is used to get the <a
-    href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">counter</a>
-  value. If this CSS value doesn't contain a counter value, a {{domxref("DOMException")}}
-  is raised. Modification to the corresponding style property can be achieved using the
-  {{domxref("Counter")}} interface.</p>
+The **`getCounterValue()`** method of the
+{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+value. If this CSS value doesn't contain a counter value, a {{domxref("DOMException")}}
+is raised. Modification to the corresponding style property can be achieved using the
+{{domxref("Counter")}} interface.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>counterValue</var> = <var>cssPrimitiveValue</var>.getCounterValue();</pre>
+```js
+var counterValue = cssPrimitiveValue.getCounterValue();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Counter")}} object representing the counter value.</p>
+A {{domxref("Counter")}} object representing the counter value.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Type</strong></th>
-      <th scope="col"><strong>Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOMException</code></td>
-      <td>An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't contain a
-        <code>Counter</code> value (e.g. this is not <code>CSS_COUNTER</code>).</td>
-    </tr>
-  </tbody>
-</table>
+| **Type**       | **Description**                                                                                                        |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `DOMException` | An `INVALID_ACCESS_ERR` is raised if the CSS value doesn't contain a `Counter` value (e.g. this is not `CSS_COUNTER`). |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

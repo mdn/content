@@ -15,55 +15,49 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.rotationRate
 ---
-<p>{{APIRef("Device Orientation Events")}}</p>
+{{APIRef("Device Orientation Events")}}
 
-<p>Returns the rate at which the device is rotating around each of its axes in degrees per
-  second.</p>
+Returns the rate at which the device is rotating around each of its axes in degrees per
+second.
 
-<div class="note"><p><strong>Note:</strong> If the hardware isn't capable of providing this
-  information, this property returns <code>null</code>.</p></div>
+> **Note:** If the hardware isn't capable of providing this
+> information, this property returns `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>rotationRate</var> = <var>deviceMotionEvent</var>.rotationRate;
-</pre>
+```js
+var rotationRate = deviceMotionEvent.rotationRate;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The <code>rotationRate</code> property is a read only object describing the rotation
-  rates of the device around each of its axes:</p>
+The `rotationRate` property is a read only object describing the rotation
+rates of the device around each of its axes:
 
-<dl>
-  <dt><code>alpha</code></dt>
-  <dd>The rate at which the device is rotating about its Z axis; that is, being twisted
-    about a line perpendicular to the screen.</dd>
-  <dt><code>beta</code></dt>
-  <dd>The rate at which the device is rotating about its X axis; that is, front to back.
-  </dd>
-  <dt><code>gamma</code></dt>
-  <dd>The rate at which the device is rotating about its Y axis; that is, side to side.
-  </dd>
-</dl>
+- `alpha`
+  - : The rate at which the device is rotating about its Z axis; that is, being twisted
+    about a line perpendicular to the screen.
+- `beta`
+  - : The rate at which the device is rotating about its X axis; that is, front to back.
+- `gamma`
+  - : The rate at which the device is rotating about its Y axis; that is, side to side.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("DeviceMotionEvent") }}</li>
-  <li>{{Event("devicemotion") }}</li>
-  <li>{{DOMxRef("window.ondevicemotion") }}</li>
-  <li>{{Event("deviceorientation") }}</li>
-  <li>{{DOMxRef("DeviceOrientationEvent") }}</li>
-  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device
-      orientation</a></li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
-      title="Orientation and motion data explained">Orientation and motion data
-      explained</a></li>
-</ul>
+- {{DOMxRef("DeviceMotionEvent") }}
+- {{Event("devicemotion") }}
+- {{DOMxRef("window.ondevicemotion") }}
+- {{Event("deviceorientation") }}
+- {{DOMxRef("DeviceOrientationEvent") }}
+- [Detecting device
+  orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Orientation and motion data
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")

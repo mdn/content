@@ -10,78 +10,59 @@ tags:
   - Web
   - access
 ---
-<p>{{DefaultAPISidebar("Permissions API")}}</p>
+{{DefaultAPISidebar("Permissions API")}}
 
-<p>The <strong>Permissions API</strong> provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.</p>
+The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (although not current versions of Firefox, as <a href="/en-US/docs/Web/API/WorkerNavigator/permissions">WorkerNavigator.permissions</a> is not implemented).</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (although not current versions of Firefox, as [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions) is not implemented).
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>Historically different APIs handle their own permissions inconsistently — for example the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> allows for explicit checking of permission status and requesting permission, whereas the <a href="/en-US/docs/Web/API/Geolocation">Geolocation API</a> doesn't (which causes problems if the user denied the initial permission request). The Permissions API provides the tools to allow developers to implement a better user experience as far as permissions are concerned.</p>
+Historically different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) allows for explicit checking of permission status and requesting permission, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation) doesn't (which causes problems if the user denied the initial permission request). The Permissions API provides the tools to allow developers to implement a better user experience as far as permissions are concerned.
 
-<p>The <code>permissions</code> property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.</p>
+The `permissions` property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.
 
-<p>Once you have this object you can then perform permission-related tasks, for example querying a permission using the {{domxref("Permissions.query()")}} method to return a promise that resolves with the {{domxref("PermissionStatus")}} for a specific API.</p>
+Once you have this object you can then perform permission-related tasks, for example querying a permission using the {{domxref("Permissions.query()")}} method to return a promise that resolves with the {{domxref("PermissionStatus")}} for a specific API.
 
-<p>Not all APIs' permission statuses can be queried using the Permissions API. Notable APIs that are Permissions-aware include:</p>
+Not all APIs' permission statuses can be queried using the Permissions API. Notable APIs that are Permissions-aware include:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
- <li><a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a></li>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
- <li>Web MIDI API</li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Notifications API](/en-US/docs/Web/API/Notifications_API)
+- [Push API](/en-US/docs/Web/API/Push_API)
+- Web MIDI API
 
-<p>More APIs will gain Permissions API support over time.</p>
+More APIs will gain Permissions API support over time.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We have made a simple example available called Location Finder. You can <a href="https://chrisdavidmills.github.io/location-finder-permissions-api/">run the example live</a>, or <a href="https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages">view the source code on Github</a>.</p>
+We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on Github](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
-<p>Read more about how it works in our article <a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a>.</p>
+Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}</dt>
- <dd>Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.</dd>
- <dt>{{domxref("Permissions")}}</dt>
- <dd>Provides the core Permission API functionality, such as methods for querying and revoking permissions.</dd>
- <dt>{{domxref("PermissionStatus")}}</dt>
- <dd>Provides access to the current status of a permission, and an event handler to respond to changes in permission status.</dd>
-</dl>
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}
+  - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
+- {{domxref("Permissions")}}
+  - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.
+- {{domxref("PermissionStatus")}}
+  - : Provides access to the current status of a permission, and an event handler to respond to changes in permission status.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/permissions/">Permissions</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                     |
+| ------------------------------------------------- |
+| [Permissions](https://w3c.github.io/permissions/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<h3 id="Permissions_interface">Permissions interface</h3>
+### Permissions interface
 
-<div>
+{{Compat("api.Permissions")}}
 
-<p>{{Compat("api.Permissions")}}</p>
-</div>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the Permissions API</a></li>
- <li><a href="https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/">Using the Permissions API to Detect How Often Users Allow or Deny Camera Access</a></li>
- <li>{{DOMxRef("Notification.permission")}}</li>
- <li><a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a></li>
-</ul>
+- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Using the Permissions API to Detect How Often Users Allow or Deny Camera Access](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
+- {{DOMxRef("Notification.permission")}}
+- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

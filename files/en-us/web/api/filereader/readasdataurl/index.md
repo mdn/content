@@ -2,52 +2,51 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 tags:
-- API
-- Base 64
-- File API
-- FileReader
-- Files
-- Method
-- Reference
+  - API
+  - Base 64
+  - File API
+  - FileReader
+  - Files
+  - Method
+  - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
-<p>The <code>readAsDataURL</code> method is used to read the contents of the specified
-  {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
-  {{domxref("FileReader.readyState","readyState")}} becomes <code>DONE</code>, and the
-  {{event("loadend")}} is triggered. At that time, the
-  {{domxref("FileReader.result","result")}} attribute contains the data as a <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data: URL</a> representing the
-  file's data as a base64 encoded string.</p>
+The `readAsDataURL` method is used to read the contents of the specified
+{{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
+{{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
+{{event("loadend")}} is triggered. At that time, the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representing the
+file's data as a base64 encoded string.
 
-<div class="note">
-  <p><strong>Note:</strong> The blob's {{domxref("FileReader.result","result")}} cannot be
-    directly decoded as Base64 without first removing the Data-URL declaration preceding
-    the Base64-encoded data. To retrieve only the Base64 encoded string, first
-    remove <code>data:*/*;base64,</code> from the result.</p>
-</div>
+> **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
+> directly decoded as Base64 without first removing the Data-URL declaration preceding
+> the Base64-encoded data. To retrieve only the Base64 encoded string, first
+> remove `data:*/*;base64,` from the result.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>instanceOfFileReader</em>.readAsDataURL(blob);</pre>
+```js
+instanceOfFileReader.readAsDataURL(blob);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>blob</code></dt>
-  <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
-</dl>
+- `blob`
+  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="file" onchange="previewFile()"&gt;&lt;br&gt;
-&lt;img src="" height="200" alt="Image preview..."&gt;</pre>
+```html
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function previewFile() {
+```js
+function previewFile() {
   const preview = document.querySelector('img');
   const file = document.querySelector('input[type=file]').files[0];
   const reader = new FileReader();
@@ -60,22 +59,26 @@ browser-compat: api.FileReader.readAsDataURL
   if (file) {
     reader.readAsDataURL(file);
   }
-}</pre>
+}
+```
 
-<h3 id="Live_Result">Live Result</h3>
+### Live Result
 
-<p>{{EmbedLiveSample("Example", "100%", 240)}}</p>
+{{EmbedLiveSample("Example", "100%", 240)}}
 
-<h2 id="Example_reading_multiple_files">Example reading multiple files</h2>
+## Example reading multiple files
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="browse" type="file" onchange="previewFiles()" multiple&gt;
-&lt;div id="preview"&gt;&lt;/div&gt;</pre>
+```html
+<input id="browse" type="file" onchange="previewFiles()" multiple>
+<div id="preview"></div>
+```
 
-<h3 id="JavaScript_2">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function previewFiles() {
+```js
+function previewFiles() {
 
   var preview = document.querySelector('#preview');
   var files   = document.querySelector('input[type=file]').files;
@@ -104,31 +107,25 @@ browser-compat: api.FileReader.readAsDataURL
   }
 
 }
-</pre>
+```
 
-<div class="note"><p><strong>Note:</strong> The <a
-    href="/en-US/docs/Web/API/FileReader"><code>FileReader()</code></a> constructor was
-  not supported by Internet Explorer for versions before 10. For a full compatibility code
-  you can see our <a
-    href="https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html"
-    title="crossbrowser_image_preview.html">crossbrowser possible solution for image
-    preview</a>. See also <a
-    href="https://mdn.mozillademos.org/files/3698/image_upload_preview.html">this more
-    powerful example</a>.</p></div>
+> **Note:** The [`FileReader()`](/en-US/docs/Web/API/FileReader) constructor was
+> not supported by Internet Explorer for versions before 10. For a full compatibility code
+> you can see our [crossbrowser possible solution for image
+> preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html "crossbrowser_image_preview.html"). See also [this more
+> powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-  <li>{{domxref("URL.createObjectURL()")}}</li>
-</ul>
+- {{domxref("FileReader")}}
+- {{domxref("URL.createObjectURL()")}}
 
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}

@@ -2,47 +2,49 @@
 title: RTCStats.id
 slug: Web/API/RTCStats/id
 tags:
-- API
-- Property
-- RTCStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- id
-- rtc
+  - API
+  - Property
+  - RTCStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - id
+  - rtc
 browser-compat: api.RTCStats.id
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>id</code></strong> property of the
-    {{domxref("RTCStats")}} dictionary is a string which uniquely identifies the object
-    for which this <code>RTCStats</code> object provides statistics.</p>
+The **`id`** property of the
+{{domxref("RTCStats")}} dictionary is a string which uniquely identifies the object
+for which this `RTCStats` object provides statistics.
 
-<p>Using the
-  <code>id</code>, you can correlate two or more <code>RTCStats</code>-based objects in
-  order to monitor statistics over time for a given WebRTC object, such as an
-  {{Glossary("RTP")}} stream, an {{domxref("RTCPeerConnection")}}, or an
-  {{domxref("RTCDataChannel")}}.</p>
+Using the
+`id`, you can correlate two or more `RTCStats`-based objects in
+order to monitor statistics over time for a given WebRTC object, such as an
+{{Glossary("RTP")}} stream, an {{domxref("RTCPeerConnection")}}, or an
+{{domxref("RTCDataChannel")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>id</em> = <em>RTCStats</em>.id;</pre>
+```js
+var id = RTCStats.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the object for which this
-  <code>RTCStats</code>-based object provides statistics.</p>
+A {{domxref("DOMString")}} which uniquely identifies the object for which this
+`RTCStats`-based object provides statistics.
 
-<p>The format of the ID string is not defined by the specification, so you cannot reliably
-  make any assumptions about the contents of the string, or assume that the format of the
-  string will remain unchanged for a given object type.</p>
+The format of the ID string is not defined by the specification, so you cannot reliably
+make any assumptions about the contents of the string, or assume that the format of the
+string will remain unchanged for a given object type.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

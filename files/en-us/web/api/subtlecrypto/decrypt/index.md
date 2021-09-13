@@ -10,88 +10,74 @@ tags:
   - Web Crypto API
 browser-compat: api.SubtleCrypto.decrypt
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>decrypt()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface decrypts some encrypted data. It takes as arguments a {{glossary("key")}} to
-  decrypt with, some optional extra parameters, and the data to decrypt (also known as
-  "ciphertext"). It returns a {{jsxref("Promise")}} which will be fulfilled with the
-  decrypted data (also known as "plaintext").</p>
+The **`decrypt()`** method of the {{domxref("SubtleCrypto")}}
+interface decrypts some encrypted data. It takes as arguments a {{glossary("key")}} to
+decrypt with, some optional extra parameters, and the data to decrypt (also known as
+"ciphertext"). It returns a {{jsxref("Promise")}} which will be fulfilled with the
+decrypted data (also known as "plaintext").
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.decrypt(algorithm, key, data);
-</pre>
+```js
+const result = crypto.subtle.decrypt(algorithm, key, data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>algorithm</code></em> is an object specifying the <a
-      href="#supported_algorithms">algorithm</a> to be used, and any extra parameters as
-    required. The values given for the extra parameters must match those passed into the
-    corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
+- _`algorithm`_ is an object specifying the [algorithm](#supported_algorithms) to be used, and any extra parameters as
+  required. The values given for the extra parameters must match those passed into the
+  corresponding {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} call.
 
-    <ul>
-      <li>To use <a href="#rsa-oaep">RSA-OAEP</a>, pass an {{domxref("RsaOaepParams")}}
-        object.</li>
-      <li>To use <a href="#aes-ctr">AES-CTR</a>, pass an {{domxref("AesCtrParams")}}
-        object.</li>
-      <li>To use <a href="#aes-cbc">AES-CBC</a>, pass an {{domxref("AesCbcParams")}}
-        object.</li>
-      <li>To use <a href="#aes-gcm">AES-GCM</a>, pass an {{domxref("AesGcmParams")}}
-        object.</li>
-    </ul>
-  </li>
-  <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key to be
-    used for decryption. If using RSA-OAEP, this is the <code>privateKey</code> property
-    of the {{domxref("CryptoKeyPair")}} object.</li>
-  <li><em><code>data</code></em> is a {{domxref("BufferSource")}} containing the data to
-    be decrypted (also known as {{glossary("ciphertext")}}).</li>
-</ul>
+  - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}}
+    object.
+  - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}}
+    object.
+  - To use [AES-CBC](#aes-cbc), pass an {{domxref("AesCbcParams")}}
+    object.
+  - To use [AES-GCM](#aes-gcm), pass an {{domxref("AesGcmParams")}}
+    object.
 
-<h3 id="Return_value">Return value</h3>
+- `key` is a {{domxref("CryptoKey")}} containing the key to be
+  used for decryption. If using RSA-OAEP, this is the `privateKey` property
+  of the {{domxref("CryptoKeyPair")}} object.
+- *`data`* is a {{domxref("BufferSource")}} containing the data to
+  be decrypted (also known as {{glossary("ciphertext")}}).
 
-<ul>
-  <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with an
-    {{jsxref("ArrayBuffer")}} containing the plaintext.</li>
-</ul>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+- `result` is a {{jsxref("Promise")}} that fulfills with an
+  {{jsxref("ArrayBuffer")}} containing the plaintext.
 
-<p>The promise is rejected when the following exceptions are encountered:</p>
+### Exceptions
 
-<dl>
-  <dt>InvalidAccessError</dt>
-  <dd>Raised when the requested operation is not valid for the provided key (e.g. invalid
-    encryption algorithm, or invalid key for the specified encryption algorithm<em>)</em>.
-  </dd>
-  <dt>OperationError</dt>
-  <dd>Raised when the operation failed for an operation-specific reason (e.g. algorithm
-    parameters of invalid sizes, or there was an error decrypting the ciphertext).</dd>
-</dl>
+The promise is rejected when the following exceptions are encountered:
 
-<h2 id="Supported_algorithms">Supported algorithms</h2>
+- InvalidAccessError
+  - : Raised when the requested operation is not valid for the provided key (e.g. invalid
+    encryption algorithm, or invalid key for the specified encryption algorithm*)*.
+- OperationError
+  - : Raised when the operation failed for an operation-specific reason (e.g. algorithm
+    parameters of invalid sizes, or there was an error decrypting the ciphertext).
 
-<p>The <code>decrypt()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms">encrypt()</a></code>
-  method.</p>
+## Supported algorithms
 
-<h2 id="Examples">Examples</h2>
+The `decrypt()` method supports the same algorithms as the
+[`encrypt()`](/en-US/docs/Web/API/SubtleCrypto/encrypt#supported_algorithms)
+method.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try
-      the working examples</a> on GitHub.</p>
-</div>
+## Examples
 
-<h3 id="RSA-OAEP">RSA-OAEP</h3>
+> **Note:** You can [try
+> the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) on GitHub.
 
-<p>This code decrypts <code>ciphertext</code> using RSA-OAEP. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+### RSA-OAEP
 
-<pre class="brush: js">function decryptMessage(privateKey, ciphertext) {
+This code decrypts `ciphertext` using RSA-OAEP. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)
+
+```js
+function decryptMessage(privateKey, ciphertext) {
   return window.crypto.subtle.decrypt(
     {
       name: "RSA-OAEP"
@@ -99,17 +85,16 @@ browser-compat: api.SubtleCrypto.decrypt
     privateKey,
     ciphertext
   );
-}</pre>
+}
+```
 
-<h3 id="AES-CTR">AES-CTR</h3>
+### AES-CTR
 
-<p>This code decrypts <code>ciphertext</code> using AES in CTR mode. Note that
-  <code>counter</code> must match the value that was used for encryption. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This code decrypts `ciphertext` using AES in CTR mode. Note that
+`counter` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-ctr.js)
 
-<pre class="brush: js">function decryptMessage(key, ciphertext) {
+```js
+function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
     {
       name: "AES-CTR",
@@ -119,17 +104,16 @@ browser-compat: api.SubtleCrypto.decrypt
     key,
     ciphertext
   );
-}</pre>
+}
+```
 
-<h3 id="AES-CBC">AES-CBC</h3>
+### AES-CBC
 
-<p>This code decrypts <code>ciphertext</code> using AES in CBC mode. Note that
-  <code>iv</code> must match the value that was used for encryption. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This code decrypts `ciphertext` using AES in CBC mode. Note that
+`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-cbc.js)
 
-<pre class="brush: js">function decryptMessage(key, ciphertext) {
+```js
+function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
     {
       name: "AES-CBC",
@@ -138,17 +122,16 @@ browser-compat: api.SubtleCrypto.decrypt
     key,
     ciphertext
   );
-}</pre>
+}
+```
 
-<h3 id="AES-GCM">AES-GCM</h3>
+### AES-GCM
 
-<p>This code decrypts <code>ciphertext</code> using AES in GCM mode. Note that
-  <code>iv</code> must match the value that was used for encryption. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This code decrypts `ciphertext` using AES in GCM mode. Note that
+`iv` must match the value that was used for encryption. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)
 
-<pre class="brush: js">function decryptMessage(key, ciphertext) {
+```js
+function decryptMessage(key, ciphertext) {
   return window.crypto.subtle.decrypt(
     {
       name: "AES-GCM",
@@ -157,28 +140,26 @@ browser-compat: api.SubtleCrypto.decrypt
     key,
     ciphertext
   );
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SubtleCrypto.encrypt()")}}.</li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies RSAOAEP.</li>
-  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST
-      SP800-38A</a> specifies CTR mode.</li>
-  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38a/final">NIST
-      SP800-38A</a> specifies CBC mode.</li>
-  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-38d/final">NIST
-      SP800-38D</a> specifies GCM mode.</li>
-  <li><a
-      href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS
-      198-1</a> specifies HMAC.</li>
-</ul>
+- {{domxref("SubtleCrypto.encrypt()")}}.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
+- [NIST
+  SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
+- [NIST
+  SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
+- [NIST
+  SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+- [FIPS
+  198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

@@ -14,75 +14,75 @@ tags:
   - ended
 browser-compat: api.MediaStreamTrack.ended_event
 ---
-<div>{{DefaultAPISidebar("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p>The <strong><code>ended</code></strong> event of the {{domxref("MediaStreamTrack")}} interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.</p>
+The **`ended`** event of the {{domxref("MediaStreamTrack")}} interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("MediaStreamTrack.onended")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("MediaStreamTrack.onended")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p><code>ended</code> events fire when the media stream track's source permanently stops sending data on the stream. There are various ways this can happen, including:</p>
+`ended` events fire when the media stream track's source permanently stops sending data on the stream. There are various ways this can happen, including:
 
-<ul>
- <li>There is no more data left to send.</li>
- <li>The user revoked the permissions needed for the data to be sent.</li>
- <li>The hardware generating the source data has been removed or ejected.</li>
- <li>A remote peer has permanently stopped sending data; pausing media <em>does not</em> generate an <code>ended</code> event.</li>
-</ul>
+- There is no more data left to send.
+- The user revoked the permissions needed for the data to be sent.
+- The hardware generating the source data has been removed or ejected.
+- A remote peer has permanently stopped sending data; pausing media _does not_ generate an `ended` event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example sets up an event handler for the <code>ended</code> event, which changes an on-screen icon to indicate that the track is no longer active.</p>
+This example sets up an event handler for the `ended` event, which changes an on-screen icon to indicate that the track is no longer active.
 
-<pre class="brush: js">track.addEventListener('ended', () =&gt; {
+```js
+track.addEventListener('ended', () => {
   let statusElem = document.getElementById("status-icon");
   statusElem.src = "/images/stopped-icon.png";
-})</pre>
+})
+```
 
-<p>You can also set up the event handler using the {{domxref("MediaStreamTrack.onended")}} property:</p>
+You can also set up the event handler using the {{domxref("MediaStreamTrack.onended")}} property:
 
-<pre class="brush: js">track.onended = function() {
+```js
+track.onended = function() {
   let statusElem = document.getElementById("status-icon");
 
   statusElem.src = "/images/stopped-icon.png";
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}</li>
- <li>{{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}</li>
- <li>{{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
- <li>{{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}</li>
- <li>{{domxref("AudioScheduledSourceNode.ended_event", 'AudioScheduledSourceNode: ended event')}}</li>
-</ul>
+- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
+- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
+- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}
+- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
+- {{domxref("AudioScheduledSourceNode.ended_event", 'AudioScheduledSourceNode: ended event')}}

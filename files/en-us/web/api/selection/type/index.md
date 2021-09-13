@@ -2,62 +2,61 @@
 title: Selection.type
 slug: Web/API/Selection/type
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Selection
-- Type
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Selection
+  - Type
 browser-compat: api.Selection.type
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>type</code></strong> read-only property of the
-  {{domxref("Selection")}} interface returns a {{domxref("DOMString")}} describing the
-  type of the current selection.</p>
+The **`type`** read-only property of the
+{{domxref("Selection")}} interface returns a {{domxref("DOMString")}} describing the
+type of the current selection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>value</em> =<em> sel</em>.type
-</pre>
+```js
+value = sel.type
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} describing the type of the current selection. Possible
-  values are:</p>
+A {{domxref("DOMString")}} describing the type of the current selection. Possible
+values are:
 
-<ul>
-  <li><code>None</code>: No selection has currently been made.</li>
-  <li><code>Caret</code>: The selection is collapsed (i.e. the caret is placed on some
-    text, but no range has been selected).</li>
-  <li><code>Range</code>: A range has been selected.</li>
-</ul>
+- `None`: No selection has currently been made.
+- `Caret`: The selection is collapsed (i.e. the caret is placed on some
+  text, but no range has been selected).
+- `Range`: A range has been selected.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the event handler will fire each time a new selection is made.
-  <code>console.log(selection.type)</code> will return <code>Caret</code> or
-  <code>Range</code> depending on whether the caret is placed at a single point in the
-  text, or a range has been selected.</p>
+In this example, the event handler will fire each time a new selection is made.
+`console.log(selection.type)` will return `Caret` or
+`Range` depending on whether the caret is placed at a single point in the
+text, or a range has been selected.
 
-<pre class="brush: js">var selection;
+```js
+var selection;
 
 document.onselectionchange = function() {
   console.log('New selection made');
   selection = document.getSelection();
   console.log(selection.type);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}</li>
-</ul>
+- {{domxref("Selection")}}

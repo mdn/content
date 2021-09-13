@@ -2,32 +2,35 @@
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
 tags:
-- DOM
-- Iterator
-- Method
-- NodeList
-- Reference
-- Web
-- Polyfill
+  - DOM
+  - Iterator
+  - Method
+  - NodeList
+  - Reference
+  - Web
+  - Polyfill
 browser-compat: api.NodeList.keys
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NodeList.keys()</strong></code> method returns an
-  {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
-  in this object. The keys are <code>unsigned integer</code>.</p>
+The **`NodeList.keys()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
+in this object. The keys are `unsigned integer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">nodeList.keys();</pre>
+```js
+nodeList.keys();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -42,23 +45,20 @@ var list = node.childNodes;
 for(var key of list.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>0
-1
-2
-</pre>
+    0
+    1
+    2
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>NodeList.prototype.keys</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
-  <li>{{domxref("Node")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- A polyfill of `NodeList.prototype.keys` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

@@ -10,29 +10,25 @@ tags:
   - Deprecated
 browser-compat: api.Document.xmlEncoding
 ---
-<p>{{APIRef("DOM")}}{{deprecated_header}}</p>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>Returns the encoding as determined by the XML declaration. Should be <code>null</code> if unspecified or unknown.</p>
+Returns the encoding as determined by the XML declaration. Should be `null` if unspecified or unknown.
 
-<div class="warning"><p><strong>Warning:</strong> Do not use this attribute; it has been removed from the DOM Level 4 specification and is no longer supported in Gecko 10.0 {{ geckoRelease("10.0") }}.</p></div>
+> **Warning:** Do not use this attribute; it has been removed from the DOM Level 4 specification and is no longer supported in Gecko 10.0 {{ geckoRelease("10.0") }}.
 
-<p>If the XML Declaration states:</p>
+If the XML Declaration states:
 
-<pre>&lt;?xml version="1.0" encoding="UTF-16"?&gt;
-</pre>
+    <?xml version="1.0" encoding="UTF-16"?>
 
-<p>...the result should be "UTF-16".</p>
+...the result should be "UTF-16".
 
-<p>However, Firefox 3.0 includes information on endianness (e.g., UTF-16BE for big endian encoding), and while this extra information is removed as of Firefox 3.1b3, Firefox 3.1b3 is still consulting the file's encoding, rather than the XML Declaration as the spec defines it ("An attribute specifying, <em>as part of the XML declaration</em>, the encoding of this document.").</p>
+However, Firefox 3.0 includes information on endianness (e.g., UTF-16BE for big endian encoding), and while this extra information is removed as of Firefox 3.1b3, Firefox 3.1b3 is still consulting the file's encoding, rather than the XML Declaration as the spec defines it ("An attribute specifying, _as part of the XML declaration_, the encoding of this document.").
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-encoding">http://www.w3.org/TR/DOM-Level-3-Cor...ment3-encoding</a></li>
- <li>This has been removed from {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}</li>
-</ul>
+- [http://www.w3.org/TR/DOM-Level-3-Cor...ment3-encoding](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-encoding)
+- This has been removed from {{ spec("http://www.w3.org/TR/domcore/","DOM Core Level 4","WD") }}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

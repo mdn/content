@@ -12,29 +12,30 @@ tags:
   - Window
 browser-compat: api.caches
 ---
-<div>{{APIRef()}}{{SeeCompatTable}}</div>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>The global <code><strong>caches</strong></code> read-only property returns the
-  {{domxref("CacheStorage")}} object associated with the current context. This object
-  enables functionality such as storing assets for offline use, and generating custom
-  responses to requests.</p>
+The global **`caches`** read-only property returns the
+{{domxref("CacheStorage")}} object associated with the current context. This object
+enables functionality such as storing assets for offline use, and generating custom
+responses to requests.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myCacheStorage</em> = self.caches; // or just caches
-</pre>
+```js
+var myCacheStorage = self.caches; // or just caches
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CacheStorage")}} object.</p>
+A {{domxref("CacheStorage")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows how you'd use a cache in a <a
-    href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> context to store
-  assets offline.</p>
+The following example shows how you'd use a cache in a [service worker](/en-US/docs/Web/API/Service_Worker_API) context to store
+assets offline.
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -51,21 +52,20 @@ browser-compat: api.caches
       ]);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
-  <li>{{domxref("CacheStorage")}}</li>
-  <li>{{domxref("Cache")}}</li>
-</ul>
+- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}

@@ -2,36 +2,38 @@
 title: FontFace.weight
 slug: Web/API/FontFace/weight
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- weight
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - weight
 browser-compat: api.FontFace.weight
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>weight</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets the weight of the font. It is
-  equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.</p>
+The **`weight`** property of the
+{{domxref("FontFace")}} interface retrieves or sets the weight of the font. It is
+equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let weightDescriptor = FontFace.weight;
-FontFace.weight = weightDescriptor;</pre>
+```js
+let weightDescriptor = FontFace.weight;
+FontFace.weight = weightDescriptor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
-  sheet's <code>@font-face</code> rule.</p>
+A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+sheet's `@font-face` rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

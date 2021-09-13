@@ -2,55 +2,53 @@
 title: DOMPointReadOnly.w
 slug: Web/API/DOMPointReadOnly/w
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Geometry
-- Geometry Interfaces
-- Point
-- Position
-- Property
-- Read-only
-- Reference
-- W
-- perspective
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Position
+  - Property
+  - Read-only
+  - Reference
+  - W
+  - perspective
 browser-compat: api.DOMPointReadOnly.w
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPointReadOnly</strong></code> interface's
-    <code><strong>w</strong></code> property holds the point's perspective value,
-    <code>w</code>, for a read-only point in space.</p>
+The **`DOMPointReadOnly`** interface's
+**`w`** property holds the point's perspective value,
+`w`, for a read-only point in space.
 
-<p>If your script needs to be able
-  to change the value of this property, you should instead use the {{domxref("DOMPoint")}}
-  object.</p>
+If your script needs to be able
+to change the value of this property, you should instead use the {{domxref("DOMPoint")}}
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>perspective</var> = <var>someDOMPointReadOnly</var>.w</pre>
+```js
+const perspective = someDOMPointReadOnly.w
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the <code>w</code> perspective value
-  for the point. This value is <strong>unrestricted</strong>, meaning that it is allowed
-  to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
-  {{jsxref("Infinity", "±Infinity")}}). The default is <code>1.0</code>.</p>
+A double-precision floating-point value indicating the `w` perspective value
+for the point. This value is **unrestricted**, meaning that it is allowed
+to be infinite or invalid (that is, its value may be {{jsxref("NaN")}} or
+{{jsxref("Infinity", "±Infinity")}}). The default is `1.0`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
-    {{domxref("DOMPointReadOnly.y", "y")}}, and {{domxref("DOMPointReadOnly.z", "z")}}.
-  </li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPointReadOnly.x", "x")}},
+  {{domxref("DOMPointReadOnly.y", "y")}}, and {{domxref("DOMPointReadOnly.z", "z")}}.

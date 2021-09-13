@@ -2,34 +2,36 @@
 title: USBDevice.productId
 slug: Web/API/USBDevice/productID
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- productID
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - productID
 browser-compat: api.USBDevice.productId
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>productId</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB
-  device.</p>
+The **`productId`** read only property of the
+{{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB
+device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var serialNumber = USBDevice.productId</pre>
+```js
+var serialNumber = USBDevice.productId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The manufacturer-defined code that identifies a USB device.</p>
+The manufacturer-defined code that identifies a USB device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

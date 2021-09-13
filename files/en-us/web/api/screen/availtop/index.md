@@ -2,35 +2,37 @@
 title: Screen.availTop
 slug: Web/API/Screen/availTop
 tags:
-- API
-- 'API:Mozilla Extensions'
-- 'API:WebKit Extensions'
-- DOM
-- Non-standard
-- Property
+  - API
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
+  - DOM
+  - Non-standard
+  - Property
 browser-compat: api.Screen.availTop
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-<p>Specifies the y-coordinate of the first pixel that is not allocated to permanent or
-  semipermanent user interface features.</p>
+Specifies the y-coordinate of the first pixel that is not allocated to permanent or
+semipermanent user interface features.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>availTop</var> = <var>window</var>.screen.availTop;
-</pre>
+```js
+let availTop = window.screen.availTop;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">let setX = window.screen.width - window.screen.availLeft;
+```js
+let setX = window.screen.width - window.screen.availLeft;
 let setY = window.screen.height - window.screen.availTop;
 window.moveTo(setX, setY);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>In most cases, this property returns <code>0</code>.</p>
+In most cases, this property returns `0`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

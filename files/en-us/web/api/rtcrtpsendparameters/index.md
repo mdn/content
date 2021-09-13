@@ -20,40 +20,34 @@ tags:
   - sender
 browser-compat: api.RTCRtpSendParameters
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The WebRTC API's <code><strong>RTCRtpSendParameters</strong></code> dictionary is used to specify the parameters for an {{domxref("RTCRtpSender")}} when calling its {{domxref("RTCRtpSender.setParameters", "setParameters()")}} method.</p>
+The WebRTC API's **`RTCRtpSendParameters`** dictionary is used to specify the parameters for an {{domxref("RTCRtpSender")}} when calling its {{domxref("RTCRtpSender.setParameters", "setParameters()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties below, <code>RTCRtpSendParameters</code> inherits the properties from the {{domxref("RTCRtpParameters")}} interface.</em></p>
+_In addition to the properties below, `RTCRtpSendParameters` inherits the properties from the {{domxref("RTCRtpParameters")}} interface._
 
-<dl>
- <dt>{{domxref("RTCRtpSendParameters.encodings", "encodings")}}</dt>
- <dd>An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters for a single codec that could be used to encode the track's media.</dd>
- <dt>{{domxref("RTCRtpSendParameters.transactionId", "transactionId")}}</dt>
- <dd>A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.</dd>
-</dl>
+- {{domxref("RTCRtpSendParameters.encodings", "encodings")}}
+  - : An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters for a single codec that could be used to encode the track's media.
+- {{domxref("RTCRtpSendParameters.transactionId", "transactionId")}}
+  - : A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt>{{domxref("RTCRtpSendParameters.degradationPreference", "degradationPreference")}} {{deprecated_inline}}</dt>
- <dd>Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is <code>balanced</code>.</dd>
- <dt>{{domxref("RTCRtpSendParameters,priority", "priority")}} {{deprecated_inline}}</dt>
- <dd>A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is <code>low</code>.</dd>
-</dl>
+- {{domxref("RTCRtpSendParameters.degradationPreference", "degradationPreference")}} {{deprecated_inline}}
+  - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is `balanced`.
+- {{domxref("RTCRtpSendParameters,priority", "priority")}} {{deprecated_inline}}
+  - : A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is `low`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("RTCRtpReceiveParameters")}} and {{domxref("RTCRtpReceiver.getParameters()")}}</li>
-</ul>
+- {{domxref("RTCRtpReceiveParameters")}} and {{domxref("RTCRtpReceiver.getParameters()")}}

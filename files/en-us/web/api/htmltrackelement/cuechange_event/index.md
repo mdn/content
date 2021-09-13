@@ -22,4 +22,4 @@ tags:
   - track
   - vtt
 ---
-<p>{{page("/en-US/docs/Web/API/TextTrack/cuechange_event")}}</p>
+{{page("/en-US/docs/Web/API/TextTrack/cuechange_event")}}

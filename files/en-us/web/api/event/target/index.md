@@ -11,28 +11,30 @@ tags:
   - target
 browser-compat: api.Event.target
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>target</strong></code> property of the
-    {{domxref("Event")}} interface is a reference to the object onto which the event was
-    dispatched. It is different from {{domxref("Event.currentTarget")}} when the event
-    handler is called during the bubbling or capturing phase of the event.</p>
+The **`target`** property of the
+{{domxref("Event")}} interface is a reference to the object onto which the event was
+dispatched. It is different from {{domxref("Event.currentTarget")}} when the event
+handler is called during the bubbling or capturing phase of the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>theTarget</var> = <var>someEvent</var>.target;</pre>
+```js
+const theTarget = someEvent.target;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{domxref("EventTarget")}}</p>
+{{domxref("EventTarget")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <code>event.target</code> property can be used in order to implement <strong>event
-    delegation</strong>.</p>
+The `event.target` property can be used in order to implement **event
+delegation**.
 
-<pre class="brush: js">// Make a list
+```js
+// Make a list
 const ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -42,27 +44,25 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(evt) {
-  // e.target refers to the clicked &lt;li&gt; element
-  // This is different than e.currentTarget, which would refer to the parent &lt;ul&gt; in this context
+  // e.target refers to the clicked <li> element
+  // This is different than e.currentTarget, which would refer to the parent <ul> in this context
   evt.target.style.visibility = 'hidden';
 }
 
 // Attach the listener to the list
-// It will fire when each &lt;li&gt; is clicked
+// It will fire when each <li> is clicked
 ul.addEventListener('click', hide, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event
-      Targets</a></li>
-</ul>
+- [Comparison of Event
+  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

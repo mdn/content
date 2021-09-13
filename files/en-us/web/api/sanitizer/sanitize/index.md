@@ -2,53 +2,53 @@
 title: Sanitizer.sanitize()
 slug: Web/API/Sanitizer/sanitize
 tags:
-- HTML Sanitizer API
-- Method
-- sanitize
+  - HTML Sanitizer API
+  - Method
+  - sanitize
 browser-compat: api.Sanitizer.sanitize
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-<p>The <strong><code>sanitize()</code></strong> method of the
-  {{domxref("sanitizer")}} interface returns a sanitized {{domxref('DocumentFragment')}}
-  from an input, removing any offending elements or attributes.</p>
+The **`sanitize()`** method of the
+{{domxref("sanitizer")}} interface returns a sanitized {{domxref('DocumentFragment')}}
+from an input, removing any offending elements or attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>DocumentFragment</var> = sanitizer.sanitize(input);</pre>
+```js
+var DocumentFragment = sanitizer.sanitize(input);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>input</code></dt>
-  <dd>A {{jsxref('String')}} to be sanitized.</dd>
-</dl>
+- `input`
+  - : A {{jsxref('String')}} to be sanitized.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('DocumentFragment')}}.</p>
+A {{domxref('DocumentFragment')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses the <code>sanitize</code> method to remove a disallowed
-  <code>script</code> and <code>blink</code> elements from a string input.</p>
+This example uses the `sanitize` method to remove a disallowed
+`script` and `blink` elements from a string input.
 
-<pre class="brush: js">// our input string to clean
-const stringToClean = 'Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;, including a rogue script &lt;script&gt;alert(1)&lt;/script&gt; def.';
+```js
+// our input string to clean
+const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
 
 const result = new Sanitizer().sanitize(stringToClean);
-// Result: A DocumentFragment containing text nodes and a &lt;b&gt; element, with a &lt;i&gt; child element
-</pre>
+// Result: A DocumentFragment containing text nodes and a <b> element, with a <i> child element
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

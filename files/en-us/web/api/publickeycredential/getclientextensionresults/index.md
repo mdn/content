@@ -2,69 +2,62 @@
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
 tags:
-- API
-- Method
-- PublicKeyCredential
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Method
+  - PublicKeyCredential
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>getClientExtensionResults()</code></strong> is a method of the
-  {{domxref("PublicKeyCredential")}} interface that returns an {{jsxref("ArrayBuffer")}}
-  which contains a map between the extensions identifiers and their results after having
-  being processed by the client.</p>
+**`getClientExtensionResults()`** is a method of the
+{{domxref("PublicKeyCredential")}} interface that returns an {{jsxref("ArrayBuffer")}}
+which contains a map between the extensions identifiers and their results after having
+being processed by the client.
 
-<p>During the creation or fetching of a <code>PublicKeyCredential</code> (respectively via
-  {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} and
-  {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}), it is possible
-  to have "custom" processing by the client for different extensions which are
-  respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")}} and
-  {{domxref("PublicKeyCredentialRequestOptions.extensions")}}.</p>
+During the creation or fetching of a `PublicKeyCredential` (respectively via
+{{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} and
+{{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}), it is possible
+to have "custom" processing by the client for different extensions which are
+respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")}} and
+{{domxref("PublicKeyCredentialRequestOptions.extensions")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Extensions are optional and different browsers may recognize
-    different extensions. All extensions are optional for the client to process them: if a
-    browser does not know of a given extension, that will not cause any failure.</p>
-</div>
+> **Note:** Extensions are optional and different browsers may recognize
+> different extensions. All extensions are optional for the client to process them: if a
+> browser does not know of a given extension, that will not cause any failure.
 
-<div class="note">
-  <p><strong>Note:</strong> This method may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This method may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">mapArrayBuffer = publicKeyCredential.getClientExtensionResults()</pre>
+```js
+mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("ArrayBuffer")}} containing the result of the processing of the different
-  extensions by the client. This object contains a map between the extensions' identifiers
-  and their results from the processing.</p>
+An {{jsxref("ArrayBuffer")}} containing the result of the processing of the different
+extensions by the client. This object contains a map between the extensions' identifiers
+and their results from the processing.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> As of March 2019, only <code>appId</code> (used during
-    creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
-    supported by <a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=818303">Chrome</a> and
-    <a
-      href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface">Edge</a>.
-    Firefox does not seem to <a
-      href="https://bugzilla.mozilla.org/show_bug.cgi?id=1370728">support any
-      extension</a>.</p>
-</div>
+> **Warning:** As of March 2019, only `appId` (used during
+> creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
+> supported by [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) and
+> [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface).
+> Firefox does not seem to [support any
+> extension](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
     "loc": true, // This extension has been defined to include location information in attestation
@@ -94,25 +87,24 @@ navigator.credentials.create({ publicKey })
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.w3.org/TR/webauthn/#sctn-defined-extensions">The list of the
-      currently defined extensions</a></li>
-  <li>{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
-    result of the authenticator's extensions processing</li>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.extensions")}} which contains the
-    client extensions' input values for the creation of the credential</li>
-  <li>{{domxref("PublicKeyCredentialRequestOptions.extensions")}} which contains the
-    client extensions' input values for the retrieval of the credential</li>
-</ul>
+- [The list of the
+  currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
+  result of the authenticator's extensions processing
+- {{domxref("PublicKeyCredentialCreationOptions.extensions")}} which contains the
+  client extensions' input values for the creation of the credential
+- {{domxref("PublicKeyCredentialRequestOptions.extensions")}} which contains the
+  client extensions' input values for the retrieval of the credential

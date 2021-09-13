@@ -9,32 +9,30 @@ tags:
   - Property
 browser-compat: api.Window.ondeviceorientation
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>An event handler for the {{ event("deviceorientation") }} event, which contains
-  information about a relative device orientation change.</p>
+An event handler for the {{ event("deviceorientation") }} event, which contains
+information about a relative device orientation change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.ondeviceorientation = function(event) { ... };
+```js
+window.ondeviceorientation = function(event) { ... };
 window.addEventListener('deviceorientation', function(event) { ... });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("deviceorientation") }}</li>
-  <li>{{ domxref("DeviceOrientationEvent") }}</li>
-  <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation"
-      title="Detecting device orientation">Detecting device orientation</a></li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation "Detecting device orientation")

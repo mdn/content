@@ -9,44 +9,50 @@ tags:
   - Storage
   - Storage Access API
 ---
-<div>{{SeeCompatTable}}{{DefaultAPISidebar("Storage Access API")}}</div>
+{{SeeCompatTable}}{{DefaultAPISidebar("Storage Access API")}}
 
-<p>The <a href="/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a> should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We’ll briefly look at a common storage access scenario.</p>
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We’ll briefly look at a common storage access scenario.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The Storage Access API is designed to allow embedded content to request access to storage that would otherwise be blocked when a user’s browser is set to block all third-party cookies. Since embedded content won’t know which storage policy is in use by the user, it’s best to always check whether the embedded frame has storage access before attempting to read or write from storage. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookies are blocked.</p>
+The Storage Access API is designed to allow embedded content to request access to storage that would otherwise be blocked when a user’s browser is set to block all third-party cookies. Since embedded content won’t know which storage policy is in use by the user, it’s best to always check whether the embedded frame has storage access before attempting to read or write from storage. This is particularly true for {{domxref("Document.cookie")}} access, as browsers will often return an empty cookie jar when third-party cookies are blocked.
 
-<h2 id="Accessing_a_user's_cookies_in_an_embedded_cross-origin_iframe">Accessing a user's cookies in an embedded cross-origin iframe</h2>
+## Accessing a user's cookies in an embedded cross-origin iframe
 
-<p>In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user’s cookies under a storage access policy that blocks third-party cookies.</p>
+In this example we show how an embedded cross-origin {{htmlelement("iframe")}} can access a user’s cookies under a storage access policy that blocks third-party cookies.
 
-<p>First of all, if the <code>&lt;iframe&gt;</code> is sandboxed, the embedding website needs to add the <code>allow-storage-access-by-user-activation</code> <a href="/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox token</a> to allow storage access requests to be successful, along with <code>allow-scripts</code> and <code>allow-same-origin</code> to allow it to call the API, and execute in an origin that can have cookies:</p>
+First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
-<pre class="brush: html">&lt;iframe sandbox="allow-storage-access-by-user-activation
+```html
+<iframe sandbox="allow-storage-access-by-user-activation
                  allow-scripts
-                 allow-same-origin"&gt;
+                 allow-same-origin">
   ...
-&lt;/iframe&gt;</pre>
+</iframe>
+```
 
-<p>Now on to the code executed inside the embedded document. Since it does not know whether it currently has access to storage, it should first call {{domxref("Document.hasStorageAccess()")}}. If that call returns <code>false</code>, we can then call {{domxref("Document.requestStorageAccess()")}}, returning the result so that then we can chain it onto the previous promise call. In the final <code>then</code>, we'll have first-party storage access.</p>
+Now on to the code executed inside the embedded document. Since it does not know whether it currently has access to storage, it should first call {{domxref("Document.hasStorageAccess()")}}. If that call returns `false`, we can then call {{domxref("Document.requestStorageAccess()")}}, returning the result so that then we can chain it onto the previous promise call. In the final `then`, we'll have first-party storage access.
 
-<pre class="brush: js">document.hasStorageAccess().then(hasAccess =&gt; {
+```js
+document.hasStorageAccess().then(hasAccess => {
   if (!hasAccess) {
     return document.requestStorageAccess();
   }
-}).then(_ =&gt; {
+}).then(_ => {
   // Now we have first-party storage access!
 
   // Let's access some items from the first-party cookie jar
   document.cookie = "foo=bar";              // set a cookie
   localStorage.setItem("username", "John"); // access a localStorage entry
-}).catch(_ =&gt; {
+}).catch(_ => {
   // error obtaining storage access.
-});</pre>
+});
+```
 
-<p>Note that access requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click — so this code needs to be run inside some kind of user gesture-based event handler, for example:</p>
+Note that access requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click — so this code needs to be run inside some kind of user gesture-based event handler, for example:
 
-<pre class="brush: js">btn.addEventListener('click', () =&gt; {
+```js
+btn.addEventListener('click', () => {
   // run code here
-});</pre>
+});
+```

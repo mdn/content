@@ -2,48 +2,48 @@
 title: TreeWalker.filter
 slug: Web/API/TreeWalker/filter
 tags:
-- API
-- DOM
-- Property
-- TreeWalker
+  - API
+  - DOM
+  - Property
+  - TreeWalker
 browser-compat: api.TreeWalker.filter
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>TreeWalker.filter</code></strong> read-only property returns a
-  {{domxref("NodeFilter")}} that is the filtering object associated with the
-  {{domxref("TreeWalker")}}.</p>
+The **`TreeWalker.filter`** read-only property returns a
+{{domxref("NodeFilter")}} that is the filtering object associated with the
+{{domxref("TreeWalker")}}.
 
-<p>When creating the <code>TreeWalker</code>, the filter object is passed in as the third
-  parameter, and its method {{domxref("NodeFilter.acceptNode()")}} is called on every
-  single node to determine whether or not to accept it.</p>
+When creating the `TreeWalker`, the filter object is passed in as the third
+parameter, and its method {{domxref("NodeFilter.acceptNode()")}} is called on every
+single node to determine whether or not to accept it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeFilter</em> = <em>treeWalker</em>.filter;
-</pre>
+```js
+nodeFilter = treeWalker.filter;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 nodeFilter = treeWalker.filter; // document.body in this case
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface it belongs to.

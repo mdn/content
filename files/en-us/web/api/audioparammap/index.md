@@ -6,34 +6,30 @@ tags:
   - Experimental
 browser-compat: api.AudioParamMap
 ---
-<div>{{draft}}{{APIRef("Web Audio API")}}</div>
+{{draft}}{{APIRef("Web Audio API")}}
 
-<p>The Web Audio API interface <code><strong>AudioParamMap</strong></code> represents a set of multiple audio parameters, each described as a mapping of a {{domxref("DOMString")}} identifying the parameter to the {{domxref("AudioParam")}} object representing its value.</p>
+The Web Audio API interface **`AudioParamMap`** represents a set of multiple audio parameters, each described as a mapping of a {{domxref("DOMString")}} identifying the parameter to the {{domxref("AudioParam")}} object representing its value.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The <code>AudioParamMap</code> object is accessed as a {{jsxref("Map")}} in which each parameter is identified by a name string which is mapped to an <code>AudioParam</code> containing the value of that parameter. In addition, there are the following properties available:</p>
+The `AudioParamMap` object is accessed as a {{jsxref("Map")}} in which each parameter is identified by a name string which is mapped to an `AudioParam` containing the value of that parameter. In addition, there are the following properties available:
 
-<dl>
- <dt>{{domxref("AudioParamMap.size", "size")}}</dt>
- <dd>?</dd>
-</dl>
+- {{domxref("AudioParamMap.size", "size")}}
+  - : ?
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AudioParamMap.entries", "entries()")}}</dt>
- <dd>?</dd>
- <dt>{{domxref("AudioParamMap.forEach", "forEach()")}}</dt>
- <dd>?</dd>
- <dt>{{domxref("AudioParamMap.has", "has()")}}</dt>
- <dd>?</dd>
- <dt>{{domxref("AudioParamMap.keys", "keys()")}}</dt>
- <dd>?</dd>
- <dt>{{domxref("AudioParamMap.values", "values()")}}</dt>
- <dd>?</dd>
-</dl>
+- {{domxref("AudioParamMap.entries", "entries()")}}
+  - : ?
+- {{domxref("AudioParamMap.forEach", "forEach()")}}
+  - : ?
+- {{domxref("AudioParamMap.has", "has()")}}
+  - : ?
+- {{domxref("AudioParamMap.keys", "keys()")}}
+  - : ?
+- {{domxref("AudioParamMap.values", "values()")}}
+  - : ?
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

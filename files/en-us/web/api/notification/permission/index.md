@@ -2,46 +2,45 @@
 title: Notification.permission
 slug: Web/API/Notification/permission
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
 browser-compat: api.Notification.permission
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code>permission</code> read-only property of the {{domxref("Notification")}}
-  interface indicates the current permission granted by the user for the current origin to
-  display web notifications.</p>
+The `permission` read-only property of the {{domxref("Notification")}}
+interface indicates the current permission granted by the user for the current origin to
+display web notifications.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>permission</var> = Notification.permission;</pre>
+```js
+var permission = Notification.permission;
+```
 
-<h3 id="Return_Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the current permission. The value can be:</p>
+A {{domxref("DOMString")}} representing the current permission. The value can be:
 
-<ul>
-  <li><code>granted</code>: The user has explicitly granted permission for the current
-    origin to display system notifications.</li>
-  <li><code>denied</code>: The user has explicitly denied permission for the current
-    origin to display system notifications.</li>
-  <li><code>default</code>: The user decision is unknown; in this case the application
-    will act as if permission was <code>denied</code>.</li>
-</ul>
+- `granted`: The user has explicitly granted permission for the current
+  origin to display system notifications.
+- `denied`: The user has explicitly denied permission for the current
+  origin to display system notifications.
+- `default`: The user decision is unknown; in this case the application
+  will act as if permission was `denied`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet could be used if you wanted to first check whether notifications
-  are supported, then check if permission has been granted for the current origin to send
-  notifications, then request permission if required, before then sending a notification.
-</p>
+The following snippet could be used if you wanted to first check whether notifications
+are supported, then check if permission has been granted for the current origin to send
+notifications, then request permission if required, before then sending a notification.
 
-<pre class="brush: js">function notifyMe() {
+```js
+function notifyMe() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support desktop notification");
@@ -65,23 +64,22 @@ browser-compat: api.Notification.permission
 
   // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/docs/Web/API/Notifications_API">Notifications API</a></li>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-  <li><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></li>
-  <li><a href="/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API">Using the
-      Permissions API</a></li>
-</ul>
+- [Notifications API](/docs/Web/API/Notifications_API)
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permissions API](/en-US/docs/Web/API/Permissions_API)
+- [Using the
+  Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)

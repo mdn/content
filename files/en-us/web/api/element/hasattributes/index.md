@@ -2,59 +2,58 @@
 title: Element.hasAttributes()
 slug: Web/API/Element/hasAttributes
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
 browser-compat: api.Element.hasAttributes
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>hasAttributes()</code></strong> method of the {{domxref("Element")}}
-  interface returns a boolean value indicating whether the current element has any
-  attributes or not.</p>
+The **`hasAttributes()`** method of the {{domxref("Element")}}
+interface returns a boolean value indicating whether the current element has any
+attributes or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>result</var> = <var>element</var>.hasAttributes();</pre>
+```js
+var result = element.hasAttributes();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code><var>result</var></code></dt>
-  <dd>holds the return value <code>true</code> or <code>false</code>.</dd>
-</dl>
+- `result`
+  - : holds the return value `true` or `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">let foo = document.getElementById('foo');
+```js
+let foo = document.getElementById('foo');
 if (foo.hasAttributes()) {
   // Do something with 'foo.attributes'
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush:js">;(function(prototype) {
+```js
+;(function(prototype) {
   prototype.hasAttributes = prototype.hasAttributes || function() {
-    return (this.attributes.length &gt; 0);
+    return (this.attributes.length > 0);
   }
 })(Element.prototype);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.attributes")}}</li>
-  <li>{{domxref("Element.hasAttribute()")}}</li>
-</ul>
+- {{domxref("Element.attributes")}}
+- {{domxref("Element.hasAttribute()")}}

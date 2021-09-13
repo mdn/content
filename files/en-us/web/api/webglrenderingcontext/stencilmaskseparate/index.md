@@ -2,76 +2,75 @@
 title: WebGLRenderingContext.stencilMaskSeparate()
 slug: Web/API/WebGLRenderingContext/stencilMaskSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilMaskSeparate
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.stencilMaskSeparate()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> controls enabling and
-  disabling of front and/or back writing of individual bits in the stencil planes.</p>
+The **`WebGLRenderingContext.stencilMaskSeparate()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) controls enabling and
+disabling of front and/or back writing of individual bits in the stencil planes.
 
-<p>The {{domxref("WebGLRenderingContext.stencilMask()")}} method can set both, the front
-  and back stencil writemasks to one value at the same time.</p>
+The {{domxref("WebGLRenderingContext.stencilMask()")}} method can set both, the front
+and back stencil writemasks to one value at the same time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.stencilMaskSeparate(<var>face, <var>mask</var>);
-</var></pre>
+```js
+void gl.stencilMaskSeparate(face, mask);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>face</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
+- face
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil writemask
     is updated. The possible values are:
-    <ul>
-      <li><code>gl.FRONT</code></li>
-      <li><code>gl.BACK</code></li>
-      <li><code>gl.FRONT_AND_BACK</code></li>
-    </ul>
-  </dd>
-  <dt><code>mask</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying a bit mask to enable or disable writing of
-    individual bits in the stencil planes. By default, the mask is all 1.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.FRONT`
+    - `gl.BACK`
+    - `gl.FRONT_AND_BACK`
 
-<p>None.</p>
+- `mask`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying a bit mask to enable or disable writing of
+    individual bits in the stencil planes. By default, the mask is all 1.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.stencilMaskSeparate(gl.FRONT, 110101);
-</pre>
+None.
 
-<p>To get the current stencil masks, query the <code>STENCIL_WRITEMASK</code>,
-  <code>STENCIL_BACK_WRITEMASK</code>, or <code>STENCIL_BITS</code> constants.</p>
+## Examples
 
-<pre class="brush: js">gl.getParameter(gl.STENCIL_WRITEMASK);
+```js
+gl.stencilMaskSeparate(gl.FRONT, 110101);
+```
+
+To get the current stencil masks, query the `STENCIL_WRITEMASK`,
+`STENCIL_BACK_WRITEMASK`, or `STENCIL_BITS` constants.
+
+```js
+gl.getParameter(gl.STENCIL_WRITEMASK);
 // 110101
 gl.getParameter(gl.STENCIL_BACK_WRITEMASK);
 // 110101
 gl.getParameter(gl.STENCIL_BITS);
 // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.colorMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.depthMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.colorMask()")}}
+- {{domxref("WebGLRenderingContext.depthMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}

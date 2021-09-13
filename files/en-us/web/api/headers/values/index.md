@@ -10,28 +10,28 @@ tags:
   - Reference
 browser-compat: api.Headers.values
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Headers.values()</strong></code> method returns an
-  {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
-  in this object. The values are {{jsxref("String")}} objects.</p>
+The **`Headers.values()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
+in this object. The values are {{jsxref("String")}} objects.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">headers.values();</pre>
+```js
+headers.values();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Create a test Headers object
+```js
+// Create a test Headers object
 var myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
@@ -40,22 +40,19 @@ myHeaders.append('Vary', 'Accept-Language');
 for (var value of myHeaders.values()) {
    console.log(value);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>text/xml
-Accept-Language</pre>
+    text/xml
+    Accept-Language
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

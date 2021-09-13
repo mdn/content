@@ -2,43 +2,43 @@
 title: RTCError.sentAlert
 slug: Web/API/RTCError/sentAlert
 tags:
-- API
-- DTLS
-- Error
-- Networking
-- Property
-- RTCError
-- Read-only
-- Reference
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- sentAlert
+  - API
+  - DTLS
+  - Error
+  - Networking
+  - Property
+  - RTCError
+  - Read-only
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - sentAlert
 browser-compat: api.RTCError.sentAlert
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code><strong>sentAlert</strong></code> property in an
-  {{domxref("RTCError")}} object specifies the {{Glossary("DTLS")}} alert number occurred
-  while sending data to the remote peer, if the error represents an outbound DTLS error.
-</p>
+The read-only **`sentAlert`** property in an
+{{domxref("RTCError")}} object specifies the {{Glossary("DTLS")}} alert number occurred
+while sending data to the remote peer, if the error represents an outbound DTLS error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>sentAlert</em> = <em>rtcError</em>.sentAlert;</pre>
+```js
+let sentAlert = rtcError.sentAlert;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned integer value providing the DTLS alert number corresponding to the DTLS
-  error which was sent to the remote peer, as represented by this <code>RTCError</code>
-  object. This property is <code>null</code> if {{domxref("RTCError.errorDetail",
-  "errorDetail")}} isn't <code>dtls-failure</code>.</p>
+An unsigned integer value providing the DTLS alert number corresponding to the DTLS
+error which was sent to the remote peer, as represented by this `RTCError`
+object. This property is `null` if {{domxref("RTCError.errorDetail",
+  "errorDetail")}} isn't `dtls-failure`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

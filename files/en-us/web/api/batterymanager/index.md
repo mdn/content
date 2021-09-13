@@ -10,51 +10,45 @@ tags:
   - Reference
 browser-compat: api.BatteryManager
 ---
-<div>{{APIRef}}{{deprecated_header}}</div>
+{{APIRef}}{{deprecated_header}}
 
-<p>The <code>BatteryManager</code> interface of the <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a> provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a <code>BatteryManager</code> interface.</p>
+The `BatteryManager` interface of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a `BatteryManager` interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}</dt>
- <dd>A Boolean value indicating whether the battery is currently being charged.</dd>
- <dt>{{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}</dt>
- <dd>A number representing the remaining time in seconds until the battery is fully charged, or 0 if the battery is already fully charged.</dd>
- <dt>{{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}</dt>
- <dd>A number representing the remaining time in seconds until the battery is completely discharged and the system suspends.</dd>
- <dt>{{domxref("BatteryManager.level")}} {{ReadOnlyInline}}</dt>
- <dd>A number representing the system's battery charge level scaled to a value between 0.0 and 1.0.</dd>
-</dl>
+- {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
+  - : A Boolean value indicating whether the battery is currently being charged.
+- {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
+  - : A number representing the remaining time in seconds until the battery is fully charged, or 0 if the battery is already fully charged.
+- {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
+  - : A number representing the remaining time in seconds until the battery is completely discharged and the system suspends.
+- {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
+  - : A number representing the system's battery charge level scaled to a value between 0.0 and 1.0.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("BatteryManager.onchargingchange")}}</dt>
- <dd>A handler for the {{event("chargingchange")}} event; This event is sent when the battery charging state is updated.</dd>
- <dt>{{domxref("BatteryManager.onchargingtimechange")}}</dt>
- <dd>A handler for the {{event("chargingtimechange")}} event; This event is sent when the battery charging time is updated</dd>
- <dt>{{domxref("BatteryManager.ondischargingtimechange")}}</dt>
- <dd>A handler for the {{event("dischargingtimechange")}} event; This event is sent when the battery discharging time is updated.</dd>
- <dt>{{domxref("BatteryManager.onlevelchange")}}</dt>
- <dd>A handler for the {{event("levelchange")}} event; This event is sent when the battery level is updated.</dd>
-</dl>
+- {{domxref("BatteryManager.onchargingchange")}}
+  - : A handler for the {{event("chargingchange")}} event; This event is sent when the battery charging state is updated.
+- {{domxref("BatteryManager.onchargingtimechange")}}
+  - : A handler for the {{event("chargingtimechange")}} event; This event is sent when the battery charging time is updated
+- {{domxref("BatteryManager.ondischargingtimechange")}}
+  - : A handler for the {{event("dischargingtimechange")}} event; This event is sent when the battery discharging time is updated.
+- {{domxref("BatteryManager.onlevelchange")}}
+  - : A handler for the {{event("levelchange")}} event; This event is sent when the battery level is updated.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface:</em> {{domxref("EventTarget")}}.</p>
+_Inherits methods from its parent interface:_ {{domxref("EventTarget")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
- <li>{{domxref("navigator.getBattery")}}</li>
-</ul>
+- The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
+- {{domxref("navigator.getBattery")}}

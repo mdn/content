@@ -12,34 +12,38 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.blob
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>blob()</strong></code>method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.</p>
+The **`blob()`**method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myBlob = PushEvent.data.blob();</pre>
+```js
+var myBlob = PushEvent.data.blob();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("Blob")}}.</p>
+A {{domxref("Blob")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var blob = event.data.blob();
 
   // do something with your Blob
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

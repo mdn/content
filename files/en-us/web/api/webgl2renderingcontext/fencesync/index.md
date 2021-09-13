@@ -2,58 +2,54 @@
 title: WebGL2RenderingContext.fenceSync()
 slug: Web/API/WebGL2RenderingContext/fenceSync
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.fenceSync
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGL2RenderingContext.fenceSync()</strong></code> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> creates a new
-  {{domxref("WebGLSync")}} object and inserts it into the GL command stream.</p>
+The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates a new
+{{domxref("WebGLSync")}} object and inserts it into the GL command stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLSync <var>gl</var>.fenceSync(<var>condition</var>, <var>flags</var>);
-</pre>
+```js
+WebGLSync gl.fenceSync(condition, flags);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>condition</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the condition that must be met to set the sync
-    object's state to signaled. Must be <code>gl.SYNC_GPU_COMMANDS_COMPLETE</code>.</dd>
-  <dt>flags</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
-    the behavior of the sync object. Must be <code>0</code> (exists for extensions only).
-  </dd>
-</dl>
+- `condition`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the condition that must be met to set the sync
+    object's state to signaled. Must be `gl.SYNC_GPU_COMMANDS_COMPLETE`.
+- flags
+  - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
+    the behavior of the sync object. Must be `0` (exists for extensions only).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLSync")}} object.</p>
+A {{domxref("WebGLSync")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. <code>WebGLSync</code>
-  objects are not available in WebGL 1.</p>
+`gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSync`
+objects are not available in WebGL 1.
 
-<pre class="brush: js">var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
-</pre>
+```js
+var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLSync")}}</li>
-</ul>
+- {{domxref("WebGLSync")}}

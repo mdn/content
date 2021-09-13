@@ -2,49 +2,50 @@
 title: TreeWalker.expandEntityReferences
 slug: Web/API/TreeWalker/expandEntityReferences
 tags:
-- API
-- DOM
-- Deprecated
-- Property
-- TreeWalker
+  - API
+  - DOM
+  - Deprecated
+  - Property
+  - TreeWalker
 browser-compat: api.TreeWalker.expandEntityReferences
 ---
-<p>{{ APIRef("DOM") }}{{deprecated_header}}</p>
+{{ APIRef("DOM") }}{{deprecated_header}}
 
-<p>The <code><strong>TreeWalker.expandEntityReferences</strong></code> read-only property
-  returns a boolean flag indicating whether or not the children of entity
-  reference nodes are visible to the {{domxref("TreeWalker")}}.</p>
+The **`TreeWalker.expandEntityReferences`** read-only property
+returns a boolean flag indicating whether or not the children of entity
+reference nodes are visible to the {{domxref("TreeWalker")}}.
 
-<p>If this value is <code>false</code>, the children of entity reference nodes (as well as
-  all of their descendants) are rejected. This takes precedence over the value of the 
-  {{domxref("TreeWalker.whatToShow")}} method and the associated filter.</p>
+If this value is `false`, the children of entity reference nodes (as well as
+all of their descendants) are rejected. This takes precedence over the value of the 
+{{domxref("TreeWalker.whatToShow")}} method and the associated filter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>expand</em> = <em>treeWalker</em>.expandEntityReferences;
-</pre>
+```js
+expand = treeWalker.expandEntityReferences;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-expand = treeWalker.expandEntityReferences;</pre>
+expand = treeWalker.expandEntityReferences;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method was originally a part of <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/">DOM Level 2 Traversal and Range</a>, but is absent in the current DOM specification.
-  This feature is no longer on track to become a standard.</p>
+This method was originally a part of [DOM Level 2 Traversal and Range](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/), but is absent in the current DOM specification.
+This feature is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface this property belongs to: {{domxref("TreeWalker")}}.</li>
-</ul>
+- The interface this property belongs to: {{domxref("TreeWalker")}}.

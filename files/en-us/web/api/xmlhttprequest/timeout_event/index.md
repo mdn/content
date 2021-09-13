@@ -11,57 +11,61 @@ tags:
   - timeout
 browser-compat: api.XMLHttpRequest.timeout_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>timeout</code></strong> event is fired when progression is terminated due to preset time expiring.</p>
+The **`timeout`** event is fired when progression is terminated due to preset time expiring.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">const client = new XMLHttpRequest();
+```js
+const client = new XMLHttpRequest();
 client.open('GET', 'http://www.example.org/example.txt');
-client.ontimeout = () =&gt; {
+client.ontimeout = () => {
     console.error('Timeout!!')
 };
 
-client.send();</pre>
+client.send();
+```
 
-<p>You could also set up the event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:</p>
+You could also set up the event handler using the {{domxref("EventTarget/addEventListener", "addEventListener()")}} method:
 
-<pre class="brush: js">client.addEventListener('timeout', () =&gt; {
+```js
+client.addEventListener('timeout', () => {
     console.error("Timeout!!");
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}

@@ -4,33 +4,31 @@ slug: Web/API/msPutPropertyEnabled
 tags:
   - msPutPropertyEnabled
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
+The **`msPutPropertyEnabled`** method sets whether a given property in the style object is enabled or disabled.
 
-<p>The <code><strong>msPutPropertyEnabled</strong></code> method sets whether a given property in the style object is enabled or disabled.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+### Syntax
 
-<h3 id="Syntax">Syntax</h3>
+```js
+var retval = style.msPutPropertyEnabled(propertyName, true);
+```
 
-<pre class="brush: js">var retval = style.msPutPropertyEnabled(propertyName, true);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+name\[in]: Name of the property. (String)
 
-<p>name[in]: Name of the property. (String)</p>
+boolean\[in]: True = Enable the property. False = Disable the property.
 
-<p>boolean[in]: True = Enable the property. False = Disable the property.</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+Type = HRESULT: If this method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
-<p>Type = HRESULT: If this method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/CSSStyleDeclaration">CSS Style Declaration</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [CSS Style Declaration](/en-US/docs/Web/API/CSSStyleDeclaration)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

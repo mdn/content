@@ -2,57 +2,55 @@
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 tags:
-- API
-- Fetching Text
-- Loading Text
-- Property
-- Read-only
-- Reference
-- XMLHttpRequest
-- responseText
+  - API
+  - Fetching Text
+  - Loading Text
+  - Property
+  - Read-only
+  - Reference
+  - XMLHttpRequest
+  - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
-<div>{{draft}}</div>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<div>{{APIRef('XMLHttpRequest')}}</div>
+The read-only {{domxref("XMLHttpRequest")}} property
+**`responseText`** returns the text received from a server
+following a request being sent.
 
-<p>The read-only {{domxref("XMLHttpRequest")}} property
-        <strong><code>responseText</code></strong> returns the text received from a server
-        following a request being sent.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var resultText = XMLHttpRequest.responseText;
+```
 
-<pre
-    class="brush: js">var <var>resultText</var> = <var>XMLHttpRequest</var>.responseText;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+A {{domxref("DOMString")}} which contains either the textual data received using the
+`XMLHttpRequest` or `null` if the request failed or
+`""` if the request has not yet been sent by calling
+{{domxref("XMLHttpRequest.send", "send()")}}.
 
-<p>A {{domxref("DOMString")}} which contains either the textual data received using the
-    <code>XMLHttpRequest</code> or <code>null</code> if the request failed or
-    <code>""</code> if the request has not yet been sent by calling
-    {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+While handling an asynchronous request, the value of `responseText` always
+has the current content received from the server, even if it's incomplete because the
+data has not been completely received yet.
 
-<p>While handling an asynchronous request, the value of <code>responseText</code> always
-    has the current content received from the server, even if it's incomplete because the
-    data has not been completely received yet.</p>
+You know the entire content has been received when the value of
+{{domxref("XMLHttpRequest.readyState", "readyState")}} becomes
+{{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`), and
+{{domxref("XMLHttpRequest.status", "status")}} becomes 200 (`"OK"`).
 
-<p>You know the entire content has been received when the value of
-    {{domxref("XMLHttpRequest.readyState", "readyState")}} becomes
-    {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), and
-    {{domxref("XMLHttpRequest.status", "status")}} becomes 200 (<code>"OK"</code>).</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+- `InvalidStateError`
+  - : The {{domxref("XMLHttpRequest.responseType")}} is not set to either the empty
+    string or `"text"`. Since the `responseText` property is
+    only valid for text content, any other value is an error condition.
 
-<dl>
-    <dt><code>InvalidStateError</code></dt>
-    <dd>The {{domxref("XMLHttpRequest.responseType")}} is not set to either the empty
-        string or <code>"text"</code>. Since the <code>responseText</code> property is
-        only valid for text content, any other value is an error condition.</dd>
-</dl>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // If specified, responseType must be empty string or "text"
@@ -67,12 +65,13 @@ xhr.onload = function () {
     }
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

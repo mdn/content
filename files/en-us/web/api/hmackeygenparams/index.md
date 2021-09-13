@@ -8,52 +8,46 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <strong><code>HmacKeyGenParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating a key for the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a> algorithm.</p>
+The **`HmacKeyGenParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>HMAC</code>.</dd>
- <dt><code>hash</code></dt>
- <dd>
- <p>A {{domxref("DOMString")}} representing the name of the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest function</a> to use. You can pass any of <code>SHA-1</code>, <code>SHA-256</code>, <code>SHA-384</code>, or <code>SHA-512</code> here.</p>
- </dd>
- <dt><code>length</code> {{optional_inline}}</dt>
- <dd>
- <p>A <code>Number</code> — the length in bits of the key. If this is omitted, the length of the key is equal to the block size of the hash function you have chosen. Unless you have a good reason to use a different length, omit this property and use the default.</p>
- </dd>
-</dl>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `HMAC`.
+- `hash`
+  - : A {{domxref("DOMString")}} representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. You can pass any of `SHA-1`, `SHA-256`, `SHA-384`, or `SHA-512` here.
+- `length` {{optional_inline}}
+  - : A `Number` — the length in bits of the key. If this is omitted, the length of the key is equal to the block size of the hash function you have chosen. Unless you have a good reason to use a different length, omit this property and use the default.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the examples for {{domxref("SubtleCrypto.generateKey()")}}.</p>
+See the examples for {{domxref("SubtleCrypto.generateKey()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-HmacKeyGenParams', 'SubtleCrypto.HmacKeyGenParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-HmacKeyGenParams', 'SubtleCrypto.HmacKeyGenParams') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "HMAC" algorithm for the {{domxref("SubtleCrypto.generateKey()")}} method will support this type.</p>
+Browsers that support the "HMAC" algorithm for the {{domxref("SubtleCrypto.generateKey()")}} method will support this type.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SubtleCrypto.generateKey()")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.generateKey()")}}.

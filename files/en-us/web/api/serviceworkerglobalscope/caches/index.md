@@ -2,46 +2,45 @@
 title: ServiceWorkerGlobalScope.caches
 slug: Web/API/ServiceWorkerGlobalScope/caches
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerGlobalScope
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.caches
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>caches</code></strong> read-only property of the
-  {{domxref("ServiceWorkerGlobalScope")}} interface returns the
-  {{domxref("CacheStorage")}} object associated with the service worker.</p>
+The **`caches`** read-only property of the
+{{domxref("ServiceWorkerGlobalScope")}} interface returns the
+{{domxref("CacheStorage")}} object associated with the service worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myCacheStorage</em> = self.caches;
-</pre>
+```js
+var myCacheStorage = self.caches;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CacheStorage")}} object.</p>
+A {{domxref("CacheStorage")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

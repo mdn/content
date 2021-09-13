@@ -2,59 +2,58 @@
 title: WebGLRenderingContext.createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.createTexture()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes a
-  {{domxref("WebGLTexture")}} object.</p>
+The **`WebGLRenderingContext.createTexture()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+{{domxref("WebGLTexture")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLTexture <var>gl</var>.createTexture();
-</pre>
+```js
+WebGLTexture gl.createTexture();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLTexture")}} object to which images can be bound to.</p>
+A {{domxref("WebGLTexture")}} object to which images can be bound to.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See also the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a> on <a
-    href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures
-    in WebGL</a>.</p>
+See also the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) on [Using textures
+in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
-<h3 id="Creating_a_texture">Creating a texture</h3>
+### Creating a texture
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

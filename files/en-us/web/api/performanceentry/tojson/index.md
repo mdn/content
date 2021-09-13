@@ -2,45 +2,42 @@
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceEntry.toJSON
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method is a <em>serializer</em>; it returns
-  a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
-</p>
+The **`toJSON()`** method is a _serializer_; it returns
+a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">json = perfEntry.toJSON();
-</pre>
+```js
+json = perfEntry.toJSON();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>None</dt>
-  <dd> </dd>
-</dl>
+- None
+  - :
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>json</dt>
-  <dd>A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
-    object.</dd>
-</dl>
+- json
+  - : A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
+    object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>toJSON()</code> method.</p>
+The following example shows the use of the `toJSON()` method.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -55,7 +52,7 @@ browser-compat: api.PerformanceEntry.toJSON
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -64,7 +61,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -72,7 +69,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -83,12 +80,12 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

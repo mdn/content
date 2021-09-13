@@ -2,36 +2,38 @@
 title: Window.home()
 slug: Web/API/Window/home
 tags:
-- API
-- Gecko
-- HTML DOM
-- Method
-- Deprecated
-- Reference
-- Window
+  - API
+  - Gecko
+  - HTML DOM
+  - Method
+  - Deprecated
+  - Reference
+  - Window
 browser-compat: api.Window.home
 ---
-<div>{{APIRef}}{{Non-standard_header}}{{deprecated_header}}</div>
+{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
 
-<p>The <code><strong>Window.home()</strong></code> method returns the window to the home
-  page.</p>
+The **`Window.home()`** method returns the window to the home
+page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>window</em>.home();
-</pre>
+```js
+window.home();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function goHome() {
+```js
+function goHome() {
   window.home();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>DOM Level 0. Not part of specification.</p>
+DOM Level 0. Not part of specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

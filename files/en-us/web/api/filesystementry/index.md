@@ -11,23 +11,24 @@ tags:
   - Reference
 browser-compat: api.FileSystemEntry
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <strong><code>FileSystemEntry</code></strong> interface of the File and Directory Entries API represents a single entry in a file system. The entry can be a file or a directory (directories are represented by the {{domxref("FileSystemDirectoryEntry")}} interface). It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about a file it points to—including the file name and its path from the root to the entry.</p>
+The **`FileSystemEntry`** interface of the File and Directory Entries API represents a single entry in a file system. The entry can be a file or a directory (directories are represented by the {{domxref("FileSystemDirectoryEntry")}} interface). It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about a file it points to—including the file name and its path from the root to the entry.
 
-<h2 id="basic">Basic concepts</h2>
+## Basic concepts
 
-<p>You don't create <code>FileSystemEntry</code> objects directly. Instead, you will receive an object based on this interface through other APIs. This interface serves as a base class for the {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} interfaces, which provide features specific to file system entries representing files and directories, respectively.</p>
+You don't create `FileSystemEntry` objects directly. Instead, you will receive an object based on this interface through other APIs. This interface serves as a base class for the {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} interfaces, which provide features specific to file system entries representing files and directories, respectively.
 
-<p>The <code>FileSystemEntry</code> interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: <code><a href="#tourl">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
+The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](#tourl). It also introduces a new URL scheme: `filesystem:`.
 
-<p>You can use the <code>filesystem:</code> scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use <code>filesystem:</code> scheme for the root directory of the origin of the app. For example, if your app is in <code><a href="https://www.html5rocks.com">http://www.html5rocks.com</a></code>, open<code> filesystem:<a href="https://www.html5rocks.com/temporary/">http://www.html5rocks.com/temporary/</a></code> in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.</p>
+You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.html5rocks.com`](https://www.html5rocks.com), open` filesystem:http://www.html5rocks.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
-<h3 id="example">Example</h3>
+### Example
 
-<p>To see an example of how <code>toURL()</code> works, see the <a href="#tourl">method description</a>. The snippet below shows you how you can remove a file by name.</p>
+To see an example of how `toURL()` works, see the [method description](#tourl). The snippet below shows you how you can remove a file by name.
 
-<pre class="brush: js">// Taking care of the browser-specific prefixes.
+```js
+// Taking care of the browser-specific prefixes.
 window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
 
 ...
@@ -41,56 +42,51 @@ window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, function(fs) {
     }, onError);
 
   }, onError);
-}, onError); </pre>
+}, onError);
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface provides the following properties.</em></p>
+_This interface provides the following properties._
 
-<dl>
- <dt>{{domxref("FileSystemEntry.filesystem", "filesystem")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("FileSystem")}} object representing the file system in which the entry is located.</dd>
- <dt>{{domxref("FileSystemEntry.fullPath", "fullPath")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("USVString")}} object which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.</dd>
- <dt>{{domxref("FileSystemEntry.isDirectory", "isDirectory")}} {{ReadOnlyInline}}</dt>
- <dd>A boolean value which is <code>true</code> if the entry represents a directory; otherwise, it's <code>false</code>.</dd>
- <dt>{{domxref("FileSystemEntry.isFile", "isFile")}} {{ReadOnlyInline}}</dt>
- <dd>A Boolean which is <code>true</code> if the entry represents a file. If it's not a file, this value is <code>false</code>.</dd>
- <dt>{{domxref("FileSystemEntry.name", "name")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("USVString")}} containing the name of the entry (the final part of the path, after the last "/" character).</dd>
-</dl>
+- {{domxref("FileSystemEntry.filesystem", "filesystem")}} {{ReadOnlyInline}}
+  - : A {{domxref("FileSystem")}} object representing the file system in which the entry is located.
+- {{domxref("FileSystemEntry.fullPath", "fullPath")}} {{ReadOnlyInline}}
+  - : A {{domxref("USVString")}} object which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.
+- {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} {{ReadOnlyInline}}
+  - : A boolean value which is `true` if the entry represents a directory; otherwise, it's `false`.
+- {{domxref("FileSystemEntry.isFile", "isFile")}} {{ReadOnlyInline}}
+  - : A Boolean which is `true` if the entry represents a file. If it's not a file, this value is `false`.
+- {{domxref("FileSystemEntry.name", "name")}} {{ReadOnlyInline}}
+  - : A {{domxref("USVString")}} containing the name of the entry (the final part of the path, after the last "/" character).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface defines the following methods.</em></p>
+_This interface defines the following methods._
 
-<dl>
- <dt>{{domxref("FileSystemEntry.copyTo", "copyTo()")}}</dt>
- <dd>Copies the file or directory to a new location on the file system.</dd>
- <dt>{{domxref("FileSystemEntry.getMetadata", "getMetadata()")}}</dt>
- <dd>Obtains metadata about the file, such as its modification date and size.</dd>
- <dt>{{domxref("FileSystemEntry.getParent", "getParent()")}}</dt>
- <dd>Returns a {{domxref("FileSystemDirectoryEntry")}} representing the entry's parent directory.</dd>
- <dt>{{domxref("FileSystemEntry.moveTo", "moveTo()")}}</dt>
- <dd>Moves the file or directory to a new location on the file system, or renames the file or directory.</dd>
- <dt>{{domxref("FileSystemEntry.remove", "remove()")}}</dt>
- <dd>Removes the specified file or directory. You can only remove directories which are empty.</dd>
- <dt>{{domxref("FileSystemEntry.toURL", "toURL()")}}</dt>
- <dd>Creates and returns a URL which identifies the entry. This URL uses the URL scheme <code>"filesystem:"</code>.</dd>
-</dl>
+- {{domxref("FileSystemEntry.copyTo", "copyTo()")}}
+  - : Copies the file or directory to a new location on the file system.
+- {{domxref("FileSystemEntry.getMetadata", "getMetadata()")}}
+  - : Obtains metadata about the file, such as its modification date and size.
+- {{domxref("FileSystemEntry.getParent", "getParent()")}}
+  - : Returns a {{domxref("FileSystemDirectoryEntry")}} representing the entry's parent directory.
+- {{domxref("FileSystemEntry.moveTo", "moveTo()")}}
+  - : Moves the file or directory to a new location on the file system, or renames the file or directory.
+- {{domxref("FileSystemEntry.remove", "remove()")}}
+  - : Removes the specified file or directory. You can only remove directories which are empty.
+- {{domxref("FileSystemEntry.toURL", "toURL()")}}
+  - : Creates and returns a URL which identifies the entry. This URL uses the URL scheme `"filesystem:"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} are based on <code>FileSystemEntry</code>.</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}} are based on `FileSystemEntry`.

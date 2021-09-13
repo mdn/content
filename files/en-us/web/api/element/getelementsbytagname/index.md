@@ -9,49 +9,48 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagName
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The
-		<code><strong>Element.getElementsByTagName()</strong></code> method returns a live
-		{{domxref("HTMLCollection")}} of elements with the given <a
-			href="/en-US/docs/Web/API/Element/tagName">tag name</a>.</p>
+The
+**`Element.getElementsByTagName()`** method returns a live
+{{domxref("HTMLCollection")}} of elements with the given [tag name](/en-US/docs/Web/API/Element/tagName).
 
-  <p>All descendants of the
-	specified element are searched, but not the element itself. The returned list is
-	<em>live</em>, which means it updates itself with the DOM tree automatically.
-	Therefore, there is no need to call <code>Element.getElementsByTagName()</code> with
-	the same element and arguments repeatedly if the DOM changes in between calls.</p>
+All descendants of the
+specified element are searched, but not the element itself. The returned list is
+_live_, which means it updates itself with the DOM tree automatically.
+Therefore, there is no need to call `Element.getElementsByTagName()` with
+the same element and arguments repeatedly if the DOM changes in between calls.
 
-<p>When called on an HTML element in an HTML document, <code>getElementsByTagName</code>
-	lower-cases the argument before searching for it. This is undesirable when trying to
-	match camel-cased SVG elements (such as
-	<code><a href="/en-US/docs/Web/SVG/Element/linearGradient">&lt;linearGradient&gt;</a></code>)
-	in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }},
-	which preserves the capitalization of the tag name.</p>
+When called on an HTML element in an HTML document, `getElementsByTagName`
+lower-cases the argument before searching for it. This is undesirable when trying to
+match camel-cased SVG elements (such as
+[`<linearGradient>`](/en-US/docs/Web/SVG/Element/linearGradient))
+in an HTML document. Instead, use {{ domxref("Element.getElementsByTagNameNS()") }},
+which preserves the capitalization of the tag name.
 
-<p><code>Element.getElementsByTagName</code> is similar to
-	{{domxref("Document.getElementsByTagName()")}}, except that it only searches for
-	elements that are descendants of the specified element.</p>
+`Element.getElementsByTagName` is similar to
+{{domxref("Document.getElementsByTagName()")}}, except that it only searches for
+elements that are descendants of the specified element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">elements = element.getElementsByTagName(tagName)</pre>
+```js
+elements = element.getElementsByTagName(tagName)
+```
 
-<ul>
-	<li><code>elements</code> is a <em>live</em> {{domxref("HTMLCollection")}} of elements
-		with a matching tag name, in the order they appear. If no elements are found, the
-		<code>HTMLCollection</code> is empty.</li>
-	<li><code>element</code> is the element from where the search starts. Only the
-		element's descendants are included, not the element itself.</li>
-	<li><code>tagName</code> is the qualified name to look for. The special string
-		<code>"*"</code> represents all elements. For compatibility with XHTML, lower-case
-		should be used.</li>
-</ul>
+- `elements` is a _live_ {{domxref("HTMLCollection")}} of elements
+  with a matching tag name, in the order they appear. If no elements are found, the
+  `HTMLCollection` is empty.
+- `element` is the element from where the search starts. Only the
+  element's descendants are included, not the element itself.
+- `tagName` is the qualified name to look for. The special string
+  `"*"` represents all elements. For compatibility with XHTML, lower-case
+  should be used.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Check the status of each data cell in a table
+```js
+// Check the status of each data cell in a table
 const table = document.getElementById('forecast-table');
 const cells = table.getElementsByTagName('td');
 
@@ -61,12 +60,12 @@ for (let cell of cells) {
     // Grab the data
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

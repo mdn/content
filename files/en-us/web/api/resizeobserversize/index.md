@@ -8,45 +8,39 @@ tags:
   - ResizeObserverSize
 browser-compat: api.ResizeObserverSize
 ---
-<div>{{DefaultAPISidebar("Resize Observer API")}}</div>
+{{DefaultAPISidebar("Resize Observer API")}}
 
-<p>The <strong><code>ResizeObserverSize</code></strong> interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.</p>
+The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In <a href="/en-US/docs/Web/CSS/CSS_Columns">multi-column layout</a>, which is a fragmented context, the sizing returned by <code>ResizeObserverSize</code> will be the size of the first column.</p>
-</div>
+> **Note:** In [multi-column layout](/en-US/docs/Web/CSS/CSS_Columns), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("ResizeObserverSize.blockSize")}}{{readonlyinline}}</dt>
-  <dd>The length of the observed element's border box in the block dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.
-  </dd>
-  <dt>{{domxref("ResizeObserverSize.inlineSize")}}{{readonlyinline}}</dt>
-  <dd>The length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
-  </dd>
-</dl>
+- {{domxref("ResizeObserverSize.blockSize")}}{{readonlyinline}}
+  - : The length of the observed element's border box in the block dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or height; if the writing-mode is vertical, this is the horizontal dimension, or width.
+- {{domxref("ResizeObserverSize.inlineSize")}}{{readonlyinline}}
+  - : The length of the observed element's border box in the inline dimension. For boxes with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For more explanation of writing modes and block and inline dimensions, read <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a>.</p>
-</div>
+> **Note:** For more explanation of writing modes and block and inline dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example the {{domxref("ResizeObserverEntry.contentBoxSize")}} property returns a <code>ResizeObserverSize</code> object. This is an array containing the sizing information for the content box of the observed element.</p>
+In this example the {{domxref("ResizeObserverEntry.contentBoxSize")}} property returns a `ResizeObserverSize` object. This is an array containing the sizing information for the content box of the observed element.
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     console.log(entry.contentBoxSize[0]); // a ResizeObserverSize
   }
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

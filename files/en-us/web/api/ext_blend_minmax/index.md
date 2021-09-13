@@ -8,49 +8,44 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_blend_minmax
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>EXT_blend_minmax</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and extends blending capabilities by adding two new blend equations: the minimum or maximum color components of the source and destination colors.</p>
+The **`EXT_blend_minmax`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and extends blending capabilities by adding two new blend equations: the minimum or maximum color components of the source and destination colors.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are <code>gl.MIN</code> and <code>gl.MAX</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are `gl.MIN` and `gl.MAX`.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>This extension adds two new constants, which can be used in {{domxref("WebGLRenderingContext.blendEquation()")}} and {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}:</p>
+This extension adds two new constants, which can be used in {{domxref("WebGLRenderingContext.blendEquation()")}} and {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}:
 
-<dl>
- <dt><code>ext.MIN_EXT</code></dt>
- <dd>Produces the minimum color components of the source and destination colors.</dd>
- <dt><code>ext.MAX_EXT</code></dt>
- <dd>Produces the maximum color components of the source and destination colors.</dd>
-</dl>
+- `ext.MIN_EXT`
+  - : Produces the minimum color components of the source and destination colors.
+- `ext.MAX_EXT`
+  - : Produces the maximum color components of the source and destination colors.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('EXT_blend_minmax');
+```js
+var ext = gl.getExtension('EXT_blend_minmax');
 
 gl.blendEquation(ext.MIN_EXT);
 gl.blendEquation(ext.MAX_EXT);
 
 gl.blendEquationSeparate(ext.MIN_EXT, ext.MAX_EXT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.blendEquation()")}}</li>
- <li>{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.blendEquation()")}}
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}

@@ -15,24 +15,26 @@ tags:
   - payment
 browser-compat: api.AddressErrors.dependentLocality
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+{{APIRef("Payment Request API")}}
 
-<p>An object based on {{domxref("AddressErrors")}} includes a <strong><code>dependentLocality</code></strong> property when the address's {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.</p>
+An object based on {{domxref("AddressErrors")}} includes a **`dependentLocality`** property when the address's {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>localityError</em> = <em>AddressErrors</em>.dependentLocality;</pre>
+```js
+var localityError = AddressErrors.dependentLocality;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.</p>
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.dependentLocality", "dependentLocality")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
-<p>If the <code>dependentLocality</code> value was validated successfully, this property is not included in the <code>AddressErrors</code> object.</p>
+If the `dependentLocality` value was validated successfully, this property is not included in the `AddressErrors` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

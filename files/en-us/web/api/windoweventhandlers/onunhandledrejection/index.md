@@ -2,47 +2,50 @@
 title: WindowEventHandlers.onunhandledrejection
 slug: Web/API/WindowEventHandlers/onunhandledrejection
 tags:
-- API
-- Event Handler
-- HTML DOM
-- Promises
-- Property
-- Reference
-- WindowEventHandlers
-- events
-- onunhandledrejection
+  - API
+  - Event Handler
+  - HTML DOM
+  - Promises
+  - Property
+  - Reference
+  - WindowEventHandlers
+  - events
+  - onunhandledrejection
 browser-compat: api.WindowEventHandlers.onunhandledrejection
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>onunhandledrejection</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("unhandledrejection")}} events. These events are raised for unhandled
-  {{jsxref("Promise")}} rejections.</p>
+The **`onunhandledrejection`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("unhandledrejection")}} events. These events are raised for unhandled
+{{jsxref("Promise")}} rejections.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">window.onunhandledrejection = <em>function</em>;</pre>
+```js
+window.onunhandledrejection = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>function</code> is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> or function to call when
-  <code>unhandledrejection</code> events are received by the window. The event handler
-  receives as an input parameter as a {{domxref("PromiseRejectionEvent")}}.</p>
+`function` is an [event handler](/en-US/docs/Web/Events/Event_handlers) or function to call when
+`unhandledrejection` events are received by the window. The event handler
+receives as an input parameter as a {{domxref("PromiseRejectionEvent")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example logs unhandled rejections' <code>reason</code> values to the console.</p>
+This example logs unhandled rejections' `reason` values to the console.
 
-<pre class="brush: js">window.onunhandledrejection = function(e) {
+```js
+window.onunhandledrejection = function(e) {
   console.log(e.reason);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

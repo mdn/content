@@ -2,58 +2,57 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 tags:
-- API
-- HTML DOM
-- NeedsMarkupWork
-- Non-standard
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsMarkupWork
+  - Non-standard
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.fullScreen
 ---
-<div>{{APIRef}}{{Non-standard_Header}}</div>
+{{APIRef}}{{Non-standard_Header}}
 
-<p>The <code><strong>fullScreen</strong></code> property of the <code>Window</code>
-  interface indicates whether the window is displayed in full screen mode or not.</p>
+The **`fullScreen`** property of the `Window`
+interface indicates whether the window is displayed in full screen mode or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>isInFullScreen</var> = <var>windowRef</var>.fullScreen;
-</pre>
+```js
+isInFullScreen = windowRef.fullScreen;
+```
 
-<p>With chrome privileges, the property is read-write, otherwise it is read-only. Bear in
-  mind that if you try to set this property without chrome privileges, it will not throw
-  an exception and instead just silently fail. This is to prevent scripts designed to set
-  this property in Internet Explorer from breaking.</p>
+With chrome privileges, the property is read-write, otherwise it is read-only. Bear in
+mind that if you try to set this property without chrome privileges, it will not throw
+an exception and instead just silently fail. This is to prevent scripts designed to set
+this property in Internet Explorer from breaking.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>isInFullScreen</code></dt>
-  <dd>A boolean. Possible Values:</dd>
-</dl>
+- `isInFullScreen`
+  - : A boolean. Possible Values:
 
-<ul>
-  <li><code>true</code>: The window is in full screen mode.</li>
-  <li><code>false</code>: The window is not in full screen mode.</li>
-</ul>
+<!---->
 
-<h2 id="Notes">Notes</h2>
+- `true`: The window is in full screen mode.
+- `false`: The window is not in full screen mode.
 
-<ul>
-  <li>Switching between regular window and full screen will fire the "resize" event on the
-    corresponding window.</li>
-</ul>
+## Notes
 
-<h2 id="Example">Example</h2>
+- Switching between regular window and full screen will fire the "resize" event on the
+  corresponding window.
 
-<pre class="brush: js">if (window.fullScreen) {
+## Example
+
+```js
+if (window.fullScreen) {
   // it's fullscreen!
 }
 else {
   // not fullscreen!
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

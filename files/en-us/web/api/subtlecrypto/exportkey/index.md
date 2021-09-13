@@ -10,101 +10,78 @@ tags:
   - exportKey
 browser-compat: api.SubtleCrypto.exportKey
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>exportKey()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
-  and gives you the key in an external, portable format.</p>
+The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
+interface exports a key: that is, it takes as input a {{domxref("CryptoKey")}} object
+and gives you the key in an external, portable format.
 
-<p>To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
-  <code>true</code>.</p>
+To export a key, the key must have {{domxref("CryptoKey.extractable")}} set to
+`true`.
 
-<p>Keys can be exported in several formats: see <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats">Supported
-    formats</a> in the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>
-  page for details.</p>
+Keys can be exported in several formats: see [Supported
+formats](/en-US/docs/Web/API/SubtleCrypto/importKey#supported_formats) in the
+[`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
+page for details.
 
-<p>Keys are not exported in an encrypted format: to encrypt keys when exporting them use
-  the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">SubtleCrypto.wrapKey()</a></code>
-  API instead.</p>
+Keys are not exported in an encrypted format: to encrypt keys when exporting them use
+the
+[`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey)
+API instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.exportKey(format, key);
-</pre>
+```js
+const result = crypto.subtle.exportKey(format, key);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>format</code></em> is a string value describing the data format in which
-    the key should be exported. It can be one of the following:
+- _`format`_ is a string value describing the data format in which
+  the key should be exported. It can be one of the following:
 
-    <ul>
-      <li><code>raw</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#raw">Raw</a> format.</li>
-      <li><code>pkcs8</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8">PKCS #8</a> format.
-      </li>
-      <li><code>spki</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
-        format.</li>
-      <li><code>jwk</code>: <a
-          href="/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key">JSON Web Key</a>
-        format.</li>
-    </ul>
-  </li>
-  <li><code><em>key</em></code> is the {{domxref("CryptoKey")}} to export.</li>
-</ul>
+  - `raw`: [Raw](/en-US/docs/Web/API/SubtleCrypto/importKey#raw) format.
+  - `pkcs8`: [PKCS #8](/en-US/docs/Web/API/SubtleCrypto/importKey#pkcs_8) format.
+  - `spki`: [SubjectPublicKeyInfo](/en-US/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo)
+    format.
+  - `jwk`: [JSON Web Key](/en-US/docs/Web/API/SubtleCrypto/importKey#json_web_key)
+    format.
 
-<h3 id="Return_value">Return value</h3>
+- `key` is the {{domxref("CryptoKey")}} to export.
 
-<ul>
-  <li><code><em>result</em></code> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>.
+### Return value
 
-    <ul>
-      <li>If <code><em>format</em></code> was <code>jwk</code>, then the promise fulfills
-        with a JSON object containing the key.</li>
-      <li>Otherwise the promise fulfills with an
-        <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-        containing the key.</li>
-    </ul>
-  </li>
-</ul>
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.").
 
-<h3 id="Exceptions">Exceptions</h3>
+  - If `format` was `jwk`, then the promise fulfills
+    with a JSON object containing the key.
+  - Otherwise the promise fulfills with an
+    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    containing the key.
 
-<p>The promise is rejected when one of the following exceptions is encountered:</p>
+### Exceptions
 
-<dl>
-  <dt>{{exception("InvalidAccessError")}}</dt>
-  <dd>Raised when trying to export a non-extractable key.</dd>
-  <dt>{{exception("NotSupported")}}</dt>
-  <dd>Raised when trying to export in an unknown format.</dd>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised when trying to use an invalid format.</dd>
-</dl>
+The promise is rejected when one of the following exceptions is encountered:
 
-<h2 id="Examples">Examples</h2>
+- {{exception("InvalidAccessError")}}
+  - : Raised when trying to export a non-extractable key.
+- {{exception("NotSupported")}}
+  - : Raised when trying to export in an unknown format.
+- {{jsxref("TypeError")}}
+  - : Raised when trying to use an invalid format.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/export-key/index.html">try the
-      working examples</a> out on GitHub.</p>
-</div>
+## Examples
 
-<h3 class="highlight-spanned" id="Raw_export"><span class="highlight-span">Raw
-    export</span></h3>
+> **Note:** You can [try the
+> working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
 
-<p>This example exports an AES key as an <code>ArrayBuffer</code> containing the bytes for
-  the key. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+### Raw export
 
-<pre class="brush: js">/*
+This example exports an AES key as an `ArrayBuffer` containing the bytes for
+the key. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/raw.js)
+
+```js
+/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
@@ -129,23 +106,21 @@ window.crypto.subtle.generateKey(
   },
   true,
   ["encrypt", "decrypt"]
-).then((key) =&gt; {
+).then((key) => {
   const exportButton = document.querySelector(".raw");
-  exportButton.addEventListener("click", () =&gt; {
+  exportButton.addEventListener("click", () => {
     exportCryptoKey(key);
   });
 });
-</pre>
+```
 
-<h3 class="highlight-spanned" id="PKCS_8_export"><span class="highlight-span">PKCS #8
-    export</span></h3>
+### PKCS #8 export
 
-<p>This example exports an RSA private signing key as a PKCS #8 object. The exported key
-  is then PEM-encoded. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This example exports an RSA private signing key as a PKCS #8 object. The exported key
+is then PEM-encoded. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/pkcs8.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -183,23 +158,22 @@ window.crypto.subtle.generateKey(
   },
   true,
   ["sign", "verify"]
-).then((keyPair) =&gt; {
+).then((keyPair) => {
   const exportButton = document.querySelector(".pkcs8");
-  exportButton.addEventListener("click", () =&gt; {
+  exportButton.addEventListener("click", () => {
     exportCryptoKey(keyPair.privateKey);
   });
 
-});</pre>
+});
+```
 
-<h3 class="highlight-spanned" id="SubjectPublicKeyInfo_export"><span
-    class="highlight-span">SubjectPublicKeyInfo export</span></h3>
+### SubjectPublicKeyInfo export
 
-<p>This example exports an RSA public encryption key as a PEM-encoded SubjectPublicKeyInfo
-  object. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This example exports an RSA public encryption key as a PEM-encoded SubjectPublicKeyInfo
+object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/spki.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Convert  an ArrayBuffer into a string
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
@@ -237,23 +211,20 @@ window.crypto.subtle.generateKey(
   },
   true,
   ["encrypt", "decrypt"]
-).then((keyPair) =&gt; {
+).then((keyPair) => {
   const exportButton = document.querySelector(".spki");
-  exportButton.addEventListener("click", () =&gt; {
+  exportButton.addEventListener("click", () => {
     exportCryptoKey(keyPair.publicKey);
   });
 });
-</pre>
+```
 
-<h3 class="highlight-spanned"><span class="highlight-span">JSON
-    Web Key export</span></h3>
+### JSON Web Key export
 
-<p>This code exports an ECDSA private signing key as a JSON Web Key object. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This code exports an ECDSA private signing key as a JSON Web Key object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/export-key/jwk.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Export the given key and write it into the "exported-key" space.
 */
 async function exportCryptoKey(key) {
@@ -276,36 +247,27 @@ window.crypto.subtle.generateKey(
   },
   true,
   ["sign", "verify"]
-).then((keyPair) =&gt; {
+).then((keyPair) => {
   const exportButton = document.querySelector(".jwk");
-  exportButton.addEventListener("click", () =&gt; {
+  exportButton.addEventListener("click", () => {
     exportCryptoKey(keyPair.privateKey);
   });
 
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.importKey()</a></code>
-  </li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">SubtleCrypto.wrapKey()</a></code>
-  </li>
-  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc5208"
-      rel="noopener">PKCS #8 format</a>.</li>
-  <li><a class="external external-icon"
-      href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1"
-      rel="noopener">SubjectPublicKeyInfo format</a>.</li>
-  <li><a class="external external-icon" href="https://datatracker.ietf.org/doc/html/rfc7517"
-      rel="noopener">JSON Web Key format</a>.</li>
-</ul>
+- [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
+- [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey)
+- [PKCS #8 format](https://datatracker.ietf.org/doc/html/rfc5208).
+- [SubjectPublicKeyInfo format](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1).
+- [JSON Web Key format](https://datatracker.ietf.org/doc/html/rfc7517).

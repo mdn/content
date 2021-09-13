@@ -9,55 +9,51 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFESpecularLightingElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFESpecularLightingElement</code></strong> interface corresponds to the {{SVGElement("feSpecularLighting")}} element.</p>
+The **`SVGFESpecularLightingElement`** interface corresponds to the {{SVGElement("feSpecularLighting")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFESpecularLightingElement.height")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.in1")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.kernelUnitLengthX")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.kernelUnitLengthY")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.result")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.specularConstant")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("specularConstant")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.specularExponent")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("specularExponent")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.surfaceScale")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("surfaceScale")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFESpecularLightingElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFESpecularLightingElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.in1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.kernelUnitLengthX")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the X component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.kernelUnitLengthY")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the Y component of the {{SVGAttr("kernelUnitLength")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.specularConstant")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("specularConstant")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.specularExponent")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("specularExponent")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.surfaceScale")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("surfaceScale")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFESpecularLightingElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feSpecularLighting")}}</li>
-</ul>
+- {{SVGElement("feSpecularLighting")}}

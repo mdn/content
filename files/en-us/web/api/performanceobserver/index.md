@@ -11,57 +11,51 @@ tags:
   - observers
 browser-compat: api.PerformanceObserver
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>PerformanceObserver</code></strong> interface is used to <em>observe</em> performance measurement events and be notified of new {{domxref("PerformanceEntry","performance entries", '', 'true')}} as they are recorded in the browser's <em>performance timeline</em>.</p>
+The **`PerformanceObserver`** interface is used to _observe_ performance measurement events and be notified of new {{domxref("PerformanceEntry","performance entries", '', 'true')}} as they are recorded in the browser's _performance timeline_.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PerformanceObserver.PerformanceObserver","PerformanceObserver()")}}</dt>
- <dd>Creates and returns a new <code>PerformanceObserver</code> object.</dd>
-</dl>
+- {{domxref("PerformanceObserver.PerformanceObserver","PerformanceObserver()")}}
+  - : Creates and returns a new `PerformanceObserver` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("PerformanceObserver.supportedEntryTypes")}}{{readonlyInline}}</dt>
-  <dd>Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.</dd>
-</dl>
+- {{domxref("PerformanceObserver.supportedEntryTypes")}}{{readonlyInline}}
+  - : Returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PerformanceObserver.observe","PerformanceObserver.observe()")}}</dt>
- <dd>Specifies the set of {{domxref("PerformanceEntry.entryType","entry types")}} to observe. The performance observer's callback function will be invoked when a {{domxref("PerformanceEntry","performance entry")}} is recorded for one of the specified <code>entryTypes</code></dd>
- <dt>{{domxref("PerformanceObserver.disconnect","PerformanceObserver.disconnect()")}}</dt>
- <dd>Stops the performance observer callback from receiving {{domxref("PerformanceEntry","performance entries")}}.</dd>
- <dt>{{domxref("PerformanceObserver.takeRecords","PerformanceObserver.takeRecords()")}}</dt>
- <dd>Returns the current list of {{domxref("PerformanceEntry","performance entries")}} stored in the performance observer, emptying it out.</dd>
-</dl>
+- {{domxref("PerformanceObserver.observe","PerformanceObserver.observe()")}}
+  - : Specifies the set of {{domxref("PerformanceEntry.entryType","entry types")}} to observe. The performance observer's callback function will be invoked when a {{domxref("PerformanceEntry","performance entry")}} is recorded for one of the specified `entryTypes`
+- {{domxref("PerformanceObserver.disconnect","PerformanceObserver.disconnect()")}}
+  - : Stops the performance observer callback from receiving {{domxref("PerformanceEntry","performance entries")}}.
+- {{domxref("PerformanceObserver.takeRecords","PerformanceObserver.takeRecords()")}}
+  - : Returns the current list of {{domxref("PerformanceEntry","performance entries")}} stored in the performance observer, emptying it out.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function observer_callback(list, observer) {
+```js
+function observer_callback(list, observer) {
    // Process the "measure" event
 }
 let observer = new PerformanceObserver(observer_callback);
-observer.observe({entryTypes: ["measure"]});</pre>
+observer.observe({entryTypes: ["measure"]});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('MutationObserver')}}</li>
- <li>{{domxref('ResizeObserver')}}</li>
- <li>{{domxref('IntersectionObserver')}}</li>
-</ul>
+- {{domxref('MutationObserver')}}
+- {{domxref('ResizeObserver')}}
+- {{domxref('IntersectionObserver')}}

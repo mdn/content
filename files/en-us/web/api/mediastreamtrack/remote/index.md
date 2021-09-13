@@ -10,25 +10,24 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.remote
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-<p>The <code><strong>MediaStreamTrack.remote</strong></code> read-only property allows
-  Javascript to know whether a WebRTC MediaStreamTrack is from a remote source or a local
-  one. It returns a boolean value that is <code>true</code> if the track
-  is sourced remotely (that is, sourced by an {{domxref("RTCPeerConnection")}}), or
-  <code>false</code> if it is sourced locally.</p>
+The **`MediaStreamTrack.remote`** read-only property allows
+Javascript to know whether a WebRTC MediaStreamTrack is from a remote source or a local
+one. It returns a boolean value that is `true` if the track
+is sourced remotely (that is, sourced by an {{domxref("RTCPeerConnection")}}), or
+`false` if it is sourced locally.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>bool</em> = <em>track</em>.remote;</pre>
+```js
+var bool = track.remote;
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

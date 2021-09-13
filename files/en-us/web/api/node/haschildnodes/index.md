@@ -2,70 +2,68 @@
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
 tags:
-- API
-- DOM
-- Method
-- NeedsSpecTable
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - NeedsSpecTable
+  - Node
+  - Reference
 browser-compat: api.Node.hasChildNodes
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.hasChildNodes()</strong></code> method returns a
-  boolean value indicating whether the given {{domxref("Node")}} has <a
-    href="/en-US/docs/Web/API/Node.childNodes">child nodes</a> or not.</p>
+The **`Node.hasChildNodes()`** method returns a
+boolean value indicating whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node.childNodes) or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>bool</em> = <em>node</em>.hasChildNodes();</pre>
+```js
+bool = node.hasChildNodes();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value that is <code>true</code> if the node has child nodes, and
-  <code>false</code> otherwise.</p>
+A boolean value that is `true` if the node has child nodes, and
+`false` otherwise.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let foo = document.getElementById('foo');
+```js
+let foo = document.getElementById('foo');
 
 if (foo.hasChildNodes()) {
   // Do something with 'foo.childNodes'
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Here is one possible polyfill:</p>
+Here is one possible polyfill:
 
-<pre class="brush:js">;(function(prototype) {
+```js
+;(function(prototype) {
   prototype.hasChildNodes = prototype.hasChildNodes || function() {
     return !!this.firstChild;
   }
 })(Node.prototype);
-</pre>
+```
 
-<p>There are various ways to determine whether the node has a child node:</p>
+There are various ways to determine whether the node has a child node:
 
-<ul>
-  <li><code>node.hasChildNodes()</code></li>
-  <li><code>node.firstChild != null</code> (or just <code>node.firstChild</code>)</li>
-  <li><code>node.childNodes &amp;&amp; node.childNodes.length</code> (or
-    <code>node.childNodes.length &gt; 0</code>)</li>
-</ul>
+- `node.hasChildNodes()`
+- `node.firstChild != null` (or just `node.firstChild`)
+- `node.childNodes && node.childNodes.length` (or
+  `node.childNodes.length > 0`)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.childNodes")}}</li>
-  <li>{{domxref("Node.hasAttributes")}}</li>
-</ul>
+- {{domxref("Node.childNodes")}}
+- {{domxref("Node.hasAttributes")}}

@@ -9,42 +9,44 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.clear
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("SVGPointList")}} interface removes all items from the list.</p>
+The **`clear()`** method of the {{domxref("SVGPointList")}} interface removes all items from the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">SVGPointList.clear();</pre>
+```js
+SVGPointList.clear();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
-  <dd>Thrown if the list is read-only.</dd>
-</dl>
+- {{domxref("DOMException")}} `NoModicationAllowedError`
+  - : Thrown if the list is read-only.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. Calling <code>clear()</code> empties the list. Therefore the polyline no longer displays in the SVG.</p>
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. Calling `clear()` empties the list. Therefore the polyline no longer displays in the SVG.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-</svg></pre>
+```html
+<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+```
 
-<pre class="brush: js">let example = document.getElementById("example");
-example.points.clear();</pre>
+```js
+let example = document.getElementById("example");
+example.points.clear();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

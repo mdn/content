@@ -9,33 +9,37 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.outputs
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>outputs</code></strong> read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI output ports.</p>
+The **`outputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI output ports.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let outputs = MIDIAccess.outputs;</pre>
+```js
+let outputs = MIDIAccess.outputs;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("MIDIOutputMap")}} instance.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("MIDIOutputMap")}} instance.
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of <code>outputs</code> to the console returns a {{domxref("MIDIOutputMap")}}.</p>
+## Examples
 
-<pre class="brush: js">navigator.requestMIDIAccess()
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `outputs` to the console returns a {{domxref("MIDIOutputMap")}}.
+
+```js
+navigator.requestMIDIAccess()
   .then(function(access) {
 
      console.log(access.outputs);
 
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

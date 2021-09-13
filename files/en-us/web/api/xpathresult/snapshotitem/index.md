@@ -2,71 +2,74 @@
 title: XPathResult.snapshotItem()
 slug: Web/API/XPathResult/snapshotItem
 tags:
-- API
-- DOM XPath API
-- Method
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Method
+  - Reference
+  - XPath
+  - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The <strong><code>snapshotItem()</code></strong> method of the
-  {{domxref("XPathResult")}} interface returns an item of the snapshot collection or
-  <code>null</code> in case the index is not within the range of nodes. Unlike the
-  iterator result, the snapshot does not become invalid, but may not correspond to the
-  current document if it is mutated.</p>
+The **`snapshotItem()`** method of the
+{{domxref("XPathResult")}} interface returns an item of the snapshot collection or
+`null` in case the index is not within the range of nodes. Unlike the
+iterator result, the snapshot does not become invalid, but may not correspond to the
+current document if it is mutated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>node</var> = <var>result</var>.snapshotItem(i);
-</pre>
+```js
+var node = result.snapshotItem(i);
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The {{domxref("Node")}} at the given index within the node set of the
-  <code>XPathResult</code>.</p>
+The {{domxref("Node")}} at the given index within the node set of the
+`XPathResult`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case {{domxref("XPathResult.resultType")}} is not
-  <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or <code>ORDERED_NODE_SNAPSHOT_TYPE</code>, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+In case {{domxref("XPathResult.resultType")}} is not
+`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>snapshotItem()</code> method.</p>
+The following example shows the use of the `snapshotItem()` method.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Tag names of the matched nodes: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Tag names of the matched nodes: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 var node = null;
 var tagNames = [];
-for(var i = 0; i &lt; result.snapshotLength; i++) {
+for(var i = 0; i < result.snapshotLength; i++) {
   var node = result.snapshotItem(i);
   tagNames.push(node.localName);
 }
 document.querySelector("output").textContent = tagNames.join(", ");
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

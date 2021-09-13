@@ -8,38 +8,38 @@ tags:
   - PushSubscriptionOptions
 browser-compat: api.PushSubscriptionOptions
 ---
-<div>{{DefaultAPISidebar("Push API")}}</div>
+{{DefaultAPISidebar("Push API")}}
 
-<p>The <strong><code>PushSubscriptionOptions</code></strong> interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.</p>
+The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.
 
-<p>The read-only <code>PushSubscriptionOptions</code> object is returned by calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}}. This interface has no constructor of its own.</p>
+The read-only `PushSubscriptionOptions` object is returned by calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}}. This interface has no constructor of its own.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("PushSubscriptionOptions.userVisibleOnly")}}{{ReadOnlyInline}}</dt>
-  <dd>A boolean value indicating that the returned push
-    subscription will only be used for messages whose effect is made visible to the user.</dd>
-  <dt>{{domxref("PushSubscriptionOptions.applicationServerKey")}}{{ReadOnlyInline}}</dt>
-  <dd>A public key your push server will use to send
-    messages to client apps via a push server.</dd>
-</dl>
+- {{domxref("PushSubscriptionOptions.userVisibleOnly")}}{{ReadOnlyInline}}
+  - : A boolean value indicating that the returned push
+    subscription will only be used for messages whose effect is made visible to the user.
+- {{domxref("PushSubscriptionOptions.applicationServerKey")}}{{ReadOnlyInline}}
+  - : A public key your push server will use to send
+    messages to client apps via a push server.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}} returns a <code>PushSubscriptionOptions</code> object. In the example below this is printed to the console.</p>
+Calling {{domxref("PushSubscription.options")}} on a {{domxref("PushSubscription")}} returns a `PushSubscriptionOptions` object. In the example below this is printed to the console.
 
-<pre class="brush:js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     let options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

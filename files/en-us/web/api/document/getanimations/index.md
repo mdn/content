@@ -17,55 +17,54 @@ tags:
   - web animations api
 browser-compat: api.Document.getAnimations
 ---
-<p>{{APIRef("Web Animations")}}</p>
+{{APIRef("Web Animations")}}
 
-<p>The <code>getAnimations()</code> method of the {{domxref("Document")}} interface
-  returns an array of all {{domxref("Animation")}} objects currently in effect whose
-  target elements are descendants of the document. This array includes <a
-    href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a>, <a
-    href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>, and <a
-    href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a>.</p>
+The `getAnimations()` method of the {{domxref("Document")}} interface
+returns an array of all {{domxref("Animation")}} objects currently in effect whose
+target elements are descendants of the document. This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">getAnimations();</pre>
+```js
+getAnimations();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing one
-  animation currently associated with elements which are descendants of the
-  {{domxref("Document")}} on which it's called.</p>
+An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing one
+animation currently associated with elements which are descendants of the
+{{domxref("Document")}} on which it's called.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code snippet will slow down all animations on a page by halving their
-  {{domxref("Animation.playbackRate")}}.</p>
+The following code snippet will slow down all animations on a page by halving their
+{{domxref("Animation.playbackRate")}}.
 
-<pre class="brush: js">document.getAnimations().forEach(
+```js
+document.getAnimations().forEach(
   function (animation) {
     animation.playbackRate *= .5;
   }
-);</pre>
+);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></li>
-  <li>{{domxref("Element.getAnimations()")}} - Fetch only the animations on a single
-    {{domxref("Element")}} and its descendants.</li>
-  <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- {{domxref("Element.getAnimations()")}} - Fetch only the animations on a single
+  {{domxref("Element")}} and its descendants.
+- {{domxref("Animation")}}

@@ -10,53 +10,57 @@ tags:
   - onorientationchange
 browser-compat: api.Window.orientationchange_event
 ---
-<div>{{APIRef}} {{Deprecated_Header}}</div>
+{{APIRef}} {{Deprecated_Header}}
 
-<p>The <code>orientationchange</code> event is fired when the orientation of the device has changed.</p>
+The `orientationchange` event is fired when the orientation of the device has changed.
 
-<p>This event is deprecated. Listen for the {{domxref("ScreenOrientation/change_event", "change")}} event instead.</p>
-
+This event is deprecated. Listen for the {{domxref("ScreenOrientation/change_event", "change")}} event instead.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("Window/onorientationchange", "onorientationchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("Window/onorientationchange", "onorientationchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>You can use the <code>orientationchange</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
+You can use the `orientationchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
-<pre class="brush:js">window.addEventListener("orientationchange", function(event) {
+```js
+window.addEventListener("orientationchange", function(event) {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
 });
-</pre>
+```
 
-<p>Or use the {{domxref("Window/onorientationchange", "onorientationchange")}} event handler property:</p>
+Or use the {{domxref("Window/onorientationchange", "onorientationchange")}} event handler property:
 
-<pre class="brush: js">window.onorientationchange = function(event) {
+```js
+window.onorientationchange = function(event) {
   console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

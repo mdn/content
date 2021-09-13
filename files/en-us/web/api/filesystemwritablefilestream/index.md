@@ -10,34 +10,33 @@ tags:
   - write file
 browser-compat: api.FileSystemWritableFileStream
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>FileSystemWritableFileStream</code></strong> interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
+The **`FileSystemWritableFileStream`** interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("WritableStream")}}.</em></p>
+_Inherits properties from its parent, {{DOMxRef("WritableStream")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{DOMxRef("WritableStream")}}.</em></p>
+_Inherits methods from its parent, {{DOMxRef("WritableStream")}}._
 
-<dl>
- <dt>{{domxref('FileSystemWritableFileStream.write')}}</dt>
- <dd>Writes content into the file the method is called on, at the current file cursor offset.</dd>
- <dt>{{domxref('FileSystemWritableFileStream.seek')}}</dt>
- <dd>Updates the current file cursor offset to the position (in bytes) specified.</dd>
- <dt>{{domxref('FileSystemWritableFileStream.truncate')}}</dt>
- <dd>Resizes the file associated with the stream to be the specified size in bytes.</dd>
-</dl>
+- {{domxref('FileSystemWritableFileStream.write')}}
+  - : Writes content into the file the method is called on, at the current file cursor offset.
+- {{domxref('FileSystemWritableFileStream.seek')}}
+  - : Updates the current file cursor offset to the position (in bytes) specified.
+- {{domxref('FileSystemWritableFileStream.truncate')}}
+  - : Resizes the file associated with the stream to be the specified size in bytes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
+This asynchronous function opens the 'Save File' picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. From which a writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-<p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.</p>
+A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
 
-<pre class="brush: js">async function saveFile() {
+```js
+async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -51,11 +50,12 @@ browser-compat: api.FileSystemWritableFileStream
   // close the file and write the contents to disk.
   await writableStream.close();
 }
-</pre>
+```
 
-<p>The following show different examples of options that can be passed into the <code>write()</code> method.</p>
+The following show different examples of options that can be passed into the `write()` method.
 
-<pre class="brush: js">// just pass in the data (no options)
+```js
+// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position
@@ -66,19 +66,17 @@ writableStream.write({ type: "seek", position: position })
 
 // resizes the file to be size bytes long
 writableStream.write({ type: "truncate", size: size })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

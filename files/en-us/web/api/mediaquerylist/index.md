@@ -13,51 +13,46 @@ tags:
   - query
 browser-compat: api.MediaQueryList
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>A <strong><code>MediaQueryList</code></strong> object stores information on a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> applied to a document, with support for both immediate and event-driven matching against the state of the document.</p>
+A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Media_Queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
 
-<p>You can create a <code>MediaQueryList</code> by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e. when the media query test starts or stops evaluating to <code>true</code>).</p>
+You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e. when the media query test starts or stops evaluating to `true`).
 
-<p>This is very useful for adaptive design, since this makes it possible to observe a document to detect when its media queries change, instead of polling the values periodically, and allows you to programmatically make changes to a document based on media query status.</p>
+This is very useful for adaptive design, since this makes it possible to observe a document to detect when its media queries change, instead of polling the values periodically, and allows you to programmatically make changes to a document based on media query status.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>MediaQueryList</code> interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}.</em></p>
+_The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}</dt>
- <dd>A boolean value that returns <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list, or <code>false</code> if not.</dd>
- <dt>{{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}</dt>
- <dd>A {{DOMxRef("DOMString")}} representing a serialized media query.</dd>
-</dl>
+- {{DOMxRef("MediaQueryList.matches", "matches")}}{{ReadOnlyInline}}
+  - : A boolean value that returns `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
+- {{DOMxRef("MediaQueryList.media", "media")}}{{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>MediaQueryList</code> interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}.</em></p>
+_The `MediaQueryList` interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.addListener", "addListener()")}}{{deprecated_inline}}</dt>
- <dd>Adds to the <code>MediaQueryList</code> a callback which is invoked whenever the media query status—whether or not the document matches the media queries in the list—changes. This method exists primarily for backward compatibility; if possible, you should instead use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to watch for the {{domxref("EventTarget.change_event", "change")}} event.</dd>
- <dt>{{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}{{deprecated_inline}}</dt>
- <dd>Removes the specified listener callback from the callbacks to be invoked when the <code>MediaQueryList</code> changes media query status, which happens any time the document switches between matching and not matching the media queries listed in the <code>MediaQueryList</code>. This method has been kept for backward compatibility; if possible, you should generally use {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} to remove change notification callbacks (which should have previously been added using <code>addEventListener()</code>).</dd>
-</dl>
+- {{DOMxRef("MediaQueryList.addListener", "addListener()")}}{{deprecated_inline}}
+  - : Adds to the `MediaQueryList` a callback which is invoked whenever the media query status—whether or not the document matches the media queries in the list—changes. This method exists primarily for backward compatibility; if possible, you should instead use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to watch for the {{domxref("EventTarget.change_event", "change")}} event.
+- {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}}{{deprecated_inline}}
+  - : Removes the specified listener callback from the callbacks to be invoked when the `MediaQueryList` changes media query status, which happens any time the document switches between matching and not matching the media queries listed in the `MediaQueryList`. This method has been kept for backward compatibility; if possible, you should generally use {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} to remove change notification callbacks (which should have previously been added using `addEventListener()`).
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>The following events are delivered to <code>MediaQueryList</code> objects:</em></p>
+_The following events are delivered to `MediaQueryList` objects:_
 
-<dl>
- <dt>{{DOMxRef("MediaQueryList.change_event", "change")}}</dt>
- <dd>Sent to the <code>MediaQueryList</code> when the result of running the media query against the document changes. For example, if the media query is <code>(min-width: 400px)</code>, the <code>change</code> event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.<br>
- Also available using the {{DOMxRef("MediaQueryList.onchange", "onchange")}} event handler property.</dd>
-</dl>
+- {{DOMxRef("MediaQueryList.change_event", "change")}}
+  - : Sent to the `MediaQueryList` when the result of running the media query against the document changes. For example, if the media query is `(min-width: 400px)`, the `change` event is fired any time the width of the document's {{Glossary("viewport")}} changes such that its width moves across the 400px boundary in either direction.
+    Also available using the {{DOMxRef("MediaQueryList.onchange", "onchange")}} event handler property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This simple example creates a <code>MediaQueryList</code> and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.</p>
+This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
-<pre class="brush: js">var para = document.querySelector('p');
+```js
+var para = document.querySelector('p');
 var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
@@ -72,28 +67,25 @@ function screenTest(e) {
   }
 }
 
-mql.addEventListener('change', screenTest);</pre>
+mql.addEventListener('change', screenTest);
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can find this example on GitHub (see the <a href="https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html">source code</a>, and also see it <a href="https://mdn.github.io/dom-examples/mediaquerylist/index.html">running live</a>).</p>
-</div>
+> **Note:** You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
-<p>You can find other examples on the individual property and method pages.</p>
+You can find other examples on the individual property and method pages.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
- <li>The article {{DOMxRef("Window.devicePixelRatio")}} also has a useful example</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryListEvent")}}
+- The article {{DOMxRef("Window.devicePixelRatio")}} also has a useful example

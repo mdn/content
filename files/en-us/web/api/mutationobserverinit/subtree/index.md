@@ -2,76 +2,81 @@
 title: MutationObserverInit.subtree
 slug: Web/API/MutationObserverInit/subtree
 tags:
-- API
-- DOM
-- DOM WHATWG
-- Monitoring
-- Mutation Observer
-- Mutation Observer API
-- MutationObserverInit
-- Nodes
-- Observer
-- Reference
-- Watching
-- mutation
-- subtree
+  - API
+  - DOM
+  - DOM WHATWG
+  - Monitoring
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserverInit
+  - Nodes
+  - Observer
+  - Reference
+  - Watching
+  - mutation
+  - subtree
 browser-compat: api.MutationObserverInit.subtree
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
-    dictionary's optional <strong><code>subtree</code></strong> property can be set to
-    <code>true</code> to monitor the targeted node <em>and</em> all of its
-    descendants.
+The **{{domxref("MutationObserverInit")}}**
+dictionary's optional **`subtree`** property can be set to
+`true` to monitor the targeted node _and_ all of its
+descendants.
 
-<p>The default value, <code>false</code>, indicates only the target
-  node itself is to be monitored for changes.</p>
+The default value, `false`, indicates only the target
+node itself is to be monitored for changes.
 
-<p><code>subtree</code> can be used in concert with the other options to extend monitoring
-  of attributes, text content, and child lists to the entire subtree rooted at the target
-  node.</p>
+`subtree` can be used in concert with the other options to extend monitoring
+of attributes, text content, and child lists to the entire subtree rooted at the target
+node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>subtree</em>: true | false
+```js
+var options = {
+  subtree: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value. The default, <code>false</code>, indicates that only the target node
-  specified when calling {{domxref("MutationObserver.observe()")}} is to be monitored for
-  changes. Changing this value to <code>true</code> causes the entire subtree rooted at
-  the specified target node to be monitored for the changes indicated by the other
-  options.</p>
+A Boolean value. The default, `false`, indicates that only the target node
+specified when calling {{domxref("MutationObserver.observe()")}} is to be monitored for
+changes. Changing this value to `true` causes the entire subtree rooted at
+the specified target node to be monitored for the changes indicated by the other
+options.
 
-<p>For example, to watch the target node only for attribute changes, the
-  {{domxref("MutationObserverInit")}} passed into
-  {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}} can be:</p>
+For example, to watch the target node only for attribute changes, the
+{{domxref("MutationObserverInit")}} passed into
+{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}} can be:
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   attributes: true,
   subtree: false
-};</pre>
+};
+```
 
-<p>Since the default value of <code>subtree</code> is <code>false</code>, line 3 is
-  optional.</p>
+Since the default value of `subtree` is `false`, line 3 is
+optional.
 
-<p>To monitor the entire subtree for attribute changes, set <code>subtree</code> to
-  <code>true</code>:</p>
+To monitor the entire subtree for attribute changes, set `subtree` to
+`true`:
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   attributes: true,
   subtree: true
-};</pre>
+};
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

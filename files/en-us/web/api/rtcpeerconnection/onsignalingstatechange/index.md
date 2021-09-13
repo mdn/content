@@ -18,70 +18,73 @@ tags:
   - onsignalingstatechange
 browser-compat: api.RTCPeerConnection.onsignalingstatechange
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>onsignalingstatechange</strong></code> event
-    handler property of the <strong>{{domxref("RTCPeerConnection")}}</strong> interface
-    specifies a function to be called when the {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event
-    occurs on an {{domxref("RTCPeerConnection")}} interface. The function receives
-  as input the event object of type {{domxref("Event")}}; this event is sent when the peer
-  connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} changes,
-  which may happen either because of a call to
-  {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or to
-  {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.</p>
+The **`onsignalingstatechange`** event
+handler property of the **{{domxref("RTCPeerConnection")}}** interface
+specifies a function to be called when the {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event
+occurs on an {{domxref("RTCPeerConnection")}} interface. The function receives
+as input the event object of type {{domxref("Event")}}; this event is sent when the peer
+connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} changes,
+which may happen either because of a call to
+{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or to
+{{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>rtcPeerConnection</em>.onsignalingstatechange = <em>errorHandler</em>;
-</pre>
+```js
+rtcPeerConnection.onsignalingstatechange = errorHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set this to a function which you provide that receives an {{domxref("Event")}} object
-  as input; this contains the {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event. This event object
-  doesn't provide details about what changed, but you can examine the
-  {{domxref("RTCPeerConnection.signalingState", "signalingState")}} property to determine
-  what the new state is.</p>
+Set this to a function which you provide that receives an {{domxref("Event")}} object
+as input; this contains the {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event. This event object
+doesn't provide details about what changed, but you can examine the
+{{domxref("RTCPeerConnection.signalingState", "signalingState")}} property to determine
+what the new state is.
 
-<p>You may also, as always, set up a handler for the
-  {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
+You may also, as always, set up a handler for the
+{{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
-<pre class="brush: js">myRTCPeerConnection.addEventListener("signalingstatechange", mySignalingStateChangeHandler);
-</pre>
+```js
+myRTCPeerConnection.addEventListener("signalingstatechange", mySignalingStateChangeHandler);
+```
 
-<p>Or, using an anonymous (inline) handler:</p>
+Or, using an anonymous (inline) handler:
 
-<pre class="brush: js">myRTCPeerConnection.addEventListener("signalingstatechange", event =&gt; {
+```js
+myRTCPeerConnection.addEventListener("signalingstatechange", event => {
   /* handle the event here */
-});</pre>
+});
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet shows a handler for {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} that looks for the
-  <code>"have-local-pranswer"</code> signaling state—indicating that a remote offer has
-  been received and a local description of type <code>"pranswer"</code> has been applied
-  in response.</p>
+This snippet shows a handler for {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} that looks for the
+`"have-local-pranswer"` signaling state—indicating that a remote offer has
+been received and a local description of type `"pranswer"` has been applied
+in response.
 
-<pre class="brush: js">pc.onsignalingstatechange = function(event) {
+```js
+pc.onsignalingstatechange = function(event) {
   if (pc.signalingState === "have-local-pranswer") {
     // setLocalDescription() has been called with an answer
   }
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and
-      video calling</a>: A WebRTC example</li>
-  <li>The {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event and its type, {{domxref("Event")}}.</li>
-</ul>
+- [Signaling and
+  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling): A WebRTC example
+- The {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}} event and its type, {{domxref("Event")}}.

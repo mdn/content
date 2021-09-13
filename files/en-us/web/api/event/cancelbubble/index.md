@@ -2,43 +2,46 @@
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
 tags:
-- API
-- DOM
-- Event
-- Property
-- Reference
-- cancelBubble
+  - API
+  - DOM
+  - Event
+  - Property
+  - Reference
+  - cancelBubble
 browser-compat: api.Event.cancelBubble
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>cancelBubble</strong></code> property of the {{domxref("Event")}}
-  interface is a historical alias to {{domxref("Event.stopPropagation()")}}. Setting its
-  value to <code>true</code> before returning from an event handler prevents propagation
-  of the event. In later implementations, setting this to <code>false</code> does nothing.
-  See {{anch("Browser compatibility")}} for details.</p>
+The **`cancelBubble`** property of the {{domxref("Event")}}
+interface is a historical alias to {{domxref("Event.stopPropagation()")}}. Setting its
+value to `true` before returning from an event handler prevents propagation
+of the event. In later implementations, setting this to `false` does nothing.
+See {{anch("Browser compatibility")}} for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>event</em>.cancelBubble = <em>bool;</em>
-var <em>bool</em> = <em>event</em>.cancelBubble;
-</pre>
+```js
+event.cancelBubble = bool;
+var bool = event.cancelBubble;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Either <code>true</code> or <code>false</code>.</p>
+Either `true` or `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">elem.onclick = function(event) {
+```js
+elem.onclick = function(event) {
   // Do cool things here
   event.cancelBubble = true;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

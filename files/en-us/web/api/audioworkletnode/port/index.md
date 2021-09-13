@@ -2,50 +2,51 @@
 title: AudioWorkletNode.port
 slug: Web/API/AudioWorkletNode/port
 tags:
-- API
-- AudioWorkletNode
-- Property
-- Reference
-- Web Audio API
-- port
+  - API
+  - AudioWorkletNode
+  - Property
+  - Reference
+  - Web Audio API
+  - port
 browser-compat: api.AudioWorkletNode.port
 ---
-<div>{{APIRef("Web Audio API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
-<p>The read-only <strong><code>port</code></strong> property of the
-  {{domxref("AudioWorkletNode")}} interface returns the associated
-  {{domxref("MessagePort")}}. It can be used to communicate between the node and its
-  associated {{domxref("AudioWorkletProcessor")}}.</p>
+The read-only **`port`** property of the
+{{domxref("AudioWorkletNode")}} interface returns the associated
+{{domxref("MessagePort")}}. It can be used to communicate between the node and its
+associated {{domxref("AudioWorkletProcessor")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The port at the other end of the channel is
-    available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the
-    processor.</p>
-</div>
+> **Note:** The port at the other end of the channel is
+> available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the
+> processor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>audioWorkletNodeInstance</em>.port;</pre>
+```js
+audioWorkletNodeInstance.port;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("MessagePort")}} object that is connecting the
-  <code>AudioWorkletNode</code> and its associated <code>AudioWorkletProcessor</code>.</p>
+The {{domxref("MessagePort")}} object that is connecting the
+`AudioWorkletNode` and its associated `AudioWorkletProcessor`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To demonstrate bidirectional communication capabilities, we'll create an
-  <code>AudioWorkletProcessor</code>, which will output silence and respond to ping
-  requests from its <code>AudioWorkletNode</code>.</p>
+To demonstrate bidirectional communication capabilities, we'll create an
+`AudioWorkletProcessor`, which will output silence and respond to ping
+requests from its `AudioWorkletNode`.
 
-<p>First, we need to define a custom <code>AudioWorkletProcessor</code>, and register it.
-  Note that this should be done in a separate file.</p>
+First, we need to define a custom `AudioWorkletProcessor`, and register it.
+Note that this should be done in a separate file.
 
-<pre class="brush: js">// ping-pong-processor.js
+```js
+// ping-pong-processor.js
 class PingPongProcessor extends AudioWorkletProcessor {
   constructor (...args) {
     super(...args)
-    this.port.onmessage = (e) =&gt; {
+    this.port.onmessage = (e) => {
       console.log(e.data)
       this.port.postMessage('pong')
     }
@@ -56,37 +57,36 @@ class PingPongProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('ping-pong-processor', PingPongProcessor)
-</pre>
+```
 
-<p>Now in our main scripts file we'll load the processor, create an instance of
-  <code>AudioWorkletNode</code> passing the name of the processor, and connect the node to
-  an audio graph.</p>
+Now in our main scripts file we'll load the processor, create an instance of
+`AudioWorkletNode` passing the name of the processor, and connect the node to
+an audio graph.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('ping-pong-processor.js')
 const pingPongNode = new AudioWorkletNode(audioContext, 'ping-pong-processor')
 // send the message containing 'ping' string
 // to the AudioWorkletProcessor from the AudioWorkletNode every second
-setInterval(() =&gt; pingPongNode.port.postMessage('ping'), 1000)
-pingPongNode.port.onmessage = (e) =&gt; console.log(e.data)
+setInterval(() => pingPongNode.port.postMessage('ping'), 1000)
+pingPongNode.port.onmessage = (e) => console.log(e.data)
 pingPongNode.connect(audioContext.destination)
-</pre>
+```
 
-<p>This will output <code>"ping"</code> and <code>"pong"</code> strings to the console
-  every second.</p>
+This will output `"ping"` and `"pong"` strings to the console
+every second.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

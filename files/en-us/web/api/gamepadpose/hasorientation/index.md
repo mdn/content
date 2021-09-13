@@ -13,33 +13,33 @@ tags:
   - hasOrientation
 browser-compat: api.GamepadPose.hasOrientation
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>hasOrientation</code></strong> read-only property of the {{domxref("GamepadPose")}} interface returns a boolean value stating whether the {{domxref("Gamepad")}} can track and return orientation information.</p>
+The **`hasOrientation`** read-only property of the {{domxref("GamepadPose")}} interface returns a boolean value stating whether the {{domxref("Gamepad")}} can track and return orientation information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var hasItGotOrientation = gamepadPoseInstance.hasOrientation;</pre>
+```js
+var hasItGotOrientation = gamepadPoseInstance.hasOrientation;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

@@ -11,42 +11,41 @@ tags:
   - createChannelSplitter
 browser-compat: api.BaseAudioContext.createChannelSplitter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>createChannelSplitter()</code> method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},
-  which is used to access the individual channels of an audio stream and process them separately.</p>
+The `createChannelSplitter()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("ChannelSplitterNode")}},
+which is used to access the individual channels of an audio stream and process them separately.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} 
-    constructor is the recommended way to create a {{domxref("ChannelSplitterNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}}
+> constructor is the recommended way to create a {{domxref("ChannelSplitterNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">createChannelSplitter(<em>numberOfOutputs</em>)</pre>
+```js
+createChannelSplitter(numberOfOutputs)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>numberOfOutputs</dt>
-  <dd>The number of channels in the input audio stream that you want to output separately;
-    the default is 6 if this parameter is not specified.</dd>
-</dl>
+- numberOfOutputs
+  - : The number of channels in the input audio stream that you want to output separately;
+    the default is 6 if this parameter is not specified.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("ChannelSplitterNode")}}.</p>
+A {{domxref("ChannelSplitterNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following simple example shows how you could separate a stereo track (say, a piece
-  of music), and process the left and right channel differently. To use them, you need to
-  use the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}}
-  method, which allow you to specify the index of the channel to connect from and the
-  index of the channel to connect to.</p>
+The following simple example shows how you could separate a stereo track (say, a piece
+of music), and process the left and right channel differently. To use them, you need to
+use the second and third parameters of the {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}}
+method, which allow you to specify the index of the channel to connect from and the
+index of the channel to connect to.
 
-<pre class="brush: js;">var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {
  var source = ac.createBufferSource();
  source.buffer = data;
@@ -70,19 +69,17 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  // MediaStream we can use to pipe the Web Audio graph to WebRTC,
  // MediaRecorder, etc.
  merger.connect(dest);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

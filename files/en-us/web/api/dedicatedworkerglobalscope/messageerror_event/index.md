@@ -5,62 +5,71 @@ tags:
   - Event
 browser-compat: api.DedicatedWorkerGlobalScope.messageerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>messageerror</code> event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when it receives a message that can't be deserialized.</p>
+The `messageerror` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when it receives a message that can't be deserialized.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror">onmessageerror</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a
+            href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror"
+            >onmessageerror</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Listen for <code>messageerror</code> using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>:</p>
+Listen for `messageerror` using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
-<pre class="brush: js">// inside worker.js
+```js
+// inside worker.js
 
-self.addEventListener('messageerror', (event) =&gt; {
+self.addEventListener('messageerror', (event) => {
     self.postMessage('Error receiving message');
     console.error(event);
-});</pre>
+});
+```
 
-<p>The same, but using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">onmessageerror</a></code> event handler property:</p>
+The same, but using the [`onmessageerror`](/en-US/docs/Web/API/WindowEventHandlers/onmessageerror) event handler property:
 
-<pre class="brush: js">// inside worker.js
+```js
+// inside worker.js
 
-self.onmessageerror = (event) =&gt; {
+self.onmessageerror = (event) => {
     self.postMessage('Error receiving message');
     console.error(event);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code></li>
- <li>Related events: <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message</a></code>.</li>
-</ul>
+- [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
+- Related events: [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event).

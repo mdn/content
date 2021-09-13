@@ -2,43 +2,42 @@
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/GlobalEventHandlers/onpointerenter
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- PointerEvent
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onpointerenter
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onpointerenter</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} events.</p>
+The **`onpointerenter`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onpointerenter = <var>enterHandler</var>;
+```js
+targetElement.onpointerenter = enterHandler;
 
-var <var>enterHandler</var> = <var>targetElement</var>.onpointerenter;
-</pre>
+var enterHandler = targetElement.onpointerenter;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code>enterHandler</code></dt>
-  <dd>The <code>pointerenter</code> event handler for element <code>targetElement</code>.
-  </dd>
-</dl>
+- `enterHandler`
+  - : The `pointerenter` event handler for element `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointerenter</code> to set an element's
-  <code>pointerenter</code> event handler.</p>
+This example shows two ways to use `onpointerenter` to set an element's
+`pointerenter` event handler.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;script&gt;
+```html
+<html>
+<script>
 function enterHandler(ev) {
   // Process the pointerenter event
 }
@@ -46,30 +45,26 @@ function init() {
   let el = document.getElementById('target1');
   el.onpointerenter = enterHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointerenter="enterHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointerenter="enterHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointerenter_event">Document: pointerenter</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">HTMLElement: pointerenter</a></code>
-    event</li>
-</ul>
+- [`Document: pointerenter`](/en-US/docs/Web/API/Document/pointerenter_event)
+  event
+- [`HTMLElement: pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+  event

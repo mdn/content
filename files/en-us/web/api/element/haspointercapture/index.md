@@ -2,43 +2,43 @@
 title: Element.hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 tags:
-- API
-- DOM
-- Element
-- Method
-- PointerEvent
-- Reference
-- hasPointerCapture
+  - API
+  - DOM
+  - Element
+  - Method
+  - PointerEvent
+  - Reference
+  - hasPointerCapture
 browser-compat: api.Element.hasPointerCapture
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>hasPointerCapture()</code></strong> method of the
-  {{domxref("Element")}} interface checks whether the element on which it is invoked has
-  pointer capture for the pointer identified by the given pointer ID.</p>
+The **`hasPointerCapture()`** method of the
+{{domxref("Element")}} interface checks whether the element on which it is invoked has
+pointer capture for the pointer identified by the given pointer ID.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>targetElement</em>.hasPointerCapture(<em>pointerId</em>);</pre>
+```js
+targetElement.hasPointerCapture(pointerId);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>pointerId</code></dt>
-  <dd>The {{domxref("PointerEvent.pointerId", "pointerId")}} of a
-    {{domxref("PointerEvent")}} object.</dd>
-</dl>
+- `pointerId`
+  - : The {{domxref("PointerEvent.pointerId", "pointerId")}} of a
+    {{domxref("PointerEvent")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value — <code>true</code> if the element does have pointer
-  capture, <code>false</code> if it doesn't.</p>
+A boolean value — `true` if the element does have pointer
+capture, `false` if it doesn't.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;script&gt;
+```html
+<html>
+  <script>
     function downHandler(ev) {
       const el = document.getElementById("target");
       // Element 'target' will receive/capture further events
@@ -59,25 +59,23 @@ browser-compat: api.Element.hasPointerCapture
       const el = document.getElementById("target");
       el.onpointerdown = downHandler;
     }
-  &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt;Touch this element with a pointer.&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+  <body onload="init();">
+    <div id="target">Touch this element with a pointer.</div>
+  </body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Element.setPointerCapture()")}}</li>
-  <li>{{ domxref("Element.releasePointerCapture()")}}</li>
-  <li>{{ domxref("Pointer_events","Pointer Events") }}</li>
-</ul>
+- {{ domxref("Element.setPointerCapture()")}}
+- {{ domxref("Element.releasePointerCapture()")}}
+- {{ domxref("Pointer_events","Pointer Events") }}

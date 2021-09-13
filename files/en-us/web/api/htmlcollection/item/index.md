@@ -2,66 +2,61 @@
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 tags:
-- API
-- HTML DOM
-- HTMLCollection
-- Method
-- Reference
-- item
+  - API
+  - HTML DOM
+  - HTMLCollection
+  - Method
+  - Reference
+  - item
 browser-compat: api.HTMLCollection.item
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLCollection")}} method <code>item()</code>
-    returns the node located at the specified offset into the collection.</p>
+The {{domxref("HTMLCollection")}} method `item()`
+returns the node located at the specified offset into the collection.
 
-<div class="note">
-  <p><strong>Note:</strong> Because the contents of an <code>HTMLCollection</code> are
-    live, changes to the underlying DOM can and will cause the position of individual
-    nodes in the collection to change, so the index value will not necessarily remain
-    constant for a given node.</p>
-</div>
+> **Note:** Because the contents of an `HTMLCollection` are
+> live, changes to the underlying DOM can and will cause the position of individual
+> nodes in the collection to change, so the index value will not necessarily remain
+> constant for a given node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>element</em> = <em>HTMLCollection</em>.item(<em>index</em>)</pre>
+```js
+var element = HTMLCollection.item(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The position of the {{domxref("Node")}} to be returned. Elements appear in an
-    <code>HTMLCollection</code> in the same order in which they appear in the document's
-    source.</dd>
-</dl>
+- `index`
+  - : The position of the {{domxref("Node")}} to be returned. Elements appear in an
+    `HTMLCollection` in the same order in which they appear in the document's
+    source.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The {{domxref("Node")}} at the specified index, or <code>null</code> if
-  <code>index</code> is less than zero or greater than or equal to the length property.
-</p>
+The {{domxref("Node")}} at the specified index, or `null` if
+`index` is less than zero or greater than or equal to the length property.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>item()</code> method returns a numbered element from an
-  <code>HTMLCollection</code>. In JavaScript, it is easier to treat the
-  <code>HTMLCollection</code> as an array and to index it using array notation. See the
-  {{anch("Example", "example")}} below.</p>
+The `item()` method returns a numbered element from an
+`HTMLCollection`. In JavaScript, it is easier to treat the
+`HTMLCollection` as an array and to index it using array notation. See the
+{{anch("Example", "example")}} below.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var c = document.images;  // This is an HTMLCollection
+```js
+var c = document.images;  // This is an HTMLCollection
 var img0 = c.item(0);     // You can use the item() method this way
 var img1 = c[1];          // But this notation is easier and more common
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("NodeList.item()")}}</li>
-</ul>
+- {{domxref("NodeList.item()")}}

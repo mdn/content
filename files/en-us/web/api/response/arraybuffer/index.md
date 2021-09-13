@@ -10,53 +10,57 @@ tags:
   - Response
 browser-compat: api.Response.arrayBuffer
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>arrayBuffer()</code></strong> method of the {{domxref("Response")}} interface
-  takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
-  that resolves with an {{jsxref("ArrayBuffer")}}.</p>
+The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
+takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
+that resolves with an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>response</em>.arrayBuffer().then(function(<em>buffer</em>) {
+```js
+response.arrayBuffer().then(function(buffer) {
   // do something with buffer
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves with an {{jsxref("ArrayBuffer")}}.</p>
+A promise that resolves with an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Playing_music">Playing music</h3>
+### Playing music
 
-<p>In our <a href="https://mdn.github.io/fetch-examples/fetch-array-buffer/">fetch array
-    buffer live</a>, we have a Play button. When pressed, the <code>getData()</code>
-  function is run. Note that before playing full audio file will be downloaded. If you
-  need to play ogg during downloading (stream it) - consider
-  {{domxref("HTMLAudioElement")}}:</p>
+In our [fetch array
+buffer live](https://mdn.github.io/fetch-examples/fetch-array-buffer/), we have a Play button. When pressed, the `getData()`
+function is run. Note that before playing full audio file will be downloaded. If you
+need to play ogg during downloading (stream it) - consider
+{{domxref("HTMLAudioElement")}}:
 
-<pre class="brush: js">new Audio("music.ogg").play();
-</pre>
+```js
+new Audio("music.ogg").play();
+```
 
-<p>In <code>getData()</code> we create a new request using the
-  {{domxref("Request.Request","Request()")}} constructor, then use it to fetch an OGG
-  music track. We also use {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource")}} to create an
-  audio buffer source. When the fetch is successful, we read an {{jsxref("ArrayBuffer")}}
-  out of the response using <code>arrayBuffer()</code>, decode the audio data using
-  {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, set the decoded data as the audio buffer
-  source's buffer (<code>source.buffer</code>), then connect the source up to the
-  {{domxref("BaseAudioContext/destination", "AudioContext.destination")}}.</p>
+In `getData()` we create a new request using the
+{{domxref("Request.Request","Request()")}} constructor, then use it to fetch an OGG
+music track. We also use {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource")}} to create an
+audio buffer source. When the fetch is successful, we read an {{jsxref("ArrayBuffer")}}
+out of the response using `arrayBuffer()`, decode the audio data using
+{{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, set the decoded data as the audio buffer
+source's buffer (`source.buffer`), then connect the source up to the
+{{domxref("BaseAudioContext/destination", "AudioContext.destination")}}.
 
-<p>Once <code>getData()</code> has finished running, we start the audio source playing
-  with <code>start(0)</code>, then disable the play button so it can't be clicked again
-  when it is already playing (this would cause an error.)</p>
+Once `getData()` has finished running, we start the audio source playing
+with `start(0)`, then disable the play button so it can't be clicked again
+when it is already playing (this would cause an error.)
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
 
   var myRequest = new Request('viper.ogg');
@@ -77,34 +81,35 @@ play.onclick = function() {
   getData();
   source.start(0);
   play.setAttribute('disabled', 'disabled');
-}</pre>
+}
+```
 
-<h3 id="Reading_files">Reading files</h3>
+### Reading files
 
-<p>The {{domxref("Response.Response","Response()")}} constructor accepts
-  {{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
-  {{domxref("File")}} into other formats.</p>
+The {{domxref("Response.Response","Response()")}} constructor accepts
+{{domxref("File")}}s and {{domxref("Blob")}}s, so it may be used to read a
+{{domxref("File")}} into other formats.
 
-<pre class="brush: js">function readFile(file) {
+```js
+function readFile(file) {
   return new Response(file).arrayBuffer();
 }
-</pre>
+```
 
-<pre
-  class="brush: html">&lt;input type="file" onchange="readFile(this.files[0])"&gt;</pre>
+```html
+<input type="file" onchange="readFile(this.files[0])">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

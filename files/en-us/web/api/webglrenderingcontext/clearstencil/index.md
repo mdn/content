@@ -2,62 +2,61 @@
 title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearStencil
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.clearStencil()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the clear value for the
-  stencil buffer.</p>
+The **`WebGLRenderingContext.clearStencil()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
+stencil buffer.
 
-<p>This specifies what stencil value to use when calling the
-  {{domxref("WebGLRenderingContext.clear", "clear()")}} method.</p>
+This specifies what stencil value to use when calling the
+{{domxref("WebGLRenderingContext.clear", "clear()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.clearStencil(<var>s</var>);
-</pre>
+```js
+void gl.clearStencil(s);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>s</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the index used when the stencil buffer is cleared.
-    Default value: 0.</dd>
-</dl>
+- `s`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the index used when the stencil buffer is cleared.
+    Default value: 0.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.clearStencil(1);
-</pre>
+```js
+gl.clearStencil(1);
+```
 
-<p>To get the current stencil clear value, query the <code>STENCIL_CLEAR_VALUE</code>
-  constant.</p>
+To get the current stencil clear value, query the `STENCIL_CLEAR_VALUE`
+constant.
 
-<pre class="brush: js">gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-// 1</pre>
+```js
+gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+// 1
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}

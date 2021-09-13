@@ -2,37 +2,39 @@
 title: MediaDeviceInfo.deviceId
 slug: Web/API/MediaDeviceInfo/deviceId
 tags:
-- API
-- Experimental
-- Media
-- MediaDevicesInfo
-- Property
-- deviceId
+  - API
+  - Experimental
+  - Media
+  - MediaDevicesInfo
+  - Property
+  - deviceId
 browser-compat: api.MediaDeviceInfo.deviceId
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Capture")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Capture")}}
 
-<p>The <strong><code>deviceId</code></strong> readonly property
-    of the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}}
-    that is an identifier for the represented device and is persisted across
-    sessions.</p>
+The **`deviceId`** readonly property
+of the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}}
+that is an identifier for the represented device and is persisted across
+sessions.
 
-<p>It is un-guessable by other applications, and unique to the origin of
-  the calling application. It is reset when the user clears cookies. For private browsing,
-  a different identifier is used that is not persisted across sessions.</p>
+It is un-guessable by other applications, and unique to the origin of
+the calling application. It is reset when the user clears cookies. For private browsing,
+a different identifier is used that is not persisted across sessions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var deviceID = MediaDeviceInfo.deviceId</pre>
+```js
+var deviceID = MediaDeviceInfo.deviceId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

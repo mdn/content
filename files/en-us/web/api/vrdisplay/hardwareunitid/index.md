@@ -14,27 +14,28 @@ tags:
   - hardwareUnitId
 browser-compat: api.VRDisplay.hardwareUnitId
 ---
-<div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>hardwareUnitId</code></strong> read-only property of the {{domxref("VRDisplay")}} interface returns the distinct hardware ID for the overall hardware unit that this <code>VRDevice</code> is a part of. All devices that are part of the same physical piece of hardware will have the same <code>hardwareUnitId</code>.</p>
+The **`hardwareUnitId`** read-only property of the {{domxref("VRDisplay")}} interface returns the distinct hardware ID for the overall hardware unit that this `VRDevice` is a part of. All devices that are part of the same physical piece of hardware will have the same `hardwareUnitId`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var hardwareID = VRDevice.hardwareUnitId;</pre>
+```js
+var hardwareID = VRDevice.hardwareUnitId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the ID of the overall hardware unit.</p>
+A {{domxref("DOMString")}} containing the ID of the overall hardware unit.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet (see our <a href="https://mdn.github.io/webvr-tests/vrdevice/">VRDevice example</a>) returns an array of all the {{domxref("VRDisplay")}}s connected to your computer via {{domxref("Navigator.getVRDisplays")}}. For each connected device it then prints out the <code>hardwareUnitId</code>, {{domxref("VRDisplay.displayId")}}, and {{domxref("VRDisplay.displayName")}}.</p>
+The following snippet (see our [VRDevice example](https://mdn.github.io/webvr-tests/vrdevice/)) returns an array of all the {{domxref("VRDisplay")}}s connected to your computer via {{domxref("Navigator.getVRDisplays")}}. For each connected device it then prints out the `hardwareUnitId`, {{domxref("VRDisplay.displayId")}}, and {{domxref("VRDisplay.displayName")}}.
 
-<pre class="brush: js">var list = document.querySelector('ul');
+```js
+var list = document.querySelector('ul');
 var info = document.querySelector('p');
 if(navigator.getVRDevices) {
   navigator.getVRDevices().then(function(myDevices) {
@@ -45,29 +46,29 @@ if(navigator.getVRDevices) {
 }
 
 function reportDevices(devices) {
-  for(i = 0; i &lt; devices.length; i++) {
+  for(i = 0; i < devices.length; i++) {
     var listItem = document.createElement('li');
     listItem.innerHTML = 'Device ' + (i+1)
-                 + ': &lt;strong&gt;Hardware ID&lt;/strong&gt;: ' + devices[i].hardwareUnitId
-                 + ', &lt;strong&gt;VD Device ID&lt;/strong&gt;: ' + devices[i].deviceId
-                 + ', &lt;strong&gt;VR Device Name&lt;/strong&gt;: ' + devices[i].deviceName
+                 + ': <strong>Hardware ID</strong>: ' + devices[i].hardwareUnitId
+                 + ', <strong>VD Device ID</strong>: ' + devices[i].deviceId
+                 + ', <strong>VR Device Name</strong>: ' + devices[i].deviceName
                  + '.';
     list.appendChild(listItem);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

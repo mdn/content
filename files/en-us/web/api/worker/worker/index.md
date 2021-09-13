@@ -9,66 +9,61 @@ tags:
   - Worker
 browser-compat: api.Worker.Worker
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>Worker()</strong></code> constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the <a href="/en-US/docs/Same_origin_policy_for_JavaScript" title="Same origin policy for JavaScript">same-origin policy</a>.</p>
+The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript").
 
-<div class="note">
-<p><strong>Note:</strong> that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.</p>
-</div>
+> **Note:** that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myWorker = new Worker(<em>aURL</em>, <em>options</em>);</pre>
+```js
+var myWorker = new Worker(aURL, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>aURL</em></dt>
- <dd>A {{domxref("USVString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>An object containing option properties that can be set when creating the object instance. Available properties are as follows:
- <ul>
-  <li><code>type</code>: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be <code>classic</code> or <code>module</code>. If not specified, the default used is <code>classic</code>.</li>
-  <li><code>credentials</code>: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be<dfn> <code>omit</code></dfn>, <code><dfn>same-origin</dfn></code>, or <dfn><code>include</code>. If not specified, or if type is <code>classic</code>, the default used is <code>omit</code> (no credentials required).</dfn></li>
-  <li><dfn><code>name</code>: A </dfn>{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.</li>
- </ul>
- </dd>
-</dl>
+- _aURL_
+  - : A {{domxref("USVString")}} representing the URL of the script the worker will execute. It must obey the same-origin policy.
+- _options_ {{optional_inline}}
 
-<h3 id="Exceptions">Exceptions</h3>
+  - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 
-<ul>
- <li>A <code>SecurityError</code> is raised if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.</li>
- <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is incorrect. It <em>should</em> always be <code>text/javascript</code> (for historical reasons <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">other JavaScript MIME types</a> may be accepted).</li>
- <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
-</ul>
+    - `type`: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
+    - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be* `omit`*, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
+    - _`name`: A _{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following code snippet shows creation of a {{domxref("Worker")}} object using the <code>Worker()</code> constructor and subsequent usage of the object:</p>
+- A `SecurityError` is raised if the document is not allowed to start workers, e.g. if the URL has an invalid syntax or if the same-origin policy is violated.
+- A `NetworkError` is raised if the MIME type of the worker script is incorrect. It _should_ always be `text/javascript` (for historical reasons [other JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) may be accepted).
+- A `SyntaxError` is raised if _aURL_ cannot be parsed.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+## Examples
+
+The following code snippet shows creation of a {{domxref("Worker")}} object using the `Worker()` constructor and subsequent usage of the object:
+
+```js
+var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
-}</pre>
+}
+```
 
-<p>For a full example, see our <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="note">
-<p><strong>Note:</strong> A browser can be marked as providing full support for <code>Worker()</code> even though it does not support worker scripts written as modules. As of Mar 1, 2019, only <a href="https://web.dev/module-workers/">Chrome 80+</a> supports this feature, while <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1247687">Firefox has an open feature request</a>.  No other browsers are known to have support for production usage of worker scripts written as modules. Without that support, worker scripts written as modules and modules used by worker scripts have to be transpiled or otherwise converted to non-module code in order to run.</p>
-</div>
+> **Note:** A browser can be marked as providing full support for `Worker()` even though it does not support worker scripts written as modules. As of Mar 1, 2019, only [Chrome 80+](https://web.dev/module-workers/) supports this feature, while [Firefox has an open feature request](https://bugzilla.mozilla.org/show_bug.cgi?id=1247687).  No other browsers are known to have support for production usage of worker scripts written as modules. Without that support, worker scripts written as modules and modules used by worker scripts have to be transpiled or otherwise converted to non-module code in order to run.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("Worker")}} interface it belongs to.</p>
+The {{domxref("Worker")}} interface it belongs to.

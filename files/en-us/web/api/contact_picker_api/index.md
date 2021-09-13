@@ -10,51 +10,47 @@ tags:
   - PWA
   - contact picker
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
-<p>The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.</p>
+The Contact Picker API allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
-</div>
+> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-<div class="note">
-<p><strong>Note:</strong> The Contact Picker API should not be confused with the deprecated <a href="/docs/Archive/B2G_OS/API/Contacts_API">Contact API</a>.</p>
-</div>
+> **Note:** The Contact Picker API should not be confused with the deprecated [Contact API](/docs/Archive/B2G_OS/API/Contacts_API).
 
-<h2 id="Contact_Picker_API_Concepts_and_Usage">Contact Picker API Concepts and Usage</h2>
+## Contact Picker API Concepts and Usage
 
-<p>Access to contacts has long been a feature available within native applications. The Contacts Picker API brings that functionality to web applications.</p>
+Access to contacts has long been a feature available within native applications. The Contacts Picker API brings that functionality to web applications.
 
-<p>Use cases include selecting contacts to message via an email or chat application, selecting a contacts phone number for use with voice over IP (VOIP), or for discovering contacts who have already joined a social platform. User agents can also offer a consistent experience with other applications on a users device.</p>
+Use cases include selecting contacts to message via an email or chat application, selecting a contacts phone number for use with voice over IP (VOIP), or for discovering contacts who have already joined a social platform. User agents can also offer a consistent experience with other applications on a users device.
 
-<p>When calling the {{domxref('ContactsManager.select', 'select')}} method of the {{domxref('ContactsManager')}} interface, the user is presented with a contact picker, whereby they can then select contact information to share with the web application. User interaction is required before permission to display the contact picker is granted and access to contacts is not persistent; the user must grant access every time a request is made by the application.</p>
+When calling the {{domxref('ContactsManager.select', 'select')}} method of the {{domxref('ContactsManager')}} interface, the user is presented with a contact picker, whereby they can then select contact information to share with the web application. User interaction is required before permission to display the contact picker is granted and access to contacts is not persistent; the user must grant access every time a request is made by the application.
 
-<p>This API is only available from a secure top-level browsing context and very carefully considers the sensitivity and privacy of contact data. The onus is on the user for choosing data to share and only allows specific data for selected contacts, with no access to any data for other contacts.</p>
+This API is only available from a secure top-level browsing context and very carefully considers the sensitivity and privacy of contact data. The onus is on the user for choosing data to share and only allows specific data for selected contacts, with no access to any data for other contacts.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("ContactsManager")}}</dt>
- <dd>The <strong><code>ContactsManager</code></strong> interface provides a way for users to select and share limited details of contacts with a web application.</dd>
- <dt>{{domxref("Navigator.contacts")}}</dt>
- <dd>Returns a {{domxref("ContactsManager")}} object instance, from which all other functionality can be accessed.</dd>
-</dl>
+- {{domxref("ContactsManager")}}
+  - : The **`ContactsManager`** interface provides a way for users to select and share limited details of contacts with a web application.
+- {{domxref("Navigator.contacts")}}
+  - : Returns a {{domxref("ContactsManager")}} object instance, from which all other functionality can be accessed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Feature_Detection">Feature Detection</h3>
+### Feature Detection
 
-<p>The following code checks whether the Contact Picker API is supported.</p>
+The following code checks whether the Contact Picker API is supported.
 
-<pre class="brush: js">const supported = 'contacts' in navigator;
-</pre>
+```js
+const supported = 'contacts' in navigator;
+```
 
-<h3 id="Checking_for_Supported_Properties">Checking for Supported Properties</h3>
+### Checking for Supported Properties
 
-<p>The following asynchronous function uses the <code>getProperties()</code> method to check for supported properties.</p>
+The following asynchronous function uses the `getProperties()` method to check for supported properties.
 
-<pre class="brush: js">async function checkProperties() {
+```js
+async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -72,15 +68,16 @@ tags:
     // run code for avatar support
   }
 }
-</pre>
+```
 
-<h3 id="Selecting_Contacts">Selecting Contacts</h3>
+### Selecting Contacts
 
-<p>The following example sets an array of properties to be retrieved for each contact, as well as setting an options object to allow for multiple contacts to be selected.</p>
+The following example sets an array of properties to be retrieved for each contact, as well as setting an options object to allow for multiple contacts to be selected.
 
-<p>An asynchronous function is then defined which uses the <code>select()</code> method to present the user with a contact picker interface and handle the chosen results.</p>
+An asynchronous function is then defined which uses the `select()` method to present the user with a contact picker interface and handle the chosen results.
 
-<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
+```js
+const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {
@@ -90,21 +87,20 @@ async function getContacts() {
   } catch (ex) {
       // Handle any errors here.
   }
-}</pre>
+}
+```
 
-<p><code>handleResults()</code> is a developer defined function.</p>
+`handleResults()` is a developer defined function.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.ContactsManager")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ContactsManager")}}</p>
+{{Compat("api.ContactsManager")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/contact-picker/">A Contact Picker for the Web</a></li>
- <li><a href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</a></li>
-</ul>
+- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

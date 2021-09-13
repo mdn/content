@@ -2,71 +2,68 @@
 title: MediaTrackSettings.cursor
 slug: Web/API/MediaTrackSettings/cursor
 tags:
-- API
-- Capture
-- Constraints
-- Cursor
-- Media
-- Media Capture and Streaming
-- Media Capture and Streaming API
-- Property
-- Recording
-- Reference
-- Screen Capture
-- Screen Capture API
-- Settings
-- display
-- screen
+  - API
+  - Capture
+  - Constraints
+  - Cursor
+  - Media
+  - Media Capture and Streaming
+  - Media Capture and Streaming API
+  - Property
+  - Recording
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - Settings
+  - display
+  - screen
 browser-compat: api.MediaTrackSettings.cursor
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-    <code><strong>cursor</strong></code> property indicates whether or not the cursor
-    should be captured as part of the video track included in the
-    {{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia",
-    "getDisplayMedia()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`cursor`** property indicates whether or not the cursor
+should be captured as part of the video track included in the
+{{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia",
+    "getDisplayMedia()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>cursorSetting</em> = <em>mediaTrackSettings</em>.cursor;</pre>
+```js
+cursorSetting = mediaTrackSettings.cursor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The value of <code>cursor</code> comes from the <code>CursorCaptureConstraint</code>
-  enumerated string type, and may have one of the following values:</p>
+The value of `cursor` comes from the `CursorCaptureConstraint`
+enumerated string type, and may have one of the following values:
 
-<dl>
-  <dt><code>always</code></dt>
-  <dd>The mouse should always be visible in the video content of the
+- `always`
+  - : The mouse should always be visible in the video content of the
     {{domxref("MediaStream")}}, unless the mouse has moved outside the area of the
-    content.</dd>
-  <dt><code>motion</code></dt>
-  <dd>The mouse cursor should always be included in the video if it's moving, and for a
-    short time after it stops moving.</dd>
-  <dt><code>never</code></dt>
-  <dd>The mouse cursor is never included in the shared video.</dd>
-</dl>
+    content.
+- `motion`
+  - : The mouse cursor should always be included in the video if it's moving, and for a
+    short time after it stops moving.
+- `never`
+  - : The mouse cursor is never included in the shared video.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the
-      screen capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaDevices.getDisplayMedia()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the
+  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

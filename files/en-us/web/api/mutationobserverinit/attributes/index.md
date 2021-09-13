@@ -2,71 +2,70 @@
 title: MutationObserverInit.attributes
 slug: Web/API/MutationObserverInit/attributes
 tags:
-- API
-- API Reference
-- Attributes
-- Changes
-- DOM
-- DOM WHATWG
-- MutationObserverInit
-- Observer
-- Property
-- Reference
-- mutation
+  - API
+  - API Reference
+  - Attributes
+  - Changes
+  - DOM
+  - DOM WHATWG
+  - MutationObserverInit
+  - Observer
+  - Property
+  - Reference
+  - mutation
 browser-compat: api.MutationObserverInit.attributes
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
-    dictionary's optional <strong><code>attributes</code></strong> property is used to
-    specify whether or not to watch for attribute value changes on the node or nodes being
-    observed.</p>
+The **{{domxref("MutationObserverInit")}}**
+dictionary's optional **`attributes`** property is used to
+specify whether or not to watch for attribute value changes on the node or nodes being
+observed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>attributes</em>: true | false
+```js
+var options = {
+  attributes: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not to report through the callback any changes to
-  the values of attributes on the node or nodes being monitored. The default value is
-  <code>false</code>.</p>
+A Boolean value indicating whether or not to report through the callback any changes to
+the values of attributes on the node or nodes being monitored. The default value is
+`false`.
 
-<p>If <code>true</code>, the callback specified when {{domxref("MutationObserver.observe",
+If `true`, the callback specified when {{domxref("MutationObserver.observe",
   "observe()")}} was used to start observing the node or subtree will be called any time
-  one or more attributes have changed on observed nodes.</p>
+one or more attributes have changed on observed nodes.
 
-<p>You can expand the capabilities of attribute mutation monitoring using other options:
-</p>
+You can expand the capabilities of attribute mutation monitoring using other options:
 
-<ul>
-  <li>{{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} lets you
-    specify specific attribute names to monitor instead of monitoring all attributes.</li>
-  <li>{{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} lets you
-    specify whether or not you want the previous value of changed attributes to be
-    included in the {{domxref("MutationRecord")}}'s {{domxref("MutationRecord.oldValue",
-    "oldValue")}} property.</li>
-  <li>{{domxref("MutationObserverInit.subtree", "subtree")}} lets you specify whether to
-    watch the target node and all of its descendants (<code>true</code>), or just the
-    target node (<code>false</code>).</li>
-</ul>
+- {{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} lets you
+  specify specific attribute names to monitor instead of monitoring all attributes.
+- {{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} lets you
+  specify whether or not you want the previous value of changed attributes to be
+  included in the {{domxref("MutationRecord")}}'s {{domxref("MutationRecord.oldValue",
+    "oldValue")}} property.
+- {{domxref("MutationObserverInit.subtree", "subtree")}} lets you specify whether to
+  watch the target node and all of its descendants (`true`), or just the
+  target node (`false`).
 
-<p>If you set either <code>attributeFilter</code> or <code>attributeOldValue</code> to
-  <code>true</code>, <code>attributes</code> is automatically assumed to be
-  <code>true</code>, even if you don't expressly set it as such.</p>
+If you set either `attributeFilter` or `attributeOldValue` to
+`true`, `attributes` is automatically assumed to be
+`true`, even if you don't expressly set it as such.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a Mutation Observer is set up to watch for changes to the
-  <code>status</code> and <code>username</code> attributes in any elements contained
-  within a subtree that displays the names of users in a chat room. This lets the code,
-  for example, reflect changes to users' nicknames, or to mark them as away from keyboard
-  (AFK) or offline.</p>
+In this example, a Mutation Observer is set up to watch for changes to the
+`status` and `username` attributes in any elements contained
+within a subtree that displays the names of users in a chat room. This lets the code,
+for example, reflect changes to users' nicknames, or to mark them as away from keyboard
+(AFK) or offline.
 
-<pre class="brush: js">function callback(mutationList) {
+```js
+function callback(mutationList) {
   mutationList.forEach(function(mutation) {
     switch(mutation.type) {
       case "attributes":
@@ -84,28 +83,29 @@ var observer = new MutationObserver(callback);
 observer.observe(targetNode, {
   attributes: true,
   attributeOldValue: true
-});</pre>
+});
+```
 
-<p>The <code>callback()</code> function—which will be passed into the
-  {{domxref("MutationObserver.observe", "observe()")}} method when starting the observer,
-  looks at each item in the list of {{domxref("MutationRecord")}} objects. For any items
-  representing an attribute change (which can be detected by the value of
-  {{domxref("MutationRecord.type")}} being <code>"attributes"</code>), a function called
-  <code>notifyUser()</code> is used to tell the user the name of the attribute that
-  changed as well as the attribute's new value
-  (<code>mutation.target[mutation.attributeName]</code>) and its old value
-  (<code>mutation.oldValue</code>).</p>
+The `callback()` function—which will be passed into the
+{{domxref("MutationObserver.observe", "observe()")}} method when starting the observer,
+looks at each item in the list of {{domxref("MutationRecord")}} objects. For any items
+representing an attribute change (which can be detected by the value of
+{{domxref("MutationRecord.type")}} being `"attributes"`), a function called
+`notifyUser()` is used to tell the user the name of the attribute that
+changed as well as the attribute's new value
+(`mutation.target[mutation.attributeName]`) and its old value
+(`mutation.oldValue`).
 
-<p>When <code>observe()</code> is called, the specified options are
-  <code>attributes</code> and <code>attributeOldValue</code>, which means that changes to
-  attribute values will be reported, and each mutation record will include the
-  {{domxref("MutationRecord.oldValue", "oldValue")}} property specifying the attribute's
-  previous value.</p>
+When `observe()` is called, the specified options are
+`attributes` and `attributeOldValue`, which means that changes to
+attribute values will be reported, and each mutation record will include the
+{{domxref("MutationRecord.oldValue", "oldValue")}} property specifying the attribute's
+previous value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

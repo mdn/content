@@ -11,32 +11,30 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventRotationRate.beta
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>This property indicates the rate of rotation around the X axis -- in degrees per second
-  -- in a {{ domxref("DeviceMotionEventRotationRate") }} object.</p>
+This property indicates the rate of rotation around the X axis -- in degrees per second
+\-- in a {{ domxref("DeviceMotionEventRotationRate") }} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>beta</em> = <em>deviceRotationRate</em>.beta;
-</pre>
+```js
+var beta = deviceRotationRate.beta;
+```
 
-<p>This property is read-only.</p>
+This property is read-only.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>beta</code></dt>
-  <dd>A <code>double</code> indicating the rate of rotation around the X axis, in degrees
-    per second. See <a
-      href="/en-US/docs/Web/API/Detecting_device_orientation#accelerometer_values_explained">Accelerometer
-      values explained</a> for details.</dd>
-</dl>
+- `beta`
+  - : A `double` indicating the rate of rotation around the X axis, in degrees
+    per second. See [Accelerometer
+    values explained](/en-US/docs/Web/API/Detecting_device_orientation#accelerometer_values_explained) for details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

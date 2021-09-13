@@ -2,43 +2,42 @@
 title: HTMLTableElement.cellPadding
 slug: Web/API/HTMLTableElement/cellPadding
 tags:
-- API
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLTableElement.cellPadding
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The <code><strong>HTMLTableElement.cellPadding</strong></code> property represents the
-  padding around the individual cells of the table.</p>
+The **`HTMLTableElement.cellPadding`** property represents the
+padding around the individual cells of the table.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.cellPadding = <em>padding</em>;
-var <em>padding</em> = <em>HTMLTableElement</em>.cellPadding;</pre>
+```js
+HTMLTableElement.cellPadding = padding;
+var padding = HTMLTableElement.cellPadding;
+```
 
-<ul>
-  <li><code>padding</code> is either a number of pixels (e.g. "10") or a percentage value
-    (e.g. "10%").</li>
-</ul>
+- `padding` is either a number of pixels (e.g. "10") or a percentage value
+  (e.g. "10%").
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Set cell padding to 10 pixels
+```js
+// Set cell padding to 10 pixels
 let t = document.getElementById('TableA');
-t.cellPadding = '10';</pre>
+t.cellPadding = '10';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification <a class="external"
-      href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158"><em>HTMLTableElement</em>
-      .cellPadding</a>.</li>
-</ul>
+- W3C DOM 2 HTML Specification [_HTMLTableElement_
+  .cellPadding](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

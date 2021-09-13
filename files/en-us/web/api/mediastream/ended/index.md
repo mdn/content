@@ -2,44 +2,42 @@
 title: MediaStream.ended
 slug: Web/API/MediaStream/ended
 tags:
-- API
-- Media Streams API
-- MediaStream
-- Deprecated
-- Property
-- Reference
-- ended
+  - API
+  - Media Streams API
+  - MediaStream
+  - Deprecated
+  - Property
+  - Reference
+  - ended
 browser-compat: api.MediaStream.ended
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The <strong><code>ended</code></strong> read-only property of the
-  {{domxref("MediaStream")}} interface returns a Boolean value which is <code>true</code> if the stream has been completely read, or <code>false</code> if the end of the stream has not been reached.
-  This value  once the {{event("ended")}} event has been fired.</p>
+The **`ended`** read-only property of the
+{{domxref("MediaStream")}} interface returns a Boolean value which is `true` if the stream has been completely read, or `false` if the end of the stream has not been reached.
+This value  once the {{event("ended")}} event has been fired.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This property has been removed from the specification; you should instead rely on the
-    {{event("ended")}} event or check the value of
-    {{domxref("MediaStreamTrack.readyState")}} to see if its value is <code>"ended"</code>
-    for the track or tracks you want to ensure have finished playing.</p>
-</div>
+> **Warning:** This property has been removed from the specification; you should instead rely on the
+> {{event("ended")}} event or check the value of
+> {{domxref("MediaStreamTrack.readyState")}} to see if its value is `"ended"`
+> for the track or tracks you want to ensure have finished playing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>hasEnded</em> = <em>MediaStream</em>.ended;</pre>
+```js
+var hasEnded = MediaStream.ended;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value that returns <code>true</code> if the end of the stream has been
-  reached.</p>
+A Boolean value that returns `true` if the end of the stream has been
+reached.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>No longer part of any specification. This property was part of earlier drafts of the <a
-    href="https://www.w3.org/TR/mediacapture-streams">Media Capture and Streams
-    specification</a>.</p>
+No longer part of any specification. This property was part of earlier drafts of the [Media Capture and Streams
+specification](https://www.w3.org/TR/mediacapture-streams).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

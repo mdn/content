@@ -2,47 +2,45 @@
 title: RTCRtpTransceiver.sender
 slug: Web/API/RTCRtpTransceiver/sender
 tags:
-- API
-- Media
-- Property
-- RTCRtpSender
-- RTCRtpTransceiver
-- RTP
-- Reference
-- WebRTC
-- sender
+  - API
+  - Media
+  - Property
+  - RTCRtpSender
+  - RTCRtpTransceiver
+  - RTP
+  - Reference
+  - WebRTC
+  - sender
 browser-compat: api.RTCRtpTransceiver.sender
 ---
+{{APIRef("WebRTC")}}
 
-<div>{{APIRef("WebRTC")}}</div>
+The read-only  **`sender`** property
+of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
+{{domxref("RTCRtpSender")}} responsible for encoding and sending outgoing media data
+for the transceiver's stream.
 
-<p>The read-only  <strong><code>sender</code></strong> property
-    of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
-    {{domxref("RTCRtpSender")}} responsible for encoding and sending outgoing media data
-    for the transceiver's stream.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var rtpSender = RTCRtpTransceiver.sender;
+```
 
-<pre
-  class="brush: js">var <em>rtpSender</em> = <em>RTCRtpTransceiver</em>.sender;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+An {{domxref("RTCRtpSender")}} object used to encode and send media whose media ID
+matches the current value of {{domxref("RTCRtpTransceiver.mid", "mid")}}.
 
-<p>An {{domxref("RTCRtpSender")}} object used to encode and send media whose media ID
-  matches the current value of {{domxref("RTCRtpTransceiver.mid", "mid")}}.</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-  <li>{{domxref("RTCRtpSender")}}</li>
-</ul>
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{domxref("RTCRtpSender")}}

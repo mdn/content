@@ -2,38 +2,37 @@
 title: IDBCursor.direction
 slug: Web/API/IDBCursor/direction
 tags:
-- API
-- Database
-- IDBCursor
-- IndexedDB
-- Property
-- Reference
-- Storage
-- direction
+  - API
+  - Database
+  - IDBCursor
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - direction
 browser-compat: api.IDBCursor.direction
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>direction</code></strong> read-only property of the
-    {{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
-    direction of traversal of the cursor (set using
-    {{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
-    section below for possible values.</p>
+The **`direction`** read-only property of the
+{{domxref("IDBCursor")}} interface is a {{domxref("DOMString")}} that returns the
+direction of traversal of the cursor (set using
+{{domxref("IDBObjectStore.openCursor")}} for example). See the {{anch("Values")}}
+section below for possible values.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js" >var <em>direction = cursor</em>.direction;</pre>
+```js
+var direction = cursor.direction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string (defined by the <a
-    href="https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection"><code>IDBCursorDirection</code>
-    enum</a>) indicating the direction in which the cursor is traversing the data.
-  Possible values are:</p>
+A string (defined by the [`IDBCursorDirection`
+enum](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection)) indicating the direction in which the cursor is traversing the data.
+Possible values are:
 
 <table class="no-markdown">
   <thead>
@@ -45,52 +44,56 @@ browser-compat: api.IDBCursor.direction
   <tbody>
     <tr>
       <td><code>next</code></td>
-      <td>This direction causes the cursor to be opened at the start of the source.</td>
+      <td>
+        This direction causes the cursor to be opened at the start of
+        the source.
+      </td>
     </tr>
     <tr>
       <td><code>nextunique</code></td>
-      <td>This direction causes the cursor to be opened at the start of the source. For every key with duplicate values, only the
-        first record is yielded.</td>
+      <td>
+        This direction causes the cursor to be opened at the start of
+        the source. For every key with duplicate values, only the first record
+        is yielded.
+      </td>
     </tr>
     <tr>
       <td><code>prev</code></td>
-      <td>This direction causes the cursor to be opened at the end of the source.</td>
+      <td>
+        This direction causes the cursor to be opened at the end of the source.
+      </td>
     </tr>
     <tr>
       <td><code>prevunique</code></td>
-      <td>This direction causes the cursor to be opened at the end of the source. For every key with duplicate values, only the
-        first record is yielded.<br>
-         </td>
+      <td>
+        This direction causes the cursor to be opened at the end of the source.
+        For every key with duplicate values, only the first record is
+        yielded.<br /> 
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a
-  cursor to iterate through all the records in the object store. Within each iteration we
-  log the direction of the cursor, something like this:</p>
+In this simple fragment we create a transaction, retrieve an object store, then use a
+cursor to iterate through all the records in the object store. Within each iteration we
+log the direction of the cursor, something like this:
 
-<pre>
-  prev
-</pre>
+      prev
 
+> **Note:** we can't change the direction of travel of the cursor using
+> the `direction` property, as it is read-only. We specify the direction of
+> travel using the 2nd argument of {{domxref("IDBObjectStore.openCursor")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> we can't change the direction of travel of the cursor using
-    the <code>direction</code> property, as it is read-only. We specify the direction of
-    travel using the 2nd argument of {{domxref("IDBObjectStore.openCursor")}}.</p>
-</div>
+The cursor does not require us to select the data based on a key; we can just grab all
+of it. Also note that in each iteration of the loop, you can grab data from the current
+record under the cursor object using `cursor.value.foo`. For a complete
+working example, see our [IDBCursor
+example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
-<p>The cursor does not require us to select the data based on a key; we can just grab all
-  of it. Also note that in each iteration of the loop, you can grab data from the current
-  record under the cursor object using <code>cursor.value.foo</code>. For a complete
-  working example, see our <a class="external external-icon"
-    href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor
-    example</a> (<a class="external external-icon"
-    href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
-
-<pre class="brush: js">function backwards() {
+```js
+function backwards() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -99,7 +102,7 @@ browser-compat: api.IDBCursor.direction
     const cursor = event.target.result;
       if(cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
+        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
         list.appendChild(listItem);
 
         console.log(cursor.direction);
@@ -108,27 +111,24 @@ browser-compat: api.IDBCursor.direction
         console.log('Entries displayed backwards.');
       }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

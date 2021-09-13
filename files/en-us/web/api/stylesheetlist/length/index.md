@@ -9,33 +9,37 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList.length
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>length</code></strong> read-only property of the {{domxref("StyleSheetList")}} interface returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.</p>
+The **`length`** read-only property of the {{domxref("StyleSheetList")}} interface returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let length = StyleSheetList.length;</pre>
+```js
+let length = StyleSheetList.length;
+```
 
-<h3>Value</h3>
-<p>An integer indicating the number of items in the collection.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer indicating the number of items in the collection.
 
-<p>In the following example, <code>length</code> is printed to the console, and also used in a for loop to print each individual {{domxref("CSSStyleSheet")}} object to the console.</p>
+## Examples
 
-<pre class="brush: js">let length = document.styleSheets.length;
+In the following example, `length` is printed to the console, and also used in a for loop to print each individual {{domxref("CSSStyleSheet")}} object to the console.
+
+```js
+let length = document.styleSheets.length;
 console.log(length);
 
-for (let i = 0; i &lt; length; i++) {
+for (let i = 0; i < length; i++) {
   console.log(document.styleSheets[i]);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

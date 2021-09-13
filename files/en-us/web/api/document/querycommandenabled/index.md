@@ -2,65 +2,61 @@
 title: Document.queryCommandEnabled()
 slug: Web/API/Document/queryCommandEnabled
 tags:
-- CSS
-- Document
-- Method
-- Reference
-- Deprecated
+  - CSS
+  - Document
+  - Method
+  - Reference
+  - Deprecated
 browser-compat: api.Document.queryCommandEnabled
 ---
-<div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p>The <code><strong>Document.queryCommandEnabled()</strong></code> method reports whether
-  or not the specified editor command is enabled by the browser.</p>
+The **`Document.queryCommandEnabled()`** method reports whether
+or not the specified editor command is enabled by the browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>isEnabled</var> = document.queryCommandEnabled(<var>command</var>);
-</pre>
+```js
+isEnabled = document.queryCommandEnabled(command);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>command</code></dt>
-  <dd>The command for which to determine support.</dd>
-</dl>
+- `command`
+  - : The command for which to determine support.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns a boolean value which is <code>true</code> if the command is enabled
-  and <code>false</code> if the command isn't<code>.</code></p>
+Returns a boolean value which is `true` if the command is enabled
+and `false` if the command isn't`.`
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
-  <li>For '<code>cut</code>' and '<code>copy</code>' commands the method only returns true
-    when called from a user-initiated thread.</li>
-  <li>The <code>'paste'</code> command return <code>false</code> not only if the feature
-    is unavailable, but also if the script calling it has insufficient privileges to
-    perform the action.</li>
-</ul>
+- For '`cut`' and '`copy`' commands the method only returns true
+  when called from a user-initiated thread.
+- The `'paste'` command return `false` not only if the feature
+  is unavailable, but also if the script calling it has insufficient privileges to
+  perform the action.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var flg = document.queryCommandEnabled("SelectAll");
+```js
+var flg = document.queryCommandEnabled("SelectAll");
 
 if(flg) {
   document.execCommand("SelectAll", false, null); // command is enabled, run it
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.execCommand()")}}</li>
-  <li>{{domxref("Document.queryCommandSupported()")}}</li>
-</ul>
+- {{domxref("Document.execCommand()")}}
+- {{domxref("Document.queryCommandSupported()")}}

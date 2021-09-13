@@ -2,55 +2,58 @@
 title: Magnetometer.x
 slug: Web/API/Magnetometer/x
 tags:
-- API
-- Generic Sensor API
-- Magnetometer
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- x
+  - API
+  - Generic Sensor API
+  - Magnetometer
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - x
 browser-compat: api.Magnetometer.x
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>x</code></strong> read-only property of the
-    {{domxref("Magnetometer")}} interface returns a double precision integer containing
-    the magnetic field around the device's x axis.</p>
+The **`x`** read-only property of the
+{{domxref("Magnetometer")}} interface returns a double precision integer containing
+the magnetic field around the device's x axis.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent
-  with the policies set on your server. This is not something that would ever be shown to
-  a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-  instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent
+with the policies set on your server. This is not something that would ever be shown to
+a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
+instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>magnetometerx</var> = <var>magnetometer</var>.x</pre>
+```js
+var magnetometerx = magnetometer.x
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Number')}}.</p>
+A {{jsxref('Number')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The magnetometer is typically read in the {{domxref('Sensor.onreading')}} event
-  callback. In the example below this occurs sixty times a second.</p>
+The magnetometer is typically read in the {{domxref('Sensor.onreading')}} event
+callback. In the example below this occurs sixty times a second.
 
-<pre class="brush: js">let magSensor = new Magnetometer({frequency: 60});
+```js
+let magSensor = new Magnetometer({frequency: 60});
 
-magSensor.addEventListener('reading', e =&gt; {
+magSensor.addEventListener('reading', e => {
   console.log("Magnetic field along the X-axis " + magSensor.x);
   console.log("Magnetic field along the Y-axis " + magSensor.y);
   console.log("Magnetic field along the Z-axis " + magSensor.z);
 });
-magSensor.start();</pre>
+magSensor.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

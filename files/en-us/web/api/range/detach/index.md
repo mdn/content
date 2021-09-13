@@ -2,42 +2,41 @@
 title: Range.detach()
 slug: Web/API/Range/detach
 tags:
-- API
-- DOM
-- Method
-- Range
+  - API
+  - DOM
+  - Method
+  - Range
 browser-compat: api.Range.detach
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.detach()</code></strong> method does nothing. It used to
-  disable the {{domxref("Range")}} object and enable the browser to release associated
-  resources. The method has been kept for compatibility.</p>
+The **`Range.detach()`** method does nothing. It used to
+disable the {{domxref("Range")}} object and enable the browser to release associated
+resources. The method has been kept for compatibility.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">range.detach();
-</pre>
+```js
+range.detach();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
 range.detach();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a>
-  </li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

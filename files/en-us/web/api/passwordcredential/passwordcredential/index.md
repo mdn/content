@@ -10,67 +10,71 @@ tags:
   - credential management
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
-<p>{{APIRef("Credential Management API")}}{{Non-standard_header}}</p>
+{{APIRef("Credential Management API")}}{{Non-standard_header}}
 
-<p>The <strong><code>PasswordCredential()</code></strong>
-    constructor creates a new {{domxref("PasswordCredential")}} object. In
-  supporting browsers, an instance of this class may be passed the <code>credential</code>
-  from the <code>init</code> object for global {{domxref('fetch()')}}.</p>
+The **`PasswordCredential()`**
+constructor creates a new {{domxref("PasswordCredential")}} object. In
+supporting browsers, an instance of this class may be passed the `credential`
+from the `init` object for global {{domxref('fetch()')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new PasswordCredential(passwordCredentialData)
-new PasswordCredential(htmlFormElement)</pre>
+```js
+new PasswordCredential(passwordCredentialData)
+new PasswordCredential(htmlFormElement)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>Either of the following:</p>
+Either of the following:
 
-<dl>
-  <dt><em>passwordCredentialData</em></dt>
-  <dd>An object with the following properties:
-    <ul>
-      <li><code>iconURL</code>: (Optional) the URL of a user's avatar image.</li>
-      <li><code>id</code>: The ID of the user signing in.</li>
-      <li><code>name</code>: (Optional) The name of the user signing in.</li>
-      <li><code>password</code>: The password of the user signing in.</li>
-    </ul>
-  </dd>
-  <dt><em>htmlFormElement</em></dt>
-  <dd>A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
+- _passwordCredentialData_
+
+  - : An object with the following properties:
+
+    - `iconURL`: (Optional) the URL of a user's avatar image.
+    - `id`: The ID of the user signing in.
+    - `name`: (Optional) The name of the user signing in.
+    - `password`: The password of the user signing in.
+
+- _htmlFormElement_
+  - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
     form should, at the very least, contain an id and password. It could also require a
-    CSRF token.</dd>
-</dl>
+    CSRF token.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
-  which we'll use to create a {{domxref("PasswordCredential")}} object.</p>
+This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
+which we'll use to create a {{domxref("PasswordCredential")}} object.
 
-<p>Starting with the form element.</p>
+Starting with the form element.
 
-<pre class="brush: html">&lt;form id="form" method="post"&gt;
-  &lt;input type="text" name="id" autocomplete="username" /&gt;
-  &lt;input type="password" name="password" autocomplete="current-password" /&gt;
-  &lt;input type="hidden" name="csrf_token" value="*****" /&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form" method="post">
+  <input type="text" name="id" autocomplete="username" />
+  <input type="password" name="password" autocomplete="current-password" />
+  <input type="hidden" name="csrf_token" value="*****" />
+</form>
+```
 
-<p>Then, a reference to this form element, using it to create
-  a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
-  system.</p>
+Then, a reference to this form element, using it to create
+a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
+system.
 
-<pre class="brush: js">var form = document.querySelector('#form');
+```js
+var form = document.querySelector('#form');
 var creds = new PasswordCredential(form);
 // Store the credentials.
 navigator.credentials.store(creds)
   .then(function(creds) {
   // Do something with the credentials if you need to.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

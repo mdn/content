@@ -9,32 +9,34 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices.enumerateDevices
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("MediaDevices")}} method <strong><code>enumerateDevices()</code></strong> requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.
-    The returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} array describing the devices.</p>
+The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.
+The returned {{jsxref("Promise")}} is resolved with a {{domxref("MediaDeviceInfo")}} array describing the devices.
 
-<p>Access to particular devices is gated by the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.
-  The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: <code>microphone</code>, <code>camera</code>, <code>speaker-selection</code> (for output devices), and so on.</p>
+Access to particular devices is gated by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+The list of returned devices will omit any devices for which the corresponding permission has not been granted, including: `microphone`, `camera`, `speaker-selection` (for output devices), and so on.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.mediaDevices.enumerateDevices()</pre>
+```js
+navigator.mediaDevices.enumerateDevices()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
-  Each object in the array describes one of the available media input and output devices (only device-types for which permission has been granted are "available").
-  The order is significant - the default capture devices will be listed first.</p>
+A {{ jsxref("Promise") }} that receives an array of {{domxref("MediaDeviceInfo")}} objects when the promise is fulfilled.
+Each object in the array describes one of the available media input and output devices (only device-types for which permission has been granted are "available").
+The order is significant - the default capture devices will be listed first.
 
-<p>If enumeration fails, the promise is rejected.</p>
+If enumeration fails, the promise is rejected.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here's an example of using <code>enumerateDevices()</code>. It outputs a list of the <a
-    href="/en-US/docs/Web/API/MediaDeviceInfo/deviceId">device IDs</a>, with their labels if available.</p>
+Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
 
-<pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+```js
+if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -51,38 +53,37 @@ navigator.mediaDevices.enumerateDevices()
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<p>This might produce:</p>
+This might produce:
 
-<pre class="brush: bash">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```bash
+videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
-</pre>
+```
 
-<p>or if one or more {{domxref("MediaStream")}}s are active or persistent permissions are
-  granted:</p>
+or if one or more {{domxref("MediaStream")}}s are active or persistent permissions are
+granted:
 
-<pre class="brush: bash">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```bash
+videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaDevices.getUserMedia")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> - the introductory page to the API</li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">MediaStream API</a> - the API for the media stream objects</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking webcam photos</a> - a
-    tutorial on using <code>getUserMedia()</code> for taking photos rather than video.
-  </li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia")}}
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
+  tutorial on using `getUserMedia()` for taking photos rather than video.

@@ -10,33 +10,34 @@ tags:
   - Deprecated
 browser-compat: api.HTMLMediaElement.controller
 ---
-<div>{{APIRef("HTML DOM")}}{{deprecated_header}}</div>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>HTMLMediaElement.controller</code></strong> property represents the media controller assigned to the element.</p>
+The **`HTMLMediaElement.controller`** property represents the media controller assigned to the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">...</pre>
+```js
+...
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>MediaController</code> object or <code>null</code> if no media controller is assigned to the element. The default is <code>null</code>.</p>
+A `MediaController` object or `null` if no media controller is assigned to the element. The default is `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">...
-</pre>
+```js
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>In 2016, the whole Media Controller feature was <a href="https://github.com/w3c/html/issues/246">removed from the HTML specification</a>. It is no longer on track to become a standard.</p>
+In 2016, the whole Media Controller feature was [removed from the HTML specification](https://github.com/w3c/html/issues/246). It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

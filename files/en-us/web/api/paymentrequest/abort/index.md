@@ -11,52 +11,53 @@ tags:
   - abort
 browser-compat: api.PaymentRequest.abort
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <code>PaymentRequest.abort()</code> method of the {{domxref('PaymentRequest')}}
-  interface causes the user agent to end the payment request and to remove any user
-  interface that might be shown.</p>
+The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
+interface causes the user agent to end the payment request and to remove any user
+interface that might be shown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PaymentRequest.abort();</pre>
+```js
+PaymentRequest.abort();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example sets up a timeout to clear the payment request that might have
-  been abandoned or neglected.</p>
+The following example sets up a timeout to clear the payment request that might have
+been abandoned or neglected.
 
-<pre class="brush: js">var request = new PaymentRequest(supportedInstruments, details, options);
+```js
+var request = new PaymentRequest(supportedInstruments, details, options);
 
-var paymentTimeout = window.setTimeout(() =&gt; {
+var paymentTimeout = window.setTimeout(() => {
   window.clearTimeout(paymentTimeout);
-  request.abort().then(() =&gt; {
+  request.abort().then(() => {
     print('Payment timed out after 20 minutes.');
-  }).catch(() =&gt; {
+  }).catch(() => {
     print('Unable to abort, because the user is currently in the process ' +
           'of paying.');
   });
 }, 20 * 60 * 1000);  /* 20 minutes */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref('PaymentRequest.abort','PaymentRequest.abort()')}}</li>
-</ul>
+- {{domxref('PaymentRequest.abort','PaymentRequest.abort()')}}

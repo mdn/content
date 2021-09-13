@@ -2,45 +2,46 @@
 title: RTCIceCandidatePairStats.remoteCandidateId
 slug: Web/API/RTCIceCandidatePairStats/remoteCandidateId
 tags:
-- API
-- Candidate
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Remote
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- id
+  - API
+  - Candidate
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Remote
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - id
 browser-compat: api.RTCIceCandidatePairStats.remoteCandidateId
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>remoteCandidateId</code></strong> is a string that uniquely identifies
-    the remote {{Glossary("ICE")}} candidate which was analyzed to generate the
-    {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
-    candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`remoteCandidateId`** is a string that uniquely identifies
+the remote {{Glossary("ICE")}} candidate which was analyzed to generate the
+{{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of
+candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>remoteCandidateId</em> = <em>rtcIceCandidatePairStats</em>.remoteCandidateId;</pre>
+```js
+remoteCandidateId = rtcIceCandidatePairStats.remoteCandidateId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} uniquely identifies the remote {{Glossary("ICE")}}
-  candidate—that is, the candidate describing a configuration for the remote peer—which is
-  represented by the remote end of these statistics.</p>
+A {{domxref("DOMString")}} uniquely identifies the remote {{Glossary("ICE")}}
+candidate—that is, the candidate describing a configuration for the remote peer—which is
+represented by the remote end of these statistics.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

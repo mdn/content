@@ -2,47 +2,45 @@
 title: RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
 slug: Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 tags:
-- API
-- Media
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Time
-- Time stamp
-- WebRTC
-- WebRTC API
-- lastPacketReceivedTimestamp
-- stream
-- timeStamp
+  - API
+  - Media
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Time
+  - Time stamp
+  - WebRTC
+  - WebRTC API
+  - lastPacketReceivedTimestamp
+  - stream
+  - timeStamp
 browser-compat: api.RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>lastPacketReceivedTimestamp</code></strong>
-    property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the time
-    at which the most recently received packet arrived from this source.</p>
+The **`lastPacketReceivedTimestamp`**
+property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the time
+at which the most recently received packet arrived from this source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>lastPacketTimestamp</em> = <em>rtcInboundRtpStreamStats</em>.lastPacketReceivedTimestamp;</pre>
+```js
+var lastPacketTimestamp = rtcInboundRtpStreamStats.lastPacketReceivedTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
-  recently received packet arrived on this RTP stream.</p>
+A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
+recently received packet arrived on this RTP stream.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This value differs from the {{domxref("RTCStats.timestamp",
+> **Note:** This value differs from the {{domxref("RTCStats.timestamp",
     "timestamp")}}, which represents the time at which the statistics object was created.
-  </p>
-</div>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

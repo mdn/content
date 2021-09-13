@@ -9,49 +9,44 @@ tags:
   - web console
 browser-compat: api.console.info
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.info()</code></strong> method outputs an
-    informational message to the Web console. In Firefox, a small "i" icon is displayed
-    next to these items in the Web console's log.</span></p>
+The **`console.info()`** method outputs an
+informational message to the Web console. In Firefox, a small "i" icon is displayed
+next to these items in the Web console's log.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.info(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.info(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt><code>obj1</code> ... <code>objN</code></dt>
-  <dd>A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output.</dd>
-  <dt><code>msg</code></dt>
-  <dd>A JavaScript string containing zero or more substitution strings.</dd>
-  <dt><code>subst1</code> ... <code>substN</code></dt>
-  <dd>JavaScript objects with which to replace substitution strings within
-    <code>msg</code>. This gives you additional control over the format of the output.
-  </dd>
-</dl>
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This gives you additional control over the format of the output.
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting
-    text to the console</a> in the documentation of {{domxref("console")}} for details.
-</p>
+See [Outputting
+text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
-      the F12 Tools Console to View Errors and Status</a></li>
-</ul>
+- [MSDN: Using
+  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)

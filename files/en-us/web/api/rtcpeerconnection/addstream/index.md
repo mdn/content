@@ -10,102 +10,103 @@ tags:
   - addStream
 browser-compat: api.RTCPeerConnection.addStream
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The <em>obsolete</em> {{domxref("RTCPeerConnection")}} method
-  <code><strong>addStream()</strong></code> adds a {{domxref("MediaStream")}} as a local
-  source of audio or video. Instead of using this obsolete method, you should instead use
-  {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to
-  send to the remote peer.</p>
+The _obsolete_ {{domxref("RTCPeerConnection")}} method
+**`addStream()`** adds a {{domxref("MediaStream")}} as a local
+source of audio or video. Instead of using this obsolete method, you should instead use
+{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to
+send to the remote peer.
 
-<p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>closed</code>, an <code>InvalidStateError</code> is raised. If the
-  {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>stable</code>, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
-  {{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must
-  be repeated to consider the new stream.</p>
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
+`closed`, an `InvalidStateError` is raised. If the
+{{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
+`stable`, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
+{{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must
+be repeated to consider the new stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>rtcPeerConnection</em>.addStream(<em>mediaStream</em>);</pre>
+```js
+rtcPeerConnection.addStream(mediaStream);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mediaStream</code></dt>
-  <dd>A {{domxref("MediaStream")}} object indicating the stream to add to the WebRTC peer
-    connection.</dd>
-</dl>
+- `mediaStream`
+  - : A {{domxref("MediaStream")}} object indicating the stream to add to the WebRTC peer
+    connection.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example adds the audio and video stream coming from the user's camera to
-  the connection.</p>
+This simple example adds the audio and video stream coming from the user's camera to
+the connection.
 
-<pre class="brush: js">navigator.mediaDevices.getUserMedia({video:true, audio:true}, function(stream) {
+```js
+navigator.mediaDevices.getUserMedia({video:true, audio:true}, function(stream) {
   var pc = new RTCPeerConnection();
   pc.addStream(stream);
-});</pre>
+});
+```
 
-<h2 id="Migrating_to_addTrack()">Migrating to addTrack()</h2>
+## Migrating to addTrack()
 
-<p>{{anch("Browser compatibility", "Compatibility allowing")}}, you should update your
-  code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
-</p>
+{{anch("Browser compatibility", "Compatibility allowing")}}, you should update your
+code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
-<pre class="brush: js">navigator.getUserMedia({video:true, audio:true}, function(stream) {
+```js
+navigator.getUserMedia({video:true, audio:true}, function(stream) {
   var pc = new RTCPeerConnection();
   stream.getTracks().forEach(function(track) {
     pc.addTrack(track, stream);
   });
-});</pre>
+});
+```
 
-<p>The newer {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} API avoids confusion
-  over whether later changes to the track-makeup of a stream affects a peer connection
-  (they do not).</p>
+The newer {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} API avoids confusion
+over whether later changes to the track-makeup of a stream affects a peer connection
+(they do not).
 
-<p>The exception is in Chrome, where <code>addStream()</code> <em>does</em> make the peer
-  connection sensitive to later stream changes (though such changes do not fire the
-  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event). If you are relying on the Chrome behavior, note
-  that other browsers do not have it. You can write web compatible code using feature
-  detection instead:</p>
+The exception is in Chrome, where `addStream()` _does_ make the peer
+connection sensitive to later stream changes (though such changes do not fire the
+{{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event). If you are relying on the Chrome behavior, note
+that other browsers do not have it. You can write web compatible code using feature
+detection instead:
 
-<pre class="brush: js">// Add a track to a stream and the peer connection said stream was added to:
+```js
+// Add a track to a stream and the peer connection said stream was added to:
 
 stream.addTrack(track);
 if (pc.addTrack) {
   pc.addTrack(track, stream);
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() =&gt; pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
 }
 
 // Remove a track from a stream and the peer connection said stream was added to:
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find(sender =&gt; sender.track == track));
+  pc.removeTrack(pc.getSenders().find(sender => sender.track == track));
 } else {
   // If you have code listening for negotiationneeded events:
-  setTimeout(() =&gt; pc.dispatchEvent(new Event('negotiationneeded')));
+  setTimeout(() => pc.dispatchEvent(new Event('negotiationneeded')));
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)

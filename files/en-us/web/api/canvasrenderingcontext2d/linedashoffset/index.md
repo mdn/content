@@ -2,50 +2,49 @@
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineDashOffset
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.lineDashOffset</code></strong>
-  property of the Canvas 2D API sets the line dash offset, or "phase."</p>
+The
+**`CanvasRenderingContext2D.lineDashOffset`**
+property of the Canvas 2D API sets the line dash offset, or "phase."
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Lines are drawn by calling the
-    {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.</p>
-</div>
+> **Note:** Lines are drawn by calling the
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.lineDashOffset = <em>value</em>;
-</pre>
+```js
+ctx.lineDashOffset = value;
+```
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A float specifying the amount of the line dash offset. The default value is
-    <code>0.0</code>.</dd>
-</dl>
+- `value`
+  - : A float specifying the amount of the line dash offset. The default value is
+    `0.0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Offsetting_a_line_dash">Offsetting a line dash</h3>
+### Offsetting a line dash
 
-<p>This example draws two dashed lines. The first has no dash offset. The second has a
-  dash offset of 4.</p>
+This example draws two dashed lines. The first has no dash offset. The second has a
+dash offset of 4.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([4, 16]);
@@ -63,24 +62,27 @@ ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The line with a dash offset is drawn in red.</p>
+The line with a dash offset is drawn in red.
 
-<p>{{ EmbedLiveSample('Offsetting_a_line_dash', 700, 180) }}</p>
+{{ EmbedLiveSample('Offsetting_a_line_dash', 700, 180) }}
 
-<h3 id="Marching_ants">Marching ants</h3>
+### Marching ants
 
-<p>The <a href="https://en.wikipedia.org/wiki/Marching_ants">marching ants</a> effect is
-  an animation technique often found in selection tools of computer graphics programs. It
-  helps the user to distinguish the selection border from the image background by
-  animating the border.</p>
+The [marching ants](https://en.wikipedia.org/wiki/Marching_ants) effect is
+an animation technique often found in selection tools of computer graphics programs. It
+helps the user to distinguish the selection border from the image background by
+animating the border.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let offset = 0;
 
@@ -93,32 +95,30 @@ function draw() {
 
 function march() {
   offset++;
-  if (offset &gt; 16) {
+  if (offset > 16) {
     offset = 0;
   }
   draw();
   setTimeout(march, 20);
 }
 
-march();</pre>
+march();
+```
 
-<p>{{ EmbedLiveSample('Marching_ants', 700, 180) }}</p>
+{{ EmbedLiveSample('Marching_ants', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-      styles and color</a></li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
+- [Applying
+  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

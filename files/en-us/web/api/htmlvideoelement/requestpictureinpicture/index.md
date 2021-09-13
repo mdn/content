@@ -2,68 +2,69 @@
 title: HTMLVideoElement.requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 tags:
-- API
-- Experimental
-- HTML DOM
-- HTMLVideoElement
-- Media
-- Method
-- Picture-in-Picture
-- Picture-in-Picture API
-- Reference
-- Video
-- pip
+  - API
+  - Experimental
+  - HTML DOM
+  - HTMLVideoElement
+  - Media
+  - Method
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Reference
+  - Video
+  - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong>{{domxref("HTMLVideoElement")}}</strong> method
-    <code><strong>requestPictureInPicture()</strong></code> issues an asynchronous request
-    to display the video in picture-in-picture mode.</p>
+The **{{domxref("HTMLVideoElement")}}** method
+**`requestPictureInPicture()`** issues an asynchronous request
+to display the video in picture-in-picture mode.
 
-<p>It's not guaranteed that the video will be put into picture-in-picture. If permission
-  to enter that mode is granted, the returned {{jsxref("Promise")}} will resolve and the
-  video will receive a {{Event("enterpictureinpicture")}} event to let it know that it's
-  now in picture-in-picture.</p>
+It's not guaranteed that the video will be put into picture-in-picture. If permission
+to enter that mode is granted, the returned {{jsxref("Promise")}} will resolve and the
+video will receive a {{Event("enterpictureinpicture")}} event to let it know that it's
+now in picture-in-picture.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>videoElement</em>.requestPictureInPicture();</pre>
+```js
+videoElement.requestPictureInPicture();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
-  object. that can be used to listen when a user will resize that floating window.</p>
+A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
+object. that can be used to listen when a user will resize that floating window.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example requests that the video enters Picture-in-Picture mode, and sets an event
-  listener to handle the floating window resizing.</p>
+This example requests that the video enters Picture-in-Picture mode, and sets an event
+listener to handle the floating window resizing.
 
-<pre class="brush: js">function enterPictureInPicture() {
+```js
+function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
-    .then(pictureInPictureWindow =&gt; {
-      pictureInPictureWindow.addEventListener("resize", () =&gt; onPipWindowResize(), false);
+    .then(pictureInPictureWindow => {
+      pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
     })
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{HTMLElement("video")}} element</li>
-  <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
-  <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
-  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-  <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
-  <li>{{CSSxRef(":picture-in-picture")}}</li>
-</ul>
+- The {{HTMLElement("video")}} element
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+- {{DOMxRef("Document.pictureInPictureEnabled")}}
+- {{DOMxRef("Document.exitPictureInPicture()")}}
+- {{DOMxRef("Document.pictureInPictureElement")}}
+- {{CSSxRef(":picture-in-picture")}}

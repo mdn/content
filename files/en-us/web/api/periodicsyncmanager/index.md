@@ -12,34 +12,33 @@ tags:
   - ServiceWorker
 browser-compat: api.PeriodicSyncManager
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>PeriodicSyncManager</code></strong> interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access <code>PeriodicSyncManager</code> through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.</p>
+The **`PeriodicSyncManager`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access `PeriodicSyncManager` through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('PeriodicSyncManager.register')}}</dt>
- <dd>Registers a periodic sync request with the browser with the specified tag and options. Returns a {{jsxref('Promise')}} that resolves when the registration completes.</dd>
- <dt>{{domxref('PeriodicSyncManager.getTags')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves with a list of {{jsxref('String','strings')}} representing the tags that are currently registered for periodic syncing.</dd>
- <dt>{{domxref('PeriodicSyncManager.unregister')}}</dt>
- <dd>Unregisters the periodic sync request corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves when unregistration completes.</dd>
-</dl>
+- {{domxref('PeriodicSyncManager.register')}}
+  - : Registers a periodic sync request with the browser with the specified tag and options. Returns a {{jsxref('Promise')}} that resolves when the registration completes.
+- {{domxref('PeriodicSyncManager.getTags')}}
+  - : Returns a {{jsxref('Promise')}} that resolves with a list of {{jsxref('String','strings')}} representing the tags that are currently registered for periodic syncing.
+- {{domxref('PeriodicSyncManager.unregister')}}
+  - : Unregisters the periodic sync request corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves when unregistration completes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples show how to use the interface.</p>
+The following examples show how to use the interface.
 
-<h3 id="Requesting_a_Periodic_Background_Sync">Requesting a Periodic Background Sync</h3>
+### Requesting a Periodic Background Sync
 
-<p>The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:</p>
+The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:
 
-<pre class="brush: js">async function registerPeriodicNewsCheck() {
+```js
+async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('get-latest-news', {
@@ -49,40 +48,40 @@ browser-compat: api.PeriodicSyncManager
     console.log('Periodic Sync could not be registered!');
   }
 }
-</pre>
+```
 
-<h3 id="Verifying_a_Background_Periodic_Sync_by_Tag">Verifying a Background Periodic Sync by Tag</h3>
+### Verifying a Background Periodic Sync by Tag
 
-<p>This code checks to see if a Periodic Background Sync task with a given tag is registered.</p>
+This code checks to see if a Periodic Background Sync task with a given tag is registered.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
-  registration.periodicSync.getTags().then(tags =&gt; {
+```js
+navigator.serviceWorker.ready.then(registration => {
+  registration.periodicSync.getTags().then(tags => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
 });
-</pre>
+```
 
-<h3 id="Removing_a_Periodic_Background_Sync_Task">Removing a Periodic Background Sync Task</h3>
+### Removing a Periodic Background Sync Task
 
-<p>The following code removes a Periodic Background Sync task to stop articles syncing in the background.</p>
+The following code removes a Periodic Background Sync task to stop articles syncing in the background.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
+```js
+navigator.serviceWorker.ready.then(registration => {
   registration.periodicSync.unregister('get-latest-news');
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

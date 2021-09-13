@@ -2,39 +2,39 @@
 title: GlobalEventHandlers.ontouchend
 slug: Web/API/GlobalEventHandlers/ontouchend
 tags:
-- API
-- Experimental
-- HTML DOM
-- Reference
-- TouchEvent
+  - API
+  - Experimental
+  - HTML DOM
+  - Reference
+  - TouchEvent
 browser-compat: api.GlobalEventHandlers.ontouchend
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>ontouchstart</code></strong> is a
-  {{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the
-  {{event("touchend")}} event.</p>
+The **`ontouchstart`** is a
+{{domxref("GlobalEventHandlers","global event handler", "", 1)}} for the
+{{event("touchend")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>endHandler</var> = <var>targetElement</var>.ontouchend;
-</pre>
+```js
+var endHandler = targetElement.ontouchend;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code><var>endHandler</var></code></dt>
-  <dd>The <code>touchend</code> event handler for element
-    <code><var>targetElement</var></code>.</dd>
-</dl>
+- `endHandler`
+  - : The `touchend` event handler for element
+    `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>ontouchend</code> to set an element's
-  <code>touchend</code> event handler.</p>
+This example shows two ways to use `ontouchend` to set an element's
+`touchend` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function endTouch(ev) {
   // Process the event
 }
@@ -42,25 +42,23 @@ function init() {
   let el = document.getElementById('target1');
   el.ontouchend = endTouch;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" ontouchend="endTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" ontouchend="endTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("touchend") }}</li>
-</ul>
+- {{ event("touchend") }}

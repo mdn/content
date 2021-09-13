@@ -2,59 +2,50 @@
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 tags:
-- API
-- Constructor
-- Encoding
-- Reference
-- TextEncoder
+  - API
+  - Constructor
+  - Encoding
+  - Reference
+  - TextEncoder
 browser-compat: api.TextEncoder.TextEncoder
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <code><strong>TextEncoder()</strong></code> constructor returns a newly created
-  utf-8 {{DOMxRef("TextEncoder")}} object.</p>
+The **`TextEncoder()`** constructor returns a newly created
+utf-8 {{DOMxRef("TextEncoder")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>encoder</var> = new TextEncoder();
-</pre>
+```js
+encoder = new TextEncoder();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>TextEncoder()</code> takes no parameters since Firefox 48 and Chrome 53</li>
-</ul>
+- `TextEncoder()` takes no parameters since Firefox 48 and Chrome 53
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Prior to Firefox 48 and Chrome 53, an encoding type label was
-    accepted as a paramer to the <code>TextEncoder</code> object, since then both browsers
-    have removed support for any encoder type other than <code>utf-8</code>, to match the
-    <a href="https://www.w3.org/TR/encoding/#dom-textencoder">spec</a>. Any type label
-    passed into the <code>TextEncoder</code> constructor will now be ignored and a
-    <code>utf-8</code> <code>TextEncoder</code> will be created.</p>
-</div>
+> **Note:** Prior to Firefox 48 and Chrome 53, an encoding type label was
+> accepted as a paramer to the `TextEncoder` object, since then both browsers
+> have removed support for any encoder type other than `utf-8`, to match the
+> [spec](https://www.w3.org/TR/encoding/#dom-textencoder). Any type label
+> passed into the `TextEncoder` constructor will now be ignored and a
+> `utf-8` `TextEncoder` will be created.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li><code>TextEncoder()</code> throws no exceptions since Firefox 48 and Chrome 53</li>
-</ul>
+- `TextEncoder()` throws no exceptions since Firefox 48 and Chrome 53
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Prior to Firefox 48 and Chrome 53 an exception would be thrown
-    for an unknown encoding type.</p>
-</div>
+> **Note:** Prior to Firefox 48 and Chrome 53 an exception would be thrown
+> for an unknown encoding type.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("TextEncoder")}} interface it belongs to.</li>
-</ul>
+- The {{DOMxRef("TextEncoder")}} interface it belongs to.

@@ -11,75 +11,77 @@ tags:
   - invalid
 browser-compat: api.HTMLInputElement.invalid_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>invalid</code></strong> event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.</p>
+The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.oninvalid")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, <code>invalid</code> events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the <a href="/en-US/docs/Learn/Forms#constraint_validation_api"><code>checkValidity()</code></a> method of the element or its owner <code>&lt;form&gt;</code> is called.</p>
+This event can be useful for displaying a summary of the problems with a form on submission. When a form is submitted, `invalid` events are fired at each form control that is invalid. The validity of submittable elements is checked before submitting their owner {{HtmlElement("form")}}, or after the [`checkValidity()`](/en-US/docs/Learn/Forms#constraint_validation_api) method of the element or its owner `<form>` is called.
 
-<p>It is not checked on {{domxref("Element/blur_event", "blur")}}.</p>
+It is not checked on {{domxref("Element/blur_event", "blur")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If a form is submitted with an invalid value, the submittable elements are checked and, if an error is found, the <code>invalid</code> event will fire on the <code>invalid</code> element. In this example, when an invalid event fires because of an invalid value in the input, the invalid value is logged.</p>
+If a form is submitted with an invalid value, the submittable elements are checked and, if an error is found, the `invalid` event will fire on the `invalid` element. In this example, when an invalid event fires because of an invalid value in the input, the invalid value is logged.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;label&gt;Enter an integer between 1 and 10: &lt;input type="number" min="1" max="10" required&gt;&lt;/label&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;input type="submit" value="submit"&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<form action="#">
+  <ul>
+    <li><label>Enter an integer between 1 and 10: <input type="number" min="1" max="10" required></label></li>
+    <li><input type="submit" value="submit"></li>
+  </ul>
+</form><p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input')
+```js
+const input = document.querySelector('input')
 const log = document.getElementById('log')
 
 input.addEventListener('invalid', logValue)
 
 function logValue(e) {
   log.textContent += e.target.value
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML {{HtmlElement("form")}} element</li>
- <li>Related event: {{domxref("HTMLFormElement/submit_event", "submit")}}</li>
- <li>CSS {{cssxref(":invalid")}} pseudo class</li>
-</ul>
+- HTML {{HtmlElement("form")}} element
+- Related event: {{domxref("HTMLFormElement/submit_event", "submit")}}
+- CSS {{cssxref(":invalid")}} pseudo class

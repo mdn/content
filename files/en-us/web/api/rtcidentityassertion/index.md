@@ -11,23 +11,21 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIdentityAssertion
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <strong><code>RTCIdentityAssertion</code></strong> interface of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> represents the identity of the a remote peer of the current connection. If no peer has yet been set and verified this interface returns <code>null</code>. Once set it can't be changed.</p>
+The **`RTCIdentityAssertion`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents the identity of the a remote peer of the current connection. If no peer has yet been set and verified this interface returns `null`. Once set it can't be changed.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCIdentityAssertion.idp")}}</dt>
- <dd>Indicates the provider of the identity assertion.</dd>
- <dt>{{domxref("RTCIdentityAssertion.name")}}</dt>
- <dd>Indicates the name of the identity assertion provider.</dd>
-</dl>
+- {{domxref("RTCIdentityAssertion.idp")}}
+  - : Indicates the provider of the identity assertion.
+- {{domxref("RTCIdentityAssertion.name")}}
+  - : Indicates the name of the identity assertion provider.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

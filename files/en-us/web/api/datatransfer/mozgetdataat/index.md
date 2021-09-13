@@ -2,91 +2,87 @@
 title: DataTransfer.mozGetDataAt()
 slug: Web/API/DataTransfer/mozGetDataAt
 tags:
-- API
-- Method
-- Non-standard
-- Reference
-- drag and drop
-- Deprecated
+  - API
+  - Method
+  - Non-standard
+  - Reference
+  - drag and drop
+  - Deprecated
 browser-compat: api.DataTransfer.mozGetDataAt
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}{{deprecated_header}}</p>
+{{ Non-standard_header() }}{{deprecated_header}}
 
-<p>The <strong><code>DataTransfer.mozGetDataAt()</code></strong> method is used to
-  retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,
-  based on a given <code>format</code> and <code>index</code>. This method returns
-  <code>null</code> if the specified item does not exist or if the index is not in the
-  range from zero to the number of items minus one.</p>
+The **`DataTransfer.mozGetDataAt()`** method is used to
+retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,
+based on a given `format` and `index`. This method returns
+`null` if the specified item does not exist or if the index is not in the
+range from zero to the number of items minus one.
 
-<div class="note"><p><strong>Note:</strong> This method is Gecko-specific.</p></div>
+> **Note:** This method is Gecko-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">nsIVariant <em>dataTransfer</em>.mozGetDataAt([type], index);
-</pre>
+```js
+nsIVariant dataTransfer.mozGetDataAt([type], index);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>A {{domxref("DOMString","string")}} representing the type of the drag data to
-    retrieve from the {{domxref("DataTransfer","drag data object")}}.</dd>
-  <dt><em>index</em></dt>
-  <dd>A <code>unsigned long</code> representing the index of the data to retrieve.</dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString","string")}} representing the type of the drag data to
+    retrieve from the {{domxref("DataTransfer","drag data object")}}.
+- _index_
+  - : A `unsigned long` representing the index of the data to retrieve.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>{{interface("nsIVariant")}}</dt>
-  <dd>The data item requested. If the specified item does not exist, <code>null</code> is
-    returned.</dd>
-</dl>
+- {{interface("nsIVariant")}}
+  - : The data item requested. If the specified item does not exist, `null` is
+    returned.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozGetDataAt()</code> method in a
-  {{event("drop")}} event handler.</p>
+This example shows the use of the `mozGetDataAt()` method in a
+{{event("drop")}} event handler.
 
-<pre class="brush: js">function drop_handler(event)
+```js
+function drop_handler(event)
 {
   var dt = event.dataTransfer;
   var count = dt.mozItemCount;
   output("Items: " + count + "\n");
 
-  for (var i = 0; i &lt; count; i++) {
+  for (var i = 0; i < count; i++) {
     output(" Item " + i + ":\n");
     var types = dt.mozTypesAt(i);
-    for (var t = 0; t &lt; types.length; t++) {
+    for (var t = 0; t < types.length; t++) {
       output("  " + types[t] + ": ");
       try {
         var data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : &lt;" + data + " &gt;\n");
+        output("(" + (typeof data) + ") : <" + data + " >\n");
       } catch (ex) {
-        output("&lt;&gt;\n");
+        output("<>\n");
         dump(ex);
       }
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method is not defined in any Web standard.</p>
+This method is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

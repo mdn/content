@@ -9,37 +9,35 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTextPositioningElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGTextPositioningElement</code></strong> interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}} and {{domxref("SVGAltGlyphElement")}}.</p>
+The **`SVGTextPositioningElement`** interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}} and {{domxref("SVGAltGlyphElement")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGTextContentElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGTextContentElement")}}._
 
-<dl>
- <dt>{{domxref("SVGTextPositioningElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPositioningElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("y")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPositioningElement.dx")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("dx")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPositioningElement.dy")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("dy")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGTextPositioningElement.rotate")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an {{domxref("SVGAnimatedNumberList")}} reflecting the {{SVGAttr("rotate")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGTextPositioningElement.x")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGTextPositioningElement.y")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("y")}} attribute of the given element.
+- {{domxref("SVGTextPositioningElement.dx")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("dx")}} attribute of the given element.
+- {{domxref("SVGTextPositioningElement.dy")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLengthList")}} reflecting the {{SVGAttr("dy")}} attribute of the given element.
+- {{domxref("SVGTextPositioningElement.rotate")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedNumberList")}} reflecting the {{SVGAttr("rotate")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't provide any specific methods, but inherits methods from its parent, {{domxref("SVGTextContentElement")}}.</em></p>
+_This interface doesn't provide any specific methods, but inherits methods from its parent, {{domxref("SVGTextContentElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,32 +12,31 @@ tags:
   - parameterDescriptors
 browser-compat: api.AudioParamDescriptor
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for {{domxref("AudioParam")}} objects.</p>
+The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) specifies properties for {{domxref("AudioParam")}} objects.
 
-<p>It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
+It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
-</p><h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>The {{domxref("DOMString")}} which represents the name of the <code>AudioParam</code>. Under this name the <code>AudioParam</code> will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this <code>AudioParam</code>.</dd>
- <dt><code>automationRate</code> {{optional_inline}}</dt>
- <dd>Either <code><a href="/en-US/docs/Web/API/AudioParam#a-rate">"a-rate"</a></code>, or <code><a href="/en-US/docs/Web/API/AudioParam#k-rate">"k-rate"</a></code> string which represents an automation rate of this <code>AudioParam</code>. Defaults to <code>"a-rate"</code>.</dd>
- <dt><code>minValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents minimum value of the <code>AudioParam</code>. Defaults to <code>-3.4028235e38</code>.</dd>
- <dt><code>maxValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents maximum value of the <code>AudioParam</code>. Defaults to <code>3.4028235e38</code>.</dd>
- <dt><code>defaultValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents initial value of the <code>AudioParam</code>. Defaults to <code>0</code>.</dd>
-</dl>
+- `name`
+  - : The {{domxref("DOMString")}} which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
+- `automationRate` {{optional_inline}}
+  - : Either [`"a-rate"`](/en-US/docs/Web/API/AudioParam#a-rate), or [`"k-rate"`](/en-US/docs/Web/API/AudioParam#k-rate) string which represents an automation rate of this `AudioParam`. Defaults to `"a-rate"`.
+- `minValue` {{optional_inline}}
+  - : A `float` which represents minimum value of the `AudioParam`. Defaults to `-3.4028235e38`.
+- `maxValue` {{optional_inline}}
+  - : A `float` which represents maximum value of the `AudioParam`. Defaults to `3.4028235e38`.
+- `defaultValue` {{optional_inline}}
+  - : A `float` which represents initial value of the `AudioParam`. Defaults to `0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The code fragment below shows a descriptor of this type being returned by a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} method defined in a custom <code>AudioWorkletProcessor</code> (this is part of the more complete example in <a href="/en-US/docs/Web/API/AudioWorkletNode/parameters#examples">AudioWorkletNode.parameters</a>).</p>
+The code fragment below shows a descriptor of this type being returned by a static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} method defined in a custom `AudioWorkletProcessor` (this is part of the more complete example in [AudioWorkletNode.parameters](/en-US/docs/Web/API/AudioWorkletNode/parameters#examples)).
 
-<pre class="brush: js">// white-noise-processor.js
+```js
+// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   static get parameterDescriptors () {
     return [{
@@ -50,21 +49,18 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
   }
 
 ...
-}</pre>
+}
+```
 
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

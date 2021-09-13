@@ -2,69 +2,63 @@
 title: PublicKeyCredential.response
 slug: Web/API/PublicKeyCredential/response
 tags:
-- API
-- Property
-- PublicKeyCredential
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredential
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredential.response
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>response</code></strong> read-only property of the
-  {{domxref("PublicKeyCredential")}} interface is an {{domxref("AuthenticatorResponse")}}
-  object which is sent from the authenticator to the user agent for the creation/fetching
-  of credentials. The information contained in this response will be used by the relying
-  party's server to verify the demand is legitimate.</p>
+The **`response`** read-only property of the
+{{domxref("PublicKeyCredential")}} interface is an {{domxref("AuthenticatorResponse")}}
+object which is sent from the authenticator to the user agent for the creation/fetching
+of credentials. The information contained in this response will be used by the relying
+party's server to verify the demand is legitimate.
 
-<p>An <code>AuthenticatorResponse</code> is either:</p>
+An `AuthenticatorResponse` is either:
 
-<ul>
-  <li>an {{domxref("AuthenticatorAttestationResponse")}} (when the
-    <code>PublicKeyCredential</code> is created via
-    {{domxref("CredentialsContainer.create()")}})</li>
-  <li>an {{domxref("AuthenticatorAssertionResponse")}} (when the
-    <code>PublicKeyCredential</code> is obtained via
-    {{domxref("CredentialsContainer.get()")}}).</li>
-</ul>
+- an {{domxref("AuthenticatorAttestationResponse")}} (when the
+  `PublicKeyCredential` is created via
+  {{domxref("CredentialsContainer.create()")}})
+- an {{domxref("AuthenticatorAssertionResponse")}} (when the
+  `PublicKeyCredential` is obtained via
+  {{domxref("CredentialsContainer.get()")}}).
 
-<p>In order to validate the <em>creation</em> of credentials, a relying party's server
-  needs both:</p>
+In order to validate the _creation_ of credentials, a relying party's server
+needs both:
 
-<ul>
-  <li>this response</li>
-  <li>the extensions of the client (given by
-    {{domxref("PublicKeyCredential.getClientExtensionResults()")}}) to validate the
-    demand.</li>
-</ul>
+- this response
+- the extensions of the client (given by
+  {{domxref("PublicKeyCredential.getClientExtensionResults()")}}) to validate the
+  demand.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> When validating the fetching of existing credentials, the
-    whole <code>PublicKeyCredential</code> object and the client extensions are necessary
-    for the relying party's server.</p>
-</div>
+> **Note:** When validating the fetching of existing credentials, the
+> whole `PublicKeyCredential` object and the client extensions are necessary
+> for the relying party's server.
 
-<div class="note">
-  <p><strong>Note:</strong> This property may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This property may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>response</em> = <em>publicKeyCredential</em>.response</pre>
+```js
+response = publicKeyCredential.response
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AuthenticatorResponse")}} object containing the data a relying party's
-  script will receive and which should be sent to the relying party's server in order to
-  validate the demand for creation or fetching. This object contains data from the client
-  ({{domxref("AuthenticatorResponse/clientDataJSON")}}) and from the authenticator.</p>
+An {{domxref("AuthenticatorResponse")}} object containing the data a relying party's
+script will receive and which should be sent to the relying party's server in order to
+validate the demand for creation or fetching. This object contains data from the client
+({{domxref("AuthenticatorResponse/clientDataJSON")}}) and from the authenticator.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -93,12 +87,12 @@ navigator.credentials.create({  publicKey: options })
 }).catch(function (err) {
   // Deal with any error
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

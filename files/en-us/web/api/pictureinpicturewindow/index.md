@@ -12,41 +12,38 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow
 ---
-<div>{{APIRef("Picture-in-Picture API")}}</div>
+{{APIRef("Picture-in-Picture API")}}
 
-<p>The <code><strong>PictureInPictureWindow</strong></code> interface represents an object able to programmatically obtain the <strong><code>width</code></strong> and <code><strong>height</strong></code> and <strong><code>resize event</code></strong> of the floating video window.</p>
+The **`PictureInPictureWindow`** interface represents an object able to programmatically obtain the **`width`** and **`height`** and **`resize event`** of the floating video window.
 
-<p>An object with this interface is obtained using the {{domxref("HTMLVideoElement.requestPictureInPicture()")}} promise return value.</p>
+An object with this interface is obtained using the {{domxref("HTMLVideoElement.requestPictureInPicture()")}} promise return value.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>PictureInPictureWindow</code> interface doesn't inherit any properties.</em></p>
+_The `PictureInPictureWindow` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{domxref("PictureInPictureWindow.width")}} {{ReadOnlyInline}}</dt>
- <dd>Determines the width of the floating video window.</dd>
- <dt>{{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}</dt>
- <dd>Determines the height of the floating video window.</dd>
-</dl>
+- {{domxref("PictureInPictureWindow.width")}} {{ReadOnlyInline}}
+  - : Determines the width of the floating video window.
+- {{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}
+  - : Determines the height of the floating video window.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>PictureInPictureWindow</code> interface doesn't inherit any methods.</em></p>
+_The `PictureInPictureWindow` interface doesn't inherit any methods._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>The <code>PictureInPictureWindow</code> interface doesn't inherit any events.</em></p>
+_The `PictureInPictureWindow` interface doesn't inherit any events._
 
-<dl>
- <dt>{{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}</dt>
- <dd>Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.</dd>
-</dl>
+- {{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given a <code>&lt;button&gt;</code> and a <code>&lt;video&gt;</code>, clicking the button will make the video enter the picture-in-picture mode; we then attach an event to print the floating video window dimensions to the console.</p>
+Given a `<button>` and a `<video>`, clicking the button will make the video enter the picture-in-picture mode; we then attach an event to print the floating video window dimensions to the console.
 
-<pre class="brush: js">const button = document.querySelector("button");
+```js
+const button = document.querySelector("button");
 const video = document.querySelector("video");
 
 function printPipWindowDimensions(evt) {
@@ -57,22 +54,20 @@ function printPipWindowDimensions(evt) {
 }
 
 button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow =&gt; {
+  video.requestPictureInPicture().then(pictureInPictureWindow => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("Picture-in-Picture_API")}}</li>
-</ul>
+- {{DOMxRef("Picture-in-Picture_API")}}

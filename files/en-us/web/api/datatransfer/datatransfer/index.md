@@ -2,32 +2,33 @@
 title: DataTransfer()
 slug: Web/API/DataTransfer/DataTransfer
 tags:
-- API
-- Constructor
-- DataTransfer
-- HTML Drag and Drop API
-- Reference
-- drag and drop
+  - API
+  - Constructor
+  - DataTransfer
+  - HTML Drag and Drop API
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.DataTransfer
 ---
-<p>{{APIRef("HTML Drag and Drop API")}}</p>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <strong><code>DataTransfer</code></strong> constructor creates a new
-  {{domxref("DataTransfer")}} object instance.</p>
+The **`DataTransfer`** constructor creates a new
+{{domxref("DataTransfer")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>dataTrans</em> = new DataTransfer()</pre>
+```js
+var dataTrans = new DataTransfer()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

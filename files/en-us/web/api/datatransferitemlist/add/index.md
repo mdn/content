@@ -2,73 +2,72 @@
 title: DataTransferItemList.add()
 slug: Web/API/DataTransferItemList/add
 tags:
-- API
-- Add
-- DataTransferItemList
-- HTML DOM
-- HTML Drag and Drop API
-- Method
-- Reference
-- drag and drop
+  - API
+  - Add
+  - DataTransferItemList
+  - HTML DOM
+  - HTML Drag and Drop API
+  - Method
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransferItemList.add
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <strong><code>DataTransferItemList.add()</code></strong> method creates a new
-  {{domxref("DataTransferItem")}} using the specified data and adds it to the drag data
-  list. The item may be a {{domxref("File")}} or a {{domxref("DOMString","string")}} of a
-  given type. If the item is successfully added to the list, the newly-created
-  {{domxref("DataTransferItem")}} object is returned.</p>
+The **`DataTransferItemList.add()`** method creates a new
+{{domxref("DataTransferItem")}} using the specified data and adds it to the drag data
+list. The item may be a {{domxref("File")}} or a {{domxref("DOMString","string")}} of a
+given type. If the item is successfully added to the list, the newly-created
+{{domxref("DataTransferItem")}} object is returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>DataTransferItem</em> = <em>DataTransferItemList</em>.add(data, type);
-<em>DataTransferItem</em> = <em>DataTransferItemList</em>.add(file);
-</pre>
+```js
+DataTransferItem = DataTransferItemList.add(data, type);
+DataTransferItem = DataTransferItemList.add(file);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>A {{domxref("DOMstring","string")}} representing the drag item's data.</dd>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMstring","string")}} of the drag item's type. Some example types are
-    <code>text/html</code> and <code>text/plain</code>.</dd>
-  <dt><code>file</code></dt>
-  <dd>A {{domxref("File")}} object. No type needs to be given in this case.</dd>
-</dl>
+- `data`
+  - : A {{domxref("DOMstring","string")}} representing the drag item's data.
+- `type`
+  - : A {{domxref("DOMstring","string")}} of the drag item's type. Some example types are
+    `text/html` and `text/plain`.
+- `file`
+  - : A {{domxref("File")}} object. No type needs to be given in this case.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DataTransferItem")}} containing the specified data. If the drag item
-  couldn't be created (for example, if the associated {{domxref("DataTransfer")}} object
-  has no data store), <code>null</code> is returned.</p>
+A {{domxref("DataTransferItem")}} containing the specified data. If the drag item
+couldn't be created (for example, if the associated {{domxref("DataTransfer")}} object
+has no data store), `null` is returned.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>A string <code>data</code> parameter was provided, and the list already contains an
+- `NotSupportedError`
+  - : A string `data` parameter was provided, and the list already contains an
     item whose {{domxref("DataTransferItem.kind","kind")}} is "Plain Unicode string" and
-    whose type is equal to the specified type parameter.</dd>
-</dl>
+    whose type is equal to the specified type parameter.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>add()</code> method.</p>
+This example shows the use of the `add()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre
-  class="brush: html">&lt;div&gt;
- &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
- Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;</pre>
+```html
+<div>
+ <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+ Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+</div>
+<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   margin: 0em;
   padding: 2em;
 }
@@ -78,18 +77,20 @@ browser-compat: api.DataTransferItemList.add
 }
 #target {
   border: 1px solid black;
-}</pre>
+}
+```
 
-<p>Javascript</p>
+Javascript
 
-<pre class="brush: js">function dragstart_handler(ev) {
+```js
+function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   var dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
+  dataList.add("<p>... paragraph ...</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -98,18 +99,18 @@ function drop_handler(ev) {
   ev.preventDefault();
   var data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i &lt; data.length; i++) {
-    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
+  for (var i = 0; i < data.length; i++) {
+    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
       data[i].getAsString(function (s){
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
         console.log("... Drop: HTML = " + s);
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
         console.log("... Drop: URI = " + s);
@@ -128,25 +129,24 @@ function dragover_handler(ev) {
 function dragend_handler(ev) {
   console.log("dragEnd");
   var dataList = ev.dataTransfer.items;
-  for (var i = 0; i &lt; dataList.length; i++) {
+  for (var i = 0; i < dataList.length; i++) {
     dataList.remove(i);
   }
   // Clear any remaining drag data
   dataList.clear();
-}</pre>
+}
+```
 
+#### Result
 
-<h4 id="Result">Result</h4>
+{{EmbedLiveSample('Example', 400, 300)}}
 
-<p>{{EmbedLiveSample('Example', 400, 300)}}</p>
+{{LiveSampleLink('Example', 'Result link')}}
 
-<p>{{LiveSampleLink('Example', 'Result link')}}</p>
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,42 +11,45 @@ tags:
   - Element
 browser-compat: api.Element.ariaHidden
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaHidden</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute"><code>aria-hidden</code></a> attribute, which indicates whether the element is exposed to an accessibility API.</p>
+The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute) attribute, which indicates whether the element is exposed to an accessibility API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaHidden</var> = element.ariaHidden;
-<var>element</var>.ariaHidden = <var>ariaHidden</var></pre>
+    var ariaHidden = element.ariaHidden;
+    element.ariaHidden = ariaHidden
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element is hidden from the accessibility API.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is exposed to the accessibility API as if it were rendered.</dd>
-  <dt><code>undefined</code></dt>
-  <dd>The element's hidden state is determined by the user agent based on whether it is rendered.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element is hidden from the accessibility API.
+- `"false"`
+  - : The element is exposed to the accessibility API as if it were rendered.
+- `undefined`
+  - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
-<p>In this example the <code>aria-hidden</code> attribute on the element with an ID of <code>hidden</code> is set to "true". Using <code>ariaHidden</code> we update the value to "false".</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="hidden" aria-hidden="true"&gt;Some things are better left unsaid.&lt;/div&gt;</pre>
+In this example the `aria-hidden` attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
 
-<pre class="brush: js">let el = document.getElementById('hidden');
+```html
+<div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>
+```
+
+```js
+let el = document.getElementById('hidden');
 console.log(el.ariaHidden); // true
 el.ariaHidden = "false"
-console.log(el.ariaHidden); // false</pre>
+console.log(el.ariaHidden); // false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

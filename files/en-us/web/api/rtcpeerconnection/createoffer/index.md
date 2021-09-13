@@ -12,163 +12,162 @@ tags:
   - createOffer
 browser-compat: api.RTCPeerConnection.createOffer
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>createOffer()</code></strong> method
-  of the {{domxref("RTCPeerConnection")}} interface
-  initiates the creation of an {{Glossary("SDP")}} offer
-  for the purpose of starting a new WebRTC connection to a remote peer.
-  The SDP offer includes information
-  about any {{domxref("MediaStreamTrack")}} objects
-  already attached to the WebRTC session, codec, and options supported by the browser,
-  and any candidates already gathered by the {{Glossary("ICE")}} agent,
-  for the purpose of being sent over the signaling channel
-  to a potential peer
-  to request a connection
-  or to update the configuration of an existing connection.</p>
+The **`createOffer()`** method
+of the {{domxref("RTCPeerConnection")}} interface
+initiates the creation of an {{Glossary("SDP")}} offer
+for the purpose of starting a new WebRTC connection to a remote peer.
+The SDP offer includes information
+about any {{domxref("MediaStreamTrack")}} objects
+already attached to the WebRTC session, codec, and options supported by the browser,
+and any candidates already gathered by the {{Glossary("ICE")}} agent,
+for the purpose of being sent over the signaling channel
+to a potential peer
+to request a connection
+or to update the configuration of an existing connection.
 
-<p>The return value is a {{jsxref("Promise")}} which, when the offer has been created, is
-  resolved with a {{domxref("RTCSessionDescription")}} object containing the newly-created
-  offer.</p>
+The return value is a {{jsxref("Promise")}} which, when the offer has been created, is
+resolved with a {{domxref("RTCSessionDescription")}} object containing the newly-created
+offer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>aPromise</em> = <em>myPeerConnection</em>.createOffer([<em>options</em>]);
+```js
+aPromise = myPeerConnection.createOffer([options]);
 
-<em>myPeerConnection</em>.createOffer(<em>successCallback</em>, <em>failureCallback, </em>[<em>options</em>]) {{deprecated_inline}}
-</pre>
+myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{deprecated_inline}}
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An <code><a href="#rtcofferoptions_dictionary">RTCOfferOptions</a></code> dictionary
-    providing options requested for the offer.</dd>
-</dl>
+- `options` {{optional_inline}}
+  - : An [`RTCOfferOptions`](#rtcofferoptions_dictionary) dictionary
+    providing options requested for the offer.
 
-<h4 id="RTCOfferOptions_dictionary">RTCOfferOptions dictionary</h4>
+#### RTCOfferOptions dictionary
 
-<p>The <code>RTCOfferOptions</code> dictionary is used to customize the offer created by
-  this method.</p>
+The `RTCOfferOptions` dictionary is used to customize the offer created by
+this method.
 
-<dl>
-  <dt><code><a href="/en-US/docs/Web/API/RTCOfferOptions/iceRestart">iceRestart</a></code>
-    {{optional_inline}}</dt>
-  <dd>To restart ICE on an active connection, set this to <code>true</code>. This will
+- [`iceRestart`](/en-US/docs/Web/API/RTCOfferOptions/iceRestart)
+  {{optional_inline}}
+  - : To restart ICE on an active connection, set this to `true`. This will
     cause the returned offer to have different credentials than those already in place. If
-    you then apply the returned offer, ICE will restart. Specify <code>false</code> to
-    keep the same credentials and therefore not restart ICE. <strong>The default is
-      <code>false</code></strong>.</dd>
-  <dt><code>offerToReceiveAudio</code> {{optional_inline}} (Legacy)</dt>
-  <dd>
-    <p>A legacy Boolean option which used to control whether or not to offer to the remote
-    peer the opportunity to try to send audio. If this value is <code>false</code>, the
+    you then apply the returned offer, ICE will restart. Specify `false` to
+    keep the same credentials and therefore not restart ICE. **The default is
+    `false`**.
+- `offerToReceiveAudio` {{optional_inline}} (Legacy)
+
+  - : A legacy Boolean option which used to control whether or not to offer to the remote
+    peer the opportunity to try to send audio. If this value is `false`, the
     remote peer will not be offered to send audio data, even if the local side will be
-    sending audio data. If this value is <code>true</code>, the remote peer will be
-    offered to send audio data, even if the local side will <em>not</em> be sending audio
+    sending audio data. If this value is `true`, the remote peer will be
+    offered to send audio data, even if the local side will _not_ be sending audio
     data. The default behavior is to offer to receive audio only if the local side is
-    sending audio, not otherwise.</p>
-    <p>To emulate this behavior in modern implementations, the presence of this member with
-    a value <code>false</code>, will set the direction of all existing audio transceivers
-    to exclude reception (i.e. set to either <code>"sendonly"</code> or
-    <code>"inactive"</code>).</p>
-    <p>In modern implementations, the presence of this member with a value
-    <code>true</code>, will ensure there is at least one transceiver set to receive audio
-    that has not been stopped, and if there isn't one, one will be created.</p>
-    <div class="note"><p><strong>Note:</strong> You shouldn't use this legacy property.
-      Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-      incoming audio.</p></div>
-  </dd>
-  <dt><code>offerToReceiveVideo</code> {{optional_inline}} (Legacy)</dt>
-  <dd><p>A legacy Boolean option which used to control whether or not to offer to the remote
-    peer the opportunity to try to send video. If this value is <code>false</code>, the
+    sending audio, not otherwise.
+
+    To emulate this behavior in modern implementations, the presence of this member with
+    a value `false`, will set the direction of all existing audio transceivers
+    to exclude reception (i.e. set to either `"sendonly"` or
+    `"inactive"`).
+
+    In modern implementations, the presence of this member with a value
+    `true`, will ensure there is at least one transceiver set to receive audio
+    that has not been stopped, and if there isn't one, one will be created.
+
+    > **Note:** You shouldn't use this legacy property.
+    > Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
+    > incoming audio.
+
+- `offerToReceiveVideo` {{optional_inline}} (Legacy)
+
+  - : A legacy Boolean option which used to control whether or not to offer to the remote
+    peer the opportunity to try to send video. If this value is `false`, the
     remote peer will not be offered to send video data, even if the local side will be
-    sending video data. If this value is <code>true</code>, the remote peer will be
-    offered to send video data, even if the local side will <em>not</em> be sending video
+    sending video data. If this value is `true`, the remote peer will be
+    offered to send video data, even if the local side will _not_ be sending video
     data. The default behavior is to offer to receive video only if the local side is
-    sending video, not otherwise.</p>
-    <p>To emulate this behavior in modern implementations, the presence of this member with
-    a value <code>false</code>, will set the direction of all existing video transceivers
-    to exclude reception (i.e. set to either <code>"sendonly"</code> or
-    <code>"inactive"</code>).</p>
-    <p>In modern implementations, the presence of this member with a value
-    <code>true</code>, will ensure there is at least one transceiver set to receive video
-    that has not been stopped, and if there isn't one, one will be created.</p>
-    <div class="note"><p><strong>Note:</strong> You shouldn't use this legacy property.
-      Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-      incoming video.</p></div>
-  </dd>
-  <dt><code>voiceActivityDetection</code> {{optional_inline}}</dt>
-  <dd>Some codecs and hardware are able to detect when audio begins and ends by watching
+    sending video, not otherwise.
+
+    To emulate this behavior in modern implementations, the presence of this member with
+    a value `false`, will set the direction of all existing video transceivers
+    to exclude reception (i.e. set to either `"sendonly"` or
+    `"inactive"`).
+
+    In modern implementations, the presence of this member with a value
+    `true`, will ensure there is at least one transceiver set to receive video
+    that has not been stopped, and if there isn't one, one will be created.
+
+    > **Note:** You shouldn't use this legacy property.
+    > Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
+    > incoming video.
+
+- `voiceActivityDetection` {{optional_inline}}
+  - : Some codecs and hardware are able to detect when audio begins and ends by watching
     for "silence" (or relatively low sound levels) to occur. This reduces network
     bandwidth used for audio by only sending audio data when there's actually something to
     broadcast. However, in some cases, this is unwanted. For example, in the case of music
     or other non-voice transmission, this can cause loss of important low-volume sounds.
-    Also, emergency calls should never cut audio when quiet. <strong>This option defaults
-      to <code>true</code></strong> (voice activity detection <em>enabled</em>).</dd>
-</dl>
+    Also, emergency calls should never cut audio when quiet. **This option defaults
+    to `true`** (voice activity detection _enabled_).
 
-<h3 id="Deprecated_parameters">Deprecated parameters</h3>
+### Deprecated parameters
 
-<p>In older code and documentation, you may see a callback-based version of this function.
-  This has been deprecated and its use is <strong>strongly</strong> discouraged. You
-  should update any existing code to use the {{jsxref("Promise")}}-based version of
-  <code>createOffer()</code> instead. The parameters for this form of
-  <code>createOffer()</code> are described below, to aid in updating existing code. </p>
+In older code and documentation, you may see a callback-based version of this function.
+This has been deprecated and its use is **strongly** discouraged. You
+should update any existing code to use the {{jsxref("Promise")}}-based version of
+`createOffer()` instead. The parameters for this form of
+`createOffer()` are described below, to aid in updating existing code.
 
-<dl>
-  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
-    {{domxref("RTCSessionDescription")}} object describing the newly-created offer.</dd>
-  <dt><code>errorCallback</code> {{deprecated_inline}}</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
+- `successCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) which will be passed a single
+    {{domxref("RTCSessionDescription")}} object describing the newly-created offer.
+- `errorCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) which will be passed a single
     {{domxref("DOMException")}} object explaining why the request to create an offer
-    failed.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An optional <code><a href="#rtcofferoptions_dictionary">RTCOfferOptions</a></code>
-    dictionary providing options requested for the offer.</dd>
-</dl>
+    failed.
+- `options` {{optional_inline}}
+  - : An optional [`RTCOfferOptions`](#rtcofferoptions_dictionary)
+    dictionary providing options requested for the offer.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to
-  the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP
-  describing the generated offer. That received offer should be delivered through the
-  signaling server to a remote peer.</p>
+A {{jsxref("Promise")}} whose fulfillment handler will receive an object conforming to
+the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP
+describing the generated offer. That received offer should be delivered through the
+signaling server to a remote peer.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>These exceptions are returned by rejecting the returned promise. Your rejection handler
-  should examine the received exception to determine which occurred.</p>
+These exceptions are returned by rejecting the returned promise. Your rejection handler
+should examine the received exception to determine which occurred.
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The <code>RTCPeerConnection</code> is closed.</dd>
-  <dt><code>NotReadableError</code></dt>
-  <dd>No certificate or set of certificates was provided for securing the connection, and
-    <code>createOffer()</code> was unable to create a new one. Since all WebRTC
-    connections are required to be secured, that results in an error.</dd>
-  <dt><code>OperationError</code></dt>
-  <dd>Examining the state of the system to determine resource availability in order to
-    generate the offer failed for some reason.</dd>
-</dl>
+- `InvalidStateError`
+  - : The `RTCPeerConnection` is closed.
+- `NotReadableError`
+  - : No certificate or set of certificates was provided for securing the connection, and
+    `createOffer()` was unable to create a new one. Since all WebRTC
+    connections are required to be secured, that results in an error.
+- `OperationError`
+  - : Examining the state of the system to determine resource availability in order to
+    generate the offer failed for some reason.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
-  offer and sends it to the remote system over a signaling channel.</p>
+Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the
+offer and sends it to the remote system over a signaling channel.
 
-<div class="note">
-  <p><strong>Note:</strong> Keep in mind that this is part of the signaling process, the
-    transport layer for which is an implementation detail that's entirely up to you. In
-    this case, a <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> connection is
-    used to send a {{Glossary("JSON")}} message with a <code>type</code> field with the
-    value "video-offer" to the other peer. The contents of the object being passed to the
-    <code>sendToServer()</code> function, along with everything else in the promise
-    fulfillment handler, depend entirely on your design.</p>
-</div>
+> **Note:** Keep in mind that this is part of the signaling process, the
+> transport layer for which is an implementation detail that's entirely up to you. In
+> this case, a [WebSocket](/en-US/docs/Web/API/WebSocket_API) connection is
+> used to send a {{Glossary("JSON")}} message with a `type` field with the
+> value "video-offer" to the other peer. The contents of the object being passed to the
+> `sendToServer()` function, along with everything else in the promise
+> fulfillment handler, depend entirely on your design.
 
-<pre class="brush: js">  myPeerConnection.createOffer().then(function(offer) {
+```js
+  myPeerConnection.createOffer().then(function(offer) {
     return myPeerConnection.setLocalDescription(offer);
   })
   .then(function() {
@@ -181,28 +180,29 @@ browser-compat: api.RTCPeerConnection.createOffer
   })
   .catch(function(reason) {
     // An error occurred, so handle the failure to connect
-  });</pre>
+  });
+```
 
-<p>In this code, the offer is created, and once successful, the local end of the
-  {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is
-  represented using an object conforming to {{domxref("RTCSessionDescriptionInit")}}) into
-  {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}. Once
-  that's done, the offer is sent to the remote system over the signaling channel; in this
-  case, by using a custom function called <code>sendToServer()</code>. The implementation
-  of the signaling server is independent from the WebRTC specification, so it doesn't
-  matter how the offer is sent as long as both the caller and potential receiver are using
-  the same one.</p>
+In this code, the offer is created, and once successful, the local end of the
+{{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is
+represented using an object conforming to {{domxref("RTCSessionDescriptionInit")}}) into
+{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}. Once
+that's done, the offer is sent to the remote system over the signaling channel; in this
+case, by using a custom function called `sendToServer()`. The implementation
+of the signaling server is independent from the WebRTC specification, so it doesn't
+matter how the offer is sent as long as both the caller and potential receiver are using
+the same one.
 
-<p>Use {{jsxref("Promise.catch()")}} to trap and handle errors.</p>
+Use {{jsxref("Promise.catch()")}} to trap and handle errors.
 
-<p>See <a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and
-    video calling</a> for the complete example from which this snippet is derived; this
-  will help you to understand how the signaling code here works.</p>
+See [Signaling and
+video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for the complete example from which this snippet is derived; this
+will help you to understand how the signaling code here works.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

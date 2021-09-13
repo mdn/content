@@ -2,43 +2,40 @@
 title: msPlayToPrimary
 slug: Web/API/MsPlayToPrimary
 tags:
-- msPlayToPrimary
+  - msPlayToPrimary
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msPlayToPrimary</strong></code> is a read/write property which gets or
-  sets the primary DLNA <em>PlayTo</em> device.</p>
+**`msPlayToPrimary`** is a read/write property which gets or
+sets the primary DLNA _PlayTo_ device.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 ptr = object.msPlayToPrimary;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+Boolean value set to _true_ indicates that the device is the primary DLNA
+_PlayTo_ device, otherwise false.
 
-<p>Boolean value set to <em>true</em> indicates that the device is the primary DLNA
-  <em>PlayTo</em> device, otherwise false.</p>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: html">     // Microsoft extensions
+```html
+     // Microsoft extensions
      interface HTMLImageElement : HTMLElement
      {
                   attribute boolean msPlayToDisabled;
                   attribute boolean msPlayToPrimary;
                   attribute DOMString msPlayToPreferredSourceUri;
      };
+```
 
-</pre>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a></li>
-</ul>
+- [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement)

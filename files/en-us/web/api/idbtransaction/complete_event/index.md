@@ -8,42 +8,45 @@ tags:
   - complete
 browser-compat: api.IDBTransaction.complete_event
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <code>complete</code> handler is executed when a transaction successfully completed.</p>
+The `complete` handler is executed when a transaction successfully completed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}:</p>
+Using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}:
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event =&gt; {
+DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -58,14 +61,14 @@ DBOpenRequest.onupgradeneeded = event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event =&gt; {
+DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `complete`
-  transaction.addEventListener('complete', event =&gt; {
+  transaction.addEventListener('complete', event => {
     console.log('Transaction was competed');
   });
 
@@ -73,18 +76,18 @@ DBOpenRequest.onsuccess = event =&gt; {
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
   const objectStoreRequest = objectStore.add(newItem);
 };
+```
 
-</pre>
+Using the {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} property:
 
-<p>Using the {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} property:</p>
-
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event =&gt; {
+DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -99,29 +102,28 @@ DBOpenRequest.onupgradeneeded = event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event =&gt; {
+DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `complete`
-  transaction.oncomplete = event =&gt; {
+  transaction.oncomplete = event => {
     console.log('Transaction was competed');
   };
 
   const objectStore = transaction.objectStore('toDoList');
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2019 };
   const objectStoreRequest = objectStore.add(newItem);
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>{{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- {{DOMxRef("IDBTransaction.oncomplete", "oncomplete")}} event handler property

@@ -2,49 +2,47 @@
 title: Document.origin
 slug: Web/API/Document/origin
 tags:
-- API
-- DOM
-- Document
-- Experimental
-- Interface
-- Property
-- Read-only
-- Deprecated
+  - API
+  - DOM
+  - Document
+  - Experimental
+  - Interface
+  - Property
+  - Read-only
+  - Deprecated
 browser-compat: api.Document.origin
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Use <code>self.origin</code> instead.</p>
-</div>
+> **Note:** Use `self.origin` instead.
 
-<p>The <strong><code>Document.origin</code></strong> read-only property returns the
-  document's origin. In most cases, this property is equivalent to
-  <code>document.defaultView.location.origin</code>.</p>
+The **`Document.origin`** read-only property returns the
+document's origin. In most cases, this property is equivalent to
+`document.defaultView.location.origin`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>origin</var> = <var>document</var>.origin;</pre>
+```js
+var origin = document.origin;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var origin = document.origin;
+```js
+var origin = document.origin;
 // On this page, returns:'https://developer.mozilla.org'
 
 var origin = document.origin;
 // On "about:blank", returns:'null'
 
 var origin = document.origin;
-// On "data:text/html,&lt;b&gt;foo&lt;/b&gt;", returns:'null'
-</pre>
+// On "data:text/html,<b>foo</b>", returns:'null'
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URLUtils.origin")}} property.</li>
-</ul>
+- The {{domxref("URLUtils.origin")}} property.

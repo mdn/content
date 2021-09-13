@@ -10,41 +10,35 @@ tags:
   - screen
 browser-compat: api.ScreenOrientation
 ---
-<div>{{APIRef("Screen Orientation API")}}</div>
+{{APIRef("Screen Orientation API")}}
 
-<p>The <strong><code>ScreenOrientation</code></strong> interface of the <a href="/en-US/docs/Web/API/Screen_Orientation_API">Screen Orientation API</a> provides information about the current orientation of the document.</p>
+The **`ScreenOrientation`** interface of the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides information about the current orientation of the document.
 
-<p>A <strong><code>ScreenOrientation</code></strong> instance object can be retrieved using the {{domxref("screen.orientation")}} property.</p>
+A **`ScreenOrientation`** instance object can be retrieved using the {{domxref("screen.orientation")}} property.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("ScreenOrientation.type")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the document's current orientation type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or "landscape-secondary".</dd>
- <dt>{{DOMxRef("ScreenOrientation.angle")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the document's current orientation angle.</dd>
-</dl>
+- {{DOMxRef("ScreenOrientation.type")}}{{ReadOnlyInline}}
+  - : Returns the document's current orientation type, one of "portrait-primary", "portrait-secondary", "landscape-primary", or "landscape-secondary".
+- {{DOMxRef("ScreenOrientation.angle")}}{{ReadOnlyInline}}
+  - : Returns the document's current orientation angle.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{DOMxRef("ScreenOrientation.onchange")}}</dt>
- <dd>The <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called whenever the screen changes orientation.</dd>
-</dl>
+- {{DOMxRef("ScreenOrientation.onchange")}}
+  - : The [event handler](/en-US/docs/Web/Events/Event_handlers) called whenever the screen changes orientation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("ScreenOrientation.lock()")}}</dt>
- <dd>Locks the orientation of the containing document to its default orientation and returns a {{JSxRef("Promise")}}.</dd>
- <dt>{{DOMxRef("ScreenOrientation.unlock()")}}</dt>
- <dd>Unlocks the orientation of the containing document from its default orientation.</dd>
-</dl>
+- {{DOMxRef("ScreenOrientation.lock()")}}
+  - : Locks the orientation of the containing document to its default orientation and returns a {{JSxRef("Promise")}}.
+- {{DOMxRef("ScreenOrientation.unlock()")}}
+  - : Unlocks the orientation of the containing document from its default orientation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,134 +2,136 @@
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Image Candidates
-- Property
-- Reference
-- Responsive Design
-- list
-- source
-- srcset
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Image Candidates
+  - Property
+  - Reference
+  - Responsive Design
+  - list
+  - source
+  - srcset
 browser-compat: api.HTMLImageElement.srcset
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLImageElement")}} property
-    <code><strong>srcset</strong></code> is a string which identifies one or more
-    <strong>image candidate strings</strong>, separated using commas (<code>,</code>) each
-    specifying image resources to use under given circumstances.</p>
+The {{domxref("HTMLImageElement")}} property
+**`srcset`** is a string which identifies one or more
+**image candidate strings**, separated using commas (`,`) each
+specifying image resources to use under given circumstances.
 
-<p>Each image
-  candidate string contains an image URL and an optional width or pixel density descriptor
-  that indicates the conditions under which that candidate should be used instead of the
-  image specified by the {{domxref("HTMLImageElement.src", "src")}} property.</p>
+Each image
+candidate string contains an image URL and an optional width or pixel density descriptor
+that indicates the conditions under which that candidate should be used instead of the
+image specified by the {{domxref("HTMLImageElement.src", "src")}} property.
 
-<p>The <code>srcset</code> property, along with the {{domxref("HTMLImageElement.sizes",
+The `srcset` property, along with the {{domxref("HTMLImageElement.sizes",
   "sizes")}} property, are a crucial component in designing responsive web sites, as they
-  can be used together to make pages that use appropriate images for the rendering
-  situation.</p>
+can be used together to make pages that use appropriate images for the rendering
+situation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.srcset = <em>imageCandidateStrings</em>;
-let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
-</pre>
+```js
+htmlImageElement.srcset = imageCandidateStrings;
+let srcset = htmlImageElement.srcset;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing a comma-separated list of one or more image
-  candidate strings to be used when determining which image resource to present inside the
-  {{HTMLElement("img")}} element represented by the
-  <code>HTMLImageElement</code><em>.</em></p>
+A {{domxref("USVString")}} containing a comma-separated list of one or more image
+candidate strings to be used when determining which image resource to present inside the
+{{HTMLElement("img")}} element represented by the
+`HTMLImageElement`_._
 
-<p>Each image candidate string must begin with a valid URL referencing a non-interactive
-  graphic resource. This is followed by whitespace and then a condition descriptor that
-  indicates the circumstances in which the indicated image should be used. Space
-  characters, other than the whitespace separating the URL and the corresponding condition
-  descriptor, are ignored; this includes both leading and trailing space, as well as space
-  before or after each comma.</p>
+Each image candidate string must begin with a valid URL referencing a non-interactive
+graphic resource. This is followed by whitespace and then a condition descriptor that
+indicates the circumstances in which the indicated image should be used. Space
+characters, other than the whitespace separating the URL and the corresponding condition
+descriptor, are ignored; this includes both leading and trailing space, as well as space
+before or after each comma.
 
-<p>If the condition descriptor is not provided (in other words, the image candidate
-  provides only a URL), the candidate is used as the fallback if none of the other
-  candidates match. Otherwise, the condition descriptor may take one of two forms:</p>
+If the condition descriptor is not provided (in other words, the image candidate
+provides only a URL), the candidate is used as the fallback if none of the other
+candidates match. Otherwise, the condition descriptor may take one of two forms:
 
-<ul>
-  <li>To indicate that the image resource specified by the image candidate string should
-    be used when the image is being rendered with a particular width in pixels, provide a
-    <strong>width descriptor</strong> comprised the number giving that width in pixels
-    followed by the lower case letter "w". For example, to provide an image resource to be
-    used when the renderer needs a 450 pixel wide image, use the width descriptor string
-    <code>450w</code>. The specified width must be a positive, non-zero, integer, and
-    <em>must</em> match the intrinsic width of the referenced image.</li>
-  <li>Alternatively, you can use a <strong>pixel density descriptor</strong>, which
-    specifies the condition in which the corresponding image resource should be used as
-    the display's pixel density. This is written by stating the pixel density as a
-    positive, non-zero floating-point value followed by the lower-case letter "x". As an
-    example, to state that the corresponding  image should be used when the pixel density
-    is double the standard density, you can give the pixel density descriptor
-    <code>2x</code> or <code>2.0x</code>.</li>
-</ul>
+- To indicate that the image resource specified by the image candidate string should
+  be used when the image is being rendered with a particular width in pixels, provide a
+  **width descriptor** comprised the number giving that width in pixels
+  followed by the lower case letter "w". For example, to provide an image resource to be
+  used when the renderer needs a 450 pixel wide image, use the width descriptor string
+  `450w`. The specified width must be a positive, non-zero, integer, and
+  _must_ match the intrinsic width of the referenced image.
+- Alternatively, you can use a **pixel density descriptor**, which
+  specifies the condition in which the corresponding image resource should be used as
+  the display's pixel density. This is written by stating the pixel density as a
+  positive, non-zero floating-point value followed by the lower-case letter "x". As an
+  example, to state that the corresponding  image should be used when the pixel density
+  is double the standard density, you can give the pixel density descriptor
+  `2x` or `2.0x`.
 
-<p>You may mix and match the two types of descriptor. You must not, however, provide
-  multiple image candidate strings that specify the same descriptor. All of the following
-  are valid image candidate strings:</p>
+You may mix and match the two types of descriptor. You must not, however, provide
+multiple image candidate strings that specify the same descriptor. All of the following
+are valid image candidate strings:
 
-<pre
-  class="brush: html">"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"</pre>
+```html
+"images/team-photo.jpg 1x, images/team-photo-retina.jpg 2x, images/team-photo-full 2048w"
+```
 
-<p>This string provides versions of an image to be used at the standard pixel density
-  (<code>1x</code>) as well as double that pixel density (<code>2x</code>). Also available
-  is a version of the image for use at a width of 2048 pixels (<code>2048w</code>).</p>
+This string provides versions of an image to be used at the standard pixel density
+(`1x`) as well as double that pixel density (`2x`). Also available
+is a version of the image for use at a width of 2048 pixels (`2048w`).
 
-<pre
-  class="brush: html">"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"</pre>
+```html
+"header640.png 640w, header960.png 960w, header1024.png 1024w, header.png"
+```
 
-<p>This string provides versions of a header image to use when the {{Glossary("user
+This string provides versions of a header image to use when the {{Glossary("user
   agent", "user agent's")}} renderer needs an image of width 640px, 960px, or 1024px. An
-  additional, fallback image candidate is provided without any condition at all, to be
-  used for any other width.</p>
+additional, fallback image candidate is provided without any condition at all, to be
+used for any other width.
 
-<pre
-  class="brush: html">"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"</pre>
+```html
+"icon32px.png 32w, icon64px.png 64w, icon-retina.png 2x, icon-ultra.png 3x, icon.svg"
+```
 
-<p>Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel
-  densities of 2x and 3x. A fallback image is provided as an SVG file that should be used
-  in all other cases. Notice that the candidates may use different image types.</p>
+Here, options are provided for an icon at widths of 32px and 64px, as well as at pixel
+densities of 2x and 3x. A fallback image is provided as an SVG file that should be used
+in all other cases. Notice that the candidates may use different image types.
 
-<p>For more information on what image formats are available for use in the
-  {{HTMLElement("img")}} element, see <a
-    href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a>.
-</p>
+For more information on what image formats are available for use in the
+{{HTMLElement("img")}} element, see [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML below indicates that the default image is the 200 pixel wide version of the
-  clock image we use in several places throughout our documentation. Also specified by the
-  <code>srcset</code> attribute is that the 200-pixel version should be used for 1x
-  displays while the 400-pixel version should be used for 2x displays.</p>
+The HTML below indicates that the default image is the 200 pixel wide version of the
+clock image we use in several places throughout our documentation. Also specified by the
+`srcset` attribute is that the 200-pixel version should be used for 1x
+displays while the 400-pixel version should be used for 2x displays.
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;img src="/en-us/web/html/element/img/clock-demo-200px.png"
+```html
+<div class="box">
+  <img src="/en-us/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png"&gt;
-&lt;/div&gt;
-</pre>
+       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png">
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The CSS specifies that the image and its surrounding box should be 200 pixels square
-  and should have a simple border around it. Also provided is the
-  {{cssxref("word-break")}} attribute, using the <code>break-all</code> value to tell the
-  browser to wrap the string within the width available regardless of where in the string
-  the wrap must occur.</p>
+The CSS specifies that the image and its surrounding box should be 200 pixels square
+and should have a simple border around it. Also provided is the
+{{cssxref("word-break")}} attribute, using the `break-all` value to tell the
+browser to wrap the string within the width available regardless of where in the string
+the wrap must occur.
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 200px;
   border: 2px solid rgba(150, 150, 150, 255);
   padding: 0.5em;
@@ -138,52 +140,50 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 
 .box img {
   width: 200px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The following code is run within a handler for the {{domxref("Window", "window")}}'s
-  {{domxref("Window.load_event", "load")}} event.  It uses the image's 
-  {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
-  the URL selected by the browser from the <code>srcset</code>.</p>
+The following code is run within a handler for the {{domxref("Window", "window")}}'s
+{{domxref("Window.load_event", "load")}} event.  It uses the image's 
+{{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
+the URL selected by the browser from the `srcset`.
 
-<pre class="brush: js">let box = document.querySelector(".box");
+```js
+let box = document.querySelector(".box");
 let image = box.querySelector("img");
 
 let newElem = document.createElement("p");
-newElem.innerHTML = `Image: &lt;code&gt;${image.currentSrc}&lt;/code&gt;`;
+newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
 box.appendChild(newElem);
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>In the displayed output below, the selected URL will correspond with whether your
-  display results in selecting the 1x or the 2x version of the image. If you happen to
-  have both standard and high density displays, try moving this window between them and
-  reloading the page to see the results change.</p>
+In the displayed output below, the selected URL will correspond with whether your
+display results in selecting the 1x or the 2x version of the image. If you happen to
+have both standard and high density displays, try moving this window between them and
+reloading the page to see the results change.
 
-<p>{{EmbedLiveSample("Example", 640, 320)}}</p>
+{{EmbedLiveSample("Example", 640, 320)}}
 
-<p>For additional examples, see our guide to <a
-    href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">responsive
-    images</a>.</p>
+For additional examples, see our guide to [responsive
+images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in
-      HTML</a></li>
-  <li><a
-      href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive
-      images</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format
-      guide</a></li>
-</ul>
+- [Images in
+  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive
+  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Image file type and format
+  guide](/en-US/docs/Web/Media/Formats/Image_types)

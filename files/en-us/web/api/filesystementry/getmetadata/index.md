@@ -2,81 +2,77 @@
 title: FileSystemEntry.getMetadata()
 slug: Web/API/FileSystemEntry/getMetadata
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Method
-- Non-standard
-- Reference
-- getMetadata
-- Deprecated
+  - API
+  - File System API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - getMetadata
+  - Deprecated
 browser-compat: api.FileSystemEntry.getMetadata
 ---
-<p>{{APIRef("File System API")}}{{deprecated_header}}</p>
+{{APIRef("File System API")}}{{deprecated_header}}
 
-<p>The {{domxref("FileSystemEntry")}} interface's method
-    <strong><code>getMetadata()</code></strong> obtains a
-    {{domxref("Metadata")}} object with information about the file system entry, such as
-    its modification date and time and its size.</p>
+The {{domxref("FileSystemEntry")}} interface's method
+**`getMetadata()`** obtains a
+{{domxref("Metadata")}} object with information about the file system entry, such as
+its modification date and time and its size.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemEntry</em>.getMetadata(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+```js
+FileSystemEntry.getMetadata(successCallback[, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>successCallback</code></dt>
-  <dd>A function which is called when the copy operation is successfully completed.
+- `successCallback`
+  - : A function which is called when the copy operation is successfully completed.
     Receives a single input parameter: a {{domxref("Metadata")}} object with information
-    about the file.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>An optional callback which is executed if an error occurs while looking up the
+    about the file.
+- `errorCallback` {{optional_inline}}
+  - : An optional callback which is executed if an error occurs while looking up the
     metadata. There's a single parameter: a {{domxref("FileError")}} describing what went
-    wrong.</dd>
-</dl>
+    wrong.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
-  <dt><code>FileError.NOT_FOUND_ERR</code></dt>
-  <dd>The {{domxref("FileSystemEntry")}} refers to an item which doesn't exist.</dd>
-  <dt><code>FileError.SECURITY_ERR</code></dt>
-  <dd>Security restrictions prohibit obtaining the requested metadata.</dd>
-</dl>
+- `FileError.NOT_FOUND_ERR`
+  - : The {{domxref("FileSystemEntry")}} refers to an item which doesn't exist.
+- `FileError.SECURITY_ERR`
+  - : Security restrictions prohibit obtaining the requested metadata.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example checks the size of a log file in a temporary folder and, if it exceeds a
-  megabyte, moves it into a different directory.</p>
+This example checks the size of a log file in a temporary folder and, if it exceeds a
+megabyte, moves it into a different directory.
 
-<pre class="brush: js">workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
+```js
+workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
   fileEntry.getMetadata(function(metadata) {
-    if (metadata.size &gt; 1048576) {
+    if (metadata.size > 1048576) {
       workingDirectory.getDirectory("log", {}, function(dirEntry) {
         fileEntry.moveTo(dirEntry);
       }, handleError);
     }
   });
-}, handleError);</pre>
+}, handleError);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

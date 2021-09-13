@@ -2,58 +2,56 @@
 title: KeyboardLayoutMap.forEach()
 slug: Web/API/KeyboardLayoutMap/forEach
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- KeyboardLayoutMap
-- Method
-- Reference
-- forEach()
-- keyboard
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - KeyboardLayoutMap
+  - Method
+  - Reference
+  - forEach()
+  - keyboard
 browser-compat: api.KeyboardLayoutMap.forEach
 ---
-<div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>forEach()</code></strong> method of the
-		{{domxref('KeyboardLayoutMap')}} interface executes a provided function once for
-		each element of the map.</p>
+The **`forEach()`** method of the
+{{domxref('KeyboardLayoutMap')}} interface executes a provided function once for
+each element of the map.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>KeyboardLayoutMap</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+```js
+KeyboardLayoutMap.forEach(function callback(currentValue[, index[, array]]) {
     //your iterator
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>callback</code></dt>
-	<dd>The function to execute for each element, taking three arguments:
-		<dl>
-			<dt><code>currentValue</code></dt>
-			<dd>The value of the current element being processed.</dd>
-			<dt><code>index</code> {{optional_inline}}</dt>
-			<dd>The index of the current element being processed.</dd>
-			<dt><code>array</code> {{optional_inline}}</dt>
-			<dd>The KeyboardLayoutMap that <code>forEach()</code> is being called on.</dd>
-		</dl>
-	</dd>
-	<dt><code>thisArg</code> {{Optional_inline}}</dt>
-	<dd>
-		<p>Value to use as <code><strong>this</strong></code> (i.e the reference
-			<code>Object</code>) when executing <code>callback</code>.</p>
-	</dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">Return value</h3>
+  - : The function to execute for each element, taking three arguments:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : The value of the current element being processed.
+    - `index` {{optional_inline}}
+      - : The index of the current element being processed.
+    - `array` {{optional_inline}}
+      - : The KeyboardLayoutMap that `forEach()` is being called on.
 
-<h2 id="Specifications">Specifications</h2>
+- `thisArg` {{Optional_inline}}
+  - : Value to use as **`this`** (i.e the reference
+    `Object`) when executing `callback`.
+
+### Return value
+
+{{jsxref("undefined")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

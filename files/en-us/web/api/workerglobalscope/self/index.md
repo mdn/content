@@ -10,27 +10,32 @@ tags:
   - self
 browser-compat: api.WorkerGlobalScope.self
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>self</strong></code> read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the <code>WorkerGlobalScope</code> itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.</p>
+The **`self`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, or {{domxref("ServiceWorkerGlobalScope")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var selfRef = self;</pre>
+```js
+var selfRef = self;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A global scope object (differs depending on the type of worker you are dealing with, as indicated above).</p>
+A global scope object (differs depending on the type of worker you are dealing with, as indicated above).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you called</p>
+If you called
 
-<pre class="brush: js">console.log(self);</pre>
+```js
+console.log(self);
+```
 
-<p>inside a worker, you will get a worker global scope of the same type as that worker object written to the console — something like the following:</p>
+inside a worker, you will get a worker global scope of the same type as that worker object written to the console — something like the following:
 
-<pre class="brush: js">DedicatedWorkerGlobalScope {
+```js
+DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity
     Array: function Array() { [native code] }
@@ -43,7 +48,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
       prototype: Array[0]
       unobserve: function unobserve() { [native code] }
       __proto__: function Empty() {}
-      &lt;function scope&gt;
+      <function scope>
     ArrayBuffer: function ArrayBuffer() { [native code] }
     Blob: function Blob() { [native code] }
     Boolean: function Boolean() { [native code] }
@@ -51,21 +56,19 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
     Date: function Date() { [native code] }
     DedicatedWorkerGlobalScope: function DedicatedWorkerGlobalScope() { [native code] }
     Error: function Error() { [native code] }
-<em>// etc. etc.</em>
-</pre>
+// etc. etc.
+```
 
-<p>This provides a full list of the objects available to that worker scope, so it is quite a useful test if you want to see whether something is available to your worker or not. We also maintain a list of <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a>.</p>
+This provides a full list of the objects available to that worker scope, so it is quite a useful test if you want to see whether something is available to your worker or not. We also maintain a list of [Functions and classes available to Web Workers](/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-
-<h2 id="See_also">See also</h2>
-
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

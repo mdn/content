@@ -2,37 +2,38 @@
 title: PaymentAddress.city
 slug: Web/API/PaymentAddress/city
 tags:
-- API
-- Address
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Read-only
-- Reference
-- city
-- payment
-- paymentAddress
-- town
-- village
+  - API
+  - Address
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Read-only
+  - Reference
+  - city
+  - payment
+  - paymentAddress
+  - town
+  - village
 browser-compat: api.PaymentAddress.city
 ---
-<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}}</div>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}}
 
-<p>The <strong><code>city</code></strong> read-only property of
-    the {{domxref('PaymentAddress')}} interface returns a string containing the city or
-    town portion of the address.</p>
+The **`city`** read-only property of
+the {{domxref('PaymentAddress')}} interface returns a string containing the city or
+town portion of the address.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentCity</em> = <em>PaymentAddress</em>.city;</pre>
+```js
+var paymentCity = PaymentAddress.city;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} indicating the city or town portion of the address described
-  by the {{domxref("PaymentAddress")}} object.</p>
+A {{domxref("DOMString")}} indicating the city or town portion of the address described
+by the {{domxref("PaymentAddress")}} object.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

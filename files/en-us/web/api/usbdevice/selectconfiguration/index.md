@@ -2,42 +2,41 @@
 title: USBDevice.selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- selectConfiguration
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - selectConfiguration
 browser-compat: api.USBDevice.selectConfiguration
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>selectConfiguration()</code></strong> method of the
-  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
-  the specified configuration is selected.</p>
+The **`selectConfiguration()`** method of the
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
+the specified configuration is selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = USBDevice.selectConfiguration(<em>configurationValue</em>)</pre>
+```js
+var promise = USBDevice.selectConfiguration(configurationValue)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>configurationValue</dt>
-  <dd>The number of a device-specific configuration.</dd>
-</dl>
+- configurationValue
+  - : The number of a device-specific configuration.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}}.</p>
+A {{jsxref("promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

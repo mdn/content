@@ -2,47 +2,49 @@
 title: PaymentResponse.shippingAddress
 slug: Web/API/PaymentResponse/shippingAddress
 tags:
-- API
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Property
-- Reference
-- Secure context
-- shippingAddress
+  - API
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Property
+  - Reference
+  - Secure context
+  - shippingAddress
 browser-compat: api.PaymentResponse.shippingAddress
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>shippingAddress</code></strong> read-only property of
-  the <code>PaymentRequest</code> interface returns a {{domxref('PaymentAddress')}} object
-  containing the shipping address provided by the user.</p>
+The **`shippingAddress`** read-only property of
+the `PaymentRequest` interface returns a {{domxref('PaymentAddress')}} object
+containing the shipping address provided by the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>shippingAddress</em> = <em>PaymentRequest</em>.shippingAddress;</pre>
+```js
+var shippingAddress = PaymentRequest.shippingAddress;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("PaymentAddress")}} object providing details comprising the shipping
-  address provided by the user.</p>
+A {{domxref("PaymentAddress")}} object providing details comprising the shipping
+address provided by the user.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Generally, the user agent will fill the <code>shippingAddress</code> property for you.
-  You can trigger this by
-  setting <code>PaymentOptions.requestShipping</code> to <code>true</code> when calling
-  the {{domxref('PaymentRequest.paymentRequest','PaymentRequest')}} constructor.</p>
+Generally, the user agent will fill the `shippingAddress` property for you.
+You can trigger this by
+setting `PaymentOptions.requestShipping` to `true` when calling
+the {{domxref('PaymentRequest.paymentRequest','PaymentRequest')}} constructor.
 
-<p>In the example below, the cost of shipping varies by geography. When the
-  {{domxref('PaymentRequest.onshippingaddresschange')}} is
-  called, <code>updateDetails()</code> is called to update the details of
-  the <code>PaymentRequest</code>, using <code>shippingAddress</code> to set the correct
-  shipping cost.</p>
+In the example below, the cost of shipping varies by geography. When the
+{{domxref('PaymentRequest.onshippingaddresschange')}} is
+called, `updateDetails()` is called to update the details of
+the `PaymentRequest`, using `shippingAddress` to set the correct
+shipping cost.
 
-<pre class="brush: js">// Initialization of PaymentRequest arguments are excerpted for brevity.
+```js
+// Initialization of PaymentRequest arguments are excerpted for brevity.
 
 var payment = new PaymentRequest(supportedInstruments, details, options);
 
@@ -83,8 +85,8 @@ function updateDetails(details, shippingAddress, resolve) {
   }
   resolve(details);
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

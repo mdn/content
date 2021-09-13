@@ -13,47 +13,44 @@ tags:
   - stopPropagation
 browser-compat: api.Event.stopPropagation
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>stopPropagation()</code></strong> method of the {{domxref("Event")}}
-  interface prevents further propagation of the current event in the capturing and
-  bubbling phases. It does not, however, prevent any default behaviors from occurring; for
-  instance, clicks on links are still processed. If you want to stop those behaviors, see
-  the {{domxref("Event.preventDefault", "preventDefault()")}} method.</p>
+The **`stopPropagation()`** method of the {{domxref("Event")}}
+interface prevents further propagation of the current event in the capturing and
+bubbling phases. It does not, however, prevent any default behaviors from occurring; for
+instance, clicks on links are still processed. If you want to stop those behaviors, see
+the {{domxref("Event.preventDefault", "preventDefault()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>event</em>.stopPropagation();</pre>
+```js
+event.stopPropagation();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See Example 5: <a
-    href="/en-US/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation">Event
-    Propagation</a> in the Examples chapter for a more detailed example of this method and
-  event propagation in the DOM.</p>
+See Example 5: [Event
+Propagation](/en-US/docs/Web/API/Document_Object_Model/Examples#example_5_event_propagation) in the Examples chapter for a more detailed example of this method and
+event propagation in the DOM.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>See the <a
-      href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM
-      specification</a> for the explanation of event flow. The <a
-      href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM Level 3 Events
-      draft</a> has an illustration.</li>
-</ul>
+- See the [DOM
+  specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) for the explanation of event flow. The [DOM Level 3 Events
+  draft](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) has an illustration.

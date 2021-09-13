@@ -2,47 +2,52 @@
 title: CSSPropertyRule.initialValue
 slug: Web/API/CSSPropertyRule/initialvalue
 tags:
-- API
-- CSS
-- CSS Properties and Values API
-- CSSPropertyRule
-- Experimental
-- Houdini
-- Property
-- Reference
-- Read-only
+  - API
+  - CSS
+  - CSS Properties and Values API
+  - CSSPropertyRule
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Read-only
 browser-compat: api.CSSPropertyRule.initialValue
 ---
-<div>{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Properties and Values API")}}{{SeeCompatTable}}
 
-<p>The read-only <strong><code>initialValue</code></strong> nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property’s initial value. </p>
+The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property’s initial value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <var>initialValue</var> = <var>CSSPropertyRule</var>.initialValue;</pre>
+    const initialValue = CSSPropertyRule.initialValue;
 
-<h3>Value</h3>
-<p>A {{domxref("USVString")}} which is a {{CSSXref("&lt;declaration-value&gt;")}} as
-  defined in <a href="https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value">CSS
-    Syntax 3</a>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("USVString")}} which is a {{CSSXref("&lt;declaration-value&gt;")}} as
+defined in [CSS
+Syntax 3](https://www.w3.org/TR/css-syntax-3/#typedef-declaration-value).
 
-<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>initialValue</code> property returns the string <code>"#c0ffee"</code> this being the value of the <code>initial-value</code> property in the CSS.</p>
+## Examples
 
-<pre class="brush:css">@property --property-name {
-  syntax: '&lt;color&gt;';
+This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a `CSSPropertyRule` representing this rule. The `initialValue` property returns the string `"#c0ffee"` this being the value of the `initial-value` property in the CSS.
+
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].initialValue); //the string "#c0ffee"</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].initialValue); //the string "#c0ffee"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

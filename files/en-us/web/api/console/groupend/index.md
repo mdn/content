@@ -10,30 +10,28 @@ tags:
   - web console
 browser-compat: api.console.groupEnd
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.groupEnd()</code></strong> method exits the current inline group in the <a href="/en-US/docs/Tools/Web_Console">Web
-		console</a>. See <a
-		href="/en-US/docs/Web/API/console#using_groups_in_the_console">Using groups in the
-		console</a> in the {{domxref("console")}} documentation for details and examples.
-</p>
+The **`console.groupEnd()`** method exits the current inline group in the [Web
+console](/en-US/docs/Tools/Web_Console). See [Using groups in the
+console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and examples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.groupEnd();
-</pre>
+```js
+console.groupEnd();
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

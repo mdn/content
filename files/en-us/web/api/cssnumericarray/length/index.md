@@ -2,38 +2,40 @@
 title: CSSNumericArray.length
 slug: Web/API/CSSNumericArray/length
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericArray
-- CSSNumericValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericArray
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSNumericArray.length
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The read-only <strong><code>length</code></strong> property of the
-  {{domxref("CSSNumericArray")}} interface returns the number of
-  {{domxref("CSSNumericValue")}} objects in the list.</p>
+The read-only **`length`** property of the
+{{domxref("CSSNumericArray")}} interface returns the number of
+{{domxref("CSSNumericValue")}} objects in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>length</var> = CSSNumericArray.length;</pre>
+```js
+var length = CSSNumericArray.length;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer representing the number of {{domxref("CSSNumericValue")}} objects in the
-  list.</p>
+An integer representing the number of {{domxref("CSSNumericValue")}} objects in the
+list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

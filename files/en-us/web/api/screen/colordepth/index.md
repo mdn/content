@@ -2,44 +2,43 @@
 title: Screen.colorDepth
 slug: Web/API/Screen/colorDepth
 tags:
-- API
-- CSSOM View
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - Property
+  - Reference
 browser-compat: api.Screen.colorDepth
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>Screen.colorDepth</code></strong> read-only property returns the
-  color depth of the screen. Per the CSSOM, some implementations return <code>24</code>
-  for compatibility reasons. See the browser compatibility section for those that don't.
-</p>
+The **`Screen.colorDepth`** read-only property returns the
+color depth of the screen. Per the CSSOM, some implementations return `24`
+for compatibility reasons. See the browser compatibility section for those that don't.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>bitDepth</var> = window.screen.colorDepth;</pre>
+```js
+bitDepth = window.screen.colorDepth;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Check the color depth of the screen
-if ( window.screen.colorDepth &lt; 8) {
+```js
+// Check the color depth of the screen
+if ( window.screen.colorDepth < 8) {
   // Use low-color version of page
 } else {
   // Use regular, colorful page
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Screen.pixelDepth")}}</li>
-</ul>
+- {{DOMxRef("Screen.pixelDepth")}}

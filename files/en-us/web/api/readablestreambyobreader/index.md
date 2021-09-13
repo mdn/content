@@ -11,43 +11,37 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
-<p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Streams")}}{{SeeCompatTable}}
 
-<p>The <code>ReadableStreamBYOBReader</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor).</p>
+The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}}</dt>
- <dd>Creates and returns a <code>ReadableStreamBYOBReader</code> object instance.</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}}
+  - : Creates and returns a `ReadableStreamBYOBReader` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBReader.closed")}} {{readonlyInline}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process. </dd>
-</dl>
+- {{domxref("ReadableStreamBYOBReader.closed")}} {{readonlyInline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBReader.cancel()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
- <dt>{{domxref("ReadableStreamBYOBReader.read()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with an object indicating the state of the stream: either the next chunk in the stream or an indication that the stream is closed.</dd>
- <dt>{{domxref("ReadableStreamBYOBReader.releaseLock()")}}</dt>
- <dd>Releases the reader's lock on the stream.</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBReader.cancel()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
+- {{domxref("ReadableStreamBYOBReader.read()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an object indicating the state of the stream: either the next chunk in the stream or an indication that the stream is closed.
+- {{domxref("ReadableStreamBYOBReader.releaseLock()")}}
+  - : Releases the reader's lock on the stream.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,81 +2,75 @@
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
 tags:
-- API
-- HTML DOM
-- HTMLElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.dir
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLElement.dir</strong></code> property gets or sets the text
-  writing directionality of the content of the current element.</p>
+The **`HTMLElement.dir`** property gets or sets the text
+writing directionality of the content of the current element.
 
-<p>The text writing directionality of an element is which direction that text goes (for
-  support of different language systems). Arabic languages and Hebrew are typical
-  languages using the RTL directionality.</p>
+The text writing directionality of an element is which direction that text goes (for
+support of different language systems). Arabic languages and Hebrew are typical
+languages using the RTL directionality.
 
-<p>An image can have its <code>dir</code> property set to "<code>rtl</code>" in which case
-  the HTML attributes <code>title</code> and <code>alt</code> will be formatted and
-  defined as "<code>rtl</code>".</p>
+An image can have its `dir` property set to "`rtl`" in which case
+the HTML attributes `title` and `alt` will be formatted and
+defined as "`rtl`".
 
-<p>When a table has its <code>dir</code> set to "<code>rtl</code>", the column order is
-  arranged from right to left.</p>
+When a table has its `dir` set to "`rtl`", the column order is
+arranged from right to left.
 
-<p>When an element has its dir set to "<code>auto</code>", the direction of the element is
-  determined based on its first strong directionality character, or default to the
-  directionality of its parent element.</p>
+When an element has its dir set to "`auto`", the direction of the element is
+determined based on its first strong directionality character, or default to the
+directionality of its parent element.
 
-<div class="note">
-  <p><strong>Note:</strong> Browsers might allow users to change the directionality of {{ HTMLElement("input") }}
-    and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome
-    and Safari provide a directionality option in the contextual menu of input fields
-    while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> +
-    <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses
-    <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
-    the <code><strong>dir</strong></code> attribute value.</p>
-</div>
+> **Note:** Browsers might allow users to change the directionality of {{ HTMLElement("input") }}
+> and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome
+> and Safari provide a directionality option in the contextual menu of input fields
+> while Internet Explorer and Edge use the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update
+> the **`dir`** attribute value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em><var>currentWritingDirection</var></em> = <em>elementNodeReference</em>.dir;
-<em>elementNodeReference</em>.dir = <em><var>newWritingDirection</var></em>;
-</pre>
+```js
+var currentWritingDirection = elementNodeReference.dir;
+elementNodeReference.dir = newWritingDirection;
+```
 
-<ul>
-  <li><code><var>currentWritingDirection</var></code> is a string variable representing
-    the text writing direction of the current element.</li>
-  <li><code><var>newWritingDirection</var></code> is a string variable representing the
-    text writing direction value.</li>
-</ul>
+- `currentWritingDirection` is a string variable representing
+  the text writing direction of the current element.
+- `newWritingDirection` is a string variable representing the
+  text writing direction value.
 
-<p>Possible values for <code>dir</code> are <code>ltr</code>, for left-to-right,
-  <code>rtl</code>, for right-to-left, and <code>auto</code> for specifying that the
-  direction of the element must be determined based on the contents of the element.</p>
+Possible values for `dir` are `ltr`, for left-to-right,
+`rtl`, for right-to-left, and `auto` for specifying that the
+direction of the element must be determined based on the contents of the element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var parg = document.getElementById("para1");
+```js
+var parg = document.getElementById("para1");
 parg.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.dir")}}</li>
-  <li>HTML <a href="/en-US/docs/Web/HTML/Global_attributes/dir"><code>dir</code></a>
-    global attribute</li>
-  <li>CSS {{cssxref("direction")}} property</li>
-  <li>CSS {{cssxref(":dir")}} pseudo-class</li>
-</ul>
+- {{domxref("document.dir")}}
+- HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir)
+  global attribute
+- CSS {{cssxref("direction")}} property
+- CSS {{cssxref(":dir")}} pseudo-class

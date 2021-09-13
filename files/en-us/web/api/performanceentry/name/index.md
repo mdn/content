@@ -2,30 +2,31 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceEntry.name
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>name</code></strong> property of the
-    {{domxref("PerformanceEntry")}} interface returns a value that further specifies the
-    value returned by the {{domxref("PerformanceEntry.entryType")}} property. This
-    property is read only.</p>
+The **`name`** property of the
+{{domxref("PerformanceEntry")}} interface returns a value that further specifies the
+value returned by the {{domxref("PerformanceEntry.entryType")}} property. This
+property is read only.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>name</em> = <em>entry</em>.name;
-</pre>
+```js
+var name = entry.name;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>The return value depends on the subtype of the <code>PerformanceEntry</code> object and
-  the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.</p>
+The return value depends on the subtype of the `PerformanceEntry` object and
+the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table below.
 
 <table class="no-markdown">
   <thead>
@@ -39,8 +40,10 @@ browser-compat: api.PerformanceEntry.name
   <tbody>
     <tr>
       <td>{{domxref("URL")}}</td>
-      <td>{{domxref('PerformanceFrameTiming')}},
-        {{domxref('PerformanceNavigationTiming')}}</td>
+      <td>
+        {{domxref('PerformanceFrameTiming')}},
+        {{domxref('PerformanceNavigationTiming')}}
+      </td>
       <td><code>frame</code>, <code>navigation</code></td>
       <td>The document's address.</td>
     </tr>
@@ -48,37 +51,47 @@ browser-compat: api.PerformanceEntry.name
       <td>{{domxref("URL")}}</td>
       <td>{{domxref('PerformanceResourceTiming')}}</td>
       <td><code>resource</code></td>
-      <td>The resolved URL of the requested resource. This value doesn't change even if
-        the request is redirected.</td>
+      <td>
+        The resolved URL of the requested resource. This value doesn't change
+        even if the request is redirected.
+      </td>
     </tr>
     <tr>
       <td>{{domxref("DOMString")}}</td>
       <td>{{domxref('PerformanceMark')}}</td>
       <td><code>mark</code></td>
-      <td>The name used when the mark was created by calling
-        {{domxref("Performance.mark","performance.mark()")}}.</td>
+      <td>
+        The name used when the mark was created by calling
+        {{domxref("Performance.mark","performance.mark()")}}.
+      </td>
     </tr>
     <tr>
       <td>{{domxref("DOMString")}}</td>
       <td>{{domxref('PerformanceMeasure')}}</td>
       <td><code>measure</code></td>
-      <td>name used when the measure was created by calling
-        {{domxref("Performance.measure","performance.measure()")}}.</td>
+      <td>
+        name used when the measure was created by calling
+        {{domxref("Performance.measure","performance.measure()")}}.
+      </td>
     </tr>
     <tr>
       <td>{{domxref("DOMString")}}</td>
       <td>{{domxref('PerformancePaintTiming')}}</td>
       <td><code>paint</code></td>
-      <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
+      <td>
+        Either <code>'first-paint'</code> or
+        <code>'first-contentful-paint'</code>.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>name</code> property.</p>
+The following example shows the use of the `name` property.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -93,7 +106,7 @@ browser-compat: api.PerformanceEntry.name
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -102,7 +115,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -110,7 +123,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -121,12 +134,12 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

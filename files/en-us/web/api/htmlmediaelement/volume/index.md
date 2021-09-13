@@ -2,46 +2,45 @@
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Reference
-- Volume
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Reference
+  - Volume
 browser-compat: api.HTMLMediaElement.volume
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.volume</code></strong> property sets the volume at
-  which the media will be played. </p>
+The **`HTMLMediaElement.volume`** property sets the volume at
+which the media will be played.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>volume</em> = <em>video</em>.volume; //1</pre>
+```js
+var volume = video.volume; //1
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double values must fall between 0 and 1, where 0 is effectively muted and 1 is the
-  loudest possible value.</p>
+A double values must fall between 0 and 1, where 0 is effectively muted and 1 is the
+loudest possible value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>var obj = document.createElement('audio');
-console.log(obj.volume); // 1
-obj.volume = 0.75;</pre>
+    var obj = document.createElement('audio');
+    console.log(obj.volume); // 1
+    obj.volume = 0.75;
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-  <li>{{domxref("HTMLMediaElement.muted")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.muted")}}

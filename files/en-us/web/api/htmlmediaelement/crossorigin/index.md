@@ -9,20 +9,18 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.crossOrigin
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.crossOrigin</code></strong> property is the CORS setting for this image element. See <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings attributes</a> for details.</p>
+The **`HTMLMediaElement.crossOrigin`** property is the CORS setting for this image element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

@@ -2,47 +2,48 @@
 title: RTCIceCandidatePairStats.bytesReceived
 slug: Web/API/RTCIceCandidatePairStats/bytesReceived
 tags:
-- API
-- Candidate
-- Candidate Pair
-- ICE
-- Network
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- bytesReceived
-- data
+  - API
+  - Candidate
+  - Candidate Pair
+  - ICE
+  - Network
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - bytesReceived
+  - data
 browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>bytesReceived</code></strong> indicates the total number of payload
-    bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
-    received to date on the connection described by the candidate pair.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`bytesReceived`** indicates the total number of payload
+bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
+received to date on the connection described by the candidate pair.
 
-<p>The {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} property reports the
-  number of bytes sent so far on the described connection.</p>
+The {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} property reports the
+number of bytes sent so far on the described connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>received</em> = <em>rtcIceCandidatePairStats</em>.bytesReceived;</pre>
+```js
+received = rtcIceCandidatePairStats.bytesReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the total number of bytes received so far on the connection
-  described by this candidate pair. Only data bytes are counted; overhead such as padding,
-  headers, and the like are not included in this count.</p>
+An integer value indicating the total number of bytes received so far on the connection
+described by this candidate pair. Only data bytes are counted; overhead such as padding,
+headers, and the like are not included in this count.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

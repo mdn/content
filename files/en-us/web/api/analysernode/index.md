@@ -9,95 +9,88 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AnalyserNode</code></strong> interface represents a node able to provide real-time frequency and time-domain analysis information. It is an {{domxref("AudioNode")}} that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.</p>
+The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information. It is an {{domxref("AudioNode")}} that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
 
-<p>An <code>AnalyserNode</code> has exactly one input and one output. The node works even if the output is not connected.</p>
+An `AnalyserNode` has exactly one input and one output. The node works even if the output is not connected.
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="fttaudiodata_en.svg"></p>
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code> (but may be left unconnected)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code> (but may be left unconnected)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Inheritance">Inheritance</h2>
+## Inheritance
 
-<p>This interface inherits from the following parent interfaces:</p>
+This interface inherits from the following parent interfaces:
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}</dt>
- <dd>Creates a new instance of an <code>AnalyserNode</code> object.</dd>
-</dl>
+- {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
+  - : Creates a new instance of an `AnalyserNode` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("AnalyserNode.fftSize")}}</dt>
- <dd>Is an unsigned long value representing the size of the FFT (<a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a>) to be used to determine the frequency domain.</dd>
- <dt>{{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}</dt>
- <dd>Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.</dd>
- <dt>{{domxref("AnalyserNode.minDecibels")}}</dt>
- <dd>Is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using <code>getByteFrequencyData()</code>.</dd>
- <dt>{{domxref("AnalyserNode.maxDecibels")}}</dt>
- <dd>Is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</dd>
- <dt>{{domxref("AnalyserNode.smoothingTimeConstant")}}</dt>
- <dd>Is a double value representing the averaging constant with the last analysis frame — basically, it makes the transition between values over time smoother.</dd>
-</dl>
+- {{domxref("AnalyserNode.fftSize")}}
+  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
+- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
+  - : Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
+- {{domxref("AnalyserNode.minDecibels")}}
+  - : Is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using `getByteFrequencyData()`.
+- {{domxref("AnalyserNode.maxDecibels")}}
+  - : Is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
+- {{domxref("AnalyserNode.smoothingTimeConstant")}}
+  - : Is a double value representing the averaging constant with the last analysis frame — basically, it makes the transition between values over time smoother.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.</dd>
- <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>Copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
- <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.</dd>
- <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</dd>
-</dl>
+- {{domxref("AnalyserNode.getFloatFrequencyData()")}}
+  - : Copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
+- {{domxref("AnalyserNode.getByteFrequencyData()")}}
+  - : Copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
+- {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
+  - : Copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
+- {{domxref("AnalyserNode.getByteTimeDomainData()")}}
+  - : Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="note">
-<p><strong>Note:</strong> See the guide <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> for more information on creating audio visualizations.</p>
-</div>
+> **Note:** See the guide [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
 // ...
 
@@ -134,7 +127,7 @@ function draw() {
   var sliceWidth = canvas.width * 1.0 / bufferLength;
   var x = 0;
 
-  for (var i = 0; i &lt; bufferLength; i++) {
+  for (var i = 0; i < bufferLength; i++) {
 
     var v = dataArray[i] / 128.0;
     var y = v * canvas.height / 2;
@@ -153,18 +146,16 @@ function draw() {
 }
 
 draw();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

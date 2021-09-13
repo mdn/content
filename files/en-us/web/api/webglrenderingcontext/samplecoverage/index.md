@@ -2,68 +2,67 @@
 title: WebGLRenderingContext.sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.sampleCoverage()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies multi-sample coverage
-  parameters for anti-aliasing effects.</p>
+The **`WebGLRenderingContext.sampleCoverage()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) specifies multi-sample coverage
+parameters for anti-aliasing effects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.sampleCoverage(<var>value</var>, <var>invert</var>);
-</pre>
+```js
+void gl.sampleCoverage(value, invert);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} which sets a single floating-point coverage value clamped
-    to the range [0,1]. The default value is 1.0.</dd>
-  <dt>invert</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} which sets whether or not the coverage masks should be
-    inverted. The default value is <code>false</code>.</dd>
-</dl>
+- value
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} which sets a single floating-point coverage value clamped
+    to the range \[0,1]. The default value is 1.0.
+- invert
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} which sets whether or not the coverage masks should be
+    inverted. The default value is `false`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Multi-sampling is disabled by default. To enable or disable multi-sampling, use the
-  {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.SAMPLE_COVERAGE</code> and <code>gl.SAMPLE_ALPHA_TO_COVERAGE</code>.</p>
+Multi-sampling is disabled by default. To enable or disable multi-sampling, use the
+{{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.SAMPLE_COVERAGE` and `gl.SAMPLE_ALPHA_TO_COVERAGE`.
 
-<pre class="brush: js">gl.enable(gl.SAMPLE_COVERAGE);
+```js
+gl.enable(gl.SAMPLE_COVERAGE);
 gl.sampleCoverage(0.5, false);
-</pre>
+```
 
-<p>To check the sample coverage values, query the <code>SAMPLE_COVERAGE_VALUE</code> and
-  <code>SAMPLE_COVERAGE_INVERT</code> constants.</p>
+To check the sample coverage values, query the `SAMPLE_COVERAGE_VALUE` and
+`SAMPLE_COVERAGE_INVERT` constants.
 
-<pre class="brush: js">gl.getParameter(gl.SAMPLE_COVERAGE_VALUE);  // 0.5
+```js
+gl.getParameter(gl.SAMPLE_COVERAGE_VALUE);  // 0.5
 gl.getParameter(gl.SAMPLE_COVERAGE_INVERT); // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLCanvasElement.getContext()")}} – <code>antialias</code> parameter for
-    the context.</li>
-</ul>
+- {{domxref("HTMLCanvasElement.getContext()")}} – `antialias` parameter for
+  the context.

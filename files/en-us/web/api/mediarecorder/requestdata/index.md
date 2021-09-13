@@ -15,41 +15,42 @@ tags:
   - requestData
 browser-compat: api.MediaRecorder.requestData
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>MediaRecorder.requestData()</code></strong>
-    method (part of the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaRecorder
-      API</a>) is used to raise a {{domxref("dataavailable")}} event containing a
-    {{domxref("Blob")}} object of the captured media as it was when the method was
-    called. This can then be grabbed and manipulated as you wish.</p>
+The **`MediaRecorder.requestData()`**
+method (part of the [MediaRecorder
+API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used to raise a {{domxref("dataavailable")}} event containing a
+{{domxref("Blob")}} object of the captured media as it was when the method was
+called. This can then be grabbed and manipulated as you wish.
 
-<p>When the <code>requestData()</code> method is invoked, the browser queues a task that
-  runs the following steps:</p>
+When the `requestData()` method is invoked, the browser queues a task that
+runs the following steps:
 
-<ol>
-  <li>If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
-    <code>InvalidState</code> error and terminate these steps. If
-    {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.</li>
-  <li>Raise a {{event("dataavailable")}} event containing a {{domxref("Blob")}} of the
-    currently captured data (the Blob is available under the event's <code>data</code>
-    attribute.)</li>
-  <li>Create a new Blob and place subsequently captured data into it.</li>
-</ol>
+1.  If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM
+    `InvalidState` error and terminate these steps. If
+    {{domxref("MediaRecorder.state")}} is not "inactive", continue to the next step.
+2.  Raise a {{event("dataavailable")}} event containing a {{domxref("Blob")}} of the
+    currently captured data (the Blob is available under the event's `data`
+    attribute.)
+3.  Create a new Blob and place subsequently captured data into it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MediaRecorder.requestData()</pre>
+```js
+MediaRecorder.requestData()
+```
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<p>An <code>InvalidState</code> error is raised if the <code>requestData()</code> method
-  is called while the <code>MediaRecorder</code> object’s
-  {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
-  recording is not occurring.</p>
+An `InvalidState` error is raised if the `requestData()` method
+is called while the `MediaRecorder` object’s
+{{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
+recording is not occurring.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">...
+```js
+...
 
   captureMedia.onclick = function() {
     mediaRecorder.requestData();
@@ -58,26 +59,23 @@ browser-compat: api.MediaRecorder.requestData
     // in new Blob
   }
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaRecorder API</a></li>
-  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-    getUserMedia + Web Audio API visualization demo, by <a
-      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Using
+  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

@@ -2,69 +2,63 @@
 title: WebGL2RenderingContext.drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawBuffers
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.drawBuffers()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> defines draw buffers to which
-  fragment colors are written into. The draw buffer settings are part of the state of the
-  currently bound framebuffer or the drawingbuffer if no framebuffer is bound.</p>
+The **`WebGL2RenderingContext.drawBuffers()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) defines draw buffers to which
+fragment colors are written into. The draw buffer settings are part of the state of the
+currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.drawBuffers(<var>buffers</var>);
-</pre>
+```js
+void gl.drawBuffers(buffers);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>buffers</code></dt>
-  <dd>An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffers into which
+- `buffers`
+
+  - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffers into which
     fragment colors will be written. Possible values are:
-    <ul>
-      <li><code>gl.NONE</code>: Fragment shader output is not written into any color
-        buffer.</li>
-      <li><code>gl.BACK</code>: Fragment shader output is written into the back color
-        buffer.</li>
-      <li><code>gl.COLOR_ATTACHMENT{0-15}</code>: Fragment shader output is written in the
-        nth color attachment of the current framebuffer.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.NONE`: Fragment shader output is not written into any color
+      buffer.
+    - `gl.BACK`: Fragment shader output is written into the back color
+      buffer.
+    - `gl.COLOR_ATTACHMENT{0-15}`: Fragment shader output is written in the
+      nth color attachment of the current framebuffer.
 
-<p>None.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+None.
 
-<ul>
-  <li>If <code>buffers</code> contains not one of the accepted values, a
-    <code>gl.INVALID_ENUM</code> error is thrown.</li>
-</ul>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- If `buffers` contains not one of the accepted values, a
+  `gl.INVALID_ENUM` error is thrown.
 
-<pre class="brush: js">gl.drawBuffers([gl.NONE, gl.COLOR_ATTACHMENT1]);
-</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+```js
+gl.drawBuffers([gl.NONE, gl.COLOR_ATTACHMENT1]);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.clearBuffer",
-    "WebGL2RenderingContext.clearBuffer[fiuv]()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.clearBuffer",
+    "WebGL2RenderingContext.clearBuffer[fiuv]()")}}

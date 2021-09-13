@@ -9,44 +9,42 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScriptURL
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>createScriptURL()</code></strong> method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.</p>
+The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>str</var> = <var>TrustedTypePolicy</var>.createScriptURL(<var>input</var>[,<var>args</var>]);</pre>
+    var str = TrustedTypePolicy.createScriptURL(input[,args]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>input</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the string to be sanitized by the policy.</dd>
-  <dt><code>args</code>{{optional_inline}}</dt>
-  <dd>Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.</dd>
-</dl>
+- `input`
+  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+- `args`{{optional_inline}}
+  - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("TrustedScriptURL")}} object.</p>
+A {{domxref("TrustedScriptURL")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example a string containing the URL to an external resource is used as the input for <code>createScriptURL()</code>. The policy can check that this is an allowed URL before inserting it into an injection sink that could cause this external script to be executed.</p>
+In the below example a string containing the URL to an external resource is used as the input for `createScriptURL()`. The policy can check that this is an allowed URL before inserting it into an injection sink that could cause this external script to be executed.
 
-<pre class="brush: js">const escaped = escapeURLPolicy.createScriptURL("https://example.com/my-script.js");</pre>
+```js
+const escaped = escapeURLPolicy.createScriptURL("https://example.com/my-script.js");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

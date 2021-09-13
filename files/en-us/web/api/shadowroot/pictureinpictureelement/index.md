@@ -2,47 +2,49 @@
 title: ShadowRoot.pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
 tags:
-- API
-- Property
-- Reference
-- ShadowRoot
-- Web Components
-- shadow dom
+  - API
+  - Property
+  - Reference
+  - ShadowRoot
+  - Web Components
+  - shadow dom
 browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>pictureInPictureElement</code></strong> read-only property of the
+The **`pictureInPictureElement`** read-only property of the
 {{domxref("ShadowRoot")}} interface returns the {{domxref("Element")}} that is currently being
-presented in picture-in-picture mode in this shadow tree, or <code>null</code> if
-picture-in-picture mode is not currently in use.</p>
+presented in picture-in-picture mode in this shadow tree, or `null` if
+picture-in-picture mode is not currently in use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>shadowRoot</var>.pictureInPictureElement</pre>
+```js
+shadowRoot.pictureInPictureElement
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A reference to the {{domxref("Element")}} object that's currently in
-  picture-in-picture mode, or, if picture-in-picture mode isn't currently in use by the
-  shadow tree, the returned value is <code>null</code>.</p>
+A reference to the {{domxref("Element")}} object that's currently in
+picture-in-picture mode, or, if picture-in-picture mode isn't currently in use by the
+shadow tree, the returned value is `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
-let pipElem = shadow.pictureInPictureElement;</pre>
+let pipElem = shadow.pictureInPictureElement;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.pictureInPictureElement")}}</li>
-</ul>
+- {{domxref("Document.pictureInPictureElement")}}

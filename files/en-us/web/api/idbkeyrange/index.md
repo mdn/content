@@ -11,125 +11,78 @@ tags:
   - Storage
 browser-compat: api.IDBKeyRange
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>The <strong><code>IDBKeyRange</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.</p>
-</div>
+The **`IDBKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.
 
-<p>A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is <em>bounded</em>; if it has no bounds, it is <em>unbounded</em>. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:</p>
+A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is _bounded_; if it has no bounds, it is _unbounded_. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Range</th>
-   <th scope="col">Code</th>
-  </tr>
-  <tr>
-   <td>All keys ≥ <strong>x</strong></td>
-   <td>{{domxref("IDBKeyRange.lowerBound")}}<code>(<strong>x</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>All keys &gt; <strong>x</strong></td>
-   <td>{{domxref("IDBKeyRange.lowerBound")}}<code>(<strong>x</strong>, true) </code></td>
-  </tr>
-  <tr>
-   <td>All keys ≤<strong> y</strong></td>
-   <td>{{domxref("IDBKeyRange.upperBound")}}<code>(<strong>y</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>All keys &lt;<strong> y</strong></td>
-   <td>{{domxref("IDBKeyRange.upperBound")}}<code>(<strong>y</strong>, true)</code></td>
-  </tr>
-  <tr>
-   <td>All keys ≥ <strong>x</strong> &amp;&amp; ≤ <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>)</code></td>
-  </tr>
-  <tr>
-   <td>All keys &gt; <strong>x</strong> &amp;&amp;&lt; <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, true, true)</code></td>
-  </tr>
-  <tr>
-   <td>All keys &gt; <strong>x</strong> &amp;&amp; ≤ <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, true, false)</code></td>
-  </tr>
-  <tr>
-   <td>All keys ≥ <strong>x</strong> &amp;&amp;&lt; <strong>y</strong></td>
-   <td>{{domxref("IDBKeyRange.bound")}}<code>(<strong>x</strong>, <strong>y</strong>, false, true)</code></td>
-  </tr>
-  <tr>
-   <td>The key = <strong>z</strong></td>
-   <td>{{domxref("IDBKeyRange.only")}}<code>(<strong>z</strong>)</code></td>
-  </tr>
- </thead>
-</table>
+| Range                       | Code                                                              |
+| --------------------------- | ----------------------------------------------------------------- |
+| All keys ≥ **x**            | {{domxref("IDBKeyRange.lowerBound")}}`(x)`             |
+| All keys > **x**            | {{domxref("IDBKeyRange.lowerBound")}}`(x, true)`       |
+| All keys ≤ **y**            | {{domxref("IDBKeyRange.upperBound")}}`(y)`             |
+| All keys < **y**            | {{domxref("IDBKeyRange.upperBound")}}`(y, true)`       |
+| All keys ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
+| All keys > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
+| All keys > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
+| All keys ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
+| The key = **z**             | {{domxref("IDBKeyRange.only")}}`(z)`                     |
 
-<p>A key is in a key range if the following conditions are true:</p>
+A key is in a key range if the following conditions are true:
 
-<ul>
- <li>The lower value of the key range is one of the following:
-  <ul>
-   <li><code>undefined</code></li>
-   <li>Less than key value</li>
-   <li>Equal to key value if <code>lowerOpen</code> is <code>false</code>.</li>
-  </ul>
- </li>
- <li>The upper value of the key range is one of the following:
-  <ul>
-   <li><code>undefined</code></li>
-   <li>Greater than key value</li>
-   <li>Equal to key value if <code>upperOpen</code> is <code>false</code>.</li>
-  </ul>
- </li>
-</ul>
+- The lower value of the key range is one of the following:
 
-<p>{{AvailableInWorkers}}</p>
+  - `undefined`
+  - Less than key value
+  - Equal to key value if `lowerOpen` is `false`.
 
-<h2 id="Properties">Properties</h2>
+- The upper value of the key range is one of the following:
 
-<dl>
- <dt>{{domxref("IDBKeyRange.lower")}} {{readonlyInline}}</dt>
- <dd>Lower bound of the key range.</dd>
- <dt>{{domxref("IDBKeyRange.upper")}} {{readonlyInline}}</dt>
- <dd>Upper bound of the key range.</dd>
- <dt>{{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}</dt>
- <dd>Returns false if the lower-bound value is included in the key range.</dd>
- <dt>{{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}</dt>
- <dd>Returns false if the upper-bound value is included in the key range.</dd>
-</dl>
+  - `undefined`
+  - Greater than key value
+  - Equal to key value if `upperOpen` is `false`.
 
-<h2 id="Methods">Methods</h2>
+{{AvailableInWorkers}}
 
-<h3 id="Static_methods">Static methods</h3>
+## Properties
 
-<dl>
- <dt>{{domxref("IDBKeyRange.bound()")}}</dt>
- <dd>Creates a new key range with upper and lower bounds.</dd>
- <dt>{{domxref("IDBKeyRange.only()")}}</dt>
- <dd>Creates a new key range containing a single value.</dd>
- <dt>{{domxref("IDBKeyRange.lowerBound()")}}</dt>
- <dd>Creates a new key range with only a lower bound.</dd>
- <dt>{{domxref("IDBKeyRange.upperBound()")}}</dt>
- <dd>Creates a new upper-bound key range.</dd>
-</dl>
+- {{domxref("IDBKeyRange.lower")}} {{readonlyInline}}
+  - : Lower bound of the key range.
+- {{domxref("IDBKeyRange.upper")}} {{readonlyInline}}
+  - : Upper bound of the key range.
+- {{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}
+  - : Returns false if the lower-bound value is included in the key range.
+- {{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}
+  - : Returns false if the upper-bound value is included in the key range.
 
-<h3 id="Instance_methods">Instance methods</h3>
+## Methods
 
-<dl>
- <dt>{{domxref("IDBKeyRange.includes()")}}</dt>
- <dd>Returns a boolean indicating whether a specified key is inside the key range.</dd>
-</dl>
+### Static methods
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("IDBKeyRange.bound()")}}
+  - : Creates a new key range with upper and lower bounds.
+- {{domxref("IDBKeyRange.only()")}}
+  - : Creates a new key range containing a single value.
+- {{domxref("IDBKeyRange.lowerBound()")}}
+  - : Creates a new key range with only a lower bound.
+- {{domxref("IDBKeyRange.upperBound()")}}
+  - : Creates a new upper-bound key range.
 
-<p>The following example illustrates how you'd use a key range. Here we declare a <code>keyRangeValue</code> as a range between values of <code>"A"</code> and <code>"F"</code>. We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring <code>keyRangeValue</code> as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values <code>"A"</code> and <code>"F"</code>, as we haven't declared that they should be open bounds.
-If we used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the range would not include <code>"A"</code> and <code>"F"</code>, only the values between them.</p>
+### Instance methods
 
-<div class="note">
-<p><strong>Note:</strong> For a more complete example allowing you to experiment with key range, have a look at our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live too</a>.)</p>
-</div>
+- {{domxref("IDBKeyRange.includes()")}}
+  - : Returns a boolean indicating whether a specified key is inside the key range.
 
-<pre class="brush: js">function displayData() {
+## Examples
+
+The following example illustrates how you'd use a key range. Here we declare a `keyRangeValue` as a range between values of `"A"` and `"F"`. We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values `"A"` and `"F"`, as we haven't declared that they should be open bounds.
+If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not include `"A"` and `"F"`, only the values between them.
+
+> **Note:** For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
+
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -139,7 +92,7 @@ If we used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the rang
     var cursor = event.target.result;
     if(cursor) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+      listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
       list.appendChild(listItem);
 
       cursor.continue();
@@ -147,24 +100,23 @@ If we used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the rang
       console.log('Entries all displayed.');
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

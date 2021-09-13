@@ -9,33 +9,29 @@ tags:
   - SVG DOM
 browser-compat: api.SVGViewElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGViewElement</code></strong> interface provides access to the properties of {{SVGElement("view")}} elements, as well as methods to manipulate them.</p>
+The **`SVGViewElement`** interface provides access to the properties of {{SVGElement("view")}} elements, as well as methods to manipulate them.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGViewElement.viewTarget")}} {{deprecated_inline}}</dt>
- <dd>An {{domxref("SVGStringList")}} corresponding to the {{SVGAttr("viewTarget")}} attribute of the given {{SVGElement("view")}} element. A list of {{domxref("DOMString")}} values which contain the names listed in the {{SVGAttr("viewTarget")}} attribute. Each of the <code>DOMString</code> values can be associated with the corresponding element using the {{domxref("Document.getElementById()", "getElementById()")}} method call.</dd>
-</dl>
+- {{domxref("SVGViewElement.viewTarget")}} {{deprecated_inline}}
+  - : An {{domxref("SVGStringList")}} corresponding to the {{SVGAttr("viewTarget")}} attribute of the given {{SVGElement("view")}} element. A list of {{domxref("DOMString")}} values which contain the names listed in the {{SVGAttr("viewTarget")}} attribute. Each of the `DOMString` values can be associated with the corresponding element using the {{domxref("Document.getElementById()", "getElementById()")}} method call.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("view")}}</li>
-</ul>
+- {{SVGElement("view")}}

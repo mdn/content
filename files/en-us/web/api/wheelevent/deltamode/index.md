@@ -10,61 +10,41 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaMode
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>WheelEvent.deltaMode</strong></code> read-only property returns an
-  <code>unsigned long</code> representing the unit of the delta values scroll amount.
-  Permitted values are:</p>
+The **`WheelEvent.deltaMode`** read-only property returns an
+`unsigned long` representing the unit of the delta values scroll amount.
+Permitted values are:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Constant</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOM_DELTA_PIXEL</code></td>
-      <td><code>0x00</code></td>
-      <td>The delta values are specified in pixels.</td>
-    </tr>
-    <tr>
-      <td><code>DOM_DELTA_LINE</code></td>
-      <td><code>0x01</code></td>
-      <td>The delta values are specified in lines.</td>
-    </tr>
-    <tr>
-      <td><code>DOM_DELTA_PAGE</code></td>
-      <td><code>0x02</code></td>
-      <td>The delta values are specified in pages.</td>
-    </tr>
-  </tbody>
-</table>
+| Constant          | Value  | Description                               |
+| ----------------- | ------ | ----------------------------------------- |
+| `DOM_DELTA_PIXEL` | `0x00` | The delta values are specified in pixels. |
+| `DOM_DELTA_LINE`  | `0x01` | The delta values are specified in lines.  |
+| `DOM_DELTA_PAGE`  | `0x02` | The delta values are specified in pages.  |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var unit = event.deltaMode;</pre>
+```js
+var unit = event.deltaMode;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+```js
+var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
 
 console.log(syntheticEvent.deltaMode);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("wheel") }}</li>
-  <li>{{domxref("WheelEvent")}}</li>
-</ul>
+- {{ event("wheel") }}
+- {{domxref("WheelEvent")}}

@@ -10,52 +10,47 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCPeerConnectionIceEvent</code></strong> interface represents events that occurs in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.</p>
+The **`RTCPeerConnectionIceEvent`** interface represents events that occurs in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.
 
-<p>Only one event is of this type: {{event("icecandidate")}}.</p>
+Only one event is of this type: {{event("icecandidate")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties</em>.</p>
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
-<dl>
- <dt>{{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}</dt>
- <dd>Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or <code>null</code> if this event indicates that there are no further candidates to come.</dd>
-</dl>
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+  - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}</dt>
- <dd>Returns a new <code>RTCPeerConnectionIceEvent</code>. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event; the second a dictionary containing the {{domxref("RTCIceCandidate")}} it refers to.</dd>
-</dl>
+- {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
+  - : Returns a new `RTCPeerConnectionIceEvent`. It takes two parameters, the first being a {{domxref("DOMString")}} representing the type of the event; the second a dictionary containing the {{domxref("RTCIceCandidate")}} it refers to.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method.</em></p>
+_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">pc.onicecandidate = function( ev ) {
+```js
+pc.onicecandidate = function( ev ) {
   alert("The ICE candidate (transport address: '" +
     ev.candidate.candidate +
     "') has been added to this connection.");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>Its usual target: {{domxref("RTCPeerConnection")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- Its usual target: {{domxref("RTCPeerConnection")}}.

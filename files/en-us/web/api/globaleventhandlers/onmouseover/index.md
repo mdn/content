@@ -2,40 +2,44 @@
 title: GlobalEventHandlers.onmouseover
 slug: Web/API/GlobalEventHandlers/onmouseover
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onmouseover
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onmouseover</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("mouseover")}} events.</p>
+The **`onmouseover`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("mouseover")}} events.
 
-<p>The <code>mouseover</code> event fires when the user moves the mouse over a particular
-  element.</p>
+The `mouseover` event fires when the user moves the mouse over a particular
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.onmouseover = <em>function</em>;
-</pre>
+```js
+element.onmouseover = function;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds an <code>onmouseover</code> and an <code>onmouseout</code> event to a
-  paragraph. Try moving your mouse over and out of the element.</p>
+This example adds an `onmouseover` and an `onmouseout` event to a
+paragraph. Try moving your mouse over and out of the element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Test your mouse on me!&lt;/p&gt;</pre>
+```html
+<p>Test your mouse on me!</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const p = document.querySelector('p');
+```js
+const p = document.querySelector('p');
 p.onmouseover = logMouseOver;
 p.onmouseout = logMouseOut;
 
@@ -45,16 +49,17 @@ function logMouseOver() {
 
 function logMouseOut() {
   p.textContent = 'MOUSE OUT detected';
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

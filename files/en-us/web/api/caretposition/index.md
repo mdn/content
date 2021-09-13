@@ -9,40 +9,34 @@ tags:
   - Reference
 browser-compat: api.CaretPosition
 ---
-<p>{{SeeCompatTable}} {{ APIRef("CSSOM") }}</p>
+{{SeeCompatTable}} {{ APIRef("CSSOM") }}
 
-<p>The <code>CaretPosition</code> interface represents the caret position, an indicator for the text insertion point. You can get a <code>CaretPosition</code> using the {{domxref("Document.caretPositionFromPoint()")}} method.</p>
+The `CaretPosition` interface represents the caret position, an indicator for the text insertion point. You can get a `CaretPosition` using the {{domxref("Document.caretPositionFromPoint()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't inherit any properties.</em></p>
+_This interface doesn't inherit any properties._
 
-<dl>
- <dt>{{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Node")}} containing the found node at the caret's position.</dd>
- <dt>{{domxref("CaretPosition.offset")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>long</code> representing the character offset in the caret position node.</dd>
-</dl>
+- {{domxref("CaretPosition.offsetNode")}} {{readonlyInline}}
+  - : Returns a {{domxref("Node")}} containing the found node at the caret's position.
+- {{domxref("CaretPosition.offset")}} {{readonlyInline}}
+  - : Returns a `long` representing the character offset in the caret position node.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("CaretPosition.getClientRect")}}</dt>
- <dd>Returns the client rectangle for the caret range.</dd>
-</dl>
+- {{domxref("CaretPosition.getClientRect")}}
+  - : Returns the client rectangle for the caret range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document.caretPositionFromPoint()")}}</li>
- <li>{{domxref("Range")}}</li>
- <li>{{domxref("Node")}}</li>
-</ul>
+- {{domxref("Document.caretPositionFromPoint()")}}
+- {{domxref("Range")}}
+- {{domxref("Node")}}

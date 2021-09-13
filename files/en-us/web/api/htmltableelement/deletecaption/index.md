@@ -2,50 +2,56 @@
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.deleteCaption
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLTableElement.deleteCaption()</code></strong> method removes the
-  {{HtmlElement("caption")}} element from a given {{HtmlElement("table")}}. If there is no
-  <code>&lt;caption&gt;</code> element associated with the table, this method does
-  nothing.</p>
+The **`HTMLTableElement.deleteCaption()`** method removes the
+{{HtmlElement("caption")}} element from a given {{HtmlElement("table")}}. If there is no
+`<caption>` element associated with the table, this method does
+nothing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.deleteCaption()</pre>
+```js
+HTMLTableElement.deleteCaption()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses JavaScript to delete a table's caption.</p>
+This example uses JavaScript to delete a table's caption.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;table&gt;
-  &lt;caption&gt;This caption will be deleted!&lt;/caption&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 1.1&lt;/td&gt;&lt;td&gt;Cell 1.2&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 2.1&lt;/td&gt;&lt;td&gt;Cell 2.2&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <caption>This caption will be deleted!</caption>
+  <tr><td>Cell 1.1</td><td>Cell 1.2</td></tr>
+  <tr><td>Cell 2.1</td><td>Cell 2.2</td></tr>
+</table>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let table = document.querySelector('table');
-table.deleteCaption();</pre>
+```js
+let table = document.querySelector('table');
+table.deleteCaption();
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

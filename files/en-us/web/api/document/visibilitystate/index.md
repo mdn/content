@@ -2,64 +2,66 @@
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
 tags:
-- DOM
-- Document
-- Page Visibility API
-- Property
-- Read-only
-- Reference
-- Web
+  - DOM
+  - Document
+  - Page Visibility API
+  - Property
+  - Read-only
+  - Reference
+  - Web
 browser-compat: api.Document.visibilityState
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>The <strong><code>Document.visibilityState</code></strong>
-    read-only property returns the visibility of the {{domxref('document')}}, that is in
-    which context this element is now visible. It is useful to know if the document is in
-    the background or an invisible tab, or only loaded for pre-rendering.</p>
+The **`Document.visibilityState`**
+read-only property returns the visibility of the {{domxref('document')}}, that is in
+which context this element is now visible. It is useful to know if the document is in
+the background or an invisible tab, or only loaded for pre-rendering.
 
-<p>Possible
-  values are:</p>
+Possible
+values are:
 
-<dl>
-  <dt><code>visible</code></dt>
-  <dd>The page content may be at least partially visible. In practice this means that the
-    page is the foreground tab of a non-minimized window.</dd>
-  <dt><code>hidden</code></dt>
-  <dd>The page content is not visible to the user. In practice this means that the
+- `visible`
+  - : The page content may be at least partially visible. In practice this means that the
+    page is the foreground tab of a non-minimized window.
+- `hidden`
+  - : The page content is not visible to the user. In practice this means that the
     document is either a background tab or part of a minimized window, or the OS screen
-    lock is active.</dd>
-  <dt><code>prerender</code> {{deprecated_inline}}</dt>
-  <dd>The page content is being prerendered and is not visible to the user (considered
+    lock is active.
+- `prerender` {{deprecated_inline}}
+  - : The page content is being prerendered and is not visible to the user (considered
     hidden for purposes of
-    <code><a href="/en-US/docs/Web/API/Document/hidden">document.hidden</a></code>). The
+    [`document.hidden`](/en-US/docs/Web/API/Document/hidden)). The
     document may start in this state, but will never transition to it from another value.
-    Note: This was removed from the standard. Check compatibility table for details.</dd>
-</dl>
+    Note: This was removed from the standard. Check compatibility table for details.
 
-<p>When the value of this property changes, the
-  {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the
-  {{domxref("Document")}}.</p>
+When the value of this property changes, the
+{{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the
+{{domxref("Document")}}.
 
-<p>Typical use of this can be to prevent the download of some assets when the document is
-  solely prerendered, or stop some activities when the document is in the background or
-  minimized.</p>
+Typical use of this can be to prevent the download of some assets when the document is
+solely prerendered, or stop some activities when the document is in the background or
+minimized.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>string</var> = document.visibilityState</pre>
+```js
+var string = document.visibilityState
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.visibilityState );
   // Modify behavior...
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

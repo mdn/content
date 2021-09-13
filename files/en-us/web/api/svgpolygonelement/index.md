@@ -9,37 +9,33 @@ tags:
   - SVG DOM
 browser-compat: api.SVGPolygonElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGPolygonElement</code></strong> interface provides access to the properties of {{SVGElement("polygon")}} elements, as well as methods to manipulate them.</p>
+The **`SVGPolygonElement`** interface provides access to the properties of {{SVGElement("polygon")}} elements, as well as methods to manipulate them.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-<dl>
- <dt>{{domxref("SVGPolygonElement.animatedPoints")}} {{readOnlyInline}}</dt>
- <dd>A {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the <code>points</code> property.</dd>
- <dt>{{domxref("SVGPolygonElement.points")}}</dt>
- <dd>A {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.</dd>
-</dl>
+- {{domxref("SVGPolygonElement.animatedPoints")}} {{readOnlyInline}}
+  - : A {{DOMxRef("SVGPointList")}} representing the animated value of the element's {{SVGAttr("points")}} attribute. If the {{SVGAttr("points")}} attribute is not being animated, it contains the same value as the `points` property.
+- {{domxref("SVGPolygonElement.points")}}
+  - : A {{DOMxRef("SVGPointList")}} representing the base (i.e., static) value of the element's {{SVGAttr("points")}} attribute. Modifications via the {{DOMxRef("SVGPointList")}} object are reflected in the {{SVGAttr("points")}} attribute, and vice versa.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("polygon")}}</li>
-</ul>
+- {{SVGElement("polygon")}}

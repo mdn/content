@@ -2,45 +2,44 @@
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
 tags:
-- API
-- HTML DOM
-- HTMLElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.title
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.title</code></strong> property
-    represents the title of the element: the text usually displayed in a 'tooltip' popup
-    when the mouse is over the node.</p>
+The **`HTMLElement.title`** property
+represents the title of the element: the text usually displayed in a 'tooltip' popup
+when the mouse is over the node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>str</em> = <em>element</em>.title;<em>
-element</em>.title = <em>str</em>;
-</pre>
+```js
+var str = element.title;
+element.title = str;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const link = document.createElement('a');
+```js
+const link = document.createElement('a');
 link.innerText = 'grapes';
 link.href = 'https://en.wikipedia.org/wiki/Grape';
 link.title = 'Wikipedia page on grapes';
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The HTML <a
-      href="/en-US/docs/Web/HTML/Global_attributes/title"><strong>title</strong></a>
-    global attribute.</li>
-</ul>
+- The HTML [**title**](/en-US/docs/Web/HTML/Global_attributes/title)
+  global attribute.

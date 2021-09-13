@@ -10,210 +10,185 @@ tags:
   - importKey
 browser-compat: api.SubtleCrypto.importKey
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>importKey()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface imports a key: that is, it takes as input a key in an external, portable
-  format and gives you a {{domxref("CryptoKey")}} object that you can use in the <a
-    href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>.</p>
+The **`importKey()`** method of the {{domxref("SubtleCrypto")}}
+interface imports a key: that is, it takes as input a key in an external, portable
+format and gives you a {{domxref("CryptoKey")}} object that you can use in the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API).
 
-<p>The function accepts several import formats: see <a
-    href="#supported_formats">Supported
-    formats</a> for details.</p>
+The function accepts several import formats: see [Supported
+formats](#supported_formats) for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.importKey(
+```js
+const result = crypto.subtle.importKey(
     format,
     keyData,
     algorithm,
     extractable,
     keyUsages
 );
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>format</code></em> is a string describing the data format of the key to
-    import. It can be one of the following:
+- _`format`_ is a string describing the data format of the key to
+  import. It can be one of the following:
 
-    <ul>
-      <li><code>raw</code>: <a href="#raw">Raw</a> format.</li>
-      <li><code>pkcs8</code>: <a href="#pkcs_8">PKCS #8</a> format.</li>
-      <li><code>spki</code>: <a href="#subjectpublickeyinfo">SubjectPublicKeyInfo</a>
-        format.</li>
-      <li><code>jwk</code>: <a href="#json_web_key">JSON Web Key</a> format.</li>
-    </ul>
-  </li>
-  <li><code><em>keyData</em></code> is an {{jsxref("ArrayBuffer")}}, a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>,
-    a {{jsxref("DataView")}}, or a <code>JSONWebKey</code> object containing the key in
-    the given format.</li>
-  <li><em><code>algorithm</code></em> is a dictionary object defining the type of key to
-    import and providing extra algorithm-specific parameters.
-    <ul>
-      <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: Pass an
-        <code><a href="/en-US/docs/Web/API/RsaHashedImportParams">RsaHashedImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: Pass
-        an <code><a href="/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: Pass an
-        <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: Pass the
-        string identifying the algorithm or an object of the form
-        <code>{ "name": ALGORITHM }</code>, where <code>ALGORITHM </code>is the name of
-        the algorithm.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a> :
-        Pass the string <code>PBKDF2</code>.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>: Pass the
-        string <code>HKDF</code>.</li>
-    </ul>
-  </li>
-  <li><code><em>extractable</em></code> is a boolean value indicating whether it
-    will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
-    {{domxref("SubtleCrypto.wrapKey()")}}.</li>
-  <li><code><em>keyUsages</em></code> is an {{jsxref("Array")}} indicating what can be
-    done with the key. Possible array values are:
-    <ul>
-      <li><code>encrypt</code>: The key may be used to {{domxref("SubtleCrypto.encrypt()",
-        "encrypt")}} messages.</li>
-      <li><code>decrypt</code>: The key may be used to {{domxref("SubtleCrypto.decrypt()",
-        "decrypt")}} messages.</li>
-      <li><code>sign</code>: The key may be used to {{domxref("SubtleCrypto.sign()",
-        "sign")}} messages.</li>
-      <li><code>verify</code>: The key may be used to {{domxref("SubtleCrypto.verify()",
-        "verify")}} signatures.</li>
-      <li><code>deriveKey</code>: The key may be used in
-        {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
-      <li><code>deriveBits</code>: The key may be used in
-        {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
-      <li><code>wrapKey</code>: The key may be used to {{domxref("SubtleCrypto.wrapKey()",
-        "wrap a key")}}.</li>
-      <li><code>unwrapKey</code>: The key may be used to
-        {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
-    </ul>
-  </li>
-</ul>
+  - `raw`: [Raw](#raw) format.
+  - `pkcs8`: [PKCS #8](#pkcs_8) format.
+  - `spki`: [SubjectPublicKeyInfo](#subjectpublickeyinfo)
+    format.
+  - `jwk`: [JSON Web Key](#json_web_key) format.
 
-<h3 id="Return_value">Return value</h3>
+- `keyData` is an {{jsxref("ArrayBuffer")}}, a [TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray),
+  a {{jsxref("DataView")}}, or a `JSONWebKey` object containing the key in
+  the given format.
+- _`algorithm`_ is a dictionary object defining the type of key to
+  import and providing extra algorithm-specific parameters.
 
-<ul>
-  <li><code><em>result</em></code> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
-      title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a>
-    that fulfills with the imported key as a {{domxref("CryptoKey")}} object.</li>
-</ul>
+  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): Pass an
+    [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams)
+    object.
+  - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh): Pass
+    an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams)
+    object.
+  - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): Pass an
+    [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams)
+    object.
+  - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): Pass the
+    string identifying the algorithm or an object of the form
+    `{ "name": ALGORITHM }`, where `ALGORITHM `is the name of
+    the algorithm.
+  - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) :
+    Pass the string `PBKDF2`.
+  - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the
+    string `HKDF`.
 
-<h3 id="Exceptions">Exceptions</h3>
+- `extractable` is a boolean value indicating whether it
+  will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  {{domxref("SubtleCrypto.wrapKey()")}}.
+- `keyUsages` is an {{jsxref("Array")}} indicating what can be
+  done with the key. Possible array values are:
 
-<p>The promise is rejected when one of the following exceptions is encountered:</p>
+  - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()",
+        "encrypt")}} messages.
+  - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()",
+        "decrypt")}} messages.
+  - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()",
+        "sign")}} messages.
+  - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()",
+        "verify")}} signatures.
+  - `deriveKey`: The key may be used in
+    {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
+  - `deriveBits`: The key may be used in
+    {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
+  - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()",
+        "wrap a key")}}.
+  - `unwrapKey`: The key may be used to
+    {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
 
-<dl>
-  <dt>{{exception("SyntaxError")}}</dt>
-  <dd>Raised when <em><code>keyUsages</code></em> is empty but the unwrapped key is of
-    type <code>secret</code> or <code>private</code>.</dd>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised when trying to use an invalid format or if the <em><code>keyData</code></em>
-    is not suited for that format.</dd>
-</dl>
+### Return value
 
-<h2 id="Supported_formats">Supported formats</h2>
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+  that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
-<p>This API supports four different key import/export formats: Raw, PKCS #8,
-  SubjectPublicKeyInfo, and JSON Web Key.</p>
+### Exceptions
 
-<h3 id="Raw">Raw</h3>
+The promise is rejected when one of the following exceptions is encountered:
 
-<p>You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve
-  public keys.</p>
+- {{exception("SyntaxError")}}
+  - : Raised when _`keyUsages`_ is empty but the unwrapped key is of
+    type `secret` or `private`.
+- {{jsxref("TypeError")}}
+  - : Raised when trying to use an invalid format or if the _`keyData`_
+    is not suited for that format.
 
-<p>In this format the key is supplied as an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the raw bytes for the key.</p>
+## Supported formats
 
-<h3 id="PKCS_8">PKCS #8</h3>
+This API supports four different key import/export formats: Raw, PKCS #8,
+SubjectPublicKeyInfo, and JSON Web Key.
 
-<p>You can use this format to import or export RSA or Elliptic Curve private keys.</p>
+### Raw
 
-<p>The PKCS #8 format is defined in <a href="https://datatracker.ietf.org/doc/html/rfc5208">RFC
-    5208</a>., using the <a
-    href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1 notation</a>:
-</p>
+You can use this format to import or export AES or HMAC secret keys, or Elliptic Curve
+public keys.
 
-<pre class="brush: plain">PrivateKeyInfo ::= SEQUENCE {
+In this format the key is supplied as an
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the raw bytes for the key.
+
+### PKCS #8
+
+You can use this format to import or export RSA or Elliptic Curve private keys.
+
+The PKCS #8 format is defined in [RFC
+5208](https://datatracker.ietf.org/doc/html/rfc5208)., using the [ASN.1 notation](https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One):
+
+```plain
+PrivateKeyInfo ::= SEQUENCE {
     version                   Version,
     privateKeyAlgorithm       PrivateKeyAlgorithmIdentifier,
     privateKey                PrivateKey,
-    attributes           [0]  IMPLICIT Attributes OPTIONAL }</pre>
+    attributes           [0]  IMPLICIT Attributes OPTIONAL }
+```
 
-<p>The <code>importKey()</code> method expects to receive this object as an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the <a href="https://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
-  form of the <code>PrivateKeyInfo</code>. DER is a set of rules for encoding ASN.1
-  structures into a binary form.</p>
+The `importKey()` method expects to receive this object as an
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html)
+form of the `PrivateKeyInfo`. DER is a set of rules for encoding ASN.1
+structures into a binary form.
 
-<p>You are most likely to encounter this object in <a
-    href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">PEM format</a>. PEM format
-  is a way to encode binary data in ASCII. It consists of a header and a footer, and in
-  between, the <a
-    href="/en-US/docs/Glossary/Base64">base64-encoded</a>
-  binary data. A PEM-encoded <code>PrivateKeyInfo</code> looks like this:</p>
+You are most likely to encounter this object in [PEM format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail). PEM format
+is a way to encode binary data in ASCII. It consists of a header and a footer, and in
+between, the [base64-encoded](/en-US/docs/Glossary/Base64)
+binary data. A PEM-encoded `PrivateKeyInfo` looks like this:
 
-<pre class="brush: plain">-----BEGIN PRIVATE KEY-----
+```plain
+-----BEGIN PRIVATE KEY-----
 MIG2AgEAMBAGByqGSM49AgEGBSuBBAAiBIGeMIGbAgEBBDAU9BD0jxDfF5OV380z
 9VIEUN2W5kJDZ3hbuaDenCxLiAMsoquKTfFaou71eLdN0TShZANiAARMUhCee/cp
 xmjGc1roj0D0k6VlUqtA+JVCWigXcIAukOeTHCngZDKCrD4PkXDBvbciJdZKvO+l
 ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
------END PRIVATE KEY-----</pre>
+-----END PRIVATE KEY-----
+```
 
-<p>To get this into a format you can give to <code>importKey()</code> you need to do two
-  things:</p>
+To get this into a format you can give to `importKey()` you need to do two
+things:
 
-<ul>
-  <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
-  </li>
-  <li>convert the resulting string into an
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
-  </li>
-</ul>
+- base64-decode the part between header and footer, using
+  [`window.atob()`](/en-US/docs/Web/API/atob).
+- convert the resulting string into an
+  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
+See the [Examples](#examples) section for more concrete guidance.
 
-<h3 id="SubjectPublicKeyInfo">SubjectPublicKeyInfo</h3>
+### SubjectPublicKeyInfo
 
-<p>You can use this format to import or export RSA or Elliptic Curve public keys.</p>
+You can use this format to import or export RSA or Elliptic Curve public keys.
 
-<p><code>SubjectPublicKey</code> is defined in <a
-    href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">RFC 5280, Section 4.1</a> using
-  the <a href="https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One">ASN.1
-    notation:</a></p>
+`SubjectPublicKey` is defined in [RFC 5280, Section 4.1](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1) using
+the [ASN.1
+notation:](https://en.wikipedia.org/wiki/Abstract_Syntax_Notation_One)
 
-<pre class="brush: plain">SubjectPublicKeyInfo  ::=  SEQUENCE  {
+```plain
+SubjectPublicKeyInfo  ::=  SEQUENCE  {
     algorithm            AlgorithmIdentifier,
-    subjectPublicKey     BIT STRING  }</pre>
+    subjectPublicKey     BIT STRING  }
+```
 
-<p>Just like <a href="#pkcs_8">PKCS #8</a>, the <code>importKey()</code> method expects to
-  receive this object as an
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the <a href="https://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
-  form of the <code>SubjectPublicKeyInfo</code>.</p>
+Just like [PKCS #8](#pkcs_8), the `importKey()` method expects to
+receive this object as an
+[`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the [DER-encoded](https://luca.ntop.org/Teaching/Appunti/asn1.html)
+form of the `SubjectPublicKeyInfo`.
 
-<p>Again, you are most likely to encounter this object in <a
-    href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">PEM format</a>. A
-  PEM-encoded <code>SubjectPublicKeyInfo</code> looks like this:</p>
+Again, you are most likely to encounter this object in [PEM format](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail). A
+PEM-encoded `SubjectPublicKeyInfo` looks like this:
 
-<pre class="brush: plain">-----BEGIN PUBLIC KEY-----
+```plain
+-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3j+HgSHUnc7F6XzvEbD0
 r3M5JNy+/kabiJVu8IU1ERAl3Osi38VgiMzjDBDOrFxVzNNzl+SXAHwXIV5BHiXL
 CQ6qhwYsDgH6OqgKIwiALra/wNH4UHxj1Or/iyAkjHRR/kGhUtjyVCjzvaQaDpJW
@@ -221,34 +196,32 @@ CQ6qhwYsDgH6OqgKIwiALra/wNH4UHxj1Or/iyAkjHRR/kGhUtjyVCjzvaQaDpJW
 8dC5eIlzCI4efUCbyG4c9O88Qz7bS14DxSfaPTy8P/TWoihVVjLaDF743LgM/JLq
 CDPUBUA3HLsZUhKm3BbSkd7Q9Ngkjv3+yByo4/fL+fkYRa8j9Ypa2N0Iw53LFb3B
 gQIDAQAB
------END PUBLIC KEY-----</pre>
+-----END PUBLIC KEY-----
+```
 
-<p>Just as with <a href="#pkcs_8">PKCS #8</a>, to get this into a format you can give to
-  <code>importKey()</code> you need to do two things:</p>
+Just as with [PKCS #8](#pkcs_8), to get this into a format you can give to
+`importKey()` you need to do two things:
 
-<ul>
-  <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
-  </li>
-  <li>convert the resulting string into an
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
-  </li>
-</ul>
+- base64-decode the part between header and footer, using
+  [`window.atob()`](/en-US/docs/Web/API/atob).
+- convert the resulting string into an
+  [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-<p>See the <a href="#examples">Examples</a> section for more concrete guidance.</p>
+See the [Examples](#examples) section for more concrete guidance.
 
-<h3 id="JSON_Web_Key">JSON Web Key</h3>
+### JSON Web Key
 
-<p>You can use JSON Web Key format to import or export RSA or Elliptic Curve public or
-  private keys, as well as AES and HMAC secret keys.</p>
+You can use JSON Web Key format to import or export RSA or Elliptic Curve public or
+private keys, as well as AES and HMAC secret keys.
 
-<p>JSON Web Key format is defined in <a href="https://datatracker.ietf.org/doc/html/rfc7517">RFC
-    7517</a>. It describes a way to represent public, private, and secret keys as JSON
-  objects.</p>
+JSON Web Key format is defined in [RFC
+7517](https://datatracker.ietf.org/doc/html/rfc7517). It describes a way to represent public, private, and secret keys as JSON
+objects.
 
-<p>A JSON Web Key looks something like this (this is an EC private key):</p>
+A JSON Web Key looks something like this (this is an EC private key):
 
-<pre class="brush: json">{
+```json
+{
   "crv": "P-384",
   "d": "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
   "ext": true,
@@ -256,24 +229,21 @@ gQIDAQAB
   "kty": "EC",
   "x": "SzrRXmyI8VWFJg1dPUNbFcc9jZvjZEfH7ulKI1UkXAltd7RGWrcfFxqyGPcwu6AQ",
   "y": "hHUag3OvDzEr0uUQND4PXHQTXP5IDGdYhJhL-WLKjnGjQAw0rNGy5V29-aV-yseW"
-};</pre>
+};
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/import-key/index.html">try the
-      working examples</a> on GitHub.</p>
-</div>
+> **Note:** You can [try the
+> working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
 
-<h3 id="Raw_import">Raw import</h3>
+### Raw import
 
-<p>This example imports an AES key from an <code>ArrayBuffer</code> containing the bytes
-  to use. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/raw.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This example imports an AES key from an `ArrayBuffer` containing the bytes
+to use. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/raw.js)
 
-<pre class="brush: js">const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
+```js
+const rawKey = window.crypto.getRandomValues(new Uint8Array(16));
 
 /*
 Import an AES secret key from an ArrayBuffer containing the raw bytes.
@@ -288,23 +258,22 @@ function importSecretKey(rawKey) {
     true,
     ["encrypt", "decrypt"]
   );
-}</pre>
+}
+```
 
-<h3 id="PKCS_8_import">PKCS #8 import</h3>
+### PKCS #8 import
 
-<p>This example imports an RSA private signing key from a PEM-encoded PKCS #8 object. <a
-    class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/pkcs8.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This example imports an RSA private signing key from a PEM-encoded PKCS #8 object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/pkcs8.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Convert a string into an ArrayBuffer
 from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 */
 function str2ab(str) {
   const buf = new ArrayBuffer(str.length);
   const bufView = new Uint8Array(buf);
-  for (let i = 0, strLen = str.length; i &lt; strLen; i++) {
+  for (let i = 0, strLen = str.length; i < strLen; i++) {
     bufView[i] = str.charCodeAt(i);
   }
   return buf;
@@ -343,21 +312,19 @@ function importPrivateKey(pem) {
     ["sign"]
   );
 }
+```
 
-</pre>
+### SubjectPublicKeyInfo import
 
-<h3 id="SubjectPublicKeyInfo_import">SubjectPublicKeyInfo import</h3>
+This example imports an RSA public encryption key from a PEM-encoded
+SubjectPublicKeyInfo object. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/spki.js)
 
-<p>This example imports an RSA public encryption key from a PEM-encoded
-  SubjectPublicKeyInfo object. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/spki.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
-
-<pre class="brush: js">  // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+```js
+  // from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
   function str2ab(str) {
     const buf = new ArrayBuffer(str.length);
     const bufView = new Uint8Array(buf);
-    for (let i = 0, strLen = str.length; i &lt; strLen; i++) {
+    for (let i = 0, strLen = str.length; i < strLen; i++) {
       bufView[i] = str.charCodeAt(i);
     }
     return buf;
@@ -387,16 +354,16 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy3Xo3U13dc+xojwQYWoJLCbOQ5fOVY8Llnqc
       true,
       ["encrypt"]
     );
-  }</pre>
+  }
+```
 
-<h3 id="JSON_Web_Key_import">JSON Web Key import</h3>
+### JSON Web Key import
 
-<p>This code imports an ECDSA private signing key, given a JSON Web Key object that
-  represents it. <a class="external external-icon"
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/jwk.js"
-    rel="noopener">See the complete code on GitHub.</a></p>
+This code imports an ECDSA private signing key, given a JSON Web Key object that
+represents it. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/import-key/jwk.js)
 
-<pre class="brush: js">const jwkEcKey = {
+```js
+const jwkEcKey = {
   "crv": "P-384",
   "d": "wouCtU7Nw4E8_7n5C1-xBjB4xqSb_liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK_",
   "ext": true,
@@ -423,24 +390,20 @@ function importPrivateKey(jwk) {
     ["sign"]
   );
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">SubtleCrypto.exportKey()</a></code>
-  </li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc5208">PKCS #8 format</a>.</li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1">SubjectPublicKeyInfo
-      format</a>.</li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc7517">JSON Web Key format</a>.</li>
-</ul>
+- [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey)
+- [PKCS #8 format](https://datatracker.ietf.org/doc/html/rfc5208).
+- [SubjectPublicKeyInfo
+  format](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1).
+- [JSON Web Key format](https://datatracker.ietf.org/doc/html/rfc7517).

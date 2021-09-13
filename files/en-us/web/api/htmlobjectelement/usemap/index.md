@@ -2,36 +2,37 @@
 title: HTMLObjectElement.useMap
 slug: Web/API/HTMLObjectElement/useMap
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- useMap
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - useMap
 browser-compat: api.HTMLObjectElement.useMap
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>useMap</code></strong> property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
-  reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
-  {{HTMLElement("map")}} element to use.</p>
+The **`useMap`** property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+reflects the {{htmlattrxref("usemap", "object")}} HTML attribute, specifying a
+{{HTMLElement("map")}} element to use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var String = HTMLObjectElement.useMap;
+```js
+var String = HTMLObjectElement.useMap;
 HTMLObjectElement.useMap = String;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

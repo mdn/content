@@ -8,42 +8,45 @@ tags:
   - blocked
 browser-compat: api.IDBOpenDBRequest.blocked_event
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <code>blocked</code> handler is executed when an open connection to a database is blocking a <code>versionchange</code> transaction on the same database.</p>
+The `blocked` handler is executed when an open connection to a database is blocking a `versionchange` transaction on the same database.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("IDBVersionChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("IDBVersionChangeEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = (event) =&gt; {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -58,26 +61,28 @@ DBOpenRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = (event) =&gt; {
+DBOpenRequest.onsuccess = (event) => {
   // Let's try to open the same database with a higher revision version
   const req2 = indexedDB.open('toDoList', 5);
 
   // In this case the onblocked handler will be executed
-  req2.addEventListener('blocked', () =&gt; {
+  req2.addEventListener('blocked', () => {
     console.log('Request was blocked');
   });
 
-};</pre>
+};
+```
 
-<p>Using the <code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/onblocked">onblocked</a></code> property:</p>
+Using the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property:
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = (event) =&gt; {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -92,24 +97,23 @@ DBOpenRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = (event) =&gt; {
+DBOpenRequest.onsuccess = (event) => {
   // Let's try to open the same database with a higher revision version
   const req2 = indexedDB.open('toDoList', 5);
 
   // In this case the onblocked handler will be executed
-  req2.onblocked = () =&gt; {
+  req2.onblocked = () => {
     console.log('Request was blocked');
   };
 
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>{{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}} event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- {{DOMxRef("IDBOpenDBRequest.onblocked", "onblocked")}} event handler property

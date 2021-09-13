@@ -2,60 +2,61 @@
 title: AudioTrackList.length
 slug: Web/API/AudioTrackList/length
 tags:
-- API
-- Audio
-- AudioTrackList
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- length
-- list
-- track
+  - API
+  - Audio
+  - AudioTrackList
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - length
+  - list
+  - track
 browser-compat: api.AudioTrackList.length
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("AudioTrackList")}}</strong>
-    property <code><strong>length</strong></code> returns the number of entries in the
-    <code>AudioTrackList</code>, each of which is an {{domxref("AudioTrack")}}
-    representing one audio track in the media element. A value of 0 indicates that
-  there are no audio tracks in the media.</p>
+The read-only **{{domxref("AudioTrackList")}}**
+property **`length`** returns the number of entries in the
+`AudioTrackList`, each of which is an {{domxref("AudioTrack")}}
+representing one audio track in the media element. A value of 0 indicates that
+there are no audio tracks in the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackCount</em> = <em>AudioTrackList</em>.length;</pre>
+```js
+var trackCount = AudioTrackList.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number indicating how many audio tracks are included in the
-  <code>AudioTrackList</code>. Each track can be accessed by treating the
-  <code>AudioTrackList</code> as an array of objects of type {{domxref("AudioTrack")}}.
-</p>
+A number indicating how many audio tracks are included in the
+`AudioTrackList`. Each track can be accessed by treating the
+`AudioTrackList` as an array of objects of type {{domxref("AudioTrack")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
-  element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
-  "querySelector()")}}.</p>
+This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
+element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
+  "querySelector()")}}.
 
-<pre class="brush: js">var videoElem = document.querySelector("video");
+```js
+var videoElem = document.querySelector("video");
 var numAudioTracks = 0;
 
 if (videoElem.audioTracks) {
   numAudioTracks = videoElem.audioTracks.length;
 }
-</pre>
+```
 
-<p>Note that this sample checks to be sure {{domxref("HTMLMediaElement.audioTracks")}} is
-  defined, to avoid failing on browsers without support for {{domxref("AudioTrack")}}.</p>
+Note that this sample checks to be sure {{domxref("HTMLMediaElement.audioTracks")}} is
+defined, to avoid failing on browsers without support for {{domxref("AudioTrack")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

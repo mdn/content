@@ -2,43 +2,45 @@
 title: CSSTransformValue.values()
 slug: Web/API/CSSTransformValue/values
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSTransformValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- values
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - values
 browser-compat: api.CSSTransformValue.values
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>CSSTransformValue.values()</code></strong>  returns a
-  new <em>array iterator</em> object that contains the values for
-  each index in the CSSTransformValue object.</p>
+The **`CSSTransformValue.values()`**  returns a
+new *array iterator* object that contains the values for
+each index in the CSSTransformValue object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSSTransformValue.values();</pre>
+```js
+CSSTransformValue.values();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("Array")}}.</p>
+A new {{jsxref("Array")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

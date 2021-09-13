@@ -19,62 +19,60 @@ tags:
   - iceServers
 browser-compat: api.RTCConfiguration.iceServers
 ---
-  <p>{{DefaultAPISidebar("WebRTC API")}}</p>
+{{DefaultAPISidebar("WebRTC API")}}
 
-  <p>The {{domxref("RTCConfiguration")}} dictionary's
-    <code><strong>iceServers</strong></code> property is an array
-    of {{domxref("RTCIceServer")}} objects, each of which describes a single
-    {{Glossary("STUN")}} or {{Glossary("TURN")}} server to use for negotiation purposes.
-  </p>
+The {{domxref("RTCConfiguration")}} dictionary's
+**`iceServers`** property is an array
+of {{domxref("RTCIceServer")}} objects, each of which describes a single
+{{Glossary("STUN")}} or {{Glossary("TURN")}} server to use for negotiation purposes.
 
-  <h2 id="Syntax">Syntax</h2>
+## Syntax
 
-  <pre class="brush: js">let rtcConfiguration = {
-  iceServers: [ <em>iceServer1...</em> ]
+```js
+let rtcConfiguration = {
+  iceServers: [ iceServer1... ]
 };
 
-let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
-</pre>
+let rtcConfiguration.iceServers = [ iceServer1... ];
+```
 
-  <h3 id="Value">Value</h3>
+### Value
 
-  <p>An array of zero or more {{domxref("RTCIceServer")}} objects, each of which describes
-    one <a href="/en-US/docs/Web/API/WebRTC_API/Protocols">STUN or TURN server</a> for the
-    ICE agent to use <a
-      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection">during
-      the connection's negotiation</a>. Each object must at least have an
-    {{domxref("RTCIceServer.urls", "urls")}} property, which is an array of one or more
-    strings, each providing one server's URL.</p>
+An array of zero or more {{domxref("RTCIceServer")}} objects, each of which describes
+one [STUN or TURN server](/en-US/docs/Web/API/WebRTC_API/Protocols) for the
+ICE agent to use [during
+the connection's negotiation](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection). Each object must at least have an
+{{domxref("RTCIceServer.urls", "urls")}} property, which is an array of one or more
+strings, each providing one server's URL.
 
-  <p>If the array is empty, or if the <code>iceServers</code> option isn't specified, the
-    ICE agent will negotiate without the use of any servers, which will limit the
-    connection to local peers.</p>
+If the array is empty, or if the `iceServers` option isn't specified, the
+ICE agent will negotiate without the use of any servers, which will limit the
+connection to local peers.
 
-  <h2 id="Description">Description</h2>
+## Description
 
-  <p>How the list of servers you provide is used is up to the implementation of the
-    {{Glossary("user agent")}}. While it can be useful to provide a second server as a
-    fallback in case the first is offline, listing too many servers can delay the user's
-    connection being established, depending on the network's performance and how many
-    servers get used for negotiation before a connection is established.</p>
+How the list of servers you provide is used is up to the implementation of the
+{{Glossary("user agent")}}. While it can be useful to provide a second server as a
+fallback in case the first is offline, listing too many servers can delay the user's
+connection being established, depending on the network's performance and how many
+servers get used for negotiation before a connection is established.
 
-  <p>If the list of servers is changed while a connection is already active by calling the
-    {{domxref("RTCPeerConnection")}} method
-    {{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate
-    effect occurs. However, the new list of servers is used for any future renegotiation,
-    such as while handling an <a
-      href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a>.
-  </p>
+If the list of servers is changed while a connection is already active by calling the
+{{domxref("RTCPeerConnection")}} method
+{{domxref("RTCPeerConnection.setConfiguration", "setConfiguration()")}}, no immediate
+effect occurs. However, the new list of servers is used for any future renegotiation,
+such as while handling an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
-  <h2 id="Examples">Examples</h2>
+## Examples
 
-  <p>The configuration below opens a new peer connection, specifying two servers for the
-    ICE agent to use for negotiation. The first one,
-    <code>stun:stun.services.mozilla.com</code>, requires authentication, so the username
-    and password are provided. The second server has two URLs:
-    <code>stun:stun.example.com</code> and <code>stun:stun-1.example.com</code>.</p>
+The configuration below opens a new peer connection, specifying two servers for the
+ICE agent to use for negotiation. The first one,
+`stun:stun.services.mozilla.com`, requires authentication, so the username
+and password are provided. The second server has two URLs:
+`stun:stun.example.com` and `stun:stun-1.example.com`.
 
-  <pre class="brush: js">var configuration = { iceServers: [{
+```js
+var configuration = { iceServers: [{
                           urls: "stun:stun.services.mozilla.com",
                           username: "louis@mozilla.com",
                           credential: "webrtcdemo"
@@ -83,24 +81,22 @@ let rtcConfiguration.iceServers = [ <em>iceServer1...</em> ];
                       }]
 };
 
-var pc = new RTCPeerConnection(configuration);</pre>
+var pc = new RTCPeerConnection(configuration);
+```
 
-  <h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-  <h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-    <p>{{Compat}}</p>
+{{Compat}}
 
-    <h2 id="See_also">See also</h2>
+## See also
 
-    <ul>
-      <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC
-          protocols</a></li>
-      <li><a
-          href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection">Lifetime
-          of a WebRTC connection</a></li>
-      <li><a href="/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation">Establishing a
-          connection: The WebRTC perfect negotiation pattern</a></li>
-    </ul>
+- [Introduction to WebRTC
+  protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [Lifetime
+  of a WebRTC connection](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection)
+- [Establishing a
+  connection: The WebRTC perfect negotiation pattern](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation)

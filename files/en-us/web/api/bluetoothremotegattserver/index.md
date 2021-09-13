@@ -11,53 +11,43 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>BluetoothRemoteGATTServer</strong></code> interface of the <a
-    href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> represents a GATT
-  Server on a remote device.</p>
+The **`BluetoothRemoteGATTServer`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT
+Server on a remote device.
 
-<div class="note">
-  <p><strong>Note:</strong> This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
-    Bluetooth API, see <a
-      href="/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer"><code>BluetoothGattServer</code>
-      (Firefox OS)</a>.</p>
-</div>
+> **Note:** This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
+> Bluetooth API, see [`BluetoothGattServer`
+> (Firefox OS)](/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}</dt>
-  <dd>A boolean value that returns true while this script execution environment is
-    connected to <code>this.device</code>. It can be false while the user agent is
-    physically connected.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}</dt>
-  <dd>A reference to the {{DOMxRef("BluetoothDevice")}} running the server.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}
+  - : A boolean value that returns true while this script execution environment is
+    connected to `this.device`. It can be false while the user agent is
+    physically connected.
+- {{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}
+  - : A reference to the {{DOMxRef("BluetoothDevice")}} running the server.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.connect()")}}</dt>
-  <dd>Causes the script execution environment to connect to <code>this.device</code>.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}}</dt>
-  <dd>Causes the script execution environment to disconnect from <code>this.device</code>.
-  </dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}</dt>
-  <dd>Returns a promise to the primary {{DOMxRef("BluetoothRemoteGATTService")}} offered by the
-    bluetooth device for a specified <code>BluetoothServiceUUID</code>.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}</dt>
-  <dd>Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
-    offered by the bluetooth device for a specified <code>BluetoothServiceUUID</code>.
-  </dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}}
+  - : Causes the script execution environment to connect to `this.device`.
+- {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}}
+  - : Causes the script execution environment to disconnect from `this.device`.
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}
+  - : Returns a promise to the primary {{DOMxRef("BluetoothRemoteGATTService")}} offered by the
+    bluetooth device for a specified `BluetoothServiceUUID`.
+- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}
+  - : Returns a promise to a list of primary {{DOMxRef("BluetoothRemoteGATTService")}} objects
+    offered by the bluetooth device for a specified `BluetoothServiceUUID`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

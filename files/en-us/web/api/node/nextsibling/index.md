@@ -2,51 +2,47 @@
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
 tags:
-- API
-- DOM
-- Node
-- Property
+  - API
+  - DOM
+  - Node
+  - Property
 browser-compat: api.Node.nextSibling
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.nextSibling</strong></code> read-only
-		property returns the node immediately following the specified one in their
-		parent's {{domxref("Node.childNodes","childNodes")}}, or returns <code>null</code>
-		if the specified node is the last child in the parent element.</p>
+The **`Node.nextSibling`** read-only
+property returns the node immediately following the specified one in their
+parent's {{domxref("Node.childNodes","childNodes")}}, or returns `null`
+if the specified node is the last child in the parent element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>nextNode</var> = <var>node</var>.nextSibling
-</pre>
+```js
+nextNode = node.nextSibling
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<div>
-	<p>Gecko-based browsers insert text nodes into a document to represent whitespace in
-		the source markup. Therefore a node obtained, for example, using <a
-			href="/en-US/docs/Web/API/Node/firstChild"
-			title="The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."><code>Node.firstChild</code></a>
-		or <a href="/en-US/docs/Web/API/Node/previousSibling"
-			title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a>
-		may refer to a whitespace text node rather than the actual element the author
-		intended to get.</p>
+Gecko-based browsers insert text nodes into a document to represent whitespace in
+the source markup. Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild "The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children.")
+or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling "The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list.")
+may refer to a whitespace text node rather than the actual element the author
+intended to get.
 
-	<p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the
-			DOM</a> and <a class="external"
-			href="https://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ:
-			Why are some Text nodes empty?</a> for more information.</p>
-</div>
+See [Whitespace in the
+DOM](/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM) and [W3C DOM 3 FAQ:
+Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext) for more information.
 
-<p>{{domxref("Element.nextElementSibling")}} may be used to obtain the next element
-	skipping any whitespace nodes, other between-element text, or comments.</p>
+{{domxref("Element.nextElementSibling")}} may be used to obtain the next element
+skipping any whitespace nodes, other between-element text, or comments.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;div id="div-1"&gt;Here is div-1&lt;/div&gt;
-&lt;div id="div-2"&gt;Here is div-2&lt;/div&gt;
+```html
+<div id="div-1">Here is div-1</div>
+<div id="div-2">Here is div-2</div>
 
-&lt;script&gt;
+<script>
 var el = document.getElementById('div-1').nextSibling,
     i = 1;
 
@@ -59,7 +55,7 @@ while (el) {
 }
 
 console.groupEnd();
-&lt;/script&gt;
+</script>
 
 /**************************************************
   The console displays the following:
@@ -72,26 +68,23 @@ console.groupEnd();
       4. SCRIPT
 
 **************************************************/
-</pre>
+```
 
-<p>In the above example, <code>#text</code> nodes are inserted in the DOM where whitespace
-	occurs between tags (i.e. after the closing tag of an element and before the opening
-	tag of the next).</p>
+In the above example, `#text` nodes are inserted in the DOM where whitespace
+occurs between tags (i.e. after the closing tag of an element and before the opening
+tag of the next).
 
-<p>The possible inclusion of text nodes must be allowed for when traversing the DOM using
-	<code>nextSibling</code>. See the resources <a href="#notes">in the Notes section</a>.
-</p>
+The possible inclusion of text nodes must be allowed for when traversing the DOM using
+`nextSibling`. See the resources [in the Notes section](#notes).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("Element.nextElementSibling")}}</li>
-</ul>
+- {{domxref("Element.nextElementSibling")}}

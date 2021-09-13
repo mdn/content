@@ -2,51 +2,53 @@
 title: MediaStreamAudioSourceOptions.mediaStream
 slug: Web/API/MediaStreamAudioSourceOptions/mediaStream
 tags:
-- API
-- Audio
-- Media
-- MediaStream
-- MediaStreamAudioSourceOptions
-- MediaStreamTrack
-- Options
-- Property
-- Reference
-- Web
-- Web Audio
-- Web Audio API
+  - API
+  - Audio
+  - Media
+  - MediaStream
+  - MediaStreamAudioSourceOptions
+  - MediaStreamTrack
+  - Options
+  - Property
+  - Reference
+  - Web
+  - Web Audio
+  - Web Audio API
 browser-compat: api.MediaStreamAudioSourceOptions.mediaStream
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The {{domxref("MediaStreamAudioSourceOptions")}} dictionary's
-    <code><strong>mediaStream</strong></code> property must specify the
-    {{domxref("MediaStream")}} from which to retrieve audio data when instantiating a
-    <code>MediaStreamAudioSourceNode</code> using the
-    {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode",
-    "MediaStreamAudioSourceNode()")}} constructor.</p>
+The {{domxref("MediaStreamAudioSourceOptions")}} dictionary's
+**`mediaStream`** property must specify the
+{{domxref("MediaStream")}} from which to retrieve audio data when instantiating a
+`MediaStreamAudioSourceNode` using the
+{{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode",
+    "MediaStreamAudioSourceNode()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>mediaStreamAudioSourceOptions</em> = {
-  mediaStream: <em>audioSourceStream</em>;
+```js
+mediaStreamAudioSourceOptions = {
+  mediaStream: audioSourceStream;
 }
 
-<em>mediaStreamAudioSourceOptions</em>.mediaStream = <em>audioSourceStream</em>;</pre>
+mediaStreamAudioSourceOptions.mediaStream = audioSourceStream;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStream")}} representing the stream from which to use a
-  {{domxref("MediaStreamTrack")}} as the source of audio for the node.</p>
+A {{domxref("MediaStream")}} representing the stream from which to use a
+{{domxref("MediaStreamTrack")}} as the source of audio for the node.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>{{page("/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode",
-  "Examples")}}</p>
+{{page("/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode",
+  "Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}} </p>
+{{Compat}}

@@ -2,47 +2,49 @@
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
 tags:
-- API
-- Feature Policy
-- Feature-Policy
-- Reference
+  - API
+  - Feature Policy
+  - Feature-Policy
+  - Reference
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getAllowlistForFeature()</code></strong>
-    method of the {{DOMxRef("FeaturePolicy")}} allows query of the allow list for a
-    specific feature for the current Feature Policy.</p>
+The **`getAllowlistForFeature()`**
+method of the {{DOMxRef("FeaturePolicy")}} allows query of the allow list for a
+specific feature for the current Feature Policy.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const allowlist = <em>FeaturePolicy</em>.getAllowlistForFeature(&lt;feature&gt;)
-</pre>
+```js
+const allowlist = FeaturePolicy.getAllowlistForFeature(<feature>)
+```
 
-<h3 id="Parameter">Parameter</h3>
+### Parameter
 
-<h4 id="Feature_name">Feature name</h4>
+#### Feature name
 
-<p>A specific feature name must be specified.</p>
+A specific feature name must be specified.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An <a href="Web/HTTP/Feature_Policy/Using_Feature_Policy">Allow list</a> for the
-  specified feature.</p>
+An [Allow list](Web/HTTP/Feature_Policy/Using_Feature_Policy) for the
+specified feature.
 
-<h2 id="Errors">Errors</h2>
+## Errors
 
-<p>The function will raise a warning if the specified Feature Policy directive name is not
-  known. However, it will also return empty array, indicating that no origin is allowed to
-  use the feature.</p>
+The function will raise a warning if the specified Feature Policy directive name is not
+known. However, it will also return empty array, indicating that no origin is allowed to
+use the feature.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example prints all the origins that are allowed to use Camera API by the
-  Feature Policy. Please note that Camera API might be restricted by the Permissions API,
-  if the user did not grant the corresponding permission yet.</p>
+The following example prints all the origins that are allowed to use Camera API by the
+Feature Policy. Please note that Camera API might be restricted by the Permissions API,
+if the user did not grant the corresponding permission yet.
 
-<pre class="brush: js">// First, get the Feature Policy object
+```js
+// First, get the Feature Policy object
 const featurePolicy = document.featurePolicy
 
 // Then query feature for specific
@@ -51,12 +53,12 @@ const allowlist = featurePolicy.getAllowlistForFeature("camera")
 for (const origin of allowlist) {
   console.log(origin)
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

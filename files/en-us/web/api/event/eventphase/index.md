@@ -2,36 +2,37 @@
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 tags:
-- API
-- DOM
-- Event
-- Gecko
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - Event
+  - Gecko
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.Event.eventPhase
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>eventPhase</strong></code> read-only property of the
-  {{domxref("Event")}} interface indicates which phase of the event flow is currently
-  being evaluated.</p>
+The **`eventPhase`** read-only property of the
+{{domxref("Event")}} interface indicates which phase of the event flow is currently
+being evaluated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>phase</em> = event.eventPhase;
-</pre>
+```js
+let phase = event.eventPhase;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Returns an integer value which specifies the current evaluation phase of the event
-  flow. Possible values are listed in {{anch("Event phase constants")}}.</p>
+Returns an integer value which specifies the current evaluation phase of the event
+flow. Possible values are listed in {{anch("Event phase constants")}}.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<h3 id="Event_phase_constants">Event phase constants</h3>
+### Event phase constants
 
-<p>These values describe which phase the event flow is currently being evaluated.</p>
+These values describe which phase the event flow is currently being evaluated.
 
 <table class="no-markdown">
   <thead>
@@ -50,65 +51,79 @@ browser-compat: api.Event.eventPhase
     <tr>
       <td><code>Event.CAPTURING_PHASE</code></td>
       <td><code>1</code></td>
-      <td>The event is being propagated through the target's ancestor objects. This
-        process starts with the {{domxref("Window")}}, then {{domxref("Document")}}, then
-        the {{domxref("HTMLHtmlElement")}}, and so on through the elements until the
-        target's parent is reached. {{domxref("EventListener", "Event listeners", "", 1)}}
-        registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was
-        called are triggered during this phase.</td>
+      <td>
+        The event is being propagated through the target's ancestor objects.
+        This process starts with the {{domxref("Window")}}, then
+        {{domxref("Document")}}, then the
+        {{domxref("HTMLHtmlElement")}}, and so on through the elements
+        until the target's parent is reached.
+        {{domxref("EventListener", "Event listeners", "", 1)}}
+        registered for capture mode when
+        {{domxref("EventTarget.addEventListener()")}} was called
+        are triggered during this phase.
+      </td>
     </tr>
     <tr>
       <td><code>Event.AT_TARGET</code></td>
       <td><code>2</code></td>
-      <td>The event has arrived at {{domxref("EventTarget", "the event's target", "",
-        1)}}. Event listeners registered for this phase are called at this time. If
-        {{domxref("Event.bubbles")}} is <code>false</code>, processing the event is
-        finished after this phase is complete.</td>
+      <td>
+        The event has arrived at
+        {{domxref("EventTarget", "the event's target", "",
+        1)}}.
+        Event listeners registered for this phase are called at this time. If
+        {{domxref("Event.bubbles")}} is <code>false</code>, processing
+        the event is finished after this phase is complete.
+      </td>
     </tr>
     <tr>
       <td><code>Event.BUBBLING_PHASE</code></td>
       <td><code>3</code></td>
-      <td>The event is propagating back up through the target's ancestors in reverse
-        order, starting with the parent, and eventually reaching the containing
-        {{domxref("Window")}}. This is known as <em>bubbling</em>, and occurs only if
-        {{domxref("Event.bubbles")}} is <code>true</code>. {{domxref("EventListener",
-        "Event listeners", "", 1)}} registered for this phase are triggered during this
-        process.</td>
+      <td>
+        The event is propagating back up through the target's ancestors in
+        reverse order, starting with the parent, and eventually reaching the
+        containing {{domxref("Window")}}. This is known as
+        <em>bubbling</em>, and occurs only if
+        {{domxref("Event.bubbles")}} is <code>true</code>.
+        {{domxref("EventListener",
+        "Event listeners", "", 1)}}
+        registered for this phase are triggered during this process.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<p>For more details, see <a class="external"
-    href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">section 3.1, Event
-    dispatch and DOM event flow</a>, of the DOM Level 3 Events specification.</p>
+For more details, see [section 3.1, Event
+dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;Event Propagation Chain&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Click 'd1'&lt;/li&gt;
-  &lt;li&gt;Analyze event propagation chain&lt;/li&gt;
-  &lt;li&gt;Click next div and repeat the experience&lt;/li&gt;
-  &lt;li&gt;Change Capturing mode&lt;/li&gt;
-  &lt;li&gt;Repeat the experience&lt;/li&gt;
-&lt;/ul&gt;
-&lt;input type="checkbox" id="chCapture" /&gt;
-&lt;label for="chCapture"&gt;Use Capturing&lt;/label&gt;
-  &lt;div id="d1"&gt;d1
-    &lt;div id="d2"&gt;d2
-      &lt;div id="d3"&gt;d3
-        &lt;div id="d4"&gt;d4&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;div id="divInfo"&gt;&lt;/div&gt;
-</pre>
+```html
+<h4>Event Propagation Chain</h4>
+<ul>
+  <li>Click 'd1'</li>
+  <li>Analyze event propagation chain</li>
+  <li>Click next div and repeat the experience</li>
+  <li>Change Capturing mode</li>
+  <li>Repeat the experience</li>
+</ul>
+<input type="checkbox" id="chCapture" />
+<label for="chCapture">Use Capturing</label>
+  <div id="d1">d1
+    <div id="d2">d2
+      <div id="d3">d3
+        <div id="d4">d4</div>
+      </div>
+    </div>
+  </div>
+<div id="divInfo"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   margin: 20px;
   padding: 4px;
   border: thin black solid;
@@ -119,11 +134,13 @@ browser-compat: api.Event.eventPhase
   padding: 8px;
   background-color:white;
   font-size:80%;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let clear = false,
+```js
+let clear = false,
     divInfo = null,
     divs = null,
     useCapture = false;
@@ -141,7 +158,7 @@ window.onload = function () {
 }
 
 function RemoveListeners() {
-  for (let i = 0; i &lt; divs.length; i++) {
+  for (let i = 0; i < divs.length; i++) {
     let d = divs[i]
     if (d.id != "divInfo") {
       d.removeEventListener("click", OnDivClick, true)
@@ -151,7 +168,7 @@ function RemoveListeners() {
 }
 
 function AddListeners() {
-  for (let i = 0; i &lt; divs.length; i++) {
+  for (let i = 0; i < divs.length; i++) {
     let d = divs[i]
     if (d.id != "divInfo") {
         if (chCapture.checked) {
@@ -183,22 +200,23 @@ function OnDivClick(e) {
 }
 
 function Clear() {
-  for (let i = 0; i &lt; divs.length; i++) {
+  for (let i = 0; i < divs.length; i++) {
     if (divs[i].id != "divInfo") {
-      divs[i].style.backgroundColor = (i &amp; 1) ? "#f6eedb" : "#cceeff"
+      divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff"
     }
   }
   divInfo.textContent = '';
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', '', '700') }}</p>
+{{ EmbedLiveSample('Example', '', '700') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

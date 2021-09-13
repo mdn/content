@@ -9,80 +9,87 @@ tags:
   - keyup
 browser-compat: api.Element.keyup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>keyup</code></strong> event is fired when a key is released.</p>
+The **`keyup`** event is fired when a key is released.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code> and <code>keyup</code> events provide a code indicating which key is pressed, while <code>keypress</code> indicates which character was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events.</p>
+The [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
-<p>Since Firefox 65, the <code>keyup</code> and <code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all <code>keyup</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
+Since Firefox 65, the `keyup` and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all `keyup` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an IME):
 
-<pre class="brush: js">eventTarget.addEventListener("keyup", event =&gt; {
+```js
+eventTarget.addEventListener("keyup", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="addEventListener_keyup_example">addEventListener keyup example</h3>
+### addEventListener keyup example
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key inside the {{HtmlElement("input")}} element.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key inside the {{HtmlElement("input")}} element.
 
-<pre class="brush: html">&lt;input placeholder="Click here, then press and release a key." size="40"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Click here, then press and release a key." size="40">
+<p id="log"></p>
+```
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('keyup', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keyup_example")}}</p>
+{{EmbedLiveSample("addEventListener_keyup_example")}}
 
-<h3 id="onkeyup_equivalent">onkeyup equivalent</h3>
+### onkeyup equivalent
 
-<pre class="brush: js">input.onkeyup = logKey;</pre>
+```js
+input.onkeyup = logKey;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/input_event">input</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keydown_event">keydown</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Element/keypress_event">keypress</a></code></li>
- <li><a href="/en-US/docs/Web/API/Document/keyup_event">Document <code>keyup</code> event</a></li>
-</ul>
+- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
+- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
+- [Document `keyup` event](/en-US/docs/Web/API/Document/keyup_event)

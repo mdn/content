@@ -2,55 +2,53 @@
 title: Element.openOrClosedShadowRoot
 slug: Web/API/Element/openOrClosedShadowRoot
 tags:
-- API
-- Add-ons
-- Element
-- Extensions
-- Mozilla
-- Needs Privileges
-- Non-standard
-- Property
-- Reference
-- WebExtensions
-- openOrClosedShadowRoot
-- shadow dom
+  - API
+  - Add-ons
+  - Element
+  - Extensions
+  - Mozilla
+  - Needs Privileges
+  - Non-standard
+  - Property
+  - Reference
+  - WebExtensions
+  - openOrClosedShadowRoot
+  - shadow dom
 browser-compat: api.Element.openOrClosedShadowRoot
 ---
-<div>{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}</div>
+{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}
 
-<div class="note"><p><strong>Note:</strong> This API is available only to <a
-      href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p></div>
+> **Note:** This API is available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 
-<p>The <code>Element.openOrCloseShadowRoot</code> read-only
-    property represents the shadow root hosted by the element, regardless if its
-    {{DOMxRef("ShadowRoot.mode", "mode")}} is <code>open</code> or
-    <code>closed</code>.</p>
+The `Element.openOrCloseShadowRoot` read-only
+property represents the shadow root hosted by the element, regardless if its
+{{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or
+`closed`.
 
-<p>Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
-  root to an existing element.</p>
+Use {{DOMxRef("Element.attachShadow()")}} to add a shadow
+root to an existing element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>shadowroot = element</em>.openOrCloseShadowRoot;
-</pre>
+```js
+var shadowroot = element.openOrCloseShadowRoot;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("ShadowRoot")}} object instance, regardless if its
-  {{DOMxRef("ShadowRoot.mode", "mode")}} is set to <code>open</code> or
-  <code>closed</code>, or <code>null</code> if no shadow root is present.
-  (See {{DOMxRef("Element.attachShadow()")}} for further details).</p>
+A {{DOMxRef("ShadowRoot")}} object instance, regardless if its
+{{DOMxRef("ShadowRoot.mode", "mode")}} is set to `open` or
+`closed`, or `null` if no shadow root is present.
+(See {{DOMxRef("Element.attachShadow()")}} for further details).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>This property is not part of any specification.</em></p>
+_This property is not part of any specification._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Element.shadowRoot")}}</li>
-</ul>
+- {{DOMxRef("Element.shadowRoot")}}

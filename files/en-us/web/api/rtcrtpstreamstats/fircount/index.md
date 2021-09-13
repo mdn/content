@@ -2,58 +2,59 @@
 title: RTCRtpStreamStats.firCount
 slug: Web/API/RTCRtpStreamStats/firCount
 tags:
-- API
-- Dropped Frames
-- Frames
-- Media
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- firCount
-- rtc
-- stream
+  - API
+  - Dropped Frames
+  - Frames
+  - Media
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - firCount
+  - rtc
+  - stream
 browser-compat: api.RTCRtpStreamStats.firCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>firCount</code></strong> property of the
-    {{domxref("RTCRtpStreamStats")}} dictionary indicates the number of <strong>Full Intra
-      Request</strong> (<strong>FIR</strong>) packets have been sent by the receiver to
-    the sender.</p>
+The **`firCount`** property of the
+{{domxref("RTCRtpStreamStats")}} dictionary indicates the number of **Full Intra
+Request** (**FIR**) packets have been sent by the receiver to
+the sender.
 
-<p>This is a measure of how often the stream falls behind and has to
-  skip frames in order to catch up.</p>
+This is a measure of how often the stream falls behind and has to
+skip frames in order to catch up.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>firCount</em> = <em>RTCRtpStreamStats</em>.firCount;</pre>
+```js
+var firCount = RTCRtpStreamStats.firCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating how many FIR packets have been received by the sender
-  during the current connection. This value is available only on receivers for video
-  tracks.</p>
+An integer value indicating how many FIR packets have been received by the sender
+during the current connection. This value is available only on receivers for video
+tracks.
 
-<p>The receiver sends a FIR packet to the sender any time it falls bahind or loses packets
-  and cannot decode the incoming stream any longer because of the lost data. This tells
-  the sender to send a full frame instead of a delta frame, so that the receiver can catch
-  up.</p>
+The receiver sends a FIR packet to the sender any time it falls bahind or loses packets
+and cannot decode the incoming stream any longer because of the lost data. This tells
+the sender to send a full frame instead of a delta frame, so that the receiver can catch
+up.
 
-<p>The higher <code>firCount</code> is, the more often frames were dropped, which may be
-  an indication that the media's bit rate is too high for the available bandwidth, or that
-  the receiving device is overburdened and is therefore unable to process the incoming
-  data.</p>
+The higher `firCount` is, the more often frames were dropped, which may be
+an indication that the media's bit rate is too high for the available bandwidth, or that
+the receiving device is overburdened and is therefore unable to process the incoming
+data.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

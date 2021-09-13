@@ -2,50 +2,49 @@
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
 tags:
-- API
-- Method
-- Reference
-- Resize Observer API
-- ResizeObserver
-- observers
-- unobserve()
+  - API
+  - Method
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - observers
+  - unobserve()
 browser-compat: api.ResizeObserver.unobserve
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>unobserve()</code></strong> method of the
-  {{domxref("ResizeObserver")}} interface ends the observing of a specified
-  {{domxref('Element')}} or {{domxref('SVGElement')}}.</p>
+The **`unobserve()`** method of the
+{{domxref("ResizeObserver")}} interface ends the observing of a specified
+{{domxref('Element')}} or {{domxref('SVGElement')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void unobserve(<em>target</em>);</pre>
+```js
+void unobserve(target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
-    unobserved.</dd>
-</dl>
+- `target`
+  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
+    unobserved.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is taken from the <a
-    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a>
-  (<a
-    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see
-    source</a>) example:</p>
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
+([see
+source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
@@ -66,19 +65,19 @@ browser-compat: api.ResizeObserver.unobserve
 
 resizeObserver.observe(divElem);
 
-checkbox.addEventListener('change', () =&gt; {
+checkbox.addEventListener('change', () => {
   if(checkbox.checked) {
     resizeObserver.observe(divElem);
   } else {
     resizeObserver.unobserve(divElem);
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

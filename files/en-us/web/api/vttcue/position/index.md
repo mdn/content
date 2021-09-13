@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.position
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>position</code></strong> property of the {{domxref("VTTCue")}} interface represents the indentation of the cue within the line.</p>
+The **`position`** property of the {{domxref("VTTCue")}} interface represents the indentation of the cue within the line.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let position = VTTCue.position;
-VTTCue.position = "auto";</pre>
+```js
+let position = VTTCue.position;
+VTTCue.position = "auto";
+```
 
-<h3>Value</h3>
-<p>A number, or <code>"auto"</code> representing the identation of the cue within the line.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A number, or `"auto"` representing the identation of the cue within the line.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>position</code> is set to <code>2</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `position` is set to `2`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -34,14 +38,12 @@ cue1.position = '2';
 console.log(cue1.position);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

@@ -10,41 +10,38 @@ tags:
   - credential management
 browser-compat: api.FederatedCredential
 ---
-<div>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</div>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>The <strong><code>FederatedCredential</code></strong> interface of the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a> provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. <a href="http://openid.net/developers/specs/">OpenID Connect</a> is an example of a federated identity provider framework.</p>
+The **`FederatedCredential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. [OpenID Connect](http://openid.net/developers/specs/) is an example of a federated identity provider framework.
 
-<p>In browsers that support it, an instance of this interface may be passed in the <code>credential</code> member of the <code>init</code> object for global {{domxref('fetch()')}}.</p>
+In browsers that support it, an instance of this interface may be passed in the `credential` member of the `init` object for global {{domxref('fetch()')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}</dt>
- <dd>Creates a new <code>FederatedCredential</code> object.</dd>
-</dl>
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+  - : Creates a new `FederatedCredential` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Credential")}}.</em></p>
+_Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-<dl>
- <dt>{{domxref("FederatedCredential.provider")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing a credential's federated identity provider.</dd>
- <dt>{{domxref("FederatedCredential.protocol")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing a credential's federated identity protocol.</dd>
-</dl>
+- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
+  - : Returns a {{domxref("USVString")}} containing a credential's federated identity provider.
+- {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing a credential's federated identity protocol.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var cred = new FederatedCredential({
+```js
+var cred = new FederatedCredential({
   id: id,
   name: name,
   provider: 'https://account.google.com',
@@ -55,12 +52,13 @@ browser-compat: api.FederatedCredential
 navigator.credentials.store(cred)
   .then(function() {
   // Do something else.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

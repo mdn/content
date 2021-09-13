@@ -13,47 +13,49 @@ tags:
   - keys
 browser-compat: api.CacheStorage.keys
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The
-    <strong><code>keys()</code></strong> method of the
-    {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will
-    resolve with an array containing strings corresponding to all of the named
-    {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the
-    order they were created. Use this method to iterate over a list of all
-    {{domxref("Cache")}} objects.</p>
+The
+**`keys()`** method of the
+{{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will
+resolve with an array containing strings corresponding to all of the named
+{{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the
+order they were created. Use this method to iterate over a list of all
+{{domxref("Cache")}} objects.
 
-<p>You can access <code>CacheStorage</code> through the global
-  {{domxref("caches")}} property.</p>
+You can access `CacheStorage` through the global
+{{domxref("caches")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">caches.keys().then(function(<em>keyList</em>) {
+```js
+caches.keys().then(function(keyList) {
   //do something with your keyList
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names
-  inside the {{domxref("CacheStorage")}} object.</p>
+a {{jsxref("Promise")}} that resolves with an array of the {{domxref("Cache")}} names
+inside the {{domxref("CacheStorage")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
+In this code snippet we wait for an {{domxref("ServiceWorkerGlobalScope.onactivate",
   "activate")}} event, and then run a
-  {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
-  unused caches before a new service worker is activated. Here we have an allowlist
-  containing the names of the caches we want to keep (<code>cacheAllowlist</code>). We
-  return the keys of the caches in the {{domxref("CacheStorage")}} object using
-  <code>keys()</code>, then check each key to see if it is in the allowlist. If not, we
-  delete it using {{domxref("CacheStorage.delete()")}}.</p>
+{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} block that clears up any old,
+unused caches before a new service worker is activated. Here we have an allowlist
+containing the names of the caches we want to keep (`cacheAllowlist`). We
+return the keys of the caches in the {{domxref("CacheStorage")}} object using
+`keys()`, then check each key to see if it is in the allowlist. If not, we
+delete it using {{domxref("CacheStorage.delete()")}}.
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cacheAllowlist = ['v2'];
 
   event.waitUntil(
@@ -65,21 +67,20 @@ browser-compat: api.CacheStorage.keys
       }));
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

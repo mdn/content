@@ -2,68 +2,65 @@
 title: Blob.text()
 slug: Web/API/Blob/text
 tags:
-- API
-- Blob
-- File API
-- Method
-- Reference
-- String
-- Text
-- Utf-8
-- get
-- read
+  - API
+  - Blob
+  - File API
+  - Method
+  - Reference
+  - String
+  - Text
+  - Utf-8
+  - get
+  - read
 browser-compat: api.Blob.text
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <code><strong>text()</strong></code> method in the
-    {{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a
-    string containing the contents of the blob, interpreted as UTF-8.</p>
+The **`text()`** method in the
+{{domxref("Blob")}} interface returns a {{jsxref("Promise")}} that resolves with a
+string containing the contents of the blob, interpreted as UTF-8.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>textPromise</em> = <em>blob</em>.text();
+```js
+var textPromise = blob.text();
 
-<em>blob</em>.text().then(<em>text</em> =&gt; /* do something with the text */);
+blob.text().then(text => /* do something with the text */);
 
-var <em>text</em> = await <em>blob</em>.text();
-</pre>
+var text = await blob.text();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A promise that resolves with a {{domxref("USVString")}} which contains the blob's data
-  as a text string. The data is <em>always</em> presumed to be in UTF-8 format.</p>
+A promise that resolves with a {{domxref("USVString")}} which contains the blob's data
+as a text string. The data is _always_ presumed to be in UTF-8 format.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText",
+The {{domxref("FileReader")}} method {{domxref("FileReader.readAsText",
   "readAsText()")}} is an older method that performs a similar function. It works on both
-  <code>Blob</code> and {{domxref("File")}} objects. There are two key differences:</p>
+`Blob` and {{domxref("File")}} objects. There are two key differences:
 
-<ul>
-  <li><code>Blob.text()</code> returns a promise, whereas
-    <code>FileReader.readAsText()</code> is an event based API.</li>
-  <li><code>Blob.text()</code> always uses UTF-8 as encoding, while
-    <code>FileReader.readAsText()</code> can use a different encoding depending on the
-    blob's type and a specified encoding name.</li>
-</ul>
+- `Blob.text()` returns a promise, whereas
+  `FileReader.readAsText()` is an event based API.
+- `Blob.text()` always uses UTF-8 as encoding, while
+  `FileReader.readAsText()` can use a different encoding depending on the
+  blob's type and a specified encoding name.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.text()")}}</li>
-  <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
-  <li>{{domxref("FileReader.readAsText()")}}</li>
-</ul>
+- {{domxref("Response.text()")}}
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- {{domxref("FileReader.readAsText()")}}

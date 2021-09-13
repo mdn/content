@@ -2,58 +2,59 @@
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
 tags:
-- API
-- Battery API
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - Battery API
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.BatteryManager.charging
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}{{APIRef("Battery API")}}
 
-<div>{{APIRef("Battery API")}}</div>
+A Boolean value indicating whether or not the device's battery is currently being
+charged.
 
-<p>A Boolean value indicating whether or not the device's battery is currently being
-  charged.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var charging = battery.charging
+```
 
-<pre class="brush: js">var <em>charging</em> = battery.charging</pre>
+On return, `charging` indicates whether or not the
+`battery`, which is a {{domxref("BatteryManager")}} object, is
+currently being charged; if the battery is charging, this value is `true`.
+Otherwise, the value is `false`.
 
-<p>On return, <code>charging</code> indicates whether or not the
-  <code><em>battery</em></code>, which is a {{domxref("BatteryManager")}} object, is
-  currently being charged; if the battery is charging, this value is <code>true</code>.
-  Otherwise, the value is <code>false</code>.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+### HTML Content
 
-<h3 id="HTML_Content">HTML Content</h3>
+```html
+<div id="charging">(charging state unknown)</div>
+```
 
-<pre
-  class="brush: html">&lt;div id="charging"&gt;(charging state unknown)&lt;/div&gt;</pre>
+### JavaScript Content
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
-
-<pre class="brush: js;">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
     var charging = battery.charging;
 
     document.querySelector('#charging').textContent = charging ;
-});</pre>
+});
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Example', '100%', 30) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BatteryManager")}}</li>
-  <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

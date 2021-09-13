@@ -2,74 +2,73 @@
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
 tags:
-- API
-- HTTP
-- Method
-- NeedsExample
-- Reference
-- XHR
-- XMLHttpRequest
-- open
+  - API
+  - HTTP
+  - Method
+  - NeedsExample
+  - Reference
+  - XHR
+  - XMLHttpRequest
+  - open
 browser-compat: api.XMLHttpRequest.open
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{domxref("XMLHttpRequest")}} method <code><strong>open()</strong></code>
-  initializes a newly-created request, or re-initializes an existing one.</p>
+The {{domxref("XMLHttpRequest")}} method **`open()`**
+initializes a newly-created request, or re-initializes an existing one.
 
-<div class="note"><p><strong>Note:</strong> Calling this method for an already active request
-  (one for which <code>open()</code> has already been called) is the equivalent of calling
-  {{domxref("XMLHttpRequest.abort", "abort()")}}.</p></div>
+> **Note:** Calling this method for an already active request
+> (one for which `open()` has already been called) is the equivalent of calling
+> {{domxref("XMLHttpRequest.abort", "abort()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>XMLHttpRequest</var>.open(<var>method</var>, <var>url</var>[, <var>async</var>[, <var>user</var>[, <var>password</var>]]])
-</pre>
+```js
+XMLHttpRequest.open(method, url[, async[, user[, password]]])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>method</code></dt>
-  <dd>The <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a> to use, such as
-    <code>"GET"</code>, <code>"POST"</code>, <code>"PUT"</code>, <code>"DELETE"</code>,
-    etc. Ignored for non-HTTP(S) URLs.</dd>
-  <dt><code>url</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the URL to send the request to.</dd>
-  <dt><code>async</code> {{optional_inline}}</dt>
-  <dd>An optional Boolean parameter, defaulting to <code>true</code>, indicating whether
-    or not to perform the operation asynchronously. If this value is <code>false</code>,
-    the <code>send()</code> method does not return until the response is received. If
-    <code>true</code>, notification of a completed transaction is provided using event
-    listeners. This <em>must</em> be true if the <code>multipart</code> attribute is
-    <code>true</code>, or an exception will be thrown.
-    <div class="note"><p><strong>Note:</strong> Synchronous requests on the main thread can
-      be easily disruptive to the user experience and should be avoided; in fact, many
-      browsers have deprecated synchronous XHR support on the main thread entirely.
-      Synchronous requests are permitted in {{domxref("Worker")}}s.</p></div>
-  </dd>
-  <dt><code>user</code> {{optional_inline}}</dt>
-  <dd>The optional user name to use for authentication purposes; by default, this is the
-    <code>null</code> value.</dd>
-  <dt><code>password</code> {{optional_inline}}</dt>
-  <dd>The optional password to use for authentication purposes; by default, this is the
-    <code>null</code> value.</dd>
-</dl>
+- `method`
+  - : The [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use, such as
+    `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
+    etc. Ignored for non-HTTP(S) URLs.
+- `url`
+  - : A {{domxref("DOMString")}} representing the URL to send the request to.
+- `async` {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : An optional Boolean parameter, defaulting to `true`, indicating whether
+    or not to perform the operation asynchronously. If this value is `false`,
+    the `send()` method does not return until the response is received. If
+    `true`, notification of a completed transaction is provided using event
+    listeners. This _must_ be true if the `multipart` attribute is
+    `true`, or an exception will be thrown.
+
+    > **Note:** Synchronous requests on the main thread can
+    > be easily disruptive to the user experience and should be avoided; in fact, many
+    > browsers have deprecated synchronous XHR support on the main thread entirely.
+    > Synchronous requests are permitted in {{domxref("Worker")}}s.
+
+- `user` {{optional_inline}}
+  - : The optional user name to use for authentication purposes; by default, this is the
+    `null` value.
+- `password` {{optional_inline}}
+  - : The optional password to use for authentication purposes; by default, this is the
+    `null` value.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li>Related {{domxref("XMLHttpRequest")}} methods:
-    {{domxref("XMLHttpRequest.setRequestHeader",
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- Related {{domxref("XMLHttpRequest")}} methods:
+  {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, and
-    {{domxref("XMLHttpRequest.abort", "abort()")}}</li>
-</ul>
+  {{domxref("XMLHttpRequest.abort", "abort()")}}

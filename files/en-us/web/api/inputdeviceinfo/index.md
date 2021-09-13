@@ -11,32 +11,32 @@ browser-compat: api.InputDeviceInfo
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p>The <strong><code>InputDeviceInfo</code></strong> interface of the {{domxref('Media Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.</p>
+The **`InputDeviceInfo`** interface of the {{domxref('Media Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.
 
-<p><code>InputDeviceInfo</code> objects are returned by {{domxref("MediaDevices.enumerateDevices()")}} if the returned device is an audio or video input device.</p>
+`InputDeviceInfo` objects are returned by {{domxref("MediaDevices.enumerateDevices()")}} if the returned device is an audio or video input device.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("InputDeviceInfo.getCapabilities()")}}</dt>
-  <dd>Returns a <code>MediaTrackCapabilities</code> object describing the primary audio or video track of a device's <code>MediaStream</code>.</dd>
-</dl>
+- {{domxref("InputDeviceInfo.getCapabilities()")}}
+  - : Returns a `MediaTrackCapabilities` object describing the primary audio or video track of a device's `MediaStream`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example gets all media devices with {{domxref("MediaDevices.enumerateDevices()")}}. If any of the devices are input devices then <code>console.log(device)</code> will print an <code>InputDeviceInfo</code> object to the console.</p>
+The following example gets all media devices with {{domxref("MediaDevices.enumerateDevices()")}}. If any of the devices are input devices then `console.log(device)` will print an `InputDeviceInfo` object to the console.
 
-<pre class="brush: js">navigator.mediaDevices.enumerateDevices()
+```js
+navigator.mediaDevices.enumerateDevices()
   .then(function(devices) {
     devices.forEach(function(device) {
       console.log(device); // an InputDeviceInfo object if the device is an input device, otherwise a MediaDeviceInfo object.
     });
-  })</pre>
+  })
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

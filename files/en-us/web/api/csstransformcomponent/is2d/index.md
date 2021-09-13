@@ -2,37 +2,39 @@
 title: CSSTransformComponent.is2D
 slug: Web/API/CSSTransformComponent/is2D
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformComponent
-- Experimental
-- Houdini
-- Property
-- Reference
-- is2D
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformComponent
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - is2D
 browser-compat: api.CSSTransformComponent.is2D
 ---
-<div>{{APIRef("CSS Typed OM")}}</div>
+{{APIRef("CSS Typed OM")}}
 
-<p>The <strong><code>is2D</code></strong> read-only property of the {{domxref("CSSTransformComponent")}} interface indicates where the transform is 2D or 3D.</p>
+The **`is2D`** read-only property of the {{domxref("CSSTransformComponent")}} interface indicates where the transform is 2D or 3D.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>is2D</var> = CSSTransformComponent.is2D;</pre>
+```js
+var is2D = CSSTransformComponent.is2D;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean. True indicating the transform is a 2D transform, false if it is a 3D
-  transform.</p>
+A boolean. True indicating the transform is a 2D transform, false if it is a 3D
+transform.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,56 +12,51 @@ tags:
   - Workers
 browser-compat: api.PeriodicSyncEvent
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>PeriodicSyncEvent</code></strong> interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.</p>
+The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.
 
-<p>An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.</p>
+An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}</dt>
- <dd>Creates a new <code>PeriodicSyncEvent</code> object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.</dd>
-</dl>
+- {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}
+  - : Creates a new `PeriodicSyncEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} callback.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}</dt>
- <dd>Returns the developer-defined identifier for this <code>PeriodicSyncEvent</code>. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.</dd>
-</dl>
+- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+  - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>Inherits methods from its parent {{domxref('ExtendableEvent')}}.</p>
+Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to respond to a periodic sync event in the service worker.</p>
+The following example shows how to respond to a periodic sync event in the service worker.
 
-<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
+```js
+self.addEventListener('periodicsync', event => {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
-</pre>
+```
 
-<p><code>fetchAndCacheLatestNews</code> is a developer defined function.</p>
+`fetchAndCacheLatestNews` is a developer defined function.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with the Periodic Background Sync API</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

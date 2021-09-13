@@ -2,62 +2,61 @@
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Horizontal
-- Image
-- Layout
-- Property
-- Reference
-- hspace
-- img
-- left
-- margin
-- right
-- spacing
-- Deprecated
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Horizontal
+  - Image
+  - Layout
+  - Property
+  - Reference
+  - hspace
+  - img
+  - left
+  - margin
+  - right
+  - spacing
+  - Deprecated
 browser-compat: api.HTMLImageElement.hspace
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The
-    <em>obsolete</em> <code><strong>hspace</strong></code> property of the
-    {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty
-    space to leave empty on the left and right sides of the {{HTMLElement("img")}} element
-    when laying out the page.</p>
+The
+*obsolete* **`hspace`** property of the
+{{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty
+space to leave empty on the left and right sides of the {{HTMLElement("img")}} element
+when laying out the page.
 
-<p>This property reflects the {{Glossary("HTML")}} {{htmlattrxref("hspace", "img")}}
-  attribute.</p>
+This property reflects the {{Glossary("HTML")}} {{htmlattrxref("hspace", "img")}}
+attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.hspace = <em>marginWidth</em>;
-<em>marginWidth</em> = <em>htmlImageElement</em>.hspace;
-</pre>
+```js
+htmlImageElement.hspace = marginWidth;
+marginWidth = htmlImageElement.hspace;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value specifying the width, in pixels, of the horizontal margin to apply to
-  the left and right sides of the image.</p>
+An integer value specifying the width, in pixels, of the horizontal margin to apply to
+the left and right sides of the image.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The value specified for <code>hspace</code> is mapped to the {{cssxref("margin-left")}}
-  and {{cssxref("margin-right")}} properties to specify the width of those margins in
-  pixels.</p>
+The value specified for `hspace` is mapped to the {{cssxref("margin-left")}}
+and {{cssxref("margin-right")}} properties to specify the width of those margins in
+pixels.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This property is obsolete. You should instead use the CSS
-    {{cssxref("margin")}} property and its longhand forms to establish margins around
-    an <code>&lt;img&gt;</code>.</p>
-</div>
+> **Warning:** This property is obsolete. You should instead use the CSS
+> {{cssxref("margin")}} property and its longhand forms to establish margins around
+> an `<img>`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

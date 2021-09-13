@@ -2,33 +2,36 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 tags:
-- API
-- Constructor
-- DOM
-- DOM Events
-- EventTarget
+  - API
+  - Constructor
+  - DOM
+  - DOM Events
+  - EventTarget
 browser-compat: api.EventTarget.EventTarget
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>EventTarget()</strong></code> constructor creates a new
-  {{domxref("EventTarget")}} object instance.</p>
+The **`EventTarget()`** constructor creates a new
+{{domxref("EventTarget")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>myEventTarget</var> = new EventTarget();</pre>
+```js
+var myEventTarget = new EventTarget();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An instance of the {{domxref("EventTarget")}} object.</p>
+An instance of the {{domxref("EventTarget")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">class MyEventTarget extends EventTarget {
+```js
+class MyEventTarget extends EventTarget {
   constructor(mySecret) {
     super();
     this._secret = mySecret;
@@ -45,18 +48,17 @@ myEventTarget.addEventListener("foo", function(e) {
 
 let event = new CustomEvent("foo", { detail: 7 });
 myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7</pre>
+let newValue = myEventTarget.secret; // == 7
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventTarget")}}</li>
-</ul>
+- {{domxref("EventTarget")}}

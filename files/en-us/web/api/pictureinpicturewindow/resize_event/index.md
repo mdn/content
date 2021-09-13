@@ -11,42 +11,46 @@ tags:
   - resize
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>resize</code></strong> event fires when the floating video window has been resized.</p>
+The **`resize`** event fires when the floating video window has been resized.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PictureInPictureWindow")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("PictureInPictureWindow.onresize", "onresize")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PictureInPictureWindow")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("PictureInPictureWindow.onresize", "onresize")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Window_size_logger">Window size logger</h3>
+### Window size logger
 
-<pre class="brush: html">&lt;p&gt;Resize the floating video window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
-&lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;video id="video" src="" muted autoplay&gt;&lt;/video&gt;
-</pre>
+```html
+<p>Resize the floating video window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+<video id="video" src="" muted autoplay></video>
+```
 
-<pre class="brush: js">const video = document.querySelector('#video');
+```js
+const video = document.querySelector('#video');
 const heightOutput = document.querySelector('#height');
 const widthOutput = document.querySelector('#width');
 
@@ -56,26 +60,27 @@ function resize(evt) {
 }
 
 video.requestPictureInPicture()
-  .then(pictureInPictureWindow =&gt; {
+  .then(pictureInPictureWindow => {
     pictureInPictureWindow.onresize = resize;
-  });</pre>
+  });
+```
 
-<h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
+### addEventListener equivalent
 
-<p>You could set up the event handler using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
+You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">pictureInPictureWindow.addEventListener('resize', resize);</pre>
+```js
+pictureInPictureWindow.addEventListener('resize', resize);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("PictureInPictureWindow.onresize")}}</li>
-</ul>
+- {{domxref("PictureInPictureWindow.onresize")}}

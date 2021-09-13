@@ -2,34 +2,36 @@
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 tags:
-- API
-- CustomEvent
-- DOM
-- Property
-- Reference
-- detail
+  - API
+  - CustomEvent
+  - DOM
+  - Property
+  - Reference
+  - detail
 browser-compat: api.CustomEvent.detail
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>detail</strong></code> readonly property of the
-  {{domxref("CustomEvent")}} interface returns any data passed when initializing the
-  event.</p>
+The **`detail`** readonly property of the
+{{domxref("CustomEvent")}} interface returns any data passed when initializing the
+event.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> let myDetail = <em>customEventInstance.detail</em>;</pre>
+```js
+ let myDetail = customEventInstance.detail;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Whatever data the event was initialized with.</p>
+Whatever data the event was initialized with.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// add an appropriate event listener
+```js
+// add an appropriate event listener
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // create and dispatch the event
@@ -41,19 +43,17 @@ let event = new CustomEvent("cat", {
 obj.dispatchEvent(event);
 
 // Will return an object containing the hazcheeseburger property
-let myDetail = <em>event.detail</em>;
-</pre>
+let myDetail = event.detail;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CustomEvent")}}</li>
-</ul>
+- {{domxref("CustomEvent")}}

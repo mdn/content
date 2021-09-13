@@ -2,43 +2,43 @@
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
 tags:
-- API
-- Method
-- Reference
-- Storage
-- Web Storage
+  - API
+  - Method
+  - Reference
+  - Storage
+  - Web Storage
 browser-compat: api.Storage.getItem
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>getItem()</code></strong> method of the {{domxref("Storage")}}
-  interface, when passed a key name, will return that key's value, or <code>null</code> if
-  the key does not exist, in the given <code>Storage</code> object.</p>
+The **`getItem()`** method of the {{domxref("Storage")}}
+interface, when passed a key name, will return that key's value, or `null` if
+the key does not exist, in the given `Storage` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>aValue</em> = <em>storage</em>.getItem(<em>keyName</em>);
-</pre>
+```js
+var aValue = storage.getItem(keyName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>keyName</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the name of the key you want to retrieve the
-    value of.</dd>
-</dl>
+- `keyName`
+  - : A {{domxref("DOMString")}} containing the name of the key you want to retrieve the
+    value of.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing the value of the key. If the key does not exist,
-  <code>null</code> is returned.</p>
+A {{domxref("DOMString")}} containing the value of the key. If the key does not exist,
+`null` is returned.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following function retrieves three data items from local storage, then uses them to
-  set custom styles on a page.</p>
+The following function retrieves three data items from local storage, then uses them to
+set custom styles on a page.
 
-<pre class="brush: js">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -50,25 +50,21 @@ browser-compat: api.Storage.getItem
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> To see this used within a real world example, see our <a
-      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Storage/setItem">Storage.setItem()</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-      Web Storage API</a></li>
-</ul>
+- [Storage.setItem()](/en-US/docs/Web/API/Storage/setItem)
+- [Using the
+  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

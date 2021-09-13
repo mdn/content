@@ -10,38 +10,33 @@ tags:
   - Reference
   - Deprecated
 ---
-<div>{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}</div>
+{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}
 
-<div class="note notebox">
-  <p><strong>Note:</strong> This method was removed from Firefox 7.0 and onward.</p>
-</div>
+> **Note:** This method was removed from Firefox 7.0 and onward.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>getAsText</code> method provides the file's data interpreted as text using a given encoding.</p>
+The `getAsText` method provides the file's data interpreted as text using a given encoding.
 
-<div class="note">
-<p><strong>Note:</strong> This method is obsolete; you should use the {{domxref("FileReader")}} method {{domxref("FileReader.readAsText()","readAsText()")}} instead.</p>
-</div>
+> **Note:** This method is obsolete; you should use the {{domxref("FileReader")}} method {{domxref("FileReader.readAsText()","readAsText()")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var <var>str</var> = <var>instanceOfFile</var>.getAsText(<var>encoding</var>);</pre>
+    var str = instanceOfFile.getAsText(encoding);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><var>encoding</var></dt>
- <dd>A string indicating the encoding to use for the returned data. If this string is empty, UTF-8 is assumed.</dd>
-</dl>
+- _encoding_
+  - : A string indicating the encoding to use for the returned data. If this string is empty, UTF-8 is assumed.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string containing the file's data interpreted as text in the specified <code>encoding</code>.</p>
+A string containing the file's data interpreted as text in the specified `encoding`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// fileInput is a HTMLInputElement: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput is a HTMLInputElement: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
@@ -55,30 +50,29 @@ var accept = {
 
 var file;
 
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
   file = files[i];
 
   // if file type could be detected
   if (file !== null) {
-    if (accept.text.indexOf(file.mediaType) &gt; -1) {
+    if (accept.text.indexOf(file.mediaType) > -1) {
       // file is of type text, which we accept
       // make sure it's encoded as utf-8
       var data = file.getAsText("utf-8");
       // modify data with string methods
 
-    } else if (accept.binary.indexOf(file.mediaType) &gt; -1) {
+    } else if (accept.binary.indexOf(file.mediaType) > -1) {
       // binary
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("File")}}</li>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

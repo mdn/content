@@ -2,42 +2,40 @@
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
 tags:
-- API
-- Constructor
-- Gamepad API
-- Games
-- Reference
+  - API
+  - Constructor
+  - Gamepad API
+  - Games
+  - Reference
 browser-compat: api.GamepadEvent.GamepadEvent
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <strong><code>GamepadEvent()</code></strong> constructor creates a new
-	{{domxref("GamepadEvent")}} object.</p>
+The **`GamepadEvent()`** constructor creates a new
+{{domxref("GamepadEvent")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var gamepadEvent = new GamepadEvent(typeArg, options)</pre>
+```js
+var gamepadEvent = new GamepadEvent(typeArg, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><em>typeArg</em></dt>
-	<dd>A {{domxref("DOMString")}} that must be one of <code>gamepadconnected</code> or
-		<code>gamepaddisconnected</code>.</dd>
-	<dt><em>options</em> {{optional_inline}}</dt>
-	<dd>Options are as follows:
-		<ul>
-			<li><code>gamepad</code>: An instance of {{domxref("Gamepad")}} describing the
-				gamepad associated with the event.</li>
-		</ul>
-	</dd>
-</dl>
+- _typeArg_
+  - : A {{domxref("DOMString")}} that must be one of `gamepadconnected` or
+    `gamepaddisconnected`.
+- _options_ {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Options are as follows:
+
+    - `gamepad`: An instance of {{domxref("Gamepad")}} describing the
+      gamepad associated with the event.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

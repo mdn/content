@@ -8,95 +8,96 @@ tags:
   - NodeList
 browser-compat: api.NodeList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>NodeList</code></strong> objects are collections of <a href="/en-US/docs/Web/API/Node">nodes</a>, usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.</p>
+**`NodeList`** objects are collections of [nodes](/en-US/docs/Web/API/Node), usually returned by properties such as {{domxref("Node.childNodes")}} and methods such as {{domxref("document.querySelectorAll()")}}.
 
-<div class="note">
-<p><strong>Note:</strong> Although <code>NodeList</code> is not an <code>Array</code>, it is possible to iterate over it with <code>forEach()</code>. It can also be converted to a real <code>Array</code> using {{jsxref("Array.from()")}}.</p>
+> **Note:** Although `NodeList` is not an `Array`, it is possible to iterate over it with `forEach()`. It can also be converted to a real `Array` using {{jsxref("Array.from()")}}.
+>
+> However, some older browsers have not implemented `NodeList.forEach()` nor `Array.from()`. This can be circumvented by using {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} — see this document's [Example](#example).
 
-<p>However, some older browsers have not implemented <code>NodeList.forEach()</code> nor <code>Array.from()</code>. This can be circumvented by using {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} — see this document's <a href="#example">Example</a>.</p>
-</div>
+## Live vs. Static NodeLists
 
-<h2 id="Live_vs._Static_NodeLists">Live vs. Static NodeLists</h2>
+Although they are both considered `NodeList`s, there are 2 varieties of NodeList: _live_ and _static_.
 
-<p>Although they are both considered <code>NodeList</code>s, there are 2 varieties of NodeList: <em>live</em> and <em>static</em>.</p>
+### Live NodeLists
 
-<h3 id="Live_NodeLists">Live NodeLists</h3>
+In some cases, the `NodeList` is _live_, which means that changes in the DOM automatically update the collection.
 
-<p>In some cases, the <code>NodeList</code> is <em>live</em>, which means that changes in the DOM automatically update the collection.</p>
+For example, {{domxref("Node.childNodes")}} is live:
 
-<p>For example, {{domxref("Node.childNodes")}} is live:</p>
-
-<pre class="brush: js">const parent = document.getElementById('parent');
+```js
+const parent = document.getElementById('parent');
 let child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
 parent.appendChild(document.createElement('div'));
 console.log(child_nodes.length); // outputs "3"
-</pre>
+```
 
-<h3 id="Static_NodeLists">Static NodeLists</h3>
+### Static NodeLists
 
-<p>In other cases, the <code>NodeList</code> is <em>static,</em> where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a <em>static</em> <code>NodeList</code>.</p>
+In other cases, the `NodeList` is _static,_ where any changes in the DOM does not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
 
-<p>It's good to keep this distinction in mind when you choose how to iterate over the items in the <code>NodeList</code>, and whether you should cache the list's <code>length</code>.</p>
+It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("NodeList.length")}}</dt>
- <dd>The number of nodes in the <code>NodeList</code>.</dd>
-</dl>
+- {{domxref("NodeList.length")}}
+  - : The number of nodes in the `NodeList`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("NodeList.item()")}}</dt>
- <dd>
-   <p>Returns an item in the list by its index, or <code>null</code> if the index is out-of-bounds.</p>
-   <p>An alternative to accessing <code>nodeList[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</p>
- </dd>
- <dt>{{domxref("NodeList.entries()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code> and the values are nodes.)</dd>
- <dt>{{domxref("NodeList.forEach()")}}</dt>
- <dd>Executes a provided function once per <code>NodeList</code> element, passing the element as an argument to the function.</dd>
- <dt>{{domxref("NodeList.keys()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are numbers starting from <code>0</code>.)</dd>
- <dt>{{domxref("NodeList.values()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.</dd>
-</dl>
+- {{domxref("NodeList.item()")}}
 
-<h2 id="Example">Example</h2>
+  - : Returns an item in the list by its index, or `null` if the index is out-of-bounds.
 
-<p>It's possible to loop over the items in a <code>NodeList</code> using a <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> loop:</p>
+    An alternative to accessing `nodeList[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
-<pre class="brush: js">for (let i = 0; i &lt; myNodeList.length; i++) {
+- {{domxref("NodeList.entries()")}}
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from `0` and the values are nodes.)
+- {{domxref("NodeList.forEach()")}}
+  - : Executes a provided function once per `NodeList` element, passing the element as an argument to the function.
+- {{domxref("NodeList.keys()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}}, allowing code to go through all the keys of the key/value pairs contained in the collection. (In this case, the keys are numbers starting from `0`.)
+- {{domxref("NodeList.values()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.
+
+## Example
+
+It's possible to loop over the items in a `NodeList` using a [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop:
+
+```js
+for (let i = 0; i < myNodeList.length; i++) {
   let item = myNodeList[i];
 }
-</pre>
+```
 
-<p><strong>Don't use <code><a href="/en-US/docs/JavaScript/Reference/Statements/for...in" title="JavaScript/ Reference/Statements/for...in">for...in</a></code> to enumerate the items in <code>NodeList</code>s</strong>, since they will <em>also</em> enumerate its <code>length</code> and <code>item</code> properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, <code>for..in</code> is not guaranteed to visit the properties in any particular order.</p>
+**Don't use [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in "JavaScript/ Reference/Statements/for...in") to enumerate the items in `NodeList`s**, since they will _also_ enumerate its `length` and `item` properties and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
 
-<p><code><a href="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> loops <strong>will</strong> loop over <code>NodeList</code> objects correctly:</p>
+[`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) loops **will** loop over `NodeList` objects correctly:
 
-<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
 for (let checkbox of list) {
   checkbox.checked = true;
-}</pre>
+}
+```
 
-<p>Recent browsers also support iterator methods ({{domxref("NodeList.forEach()", "forEach()")}}) as well as {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}}, and {{domxref("NodeList.keys()", "keys()")}}.</p>
+Recent browsers also support iterator methods ({{domxref("NodeList.forEach()", "forEach()")}}) as well as {{domxref("NodeList.entries()", "entries()")}}, {{domxref("NodeList.values()", "values()")}}, and {{domxref("NodeList.keys()", "keys()")}}.
 
-<p>There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration:</p>
+There is also an Internet Explorer-compatible way to use {{jsxref("Array.forEach()", "Array.prototype.forEach")}} for iteration:
 
-<pre class="brush: js">const list = document.querySelectorAll('input[type=checkbox]');
+```js
+const list = document.querySelectorAll('input[type=checkbox]');
 Array.prototype.forEach.call(list, function (checkbox) {
   checkbox.checked = true;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

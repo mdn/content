@@ -6,61 +6,54 @@ tags:
   - TouchEvent
   - touch
 ---
-<p>{{DefaultAPISidebar("Touch Events")}}</p>
+{{DefaultAPISidebar("Touch Events")}}
 
-<p>The {{domxref("Touch_events","touch")}} interfaces enable applications to create enhanced user experiences on touch enabled devices. However, the reality is the vast majority of today's web content is designed only to work with mouse input. Consequently, even if a browser supports touch, the browser must still <em>emulate</em> mouse events so content that assumes mouse-only input will work <em>as is</em> without direct modification.</p>
+The {{domxref("Touch_events","touch")}} interfaces enable applications to create enhanced user experiences on touch enabled devices. However, the reality is the vast majority of today's web content is designed only to work with mouse input. Consequently, even if a browser supports touch, the browser must still _emulate_ mouse events so content that assumes mouse-only input will work _as is_ without direct modification.
 
-<p>Ideally, a touch-based application does not need to explicitly address mouse input. However, because the browser must emulate mouse events, there may be some interaction issues that need to be handled. Below are some details about the interaction and the ramifications for application developers.</p>
+Ideally, a touch-based application does not need to explicitly address mouse input. However, because the browser must emulate mouse events, there may be some interaction issues that need to be handled. Below are some details about the interaction and the ramifications for application developers.
 
-<h2 id="Event_firing">Event firing</h2>
+## Event firing
 
-<p>The touch events standard defines a few browser requirements regarding touch and mouse interaction (see the <a href="https://w3c.github.io/touch-events/#mouse-events"><em>Interaction with Mouse Events and click</em></a> section for details), noting <em>the browser may fire both touch events and mouse events in response to the same user input</em>. This section describes the requirement that may affect an application.</p>
+The touch events standard defines a few browser requirements regarding touch and mouse interaction (see the [_Interaction with Mouse Events and click_](https://w3c.github.io/touch-events/#mouse-events) section for details), noting _the browser may fire both touch events and mouse events in response to the same user input_. This section describes the requirement that may affect an application.
 
-<p>If the browser fires both touch and mouse events because of a single user input, the browser <em>must</em> fire a {{domxref("Element/touchstart_event", "touchstart")}} before any mouse events. Consequently, if an application does not want mouse events fired on a specific touch {{domxref("Touch.target","target")}} element, the element's touch event handlers should call {{domxref("Event.preventDefault()","preventDefault()")}} and no additional mouse events will be dispatched.</p>
+If the browser fires both touch and mouse events because of a single user input, the browser _must_ fire a {{domxref("Element/touchstart_event", "touchstart")}} before any mouse events. Consequently, if an application does not want mouse events fired on a specific touch {{domxref("Touch.target","target")}} element, the element's touch event handlers should call {{domxref("Event.preventDefault()","preventDefault()")}} and no additional mouse events will be dispatched.
 
-<p>Here is a code snippet of the {{event("touchmove")}} event handler calling <code>preventDefault()</code>.</p>
+Here is a code snippet of the {{event("touchmove")}} event handler calling `preventDefault()`.
 
-<pre class="brush: js">// touchmove handler
+```js
+// touchmove handler
 function process_touchmove(ev) {
   // Call preventDefault() to prevent any further handling
   ev.preventDefault();
 }
-</pre>
+```
 
-<h2 id="Event_order">Event order</h2>
+## Event order
 
-<p>Although the specific ordering of touch and mouse events is implementation-defined, the standard indicates the following order is <em>typical:</em> for single input:</p>
+Although the specific ordering of touch and mouse events is implementation-defined, the standard indicates the following order is _typical:_ for single input:
 
-<ul>
- <li><code>touchstart</code></li>
- <li>Zero or more <code>touchmove</code> events, depending on movement of the finger(s)</li>
- <li><code>touchend</code></li>
- <li><code>mousemove</code></li>
- <li><code>mousedown</code></li>
- <li><code>mouseup</code></li>
- <li><code>click</code></li>
-</ul>
+- `touchstart`
+- Zero or more `touchmove` events, depending on movement of the finger(s)
+- `touchend`
+- `mousemove`
+- `mousedown`
+- `mouseup`
+- `click`
 
-<p>If the {{domxref("Element/touchstart_event", "touchstart")}}, {{event("touchmove")}} or {{event("touchend")}} event is canceled during an interaction, no mouse or click events will be fired, and the resulting sequence of events would just be:</p>
+If the {{domxref("Element/touchstart_event", "touchstart")}}, {{event("touchmove")}} or {{event("touchend")}} event is canceled during an interaction, no mouse or click events will be fired, and the resulting sequence of events would just be:
 
-<ul>
- <li><code>touchstart</code></li>
- <li>Zero or more <code>touchmove</code> events, depending on movement of the finger(s)</li>
- <li><code>touchend</code></li>
-</ul>
+- `touchstart`
+- Zero or more `touchmove` events, depending on movement of the finger(s)
+- `touchend`
 
-<h2 id="Community">Community</h2>
+## Community
 
-<ul>
- <li><a href="https://github.com/w3c/touch-events">Touch Events Community Group</a></li>
- <li><a href="https://lists.w3.org/Archives/Public/public-touchevents/">Mail list</a></li>
- <li><a href="irc://irc.w3.org:6667/">W3C #touchevents IRC channel</a></li>
-</ul>
+- [Touch Events Community Group](https://github.com/w3c/touch-events)
+- [Mail list](https://lists.w3.org/Archives/Public/public-touchevents/)
+- [W3C #touchevents IRC channel](irc://irc.w3.org:6667/)
 
-<h2 id="Related_topics_and_resources">Related topics and resources</h2>
+## Related topics and resources
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch Events Overview</a></li>
- <li><a href="/en-US/docs/Web/API/Touch_events/Using_Touch_Events">Using Touch Events</a></li>
- <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse (Together Again for the First Time)</a></li>
-</ul>
+- [Touch Events Overview](/en-US/docs/Web/API/Touch_events)
+- [Using Touch Events](/en-US/docs/Web/API/Touch_events/Using_Touch_Events)
+- [Touch and Mouse (Together Again for the First Time)](https://www.html5rocks.com/en/mobile/touchandmouse/)

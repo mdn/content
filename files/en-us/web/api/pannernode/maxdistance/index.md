@@ -10,45 +10,41 @@ tags:
   - maxDistance
 browser-compat: api.PannerNode.maxDistance
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>maxDistance</code> property of the {{ domxref("PannerNode") }} interface is a double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further. This value is used only by the <code>linear</code> distance model.</p>
+The `maxDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further. This value is used only by the `linear` distance model.
 
-<p>The <code>maxDistance</code> property's default value is <code>10000</code>.</p>
-</div>
+The `maxDistance` property's default value is `10000`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panner = audioCtx.createPanner();
-panner.maxDistance = 10000;</pre>
+panner.maxDistance = 10000;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double. The default is <code>10000</code>, and non-positive values are not allowed.</p>
+A double. The default is `10000`, and non-positive values are not allowed.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>RangeError</code></dt>
- <dd>The property has been given a value that is outside the accepted range.</dd>
-</dl>
+- `RangeError`
+  - : The property has been given a value that is outside the accepted range.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

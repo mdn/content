@@ -10,49 +10,47 @@ tags:
   - Reference
 browser-compat: api.Range.createContextualFragment
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.createContextualFragment()</code></strong> method returns a
-  {{domxref("DocumentFragment")}} by invoking the HTML fragment parsing algorithm or the
-  XML fragment parsing algorithm with the start of the range (the <em>parent</em> of the
-  selected node) as the context node. The HTML fragment parsing algorithm is used if the
-  range belongs to a <code>Document</code> whose HTMLness bit is set. In the HTML case, if
-  the context node would be <code>html</code>, for historical reasons the fragment parsing
-  algorithm is invoked with <code>body</code> as the context instead.</p>
+The **`Range.createContextualFragment()`** method returns a
+{{domxref("DocumentFragment")}} by invoking the HTML fragment parsing algorithm or the
+XML fragment parsing algorithm with the start of the range (the _parent_ of the
+selected node) as the context node. The HTML fragment parsing algorithm is used if the
+range belongs to a `Document` whose HTMLness bit is set. In the HTML case, if
+the context node would be `html`, for historical reasons the fragment parsing
+algorithm is invoked with `body` as the context instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>documentFragment</em> = <em>range</em>.createContextualFragment(<em>tagString</em>)
-</pre>
+```js
+documentFragment = range.createContextualFragment(tagString)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>tagString</code></dt>
-  <dd>Text that contains text and tags to be converted to a document fragment.</dd>
-</dl>
+- `tagString`
+  - : Text that contains text and tags to be converted to a document fragment.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var tagString = "&lt;div&gt;I am a div node&lt;/div&gt;";
+```js
+var tagString = "<div>I am a div node</div>";
 var range = document.createRange();
 
 // Make the parent of the first div in the document become the context node
 range.selectNode(document.getElementsByTagName("div").item(0));
 var documentFragment = range.createContextualFragment(tagString);
 document.body.appendChild(documentFragment);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

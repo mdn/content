@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.text
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>text</code></strong> property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.</p>
+The **`text`** property of the {{domxref("VTTCue")}} interface represents the text contents of the cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let text = VTTCue.text;
-VTTCue.text = a;</pre>
+```js
+let text = VTTCue.text;
+VTTCue.text = a;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing the raw text of the cue.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} containing the raw text of the cue.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>size</code> is set to the string <code>"new cue value"</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `size` is set to the string `"new cue value"`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -34,14 +38,12 @@ cue1.text = 'new cue value';
 console.log(cue1.text) // 'new cue value';
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

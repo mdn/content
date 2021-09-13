@@ -2,56 +2,59 @@
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
 tags:
-- API
-- Audio
-- AudioTrack
-- HTML DOM
-- Language
-- Localization
-- Media
-- Property
-- Read-only
-- Reference
-- Translated
-- Translation
-- track
+  - API
+  - Audio
+  - AudioTrack
+  - HTML DOM
+  - Language
+  - Localization
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Translated
+  - Translation
+  - track
 browser-compat: api.AudioTrack.language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("AudioTrack")}}</strong>
-    property <strong><code>language</code></strong> returns a string identifying the
-    language used in the audio track.</p>
+The read-only **{{domxref("AudioTrack")}}**
+property **`language`** returns a string identifying the
+language used in the audio track.
 
-<p>For tracks that include multiple languages
-  (such as a movie in English in which a few lines are spoken in other languages), this
-  should be the video's primary language.</p>
+For tracks that include multiple languages
+(such as a movie in English in which a few lines are spoken in other languages), this
+should be the video's primary language.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>audioTrackLanguage</em> = <em>AudioTrack</em>.language;</pre>
+```js
+var audioTrackLanguage = AudioTrack.language;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
-  the primary language used in the audio track, or an empty string (<code>""</code>) if
-  the language is not specified or known, or if the track doesn't contain speech.</p>
+A {{domxref("DOMString")}} specifying the BCP 47 ({{RFC(5646)}}) format language tag of
+the primary language used in the audio track, or an empty string (`""`) if
+the language is not specified or known, or if the track doesn't contain speech.
 
-<p>For example, if the primary language used in the track is United States English, this
-  value would be <code>"en-US"</code>. For Brazilian Portuguese, the value would be
-  <code>"pt-BR"</code>.</p>
+For example, if the primary language used in the track is United States English, this
+value would be `"en-US"`. For Brazilian Portuguese, the value would be
+`"pt-BR"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example locates all of a media element's primary language and translated audio
-  tracks and returns a list of objects containing each of those tracks'
-  {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind", "kind")}}, and
-  <code>language</code>.</p>
+This example locates all of a media element's primary language and translated audio
+tracks and returns a list of objects containing each of those tracks'
+{{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind", "kind")}}, and
+`language`.
 
-<p>This could then be used to build a user interface for selecting the language the user
-  would like to listen to while watching a movie, for example.</p>
+This could then be used to build a user interface for selecting the language the user
+would like to listen to while watching a movie, for example.
 
-<pre class="brush: js">function getAvailableLanguages(el) {
+```js
+function getAvailableLanguages(el) {
   var trackList = [];
   const wantedKinds = [
     "main", "translation"
@@ -67,12 +70,13 @@ browser-compat: api.AudioTrack.language
     }
   });
   return trackList;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

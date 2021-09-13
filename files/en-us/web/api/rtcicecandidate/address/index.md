@@ -2,64 +2,65 @@
 title: RTCIceCandidate.address
 slug: Web/API/RTCIceCandidate/address
 tags:
-- API
-- Address
-- Candidate
-- ICE
-- IP
-- Networking
-- Property
-- RTCIceCandidate
-- Read-only
-- Reference
-- SDP
-- WebRTC
-- WebRTC API
+  - API
+  - Address
+  - Candidate
+  - ICE
+  - IP
+  - Networking
+  - Property
+  - RTCIceCandidate
+  - Read-only
+  - Reference
+  - SDP
+  - WebRTC
+  - WebRTC API
 browser-compat: api.RTCIceCandidate.address
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>address</code></strong> property is a string providing the IP address of the device which is the source of the candidate.
-  The <code>address</code> is <code>null</code> by default if not otherwise specified.</p>
+The **{{domxref("RTCIceCandidate")}}** interface's read-only **`address`** property is a string providing the IP address of the device which is the source of the candidate.
+The `address` is `null` by default if not otherwise specified.
 
-<p>The <code>address</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
-  You can't specify the value of <code>address</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly.</p>
+The `address` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+You can't specify the value of `address` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>address</em> = <em>RTCIceCandidate</em>.address;</pre>
+```js
+var address = RTCIceCandidate.address;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} providing the IP address from which the candidate comes.</p>
+A {{domxref("DOMString")}} providing the IP address from which the candidate comes.
 
-<div class="note">
-  <p><strong>Note:</strong> If <code>port</code> is <code>null</code> — and
-    <code>port</code> is supported by the {{Glossary("user agent")}} — passing the
-    candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
-    will fail, throwing an <code>OperationError</code> exception.</p>
-</div>
+> **Note:** If `port` is `null` — and
+> `port` is supported by the {{Glossary("user agent")}} — passing the
+> candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+> will fail, throwing an `OperationError` exception.
 
-<h2 id="Security_notes">Security notes</h2>
+## Security notes
 
-<p>It's important to note here that although WebRTC does not require the two peers on an
-  {{domxref("RTCPeerConnection")}} to know one another's true IP addresses, the
-  <code>address</code> property on <code>RTCIceCandidate</code> <em>can</em> expose more
-  information about the source of the remote peer than the user expects. The IP address
-  can be used to derive information about the remote device's location, network topology,
-  and so forth. It can also be used for fingerprinting purposes.</p>
+It's important to note here that although WebRTC does not require the two peers on an
+{{domxref("RTCPeerConnection")}} to know one another's true IP addresses, the
+`address` property on `RTCIceCandidate` _can_ expose more
+information about the source of the remote peer than the user expects. The IP address
+can be used to derive information about the remote device's location, network topology,
+and so forth. It can also be used for fingerprinting purposes.
 
-<p>The candidate IP addresses are <em>always</em> exposed to the application through
-  <code>address</code>, and unsavory applications can in turn potentially reveal the
-  address to the user. This can occur without the remote peer's consent.</p>
+The candidate IP addresses are _always_ exposed to the application through
+`address`, and unsavory applications can in turn potentially reveal the
+address to the user. This can occur without the remote peer's consent.
 
-<p>Applications being built with user privacy and security in mind can choose to limit the
-  permitted candidates to relay candidates only. Doing so prevents the remote user's
-  address from being exposed, but reduces the pool of available candidates to choose from.
-  To do this, configure the ICE agent's ICE transport policy using
-  {{domxref("RTCConfiguration")}}, like this:</p>
+Applications being built with user privacy and security in mind can choose to limit the
+permitted candidates to relay candidates only. Doing so prevents the remote user's
+address from being exposed, but reduces the pool of available candidates to choose from.
+To do this, configure the ICE agent's ICE transport policy using
+{{domxref("RTCConfiguration")}}, like this:
 
-<pre class="brush: js">var rtcConfig = {
+```js
+var rtcConfig = {
   iceServers: [
     {
       urls: "turn:myturn.server.ip",
@@ -69,35 +70,36 @@ browser-compat: api.RTCIceCandidate.address
   ],
   iceTransportPolicy: "relay"
 }
-</pre>
+```
 
-<p>By setting {{domxref("RTCConfiguration.iceTransportPolicy")}} to <code>"relay"</code>,
-  any host candidates (candidates where the IP address is the peer's own IP address) are
-  left out of the pool of candidates, as are any other candidates which aren't relay candidates.</p>
+By setting {{domxref("RTCConfiguration.iceTransportPolicy")}} to `"relay"`,
+any host candidates (candidates where the IP address is the peer's own IP address) are
+left out of the pool of candidates, as are any other candidates which aren't relay candidates.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE candidate:</p>
+Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE candidate:
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
-<p>The fifth field, <code>"192.168.0.56"</code> is the IP address in this candidate's a-line string.</p>
+The fifth field, `"192.168.0.56"` is the IP address in this candidate's a-line string.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet uses the value of <code>address</code> to implement an IP address based ban feature.</p>
+This code snippet uses the value of `address` to implement an IP address based ban feature.
 
-<pre class="brush: js">if (ipBanList.includes(candidate.address)) {
+```js
+if (ipBanList.includes(candidate.address)) {
   rejectCandidate(candidate);
 } else {
   acceptCandidate(candidate);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

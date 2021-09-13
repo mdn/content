@@ -16,40 +16,38 @@ tags:
   - web animations api
 browser-compat: api.Document.timeline
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code>timeline</code> readonly property of the {{domxref("Document")}} interface represents the default timeline of the current document. This timeline is a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load. </p>
+The `timeline` readonly property of the {{domxref("Document")}} interface represents the default timeline of the current document. This timeline is a special instance of {{domxref("DocumentTimeline")}} that is automatically created on page load.
 
-<p>This timeline is unique to each <code>document</code> and persists for the lifetime of the <code>document</code> including calls to {{domxref("Document.open()")}}.</p>
+This timeline is unique to each `document` and persists for the lifetime of the `document` including calls to {{domxref("Document.open()")}}.
 
-<p>The time values for this timeline are calculated as a fixed offset from the global clock such that the <strong>zero time</strong> corresponds to the {{domxref("PerformanceTiming.navigationStart", "navigationStart")}} moment plus a signed delta known as the <strong>origin time.</strong> Prior to establishing the <code>navigationStart</code> moment, the document timeline is <strong>inactive</strong>.</p>
+The time values for this timeline are calculated as a fixed offset from the global clock such that the **zero time** corresponds to the {{domxref("PerformanceTiming.navigationStart", "navigationStart")}} moment plus a signed delta known as the **origin time.** Prior to establishing the `navigationStart` moment, the document timeline is **inactive**.
 
-<div class="note">
-<p><strong>Note:</strong> A document timeline that is associated with a non-active document is also considered to be <strong>inactive</strong>.</p>
-</div>
+> **Note:** A document timeline that is associated with a non-active document is also considered to be **inactive**.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var pageTimeline = document.timeline;
-var thisMoment = pageTimeline.currentTime;</pre>
+```js
+var pageTimeline = document.timeline;
+var thisMoment = pageTimeline.currentTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DocumentTimeline")}} object.</p>
+A {{domxref("DocumentTimeline")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationTimeline")}}</li>
- <li>{{domxref("AnimationTimeline.currentTime")}}</li>
- <li>{{domxref("DocumentTimeline")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationTimeline")}}
+- {{domxref("AnimationTimeline.currentTime")}}
+- {{domxref("DocumentTimeline")}}

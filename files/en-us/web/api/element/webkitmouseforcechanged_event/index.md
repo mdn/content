@@ -19,44 +19,42 @@ tags:
   - webkitmouseforcechanged
 browser-compat: api.Element.webkitmouseforcechanged_event
 ---
-<p>{{APIRef}}{{Non-standard_header()}}</p>
+{{APIRef}}{{Non-standard_header()}}
 
-<p>The non-standard <strong><code>webkitmouseforcechanged</code></strong> event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.</p>
+The non-standard **`webkitmouseforcechanged`** event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><strong><code>webkitmouseforcechanged</code></strong> is a proprietary, WebKit-specific event introduced by Apple to support their <a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a> feature.</p>
+**`webkitmouseforcechanged`** is a proprietary, WebKit-specific event introduced by Apple to support their [Force Touch events](/en-US/docs/Web/API/Force_Touch_events) feature.
 
-<p>This event first fires after the {{event("mousedown")}} event and stops firing before the {{event("mouseup")}} event.</p>
+This event first fires after the {{event("mousedown")}} event and stops firing before the {{event("mouseup")}} event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>Not part of any specification.</em> Apple has <a href="https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html">a description at the Mac Developer Library</a>.</p>
+_Not part of any specification._ Apple has [a description at the Mac Developer Library](https://developer.apple.com/library/prerelease/mac/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Force_Touch_events">Force Touch events</a></li>
- <li>{{event("webkitmouseforcewillbegin")}}</li>
- <li>{{event("webkitmouseforcedown")}}</li>
- <li>{{event("webkitmouseforceup")}}</li>
-</ul>
+- [Force Touch events](/en-US/docs/Web/API/Force_Touch_events)
+- {{event("webkitmouseforcewillbegin")}}
+- {{event("webkitmouseforcedown")}}
+- {{event("webkitmouseforceup")}}

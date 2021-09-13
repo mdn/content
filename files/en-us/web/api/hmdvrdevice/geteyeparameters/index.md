@@ -13,32 +13,33 @@ tags:
   - Deprecated
 browser-compat: api.HMDVRDevice.getEyeParameters
 ---
-<div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getEyeParameters()</code></strong> method of the {{domxref("HMDVRDevice")}} interface returns current parameters for the eye specified as its argument ("left" or "right") — stored in a {{domxref("VREyeParameters")}} object.</p>
+The **`getEyeParameters()`** method of the {{domxref("HMDVRDevice")}} interface returns current parameters for the eye specified as its argument ("left" or "right") — stored in a {{domxref("VREyeParameters")}} object.
 
-<p>This includes field of view information, and more.</p>
+This includes field of view information, and more.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myLeftEye = HMDVRDevice.getEyeParameters('left');</pre>
+```js
+var myLeftEye = HMDVRDevice.getEyeParameters('left');
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>whichEye</code></dt>
- <dd>A {{domxref("DOMString")}} representing the eye you want to return information about. The value can be <code>left</code> or <code>right</code>.</dd>
-</dl>
+- `whichEye`
+  - : A {{domxref("DOMString")}} representing the eye you want to return information about. The value can be `left` or `right`.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("VREyeParameters")}} object.</p>
+A {{domxref("VREyeParameters")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example is taken from the Mozilla VR Team's <a class="external external-icon" href="https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate">threejs-vr-boilerplate</a> code — to be precise, the <a href="https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29">VREffect.js file</a>. Early on in the code the <code>getEyeParameters()</code> method is used to access information about each eye, which is then used for rendering calculations later on.</p>
+The following example is taken from the Mozilla VR Team's [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) code — to be precise, the [VREffect.js file](https://github.com/MozVR/vr-web-examples/blob/master/threejs-vr-boilerplate/js/VREffect.js#L28-L29). Early on in the code the `getEyeParameters()` method is used to access information about each eye, which is then used for rendering calculations later on.
 
-<pre class="brush: js">if ( vrHMD.getEyeParameters !== undefined ) {
+```js
+if ( vrHMD.getEyeParameters !== undefined ) {
     var eyeParamsL = vrHMD.getEyeParameters( 'left' );
     var eyeParamsR = vrHMD.getEyeParameters( 'right' );
 
@@ -48,15 +49,14 @@ browser-compat: api.HMDVRDevice.getEyeParameters
     eyeFOVR = eyeParamsR.recommendedFieldOfView;
 } else {
   ...
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

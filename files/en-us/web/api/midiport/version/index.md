@@ -9,31 +9,35 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.version
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>version</code></strong> read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.</p>
+The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let version = MIDIPort.version;
-</pre>
+```js
+let version = MIDIPort.version;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the version of the port.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the version of the port.
 
-<p>The following example loops through all input ports and prints the version of each to the console.</p>
+## Examples
 
-<pre class="brush: js">for (let entry of midiAccess.inputs) {
+The following example loops through all input ports and prints the version of each to the console.
+
+```js
+for (let entry of midiAccess.inputs) {
   let input = entry[1];
   console.log(input.version);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,84 +10,87 @@ tags:
   - Reference
 browser-compat: api.Document.lastModified
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>lastModified</code></strong> property of the {{domxref("Document")}}
-  interface returns a string containing the date and time on which the current document
-  was last modified.</p>
+The **`lastModified`** property of the {{domxref("Document")}}
+interface returns a string containing the date and time on which the current document
+was last modified.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>string</var> = <var>document</var>.lastModified;
-</pre>
+```js
+var string = document.lastModified;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_usage">Simple usage</h3>
+### Simple usage
 
-<p>This example alerts the value of <code>lastModified</code>.</p>
+This example alerts the value of `lastModified`.
 
-<pre class="brush: js">alert(document.lastModified);
+```js
+alert(document.lastModified);
 // returns: Tuesday, December 16, 2017 11:09:42
-</pre>
+```
 
-<h3 id="Transforming_lastModified_into_a_Date_object">Transforming lastModified into a
-  Date object</h3>
+### Transforming lastModified into a Date object
 
-<p>This example transforms <code>lastModified</code> into a {{jsxref("Date")}} object.</p>
+This example transforms `lastModified` into a {{jsxref("Date")}} object.
 
-<pre class="brush: js">let oLastModif = new Date(document.lastModified);
-</pre>
+```js
+let oLastModif = new Date(document.lastModified);
+```
 
-<h3 id="Transforming_lastModified_into_milliseconds">Transforming lastModified into
-  milliseconds</h3>
+### Transforming lastModified into milliseconds
 
-<p>This example transforms <code>lastModified</code> into the number of milliseconds since
-  January 1, 1970, 00:00:00, local time.</p>
+This example transforms `lastModified` into the number of milliseconds since
+January 1, 1970, 00:00:00, local time.
 
-<pre class="brush: js">let nLastModif = Date.parse(document.lastModified);
-</pre>
+```js
+let nLastModif = Date.parse(document.lastModified);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Note that as a string, <code>lastModified</code> cannot <em>easily</em> be used for
-  comparing the modification dates of documents. Here is a possible example of how to show
-  an alert message when the page changes (see also: <a
-    href="/en-US/docs/Web/API/Document/cookie">JavaScript cookies API</a>):</p>
+Note that as a string, `lastModified` cannot _easily_ be used for
+comparing the modification dates of documents. Here is a possible example of how to show
+an alert message when the page changes (see also: [JavaScript cookies API](/en-US/docs/Web/API/Document/cookie)):
 
-<pre class="brush: js">if (Date.parse(document.lastModified) &gt; parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
+```js
+if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
   alert("This page has changed!");
-}</pre>
+}
+```
 
-<p>…the same example, but skipping the first visit:</p>
+…the same example, but skipping the first visit:
 
-<pre class="brush: js">var
+```js
+var
   nLastVisit = parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1")),
   nLastModif = Date.parse(document.lastModified);
 
-if (isNaN(nLastVisit) || nLastModif &gt; nLastVisit) {
+if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
   document.cookie = "last_modif=" + Date.now() + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=" + location.pathname;
 
   if (isFinite(nLastVisit)) {
     alert("This page has been changed!");
   }
-}</pre>
+}
+```
 
-<div class="note"><p><strong>Note:</strong> WebKit returns the time string in UTC; Gecko and
-  Internet Explorer return a time in the local timezone. (See: <a
-    href="https://bugs.webkit.org/show_bug.cgi?id=4363">Bug 4363 – document.lastModified
-    returns date in UTC time, but should return it in local time</a>)</p></div>
+> **Note:** WebKit returns the time string in UTC; Gecko and
+> Internet Explorer return a time in the local timezone. (See: [Bug 4363 – document.lastModified
+> returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
-<p>If you want to know <strong>whether <em>an external page</em> has changed</strong>,
-  please read <a
-    href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date">this
-    paragraph about the <code>XMLHttpRequest()</code> API</a>.</p>
+If you want to know **whether _an external page_ has changed**,
+please read [this
+paragraph about the `XMLHttpRequest()` API](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#get_last_modified_date).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

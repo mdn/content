@@ -2,57 +2,57 @@
 title: RTCIceTransport.getLocalParameters()
 slug: Web/API/RTCIceTransport/getLocalParameters
 tags:
-- API
-- Connectivity
-- ICE
-- Method
-- Negotiation
-- RTCIceTransport
-- Reference
-- Transport
-- WebRTC
-- WebRTC API
-- getLocalParameters
-- parameters
-- password
-- ufrag
-- username
-- usernameFragment
+  - API
+  - Connectivity
+  - ICE
+  - Method
+  - Negotiation
+  - RTCIceTransport
+  - Reference
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - getLocalParameters
+  - parameters
+  - password
+  - ufrag
+  - username
+  - usernameFragment
 browser-compat: api.RTCIceTransport.getLocalParameters
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
-    <code><strong>getLocalParameters()</strong></code> returns an
-    {{domxref("RTCIceParameters")}} object which provides information uniquely identifying
-    the local peer for the duration of the ICE session.</p>
+The **{{domxref("RTCIceTransport")}}** method
+**`getLocalParameters()`** returns an
+{{domxref("RTCIceParameters")}} object which provides information uniquely identifying
+the local peer for the duration of the ICE session.
 
-<p>The local peer's parameters are obtained during ICE signaling and delivered to the
-  transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription()")}}.
-</p>
+The local peer's parameters are obtained during ICE signaling and delivered to the
+transport when the client calls {{domxref("RTCPeerConnection.setLocalDescription()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>parameters</em> = <em>RTCIceTransport</em>.getLocalParameters();</pre>
+```js
+parameters = RTCIceTransport.getLocalParameters();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("RTCIceParameters")}} object indicating the
-  {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}} and
-  {{domxref("RTCIceParameters.password", "password")}} which uniquely identify the local
-  peer for the duration of the ICE session.</p>
+An {{domxref("RTCIceParameters")}} object indicating the
+{{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}} and
+{{domxref("RTCIceParameters.password", "password")}} which uniquely identify the local
+peer for the duration of the ICE session.
 
-<p>Returns <code>null</code> if the parameters have not yet been received.</p>
+Returns `null` if the parameters have not yet been received.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

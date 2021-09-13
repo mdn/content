@@ -13,70 +13,84 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <strong><code>RTCSessionDescription</code></strong> interface describes one end of a connection—or potential connection—and how it's configured. Each <code>RTCSessionDescription</code> consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.</p>
+The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
 
-<p>The process of negotiating a connection between two peers involves exchanging <code>RTCSessionDescription</code> objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.</p>
+The process of negotiating a connection between two peers involves exchanging `RTCSessionDescription` objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>RTCSessionDescription</code> interface doesn't inherit any properties.</em></p>
+_The `RTCSessionDescription` interface doesn't inherit any properties._
 
-<dl>
-	<dt>{{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}</dt>
-	<dd>An enum of type <code>{{anch("RTCSdpType")}}</code> describing the session description's type.</dd>
-	<dt>{{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}} containing the {{Glossary("SDP")}} describing the session.</dd>
-</dl>
+- {{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}
+  - : An enum of type `{{anch("RTCSdpType")}}` describing the session description's type.
+- {{domxref("RTCSessionDescription.sdp")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} containing the {{Glossary("SDP")}} describing the session.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<h3 id="RTCSdpType">RTCSdpType</h3>
+### RTCSdpType
 
-<p>This enum defines strings that describe the current state of the session description, as used in the {{domxref("RTCSessionDescription.type", "type")}} property. The session description's type will be specified using one of these values.</p>
+This enum defines strings that describe the current state of the session description, as used in the {{domxref("RTCSessionDescription.type", "type")}} property. The session description's type will be specified using one of these values.
 
 <table class="no-markdown">
-	<thead>
-		<tr>
-			<th scope="col">Value</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>answer</code></td>
-			<td>The SDP contained in the {{domxref("RTCSessionDescription.sdp", "sdp")}} property is the definitive choice in the exchange. In other words, this session description describes the agreed-upon configuration, and is being sent to finalize negotiation.</td>
-		</tr>
-		<tr>
-			<td><code>offer</code></td>
-			<td>The session description object describes the initial proposal in an offer/answer exchange. The session negotiation process begins with an offer being sent from the caller to the callee.</td>
-		</tr>
-		<tr>
-			<td><code>pranswer</code></td>
-			<td>The session description object describes a provisional answer; that is, a response to a previous offer that is not the final answer. It is usually employed by legacy hardware.</td>
-		</tr>
-		<tr>
-			<td><code>rollback</code></td>
-			<td>This special type with an empty session description is used to roll back to the previous stable state.</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Value</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>answer</code></td>
+      <td>
+        The SDP contained in the
+        {{domxref("RTCSessionDescription.sdp", "sdp")}}
+        property is the definitive choice in the exchange. In other words, this
+        session description describes the agreed-upon configuration, and is
+        being sent to finalize negotiation.
+      </td>
+    </tr>
+    <tr>
+      <td><code>offer</code></td>
+      <td>
+        The session description object describes the initial proposal in an
+        offer/answer exchange. The session negotiation process begins with an
+        offer being sent from the caller to the callee.
+      </td>
+    </tr>
+    <tr>
+      <td><code>pranswer</code></td>
+      <td>
+        The session description object describes a provisional answer; that is,
+        a response to a previous offer that is not the final answer. It is
+        usually employed by legacy hardware.
+      </td>
+    </tr>
+    <tr>
+      <td><code>rollback</code></td>
+      <td>
+        This special type with an empty session description is used to roll back
+        to the previous stable state.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>RTCSessionDescription</code> doesn't inherit any methods.</em></p>
+_The `RTCSessionDescription` doesn't inherit any methods._
 
-<dl>
-	<dt>{{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}</dt>
-	<dd>This constructor returns a new <code>RTCSessionDescription</code>. The parameter is a <code>RTCSessionDescriptionInit</code> dictionary containing the values to assign the two properties.</dd>
-	<dt>{{domxref("RTCSessionDescription.toJSON()")}}</dt>
-	<dd>Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.</dd>
-</dl>
+- {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}
+  - : This constructor returns a new `RTCSessionDescription`. The parameter is a `RTCSessionDescriptionInit` dictionary containing the values to assign the two properties.
+- {{domxref("RTCSessionDescription.toJSON()")}}
+  - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">signalingChannel.onmessage = function (evt) {
+```js
+signalingChannel.onmessage = function (evt) {
     if (!pc)
         start(false);
 
@@ -91,19 +105,17 @@ browser-compat: api.RTCSessionDescription
         pc.addIceCandidate(new RTCIceCandidate(message.candidate),
             function () {}, logError);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-	<li>{{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}

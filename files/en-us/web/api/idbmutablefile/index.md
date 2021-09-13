@@ -7,52 +7,42 @@ tags:
   - Files
   - Reference
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>IDBMutableFile</code> interface provides access in read or write mode to a file, dealing with all the necessary locks.</p>
+The `IDBMutableFile` interface provides access in read or write mode to a file, dealing with all the necessary locks.
 
-<div class="note">
-<p><strong>Note:</strong> This interface used to be called <code>FileHandle</code> , but it was changed to this ({{bug(1006485)}}.)</p>
-</div>
+> **Note:** This interface used to be called `FileHandle` , but it was changed to this ({{bug(1006485)}}.)
 
-<p>As <code>IDBMutableFile</code> objects are bound to a fake file system built on top of IndexedDB, such an object is created using the {{domxref("IDBDatabase.createMutableFile")}} method.</p>
+As `IDBMutableFile` objects are bound to a fake file system built on top of IndexedDB, such an object is created using the {{domxref("IDBDatabase.createMutableFile")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MutableFile.name")}} {{readonlyinline}}</dt>
- <dd>The name of the handled file.</dd>
- <dt>{{domxref("MutableFile.type")}} {{readonlyinline}}</dt>
- <dd>The MIME type of the handled file.</dd>
-</dl>
+- {{domxref("MutableFile.name")}} {{readonlyinline}}
+  - : The name of the handled file.
+- {{domxref("MutableFile.type")}} {{readonlyinline}}
+  - : The MIME type of the handled file.
 
-<h3 id="Events_Handler">Events Handler</h3>
+### Events Handler
 
-<dl>
- <dt>{{domxref("MutableFile.onabort")}}</dt>
- <dd>The {{event("abort")}} event is triggered each time the handled file is aborted.</dd>
- <dt>{{domxref("MutableFile.onerror")}}</dt>
- <dd>The {{event("error")}} event is triggered each time something goes wrong.</dd>
-</dl>
+- {{domxref("MutableFile.onabort")}}
+  - : The {{event("abort")}} event is triggered each time the handled file is aborted.
+- {{domxref("MutableFile.onerror")}}
+  - : The {{event("error")}} event is triggered each time something goes wrong.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MutableFile.open()")}}</dt>
- <dd>Returns a {{domxref("LockedFile")}} object to read or write the associated file safely.</dd>
- <dt>{{domxref("MutableFile.getFile()")}}</dt>
- <dd>Returns a {{domxref("DOMRequest")}} object. In case of success, the request's result is a {{domxref("File")}} object representing a snapshot of the handled file.</dd>
-</dl>
+- {{domxref("MutableFile.open()")}}
+  - : Returns a {{domxref("LockedFile")}} object to read or write the associated file safely.
+- {{domxref("MutableFile.getFile()")}}
+  - : Returns a {{domxref("DOMRequest")}} object. In case of success, the request's result is a {{domxref("File")}} object representing a snapshot of the handled file.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("LockedFile")}}</li>
- <li>{{domxref("File")}}</li>
-</ul>
+- {{domxref("LockedFile")}}
+- {{domxref("File")}}

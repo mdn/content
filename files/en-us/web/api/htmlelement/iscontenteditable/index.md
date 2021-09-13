@@ -2,57 +2,59 @@
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 tags:
-- API
-- Editing
-- HTML DOM
-- HTMLElement
-- Property
-- Read-only
-- Reference
+  - API
+  - Editing
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.HTMLElement.isContentEditable
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.isContentEditable</code></strong> read-only property
-  returns a boolean value that is <code>true</code> if the contents of the element
-  are editable; otherwise it returns <code>false</code>.</p>
+The **`HTMLElement.isContentEditable`** read-only property
+returns a boolean value that is `true` if the contents of the element
+are editable; otherwise it returns `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>editable</em> = <em>element</em>.isContentEditable
-</pre>
+```js
+editable = element.isContentEditable
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myText1"&gt;Uneditable Paragraph&lt;/p&gt;
-&lt;p id="myText2" contentEditable="true"&gt;Editable Paragraph&lt;/p&gt;
+```html
+<p id="myText1">Uneditable Paragraph</p>
+<p id="myText2" contentEditable="true">Editable Paragraph</p>
 
-&lt;p id="infoText1"&gt;Can edit the first paragraph? &lt;/p&gt;
-&lt;p id="infoText2"&gt;Can edit the second paragraph? &lt;/p&gt;</pre>
+<p id="infoText1">Can edit the first paragraph? </p>
+<p id="infoText2">Can edit the second paragraph? </p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre
-  class="brush: js">document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
-document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;</pre>
+```js
+document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
+document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLElement/contentEditable")}}</li>
-  <li>The {{htmlattrxref("contenteditable")}} global attribute.</li>
-</ul>
+- {{domxref("HTMLElement/contentEditable")}}
+- The {{htmlattrxref("contenteditable")}} global attribute.

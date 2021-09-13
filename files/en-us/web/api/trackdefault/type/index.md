@@ -14,30 +14,29 @@ tags:
   - Video
 browser-compat: api.TrackDefault.type
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>type</strong></code> read-only property of the {{domxref("TrackDefault")}} interface returns the type of track that this {{domxref("SourceBuffer")}}'s media segment data relates to (i.e. audio, video, or text track.)</p>
+The **`type`** read-only property of the {{domxref("TrackDefault")}} interface returns the type of track that this {{domxref("SourceBuffer")}}'s media segment data relates to (i.e. audio, video, or text track.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myType = TrackDefault.type;
-</pre>
+```js
+var myType = TrackDefault.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} — one of <code>audio</code>, <code>video</code> or <code>text</code>.</p>
+A {{domxref("DOMString")}} — one of `audio`, `video` or `text`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

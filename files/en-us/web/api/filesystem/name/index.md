@@ -2,53 +2,51 @@
 title: FileSystem.name
 slug: Web/API/FileSystem/name
 tags:
-- API
-- File and Directory Entries API
-- Files
-- NeedsExample
-- Property
-- Reference
-- filesystem
-- name
+  - API
+  - File and Directory Entries API
+  - Files
+  - NeedsExample
+  - Property
+  - Reference
+  - filesystem
+  - name
 browser-compat: api.FileSystem.name
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The read-only <strong><code>name</code></strong> property of the
-  {{domxref("FileSystem")}} interface indicates the file system's name. This
-  {{domxref("USVString")}} is unique among all file systems currently exposed by the <a
-    href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries
-    API</a>.</p>
+The read-only **`name`** property of the
+{{domxref("FileSystem")}} interface indicates the file system's name. This
+{{domxref("USVString")}} is unique among all file systems currently exposed by the [File and Directory Entries
+API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>fsName</em> = <em>FileSystem</em>.name;</pre>
+```js
+var fsName = FileSystem.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} representing the file system's name.</p>
+A {{domxref("USVString")}} representing the file system's name.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// tbd
-</pre>
+```js
+// tbd
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystem")}}

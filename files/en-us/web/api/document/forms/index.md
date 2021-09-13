@@ -12,102 +12,101 @@ tags:
   - Reference
 browser-compat: api.Document.forms
 ---
-<p>The <strong><code>forms</code></strong> read-only property of
-    the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
-    all the {{HTMLElement("form")}} elements contained in the document.</p>
+The **`forms`** read-only property of
+the {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} listing
+all the {{HTMLElement("form")}} elements contained in the document.
 
-<div class="note">
-  <p><strong>Note:</strong> Similarly, you can access a list of a form's component user
-    input elements using the {{domxref("HTMLFormElement.elements")}} property.</p>
-</div>
+> **Note:** Similarly, you can access a list of a form's component user
+> input elements using the {{domxref("HTMLFormElement.elements")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>collection</var> = <em>document</em>.forms;</pre>
+```js
+collection = document.forms;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
-  in the collection is a {{domxref("HTMLFormElement")}} representing a single
-  <code>&lt;form&gt;</code> element.</p>
+An {{domxref("HTMLCollection")}} object listing all of the document's forms. Each item
+in the collection is a {{domxref("HTMLFormElement")}} representing a single
+`<form>` element.
 
-<p>If the document has no forms, the returned collection is empty, with a length of zero.
-</p>
+If the document has no forms, the returned collection is empty, with a length of zero.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Getting_form_information">Getting form information</h3>
+### Getting form information
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-&lt;head&gt;
-&lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+<head>
+<title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form id="robby"&gt;
-  &lt;input type="button" onclick="alert(document.forms[0].id);" value="robby's form" /&gt;
-&lt;/form&gt;
+<form id="robby">
+  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
+</form>
 
-&lt;form id="dave"&gt;
-  &lt;input type="button" onclick="alert(document.forms[1].id);" value="dave's form" /&gt;
-&lt;/form&gt;
+<form id="dave">
+  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
+</form>
 
-&lt;form id="paul"&gt;
-  &lt;input type="button" onclick="alert(document.forms[2].id);" value="paul's form" /&gt;
-&lt;/form&gt;
+<form id="paul">
+  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Getting_an_element_from_within_a_form">Getting an element from within a form</h3>
+### Getting an element from within a form
 
-<pre class="brush: js">var selectForm = document.forms[index];
+```js
+var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
-</pre>
+```
 
-<h3 id="Named_form_access">Named form access</h3>
+### Named form access
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form name="login"&gt;
-  &lt;input name="email" type="email"&gt;
-  &lt;input name="password" type="password"&gt;
-  &lt;button type="submit"&gt;Log in&lt;/button&gt;
-&lt;/form&gt;
+<form name="login">
+  <input name="email" type="email">
+  <input name="password" type="password">
+  <button type="submit">Log in</button>
+</form>
 
-&lt;script&gt;
+<script>
   var loginForm = document.forms.login; // Or document.forms['login']
   loginForm.elements.email.placeholder = 'test@example.com';
   loginForm.elements.password.placeholder = 'password';
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Learn/Forms">HTML forms</a></li>
-  <li>{{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface</li>
-</ul>
+- [HTML forms](/en-US/docs/Learn/Forms)
+- {{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface
 
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}

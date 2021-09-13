@@ -11,63 +11,63 @@ tags:
   - webkitMatchesSelector
 browser-compat: api.Element.matches
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>matches()</code></strong> method checks to see if the
-  {{domxref("Element")}} would be selected by the provided
-  <code><var>selectorString</var></code> -- in other words -- checks if the element "is"
-  the selector.</p>
+The **`matches()`** method checks to see if the
+{{domxref("Element")}} would be selected by the provided
+`selectorString` -- in other words -- checks if the element "is"
+the selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>result</var> = <var>element</var>.matches(<var>selectorString</var>);
-</pre>
+```js
+var result = element.matches(selectorString);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code><var>selectorString</var></code> is a string representing the selector to test.
-</p>
+`selectorString` is a string representing the selector to test.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code><var>result</var></code> is a boolean value.</p>
+`result` is a boolean value.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SYNTAX_ERR</code></dt>
-  <dd>The specified selector string is invalid.</dd>
-</dl>
+- `SYNTAX_ERR`
+  - : The specified selector string is invalid.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;ul id="birds"&gt;
-  &lt;li&gt;Orange-winged parrot&lt;/li&gt;
-  &lt;li class="endangered"&gt;Philippine eagle&lt;/li&gt;
-  &lt;li&gt;Great white pelican&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul id="birds">
+  <li>Orange-winged parrot</li>
+  <li class="endangered">Philippine eagle</li>
+  <li>Great white pelican</li>
+</ul>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var birds = document.getElementsByTagName('li');
 
-  for (var i = 0; i &lt; birds.length; i++) {
+  for (var i = 0; i < birds.length; i++) {
     if (birds[i].matches('.endangered')) {
       console.log('The ' + birds[i].textContent + ' is endangered!');
     }
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>This will log "The Philippine eagle is endangered!" to the console, since the element
-  has indeed a <code>class</code> attribute with value <code>endangered</code>.</p>
+This will log "The Philippine eagle is endangered!" to the console, since the element
+has indeed a `class` attribute with value `endangered`.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>For browsers that do not support <code>Element.matches()</code> or
-  <code>Element.matchesSelector()</code>, but include support for
-  <code>document.querySelectorAll()</code>, a polyfill exists:</p>
+For browsers that do not support `Element.matches()` or
+`Element.matchesSelector()`, but include support for
+`document.querySelectorAll()`, a polyfill exists:
 
-<pre class="brush: js">if (!Element.prototype.matches) {
+```js
+if (!Element.prototype.matches) {
   Element.prototype.matches =
       Element.prototype.matchesSelector ||
       Element.prototype.mozMatchesSelector ||
@@ -77,37 +77,33 @@ browser-compat: api.Element.matches
       function(s) {
         var matches = (this.document || this.ownerDocument).querySelectorAll(s),
             i = matches.length;
-        while (--i &gt;= 0 &amp;&amp; matches.item(i) !== this) {}
-        return i &gt; -1;
+        while (--i >= 0 && matches.item(i) !== this) {}
+        return i > -1;
       };
-}</pre>
+}
+```
 
-<p>However, given the practicality of supporting older browsers, the following should
-  suffice for most (if not all) practical cases (i.e. IE9+ support).</p>
+However, given the practicality of supporting older browsers, the following should
+suffice for most (if not all) practical cases (i.e. IE9+ support).
 
-<pre class="brush: js">if (!Element.prototype.matches) {
+```js
+if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||
                               Element.prototype.webkitMatchesSelector;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">The syntax of
-      Selectors</a>
-  </li>
-  <li>
-    Other methods that take selectors: {{domxref("element.querySelector()")}} and
-    {{domxref("element.closest()")}}.
-  </li>
-</ul>
+- [The syntax of
+  Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- Other methods that take selectors: {{domxref("element.querySelector()")}} and
+  {{domxref("element.closest()")}}.

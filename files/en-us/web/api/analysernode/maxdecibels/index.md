@@ -10,29 +10,31 @@ tags:
   - maxDecibels
 browser-compat: api.AnalyserNode.maxDecibels
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
+The **`maxDecibels`** property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>curValue</em> = <em>analyserNode</em>.maxDecibels;
-<em>analyserNode</em>.maxDecibels = <em>newValue</em>;
-</pre>
+```js
+var curValue = analyserNode.maxDecibels;
+analyserNode.maxDecibels = newValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double, representing the maximum <a href="https://en.wikipedia.org/wiki/Decibel" title="Decibel on Wikipedia">decibel</a> value for scaling the FFT analysis data, where <code>0</code> dB is the loudest possible sound, <code>-10</code> dB is a 10th of that, etc. The default value is <code>-30</code> dB.</p>
+A double, representing the maximum [decibel](https://en.wikipedia.org/wiki/Decibel "Decibel on Wikipedia") value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-30` dB.
 
-<p>When getting data from <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>maxDecibels</code> or higher will be returned as <code>255</code>.</p>
+When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `maxDecibels` or higher will be returned as `255`.
 
-<p><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
+**Note**: If a value less than or equal to `AnalyserNode.minDecibels` is set, an `IndexSizeError` exception is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -58,7 +60,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -68,18 +70,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,38 +2,40 @@
 title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 tags:
-- API
-- Controller
-- Property
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
-- ServiceWorkerController
+  - API
+  - Controller
+  - Property
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
+  - ServiceWorkerController
 browser-compat: api.ServiceWorkerContainer.controller
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>controller</code></strong> read-only
-    property of the {{domxref("ServiceWorkerContainer")}} interface returns a
-    {{domxref("ServiceWorker")}} object if its state is <code>activating</code> or
-    <code>activated</code> (the same object returned by
-    {{domxref("ServiceWorkerRegistration.active")}}). This property returns
-    <code>null</code> if the request is a force refresh (<em>Shift</em> + refresh) or if
-    there is no active worker.</p>
+The **`controller`** read-only
+property of the {{domxref("ServiceWorkerContainer")}} interface returns a
+{{domxref("ServiceWorker")}} object if its state is `activating` or
+`activated` (the same object returned by
+{{domxref("ServiceWorkerRegistration.active")}}). This property returns
+`null` if the request is a force refresh (_Shift_ + refresh) or if
+there is no active worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myController</em> = navigator.serviceWorker.controller;
-</pre>
+```js
+var myController = navigator.serviceWorker.controller;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorker")}} object.</p>
+A {{domxref("ServiceWorker")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Do a one-off check to see if a service worker's in control.
   if (navigator.serviceWorker.controller) {
     console.log(`This page is currently controlled by: ${navigator.serviceWorker.controller}`);
@@ -42,12 +44,13 @@ browser-compat: api.ServiceWorkerContainer.controller
   }
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

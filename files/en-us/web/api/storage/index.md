@@ -10,39 +10,36 @@ tags:
   - data
 browser-compat: api.Storage
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>Storage</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a> provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.</p>
+The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
 
-<p>To manipulate, for instance, the session storage for a domain, a call to {{domxref("Window.sessionStorage")}} is made; whereas for local storage the call is made to {{domxref("Window.localStorage")}}.</p>
+To manipulate, for instance, the session storage for a domain, a call to {{domxref("Window.sessionStorage")}} is made; whereas for local storage the call is made to {{domxref("Window.localStorage")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd>Returns an integer representing the number of data items stored in the <code>Storage</code> object.</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : Returns an integer representing the number of data items stored in the `Storage` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>When passed a number <code>n</code>, this method will return the name of the nth key in the storage.</dd>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>When passed a key name, will return that key's value.</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>When passed a key name and value, will add that key to the storage, or update that key's value if it already exists.</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>When passed a key name, will remove that key from the storage.</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>When invoked, will empty all keys out of the storage.</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : When passed a number `n`, this method will return the name of the nth key in the storage.
+- {{domxref("Storage.getItem()")}}
+  - : When passed a key name, will return that key's value.
+- {{domxref("Storage.setItem()")}}
+  - : When passed a key name and value, will add that key to the storage, or update that key's value if it already exists.
+- {{domxref("Storage.removeItem()")}}
+  - : When passed a key name, will remove that key from the storage.
+- {{domxref("Storage.clear()")}}
+  - : When invoked, will empty all keys out of the storage.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here we access a <code>Storage</code> object by calling <code>localStorage</code>. We first test whether the local storage contains data items using <code>!localStorage.getItem('bgcolor')</code>. If it does, we run a function called <code>setStyles()</code> that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, <code>populateStorage()</code>, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs <code>setStyles()</code>.</p>
+Here we access a `Storage` object by calling `localStorage`. We first test whether the local storage contains data items using `!localStorage.getItem('bgcolor')`. If it does, we run a function called `setStyles()` that grabs the data items using {{domxref("Storage.getItem()")}} and uses those values to update page styles. If it doesn't, we run another function, `populateStorage()`, which uses {{domxref("Storage.setItem()")}} to set the item values, then runs `setStyles()`.
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -68,25 +65,22 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> To see this running as a complete working example, see our <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** To see this running as a complete working example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li>{{domxref("Window.localStorage")}}</li>
- <li>{{domxref("Window.sessionStorage")}}</li>
- <li>{{domxref("CacheStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("Window.localStorage")}}
+- {{domxref("Window.sessionStorage")}}
+- {{domxref("CacheStorage")}}

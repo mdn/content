@@ -2,36 +2,38 @@
 title: FontFace.style
 slug: Web/API/FontFace/style
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- Style
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - Style
 browser-compat: api.FontFace.style
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>style</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets the font's style. It is equivalent
-  to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.</p>
+The **`style`** property of the
+{{domxref("FontFace")}} interface retrieves or sets the font's style. It is equivalent
+to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let style = FontFace.style;
-FontFace.style = value;</pre>
+```js
+let style = FontFace.style;
+FontFace.style = value;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing the descriptors defined in the style sheet's
-  <code>@font-face</code> rule.</p>
+A {{domxref('CSSOMString')}} containing the descriptors defined in the style sheet's
+`@font-face` rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

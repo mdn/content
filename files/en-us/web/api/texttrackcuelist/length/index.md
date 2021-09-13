@@ -11,53 +11,55 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList.length
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>length</code></strong> read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.</p>
+The **`length`** read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>length</var> = <var>TextTrackCueList</var>.length;</pre>
+    var length = TextTrackCueList.length;
 
-<h3>Value</h3>
-<p>An <code>unsigned long</code> which is the number of cues in the list.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An `unsigned long` which is the number of cues in the list.
 
-<p>The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling <code>cues.length</code> returns the number of cues in the list. Using the WebVTT track below, the value of <code>length</code> is 5.</p>
+## Examples
 
-<pre>WEBVTT
+The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.length` returns the number of cues in the list. Using the WebVTT track below, the value of `length` is 5.
 
-first
-00:00:00.000 --> 00:00:00.999  line:80%
-Hildy!
+    WEBVTT
 
-second
-00:00:01.000 --> 00:00:01.499 line:80%
-How are you?
+    first
+    00:00:00.000 --> 00:00:00.999  line:80%
+    Hildy!
 
-third
-00:00:01.500 --> 00:00:02.999 line:80%
-Tell me, is the ruler of the universe in?
+    second
+    00:00:01.000 --> 00:00:01.499 line:80%
+    How are you?
 
-fourth
-00:00:03.000 --> 00:00:04.299 line:80%
-Yes, they're in - in a bad humor
+    third
+    00:00:01.500 --> 00:00:02.999 line:80%
+    Tell me, is the ruler of the universe in?
 
-fifth
-00:00:04.300 --> 00:00:06.000 line:80%
-Somebody must've stolen the crown jewels
-</pre>
+    fourth
+    00:00:03.000 --> 00:00:04.299 line:80%
+    Yes, they're in - in a bad humor
 
-<pre class="brush: js">let video = document.getElementById("video");
+    fifth
+    00:00:04.300 --> 00:00:06.000 line:80%
+    Somebody must've stolen the crown jewels
+
+```js
+let video = document.getElementById("video");
 video.onplay = function () {
   console.log(video.textTracks[0].cues.length) //5;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

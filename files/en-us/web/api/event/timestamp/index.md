@@ -2,71 +2,74 @@
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 tags:
-- API
-- DOM
-- Event
-- Property
-- Reference
-- timeStamp
+  - API
+  - DOM
+  - Event
+  - Property
+  - Reference
+  - timeStamp
 browser-compat: api.Event.timeStamp
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>timeStamp</strong></code> read-only property of the
-  {{domxref("Event")}} interface returns the time (in milliseconds) at which the event was
-  created.</p>
+The **`timeStamp`** read-only property of the
+{{domxref("Event")}} interface returns the time (in milliseconds) at which the event was
+created.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property only works if the event system supports it for
-    the particular event.</p>
-</div>
+> **Note:** This property only works if the event system supports it for
+> the particular event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>time</em> = <em>event</em>.timeStamp;
-</pre>
+```js
+time = event.timeStamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This value is the number of milliseconds elapsed from the beginning of the current <a
-    href="/en-US/docs/Web/API/Performance/timeOrigin">document's lifetime</a> till the
-  event was created.</p>
+This value is the number of milliseconds elapsed from the beginning of the current [document's lifetime](/en-US/docs/Web/API/Performance/timeOrigin) till the
+event was created.
 
-<p>In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}} accurate to
-  5 microseconds (0.005 ms). In older implementations, the value is a
-  {{domxref("DOMTimeStamp")}}, accurate to a millisecond.</p>
+In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}} accurate to
+5 microseconds (0.005 ms). In older implementations, the value is a
+{{domxref("DOMTimeStamp")}}, accurate to a millisecond.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Focus this iframe and press any key to get the
   current timestamp for the keypress event.
-&lt;/p&gt;
-&lt;p&gt;timeStamp: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;</pre>
+</p>
+<p>timeStamp: <span id="time">-</span></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function getTime(event) {
+```js
+function getTime(event) {
   var time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener("keypress", getTime);</pre>
+document.body.addEventListener("keypress", getTime);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
+{{EmbedLiveSample("Example", "100%", 100)}}
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of
-  <code>Event.timeStamp</code> might get rounded depending on browser settings.</p>
+To offer protection against timing attacks and fingerprinting, the precision of
+`Event.timeStamp` might get rounded depending on browser settings.
 
-<p>In Firefox, the <code>privacy.reduceTimerPrecision</code> preference is enabled by
-  default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
+default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 event.timeStamp;
 // 1519211809934
 // 1519211810362
@@ -79,17 +82,17 @@ event.timeStamp;
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>In Firefox, if you also enable <code>privacy.resistFingerprinting</code>, the precision
-  will be 100ms or the value of
-  <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever
-  is larger.</p>
+In Firefox, if you also enable `privacy.resistFingerprinting`, the precision
+will be 100ms or the value of
+`privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever
+is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,55 +11,54 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaCurrent
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaCurrent</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-current</code> attribute, which indicates the element that represents the current item within a container or set of related elements.</p>
+The **`ariaCurrent`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-current` attribute, which indicates the element that represents the current item within a container or set of related elements.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaCurrent = ElementInternals.ariaCurrent;
-ElementInternals.ariaCurrent = ariaCurrent;</pre>
+```js
+let ariaCurrent = ElementInternals.ariaCurrent;
+ElementInternals.ariaCurrent = ariaCurrent;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"page"</code></dt>
-  <dd>Represents the current page within a set of pages.</dd>
-  <dt><code>"step"</code></dt>
-  <dd>Represents the current step within a process.</dd>
-  <dt><code>"location"</code></dt>
-  <dd>Represents the current location, for example the current page in a breadcrumbs hierarchy.</dd>
-  <dt><code>"date"</code></dt>
-  <dd>Represents the current date within a collection of dates.</dd>
-  <dt><code>"time"</code></dt>
-  <dd>Represents the current time within a set of times.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>Represents the current item within a set.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>Does not represent the current item within a set.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"page"`
+  - : Represents the current page within a set of pages.
+- `"step"`
+  - : Represents the current step within a process.
+- `"location"`
+  - : Represents the current location, for example the current page in a breadcrumbs hierarchy.
+- `"date"`
+  - : Represents the current date within a collection of dates.
+- `"time"`
+  - : Represents the current time within a set of times.
+- `"true"`
+  - : Represents the current item within a set.
+- `"false"`
+  - : Does not represent the current item within a set.
 
-<p>In this example the value of <code>ariaCurrent</code> is set to "page".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaCurrent = "page";</pre>
+In this example the value of `ariaCurrent` is set to "page".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaCurrent = "page";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</a></li>
-</ul>
+- [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)

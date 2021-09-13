@@ -2,66 +2,66 @@
 title: HTMLTableElement.frame
 slug: Web/API/HTMLTableElement/frame
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- NeedsBrowserCompatibility
-- NeedsSpecTable
-- Property
-- Reference
-- Tables
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Tables
+  - Deprecated
 browser-compat: api.HTMLTableElement.frame
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The {{domxref("HTMLTableElement")}} interface's <code><strong>frame</strong></code>
-  property is a string that indicates which of the table's exterior borders should be
-  drawn.</p>
+The {{domxref("HTMLTableElement")}} interface's **`frame`**
+property is a string that indicates which of the table's exterior borders should be
+drawn.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.frame = <em>frameSides</em>;
-var <em>frameSides</em> = <em>HTMLTableElement</em>.frame;</pre>
+```js
+HTMLTableElement.frame = frameSides;
+var frameSides = HTMLTableElement.frame;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code>frameSides</code> is a string whose value is one of the following values:</p>
+`frameSides` is a string whose value is one of the following values:
 
-<dl>
-  <dt><code>void</code></dt>
-  <dd>No sides. This is the default.</dd>
-  <dt><code>"above"</code></dt>
-  <dd>Top side</dd>
-  <dt><code>"below"</code></dt>
-  <dd>Bottom side</dd>
-  <dt><code>"hsides"</code></dt>
-  <dd>Top and bottom only</dd>
-  <dt><code>"vsides"</code></dt>
-  <dd>Right and left sides only</dd>
-  <dt><code>"lhs"</code></dt>
-  <dd>Left-hand side only</dd>
-  <dt><code>"rhs"</code></dt>
-  <dd>Right-hand side only</dd>
-  <dt><code>"box"</code></dt>
-  <dd>All four sides</dd>
-  <dt><code>"border"</code></dt>
-  <dd>All four sides</dd>
-</dl>
+- `void`
+  - : No sides. This is the default.
+- `"above"`
+  - : Top side
+- `"below"`
+  - : Bottom side
+- `"hsides"`
+  - : Top and bottom only
+- `"vsides"`
+  - : Right and left sides only
+- `"lhs"`
+  - : Left-hand side only
+- `"rhs"`
+  - : Right-hand side only
+- `"box"`
+  - : All four sides
+- `"border"`
+  - : All four sides
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Set the frame of TableA to 'border'
+```js
+// Set the frame of TableA to 'border'
 var t = document.getElementById('TableA');
 t.frame  = "border";
-t.border = "2px";</pre>
+t.border = "2px";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification</li>
-</ul>
+- W3C DOM 2 HTML Specification
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

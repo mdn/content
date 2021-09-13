@@ -2,49 +2,51 @@
 title: Document.anchors
 slug: Web/API/Document/anchors
 tags:
-- API
-- Deprecated
-- Document
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Deprecated
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Document.anchors
 ---
-<div>{{APIRef("DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("DOM")}} {{Deprecated_Header}}
 
-<p>The <strong><code>anchors</code></strong> read-only property of the
-  {{domxref("Document")}} interface returns a list of all of the anchors in the document.
-</p>
+The **`anchors`** read-only property of the
+{{domxref("Document")}} interface returns a list of all of the anchors in the document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>nodeList</var> = document.anchors;
-</pre>
+```js
+nodeList = document.anchors;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}}.</p>
+An {{domxref("HTMLCollection")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (document.anchors.length &gt;= 5) {
+```js
+if (document.anchors.length >= 5) {
   dump("found too many anchors");
 }
-</pre>
+```
 
-<p>The following is an example that auto populates a Table of Contents with every anchor
-  on the page:</p>
+The following is an example that auto populates a Table of Contents with every anchor
+on the page:
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Test&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Test</title>
+<script>
 function init() {
   var toc = document.getElementById("toc");
   var i, li, newAnchor;
-  for (i = 0; i &lt; document.anchors.length; i++) {
+  for (i = 0; i < document.anchors.length; i++) {
     li = document.createElement("li");
     newAnchor = document.createElement('a');
     newAnchor.href = "#" + document.anchors[i].name;
@@ -53,44 +55,44 @@ function init() {
     toc.appendChild(li);
   }
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
+</script>
+</head>
+<body onload="init()">
 
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;h2&gt;&lt;a name="contents"&gt;Contents&lt;/a&gt;&lt;/h2&gt;
-&lt;ul id="toc"&gt;&lt;/ul&gt;
+<h1>Title</h1>
+<h2><a name="contents">Contents</a></h2>
+<ul id="toc"></ul>
 
-&lt;h2&gt;&lt;a name="plants"&gt;Plants&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Oranges&lt;/li&gt;
-  &lt;li&gt;Pears&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="plants">Plants</a></h2>
+<ol>
+  <li>Apples</li>
+  <li>Oranges</li>
+  <li>Pears</li>
+</ol>
 
-&lt;h2&gt;&lt;a name="veggies"&gt;Veggies&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Carrots&lt;/li&gt;
-  &lt;li&gt;Celery&lt;/li&gt;
-  &lt;li&gt;Beats&lt;/li&gt;
-&lt;/ol&gt;
+<h2><a name="veggies">Veggies</a></h2>
+<ol>
+  <li>Carrots</li>
+  <li>Celery</li>
+  <li>Beats</li>
+</ol>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/S4yNp">View on JSFiddle</a></p>
+[View on JSFiddle](https://jsfiddle.net/S4yNp)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>For reasons of backwards compatibility, the returned set of anchors only contains those
-  anchors created with the <code>name</code> attribute, not those created with the
-  <code>id</code> attribute.</p>
+For reasons of backwards compatibility, the returned set of anchors only contains those
+anchors created with the `name` attribute, not those created with the
+`id` attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

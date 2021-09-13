@@ -2,61 +2,60 @@
 title: RTCInboundRtpStreamStats.packetsDuplicated
 slug: Web/API/RTCInboundRtpStreamStats/packetsDuplicated
 tags:
-- API
-- Duplicate
-- Packets
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Repeat
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- packetsDuplicated
-- stream
+  - API
+  - Duplicate
+  - Packets
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Repeat
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - packetsDuplicated
+  - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsDuplicated
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>packetsDuplicated</code></strong> property
-    of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number
-    of packets discarded because they were duplicates of previously-received
-    packets.</p>
+The **`packetsDuplicated`** property
+of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number
+of packets discarded because they were duplicates of previously-received
+packets.
 
-<p>These packets are not counted by the
-  {{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
-</p>
+These packets are not counted by the
+{{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>packetsDuplicated</em> = <em>rtcInboundRtpStreamStats</em>.packetsDuplicated;</pre>
+```js
+var packetsDuplicated = rtcInboundRtpStreamStats.packetsDuplicated;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value which specifies how many duplcate packets have been received by the
-  local end of this RTP stream so far. These duplicate packets are not included in the
-  {{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
-</p>
+An integer value which specifies how many duplcate packets have been received by the
+local end of this RTP stream so far. These duplicate packets are not included in the
+{{domxref("RTCInboundRtpSreamStats.packetsDiscarded", "packetsDiscarded")}} property.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Duplicate packets are detected when a packet has the same RTP sequence number as
-  another packet that has previously been processed. Each time a packet is repeated, the
-  value of <code>packetsDuplicated</code> is incremented, even if the same packet is
-  received more than twice.</p>
+Duplicate packets are detected when a packet has the same RTP sequence number as
+another packet that has previously been processed. Each time a packet is repeated, the
+value of `packetsDuplicated` is incremented, even if the same packet is
+received more than twice.
 
-<p>You can get a more accurate tally of how many packets have been lost on the stream by
-  adding <code>packetsDuplicated</code> to
-  {{domxref("RTCInboundRtpSreamStats.packetsLost", "packetsLost")}}. The resulting value
-  will be positive, although it will not match the count as computed in {{RFC(3660)}}.</p>
+You can get a more accurate tally of how many packets have been lost on the stream by
+adding `packetsDuplicated` to
+{{domxref("RTCInboundRtpSreamStats.packetsLost", "packetsLost")}}. The resulting value
+will be positive, although it will not match the count as computed in {{RFC(3660)}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

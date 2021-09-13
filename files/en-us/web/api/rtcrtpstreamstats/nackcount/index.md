@@ -2,51 +2,50 @@
 title: RTCRtpStreamStats.nackCount
 slug: Web/API/RTCRtpStreamStats/nackCount
 tags:
-- API
-- Acknowledgement
-- Generic NACK
-- NACK
-- Negative Acknowledgement
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- nackCount
-- rtc
+  - API
+  - Acknowledgement
+  - Generic NACK
+  - NACK
+  - Negative Acknowledgement
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - nackCount
+  - rtc
 browser-compat: api.RTCRtpStreamStats.nackCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>nackCount</code></strong> property of the
-    {{domxref("RTCRtpStreamStats")}} dictionary is a numeric value indicating the number
-    of times the receiver sent a <strong>NACK packet</strong> to the sender.</p>
+The **`nackCount`** property of the
+{{domxref("RTCRtpStreamStats")}} dictionary is a numeric value indicating the number
+of times the receiver sent a **NACK packet** to the sender.
 
-<p>A NACK
-  (Negative ACKnowledgement, also called "Generic NACK") packet tells the sender that one
-  or more of the {{Glossary("RTP")}} packets it sent were lost in transport.</p>
+A NACK
+(Negative ACKnowledgement, also called "Generic NACK") packet tells the sender that one
+or more of the {{Glossary("RTP")}} packets it sent were lost in transport.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>nackCount</em> = <em>RTCRtpStreamStats</em>.nackCount;</pre>
+```js
+var nackCount = RTCRtpStreamStats.nackCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating how many times the receiver sent a NACK packet to the
-  sender after detecting that one or more packets were lost during transport.</p>
+An integer value indicating how many times the receiver sent a NACK packet to the
+sender after detecting that one or more packets were lost during transport.
 
-<div class="note">
-  <p><strong>Note:</strong> This value is only available on the receiver.</p>
-</div>
+> **Note:** This value is only available on the receiver.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

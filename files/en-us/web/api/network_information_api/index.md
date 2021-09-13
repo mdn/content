@@ -8,19 +8,20 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-<p>The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.). This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the {{domxref("NetworkInformation")}} interface and a single property to the {{domxref("Navigator")}} interface: {{domxref("Navigator.connection")}}.</p>
+The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi', 'cellular', etc.). This can be used to select high definition content or low definition content based on the user's connection. The entire API consists of the addition of the {{domxref("NetworkInformation")}} interface and a single property to the {{domxref("Navigator")}} interface: {{domxref("Navigator.connection")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Detect_connection_changes">Detect connection changes</h3>
+### Detect connection changes
 
-<p>This example watches for changes to the user's connection.</p>
+This example watches for changes to the user's connection.
 
-<pre class="brush: js">var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+```js
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.effectiveType;
 
 function updateConnectionStatus() {
@@ -29,52 +30,45 @@ function updateConnectionStatus() {
 }
 
 connection.addEventListener('change', updateConnectionStatus);
-</pre>
+```
 
-<h3 id="Preload_large_resources">Preload large resources</h3>
+### Preload large resources
 
-<p>The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the <code>preloadVideo</code> flag is set to <code>false</code>. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the <code>type</code> value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.</p>
+The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the `preloadVideo` flag is set to `false`. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the `type` value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.
 
-<pre class="brush: js">let preloadVideo = true;
+```js
+let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
     preloadVideo = false;
   }
-}</pre>
+}
+```
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("NetworkInformation")}}</dt>
- <dd>Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The <code>NetworkInformation</code> interfaces cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.</dd>
-</dl>
+- {{domxref("NetworkInformation")}}
+  - : Provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes. The `NetworkInformation` interfaces cannot be instantiated. It is instead accessed through the {{domxref("Navigator")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://wicg.github.io/netinfo/">Network Information API</a></td>
-  </tr>
-</table>
+| Specification                                              |
+| ---------------------------------------------------------- |
+| [Network Information API](https://wicg.github.io/netinfo/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="NetworkInformation">NetworkInformation</h3>
+### NetworkInformation
 
-<p>{{Compat("api.NetworkInformation")}}</p>
+{{Compat("api.NetworkInformation")}}
 
-<h3 id="Navigator.connection">Navigator.connection</h3>
+### Navigator.connection
 
-<p>{{Compat("api.Navigator.connection")}}</p>
+{{Compat("api.Navigator.connection")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{spec("https://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}</li>
- <li><a href="/en-US/docs/Web/API/Navigator/Online_and_offline_events">Online and offline events</a></li>
- <li>{{domxref("Navigator.connection", "window.navigator.connection")}}</li>
-</ul>
+- {{spec("https://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
+- [Online and offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- {{domxref("Navigator.connection", "window.navigator.connection")}}

@@ -8,59 +8,53 @@ tags:
   - Reference
 browser-compat: api.HTMLFieldSetElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLFieldSetElement</code></strong> interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{ HTMLElement("fieldset") }} elements.</p>
+The **`HTMLFieldSetElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{ HTMLElement("fieldset") }} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFieldSetElement.disabled")}}</dt>
- <dd>A boolean value reflecting the {{htmlattrxref("disabled", "fieldset")}} HTML attribute, indicating whether the user can interact with the control.</dd>
- <dt>{{domxref("HTMLFieldSetElement.elements")}}{{ReadOnlyInline}}</dt>
- <dd>The elements belonging to this field set. The type of this property depends on the version of the spec that is implemented by the browser.</dd>
- <dt>{{domxref("HTMLFieldSetElement.form")}}{{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.<br>
- If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the <code>null</code> value if none matches.</dd>
- <dt>{{domxref("HTMLFieldSetElement.name")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is <em>not</em> part of the data which is sent to the server.</dd>
- <dt>{{domxref("HTMLFieldSetElement.type")}}{{ReadOnlyInline}}</dt>
- <dd>The {{domxref("DOMString")}} "<code>fieldset</code>".</dd>
- <dt>{{domxref("HTMLFieldSetElement.validationMessage")}}</dt>
- <dd>A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (<code>willValidate</code> is <code>false</code>), or it satisfies its constraints.</dd>
- <dt>{{domxref("HTMLFieldSetElement.validity")}}</dt>
- <dd>A {{domxref("ValidityState")}} representing the validity states that this element is in.</dd>
- <dt>{{domxref("HTMLFieldSetElement.willValidate")}}</dt>
- <dd>A boolean value <code>false</code>, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.</dd>
-</dl>
+- {{domxref("HTMLFieldSetElement.disabled")}}
+  - : A boolean value reflecting the {{htmlattrxref("disabled", "fieldset")}} HTML attribute, indicating whether the user can interact with the control.
+- {{domxref("HTMLFieldSetElement.elements")}}{{ReadOnlyInline}}
+  - : The elements belonging to this field set. The type of this property depends on the version of the spec that is implemented by the browser.
+- {{domxref("HTMLFieldSetElement.form")}}{{ReadOnlyInline}}
+  - : An {{domxref("HTMLFormControlsCollection")}} or {{domxref("HTMLCollection")}} referencing the containing form element, if this element is in a form.
+    If the field set is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
+- {{domxref("HTMLFieldSetElement.name")}}
+  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "fieldset")}} HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
+- {{domxref("HTMLFieldSetElement.type")}}{{ReadOnlyInline}}
+  - : The {{domxref("DOMString")}} "`fieldset`".
+- {{domxref("HTMLFieldSetElement.validationMessage")}}
+  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
+- {{domxref("HTMLFieldSetElement.validity")}}
+  - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
+- {{domxref("HTMLFieldSetElement.willValidate")}}
+  - : A boolean value `false`, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFieldSetElement.checkValidity()")}}</dt>
- <dd>Always returns <code>true</code> because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.</dd>
- <dt>{{domxref("HTMLFieldSetElement.reportValidity()")}}</dt>
- <dd>Always returns <code>true</code> because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.</dd>
- <dt>{{domxref("HTMLFieldSetElement.setCustomValidity()")}}</dt>
- <dd>Sets a custom validity message for the field set. If this message is not the empty string, then the field set is suffering from a custom validity error, and does not validate.</dd>
-</dl>
+- {{domxref("HTMLFieldSetElement.checkValidity()")}}
+  - : Always returns `true` because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
+- {{domxref("HTMLFieldSetElement.reportValidity()")}}
+  - : Always returns `true` because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
+- {{domxref("HTMLFieldSetElement.setCustomValidity()")}}
+  - : Sets a custom validity message for the field set. If this message is not the empty string, then the field set is suffering from a custom validity error, and does not validate.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("fieldset") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("fieldset") }}.

@@ -2,37 +2,39 @@
 title: PerformanceNavigationTiming.loadEventEnd
 slug: Web/API/PerformanceNavigationTiming/loadEventEnd
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>The <strong><code>loadEventEnd</code></strong> read-only property returns a
-  {{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load
-  event of the current document is completed.</p>
+The **`loadEventEnd`** read-only property returns a
+{{domxref("DOMHighResTimeStamp","timestamp")}} which is equal to the time when the load
+event of the current document is completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>perfEntry</em>.loadEventEnd;
-</pre>
+```js
+perfEntry.loadEventEnd;
+```
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time when the load
-  event of the current document is completed.</p>
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time when the load
+event of the current document is completed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates this property's usage.</p>
+The following example illustrates this property's usage.
 
-<pre class="brush: js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   var perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
     // dom Properties
@@ -49,12 +51,12 @@ browser-compat: api.PerformanceNavigationTiming.loadEventEnd
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,63 +2,59 @@
 title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 tags:
-- API
-- ExtendableEvent
-- Method
-- Reference
-- waitUntil
+  - API
+  - ExtendableEvent
+  - Method
+  - Reference
+  - waitUntil
 browser-compat: api.ExtendableEvent.waitUntil
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>ExtendableEvent.waitUntil()</strong></code>
-    method tells the event dispatcher that work is ongoing. It can also be used to detect
-    whether that work was successful. In service workers, <code>waitUntil()</code> tells
-    the browser that work is ongoing until the promise settles, and it shouldn't terminate
-    the service worker if it wants that work to complete.</p>
+The **`ExtendableEvent.waitUntil()`**
+method tells the event dispatcher that work is ongoing. It can also be used to detect
+whether that work was successful. In service workers, `waitUntil()` tells
+the browser that work is ongoing until the promise settles, and it shouldn't terminate
+the service worker if it wants that work to complete.
 
-<p>The {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} events in <a
-    href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</a> use
-  <code>waitUntil()</code> to hold the service worker in
-  the {{domxref("ServiceWorkerRegistration.installing", "installing")}} phase until tasks
-  complete. If the promise passed to <code>waitUntil()</code> rejects, the install is
-  considered a failure, and the installing service worker is discarded. This is primarily
-  used to ensure that a service worker is not considered installed until all of the core
-  caches it depends on are successfully populated.</p>
+The {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} events in [service workers](/en-US/docs/Web/API/ServiceWorkerGlobalScope) use
+`waitUntil()` to hold the service worker in
+the {{domxref("ServiceWorkerRegistration.installing", "installing")}} phase until tasks
+complete. If the promise passed to `waitUntil()` rejects, the install is
+considered a failure, and the installing service worker is discarded. This is primarily
+used to ensure that a service worker is not considered installed until all of the core
+caches it depends on are successfully populated.
 
-<p>The {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} events in <a
-    href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</a> use
-  <code>waitUntil()</code> to buffer functional events such as <code>fetch</code> and
-  <code>push</code> until the promise passed to <code>waitUntil()</code> settles. This
-  gives the service worker time to update database schemas and delete outdated
-  {{domxref("Cache", "caches")}}, so other events can rely on a completely upgraded state.
-</p>
+The {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} events in [service workers](/en-US/docs/Web/API/ServiceWorkerGlobalScope) use
+`waitUntil()` to buffer functional events such as `fetch` and
+`push` until the promise passed to `waitUntil()` settles. This
+gives the service worker time to update database schemas and delete outdated
+{{domxref("Cache", "caches")}}, so other events can rely on a completely upgraded state.
 
-<p>The <code>waitUntil()</code> method must be initially called within the event callback,
-  but after that it can be called multiple times, until all the promises passed to it
-  settle.</p>
+The `waitUntil()` method must be initially called within the event callback,
+but after that it can be called multiple times, until all the promises passed to it
+settle.
 
-<div class="note">
-  <p><strong>Note:</strong> The behavior described in the above paragraph was fixed in
-    Firefox 43 (see {{bug(1180274)}}).</p>
-</div>
+> **Note:** The behavior described in the above paragraph was fixed in
+> Firefox 43 (see {{bug(1180274)}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>extendableEvent</em>.waitUntil(<em>promise</em>);</pre>
+```js
+extendableEvent.waitUntil(promise);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Using <code>waitUntil()</code> within a service worker's <code>install</code> event:
-</p>
+Using `waitUntil()` within a service worker's `install` event:
 
-<pre class="brush: js;">addEventListener('install', event =&gt; {
-  const preCache = async () =&gt; {
+```js
+addEventListener('install', event => {
+  const preCache = async () => {
     const cache = await caches.open('static-v1');
     return cache.addAll([
       '/',
@@ -67,23 +63,21 @@ browser-compat: api.ExtendableEvent.waitUntil
     ]);
   };
   event.waitUntil(preCache());
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}

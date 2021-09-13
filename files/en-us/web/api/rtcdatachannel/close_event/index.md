@@ -17,66 +17,67 @@ tags:
   - Event
 browser-compat: api.RTCDataChannel.close_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>close</code></strong> event is sent to the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler on an {{domxref("RTCDataChannel")}} instance when the data transport being used for the data channel has closed. Before any further data can be transferred using <code>RTCDataChannel</code>, a new data channel instance must be created.</p>
+The **`close`** event is sent to the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler on an {{domxref("RTCDataChannel")}} instance when the data transport being used for the data channel has closed. Before any further data can be transferred using `RTCDataChannel`, a new data channel instance must be created.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("RTCDataChannel.onclose")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("RTCDataChannel.onclose")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example sets up a handler for the <code>close</code> event for the {{domxref("RTCDataChannel")}} named <code>dc</code>; its responsibility in this example is to update user interface elements to reflect that there is no longer an ongoing call, and to allow a new call to be started.</p>
+This example sets up a handler for the `close` event for the {{domxref("RTCDataChannel")}} named `dc`; its responsibility in this example is to update user interface elements to reflect that there is no longer an ongoing call, and to allow a new call to be started.
 
-<pre class="brush: js">dc.addEventListener("close", ev =&gt; {
+```js
+dc.addEventListener("close", ev => {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;
   disconnectButton.disabled = true;
 }, false);
-</pre>
+```
 
-<p>All this code does in response to receiving the <code>close</code> event is to disable an input box and its "Send" button, and to enable the button used to start a call (while disabling the one that ends a call).</p>
+All this code does in response to receiving the `close` event is to disable an input box and its "Send" button, and to enable the button used to start a call (while disabling the one that ends a call).
 
-<p>You can also use the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler property to set a handler for <code>close</code> events:</p>
+You can also use the {{domxref("RTCDataChannel.onclose", "onclose")}} event handler property to set a handler for `close` events:
 
-<pre class="brush: js">dc.onclose = ev =&gt; {
+```js
+dc.onclose = ev => {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;
   disconnectButton.disabled = true;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</a></li>
- <li>Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.message_event", "message")}}, and {{domxref("RTCDataChannel.error_event", "error")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [A simple RTCDataChannel example](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.message_event", "message")}}, and {{domxref("RTCDataChannel.error_event", "error")}}

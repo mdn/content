@@ -10,29 +10,27 @@ tags:
   - Web Components
 browser-compat: api.HTMLTemplateElement
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p>The <code><strong>HTMLTemplateElement</strong></code> interface enables access to the contents of an HTML {{HTMLElement("template")}} element.</p>
+The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the properties of {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTemplateElement.content", "content")}} {{readonlyinline}}</dt>
- <dd>A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.</dd>
-</dl>
+- {{domxref("HTMLTemplateElement.content", "content")}} {{readonlyinline}}
+  - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of {{domxref("HTMLElement")}}.</em></p>
+_This interface inherits the methods of {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,74 +13,74 @@ tags:
   - unmute
 browser-compat: api.MediaStreamTrack.unmute_event
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <code><strong>unmute</strong></code> event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is once again able to provide media data after a period of not being able to do so.</p>
+The **`unmute`** event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is once again able to provide media data after a period of not being able to do so.
 
-<p>This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.</p>
+This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("MediaStreamTrack.onunmute", "onunmute")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("MediaStreamTrack.onunmute", "onunmute")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> The condition that most people think of as "muted" (that is, a user-controllable way to silence a track) is actually managed using the {{domxref("MediaStreamTrack.enabled")}} property, for which there are no events.</p>
-</div>
+> **Note:** The condition that most people think of as "muted" (that is, a user-controllable way to silence a track) is actually managed using the {{domxref("MediaStreamTrack.enabled")}} property, for which there are no events.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, event handlers are established for the {{domxref("MediaStreamTrack/mute_event", "mute")}} and <code>unmute</code> events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} stored in the variable <code>musicTrack</code>.</p>
+In this example, event handlers are established for the {{domxref("MediaStreamTrack/mute_event", "mute")}} and `unmute` events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} stored in the variable `musicTrack`.
 
-<pre class="brush: js">musicTrack.addEventListener("mute", event =&gt; {
+```js
+musicTrack.addEventListener("mute", event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }, false);
 
-musicTrack.addEventListener("unmute", event =&gt; {
+musicTrack.addEventListener("unmute", event => {
  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }, false);
-</pre>
+```
 
-<p>With these event handlers in place, when the track <code>musicTrack</code> enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID <code>timeline-widget</code> gets its background color changed to <code>#aaa</code>. When the track exits the muted state—detected by the arrival of an <code>unmuted</code> event—the background color is restored to white.</p>
+With these event handlers in place, when the track `musicTrack` enters its {{domxref("MediaStreamTrack.muted", "muted")}} state, the element with the ID `timeline-widget` gets its background color changed to `#aaa`. When the track exits the muted state—detected by the arrival of an `unmuted` event—the background color is restored to white.
 
-<p>You can also use the {{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.onmute", "onmute")}} event handler is available for setting up a handler for the <code>mute</code> event. The following example shows this:</p>
+You can also use the {{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.onmute", "onmute")}} event handler is available for setting up a handler for the `mute` event. The following example shows this:
 
-<pre class="brush: js">musicTrack.onmute = event =&gt; {
+```js
+musicTrack.onmute = event => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.mute = event = &gt; {
+musicTrack.mute = event = > {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property</li>
- <li>{{domxref("MediaStreamTrack/mute_event", "mute")}} event</li>
-</ul>
+- {{domxref("MediaStreamTrack.onunmute", "onunmute")}} event handler property
+- {{domxref("MediaStreamTrack/mute_event", "mute")}} event

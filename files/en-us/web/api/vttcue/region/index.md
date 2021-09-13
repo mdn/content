@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.region
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>region</code></strong> property of the {{domxref("VTTCue")}} interface returns and sets the {{domxref("VTTRegion")}} that this cue belongs to.</p>
+The **`region`** property of the {{domxref("VTTCue")}} interface returns and sets the {{domxref("VTTRegion")}} that this cue belongs to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let region = VTTCue.region;
-VTTCue.region = a;</pre>
+```js
+let region = VTTCue.region;
+VTTCue.region = a;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("VTTRegion")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("VTTRegion")}} object.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>region</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `region` is printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -33,14 +37,12 @@ let cue1 = new VTTCue(0, 0.9, 'Hildy!');
 console.log(cue1.region);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

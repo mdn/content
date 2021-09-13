@@ -2,55 +2,58 @@
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
 tags:
-- API
-- Method
-- Reference
-- URLSearchParams
-- sort
+  - API
+  - Method
+  - Reference
+  - URLSearchParams
+  - sort
 browser-compat: api.URLSearchParams.sort
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>The <code><strong>URLSearchParams.sort()</strong></code> method sorts all key/value
-  pairs contained in this object in place and returns <code>undefined</code>. The sort
-  order is according to unicode code points of the keys. This method uses a stable sorting
-  algorithm (i.e. the relative order between key/value pairs with equal keys will be
-  preserved).</p>
+The **`URLSearchParams.sort()`** method sorts all key/value
+pairs contained in this object in place and returns `undefined`. The sort
+order is according to unicode code points of the keys. This method uses a stable sorting
+algorithm (i.e. the relative order between key/value pairs with equal keys will be
+preserved).
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">searchParams.sort();</pre>
+```js
+searchParams.sort();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("c=4&amp;a=2&amp;b=3&amp;a=1");
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
 // Sort the key/value pairs
 searchParams.sort();
 
 // Display the sorted query string
 console.log(searchParams.toString());
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>a=2&amp;a=1&amp;b=3&amp;c=4</pre>
+    a=2&a=1&b=3&c=4
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

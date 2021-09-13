@@ -8,50 +8,54 @@ tags:
   - Range
 browser-compat: api.Range.extractContents
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.extractContents()</code></strong> method moves contents of the
-  {{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.
-</p>
+The **`Range.extractContents()`** method moves contents of the
+{{ domxref("Range") }} from the document tree into a {{ domxref("DocumentFragment") }}.
 
-<p>Event listeners added using DOM Events are not retained during extraction. HTML
-  attribute events are retained or duplicated as they are for the
-  {{domxref("Node.cloneNode()")}} method. HTML <code>id</code> attributes are also cloned,
-  which can lead to an invalid document if a partially-selected node is extracted and
-  appended to the document.</p>
+Event listeners added using DOM Events are not retained during extraction. HTML
+attribute events are retained or duplicated as they are for the
+{{domxref("Node.cloneNode()")}} method. HTML `id` attributes are also cloned,
+which can lead to an invalid document if a partially-selected node is extracted and
+appended to the document.
 
-<p>Partially selected nodes are cloned to include the parent tags necessary to make the
-  document fragment valid.</p>
+Partially selected nodes are cloned to include the parent tags necessary to make the
+document fragment valid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>documentFragment</em> = <em>range</em>.extractContents();
-</pre>
+```js
+documentFragment = range.extractContents();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: js">var range = document.createRange();
+```js
+var range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 var documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
-</pre>
+```
 
-<h3 id="Moving_items_between_containers">Moving items between containers</h3>
+### Moving items between containers
 
-<p>This example lets you move items between two containers. Select one or more item, and
-  then click "swap" to move them to the opposite container.</p>
+This example lets you move items between two containers. Select one or more item, and
+then click "swap" to move them to the opposite container.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="list1"&gt;123456&lt;/p&gt;
-&lt;button id="swap"&gt;Swap selected item(s)&lt;/button&gt;
-&lt;p id="list2"&gt;abcdef&lt;/p&gt;</pre>
+```html
+<p id="list1">123456</p>
+<button id="swap">Swap selected item(s)</button>
+<p id="list2">abcdef</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   pointer-events: none;
 }
 
@@ -65,18 +69,20 @@ button {
   font-size: 1.2em;
   padding: .5em;
   pointer-events: auto;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const list1 = document.getElementById('list1');
+```js
+const list1 = document.getElementById('list1');
 const list2 = document.getElementById('list2');
 const button = document.getElementById('swap');
 
-button.addEventListener('click', e =&gt; {
+button.addEventListener('click', e => {
   selection = window.getSelection();
 
-  for (let i = 0; i &lt; selection.rangeCount; i++) {
+  for (let i = 0; i < selection.rangeCount; i++) {
     const range = selection.getRangeAt(i);
 
     if (range.commonAncestorContainer === list1 ||
@@ -89,22 +95,21 @@ button.addEventListener('click', e =&gt; {
       list1.appendChild(documentFragment);
     }
   }
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Moving_items_between_containers", 700, 300)}}</p>
+{{EmbedLiveSample("Moving_items_between_containers", 700, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

@@ -8,32 +8,31 @@ tags:
   - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat.precision
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The read-only <strong><code>WebGLShaderPrecisionFormat.precision</code></strong> property returns the number of bits of precision that can be represented.</p>
+The read-only **`WebGLShaderPrecisionFormat.precision`** property returns the number of bits of precision that can be represented.
 
-<p>For integer formats this value is always 0.</p>
+For integer formats this value is always 0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT).precision; // 23
 gl.getShaderPrecisionFormat(gl.FRAGMENT_SHADER, gl.LOW_INT).precision; // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLShaderPrecisionFormat")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
-</ul>
+- {{domxref("WebGLShaderPrecisionFormat")}}
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}

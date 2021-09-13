@@ -13,31 +13,31 @@ tags:
   - Video
 browser-compat: api.MediaKeys
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>MediaKeys</code></strong> interface of <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">EncryptedMediaExtensions API</a> represents a set of keys that an associated {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.</p>
+The **`MediaKeys`** interface of [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a set of keys that an associated {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaKeys.createSession()")}}</dt>
- <dd>Returns a new {{domxref("MediaKeySession")}} object, which represents a context for message exchange with a content decryption module (CDM).</dd>
- <dt>{{domxref("MediaKeys.setServerCertificate()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} to a server certificate to be used to encrypt messages to the license server.</dd>
-</dl>
+- {{domxref("MediaKeys.createSession()")}}
+  - : Returns a new {{domxref("MediaKeySession")}} object, which represents a context for message exchange with a content decryption module (CDM).
+- {{domxref("MediaKeys.setServerCertificate()")}}
+  - : Returns a {{jsxref("Promise")}} to a server certificate to be used to encrypt messages to the license server.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">//TBD</pre>
+```js
+//TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

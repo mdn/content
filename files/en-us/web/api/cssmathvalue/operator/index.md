@@ -12,96 +12,73 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue.operator
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathValue.operator</code></strong> read-only
-  property of the {{domxref("CSSMathValue")}} interface indicates the operator that the
-  current subtype represents. For example, if the current <code>CSSMathValue</code>
-  subtype is <code>CSSMathSum</code>, this property will return the string
-  <code>"sum"</code>.</p>
+The **`CSSMathValue.operator`** read-only
+property of the {{domxref("CSSMathValue")}} interface indicates the operator that the
+current subtype represents. For example, if the current `CSSMathValue`
+subtype is `CSSMathSum`, this property will return the string
+`"sum"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>aString</em> = CSSMathValue.operator;</pre>
+```js
+var aString = CSSMathValue.operator;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('String')}}.</p>
+A {{jsxref('String')}}.
 
-<table>
-  <thead>
-    <tr>
-      <th>Interface</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>{{domxref('CSSMathSum')}}</code></td>
-      <td><code>"sum"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathProduct')}}</code></td>
-      <td><code>"product"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathMin')}}</code></td>
-      <td><code>"min"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathMax')}}</code></td>
-      <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathClamp')}}</code></td>
-      <td><code>"clamp"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathNegate')}}</code></td>
-      <td><code>"negate"</code></td>
-    </tr>
-    <tr>
-      <td><code>{{domxref('CSSMathInvert')}}</code></td>
-      <td><code>"invert"</code></td>
-    </tr>
-  </tbody>
-</table>
+| Interface                                  | Value       |
+| ------------------------------------------ | ----------- |
+| `{{domxref('CSSMathSum')}}`         | `"sum"`     |
+| `{{domxref('CSSMathProduct')}}` | `"product"` |
+| `{{domxref('CSSMathMin')}}`         | `"min"`     |
+| `{{domxref('CSSMathMax')}}`         | `"max"`     |
+| `{{domxref('CSSMathClamp')}}`     | `"clamp"`   |
+| `{{domxref('CSSMathNegate')}}`     | `"negate"`  |
+| `{{domxref('CSSMathInvert')}}`     | `"invert"`  |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We create an element with a <code><a href="/en-US/docs/Web/CSS/width">width</a></code>
-  determined using a <code><a href="/en-US/docs/Web/CSS/calc()">calc()</a></code> function,
-  then {{DOMxRef("console.log()")}} the
-  <code>operator</code>.</p>
+We create an element with a [`width`](/en-US/docs/Web/CSS/width)
+determined using a [`calc()`](</en-US/docs/Web/CSS/calc()>) function,
+then {{DOMxRef("console.log()")}} the
+`operator`.
 
-<pre class="brush: html">&lt;div&gt;My width has a &lt;code&gt;calc()&lt;/code&gt; function&lt;/div&gt;
-</pre>
+```html
+<div>My width has a <code>calc()</code> function</div>
+```
 
-<p>We assign a <code>width</code> with a calculation</p>
+We assign a `width` with a calculation
 
-<pre class="brush: css">div {
+```css
+div {
   width: calc(50% - 0.5vw);
-}</pre>
+}
+```
 
-<p>We add the JavaScript</p>
+We add the JavaScript
 
-<pre class="brush: js">const styleMap = document.querySelector('div').computedStyleMap();
+```js
+const styleMap = document.querySelector('div').computedStyleMap();
 
 console.log( styleMap.get('width') );                   // CSSMathSum {values: CSSNumericArray, operator: "sum"}
 console.log( styleMap.get('width').values );            // CSSNumericArray {0: CSSUnitValue, 1: CSSMathNegate, length: 2}
 console.log( styleMap.get('width').operator );          // 'sum'
 console.log( styleMap.get('width').values[1].operator ) // 'negate'
-</pre>
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 300)}}</p>
+{{EmbedLiveSample("Examples", 120, 300)}}
 
-<p>The <code>CSSMathValue.operator</code> returns <code>sum</code> for the equation and
-  <code>negate</code> for the operator on the second value.</p>
+The `CSSMathValue.operator` returns `sum` for the equation and
+`negate` for the operator on the second value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

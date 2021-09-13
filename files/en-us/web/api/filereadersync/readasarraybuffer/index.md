@@ -3,63 +3,54 @@ title: FileReaderSync.readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
 browser-compat: api.FileReaderSync.readAsArrayBuffer
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}The `readAsArrayBuffer()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
-<div>The <code>readAsArrayBuffer()</code> method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{jsxref("ArrayBuffer")}}. This interface is <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">only available</a> in <a href="/en-US/docs/Web/API/Worker">workers</a> as it enables synchronous I/O that could potentially block.</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+    ArrayBuffer readAsArrayBuffer(
+      in Blob blob
+    );
 
-<pre class="eval">ArrayBuffer readAsArrayBuffer(
-  in Blob blob
-);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `blob`
+  - : The DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} to read into the {{DOMxRef("File")}} or {{jsxref("ArrayBuffer")}}.
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>The DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} to read into the {{DOMxRef("File")}} or {{jsxref("ArrayBuffer")}}.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+An {{jsxref("ArrayBuffer")}} representing the file's data.
 
-<p>An {{jsxref("ArrayBuffer")}} representing the file's data.</p>
+## Exceptions
 
-<h2 id="Exceptions">Exceptions</h2>
+The following exceptions can be raised by this method:
 
-<p>The following exceptions can be raised by this method:</p>
+- `NotFoundError`
+  - : is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.
+- `SecurityError`
 
-<dl>
- <dt><code>NotFoundError</code></dt>
- <dd>is raised when the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.</dd>
- <dt><code>SecurityError</code></dt>
- <dd>is raised when one of the following problematic situation is detected:
- <ul>
-  <li>the resource has been modified by a third party;</li>
-  <li>too many read are performed simultaneously;</li>
-  <li>the file pointed by the resource is unsafe for a use from the Web (like it is a system file).</li>
- </ul>
- </dd>
- <dt><code>NotReadableError</code></dt>
- <dd>is raised when the resource cannot be read due to a permission problem, like a concurrent lock.</dd>
- <dt><code>EncodingError</code></dt>
- <dd>is raised when the resource is a data URL and exceed the limit length defined by each browser.</dd>
-</dl>
+  - : is raised when one of the following problematic situation is detected:
 
-<h2 id="Specifications">Specifications</h2>
+    - the resource has been modified by a third party;
+    - too many read are performed simultaneously;
+    - the file pointed by the resource is unsafe for a use from the Web (like it is a system file).
+
+- `NotReadableError`
+  - : is raised when the resource cannot be read due to a permission problem, like a concurrent lock.
+- `EncodingError`
+  - : is raised when the resource is a data URL and exceed the limit length defined by each browser.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/API/File_API">File API</a></li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("FileReaderSync")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}</li>
-</ul>
+- [File API](/en-US/docs/API/File_API)
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileReaderSync")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}

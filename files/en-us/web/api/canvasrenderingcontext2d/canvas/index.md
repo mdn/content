@@ -2,51 +2,52 @@
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>CanvasRenderingContext2D.canvas</strong></code> property, part of the
-  <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, is a read-only reference to the
-  {{domxref("HTMLCanvasElement")}} object that is associated with a given context. It
-  might be {{jsxref("null")}} if there is no associated {{HTMLElement("canvas")}} element.
-</p>
+The **`CanvasRenderingContext2D.canvas`** property, part of the
+[Canvas API](/en-US/docs/Web/API/Canvas_API), is a read-only reference to the
+{{domxref("HTMLCanvasElement")}} object that is associated with a given context. It
+might be {{jsxref("null")}} if there is no associated {{HTMLElement("canvas")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>ctx</em></var>.canvas;</pre>
+```js
+ctx.canvas;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>... you can get a reference to the canvas element within the
-  <code>CanvasRenderingContext2D</code> by using the <code>canvas</code> property:</p>
+... you can get a reference to the canvas element within the
+`CanvasRenderingContext2D` by using the `canvas` property:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.canvas // HTMLCanvasElement
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CanvasRenderingContext2D")}} interface</li>
-  <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}} interface
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)

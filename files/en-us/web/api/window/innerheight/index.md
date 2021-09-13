@@ -15,44 +15,46 @@ tags:
   - innerHeight
 browser-compat: api.Window.innerHeight
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The read-only <strong><code>innerHeight</code></strong> property of the
-  {{domxref("Window")}} interface returns the interior height of the window in pixels,
-  including the height of the horizontal scroll bar, if present.</p>
+The read-only **`innerHeight`** property of the
+{{domxref("Window")}} interface returns the interior height of the window in pixels,
+including the height of the horizontal scroll bar, if present.
 
-<p>The value of <code>innerHeight</code> is taken from the height of the window's
-  {{Glossary("layout viewport")}}. The width can be obtained using the
-  {{domxref("Window.innerWidth", "innerWidth")}} property.</p>
+The value of `innerHeight` is taken from the height of the window's
+{{Glossary("layout viewport")}}. The width can be obtained using the
+{{domxref("Window.innerWidth", "innerWidth")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>intViewportHeight</var> = window.innerHeight;</pre>
+```js
+let intViewportHeight = window.innerHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the window's layout viewport height in pixels. The property
-  is read only and has no default value.</p>
+An integer value indicating the window's layout viewport height in pixels. The property
+is read only and has no default value.
 
-<p>To change the width of the window, call one of its resize methods, such as
-  {{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy",
-  "resizeBy()")}}.</p>
+To change the width of the window, call one of its resize methods, such as
+{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy",
+  "resizeBy()")}}.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>To obtain the height of the window minus its horizontal scroll bar and any borders, use
-  the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
-  "clientHeight")}} property instead.</p>
+To obtain the height of the window minus its horizontal scroll bar and any borders, use
+the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
+  "clientHeight")}} property instead.
 
-<p>Both <code>innerHeight</code> and <code>innerWidth</code> are available on any window
-  or any object that behaves like a window, such as a tab or frame.</p>
+Both `innerHeight` and `innerWidth` are available on any window
+or any object that behaves like a window, such as a tab or frame.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Assuming_a_frameset">Assuming a frameset</h3>
+### Assuming a frameset
 
-<pre class="brush:js">var intFrameHeight = window.innerHeight; // or
+```js
+var intFrameHeight = window.innerHeight; // or
 
 var intFrameHeight = self.innerHeight;
 // will return the height of the frame viewport within the frameset
@@ -62,36 +64,33 @@ var intFramesetHeight = parent.innerHeight;
 
 var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
-</pre>
+```
 
-<p>{{todo("link to an interactive demo here")}}</p>
+{{todo("link to an interactive demo here")}}
 
-<p>To change the size of a window, see {{domxref("window.resizeBy()")}} and
-  {{domxref("window.resizeTo()")}}.</p>
+To change the size of a window, see {{domxref("window.resizeBy()")}} and
+{{domxref("window.resizeTo()")}}.
 
-<p>To get the outer height of a window, i.e. the height of the whole browser window, see
-  {{domxref("window.outerHeight")}}.</p>
+To get the outer height of a window, i.e. the height of the whole browser window, see
+{{domxref("window.outerHeight")}}.
 
-<h3 id="Graphical_example">Graphical example</h3>
+### Graphical example
 
-<p>The following figure shows the difference between <code>outerHeight</code> and
-  <code>innerHeight</code>.</p>
+The following figure shows the difference between `outerHeight` and
+`innerHeight`.
 
-<p><img alt="innerHeight vs outerHeight illustration"
-    src="firefoxinnervsouterheight2.png"></p>
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.innerWidth")}}</li>
-  <li>{{domxref("window.outerHeight")}}</li>
-  <li>{{domxref("window.outerWidth")}}</li>
-</ul>
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerHeight")}}
+- {{domxref("window.outerWidth")}}

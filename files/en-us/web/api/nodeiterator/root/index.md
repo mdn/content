@@ -2,44 +2,44 @@
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
 tags:
-- API
-- DOM
-- NodeIterator
-- Property
+  - API
+  - DOM
+  - NodeIterator
+  - Property
 browser-compat: api.NodeIterator.root
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NodeIterator.root</strong></code> read-only property represents the
-	{{DOMxref("Node")}} that is the root of what the {{DOMxref("NodeIterator")}}
-	traverses.</p>
+The **`NodeIterator.root`** read-only property represents the
+{{DOMxref("Node")}} that is the root of what the {{DOMxref("NodeIterator")}}
+traverses.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>root</em> = <em>nodeIterator</em>.root;
-</pre>
+```js
+root = nodeIterator.root;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = nodeIterator.root; // document.body in this case
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface it belongs to: {{domxref("NodeIterator")}}.</li>
-</ul>
+- The interface it belongs to: {{domxref("NodeIterator")}}.

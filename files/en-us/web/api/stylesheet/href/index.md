@@ -2,60 +2,58 @@
 title: Stylesheet.href
 slug: Web/API/StyleSheet/href
 tags:
-- API
-- CSSOM
-- Property
-- Reference
+  - API
+  - CSSOM
+  - Property
+  - Reference
 browser-compat: api.StyleSheet.href
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>href</strong></code> property of the {{domxref("StyleSheet")}}
-  interface returns the location of the style sheet.</p>
+The **`href`** property of the {{domxref("StyleSheet")}}
+interface returns the location of the style sheet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>uri</em> = stylesheet.href
-</pre>
+```js
+uri = stylesheet.href
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>uri</code> is a string containing the stylesheet's URI.</li>
-</ul>
+- `uri` is a string containing the stylesheet's URI.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre> // on a local machine:
- &lt;html&gt;
-  &lt;head&gt;
-   &lt;link rel="StyleSheet" href="example.css" type="text/css" /&gt;
-   &lt;script&gt;
-    function sref() {
-     alert(document.styleSheets[0].href);
-    }
-   &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-   &lt;div class="thunder"&gt;Thunder&lt;/div&gt;
-   &lt;button onclick="sref()"&gt;ss&lt;/button&gt;
-  &lt;/body&gt;
- &lt;/html&gt;
-// returns "file:////C:/Windows/Desktop/example.css
-</pre>
+     // on a local machine:
+     <html>
+      <head>
+       <link rel="StyleSheet" href="example.css" type="text/css" />
+       <script>
+        function sref() {
+         alert(document.styleSheets[0].href);
+        }
+       </script>
+      </head>
+      <body>
+       <div class="thunder">Thunder</div>
+       <button onclick="sref()">ss</button>
+      </body>
+     </html>
+    // returns "file:////C:/Windows/Desktop/example.css
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>If the style sheet is a linked style sheet, the value of its attribute is its location.
-  For inline style sheets, the value of this attribute is <code>NULL</code>.</p>
+If the style sheet is a linked style sheet, the value of its attribute is its location.
+For inline style sheets, the value of this attribute is `NULL`.
 
-<p>This property is read-only in Firefox, Opera, Google Chrome, and Safari, and it is
-  read/write in Internet Explorer.</p>
+This property is read-only in Firefox, Opera, Google Chrome, and Safari, and it is
+read/write in Internet Explorer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

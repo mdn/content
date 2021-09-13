@@ -2,39 +2,40 @@
 title: CSSMathMin.values
 slug: Web/API/CSSMathMin/values
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathMin
-- CSSNumericValue
-- Experimental
-- Houdini
-- Property
-- Read-only
+  - API
+  - CSS Typed Object Model API
+  - CSSMathMin
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Property
+  - Read-only
 browser-compat: api.CSSMathMin.values
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The CSSMathMin.values read-only property of the
-  {{domxref("CSSMathMin")}} interface returns a {{domxref('CSSNumericArray')}} object
-  which contains one or more {{domxref('CSSNumericValue')}} objects.</p>
+The CSSMathMin.values read-only property of the
+{{domxref("CSSMathMin")}} interface returns a {{domxref('CSSNumericArray')}} object
+which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>cssNumericArray</var> = CSSMathMin.values;</pre>
+```js
+var cssNumericArray = CSSMathMin.values;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSNumericArray')}}.</p>
+A {{domxref('CSSNumericArray')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

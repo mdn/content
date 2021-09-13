@@ -10,55 +10,48 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>seek()</code></strong> method of the
-  {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
-  offset to the position (in bytes) specified when calling the method.</p>
+The **`seek()`** method of the
+{{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
+offset to the position (in bytes) specified when calling the method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">FileSystemWritableStream.seek(position).then(...);</pre>
+```js
+FileSystemWritableStream.seek(position).then(...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>position</code></dt>
-  <dd>An unsigned long describing the byte position from the top (beginning) of the file.
-  </dd>
-</dl>
+- `position`
+  - : An unsigned long describing the byte position from the top (beginning) of the file.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('Promise')}} which returns undefined.</p>
+{{jsxref('Promise')}} which returns undefined.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>NotAllowedError</dt>
-  <dd>If the {{domxref('PermissionStatus.state')}} is not 'granted'.</dd>
-  <dt>TypeError</dt>
-  <dd>If <code>position</code> is not defined or of type unsigned long.</dd>
-</dl>
+- NotAllowedError
+  - : If the {{domxref('PermissionStatus.state')}} is not 'granted'.
+- TypeError
+  - : If `position` is not defined or of type unsigned long.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Todo</p>
+Todo
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

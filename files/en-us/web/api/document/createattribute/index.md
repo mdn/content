@@ -2,64 +2,58 @@
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
 tags:
-- API
-- DOM
-- Method
-- Reference
+  - API
+  - DOM
+  - Method
+  - Reference
 browser-compat: api.Document.createAttribute
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>Document.createAttribute()</strong></code> method creates a new
-  attribute node, and returns it. The object created a node implementing the
-  {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
-  added to a particular element in this manner.</p>
+The **`Document.createAttribute()`** method creates a new
+attribute node, and returns it. The object created a node implementing the
+{{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
+added to a particular element in this manner.
 
-<div class="note">
-  <p><strong>Note:</strong> The string given in parameter is converted to lowercase.</p>
-</div>
+> **Note:** The string given in parameter is converted to lowercase.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>attribute</em> = document.createAttribute(name)
-</pre>
+```js
+attribute = document.createAttribute(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>name</code> is a string containing the name of the attribute.</li>
-</ul>
+- `name` is a string containing the name of the attribute.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Attr")}} node.</p>
+A {{domxref("Attr")}} node.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li><code>INVALID_CHARACTER_ERR</code> if the parameter contains invalid characters for
-    XML attribute.</li>
-</ul>
+- `INVALID_CHARACTER_ERR` if the parameter contains invalid characters for
+  XML attribute.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var node = document.getElementById("div1");
+```js
+var node = document.getElementById("div1");
 var a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.createElement()")}}</li>
-</ul>
+- {{domxref("Document.createElement()")}}

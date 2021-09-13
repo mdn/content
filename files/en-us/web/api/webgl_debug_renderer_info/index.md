@@ -8,34 +8,31 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_debug_renderer_info
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_debug_renderer_info</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes two constants with information about the graphics driver for debugging purposes.</p>
+The **`WEBGL_debug_renderer_info`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes two constants with information about the graphics driver for debugging purposes.
 
-<p>Depending on the privacy settings of the browser, this extension might only be available to privileged contexts. Generally, the graphics driver information should only be used in edge cases to optimize your WebGL content or to debug GPU problems. The {{domxref("WebGLRenderingContext.getParameter()")}} method can help you to detect which features are supported and the <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">failIfMajorPerformanceCaveat</a></code> context attribute lets you control if a context should be returned at all, if the performance would be dramatically slow.</p>
+Depending on the privacy settings of the browser, this extension might only be available to privileged contexts. Generally, the graphics driver information should only be used in edge cases to optimize your WebGL content or to debug GPU problems. The {{domxref("WebGLRenderingContext.getParameter()")}} method can help you to detect which features are supported and the [`failIfMajorPerformanceCaveat`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) context attribute lets you control if a context should be returned at all, if the performance would be dramatically slow.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> Depending on the privacy settings of the browser, this extension might only be available to privileged contexts or not work at all. In Firefox, if <code>privacy.resistFingerprinting</code> is set to <code>true</code>, this extensions is disabled.</p>
+> **Note:** Depending on the privacy settings of the browser, this extension might only be available to privileged contexts or not work at all. In Firefox, if `privacy.resistFingerprinting` is set to `true`, this extensions is disabled.
+>
+> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<p>This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+## Constants
 
-<h2 id="Constants">Constants</h2>
+- ext.UNMASKED_VENDOR_WEBGL
+  - : Vendor string of the graphics driver.
+- ext.UNMASKED_RENDERER_WEBGL
+  - : Renderer string of the graphics driver.
 
-<dl>
- <dt>ext.UNMASKED_VENDOR_WEBGL</dt>
- <dd>Vendor string of the graphics driver.</dd>
- <dt>ext.UNMASKED_RENDERER_WEBGL</dt>
- <dd>Renderer string of the graphics driver.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+With the help of this extension, privileged contexts are able to retrieve debugging information about the user's graphic driver:
 
-<p>With the help of this extension, privileged contexts are able to retrieve debugging information about the user's graphic driver:</p>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
@@ -44,18 +41,16 @@ var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
 
 console.log(vendor);
 console.log(renderer);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}

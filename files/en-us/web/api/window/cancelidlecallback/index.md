@@ -12,46 +12,43 @@ tags:
   - polyfill
 browser-compat: api.Window.cancelIdleCallback
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <strong><code>window.cancelIdleCallback()</code></strong> method cancels a callback
-  previously scheduled with {{domxref("window.requestIdleCallback()")}}.</p>
+The **`window.cancelIdleCallback()`** method cancels a callback
+previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">window.cancelIdleCallback(<em>handle</em>);</pre>
+```js
+window.cancelIdleCallback(handle);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>handle</code></dt>
-  <dd>The ID value returned by {{domxref("window.requestIdleCallback()")}} when the
-    callback was established.</dd>
-</dl>
+- `handle`
+  - : The ID value returned by {{domxref("window.requestIdleCallback()")}} when the
+    callback was established.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a>
-  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
-    of Background Tasks API</a>.</p>
+See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
+in the article [Cooperative Scheduling
+of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
-</ul>
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

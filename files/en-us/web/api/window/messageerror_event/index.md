@@ -9,56 +9,60 @@ tags:
   - Window
 browser-compat: api.Window.messageerror_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>messageerror</code> event is fired on a {{domxref('Window')}} object when it receives a message that can't be deserialized.</p>
+The `messageerror` event is fired on a {{domxref('Window')}} object when it receives a message that can't be deserialized.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Listen for <code>messageerror</code> using {{domxref("EventTarget/addEventListener", "addEventListener()")}}:</p>
+Listen for `messageerror` using {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
 
-<pre class="brush: js">window.addEventListener('messageerror', (event) =&gt; {
+```js
+window.addEventListener('messageerror', (event) => {
     console.error(event);
-});</pre>
+});
+```
 
-<p>The same, but using the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} event handler property:</p>
+The same, but using the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} event handler property:
 
-<pre class="brush: js">window.onmessageerror = (event) =&gt; {
+```js
+window.onmessageerror = (event) => {
     console.error(event);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.postMessage()")}}</li>
- <li>Related events: {{domxref("Window/message_event", "message")}}.</li>
-</ul>
+- {{domxref("Window.postMessage()")}}
+- Related events: {{domxref("Window/message_event", "message")}}.

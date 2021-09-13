@@ -2,62 +2,63 @@
 title: VideoTrackList.length
 slug: Web/API/VideoTrackList/length
 tags:
-- API
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- VideoTrackList
-- length
-- list
-- track
+  - API
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - VideoTrackList
+  - length
+  - list
+  - track
 browser-compat: api.VideoTrackList.length
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("VideoTrackList")}}</strong>
-    property <code><strong>length</strong></code> returns the number of entries in the
-    <code>VideoTrackList</code>, each of which is a {{domxref("VideoTrack")}} representing
-    one video track in the media element.</p>
+The read-only **{{domxref("VideoTrackList")}}**
+property **`length`** returns the number of entries in the
+`VideoTrackList`, each of which is a {{domxref("VideoTrack")}} representing
+one video track in the media element.
 
-<p>A value of 0 indicates that there are no
-  video tracks in the media.</p>
+A value of 0 indicates that there are no
+video tracks in the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackCount</em> = <em>VideoTrackList</em>.length;</pre>
+```js
+var trackCount = VideoTrackList.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number indicating how many video tracks are included in the
-  <code>VideoTrackList</code>. Each track can be accessed by treating the
-  <code>VideoTrackList</code> as an array of objects of type {{domxref("VideoTrack")}}.
-</p>
+A number indicating how many video tracks are included in the
+`VideoTrackList`. Each track can be accessed by treating the
+`VideoTrackList` as an array of objects of type {{domxref("VideoTrack")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet gets the number of video tracks in the first {{HTMLElement("video")}}
-  element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
-  "querySelector()")}}.</p>
+This snippet gets the number of video tracks in the first {{HTMLElement("video")}}
+element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
+  "querySelector()")}}.
 
-<pre class="brush: js">var videoElem = document.querySelector("video");
+```js
+var videoElem = document.querySelector("video");
 var numVideoTracks = 0;
 
 if (videoElem.videoTracks) {
   numVideoTracks = videoElem.videoTracks.length;
 }
-</pre>
+```
 
-<p>Note that this sample checks to be sure {{domxref("HTMLMediaElement.videoTracks")}} is
-  defined, to avoid failing on browsers without support for {{domxref("VideoTrack")}}.</p>
+Note that this sample checks to be sure {{domxref("HTMLMediaElement.videoTracks")}} is
+defined, to avoid failing on browsers without support for {{domxref("VideoTrack")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

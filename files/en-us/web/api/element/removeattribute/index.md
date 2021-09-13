@@ -2,59 +2,59 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
-- remove
-- removeAttribute
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
+  - remove
+  - removeAttribute
 browser-compat: api.Element.removeAttribute
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The {{domxref("Element")}} method
-    <strong><code>removeAttribute()</code></strong> removes the attribute with the
-    specified name from the element.</p>
+The {{domxref("Element")}} method
+**`removeAttribute()`** removes the attribute with the
+specified name from the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.removeAttribute(<em>attrName</em>);
-</pre>
+```js
+element.removeAttribute(attrName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>attrName</var></code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the name of the attribute to remove from the
-    element. If the specified attribute does not exist, <code>removeAttribute()</code>
-    returns without generating an error.</dd>
-</dl>
+- `attrName`
+  - : A {{domxref("DOMString")}} specifying the name of the attribute to remove from the
+    element. If the specified attribute does not exist, `removeAttribute()`
+    returns without generating an error.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You should use <code>removeAttribute()</code> instead of setting the attribute value to
-  <code>null</code> either directly or using {{domxref("Element.setAttribute",
+You should use `removeAttribute()` instead of setting the attribute value to
+`null` either directly or using {{domxref("Element.setAttribute",
   "setAttribute()")}}. Many attributes will not behave as expected if you set them to
-  <code>null</code>.</p>
+`null`.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Given: &lt;div id="div1" align="left" width="200px"&gt;
+```js
+// Given: <div id="div1" align="left" width="200px">
 document.getElementById("div1").removeAttribute("align");
-// Now: &lt;div id="div1" width="200px"&gt;
-</pre>
+// Now: <div id="div1" width="200px">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

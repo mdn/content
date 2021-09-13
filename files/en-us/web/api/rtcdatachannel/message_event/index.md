@@ -18,74 +18,74 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.message_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The WebRTC <code><strong>message</strong></code> event is sent to the {{domxref("RTCDataChannel.onmessage", "onmessage")}} event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.</p>
+The WebRTC **`message`** event is sent to the {{domxref("RTCDataChannel.onmessage", "onmessage")}} event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("RTCDataChannel.onmessage", "onmessage")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("RTCDataChannel.onmessage", "onmessage")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>message</code> event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.</p>
-</div>
+> **Note:** The `message` event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>For a given {{domxref("RTCDataChannel")}}, <code>dc</code>, created for a peer connection using its {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method, this code sets up a handler for incoming messages and acts on them by adding the data contained within the message to the current document as a new {{HTMLElement("p")}} (paragraph) element.</p>
+For a given {{domxref("RTCDataChannel")}}, `dc`, created for a peer connection using its {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method, this code sets up a handler for incoming messages and acts on them by adding the data contained within the message to the current document as a new {{HTMLElement("p")}} (paragraph) element.
 
-<pre class="brush: js">dc.addEventListener("message", ev =&gt; {
+```js
+dc.addEventListener("message", ev => {
   let newParagraph = document.createElement("p");
   let textNode = document.createTextNode(event.data);
   newParagraph.appendChild(textNode);
 
   document.body.appendChild(newParagraph);
 }, false);
-</pre>
+```
 
-<p>Lines 2-4 create the new paragraph element and add the message data to it as a new text node. Line 6 appends the new paragraph to the end of the document's body.</p>
+Lines 2-4 create the new paragraph element and add the message data to it as a new text node. Line 6 appends the new paragraph to the end of the document's body.
 
-<p>You can also use an <code>RTCDataChannel</code> object's {{domxref("RTCDataChannel.onmessage", "onmessage")}} event handler property to set the event handler:</p>
+You can also use an `RTCDataChannel` object's {{domxref("RTCDataChannel.onmessage", "onmessage")}} event handler property to set the event handler:
 
-<pre class="brush: js">dc.onmessage = ev =&gt; {
+```js
+dc.onmessage = ev => {
   let newParagraph = document.createElement("p");
   let textNode = document.createTextNode(event.data);
   newParagraph.appendChild(textNode);
 
   document.body.appendChild(newParagraph);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel example</a></li>
- <li>Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.close_event", "close")}}, and {{domxref("RTCDataChannel.error_event", "error")}}</li>
- <li>{{domxref("RTCDataChannel.send()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [A simple RTCDataChannel example](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- Related events: {{domxref("RTCDataChannel.open_event", "open")}}, {{domxref("RTCDataChannel.close_event", "close")}}, and {{domxref("RTCDataChannel.error_event", "error")}}
+- {{domxref("RTCDataChannel.send()")}}

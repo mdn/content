@@ -10,37 +10,36 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>CountQueuingStrategy()</code></strong> constructor
-  creates and returns a <code>CountQueuingStrategy</code> object instance.</p>
+The **`CountQueuingStrategy()`** constructor
+creates and returns a `CountQueuingStrategy` object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>countQueuingStrategy</em> = new CountQueuingStrategy({<em>highWaterMark</em>});</pre>
+```js
+var countQueuingStrategy = new CountQueuingStrategy({highWaterMark});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{highWaterMark}</dt>
-  <dd>An object containing a <code>highWaterMark</code> property. This is a non-negative
+- {highWaterMark}
+  - : An object containing a `highWaterMark` property. This is a non-negative
     integer defining the total number of chunks that can be contained in the internal
-    queue before backpressure is applied.</dd>
-</dl>
+    queue before backpressure is applied.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An instance of the {{domxref("CountQueuingStrategy")}} object.</p>
+An instance of the {{domxref("CountQueuingStrategy")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush: js ">const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+```js
+const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
 const writableStream = new WritableStream({
   // Implement the sink
@@ -51,16 +50,17 @@ const writableStream = new WritableStream({
     ...
   },
   abort(err) {
-    console.log(&quot;Sink error:&quot;, err);
+    console.log("Sink error:", err);
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size();</pre>
+var size = queuingStrategy.size();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

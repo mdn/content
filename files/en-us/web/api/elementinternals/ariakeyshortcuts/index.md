@@ -11,32 +11,35 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaKeyShortcuts
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaKeyShortcuts</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-keyshortcuts</code> attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.</p>
+The **`ariaKeyShortcuts`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-keyshortcuts` attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaKeyShortcuts = ElementInternals.ariaKeyShortcuts;
-ElementInternals.ariaKeyShortcuts = ariaKeyShortcuts;</pre>
+```js
+let ariaKeyShortcuts = ElementInternals.ariaKeyShortcuts;
+ElementInternals.ariaKeyShortcuts = ariaKeyShortcuts;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the value of <code>ariaKeyShortcuts</code> is set to "Alt+Shift+A".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaKeyShortcuts = "Alt+Shift+A";</pre>
+In this example the value of `ariaKeyShortcuts` is set to "Alt+Shift+A".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaKeyShortcuts = "Alt+Shift+A";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

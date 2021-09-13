@@ -11,40 +11,43 @@ tags:
   - platform
 browser-compat: api.WorkerNavigator.platform
 ---
-<p>{{ APIRef("HTML DOM") }} {{Deprecated_Header}}</p>
+{{ APIRef("HTML DOM") }} {{Deprecated_Header}}
 
-<p>Returns a string representing the platform of the browser. The specification allows
-  browsers to always return the empty string, so don't rely on this property to get a
-  reliable answer.</p>
+Returns a string representing the platform of the browser. The specification allows
+browsers to always return the empty string, so don't rely on this property to get a
+reliable answer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>platform</em> = navigator.platform
-</pre>
+```js
+platform = navigator.platform
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} identifying the platform on which the browser is running, or
-  an empty string if the browser declines to (or is unable to) identify the platform.
-  <code>platform</code> is a string that must be an empty string or a string representing
-  the platform on which the browser is executing.</p>
+A {{domxref("DOMString")}} identifying the platform on which the browser is running, or
+an empty string if the browser declines to (or is unable to) identify the platform.
+`platform` is a string that must be an empty string or a string representing
+the platform on which the browser is executing.
 
-<p>For example: "<code>MacIntel</code>", "<code>Win32</code>", "<code>FreeBSD i386</code>", "<code>WebTV OS</code>"</p>
+For example: "`MacIntel`", "`Win32`", "`FreeBSD i386`", "`WebTV OS`"
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">console.log(navigator.platform);</pre>
+```js
+console.log(navigator.platform);
+```
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Most browsers, including Chrome, Edge, and Firefox 63 and later, return
-  <code>"Win32"</code> even if running on a 64-bit version of Windows. Internet Explorer
-  and versions of Firefox prior to version 63 still report <code>"Win64"</code>.</p>
+Most browsers, including Chrome, Edge, and Firefox 63 and later, return
+`"Win32"` even if running on a 64-bit version of Windows. Internet Explorer
+and versions of Firefox prior to version 63 still report `"Win64"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

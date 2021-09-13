@@ -2,44 +2,44 @@
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Read-only
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Read-only
 browser-compat: api.HTMLMediaElement.paused
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong><code>HTMLMediaElement.paused</code></strong> property
-  tells whether the media element is paused.</p>
+The read-only **`HTMLMediaElement.paused`** property
+tells whether the media element is paused.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>isPaused</em> = <em>audioOrVideo</em>.paused</pre>
+```js
+var isPaused = audioOrVideo.paused
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. <code>true</code> is paused and <code>false</code> is not
-  paused.</p>
+A boolean value. `true` is paused and `false` is not
+paused.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.paused); // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

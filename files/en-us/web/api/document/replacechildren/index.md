@@ -11,57 +11,50 @@ tags:
   - replaceChildren
 browser-compat: api.Document.replaceChildren
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.replaceChildren()</code></strong> method replaces the
-  existing children of a <code>Document</code> with a specified new set of children.</p>
+The **`Document.replaceChildren()`** method replaces the
+existing children of a `Document` with a specified new set of children.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 replaceChildren(...nodesOrDOMStrings)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>nodesOrDOMStrings</var></code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
-    <code>Document</code>'s existing children with. If no replacement objects are
-    specified, then the <code>Document</code> is emptied of all child nodes.</dd>
-</dl>
+- `nodesOrDOMStrings`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
+    `Document`'s existing children with. If no replacement objects are
+    specified, then the `Document` is emptied of all child nodes.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: The <a
-      href="https://dom.spec.whatwg.org/#concept-node-tree">constraints of the node
-      tree</a> are violated.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: The [constraints of the node
+  tree](https://dom.spec.whatwg.org/#concept-node-tree) are violated.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Emptying_a_document">Emptying a document</h3>
+### Emptying a document
 
-<p><code>replaceChildren()</code> provides a very convenient mechanism for emptying a document
-  of all its children. You call it on the document without any argument specified:</p>
+`replaceChildren()` provides a very convenient mechanism for emptying a document
+of all its children. You call it on the document without any argument specified:
 
-<pre class="brush: js">
+```js
 document.replaceChildren();
 document.children; // HTMLCollection []
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.prepend()")}}</li>
-  <li>{{domxref("Document.append()")}}</li>
-</ul>
+- {{domxref("Document.prepend()")}}
+- {{domxref("Document.append()")}}

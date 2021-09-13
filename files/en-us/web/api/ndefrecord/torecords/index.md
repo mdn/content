@@ -2,59 +2,61 @@
 title: NDEFRecord.toRecords()
 slug: Web/API/NDEFRecord/toRecords
 tags:
-- NDEF
-- Reference
-- Web NFC
+  - NDEF
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.toRecords
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>toRecords()</code></strong>
-    method of the {{DOMxRef("NDEFRecord")}} interface converts
-    {{DOMxRef("NDEFRecord.data")}} to a sequence of records based on
-    {{DOMxRef("NDEFRecord.recordType")}}, and returns the result. This allows
-    parsing the payloads of record types which may contain nested records, such
-    as smart poster and external type records.</p>
+The **`toRecords()`**
+method of the {{DOMxRef("NDEFRecord")}} interface converts
+{{DOMxRef("NDEFRecord.data")}} to a sequence of records based on
+{{DOMxRef("NDEFRecord.recordType")}}, and returns the result. This allows
+parsing the payloads of record types which may contain nested records, such
+as smart poster and external type records.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.toRecords()
-</pre>
+```js
+NDEFRecord.toRecords()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A list of {{DOMxRef("NDEFRecord")}}s.</p>
+A list of {{DOMxRef("NDEFRecord")}}s.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>"NotSupported"</code></dt>
-  <dd>Indicates that the {{Glossary("User Agent")}} does not know how to parse this combination of
-    {{DOMxRef("NDEFRecord.data")}} and {{DOMxRef("NDEFRecord.recordType")}}.</dd>
-</dl>
+- {{domxref("DOMException")}} `"NotSupported"`
+  - : Indicates that the {{Glossary("User Agent")}} does not know how to parse this combination of
+    {{DOMxRef("NDEFRecord.data")}} and {{DOMxRef("NDEFRecord.recordType")}}.
 
-<h2 id="Examples">Examples</h2>Read an external record with an NDEF message as payload</h2>
+## Examples
 
-<p>The example uses external type records to create application-defined records.
+Read an external record with an NDEF message as payload
+
+The example uses external type records to create application-defined records.
 These records may contain an {{domxref("NDEFMessage")}} as payload, with its own
 {{domxref("NDEFRecord")}} objects, including local types that are used in the
 context of the application. Notice that the smart poster record type also
-contains an NDEF message as payload.</p>
+contains an NDEF message as payload.
 
-<p>Because NDEF gives no guarantee on the ordering of records, using an external
+Because NDEF gives no guarantee on the ordering of records, using an external
 type record with an NDEF message as payload can be useful for encapsulating
-related data.</p>
+related data.
 
-<p>This example shows how to read an external record for social posts, which
+This example shows how to read an external record for social posts, which
 contains an an {{domxref("NDEFMessage")}}, containing a text record and a record
 with the local type "act" (action), with a definition borrowed from smart
-poster, but used in local application context.</p>
+poster, but used in local application context.
 
-<pre class="brush: js">const ndefReader = new NDEFReader();
+```js
+const ndefReader = new NDEFReader();
 await ndefReader.scan();
 ndefReader.onreading = (event) => {
   const externalRecord = event.message.records.find(
@@ -83,12 +85,13 @@ ndefReader.onreading = (event) => {
       console.log(`Show editable post with "${text}"`);
       break;
   }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

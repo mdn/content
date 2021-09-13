@@ -18,31 +18,31 @@ tags:
   - component
 browser-compat: api.RTCIceTransport.component
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong>{{domxref("RTCIceTransport")}}</strong>
-    property <code><strong>component</strong></code> specifies whether the object is
-    serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.</p>
+The read-only **{{domxref("RTCIceTransport")}}**
+property **`component`** specifies whether the object is
+serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>iceComponent</em> = <em>RTCIceTransport</em>.component;
-</pre>
+```js
+iceComponent = RTCIceTransport.component;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string which is one of the following:</p>
+A string which is one of the following:
 
-<dl>
- <dt><code>rtp</code></dt>
- <dd>Identifies an ICE transport which is being used for the <a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Real-time Transport Protocol</a> (RTP), or for RTP multiplexed with the RTP Control Protocol (RTCP). RTP is defined in {{RFC(3550)}}. This value corresponds to the component ID field in the <code>candidate</code> a-line with the value 1.</dd>
- <dt><code>rtcp</code></dt>
- <dd>Identifies an ICE transport being used for RTCP, which is defined in {{RFC(3550, "", 6)}}. This value corresponds to the component ID 2.</dd>
-</dl>
-<h2 id="Specifications">Specifications</h2>
+- `rtp`
+  - : Identifies an ICE transport which is being used for the [Real-time Transport Protocol](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP) (RTP), or for RTP multiplexed with the RTP Control Protocol (RTCP). RTP is defined in {{RFC(3550)}}. This value corresponds to the component ID field in the `candidate` a-line with the value 1.
+- `rtcp`
+  - : Identifies an ICE transport being used for RTCP, which is defined in {{RFC(3550, "", 6)}}. This value corresponds to the component ID 2.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

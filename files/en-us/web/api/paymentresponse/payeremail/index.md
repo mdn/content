@@ -13,19 +13,20 @@ tags:
   - payerEmail
 browser-compat: api.PaymentResponse.payerEmail
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <code>payerEmail</code> read-only property of the {{domxref("PaymentResponse")}}
-  interface returns the email address supplied by the user. This option is only present
-  when the <code>requestPayerEmail</code> option is set to <code>true</code> in the
-  {{domxref('PaymentOptions')}} object passed to the
-  {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.</p>
+The `payerEmail` read-only property of the {{domxref("PaymentResponse")}}
+interface returns the email address supplied by the user. This option is only present
+when the `requestPayerEmail` option is set to `true` in the
+{{domxref('PaymentOptions')}} object passed to the
+{{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var payerEmail = PaymentResponse.payerEmail;</pre>
+```js
+var payerEmail = PaymentResponse.payerEmail;
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

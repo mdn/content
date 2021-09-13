@@ -14,96 +14,83 @@ tags:
   - View
   - pip
 ---
-<div>{{DefaultAPISidebar("Picture-in-Picture API")}}</div>
+{{DefaultAPISidebar("Picture-in-Picture API")}}
 
-<p>The <strong>Picture-in-Picture API</strong> allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device.</p>
+The **Picture-in-Picture API** allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{DOMxRef("PictureInPictureWindow")}}</dt>
- <dd>Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.</dd>
-</dl>
+- {{DOMxRef("PictureInPictureWindow")}}
+  - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} and {{DOMxRef("Document")}} interfaces to allow toggling of the floating video window.</p>
+The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} and {{DOMxRef("Document")}} interfaces to allow toggling of the floating video window.
 
-<h3 id="Methods_on_the_HTMLVideoElement_interface">Methods on the HTMLVideoElement interface</h3>
+### Methods on the HTMLVideoElement interface
 
-<dl>
- <dt>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</dt>
- <dd>Requests that the user agent enters the video into picture-in-picture mode</dd>
-</dl>
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+  - : Requests that the user agent enters the video into picture-in-picture mode
 
-<h3 id="Methods_on_the_Document_interface">Methods on the Document interface</h3>
+### Methods on the Document interface
 
-<dl>
- <dt>{{DOMxRef("Document.exitPictureInPicture()")}}</dt>
- <dd>Requests that the user agent returns the element in picture-in-picture mode back into its original box.</dd>
-</dl>
+- {{DOMxRef("Document.exitPictureInPicture()")}}
+  - : Requests that the user agent returns the element in picture-in-picture mode back into its original box.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The Picture-in-Picture API augments the </em>{{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} <em>interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating.</em></p>
+*The Picture-in-Picture API augments the* {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} _interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating._
 
-<h3 id="Properties_on_the_HTMLVideoElement_interface">Properties on the HTMLVideoElement interface</h3>
+### Properties on the HTMLVideoElement interface
 
-<dl>
- <dt>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</dt>
- <dd>The <code>autoPictureInPicture</code> property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.</dd>
- <dt>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</dt>
- <dd>The <code>disablePictureInPicture</code> property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.</dd>
-</dl>
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+  - : The `autoPictureInPicture` property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : The `disablePictureInPicture` property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.
 
-<h3 id="Properties_on_the_Document_interface">Properties on the Document interface</h3>
+### Properties on the Document interface
 
-<dl>
- <dt>{{DOMxRef("Document.pictureInPictureEnabled")}}</dt>
- <dd>The <code>pictureInPictureEnabled</code> property tells you whether or not it is possible to engage picture-in-picture mode. This is <code>false</code> if picture-in-picture mode is not available for any reason (e.g. the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture"><code>"picture-in-picture"</code> feature</a> has been disallowed, or picture-in-picture mode is not supported).</dd>
-</dl>
+- {{DOMxRef("Document.pictureInPictureEnabled")}}
+  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
 
-<h3 id="Properties_on_the_Document_or_ShadowRoot_interfaces">Properties on the Document or ShadowRoot interfaces</h3>
+### Properties on the Document or ShadowRoot interfaces
 
-<dl>
- <dt>{{DOMxRef("Document.pictureInPictureElement")}} / {{DOMxRef("ShadowRoot.pictureInPictureElement")}}</dt>
- <dd>The <code>pictureInPictureElement</code> property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window (or in the shadow DOM). If this is <code>null</code>, the document (or shadow DOM) has no node currently in picture-in-picture mode.</dd>
-</dl>
+- {{DOMxRef("Document.pictureInPictureElement")}} / {{DOMxRef("ShadowRoot.pictureInPictureElement")}}
+  - : The `pictureInPictureElement` property tells you which {{DOMxRef("Element")}} is currently being displayed in the floating window (or in the shadow DOM). If this is `null`, the document (or shadow DOM) has no node currently in picture-in-picture mode.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>The Picture-in-Picture API defines three events, which can be used to detect when picture-in-picture mode is toggled and when the floating video window is resized.</em></p>
+_The Picture-in-Picture API defines three events, which can be used to detect when picture-in-picture mode is toggled and when the floating video window is resized._
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}</dt>
- <dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}</dd>
- <dt>{{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}</dt>
- <dd>Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}</dd>
- <dt>{{domxref("PictureInPictureWindow.resize_event", "resize")}}</dt>
- <dd>Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}</dd>
-</dl>
+- {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onenterpictureinpicture")}}
+- {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
+  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves picture-in-picture mode. The associated event handler is {{DOMxRef("HTMLVideoElement.onleavepictureinpicture")}}
+- {{domxref("PictureInPictureWindow.resize_event", "resize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size. The associated event handler is {{DOMxRef("PictureInPictureWindow.onresize")}}
 
-<h2 id="Controlling_styling">Controlling styling</h2>
+## Controlling styling
 
-<p>The <code><a href="/en-US/docs/Web/CSS/:picture-in-picture">:picture-in-picture</a></code> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.</p>
+The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
 
-<h2 id="Controlling_access">Controlling access</h2>
+## Controlling access
 
-<p>The availability of picture-in-picture mode can be controlled using <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>. The full-screen mode feature is identified by the string <code>"picture-in-picture"</code>, with a default allow-list value of <code>"self"</code>, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.</p>
+The availability of picture-in-picture mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The full-screen mode feature is identified by the string `"picture-in-picture"`, with a default allow-list value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
-<p>See <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> to learn more about using Feature Policy to control access to an API.</p>
+See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a video is presented in a web page. Clicking the button below lets the user toggle the floating video window.</p>
+In this example, a video is presented in a web page. Clicking the button below lets the user toggle the floating video window.
 
-<p>{{EmbedGHLiveSample("dom-examples/picture-in-picture/index.html", '100%', 350)}}</p>
+{{EmbedGHLiveSample("dom-examples/picture-in-picture/index.html", '100%', 350)}}
 
-<h3 id="Toggling_picture-in-picture_mode">Toggling picture-in-picture mode</h3>
+### Toggling picture-in-picture mode
 
-<p>This code is called by a click handler when the user clicks the "<span class="pl-s">Toggle Picture-in-Picture</span>" button:</p>
+This code is called by a click handler when the user clicks the "Toggle Picture-in-Picture" button:
 
-<pre class="brush: js">function togglePictureInPicture() {
+```js
+function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
       document.exitPictureInPicture();
   } else {
@@ -111,61 +98,55 @@ tags:
       video.requestPictureInPicture();
     }
   }
-}</pre>
+}
+```
 
-<p>This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s <code>pictureInPictureElement</code> attribute. If the value is <code>null</code>, no video is in the floating window. so we can request a video to enter the picture-in-picture mode; otherwise, it's the element that's currently in picture-in-picture mode. Switching to picture-in-picture mode is done by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.</p>
+This block starts by looking at the value of the {{DOMxRef("Document", "document")}}'s `pictureInPictureElement` attribute. If the value is `null`, no video is in the floating window. so we can request a video to enter the picture-in-picture mode; otherwise, it's the element that's currently in picture-in-picture mode. Switching to picture-in-picture mode is done by calling {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} on the {{HTMLElement("video")}} element.
 
-<p>If a video is in the floating window (<code>pictureInPictureElement</code> is not <code>null</code>), we call {{DOMxRef("Document.exitPictureInPicture", "exitPictureInPicture()")}} on the <code>document</code> to bring the video back into its initial box.</p>
+If a video is in the floating window (`pictureInPictureElement` is not `null`), we call {{DOMxRef("Document.exitPictureInPicture", "exitPictureInPicture()")}} on the `document` to bring the video back into its initial box.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/picture-in-picture/">Picture-in-Picture</td>
-  </tr>
-</table>
+| Specification                                                   |
+| --------------------------------------------------------------- |
+| [Picture-in-Picture](https://w3c.github.io/picture-in-picture/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="HTMLVideoElement.requestPictureInPicture"><code>HTMLVideoElement.requestPictureInPicture</code></h3>
+### `HTMLVideoElement.requestPictureInPicture`
 
-<p>{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}</p>
+{{Compat("api.HTMLVideoElement.requestPictureInPicture")}}
 
-<h3 id="HTMLVideoElement.autoPictureInPicture"><code>HTMLVideoElement.autoPictureInPicture</code></h3>
+### `HTMLVideoElement.autoPictureInPicture`
 
-<p>{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}</p>
+{{Compat("api.HTMLVideoElement.autoPictureInPicture")}}
 
-<h3 id="HTMLVideoElement.disablePictureInPicture"><code>HTMLVideoElement.disablePictureInPicture</code></h3>
+### `HTMLVideoElement.disablePictureInPicture`
 
-<p>{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}</p>
+{{Compat("api.HTMLVideoElement.disablePictureInPicture")}}
 
-<h3 id="Document.pictureInPictureEnabled"><code>Document.pictureInPictureEnabled</code></h3>
+### `Document.pictureInPictureEnabled`
 
-<p>{{Compat("api.Document.pictureInPictureEnabled")}}</p>
+{{Compat("api.Document.pictureInPictureEnabled")}}
 
-<h3 id="Document.exitPictureInPicture"><code>Document.exitPictureInPicture</code></h3>
+### `Document.exitPictureInPicture`
 
-<p>{{Compat("api.Document.exitPictureInPicture")}}</p>
+{{Compat("api.Document.exitPictureInPicture")}}
 
-<h3 id="Document.pictureInPictureElement"><code>Document.pictureInPictureElement</code></h3>
+### `Document.pictureInPictureElement`
 
-<p>{{Compat("api.Document.pictureInPictureElement")}}</p>
+{{Compat("api.Document.pictureInPictureElement")}}
 
-<h3 id="PictureInPictureWindow"><code>PictureInPictureWindow</code></h3>
+### `PictureInPictureWindow`
 
-<p>{{Compat("api.PictureInPictureWindow")}}</p>
+{{Compat("api.PictureInPictureWindow")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
- <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
- <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
- <li>{{DOMxRef("Document.pictureInPictureEnabled")}}</li>
- <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
- <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
- <li>{{CSSxRef(":picture-in-picture")}}</li>
-</ul>
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+- {{DOMxRef("Document.pictureInPictureEnabled")}}
+- {{DOMxRef("Document.exitPictureInPicture()")}}
+- {{DOMxRef("Document.pictureInPictureElement")}}
+- {{CSSxRef(":picture-in-picture")}}

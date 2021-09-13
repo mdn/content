@@ -2,64 +2,59 @@
 title: EventSource.close()
 slug: Web/API/EventSource/close
 tags:
-- API
-- EventSource
-- Method
-- Reference
-- Server-sent events
-- close
+  - API
+  - EventSource
+  - Method
+  - Reference
+  - Server-sent events
+  - close
 browser-compat: api.EventSource.close
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <code><strong>close()</strong></code> method of the {{domxref("EventSource")}}
-  interface closes the connection, if one is made, and sets the
-  {{domxref("EventSource.readyState")}} attribute to <code>2</code> (closed).</p>
+The **`close()`** method of the {{domxref("EventSource")}}
+interface closes the connection, if one is made, and sets the
+{{domxref("EventSource.readyState")}} attribute to `2` (closed).
 
-<div class="note">
-  <p><strong>Note:</strong> If the connection is already closed, the method does nothing.
-  </p>
-</div>
+> **Note:** If the connection is already closed, the method does nothing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">eventSource.close();</pre>
+```js
+eventSource.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var button = document.querySelector('button');
+```js
+var button = document.querySelector('button');
 var evtSource = new EventSource('sse.php');
 
 button.onclick = function() {
   console.log('Connection closed');
   evtSource.close();
 }
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

@@ -10,21 +10,20 @@ tags:
   - WebGL
   - rendering
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
-<p>Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.</p>
+Let's take our square plane into three dimensions by adding five more faces to create a cube. To do this efficiently, we're going to switch from drawing using the vertices directly by calling the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method to using the vertex array as a table, and referencing individual vertices in that table to define the positions of each face's vertices, by calling {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
-<p>Consider: each face requires four vertices to define it, but each vertex is shared by three faces. We can pass a lot fewer data around by building an array of all 24 vertices, then referring to each vertex by its index into that array instead of moving entire sets of coordinates around. If you wonder why we need 24 vertices, and not just 8, it is because each corner belongs to three faces of different colors, and a single vertex needs to have a single specific color; therefore we will create three copies of each vertex in three different colors, one for each face.</p>
+Consider: each face requires four vertices to define it, but each vertex is shared by three faces. We can pass a lot fewer data around by building an array of all 24 vertices, then referring to each vertex by its index into that array instead of moving entire sets of coordinates around. If you wonder why we need 24 vertices, and not just 8, it is because each corner belongs to three faces of different colors, and a single vertex needs to have a single specific color; therefore we will create three copies of each vertex in three different colors, one for each face.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Define_the_positions_of_the_cubes_vertices">Define the positions of the cube's vertices</h2>
+## Define the positions of the cube's vertices
 
-<p>First, let's build the cube's vertex position buffer by updating the code in <code>initBuffers()</code>. This is pretty much the same as it was for the square plane, but somewhat longer since there are 24 vertices (4 per side):</p>
+First, let's build the cube's vertex position buffer by updating the code in `initBuffers()`. This is pretty much the same as it was for the square plane, but somewhat longer since there are 24 vertices (4 per side):
 
-<pre class="brush: js">const positions = [
+```js
+const positions = [
   // Front face
   -1.0, -1.0,  1.0,
    1.0, -1.0,  1.0,
@@ -61,11 +60,12 @@ tags:
   -1.0,  1.0,  1.0,
   -1.0,  1.0, -1.0,
 ];
-</pre>
+```
 
-<p>Since we've added a z-component to our vertices, we need to update the <code>numComponents</code> of our <code>vertexPosition</code> attribute to 3.</p>
+Since we've added a z-component to our vertices, we need to update the `numComponents` of our `vertexPosition` attribute to 3.
 
-<pre class="brush: js">// Tell WebGL how to pull out the positions from the position
+```js
+// Tell WebGL how to pull out the positions from the position
 // buffer into the vertexPosition attribute
 {
   const numComponents = 3;
@@ -80,13 +80,14 @@ tags:
   gl.enableVertexAttribArray(
       programInfo.attribLocations.vertexPosition);
 }
-</pre>
+```
 
-<h2 id="Define_the_vertices_colors">Define the vertices' colors</h2>
+## Define the vertices' colors
 
-<p>We also need to build an array of colors for each of the 24 vertices. This code starts by defining a color for each face, then uses a loop to assemble an array of all the colors for each of the vertices.</p>
+We also need to build an array of colors for each of the 24 vertices. This code starts by defining a color for each face, then uses a loop to assemble an array of all the colors for each of the vertices.
 
-<pre class="brush: js">  const faceColors = [
+```js
+  const faceColors = [
     [1.0,  1.0,  1.0,  1.0],    // Front face: white
     [1.0,  0.0,  0.0,  1.0],    // Back face: red
     [0.0,  1.0,  0.0,  1.0],    // Top face: green
@@ -99,7 +100,7 @@ tags:
 
   var colors = [];
 
-  for (var j = 0; j &lt; faceColors.length; ++j) {
+  for (var j = 0; j < faceColors.length; ++j) {
     const c = faceColors[j];
 
     // Repeat each color four times for the four vertices of the face
@@ -109,13 +110,14 @@ tags:
   const colorBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
-</pre>
+```
 
-<h2 id="Define_the_element_array">Define the element array</h2>
+## Define the element array
 
-<p>Once the vertex arrays are generated, we need to build the element array.</p>
+Once the vertex arrays are generated, we need to build the element array.
 
-<pre class="brush: js">  const indexBuffer = gl.createBuffer();
+```js
+  const indexBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
   // This array defines each face as two triangles, using the
@@ -142,16 +144,16 @@ tags:
     indices: indexBuffer,
   };
 }
+```
 
-</pre>
+The `indices` array defines each face like a pair of triangles, specifying each triangle's vertices as an index into the cube's vertex arrays. Thus the cube is described as a collection of 12 triangles.
 
-<p>The <code>indices</code> array defines each face like a pair of triangles, specifying each triangle's vertices as an index into the cube's vertex arrays. Thus the cube is described as a collection of 12 triangles.</p>
+## Drawing the cube
 
-<h2 id="Drawing_the_cube">Drawing the cube</h2>
+Next we need to add code to our `drawScene()` function to draw using the cube's index buffer, adding new  {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls:
 
-<p>Next we need to add code to our <code>drawScene()</code> function to draw using the cube's index buffer, adding new  {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} and {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} calls:</p>
-
-<pre class="brush: js">  // Tell WebGL which indices to use to index the vertices
+```js
+  // Tell WebGL which indices to use to index the vertices
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, buffers.indices);
 
 ...
@@ -162,21 +164,20 @@ tags:
     const offset = 0;
     gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
   }
+```
 
-</pre>
+Since each face of our cube is comprised of two triangles, there are 6 vertices per side, or 36 total vertices in the cube, even though many of them are duplicates.
 
-<p>Since each face of our cube is comprised of two triangles, there are 6 vertices per side, or 36 total vertices in the cube, even though many of them are duplicates.</p>
+Finally, let's replace our variable `squareRotation` by `cubeRotation` and add a second rotation around the x axis:
 
-<p>Finally, let's replace our variable <code>squareRotation</code> by <code>cubeRotation</code> and add a second rotation around the x axis:</p>
+```js
+mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
+```
 
-<pre class="brush: js"><span class="pl-smi">mat4</span>.<span class="pl-en">rotate</span>(modelViewMatrix, modelViewMatrix, cubeRotation<span class="pl-k"> *</span><span class="pl-c1"> .7</span>, [<span class="pl-c1">0</span>, <span class="pl-c1">1</span>, <span class="pl-c1">0</span>]);
+At this point, we now have an animated cube rotating, its six faces rather vividly colored.
 
-</pre>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-<p>At this point, we now have an animated cube rotating, its six faces rather vividly colored.</p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample5/)
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}</p>
-
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample5/">Open this demo on a new page</a></p>
-
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

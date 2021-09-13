@@ -10,23 +10,21 @@ tags:
   - Deprecated
 browser-compat: api.UserProximityEvent
 ---
-<p>{{APIRef("Proximity Events")}}{{deprecated_header}}</p>
-<div class="notecard warning">
-  <p><strong>Warning:</strong> <code>UserProximityEvent</code> is not supported by any current major browser, and should not be used.</p>
-</div>
+{{APIRef("Proximity Events")}}{{deprecated_header}}
 
-<p>The <strong><code>UserProximityEvent</code></strong> indicates whether a nearby physical object is present by using the proximity sensor of a device.</p>
+> **Warning:** `UserProximityEvent` is not supported by any current major browser, and should not be used.
 
-<h2 id="Properties">Properties</h2>
+The **`UserProximityEvent`** indicates whether a nearby physical object is present by using the proximity sensor of a device.
 
-<dl>
- <dt><code>UserProximityEvent.near</code></dt>
- <dd>Indicates if the device has sensed a nearby physical object.</dd>
-</dl>
+## Properties
 
-<h2 id="Examples">Examples</h2>
+- `UserProximityEvent.near`
+  - : Indicates if the device has sensed a nearby physical object.
 
-<pre class="brush: js">window.addEventListener('userproximity', function(event) {
+## Examples
+
+```js
+window.addEventListener('userproximity', function(event) {
   if (event.near) {
     // let's power off the screen
     navigator.mozPower.screenEnabled = false;
@@ -34,17 +32,14 @@ browser-compat: api.UserProximityEvent
     // Otherwise, let's power on the screen
     navigator.mozPower.screenEnabled = true;
   }
-});</pre>
+});
+```
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Proximity_Events">Proximity Events</a></li>
- <li>{{domxref("DeviceProximityEvent")}}</li>
- 
-</ul>
+- [Proximity Events](/en-US/docs/Web/API/Proximity_Events)
+- {{domxref("DeviceProximityEvent")}}

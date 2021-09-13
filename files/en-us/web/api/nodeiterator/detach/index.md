@@ -2,52 +2,49 @@
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
 tags:
-- API
-- DOM
-- Method
-- NodeIterator
-- Deprecated
+  - API
+  - DOM
+  - Method
+  - NodeIterator
+  - Deprecated
 browser-compat: api.NodeIterator.detach
 ---
-<p>{{APIRef("DOM")}}{{deprecated_header}}</p>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>NodeIterator.detach()</code></strong> method is a no-op, kept for
-	backward compatibility only.</p>
+The **`NodeIterator.detach()`** method is a no-op, kept for
+backward compatibility only.
 
-<p>Originally, it detached the {{domxref("NodeIterator")}} from the set over which it
-	iterates, releasing any resources used by the set and setting the iterator's state to
-	<code>INVALID</code>. Once this method had been called, calls to other methods on
-	<code>NodeIterator</code> would raise the <code>INVALID_STATE_ERR</code> exception. 
-</p>
+Originally, it detached the {{domxref("NodeIterator")}} from the set over which it
+iterates, releasing any resources used by the set and setting the iterator's state to
+`INVALID`. Once this method had been called, calls to other methods on
+`NodeIterator` would raise the `INVALID_STATE_ERR` exception.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeIterator</em>.detach();
-</pre>
+```js
+nodeIterator.detach();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="eval">var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
-);
-nodeIterator.detach(); // detaches the iterator
+    var nodeIterator = document.createNodeIterator(
+        document.body,
+        NodeFilter.SHOW_ELEMENT,
+        { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+        false
+    );
+    nodeIterator.detach(); // detaches the iterator
 
-nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
-</pre>
+    nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface it belongs to: {{domxref("NodeIterator")}}.</li>
-</ul>
+- The interface it belongs to: {{domxref("NodeIterator")}}.

@@ -9,46 +9,45 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getPropertyType
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>getPropertyType()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.</p>
+The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element's property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>null</var> = TrustedTypePolicyFactory.getPropertyType(<var>tagName</var>,<var>property</var>[, <var>elementNS</var>]);</pre>
+    var null = TrustedTypePolicyFactory.getPropertyType(tagName,property[, elementNS]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>tagName</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the name of an HTML tag.</dd>
-  <dt><code>property</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing a property, for example <code>"innerHTML"</code>.</dd>
-  <dt><code>elementNs</code>{{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.</dd>
-</dl>
+- `tagName`
+  - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
+- `property`
+  - : A {{domxref("DOMString","string")}} containing a property, for example `"innerHTML"`.
+- `elementNs`{{optional_inline}}
+  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString","string")}} with one of:</p>
-<ul>
-  <li><code>"TrustedHTML"</code></li>
-  <li><code>"TrustedScript"</code></li>
-  <li><code>"TrustedScriptURL"</code></li>
-</ul>
+A {{domxref("DOMString","string")}} with one of:
 
-<p>Or, null.</p>
+- `"TrustedHTML"`
+- `"TrustedScript"`
+- `"TrustedScriptURL"`
 
-<h2 id="Examples">Examples</h2>
+Or, null.
 
-<p>In this example, passing the {{htmlelement("div")}} element and <code>innerHTML</code> property to <code>getPropertyType</code> returns "TrustedHTML".</p>
+## Examples
 
-<pre class="brush: js">console.log(trustedTypes.getPropertyType('div', 'innerHTML')); // "TrustedHTML"</pre>
+In this example, passing the {{htmlelement("div")}} element and `innerHTML` property to `getPropertyType` returns "TrustedHTML".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(trustedTypes.getPropertyType('div', 'innerHTML')); // "TrustedHTML"
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

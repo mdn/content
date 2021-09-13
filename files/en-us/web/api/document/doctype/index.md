@@ -2,51 +2,52 @@
 title: Document.doctype
 slug: Web/API/Document/doctype
 tags:
-- API
-- DOM
-- Document
-- Property
-- Reference
+  - API
+  - DOM
+  - Document
+  - Property
+  - Reference
 browser-compat: api.Document.doctype
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>Returns the Document Type Declaration (DTD) associated with current document. The
-  returned object implements the {{domxref("DocumentType")}} interface. Use
-  {{domxref("DOMImplementation.createDocumentType()")}} to create a
-  <code>DocumentType</code>.</p>
+Returns the Document Type Declaration (DTD) associated with current document. The
+returned object implements the {{domxref("DocumentType")}} interface. Use
+{{domxref("DOMImplementation.createDocumentType()")}} to create a
+`DocumentType`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>doctype</var> = <var>document</var>.doctype;
-</pre>
+```js
+doctype = document.doctype;
+```
 
-<ul>
-  <li><code>doctype</code> is a read-only property.</li>
-</ul>
+- `doctype` is a read-only property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var doctypeObj = document.doctype;
+```js
+var doctypeObj = document.doctype;
 
 console.log(
   "doctypeObj.name: "           + doctypeObj.name            + "\n" +
   "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
   "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
   "doctypeObj.systemId: "       + doctypeObj.systemId
-);</pre>
+);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The property returns <code>null</code> if there is no DTD associated with the current
-  document.</p>
+The property returns `null` if there is no DTD associated with the current
+document.
 
-<p>DOM level 2 doesn't support editing the document type declaration.</p>
+DOM level 2 doesn't support editing the document type declaration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,33 +2,35 @@
 title: VisualViewport.pageTop
 slug: Web/API/VisualViewport/pageTop
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- pageLeft
-- viewport
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - pageLeft
+  - viewport
 browser-compat: api.VisualViewport.pageTop
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>pageTop</code></strong> read-only property of the
-  {{domxref("VisualViewport")}} interface returns the y coordinate of the top edge of the
-  visual viewport relative to the initial containing block origin, in CSS pixels.</p>
+The **`pageTop`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the y coordinate of the top edge of the
+visual viewport relative to the initial containing block origin, in CSS pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>pageTop</em> = VisualViewport.pageTop</pre>
+```js
+var pageTop = VisualViewport.pageTop
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

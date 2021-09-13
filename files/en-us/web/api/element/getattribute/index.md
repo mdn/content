@@ -9,91 +9,88 @@ tags:
   - Reference
 browser-compat: api.Element.getAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getAttribute()</code></strong> method of the
-		{{domxref("Element")}} interface returns the value of a specified attribute on the
-		element.</p>
+The **`getAttribute()`** method of the
+{{domxref("Element")}} interface returns the value of a specified attribute on the
+element.
 
-<p>If the given attribute does not exist, the value returned will
-	either be <code>null</code> or <code>""</code> (the empty string); see <a
-		href="#non-existing_attributes">Non-existing attributes</a> for details.</p>
+If the given attribute does not exist, the value returned will
+either be `null` or `""` (the empty string); see [Non-existing attributes](#non-existing_attributes) for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
-</pre>
+```js
+let attribute = element.getAttribute(attributeName);
+```
 
-<p>where</p>
+where
 
-<ul>
-	<li><code><var>attribute</var></code> is a string containing the value of
-		<code><var>attributeName</var></code>.</li>
-	<li><code><var>attributeName</var></code> is the name of the attribute whose value you
-		want to get.</li>
-</ul>
+- `attribute` is a string containing the value of
+  `attributeName`.
+- `attributeName` is the name of the attribute whose value you
+  want to get.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">&lt;!-- example div in an html DOC --&gt;
-&lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
+```js
+<!-- example div in an html DOC -->
+<div id="div1">Hi Champ!</div>
 
 // in a console
 const div1 = document.getElementById('div1');
-//=&gt; &lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
+//=> <div id="div1">Hi Champ!</div>
 
 const exampleAttr= div1.getAttribute('id');
-//=&gt; "div1"
+//=> "div1"
 
 const align = div1.getAttribute('align')
-//=&gt; null
+//=> null
+```
 
-</pre>
+## Description
 
-<h2 id="Description">Description</h2>
+### Lower casing
 
-<h3 id="Lower_casing">Lower casing</h3>
+When called on an HTML element in a DOM flagged as an HTML document,
+`getAttribute()` lower-cases its argument before proceeding.
 
-<p>When called on an HTML element in a DOM flagged as an HTML document,
-	<code>getAttribute()</code> lower-cases its argument before proceeding.</p>
+### Non-existing attributes
 
-<h3 id="Non-existing_attributes">Non-existing attributes</h3>
+Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera,
+Safari, Konqueror, and iCab, as a non-exhaustive list) return `null` when
+the specified attribute does not exist on the specified element; this is what [the current DOM
+specification draft](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. The old DOM 3 Core specification, on the other
+hand, says that the correct return value in this case is actually the _empty
+string_, and some DOM implementations implement this behavior. The
+implementation of `getAttribute()` in XUL (Gecko) actually follows the DOM
+3 Core specification and returns an empty string. Consequently, you should use
+{{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to
+calling `getAttribute()` if it is possible that the requested attribute
+does not exist on the specified element.
 
-<p>Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera,
-	Safari, Konqueror, and iCab, as a non-exhaustive list) return <code>null</code> when
-	the specified attribute does not exist on the specified element; this is what <a
-		href="https://dom.spec.whatwg.org/#dom-element-getattribute">the current DOM
-		specification draft</a> specifies. The old DOM 3 Core specification, on the other
-	hand, says that the correct return value in this case is actually the <em>empty
-		string</em>, and some DOM implementations implement this behavior. The
-	implementation of <code>getAttribute()</code> in XUL (Gecko) actually follows the DOM
-	3 Core specification and returns an empty string. Consequently, you should use
-	{{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to
-	calling <code>getAttribute()</code> if it is possible that the requested attribute
-	does not exist on the specified element.</p>
+### Retrieving nonce values
 
-<h3 id="Retrieving_nonce_values">Retrieving nonce values</h3>
+For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
+sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
+hidden.
 
-<p>For security reasons, <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script
-	sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls are
-	hidden.</p>
-
-<pre class="brush: js example-bad">let nonce =  script.getAttribute('nonce');
+```js example-bad
+let nonce =  script.getAttribute('nonce');
 // returns empty string
-</pre>
+```
 
-<p>Instead of retrieving the nonce from the content attribute, use the
-	{{domxref("HTMLElement/nonce", "nonce")}} property:</p>
+Instead of retrieving the nonce from the content attribute, use the
+{{domxref("HTMLElement/nonce", "nonce")}} property:
 
-<pre class="brush: js">let nonce =  script.nonce;</pre>
+```js
+let nonce =  script.nonce;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

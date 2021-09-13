@@ -2,55 +2,49 @@
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
 tags:
-- API
-- Constructor
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Constructor
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.WebSocket
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <code><strong>WebSocket()</strong></code> constructor returns a new
-  {{domxref("WebSocket")}} object.</p>
+The **`WebSocket()`** constructor returns a new
+{{domxref("WebSocket")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aWebSocket</em> = new WebSocket(<em>url</em> [, protocols]);</pre>
+```js
+var aWebSocket = new WebSocket(url [, protocols]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>The URL to which to connect; this should be the URL to which the WebSocket server
-    will respond.</dd>
-  <dt><code>protocols</code> {{optional_inline}}</dt>
-  <dd>
-    <p>Either a single protocol string or an array of protocol strings. These strings are
+- `url`
+  - : The URL to which to connect; this should be the URL to which the WebSocket server
+    will respond.
+- `protocols` {{optional_inline}}
+
+  - : Either a single protocol string or an array of protocol strings. These strings are
     used to indicate sub-protocols, so that a single server can implement multiple
     WebSocket sub-protocols (for example, you might want one server to be able to handle
-    different types of interactions depending on the specified <code>protocol</code>).</p>
-    <p>If it is omitted, an empty array is used by default, i.e. <code>[]</code>.
-    </p>
-  </dd>
-</dl>
+    different types of interactions depending on the specified `protocol`).
 
-<h3 id="Exceptions_thrown">Exceptions thrown</h3>
+    If it is omitted, an empty array is used by default, i.e. `[]`.
 
-<dl>
-  <dt><code>SECURITY_ERR</code></dt>
-  <dd>The port to which the connection is being attempted is being blocked.</dd>
-  <dt><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>
-  </dt>
-  <dd>The URL is invalid.</dd>
-</dl>
+### Exceptions thrown
 
-<h2 id="Specifications">Specifications</h2>
+- `SECURITY_ERR`
+  - : The port to which the connection is being attempted is being blocked.
+- [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+  - : The URL is invalid.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

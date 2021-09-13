@@ -9,96 +9,94 @@ tags:
   - Media Source Extensions
   - adaptive
 ---
-<p>When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.</p>
+When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.
 
-<h2 id="Getting_started">Getting started</h2>
+## Getting started
 
-<ol>
- <li>The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.</li>
- <li>Depending on the codec, you might need to fragment the file to comply with the <a href="https://www.w3.org/TR/mse-byte-stream-format-isobmff/">ISO BMFF spec</a>.</li>
- <li>(Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.</li>
-</ol>
+1.  The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
+2.  Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
+3.  (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
 
-<p>Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.</p>
+Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.
 
-<h3 id="Sample_Media">Sample Media</h3>
+### Sample Media
 
-<p>If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the trailer to Big Buck Bunny [0] <a href="http://wayback.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov">here</a>. Big Buck Bunny is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.  Throughout this tutorial, you'll see the filename trailer_1080p.mov which is the download.</p>
+If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the trailer to Big Buck Bunny \[0] [here](http://wayback.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov). Big Buck Bunny is licensed under the [Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/) license.  Throughout this tutorial, you'll see the filename trailer_1080p.mov which is the download.
 
-<p>[0] (c) Copyright 2008, Blender Foundation / www.bigbuckbunny.org / https://peach.blender.org/about/</p>
+\[0] (c) Copyright 2008, Blender Foundation / www\.bigbuckbunny.org / https\://peach.blender.org/about/
 
-<h3 id="Tools_required">Tools required</h3>
+### Tools required
 
-<p>When working with MSE, the following tools are a must have:</p>
+When working with MSE, the following tools are a must have:
 
-<ol>
- <li><a href="http://ffmpeg.org/">ffmpeg</a> — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the <a href="http://ffmpeg.org/download.html">Download FFmpeg page</a>. Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use <a href="http://brew.sh/">homebrew</a> to install ffmpeg.</li>
- <li><a href="https://github.com/axiomatic-systems/Bento4">Bento4</a> — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the <a href="https://github.com/axiomatic-systems/Bento4#building">Building instructions</a> for more details. The prebuilt file is <a href="https://www.bento4.com/downloads/">here</a>. Put the contents of the <code>bin</code> directory in the same place as ffmpeg.</li>
- <li>python2 — Bento4 uses it.</li>
-</ol>
+1.  [ffmpeg](http://ffmpeg.org/) — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the [Download FFmpeg page](http://ffmpeg.org/download.html). Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use [homebrew](http://brew.sh/) to install ffmpeg.
+2.  [Bento4](https://github.com/axiomatic-systems/Bento4) — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the [Building instructions](https://github.com/axiomatic-systems/Bento4#building) for more details. The prebuilt file is [here](https://www.bento4.com/downloads/). Put the contents of the `bin` directory in the same place as ffmpeg.
+3.  python2 — Bento4 uses it.
 
-<p>Get these installed successfully before moving to the next step.</p>
+Get these installed successfully before moving to the next step.
 
-<p>Sample media should be placed in the Bento4 <code>utils</code> directory and worked here.</p>
+Sample media should be placed in the Bento4 `utils` directory and worked here.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add <code>--audio-codec=aac</code> to the <code>mp4-dash-encode.py</code> command line.</p>
-</div>
+> **Note:** The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add `--audio-codec=aac` to the `mp4-dash-encode.py` command line.
 
-<h3 id="Container_and_Codec_Support">Container and Codec Support</h3>
+### Container and Codec Support
 
-<p>As specified in <a href="https://www.w3.org/TR/media-source/#goals">section 1.1 of the MSE spec: Goals</a>, MSE is designed not to require support for any particular media format or codec.  While this is true on paper, browser support varies for specific container/codec combinations.</p>
+As specified in [section 1.1 of the MSE spec: Goals](https://www.w3.org/TR/media-source/#goals), MSE is designed not to require support for any particular media format or codec.  While this is true on paper, browser support varies for specific container/codec combinations.
 
-<p>To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported")}} method:</p>
+To check if the browser supports a particular container, you can pass a string of the MIME type to the {{domxref("MediaSource.isTypeSupported")}} method:
 
-<pre class="brush: js">MediaSource.isTypeSupported('audio/mp3'); // false
+```js
+MediaSource.isTypeSupported('audio/mp3'); // false
 MediaSource.isTypeSupported('video/mp4'); // true
-MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true</pre>
+MediaSource.isTypeSupported('video/mp4; codecs="avc1.4D4028, mp4a.40.2"'); // true
+```
 
-<p>The string is the MIME type of the container, optionally followed by a list of codecs. While the MIME type is fairly simple to figure out, we can get the codec string using the <a href="https://nickdesaulniers.github.io/mp4info/">mp4info</a> utility.</p>
+The string is the MIME type of the container, optionally followed by a list of codecs. While the MIME type is fairly simple to figure out, we can get the codec string using the [mp4info](https://nickdesaulniers.github.io/mp4info/) utility.
 
-<p>Currently, MP4 containers with H.264 video and AAC audio codecs have support across all modern browsers, while others don't.</p>
+Currently, MP4 containers with H.264 video and AAC audio codecs have support across all modern browsers, while others don't.
 
-<p>To convert our sample media from a QuickTime MOV container to an MP4 container, we can use ffmpeg.  Because the audio codec in the MOV container is already AAC and the video codec is h.264, we can instruct ffmpeg not to perform transcoding. Instead, it will just copy the audio and video tracks over without performing any transcoding, which is relatively faster than having to transcode.</p>
+To convert our sample media from a QuickTime MOV container to an MP4 container, we can use ffmpeg.  Because the audio codec in the MOV container is already AAC and the video codec is h.264, we can instruct ffmpeg not to perform transcoding. Instead, it will just copy the audio and video tracks over without performing any transcoding, which is relatively faster than having to transcode.
 
-<pre>$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
-$ ls
-bunny.mp4         trailer_1080p.mov</pre>
+    $ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy bunny.mp4
+    $ ls
+    bunny.mp4         trailer_1080p.mov
 
-<h3 id="Checking_Fragmentation">Checking Fragmentation</h3>
+### Checking Fragmentation
 
-<p>In order to properly stream MP4, we need the asset to be an <a href="https://www.w3.org/TR/mse-byte-stream-format-isobmff/">ISO BMF</a> format MP4. Without proper fragmentation, any given MP4 file is not guaranteed to work with MSE.  This means that metadata within the container is spread out and not lumped together.</p>
+In order to properly stream MP4, we need the asset to be an [ISO BMF](https://www.w3.org/TR/mse-byte-stream-format-isobmff/) format MP4. Without proper fragmentation, any given MP4 file is not guaranteed to work with MSE.  This means that metadata within the container is spread out and not lumped together.
 
-<p>To check whether an MP4 file is a proper MP4 stream, you can again use the <a href="https://nickdesaulniers.github.io/mp4info/">mp4info</a> utility to list the atoms of an MP4.</p>
+To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4info](https://nickdesaulniers.github.io/mp4info/) utility to list the atoms of an MP4.
 
-<div class="note">
-<p><strong>Note:</strong> The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.</p>
-</div>
+> **Note:** The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.
 
-<h3 id="Fragmenting">Fragmenting</h3>
+### Fragmenting
 
-<p>If you have an asset that is not already an MP4, ffmpeg can handle emitting a properly fragmented MP4 during the transcode process, with the <code>-movflags frag_keyframe+empty_moov</code> command line flag:</p>
+If you have an asset that is not already an MP4, ffmpeg can handle emitting a properly fragmented MP4 during the transcode process, with the `-movflags frag_keyframe+empty_moov` command line flag:
 
-<pre class="brush: bash">$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4</pre>
+```bash
+$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+```
 
-<p>If you already have an MP4, but it's not properly fragmented, you can again use ffmpeg:</p>
+If you already have an MP4, but it's not properly fragmented, you can again use ffmpeg:
 
-<pre>$ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
-</pre>
+    $ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
 
-<p>In both cases, Chrome may require an extra movie flag to be set:</p>
+In both cases, Chrome may require an extra movie flag to be set:
 
-<pre class="brush: bash">-movflags frag_keyframe+empty_moov+default_base_moof</pre>
+```bash
+-movflags frag_keyframe+empty_moov+default_base_moof
+```
 
-<p>Having a properly fragmented MP4 file is all you need to get started.  If you wish to employ adaptive bitrate streaming, you'll have to create encodings at multiple resolutions.  While MSE is flexible enough to allow you to make your implementation, it's highly recommended to use an existing DASH client as DASH is a well-specified application protocol.</p>
+Having a properly fragmented MP4 file is all you need to get started.  If you wish to employ adaptive bitrate streaming, you'll have to create encodings at multiple resolutions.  While MSE is flexible enough to allow you to make your implementation, it's highly recommended to use an existing DASH client as DASH is a well-specified application protocol.
 
-<h3 id="Creating_Content_for_DASH">Creating Content for DASH</h3>
+### Creating Content for DASH
 
-<p>Given that you have ffmpeg and Bento4's utilities accessible through your $PATH, you can run Bento4's <code>mp4-dash-encode.py</code> Python script to generate multiple encodings of your content at various resolutions. Bento4's <code>mp4-dash.py</code> Python script can then be used to generate the corresponding MPD file needed by clients.</p>
+Given that you have ffmpeg and Bento4's utilities accessible through your $PATH, you can run Bento4's `mp4-dash-encode.py` Python script to generate multiple encodings of your content at various resolutions. Bento4's `mp4-dash.py` Python script can then be used to generate the corresponding MPD file needed by clients.
 
-<p>Run the following commands (shown with sample output):</p>
+Run the following commands (shown with sample output):
 
-<pre class="brush: bash">$ python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
+```bash
+$ python mp4-dash-encode.py -b 5 -v bunny_fragmented.mp4
 Encoding 5 bitrates, min bitrate = 500.0 max bitrate = 2000.0
 Media Source: Video: resolution=640x360
 ENCODING bitrate: 500, resolution: 256x144
@@ -132,16 +130,13 @@ output
     ├── 4
     └── 5
 
-8 directories, 1 file</pre>
+8 directories, 1 file
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>mp4-dash-encode.py</code> does not display ffmpeg error messages. You can see it by specifying the <code>-d</code> option.</p>
-</div>
+> **Note:** `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If <code>"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"</code> is displayed as an error message, modify <code>mp4-dash-encode.py</code> and remove two <code>"'"</code> from <code>"-force_key_frames 'expr:eq(mod(n,%d),0)'"</code>.</p>
-</div>
+> **Note:** If `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` is displayed as an error message, modify `mp4-dash-encode.py` and remove two `"'"` from `"-force_key_frames 'expr:eq(mod(n,%d),0)'"`.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>With your video properly encoded and adaptive bitrate media generated, you're now ready to begin adaptive bitrate streaming on the web using DASH and MSE.</p>
+With your video properly encoded and adaptive bitrate media generated, you're now ready to begin adaptive bitrate streaming on the web using DASH and MSE.

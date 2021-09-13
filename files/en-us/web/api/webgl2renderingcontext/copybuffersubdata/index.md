@@ -2,64 +2,60 @@
 title: WebGL2RenderingContext.copyBufferSubData()
 slug: Web/API/WebGL2RenderingContext/copyBufferSubData
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyBufferSubData
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.copyBufferSubData()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> copies part of the data of a
-  buffer to another buffer.</p>
+The **`WebGL2RenderingContext.copyBufferSubData()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) copies part of the data of a
+buffer to another buffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.copyBufferSubData(<var>readTarget</var>, <var>writeTarget</var>, <var>readOffset</var>, <var>writeOffset</var>, <var>size</var>);</pre>
+```js
+void gl.copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>readTarget<br>
- writeTarget</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) from whose data store
+- `readTarget writeTarget`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) from whose data store
     should be read or written. Possible values:
-    <ul>
-      <li><code>gl.ARRAY_BUFFER</code>: Buffer containing vertex attributes, such as
-        vertex coordinates, texture coordinate data, or vertex color data.</li>
-      <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: Buffer used for element indices.</li>
-      <li><code>gl.COPY_READ_BUFFER</code>: Buffer for copying from one buffer object to
-        another (provided specifically for copy operations).</li>
-      <li><code>gl.COPY_WRITE_BUFFER</code>: Buffer for copying from one buffer object to
-        another (provided specifically for copy operations).</li>
-      <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback
-        operations.</li>
-      <li><code>gl.UNIFORM_BUFFER</code>: Buffer used for storing uniform blocks.</li>
-      <li><code>gl.PIXEL_PACK_BUFFER</code>: Buffer used for pixel transfer operations.
-      </li>
-      <li><code>gl.PIXEL_UNPACK_BUFFER</code>: Buffer used for pixel transfer operations.
-      </li>
-    </ul>
-  </dd>
-  <dt><code>readOffset<br>
- writeOffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the byte offset from which to start reading
-    from or writing to the buffer.</dd>
-  <dt><code>size</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} in bytes specifying the size of the data to be copied from
-    <code>readTarget</code> to <code>writeTarget</code>.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
+      vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object to
+      another (provided specifically for copy operations).
+    - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object to
+      another (provided specifically for copy operations).
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
+      operations.
+    - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer operations.
+    - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer operations.
 
-<p>None.</p>
+- `readOffset writeOffset`
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying the byte offset from which to start reading
+    from or writing to the buffer.
+- `size`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} in bytes specifying the size of the data to be copied from
+    `readTarget` to `writeTarget`.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">var srcBuffer = gl.createBuffer();
+None.
+
+## Examples
+
+```js
+var srcBuffer = gl.createBuffer();
 var dstBuffer = gl.createBuffer();
 
 var data = new Float32Array(vertices);
@@ -73,21 +69,19 @@ gl.bindBuffer(gl.ARRAY_BUFFER, dstBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(length), gl.STATIC_DRAW);
 
 gl.copyBufferSubData(gl.COPY_READ_BUFFER, gl.ARRAY_BUFFER, 0, 0, length);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bufferData()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bufferSubData()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getBufferParameter()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.getBufferSubData()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bufferData()")}}
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
+- {{domxref("WebGLRenderingContext.getBufferParameter()")}}
+- {{domxref("WebGL2RenderingContext.getBufferSubData()")}}

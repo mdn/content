@@ -13,56 +13,54 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loopEnd
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>loopEnd</code> property of the {{ domxref("AudioBufferSourceNode") }}
-  interface specifies is a floating point number specifying, in seconds, at what offset
-  into playing the {{domxref("AudioBuffer")}} playback should loop back to the time
-  indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} property.
-  This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
-  <code>true</code>.</p>
+The `loopEnd` property of the {{ domxref("AudioBufferSourceNode") }}
+interface specifies is a floating point number specifying, in seconds, at what offset
+into playing the {{domxref("AudioBuffer")}} playback should loop back to the time
+indicated by the {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} property.
+This is only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
+`true`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioBufferSourceNode.loopEnd = endOffsetInSeconds</em>;
+```js
+AudioBufferSourceNode.loopEnd = endOffsetInSeconds;
 
-var <em>endOffsetInSeconds</em> = <em>AudioBufferSourceNode<code>.loopEnd;</code></em>
-</pre>
+var endOffsetInSeconds = AudioBufferSourceNode.loopEnd;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point number indicating the offset, in seconds, into the audio buffer at
-  which each loop will loop return to the beginning of the loop (that is, the current play
-  time gets reset to {{domxref("AudioBufferSourceNode.loopStart")}}). This property is
-  only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
-  <code>true</code>.</p>
+A floating-point number indicating the offset, in seconds, into the audio buffer at
+which each loop will loop return to the beginning of the loop (that is, the current play
+time gets reset to {{domxref("AudioBufferSourceNode.loopStart")}}). This property is
+only used if the {{domxref("AudioBufferSourceNode.loop", "loop")}} property is
+`true`.
 
-<p>The default value is 0.</p>
+The default value is 0.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
-  decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
-  are provided to play and stop the audio playback, and slider controls are used to change
-  the <code>playbackRate</code>, <code>loopStart</code> and <code>loopEnd</code>
-  properties on the fly.</p>
+In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
+decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
+are provided to play and stop the audio playback, and slider controls are used to change
+the `playbackRate`, `loopStart` and `loopEnd`
+properties on the fly.
 
-<p>When the audio is played to the end, it loops, but you can control how long the loops
-  last by altering <code>loopStart</code> and <code>loopEnd</code>. For example, if you
-  set their values to 20 and 25, respectively, then begin playback, the sound will play
-  normally until it reaches the 25 second mark. Then the current play position will loop
-  back to the 20 second mark and continue playing until the 25 second mark, ad infinitum
-  (or at least until {{domxref("AudioScheduledSourceNode/stop", "stop()")}} is called).</p>
+When the audio is played to the end, it loops, but you can control how long the loops
+last by altering `loopStart` and `loopEnd`. For example, if you
+set their values to 20 and 25, respectively, then begin playback, the sound will play
+normally until it reaches the 25 second mark. Then the current play position will loop
+back to the 20 second mark and continue playing until the 25 second mark, ad infinitum
+(or at least until {{domxref("AudioScheduledSourceNode/stop", "stop()")}} is called).
 
-<div class="note">
-  <p><strong>Note:</strong> For a full working example, see<a class="external external-icon"
-      href="https://mdn.github.io/webaudio-examples/decode-audio-data/"> this code running
-      live</a>, or <a class="external external-icon"
-      href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">view
-      the source</a>.</p>
-</div>
+> **Note:** For a full working example, see[ this code running
+> live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view
+> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
-<pre class="brush: js">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -102,19 +100,18 @@ loopstartControl.oninput = function() {
 loopendControl.oninput = function() {
   source.loopEnd = loopendControl.value;
   loopendValue.innerHTML = loopendControl.value;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- </ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

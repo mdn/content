@@ -15,61 +15,62 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.longDesc
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <em>deprecated</em> property <code><strong>longDesc</strong></code> on
-    the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
-    which contains a long-form description of the image. This can be used to
-  provide optional added details beyond the short description provided in the
-  {{htmlattrxref("title")}} attribute.</p>
+The _deprecated_ property **`longDesc`** on
+the {{domxref("HTMLImageElement")}} interface specifies the URL of a text or HTML file
+which contains a long-form description of the image. This can be used to
+provide optional added details beyond the short description provided in the
+{{htmlattrxref("title")}} attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>descURL</em> = <em>htmlImageElement</em>.longDesc;
-<em>htmlImageElement</em>.longDesc = <em>descURL</em>;
-</pre>
+```js
+descURL = htmlImageElement.longDesc;
+htmlImageElement.longDesc = descURL;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which may be either an empty string (indicating that no long
-  description is available) or the URL of a file containing a long form description of the
-  image's contents.</p>
+A {{domxref("DOMString")}} which may be either an empty string (indicating that no long
+description is available) or the URL of a file containing a long form description of the
+image's contents.
 
-<p>For example, if the image is a <a
-    href="/en-US/docs/Web/Media/Formats/Image_types#png">PNG</a> of a flowchart.
-  The <code>longDesc</code> property could be used to provide an explanation of the flow
-  of control represented by the chart, using only text. This can be used by readers both
-  as an explanation, but also as a substitute for visually-impaired users.</p>
+For example, if the image is a [PNG](/en-US/docs/Web/Media/Formats/Image_types#png) of a flowchart.
+The `longDesc` property could be used to provide an explanation of the flow
+of control represented by the chart, using only text. This can be used by readers both
+as an explanation, but also as a substitute for visually-impaired users.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>This property is <em>deprecated</em> and should no longer be used. Instead of
-  using <code>longDesc</code> to provide a link to a detailed description of an image,
-  encapsulate the image within a link using the {{HTMLElement("a")}} element.</p>
+This property is _deprecated_ and should no longer be used. Instead of
+using `longDesc` to provide a link to a detailed description of an image,
+encapsulate the image within a link using the {{HTMLElement("a")}} element.
 
-<p>Consider the following older HTML:</p>
+Consider the following older HTML:
 
-<pre
-  class="brush: html">&lt;img src="taco-tuesday.jpg" longDesc="image-descriptions/taco-tuesday.html"&gt;</pre>
+```html
+<img src="taco-tuesday.jpg" longDesc="image-descriptions/taco-tuesday.html">
+```
 
-<p>Here, the <code>longDesc</code> is used to indicate that the user should be able to
-  access a detailed description of the image <code>taco-tuesday.jpg</code> in the HTML
-  file <code>image-descriptions/taco-tuesday.html</code>.</p>
+Here, the `longDesc` is used to indicate that the user should be able to
+access a detailed description of the image `taco-tuesday.jpg` in the HTML
+file `image-descriptions/taco-tuesday.html`.
 
-<p>This can be easily converted into modern HTML:</p>
+This can be easily converted into modern HTML:
 
-<pre class="brush: html">&lt;a href="image-descriptions/taco-tuesday.html"&gt;
-  &lt;img src="taco-tuesday.jpg"&gt;
-&lt;/a&gt;
-</pre>
+```html
+<a href="image-descriptions/taco-tuesday.html">
+  <img src="taco-tuesday.jpg">
+</a>
+```
 
-<p>With that, the image is a link to the HTML file describing the image in more detail.
-</p>
+With that, the image is a link to the HTML file describing the image in more detail.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

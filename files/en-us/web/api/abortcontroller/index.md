@@ -9,42 +9,37 @@ tags:
   - Reference
 browser-compat: api.AbortController
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>AbortController</code></strong> interface represents a controller object that allows you to abort one or more Web requests as and when desired.</p>
+The **`AbortController`** interface represents a controller object that allows you to abort one or more Web requests as and when desired.
 
-<p>You can create a new <code>AbortController</code> object using the {{domxref("AbortController.AbortController()", "AbortController()")}} constructor. Communicating with a DOM request is done using an {{domxref("AbortSignal")}} object.</p>
+You can create a new `AbortController` object using the {{domxref("AbortController.AbortController()", "AbortController()")}} constructor. Communicating with a DOM request is done using an {{domxref("AbortSignal")}} object.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AbortController()")}}</dt>
- <dd>Creates a new <code>AbortController</code> object instance.</dd>
-</dl>
+- {{domxref("AbortController()")}}
+  - : Creates a new `AbortController` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AbortController.signal")}} {{readonlyInline}}</dt>
- <dd>Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.</dd>
-</dl>
+- {{domxref("AbortController.signal")}} {{readonlyInline}}
+  - : Returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with, or to abort, a DOM request.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AbortController.abort()")}}</dt>
- <dd>Aborts a DOM request before it has completed. This is able to abort <a href="/en-US/docs/Web/API/fetch">fetch requests</a>, consumption of any response bodies, and streams.</dd>
-</dl>
+- {{domxref("AbortController.abort()")}}
+  - : Aborts a DOM request before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, we aim to download a video using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-<p>We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.</p>
+We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-<p>When the <a href="/en-US/docs/Web/API/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (the <code>{signal}</code> below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
+When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -64,25 +59,22 @@ function fetchVideo() {
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with a <code>DOMException</code> named <code>AbortError</code>.</p>
-</div>
+> **Note:** When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
-<p>You can find a <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">full working example on GitHub</a>; you can also see it  <a href="https://mdn.github.io/dom-examples/abort-api/">running live</a>.</p>
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> by Jake Archibald</li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald

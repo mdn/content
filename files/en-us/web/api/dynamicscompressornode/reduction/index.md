@@ -10,39 +10,40 @@ tags:
   - reduction
 browser-compat: api.DynamicsCompressorNode.reduction
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>reduction</code></strong> read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.</p>
+The **`reduction`** read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
 
-<p>Intended for metering purposes, it returns a value in dB, or <code>0</code> (no gain reduction) if no signal is fed into the <code>DynamicsCompressorNode</code>. The range of this value is between <code>-20</code> and <code>0</code> (in dB).</p>
+Intended for metering purposes, it returns a value in dB, or `0` (no gain reduction) if no signal is fed into the `DynamicsCompressorNode`. The range of this value is between `-20` and `0` (in dB).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myReduction = compressorNodeInstance.reduction;
-</pre>
+```js
+var myReduction = compressorNodeInstance.reduction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A float.</p>
+A float.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
-var myReduction = compressor.reduction;</pre>
+var myReduction = compressor.reduction;
+```
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

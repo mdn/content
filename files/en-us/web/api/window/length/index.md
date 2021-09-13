@@ -2,38 +2,39 @@
 title: Window.length
 slug: Web/API/Window/length
 tags:
-- API
-- Gecko
-- HTML DOM
-- Property
-- Reference
-- Window
+  - API
+  - Gecko
+  - HTML DOM
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.length
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>Returns the number of frames (either {{HTMLElement("frame")}} or
-  {{HTMLElement("iframe")}} elements) in the window.</p>
+Returns the number of frames (either {{HTMLElement("frame")}} or
+{{HTMLElement("iframe")}} elements) in the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>framesCount</em> = window.length;
-</pre>
+```js
+framesCount = window.length;
+```
 
-<ul>
-  <li><code>framesCount</code> is the number of frames.</li>
-</ul>
+- `framesCount` is the number of frames.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (window.length) {
+```js
+if (window.length) {
   // this is a document with subframes
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

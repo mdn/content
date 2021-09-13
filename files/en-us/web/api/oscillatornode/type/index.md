@@ -10,61 +10,55 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <strong><code>type</code></strong> property of the {{ domxref("OscillatorNode")
+The **`type`** property of the {{ domxref("OscillatorNode")
     }} interface specifies what shape of {{interwiki("wikipedia", "waveform")}} the
-    oscillator will output. There are several common waveforms available, as well as an
-    option to specify a custom waveform shape. The shape of the waveform will affect the
-    tone that is produced.</p>
-</div>
+oscillator will output. There are several common waveforms available, as well as an
+option to specify a custom waveform shape. The shape of the waveform will affect the
+tone that is produced.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>OscillatorNode</em>.type = <em>type</em>;</pre>
+```js
+OscillatorNode.type = type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the shape of oscillator wave. The different
-  available values are:</p>
+A {{domxref("DOMString")}} specifying the shape of oscillator wave. The different
+available values are:
 
-<dl>
-  <dt><code>sine</code></dt>
-  <dd>A {{interwiki("wikipedia", "sine wave")}}. This is the default value.</dd>
-  <dt><code>square</code></dt>
-  <dd>A {{interwiki("wikipedia", "square wave")}} with a {{interwiki("wikipedia", "duty
-    cycle")}} of 0.5; that is, the signal is "high" for half of each period.</dd>
-  <dt><code>sawtooth</code></dt>
-  <dd>A {{interwiki("wikipedia", "sawtooth wave")}}.</dd>
-  <dt><code>triangle</code></dt>
-  <dd>A {{interwiki("wikipedia", "triangle wave")}}.</dd>
-  <dt><code>custom</code></dt>
-  <dd>A custom waveform. You never set <code>type</code> to <code>custom</code> manually;
+- `sine`
+  - : A {{interwiki("wikipedia", "sine wave")}}. This is the default value.
+- `square`
+  - : A {{interwiki("wikipedia", "square wave")}} with a {{interwiki("wikipedia", "duty
+    cycle")}} of 0.5; that is, the signal is "high" for half of each period.
+- `sawtooth`
+  - : A {{interwiki("wikipedia", "sawtooth wave")}}.
+- `triangle`
+  - : A {{interwiki("wikipedia", "triangle wave")}}.
+- `custom`
+  - : A custom waveform. You never set `type` to `custom` manually;
     instead, use the {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}
     method to provide the data representing the waveform. Doing so automatically sets the
-    <code>type</code> to <code>custom</code>.</dd>
-</dl>
+    `type` to `custom`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The value <code>custom</code> was specified. To set a custom waveform, just call
+- `InvalidStateError`
+  - : The value `custom` was specified. To set a custom waveform, just call
     {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}. Doing so
-    automatically sets the type for you.</dd>
-</dl>
+    automatically sets the type for you.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{ domxref("AudioContext") }} to create
-  an oscillator node. For an applied example, check out our <a
-    href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a
-    href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see
-    app.js</a> for relevant code).</p>
+The following example shows basic usage of an {{ domxref("AudioContext") }} to create
+an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see
+app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 
-<pre class="brush: js;">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -72,19 +66,17 @@ var oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

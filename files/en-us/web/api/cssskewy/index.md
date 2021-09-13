@@ -12,38 +12,34 @@ tags:
   - Interface
 browser-compat: api.CSSSkewY
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSSkewY</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <code><a href="/en-US/docs/Web/CSS/transform-function/skewY()">skewY()</a></code> value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.</p>
+The **`CSSSkewY`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [`skewY()`](</en-US/docs/Web/CSS/transform-function/skewY()>) value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref("CSSTransformValue")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSSkewY.CSSSkewY()")}}</dt>
- <dd>Creates a new <code>CSSSkewY</code> object.</dd>
-</dl>
+- {{domxref("CSSSkewY.CSSSkewY()")}}
+  - : Creates a new `CSSSkewY` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor</em> {{domxref("CSSTransformValue")}}.</p>
+_Inherits properties from its ancestor_ {{domxref("CSSTransformValue")}}.
 
-<dl>
- <dt>{{domxref('CSSSkewY.ay','ay')}}</dt>
- <dd>Returns or sets the y-axis value.</dd>
-</dl>
+- {{domxref('CSSSkewY.ay','ay')}}
+  - : Returns or sets the y-axis value.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor </em>{{domxref("CSSTransformValue")}}<em>.</em></p>
+_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}_._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

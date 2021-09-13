@@ -2,49 +2,45 @@
 title: MediaStreamTrack.getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
 tags:
-- API
-- Constraints
-- Media Capture and Streams
-- MediaStreamTrack
-- Method
-- Reference
+  - API
+  - Constraints
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - Method
+  - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>getSettings()</code></strong> method of the
-    {{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
-    object containing the current values of each of the constrainable properties for the
-    current <code>MediaStreamTrack</code>.</p>
+The **`getSettings()`** method of the
+{{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
+object containing the current values of each of the constrainable properties for the
+current `MediaStreamTrack`.
 
-<p>See <a
-    href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints,
-    and settings</a> for details on how to work with constrainable properties.</p>
+See [Capabilities, constraints,
+and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>settings</em> = <em>track</em>.getSettings()</pre>
+```js
+const settings = track.getSettings()
+```
 
-<h3 id="Returns">
-  Returns
-</h3>
+### Returns
 
-<p>A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
-  track's constrainable properties.</p>
+A {{domxref("MediaTrackSettings")}} object describing the current configuration of the
+track's constrainable properties.
 
-<div class="note">
-  <p><strong>Note:</strong> The returned object identifies the current values of every
-    constrainable property, including those which are platform defaults rather than having
-    been expressly set by the site's code. To instead fetch the most-recently established
-    constraints for the track's properties, as specified by the site's code, use
-    {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.</p>
-</div>
+> **Note:** The returned object identifies the current values of every
+> constrainable property, including those which are platform defaults rather than having
+> been expressly set by the site's code. To instead fetch the most-recently established
+> constraints for the track's properties, as specified by the site's code, use
+> {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

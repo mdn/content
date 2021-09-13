@@ -12,63 +12,58 @@ tags:
   - Reference
 browser-compat: api.DOMParser
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>DOMParser</code></strong> interface provides
-    the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a
-    string into a DOM {{domxref("Document")}}.</p>
+The **`DOMParser`** interface provides
+the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a
+string into a DOM {{domxref("Document")}}.
 
-<p>You can perform the opposite operation—converting a DOM tree into XML or HTML
-  source—using the {{domxref("XMLSerializer")}} interface.</p>
+You can perform the opposite operation—converting a DOM tree into XML or HTML
+source—using the {{domxref("XMLSerializer")}} interface.
 
-<p>In the case of an HTML document, you can also replace portions of the DOM with new DOM
-  trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and
-  {{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be
-  read to fetch HTML fragments corresponding to the corresponding DOM subtree.</p>
+In the case of an HTML document, you can also replace portions of the DOM with new DOM
+trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and
+{{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be
+read to fetch HTML fragments corresponding to the corresponding DOM subtree.
 
-<p>Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
-  from a URL-addressable resource, returning a <code>Document</code> in its
-  {{domxref("XMLHttpRequest.response", "response")}} property.</p>
+Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
+from a URL-addressable resource, returning a `Document` in its
+{{domxref("XMLHttpRequest.response", "response")}} property.
 
-<div class="note notecard">
-  <p><strong>Note:</strong> Be aware that <a href="/en-US/docs/Web/HTML/Block-level_elements">block-level elements</a>
-    like <code>&lt;p&gt;</code> will be automatically closed if another
-    block-level element is nested inside and therefore parsed before the closing <code>&lt;/p&gt;</code> tag.</p>
-</div>
+> **Note:** Be aware that [block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+> like `<p>` will be automatically closed if another
+> block-level element is nested inside and therefore parsed before the closing `</p>` tag.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMParser.DOMParser","DOMParser()")}}</dt>
- <dd>Creates a new <code>DOMParser</code> object.</dd>
-</dl>
+- {{domxref("DOMParser.DOMParser","DOMParser()")}}
+  - : Creates a new `DOMParser` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("DOMParser.parseFromString()")}}</dt>
- <dd>Parses a string using either the HTML parser or the XML parser, returning an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}}.</dd>
-</dl>
+- {{domxref("DOMParser.parseFromString()")}}
+  - : Parses a string using either the HTML parser or the XML parser, returning an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Parsing XML, SVG, and HTML</h3>
+### Parsing XML, SVG, and HTML
 
-<p>This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
-<code>text/html</code> will invoke the HTML parser, and any of the other MIME types
-that are accepted by this method will invoke the XML parser.</p>
+This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
+`text/html` will invoke the HTML parser, and any of the other MIME types
+that are accepted by this method will invoke the XML parser.
 
-<pre class="brush: js">const parser = new DOMParser();
+```js
+const parser = new DOMParser();
 
-const xmlString = "&lt;warning&gt;Beware of the tiger&lt;/warning&gt;";
+const xmlString = "<warning>Beware of the tiger</warning>";
 const doc1 = parser.parseFromString(xmlString, "application/xml");
 // XMLDocument
 
-const svgString = "&lt;circle cx=\"50\" cy=\"50\" r=\"50\"/&gt;";
+const svgString = "<circle cx=\"50\" cy=\"50\" r=\"50\"/>";
 const doc2 = parser.parseFromString(svgString, "image/svg+xml");
 // XMLDocument
 
-const htmlString = "&lt;strong&gt;Beware of the leopard&lt;/strong&gt;";
+const htmlString = "<strong>Beware of the leopard</strong>";
 const doc3 = parser.parseFromString(htmlString, "text/html");
 // HTMLDocument
 
@@ -80,22 +75,19 @@ console.log(doc2.firstChild.tagName);
 
 console.log(doc3.body.firstChild.textContent);
 // "Beware of the leopard"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a>
-  </li>
-  <li>{{domxref("XMLHttpRequest")}}</li>
-  <li>{{domxref("XMLSerializer")}}</li>
-  <li>{{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.</li>
-</ul>
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLSerializer")}}
+- {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

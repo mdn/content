@@ -17,66 +17,62 @@ tags:
   - ongatheringstatechange
 browser-compat: api.RTCIceTransport.ongatheringstatechange
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>ongatheringstatechange</strong></code> event handler for the {{domxref("RTCIceTransport")}} interface specifies an event handler that is to be called when the {{event("gatheringstatechange")}} event occurs on the transport.</p>
-    
-<p>This event is delivered whenever the transport's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property changes.</p>
+The **`ongatheringstatechange`** event handler for the {{domxref("RTCIceTransport")}} interface specifies an event handler that is to be called when the {{event("gatheringstatechange")}} event occurs on the transport.
 
-<h2 id="Syntax">Syntax</h2>
+This event is delivered whenever the transport's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property changes.
 
-<pre class="brush: js"><em>RTCIceTransport</em>.ongatheringstatechange = <em>stateChangeHandler</em>;
-</pre>
+## Syntax
 
-<h3 id="Value">Value</h3>
+```js
+RTCIceTransport.ongatheringstatechange = stateChangeHandler;
+```
 
-<p>A function to be called when the {{domxref("RTCIceTransport")}} object's gathering
-  state changes. To determine the new state, examine the value of
-  {{domxref("RTCIceTransport.gatheringState", "gatheringState")}}.</p>
+### Value
 
-<p>The gathering state indicates whether or not the ICE agent has begun gathering
-  candidates, and if so, whether or not gathering has finished. Its possible values are:</p>
+A function to be called when the {{domxref("RTCIceTransport")}} object's gathering
+state changes. To determine the new state, examine the value of
+{{domxref("RTCIceTransport.gatheringState", "gatheringState")}}.
 
-  <dl>
-    <dt><code>"new"</code></dt>
-    <dd>The {{domxref("RTCIceTransport")}} is newly created and has not yet started to gather ICE candidates.</dd>
-    <dt><code>"gathering"</code></dt>
-    <dd>The transport is in the process of gathering candidates.</dd>
-    <dt><code>"complete"</code></dt>
-    <dd>The transport has finished gathering ICE candidates and has sent the end-of-candidates indicator to the remote device. The transport won't gather any further candidates unless an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> occurs, at which point the gathering process starts over from scratch.</dd>
-   </dl>
-   
+The gathering state indicates whether or not the ICE agent has begun gathering
+candidates, and if so, whether or not gathering has finished. Its possible values are:
 
-<h2 id="Example">Example</h2>
+- `"new"`
+  - : The {{domxref("RTCIceTransport")}} is newly created and has not yet started to gather ICE candidates.
+- `"gathering"`
+  - : The transport is in the process of gathering candidates.
+- `"complete"`
+  - : The transport has finished gathering ICE candidates and has sent the end-of-candidates indicator to the remote device. The transport won't gather any further candidates unless an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs, at which point the gathering process starts over from scratch.
 
-<p>This snippet establishes a handler for the {{event("gatheringstatechange")}} event that
-  checks to see if the state has changed to <code>"complete"</code>, indicating that all
-  ICE candidates from both the local and remote peers have been received and processed.
-</p>
+## Example
 
-<pre class="brush: js">var iceTransport = pc.getSenders()[0].transport.transport;
+This snippet establishes a handler for the {{event("gatheringstatechange")}} event that
+checks to see if the state has changed to `"complete"`, indicating that all
+ICE candidates from both the local and remote peers have been received and processed.
+
+```js
+var iceTransport = pc.getSenders()[0].transport.transport;
 
 iceTransport.ongatheringstatechange = function(event) {
   if (iceTransport.gatheringState == "complete") {
     allCandidatesReceived(pc);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("gatheringstatechange")}} event and its type, {{domxref("Event")}}.</li>
-  <li>The other event handlers for <code>RTCIceTransport</code>:
-    {{domxref("RTCIceTransport.onstatechange", "onstatechange")}} and
-    {{domxref("RTCIceTransport.onselectedcandidatepairchange",
-    "onselectedcandidatepairchange")}}</li>
-</ul>
+- The {{event("gatheringstatechange")}} event and its type, {{domxref("Event")}}.
+- The other event handlers for `RTCIceTransport`:
+  {{domxref("RTCIceTransport.onstatechange", "onstatechange")}} and
+  {{domxref("RTCIceTransport.onselectedcandidatepairchange",
+    "onselectedcandidatepairchange")}}

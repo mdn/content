@@ -11,73 +11,76 @@ tags:
   - Reference
 browser-compat: api.MediaQueryList.media
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>media</strong></code> read-only property of the
-  {{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
-  serialized media query.</p>
+The **`media`** read-only property of the
+{{DOMxRef("MediaQueryList")}} interface is a {{DOMxRef("DOMString")}} representing a
+serialized media query.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>media</em> = <em>MediaQueryList.media;</em></pre>
+```js
+var media = MediaQueryList.media;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("DOMString")}} representing a serialized media query.</p>
+A {{DOMxRef("DOMString")}} representing a serialized media query.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example runs the media query <code>(max-width: 600px)</code> and displays the
-  value of the resulting <code>MediaQueryList</code>'s <code>media</code> property in a
-  {{HTMLElement("span")}}.</p>
+This example runs the media query `(max-width: 600px)` and displays the
+value of the resulting `MediaQueryList`'s `media` property in a
+{{HTMLElement("span")}}.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let mql = window.matchMedia('(max-width: 600px)');
+```js
+let mql = window.matchMedia('(max-width: 600px)');
 
 document.querySelector(".mq-value").innerText = mql.media;
-</pre>
+```
 
-<p>The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia",
-  "matchMedia()")}} to compile it, then sets the <code>&lt;span&gt;</code>'s
-  {{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
-  {{DOMxRef("MediaQueryList.media", "media")}} property.</p>
+The JavaScript code passes the media query to match into {{DOMxRef("Window.matchMedia",
+  "matchMedia()")}} to compile it, then sets the `<span>`'s
+{{DOMxRef("HTMLElement.innerText", "innerText")}} to the value of the result's
+{{DOMxRef("MediaQueryList.media", "media")}} property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span class="mq-value"&gt;&lt;/span&gt;</pre>
+```html
+<span class="mq-value"></span>
+```
 
-<p>A simple <code>&lt;span&gt;</code> to receive the output.</p>
+A simple `<span>` to receive the output.
 
-<pre class="brush: css hidden">.mq-value {
+```css hidden
+.mq-value {
   font: 18px arial, sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;
   border: 1px solid #dde;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", "60")}}</p>
+{{EmbedLiveSample("Examples", "100%", "60")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

@@ -11,21 +11,19 @@ tags:
   - Reference
 browser-compat: api.PresentationReceiver
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
-<p>The <strong><code>PresentationReceiver</code></strong> interface of the <a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a> provides a means for a receiving browsing context to access controlling browsing contexts and communicate with them.</p>
+The **`PresentationReceiver`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) provides a means for a receiving browsing context to access controlling browsing contexts and communicate with them.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('PresentationReceiver.connectionList')}} {{readonlyinline}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves with a {{domxref('PresentationConnectionList')}} object containing a list of <dfn>incoming presentation connections.</dfn></dd>
-</dl>
+- {{domxref('PresentationReceiver.connectionList')}} {{readonlyinline}}
+  - : Returns a {{jsxref('Promise')}} that resolves with a {{domxref('PresentationConnectionList')}} object containing a list of *incoming presentation connections.*
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

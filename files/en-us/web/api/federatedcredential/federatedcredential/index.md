@@ -11,34 +11,32 @@ tags:
   - credential management
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
-<p>{{APIRef("Credential Management API")}}{{Non-standard_header}}</p>
+{{APIRef("Credential Management API")}}{{Non-standard_header}}
 
-<p>The <strong><code>FederatedCredential()</code></strong>
-    constructor creates a new {{domxref("FederatedCredential")}} object. In
-  supporting browsers, an instance of this class may be passed the <code>credential</code>
-  received from the <code>init</code> object for global {{domxref('fetch()')}}.</p>
+The **`FederatedCredential()`**
+constructor creates a new {{domxref("FederatedCredential")}} object. In
+supporting browsers, an instance of this class may be passed the `credential`
+received from the `init` object for global {{domxref('fetch()')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myCredential = new FederatedCredential(init)</pre>
+```js
+var myCredential = new FederatedCredential(init)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>init</em></dt>
-  <dd>Options are:
-    <ul>
-      <li><code>provider</code>: A {{domxref("USVString")}}; identifying the credential
-        provider.</li>
-    </ul>
-  </dd>
-</dl>
+- _init_
 
-<h2 id="Specifications">Specifications</h2>
+  - : Options are:
+
+    - `provider`: A {{domxref("USVString")}}; identifying the credential
+      provider.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,57 +9,53 @@ tags:
   - Reference
 browser-compat: api.CharacterData.replaceWith
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>CharacterData.replaceWith()</strong></code> method replaces characters
-  in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
-  {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.</p>
+The **`CharacterData.replaceWith()`** method replaces characters
+in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
+{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">replaceWith(...nodes)</pre>
+```js
+replaceWith(...nodes)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_replaceWith">Using <code>replaceWith()</code></h3>
+### Using `replaceWith()`
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;Some text&lt;/p&gt;
-</pre>
+```html
+<p id="myText">Some text</p>
+```
 
-<pre class="brush: js">let text = document.getElementById('myText').firstChild;
+```js
+let text = document.getElementById('myText').firstChild;
 text.replaceWith("Other text");
-</pre>
+```
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;Other text&lt;/p&gt;
-</pre>
+```html
+<p id="myText">Other text</p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}
+{{Specifications}}
 
-</p>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CharacterData.replaceData()")}}</li>
-</ul>
+- {{domxref("CharacterData.replaceData()")}}

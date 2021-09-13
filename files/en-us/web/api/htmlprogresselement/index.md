@@ -8,41 +8,37 @@ tags:
   - Reference
 browser-compat: api.HTMLProgressElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLProgressElement</code></strong> interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("progress")}} elements.</p>
+The **`HTMLProgressElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("progress")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLProgressElement.max")}}</dt>
- <dd>Is a <code>double</code> value reflecting the content attribute of the same name, limited to numbers greater than zero. Its default value is <code>1.0</code>.</dd>
- <dt>{{domxref("HTMLProgressElement.position")}}{{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> value returning the result of dividing the current value (<code>value</code>) by the maximum value (<code>max</code>); if the progress bar is an indeterminate progress bar, it returns <code>-1</code>.</dd>
- <dt>{{domxref("HTMLProgressElement.value")}}</dt>
- <dd>Is a <code>double</code> value that reflects the current value; if the progress bar is an indeterminate progress bar, it returns <code>0</code>.</dd>
- <dt>{{domxref("HTMLProgressElement.labels")}}{{readonlyInline}}</dt>
- <dd>Returns {{domxref("NodeList")}} containing the list of {{HTMLElement("label")}} elements that are labels for this element.</dd>
-</dl>
+- {{domxref("HTMLProgressElement.max")}}
+  - : Is a `double` value reflecting the content attribute of the same name, limited to numbers greater than zero. Its default value is `1.0`.
+- {{domxref("HTMLProgressElement.position")}}{{readonlyInline}}
+  - : Returns a `double` value returning the result of dividing the current value (`value`) by the maximum value (`max`); if the progress bar is an indeterminate progress bar, it returns `-1`.
+- {{domxref("HTMLProgressElement.value")}}
+  - : Is a `double` value that reflects the current value; if the progress bar is an indeterminate progress bar, it returns `0`.
+- {{domxref("HTMLProgressElement.labels")}}{{readonlyInline}}
+  - : Returns {{domxref("NodeList")}} containing the list of {{HTMLElement("label")}} elements that are labels for this element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("progress")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("progress")}}

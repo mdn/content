@@ -11,41 +11,41 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.close
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>The <strong><code>BroadcastChannel.close()</code></strong> terminates the connection to
-  the underlying channel, allowing the object to be garbage collected. This is a necessary
-  step to perform as there is no other way for a browser to know that this channel is not
-  needed anymore.</p>
+The **`BroadcastChannel.close()`** terminates the connection to
+the underlying channel, allowing the object to be garbage collected. This is a necessary
+step to perform as there is no other way for a browser to know that this channel is not
+needed anymore.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var str = channel.close();
-</pre>
+```js
+var str = channel.close();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Connect to a channel
+```js
+// Connect to a channel
 var bc = new BroadcastChannel('test_channel');
 
 // More operations (like postMessage, …)
 
 // When done, disconnect from the channel
 bc.close();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, the interface it belongs to.

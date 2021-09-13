@@ -9,31 +9,27 @@ tags:
   - WebGL extensions
 browser-compat: api.OES_fbo_render_mipmap
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code>OES_fbo_render_mipmap</code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and makes it possible to attach any level of a texture to a framebuffer object.</p>
+The `OES_fbo_render_mipmap` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and makes it possible to attach any level of a texture to a framebuffer object.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}.  <br>
- In WebGL2, the functionality of this extension is available in the WebGL 2 context by default.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}.  
+> In WebGL2, the functionality of this extension is available in the WebGL 2 context by default.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the <a href="https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/">sample code</a> in the Khronos specification.</p>
+See the [sample code](https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/) in the Khronos specification.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}

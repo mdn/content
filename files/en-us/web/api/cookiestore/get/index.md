@@ -9,95 +9,83 @@ tags:
   - CookieStore
 browser-compat: api.CookieStore.get
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-<p>The <strong><code>get()</code></strong> method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.</p>
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. (See below.) The method will return the first matching cookie for the passed parameters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>cookie</var> = CookieStore.get(<var>name</var>);
-var <var>cookie</var> = CookieStore.get(<var>options</var>);</pre>
+    var cookie = CookieStore.get(name);
+    var cookie = CookieStore.get(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method requires one of the following:</p>
+This method requires one of the following:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-  <dt>options</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>name</code></dt>
-      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-      <dt><code>url</code></dt>
-      <dd>A {{domxref("USVString")}} with the url of a cookie.</dd>
-    </dl>
-  </dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} with the name of a cookie.
+- options
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
-</div>
+  - : An object containing:
 
-<h3 id="Returns">Return value</h3>
+    - `name`
+      - : A {{domxref("USVString")}} with the name of a cookie.
+    - `url`
+      - : A {{domxref("USVString")}} with the url of a cookie.
 
-<p>A {{jsxref("Promise")}} that resolves with an object containing the first cookie matching the submitted name or options. This object contains the following properties:</p>
+> **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} containing the name of the cookie.</dd>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("USVString")}} containing the value of the cookie.</dd>
-  <dt><code>domain</code></dt>
-  <dd>A {{domxref("USVString")}} containing the domain of the cookie.</dd>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("USVString")}} containing the path of the cookie.</dd>
-  <dt><code>expires</code></dt>
-  <dd>A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.</dd>
-  <dt><code>secure</code></dt>
-  <dd>A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.</dd>
-  <dt><code>sameSite</code></dt>
-  <dd>One of the following <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> values:
-    <dl>
-      <dt><code>"strict"</code></dt>
-      <dd>Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.</dd>
-      <dt><code>"lax"</code></dt>
-      <dd>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).</dd>
-      <dt><code>"none"</code></dt>
-      <dd>Cookies will be sent in all contexts.</dd>
-    </dl>
+### Return value
 
-    <div class="notecard note">
-      <p><strong>Note:</strong> For more information on SameSite cookies see <a href="https://web.dev/samesite-cookies-explained/">SameSite cookies explained</a>.</p>
-    </div>
-  </dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with an object containing the first cookie matching the submitted name or options. This object contains the following properties:
 
-<h3 id="Exceptions">Exceptions</h3>
+- `name`
+  - : A {{domxref("USVString")}} containing the name of the cookie.
+- `value`
+  - : A {{domxref("USVString")}} containing the value of the cookie.
+- `domain`
+  - : A {{domxref("USVString")}} containing the domain of the cookie.
+- `path`
+  - : A {{domxref("USVString")}} containing the path of the cookie.
+- `expires`
+  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+- `secure`
+  - : A {{jsxref("boolean")}} indicating whether the cookie is to be used in secure contexts only.
+- `sameSite`
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if getting the cookie represented by the given <code>name</code> or <code>options</code> fails.</dd>
-</dl>
+  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
 
-<h2 id="Examples">Examples</h2>
+    - `"strict"`
+      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
+    - `"lax"`
+      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
+    - `"none"`
+      - : Cookies will be sent in all contexts.
 
-<p>In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.</p>
+    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
 
-<pre class="brush: js">let cookie = cookieStore.get('cookie1');
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if getting the cookie represented by the given `name` or `options` fails.
+
+## Examples
+
+In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
+
+```js
+let cookie = cookieStore.get('cookie1');
 if (cookie) {
     console.log(cookie);
 } else {
     console.log('Cookie not found');
-}</pre>
+}
+```
 
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,40 +2,41 @@
 title: HTMLShadowElement.getDistributedNodes()
 slug: Web/API/HTMLShadowElement/getDistributedNodes
 tags:
-- API
-- HTML DOM
-- Property
-- Reference
-- Web Components
-- Deprecated
+  - API
+  - HTML DOM
+  - Property
+  - Reference
+  - Web Components
+  - Deprecated
 browser-compat: api.HTMLShadowElement.getDistributedNodes
 ---
-<div>{{APIRef("Web Components")}}{{Deprecated_header}}</div>
+{{APIRef("Web Components")}}{{Deprecated_header}}
 
-<p>The <code><strong>HTMLShadowElement.getDistributedNodes()</strong></code> method
-  returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}
-  associated with this <code>&lt;shadow&gt;</code> element.</p>
+The **`HTMLShadowElement.getDistributedNodes()`** method
+returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}}
+associated with this `<shadow>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>nodeList</var> = <var>object</var>.getDistributedNodes()
-</pre>
+```js
+var nodeList = object.getDistributedNodes()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Get the distributed nodes
-var nodes = myShadowObject.getDistributedNodes();</pre>
+```js
+// Get the distributed nodes
+var nodes = myShadowObject.getDistributedNodes();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer defined by any specifications.</p>
+This feature is no longer defined by any specifications.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLShadowElement">HTMLShadowElement</a></li>
-</ul>
+- [HTMLShadowElement](/en-US/docs/Web/API/HTMLShadowElement)

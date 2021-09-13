@@ -5,37 +5,34 @@ tags:
   - Streams API
 browser-compat: api.TransformStream
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <code>TransformStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a set of transformable data.</p>
+The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a set of transformable data.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("TransformStream.TransformStream", "TransformStream()")}}</dt>
- <dd>Creates and returns a transform stream object from the given handlers.</dd>
-</dl>
+- {{domxref("TransformStream.TransformStream", "TransformStream()")}}
+  - : Creates and returns a transform stream object from the given handlers.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("TransformStream.readable")}} {{readonlyInline}}</dt>
- <dd>The <code>readable</code> end of a TransformStream.</dd>
- <dt>{{domxref("TransformStream.writable")}} {{readonlyInline}}</dt>
- <dd>The <code>writable</code> end of a TransformStream.</dd>
-</dl>
+- {{domxref("TransformStream.readable")}} {{readonlyInline}}
+  - : The `readable` end of a TransformStream.
+- {{domxref("TransformStream.writable")}} {{readonlyInline}}
+  - : The `writable` end of a TransformStream.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None</p>
+None
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Anything-to-uint8array_stream">Anything-to-uint8array stream</h3>
+### Anything-to-uint8array stream
 
-<p>In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values.</p>
+In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values.
 
-<pre class="brush: js">const transformContent = {
+```js
+const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
     chunk = await chunk
@@ -45,9 +42,9 @@ browser-compat: api.TransformStream
         if (chunk === null) controller.terminate()
         else if (ArrayBuffer.isView(chunk))
           controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) &amp;&amp; chunk.every(value =&gt; typeof value === 'number'))
+        else if (Array.isArray(chunk) && chunk.every(value => typeof value === 'number'))
           controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf &amp;&amp; chunk.valueOf() !== chunk)
+        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
           this.transform(chunk.valueOf(), controller) // hack
         else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
         break
@@ -69,13 +66,14 @@ class AnyToU8Stream extends TransformStream {
     super({...transformContent, textencoder: new TextEncoder()})
   }
 }
-</pre>
+```
 
-<h3 id="Polyfilling_TextEncoderStream_and_TextDecoderStream">Polyfilling TextEncoderStream and TextDecoderStream</h3>
+### Polyfilling TextEncoderStream and TextDecoderStream
 
-<p>Note that this is deprecated by the native constructors. This is intended as a polyfill for unsupported platforms.</p>
+Note that this is deprecated by the native constructors. This is intended as a polyfill for unsupported platforms.
 
-<pre class="brush: js">const tes = {
+```js
+const tes = {
   start(){this.encoder = new TextEncoder()},
   transform(chunk, controller) {
     controller.enqueue(this.encoder.encode(chunk))
@@ -92,11 +90,12 @@ class JSTextEncoderStream extends TransformStream {
   }
   get encoding() {return _jstes_wm.get(this).encoder.encoding}
 }
-</pre>
+```
 
-<p>Similarly, <code>TextDecoderStream</code> can be written as such:</p>
+Similarly, `TextDecoderStream` can be written as such:
 
-<pre class="brush: js">const tds = {
+```js
+const tds = {
   start(){
     this.decoder = new TextDecoder(this.encoding, this.options)
   },
@@ -117,34 +116,33 @@ class JSTextDecoderStream extends TransformStream {
   get fatal() {return _jstds_wm.get(this).decoder.fatal}
   get ignoreBOM() {return _jstds_wm.get(this).decoder.ignoreBOM}
 }
-</pre>
+```
 
-<h3 id="Chaining_multiple_ReadableStreams_together">Chaining multiple ReadableStreams together</h3>
+### Chaining multiple ReadableStreams together
 
-<p>This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.</p>
+This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.
 
-<pre class="brush: js">let responses = [ /* conjoined response tree */ ]
+```js
+let responses = [ /* conjoined response tree */ ]
 let {readable, writable} = new TransformStream
 
 responses.reduce(
-  (a, res, i, arr) =&gt; a.then(() =&gt; res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
+  (a, res, i, arr) => a.then(() => res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
   Promise.resolve()
 )
-</pre>
+```
 
-<p>Note that this is not resilient to other influences.</p>
+Note that this is not resilient to other influences.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
- <li><a href="https://web.dev/streams/">Streams—The Definitive Guide</a></li>
-</ul>
+- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.
+- [Streams—The Definitive Guide](https://web.dev/streams/)

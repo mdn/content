@@ -2,52 +2,51 @@
 title: IDBCursor.continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
 tags:
-- API
-- IDBCursor
-- IndexedDB
-- Method
-- Reference
-- Storage
-- Web
+  - API
+  - IDBCursor
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - Web
 browser-compat: api.IDBCursor.continuePrimaryKey
 ---
-<div>{{APIRef("IndexedDB")}}</div>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>continuePrimaryKey()</code></strong> method of the
-  {{domxref("IDBCursor")}} interface advances the cursor to the to the item whose key
-  matches the key parameter as well as whose primary key matches the primary key
-  parameter.</p>
+The **`continuePrimaryKey()`** method of the
+{{domxref("IDBCursor")}} interface advances the cursor to the to the item whose key
+matches the key parameter as well as whose primary key matches the primary key
+parameter.
 
-<p>A typical use case, is to resume the iteration where a previous cursor has been closed,
-  without having to compare the keys one by one.</p>
+A typical use case, is to resume the iteration where a previous cursor has been closed,
+without having to compare the keys one by one.
 
-<p>Calling this method more than once before new cursor data has been loaded - for
-  example, calling <code>continuePrimaryKey()</code> twice from the same onsuccess handler
-  - results in an <code>InvalidStateError</code> being thrown on the second call because
-  the cursor’s got value flag has been unset.</p>
+Calling this method more than once before new cursor data has been loaded - for
+example, calling `continuePrimaryKey()` twice from the same onsuccess handler
+\- results in an `InvalidStateError` being thrown on the second call because
+the cursor’s got value flag has been unset.
 
-<p>This method is only valid for cursors coming from an index. Using it for cursors coming
-  from an object store will throw an error.</p>
+This method is only valid for cursors coming from an index. Using it for cursors coming
+from an object store will throw an error.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>cursor</em>.continuePrimaryKey(<em>key</em>, <em>primaryKey</em>);</pre>
+```js
+cursor.continuePrimaryKey(key, primaryKey);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>key</code></dt>
-  <dd>The key to position the cursor at.</dd>
-  <dt><code>primaryKey</code></dt>
-  <dd>The primary key to position the cursor at.</dd>
-</dl>
+- `key`
+  - : The key to position the cursor at.
+- `primaryKey`
+  - : The primary key to position the cursor at.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 <table class="standard-table">
   <thead>
@@ -65,40 +64,48 @@ browser-compat: api.IDBCursor.continuePrimaryKey
       <td><code>DataError</code></td>
       <td>
         <p>The key parameter may have any of the following conditions:</p>
-
         <ul>
           <li>The key is not a valid key.</li>
-          <li>The key is less than or equal to this cursor's position and the cursor's
-            direction is <code>next</code> or <code>nextunique</code>.</li>
-          <li>The key is greater than or equal to this cursor's position and this cursor's
-            direction is <code>prev</code> or <code>prevunique</code>.</li>
+          <li>
+            The key is less than or equal to this cursor's position and the
+            cursor's direction is <code>next</code> or <code>nextunique</code>.
+          </li>
+          <li>
+            The key is greater than or equal to this cursor's position and this
+            cursor's direction is <code>prev</code> or <code>prevunique</code>.
+          </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The cursor is currently being iterated or has iterated past its end.</td>
+      <td>
+        The cursor is currently being iterated or has iterated past its end.
+      </td>
     </tr>
     <tr>
       <td><code>InvalidAccessError</code></td>
-      <td>The cursor's direction is not <code>prev</code> or <code>next</code>.</td>
+      <td>
+        The cursor's direction is not <code>prev</code> or <code>next</code>.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>here’s how you can resume an iteration of all articles tagged with
-  <code>"javascript"</code> since your last visit:</p>
+here’s how you can resume an iteration of all articles tagged with
+`"javascript"` since your last visit:
 
-<pre class="brush: js">let request = articleStore.index("tag").openCursor();
+```js
+let request = articleStore.index("tag").openCursor();
 let count = 0;
 let unreadList = [];
-request.onsuccess = (event) =&gt; {
+request.onsuccess = (event) => {
     let cursor = event.target.result;
     if (!cursor) { return; }
     let lastPrimaryKey = getLastIteratedArticleId();
-    if (lastPrimaryKey &gt; cursor.primaryKey) {
+    if (lastPrimaryKey > cursor.primaryKey) {
       cursor.continuePrimaryKey("javascript", lastPrimaryKey);
       return;
     }
@@ -106,30 +113,27 @@ request.onsuccess = (event) =&gt; {
     setLastIteratedArticleId(cursor.primaryKey);
     // preload 5 articles into the unread list;
     unreadList.push(cursor.value);
-    if (++count &lt; 5) {
+    if (++count < 5) {
       cursor.continue();
     }
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -2,38 +2,40 @@
 title: CSSScale.y
 slug: Web/API/CSSScale/y
 tags:
-- API
-- CSS Typed Object Model API
-- CSSScale
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSScale
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSScale.y
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>y</code></strong> property of the
-  {{domxref("CSSScale")}} interface gets and sets the ordinate or y-axis of the
-  translating vector.</p>
+The **`y`** property of the
+{{domxref("CSSScale")}} interface gets and sets the ordinate or y-axis of the
+translating vector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>scaleY</em> = CSSScale.y;</pre>
+```js
+var scaleY = CSSScale.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer or a {{domxref("CSSNumericValue")}}</p>
+A double integer or a {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

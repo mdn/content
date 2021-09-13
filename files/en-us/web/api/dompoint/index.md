@@ -15,50 +15,45 @@ tags:
   - VR
 browser-compat: api.DOMPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>A <strong><code>DOMPoint</code></strong> object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value. <code>DOMPoint</code> is based on {{domxref("DOMPointReadOnly")}} but allows its properties' values to be changed.</p>
+A **`DOMPoint`** object represents a 2D or 3D point in a coordinate system; it includes values for the coordinates in up to three dimensions, as well as an optional perspective value. `DOMPoint` is based on {{domxref("DOMPointReadOnly")}} but allows its properties' values to be changed.
 
-<p>In general, a positive <code>x</code> component represents a position to the right of the origin, a positive <code>y</code> component is downward from the origin, and a positive <code>z</code> component extends outward from the screen (in other words, toward the user).</p>
+In general, a positive `x` component represents a position to the right of the origin, a positive `y` component is downward from the origin, and a positive `z` component extends outward from the screen (in other words, toward the user).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("DOMPoint.DOMPoint","DOMPoint()")}}</dt>
-	<dd>Creates and returns a new <code>DOMPoint</code> object given the values of zero or more of its coordinate components and optionally the <code>w</code> perspective value. You can also use an existing <code>DOMPoint</code> or <code>DOMPointReadOnly</code> or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.</dd>
-</dl>
+- {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
+  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>DOMPoint</code> inherits methods from its parent, {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` inherits methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
-	<dt>{{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}</dt>
-	<dd>Creates a new mutable <code>DOMPoint</code> object given an existing point (or an object containing matching properties) which provides the values for its properties.</dd>
-</dl>
+- {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
+  - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>DOMPoint</code> inherits properties from its parent, {{domxref("DOMPointReadOnly")}}.</em></p>
+_`DOMPoint` inherits properties from its parent, {{domxref("DOMPointReadOnly")}}._
 
-<dl>
-	<dt>{{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}</dt>
-	<dd>The <code>x</code> coordinate of the <code>DOMPoint</code>.</dd>
-	<dt>{{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}</dt>
-	<dd>The <code>y</code> coordinate of the <code>DOMPoint</code>.</dd>
-	<dt>{{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}</dt>
-	<dd>The <code>z</code> coordinate of the <code>DOMPoint</code>.</dd>
-	<dt>{{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}</dt>
-	<dd>The perspective value of the <code>DOMPoint</code>.</dd>
-</dl>
+- {{domxref("DOMPointReadOnly.x", "DOMPoint.x")}}
+  - : The `x` coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.y", "DOMPoint.y")}}
+  - : The `y` coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.z", "DOMPoint.z")}}
+  - : The `z` coordinate of the `DOMPoint`.
+- {{domxref("DOMPointReadOnly.w", "DOMPoint.w")}}
+  - : The perspective value of the `DOMPoint`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>, <code>DOMPointReadOnly</code> values are used to represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two <code>DOMPointReadOnly</code> attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRViewerPose.orientation","orientation")}} as a quaternion.</p>
+In the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), `DOMPointReadOnly` values are used to represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two `DOMPointReadOnly` attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRViewerPose.orientation","orientation")}} as a quaternion.
 
-<pre class="brush: js">function onXRFrame(time, xrFrame) {
+```js
+function onXRFrame(time, xrFrame) {
   let viewerPose = xrFrame.getViewerPose(xrReferenceSpace);
 
   if (viewerPose) {
@@ -74,19 +69,18 @@ browser-compat: api.DOMPoint
                                     + ', z: ' + roundToTwo(orientation.z)
                                     + ', w: ' + roundToTwo(orientation.w));
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("DOMRect")}}</li>
-	<li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- {{domxref("DOMRect")}}
+- {{domxref("DOMMatrix")}}

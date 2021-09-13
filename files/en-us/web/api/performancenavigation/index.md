@@ -15,60 +15,52 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<p>The legacy <strong><code>PerformanceNavigation</code></strong> interface represents information about how the navigation to the current document was done.</p>
+The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>.
-     Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
-</div>
+> **Warning:** This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
+> Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<p>An object of this type can be obtained by calling the {{domxref("Performance.navigation")}} read-only attribute.</p>
+An object of this type can be obtained by calling the {{domxref("Performance.navigation")}} read-only attribute.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>PerformanceNavigation</code> interface doesn't inherit any properties.</em></p>
+_The `PerformanceNavigation` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{deprecated_inline}} {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned short</code> which indicates how the navigation to this page was done. Possible values are:
- <dl>
-  <dt><code>TYPE_NAVIGATE</code> (0)</dt>
-  <dd>The page was accessed by following a link, a bookmark, a form submission, or a script, or by typing the URL in the address bar.</dd>
-  <dt><code>TYPE_RELOAD</code> (1)</dt>
-  <dd>The page was accessed by clicking the Reload button or via the {{domxref("Location.reload()")}} method.</dd>
-  <dt><code>TYPE_BACK_FORWARD</code> (2)</dt>
-  <dd>The page was accessed by navigating into the history.</dd>
-  <dt><code>TYPE_RESERVED</code> (255)</dt>
-  <dd>Any other way.</dd>
- </dl>
- </dd>
- <dt>{{deprecated_inline}} {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned short</code> representing the number of REDIRECTs done before reaching the page.</dd>
-</dl>
+- {{deprecated_inline}} {{domxref("PerformanceNavigation.type")}} {{readonlyInline}}
 
-<h2 id="Methods">Methods</h2>
+  - : An `unsigned short` which indicates how the navigation to this page was done. Possible values are:
 
-<p><em>The <code>Performance</code> interface doesn't inherit any methods.</em></p>
+    - `TYPE_NAVIGATE` (0)
+      - : The page was accessed by following a link, a bookmark, a form submission, or a script, or by typing the URL in the address bar.
+    - `TYPE_RELOAD` (1)
+      - : The page was accessed by clicking the Reload button or via the {{domxref("Location.reload()")}} method.
+    - `TYPE_BACK_FORWARD` (2)
+      - : The page was accessed by navigating into the history.
+    - `TYPE_RESERVED` (255)
+      - : Any other way.
 
-<dl>
- <dt>{{deprecated_inline}} {{domxref("PerformanceNavigation.toJSON()")}}</dt>
- <dd>Is a jsonizer returning a json object representing the <code>PerformanceNavigation</code> object.</dd>
-</dl>
+- {{deprecated_inline}} {{domxref("PerformanceNavigation.redirectCount")}} {{readonlyInline}}
+  - : An `unsigned short` representing the number of REDIRECTs done before reaching the page.
 
-<h2 id="Specifications">Specifications</h2>
+## Methods
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+_The `Performance` interface doesn't inherit any methods._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- {{deprecated_inline}} {{domxref("PerformanceNavigation.toJSON()")}}
+  - : Is a jsonizer returning a json object representing the `PerformanceNavigation` object.
 
-<p>{{Compat}}</p>
+## Specifications
 
-<h2 id="See_also">See also</h2>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<ul>
- <li>The {{domxref("Performance")}} that allows access to an object of this type.</li>
- <li>{{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}</li>
-</ul>
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- The {{domxref("Performance")}} that allows access to an object of this type.
+- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) {{experimental_inline}}

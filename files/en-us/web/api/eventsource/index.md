@@ -12,78 +12,67 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
-<div>{{APIRef("Server Sent Events")}}</div>
+{{APIRef("Server Sent Events")}}
 
-<p>The <strong><code>EventSource</code></strong> interface is web content's interface to <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>.</p>
+The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).
 
-<p>An <code>EventSource</code> instance opens a persistent connection to an <a href="/en-US/docs/Web/HTTP">HTTP</a> server, which sends <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">events</a> in <code>text/event-stream</code> format. The connection remains open until closed by calling {{domxref("EventSource.close()")}}.</p>
+An `EventSource` instance opens a persistent connection to an [HTTP](/en-US/docs/Web/HTTP) server, which sends [events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) in `text/event-stream` format. The connection remains open until closed by calling {{domxref("EventSource.close()")}}.
 
-<p>Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.</p>
+Once the connection is opened, incoming messages from the server are delivered to your code in the form of events. If there is an event field in the incoming message, the triggered event is the same as the event field value. If no event field is present, then a generic {{event("message")}} event is fired.
 
-<p>Unlike <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, <code>EventSource</code> is a useful approach for handling things like social media status updates, news feeds, or delivering data into a <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">client-side storage</a> mechanism like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> or <a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a>.</p>
+Unlike [WebSockets](/en-US/docs/Web/API/WebSockets_API), server-sent events are unidirectional; that is, data messages are delivered in one direction, from the server to the client (such as a user's web browser). That makes them an excellent choice when there's no need to send data from the client to the server in message form. For example, `EventSource` is a useful approach for handling things like social media status updates, news feeds, or delivering data into a [client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) mechanism like [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) or [web storage](/en-US/docs/Web/API/Web_Storage_API).
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is <em>per browser</em> and set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com.</code> (from <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
-</div>
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be specially painful when opening various tabs as the limit is _per browser_ and set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, so that means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com.` (from [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("EventSource.EventSource", "EventSource()")}}</dt>
- <dd>Creates a new <code>EventSource</code> to handle receiving server-sent events from a specified URL, optionally in credentials mode.</dd>
-</dl>
+- {{domxref("EventSource.EventSource", "EventSource()")}}
+  - : Creates a new `EventSource` to handle receiving server-sent events from a specified URL, optionally in credentials mode.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("EventSource.readyState")}} {{readonlyinline}}</dt>
- <dd>A number representing the state of the connection. Possible values are <code>CONNECTING</code> (<code>0</code>), <code>OPEN</code> (<code>1</code>), or <code>CLOSED</code> (<code>2</code>).</dd>
- <dt>{{domxref("EventSource.url")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the URL of the source.</dd>
- <dt>{{domxref("EventSource.withCredentials")}} {{readonlyinline}}</dt>
- <dd>A boolean value indicating whether the <code>EventSource</code> object was instantiated with cross-origin (<a href="/en-US/docs/Web/HTTP/CORS">CORS</a>) credentials set (<code>true</code>), or not (<code>false</code>, the default).</dd>
-</dl>
+- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+  - : A number representing the state of the connection. Possible values are `CONNECTING` (`0`), `OPEN` (`1`), or `CLOSED` (`2`).
+- {{domxref("EventSource.url")}} {{readonlyinline}}
+  - : A {{domxref("DOMString")}} representing the URL of the source.
+- {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
+  - : A boolean value indicating whether the `EventSource` object was instantiated with cross-origin ([CORS](/en-US/docs/Web/HTTP/CORS)) credentials set (`true`), or not (`false`, the default).
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("EventSource.onerror")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an <code>EventSource</code> object.</dd>
- <dt>{{domxref("EventSource.onmessage")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.</dd>
- <dt>{{domxref("EventSource.onopen")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.</dd>
-</dl>
+- {{domxref("EventSource.onerror")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an error occurs and the {{domxref("EventSource/error_event", "error")}} event is dispatched on an `EventSource` object.
+- {{domxref("EventSource.onmessage")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{domxref("EventSource/message_event", "message")}} event is received, that is when a message is coming from the source.
+- {{domxref("EventSource.onopen")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{domxref("EventSource/open_event", "open")}} event is received, that is when the connection was just opened.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("EventSource.close()")}}</dt>
- <dd>Closes the connection, if any, and sets the <code>readyState</code> attribute to <code>CLOSED</code>. If the connection is already closed, the method does nothing.</dd>
-</dl>
+- {{domxref("EventSource.close()")}}
+  - : Closes the connection, if any, and sets the `readyState` attribute to `CLOSED`. If the connection is already closed, the method does nothing.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{domxref("EventSource/error_event", "error")}}</dt>
- <dd>Fired when a connection to an event source failed to open.</dd>
- <dt>{{domxref("EventSource/message_event", "message")}}</dt>
- <dd>Fired when data is received from an event source.</dd>
- <dt>{{domxref("EventSource/open_event", "open")}}</dt>
- <dd>Fired when a connection to an event source has opened.</dd>
-</dl>
+- {{domxref("EventSource/error_event", "error")}}
+  - : Fired when a connection to an event source failed to open.
+- {{domxref("EventSource/message_event", "message")}}
+  - : Fired when data is received from an event source.
+- {{domxref("EventSource/open_event", "open")}}
+  - : Fired when a connection to an event source has opened.
 
-<p>Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.</p>
+Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this basic example, an <code>EventSource</code> is created to receive unnamed events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
+In this basic example, an `EventSource` is created to receive unnamed events from the server; a page with the name `sse.php` is responsible for generating the events.
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -91,17 +80,17 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<p>Each received event causes our <code>EventSource</code> object's <code>onmessage</code> event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.</p>
+Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
 
-<div class="note">
-<p><strong>Note:</strong> You can find a full example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<p>To listen to named events, you'll require a listener for each type of event sent.</p>
+To listen to named events, you'll require a listener for each type of event sent.
 
-<pre class="brush: js">  const sse = new EventSource('/api/v1/sse');
+```js
+  const sse = new EventSource('/api/v1/sse');
 
   /* This will listen only for events
    * similar to the following:
@@ -131,19 +120,18 @@ evtSource.onmessage = function(e) {
   sse.addEventListener("message", function(e) {
     console.log(e.data)
   })
-  </pre>
 
-<h2 id="Specifications">Specifications</h2>
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a></li>
- <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
-</ul>
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
+- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)

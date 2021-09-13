@@ -13,64 +13,59 @@ tags:
   - observers
 browser-compat: api.ResizeObserver
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>ResizeObserver</code></strong> interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.</p>
+The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a> for further explanation.</p>
-</div>
+> **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
 
-<p><code>ResizeObserver</code> avoids infinite callback loops and cyclic dependencies that are often created when resizing via a callback function. It does this by only processing elements deeper in the DOM in subsequent frames. Implementations should, if they follow the specification, invoke resize events before paint and after layout.</p>
+`ResizeObserver` avoids infinite callback loops and cyclic dependencies that are often created when resizing via a callback function. It does this by only processing elements deeper in the DOM in subsequent frames. Implementations should, if they follow the specification, invoke resize events before paint and after layout.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}</dt>
- <dd>Creates and returns a new <code>ResizeObserver</code> object.</dd>
-</dl>
+- {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
+  - : Creates and returns a new `ResizeObserver` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('ResizeObserver.disconnect()')}}</dt>
- <dd>Unobserves all observed {{domxref('Element')}} targets of a particular observer.</dd>
- <dt>{{domxref('ResizeObserver.observe()')}}</dt>
- <dd>Initiates the observing of a specified {{domxref('Element')}}.</dd>
- <dt>{{domxref('ResizeObserver.unobserve()')}}</dt>
- <dd>Ends the observing of a specified {{domxref('Element')}}.</dd>
-</dl>
+- {{domxref('ResizeObserver.disconnect()')}}
+  - : Unobserves all observed {{domxref('Element')}} targets of a particular observer.
+- {{domxref('ResizeObserver.observe()')}}
+  - : Initiates the observing of a specified {{domxref('Element')}}.
+- {{domxref('ResizeObserver.unobserve()')}}
+  - : Ends the observing of a specified {{domxref('Element')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see source</a>) example, we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider’s value is changed causing the containing <code>&lt;div&gt;</code> to change width. This shows that you can respond to changes in an element’s size, even if they have nothing to do with the viewport.</p>
+In the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example, we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider’s value is changed causing the containing `<div>` to change width. This shows that you can respond to changes in an element’s size, even if they have nothing to do with the viewport.
 
-<p>We also provide a checkbox to turn the observer off and on. If it is turned off, the text will not change in response to the <code>&lt;div&gt;</code>'s width changing.</p>
+We also provide a checkbox to turn the observer off and on. If it is turned off, the text will not change in response to the `<div>`'s width changing.
 
-<p>The JavaScript looks like so:</p>
+The JavaScript looks like so:
 
-<pre class="brush: js">const h1Elem = document.querySelector('h1');
+```js
+const h1Elem = document.querySelector('h1');
 const pElem = document.querySelector('p');
-const divElem = document.querySelector('body &gt; div');
+const divElem = document.querySelector('body > div');
 const slider = document.querySelector('input[type="range"]');
 const checkbox = document.querySelector('input[type="checkbox"]');
 
 divElem.style.width = '600px';
 
-slider.addEventListener('input', () =&gt; {
+slider.addEventListener('input', () => {
   divElem.style.width = slider.value + 'px';
 })
 
-const resizeObserver = new ResizeObserver(entries =&gt; {
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       // Firefox implements `contentBoxSize` as a single content rect, rather than an array
       const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
-      
+
       h1Elem.style.fontSize = Math.max(1.5, contentBoxSize.inlineSize / 200) + 'rem';
       pElem.style.fontSize = Math.max(1, contentBoxSize.inlineSize / 600) + 'rem';
     } else {
@@ -78,33 +73,31 @@ const resizeObserver = new ResizeObserver(entries =&gt; {
       pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + 'rem';
     }
   }
-  
+
   console.log('Size changed');
 });
 
 resizeObserver.observe(divElem);
 
-checkbox.addEventListener('change', () =&gt; {
+checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
     resizeObserver.observe(divElem);
   } else {
     resizeObserver.unobserve(divElem);
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li>{{domxref('PerformanceObserver')}}</li>
- <li>{{domxref('IntersectionObserver')}} (part of the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>)</li>
-</ul>
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- {{domxref('PerformanceObserver')}}
+- {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))

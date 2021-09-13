@@ -9,53 +9,49 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.removeCue
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>removeCue()</code></strong> method of the {{domxref("TextTrack")}} interface removes a cue from the list of cues.</p>
+The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a cue from the list of cues.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">TextTrack.removeCue(cue);</pre>
+```js
+TextTrack.removeCue(cue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cue</code></dt>
-  <dd>A {{domxref("TextTrackCue")}}.</dd>
-</dl>
+- `cue`
+  - : A {{domxref("TextTrackCue")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>Undefined.</p>
+Undefined.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
-  <dd>Thrown if the given cue is not found in the list of cues.</dd>
-</dl>
+- {{domxref("DOMException")}} `NotFoundError`
+  - : Thrown if the given cue is not found in the list of cues.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when removing a cue you will be passing in one of the cue types that inherit from <code>TextTrackCue</code>.</p>
-</div>
+> **Note:** The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when removing a cue you will be passing in one of the cue types that inherit from `TextTrackCue`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example a cue is added to a video text track using <code>addCue()</code>, then removed using <code>removeCue</code>.</p>
+In the following example a cue is added to a video text track using `addCue()`, then removed using `removeCue`.
 
-<pre class="brush: js">let video = document.querySelector('video');
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 let cue = new VTTCue(0, 0.9, 'Hildy!');
 track.addCue(cue);
 track.removeCue(cue);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

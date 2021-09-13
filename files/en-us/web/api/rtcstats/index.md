@@ -13,55 +13,43 @@ tags:
   - rtc
 browser-compat: api.RTCStats
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCStats</code></strong> dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.</p>
+The **`RTCStats`** dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.
 
-<p>Specific classes of statistic are defined as dictionaries based on <code>RTCStats</code>. For example, statistics about a received {{Glossary("RTP")}} stream are represented by {{domxref("RTCReceivedRtpStreamStats")}}.</p>
+Specific classes of statistic are defined as dictionaries based on `RTCStats`. For example, statistics about a received {{Glossary("RTP")}} stream are represented by {{domxref("RTCReceivedRtpStreamStats")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCStats.id", "id")}}</dt>
- <dd>A {{domxref("DOMString")}} which uniquely identifies the object which was inspected to produce this object based on <code>RTCStats</code>.</dd>
- <dt>{{domxref("RTCStats.timestamp", "timestamp")}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.</dd>
- <dt>{{domxref("RTCStats.type", "type")}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the type of statistics the object contains, taken from the enum type {{domxref("RTCStatsType")}}.</dd>
-</dl>
+- {{domxref("RTCStats.id", "id")}}
+  - : A {{domxref("DOMString")}} which uniquely identifies the object which was inspected to produce this object based on `RTCStats`.
+- {{domxref("RTCStats.timestamp", "timestamp")}}
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- {{domxref("RTCStats.type", "type")}}
+  - : A {{domxref("DOMString")}} indicating the type of statistics the object contains, taken from the enum type {{domxref("RTCStatsType")}}.
 
-<h2 id="The_statistics_type_hierarchy">The statistics type hierarchy</h2>
+## The statistics type hierarchy
 
-<p>The various dictionaries that are used to define the contents of the objects that contain each of the various types of statistics for WebRTC are structured in such a way that they build upon the core <code>RTCStats</code> dictionary, each layer adding more relevant information.</p>
+The various dictionaries that are used to define the contents of the objects that contain each of the various types of statistics for WebRTC are structured in such a way that they build upon the core `RTCStats` dictionary, each layer adding more relevant information.
 
-<ul>
- <li>{{domxref("RTCStats")}} is the foundation of all WebRTC statistics objects
-  <ul>
-   <li>{{domxref("RTCRtpStreamStats")}} adds to <code>RTCStats</code> information that applies to all RTP endpoints (that is, both local and remote endpoints, and regardless of whether the endpoint is a sender or a receiver)
+- {{domxref("RTCStats")}} is the foundation of all WebRTC statistics objects
 
-    <ul>
-     <li>{{domxref("RTCReceivedRtpStreamStats")}} further adds statistics measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
-      <ul>
-       <li>{{domxref("RTCInboundRtpStreamStats")}} contains statistics that can only be measured on a receiver at the local end of the RTP connection.</li>
-       <li>{{domxref("RTCOutboundRtpStreamStats")}} contains statistics related to the receiver at the remote end of the RTP stream.</li>
-      </ul>
-     </li>
-     <li>{{domxref("RTCSentRtpStreamStats")}} offers statistics related to the sending end of an RTP stream.
-      <ul>
-       <li>{{domxref("RTCOutboundRtpStreamStats")}} contains statistics about the local sending endpoint of an RTP stream.</li>
-       <li>{{domxref("RTCRemoteOutboundRtpStreamStats")}} holds statistics related to the remote sending end an RTP stream.</li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+  - {{domxref("RTCRtpStreamStats")}} adds to `RTCStats` information that applies to all RTP endpoints (that is, both local and remote endpoints, and regardless of whether the endpoint is a sender or a receiver)
 
-<h2 id="Specifications">Specifications</h2>
+    - {{domxref("RTCReceivedRtpStreamStats")}} further adds statistics measured at the receiving end of an RTP stream, regardless of whether it's local or remote.
+
+      - {{domxref("RTCInboundRtpStreamStats")}} contains statistics that can only be measured on a receiver at the local end of the RTP connection.
+      - {{domxref("RTCOutboundRtpStreamStats")}} contains statistics related to the receiver at the remote end of the RTP stream.
+
+    - {{domxref("RTCSentRtpStreamStats")}} offers statistics related to the sending end of an RTP stream.
+
+      - {{domxref("RTCOutboundRtpStreamStats")}} contains statistics about the local sending endpoint of an RTP stream.
+      - {{domxref("RTCRemoteOutboundRtpStreamStats")}} holds statistics related to the remote sending end an RTP stream.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

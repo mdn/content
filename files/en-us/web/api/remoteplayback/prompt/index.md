@@ -9,59 +9,61 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.prompt
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>prompt()</code></strong> method of the {{domxref("RemotePlayback")}} interface prompts the user to select an available remote playback device and give permission for the current media to be played using that device.</p>
+The **`prompt()`** method of the {{domxref("RemotePlayback")}} interface prompts the user to select an available remote playback device and give permission for the current media to be played using that device.
 
-<p>If the user gives permission, the {{domxref("RemotePlayback.state","state")}} will be set to <code>connecting</code> and the user agent will connect to the device to initiate playback.</p>
+If the user gives permission, the {{domxref("RemotePlayback.state","state")}} will be set to `connecting` and the user agent will connect to the device to initiate playback.
 
-<p>If the user chooses to instead disconnect from the device, the {{domxref("RemotePlayback.state","state")}} will be set to <code>disconnected</code> and user agent will disconnect from this device.</p>
+If the user chooses to instead disconnect from the device, the {{domxref("RemotePlayback.state","state")}} will be set to `disconnected` and user agent will disconnect from this device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RemotePlayback.prompt();</pre>
+```js
+RemotePlayback.prompt();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code> after the user accepts or rejects the prompt.</p>
+A {{jsxref("Promise")}} that resolves with `undefined` after the user accepts or rejects the prompt.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The promise will be rejected with one of the following exceptions:</p>
+The promise will be rejected with one of the following exceptions:
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
-  <dt>{{domxref("DOMException")}} <code>OperationError</code></dt>
-  <dd>Thrown if there is already an unsettled promise for this media element, or browsing context.</dd>
-  <dt>{{domxref("DOMException")}} <code>InvalidAccessError</code></dt>
-  <dd>Thrown if the user has not interacted with this device recently.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the user agent knows that remote playback of this particular media is not feasible.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
-  <dd>Thrown if remote playback is unavailable.</dd>
-</dl>
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is `true` for the media element.
+- {{domxref("DOMException")}} `OperationError`
+  - : Thrown if there is already an unsettled promise for this media element, or browsing context.
+- {{domxref("DOMException")}} `InvalidAccessError`
+  - : Thrown if the user has not interacted with this device recently.
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the user agent knows that remote playback of this particular media is not feasible.
+- {{domxref("DOMException")}} `NotFoundError`
+  - : Thrown if remote playback is unavailable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example the user is prompted to select a remote playback device to play a video.</p>
+In the following example the user is prompted to select a remote playback device to play a video.
 
-<pre class="brush: js">devicesBtn.onclick = () => {
+```js
+devicesBtn.onclick = () => {
   // Request the user to select a remote playback device.
   videoElem.remote.prompt()
     // Update the UI and monitor the connected state.
     .then(updateRemotePlaybackState);
     // Otherwise, the user cancelled the selection UI or no screens were found.
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

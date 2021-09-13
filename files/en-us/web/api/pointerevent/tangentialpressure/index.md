@@ -2,44 +2,45 @@
 title: PointerEvent.tangentialPressure
 slug: Web/API/PointerEvent/tangentialPressure
 tags:
-- API
-- DOM
-- Pointer Events
-- PointerEvent
-- Property
-- Reference
-- tangentialPressure
+  - API
+  - DOM
+  - Pointer Events
+  - PointerEvent
+  - Property
+  - Reference
+  - tangentialPressure
 browser-compat: api.PointerEvent.tangentialPressure
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p>The <strong><code>tangentialPressure</code></strong> read-only property of the
-  {{domxref("PointerEvent")}} interface represents the normalized tangential pressure of
-  the pointer input (also known as barrel pressure or <a
-    href="https://en.wikipedia.org/wiki/Cylinder_stress">cylinder stress</a>).</p>
+The **`tangentialPressure`** read-only property of the
+{{domxref("PointerEvent")}} interface represents the normalized tangential pressure of
+the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>tanPressure</em> = <em>pointerEvent</em>.tangentialPressure;
-</pre>
+```js
+var tanPressure = pointerEvent.tangentialPressure;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>float</code> representing the normalized tangential pressure of the pointer
-  input in the range <code>-1</code> to <code>1</code>, inclusive, where <code>0</code> is
-  the neutral position of the control.</p>
+A `float` representing the normalized tangential pressure of the pointer
+input in the range `-1` to `1`, inclusive, where `0` is
+the neutral position of the control.
 
-<p>Note that some hardware may only support positive values in the range <code>0</code> to
-  <code>1</code>. For hardware that does not support tangential pressure, the value will
-  be <code>0</code>.</p>
+Note that some hardware may only support positive values in the range `0` to
+`1`. For hardware that does not support tangential pressure, the value will
+be `0`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this snippet, when a {{event("pointerdown")}} event is fired, different functions
-  are called depending on the value of the event's <code>tangentialPressure</code>
-  property.</p>
+In this snippet, when a {{event("pointerdown")}} event is fired, different functions
+are called depending on the value of the event's `tangentialPressure`
+property.
 
-<pre class="brush: js">someElement.addEventListener('pointerdown', function(event) {
+```js
+someElement.addEventListener('pointerdown', function(event) {
   if (event.tangentialPressure == 0) {
     // No pressure
     process_no_tanPressure(event);
@@ -51,18 +52,16 @@ browser-compat: api.PointerEvent.tangentialPressure
     process_tanPressure(event);
   }
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Touch.force") }}</li>
-</ul>
+- {{ domxref("Touch.force") }}

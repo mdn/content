@@ -11,60 +11,54 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.getComputedTiming
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code>getComputedTiming()</code> method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.</p>
+The `getComputedTiming()` method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.
 
-<p>Although many of the attributes of the returned object are common to the {{domxref("EffectTiming")}} contained in the object returned by the {{domxref("AnimationEffect.getTiming()")}} method, the values returned by this object differ in the following ways:</p>
+Although many of the attributes of the returned object are common to the {{domxref("EffectTiming")}} contained in the object returned by the {{domxref("AnimationEffect.getTiming()")}} method, the values returned by this object differ in the following ways:
 
-<dl>
- <dt><code>duration</code></dt>
- <dd>Returns the calculated value of the iteration duration. If {{domxref("EffectTiming.duration")}} is the string <code>auto</code>, this attribute will return <code>0</code>.</dd>
- <dt><code>fill</code></dt>
- <dd>The <code>auto</code> value is replaced with the appropriate {{domxref("EffectTiming.fill")}} value.</dd>
-</dl>
+- `duration`
+  - : Returns the calculated value of the iteration duration. If {{domxref("EffectTiming.duration")}} is the string `auto`, this attribute will return `0`.
+- `fill`
+  - : The `auto` value is replaced with the appropriate {{domxref("EffectTiming.fill")}} value.
 
-<div class="note">
-<p><strong>Note:</strong> These values are comparable to the computed styles of an Element returned using <code>window.getComputedStyle(elem)</code>.</p>
-</div>
+> **Note:** These values are comparable to the computed styles of an Element returned using `window.getComputedStyle(elem)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var currentTimeValues = animation.getComputedTiming();</pre>
+```js
+var currentTimeValues = animation.getComputedTiming();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>A <code><a href="https://drafts.csswg.org/web-animations/#dictdef-computedeffecttiming">ComputedEffectTiming</a></code> dictionary object, which contains the following properties:</p>
+A [`ComputedEffectTiming`](https://drafts.csswg.org/web-animations/#dictdef-computedeffecttiming) dictionary object, which contains the following properties:
 
-<dl>
- <dt>endTime</dt>
- <dd>The end time of the animation in milliseconds from the animation's start (if the {{domxref("KeyframeEffect")}} is associated with an {{domxref("Animation")}}). (Also includes {{domxref("EffectTiming.endDelay")}} in that calculation.)</dd>
- <dt>activeDuration</dt>
- <dd>The length of time in milliseconds that the animation's effects will run. This is equal to the <a href="/en-US/docs/Web/API/EffectTiming/duration">iteration duration</a> multiplied by the <a href="/en-US/docs/Web/API/EffectTiming/iterations">iteration count</a>.</dd>
- <dt>localTime</dt>
- <dd>The <a href="/en-US/docs/Web/API/AnimationTimeline/currentTime">current time</a> of the animation in milliseconds. If the <code>KeyframeEffect</code> is not associated with an <code>Animation</code>, its value is <code>null</code>.</dd>
- <dt>progress</dt>
- <dd>Indicates how far along the animation is through its current iteration with values between <code>0</code> and <code>1</code>. Returns <code>null</code> if the animation is not running or its <code>KeyframeEffect</code> isn't associated with an <code>Animation</code>.</dd>
- <dt>currentIteration</dt>
- <dd>The number of times this animation has looped, starting from <code>0</code>. Returns <code>null</code> if the animation is not running or its <code>KeyframeEffect</code> isn't associated with an <code>Animation</code>.</dd>
-</dl>
+- endTime
+  - : The end time of the animation in milliseconds from the animation's start (if the {{domxref("KeyframeEffect")}} is associated with an {{domxref("Animation")}}). (Also includes {{domxref("EffectTiming.endDelay")}} in that calculation.)
+- activeDuration
+  - : The length of time in milliseconds that the animation's effects will run. This is equal to the [iteration duration](/en-US/docs/Web/API/EffectTiming/duration) multiplied by the [iteration count](/en-US/docs/Web/API/EffectTiming/iterations).
+- localTime
+  - : The [current time](/en-US/docs/Web/API/AnimationTimeline/currentTime) of the animation in milliseconds. If the `KeyframeEffect` is not associated with an `Animation`, its value is `null`.
+- progress
+  - : Indicates how far along the animation is through its current iteration with values between `0` and `1`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
+- currentIteration
+  - : The number of times this animation has looped, starting from `0`. Returns `null` if the animation is not running or its `KeyframeEffect` isn't associated with an `Animation`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationEffect")}}</li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationEffect")}}
+- {{domxref("Animation")}}

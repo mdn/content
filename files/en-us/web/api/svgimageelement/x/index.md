@@ -2,36 +2,38 @@
 title: SVGImageElement.x
 slug: Web/API/SVGImageElement/x
 tags:
-- API
-- Image
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- x
+  - API
+  - Image
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - x
 browser-compat: api.SVGImageElement.x
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>x</code></strong> read-only property of the
-  {{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
-  corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("image")}}
-  element.</p>
+The **`x`** read-only property of the
+{{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
+corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("image")}}
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var x = <em>svgImageElement</em>.x;</pre>
+```js
+var x = svgImageElement.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedLength")}}.</p>
+An {{domxref("SVGAnimatedLength")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

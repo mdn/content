@@ -11,113 +11,99 @@ tags:
   - WindowEventHandlers
 browser-compat: api.WindowEventHandlers.onhashchange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>WindowEventHandlers.onhashchange</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing
-  <code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code>
-  events.</p>
+The **`WindowEventHandlers.onhashchange`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing
+[`hashchange`](/en-US/docs/Web/API/Window/hashchange_event)
+events.
 
-<p>The <code>hashchange</code> event fires when a window's hash changes (see
-  {{domxref("Window.location")}} and {{domxref("HTMLAnchorElement.hash")}}).</p>
+The `hashchange` event fires when a window's hash changes (see
+{{domxref("Window.location")}} and {{domxref("HTMLAnchorElement.hash")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p><strong>Using an event handler:</strong></p>
+**Using an event handler:**
 
-<pre class="brush: js">window.onhashchange = funcRef;
-</pre>
+```js
+window.onhashchange = funcRef;
+```
 
-<p><strong>Using an HTML event handler:</strong></p>
+**Using an HTML event handler:**
 
-<pre class="brush: js">&lt;body onhashchange="funcRef();"&gt;
-</pre>
+```js
+<body onhashchange="funcRef();">
+```
 
-<p><strong>Using an event listener:</strong></p>
+**Using an event listener:**
 
-<p>To add an event listener, use {{domxref("EventTarget.addEventListener()",
-  "addEventListener()")}}:</p>
+To add an event listener, use {{domxref("EventTarget.addEventListener()",
+  "addEventListener()")}}:
 
-<pre class="brush: js">window.addEventListener("hashchange", funcRef, false);
-</pre>
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>funcRef</code></dt>
-  <dd>A reference to a function.</dd>
-</dl>
+- `funcRef`
+  - : A reference to a function.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_an_event_handler">Using an event handler</h3>
+### Using an event handler
 
-<p>This example uses an event handler (<code>window.onhashchange</code>) to check the new
-  hash value whenever it changes. If it equals <code>#cool-feature</code>, the script logs
-  a message to the console.</p>
+This example uses an event handler (`window.onhashchange`) to check the new
+hash value whenever it changes. If it equals `#cool-feature`, the script logs
+a message to the console.
 
-<pre class="brush:js">function locationHashChanged() {
+```js
+function locationHashChanged() {
   if (location.hash === '#cool-feature') {
     console.log("You're visiting a cool feature!");
   }
 }
 
 window.onhashchange = locationHashChanged;
-</pre>
+```
 
-<h3 id="Using_an_event_listener">Using an event listener</h3>
+### Using an event listener
 
-<p>This example uses an event listener to log a notification whenever the hash has
-  changed.</p>
+This example uses an event listener to log a notification whenever the hash has
+changed.
 
-<pre class="brush:js">function hashHandler() {
+```js
+function hashHandler() {
   console.log('The hash has changed!');
 }
 
 window.addEventListener('hashchange', hashHandler, false);
-</pre>
+```
 
-<h3 id="Overriding_the_hash">Overriding the hash</h3>
+### Overriding the hash
 
-<p>This function sets a new hash dynamically, setting it randomly to one of two values.
-</p>
+This function sets a new hash dynamically, setting it randomly to one of two values.
 
-<pre class="brush:js">function changeHash() {
-  location.hash = (Math.random() &gt; 0.5) ? 'location1' : 'location2';
+```js
+function changeHash() {
+  location.hash = (Math.random() > 0.5) ? 'location1' : 'location2';
 }
-</pre>
+```
 
-<h2 id="The_hashchange_event">The hashchange event</h2>
+## The hashchange event
 
-<p>The dispatched <code>hashchange</code> event has the following properties:</p>
+The dispatched `hashchange` event has the following properties:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>newURL</code></td>
-      <td><code>DOMString</code></td>
-      <td>The new URL to which the window is navigating.</td>
-    </tr>
-    <tr>
-      <td><code>oldURL</code></td>
-      <td><code>DOMString</code></td>
-      <td>The previous URL from which the window was navigated.</td>
-    </tr>
-  </tbody>
-</table>
+| Field    | Type        | Description                                           |
+| -------- | ----------- | ----------------------------------------------------- |
+| `newURL` | `DOMString` | The new URL to which the window is navigating.        |
+| `oldURL` | `DOMString` | The previous URL from which the window was navigated. |
 
-<h3 id="Polyfill_for_event.newURL_and_event.oldURL">Polyfill for event.newURL and
-  event.oldURL</h3>
+### Polyfill for event.newURL and event.oldURL
 
-<pre class="brush:js">// Let this snippet run before your hashchange event binding code
+```js
+// Let this snippet run before your hashchange event binding code
 if (!window.HashChangeEvent)(function(){
   var lastURL = document.URL;
   window.addEventListener("hashchange", function(event){
@@ -126,26 +112,22 @@ if (!window.HashChangeEvent)(function(){
     lastURL = document.URL;
   });
 }());
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code>
-    event</li>
-  <li><a href="/en-US/docs/Web/API/History_API"
-      title="DOM/Manipulating the browser history">Manipulating the browser history</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Window/history"><code>history.pushState()</code> and
-      <code>history.replaceState()</code></a> methods</li>
-  <li>{{domxref("WindowEventHandlers.onpopstate")}}</li>
-  <li>{{domxref("HTMLAnchorElement.hash")}}</li>
-</ul>
+- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event)
+  event
+- [Manipulating the browser history](/en-US/docs/Web/API/History_API "DOM/Manipulating the browser history")
+- [`history.pushState()` and
+  `history.replaceState()`](/en-US/docs/Web/API/Window/history) methods
+- {{domxref("WindowEventHandlers.onpopstate")}}
+- {{domxref("HTMLAnchorElement.hash")}}

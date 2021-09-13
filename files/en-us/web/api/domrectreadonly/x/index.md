@@ -13,28 +13,28 @@ tags:
   - x
 browser-compat: api.DOMRectReadOnly.x
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>x</strong></code> read-only property of the <strong><code>DOMRectReadOnly</code></strong> interface represents the x coordinate of the <code>DOMRect</code>'s origin.</p>
+The **`x`** read-only property of the **`DOMRectReadOnly`** interface represents the x coordinate of the `DOMRect`'s origin.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var recX = DOMRect.x;</pre>
+```js
+var recX = DOMRect.x;
+```
 
-<h3 id="Specification">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMRect")}}

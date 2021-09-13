@@ -2,46 +2,45 @@
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Read-only
-- Web
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Read-only
+  - Web
 browser-compat: api.HTMLMediaElement.buffered
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>buffered</code></strong> read-only property of {{domxref("HTMLMediaElement")}} objects returns a new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized <code>TimeRanges</code> object</a> that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the <code>buffered</code> property is accessed.</p>
+The **`buffered`** read-only property of {{domxref("HTMLMediaElement")}} objects returns a new static [normalized `TimeRanges` object](/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects) that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the `buffered` property is accessed.
 
-<div class="note"><p><strong>Note:</strong> This feature is not available in <a
-    href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p></div>
+> **Note:** This feature is not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>timeRange</em> = <em>audioObject</em>.buffered</pre>
+```js
+var timeRange = audioObject.buffered
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A new static <a href="/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects">normalized TimeRanges object</a> that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the <code>buffered</code> property is accessed.</p>
+A new static [normalized TimeRanges object](/en-US/docs/Web/API/TimeRanges#normalized_timeranges_objects) that represents the ranges of the media resource, if any, that the user agent has buffered at the moment the `buffered` property is accessed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.buffered); // TimeRanges { length: 0 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

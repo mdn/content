@@ -2,63 +2,63 @@
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 tags:
-- API
-- ArrayBuffer
-- Blob
-- File API
-- Method
-- Reference
-- binary
-- read
+  - API
+  - ArrayBuffer
+  - Blob
+  - File API
+  - Method
+  - Reference
+  - binary
+  - read
 browser-compat: api.Blob.arrayBuffer
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>The <code><strong>arrayBuffer()</strong></code> method in the {{domxref("Blob")}}
-  interface returns a {{jsxref("Promise")}} that resolves with the contents of the blob as
-  binary data contained in an {{jsxref("ArrayBuffer")}}.</p>
+The **`arrayBuffer()`** method in the {{domxref("Blob")}}
+interface returns a {{jsxref("Promise")}} that resolves with the contents of the blob as
+binary data contained in an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>bufferPromise</em> = <em>blob</em>.arrayBuffer();
+```js
+var bufferPromise = blob.arrayBuffer();
 
-<em>blob</em>.arrayBuffer().then(<em>buffer</em> =&gt; /* process the ArrayBuffer */);
+blob.arrayBuffer().then(buffer => /* process the ArrayBuffer */);
 
-var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
+var buffer = await blob.arrayBuffer();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A promise that resolves with an {{jsxref("ArrayBuffer")}} that contains the blob's
-  data in binary form.</p>
+A promise that resolves with an {{jsxref("ArrayBuffer")}} that contains the blob's
+data in binary form.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>While this method doesn't throw exceptions, it may reject the promise. This can happen,
-  for example, if the reader used to fetch the blob's data throws an exception. Any
-  exceptions thrown while getting the data will be converted into rejections.</p>
+While this method doesn't throw exceptions, it may reject the promise. This can happen,
+for example, if the reader used to fetch the blob's data throws an exception. Any
+exceptions thrown while getting the data will be converted into rejections.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>While similar to the {{domxref("FileReader.readAsArrayBuffer()")}} method,
-  <code>arrayBuffer()</code> returns a promise rather than being an event-based API, as is
-  the case with the <code>FileReader</code> interface's method.</p>
+While similar to the {{domxref("FileReader.readAsArrayBuffer()")}} method,
+`arrayBuffer()` returns a promise rather than being an event-based API, as is
+the case with the `FileReader` interface's method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.arrayBuffer()")}}</li>
-  <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
-  <li>{{domxref("FileReader.readAsArrayBuffer()")}}</li>
-</ul>
+- {{domxref("Response.arrayBuffer()")}}
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- {{domxref("FileReader.readAsArrayBuffer()")}}

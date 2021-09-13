@@ -11,36 +11,33 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>AuthenticatorAssertionResponse</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> is returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.</p>
+The **`AuthenticatorAssertionResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.
 
-<p>This interface inherites from {{domxref("AuthenticatorResponse")}}.</p>
+This interface inherites from {{domxref("AuthenticatorResponse")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.</p>
-</div>
+> **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>AuthenticatorAssertionResponse.clientDataJSON</code> {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>The client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>An {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence and user verification flags, and any extensions processed by the authenticator.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.signature")}} {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>An assertion signature over {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and {{domxref("AuthenticatorResponse.clientDataJSON")}}. The assertion signature is created with the private key of keypair that was created during the {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call and verified using the public key of that same keypair.</dd>
- <dt>{{domxref("AuthenticatorAssertionResponse.userHandle")}} {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>An {{jsxref("ArrayBuffer")}} containing an opaque user identifier.</dd>
-</dl>
+- `AuthenticatorAssertionResponse.clientDataJSON` {{securecontext_inline}}{{readonlyinline}}
+  - : The client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} {{securecontext_inline}}{{readonlyinline}}
+  - : An {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence and user verification flags, and any extensions processed by the authenticator.
+- {{domxref("AuthenticatorAssertionResponse.signature")}} {{securecontext_inline}}{{readonlyinline}}
+  - : An assertion signature over {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} and {{domxref("AuthenticatorResponse.clientDataJSON")}}. The assertion signature is created with the private key of keypair that was created during the {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call and verified using the public key of that same keypair.
+- {{domxref("AuthenticatorAssertionResponse.userHandle")}} {{securecontext_inline}}{{readonlyinline}}
+  - : An {{jsxref("ArrayBuffer")}} containing an opaque user identifier.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
@@ -54,20 +51,17 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("AuthenticatorAttestationResponse")}}: the interface for the type of response given when creating a new credential</li>
- <li>{{domxref("AuthenticatorResponse")}}: the parent interface</li>
-</ul>
+- {{domxref("AuthenticatorAttestationResponse")}}: the interface for the type of response given when creating a new credential
+- {{domxref("AuthenticatorResponse")}}: the parent interface

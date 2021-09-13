@@ -9,22 +9,22 @@ tags:
   - Reference
 browser-compat: api.Document.featurePolicy
 ---
-<p>{{APIRef("Feature Policy")}}</p>
+{{APIRef("Feature Policy")}}
 
-<p>The <strong><code>featurePolicy</code></strong> read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the feature policies applied to a specific document.</p>
+The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the feature policies applied to a specific document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>var <var>policy</var> = <var>iframeElement</var>.featurePolicy</pre>
+    var policy = iframeElement.featurePolicy
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("FeaturePolicy")}} object that can be used to inspect the Feature Policy settings applied to the document.</p>
+A {{domxref("FeaturePolicy")}} object that can be used to inspect the Feature Policy settings applied to the document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

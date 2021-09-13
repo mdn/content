@@ -2,48 +2,46 @@
 title: MSCandidateWindowHide
 slug: Web/API/MSCandidateWindowHide
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>MSCandidateWindowHide</strong></code> fires after the Input Method Editor (IME) candidate window closes and is fully hidden.</p>
+**`MSCandidateWindowHide`** fires after the Input Method Editor (IME) candidate window closes and is fully hidden.
 
-<p>This proprietary method is specific to Internet Explorer.</p>
+This proprietary method is specific to Internet Explorer.
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt>Synchronous</dt>
- <dd>No</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
-</dl>
+- Synchronous
+  - : No
+- Bubbles
+  - : No
+- Cancelable
+  - : No
 
-<h3 id="Note">Note</h3>
+### Note
 
-<p>Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.</p>
+Windows 8.1 and Windows 7 IMEs for certain languages on Internet Explorer for the desktop might not support this event. On Internet Explorer in the new Windows UI, this event is supported in Windows 8.1 IMEs of all languages.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">object.addEventListener("MSCandidateWindowHide", handler, useCapture)</pre>
+```js
+object.addEventListener("MSCandidateWindowHide", handler, useCapture)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><strong>pEvtObj</strong> [in]</p>
+**pEvtObj** \[in]
 
-<p>Type: <em>IHTMLEventObj</em></p>
+Type: _IHTMLEventObj_
 
-<p>Pointer to an IHTMLEventObj interface for the current event.</p>
+Pointer to an IHTMLEventObj interface for the current event.
 
-<p>The handler of this event will see that the isCandidateWindowVisible method returns false, and no ClientRect object is returned from getCandidateWindowClientRect.</p>
+The handler of this event will see that the isCandidateWindowVisible method returns false, and no ClientRect object is returned from getCandidateWindowClientRect.
 
-<p>Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).</p>
+Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
- <li><a href="/en-US/docs/Mozilla/IME_handling_guide">IME handling guide for Gecko</a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)
+- [IME handling guide for Gecko](/en-US/docs/Mozilla/IME_handling_guide)

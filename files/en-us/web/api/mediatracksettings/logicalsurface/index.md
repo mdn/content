@@ -2,76 +2,74 @@
 title: MediaTrackSettings.logicalSurface
 slug: Web/API/MediaTrackSettings/logicalSurface
 tags:
-- API
-- Capture
-- Logical Surface
-- Media
-- Media Capture and Streaming
-- Media Capture and Streaming API
-- MediaTrackSettings
-- Reference
-- Screen Capture
-- Screen Capture API
-- Sharing
-- Surface
-- Video
-- display
-- logicalSurface
-- screen
+  - API
+  - Capture
+  - Logical Surface
+  - Media
+  - Media Capture and Streaming
+  - Media Capture and Streaming API
+  - MediaTrackSettings
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - Sharing
+  - Surface
+  - Video
+  - display
+  - logicalSurface
+  - screen
 browser-compat: api.MediaTrackSettings.logicalSurface
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-    <strong><code>logicalSurface</code></strong> property indicates whether or not the
-    display area being captured is a logical surface. Logical surfaces are those which are
-    not necessarily entirely onscreen, or may even be off-screen, such as windows' backing
-    buffers (where only part of the buffer is visible without scrolling the containing
-    window) and offscreen rendering contexts.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`logicalSurface`** property indicates whether or not the
+display area being captured is a logical surface. Logical surfaces are those which are
+not necessarily entirely onscreen, or may even be off-screen, such as windows' backing
+buffers (where only part of the buffer is visible without scrolling the containing
+window) and offscreen rendering contexts.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>isLogicalSurface</em> = <em>mediaTrackSettings</em>.logicalSurface;</pre>
+```js
+isLogicalSurface = mediaTrackSettings.logicalSurface;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the video track in the stream of captured
-  video is taken from a logical display surface.</p>
+A Boolean value which is `true` if the video track in the stream of captured
+video is taken from a logical display surface.
 
-<p>The most common scenario in which a display surface may be a logical one is if the
-  selected surface contains the entire content area of a window which is too large to
-  display onscreen at once. Since the window that contains the surface has to be scrolled
-  to show the rest of the contents, the surface is a logical one.</p>
+The most common scenario in which a display surface may be a logical one is if the
+selected surface contains the entire content area of a window which is too large to
+display onscreen at once. Since the window that contains the surface has to be scrolled
+to show the rest of the contents, the surface is a logical one.
 
-<p>A visible display surface (that is, a surface for which <code>logicalSurface</code>
-  returns <code>false</code>) is the portion of a logical display surface which is
-  currently visible onscreen.</p>
+A visible display surface (that is, a surface for which `logicalSurface`
+returns `false`) is the portion of a logical display surface which is
+currently visible onscreen.
 
-<p>For example, a user agent <em>may</em> choose to allow the user to choose whether to
-  share the entire document (a <code>browser</code> with <code>logicalSurface</code> value
-  of <code>true</code>), or just the currently visible portion of the document (where the
-  <code>logicalSurface</code> of the <code>browser</code> surface is <code>false</code>).
-</p>
+For example, a user agent _may_ choose to allow the user to choose whether to
+share the entire document (a `browser` with `logicalSurface` value
+of `true`), or just the currently visible portion of the document (where the
+`logicalSurface` of the `browser` surface is `false`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the
-      screen capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaDevices.getDisplayMedia()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the
+  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

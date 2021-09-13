@@ -8,41 +8,39 @@ tags:
   - Reference
 browser-compat: api.LayoutShift
 ---
-<div>{{DefaultAPISidebar("Layout Instability API")}}</div>
+{{DefaultAPISidebar("Layout Instability API")}}
 
-<p>The <strong>Layout Instability API</strong> provides interfaces for measuring and reporting layout shifts.</p>
+The **Layout Instability API** provides interfaces for measuring and reporting layout shifts.
 
-<h2> Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>A layout shift happens when any element that is visible in the viewport changes its start position between two frames. These elements are described as being <strong>unstable</strong>, and contribute to a poor <a href="https://web.dev/cls/">Cumulative Layout Shift (CLS)</a> score, indicating a lack of visual stability.</p>
+A layout shift happens when any element that is visible in the viewport changes its start position between two frames. These elements are described as being **unstable**, and contribute to a poor [Cumulative Layout Shift (CLS)](https://web.dev/cls/) score, indicating a lack of visual stability.
 
-<p>The Layout Instabiliy API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.</p>
+The Layout Instabiliy API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in DevTools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to Google Analytics.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("LayoutShift")}}</dt>
-  <dd>Provides insights into the stability of web pages based on movements of the elements on the page.</dd>
-  <dt>{{domxref("LayoutShiftAttribution")}}</dt>
-  <dd>Provides debugging information about elements which have shifted.</dd>
-</dl>
+- {{domxref("LayoutShift")}}
+  - : Provides insights into the stability of web pages based on movements of the elements on the page.
+- {{domxref("LayoutShiftAttribution")}}
+  - : Provides debugging information about elements which have shifted.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example observes all layout shifts, and prints them to the console.</p>
+The following example observes all layout shifts, and prints them to the console.
 
-<pre class="brush: js">new PerformanceObserver((list) => {
+```js
+new PerformanceObserver((list) => {
 	console.log(list.getEntries());
-}).observe({type: 'layout-shift', buffered: true});</pre>
+}).observe({type: 'layout-shift', buffered: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/cls/">Cumulative Layout Shift</a></li>
-  <li><a href="https://web.dev/debug-layout-shifts/">Debug layout shifts</a></li>
-  <li><a href="https://web.dev/debug-web-vitals-in-the-field/">Debug Web Vitals in the field</a></li>
-</ul>
+- [Cumulative Layout Shift](https://web.dev/cls/)
+- [Debug layout shifts](https://web.dev/debug-layout-shifts/)
+- [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/)

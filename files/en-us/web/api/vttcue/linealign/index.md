@@ -9,31 +9,34 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.lineAlign
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>lineAlign</code></strong> property of the {{domxref("VTTCue")}} interface represents the alignment of this VTT cue.</p>
+The **`lineAlign`** property of the {{domxref("VTTCue")}} interface represents the alignment of this VTT cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let lineAlign = VTTCue.lineAlign;
-VTTCue.lineAlign = a;</pre>
+```js
+let lineAlign = VTTCue.lineAlign;
+VTTCue.lineAlign = a;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing one of the following values:</p>
-<dl>
-  <dt><code>"start"</code></dt>
-  <dd>Start alignment.</dd>
-  <dt><code>"center"</code></dt>
-  <dd>Center alignment.</dd>
-  <dt><code>"end"</code></dt>
-  <dd>End alignment.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing one of the following values:
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>lineAlign</code> is set to <code>"center"</code>. The value is then printed to the console.</p>
+- `"start"`
+  - : Start alignment.
+- `"center"`
+  - : Center alignment.
+- `"end"`
+  - : End alignment.
 
-<pre class="brush: js">let video = document.querySelector('video');
+## Examples
+
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `lineAlign` is set to `"center"`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -42,14 +45,12 @@ cue1.lineAlign = 'center';
 console.log(cue1.lineAlign);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

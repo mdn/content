@@ -10,83 +10,81 @@ tags:
   - Service Workers
 browser-compat: api.ExtendableMessageEvent
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>ExtendableMessageEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> represents the event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.</p>
+The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}</dt>
- <dd>Creates a new <code>ExtendableMessageEvent</code> object instance.</dd>
-</dl>
+- {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}
+  - : Creates a new `ExtendableMessageEvent` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}</dt>
- <dd>Returns the event's data. It can be any data type.</dd>
- <dt>{{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}</dt>
- <dd>Returns the origin of the {{domxref("Client")}} that sent the message.</dd>
- <dt>{{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}</dt>
- <dd>Represents, in <a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">server-sent events</a>, the last event ID of the event source. This is an empty string.</dd>
- <dt>{{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the {{domxref("Client")}} object that sent the message.</dd>
- <dt>{{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}</dt>
- <dd>Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.</dd>
-</dl>
+- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
+  - : Returns the event's data. It can be any data type.
+- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
+  - : Returns the origin of the {{domxref("Client")}} that sent the message.
+- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
+  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
+- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("Client")}} object that sent the message.
+- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
+  - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its <code>postMessage()</code> function.</p>
+In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.
 
-<pre class="brush: js">// in the page being controlled
+```js
+// in the page being controlled
 if (navigator.serviceWorker) {
 
   navigator.serviceWorker.register('service-worker.js');
 
-  navigator.serviceWorker.addEventListener('message', event =&gt; {
+  navigator.serviceWorker.addEventListener('message', event => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration =&gt; {
+  navigator.serviceWorker.ready.then( registration => {
     registration.active.postMessage("Hi service worker");
   });
 
-}</pre>
+}
+```
 
-<p>The service worker can receive the message by listening to the <code>message</code> event:</p>
+The service worker can receive the message by listening to the `message` event:
 
-<pre class="brush: js">// in the service worker
-addEventListener('message', event =&gt; {
+```js
+// in the service worker
+addEventListener('message', event => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 
   event.source.postMessage("Hi client");
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

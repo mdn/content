@@ -11,120 +11,124 @@ tags:
   - request()
 browser-compat: api.LockManager.request
 ---
-<p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Locks")}}{{SeeCompatTable}}
 
-<p>The <strong><code>request()</code></strong> method of the
-    {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with
-    parameters specifying its name and characteristics. The requested <code>Lock</code> is
-    passed to a callback, while the function itself returns a {{jsxref('Promise')}} that
-    resolves with {{jsxref('undefined')}}.</p>
+The **`request()`** method of the
+{{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with
+parameters specifying its name and characteristics. The requested `Lock` is
+passed to a callback, while the function itself returns a {{jsxref('Promise')}} that
+resolves with {{jsxref('undefined')}}.
 
-<p>The <code>mode</code> property of the <code>options</code> parameter may be either
-  <code>"exclusive"</code> or <code>"shared"</code>.</p>
+The `mode` property of the `options` parameter may be either
+`"exclusive"` or `"shared"`.
 
-<p>Request an <code>"exclusive"</code> lock when it should only be held by one code
-  instance at a time. This applies to code in both tabs and workers. Use this to represent
-  mutually exclusive access to a resource. When an <code>"exclusive"</code> lock for a
-  given name is held, no other lock with the same name can be held.</p>
+Request an `"exclusive"` lock when it should only be held by one code
+instance at a time. This applies to code in both tabs and workers. Use this to represent
+mutually exclusive access to a resource. When an `"exclusive"` lock for a
+given name is held, no other lock with the same name can be held.
 
-<p>Request a <code>"shared"</code> lock when multiple instances of the code can share
-  access to a resource. When a <code>"shared"</code> lock for a given name is held, other
-  <code>"shared"</code> locks for the same name can be granted, but no
-  <code>"exclusive"</code> locks with that name can be held or granted.</p>
+Request a `"shared"` lock when multiple instances of the code can share
+access to a resource. When a `"shared"` lock for a given name is held, other
+`"shared"` locks for the same name can be granted, but no
+`"exclusive"` locks with that name can be held or granted.
 
-<p>This shared/exclusive lock pattern is common in database transaction architecture, for
-  example to allow multiple simultaneous readers (each requests a <code>"shared"</code>
-  lock) but only one writer (a single <code>"exclusive"</code> lock). This is known as the
-  readers-writer pattern. In the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>,
-  this is exposed as <code>"readonly"</code> and <code>"readwrite"</code> transactions
-  which have the same semantics.</p>
+This shared/exclusive lock pattern is common in database transaction architecture, for
+example to allow multiple simultaneous readers (each requests a `"shared"`
+lock) but only one writer (a single `"exclusive"` lock). This is known as the
+readers-writer pattern. In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API),
+this is exposed as `"readonly"` and `"readwrite"` transactions
+which have the same semantics.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">LockManager.request(var promise = <var>name</var>[, <var>{options}</var>], <var>callback</var>)</pre>
+```js
+LockManager.request(var promise = name[, {options}], callback)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>An identifier for the lock you want to request.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object describing characteristics of the lock you want to create. Valid values
+- name
+  - : An identifier for the lock you want to request.
+- options {{optional_inline}}
+
+  - : An object describing characteristics of the lock you want to create. Valid values
     are:
-    <ul>
-      <li><code>mode</code> {{optional_inline}}: Either <code>"exclusive"</code> or
-        <code>"shared"</code>. The default value is <code>"exclusive"</code>.</li>
-      <li><code>ifAvailable</code> {{optional_inline}}: If <code>true</code>, the lock
-        request will only be granted if it is not already held. If it cannot be granted,
-        the callback will be invoked with <code>null</code> instead of a <code>Lock</code>
-        instance. The default value is <code>false</code>.</li>
-      <li><code>steal</code> {{optional_inline}}: If <code>true</code>, then any held
-        locks with the same name will be released, and the request will be granted,
-        preempting any queued requests for it. The default value is <code>false</code>.
-      </li>
-      <li><code>signal</code> {{optional_inline}}: An <code>AbortSignal</code> (the
-        <code>signal</code> property of an <code>AbortController</code>); if specified and
-        the <code>AbortController</code> is aborted, the lock request is dropped if it was
-        not already granted.</li>
-    </ul>
-  </dd>
-  <dt>callback</dt>
-  <dd>…</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `mode` {{optional_inline}}: Either `"exclusive"` or
+      `"shared"`. The default value is `"exclusive"`.
+    - `ifAvailable` {{optional_inline}}: If `true`, the lock
+      request will only be granted if it is not already held. If it cannot be granted,
+      the callback will be invoked with `null` instead of a `Lock`
+      instance. The default value is `false`.
+    - `steal` {{optional_inline}}: If `true`, then any held
+      locks with the same name will be released, and the request will be granted,
+      preempting any queued requests for it. The default value is `false`.
+    - `signal` {{optional_inline}}: An `AbortSignal` (the
+      `signal` property of an `AbortController`); if specified and
+      the `AbortController` is aborted, the lock request is dropped if it was
+      not already granted.
 
-<p>A {{jsxref('Promise')}} that resolves with undefined when the request is granted.</p>
+- callback
+  - : …
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<h3 id="General_Example">General Example</h3>
+A {{jsxref('Promise')}} that resolves with undefined when the request is granted.
 
-<p>The following example shows the basic use of the <code>request()</code> method with an
-  asynchronous function as the callback. Once the callback is invoked, no other running
-  code on this origin can hold `<code>my_resource</code>` until the callback returns.</p>
+## Examples
 
-<pre class="brush: js">await navigator.locks.request('my_resource', async lock =&gt; {
+### General Example
+
+The following example shows the basic use of the `request()` method with an
+asynchronous function as the callback. Once the callback is invoked, no other running
+code on this origin can hold \``my_resource`\` until the callback returns.
+
+```js
+await navigator.locks.request('my_resource', async lock => {
   // The lock was granted.
 });
-</pre>
+```
 
-<h3 id="Mode_Example">Mode Example</h3>
+### Mode Example
 
-<p>The following example shows how to use the <code>mode</code> option for readers and
-  writers.</p>
+The following example shows how to use the `mode` option for readers and
+writers.
 
-<p>Notice that both functions use a lock called <code>my_resource</code>. The
-  <code>do_read()</code> requests a lock in <code>'shared'</code> mode meaning that
-  multiple calls may occur simultaneously across different event handlers, tabs, or
-  workers.</p>
+Notice that both functions use a lock called `my_resource`. The
+`do_read()` requests a lock in `'shared'` mode meaning that
+multiple calls may occur simultaneously across different event handlers, tabs, or
+workers.
 
-<pre class="brush: js">async function do_read() {
-  await navigator.locks.request('my_resource', {mode: 'shared'}, async lock =&gt; {
+```js
+async function do_read() {
+  await navigator.locks.request('my_resource', {mode: 'shared'}, async lock => {
     // Read code here.
   });
-}</pre>
+}
+```
 
-<p>The <code>do_write()</code> function use the same lock but in <code>'exclusive'</code>
-  mode which will delay invocation of the <code>request()</code> call in
-  <code>do_read()</code> until the write operation has completed. This applies across
-  event handlers, tabs, or workers.</p>
+The `do_write()` function use the same lock but in `'exclusive'`
+mode which will delay invocation of the `request()` call in
+`do_read()` until the write operation has completed. This applies across
+event handlers, tabs, or workers.
 
-<pre class="brush: js">function do_write() {
-  await navigator.locks.request('my_resource', {mode: 'exclusive'}, async lock =&gt; {
+```js
+function do_write() {
+  await navigator.locks.request('my_resource', {mode: 'exclusive'}, async lock => {
     // Write code here.
   });
-}</pre>
+}
+```
 
-<h3 id="ifAvailable_Example">ifAvailable Example</h3>
+### ifAvailable Example
 
-<p>To grab a lock only if it isn't already being held, use the <code>ifAvailable</code>
-  option. In this function <code>await</code> means the method will not return until the
-  callback is complete. Since the lock is only granted if it was available, this call
-  avoids needing to wait on the lock being released elsewhere.</p>
+To grab a lock only if it isn't already being held, use the `ifAvailable`
+option. In this function `await` means the method will not return until the
+callback is complete. Since the lock is only granted if it was available, this call
+avoids needing to wait on the lock being released elsewhere.
 
-<pre class="brush: js">await navigator.locks.request('my_resource', {ifAvailable: true}, async lock =&gt; {
+```js
+await navigator.locks.request('my_resource', {ifAvailable: true}, async lock => {
   if (!lock) {
     // The lock was not granted - get out fast.
     return;
@@ -133,19 +137,19 @@ browser-compat: api.LockManager.request
   // The lock was granted, and no other running code in this origin is holding
   // the 'my_res_lock' lock until this returns.
 });
-</pre>
+```
 
-<h3 id="signal_Example">signal Example</h3>
+### signal Example
 
-<p>To only wait for a lock for a short period of time, use the <code>signal</code> option.
-</p>
+To only wait for a lock for a short period of time, use the `signal` option.
 
-<pre class="brush: js">const controller = new AbortController();
+```js
+const controller = new AbortController();
 // Wait at most 200ms.
-setTimeout(() =&gt; controller.abort(), 200);
+setTimeout(() => controller.abort(), 200);
 
 try {
-  await navigator.locks.request('my_resource', {signal: controller.signal}, async lock =&gt; {
+  await navigator.locks.request('my_resource', {signal: controller.signal}, async lock => {
     // The lock was acquired!
   });
 } catch (ex) {
@@ -153,12 +157,12 @@ try {
     // The request aborted before it could be granted.
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

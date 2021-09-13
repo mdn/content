@@ -9,93 +9,89 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toDataURL
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <strong><code>HTMLCanvasElement.toDataURL()</code></strong> method returns a <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a> containing a representation of the
-  image in the format specified by the <code>type</code> parameter (defaults to <a
-    href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). The returned
-  image is in a resolution of 96 dpi.</p>
+The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the
+image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned
+image is in a resolution of 96 dpi.
 
-<ul>
-  <li>If the height or width of the canvas is <code>0</code> or larger than the <a
-      href="/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size">maximum canvas
-      size</a>, the string <code>"data:,"</code> is returned.</li>
-  <li>If the requested type is not <code>image/png</code>, but the returned value starts
-    with <code>data:image/png</code>, then the requested type is not supported.</li>
-  <li>Chrome also supports the <code>image/webp</code> type.</li>
-</ul>
+- If the height or width of the canvas is `0` or larger than the [maximum canvas
+  size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
+- If the requested type is not `image/png`, but the returned value starts
+  with `data:image/png`, then the requested type is not supported.
+- Chrome also supports the `image/webp` type.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>canvas</em>.toDataURL(<em>type</em>, <em>encoderOptions</em>);
-</pre>
+```js
+canvas.toDataURL(type, encoderOptions);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} indicating the image format. The default format type is
-    <code>image/png</code>.</dd>
-  <dt><code>encoderOptions</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code> indicating the
+- `type` {{optional_inline}}
+  - : A {{domxref("DOMString")}} indicating the image format. The default format type is
+    `image/png`.
+- `encoderOptions` {{optional_inline}}
+  - : A {{jsxref("Number")}} between `0` and `1` indicating the
     image quality to use for image formats that use lossy compression such as
-    <code>image/jpeg</code> and <code>image/webp</code>.<br>
+    `image/jpeg` and `image/webp`.
     If this argument is anything else, the default value for image quality is used. The
-    default value is <code>0.92</code>. Other arguments are ignored.</dd>
-</dl>
+    default value is `0.92`. Other arguments are ignored.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing the requested <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a>.</p>
+A {{domxref("DOMString")}} containing the requested [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SecurityError</code></dt>
-  <dd>The canvas's bitmap is not origin clean; at least some of its contents have or may
+- `SecurityError`
+  - : The canvas's bitmap is not origin clean; at least some of its contents have or may
     have been loaded from a site other than the one from which the document itself was
-    loaded.</dd>
-</dl>
+    loaded.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="5" height="5"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="5" height="5"></canvas>
+```
 
-<p>You can get a data-URL of the canvas with the following lines:</p>
+You can get a data-URL of the canvas with the following lines:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
-</pre>
+```
 
-<h3 id="Setting_image_quality_with_jpegs">Setting image quality with jpegs</h3>
+### Setting image quality with jpegs
 
-<pre class="brush: js">var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+```js
+var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
 var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
-</pre>
+```
 
-<h3 id="Example_Dynamically_change_images">Example: Dynamically change images</h3>
+### Example: Dynamically change images
 
-<p>You can use this technique in coordination with mouse events in order to dynamically
-  change images (gray-scale vs. color in this example):</p>
+You can use this technique in coordination with mouse events in order to dynamically
+change images (gray-scale vs. color in this example):
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre
-  class="brush: html">&lt;img class="grayscale" src="myPicture.png" alt="Description of my picture" /&gt;</pre>
+```html
+<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">window.addEventListener('load', removeColors);
+```js
+window.addEventListener('load', removeColors);
 
 function showColorImg() {
   this.style.display = 'none';
@@ -112,7 +108,7 @@ function removeColors() {
       nImgsLen = aImages.length,
       oCanvas = document.createElement('canvas'),
       oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId &lt; nImgsLen; nImgId++) {
+  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -122,7 +118,7 @@ function removeColors() {
     oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
     aPix = oImgData.data;
     nPixLen = aPix.length;
-    for (nPixel = 0; nPixel &lt; nPixLen; nPixel += 4) {
+    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
       aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
@@ -134,20 +130,18 @@ function removeColors() {
     oColorImg.style.display = "none";
     oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-  <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Data URIs</a> in the <a
-      href="/en-US/docs/Web/HTTP">HTTP</a> reference.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) in the [HTTP](/en-US/docs/Web/HTTP) reference.

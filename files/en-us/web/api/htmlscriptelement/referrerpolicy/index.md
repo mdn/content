@@ -2,91 +2,86 @@
 title: HTMLScriptElement.referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
 tags:
-- API
-- HTMLScriptElement
-- Property
-- Reference
-- referrerPolicy
+  - API
+  - HTMLScriptElement
+  - Property
+  - Reference
+  - referrerPolicy
 browser-compat: api.HTMLScriptElement.referrerPolicy
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>referrerPolicy</code></strong> property of the
-  {{domxref("HTMLScriptElement")}} interface reflects the HTML
-  {{htmlattrxref("referrerpolicy","script")}} of the {{HTMLElement("script")}} element and
-  fetches made by that script, defining which referrer is sent when fetching the resource.
-</p>
+The **`referrerPolicy`** property of the
+{{domxref("HTMLScriptElement")}} interface reflects the HTML
+{{htmlattrxref("referrerpolicy","script")}} of the {{HTMLElement("script")}} element and
+fetches made by that script, defining which referrer is sent when fetching the resource.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>refStr</var> = <var>scriptElem</var>.referrerPolicy;
-<var>scriptElem</var>.referrerPolicy = <var>refStr</var>;</pre>
+```js
+refStr = scriptElem.referrerPolicy;
+scriptElem.referrerPolicy = refStr;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}; one of the following:</p>
+A {{domxref("DOMString")}}; one of the following:
 
-<dl>
-  <dt>no-referrer</dt>
-  <dd>The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
-    information is sent along with requests.</dd>
-  <dt>no-referrer-when-downgrade</dt>
-  <dd>The URL is sent
+- no-referrer
+  - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer
+    information is sent along with requests.
+- no-referrer-when-downgrade
+  - : The URL is sent
     as a referrer when the protocol security level stays the same (e.g.HTTP→HTTP,
-    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).</dd>
-  <dt>origin</dt>
-  <dd>Only send the origin of the document as the referrer in all cases.<br>
-    The document <code>https://example.com/page.html</code> will send the referrer
-    <code>https://example.com/</code>.</dd>
-  <dt>origin-when-cross-origin</dt>
-  <dd>Send a full URL when performing a same-origin request, but only send the origin of
-    the document for other cases.</dd>
-  <dt>same-origin</dt>
-  <dd>A referrer will be sent for <a
-      href="/en-US/docs/Web/Security/Same-origin_policy">same-site origins</a>, but
-    cross-origin requests will contain no referrer information.</dd>
-  <dt>strict-origin</dt>
-  <dd>Only send the origin of the document as the referrer when the protocol security
+    HTTPS→HTTPS), but isn't sent to a less secure destination (e.g. HTTPS→HTTP).
+- origin
+  - : Only send the origin of the document as the referrer in all cases.
+    The document `https://example.com/page.html` will send the referrer
+    `https://example.com/`.
+- origin-when-cross-origin
+  - : Send a full URL when performing a same-origin request, but only send the origin of
+    the document for other cases.
+- same-origin
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+    cross-origin requests will contain no referrer information.
+- strict-origin
+  - : Only send the origin of the document as the referrer when the protocol security
     level stays the same (e.g. HTTPS→HTTPS), but don't send it to a less secure
-    destination (e.g. HTTPS→HTTP).</dd>
-  <dt>strict-origin-when-cross-origin (default)</dt>
-  <dd>This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
+    destination (e.g. HTTPS→HTTP).
+- strict-origin-when-cross-origin (default)
+  - : This is the user agent's default behavior if no policy is specified. Send a full URL when performing a same-origin request, only send the origin when the
     protocol security level stays the same (e.g. HTTPS→HTTPS), and send no header to a
-    less secure destination (e.g. HTTPS→HTTP).</dd>
-  <dt>unsafe-url</dt>
-  <dd>Send a full URL when performing a same-origin or cross-origin request. This policy
+    less secure destination (e.g. HTTPS→HTTP).
+- unsafe-url
+  - : Send a full URL when performing a same-origin or cross-origin request. This policy
     will leak origins and paths from TLS-protected resources to insecure origins.
-    Carefully consider the impact of this setting.</dd>
-</dl>
+    Carefully consider the impact of this setting.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An empty string value (<code>""</code>) is both the default
-    value, and a fallback value if <code>referrerpolicy</code> is not supported. If
-    <code>referrerpolicy</code> is not explicitly specified on the
-    <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy,
-    i.e. one set on the whole document or domain. If a higher-level policy is not
-    available, the empty string is treated as being equivalent to
-    <code>no-referrer-when-downgrade</code>.</p>
-</div>
+> **Note:** An empty string value (`""`) is both the default
+> value, and a fallback value if `referrerpolicy` is not supported. If
+> `referrerpolicy` is not explicitly specified on the
+> `<script>` element, it will adopt a higher-level referrer policy,
+> i.e. one set on the whole document or domain. If a higher-level policy is not
+> available, the empty string is treated as being equivalent to
+> `no-referrer-when-downgrade`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">var scriptElem = document.createElement("script");
+```js
+var scriptElem = document.createElement("script");
 scriptElem.src = "/";
 scriptElem.referrerPolicy = "unsafe-url";
 document.body.appendChild(scriptElem);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLIFrameElement.referrerPolicy")}}</li>
-</ul>
+- {{domxref("HTMLIFrameElement.referrerPolicy")}}

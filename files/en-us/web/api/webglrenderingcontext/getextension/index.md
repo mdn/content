@@ -2,66 +2,63 @@
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLRenderingContext.getExtension()</strong></code> method enables a
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> extension.</p>
+The **`WebGLRenderingContext.getExtension()`** method enables a
+[WebGL](/en-US/docs/Web/API/WebGL_API) extension.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><em>gl</em></var>.getExtension(name);</pre>
+```js
+gl.getExtension(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>A {{jsxref("String")}} for the name of the WebGL extension to enable.</dd>
-</dl>
+- name
+  - : A {{jsxref("String")}} for the name of the WebGL extension to enable.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A WebGL extension object, or {{jsxref("null")}} if name does not match
-  (case-insensitive) to one of the strings in
-  {{domxref("WebGLRenderingContext.getSupportedExtensions")}}.</p>
+A WebGL extension object, or {{jsxref("null")}} if name does not match
+(case-insensitive) to one of the strings in
+{{domxref("WebGLRenderingContext.getSupportedExtensions")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Once a WebGL extension is enabled, you are able to use the methods, properties or
-  constants that this extension object provides.</p>
+Once a WebGL extension is enabled, you are able to use the methods, properties or
+constants that this extension object provides.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 gl = canvas.getContext('webgl');
 
 gl.getExtension('WEBGL_lose_context').loseContext();
-</pre>
+```
 
-<h2 id="WebGL_extensions">WebGL extensions</h2>
+## WebGL extensions
 
-<p>Extensions for the WebGL API are registered in the <a
-    href="https://www.khronos.org/registry/webgl/extensions/">WebGL Extension
-    Registry</a>. The current extensions are:</p>
+Extensions for the WebGL API are registered in the [WebGL Extension
+Registry](https://www.khronos.org/registry/webgl/extensions/). The current extensions are:
 
-<p>{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}</p>
+{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getSupportedExtensions()")}}</li>
-  <li><a href="http://webglreport.com">webglreport.com</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
+- [webglreport.com](http://webglreport.com)

@@ -10,25 +10,27 @@ tags:
   - stream
 browser-compat: api.MediaRecorder.stream
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>MediaRecorder.stream</code></strong> read-only property returns the
-   stream that was passed into the <code>MediaRecorder()</code> constructor when the
-   <code>MediaRecorder</code> was created.</p>
+The **`MediaRecorder.stream`** read-only property returns the
+stream that was passed into the `MediaRecorder()` constructor when the
+`MediaRecorder` was created.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-   class="brush: js">var <em>stream</em> = MediaRecorder.stream</pre>
+```js
+var stream = MediaRecorder.stream
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The MediaStream passed into the <code>MediaRecorder()</code> constructor when the
-   <code>MediaRecorder</code> was originally created.</p>
+The MediaStream passed into the `MediaRecorder()` constructor when the
+`MediaRecorder` was originally created.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">if (navigator.getUserMedia) {
+```js
+if (navigator.getUserMedia) {
    console.log('getUserMedia supported.');
    navigator.getUserMedia (
       // constraints - only audio needed for this app
@@ -43,26 +45,23 @@ browser-compat: api.MediaRecorder.stream
            var myStream = mediaRecorder.stream;
            console.log(myStream);
 
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-   <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-         the MediaRecorder API</a></li>
-   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-      getUserMedia + Web Audio API visualization demo, by <a
-         href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-         href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-   <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-         demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-   <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Using
+  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

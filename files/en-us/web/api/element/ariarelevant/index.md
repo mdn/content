@@ -11,40 +11,43 @@ tags:
   - Element
 browser-compat: api.Element.ariaRelevant
 ---
-<div>{{DefaultAPISidebar("DOM")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>ariaRelevant</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><code>aria-relevant</code></a> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</p>
+The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaRelevant</var> = element.ariaRelevant;
-<var>element</var>.ariaRelevant = <var>ariaRelevant</var></pre>
+    var ariaRelevant = element.ariaRelevant;
+    element.ariaRelevant = ariaRelevant
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing one or more of the following values, space separated:</p>
+### Value
 
-<dl>
-  <dt>"additions"</dt>
-  <dd>Additions of Element Nodes within the live region should be considered relevant.</dd>
-  <dt>"removals"</dt>
-  <dd>Deletion of Nodes from the live region should be considered relevant.</dd>
-  <dt>"text"</dt>
-  <dd>Changes to the textual content of existing nodes should be considered relevant.</dd>
-  <dt>"all"</dt>
-  <dd>Equivalent to <code>"additions removals text"</code>.</dd>
-</dl>
+A {{domxref("DOMString")}} containing one or more of the following values, space separated:
 
-<h2 id="Examples">Examples</h2>
+- "additions"
+  - : Additions of Element Nodes within the live region should be considered relevant.
+- "removals"
+  - : Deletion of Nodes from the live region should be considered relevant.
+- "text"
+  - : Changes to the textual content of existing nodes should be considered relevant.
+- "all"
+  - : Equivalent to `"additions removals text"`.
 
-<p>In this example the <code>aria-relevant</code> attribute on the element with an ID of <code>text</code> is set to "all". Using <code>ariaRelevant</code> we update the value to "text".</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-relevant="all"&gt;&lt;/div&gt;</pre>
+In this example the `aria-relevant` attribute on the element with an ID of `text` is set to "all". Using `ariaRelevant` we update the value to "text".
 
-<pre class="brush: js">let el = document.getElementById('clock');
+```html
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-relevant="all"></div>
+```
+
+```js
+let el = document.getElementById('clock');
 console.log(el.ariaRelevant); // all
 el.ariaRelevant = "text"
-console.log(el.ariaRelevant); // text</pre>
+console.log(el.ariaRelevant); // text
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

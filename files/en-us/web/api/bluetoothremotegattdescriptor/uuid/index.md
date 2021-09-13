@@ -12,26 +12,27 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTDescriptor.uuid
 ---
-<p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor.uuid</code></strong> read-only property
-  returns the UUID of the characteristic descriptor, for
-  example '<code>00002902-0000-1000-8000-00805f9b34fb</code>' for theClient Characteristic
-  Configuration descriptor.</p>
+The **`BluetoothRemoteGATTDescriptor.uuid`** read-only property
+returns the UUID of the characteristic descriptor, for
+example '`00002902-0000-1000-8000-00805f9b34fb`' for theClient Characteristic
+Configuration descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var uuid = BluetoothRemoteGATTDescriptor.uuid</pre>
+```js
+var uuid = BluetoothRemoteGATTDescriptor.uuid
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A UUID.</p>
+A UUID.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

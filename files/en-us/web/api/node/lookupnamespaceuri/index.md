@@ -2,42 +2,41 @@
 title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 tags:
-- API
-- DOM
-- Method
-- NeedsSpecTable
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - NeedsSpecTable
+  - Node
+  - Reference
 browser-compat: api.Node.lookupNamespaceURI
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.lookupNamespaceURI()</strong></code> method accepts a prefix and
-  returns the namespace URI associated with it on the given node if found (and
-  <code>null</code> if not).</p>
+The **`Node.lookupNamespaceURI()`** method accepts a prefix and
+returns the namespace URI associated with it on the given node if found (and
+`null` if not).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>namespace</em> = <em>node</em>.lookupNamespaceURI(<em>prefix</em>);</pre>
+```js
+var namespace = node.lookupNamespaceURI(prefix);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>prefix</code></dt>
-  <dd>The prefix to look for. If this parameter is <code>null</code>, the method will
-    return the default namespace URI, if any.</dd>
-</dl>
+- `prefix`
+  - : The prefix to look for. If this parameter is `null`, the method will
+    return the default namespace URI, if any.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing the namespace URI. If the prefix is not found, it
-  returns <code>null</code>.</p>
+A {{domxref("DOMString")}} containing the namespace URI. If the prefix is not found, it
+returns `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

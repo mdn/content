@@ -2,143 +2,130 @@
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- Files
-- HTML DOM
-- HTMLInputElement
-- Non-standard
-- Property
-- Reference
-- Web
-- webkitdirectory
+  - API
+  - File System API
+  - File and Directory Entries API
+  - Files
+  - HTML DOM
+  - HTMLInputElement
+  - Non-standard
+  - Property
+  - Reference
+  - Web
+  - webkitdirectory
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
-<p>{{APIRef("HTML DOM")}}{{non-standard_header}}</p>
+{{APIRef("HTML DOM")}}{{non-standard_header}}
 
-<p>The
-    <code><strong>HTMLInputElement.webkitdirectory</strong></code> is a property that
-    reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute and indicates
-    that the {{HTMLElement("input")}} element should let the user select directories
-    instead of files. When a directory is selected, the directory and its entire hierarchy
-    of contents are included in the set of selected items. The selected file system
-    entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
-    "webkitEntries")}} property.</p>
+The
+**`HTMLInputElement.webkitdirectory`** is a property that
+reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute and indicates
+that the {{HTMLElement("input")}} element should let the user select directories
+instead of files. When a directory is selected, the directory and its entire hierarchy
+of contents are included in the set of selected items. The selected file system
+entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
+    "webkitEntries")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> <em>HTMLInputElement</em>.webkitdirectory = <em>boolValue</em></pre>
+```js
+ HTMLInputElement.webkitdirectory = boolValue
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean; <code>true</code> if the {{HTMLElement("input")}} element should allow
-  picking only directories or <code>false</code> if only files should be selectable.</p>
+A Boolean; `true` if the {{HTMLElement("input")}} element should allow
+picking only directories or `false` if only files should be selectable.
 
-<h2 id="Understanding_the_results">Understanding the results</h2>
+## Understanding the results
 
-<p>After the user makes a selection, each {{domxref("File")}} object in <code>files</code>
-  has its {{domxref("File.webkitRelativePath")}} property set to the relative path within
-  the selected directory at which the file is located. For example, consider this file
-  system:</p>
+After the user makes a selection, each {{domxref("File")}} object in `files`
+has its {{domxref("File.webkitRelativePath")}} property set to the relative path within
+the selected directory at which the file is located. For example, consider this file
+system:
 
-<ul>
-  <li>PhotoAlbums
-    <ul>
-      <li>Birthdays
-        <ul>
-          <li>Jamie's 1st birthday
-            <ul>
-              <li>PIC1000.jpg</li>
-              <li>PIC1004.jpg</li>
-              <li>PIC1044.jpg</li>
-            </ul>
-          </li>
-          <li>Don's 40th birthday
-            <ul>
-              <li>PIC2343.jpg</li>
-              <li>PIC2344.jpg</li>
-              <li>PIC2355.jpg</li>
-              <li>PIC2356.jpg</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Vacations
-        <ul>
-          <li>Mars
-            <ul>
-              <li>PIC5533.jpg</li>
-              <li>PIC5534.jpg</li>
-              <li>PIC5556.jpg</li>
-              <li>PIC5684.jpg</li>
-              <li>PIC5712.jpg</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+- PhotoAlbums
 
-<p>If the user chooses <code>PhotoAlbums</code>, then the list reported by files will
-  contain {{domxref("File")}} objects for every file listed above—but not the directories.
-  The entry for <code>PIC2343.jpg</code> will have a <code>webkitRelativePath</code> of
-  <code>PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg</code>. This makes it
-  possible to know the hierarchy even though the {{domxref("FileList")}} is flat.</p>
+  - Birthdays
 
-<div class="note">
-  <p><strong>Note:</strong> The behavior of <code>webkitRelativePath</code> is different
-    in <em>Chromium &lt; 72</em>. See <a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">this bug</a> for
-    further details.</p>
-</div>
+    - Jamie's 1st birthday
 
-<h2 id="Example">Example</h2>
+      - PIC1000.jpg
+      - PIC1004.jpg
+      - PIC1044.jpg
 
-<p>In this example, a directory picker is presented which lets the user choose one or more
-  directories. When the {{event("change")}} event occurs, a list of all files contained
-  within the selected directory hierarchies is generated and displayed.</p>
+    - Don's 40th birthday
 
-<h3 id="HTML_content">HTML content</h3>
+      - PIC2343.jpg
+      - PIC2344.jpg
+      - PIC2355.jpg
+      - PIC2356.jpg
 
-<pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
-&lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
+  - Vacations
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+    - Mars
 
-<pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
+      - PIC5533.jpg
+      - PIC5534.jpg
+      - PIC5556.jpg
+      - PIC5684.jpg
+      - PIC5712.jpg
+
+If the user chooses `PhotoAlbums`, then the list reported by files will
+contain {{domxref("File")}} objects for every file listed above—but not the directories.
+The entry for `PIC2343.jpg` will have a `webkitRelativePath` of
+`PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg`. This makes it
+possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
+
+> **Note:** The behavior of `webkitRelativePath` is different
+> in _Chromium < 72_. See [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187) for
+> further details.
+
+## Example
+
+In this example, a directory picker is presented which lets the user choose one or more
+directories. When the {{event("change")}} event occurs, a list of all files contained
+within the selected directory hierarchies is generated and displayed.
+
+### HTML content
+
+```html
+<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<ul id="listing"></ul>
+```
+
+### JavaScript content
+
+```js
+document.getElementById("filepicker").addEventListener("change", function(event) {
   let output = document.getElementById("listing");
   let files = event.target.files;
 
-  for (let i=0; i&lt;files.length; i++) {
+  for (let i=0; i<files.length; i++) {
     let item = document.createElement("li");
     item.innerHTML = files[i].webkitRelativePath;
     output.appendChild(item);
   };
 }, false);
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
-  <li>{{domxref("File.webkitRelativePath")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- {{domxref("HTMLInputElement.webkitEntries")}}
+- {{domxref("File.webkitRelativePath")}}

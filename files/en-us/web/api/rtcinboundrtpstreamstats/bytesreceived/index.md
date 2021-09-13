@@ -2,50 +2,51 @@
 title: RTCInboundRtpStreamStats.bytesReceived
 slug: Web/API/RTCInboundRtpStreamStats/bytesReceived
 tags:
-- API
-- Media
-- Networking
-- Performance
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- bytesReceived
-- stream
+  - API
+  - Media
+  - Networking
+  - Performance
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - bytesReceived
+  - stream
 browser-compat: api.RTCInboundRtpStreamStats.bytesReceived
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCInboundRtpStreamStats")}} dictionary's
-    <code><strong>bytesReceived</strong></code> property is an integer value which
-    indicates the total number of bytes received so far from this synchronization source
-    (SSRC).</p>
+The {{domxref("RTCInboundRtpStreamStats")}} dictionary's
+**`bytesReceived`** property is an integer value which
+indicates the total number of bytes received so far from this synchronization source
+(SSRC).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var bytesReceived = <em>rtcInboundRtpStreamStats</em>.bytesReceived;</pre>
+```js
+var bytesReceived = rtcInboundRtpStreamStats.bytesReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned integer value indicating the total number of bytes received so far on this
-  RTP stream, not including header and padding bytes. This value can be used to calculate
-  an approximation of the average media data rate:</p>
+An unsigned integer value indicating the total number of bytes received so far on this
+RTP stream, not including header and padding bytes. This value can be used to calculate
+an approximation of the average media data rate:
 
-<pre
-  class="brush: js">avgDataRate = rtcInboundRtpStreamStats.bytesReceived / elapsedTime;</pre>
+```js
+avgDataRate = rtcInboundRtpStreamStats.bytesReceived / elapsedTime;
+```
 
-<p>This value gets reset to zero if the sender's SSRC identifier changes for any reason.
-</p>
+This value gets reset to zero if the sender's SSRC identifier changes for any reason.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

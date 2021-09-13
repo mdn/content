@@ -16,72 +16,71 @@ tags:
   - onicecandidate
 browser-compat: api.RTCPeerConnection.onicecandidate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code>RTCPeerConnection</code> property
-    <strong>{{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}</strong>
-    property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
-    when the {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event occurs on an {{domxref("RTCPeerConnection")}}
-    instance. This happens whenever the local {{Glossary("ICE")}} agent needs to deliver a
-    message to the other peer through the signaling server.This lets the ICE agent
-  perform negotiation with the remote peer without the browser itself needing to know any
-  specifics about the technology being used for signaling; implement this method to use
-  whatever messaging technology you choose to send the ICE candidate to the remote peer.
-</p>
+The `RTCPeerConnection` property
+**{{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}**
+property is an [event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called
+when the {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event occurs on an {{domxref("RTCPeerConnection")}}
+instance. This happens whenever the local {{Glossary("ICE")}} agent needs to deliver a
+message to the other peer through the signaling server.This lets the ICE agent
+perform negotiation with the remote peer without the browser itself needing to know any
+specifics about the technology being used for signaling; implement this method to use
+whatever messaging technology you choose to send the ICE candidate to the remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>rtcPeerConnection</em>.onicecandidate = <em>eventHandler</em>;
-</pre>
+```js
+rtcPeerConnection.onicecandidate = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This should be set to a function which you provide that accepts as input an
-  {{domxref("RTCPeerConnectionIceEvent")}} object representing the
-  {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event. The function should deliver the ICE candidate, whose
-  {{Glossary("SDP")}} can be found in the event's
-  {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property, to the remote
-  peer through the signaling server.</p>
+This should be set to a function which you provide that accepts as input an
+{{domxref("RTCPeerConnectionIceEvent")}} object representing the
+{{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event. The function should deliver the ICE candidate, whose
+{{Glossary("SDP")}} can be found in the event's
+{{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property, to the remote
+peer through the signaling server.
 
-<p>If the event's <code>candidate</code> property is <code>null</code>, ICE gathering has
-  finished. This message should not be sent to the remote peer. When this happens, the
-  connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has
-  also changed to <code>complete</code>. You don't need to watch for this explicitly;
-  instead, if you need to sense the end of signaling, you should watch for a
-  {{domxref("RTCPeerConnection.icegatheringstatechange_event",
+If the event's `candidate` property is `null`, ICE gathering has
+finished. This message should not be sent to the remote peer. When this happens, the
+connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has
+also changed to `complete`. You don't need to watch for this explicitly;
+instead, if you need to sense the end of signaling, you should watch for a
+{{domxref("RTCPeerConnection.icegatheringstatechange_event",
   "icegatheringstatechange")}} event indicating that the ICE negotiation has transitioned
-  to the <code>complete</code> state.</p>
+to the `complete` state.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The example below, which is based on the code from the article <a
-    href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video
-    calling</a>, sets up a handler for {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} events to send the
-  candidates to the remote peer.</p>
+The example below, which is based on the code from the article [Signaling and video
+calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling), sets up a handler for {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} events to send the
+candidates to the remote peer.
 
-<pre class="brush: js">pc.onicecandidate = function(event) {
+```js
+pc.onicecandidate = function(event) {
   if (event.candidate) {
     // Send the candidate to the remote peer
   } else {
     // All ICE candidates have been sent
   }
-}</pre>
+}
+```
 
-<p>Notice that the end of negotiation is detected here when the event's
-  {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is
-  <code>null</code>.</p>
+Notice that the end of negotiation is detected here when the event's
+{{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is
+`null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event and its type,
-    {{domxref("RTCPeerConnectionIceEvent")}}.</li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}} event and its type,
+  {{domxref("RTCPeerConnectionIceEvent")}}.

@@ -9,56 +9,59 @@ tags:
   - load
 browser-compat: api.FileReader.load_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>load</code> event is fired when a file has been read successfully.</p>
+The `load` event is fired when a file has been read successfully.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("FileReader.onload")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ProgressEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("FileReader.onload")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="example"&gt;
+```html
+<div class="example">
 
-    &lt;div class="file-select"&gt;
-        &lt;label for="avatar"&gt;Choose a profile picture:&lt;/label&gt;
-        &lt;input type="file"
+    <div class="file-select">
+        <label for="avatar">Choose a profile picture:</label>
+        <input type="file"
                id="avatar" name="avatar"
-               accept="image/png, image/jpeg"&gt;
-    &lt;/div&gt;
+               accept="image/png, image/jpeg">
+    </div>
 
-    &lt;img src="" class="preview" height="200" alt="Image preview..."&gt;
+    <img src="" class="preview" height="200" alt="Image preview...">
 
-    &lt;div class="event-log"&gt;
-        &lt;label&gt;Event log:&lt;/label&gt;
-        &lt;textarea readonly class="event-log-contents"&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
+    <div class="event-log">
+        <label>Event log:</label>
+        <textarea readonly class="event-log-contents"></textarea>
+    </div>
 
-  &lt;/div&gt;</pre>
+  </div>
+```
 
-<pre class="brush: css hidden">img.preview {
+```css hidden
+img.preview {
   margin: 1rem 0;
 }
 
@@ -89,17 +92,19 @@ browser-compat: api.FileReader.load_event
   grid-area: log;
 }
 
-.event-log&gt;label {
+.event-log>label {
   display: block;
 }
 
 .event-log-contents {
   resize: none;
-}</pre>
+}
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const fileInput = document.querySelector('input[type="file"]');
+```js
+const fileInput = document.querySelector('input[type="file"]');
 const preview = document.querySelector('img.preview');
 const eventLog = document.querySelector('.event-log-contents');
 const reader = new FileReader();
@@ -131,22 +136,20 @@ function handleSelected(e) {
 }
 
 fileInput.addEventListener('change', handleSelected);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '300px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '300px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}</li>
-</ul>
+- Related events: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}

@@ -2,59 +2,58 @@
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- NeedsBrowserCompatibility
-- NeedsSpecTable
-- Property
-- Read-only
-- Reference
-- Table Rows
-- rows
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - Property
+  - Read-only
+  - Reference
+  - Table Rows
+  - rows
 browser-compat: api.HTMLTableElement.rows
 ---
-<div>
-  <div>
-    <div>{{APIRef("HTML DOM")}}</div>
-  </div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only {{domxref("HTMLTableElement")}}
-    property <code><strong>rows</strong></code> returns a live
-    {{domxref("HTMLCollection")}} of all the rows in the table, including the rows
-    contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
-    {{HTMLElement("tbody")}} elements.</p>
+The read-only {{domxref("HTMLTableElement")}}
+property **`rows`** returns a live
+{{domxref("HTMLCollection")}} of all the rows in the table, including the rows
+contained within any {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, and
+{{HTMLElement("tbody")}} elements.
 
-<p>Although the property itself is read-only, the returned object is live and allows the
-  modification of its content.</p>
+Although the property itself is read-only, the returned object is live and allows the
+modification of its content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>HTMLCollectionObject</em> = <em>table</em>.rows;</pre>
+```js
+HTMLCollectionObject = table.rows;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}} providing a live-updating list of the
-  {{domxref("HTMLTableRowElement")}} objects representing all of the {{HTMLElement("tr")}}
-  elements contained in the table. This provides quick access to all of the table rows,
-  without having to manually search for them.</p>
+An {{domxref("HTMLCollection")}} providing a live-updating list of the
+{{domxref("HTMLTableRowElement")}} objects representing all of the {{HTMLElement("tr")}}
+elements contained in the table. This provides quick access to all of the table rows,
+without having to manually search for them.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">myrows = mytable.rows;
+```js
+myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows.item(mytable.rows.length-1);</pre>
+lastRow = mytable.rows.item(mytable.rows.length-1);
+```
 
-<p>This demonstrates how you can use both array syntax (line 2) and the
-  {{domxref("HTMLCollection.item()")}} method (line 3) to obtain individual rows in the
-  table.</p>
+This demonstrates how you can use both array syntax (line 2) and the
+{{domxref("HTMLCollection.item()")}} method (line 3) to obtain individual rows in the
+table.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

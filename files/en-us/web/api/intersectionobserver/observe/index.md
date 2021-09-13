@@ -2,54 +2,53 @@
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 tags:
-- API
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserver
-- Method
-- Reference
-- observe
+  - API
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserver
+  - Method
+  - Reference
+  - observe
 browser-compat: api.IntersectionObserver.observe
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>The {{domxref("IntersectionObserver")}} method
-    <code><strong>observe()</strong></code> adds an element to the set of target elements
-    being watched by the <code>IntersectionObserver</code>. One observer has one set of
-    thresholds and one root, but can watch multiple target elements for visibility changes
-    in keeping with those.</p>
+The {{domxref("IntersectionObserver")}} method
+**`observe()`** adds an element to the set of target elements
+being watched by the `IntersectionObserver`. One observer has one set of
+thresholds and one root, but can watch multiple target elements for visibility changes
+in keeping with those.
 
-<p>To stop observing the element, call
-  {{domxref("IntersectionObserver.unobserve()")}}.</p>
+To stop observing the element, call
+{{domxref("IntersectionObserver.unobserve()")}}.
 
-<p>When the visibility of the specified element crosses over one of the observer's
-  visibility thresholds (as listed in {{domxref("IntersectionObserver.thresholds")}}), the
-  observer's callback is executed with an array of
-  {{domxref("IntersectionObserverEntry")}} objects representing the intersection changes
-  which occurred. Note that this design allows multiple elements' intersection changes to
-  be processed by a single call to the callback.</p>
+When the visibility of the specified element crosses over one of the observer's
+visibility thresholds (as listed in {{domxref("IntersectionObserver.thresholds")}}), the
+observer's callback is executed with an array of
+{{domxref("IntersectionObserverEntry")}} objects representing the intersection changes
+which occurred. Note that this design allows multiple elements' intersection changes to
+be processed by a single call to the callback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
+```js
+IntersectionObserver.observe(targetElement);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>targetElement</code></dt>
-  <dd>An {{domxref("element")}} whose visibility within the root is to be monitored. This
+- `targetElement`
+  - : An {{domxref("element")}} whose visibility within the root is to be monitored. This
     element must be a descendant of the root element (or contained within the current
-    document, if the root is the document's viewport).</dd>
-</dl>
+    document, if the root is the document's viewport).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 // Register IntersectionObserver
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -69,18 +68,16 @@ const boxElList = document.querySelectorAll('.box');
 boxElList.forEach((el) => {
   io.observe(el);
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("IntersectionObserver.unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.unobserve()")}}

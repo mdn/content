@@ -8,35 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLBRElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLBRElement</code></strong> interface represents a HTML line break element ({{htmlelement("br")}}). It inherits from {{domxref("HTMLElement")}}.</p>
+The **`HTMLBRElement`** interface represents a HTML line break element ({{htmlelement("br")}}). It inherits from {{domxref("HTMLElement")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} indicating the flow of text around floating objects.</dd>
-</dl>
+- {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} indicating the flow of text around floating objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{HTMLElement("br")}}</li>
-</ul>
+- HTML element implementing this interface: {{HTMLElement("br")}}

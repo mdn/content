@@ -9,62 +9,57 @@ tags:
   - Serial
 browser-compat: api.Serial.requestPort
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>Serial.requestPort()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
+The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = Serial.requestPort([<var>options</var>]);</pre>
+    var promise = Serial.requestPort([options]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>options</dt>
-  <dd>
-    <p>An object with the following properties:</p>
-    <dl>
-      <dt><code>filters</code></dt>
-      <dd>A list of objects containing vendor and product IDs used to search for attached devices. The <a href="https://www.usb.org/">USB Implementors Forum</a> assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
-        <ul>
-          <li><code>usbVendorId</code>: An unsigned short integer that identifies a USB device vendor. </li>
-          <li><code>usbProductId</code>: An unsigned short integer that identifies a USB device.</li>
-        </ul>
-      </dd>
-    </dl>
-  </dd>
-</dl>
+- options
 
-<h3 id="Returns">Return value</h3>
+  - : An object with the following properties:
 
-<p>A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}}.</p>
+    - `filters`
 
-<h3 id="Exceptions">Exceptions</h3>
+      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>"SecurityError"</code></dt>
-  <dd>The returned <code>Promise</code> rejects with this error if a <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> restricts use of this API or a permission to use it has not granted via a user gesture.</dd>
-  <dt>{{domxref("DOMException")}} <code>"AbortError"</code></dt>
-  <dd>The returned <code>Promise</code> rejects with this if the user does not select a port when prompted.</dd>
-</dl>
+        - `usbVendorId`: An unsigned short integer that identifies a USB device vendor.
+        - `usbProductId`: An unsigned short integer that identifies a USB device.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>The following example shows a filter being passed to <code>requestPort()</code> with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.</p>
+A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}}.
 
-<pre class="brush: js">button.addEventListener('click', () => {
+### Exceptions
+
+- {{domxref("DOMException")}} `"SecurityError"`
+  - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
+- {{domxref("DOMException")}} `"AbortError"`
+  - : The returned `Promise` rejects with this if the user does not select a port when prompted.
+
+## Examples
+
+The following example shows a filter being passed to `requestPort()` with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.
+
+```js
+button.addEventListener('click', () => {
   const usbVendorId = ...;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {
     // The user didn't select a port.
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

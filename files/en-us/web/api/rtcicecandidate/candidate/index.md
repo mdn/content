@@ -17,77 +17,80 @@ tags:
   - a-line
 browser-compat: api.RTCIceCandidate.candidate
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only property <code><strong>candidate</strong></code> on the {{domxref("RTCIceCandidate")}} interface returns a {{domxref("DOMString")}} describing the candidate in detail.
-    Most of the other properties of <code>RTCIceCandidate</code> are actually extracted from this string.</p>
+The read-only property **`candidate`** on the {{domxref("RTCIceCandidate")}} interface returns a {{domxref("DOMString")}} describing the candidate in detail.
+Most of the other properties of `RTCIceCandidate` are actually extracted from this string.
 
-<p>This property can be configured using the <code>candidate</code> property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.</p>
+This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var candidate = RTCIceCandidate.candidate;
+```
 
-<pre class="brush: js">var <em>candidate</em> = <em>RTCIceCandidate</em>.candidate;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute `"candidate"`.
+The candidate string specifies the network connectivity information for the candidate.
+If the `candidate` is an empty string (`""`), the end of the candidate list has been reached; this candidate is known as the "end-of-candidates" marker.
 
-<p>A {{domxref("DOMString")}} describing the properties of the candidate, taken directly from the {{Glossary("SDP")}} attribute <code>"candidate"</code>.
-  The candidate string specifies the network connectivity information for the candidate.
-  If the <code>candidate</code> is an empty string (<code>""</code>), the end of the candidate list has been reached; this candidate is known as the "end-of-candidates" marker.</p>
+The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an a-line (attribute line) that looks like this:
 
-<p>The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}. For an a-line (attribute line) that looks like this:</p>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+the corresponding `candidate` string's value will be: `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
 
-<p>the corresponding <code>candidate</code> string's value will be: <code>"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"</code>.</p>
+The {{Glossary("user agent")}} always prefers candidates with the highest
+{{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal. In the
+example above, the priority is `2043278322`. The attributes are all separated
+by a single space character, and are in a specific order. The complete list of
+attributes for this example candidate is:
 
-<p>The {{Glossary("user agent")}} always prefers candidates with the highest
-  {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal. In the
-  example above, the priority is <code>2043278322</code>. The attributes are all separated
-  by a single space character, and are in a specific order. The complete list of
-  attributes for this example candidate is:</p>
+- {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
+- {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
+- {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
+- {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
+- {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+- {{domxref("RTCIceCandidate.port", "port")}} = 44323
+- {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-<ul>
-  <li>{{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325</li>
-  <li>{{domxref("RTCIceCandidate.component", "component")}} = <code>"rtp"</code> (the number 1 is encoded to this string; 2 becomes <code>"rtcp"</code>)</li>
-  <li>{{domxref("RTCIceCandidate.protocol", "protocol")}} = <code>"udp"</code></li>
-  <li>{{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322</li>
-  <li>{{domxref("RTCIceCandidate/address", "ip")}} = <code>"192.168.0.56"</code></li>
-  <li>{{domxref("RTCIceCandidate.port", "port")}} = 44323</li>
-  <li>{{domxref("RTCIceCandidate.type", "type")}} = <code>"host"</code></li>
-</ul>
+## Example
 
-<h2 id="Example">Example</h2>
+In this example, we see a function which receives as input an SDP string containing an
+ICE candidate received from the remote peer during the signaling process.
 
-<p>In this example, we see a function which receives as input an SDP string containing an
-  ICE candidate received from the remote peer during the signaling process.</p>
-
-<pre class="brush: js">function handleNewIceCandidate(candidateSDP) {
+```js
+function handleNewIceCandidate(candidateSDP) {
   var candidateObj = new RTCIceCandidate(candidateSDP);
 
   myPeerConnection.addIceCandidate(candidateObj).catch({
     /* handle the error thrown by addIceCandidate() */
   });
-}</pre>
+}
+```
 
-<p>The <code>handleNewIceCandidate()</code> function shown here passes the received
-  candidate's SDP text into {{domxref("RTCIceCandidate.RTCIceCandidate",
+The `handleNewIceCandidate()` function shown here passes the received
+candidate's SDP text into {{domxref("RTCIceCandidate.RTCIceCandidate",
   "RTCIceCandidate()")}} to receive an {{domxref("RTCIceCandidate")}} object in return,
-  which represents the candidate.</p>
+which represents the candidate.
 
-<p>The new candidate is then passed into {{domxref("RTCPeerConnection.addIceCandidate()")}} to add the candidate to the list of
-  candidates for WebRTC to consider using for the connection being established.</p>
+The new candidate is then passed into {{domxref("RTCPeerConnection.addIceCandidate()")}} to add the candidate to the list of
+candidates for WebRTC to consider using for the connection being established.
 
-<p>This example could be simplified somewhat; you may more often see the code look
-  something like this, taking advantage of more advanced ECMAScript 2016 features:</p>
+This example could be simplified somewhat; you may more often see the code look
+something like this, taking advantage of more advanced ECMAScript 2016 features:
 
-<pre class="brush: js">let handleNewIceCandidate = candidateSDP =&gt;
-  myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));</pre>
+```js
+let handleNewIceCandidate = candidateSDP =>
+  myPeerConnection.addIceCandidate(new RTCIceCandidate(candidateSDP));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

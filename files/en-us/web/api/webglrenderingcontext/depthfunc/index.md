@@ -2,81 +2,77 @@
 title: WebGLRenderingContext.depthFunc()
 slug: Web/API/WebGLRenderingContext/depthFunc
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthFunc
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.depthFunc()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies a function that compares
-  incoming pixel depth to the current depth buffer value.</p>
+The **`WebGLRenderingContext.depthFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a function that compares
+incoming pixel depth to the current depth buffer value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.depthFunc(<var>func</var>);
-</pre>
+```js
+void gl.depthFunc(func);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>func</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the depth comparison function, which sets the
+- `func`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the depth comparison function, which sets the
     conditions under which the pixel will be drawn. The default value is
-    <code>gl.LESS</code>. Possible values are:
-    <ul>
-      <li><code>gl.NEVER</code> (never pass)</li>
-      <li><code>gl.LESS</code> (pass if the incoming value is less than the depth buffer
-        value)</li>
-      <li><code>gl.EQUAL</code> (pass if the incoming value equals the depth buffer value)
-      </li>
-      <li><code>gl.LEQUAL</code> (pass if the incoming value is less than or equal to the
-        depth buffer value)</li>
-      <li><code>gl.GREATER</code> (pass if the incoming value is greater than the depth
-        buffer value)</li>
-      <li><code>gl.NOTEQUAL</code> (pass if the incoming value is not equal to the depth
-        buffer value)</li>
-      <li><code>gl.GEQUAL</code> (pass if the incoming value is greater than or equal to
-        the depth buffer value)</li>
-      <li><code>gl.ALWAYS</code> (always pass)</li>
-    </ul>
-  </dd>
-</dl>
+    `gl.LESS`. Possible values are:
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.NEVER` (never pass)
+    - `gl.LESS` (pass if the incoming value is less than the depth buffer
+      value)
+    - `gl.EQUAL` (pass if the incoming value equals the depth buffer value)
+    - `gl.LEQUAL` (pass if the incoming value is less than or equal to the
+      depth buffer value)
+    - `gl.GREATER` (pass if the incoming value is greater than the depth
+      buffer value)
+    - `gl.NOTEQUAL` (pass if the incoming value is not equal to the depth
+      buffer value)
+    - `gl.GEQUAL` (pass if the incoming value is greater than or equal to
+      the depth buffer value)
+    - `gl.ALWAYS` (always pass)
 
-<p>None.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<p>The depth testing is disabled by default. To enable or disable depth testing, use the
-  {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.DEPTH_TEST</code>.</p>
+## Examples
 
-<pre class="brush: js">gl.enable(gl.DEPTH_TEST);
+The depth testing is disabled by default. To enable or disable depth testing, use the
+{{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.DEPTH_TEST`.
+
+```js
+gl.enable(gl.DEPTH_TEST);
 gl.depthFunc(gl.NEVER);
-</pre>
+```
 
-<p>To check the current depth function, query the <code>DEPTH_FUNC</code> constant.</p>
+To check the current depth function, query the `DEPTH_FUNC` constant.
 
-<pre class="brush: js">gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
+```js
+gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
 // true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enable()")}}

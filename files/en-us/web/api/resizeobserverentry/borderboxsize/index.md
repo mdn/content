@@ -2,57 +2,52 @@
 title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Resize Observer API
-- ResizeObserverEntry
-- borderBoxSize
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Resize Observer API
+  - ResizeObserverEntry
+  - borderBoxSize
 browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
-<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>borderBoxSize</code></strong> read-only property of
-  the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
-  border box size of the observed element when the callback is run.</p>
+The **`borderBoxSize`** read-only property of
+the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
+border box size of the observed element when the callback is run.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myBorderBoxSize = ResizeObserverEntry.borderBoxSize;
-</pre>
+```js
+var myBorderBoxSize = ResizeObserverEntry.borderBoxSize;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array containing objects with the new border box size of the observed element. The
-  array is necessary to support elements that have multiple fragments, which occur in
-  multi-column scenarios. Each object in the array contains two properties:</p>
+An array containing objects with the new border box size of the observed element. The
+array is necessary to support elements that have multiple fragments, which occur in
+multi-column scenarios. Each object in the array contains two properties:
 
-<dl>
-  <dt><code>blockSize</code></dt>
-  <dd>The length of the observed element's border box in the block dimension. For boxes
+- `blockSize`
+  - : The length of the observed element's border box in the block dimension. For boxes
     with a horizontal {{cssxref("writing-mode")}}, this is the vertical dimension, or
     height; if the writing-mode is vertical, this is the horizontal dimension, or width.
-  </dd>
-  <dt><code>inlineSize</code></dt>
-  <dd>The length of the observed element's border box in the inline dimension. For boxes
+- `inlineSize`
+  - : The length of the observed element's border box in the inline dimension. For boxes
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
-  </dd>
-</dl>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For more explanation of writing modes and block and inline
-    dimensions, read <a
-      href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling
-      different text directions</a>.</p>
-</div>
+> **Note:** For more explanation of writing modes and block and inline
+> dimensions, read [Handling
+> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
-    if(entry.borderBoxSize &amp;&amp; entry.borderBoxSize.length &gt; 0) {
+    if(entry.borderBoxSize && entry.borderBoxSize.length > 0) {
       entry.target.style.borderRadius = Math.min(100, (entry.borderBoxSize[0].inlineSize/10) +
                                                       (entry.borderBoxSize[0].blockSize/10)) + 'px';
     } else {
@@ -62,12 +57,13 @@ browser-compat: api.ResizeObserverEntry.borderBoxSize
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));</pre>
+resizeObserver.observe(document.querySelector('div'));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,48 +11,50 @@ tags:
   - Reference
 browser-compat: api.Gamepad.id
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>The <strong><code>Gamepad.id</code></strong> property of the {{domxref("Gamepad") }}
-	interface returns a string containing some information about the controller.</p>
+The **`Gamepad.id`** property of the {{domxref("Gamepad") }}
+interface returns a string containing some information about the controller.
 
-<p>The exact syntax is not strictly specified, but in Firefox it will contain three pieces
-	of information separated by dashes (<code>-</code>):</p>
+The exact syntax is not strictly specified, but in Firefox it will contain three pieces
+of information separated by dashes (`-`):
 
-<ul>
-	<li>Two 4-digit hexadecimal strings containing the USB vendor and product id of the
-		controller</li>
-	<li>The name of the controller as provided by the driver.</li>
-</ul>
+- Two 4-digit hexadecimal strings containing the USB vendor and product id of the
+  controller
+- The name of the controller as provided by the driver.
 
-<p>For example, a PS2 controller returned <strong>810-3-USB Gamepad</strong>.</p>
+For example, a PS2 controller returned **810-3-USB Gamepad**.
 
-<p>This information is intended to allow you to find a mapping for the controls on the
-	device as well as display useful feedback to the user.</p>
+This information is intended to allow you to find a mapping for the controls on the
+device as well as display useful feedback to the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const id = gamepad.id;</pre>
+```js
+const id = gamepad.id;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
+```js
+window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});</pre>
+});
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{jsxref("String")}}.</p>
+A {{jsxref("String")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

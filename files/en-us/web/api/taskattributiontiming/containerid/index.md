@@ -2,34 +2,35 @@
 title: TaskAttributionTiming.containerId
 slug: Web/API/TaskAttributionTiming/containerId
 tags:
-- API
-- Long Tasks API
-- Performance
-- Property
-- Reference
-- TaskAttributionTiming
+  - API
+  - Long Tasks API
+  - Performance
+  - Property
+  - Reference
+  - TaskAttributionTiming
 browser-compat: api.TaskAttributionTiming.containerId
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p>The <strong><code>containerId</code></strong> readonly property of the
-  {{domxref("TaskAttributionTiming")}} interface returns the container's <code>id</code>
-  attribute. A container is the iframe, embed or object etc. that is being implicated, on
-  the whole, for a long task.</p>
+The **`containerId`** readonly property of the
+{{domxref("TaskAttributionTiming")}} interface returns the container's `id`
+attribute. A container is the iframe, embed or object etc. that is being implicated, on
+the whole, for a long task.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>containerId</em> = TaskAttributionTiming.containerId;</pre>
+```js
+var containerId = TaskAttributionTiming.containerId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the containers <code>id</code> attribute.</p>
+A {{domxref("DOMString")}} containing the containers `id` attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

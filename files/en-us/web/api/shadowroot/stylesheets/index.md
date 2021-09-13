@@ -9,31 +9,33 @@ tags:
   - Stylesheets
 browser-compat: api.ShadowRoot.styleSheets
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>styleSheets</code></strong> read-only property of the {{domxref("ShadowRoot")}} interface
-returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a shadow tree.</p>
+The **`styleSheets`** read-only property of the {{domxref("ShadowRoot")}} interface
+returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a shadow tree.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">shadowRoot.styleSheets</pre>
+```js
+shadowRoot.styleSheets
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.</p>
+A {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 let styleSheets = shadow.styleSheets;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

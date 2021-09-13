@@ -12,35 +12,32 @@ tags:
   - Video
 browser-compat: api.MediaMetadata
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>MediaMetadata</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> allows a web page to provide rich media metadata for display in a platform UI.</p>
+The **`MediaMetadata`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide rich media metadata for display in a platform UI.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaMetadata.MediaMetadata()")}}</dt>
- <dd>Creates a new <code>MediaMetaData</code> object.</dd>
-</dl>
+- {{domxref("MediaMetadata.MediaMetadata()")}}
+  - : Creates a new `MediaMetaData` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaMetadata.title")}}</dt>
- <dd>Returns or sets the title of the media to be played.</dd>
- <dt>{{domxref("MediaMetadata.artist")}}</dt>
- <dd>Returns or sets the name of the artist, group, creator, etc. of the media to be played.</dd>
- <dt>{{domxref("MediaMetadata.album")}}</dt>
- <dd>Returns or sets the name of the album or collection containing the media to be played.</dd>
- <dt>{{domxref("MediaMetadata.artwork")}}</dt>
- <dd>Returns or sets an array of images associated with playing media. </dd>
-</dl>
+- {{domxref("MediaMetadata.title")}}
+  - : Returns or sets the title of the media to be played.
+- {{domxref("MediaMetadata.artist")}}
+  - : Returns or sets the name of the artist, group, creator, etc. of the media to be played.
+- {{domxref("MediaMetadata.album")}}
+  - : Returns or sets the name of the album or collection containing the media to be played.
+- {{domxref("MediaMetadata.artwork")}}
+  - : Returns or sets an array of images associated with playing media.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example checks for browser compatibility and sets the current metadata for the media session.</p>
+The following example checks for browser compatibility and sets the current metadata for the media session.
 
-<pre class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -54,12 +51,13 @@ browser-compat: api.MediaMetadata
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

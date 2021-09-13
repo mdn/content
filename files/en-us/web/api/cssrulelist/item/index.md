@@ -9,36 +9,38 @@ tags:
   - CSSRuleList
 browser-compat: api.CSSRuleList.item
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>item()</code></strong> method of the {{domxref("CSSRuleList")}} interface returns the {{domxref("CSSRule")}} object at the specified <code>index</code> or <code>null</code> if the specified <code>index</code> doesn't exist.</p>
+The **`item()`** method of the {{domxref("CSSRuleList")}} interface returns the {{domxref("CSSRule")}} object at the specified `index` or `null` if the specified `index` doesn't exist.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSSRuleList.item(index);</pre>
+```js
+CSSRuleList.item(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>An integer.</dd>
-</dl>
+- `index`
+  - : An integer.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("CSSRule")}}.</p>
+A {{domxref("CSSRule")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example the first item in the {{domxref("CSSRuleList")}} named <code>myRules</code> is printed to the console.</p>
+In the following example the first item in the {{domxref("CSSRuleList")}} named `myRules` is printed to the console.
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]);</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

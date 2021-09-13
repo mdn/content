@@ -2,44 +2,46 @@
 title: RTCTrackEventInit.track
 slug: Web/API/RTCTrackEventInit/track
 tags:
-- API
-- Media
-- Property
-- RTCTrackEventInit
-- Reference
-- WebRTC
-- WebRTC API
-- events
-- track
+  - API
+  - Media
+  - Property
+  - RTCTrackEventInit
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - events
+  - track
 browser-compat: api.RTCTrackEventInit.track
 ---
-<div>{{APIRef("WebAPI")}}</div>
+{{APIRef("WebAPI")}}
 
-<p>The {{domxref("RTCTrackEventInit")}} dictionary's
-    <strong><code>track</code></strong> property specifies the
-    {{domxref("MediaStreamTrack")}} associated with the {{event("track")}} event.</p>
+The {{domxref("RTCTrackEventInit")}} dictionary's
+**`track`** property specifies the
+{{domxref("MediaStreamTrack")}} associated with the {{event("track")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>trackEventInit</em> = {
-  receiver: <em>rtpReceiver</em>,
-  track: <em>mediaStreamTrack</em>,
-  streams: [<em>videoStream</em>],
-  transceiver: <em>rtpTransceiver</em>
+```js
+var trackEventInit = {
+  receiver: rtpReceiver,
+  track: mediaStreamTrack,
+  streams: [videoStream],
+  transceiver: rtpTransceiver
 };
 
-var <em>track</em> = <em>trackEventInit</em>.track;</pre>
+var track = trackEventInit.track;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStreamTrack")}} representing the track with which the event is
-  associated. This is the track that's being added to the
-  {{domxref("RTCPeerConnection")}}.</p>
+A {{domxref("MediaStreamTrack")}} representing the track with which the event is
+associated. This is the track that's being added to the
+{{domxref("RTCPeerConnection")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

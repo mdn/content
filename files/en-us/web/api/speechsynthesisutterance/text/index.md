@@ -13,30 +13,31 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.text
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>text</code></strong> property of the
-  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be
-  synthesised when the utterance is spoken.</p>
+The **`text`** property of the
+{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be
+synthesised when the utterance is spoken.
 
-<p>The text may be provided as plain text, or a well-formed <a
-    class="external external-icon" href="https://www.w3.org/TR/speech-synthesis/">SSML</a>
-  document. The SSML tags will be stripped away by devices that don't support SSML.</p>
+The text may be provided as plain text, or a well-formed [SSML](https://www.w3.org/TR/speech-synthesis/)
+document. The SSML tags will be stripped away by devices that don't support SSML.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myText = speechSynthesisUtteranceInstance.text;
+```js
+var myText = speechSynthesisUtteranceInstance.text;
 speechSynthesisUtteranceInstance.text = 'Hello I am speaking';
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length
-  of the text that can be spoken in each utterance is 32,767 characters.</p>
+A {{domxref("DOMString")}} representing the text to the synthesised. The maximum length
+of the text that can be spoken in each utterance is 32,767 characters.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -51,7 +52,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -59,18 +60,17 @@ inputForm.onsubmit = function(event) {
   console.log(utterThis.text);
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

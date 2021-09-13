@@ -2,46 +2,47 @@
 title: NodeIterator.pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
 tags:
-- API
-- DOM
-- Experimental
-- NodeIterator
-- Property
+  - API
+  - DOM
+  - Experimental
+  - NodeIterator
+  - Property
 browser-compat: api.NodeIterator.pointerBeforeReferenceNode
 ---
-<p>{{APIRef("DOM")}} {{SeeCompatTable}}</p>
+{{APIRef("DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>NodeIterator.pointerBeforeReferenceNode</code></strong> read-only
-	property returns a boolean flag that indicates whether the
-	{{domxref("NodeFilter")}} is anchored before (if this value is <code>true</code>) or
-	after (if this value is <code>false</code>) the anchor node indicated by the
-	{{domxref("NodeIterator.referenceNode")}} property.</p>
+The **`NodeIterator.pointerBeforeReferenceNode`** read-only
+property returns a boolean flag that indicates whether the
+{{domxref("NodeFilter")}} is anchored before (if this value is `true`) or
+after (if this value is `false`) the anchor node indicated by the
+{{domxref("NodeIterator.referenceNode")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>flag</em> = <em>nodeIterator</em>.pointerBeforeReferenceNode;
-</pre>
+```js
+flag = nodeIterator.pointerBeforeReferenceNode;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-flag = nodeIterator.pointerBeforeReferenceNode;</pre>
+flag = nodeIterator.pointerBeforeReferenceNode;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface it belongs to: {{domxref("NodeIterator")}}</li>
-</ul>
+- The interface it belongs to: {{domxref("NodeIterator")}}

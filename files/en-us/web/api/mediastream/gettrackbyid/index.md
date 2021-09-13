@@ -2,59 +2,58 @@
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
 tags:
-- Media
-- MediaStream
-- MediaStream API
-- Method
-- Reference
-- WebRTC
-- getTrackById
+  - Media
+  - MediaStream
+  - MediaStream API
+  - Method
+  - Reference
+  - WebRTC
+  - getTrackById
 browser-compat: api.MediaStream.getTrackById
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>MediaStream.getTrackById()</code></strong> method returns a
-  {{domxref("MediaStreamTrack")}} object representing the track with the specified ID
-  string. If there is no track with the specified ID, this method returns
-  <code>null</code>.</p>
+The **`MediaStream.getTrackById()`** method returns a
+{{domxref("MediaStreamTrack")}} object representing the track with the specified ID
+string. If there is no track with the specified ID, this method returns
+`null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>track</em> = <em>MediaStream</em>.getTrackById(<em>id</em>);
-</pre>
+```js
+var track = MediaStream.getTrackById(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>id</code></dt>
-  <dd>A {{domxref("DOMString")}} which identifies the track to be returned.</dd>
-</dl>
+- `id`
+  - : A {{domxref("DOMString")}} which identifies the track to be returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>If a track is found for which {{domxref("MediaStreamTrack.id")}} matches the specified
-  <code>id</code> string, that {{domxref("MediaStreamTrack")}} object is returned.
-  Otherwise, the returned value is <code>null</code>.</p>
+If a track is found for which {{domxref("MediaStreamTrack.id")}} matches the specified
+`id` string, that {{domxref("MediaStreamTrack")}} object is returned.
+Otherwise, the returned value is `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example activates a commentary track on a video by ducking the audio level of the
-  main audio track to 50%, then enabling the commentary track.</p>
+This example activates a commentary track on a video by ducking the audio level of the
+main audio track to 50%, then enabling the commentary track.
 
-<pre class="brush: js">stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
-stream.getTrackById("commentary-track").enabled = true;</pre>
+```js
+stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
+stream.getTrackById("commentary-track").enabled = true;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaStream")}}</li>
-  <li>{{domxref("MediaStreamTrack.id")}}</li>
-</ul>
+- {{domxref("MediaStream")}}
+- {{domxref("MediaStreamTrack.id")}}

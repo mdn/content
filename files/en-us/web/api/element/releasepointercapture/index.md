@@ -2,82 +2,75 @@
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 tags:
-- API
-- DOM
-- Element
-- Method
-- PointerEvent
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - PointerEvent
+  - Reference
 browser-compat: api.Element.releasePointerCapture
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>releasePointerCapture()</strong></code> method of the
-  {{domxref("Element")}} interface releases (stops) <em>pointer capture</em> that was
-  previously set for a specific ({{domxref("PointerEvent")}}) <em>pointer</em>.</p>
+The **`releasePointerCapture()`** method of the
+{{domxref("Element")}} interface releases (stops) _pointer capture_ that was
+previously set for a specific ({{domxref("PointerEvent")}}) _pointer_.
 
-<p>See the {{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} method
-  for a description of <em>pointer capture</em> and how to set it for a particular
-  element.</p>
+See the {{domxref("Element.setPointerCapture","Element.setPointerCapture()")}} method
+for a description of _pointer capture_ and how to set it for a particular
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>targetElement</em>.releasePointerCapture(<em>pointerId</em>);
-</pre>
+```js
+targetElement.releasePointerCapture(pointerId);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>pointerId</code></dt>
-  <dd>The {{domxref("PointerEvent.pointerId", "pointerId")}} of a
-    {{domxref("PointerEvent")}} object.</dd>
-</dl>
+- `pointerId`
+  - : The {{domxref("PointerEvent.pointerId", "pointerId")}} of a
+    {{domxref("PointerEvent")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method returns <code>undefined</code>.</p>
+This method returns `undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidPointerId</code></td>
-      <td>pointerId does not match any of the active pointers.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception          | Explanation                                          |
+| ------------------ | ---------------------------------------------------- |
+| `InvalidPointerId` | pointerId does not match any of the active pointers. |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
-  it. This lets you slide the element horizontally, even when you pointer moves outside of
-  its boundaries.</p>
+This example sets pointer capture on a {{HtmlElement("div")}} when you press down on
+it. This lets you slide the element horizontally, even when you pointer moves outside of
+its boundaries.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="slider"&gt;SLIDE ME&lt;/div&gt;</pre>
+```html
+<div id="slider">SLIDE ME</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 140px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fbe;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function beginSliding(e) {
+```js
+function beginSliding(e) {
   slider.onpointermove = slide;
   slider.setPointerCapture(e.pointerId);
 }
@@ -95,23 +88,21 @@ const slider = document.getElementById('slider');
 
 slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}</li>
-  <li>{{ domxref("Pointer_events","Pointer Events") }}</li>
-</ul>
+- {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
+- {{ domxref("Pointer_events","Pointer Events") }}

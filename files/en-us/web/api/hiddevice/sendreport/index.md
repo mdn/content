@@ -9,41 +9,40 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.sendReport
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>sendReport()</code></strong> method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.</p>
+The **`sendReport()`** method of the {{domxref("HIDDevice")}} interface sends an output report to the HID device.
 
-<p>The <code>reportId</code> for each of the report formats that this device supports can be retrieved from {{domxref("HIDDevice.collections")}}.</p>
+The `reportId` for each of the report formats that this device supports can be retrieved from {{domxref("HIDDevice.collections")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HIDDevice.sendReport(reportId, data);</pre>
+```js
+HIDDevice.sendReport(reportId, data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>reportId</code></dt>
-  <dd>An 8-bit report ID. If the HID device does not use report IDs, send <code>0</code>.</dd>
-  <dt><code>data</code></dt>
-  <dd>Bytes as a {{domxref("BufferSource")}}.</dd>
-</dl>
+- `reportId`
+  - : An 8-bit report ID. If the HID device does not use report IDs, send `0`.
+- `data`
+  - : Bytes as a {{domxref("BufferSource")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code> once the report has been sent.</p>
+A {{jsxref("Promise")}} that resolves with `undefined` once the report has been sent.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>Thrown if sending the report fails for any reason.</dd>
-</dl>
+- {{domxref("DOMException")}} `NotAllowedError`
+  - : Thrown if sending the report fails for any reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below shows how to make a Joy-Con device rumble using output reports. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+The example below shows how to make a Joy-Con device rumble using output reports. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
 
-<pre class="brush: js">// First, send a command to enable vibration.
+```js
+// First, send a command to enable vibration.
 // Magical bytes come from https://github.com/mzyy94/joycon-toolweb
 const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
 await device.sendReport(0x01, new Uint8Array(enableVibrationData));
@@ -51,13 +50,13 @@ await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 // Then, send a command to make the Joy-Con device rumble.
 // Actual bytes are available in the sample below.
 const rumbleData = [ /* ... */ ];
-await device.sendReport(0x10, new Uint8Array(rumbleData));</pre>
+await device.sendReport(0x10, new Uint8Array(rumbleData));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

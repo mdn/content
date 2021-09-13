@@ -2,38 +2,40 @@
 title: Locks.mode
 slug: Web/API/Lock/mode
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Web Locks API
-- lock
-- mode
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Web Locks API
+  - lock
+  - mode
 browser-compat: api.Lock.mode
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p>The <strong><code>mode</code></strong> read-only property of
-    the {{domxref("Lock")}} interface returns the access mode passed to
-    {{domxref('LockManager.request()')}} when the lock was requested. The mode is either
-    <code>"exclusive"</code> (the default) or <code>"shared"</code>.</p>
+The **`mode`** read-only property of
+the {{domxref("Lock")}} interface returns the access mode passed to
+{{domxref('LockManager.request()')}} when the lock was requested. The mode is either
+`"exclusive"` (the default) or `"shared"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>mode</var> = <var>Lock.mode</var></pre>
+```js
+var mode = Lock.mode
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>One of <code>"exclusive"</code> or <code>"shared"</code>.</p>
+One of `"exclusive"` or `"shared"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following examples show how the mode property is passed in the call
-  to {{domxref('LockManager.request()')}}. <code>LockManager</code> is the object returned
-  by {{domxref('navigator.locks')}}.</p>
+The following examples show how the mode property is passed in the call
+to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+by {{domxref('navigator.locks')}}.
 
-<pre class="brush: js">// Should show "exclusive" (the default)
+```js
+// Should show "exclusive" (the default)
 navigator.locks.request("my_resource", show_lock_properties);
 
 // Should show "exclusive"
@@ -46,12 +48,12 @@ function show_lock_properties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

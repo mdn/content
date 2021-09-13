@@ -2,133 +2,135 @@
 title: MediaTrackConstraints.cursor
 slug: Web/API/MediaTrackConstraints/cursor
 tags:
-- API
-- Capture
-- Constraints
-- Media
-- Media Capture and Streams
-- Media Capture and Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- Screen Capture
-- Screen Capture API
-- Sharing
-- Video
-- display
-- screen
+  - API
+  - Capture
+  - Constraints
+  - Media
+  - Media Capture and Streams
+  - Media Capture and Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - Sharing
+  - Video
+  - display
+  - screen
 browser-compat: api.MediaTrackConstraints.cursor
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <strong><code>cursor</code></strong> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.cursor", "cursor")}} constrainable property, which is used
-  to specify whether or not the cursor should be included in the captured video.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`cursor`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.cursor", "cursor")}} constrainable property, which is used
+to specify whether or not the cursor should be included in the captured video.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.cursor")}} as returned by a call
-  to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
-  unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.cursor")}} as returned by a call
+to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
+unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { cursor: <em>constraint</em> };
+```js
+var constraintsObject = { cursor: constraint };
 
-<em>constraintsObject</em>.cursor = <em>constraint</em>;
-</pre>
+constraintsObject.cursor = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> which specifies whether or not the mouse cursor
-  should be rendered into the video track in the {{domxref("MediaStream")}} returned by
-  the call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. See
-  {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How constraints
-  are defined")}} for an explanation of how to define constraints.</p>
+A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) which specifies whether or not the mouse cursor
+should be rendered into the video track in the {{domxref("MediaStream")}} returned by
+the call to {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. See
+{{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How constraints
+  are defined")}} for an explanation of how to define constraints.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>You can check the setting selected by the user agent after the display media has been
-  created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
-  {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
-  video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
-  {{domxref("MediaTrackSettings")}} object's {{domxref("MediaTrackSettings.cursor",
-  "cursor")}} object.</p>
+You can check the setting selected by the user agent after the display media has been
+created by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} by calling
+{{domxref("MediaStreamTrack.getSettings", "getSettings()")}} on the display media's
+video {{domxref("MediaStreamTrack")}}, then checking the value of  the returned
+{{domxref("MediaTrackSettings")}} object's {{domxref("MediaTrackSettings.cursor",
+  "cursor")}} object.
 
-<p>For example, if your app needs to alter the stream by inserting a representation of the
-  cursor position if the stream doesn't include the rendered cursor, you can determine the
-  need to do so by using code like this:</p>
+For example, if your app needs to alter the stream by inserting a representation of the
+cursor position if the stream doesn't include the rendered cursor, you can determine the
+need to do so by using code like this:
 
-<pre class="brush: js">let insertFakeCursorFlag = false;
+```js
+let insertFakeCursorFlag = false;
 
 if (displayStream.getVideoTracks()[0].getSettings().cursor === "never") {
   insertFakeCursorFlag = true;
 }
-</pre>
+```
 
-<p>Following this code, <code>insertFakeCursorFlag</code> is <code>true</code> if there's
-  no cursor rendered into the stream already. Later code can detect this flag's value and
-  if it's <code>true</code>, can manually look at some metadata that might be provided and
-  insert a fake representation of the cursor at the correct position.</p>
+Following this code, `insertFakeCursorFlag` is `true` if there's
+no cursor rendered into the stream already. Later code can detect this flag's value and
+if it's `true`, can manually look at some metadata that might be provided and
+insert a fake representation of the cursor at the correct position.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<p>Here are some example constraints objects for <code>getDisplayMedia()</code> that make
-  use of the <code>cursor</code> property. In addition, see
-  {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for a complete example showing how constraints are used.</p>
+Here are some example constraints objects for `getDisplayMedia()` that make
+use of the `cursor` property. In addition, see
+{{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for a complete example showing how constraints are used.
 
-<h3 id="Example_Cursor_always_visible">Example: Cursor always visible</h3>
+### Example: Cursor always visible
 
-<p>This example sets up the constraints to request that the cursor always be visible.</p>
+This example sets up the constraints to request that the cursor always be visible.
 
-<pre class="brush: js">let displayMediaOptions = {
+```js
+let displayMediaOptions = {
   cursor: "always"
 };
-</pre>
+```
 
-<h3 id="Example_Cursor_visible_during_motion_with_fallback">Example: Cursor visible during
-  motion with fallback</h3>
+### Example: Cursor visible during motion with fallback
 
-<p>In this example, the <code>cursor</code> property is configured to request that the
-  cursor be visible when in motion, falling back to always being visible if the user agent
-  doesn't support in-motion only cursor rendering.</p>
+In this example, the `cursor` property is configured to request that the
+cursor be visible when in motion, falling back to always being visible if the user agent
+doesn't support in-motion only cursor rendering.
 
-<pre class="brush: js">let displayMediaOptions = {
+```js
+let displayMediaOptions = {
   cursor: ["motion", "always"]
-};</pre>
+};
+```
 
-<h3 id="Example_Require_that_the_cursor_not_be_visible">Example: Require that the cursor
-  not be visible</h3>
+### Example: Require that the cursor not be visible
 
-<p>This constraints object explicitly requires that the cursor <em>not</em> be rendered
-  into the video track.</p>
+This constraints object explicitly requires that the cursor _not_ be rendered
+into the video track.
 
-<pre class="brush: js">let displayMediaOptions = {
+```js
+let displayMediaOptions = {
   cursor: {
     exact: "none"
   }
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the
-      Screen Capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-</ul>
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the
+  Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}

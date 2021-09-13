@@ -9,37 +9,37 @@ tags:
   - Serial
 browser-compat: api.Serial.getPorts
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>getPorts()</code></strong> method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access. </p>
+The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = <var>Serial</var>.getPorts();</pre>
+    var promise = Serial.getPorts();
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects.</p>
+A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>"SecurityError"</code></dt>
-  <dd>The returned <code>Promise</code> rejects with this error if a <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a> restricts use of this API or a permission to use it has not granted via a user gesture.</dd>
-</dl>
+- {{domxref("DOMException")}} `"SecurityError"`
+  - : The returned `Promise` rejects with this error if a [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) restricts use of this API or a permission to use it has not granted via a user gesture.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example uses <code>getPorts()</code> to initialize a list of available ports.</p>
+The following example uses `getPorts()` to initialize a list of available ports.
 
-<pre class="brush: js notranslate">navigator.serial.getPorts().then((ports) => {
+```js
+navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

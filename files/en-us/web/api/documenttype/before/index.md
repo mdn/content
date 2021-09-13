@@ -9,70 +9,60 @@ tags:
   - Reference
 browser-compat: api.DocumentType.before
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DocumentType.before()</strong></code> method inserts a set of
-  {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-  <code>DocumentType</code>'s parent, just before the <code>DocumentType</code>.
-  {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
-</p>
+The **`DocumentType.before()`** method inserts a set of
+{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+`DocumentType`'s parent, just before the `DocumentType`.
+{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
 
-<div class="note">
-  <p><strong>Note:</strong> Putting nodes before the document's doctype will set the rendering mode to
-    <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>
-    in some browsers (Internet Explorer). It is not advisable to do this.</p>
-</div>
+> **Note:** Putting nodes before the document's doctype will set the rendering mode to
+> [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+> in some browsers (Internet Explorer). It is not advisable to do this.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 before(... nodes)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Adding a conditional comment</h3>
+### Adding a conditional comment
 
-<p>Comment nodes are valid before doctype declarations but not advisable
-  given they trigger quirks mode in IE. A
-  <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments">conditional comment</a>
-  works for IE as well, though:
-</p>
+Comment nodes are valid before doctype declarations but not advisable
+given they trigger quirks mode in IE. A
+[conditional comment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments)
+works for IE as well, though:
 
-<pre class="brush: js">
+```js
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.before(document.createComment('&lt;!--[if !IE]&gt; conditional comment &lt;![endif]--&gt;'));
+docType.before(document.createComment('<!--[if !IE]> conditional comment <![endif]-->'));
 
 myDoc.childNodes;
-// NodeList [&lt;!--[if !IE]&gt; conditional comment &lt;![endif]--&gt;, &lt;!DOCTYPE html&gt;]
-</pre>
+// NodeList [<!--[if !IE]> conditional comment <![endif]-->, <!DOCTYPE html>]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DocumentType.after()")}}</li>
-</ul>
+- {{domxref("DocumentType.after()")}}

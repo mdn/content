@@ -16,35 +16,33 @@ tags:
   - mutation
 browser-compat: api.MutationObserverInit
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong><code>MutationObserverInit</code></strong> dictionary describes the configuration of a mutation observer. As such, it's primarily used as the type of the <code>options</code> parameter on the {{domxref("MutationObserver.observe()")}} method.</p>
+The **`MutationObserverInit`** dictionary describes the configuration of a mutation observer. As such, it's primarily used as the type of the `options` parameter on the {{domxref("MutationObserver.observe()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>At a minimum, one of <code>childList</code>, <code>attributes</code>, and/or <code>characterData</code> must be <code>true</code> when you call {{domxref("MutationObserver.observe", "observe()")}}. Otherwise, a <code>TypeError</code> exception will be thrown.</p>
+At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}. Otherwise, a `TypeError` exception will be thrown.
 
-<dl>
-	<dt>{{domxref("MutationObserverInit.subtree", "subtree")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to extend monitoring to the entire subtree of nodes rooted at <code>target</code>. All of the other <code>MutationObserverInit</code> properties are then extended to all of the nodes in the subtree instead of applying solely to the <code>target</code> node. The default value is <code>false</code>.</dd>
-	<dt>{{domxref("MutationObserverInit.childList", "childList")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to monitor the target node (and, if <code>subtree</code> is <code>true</code>, its descendants) for the addition of new child nodes or removal of existing child nodes. The default value is <code>false</code>.</dd>
-	<dt>{{domxref("MutationObserverInit.attributes", "attributes")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to watch for changes to the value of attributes on the node or nodes being monitored. The default value is <code>true</code> if either of <code>attributeFilter</code> or <code>attributeOldValue</code> is specified, otherwise the default value is <code>false</code>.</dd>
-	<dt>{{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} {{optional_inline}}</dt>
-	<dd>An array of specific attribute names to be monitored. If this property isn't included, changes to all attributes cause mutation notifications.</dd>
-	<dt>{{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes; see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording. The default value is <code>false</code>.</dd>
-	<dt>{{domxref("MutationObserverInit.characterData", "characterData")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to monitor the specified target node (and, if <code>subtree</code> is <code>true</code>, its descendants) for changes to the character data contained within the node or nodes. The default value is <code>true</code> if <code>characterDataOldValue</code> is specified, otherwise the default value is <code>false</code>.</dd>
-	<dt>{{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}} {{optional_inline}}</dt>
-	<dd>Set to <code>true</code> to record the previous value of a node's text whenever the text changes on nodes being monitored. The default value is <code>false</code>.</dd>
-</dl>
+- {{domxref("MutationObserverInit.subtree", "subtree")}} {{optional_inline}}
+  - : Set to `true` to extend monitoring to the entire subtree of nodes rooted at `target`. All of the other `MutationObserverInit` properties are then extended to all of the nodes in the subtree instead of applying solely to the `target` node. The default value is `false`.
+- {{domxref("MutationObserverInit.childList", "childList")}} {{optional_inline}}
+  - : Set to `true` to monitor the target node (and, if `subtree` is `true`, its descendants) for the addition of new child nodes or removal of existing child nodes. The default value is `false`.
+- {{domxref("MutationObserverInit.attributes", "attributes")}} {{optional_inline}}
+  - : Set to `true` to watch for changes to the value of attributes on the node or nodes being monitored. The default value is `true` if either of `attributeFilter` or `attributeOldValue` is specified, otherwise the default value is `false`.
+- {{domxref("MutationObserverInit.attributeFilter", "attributeFilter")}} {{optional_inline}}
+  - : An array of specific attribute names to be monitored. If this property isn't included, changes to all attributes cause mutation notifications.
+- {{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}} {{optional_inline}}
+  - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes; see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording. The default value is `false`.
+- {{domxref("MutationObserverInit.characterData", "characterData")}} {{optional_inline}}
+  - : Set to `true` to monitor the specified target node (and, if `subtree` is `true`, its descendants) for changes to the character data contained within the node or nodes. The default value is `true` if `characterDataOldValue` is specified, otherwise the default value is `false`.
+- {{domxref("MutationObserverInit.characterDataOldValue", "characterDataOldValue")}} {{optional_inline}}
+  - : Set to `true` to record the previous value of a node's text whenever the text changes on nodes being monitored. The default value is `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

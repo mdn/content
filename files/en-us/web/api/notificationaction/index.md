@@ -3,34 +3,33 @@ title: NotificationAction
 slug: Web/API/NotificationAction
 browser-compat: api.NotificationAction
 ---
-<div>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</div>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code>NotificationAction</code> interface of the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> is used to represent action buttons the user can click to interact with notifications.</p>
+The `NotificationAction` interface of the [Notifications API](/en-US/docs/Web/API/Notifications_API) is used to represent action buttons the user can click to interact with notifications.
 
-<p>These buttons' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously show actions to the user in a notification.</p>
+These buttons' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously show actions to the user in a notification.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<h3 id="Instance_properties">Instance properties</h3>
+### Instance properties
 
-<p>These properties are available only on instances of the <code>Notification</code> object.</p>
+These properties are available only on instances of the `Notification` object.
 
-<dl>
- <dt>{{domxref("NotificationAction.action")}} {{readonlyinline}}</dt>
- <dd>The name of the action, which can be used to identify the clicked action similar to <a href="/en-US/docs/Web/API/Element/name">input names</a>.</dd>
- <dt>{{domxref("NotificationAction.title")}} {{readonlyinline}}</dt>
- <dd>The string describing the action that is displayed to the user.</dd>
- <dt>{{domxref("NotificationAction.icon")}} {{readonlyinline}}</dt>
- <dd>The URL of the image used to represent the notification when there is not enough space to display the notification itself.</dd>
-</dl>
+- {{domxref("NotificationAction.action")}} {{readonlyinline}}
+  - : The name of the action, which can be used to identify the clicked action similar to [input names](/en-US/docs/Web/API/Element/name).
+- {{domxref("NotificationAction.title")}} {{readonlyinline}}
+  - : The string describing the action that is displayed to the user.
+- {{domxref("NotificationAction.icon")}} {{readonlyinline}}
+  - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Notifications can fire {{Event("notificationclick")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.</p>
+Notifications can fire {{Event("notificationclick")}} events on the {{domxref("ServiceWorkerGlobalScope")}}.
 
-<p>Here a service worker shows a notification with a single "Archive" action, allowing users to perform this common task from the notification without having to open the website. The user can also click the main body of the notification to open their inbox instead.</p>
+Here a service worker shows a notification with a single "Archive" action, allowing users to perform this common task from the notification without having to open the website. The user can also click the main body of the notification to open their inbox instead.
 
-<pre class="brush: js">self.registration.showNotification("New mail from Alice", {
+```js
+self.registration.showNotification("New mail from Alice", {
   actions: [
     {
       action: 'archive',
@@ -49,18 +48,16 @@ self.addEventListener('notificationclick', function(event) {
     clients.openWindow('/inbox');
   }
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

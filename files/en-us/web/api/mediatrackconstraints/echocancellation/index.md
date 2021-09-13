@@ -2,74 +2,71 @@
 title: MediaTrackConstraints.echoCancellation
 slug: Web/API/MediaTrackConstraints/echoCancellation
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- WebRTC
-- echoCancellation
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - WebRTC
+  - echoCancellation
 browser-compat: api.MediaTrackConstraints.echoCancellation
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>echoCancellation</strong></code> property is a
-  <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean"><code>ConstrainBoolean</code></a> describing the requested or mandatory constraints placed
-  upon the value of the {{domxref("MediaTrackSettings.echoCancellation",
-  "echoCancellation")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`echoCancellation`** property is a
+[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) describing the requested or mandatory constraints placed
+upon the value of the {{domxref("MediaTrackSettings.echoCancellation",
+  "echoCancellation")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned
-  by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
-  this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
-</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned
+by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
+this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
-  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}}
-  will never include this property.</p>
+Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
+will never include this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { echoCancellation: <em>constraint</em> };
+```js
+var constraintsObject = { echoCancellation: constraint };
 
-<em>constraintsObject</em>.echoCancellation = <em>constraint</em>;
-</pre>
+constraintsObject.echoCancellation = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If this value is a simple <code>true</code> or <code>false</code>, the user agent will
-  attempt to obtain media with echo cancellation enabled or disabled as specified, if
-  possible, but will not fail if this can't be done. If, instead, the value is given as an
-  object with an <code>exact</code> field, that field's Boolean value indicates a required
-  setting for the echo cancellation feature; if it can't be met, then the request will
-  result in an error.</p>
+If this value is a simple `true` or `false`, the user agent will
+attempt to obtain media with echo cancellation enabled or disabled as specified, if
+possible, but will not fail if this can't be done. If, instead, the value is given as an
+object with an `exact` field, that field's Boolean value indicates a required
+setting for the echo cancellation feature; if it can't be met, then the request will
+result in an error.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

@@ -2,56 +2,52 @@
 title: IDBVersionChangeEvent()
 slug: Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent
 tags:
-- API
-- Constructor
-- Reference
-- IDBVersionChangeEvent
-- IndexedDB
-- Storage
-- Database
+  - API
+  - Constructor
+  - Reference
+  - IDBVersionChangeEvent
+  - IndexedDB
+  - Storage
+  - Database
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
-<p>The <strong><code>IDBVersionChangeEvent()</code></strong> constructor
-  creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent
-  when a version of the database has changed, as a result of the
-  {{domxref('IDBOpenDBRequest.onupgradeneeded')}} event handler.</p>
+The **`IDBVersionChangeEvent()`** constructor
+creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent
+when a version of the database has changed, as a result of the
+{{domxref('IDBOpenDBRequest.onupgradeneeded')}} event handler.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>idbVersionChangeEvent</var> = new IDBVersionChangeEvent();</pre>
+```js
+var idbVersionChangeEvent = new IDBVersionChangeEvent();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the event which occurred. For
-    <code>IDBVersionChangeEvent</code> this is <code>versionchange</code>.</dd>
-  <dt><code>eventInitDict</code></dt>
-  <dd>An optional dictionary of initial values for the event's properties. These are as
+- `type`
+  - : A {{domxref("DOMString")}} indicating the event which occurred. For
+    `IDBVersionChangeEvent` this is `versionchange`.
+- `eventInitDict`
+
+  - : An optional dictionary of initial values for the event's properties. These are as
     follows:
-    <ul>
-      <li><code>oldVersion</code>: An unsigned long representing the previous version of
-        the database. Default is <code>0</code>.</li>
-      <li><code>newVersion</code>: An unsigned long representing the new version of the
-        database, or <code>null</code> if the database is being deleted. Default is
-        <code>null</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+    - `oldVersion`: An unsigned long representing the previous version of
+      the database. Default is `0`.
+    - `newVersion`: An unsigned long representing the new version of the
+      database, or `null` if the database is being deleted. Default is
+      `null`.
 
-<p>For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

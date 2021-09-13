@@ -7,51 +7,40 @@ tags:
   - Web NFC
 browser-compat: api.NDEFRecord
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>NDEFRecord</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> provides data that can be read from, or written to, compatible NFC devices, e.g. NFC tags supporting NDEF.</p>
+The **`NDEFRecord`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) provides data that can be read from, or written to, compatible NFC devices, e.g. NFC tags supporting NDEF.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("NDEFRecord.NDEFRecord", "NDEFRecord()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a new <code>NDEFRecord</code>.</dd>
-</dl>
+- {{DOMxRef("NDEFRecord.NDEFRecord", "NDEFRecord()")}} {{Experimental_Inline}}
+  - : Returns a new `NDEFRecord`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("NDEFRecord.recordType")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the record type of the record. Records must have either a standardized well-known type name such as <code>"empty"</code>, <code>"text"</code>, <code>"url"</code>, <code>"smart-poster"</code>, <code>"absolute-url"</code>, <code>"mime"</code>, or <code>"unknown"</code> or else an external type name, which consists of a domain name and custom type name separated by a colon (":").</dd>
+- {{DOMxRef("NDEFRecord.recordType")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the record type of the record. Records must have either a standardized well-known type name such as `"empty"`, `"text"`, `"url"`, `"smart-poster"`, `"absolute-url"`, `"mime"`, or `"unknown"` or else an external type name, which consists of a domain name and custom type name separated by a colon (":").
+- {{DOMxRef("NDEFRecord.mediaType")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
+- {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the record identifier, which is an absolute or relative URL used to identify the record.
+    **Note:** The uniqueness of the identifier is enforced only by the generator of the record.
+- {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns a {{jsxref("DataView")}} containing the raw bytes of the record's payload.
+- {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the encoding of a textual payload, or `null` otherwise.
+- {{DOMxRef("NDEFRecord.lang")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the language of a textual payload, or `null` if one was not supplied.
 
- <dt>{{DOMxRef("NDEFRecord.mediaType")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the {{Glossary("MIME type")}} of the record. This value will be <code>null</code> if <code>recordType</code> is not equal to <code>"mime"</code>.</dd>
+## Methods
 
- <dt>{{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the record identifier, which is an absolute or relative URL used to identify the record.<br>
- <strong>Note:</strong> The uniqueness of the identifier is enforced only by the generator of the record.</dd>
+- {{DOMxRef("NDEFRecord.toRecords", "NDEFRecord.toRecords()")}} {{Experimental_Inline}}
+  - : Converts {{DOMxRef("NDEFRecord.data")}} to a sequence of records. This allows parsing the payloads of record types which may contain nested records, such as smart poster and external type records.
 
- <dt>{{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns a {{jsxref("DataView")}} containing the raw bytes of the record's payload.</dd>
-
- <dt>{{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the encoding of a textual payload, or <code>null</code> otherwise.</dd>
-
- <dt>{{DOMxRef("NDEFRecord.lang")}} {{Experimental_Inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns the language of a textual payload, or <code>null</code> if one was not supplied.</dd>
-</dl>
-
-<h2 id="Methods">Methods</h2>
-
-<dl>
- <dt>{{DOMxRef("NDEFRecord.toRecords", "NDEFRecord.toRecords()")}} {{Experimental_Inline}}</dt>
- <dd>Converts {{DOMxRef("NDEFRecord.data")}} to a sequence of records. This allows parsing the payloads of record types which may contain nested records, such as smart poster and external type records.</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

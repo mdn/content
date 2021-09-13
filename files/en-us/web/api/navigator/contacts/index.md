@@ -2,49 +2,49 @@
 title: Navigator.contacts
 slug: Web/API/Navigator/contacts
 tags:
-- Contact Picker API
-- Contacts
-- Navigator
-- PWA
-- Property
-- Read-only
-- contact picker
+  - Contact Picker API
+  - Contacts
+  - Navigator
+  - PWA
+  - Property
+  - Read-only
+  - contact picker
 browser-compat: api.Navigator.contacts
 ---
-<div>{{draft}}{{DefaultAPISidebar("Contact Picker API")}}</div>
+{{draft}}{{DefaultAPISidebar("Contact Picker API")}}
 
-<p>The <strong><code>contacts</code></strong> read-only property of the
-  {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface
-  which allows users to select entries from their contact list and share limited details
-  of the selected entries with a website or application.</p>
+The **`contacts`** read-only property of the
+{{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface
+which allows users to select entries from their contact list and share limited details
+of the selected entries with a website or application.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>contactsManager</var> = navigator.contacts;</pre>
+```js
+var contactsManager = navigator.contacts;
+```
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>{{domxref('ContactsManager')}}</p>
+{{domxref('ContactsManager')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code checks whether the Contact Picker API is supported.</p>
+The following code checks whether the Contact Picker API is supported.
 
-<pre class="brush: js">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
-</pre>
+```js
+const supported = ('contacts' in navigator && 'ContactsManager' in window);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/contact-picker/">A Contact Picker for the Web</a></li>
-  <li><a href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</a></li>
-</ul>
+- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

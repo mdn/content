@@ -10,40 +10,43 @@ tags:
   - fullscreenchange
 browser-compat: api.Document.fullscreenchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>fullscreenchange</code> event is fired immediately after the browser switches into or out of full-screen mode.</p>
+The `fullscreenchange` event is fired immediately after the browser switches into or out of full-screen mode.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document.onfullscreenchange", "onfullscreenchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document.onfullscreenchange", "onfullscreenchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event is sent to the <code>Element</code> that is transitioning into or out of full-screen mode, and this event then bubbles up to the <code>Document</code>.</p>
+The event is sent to the `Element` that is transitioning into or out of full-screen mode, and this event then bubbles up to the `Document`.
 
-<p>To find out whether the <code>Element</code> is entering or exiting full-screen mode, check the value of {{domxref("Document.fullscreenElement")}}: if this value is <code>null</code> then the element is exiting full-screen mode, otherwise it is entering full-screen mode.</p>
+To find out whether the `Element` is entering or exiting full-screen mode, check the value of {{domxref("Document.fullscreenElement")}}: if this value is `null` then the element is exiting full-screen mode, otherwise it is entering full-screen mode.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a handler for the <code>fullscreenchange</code> event is added to the {{domxref("Document")}}.</p>
+In this example, a handler for the `fullscreenchange` event is added to the {{domxref("Document")}}.
 
-<pre class="brush: js">document.addEventListener('fullscreenchange', (event) =&gt; {
+```js
+document.addEventListener('fullscreenchange', (event) => {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If there isn't one,
   // the value of the property is null.
@@ -53,23 +56,21 @@ browser-compat: api.Document.fullscreenchange_event
     console.log('Leaving full-screen mode.');
   }
 });
-</pre>
+```
 
-<p>See <a href="/en-US/docs/Web/API/Element/fullscreenchange_event">Element: fullscreenchange event</a> for another example.</p>
+See [Element: fullscreenchange event](/en-US/docs/Web/API/Element/fullscreenchange_event) for another example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document/fullscreenerror_event", "fullscreenerror")}}</li>
- <li>{{domxref("Element")}}: {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event</li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
-</ul>
+- {{domxref("Document/fullscreenerror_event", "fullscreenerror")}}
+- {{domxref("Element")}}: {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)

@@ -11,85 +11,86 @@ tags:
   - events
 browser-compat: api.GlobalEventHandlers.onkeydown
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onkeydown</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("keydown")}} events.</p>
+The **`onkeydown`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("keydown")}} events.
 
-<p>The <code>keydown</code> event fires when the user presses a keyboard key.</p>
+The `keydown` event fires when the user presses a keyboard key.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>target</var>.onkeydown = <var>functionRef</var>;</pre>
+```js
+target.onkeydown = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its
-  sole argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+sole argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a
-  key inside the {{HtmlElement("input")}} element.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a
+key inside the {{HtmlElement("input")}} element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.onkeydown = logKey;
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Compatibility_notes">Compatibility notes</h3>
+### Compatibility notes
 
-<p>Since Firefox 65, the <code><a href="/en-US/docs/Web/API/Document/keyup_event">keyup</a></code> and
-  <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> events are now fired
-  during IME composition, to improve cross-browser compatibility for CJKT users
-  ({{bug(354358)}}. To
-  ignore all <code>keydown</code> events that are part of composition, do something like
-  this (229 is a special value set for a <code>keyCode</code> relating to an event that
-  has been processed by an IME):</p>
+Since Firefox 65, the [`keyup`](/en-US/docs/Web/API/Document/keyup_event) and
+[`keydown`](/en-US/docs/Web/API/Document/keydown_event) events are now fired
+during IME composition, to improve cross-browser compatibility for CJKT users
+({{bug(354358)}}. To
+ignore all `keydown` events that are part of composition, do something like
+this (229 is a special value set for a `keyCode` relating to an event that
+has been processed by an IME):
 
-<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
+```js
+eventTarget.addEventListener("keydown", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Event("keydown")}} event</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
-      <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
-    </ul>
-  </li>
-</ul>
+- {{Event("keydown")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onkeypress")}}
+  - {{domxref("GlobalEventHandlers.onkeyup")}}

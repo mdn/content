@@ -2,52 +2,54 @@
 title: CSSNumericValue.type
 slug: Web/API/CSSNumericValue/type
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Property
-- Reference
-- Type
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Type
 browser-compat: api.CSSNumericValue.type
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>type()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface returns the type of
-  <code>CSSNumericValue</code>, one of <code>angle</code>, <code>flex</code>,
-  <code>frequency</code>, <code>length</code>, <code>resolution</code>,
-  <code>percent</code>, <code>percentHint</code>, or <code>time</code>.</p>
+The **`type()`** method of the
+{{domxref("CSSNumericValue")}} interface returns the type of
+`CSSNumericValue`, one of `angle`, `flex`,
+`frequency`, `length`, `resolution`,
+`percent`, `percentHint`, or `time`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssNumericType = CSSNumericValue.type();</pre>
+```js
+var cssNumericType = CSSNumericValue.type();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSNumericType')}} object.</p>
+A {{domxref('CSSNumericType')}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let mathSum = CSS.px("23").sub(CSS.percent("4")).sub(CSS.cm("3")).sub(CSS.in("9"));
+```js
+let mathSum = CSS.px("23").sub(CSS.percent("4")).sub(CSS.cm("3")).sub(CSS.in("9"));
 // Returns an object with the structure: {length: 1, percentHint: "length"}
 let cssNumericType = mathSum.type();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

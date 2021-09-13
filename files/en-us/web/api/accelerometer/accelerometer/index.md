@@ -13,32 +13,31 @@ tags:
   - Sensors
 browser-compat: api.Accelerometer.Accelerometer
 ---
-<div>{{APIRef("Sensor API")}}{{SeeCompatTable}}</div>
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Accelerometer()</code></strong> constructor creates a new {{domxref("Accelerometer")}} object which returns the acceleration of the device along all three axes at the time it is read.</p>
+The **`Accelerometer()`** constructor creates a new {{domxref("Accelerometer")}} object which returns the acceleration of the device along all three axes at the time it is read.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>accelerometer</var> = new Accelerometer([<em>options</em>])</pre>
+```js
+var accelerometer = new Accelerometer([options])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Options are as follows:
- <ul>
-  <li><code>frequency</code>: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.</li>
-  <li><code>referenceFrame</code>: Either <code>'device'</code> or <code>'screen'</code>. The default is <code>'device'</code>.</li>
- </ul>
- </dd>
-</dl>
+- _options_ {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Options are as follows:
+
+    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
+    - `referenceFrame`: Either `'device'` or `'screen'`. The default is `'device'`.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -14,17 +14,15 @@ tags:
   - state
 browser-compat: api.PresentationConnection.state
 ---
-<div>{{APIRef("Presentation API")}}</div>
+{{APIRef("Presentation API")}}
 
-<p>The <dfn><code>state</code></dfn> attribute reflects the <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a>'s current state. Depending on the current <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate"><code>PresentationConnectionState</code></a>, the <dfn><code>state</code></dfn> attribute can hold one of the following values.</p>
+The _`state`_ attribute reflects the [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection)'s current state. Depending on the current [`PresentationConnectionState`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate), the *`state`* attribute can hold one of the following values.
 
-<ul>
- <li><strong><dfn><code>connecting</code></dfn></strong>: The user agent is attempting to <a href="https://www.w3.org/TR/presentation-api/#dfn-establish-a-presentation-connection">establish a presentation connection</a> with the <a href="https://www.w3.org/TR/presentation-api/#dfn-destination-browsing-context">destination browsing context</a>. This is the initial state when a <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection"><code>PresentationConnection</code></a> object is created.</li>
- <li><strong><dfn><code>connected</code></dfn></strong>: The <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a> is established and communication is possible.</li>
- <li><strong><dfn><code>closed</code></dfn></strong>: The <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a> has been closed or could not be opened. The connection may be reopened by calling <code><a href="https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect">reconnect()</a></code>. No communication is possible in this state.</li>
- <li><strong><dfn><code>terminated</code></dfn></strong>: The <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context">receiving browsing context</a> has terminated. Any <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a> to that <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation">presentation</a> has also terminated and cannot be reopened. No communication is possible.</li>
-</ul>
+- **_`connecting`_**: The user agent is attempting to [establish a presentation connection](https://www.w3.org/TR/presentation-api/#dfn-establish-a-presentation-connection) with the [destination browsing context](https://www.w3.org/TR/presentation-api/#dfn-destination-browsing-context). This is the initial state when a [`PresentationConnection`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection) object is created.
+- **_`connected`_**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is established and communication is possible.
+- **_`closed`_**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) has been closed or could not be opened. The connection may be reopened by calling [`reconnect()`](https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect). No communication is possible in this state.
+- **_`terminated`_**: The [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) has terminated. Any [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) to that [presentation](https://www.w3.org/TR/presentation-api/#dfn-presentation) has also terminated and cannot be reopened. No communication is possible.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

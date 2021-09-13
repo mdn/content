@@ -2,57 +2,59 @@
 title: MediaList.mediaText
 slug: Web/API/MediaList/mediaText
 tags:
-- API
-- CSSOM
-- MediaList
-- Property
-- Reference
-- mediaText
+  - API
+  - CSSOM
+  - MediaList
+  - Property
+  - Reference
+  - mediaText
 browser-compat: api.MediaList.mediaText
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>mediaText</strong></code> property of the {{domxref("MediaList")}}
-  interface is a stringifier that returns a {{domxref("DOMString")}} representing the
-  <code>MediaList</code> as text, and also allows you to set a new <code>MediaList</code>.
-</p>
+The **`mediaText`** property of the {{domxref("MediaList")}}
+interface is a stringifier that returns a {{domxref("DOMString")}} representing the
+`MediaList` as text, and also allows you to set a new `MediaList`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mediaListInstance.mediaText;
-mediaListInstance.mediaText = <em>string</em>;</pre>
+```js
+mediaListInstance.mediaText;
+mediaListInstance.mediaText = string;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the media queries of a stylesheet. Each one is
-  separated by a comma, for example
-  <code>screen and (min-width: 480px), print</code>.
-</p>
+A {{domxref("DOMString")}} representing the media queries of a stylesheet. Each one is
+separated by a comma, for example
+`screen and (min-width: 480px), print`.
 
-<p>If you wish to set new media queries on the document, the string value must have the
-  different queries separated by commas, e.g. <code>screen, print</code>. Note that the
-          <code>MediaList</code> is a live list; updating the list via
-          <code>mediaText</code> will immediately update the behavior of the
-          document.</p>
+If you wish to set new media queries on the document, the string value must have the
+different queries separated by commas, e.g. `screen, print`. Note that the
+`MediaList` is a live list; updating the list via
+`mediaText` will immediately update the behavior of the
+document.
 
-<p>Also note that is you try to set
-          <code>mediaText</code> to <code>null</code>, it will be treated as an empty
-          string, i.e. the value will be set to
-          <code>""</code>.</p>
+Also note that is you try to set
+`mediaText` to `null`, it will be treated as an empty
+string, i.e. the value will be set to
+`""`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following would log to the console a textual representation of the
-  <code>MediaList</code> of the first stylesheet applied to the current document.</p>
+The following would log to the console a textual representation of the
+`MediaList` of the first stylesheet applied to the current document.
 
-<pre class="brush: css">const stylesheets = document.styleSheets;
+```css
+const stylesheets = document.styleSheets;
 let stylesheet = stylesheets[0];
-console.log(stylesheet.media.mediaText);</pre>
+console.log(stylesheet.media.mediaText);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

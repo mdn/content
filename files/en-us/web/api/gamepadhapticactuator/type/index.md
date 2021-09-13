@@ -12,36 +12,34 @@ tags:
   - Type
 browser-compat: api.GamepadHapticActuator.type
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>The <strong><code>type</code></strong> read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enum representing the type of the haptic hardware.</p>
+The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enum representing the type of the haptic hardware.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myActuatorType = gamepadHapticActuatorInstance.type;</pre>
+```js
+var myActuatorType = gamepadHapticActuatorInstance.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An enum of type <code><a href="https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum">GamepadHapticActuatorType</a></code>; currently available types are:</p>
+An enum of type [`GamepadHapticActuatorType`](https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuatortype-enum); currently available types are:
 
-<ul>
-	<li><code>vibration</code> — vibration hardware, which creates a rumbling effect.</li>
-</ul>
+- `vibration` — vibration hardware, which creates a rumbling effect.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBC</p>
+TBC
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

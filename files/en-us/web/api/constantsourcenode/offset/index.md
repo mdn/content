@@ -2,56 +2,56 @@
 title: ConstantSourceNode.offset
 slug: Web/API/ConstantSourceNode/offset
 tags:
-- API
-- Audio
-- ConstantSourceNode
-- Media
-- Property
-- Read-only
-- Web Audio API
+  - API
+  - Audio
+  - ConstantSourceNode
+  - Media
+  - Property
+  - Read-only
+  - Web Audio API
 browser-compat: api.ConstantSourceNode.offset
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The read-only <code>offset</code> property of the {{ domxref("ConstantSourceNode") }}
-  interface returns a {{domxref("AudioParam")}} object indicating the numeric <a
-    href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> value which is always returned
-  by the source when asked for the next sample.</p>
+The read-only `offset` property of the {{ domxref("ConstantSourceNode") }}
+interface returns a {{domxref("AudioParam")}} object indicating the numeric [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value which is always returned
+by the source when asked for the next sample.
 
-<div class="note">
-  <p><strong>Note:</strong> While the <code>AudioParam</code> named <code>offset</code> is read-only, the
-    <code>value</code> property within is not. So you can change the value of
-    <code>offset</code> by setting the value of
-    <code>ConstantSourceNode.offset.value</code>:</p>
+> **Note:** While the `AudioParam` named `offset` is read-only, the
+> `value` property within is not. So you can change the value of
+> `offset` by setting the value of
+> `ConstantSourceNode.offset.value`:
+>
+> ```js
+> myConstantSourceNode.offset.value = newValue;
+> ```
 
-  <pre class="brush: js">myConstantSourceNode.offset.value = newValue;</pre>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+let offsetParameter = ConstantAudioNode.offset;
 
-<pre class="brush: js">let <em>offsetParameter</em> = <em>ConstantAudioNode</em>.offset;
+let offset = ConstantSourceNode.offset.value;
+ConstantSourceNode.offset.value = newValue;
+```
 
-let <em>offset</em> = <em>ConstantSourceNode</em>.offset.value;
-<em>ConstantSourceNode</em>.offset.value = <em>newValue</em>;</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+An {{ domxref("AudioParam") }} object indicating the [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) value returned for every
+sample by this node. The default value is 1.0.
 
-<p>An {{ domxref("AudioParam") }} object indicating the <a
-    href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> value returned for every
-  sample by this node. The default value is 1.0.</p>
+To access the `offset` parameter's current value, access the parameter's
+`value` property, as shown in the syntax box above.
 
-<p>To access the <code>offset</code> parameter's current value, access the parameter's
-  <code>value</code> property, as shown in the syntax box above.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+This example shows how to set up a `ConstantSourceNode` so its
+`offset` is used as the input to a pair of {{domxref("GainNode")}}s; this
+snippet is derived from the complete example you can find in [Controlling
+multiple parameters with ConstantSourcenode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode).
 
-<p>This example shows how to set up a <code>ConstantSourceNode</code> so its
-  <code>offset</code> is used as the input to a pair of {{domxref("GainNode")}}s; this
-  snippet is derived from the complete example you can find in <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode">Controlling
-    multiple parameters with ConstantSourcenode</a>.</p>
-
-<pre class="brush: js">gainNode2 = context.createGain();
+```js
+gainNode2 = context.createGain();
 gainNode3 = context.createGain();
 gainNode2.gain.value = gainNode3.gain.value = 0.5;
 
@@ -59,42 +59,43 @@ volumeSliderControl.value = gainNode2.gain.value;
 
 constantSource = context.createConstantSource();
 constantSource.connect(gainNode2.gain);
-constantSource.connect(gainNode3.gain);</pre>
+constantSource.connect(gainNode3.gain);
+```
 
-<p>First, the gain nodes are created and configured, and a slider control's value is set
-  to match the gain on the two nodes. Then we create a new
-  {{domxref("ConstantSourceNode")}} and make it the source for the two gain nodes'
-  {{domxref("GainNode.gain")}} values. Each of those values is also an
-  {{domxref("AudioParam")}}.</p>
+First, the gain nodes are created and configured, and a slider control's value is set
+to match the gain on the two nodes. Then we create a new
+{{domxref("ConstantSourceNode")}} and make it the source for the two gain nodes'
+{{domxref("GainNode.gain")}} values. Each of those values is also an
+{{domxref("AudioParam")}}.
 
-<p>Let's say we have an event handler (for {{event("click")}} events, in this case) which
-  needs to respond by altering the value of the two gain nodes. With the linkage above in
-  place, that can be done using this simple event handler:</p>
+Let's say we have an event handler (for {{event("click")}} events, in this case) which
+needs to respond by altering the value of the two gain nodes. With the linkage above in
+place, that can be done using this simple event handler:
 
-<pre class="brush: js">function handleClickEvent(event) {
+```js
+function handleClickEvent(event) {
   constantSource.offset.value = volumeSliderControl.value;
-}</pre>
+}
+```
 
-<p>All this function has to do is fetch the current value of the slider control we're
-  using to control the paired nodes' gains, then store that value into the
-  <code>ConstantSourceNode</code>'s <code>offset</code> parameter. That's done by changing
-  the contents of its {{domxref("AudioParam.value")}} property. The two gain nodes quickly
-  adopt the new volume level.</p>
+All this function has to do is fetch the current value of the slider control we're
+using to control the paired nodes' gains, then store that value into the
+`ConstantSourceNode`'s `offset` parameter. That's done by changing
+the contents of its {{domxref("AudioParam.value")}} property. The two gain nodes quickly
+adopt the new volume level.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-  <li>{{domxref("ConstantSourceNode")}}</li>
-  <li>{{domxref("AudioNode")}}</li>
-  <li>{{domxref("AudioParam")}}</li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("ConstantSourceNode")}}
+- {{domxref("AudioNode")}}
+- {{domxref("AudioParam")}}

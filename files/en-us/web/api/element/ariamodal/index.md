@@ -11,47 +11,48 @@ tags:
   - Element
 browser-compat: api.Element.ariaModal
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaModal</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-modal</code> attribute, which indicates whether an element is modal when displayed.</p>
+The **`ariaModal`** property of the {{domxref("Element")}} interface reflects the value of the `aria-modal` attribute, which indicates whether an element is modal when displayed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaModal</var> = element.ariaModal;
-<var>element</var>.ariaModal = <var>ariaModal</var></pre>
+    var ariaModal = element.ariaModal;
+    element.ariaModal = ariaModal
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element is modal.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is not modal.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element is modal.
+- `"false"`
+  - : The element is not modal.
 
-<p>In this example the <code>aria-modal</code> attribute on the element with an ID of <code>address-modal</code> is set to "true" indicating that this is a modal dialog. Using <code>ariaModal</code> we update the value to "false".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="dialog" id="address-modal" aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc" aria-modal="true"&gt;&lt;/div&gt;</pre>
+In this example the `aria-modal` attribute on the element with an ID of `address-modal` is set to "true" indicating that this is a modal dialog. Using `ariaModal` we update the value to "false".
 
-<pre class="brush: js">let el = document.getElementById('address-modal');
+```html
+<div role="dialog" id="address-modal" aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc" aria-modal="true"></div>
+```
+
+```js
+let el = document.getElementById('address-modal');
 console.log(el.ariaModal); // "true"
 el.ariaModal = "false"
-console.log(el.ariaModal); // "false"</pre>
+console.log(el.ariaModal); // "false"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role">ARIA: dialog role</a></li>
-</ul>
+- [ARIA: dialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)

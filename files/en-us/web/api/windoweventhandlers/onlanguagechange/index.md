@@ -2,57 +2,55 @@
 title: WindowEventHandlers.onlanguagechange
 slug: Web/API/WindowEventHandlers/onlanguagechange
 tags:
-- API
-- Event Handler
-- Experimental
-- Property
-- Reference
-- WindowEventHandlers
+  - API
+  - Event Handler
+  - Experimental
+  - Property
+  - Reference
+  - WindowEventHandlers
 browser-compat: api.WindowEventHandlers.onlanguagechange
 ---
-<div>{{APIRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <code><strong>onlanguagechange</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("languagechange")}} events.</p>
+The **`onlanguagechange`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("languagechange")}} events.
 
-<p>These events are received by the object implementing this interface, usually a
-  {{domxref("Window")}}, an {{domxref("HTMLBodyElement")}}, or an
-  {{domxref("HTMLIFrameElement")}}. Such an event is sent by the browser to inform that
-  the preferred languages list has been updated. The list is accessible via
-  {{domxref("Navigator.languages")}}.</p>
+These events are received by the object implementing this interface, usually a
+{{domxref("Window")}}, an {{domxref("HTMLBodyElement")}}, or an
+{{domxref("HTMLIFrameElement")}}. Such an event is sent by the browser to inform that
+the preferred languages list has been updated. The list is accessible via
+{{domxref("Navigator.languages")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>object</em>.onlanguagechange = <em>function</em>;
-</pre>
+```js
+object.onlanguagechange = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<ul>
-  <li><code>function</code> is the name of a user-defined function, without the
-    <code>()</code> suffix or any parameters, or an anonymous function declaration, such
-    as <code>function(event) {...}</code>. An event handler always has one single
-    parameter, containing the event, here of type {{domxref("Event")}}.</li>
-</ul>
+- `function` is the name of a user-defined function, without the
+  `()` suffix or any parameters, or an anonymous function declaration, such
+  as `function(event) {...}`. An event handler always has one single
+  parameter, containing the event, here of type {{domxref("Event")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.onlanguagechange = function(event) {
+```js
+window.onlanguagechange = function(event) {
   console.log('languagechange event detected!');
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("languagechange")}} event and its type, {{domxref("Event")}}</li>
-</ul>
+- The {{event("languagechange")}} event and its type, {{domxref("Event")}}

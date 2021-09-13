@@ -10,58 +10,53 @@ tags:
   - content indexing
 browser-compat: api.ContentIndexEvent
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The <strong><code>ContentIndexEvent</code></strong> interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.</p>
+The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.
 
-<p>This event is sent to the {{domxref('ServiceWorkerGlobalScope','global scope')}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.</p>
+This event is sent to the {{domxref('ServiceWorkerGlobalScope','global scope')}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.
 
-<p>The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.</p>
+The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}}</dt>
-  <dd>Creates and returns a new <code>ContentIndexEvent</code> object whose type and other options are configured as specified.</dd>
-</dl>
+- {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}}
+  - : Creates and returns a new `ContentIndexEvent` object whose type and other options are configured as specified.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ExtendableEvent")}}.</em></p>
+_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("ExtendableEvent")}}._
 
-<dl>
-  <dt>{{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref('String')}} which identifies the deleted content index via it's <code>id</code>.</dd>
- </dl>
+- {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
+  - : A {{jsxref('String')}} which identifies the deleted content index via it's `id`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>While <code>ContentIndexEvent</code> offers no methods of its own, it inherits any specified by its parent interface, {{domxref("ExtendableEvent")}}.</em></p>
+_While `ContentIndexEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("ExtendableEvent")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.</p>
+This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.
 
-<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
+```js
+self.addEventListener('contentdelete', (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
 
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

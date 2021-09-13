@@ -2,49 +2,50 @@
 title: SecurityPolicyViolationEvent.effectiveDirective
 slug: Web/API/SecurityPolicyViolationEvent/effectiveDirective
 tags:
-- API
-- CSP
-- Experimental
-- HTTP
-- Property
-- Reference
-- Security
-- SecurityPolicyViolationEvent
-- effectiveDirective
+  - API
+  - CSP
+  - Experimental
+  - HTTP
+  - Property
+  - Reference
+  - Security
+  - SecurityPolicyViolationEvent
+  - effectiveDirective
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
-<div>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</div>
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>effectiveDirective</strong></code> read-only property of the
-  {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
-  representing the directive whose enforcement uncovered the violation.</p>
+The **`effectiveDirective`** read-only property of the
+{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("DOMString")}}
+representing the directive whose enforcement uncovered the violation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>effDir</var> = <var>violationEventInstance</var>.effectiveDirective;</pre>
+```js
+let effDir = violationEventInstance.effectiveDirective;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
-  violation.</p>
+A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the
+violation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.addEventListener("securitypolicyviolation", (e) =&gt; {
+```js
+document.addEventListener("securitypolicyviolation", (e) => {
   console.log(e.effectiveDirective);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
-</ul>
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)

@@ -7,41 +7,40 @@ tags:
   - Property
 browser-compat: api.HTMLAnchorElement.password
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.password</code></strong> property is a
-  {{domxref("USVString")}} containing the password specified before the domain name.</p>
+The **`HTMLAnchorElement.password`** property is a
+{{domxref("USVString")}} containing the password specified before the domain name.
 
-<p>If it is set without first setting the
-  <code><a href="/en-US/docs/Web/API/HTMLAnchorElement/username">username</a></code>
-  property, it silently fails.</p>
+If it is set without first setting the
+[`username`](/en-US/docs/Web/API/HTMLAnchorElement/username)
+property, it silently fails.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.password;
+string = anchor.password;
 // Setter
-<em>anchor</em>.password = <em>string</em>;
-</pre>
+anchor.password = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"&gt; is in the document
+```js
+// An <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"> is in the document
 const anchor = document.getElementByID("myAnchor");
 anchor.password; // returns 'flabada'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

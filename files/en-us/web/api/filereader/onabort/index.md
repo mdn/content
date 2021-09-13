@@ -9,12 +9,14 @@ tags:
   - Reference
 browser-compat: api.FileReader.onabort
 ---
-<p>The <strong><code>FileReader.onabort</code></strong> property contains an event handler executed when the <code><a href="/en-US/docs/Web/API/HTMLMediaElement/abort_event">abort</a></code> event is fired, i.e. when the process of reading the file is aborted.</p>
+The **`FileReader.onabort`** property contains an event handler executed when the [`abort`](/en-US/docs/Web/API/HTMLMediaElement/abort_event) event is fired, i.e. when the process of reading the file is aborted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">reader.onabort = function() { ... };</pre>
+```js
+reader.onabort = function() { ... };
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

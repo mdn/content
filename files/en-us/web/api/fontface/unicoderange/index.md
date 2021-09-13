@@ -2,37 +2,39 @@
 title: FontFace.unicodeRange
 slug: Web/API/FontFace/unicodeRange
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- unicodeRange
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - unicodeRange
 browser-compat: api.FontFace.unicodeRange
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>unicodeRange</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets the range of unicode codepoints
-  encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
-  "unicode-range")}} descriptor.</p>
+The **`unicodeRange`** property of the
+{{domxref("FontFace")}} interface retrieves or sets the range of unicode codepoints
+encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
+  "unicode-range")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let unicodeRangeDescriptor = FontFace.unicodeRange;
-FontFace.unicodeRange = unicodeRangeDescriptor;</pre>
+```js
+let unicodeRangeDescriptor = FontFace.unicodeRange;
+FontFace.unicodeRange = unicodeRangeDescriptor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor as it would appear in a style
-  sheet's <code>@font-face</code> rule.</p>
+A {{domxref('CSSOMString')}} containing a descriptor as it would appear in a style
+sheet's `@font-face` rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

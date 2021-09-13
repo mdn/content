@@ -2,36 +2,38 @@
 title: FontFace.featureSettings
 slug: Web/API/FontFace/featureSettings
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- featureSettings
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - featureSettings
 browser-compat: api.FontFace.featureSettings
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>featureSettings</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets infrequently used font features that
-  are not available from a font's variant properties. It is equivalent to the
-  {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.</p>
+The **`featureSettings`** property of the
+{{domxref("FontFace")}} interface retrieves or sets infrequently used font features that
+are not available from a font's variant properties. It is equivalent to the
+{{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let featureSettingDescriptor = FontFace.featureSettings;
-FontFace.featureSettings = featureSettingDescriptor;</pre>
+```js
+let featureSettingDescriptor = FontFace.featureSettings;
+FontFace.featureSettings = featureSettingDescriptor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor.</p>
+A {{domxref('CSSOMString')}} containing a descriptor.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

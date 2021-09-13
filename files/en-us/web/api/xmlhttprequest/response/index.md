@@ -2,61 +2,62 @@
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
 tags:
-- AJAX
-- API
-- Fetching Content
-- Fetching Data
-- Loading Data
-- Property
-- Read-only
-- Reading Data
-- Reference
-- Response
-- Server
-- XMLHttpRequest
+  - AJAX
+  - API
+  - Fetching Content
+  - Fetching Data
+  - Loading Data
+  - Property
+  - Read-only
+  - Reading Data
+  - Reference
+  - Response
+  - Server
+  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.response
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{domxref("XMLHttpRequest")}}
-    <code><strong>response</strong></code> property returns the response's body content as
-    an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
-    JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
-    of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
-    property.</p>
+The {{domxref("XMLHttpRequest")}}
+**`response`** property returns the response's body content as
+an {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}},
+JavaScript {{jsxref("Object")}}, or {{domxref("DOMString")}}, depending on the value
+of the request's {{domxref("XMLHttpRequest.responseType", "responseType")}}
+property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>body</em> = <em>XMLHttpRequest</em>.response;
-</pre>
+```js
+var body = XMLHttpRequest.response;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
+An appropriate object based on the value of {{domxref("XMLHttpRequest.responseType",
   "responseType")}}. You may attempt to request the data be provided in a specific format
-  by setting the value of <code>responseType</code> after calling
-  {{domxref("XMLHttpRequest.open", "open()")}} to initialize the request but before
-  calling {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.
-</p>
+by setting the value of `responseType` after calling
+{{domxref("XMLHttpRequest.open", "open()")}} to initialize the request but before
+calling {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.
 
-<p>The value is <code>null</code> if the request is not yet complete or was unsuccessful,
-  with the exception that when reading text data using a <code>responseType</code> of
-  <code>"text"</code> or the empty string (<code>""</code>), the response can contain the
-  response so far while the request is still in the <code>LOADING</code>
-  {{domxref("XMLHttpRequest.readyState", "readyState")}} (3).</p>
+The value is `null` if the request is not yet complete or was unsuccessful,
+with the exception that when reading text data using a `responseType` of
+`"text"` or the empty string (`""`), the response can contain the
+response so far while the request is still in the `LOADING`
+{{domxref("XMLHttpRequest.readyState", "readyState")}} (3).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example presents a function, <code>load()</code>, which loads and processes a page
-  from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and
-  creating a listener for {{event("readystatechange")}} events such that when
-  <code>readyState</code> changes to <code>DONE</code> (4), the <code>response</code> is
-  obtained and passed into the callback function provided to <code>load()</code>.</p>
+This example presents a function, `load()`, which loads and processes a page
+from the server. It works by creating an {{domxref("XMLHttpRequest")}} object and
+creating a listener for {{event("readystatechange")}} events such that when
+`readyState` changes to `DONE` (4), the `response` is
+obtained and passed into the callback function provided to `load()`.
 
-<p>The content is handled as raw text data (since nothing here is overriding the default
-  {{domxref("XMLHttpRequest.responseType", "responseType")}}).</p>
+The content is handled as raw text data (since nothing here is overriding the default
+{{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
-<pre class="brush: js">var url = 'somePage.html'; //A local page
+```js
+var url = 'somePage.html'; //A local page
 
 function load(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -70,22 +71,19 @@ function load(url, callback) {
   xhr.open('GET', url, true);
   xhr.send('');
 }
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li>Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
-    {{domxref("XMLHttpRequest.responseXML")}}</li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
+  {{domxref("XMLHttpRequest.responseXML")}}

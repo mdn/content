@@ -2,38 +2,40 @@
 title: Window.stop()
 slug: Web/API/Window/stop
 tags:
-- API
-- DOM
-- HTML DOM
-- Method
-- Reference
-- Window
-- stop
+  - API
+  - DOM
+  - HTML DOM
+  - Method
+  - Reference
+  - Window
+  - stop
 browser-compat: api.Window.stop
 ---
-<div> {{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>window.stop()</code></strong> stops further resource loading in the current
-  browsing context, equivalent to the stop button in the browser.</p>
+The **`window.stop()`** stops further resource loading in the current
+browsing context, equivalent to the stop button in the browser.
 
-<p>Because of how scripts are executed, this method cannot interrupt its parent
-  document's loading, but it will stop its images, new windows, and other still-loading
-  objects.</p>
+Because of how scripts are executed, this method cannot interrupt its parent
+document's loading, but it will stop its images, new windows, and other still-loading
+objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.stop()
-</pre>
+```js
+window.stop()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">window.stop();
-</pre>
+```js
+window.stop();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

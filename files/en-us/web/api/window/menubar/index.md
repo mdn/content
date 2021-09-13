@@ -2,55 +2,55 @@
 title: Window.menubar
 slug: Web/API/Window/menubar
 tags:
-- API
-- HTML DOM
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.menubar
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>The <code><strong>Window.menubar</strong></code> property returns the
-  <code>menubar</code> object, whose visibility can be checked.</p>
+The **`Window.menubar`** property returns the
+`menubar` object, whose visibility can be checked.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>objRef</em> = <em>window</em>.menubar
-</pre>
+```js
+objRef = window.menubar
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following complete HTML example demonstrates how the <code>visible</code> property
-  of the <code>menubar</code> object is used.</p>
+The following complete HTML example demonstrates how the `visible` property
+of the `menubar` object is used.
 
-<pre class="brush:html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Various DOM Tests&lt;/title&gt;
-  &lt;script&gt;
+```html
+<html>
+<head>
+  <title>Various DOM Tests</title>
+  <script>
     var visible = window.menubar.visible;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Window.locationbar")}}</li>
-  <li>{{domxref("Window.personalbar")}}</li>
-  <li>{{domxref("Window.scrollbars")}}</li>
-  <li>{{domxref("Window.statusbar")}}</li>
-  <li>{{domxref("Window.toolbar")}}</li>
-</ul>
+- {{domxref("Window.locationbar")}}
+- {{domxref("Window.personalbar")}}
+- {{domxref("Window.scrollbars")}}
+- {{domxref("Window.statusbar")}}
+- {{domxref("Window.toolbar")}}

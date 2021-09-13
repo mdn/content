@@ -2,129 +2,114 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 tags:
-- API
-- DOM
-- Element
-- Gecko
-- Method
-- Reference
-- insertAdjacentText
+  - API
+  - DOM
+  - Element
+  - Gecko
+  - Method
+  - Reference
+  - insertAdjacentText
 browser-compat: api.Element.insertAdjacentText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>insertAdjacentText()</code></strong> method of the
-  {{domxref("Element")}} interface inserts a given text node at a given position relative
-  to the element it is invoked upon.</p>
+The **`insertAdjacentText()`** method of the
+{{domxref("Element")}} interface inserts a given text node at a given position relative
+to the element it is invoked upon.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>element</em>.insertAdjacentText(<em>position</em>, <em>element</em>);</pre>
+```js
+element.insertAdjacentText(position, element);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>position</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the position relative to the
-    <code>element</code>; must be one of the following strings:
-    <ul>
-      <li><code>'beforebegin'</code>: Before the <code>element</code>
-        itself.</li>
-      <li><code>'afterbegin'</code>: Just inside the
-        <code>element</code>, before its first child.</li>
-      <li><code>'beforeend'</code>: Just inside the
-        <code>element</code>, after its last child.</li>
-      <li><code>'afterend'</code>: After the <code>element</code>
-        itself.</li>
-    </ul>
-  </dd>
-  <dt><code>element</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the text to be inserted into the tree.</dd>
-</dl>
+- `position`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("DOMString")}} representing the position relative to the
+    `element`; must be one of the following strings:
 
-<p>Void.</p>
+    - `'beforebegin'`: Before the `element`
+      itself.
+    - `'afterbegin'`: Just inside the
+      `element`, before its first child.
+    - `'beforeend'`: Just inside the
+      `element`, after its last child.
+    - `'afterend'`: After the `element`
+      itself.
 
-<h3 id="Exceptions">Exceptions</h3>
+- `element`
+  - : A {{domxref("DOMString")}} representing the text to be inserted into the tree.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>The <code>position</code> specified is not a recognized value.</td>
-    </tr>
-  </tbody>
-</table>
+### Return value
 
-<h3 id="Visualization_of_position_names">Visualization of position names</h3>
+Void.
 
-<pre>&lt;!-- <strong><code>beforebegin</code></strong> --&gt;
-<code>&lt;p&gt;</code>
-  &lt;!-- <strong><code>afterbegin</code></strong> --&gt;
-  foo
-  &lt;!-- <strong><code>beforeend</code></strong> --&gt;
-<code>&lt;/p&gt;</code>
-&lt;!-- <strong><code>afterend</code></strong> --&gt;</pre>
+### Exceptions
 
-<div class="note"><p><strong>Note:</strong> The <code>beforebegin</code> and
-  <code>afterend</code> positions work only if the node is in a tree and has an element
-  parent.</p></div>
+| Exception     | Explanation                                         |
+| ------------- | --------------------------------------------------- |
+| `SyntaxError` | The `position` specified is not a recognized value. |
 
-<h2 id="Example">Example</h2>
+### Visualization of position names
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+    <!-- beforebegin -->
+    <p>
+      <!-- afterbegin -->
+      foo
+      <!-- beforeend -->
+    </p>
+    <!-- afterend -->
+
+> **Note:** The `beforebegin` and
+> `afterend` positions work only if the node is in a tree and has an element
+> parent.
+
+## Example
+
+```js
+beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
 });
 
 afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
-});</pre>
+});
+```
 
-<p>Have a look at our <a
-    href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a>
-  demo on GitHub (see the <a
-    href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source
-    code</a> too.) Here we have a simple paragraph. You can enter some text into the form
-  element, then press the <em>Insert before</em> and <em>Insert after</em> buttons to
-  insert it before or after the existing paragraph text using
-  <code>insertAdjacentText()</code>. Note that the existing text node is not added to —
-  further text nodes are created containing the new additions.</p>
+Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html)
+demo on GitHub (see the [source
+code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) too.) Here we have a simple paragraph. You can enter some text into the form
+element, then press the _Insert before_ and _Insert after_ buttons to
+insert it before or after the existing paragraph text using
+`insertAdjacentText()`. Note that the existing text node is not added to —
+further text nodes are created containing the new additions.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>You can polyfill the insertAdjacentText<code>() method</code> in Internet Explorer 5.5
-  (maybe earlier) and higher with the following code:</p>
+You can polyfill the insertAdjacentText`() method` in Internet Explorer 5.5
+(maybe earlier) and higher with the following code:
 
-<pre>if (!Element.prototype.insertAdjacentText)
-  Element.prototype.insertAdjacentText = function(type, txt){
-    this.insertAdjacentHTML(
-      type,
-      (txt+'') // convert to string
-        .replace(/&amp;/g, '&amp;amp;') // embed ampersand symbols
-        .replace(/&lt;/g, '&amp;lt;') // embed less-than symbols
-    )
-  }
-</pre>
+    if (!Element.prototype.insertAdjacentText)
+      Element.prototype.insertAdjacentText = function(type, txt){
+        this.insertAdjacentHTML(
+          type,
+          (txt+'') // convert to string
+            .replace(/&/g, '&amp;') // embed ampersand symbols
+            .replace(/</g, '&lt;') // embed less-than symbols
+        )
+      }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-</ul>
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.insertAdjacentHTML()")}}

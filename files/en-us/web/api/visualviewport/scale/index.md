@@ -2,33 +2,35 @@
 title: VisualViewport.scale
 slug: Web/API/VisualViewport/scale
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- size
-- viewport
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - size
+  - viewport
 browser-compat: api.VisualViewport.scale
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>scale</code></strong> read-only property of the
-	{{domxref("VisualViewport")}} interface returns the pinch-zoom scaling factor applied
-	to the visual viewport.</p>
+The **`scale`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the pinch-zoom scaling factor applied
+to the visual viewport.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>scale</em> = VisualViewport.scale</pre>
+```js
+var scale = VisualViewport.scale
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

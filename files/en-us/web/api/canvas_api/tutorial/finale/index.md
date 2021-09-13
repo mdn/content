@@ -6,43 +6,37 @@ tags:
   - Graphics
   - Tutorial
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
-<p>Congratulations! You finished the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>! This knowledge will help you to make great 2D graphics on the web.</p>
+Congratulations! You finished the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)! This knowledge will help you to make great 2D graphics on the web.
 
-<h2 id="More_examples_and_tutorials">More examples and tutorials</h2>
+## More examples and tutorials
 
-<p>There are a variety of demos and further explanations about canvas on these sites:</p>
+There are a variety of demos and further explanations about canvas on these sites:
 
-<dl>
- <dt><a href="https://codepen.io/search/pens?q=canvas">Codepen.io</a></dt>
- <dd>Front End Developer Playground &amp; Code Editor in the Browser.</dd>
- <dt><a href="http://www.html5canvastutorials.com/">HTML5 Canvas Tutorials</a></dt>
- <dd>Examples for most canvas APIs.</dd>
- <dt><a href="/en-US/docs/Games">Game development</a></dt>
- <dd>Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.</dd>
-</dl>
+- [Codepen.io](https://codepen.io/search/pens?q=canvas)
+  - : Front End Developer Playground & Code Editor in the Browser.
+- [HTML5 Canvas Tutorials](http://www.html5canvastutorials.com/)
+  - : Examples for most canvas APIs.
+- [Game development](/en-US/docs/Games)
+  - : Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
 
-<h2 id="Other_Web_APIs">Other Web APIs</h2>
+## Other Web APIs
 
-<p>These APIs might be useful when working further with canvas and graphics:</p>
+These APIs might be useful when working further with canvas and graphics:
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></dt>
- <dd>Advanced API for rendering complex graphics, including 3D.</dd>
- <dt><a href="/en-US/docs/Web/SVG">SVG</a></dt>
- <dd>Scalable Vector Graphics let you describe images as sets of vectors (lines) and shapes in order to allow them to scale smoothly regardless of the size at which they're drawn.</dd>
- <dt><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio</a></dt>
- <dd>The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning)  and much more.</dd>
-</dl>
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : Advanced API for rendering complex graphics, including 3D.
+- [SVG](/en-US/docs/Web/SVG)
+  - : Scalable Vector Graphics let you describe images as sets of vectors (lines) and shapes in order to allow them to scale smoothly regardless of the size at which they're drawn.
+- [Web Audio](/en-US/docs/Web/API/Web_Audio_API)
+  - : The Web Audio API provides a powerful and versatile system for controlling audio on the Web, allowing developers to choose audio sources, add effects to audio, create audio visualizations, apply spatial effects (such as panning)  and much more.
 
-<h2 id="Questions">Questions</h2>
+## Questions
 
-<dl>
- <dt><a href="https://stackoverflow.com/questions/tagged/html5-canvas">Stack Overflow</a></dt>
- <dd>Questions tagged with "html5-canvas".</dd>
- <dt><a href="/en-US/docs/MDN">Comments about this tutorial – the MDN documentation community</a></dt>
- <dd>If you have any comments about this tutorial or want to thank us, feel free to reach out to us!</dd>
-</dl>
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/html5-canvas)
+  - : Questions tagged with "html5-canvas".
+- [Comments about this tutorial – the MDN documentation community](/en-US/docs/MDN)
+  - : If you have any comments about this tutorial or want to thank us, feel free to reach out to us!
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

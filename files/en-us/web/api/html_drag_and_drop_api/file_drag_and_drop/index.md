@@ -6,51 +6,54 @@ tags:
   - drag and drop
   - drop zone
 ---
-<p>{{DefaultAPISidebar("HTML Drag and Drop API")}}</p>
+{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-<p>HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's <em>file manager</em> and dropped on a web page.</p>
+HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 
-<p>The main steps to drag and drop are to define a <em>drop zone</em> (i.e. a target element for the file drop) and to define event handlers for the {{event("drop")}} and {{event("dragover")}} events. These steps are described below, including example code snippets. The full source code is available in <a href="https://github.com/mdn/dom-examples/tree/master/drag-and-drop">MDN's drag-and-drop repository</a> (pull requests and/or issues are welcome).</p>
+The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{event("drop")}} and {{event("dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests and/or issues are welcome).
 
-<p>Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).</p>
+Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
-<h2 id="Define_the_drop_zone">Define the drop <em>zone</em></h2>
+## Define the drop _zone_
 
-<p>The <em>target element</em> of the {{event("drop")}} event needs an {{domxref("GlobalEventHandlers.ondrop","ondrop")}} global event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:</p>
+The _target element_ of the {{event("drop")}} event needs an {{domxref("GlobalEventHandlers.ondrop","ondrop")}} global event handler. The following code snippet shows how this is done with a {{HTMLelement("div")}} element:
 
-<pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);"&gt;
-  &lt;p&gt;Drag one or more files to this Drop Zone ...&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="drop_zone" ondrop="dropHandler(event);">
+  <p>Drag one or more files to this Drop Zone ...</p>
+</div>
+```
 
-<p>Typically, an application will include a {{event("dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("GlobalEventHandlers.ondragover","ondragover")}} global event handler:</p>
+Typically, an application will include a {{event("dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("GlobalEventHandlers.ondragover","ondragover")}} global event handler:
 
-<pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"&gt;
-  &lt;p&gt;Drag one or more files to this Drop Zone ...&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+  <p>Drag one or more files to this Drop Zone ...</p>
+</div>
+```
 
-<p>Lastly, an application may want to style the drop target element to visually indicate the element is a drop zone. In this example, the drop target element uses the following styling:</p>
+Lastly, an application may want to style the drop target element to visually indicate the element is a drop zone. In this example, the drop target element uses the following styling:
 
-<pre class="brush: css">#drop_zone {
+```css
+#drop_zone {
   border: 5px solid blue;
   width:  200px;
   height: 100px;
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> <code>dragstart</code> and <code>dragend</code> events are not fired when dragging a file into the browser from the OS.</p>
-</div>
+> **Note:** `dragstart` and `dragend` events are not fired when dragging a file into the browser from the OS.
 
-<h2 id="Process_the_drop">Process the drop</h2>
+## Process the drop
 
-<p>The {{event("drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.</p>
+The {{event("drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.
 
-<p>This example shows how to write the name of each dragged file to the console. In a <em>real</em> application, an application may want to process a file using  the {{domxref("File","File API")}}.</p>
+This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using  the {{domxref("File","File API")}}.
 
-<p>Note that in this example, any drag item that is not a file is ignored.</p>
+Note that in this example, any drag item that is not a file is ignored.
 
-<pre class="brush: js">function dropHandler(ev) {
+```js
+function dropHandler(ev) {
   console.log('File(s) dropped');
 
   // Prevent default behavior (Prevent file from being opened)
@@ -58,7 +61,7 @@ tags:
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to access the file(s)
-    for (var i = 0; i &lt; ev.dataTransfer.items.length; i++) {
+    for (var i = 0; i < ev.dataTransfer.items.length; i++) {
       // If dropped items aren't files, reject them
       if (ev.dataTransfer.items[i].kind === 'file') {
         var file = ev.dataTransfer.items[i].getAsFile();
@@ -67,28 +70,28 @@ tags:
     }
   } else {
     // Use DataTransfer interface to access the file(s)
-    for (var i = 0; i &lt; ev.dataTransfer.files.length; i++) {
+    for (var i = 0; i < ev.dataTransfer.files.length; i++) {
       console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Prevent_the_browser's_default_drag_behavior">Prevent the browser's default drag behavior</h2>
+## Prevent the browser's default drag behavior
 
-<p>The following {{event("dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler.</p>
+The following {{event("dragover")}} event handler calls {{domxref("Event.preventDefault","preventDefault()")}} to turn off the browser's default drag and drop handler.
 
-<pre class="brush: js">function dragOverHandler(ev) {
+```js
+function dragOverHandler(ev) {
   console.log('File(s) in drop zone');
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API</a></li>
-	<li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
-	<li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
-</ul>
+- [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

@@ -9,70 +9,64 @@ tags:
   - Reference
 browser-compat: api.Node.insertBefore
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.insertBefore()</strong></code> method
-    inserts a node before a <em>reference node</em> as a child of a specified <em>parent
-      node</em>. </p>
+The **`Node.insertBefore()`** method
+inserts a node before a _reference node_ as a child of a specified _parent
+node_.
 
-<p>If the given node already exists in the document, <code>insertBefore()</code> moves it
-  from its current position to the new position. (That is, it will automatically be
-  removed from its existing parent before appending it to the specified new parent.)</p>
+If the given node already exists in the document, `insertBefore()` moves it
+from its current position to the new position. (That is, it will automatically be
+removed from its existing parent before appending it to the specified new parent.)
 
-<p>This means that a node cannot be in two locations of the document simultaneously.</p>
+This means that a node cannot be in two locations of the document simultaneously.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("Node.cloneNode()")}} can be used to make a copy
-    of the node before appending it under the new parent. Note that the copies made with
-    <code>cloneNode()</code> will not be automatically kept in sync.</p>
+> **Note:** The {{domxref("Node.cloneNode()")}} can be used to make a copy
+> of the node before appending it under the new parent. Note that the copies made with
+> `cloneNode()` will not be automatically kept in sync.
+
+If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the
+`DocumentFragment` are moved into the child list of the specified parent
+node.
+
+## Syntax
+
+```js
+let insertedNode = parentNode.insertBefore(newNode, referenceNode)
+```
+
+- `insertedNode`
+  - : The node being inserted (the same as `newNode`)
+- `parentNode`
+  - : The parent of the newly inserted node.
+- `newNode`
+  - : The node to be inserted.
+- `referenceNode`
+  - : The node before which `newNode` is inserted. If this is
+    `null`, then `newNode` is inserted at the end of
+    `parentNode`'s child nodes.
+
+> **Note:** `referenceNode` is **not**
+> an optional parameter. You must explicitly pass a {{domxref("Node")}} or
+> `null`. Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in
+> different browser versions.
+
+### Return value
+
+Returns the added child (unless `newNode` is a
+{{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}}
+is returned).
+
+## Example
+
+### Example 1
+
+```html
+<div id="parentElement">
+   <span id="childElement">foo bar</span>
 </div>
 
-<p>If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the
-  <code>DocumentFragment</code> are moved into the child list of the specified parent
-  node.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">let <var>insertedNode</var> = <var>parentNode</var>.insertBefore(<var>newNode</var>, <var>referenceNode</var>)
-</pre>
-
-<dl>
-  <dt><code><var>insertedNode</var></code></dt>
-  <dd>The node being inserted (the same as <code><var>newNode</var></code>)</dd>
-  <dt><code><var>parentNode</var></code></dt>
-  <dd>The parent of the newly inserted node.</dd>
-  <dt><code><var>newNode</var></code></dt>
-  <dd>The node to be inserted.</dd>
-  <dt><code><var>referenceNode</var></code></dt>
-  <dd>The node before which <code><var>newNode</var></code> is inserted. If this is
-    <code>null</code>, then <code><var>newNode</var></code> is inserted at the end of
-    <code><var>parentNode</var></code>'s child nodes.</dd>
-</dl>
-
-<div class="note">
-  <p><strong>Note:</strong> <code><var>referenceNode</var></code> is <strong>not</strong>
-    an optional parameter. You must explicitly pass a {{domxref("Node")}} or
-    <code>null</code>. Failing to provide it or passing invalid values may <a
-      href="https://code.google.com/p/chromium/issues/detail?id=419780">behave</a> <a
-      href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">differently</a> in
-    different browser versions.</p>
-</div>
-
-<h3 id="Return_value">Return value</h3>
-
-<p>Returns the added child (unless <code><var>newNode</var></code> is a
-  {{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}}
-  is returned).</p>
-
-<h2 id="Example">Example</h2>
-
-<h3 id="Example_1">Example 1</h3>
-
-<pre class="brush: html">&lt;div id="parentElement"&gt;
-   &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
+<script>
 // Create the new node to insert
 let newNode = document.createElement("span")
 
@@ -93,17 +87,18 @@ parentDiv.insertBefore(newNode, sp2) // Implicit dynamic cast to type Node
 let sp2 = "undefined" // Non-existent node of id "childElement"
 parentDiv.insertBefore(newNode, sp2) // Generates "Type Error: Invalid Argument"
 // End test case [ 3 ]
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<pre class="brush:html">&lt;div id="parentElement"&gt;
-  &lt;span id="childElement"&gt;foo bar&lt;/span&gt;
-&lt;/div&gt;
+```html
+<div id="parentElement">
+  <span id="childElement">foo bar</span>
+</div>
 
-&lt;script&gt;
-// Create a new, plain &lt;span&gt; element
+<script>
+// Create a new, plain <span> element
 let sp1 = document.createElement("span")
 
 // Get the reference element
@@ -113,30 +108,31 @@ let parentDiv = sp2.parentNode
 
 // Insert the new element into before sp2
 parentDiv.insertBefore(sp1, sp2)
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> There is no <code>insertAfter()</code> method. It can be
-    emulated by combining the <code>insertBefore</code> method with
-    {{domxref("Node.nextSibling")}}.</p>
-</div>
+> **Note:** There is no `insertAfter()` method. It can be
+> emulated by combining the `insertBefore` method with
+> {{domxref("Node.nextSibling")}}.
 
-<p>In the previous example, <code>sp1</code> could be inserted after <code>sp2</code>
-  using:</p>
+In the previous example, `sp1` could be inserted after `sp2`
+using:
 
-<pre class="brush: js">parentDiv.insertBefore(sp1, sp2.nextSibling)</pre>
+```js
+parentDiv.insertBefore(sp1, sp2.nextSibling)
+```
 
-<p>If <code>sp2</code> does not have a next sibling, then it must be the last child —
-  <code>sp2.nextSibling</code> returns <code>null</code>, and <code>sp1</code> is inserted
-  at the end of the child node list (immediately after <code>sp2</code>).</p>
+If `sp2` does not have a next sibling, then it must be the last child —
+`sp2.nextSibling` returns `null`, and `sp1` is inserted
+at the end of the child node list (immediately after `sp2`).
 
-<h3 id="Example_3">Example 3</h3>
+### Example 3
 
-<p>Insert an element before the first child element, using the
-  {{domxref("Node/firstChild", "firstChild")}} property.</p>
+Insert an element before the first child element, using the
+{{domxref("Node/firstChild", "firstChild")}} property.
 
-<pre class="brush:js">// Get the parent element
+```js
+// Get the parent element
 let parentElement = document.getElementById('parentElement')
 // Get the parent's first child
 let theFirstChild = parentElement.firstChild
@@ -146,32 +142,29 @@ let newElement = document.createElement("div")
 
 // Insert the new element before the first child
 parentElement.insertBefore(newElement, theFirstChild)
-</pre>
+```
 
-<p>When the element does not have a first child, then <code>firstChild</code> is
-  <code>null</code>. The element is still appended to the parent, after the last child.
-</p>
+When the element does not have a first child, then `firstChild` is
+`null`. The element is still appended to the parent, after the last child.
 
-<p>Since the parent element did not have a first child, it did not have a last child,
-  either. Consequently, the newly inserted element is the <em>only</em> element.</p>
+Since the parent element did not have a first child, it did not have a last child,
+either. Consequently, the newly inserted element is the _only_ element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.removeChild()")}}</li>
-  <li>{{domxref("Node.replaceChild()")}}</li>
-  <li>{{domxref("Node.appendChild()")}}</li>
-  <li>{{domxref("Node.hasChildNodes()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("Element.prepend()")}}</li>
-  <li>{{domxref("Element.before()")}}</li>
-  <li>{{domxref("Element.after()")}}</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.prepend()")}}
+- {{domxref("Element.before()")}}
+- {{domxref("Element.after()")}}

@@ -9,73 +9,67 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>getHighEntropyValues()</code></strong> method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the <em>high entropy</em> values the user-agent returns.</p>
+The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The terms <em>high entropy</em> and <em>low entropy</em> refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.</p>
-</div>
+> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser. The values returned as properties are deemed low entropy, and unlikely to identify a user. The values returned by {{domxref("NavigatorUAData.getHighEntropyValues()")}} could potentially reveal more information. These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NavigatorUAData.getHighEntropyValues(hints);</pre>
+```js
+NavigatorUAData.getHighEntropyValues(hints);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>hints</code></dt>
-  <dd>An array containing the hints to be returned, one or more of:
-    <ul>
-      <li><code>"architecture"</code></li>
-      <li><code>"bitness"</code></li>
-      <li><code>"model"</code></li>
-      <li><code>"platformVersion"</code></li>
-      <li><code>"uaFullVersion"</code></li>
-    </ul>
-  </dd>
-</dl>
+- `hints`
 
-<h3 id="Returns">Return value</h3>
+  - : An array containing the hints to be returned, one or more of:
 
-<p>An object containing some or all of the following values, based on the hints requested:</p>
+    - `"architecture"`
+    - `"bitness"`
+    - `"model"`
+    - `"platformVersion"`
+    - `"uaFullVersion"`
 
-<dl>
-  <dt><code>architecture</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the platform architecture. For example, <code>"x86"</code>.</dd>
-  <dt><code>bitness</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the architecture bitness. For example, <code>"64"</code>.</dd>
-  <dt><code>model</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the device model. For example, <code>"Pixel 2XL"</code>.</dd>
-  <dt><code>platformVersion</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the platform version. For example, <code>"10.0"</code>.</dd>
-  <dt><code>uaFullVersion</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the full browser version. For example, <code>"91.0.4472.124"</code>.</dd>
-</dl>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+An object containing some or all of the following values, based on the hints requested:
 
-<dl>
-  <dt>A {{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>Thrown if the user-agent decides that one or more of the <code>hints</code> requested should not be returned.</dd>
-</dl>
+- `architecture`
+  - : A {{domxref("DOMString","string")}} containing the platform architecture. For example, `"x86"`.
+- `bitness`
+  - : A {{domxref("DOMString","string")}} containing the architecture bitness. For example, `"64"`.
+- `model`
+  - : A {{domxref("DOMString","string")}} containing the device model. For example, `"Pixel 2XL"`.
+- `platformVersion`
+  - : A {{domxref("DOMString","string")}} containing the platform version. For example, `"10.0"`.
+- `uaFullVersion`
+  - : A {{domxref("DOMString","string")}} containing the full browser version. For example, `"91.0.4472.124"`.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>In the following example a number of hints are requested using the <code>getHighEntropyValues()</code> method. When the promise resolves, this information is printed to the console.</p>
+- A {{domxref("DOMException")}} `NotAllowedError`
+  - : Thrown if the user-agent decides that one or more of the `hints` requested should not be returned.
 
-<pre class="brush:js">navigator.userAgentData.getHighEntropyValues(
+## Examples
+
+In the following example a number of hints are requested using the `getHighEntropyValues()` method. When the promise resolves, this information is printed to the console.
+
+```js
+navigator.userAgentData.getHighEntropyValues(
   ["architecture",
   "model",
   "platformVersion",
   "uaFullVersion"])
-  .then(ua => { console.log(ua) });</pre>
+  .then(ua => { console.log(ua) });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

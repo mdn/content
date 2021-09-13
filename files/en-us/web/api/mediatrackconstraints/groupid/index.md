@@ -2,85 +2,83 @@
 title: MediaTrackConstraints.groupId
 slug: Web/API/MediaTrackConstraints/groupId
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- WebRTC
-- getusermedia
-- groupId
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - WebRTC
+  - getusermedia
+  - groupId
 browser-compat: api.MediaTrackConstraints.groupId
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>groupId</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call
-  to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
-  unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call
+to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
+unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { groupId: <em>constraint</em> };
+```js
+var constraintsObject = { groupId: constraint };
 
-<em>constraintsObject</em>.groupId = <em>constraint</em>;
-</pre>
+constraintsObject.groupId = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An object based on <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> specifying one or more acceptable,
-  ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
-  content.</p>
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
+content.
 
-<p>Group IDs are unique for a given origin for the duration of a single browsing session,
-  and are shared by all media sources that come from the same physical device. For
-  example, the microphone and speaker on the same headset would share a group ID. This
-  makes it possible to use the group ID to ensure that the audio and input devices are on
-  the same headset by retrieving the group ID of the input device and specifying it when
-  asking for an output device, perhaps.</p>
+Group IDs are unique for a given origin for the duration of a single browsing session,
+and are shared by all media sources that come from the same physical device. For
+example, the microphone and speaker on the same headset would share a group ID. This
+makes it possible to use the group ID to ensure that the audio and input devices are on
+the same headset by retrieving the group ID of the input device and specifying it when
+asking for an output device, perhaps.
 
-<p>However, the value of the <code>groupId</code> is determined by the source of the
-  track's content, and there's no particular format mandated by the specification
-  (although some kind of GUID is recommended). That means that a given track will only
-  return one value for the <code>groupId</code> when you call
-  {{domxref("MediaStreamTrack.getCapabilities", "getCapabilities()")}}, and keep in mind
-  that this value will change for each browsing session.</p>
+However, the value of the `groupId` is determined by the source of the
+track's content, and there's no particular format mandated by the specification
+(although some kind of GUID is recommended). That means that a given track will only
+return one value for the `groupId` when you call
+{{domxref("MediaStreamTrack.getCapabilities", "getCapabilities()")}}, and keep in mind
+that this value will change for each browsing session.
 
-<p>Because of this, there's no use for the group ID when calling
-  {{domxref("MediaStreamTrack.applyConstraints()")}}, since there is only one possible
-  value, and you can't use it to ensure the same group is used across multiple browsing
-  sessions when calling <code>getUserMedia()</code>.</p>
+Because of this, there's no use for the group ID when calling
+{{domxref("MediaStreamTrack.applyConstraints()")}}, since there is only one possible
+value, and you can't use it to ensure the same group is used across multiple browsing
+sessions when calling `getUserMedia()`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

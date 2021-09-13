@@ -8,31 +8,25 @@ tags:
   - Property
   - Reference
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.online</code></strong> event is fired on the {{HtmlElement("body")}} of each page when the browser switches between online and offline mode. Additionally, the events bubble up from <code>document.body</code>, to <code>document</code>, ending at <code>window</code>. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).</p>
+The **`Document.online`** event is fired on the {{HtmlElement("body")}} of each page when the browser switches between online and offline mode. Additionally, the events bubble up from `document.body`, to `document`, ending at `window`. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).
 
-<p><code>window.navigator.onLine</code> returns boolean <code>true</code> if the browser is online and <code>false</code> if it is definitely offline (disconnected from the network). The <code>online</code> and <code>offline</code> events are fired when the value of this attribute changes.</p>
+`window.navigator.onLine` returns boolean `true` if the browser is online and `false` if it is definitely offline (disconnected from the network). The `online` and `offline` events are fired when the value of this attribute changes.
 
-<div class="note">
-<p><strong>Note:</strong> It is important to note that this event and attribute are inherently unreliable. A computer can be connected to a network without having Internet access.</p>
-</div>
+> **Note:** It is important to note that this event and attribute are inherently unreliable. A computer can be connected to a network without having Internet access.
 
-<p>You can register listeners for these events in a few familiar ways:</p>
+You can register listeners for these events in a few familiar ways:
 
-<ul>
- <li>Using {{domxref("EventTarget.addEventListener", "addEventListener")}} on the <code>window</code>, <code>document</code>, or <code>document.body</code></li>
- <li>By setting the <code>.ononline</code> or <code>.onoffline</code> properties on <code>document</code> or <code>document.body</code> to a JavaScript <code>Function</code> object. (<strong>Note:</strong> using <code>window.ononline</code> or <code>window.onoffline</code> will not work for compatibility reasons.)</li>
- <li>By specifying <code>ononline="..."</code> or <code>onoffline="..."</code> attributes on the <code>&lt;body&gt;</code> tag in the HTML markup.</li>
-</ul>
+- Using {{domxref("EventTarget.addEventListener", "addEventListener")}} on the `window`, `document`, or `document.body`
+- By setting the `.ononline` or `.onoffline` properties on `document` or `document.body` to a JavaScript `Function` object. (**Note:** using `window.ononline` or `window.onoffline` will not work for compatibility reasons.)
+- By specifying `ononline="..."` or `onoffline="..."` attributes on the `<body>` tag in the HTML markup.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>There's <a class="external link-https external-icon" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">a simple test case</a> that you can run to verify that the events are working.</p>
+There's [a simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609) that you can run to verify that the events are working.
 
-<h2 id="References">References</h2>
+## References
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Navigator/Online_and_offline_events">Online and offline events [en-US]</a></li>
- <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#event-online">WHATWG Web App Specification</a></li>
-</ul>
+- [Online and offline events \[en-US\]](/en-US/docs/Web/API/Navigator/Online_and_offline_events)
+- [WHATWG Web App Specification](https://www.whatwg.org/specs/web-apps/current-work/#event-online)

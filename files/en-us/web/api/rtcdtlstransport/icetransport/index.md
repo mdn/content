@@ -2,44 +2,43 @@
 title: RTCDtlsTransport.iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
 tags:
-- API
-- Property
-- RTCDtlsTransport
-- Read-only
-- Reference
-- iceTransport
+  - API
+  - Property
+  - RTCDtlsTransport
+  - Read-only
+  - Reference
+  - iceTransport
 browser-compat: api.RTCDtlsTransport.iceTransport
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong>{{DOMxRef("RTCDtlsTransport")}}</strong>
-    property <code><strong>iceTransport</strong></code> contains areference
-    to the underlying {{DOMxRef("RTCIceTransport")}}.</p>
+The read-only **{{DOMxRef("RTCDtlsTransport")}}**
+property **`iceTransport`** contains areference
+to the underlying {{DOMxRef("RTCIceTransport")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>iceTransport</var> = <var>rtcDtlsTransport</var>.iceTransport;</pre>
+```js
+var iceTransport = rtcDtlsTransport.iceTransport;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The underlying {{DOMxRef("RTCIceTransport")}} instance.</p>
+The underlying {{DOMxRef("RTCIceTransport")}} instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("RTCDtlsTransport")}}</li>
-  <li>{{DOMxRef("RTCIceTransport")}}</li>
-</ul>
+- {{DOMxRef("RTCDtlsTransport")}}
+- {{DOMxRef("RTCIceTransport")}}

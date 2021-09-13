@@ -11,45 +11,43 @@ tags:
   - detune
 browser-compat: api.AudioBufferSourceNode.detune
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>detune</code></strong> property of the
-  {{domxref("AudioBufferSourceNode")}} interface is a <a
-    href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
-  representing detuning of oscillation in <a
-    href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
+The **`detune`** property of the
+{{domxref("AudioBufferSourceNode")}} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
+representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-<p>For example, values of +100 and -100 detune the source up or down by one semitone,
-  while +1200 and -1200 detune it up or down by one octave.</p>
+For example, values of +100 and -100 detune the source up or down by one semitone,
+while +1200 and -1200 detune it up or down by one octave.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>source</em> = <em>audioCtx</em>.createBufferSource();
-<em>source</em>.detune.value = 100; // value in cents</pre>
+```js
+var source = audioCtx.createBufferSource();
+source.detune.value = 100; // value in cents
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Though the <code>AudioParam</code> returned is read-only, the
-    value it represents is not.</p>
-</div>
+> **Note:** Though the `AudioParam` returned is read-only, the
+> value it represents is not.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}}
-  whose value indicates the detuning of oscillation in <a
-    href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
+A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
+whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 
 const channelCount = 2;
 const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 
 const myArrayBuffer = audioCtx.createBuffer(channelCount, frameCount, audioCtx.sampleRate);
 
-for (let channel = 0; channel &lt; channelCount; channel++) {
+for (let channel = 0; channel < channelCount; channel++) {
   const nowBuffering = myArrayBuffer.getChannelData(channel);
-  for (let i = 0; i &lt; frameCount; i++) {
+  for (let i = 0; i < frameCount; i++) {
     nowBuffering[i] = Math.random() * 2 - 1;
   }
 }
@@ -59,19 +57,17 @@ source.buffer = myArrayBuffer;
 source.connect(audioCtx.destination);
 source.detune.value = 100; // value in cents
 source.start();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- </ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

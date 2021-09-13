@@ -8,67 +8,64 @@ tags:
   - drag and drop
 browser-compat: api.Document.dragstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>dragstart</code> event is fired when the user starts dragging an element or text selection.</p>
+The `dragstart` event is fired when the user starts dragging an element or text selection.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Default action</th>
-   <td>Initiate the drag-and-drop operation.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("DragEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Default action</th>
+      <td>Initiate the drag-and-drop operation.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("DragEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See the <a href="/en-US/docs/Web/API/Document/drag_event">drag event</a> for example code or this <a class="external external-icon" href="https://jsfiddle.net/zfnj5rv4/" rel="noopener">JSFiddle demo</a>.</p>
+See the [drag event](/en-US/docs/Web/API/Document/drag_event) for example code or this [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/).
 
-<p>{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}</p>
+{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other drag and drop events:
-  <ul>
-   <li>{{domxref("Document/drag_event", "drag")}}</li>
-   <li>{{domxref("Document/dragend_event", "dragend")}}</li>
-   <li>{{domxref("Document/dragover_event", "dragover")}}</li>
-   <li>{{domxref("Document/dragenter_event", "dragenter")}}</li>
-   <li>{{domxref("Document/dragleave_event", "dragleave")}}</li>
-   <li>{{domxref("Document/drop_event", "drop")}}</li>
-  </ul>
- </li>
- <li>This event on other targets:
-  <ul>
-   <li>{{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event</li>
-   <li>{{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragstart_event", "dragstart")}} event</li>
-   <li>{{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event</li>
-  </ul>
- </li>
-</ul>
+- Other drag and drop events:
+
+  - {{domxref("Document/drag_event", "drag")}}
+  - {{domxref("Document/dragend_event", "dragend")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/dragleave_event", "dragleave")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- This event on other targets:
+
+  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragstart_event", "dragstart")}} event
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event

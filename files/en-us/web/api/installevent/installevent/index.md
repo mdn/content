@@ -11,34 +11,31 @@ tags:
   - ServiceWorker
 browser-compat: api.InstallEvent.InstallEvent
 ---
-<div>{{non-standard_header}}{{deprecated_header}}</div>
+{{non-standard_header}}{{deprecated_header}}
 
-<p>The <code><strong>InstallEvent()</strong></code> constructor creates a new {{domxref("InstallEvent")}} object.</p>
+The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myInstallEvent = new InstallEvent(type, init);</pre>
+```js
+var myInstallEvent = new InstallEvent(type, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>type</em></dt>
- <dd>The type of the event.</dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>An options object containing any custom settings that you want to apply to the event object. Available options are as follows:
- <ul>
-  <li><code>activeWorker</code>: The {{domxref("ServiceWorker")}} that is currently actively controlling the page.</li>
- </ul>
- </dd>
-</dl>
+- _type_
+  - : The type of the event.
+- _init_ {{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : An options object containing any custom settings that you want to apply to the event object. Available options are as follows:
 
-<p>{{Compat}}</p>
+    - `activeWorker`: The {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 
-<h2 id="See_also">See also</h2>
+## Browser compatibility
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+{{Compat}}
+
+## See also
+
+- {{jsxref("Promise")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

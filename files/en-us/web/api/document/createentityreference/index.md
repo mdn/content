@@ -9,14 +9,14 @@ tags:
   - Deprecated
 browser-compat: api.Document.createEntityReference
 ---
-<div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
+{{ApiRef("DOM")}}{{deprecated_header}}
 
-<p>Prior to {{ gecko("7.0") }} this method showed up as present, due to bug {{ bug("9850") }}, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode_escape_sequences">Unicode escape sequences</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">fromCharCode()</a> as necessary.</p>
+Prior to {{ gecko("7.0") }} this method showed up as present, due to bug {{ bug("9850") }}, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using [Unicode escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#unicode_escape_sequences) or [fromCharCode()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) as necessary.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-392B75AE">createEntityReference</a></p>
+[createEntityReference](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-392B75AE)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

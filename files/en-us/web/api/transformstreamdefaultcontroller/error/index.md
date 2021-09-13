@@ -9,33 +9,33 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.error
 ---
-<div>{{DefaultAPISidebar("Streams API")}}</div>
+{{DefaultAPISidebar("Streams API")}}
 
-<p>The <strong><code>error()</code></strong> method of the {{domxref("TransformStreamDefaultController")}} interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.</p>
+The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">TransformStreamDefaultController.error(reason);</pre>
+    TransformStreamDefaultController.error(reason);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>reason</code></dt>
-  <dd>A string containing the error message to be returned on any further interaction with the stream.</dd>
-</dl>
+- `reason`
+  - : A string containing the error message to be returned on any further interaction with the stream.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example the <code>error()</code> method is used when a chunk contains a symbol.</p>
+In this example the `error()` method is used when a chunk contains a symbol.
 
-<pre class="brush:js">case 'symbol':
+```js
+case 'symbol':
   controller.error("Cannot send a symbol as a chunk part")
-  break</pre>
+  break
+```
 
- <h2 id="Specifications">Specifications</h2>
+## Specifications
 
- {{Specifications}}
+{{Specifications}}
 
- <h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
- <p>{{Compat}}</p>
+{{Compat}}

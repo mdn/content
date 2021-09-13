@@ -2,36 +2,32 @@
 title: PerformanceServerTiming.name
 slug: Web/API/PerformanceServerTiming/name
 tags:
-- API
-- Property
-- Reference
-- ServerTiming
+  - API
+  - Property
+  - Reference
+  - ServerTiming
 browser-compat: api.PerformanceServerTiming.name
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>name</code></strong> read-only property returns a
-  {{domxref("DOMString")}} value of the server-specified metric name.</p>
+The **`name`** read-only property returns a
+{{domxref("DOMString")}} value of the server-specified metric name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serverTiming</em>.name;
-</pre>
+```js
+serverTiming.name;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+## See also
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li>{{domxref("PerformanceServerTiming")}}</li>
-    <li>{{HTTPHeader("Server-Timing")}}</li>
-  </ul>
-</div>
+- {{domxref("PerformanceServerTiming")}}
+- {{HTTPHeader("Server-Timing")}}

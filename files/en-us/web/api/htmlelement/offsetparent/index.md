@@ -2,52 +2,47 @@
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
 tags:
-- API
-- CSSOM View
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.offsetParent
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.offsetParent</code></strong> read-only property returns a
-  reference to the element which is the closest (nearest in the containment hierarchy)
-  positioned ancestor element. If there is no positioned ancestor element, the nearest
-  ancestor <code>td</code>, <code>th</code>, <code>table</code> will be returned, or the
-  <code>body</code> if there are no ancestor table elements either.</p>
+The **`HTMLElement.offsetParent`** read-only property returns a
+reference to the element which is the closest (nearest in the containment hierarchy)
+positioned ancestor element. If there is no positioned ancestor element, the nearest
+ancestor `td`, `th`, `table` will be returned, or the
+`body` if there are no ancestor table elements either.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>offsetParent</code> returns <code>null</code> in the following
-      situations:</p>
+> **Note:** `offsetParent` returns `null` in the following
+> situations:
+>
+> - The element or its parent element has the `display` property set to
+>   `none`.
+> - The element has the `position` property set to `fixed`
+>   (firefox returns `<body>`).
+> - The element is `<body>` or `<html>`.
 
-  <ul>
-    <li>The element or its parent element has the <code>display</code> property set to
-      <code>none</code>.</li>
-    <li>The element has the <code>position</code> property set to <code>fixed</code>
-      (firefox returns <code>&lt;body&gt;</code>).</li>
-    <li>The element is <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code>.</li>
-  </ul>
-</div>
+`offsetParent` is useful because
+{{domxref("HTMLElement.offsetTop","offsetTop")}} and
+{{domxref("HTMLElement.offsetLeft","offsetLeft")}} are relative to its padding edge.
 
-<p><code>offsetParent</code> is useful because
-  {{domxref("HTMLElement.offsetTop","offsetTop")}} and
-  {{domxref("HTMLElement.offsetLeft","offsetLeft")}} are relative to its padding edge.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+parentObj = element.offsetParent;
+```
 
-<pre class="brush: js"><var>parentObj</var> = <var>element</var>.offsetParent;
-</pre>
+- _parentObj_ is an object reference to the element in which the current
+  element is offset.
 
-<ul>
-  <li><var>parentObj</var> is an object reference to the element in which the current
-    element is offset.</li>
-</ul>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

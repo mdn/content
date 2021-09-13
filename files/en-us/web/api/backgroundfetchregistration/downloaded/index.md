@@ -9,27 +9,30 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.downloaded
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>downloaded</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes that has been downloaded, initially <code>0</code>.</p>
+The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes that has been downloaded, initially `0`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let downloaded = BackgroundFetchRegistration.downloaded;</pre>
+    let downloaded = BackgroundFetchRegistration.downloaded;
 
-<h3>Value</h3>
-<p>A {{jsxref("number")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("number")}}.
 
-<p>Logging {{domxref("BackgroundFetchRegistration.downloaded")}} to the console returns the number of bytes downloaded.</p>
+## Examples
 
-<pre class="brush: js">console.log(bgFetch.downloaded);</pre>
+Logging {{domxref("BackgroundFetchRegistration.downloaded")}} to the console returns the number of bytes downloaded.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(bgFetch.downloaded);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

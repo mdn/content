@@ -17,35 +17,34 @@ tags:
   - handleEvent
 browser-compat: api.EventListener.handleEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The {{domxref("EventListener")}} method
-		<code><strong>handleEvent()</strong></code> method is called by the
-		{{Glossary("user agent")}} when an event is sent to the
-		<code>EventListener</code>, in order to handle events that occur on an observed
-		{{domxref("EventTarget")}}.</p>
+The {{domxref("EventListener")}} method
+**`handleEvent()`** method is called by the
+{{Glossary("user agent")}} when an event is sent to the
+`EventListener`, in order to handle events that occur on an observed
+{{domxref("EventTarget")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">eventListener.handleEvent(event);
-</pre>
+```js
+eventListener.handleEvent(event);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><strong><code>event</code></strong></dt>
-	<dd>An {{domxref("Event")}} object describing the event that has been fired and needs
-		to be processed.</dd>
-</dl>
+- **`event`**
+  - : An {{domxref("Event")}} object describing the event that has been fired and needs
+    to be processed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>. If you return a value, the browser will ignore it.</p>
+`undefined`. If you return a value, the browser will ignore it.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

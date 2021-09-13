@@ -2,35 +2,36 @@
 title: Navigator.locks
 slug: Web/API/Navigator/locks
 tags:
-- API
-- Experimental
-- LockManager
-- Property
-- Reference
-- Web Locks API
-- locks
+  - API
+  - Experimental
+  - LockManager
+  - Property
+  - Reference
+  - Web Locks API
+  - locks
 browser-compat: api.Navigator.locks
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p>The <strong><code>locks</code></strong> read-only property of
-    the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} object
-    which provides methods for requesting a new {{domxref('Lock')}} object and querying
-    for an existing <code>Lock</code> object. </p>
+The **`locks`** read-only property of
+the {{domxref("Navigator")}} interface returns a {{domxref("LockManager")}} object
+which provides methods for requesting a new {{domxref('Lock')}} object and querying
+for an existing `Lock` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>lockManager</var> = navigator.locks</pre>
+```js
+var lockManager = navigator.locks
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("LockManager")}} object.</p>
+A {{domxref("LockManager")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

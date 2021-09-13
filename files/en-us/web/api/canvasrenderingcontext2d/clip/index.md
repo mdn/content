@@ -9,73 +9,68 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.clip()</code></strong>
-  method of the Canvas 2D API turns the current or given path into the current clipping
-  region. The previous clipping region, if any, is intersected with the current or given
-  path to create the new clipping region.</p>
+The
+**`CanvasRenderingContext2D.clip()`**
+method of the Canvas 2D API turns the current or given path into the current clipping
+region. The previous clipping region, if any, is intersected with the current or given
+path to create the new clipping region.
 
-<p>In the image below, the red outline represents a clipping region shaped like a star.
-  Only those parts of the checkerboard pattern that are within the clipping region get
-  drawn.</p>
+In the image below, the red outline represents a clipping region shaped like a star.
+Only those parts of the checkerboard pattern that are within the clipping region get
+drawn.
 
-<p><img alt=""
-    src="canvas_clipping_path.png"></p>
+![](canvas_clipping_path.png)
 
-<div class="note">
-  <p><strong>Note:</strong> Be aware that the clipping region is only constructed from
-    shapes added to the path. It doesn't work with shape primitives drawn directly to the
-    canvas, such as {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
-    Instead, you'd have to use {{domxref("CanvasRenderingContext2D.rect()","rect()")}} to
-    add a rectangular shape to the path before calling <code>clip()</code>.</p>
-</div>
+> **Note:** Be aware that the clipping region is only constructed from
+> shapes added to the path. It doesn't work with shape primitives drawn directly to the
+> canvas, such as {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
+> Instead, you'd have to use {{domxref("CanvasRenderingContext2D.rect()","rect()")}} to
+> add a rectangular shape to the path before calling `clip()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.clip([<em>fillRule</em>]);
-void <em>ctx</em>.clip(<em>path</em> [, <em>fillRule</em>]);
-</pre>
+```js
+void ctx.clip([fillRule]);
+void ctx.clip(path [, fillRule]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>fillRule</code></dt>
-  <dd>The algorithm by which to determine if a point is inside or outside the clipping
+- `fillRule`
+
+  - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
-    <ul>
-      <li><code><strong>"nonzero"</strong></code>: The <a
-          href="https://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>.
-        Default rule.</li>
-      <li><code><strong>"evenodd"</strong></code>: The <a
-          href="https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding
-          rule</a>.</li>
-    </ul>
-  </dd>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("Path2D")}} path to use as the clipping region.</dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+      Default rule.
+    - **`"evenodd"`**: The [even-odd winding
+      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-<h3 id="A_simple_clipping_region">A simple clipping region</h3>
+- `path`
+  - : A {{domxref("Path2D")}} path to use as the clipping region.
 
-<p>This example uses the <code>clip()</code> method to create a clipping region according
-  to the shape of a circular arc. Two rectangles are then drawn; only those parts within
-  the clipping region are rendered.</p>
+## Examples
 
-<h4 id="HTML">HTML</h4>
+### A simple clipping region
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+This example uses the `clip()` method to create a clipping region according
+to the shape of a circular arc. Two rectangles are then drawn; only those parts within
+the clipping region are rendered.
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<p>The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
-</p>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+#### JavaScript
+
+The clipping region is a full circle, with its center at (100, 75), and a radius of 50.
+
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create circular clipping region
@@ -88,27 +83,29 @@ ctx.fillStyle = 'blue';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.fillStyle = 'orange';
 ctx.fillRect(0, 0, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('A_simple_clipping_region', 700, 180) }}</p>
+{{ EmbedLiveSample('A_simple_clipping_region', 700, 180) }}
 
-<h3 id="Specifying_a_path_and_a_fillRule">Specifying a path and a fillRule</h3>
+### Specifying a path and a fillRule
 
-<p>This example saves two rectangles to a Path2D object, which is then made the current
-  clipping region using the <code>clip()</code> method. The <code>"evenodd"</code> rule
-  creates a hole where the clipping rectangles intersect; by default (with the
-  <code>"nonzero"</code> rule), there would be no hole.</p>
+This example saves two rectangles to a Path2D object, which is then made the current
+clipping region using the `clip()` method. The `"evenodd"` rule
+creates a hole where the clipping rectangles intersect; by default (with the
+`"nonzero"` rule), there would be no hole.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create clipping path
@@ -120,27 +117,30 @@ ctx.clip(region, "evenodd");
 // Draw stuff that gets clipped
 ctx.fillStyle = 'blue';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Specifying_a_path_and_a_fillRule', 700, 180) }}</p>
+{{ EmbedLiveSample('Specifying_a_path_and_a_fillRule', 700, 180) }}
 
-<h3 id="Creating_a_complex_clipping_region">Creating a complex clipping region</h3>
+### Creating a complex clipping region
 
-<p>This example uses two paths, a rectangle and a square to create a complex clipping
-  region. The <code>clip()</code> method is called twice, first to set the current
-  clipping region to the circle using a <code>Path2D</code> object, then again to
-  intersect the circle clipping region with a square. The final clipping region is a shape
-  representing the intersection of the circle and the square.</p>
+This example uses two paths, a rectangle and a square to create a complex clipping
+region. The `clip()` method is called twice, first to set the current
+clipping region to the circle using a `Path2D` object, then again to
+intersect the circle clipping region with a square. The final clipping region is a shape
+representing the intersection of the circle and the square.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create two clipping paths
@@ -156,22 +156,21 @@ ctx.clip(squarePath);
 
 // Draw stuff that gets clipped
 ctx.fillStyle = 'blue';
-ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Creating_a_complex_clipping_region', 300, 150) }}</p>
+{{ EmbedLiveSample('Creating_a_complex_clipping_region', 300, 150) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

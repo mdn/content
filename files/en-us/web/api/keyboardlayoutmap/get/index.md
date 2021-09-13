@@ -2,60 +2,59 @@
 title: KeyboardLayoutMap.get()
 slug: Web/API/KeyboardLayoutMap/get
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- KeyboardLayoutMap
-- Method
-- Reference
-- get()
-- keyboard
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - KeyboardLayoutMap
+  - Method
+  - Reference
+  - get()
+  - keyboard
 browser-compat: api.KeyboardLayoutMap.get
 ---
-<div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>get()</code></strong> method of the
-    {{domxref('KeyboardLayoutMap')}} interface returns the element with the given
-    key.</p>
+The **`get()`** method of the
+{{domxref('KeyboardLayoutMap')}} interface returns the element with the given
+key.
 
-<p>A list of valid keys is found in the <a
-    href="https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system">UI Events
-    KeyboardEvent code Values</a> spec.</p>
+A list of valid keys is found in the [UI Events
+KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>value</var> = <var>KeyboardLayoutMap</var>.get(<var>key</var>)</pre>
+```js
+var value = KeyboardLayoutMap.get(key)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>key</dt>
-  <dd>The key of the item to return from the map.</dd>
-</dl>
+- key
+  - : The key of the item to return from the map.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The value of the specified key.</p>
+The value of the specified key.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example demonstrates how to get the location- or layout-specific string
-  associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
-</p>
+The following example demonstrates how to get the location- or layout-specific string
+associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
 
-<pre class="brush: js">var keyboard = navigator.keyboard;
+```js
+var keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap =&gt; {
+.then(keyboardLayoutMap => {
   var upKey = keyboardLayoutMap.get('KeyW');
   window.alert('Press ' + upKey + ' to move up.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

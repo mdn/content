@@ -2,34 +2,36 @@
 title: StaticRange.endContainer
 slug: Web/API/StaticRange/endContainer
 tags:
-- API
-- DOM
-- DOM API
-- Property
-- Reference
-- Static Range API
-- StaticRange
-- endContainer
+  - API
+  - DOM
+  - DOM API
+  - Property
+  - Reference
+  - Static Range API
+  - StaticRange
+  - endContainer
 browser-compat: api.StaticRange.endContainer
 ---
-<p>{{APIRef("DOM
-    WHATWG")}}</p>
+{{APIRef("DOM
+    WHATWG")}}
 
-<p>The <strong><code>endContainer</code></strong> property of the {{domxref("StaticRange")}} interface returns the end {{domxref("Node")}} for the range.</p>
+The **`endContainer`** property of the {{domxref("StaticRange")}} interface returns the end {{domxref("Node")}} for the range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>node</em> = <em>staticNode.endContainer</em>
-<em>staticNode.endContainer</em> = endContainer</pre>
+```js
+var node = staticNode.endContainer
+staticNode.endContainer = endContainer
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The DOM {{domxref("Node")}} which contains the final character of the range.</p>
+The DOM {{domxref("Node")}} which contains the final character of the range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

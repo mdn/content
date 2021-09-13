@@ -3,42 +3,49 @@ title: 'IDBRequest: success event'
 slug: Web/API/IDBRequest/success_event
 browser-compat: api.IDBRequest.success_event
 ---
-<div>{{ APIRef("IndexedDB") }}</div>
+{{ APIRef("IndexedDB") }}
 
-<p>The <code>success</code> event is fired when an <code>IDBRequest</code> succeeds.</p>
+The `success` event is fired when an `IDBRequest` succeeds.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBRequest/onsuccess"
+            >onsuccess</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example tries to open a database and listens for the <code>success</code> event using <code>addEventListener()</code>:</p>
+This example tries to open a database and listens for the `success` event using `addEventListener()`:
 
-<pre class="brush: js">// Open the database
+```js
+// Open the database
 const openRequest = window.indexedDB.open('toDoList', 4);
 
-openRequest.onupgradeneeded = (event) =&gt; {
+openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -53,21 +60,21 @@ openRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-openRequest.addEventListener('success', (event) =&gt; {
+openRequest.addEventListener('success', (event) => {
   console.log('Database opened successfully!');
 });
+```
 
-</pre>
+The same example, but using the `onsuccess` event handler property:
 
-<p>The same example, but using the <code>onsuccess</code> event handler property:</p>
-
-<pre class="brush: js">// Open the database
+```js
+// Open the database
 const openRequest = window.indexedDB.open('toDoList', 4);
 
-openRequest.onupgradeneeded = (event) =&gt; {
+openRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -82,18 +89,16 @@ openRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-openRequest.onsuccess = (event) =&gt; {
+openRequest.onsuccess = (event) => {
   console.log('Database opened successfully!');
 };
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li><code><a href="/en-US/docs/Web/API/IDBRequest/onsuccess">onsuccess</a></code> event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) event handler property

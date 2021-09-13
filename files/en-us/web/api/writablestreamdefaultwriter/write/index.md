@@ -2,92 +2,90 @@
 title: WritableStreamDefaultWriter.write()
 slug: Web/API/WritableStreamDefaultWriter/write
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Streams
-- WritableStreamDefaultWriter
-- write
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Streams
+  - WritableStreamDefaultWriter
+  - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
-<p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>write()</code></strong> method of the
-  {{domxref("WritableStreamDefaultWriter")}} interface writes a passed chunk of data to a
-  {{domxref("WritableStream")}} and its underlying sink, then returns a
-  {{jsxref("Promise")}} that resolves to indicate the success or failure of the write
-  operation.</p>
+The **`write()`** method of the
+{{domxref("WritableStreamDefaultWriter")}} interface writes a passed chunk of data to a
+{{domxref("WritableStream")}} and its underlying sink, then returns a
+{{jsxref("Promise")}} that resolves to indicate the success or failure of the write
+operation.
 
-<p>Note that what "success" means is up to the underlying sink; it might indicate that the
-  chunk has been accepted, and not necessarily that it is safely saved to its ultimate
-  destination.</p>
+Note that what "success" means is up to the underlying sink; it might indicate that the
+chunk has been accepted, and not necessarily that it is safely saved to its ultimate
+destination.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.write(<em>chunk</em>);</pre>
+```js
+var promise = writableStreamDefaultWriter.write(chunk);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>chunk</dt>
-  <dd>A block of binary data to pass to the <code>WritableStream</code>.</dd>
-</dl>
+- chunk
+  - : A block of binary data to pass to the `WritableStream`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills with the <code>undefined</code> upon a
-  successful write, or rejects if the write fails or stream becomes errored before the
-  writing process is initiated.</p>
+A {{jsxref("Promise")}}, which fulfills with the `undefined` upon a
+successful write, or rejects if the write fails or stream becomes errored before the
+writing process is initiated.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The target stream is not a writable stream, or it does not have an owner.</dd>
-</dl>
+- TypeError
+  - : The target stream is not a writable stream, or it does not have an owner.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows the creation of a <code>WritableStream</code> with a custom
-  sink and an API-supplied queuing strategy. It then calls a function called
-  <code>sendMessage()</code>, passing the newly created stream and a string. Inside this
-  function it calls the stream's <code>getWriter()</code> method, which returns an
-  instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is
-  used to write each chunk of the string to the stream. Finally, <code>write()</code> and
-  <code>close()</code> return promises that are processed to deal with success or failure
-  of chunks and streams.</p>
+The following example shows the creation of a `WritableStream` with a custom
+sink and an API-supplied queuing strategy. It then calls a function called
+`sendMessage()`, passing the newly created stream and a string. Inside this
+function it calls the stream's `getWriter()` method, which returns an
+instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is
+used to write each chunk of the string to the stream. Finally, `write()` and
+`close()` return promises that are processed to deal with success or failure
+of chunks and streams.
 
-<pre class="brush: js">const list = document.querySelector('ul');
+```js
+const list = document.querySelector('ul');
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) =&gt; {
+  encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() =&gt; {
+      .then(() => {
         return defaultWriter.write(chunk);
       })
-      .then(() =&gt; {
+      .then(() => {
         console.log("Chunk written to sink.");
       })
-      .catch((err) =&gt; {
+      .catch((err) => {
         console.log("Chunk error:", err);
       });
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() =&gt; {
+    .then(() => {
       defaultWriter.close();
     })
-    .then(() =&gt; {
+    .then(() => {
       console.log("All chunks written");
     })
-    .catch((err) =&gt; {
+    .catch((err) => {
       console.log("Stream error:", err);
     });
 }
@@ -98,7 +96,7 @@ let result = "";
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    return new Promise((resolve, reject) =&gt; {
+    return new Promise((resolve, reject) => {
       var buffer = new ArrayBuffer(2);
       var view = new Uint16Array(buffer);
       view[0] = chunk;
@@ -120,16 +118,16 @@ const writableStream = new WritableStream({
   }
 }, queuingStrategy);
 
-sendMessage("Hello, world.", writableStream);</pre>
+sendMessage("Hello, world.", writableStream);
+```
 
-<p>You can find the full code in our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer
-    example</a>.</p>
+You can find the full code in our [Simple writer
+example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

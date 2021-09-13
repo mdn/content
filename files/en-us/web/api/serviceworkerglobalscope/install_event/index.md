@@ -10,36 +10,37 @@ tags:
   - install
 browser-compat: api.ServiceWorkerGlobalScope.install_event
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>install</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.</p>
+The **`install`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ExtendableEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ExtendableEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet shows how an <code>install</code> event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:</p>
+The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
    caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -56,26 +57,27 @@ browser-compat: api.ServiceWorkerGlobalScope.install_event
       ])
    })
    );
-});</pre>
+});
+```
 
-<p>You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property:</p>
+You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.oninstall")}} property:
 
-<pre class="brush: js">globalScope.oninstall = function(event) {
+```js
+globalScope.oninstall = function(event) {
   ...
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} event</li>
- <li>{{domxref("ServiceWorkerGlobalScope")}}</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} event
+- {{domxref("ServiceWorkerGlobalScope")}}
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

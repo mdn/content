@@ -2,52 +2,48 @@
 title: CredentialsContainer.store()
 slug: Web/API/CredentialsContainer/store
 tags:
-- API
-- Credential Management API
-- CredentialsContainer
-- Method
-- NeedsExample
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - CredentialsContainer
+  - Method
+  - NeedsExample
+  - Reference
+  - credential management
 browser-compat: api.CredentialsContainer.store
 ---
-<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>store()</code></strong> method of the
-    {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
-    {{domxref("Credential")}} instance, returning this in a {{jsxref("Promise")}}.</p>
+The **`store()`** method of the
+{{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
+{{domxref("Credential")}} instance, returning this in a {{jsxref("Promise")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is restricted to top-level contexts. Calls to it within an
-    <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
-</div>
+> **Note:** This method is restricted to top-level contexts. Calls to it within an
+> `<iframe>` element will resolve without effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">CredentialsContainer.store(Credential).then(function(Credential) { ... } )</pre>
+```js
+CredentialsContainer.store(Credential).then(function(Credential) { ... } )
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>Credentials</dt>
-  <dd>A valid {{domxref("Credential")}} instance.</dd>
-</dl>
+- Credentials
+  - : A valid {{domxref("Credential")}} instance.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to <code>undefined</code>.
-</p>
+A {{jsxref("Promise")}} that resolves to `undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Storing_a_password_credential_at_successful_authentication">Storing a password
-  credential at successful authentication</h3>
+### Storing a password credential at successful authentication
 
-<p>This code would be executed after a user signs up or logs in and the server confirms
-  the credential is correct.</p>
+This code would be executed after a user signs up or logs in and the server confirms
+the credential is correct.
 
-<pre class="brush: js">// Check if the browser supports password credentials (and the Credential Management API)
+```js
+// Check if the browser supports password credentials (and the Credential Management API)
 if ("PasswordCredential" in window) {
   let credential = new PasswordCredential({
     id: "example-username",
@@ -55,18 +51,18 @@ if ("PasswordCredential" in window) {
     password: "correct horse battery staple"
   });
 
-  navigator.credentials.store(credential).then(() =&gt; {
+  navigator.credentials.store(credential).then(() => {
     console.info("Credential stored in the user agent's credential manager.");
-  }, (err) =&gt; {
+  }, (err) => {
     console.error("Error while storing the credential: ", err);
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

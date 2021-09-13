@@ -8,65 +8,55 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLTableRowElement</code></strong> interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.</p>
+The **`HTMLTableRowElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}</dt>
- <dd>Returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The <code>HTMLCollection</code> is live and is automatically updated when cells are added or removed.</dd>
- <dt>{{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>long</code> value which gives the logical position of the row within the entire table. If the row is not part of a table, returns <code>-1</code>.</dd>
- <dt>{{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>long</code> value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns <code>-1</code>.</dd>
-</dl>
+- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
+  - : Returns a live {{domxref("HTMLCollection")}} containing the cells in the row. The `HTMLCollection` is live and is automatically updated when cells are added or removed.
+- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
+  - : Returns a `long` value which gives the logical position of the row within the entire table. If the row is not part of a table, returns `-1`.
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
+  - : Returns a `long` value which gives the logical position of the row within the table section it belongs to. If the row is not part of a section, returns `-1`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
-<dl>
- <dt>{{domxref("HTMLTableRowElement.deleteCell()")}}</dt>
- <dd>Removes the cell at the given position in the row. If it is equal to <code>-1</code>, it deletes the last cell of the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>-1</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value.</dd>
- <dt>{{domxref("HTMLTableRowElement.insertCell()")}}</dt>
- <dd>Inserts a new cell just before the given position in the row. If the given position is not given or is <code>-1</code>, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than <code>-1</code>, it raises a {{domxref("DOMException")}} with the <code>IndexSizeError</code> value. Returns a reference to a {{domxref("HTMLTableCellElement")}}.</dd>
-</dl>
+- {{domxref("HTMLTableRowElement.deleteCell()")}}
+  - : Removes the cell at the given position in the row. If it is equal to `-1`, it deletes the last cell of the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `-1`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value.
+- {{domxref("HTMLTableRowElement.insertCell()")}}
+  - : Inserts a new cell just before the given position in the row. If the given position is not given or is `-1`, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `-1`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value. Returns a reference to a {{domxref("HTMLTableCellElement")}}.
 
-<h2 id="Deprecated_properties">Deprecated properties</h2>
+## Deprecated properties
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> These properties have been {{Glossary("deprecated")}} and should no longer be used. They are documented primarily to help understand older code bases.</p>
-</div>
+> **Warning:** These properties have been {{Glossary("deprecated")}} and should no longer be used. They are documented primarily to help understand older code bases.
 
-<dl>
- <dt>{{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "tr")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, and <code>"center"</code>.</dd>
- <dt>{{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "tr")}} attribute.</dd>
- <dt>{{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. <code>'.'</code> for English, or <code>','</code> for French. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by <code>HTMLTableRowElement.ch</code>. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: <code>"top"</code>, <code>"middle"</code>, <code>"bottom"</code>, or <code>"baseline"</code>.</dd>
-</dl>
+- {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "tr")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+- {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "tr")}} attribute.
+- {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "tr")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
+- {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableRowElement.ch`. This property was optional and was not very well supported.
+- {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "tr")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("tr")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("tr")}}.

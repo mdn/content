@@ -2,48 +2,48 @@
 title: XMLHttpRequestEventTarget.onloadstart
 slug: Web/API/XMLHttpRequestEventTarget/onloadstart
 tags:
-- API
-- Event Handler
-- Property
-- Reference
-- Web
-- XMLHttpRequestEventTarget
+  - API
+  - Event Handler
+  - Property
+  - Reference
+  - Web
+  - XMLHttpRequestEventTarget
 browser-compat: api.XMLHttpRequestEventTarget.onloadstart
 ---
-<div>{{APIRef("XMLHttpRequest")}}</div>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <strong><code>XMLHttpRequestEventTarget.onloadstart</code></strong> is the function
-  called when an {{domxref("XMLHttpRequest")}} transaction starts transferring data.</p>
+The **`XMLHttpRequestEventTarget.onloadstart`** is the function
+called when an {{domxref("XMLHttpRequest")}} transaction starts transferring data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>XMLHttpRequest</em>.onloadstart = <em>callback</em>;</pre>
+```js
+XMLHttpRequest.onloadstart = callback;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
-  <li><code><em>callback</em></code> is the function to be called when the transaction
-    begins to transfer data.</li>
-</ul>
+- `callback` is the function to be called when the transaction
+  begins to transfer data.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+```js
+var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 
-xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.open(method, url, true);
 xmlhttp.onloadstart = function () {
   console.log("Download underway");
 };
 xmlhttp.send();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

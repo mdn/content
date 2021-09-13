@@ -2,43 +2,47 @@
 title: GlobalEventHandlers.onloadend
 slug: Web/API/GlobalEventHandlers/onloadend
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- Web
-- events
-- onloadend
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - Web
+  - events
+  - onloadend
 browser-compat: api.GlobalEventHandlers.onloadend
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>The <strong><code>onloadend</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing
-  the code to be called when the {{event("loadend")}} event is raised (when progress has
-  stopped on the loading of a resource.)</p>
+The **`onloadend`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing
+the code to be called when the {{event("loadend")}} event is raised (when progress has
+stopped on the loading of a resource.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>img</var>.onloadend = <var>funcRef</var>;
-</pre>
+```js
+img.onloadend = funcRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>funcRef</code> is the handler function to be called when the resource's
-  <code>loadend</code> event fires.</p>
+`funcRef` is the handler function to be called when the resource's
+`loadend` event fires.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;img src="myImage.jpg"&gt;</pre>
+```html
+<img src="myImage.jpg">
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">// 'loadstart' fires first, then 'load', then 'loadend'
+```js
+// 'loadstart' fires first, then 'load', then 'loadend'
 
 image.addEventListener('load', function(e) {
   console.log('Image loaded');
@@ -50,8 +54,9 @@ image.addEventListener('loadstart', function(e) {
 
 image.addEventListener('loadend', function(e) {
   console.log('Image load finished');
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,45 +2,42 @@
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
 tags:
-- API
-- Backwards compatibility
-- Deprecated
-- HTML
-- Navigation Timing
-- PerformanceNavigation
-- Property
-- Read-only
-- legacy
+  - API
+  - Backwards compatibility
+  - Deprecated
+  - HTML
+  - Navigation Timing
+  - PerformanceNavigation
+  - Property
+  - Read-only
+  - legacy
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<p>The legacy
-  <strong><code>PerformanceNavigation.redirectCount</code></strong>
-  read-only property returns an <code>unsigned short</code> representing the number of
-  REDIRECTs done before reaching the page.</p>
+The legacy
+**`PerformanceNavigation.redirectCount`**
+read-only property returns an `unsigned short` representing the number of
+REDIRECTs done before reaching the page.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>.
-    Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
-</div>
+> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
+> Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>amount</em> = <em>performanceNavigation</em>.redirectCount;</pre>
+```js
+amount = performanceNavigation.redirectCount;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("PerformanceNavigation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("PerformanceNavigation")}} interface it belongs to.

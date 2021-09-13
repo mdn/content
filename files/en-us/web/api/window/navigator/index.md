@@ -2,56 +2,57 @@
 title: Window.navigator
 slug: Web/API/Window/navigator
 tags:
-- API
-- HTML DOM
-- Property
-- Read-only
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - Property
+  - Read-only
+  - Reference
+  - Window
 browser-compat: api.Window.navigator
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>Window.navigator</code></strong> read-only property returns a
-  reference to the {{domxref("Navigator")}} object, which has methods and properties about
-  the application running the script.</p>
+The **`Window.navigator`** read-only property returns a
+reference to the {{domxref("Navigator")}} object, which has methods and properties about
+the application running the script.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>navigatorObject</em> = window.navigator</pre>
+```js
+navigatorObject = window.navigator
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1_Browser_detect_and_return_a_string">Example #1: Browser detect and
-  return a string</h3>
+### Example #1: Browser detect and return a string
 
-<pre class="brush: js">var sBrowser, sUsrAg = navigator.userAgent;
+```js
+var sBrowser, sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
-if (sUsrAg.indexOf("Firefox") &gt; -1) {
+if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "Mozilla Firefox";
   // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-} else if (sUsrAg.indexOf("SamsungBrowser") &gt; -1) {
+} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
   sBrowser = "Samsung Internet";
   // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
-} else if (sUsrAg.indexOf("Opera") &gt; -1 || sUsrAg.indexOf("OPR") &gt; -1) {
+} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
   sBrowser = "Opera";
   // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-} else if (sUsrAg.indexOf("Trident") &gt; -1) {
+} else if (sUsrAg.indexOf("Trident") > -1) {
   sBrowser = "Microsoft Internet Explorer";
   // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-} else if (sUsrAg.indexOf("Edge") &gt; -1) {
+} else if (sUsrAg.indexOf("Edge") > -1) {
   sBrowser = "Microsoft Edge (Legacy)";
   // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-} else if (sUsrAg.indexOf("Edg") &gt; -1) {
+} else if (sUsrAg.indexOf("Edg") > -1) {
   sBrowser = "Microsoft Edge (Chromium)";
   // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.64
-} else if (sUsrAg.indexOf("Chrome") &gt; -1) {
+} else if (sUsrAg.indexOf("Chrome") > -1) {
   sBrowser = "Google Chrome or Chromium";
   // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-} else if (sUsrAg.indexOf("Safari") &gt; -1) {
+} else if (sUsrAg.indexOf("Safari") > -1) {
   sBrowser = "Apple Safari";
   // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
 } else {
@@ -59,12 +60,12 @@ if (sUsrAg.indexOf("Firefox") &gt; -1) {
 }
 
 alert("You are using: " + sBrowser);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

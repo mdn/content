@@ -2,75 +2,69 @@
 title: Window.requestFileSystem()
 slug: Web/API/Window/requestFileSystem
 tags:
-- API
-- Deprecated
-- File
-- File System
-- File System API
-- File and Directory Entry API
-- Files
-- Method
-- Non-standard
-- Reference
-- Window
-- filesystem
-- requestFileSystem
+  - API
+  - Deprecated
+  - File
+  - File System
+  - File System API
+  - File and Directory Entry API
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - Window
+  - filesystem
+  - requestFileSystem
 browser-compat: api.Window.requestFileSystem
 ---
-<p>{{APIRef("File System API")}} {{Deprecated_Header}} {{non-standard_header()}}</p>
+{{APIRef("File System API")}} {{Deprecated_Header}} {{non-standard_header()}}
 
-<p>The non-standard {{domxref("Window")}} method
-  <strong><code>requestFileSystem()</code></strong> method is a Google Chrome-specific
-  method which lets a web site or app gain access to a sandboxed file system for its own
-  use. The returned {{domxref("FileSystem")}} is then available for use with the other <a
-    href="/en-US/docs/Web/API/File_and_Directory_Entries_API">file system APIs</a>.</p>
+The non-standard {{domxref("Window")}} method
+**`requestFileSystem()`** method is a Google Chrome-specific
+method which lets a web site or app gain access to a sandboxed file system for its own
+use. The returned {{domxref("FileSystem")}} is then available for use with the other [file system APIs](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="note">
-  <p><strong>Note:</strong> This method is prefixed with <code>webkit</code> in all browsers that implement it.</p>
-</div>
+> **Note:** This method is prefixed with `webkit` in all browsers that implement it.
 
-<pre
-  class="brush: js">window.requestFileSystem(<em>type</em>, <em>size</em>, <em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+```js
+window.requestFileSystem(type, size, successCallback[, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>The type of storage to request. Specify <code>Window.TEMPORARY</code> if it's
+- `type`
+  - : The type of storage to request. Specify `Window.TEMPORARY` if it's
     acceptable for the browser to delete the files at its own discretion, such as if
-    storage space runs low, or <code>Window.PERSISTENT</code> if you need the files to
+    storage space runs low, or `Window.PERSISTENT` if you need the files to
     remain in place unless the user or the web site or app explicitly permit it.
-    Persistent storage requires that the user grant the site quota.</dd>
-  <dt><code>size</code></dt>
-  <dd>The amount of storage space you wish to have allocated for your app's use.</dd>
-  <dt><code>successCallback</code></dt>
-  <dd>A function which is invoked when the file system has been successfully obtained. The
+    Persistent storage requires that the user grant the site quota.
+- `size`
+  - : The amount of storage space you wish to have allocated for your app's use.
+- `successCallback`
+  - : A function which is invoked when the file system has been successfully obtained. The
     callback receives a single parameter: a {{domxref("FileSystem")}} object representing
-    the file system the app has permission to use.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>An optional parameter specifying a function which is called if an error occurs while
+    the file system the app has permission to use.
+- `errorCallback` {{optional_inline}}
+  - : An optional parameter specifying a function which is called if an error occurs while
     attempting to obtain the file system, or if the user denies permission to create or
     access the file system. The callback receives as input a single parameter: a
-    {{domxref("FileError")}} object describing the error.</dd>
-</dl>
+    {{domxref("FileError")}} object describing the error.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>As this method was removed from the <a href="https://wicg.github.io/entries-api/"> File and Directory Entries API</a> proposal, it has no official W3C or WHATWG specification. It is no longer on track to become a standard.</p></p>
+As this method was removed from the [File and Directory Entries API](https://wicg.github.io/entries-api/) proposal, it has no official W3C or WHATWG specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">File
-      and Directory Entries API support in Firefox</a></li>
-</ul>
+- [File
+  and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

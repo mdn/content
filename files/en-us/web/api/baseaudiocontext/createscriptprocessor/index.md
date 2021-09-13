@@ -11,77 +11,70 @@ tags:
   - createScriptProcessor
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>The <code>createScriptProcessor()</code> method of the {{domxref("BaseAudioContext")}} interface
-  creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.</p>
+The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
+creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
-</div>
+> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>scriptProcessor</em> = <em>audioCtx</em>.createScriptProcessor(<em>bufferSize</em>, <em>numberOfInputChannels</em>, <em>numberOfOutputChannels</em>);</pre>
+```js
+var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>bufferSize</code></dt>
-  <dd><p>The buffer size in units of sample-frames. If specified, the bufferSize must be one
+- `bufferSize`
+
+  - : The buffer size in units of sample-frames. If specified, the bufferSize must be one
     of the following values: 256, 512, 1024, 2048, 4096, 8192, 16384. If it's not passed
     in, or if the value is 0, then the implementation will choose the best buffer size for
     the given environment, which will be a constant power of 2 throughout the lifetime of
-    the node.</p>
-  <p>This value controls how frequently the <code>audioprocess</code> event is dispatched
+    the node.
+
+    This value controls how frequently the `audioprocess` event is dispatched
     and how many sample-frames need to be processed each call. Lower values for
-    <code>bufferSize</code> will result in a lower (better) latency. Higher values will be
+    `bufferSize` will result in a lower (better) latency. Higher values will be
     necessary to avoid audio breakup and glitches. It is recommended for authors to not
     specify this buffer size and allow the implementation to pick a good buffer size to
-    balance between latency and audio quality.</p></dd>
-  <dt><code>numberOfInputChannels</code></dt>
-  <dd>Integer specifying the number of channels for this node's input, defaults to 2.
-    Values of up to 32 are supported.</dd>
-  <dt><code>numberOfOutputChannels</code></dt>
-  <dd>Integer specifying the number of channels for this node's output, defaults to 2.
-    Values of up to 32 are supported.</dd>
-</dl>
+    balance between latency and audio quality.
 
-<div class="warning">
-  <p><strong>Warning:</strong> Webkit currently (version 31) requires that a valid
-    <code>bufferSize</code> be passed when calling this method.</p>
-</div>
+- `numberOfInputChannels`
+  - : Integer specifying the number of channels for this node's input, defaults to 2.
+    Values of up to 32 are supported.
+- `numberOfOutputChannels`
+  - : Integer specifying the number of channels for this node's output, defaults to 2.
+    Values of up to 32 are supported.
 
-<div class="note">
-  <p><strong>Note:</strong> It is invalid for both <code>numberOfInputChannels</code> and
-    <code>numberOfOutputChannels</code> to be zero.</p>
-</div>
+> **Warning:** Webkit currently (version 31) requires that a valid
+> `bufferSize` be passed when calling this method.
 
-<h3 id="Description">Returns</h3>
+> **Note:** It is invalid for both `numberOfInputChannels` and
+> `numberOfOutputChannels` to be zero.
 
-<p>A {{domxref("ScriptProcessorNode")}}.</p>
+### Returns
 
-<h2 id="Example">Example</h2>
+A {{domxref("ScriptProcessorNode")}}.
 
-<p>The following example shows basic usage of a <code>ScriptProcessorNode</code> to take a
-  track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
-  of white noise to each audio sample of the input track (buffer) and play it through the
-  {{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
-  <code>scriptNode.onaudioprocess</code> function takes the associated
-  <code>audioProcessingEvent</code> and uses it to loop through each channel of the input
-  buffer, and each sample in each channel, and add a small amount of white noise, before
-  setting that result to be the output sample in each case.</p>
+## Example
 
-<div class="note">
-  <p><strong>Note:</strong> For a full working example, see our <a
-      href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a>
-    github repo (also view the <a
-      href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source
-      code</a>.)</p>
-</div>
+The following example shows basic usage of a `ScriptProcessorNode` to take a
+track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
+of white noise to each audio sample of the input track (buffer) and play it through the
+{{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
+`scriptNode.onaudioprocess` function takes the associated
+`audioProcessingEvent` and uses it to loop through each channel of the input
+buffer, and each sample in each channel, and add a small amount of white noise, before
+setting that result to be the output sample in each case.
 
-<pre class="brush: js">var myScript = document.querySelector('script');
+> **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
+> github repo (also view the [source
+> code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+
+```js
+var myScript = document.querySelector('script');
 var myPre = document.querySelector('pre');
 var playButton = document.querySelector('button');
 
@@ -120,12 +113,12 @@ scriptNode.onaudioprocess = function(audioProcessingEvent) {
   var outputBuffer = audioProcessingEvent.outputBuffer;
 
   // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
+  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
     var inputData = inputBuffer.getChannelData(channel);
     var outputData = outputBuffer.getChannelData(channel);
 
     // Loop through the 4096 samples
-    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
+    for (var sample = 0; sample < inputBuffer.length; sample++) {
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
@@ -149,21 +142,18 @@ source.onended = function() {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Since the August 29 2014 <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+Since the August 29 2014 [Web Audio API specification](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
-<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
+It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

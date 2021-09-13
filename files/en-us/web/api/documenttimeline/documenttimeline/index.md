@@ -12,26 +12,27 @@ tags:
   - web animations api
 browser-compat: api.DocumentTimeline.DocumentTimeline
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <strong><code>DocumentTimeline()</code></strong> constructor of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> creates a new instance of the {{domxref("DocumentTimeline")}} object associated with the active document of the current browsing context.</p>
+The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) creates a new instance of the {{domxref("DocumentTimeline")}} object associated with the active document of the current browsing context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var sharedTimeline = new DocumentTimeline(<em>options</em>);</pre>
+```js
+var sharedTimeline = new DocumentTimeline(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>options</dt>
- <dd>An object specifying options for the new timeline. Currently the only supported option is the <code>originTime</code> member which specifies the zero time for the <code>documentTimeline</code> as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} moment of the active document for the current browsing context.</dd>
-</dl>
+- options
+  - : An object specifying options for the new timeline. Currently the only supported option is the `originTime` member which specifies the zero time for the `documentTimeline` as a real number of milliseconds relative to the {{domxref("PerformanceTiming.navigationStart","navigationStart")}} moment of the active document for the current browsing context.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We could share a single <code>documentTimeline</code> among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:</p>
+We could share a single `documentTimeline` among multiple animations, thus allowing us to manipulate just that group of animations via their shared timeline. This bit of code would start all the cats animating 500 milliseconds into their animations:
 
-<pre class="brush: js">var cats = document.querySelectorAll('.sharedTimelineCat');
+```js
+var cats = document.querySelectorAll('.sharedTimelineCat');
 cats = Array.prototype.slice.call(cats);
 
 var sharedTimeline = new DocumentTimeline({ originTime: 500 });
@@ -41,20 +42,18 @@ cats.forEach(function(cat) {
   var catAnimation = new Animation(catKeyframes, sharedTimeline);
   catAnimation.play();
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationTimeline")}}</li>
- <li>{{domxref("DocumentTimeline")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationTimeline")}}
+- {{domxref("DocumentTimeline")}}

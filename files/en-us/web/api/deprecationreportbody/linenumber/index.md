@@ -9,26 +9,28 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>lineNumber</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.</p>
+The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.</p>
-</div>
+> **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let lineNumber = DeprecationReportBody.lineNumber;</pre>
+```js
+let lineNumber = DeprecationReportBody.lineNumber;
+```
 
-<h3>Value</h3>
-<p>An integer, or <code>null</code> if the line is not known.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer, or `null` if the line is not known.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>lineNumber</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of `lineNumber` to the console.
+
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -38,12 +40,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile); // the source file
   console.log(firstReport.body.lineNumber); // the line in that file
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

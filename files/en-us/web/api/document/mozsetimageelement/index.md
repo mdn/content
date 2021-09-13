@@ -10,36 +10,36 @@ tags:
   - Reference
 browser-compat: api.Document.mozSetImageElement
 ---
-<p>{{ ApiRef("DOM") }}{{ non-standard_header() }}</p>
+{{ ApiRef("DOM") }}{{ non-standard_header() }}
 
-<p>The <code><strong>Document.mozSetImageElement()</strong></code> method changes the
-  element being used as the CSS background for a background with a given background
-  element ID.</p>
+The **`Document.mozSetImageElement()`** method changes the
+element being used as the CSS background for a background with a given background
+element ID.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>document</em>.mozSetImageElement(<em>imageElementId</em>, <em>imageElement</em>);
-</pre>
+```js
+document.mozSetImageElement(imageElementId, imageElement);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>imageElementId</code> is a string indicating the name of an element that has
-    been specified as a background image using the {{ cssxref("-moz-element") }} CSS
-    function.</li>
-  <li><code>imageElement</code> is the new element to use as the background corresponding
-    to that image element string. Specify <code>null</code> to remove the background
-    element.</li>
-</ul>
+- `imageElementId` is a string indicating the name of an element that has
+  been specified as a background image using the {{ cssxref("-moz-element") }} CSS
+  function.
+- `imageElement` is the new element to use as the background corresponding
+  to that image element string. Specify `null` to remove the background
+  element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example changes the background of a {{ HTMLElement("div") }} block each time the
-  block is clicked by the user.</p>
+This example changes the background of a {{ HTMLElement("div") }} block each time the
+block is clicked by the user.
 
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html">View this example live</a>.</p>
+[View this example live](https://media.prod.mdn.mozit.cloud/samples/domref/mozSetImageElement.html).
 
-<pre class="brush: html">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
   #mybox {
     background-image: -moz-element(#canvasbg);
     text-align: center;
@@ -47,13 +47,14 @@ browser-compat: api.Document.mozSetImageElement
     height: 400px;
     cursor: pointer;
   }
-&lt;/style&gt;
-</pre>
+</style>
+```
 
-<p>The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
-  HTMLElement("div") }} to use an element with the id "canvasbg" as its background.</p>
+The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
+  HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
 
-<pre class="brush: js">var c = 0x00;
+```js
+var c = 0x00;
 function clicked() {
   var canvas = document.createElement("canvas");
   canvas.setAttribute("width", 100);
@@ -64,35 +65,33 @@ function clicked() {
   ctx.fillRect(25, 25, 75, 75);
 
   c += 0x11;
-  if (c &gt; 0xff) {
+  if (c > 0xff) {
     c = 0x00;
   }
 
   document.mozSetImageElement("canvasbg", canvas);
 }
-</pre>
+```
 
-<p>The code here is called each time the user clicks the {{ HTMLElement("div") }} element.
-  It creates a new {{ HTMLElement("canvas") }} with the width and height set to 100
-  pixels, then draws into it a 50 by 50 pixel square. Each time the function is called,
-  the square is a different color (its red component is increased each time), so each time
-  the user clicks the element, the background is filled with a brighter and brighter
-  pattern of red tiles.</p>
+The code here is called each time the user clicks the {{ HTMLElement("div") }} element.
+It creates a new {{ HTMLElement("canvas") }} with the width and height set to 100
+pixels, then draws into it a 50 by 50 pixel square. Each time the function is called,
+the square is a different color (its red component is increased each time), so each time
+the user clicks the element, the background is filled with a brighter and brighter
+pattern of red tiles.
 
-<p>Once the canvas is drawn, <code>document.mozSetImageElement()</code> is called to set
-  the background for any CSS using the ID "canvasbg" as its background element ID to be
-  our new canvas.</p>
+Once the canvas is drawn, `document.mozSetImageElement()` is called to set
+the background for any CSS using the ID "canvasbg" as its background element ID to be
+our new canvas.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ cssxref("-moz-element") }}</li>
-</ul>
+- {{ cssxref("-moz-element") }}

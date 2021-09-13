@@ -9,35 +9,34 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.queryCounterEXT
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>EXT_disjoint_timer_query.queryCounterEXT()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> records the current time into
-  the corresponding query object.</p>
+The **`EXT_disjoint_timer_query.queryCounterEXT()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) records the current time into
+the corresponding query object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>ext</var>.queryCounterEXT(<var>query</var>, <var>target</var>);
-</pre>
+```js
+void ext.queryCounterEXT(query, target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>query</code></dt>
-  <dd>A {{domxref("WebGLQuery")}} object for which to record the current time.
-  </dd>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
-    <code>ext.TIMESTAMP_EXT</code>.</dd>
-</dl>
+- `query`
+  - : A {{domxref("WebGLQuery")}} object for which to record the current time.
+- target
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
+    `ext.TIMESTAMP_EXT`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
 var startQuery = ext.createQueryEXT();
 var endQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
@@ -45,20 +44,18 @@ ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 // ...
 
 ext.queryCounterEXT(endQuery, ext.TIMESTAMP_EXT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLQuery")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLQuery")}}
+- {{domxref("EXT_disjoint_timer_query")}}

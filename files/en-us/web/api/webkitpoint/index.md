@@ -11,35 +11,29 @@ tags:
   - Reference
 browser-compat: api.WebKitPoint
 ---
-<div>{{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_header}}</div>
+{{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-<p><strong><code>Point</code></strong> is an interface which represents a point in 2-dimensional space. It is non-standard, not broadly compatible, and should not be used.</p>
+**`Point`** is an interface which represents a point in 2-dimensional space. It is non-standard, not broadly compatible, and should not be used.
 
-<div class="note">
-<p><strong>Note:</strong> Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.</p>
-</div>
+> **Note:** Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>x</code> {{deprecated_inline}}</dt>
- <dd>A floating-point value specifying the point's position with respect to the X (horizontal) axis.</dd>
- <dt><code>y</code> {{deprecated_inline}}</dt>
- <dd>A floating-point value specifying the point's position with respect to the Y (vertical) axis.</dd>
-</dl>
+- `x` {{deprecated_inline}}
+  - : A floating-point value specifying the point's position with respect to the X (horizontal) axis.
+- `y` {{deprecated_inline}}
+  - : A floating-point value specifying the point's position with respect to the Y (vertical) axis.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This class was specified in <a href="https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/">the defunct 20 March 2009 Working Draft of CSS 2D Transforms Module Level 3</a>. It is not present in any current specification.</p>
+This class was specified in [the defunct 20 March 2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in any current specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.webkitConvertPointFromNodeToPage()")}}</li>
- <li>{{domxref("Window.webkitConvertPointFromPageToNode()")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ie/dn760730(v=vs.85).aspx"><code>WebKitPoint</code> documentation at the IE Dev Center</a></li>
-</ul>
+- {{domxref("Window.webkitConvertPointFromNodeToPage()")}}
+- {{domxref("Window.webkitConvertPointFromPageToNode()")}}
+- [`WebKitPoint` documentation at the IE Dev Center](<https://msdn.microsoft.com/en-us/library/ie/dn760730(v=vs.85).aspx>)

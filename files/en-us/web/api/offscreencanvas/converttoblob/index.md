@@ -10,61 +10,55 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.convertToBlob
 ---
-<p>{{APIRef("Canvas API")}} {{SeeCompatTable}}</p>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <strong><code>OffscreenCanvas.convertToBlob()</code></strong>method creates a {{domxref("Blob")}} object representing the image contained in the canvas.</p>
+The **`OffscreenCanvas.convertToBlob()`**method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>Promise&lt;Blob&gt; OffscreenCanvas.convertToBlob(<var>options</var>);</pre>
+    Promise<Blob> OffscreenCanvas.convertToBlob(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
- <p>You can specify several options when converting your {{domxref("OffscreenCanvas")}} object into a {{domxref("Blob")}} object, for example:</p>
+- `options`{{optional_inline}}
 
- <pre>const blob = offscreenCanvas.convertToBlob({
-  type: "image/jpeg",
-  quality: 0.95
-});</pre>
+  - : You can specify several options when converting your {{domxref("OffscreenCanvas")}} object into a {{domxref("Blob")}} object, for example:
 
- <p>options:</p>
+        const blob = offscreenCanvas.convertToBlob({
+          type: "image/jpeg",
+          quality: 0.95
+        });
 
- <ul>
-  <li><strong><code>type</code></strong>: A {{domxref("DOMString")}} indicating the image format. The default type is <code>image/png</code>.</li>
-  <li><code><strong>quality</strong></code>: A {{jsxref("Number")}} between <code>0</code> and <code>1</code> indicating image quality if the <code>type</code> option is <code>image/jpeg</code> or <code>image/webp</code>. If this argument is anything else, the default value for image quality is used. Other arguments are ignored.</li>
- </ul>
- </dd>
-</dl>
+    options:
 
-<h3 id="Return_value">Return value</h3>
+    - **`type`**: A {{domxref("DOMString")}} indicating the image format. The default type is `image/png`.
+    - **`quality`**: A {{jsxref("Number")}} between `0` and `1` indicating image quality if the `type` option is `image/jpeg` or `image/webp`. If this argument is anything else, the default value for image quality is used. Other arguments are ignored.
 
-<p>A {{jsxref("Promise")}} returning a {{domxref("Blob")}} object representing the image contained in the canvas.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Promise")}} returning a {{domxref("Blob")}} object representing the image contained in the canvas.
 
-<pre>var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+## Examples
 
-// ... some drawing using the gl context ...
+    var offscreen = new OffscreenCanvas(256, 256);
+    var gl = offscreen.getContext("webgl");
 
-offscreen.convertToBlob().then(function(blob) {
-  console.log(blob);
-});
+    // ... some drawing using the gl context ...
 
-// Blob { size: 334, type: "image/png" }</pre>
+    offscreen.convertToBlob().then(function(blob) {
+      console.log(blob);
+    });
 
-<h2 id="Specifications">Specifications</h2>
+    // Blob { size: 334, type: "image/png" }
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>The interface defining this method, {{domxref("OffscreenCanvas")}}.</li>
-</ul>
+## See also
+
+- The interface defining this method, {{domxref("OffscreenCanvas")}}.

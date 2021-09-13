@@ -10,36 +10,31 @@ tags:
   - touch
 browser-compat: api.Touch.rotationAngle
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Returns the rotation angle, in degrees, of the contact area ellipse defined by {{ domxref("Touch.radiusX") }} and {{ domxref("Touch.radiusY") }}. The value may be between 0 and 90. Together, these three values describe an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.</p>
+Returns the rotation angle, in degrees, of the contact area ellipse defined by {{ domxref("Touch.radiusX") }} and {{ domxref("Touch.radiusY") }}. The value may be between 0 and 90. Together, these three values describe an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.
 
-<div class="note">
-<p><strong>Note:</strong> This attribute has <em>not</em> been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.</p>
-</div>
+> **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>angle</em> = <em>touchItem</em>.rotationAngle;
-</pre>
+    var angle = touchItem.rotationAngle;
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>angle</code></dt>
- <dd>The number of degrees of rotation to apply to the described ellipse to align with the contact area between the user and the touch surface.</dd>
-</dl>
+- `angle`
+  - : The number of degrees of rotation to apply to the described ellipse to align with the contact area between the user and the touch surface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <a href="/en-US/docs/Web/API/Touch/radiusX#example">Touch.radiusX example</a> includes an example of this property's usage.</p>
+The [Touch.radiusX example](/en-US/docs/Web/API/Touch/radiusX#example) includes an example of this property's usage.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,71 +2,69 @@
 title: PublicKeyCredentialCreationOptions.authenticatorSelection
 slug: Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection
 tags:
-- API
-- Property
-- PublicKeyCredentialCreationOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialCreationOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialCreationOptions.authenticatorSelection
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>authenticatorSelection</code></strong>, an optional property of the
-  {{domxref("PublicKeyCredentialCreationOptions")}} dictionary, is an object giving
-  criteria to filter out the authenticators to be used for the creation operation.</p>
+**`authenticatorSelection`**, an optional property of the
+{{domxref("PublicKeyCredentialCreationOptions")}} dictionary, is an object giving
+criteria to filter out the authenticators to be used for the creation operation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>authenticatorSelection</em> = <em>publicKeyCredentialCreationOptions</em>.authenticatorSelection</pre>
+```js
+authenticatorSelection = publicKeyCredentialCreationOptions.authenticatorSelection
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An object with the following properties:</p>
+An object with the following properties:
 
-<dl>
-  <dt><code>authenticatorAttachment</code>{{optional_inline}}</dt>
-  <dd>A string which is either "<code>platform</code>" or "<code>cross-platform</code>".
+- `authenticatorAttachment`{{optional_inline}}
+  - : A string which is either "`platform`" or "`cross-platform`".
     The former describes an authenticator which is bound to the client and which is
     generally not removable. The latter describes a device which may be used across
-    different platform (such as a USB or NFC device).</dd>
-  <dt><code>requireResidentKey</code>{{optional_inline}}</dt>
-  <dd>A boolean which indicated that the credential private key must be stored in the
+    different platform (such as a USB or NFC device).
+- `requireResidentKey`{{optional_inline}}
+  - : A boolean which indicated that the credential private key must be stored in the
     authenticator, the client or in a client device. The default value is
-    <code>false</code>.</dd>
-  <dt><code>userVerification</code>{{optional_inline}}</dt>
-  <dd>A string qualifying how the user verification should be part of the authentication
+    `false`.
+- `userVerification`{{optional_inline}}
+
+  - : A string qualifying how the user verification should be part of the authentication
     process. The values may be:
-    <ul>
-      <li>"<code>required</code>": user verification is required, the operation will fail
-        if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does not
-        have the UV flag (as part of the <code>authenticatorData</code> property of
-        {{domxref("AuthenticatorAttestationResponse.attestationObject")}})</li>
-      <li>"<code>preferred</code>": user verification is preferred, the operation will not
-        fail if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does
-        not have the UV flag (as part of the <code>authenticatorData</code> property of
-        {{domxref("AuthenticatorAttestationResponse.attestationObject")}})</li>
-      <li>"<code>discouraged</code>": user verification should not be employed as to
-        minimize the user interaction during the process.</li>
-    </ul>
-    The default value is "<code>preferred</code>".
-  </dd>
-</dl>
 
-<p>The authenticator used for the creation of the public key credential must comply with
-  the requirements.</p>
+    - "`required`": user verification is required, the operation will fail
+      if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does not
+      have the UV flag (as part of the `authenticatorData` property of
+      {{domxref("AuthenticatorAttestationResponse.attestationObject")}})
+    - "`preferred`": user verification is preferred, the operation will not
+      fail if the {{domxref("AuthenticatorAttestationResponse","response","",1)}} does
+      not have the UV flag (as part of the `authenticatorData` property of
+      {{domxref("AuthenticatorAttestationResponse.attestationObject")}})
+    - "`discouraged`": user verification should not be employed as to
+      minimize the user interaction during the process.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> See
-    {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
-    which resolves to <code>true</code> when a user-verifiying platform authenticator is
-    available.</p>
-</div>
+    The default value is "`preferred`".
 
-<h2 id="Examples">Examples</h2>
+The authenticator used for the creation of the public key credential must comply with
+the requirements.
 
-<pre class="brush: js">var publicKey = {
+> **Note:** See
+> {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
+> which resolves to `true` when a user-verifiying platform authenticator is
+> available.
+
+## Examples
+
+```js
+var publicKey = {
   authenticatorSelection:{
     authenticatorAttachment: "cross-platform",
     requireResidentKey: true,
@@ -94,23 +92,21 @@ navigator.credentials.create({ publicKey })
     // of the credential
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
-  </li>
-  <li>{{domxref("AuthenticatorAssertionResponse.authenticatorData")}} whose structure
-    contains the UV flag (please note that for the creation operation,
-    {{domxref("AuthenticatorAttestationResponse.attestationObject")}} only contains a CBOR
-    encoded version of this data and does not give an immediate access to the flag).</li>
-</ul>
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} whose structure
+  contains the UV flag (please note that for the creation operation,
+  {{domxref("AuthenticatorAttestationResponse.attestationObject")}} only contains a CBOR
+  encoded version of this data and does not give an immediate access to the flag).

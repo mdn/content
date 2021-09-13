@@ -2,74 +2,74 @@
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
 tags:
-- API
-- Error
-- Error Handling
-- MediaRecordingErrorEvent
-- MediaStream Recording
-- MediaStream Recording API
-- Property
-- Reference
+  - API
+  - Error
+  - Error Handling
+  - MediaRecordingErrorEvent
+  - MediaStream Recording
+  - MediaStream Recording API
+  - Property
+  - Reference
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>The read-only <code>error</code> property in the
-  <strong>{{domxref("MediaRecorderErrorEvent")}}</strong> interface is a
-  {{domxref("DOMException")}} object providing details about the exception that was thrown
-  by a {{domxref("MediaRecorder")}} instance.</p>
+The read-only `error` property in the
+**{{domxref("MediaRecorderErrorEvent")}}** interface is a
+{{domxref("DOMException")}} object providing details about the exception that was thrown
+by a {{domxref("MediaRecorder")}} instance.
 
-<p>When a <code>MediaRecorderErrorEvent</code> occurs, you can determine to some extent
-  what went wrong by examining the <code>error</code> property within the
-  <code>MediaRecorderErrorEvent</code> received by the <code>MediaRecorder</code>'s
-  {{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.</p>
+When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
+what went wrong by examining the `error` property within the
+`MediaRecorderErrorEvent` received by the `MediaRecorder`'s
+{{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>error</em> = <em>MediaRecorderErrorEvent</em>.error;
-</pre>
+```js
+error = MediaRecorderErrorEvent.error;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMException")}} describing the error represented by the event. The
-  error's {{domxref("DOMException.name", "name")}} property's value may be any exception
-  that makes sense during the handling of media recording, including these specifically
-  identified by the specification. The descriptions here are generic ones; you'll find
-  more specific ones to various scenarios in which they may occur in the corresponding
-  method references.</p>
+A {{domxref("DOMException")}} describing the error represented by the event. The
+error's {{domxref("DOMException.name", "name")}} property's value may be any exception
+that makes sense during the handling of media recording, including these specifically
+identified by the specification. The descriptions here are generic ones; you'll find
+more specific ones to various scenarios in which they may occur in the corresponding
+method references.
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>An operation was attempted in a context in which it isn't allowed, or a request has
-    been made on an object that's deleted or removed.</dd>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>A <code>MediaRecorder</code> couldn't be created because the specified options
-    weren't valid. The <code>message</code> atttribute should provide additional
-    information, if it exists.</dd>
-  <dt><code>SecurityError</code></dt>
-  <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+- `InvalidStateError`
+  - : An operation was attempted in a context in which it isn't allowed, or a request has
+    been made on an object that's deleted or removed.
+- `NotSupportedError`
+  - : A `MediaRecorder` couldn't be created because the specified options
+    weren't valid. The `message` atttribute should provide additional
+    information, if it exists.
+- `SecurityError`
+  - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.</dd>
-  <dt><code>InvalidModificationError</code></dt>
-  <dd>The number of tracks on the stream being recorded has changed. You can't add or
-    remove tracks while recording media.</dd>
-  <dt><code>UnknownError</code></dt>
-  <dd>A non-security related error occurred that cannot otherwise be categorized.
-    Recording stops, the <code>MediaRecorder</code>'s {{domxref("MediaRecorder.state",
-    "state")}} becomes <code>inactive</code>, one last {{event("dataavailable")}} event is
-    sent to the <code>MediaRecorder</code> with the remaining received data, and finally a
-    {{event("stop")}} event is sent.</dd>
-</dl>
+    "getUserMedia()")}} when the user denies permission to use an input device.
+- `InvalidModificationError`
+  - : The number of tracks on the stream being recorded has changed. You can't add or
+    remove tracks while recording media.
+- `UnknownError`
+  - : A non-security related error occurred that cannot otherwise be categorized.
+    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
+    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    sent to the `MediaRecorder` with the remaining received data, and finally a
+    {{event("stop")}} event is sent.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_error-handling_example">Basic error-handling example</h3>
+### Basic error-handling example
 
-<p>This function creates and returns a <code>MediaRecorder</code> for a given
-  {{domxref("MediaStream")}}, configured to buffer data into an array and to watch for
-  errors.</p>
+This function creates and returns a `MediaRecorder` for a given
+{{domxref("MediaStream")}}, configured to buffer data into an array and to watch for
+errors.
 
-<pre class="brush: js">function recordStream(stream) {
+```js
+function recordStream(stream) {
   let recorder = null;
   let bufferList = [];
 
@@ -89,22 +89,20 @@ browser-compat: api.MediaRecorderErrorEvent.error
 
   recorder.start(100);  /* 100ms time slices per buffer */
   return recorder;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
-      API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaStream Recording API</a></li>
-</ul>
+- [MediaStream Recording
+  API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using
+  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

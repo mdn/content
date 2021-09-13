@@ -2,61 +2,56 @@
 title: RTCRtpSender.dtmf
 slug: Web/API/RTCRtpSender/dtmf
 tags:
-- DTMF
-- Media
-- NeedsExample
-- Property
-- RTCRtpSender
-- Read-only
-- Reference
-- WebRTC
-- WebRTC API
+  - DTMF
+  - Media
+  - NeedsExample
+  - Property
+  - RTCRtpSender
+  - Read-only
+  - Reference
+  - WebRTC
+  - WebRTC API
 browser-compat: api.RTCRtpSender.dtmf
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong><code>dtmf</code></strong> property on the
-  <strong>{{domxref("RTCRtpSender")}}</strong> interface returns a
-  {{domxref("RTCDTMFSender")}} object which can be used to send {{Glossary("DTMF")}} tones
-  over the {{domxref("RTCPeerConnection")}} . See <a
-    href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF</a> for details on how to
-  make use of th<code>e</code> returned <code>RTCDTMFSender</code> object.</p>
+The read-only **`dtmf`** property on the
+**{{domxref("RTCRtpSender")}}** interface returns a
+{{domxref("RTCDTMFSender")}} object which can be used to send {{Glossary("DTMF")}} tones
+over the {{domxref("RTCPeerConnection")}} . See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for details on how to
+make use of th`e` returned `RTCDTMFSender` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var dtmfSender = <em>RTCRtpSender</em>.dtmf;</pre>
+```js
+var dtmfSender = RTCRtpSender.dtmf;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCDTMFSender")}} which can be used to send DTMF over the RTP session, or
-  <code>null</code> if the track being carried by the RTP session or the
-  {{domxref("RTCPeerConnection")}} as a whole doesn't support DTMF.</p>
+An {{domxref("RTCDTMFSender")}} which can be used to send DTMF over the RTP session, or
+`null` if the track being carried by the RTP session or the
+{{domxref("RTCPeerConnection")}} as a whole doesn't support DTMF.
 
-<div class="note">
-  <p><strong>Note:</strong> Only audio tracks can support DTMF, and typically only one audio track per
-    <code>RTCPeerConnection</code> will have an associated {{domxref("RTCDTMFSender")}}
-  </p>
-</div>
+> **Note:** Only audio tracks can support DTMF, and typically only one audio track per
+> `RTCPeerConnection` will have an associated {{domxref("RTCDTMFSender")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>tbd</p>
+tbd
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li>{{domxref("RTCDTMFSender")}}</li>
-  <li>{{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCDTMFSender")}}
+- {{domxref("RTCRtpSender")}}

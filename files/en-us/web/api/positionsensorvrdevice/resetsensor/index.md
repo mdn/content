@@ -14,39 +14,41 @@ tags:
   - resetSensor
 browser-compat: api.PositionSensorVRDevice.resetSensor
 ---
-<div>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>resetSensor()</code></strong> method of the {{domxref("VRDisplay")}} interface <dfn>can be used to reset the sensor if desired, returning the</dfn> position and orientation values to zero.</p>
+The **`resetSensor()`** method of the {{domxref("VRDisplay")}} interface _can be used to reset the sensor if desired, returning the_ position and orientation values to zero.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PositionSensorVRDevice.resetSensor();</pre>
+```js
+PositionSensorVRDevice.resetSensor();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Our <a href="https://mdn.github.io/webvr-tests/positionsensorvrdevice/">positionsensorvrdevice</a> demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. It features, among other things, a "Reset Sensor" button in the UI, which when pressed runs the <code>resetSensor()</code> function on the position sensor. The JavaScript looks like this:</p>
+Our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. It features, among other things, a "Reset Sensor" button in the UI, which when pressed runs the `resetSensor()` function on the position sensor. The JavaScript looks like this:
 
-<pre class="brush: js">document.querySelector('button').onclick = function() {
+```js
+document.querySelector('button').onclick = function() {
   gPositionSensor.resetSensor();
-}</pre>
+}
+```
 
-<p>When the button is pressed, the current position, orientation, etc. of the sensor/head mounted display is set to be 0 — this makes the method useful for calibration when an app is first loaded.</p>
+When the button is pressed, the current position, orientation, etc. of the sensor/head mounted display is set to be 0 — this makes the method useful for calibration when an app is first loaded.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

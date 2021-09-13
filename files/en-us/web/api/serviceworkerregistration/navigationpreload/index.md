@@ -2,35 +2,36 @@
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
 tags:
-- API
-- NavigationPreloadManager
-- Offline
-- Property
-- Service Workers
-- ServiceWorkerRegistration
-- Workers
+  - API
+  - NavigationPreloadManager
+  - Offline
+  - Property
+  - Service Workers
+  - ServiceWorkerRegistration
+  - Workers
 browser-compat: api.ServiceWorkerRegistration.navigationPreload
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>navigationPreload</code></strong> read-only property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns the
-  {{domxref("NavigationPreloadManager")}} associated with the current service worker
-  registration.</p>
+The **`navigationPreload`** read-only property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns the
+{{domxref("NavigationPreloadManager")}} associated with the current service worker
+registration.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>navigationPreloadManager</em> = <em>serviceWorkerRegistration</em>.navigationPreload;</pre>
+```js
+var navigationPreloadManager = serviceWorkerRegistration.navigationPreload;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An instance of {{domxref("NavigationPreloadManager")}}.</p>
+An instance of {{domxref("NavigationPreloadManager")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

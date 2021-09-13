@@ -10,36 +10,36 @@ tags:
   - setPeriodicWave
 browser-compat: api.OscillatorNode.setPeriodicWave
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>setPeriodicWave()</code></strong> method of the {{
+The **`setPeriodicWave()`** method of the {{
   domxref("OscillatorNode") }} interface is used to point to a {{domxref("PeriodicWave")}}
-  defining a periodic waveform that can be used to shape the oscillator's output, when
-  {{domxref("OscillatorNode.type", "type")}} is <code>custom</code>.</p>
+defining a periodic waveform that can be used to shape the oscillator's output, when
+{{domxref("OscillatorNode.type", "type")}} is `custom`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>OscillatorNode</em>.setPeriodicWave(<em>wave</em>);</pre>
+```js
+OscillatorNode.setPeriodicWave(wave);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>wave</code></dt>
-  <dd>A {{domxref("PeriodicWave")}} object representing the waveform to use as the shape
-    of the oscillator's output.</dd>
-</dl>
+- `wave`
+  - : A {{domxref("PeriodicWave")}} object representing the waveform to use as the shape
+    of the oscillator's output.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates simple usage of <code>createPeriodicWave()</code>,
-  recreating a sine wave from a periodic wave.</p>
+The following example illustrates simple usage of `createPeriodicWave()`,
+recreating a sine wave from a periodic wave.
 
-<pre class="brush: js;">var real = new Float32Array(2);
+```js
+var real = new Float32Array(2);
 var imag = new Float32Array(2);
 var ac = new AudioContext();
 var osc = ac.createOscillator();
@@ -56,37 +56,32 @@ osc.setPeriodicWave(wave);
 osc.connect(ac.destination);
 
 osc.start();
-osc.stop(2);</pre>
+osc.stop(2);
+```
 
-<p>This works because a sound that contains only a fundamental tone is by definition a
-  sine wave.<br>
-  <br>
-  Here, we create a {{domxref("PeriodicWave")}} with two values. The first value is the DC
-  offset, which is the value at which the oscillator starts. 0 is good here, because we
-  want to start the curve at the middle of the [-1.0; 1.0] range.
-</p>
+This works because a sound that contains only a fundamental tone is by definition a
+sine wave.
 
-<p>The second and subsequent values are sine and cosine components. You can think of it as
-  the result of a Fourier transform, where you get frequency domain values from time
-  domain value. Here, with <code>createPeriodicWave()</code>, you specify the frequencies,
-  and the browser performs a an inverse Fourier transform to get a time domain buffer for
-  the frequency of the oscillator. Here, we only set one component at full volume (1.0) on
-  the fundamental tone, so we get a sine wave.</p>
+Here, we create a {{domxref("PeriodicWave")}} with two values. The first value is the DC
+offset, which is the value at which the oscillator starts. 0 is good here, because we
+want to start the curve at the middle of the \[-1.0; 1.0] range.
 
-<h2 id="Specifications">Specifications</h2>
+The second and subsequent values are sine and cosine components. You can think of it as
+the result of a Fourier transform, where you get frequency domain values from time
+domain value. Here, with `createPeriodicWave()`, you specify the frequencies,
+and the browser performs a an inverse Fourier transform to get a time domain buffer for
+the frequency of the oscillator. Here, we only set one component at full volume (1.0) on
+the fundamental tone, so we get a sine wave.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li><a
-      href="/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave">AudioContext.createPeriodicWave</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [AudioContext.createPeriodicWave](/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave)

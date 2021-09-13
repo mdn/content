@@ -9,28 +9,31 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.readable
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>readable</code></strong> read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.</p>
+The **`readable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let stream = CompressionStream.readable;</pre>
+    let stream = CompressionStream.readable;
 
-<h3>Value</h3>
-<p>A {{domxref("ReadableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ReadableStream")}}.
 
-<p>The following example returns a {{domxref("ReadableStream")}} from a <code>CompressionStream</code>.</p>
+## Examples
 
-<pre class="brush:js">let stream = new CompressionStream('gzip');
-console.log(stream.readable); //a ReadableStream</pre>
+The following example returns a {{domxref("ReadableStream")}} from a `CompressionStream`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let stream = new CompressionStream('gzip');
+console.log(stream.readable); //a ReadableStream
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -16,120 +16,117 @@ tags:
   - mouse
 browser-compat: api.Element.click_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>An element receives a <code><strong>click</strong></code> event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.</p>
+An element receives a **`click`** event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onclick", "onclick")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onclick", "onclick")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.</p>
+If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
-<p><code>click</code> fires after both the {{event("mousedown")}} and {{event("mouseup")}} events have fired, in that order.</p>
+`click` fires after both the {{event("mousedown")}} and {{event("mouseup")}} events have fired, in that order.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The {{domxref("MouseEvent")}} object passed into the event handler for <code>click</code> has its {{domxref("UIEvent/detail", "detail")}} property set to the number of times the {{domxref("Event.target", "target")}} was clicked. In other words, <code>detail</code> will be 2 for a double-click, 3 for triple-click, and so forth. This counter resets after a short interval without any clicks occurring; the specifics of how long that interval is may vary from browser to browser and across platforms. The interval is also likely to be affected by user preferences; for example, accessibility options may extend this interval to make it easier to perform multiple clicks with adaptive interfaces.</p>
+The {{domxref("MouseEvent")}} object passed into the event handler for `click` has its {{domxref("UIEvent/detail", "detail")}} property set to the number of times the {{domxref("Event.target", "target")}} was clicked. In other words, `detail` will be 2 for a double-click, 3 for triple-click, and so forth. This counter resets after a short interval without any clicks occurring; the specifics of how long that interval is may vary from browser to browser and across platforms. The interval is also likely to be affected by user preferences; for example, accessibility options may extend this interval to make it easier to perform multiple clicks with adaptive interfaces.
 
-<h3 id="Internet_Explorer">Internet Explorer</h3>
+### Internet Explorer
 
-<p>Internet Explorer 8 &amp; 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a> that are overlaid on top of other element(s) won't receive <code>click</code> events. Any <code>click</code> events will be fired at the underlying element(s) instead. See <a href="https://jsfiddle.net/YUKma/show/">this live example</a> for a demonstration.</p>
+Internet Explorer 8 & 9 suffer from a bug where elements with a computed {{cssxref("background-color")}} of [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword) that are overlaid on top of other element(s) won't receive `click` events. Any `click` events will be fired at the underlying element(s) instead. See [this live example](https://jsfiddle.net/YUKma/show/) for a demonstration.
 
-<p>Known workarounds for this bug:</p>
+Known workarounds for this bug:
 
-<ul>
- <li>For IE9 only:
-  <ul>
-   <li>Set {{cssxref("background-color")}}<code>: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
-   <li>Set {{cssxref("opacity")}}<code>: 0</code> and an explicit {{cssxref("background-color")}} other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-  </ul>
- </li>
- <li>For IE8 and IE9: Set <code><a href="https://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code> and an explicit {{cssxref("background-color")}} other than <a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-</ul>
+- For IE9 only:
 
-<h3 id="Safari_Mobile">Safari Mobile</h3>
+  - Set {{cssxref("background-color")}}`: rgba(0,0,0,0)`
+  - Set {{cssxref("opacity")}}`: 0` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>Safari Mobile 7.0+ (and likely earlier versions too) <a href="https://bugs.webkit.org/show_bug.cgi?id=153887">suffers from a bug</a> where <code>click</code> events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. <a href="https://davidwalsh.name/event-delegate">event delegation</a> is being used). See <a href="https://jsfiddle.net/cvrhulu/k9t0sdnf/show/">this live example</a> for a demonstration. See also <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari's docs on making elements clickable</a> and the <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">definition of "clickable element"</a>.</p>
+- For IE8 and IE9: Set `filter: alpha(opacity=0);` and an explicit {{cssxref("background-color")}} other than [`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>Known workarounds for this bug:</p>
+### Safari Mobile
 
-<ul>
- <li>Set {{cssxref("cursor")}}<code>: pointer;</code> on the element or any of its ancestors.</li>
- <li>Add a dummy <code>onclick="void(0)"</code> attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.</li>
- <li>Use a typically interactive element (e.g., {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g., {{HTMLElement("div")}}).</li>
- <li>Stop using <code>click</code> <a href="https://davidwalsh.name/event-delegate">event delegation</a>.</li>
-</ul>
+Safari Mobile 7.0+ (and likely earlier versions too) [suffers from a bug](https://bugs.webkit.org/show_bug.cgi?id=153887) where `click` events aren't fired on elements that aren't typically interactive (e.g. {{HTMLElement("div")}}) and which also don't have event listeners directly attached to the elements themselves (i.e. [event delegation](https://davidwalsh.name/event-delegate) is being used). See [this live example](https://jsfiddle.net/cvrhulu/k9t0sdnf/show/) for a demonstration. See also [Safari's docs on making elements clickable](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) and the [definition of "clickable element"](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
 
-<p>Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):</p>
+Known workarounds for this bug:
 
-<ul>
- <li>{{HTMLElement("a")}} (but it must have an <code>href</code>)</li>
- <li>{{HTMLElement("area")}} (but it must have an <code>href</code>)</li>
- <li>{{HTMLElement("button")}}</li>
- <li>{{HTMLElement("img")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("label")}} (but it must be associated with a form control)</li>
- <li>{{HTMLElement("textarea")}}</li>
- <li><em>This list is incomplete; you can help MDN by doing further testing/research and expanding it.</em></li>
-</ul>
+- Set {{cssxref("cursor")}}`: pointer;` on the element or any of its ancestors.
+- Add a dummy `onclick="void(0)"` attribute to the element or any of its ancestors up to but not including {{HTMLElement("body")}}.
+- Use a typically interactive element (e.g., {{HTMLElement("a")}}) instead of one that isn't typically interactive (e.g., {{HTMLElement("div")}}).
+- Stop using `click` [event delegation](https://davidwalsh.name/event-delegate).
 
-<h2 id="Examples">Examples</h2>
+Safari Mobile considers the following elements to be typically interactive (and thus they aren't affected by this bug):
 
-<p>This example displays the number of consecutive clicks on a {{HtmlElement("button")}}.</p>
+- {{HTMLElement("a")}} (but it must have an `href`)
+- {{HTMLElement("area")}} (but it must have an `href`)
+- {{HTMLElement("button")}}
+- {{HTMLElement("img")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("label")}} (but it must be associated with a form control)
+- {{HTMLElement("textarea")}}
+- _This list is incomplete; you can help MDN by doing further testing/research and expanding it._
 
-<h3 id="HTML">HTML</h3>
+## Examples
 
-<pre class="brush: html">&lt;button&gt;Click&lt;/button&gt;</pre>
+This example displays the number of consecutive clicks on a {{HtmlElement("button")}}.
 
-<h3 id="JavaScript">JavaScript</h3>
+### HTML
 
-<pre class="brush: js">const button = document.querySelector('button');
+```html
+<button>Click</button>
+```
 
-button.addEventListener('click', event =&gt; {
+### JavaScript
+
+```js
+const button = document.querySelector('button');
+
+button.addEventListener('click', event => {
   button.textContent = `Click count: ${event.detail}`;
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Try making rapid, repeated clicks on the button to increase the click count. If you take a break between clicks, the count will reset.</p>
+Try making rapid, repeated clicks on the button to increase the click count. If you take a break between clicks, the count will reset.
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{event("auxclick")}}</li>
- <li>{{event("contextmenu")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("pointerdown")}}</li>
- <li>{{event("pointerup")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{event("auxclick")}}
+- {{event("contextmenu")}}
+- {{event("dblclick")}}
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("pointerdown")}}
+- {{event("pointerup")}}

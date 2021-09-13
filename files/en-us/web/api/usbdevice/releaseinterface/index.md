@@ -2,42 +2,41 @@
 title: USBDevice.releaseInterface()
 slug: Web/API/USBDevice/releaseInterface
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- releaseInterface
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - releaseInterface
 browser-compat: api.USBDevice.releaseInterface
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>releaseInterface()</code></strong> method of the
-  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when a
-  cliamed interface is released from exclusive access.</p>
+The **`releaseInterface()`** method of the
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when a
+cliamed interface is released from exclusive access.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = USBDevice.releaseInterface(<em>interfaceNumber</em>)</pre>
+```js
+var promise = USBDevice.releaseInterface(interfaceNumber)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>interfaceNumber</dt>
-  <dd>The device-specific index of the currently-claimed interface.</dd>
-</dl>
+- interfaceNumber
+  - : The device-specific index of the currently-claimed interface.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}}.</p>
+A {{jsxref("promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

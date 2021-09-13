@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.snapToLines
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>snapToLines</code></strong> property of the {{domxref("VTTCue")}} interface is a {{jsxref("Boolean")}} indicating if the {{domxref("VTTCue.line")}} property is an integer number of lines, or a percentage of the video size.</p>
+The **`snapToLines`** property of the {{domxref("VTTCue")}} interface is a {{jsxref("Boolean")}} indicating if the {{domxref("VTTCue.line")}} property is an integer number of lines, or a percentage of the video size.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let snapToLines = VTTCue.snapToLines;
-VTTCue.snapToLines = a;</pre>
+```js
+let snapToLines = VTTCue.snapToLines;
+VTTCue.snapToLines = a;
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("Boolean")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Boolean")}}.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>snapToLines</code> is set to <code>true</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `snapToLines` is set to `true`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -34,14 +38,12 @@ cue1.snapToLines = true;
 console.log(cue1.snapToLines);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

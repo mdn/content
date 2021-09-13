@@ -8,61 +8,66 @@ tags:
   - Optimization
   - Performance
 ---
-<div>{{DefaultAPISidebar("Navigation Timing")}}</div>
+{{DefaultAPISidebar("Navigation Timing")}}
 
-<p>The Navigation Timing API lets you easily obtain detailed and highly accurate timing information to help isolate performance problems with your site's code or resources.</p>
+The Navigation Timing API lets you easily obtain detailed and highly accurate timing information to help isolate performance problems with your site's code or resources.
 
-<p>Unlike other tools or libraries, the <a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a> lets you gather information that only the browser can provide at a level of accuracy much improved over other techniques. It also offers the advantage of being able to provide timing information as perceived by the user rather than data that has no correlation to what the user experiences.</p>
+Unlike other tools or libraries, the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API) lets you gather information that only the browser can provide at a level of accuracy much improved over other techniques. It also offers the advantage of being able to provide timing information as perceived by the user rather than data that has no correlation to what the user experiences.
 
-<h2 id="Collecting_timing_information">Collecting timing information</h2>
+## Collecting timing information
 
-<p>Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:</p>
+Using the API is as simple as obtaining the {{domxref("Performance")}} object using {{domxref("window.performance")}} and looking up what you need within the object returned. For example, to measure the perceived loading time for a page:
 
-<pre class="brush: js">window.addEventListener("load", function() {
+```js
+window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
   document.querySelector(".output").innerText =
         loadingTime + " ms";
-}, false);</pre>
+}, false);
+```
 
-<p>This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.</p>
+This code, executed when the {{event("load")}} event occurs, subtracts from the current time the time at which the navigation whose timing was recorded began ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}}), and outputs that information to the screen by inserting it into an element.
 
-<pre class="brush: html hidden">&lt;div class="output"&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="output">
+</div>
+```
 
-<pre class="brush: css hidden">.output {
+```css hidden
+.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
-}</pre>
+}
+```
 
-<p>In tandem with appropriate HTML and CSS, the result is:</p>
+In tandem with appropriate HTML and CSS, the result is:
 
-<p>{{EmbedLiveSample("Collecting_timing_information", 500, 80)}}</p>
+{{EmbedLiveSample("Collecting_timing_information", 500, 80)}}
 
-<p>The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.</p>
+The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented above.
 
-<p>For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's <a href="/en-US/docs/Web/API/PerformanceTiming#Properties">Properties</a> section.</p>
+For a list of the available timing values you can look for in {{domxref("PerformanceTiming")}}, see the {{domxref("PerformanceTiming")}} interface's [Properties](/en-US/docs/Web/API/PerformanceTiming#Properties) section.
 
-<h2 id="Determining_navigation_type">Determining navigation type</h2>
+## Determining navigation type
 
-<p>To put the timing information obtained from {{domxref("PerformanceTiming")}} into the correct perspective, you need to know more about what sort of load operation occurred. In particular, you need to know:</p>
+To put the timing information obtained from {{domxref("PerformanceTiming")}} into the correct perspective, you need to know more about what sort of load operation occurred. In particular, you need to know:
 
-<ul>
- <li>Was this a load or a reload?</li>
- <li>Was this a navigation or a move forward or backward through history?</li>
- <li>How many (if any) redirects were required in order to complete the navigation?</li>
-</ul>
+- Was this a load or a reload?
+- Was this a navigation or a move forward or backward through history?
+- How many (if any) redirects were required in order to complete the navigation?
 
-<p>This information is provided by the {{domxref("Performance.navigation")}} property, which returns a {{domxref("PerformanceNavigation")}} object that includes the needed information.</p>
+This information is provided by the {{domxref("Performance.navigation")}} property, which returns a {{domxref("PerformanceNavigation")}} object that includes the needed information.
 
-<p>Let's add this information to the example above. The new code looks like this:</p>
+Let's add this information to the example above. The new code looks like this:
 
-<pre class="brush: js">window.addEventListener("load", function() {
+```js
+window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
-  output = "Load time: " + loadingTime + " ms&lt;br/&gt;";
+  output = "Load time: " + loadingTime + " ms<br/>";
   output += "Navigation type: ";
 
   switch(performance.navigation.type) {
@@ -80,31 +85,34 @@ tags:
       break;
   }
 
-  output += "&lt;br/&gt;Redirects: " +
+  output += "<br/>Redirects: " +
       performance.navigation.redirectCount;
   document.querySelector(".output").innerHTML = output;
-}, false);</pre>
+}, false);
+```
 
-<p>This amends the previous example by looking at the contents of the <code>performance.navigation</code> object. {{domxref("PerformanceNavigation.type", "performance.navigation.type")}} indicates what kind of load operation took place: a navigation, a reload, or a shift through the browser's history. We also obtain the number of redirects that were incurred during the navigation from {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}. This information is output to the screen just like the page load time was previously: by inserting it into the element with class <code>"output"</code>.</p>
+This amends the previous example by looking at the contents of the `performance.navigation` object. {{domxref("PerformanceNavigation.type", "performance.navigation.type")}} indicates what kind of load operation took place: a navigation, a reload, or a shift through the browser's history. We also obtain the number of redirects that were incurred during the navigation from {{domxref("PerformanceNavigation.redirectCount", "performance.navigation.redirectCount")}}. This information is output to the screen just like the page load time was previously: by inserting it into the element with class `"output"`.
 
-<pre class="brush: html hidden">&lt;div class="output"&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="output">
+</div>
+```
 
-<pre class="brush: css hidden">.output {
+```css hidden
+.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
-}</pre>
+}
+```
 
-<p>With this code in place, the result looks like this:</p>
+With this code in place, the result looks like this:
 
-<p>{{EmbedLiveSample("Determining_navigation_type", 500, 120)}}</p>
+{{EmbedLiveSample("Determining_navigation_type", 500, 120)}}
 
-<p>The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented.</p>
+The values listed are for the {{HTMLElement("iframe")}} in which the sample is presented.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a></li>
- <li>{{domxref("window.performance")}}</li>
- <li>{{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}</li>
-</ul>
+- [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API)
+- {{domxref("window.performance")}}
+- {{domxref("Performance")}}, {{domxref("PerformanceTiming")}}, and {{domxref("PerformanceNavigation")}}

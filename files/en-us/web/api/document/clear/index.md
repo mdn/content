@@ -2,35 +2,34 @@
 title: Document.clear()
 slug: Web/API/Document/clear
 tags:
-- API
-- Deprecated
-- Document
-- HTML DOM
-- Method
-- NeedsExample
-- NeedsSpecTable
-- Reference
+  - API
+  - Deprecated
+  - Document
+  - HTML DOM
+  - Method
+  - NeedsExample
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.Document.clear
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-<p>The <code><strong>Document.clear()</strong></code> method clears the whole specified
-  document in early (pre-1.0) versions of Mozilla.</p>
+The **`Document.clear()`** method clears the whole specified
+document in early (pre-1.0) versions of Mozilla.
 
-<p>In recent versions of Mozilla-based applications, as well as in Internet Explorer and
-  Netscape 4, this method does nothing.</p>
+In recent versions of Mozilla-based applications, as well as in Internet Explorer and
+Netscape 4, this method does nothing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">document.clear();
-</pre>
+```js
+document.clear();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.whatwg.org/html/#dom-document-clear">HTML5</a></li>
-</ul>
+- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

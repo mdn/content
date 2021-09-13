@@ -2,54 +2,52 @@
 title: PublicKeyCredentialCreationOptions.pubKeyCredParams
 slug: Web/API/PublicKeyCredentialCreationOptions/pubKeyCredParams
 tags:
-- API
-- Property
-- PublicKeyCredentialCreationOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialCreationOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialCreationOptions.pubKeyCredParams
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>pubKeyCredParams</code></strong> property of the
-  {{domxref("PublicKeyCredentialCreationOptions")}} dictionary is an {{jsxref("Array")}}
-  whose elements are objects describing the desired features of the credential to be
-  created. These objects define the type of public-key and the algorithm used for <a
-    href="https://en.wikipedia.org/wiki/Digital_signature">cryptographic signature</a>
-  operations.</p>
+The **`pubKeyCredParams`** property of the
+{{domxref("PublicKeyCredentialCreationOptions")}} dictionary is an {{jsxref("Array")}}
+whose elements are objects describing the desired features of the credential to be
+created. These objects define the type of public-key and the algorithm used for [cryptographic signature](https://en.wikipedia.org/wiki/Digital_signature)
+operations.
 
-<p>If this array contains multiple elements, they are sorted by descending order of
-  preference.</p>
+If this array contains multiple elements, they are sorted by descending order of
+preference.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>pubKeyCredParams </em>= <em>publicKeyCredentialCreationOptions</em>.pubKeyCredParams</pre>
+```js
+pubKeyCredParams = publicKeyCredentialCreationOptions.pubKeyCredParams
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} whose elements are objects with the following properties:</p>
+An {{jsxref("Array")}} whose elements are objects with the following properties:
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A string describing type of public-key credential to be created. As of this writing
-    (March 2019), only <code>"public-key"</code> may be used.</dd>
-  <dt><code>alg</code></dt>
-  <dd>A numeric identifier for the algorithm to be used to generate the key pair. The
-    links between identifier and algorithms are defined in <a
-      href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">this IANA
-    registry</a>. Targeting ES256 (<code>-7</code>) and RS256 (<code>-257</code>) provides
-    coverage for the vast majority of authenticators.</dd>
-</dl>
+- `type`
+  - : A string describing type of public-key credential to be created. As of this writing
+    (March 2019), only `"public-key"` may be used.
+- `alg`
+  - : A numeric identifier for the algorithm to be used to generate the key pair. The
+    links between identifier and algorithms are defined in [this IANA
+    registry](https://www.iana.org/assignments/cose/cose.xhtml#algorithms). Targeting ES256 (`-7`) and RS256 (`-257`) provides
+    coverage for the vast majority of authenticators.
 
-<p>Though those elements are sorted by preference (the first element being the most
-  preferred), it is up to the client to choose among those elements for building the
-  credential.</p>
+Though those elements are sorted by preference (the first element being the most
+preferred), it is up to the client to choose among those elements for building the
+credential.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   pubKeyCredParams: [
     // We would like an elliptic curve to be used if possible
     {
@@ -81,20 +79,19 @@ navigator.credentials.create({ publicKey })
     // of the credential
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">The IANA COSE
-      Algorithms registry</a> which describes the cryptographic algorithms and their
-    corresponding identifier (used as the <code>"alg"</code> key here)</li>
-</ul>
+- [The IANA COSE
+  Algorithms registry](https://www.iana.org/assignments/cose/cose.xhtml#algorithms) which describes the cryptographic algorithms and their
+  corresponding identifier (used as the `"alg"` key here)

@@ -9,39 +9,41 @@ tags:
   - Reference
   - Overview
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong>Compression Streams API</strong> provides a JavaScript API for compressing and decompressing streams of data using the gzip or deflate formats.</p>
+The **Compression Streams API** provides a JavaScript API for compressing and decompressing streams of data using the gzip or deflate formats.
 
-<p>Built in compression means that JavaScript applications will not need to include a compression library, which makes the download size of the application smaller.</p>
+Built in compression means that JavaScript applications will not need to include a compression library, which makes the download size of the application smaller.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("CompressionStream")}}</dt>
-  <dd>Compresses a stream of data.</dd>
-  <dt>{{domxref("DecompressionStream")}}</dt>
-  <dd>Decompresses a stream of data.</dd>
-</dl>
+- {{domxref("CompressionStream")}}
+  - : Compresses a stream of data.
+- {{domxref("DecompressionStream")}}
+  - : Decompresses a stream of data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a stream is compressed using gzip compression.</p>
+In this example a stream is compressed using gzip compression.
 
-<pre class="brush: js">const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));</pre>
+```js
+const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+```
 
-<p>In the following example a function decompresses a blob using gzip.</p>
+In the following example a function decompresses a blob using gzip.
 
-<pre class="brush: js">async function DecompressBlob(blob) {
+```js
+async function DecompressBlob(blob) {
   const ds = new DecompressionStream('gzip');
   const decompressedStream = blob.stream().pipeThrough(ds);
   return await new Response(decompressedStream).blob();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.CompressionStream")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.CompressionStream")}}</p>
+{{Compat("api.CompressionStream")}}

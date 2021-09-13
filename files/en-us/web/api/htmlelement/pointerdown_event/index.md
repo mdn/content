@@ -9,60 +9,68 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.pointerdown_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointerdown</code> event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons depressed to at least one button depressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.</p>
+The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons depressed to at least one button depressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">onpointerdown</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown"
+            >onpointerdown</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   console.log('Pointer down event');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointerdown</code> event handler property:</p>
+Using the `onpointerdown` event handler property:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.onpointerdown = (event) =&gt; {
+para.onpointerdown = (event) => {
   console.log('Pointer down event');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown">onpointerdown</a></code> event handler property.</li>
- <li>This event on <code>Document</code> targets: <code><a href="/en-US/docs/Web/API/Document/pointerdown_event">pointerdown</a></code> event</li>
-</ul>
+- [`onpointerdown`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown) event handler property.
+- This event on `Document` targets: [`pointerdown`](/en-US/docs/Web/API/Document/pointerdown_event) event

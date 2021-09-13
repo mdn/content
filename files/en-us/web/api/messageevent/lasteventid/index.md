@@ -2,49 +2,50 @@
 title: MessageEvent.lastEventId
 slug: Web/API/MessageEvent/lastEventId
 tags:
-- API
-- DOM
-- MessageEvent
-- Property
-- Reference
-- lastEventID
-- messaging
+  - API
+  - DOM
+  - MessageEvent
+  - Property
+  - Reference
+  - lastEventID
+  - messaging
 browser-compat: api.MessageEvent.lastEventId
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>lastEventId</strong></code> read-only property of the
-  {{domxref("MessageEvent")}} interface is a {{domxref("DOMString")}} representing a
-  unique ID for the event.</p>
+The **`lastEventId`** read-only property of the
+{{domxref("MessageEvent")}} interface is a {{domxref("DOMString")}} representing a
+unique ID for the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myId = messageEvent.lastEventId;</pre>
+```js
+var myId = messageEvent.lastEventId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the ID.</p>
+A {{domxref("DOMString")}} representing the ID.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">myWorker.onmessage = function(e) {
+```js
+myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.lastEventId);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-    interfaces that needs to give more flexibility to authors.</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
+  interfaces that needs to give more flexibility to authors.

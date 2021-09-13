@@ -9,27 +9,25 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedString
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGAnimatedString</strong></code> interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.</p>
+The **`SVGAnimatedString`** interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared inside this.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SVGAnimatedString.animVal")}} {{readonlyInline}}</dt>
- <dd>This is a {{domxref("DOMString")}} representing the animation value. If the given attribute or property is being animated it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as baseVal.</dd>
- <dt>{{domxref("SVGAnimatedString.baseVal")}}</dt>
- <dd>This is a {{domxref("DOMString")}} representing the base value. The base value of the given attribute before applying any animations. Setter throws DOMException.</dd>
-</dl>
+- {{domxref("SVGAnimatedString.animVal")}} {{readonlyInline}}
+  - : This is a {{domxref("DOMString")}} representing the animation value. If the given attribute or property is being animated it contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, it contains the same value as baseVal.
+- {{domxref("SVGAnimatedString.baseVal")}}
+  - : This is a {{domxref("DOMString")}} representing the base value. The base value of the given attribute before applying any animations. Setter throws DOMException.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>SVGAnimatedString</code> interface do not provide any specific methods.</em></p>
+_The `SVGAnimatedString` interface do not provide any specific methods._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

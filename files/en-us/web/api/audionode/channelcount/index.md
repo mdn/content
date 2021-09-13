@@ -10,30 +10,31 @@ tags:
   - channelCount
 browser-compat: api.AudioNode.channelCount
 ---
-<div>{{ APIRef("Web Audio API") }}</div>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>channelCount</code></strong> property of the {{ domxref("AudioNode") }} interface represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node.</p>
+The **`channelCount`** property of the {{ domxref("AudioNode") }} interface represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.
 
-<p><code>channelCount</code>'s usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}:</p>
+`channelCount`'s usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}:
 
-<ul>
- <li>It is ignored if the <code>channelCountMode</code> value is <code>max</code>.</li>
- <li>It is used as a maximum value if the <code>channelCountMode</code> value is <code>clamped-max</code>.</li>
- <li>It is used as the exact value if the <code>channelCountMode</code> value is <code>explicit</code>.</li>
-</ul>
+- It is ignored if the `channelCountMode` value is `max`.
+- It is used as a maximum value if the `channelCountMode` value is `clamped-max`.
+- It is used as the exact value if the `channelCountMode` value is `explicit`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var oscillator = audioCtx.createOscillator();
-var channels = oscillator.channelCount;</pre>
+```js
+var oscillator = audioCtx.createOscillator();
+var channels = oscillator.channelCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer.</p>
+An integer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 
@@ -44,18 +45,16 @@ oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 oscillator.channelCount;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

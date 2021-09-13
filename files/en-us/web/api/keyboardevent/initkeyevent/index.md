@@ -10,70 +10,89 @@ tags:
   - Reference
   - Non Standard
 ---
-<p>{{ ApiRef("DOM Events") }}</p>
+{{ ApiRef("DOM Events") }}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!</p>
-      
-  <p>The method has been removed from the DOM specification and is not supported by any current browser.
-    Firefox hides this method behind the preference (<code>dom.keyboardevent.init_key_event.enabled</code>) from version 93 and plans to remove it shortly afterwards.</p>
-</div>
+> **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
+>
+> The method has been removed from the DOM specification and is not supported by any current browser.
+> Firefox hides this method behind the preference (`dom.keyboardevent.init_key_event.enabled`) from version 93 and plans to remove it shortly afterwards.
 
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p>The <strong><code>KeyboardEvent.initKeyEvent()</code></strong> method is used to
-  initialize the value of an event created using
-  {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code>. Events initialized in
-  this way must have been created with the
-  {{domxref("document.createEvent")}}<code>("KeyboardEvent")</code> method.
-  <code>initKeyEvent()</code> must be called to set the event before it is <a
-    href="/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</a>.</p>
+The **`KeyboardEvent.initKeyEvent()`** method is used to
+initialize the value of an event created using
+{{domxref("document.createEvent")}}`("KeyboardEvent")`. Events initialized in
+this way must have been created with the
+{{domxref("document.createEvent")}}`("KeyboardEvent")` method.
+`initKeyEvent()` must be called to set the event before it is [dispatched](/en-US/docs/Web/API/EventTarget/dispatchEvent).
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+event.initKeyEvent (type, bubbles, cancelable, viewArg,
+                    ctrlKeyArg, altKeyArg, shiftKeyArg, metaKeyArg,
+                    keyCodeArg, charCodeArg)
+```
 
-<pre class="brush: js"><em>event</em>.initKeyEvent (<em>type</em>, <em>bubbles</em>, <em>cancelable</em>, <em>viewArg</em>,
-                    <em>ctrlKeyArg</em>, <em>altKeyArg</em>, <em>shiftKeyArg</em>, <em>metaKeyArg</em>,
-                    <em>keyCodeArg</em>, <em>charCodeArg</em>)
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- _`type`_
+  - : Is a {{domxref("DOMString")}} representing the type of event.
+- _`bubbles`_
+  - : Is a boolean value indicating whether the event should bubble up through the
+    event chain or not (see [bubbles](/en-US/docs/Web/API/Event/bubbles)).
+- _`cancelable`_
+  - : Is a boolean value indicating whether the event can be canceled (see [cancelable](/en-US/docs/Web/API/Event/cancelable)).
+- _`viewArg`_
+  - : Specifies the {{domxref("UIEvent.view")}}; this value may be `null`.
+- _`ctrlKeyArg`_
 
-<dl>
-  <dt><em><code>type</code></em></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the type of event.</dd>
-  <dt><em><code>bubbles</code></em></dt>
-  <dd>Is a boolean value indicating whether the event should bubble up through the
-    event chain or not (see <a href="/en-US/docs/Web/API/Event/bubbles">bubbles</a>).</dd>
-  <dt><em><code>cancelable</code></em></dt>
-  <dd>Is a boolean value indicating whether the event can be canceled (see <a
-      href="/en-US/docs/Web/API/Event/cancelable">cancelable</a>).</dd>
-  <dt><em><code>viewArg</code></em></dt>
-  <dd>Specifies the {{domxref("UIEvent.view")}}; this value may be <code>null</code>.</dd>
-  <dt><em><code>ctrlKeyArg</code></em></dt>
-  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
-    generated is a combination of keys containing the <kbd>Ctrl</kbd> key.</dd>
-  <dt><em><code>altKeyArg</code></em></dt>
-  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
-    generated is a combination of keys containing the <kbd>Alt</kbd> key.</dd>
-  <dt><em><code>shiftKeyArg</code></em></dt>
-  <dd>A boolean value that is <code>true</code> if the virtual key to be generated
-    is a combination of keys containing the <kbd>Shift</kbd> key.</dd>
-  <dt><em><code>metaKeyArg</code></em></dt>
-  <dd>Is a boolean value that is <code>true</code> if the virtual key to be
-    generated is a combination of keys containing the <kbd>Meta</kbd> key.</dd>
-  <dt><em><code>keyCodeArg</code></em></dt>
-  <dd>Is a <code>unsigned long</code> representing the virtual key code value of the key
-    which was depressed, otherwise <code>0</code>. See {{ domxref("KeyboardEvent.keyCode")
-    }} for the list of key codes.</dd>
-  <dt><em><code>charCodeArg</code></em></dt>
-  <dd>Is a <code>unsigned long</code> representingthe Unicode character associated with
-    the depressed key otherwise <code>0</code>.</dd>
-</dl>
+  - : Is a boolean value that is `true` if the virtual key to be
+    generated is a combination of keys containing the
 
-<h2 id="Example">Example</h2>
+    <kbd>Ctrl</kbd>
 
-<pre class="brush: js">var event = document.createEvent('KeyboardEvent'); // create a key event
+    key.
+
+- _`altKeyArg`_
+
+  - : Is a boolean value that is `true` if the virtual key to be
+    generated is a combination of keys containing the
+
+    <kbd>Alt</kbd>
+
+    key.
+
+- _`shiftKeyArg`_
+
+  - : A boolean value that is `true` if the virtual key to be generated
+    is a combination of keys containing the
+
+    <kbd>Shift</kbd>
+
+    key.
+
+- _`metaKeyArg`_
+
+  - : Is a boolean value that is `true` if the virtual key to be
+    generated is a combination of keys containing the
+
+    <kbd>Meta</kbd>
+
+    key.
+
+- _`keyCodeArg`_
+  - : Is a `unsigned long` representing the virtual key code value of the key
+    which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
+    }} for the list of key codes.
+- _`charCodeArg`_
+  - : Is a `unsigned long` representingthe Unicode character associated with
+    the depressed key otherwise `0`.
+
+## Example
+
+```js
+var event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
@@ -87,24 +106,22 @@ event.initKeyEvent("keypress",       // typeArg,
                     0);              // charCodeArg);
 
 document.getElementById('blah').dispatchEvent(event);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This implementation of keyboard events is based on the key events spec in the <a class="external"
-    href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
-    of DOM 2 Events</a>, later removed from that spec.</p>
+This implementation of keyboard events is based on the key events spec in the [early versions
+of DOM 2 Events](https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html), later removed from that spec.
 
-<p>The <code>initKeyEvent</code> is the current Gecko equivalent of the DOM Level 3 Events
-  (initially drafted and also deprecated in favor of
-  {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  {{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:</p>
+The `initKeyEvent` is the current Gecko equivalent of the DOM Level 3 Events
+(initially drafted and also deprecated in favor of
+{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
+{{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:
 
-<pre class="eval">typeArg of type DOMString
-canBubbleArg of type boolean
-cancelableArg of type boolean
-viewArg of type views::AbstractView
-keyIdentifierArg of type DOMString
-keyLocationArg of type unsigned long
-modifiersList of type DOMString);
-</pre>
+    typeArg of type DOMString
+    canBubbleArg of type boolean
+    cancelableArg of type boolean
+    viewArg of type views::AbstractView
+    keyIdentifierArg of type DOMString
+    keyLocationArg of type unsigned long
+    modifiersList of type DOMString);

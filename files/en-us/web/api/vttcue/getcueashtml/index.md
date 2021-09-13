@@ -9,27 +9,30 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.getCueAsHTML
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>getCueAsHTML()</code></strong> method of the {{domxref("VTTCue")}} interface returns a {{domxref("DocumentFragment")}} containing the cue content.</p>
+The **`getCueAsHTML()`** method of the {{domxref("VTTCue")}} interface returns a {{domxref("DocumentFragment")}} containing the cue content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">VTTCue.getCueAsHTML();</pre>
+```js
+VTTCue.getCueAsHTML();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("DocumentFragment")}} .</p>
+A {{domxref("DocumentFragment")}} .
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example a new {{domxref("VTTCue")}} is created. The value as a document fragment is then printed to the console.</p>
+In the following example a new {{domxref("VTTCue")}} is created. The value as a document fragment is then printed to the console.
 
-<pre class="brush: js">let video = document.querySelector('video');
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -37,14 +40,12 @@ let cue1 = new VTTCue(0, 0.9, 'Hildy!');
 console.log(cue1.getCueAsHTML());
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

@@ -2,46 +2,50 @@
 title: CSSPropertyRule.name
 slug: Web/API/CSSPropertyRule/name
 tags:
-- API
-- CSS
-- CSS Properties and Values API
-- CSSPropertyRule
-- Experimental
-- Houdini
-- Property
-- Reference
-- Read-only
+  - API
+  - CSS
+  - CSS Properties and Values API
+  - CSSPropertyRule
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Read-only
 browser-compat: api.CSSPropertyRule.name
 ---
-<div>{{APIRef("CSS Properties and Values API")}}</div>
+{{APIRef("CSS Properties and Values API")}}
 
-<p>The read-only <strong><code>name</code></strong> property of the {{domxref("CSSPropertyRule")}} interface represents the property name, this being the serialization of the name given to the custom property in the {{cssxref("@property")}} rule’s prelude.</p>
+The read-only **`name`** property of the {{domxref("CSSPropertyRule")}} interface represents the property name, this being the serialization of the name given to the custom property in the {{cssxref("@property")}} rule’s prelude.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <var>name</var> = <var>CSSPropertyRule</var>.name;</pre>
+    const name = CSSPropertyRule.name;
 
-<h3>Value</h3>
-<p>A {{domxref("USVString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("USVString")}}.
 
+## Examples
 
-<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>name</code> property returns the string <code>"--property-name"</code>, which is the name given to the custom property in CSS.</p>
+This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a `CSSPropertyRule` representing this rule. The `name` property returns the string `"--property-name"`, which is the name given to the custom property in CSS.
 
-<pre class="brush:css">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].name); //the string "--property-name"</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].name); //the string "--property-name"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,54 +9,50 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent
 ---
-<p>{{apiref("Device Orientation Events")}}{{SeeCompatTable}}</p>
+{{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
-<p>The <code>DeviceOrientationEvent</code> provides web developers with information from the physical orientation of the device running the web page.</p>
+The `DeviceOrientationEvent` provides web developers with information from the physical orientation of the device running the web page.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}}</dt>
- <dd>Creates a new <code>DeviceOrientationEvent</code>.</dd>
-</dl>
+- {{domxref("DeviceOrientationEvent.DeviceOrientationEvent","DeviceOrientationEvent.DeviceOrientationEvent()")}}
+  - : Creates a new `DeviceOrientationEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}</dt>
- <dd>A boolean that indicates whether or not the device is providing orientation data absolutely.</dd>
- <dt>{{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}</dt>
- <dd>A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).</dd>
- <dt>{{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}</dt>
- <dd>A number representing the motion of the device around the x axis, express in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.</dd>
- <dt>{{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}</dt>
- <dd>A number representing the motion of the device around the y axis, express in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.</dd>
- <dt><code>DeviceOrientationEvent.webkitCompassHeading</code> {{Non-Standard_Inline}} {{readonlyinline}}</dt>
- <dd>A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, express in degrees with values ranging from 0 to 360.</dd>
- <dt><code>DeviceOrientationEvent.webkitCompassAccuracy</code> {{Non-Standard_Inline}} {{readonlyinline}}</dt>
- <dd>The accuracy of the compass means that the deviation is positive or negative. It's usually 10.</dd>
-</dl>
+- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
+  - : A boolean that indicates whether or not the device is providing orientation data absolutely.
+- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 (inclusive) to 360 (exclusive).
+- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the x axis, express in degrees with values ranging from -180 (inclusive) to 180 (exclusive). This represents a front to back motion of the device.
+- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
+  - : A number representing the motion of the device around the y axis, express in degrees with values ranging from -90 (inclusive) to 90 (exclusive). This represents a left to right motion of the device.
+- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : A number represents the difference between the motion of the device around the z axis of the world system and the direction of the north, express in degrees with values ranging from 0 to 360.
+- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{readonlyinline}}
+  - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.addEventListener('deviceorientation', function(event) {
+```js
+window.addEventListener('deviceorientation', function(event) {
   console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained" title="Orientation and motion data explained">Orientation and motion data explained</a></li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")

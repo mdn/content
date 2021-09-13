@@ -11,45 +11,45 @@ tags:
   - request
 browser-compat: api.Request.redirect
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>redirect</code></strong> read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.</p>
+The **`redirect`** read-only property of the {{domxref("Request")}} interface contains the mode for how redirects are handled.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myRedirect = request.redirect;</pre>
+```js
+var myRedirect = request.redirect;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>RequestRedirect</code> enum value, which can be one the following strings:</p>
+A `RequestRedirect` enum value, which can be one the following strings:
 
-<ul>
-	<li><code>follow</code></li>
-	<li><code>error</code></li>
-	<li><code>manual</code></li>
-</ul>
+- `follow`
+- `error`
+- `manual`
 
-<p>If not specified when the request is created, it takes the default value of <code>follow</code>.</p>
+If not specified when the request is created, it takes the default value of `follow`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request <code>redirect</code> value in a variable:</p>
+In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request `redirect` value in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.redirect;</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myCred = myRequest.redirect;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-	<li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

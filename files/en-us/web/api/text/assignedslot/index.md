@@ -2,33 +2,34 @@
 title: Text.assignedSlot
 slug: Web/API/Text/assignedSlot
 tags:
-- API
-- Property
-- Reference
-- Text
-- assignedSlot
-- shadow dom
+  - API
+  - Property
+  - Reference
+  - Text
+  - assignedSlot
+  - shadow dom
 browser-compat: api.Text.assignedSlot
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>assignedSlot</code></strong> property of the
-    {{domxref("Text")}} interface returns the {{domxref("HTMLSlotElement")}} object
-    associated with the element.</p>
+The **`assignedSlot`** property of the
+{{domxref("Text")}} interface returns the {{domxref("HTMLSlotElement")}} object
+associated with the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>htmlSlotElement</em> = text.assignedSlot</pre>
+```js
+var htmlSlotElement = text.assignedSlot
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("HTMLSlotElement")}} object.</p>
+A {{domxref("HTMLSlotElement")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,104 +2,99 @@
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.bindBuffer()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> binds a given
-  {{domxref("WebGLBuffer")}} to a target.</p>
+The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
+{{domxref("WebGLBuffer")}} to a target.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.bindBuffer(<var>target</var>, <var>buffer</var>);
-</pre>
+```js
+void gl.bindBuffer(target, buffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.ARRAY_BUFFER</code>: Buffer containing vertex attributes, such as
-        vertex coordinates, texture coordinate data, or vertex color data.</li>
-      <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: Buffer used for element indices.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.COPY_READ_BUFFER</code>: Buffer for copying from one buffer object
-            to another.</li>
-          <li><code>gl.COPY_WRITE_BUFFER</code>: Buffer for copying from one buffer object
-            to another.</li>
-          <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback
-            operations.</li>
-          <li><code>gl.UNIFORM_BUFFER</code>: Buffer used for storing uniform blocks.</li>
-          <li><code>gl.PIXEL_PACK_BUFFER</code>: Buffer used for pixel transfer
-            operations.</li>
-          <li><code>gl.PIXEL_UNPACK_BUFFER</code>: Buffer used for pixel transfer
-            operations.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>buffer</dt>
-  <dd>A {{domxref("WebGLBuffer")}} to bind.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-<p>None.</p>
+    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
+      vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
+        to another.
+      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object
+        to another.
+      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
+        operations.
+      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
+      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
+        operations.
+      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
+        operations.
 
-<p>Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt to bind
-  the buffer to another target will throw an <code>INVALID_OPERATION</code> error and the
-  current buffer binding will remain the same.</p>
+- buffer
+  - : A {{domxref("WebGLBuffer")}} to bind.
 
-<p>A {{domxref("WebGLBuffer")}} which has been marked for deletion with
-  {{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} cannot be
-  (re-)bound. An attempt to do so will generate an <code>INVALID_OPERATION</code> error,
-  and the current binding will remain untouched.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<h3 id="Binding_a_buffer_to_a_target">Binding a buffer to a target</h3>
+### Exceptions
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt to bind
+the buffer to another target will throw an `INVALID_OPERATION` error and the
+current buffer binding will remain the same.
+
+A {{domxref("WebGLBuffer")}} which has been marked for deletion with
+{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} cannot be
+(re-)bound. An attempt to do so will generate an `INVALID_OPERATION` error,
+and the current binding will remain untouched.
+
+## Examples
+
+### Binding a buffer to a target
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-</pre>
+```
 
-<h3 id="Getting_current_bindings">Getting current bindings</h3>
+### Getting current bindings
 
-<p>To check the current buffer bindings, query the <code>ARRAY_BUFFER_BINDING</code>
-  and <code>ELEMENT_ARRAY_BUFFER_BINDING</code> constants.</p>
+To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING`
+and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
 
-<pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
+```js
+gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
-  </li>
-</ul>
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

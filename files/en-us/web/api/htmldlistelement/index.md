@@ -9,35 +9,31 @@ tags:
   - Reference
 browser-compat: api.HTMLDListElement
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLDListElement</code></strong> interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating definition list ({{HtmlElement("dl")}}) elements.</p>
+The **`HTMLDListElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating definition list ({{HtmlElement("dl")}}) elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}</dt>
- <dd>Is a boolean value indicating that spacing between list items should be reduced.</dd>
-</dl>
+- {{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}
+  - : Is a boolean value indicating that spacing between list items should be reduced.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dl") }}</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dl") }}

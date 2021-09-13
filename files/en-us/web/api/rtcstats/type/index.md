@@ -2,44 +2,44 @@
 title: RTCStats.type
 slug: Web/API/RTCStats/type
 tags:
-- API
-- Property
-- RTCStats
-- Report
-- Statistics
-- Stats
-- Type
-- WebRTC
-- WebRTC API
-- rtc
+  - API
+  - Property
+  - RTCStats
+  - Report
+  - Statistics
+  - Stats
+  - Type
+  - WebRTC
+  - WebRTC API
+  - rtc
 browser-compat: api.RTCStats.type
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCStats")}} dictionary's property
-    <code><strong>type</strong></code> is a string which specifies the type of statistic
-    represented by the object, where the permitted values are drawn from the enum type
-    {{domxref("RTCStatsType")}}.</p>
+The {{domxref("RTCStats")}} dictionary's property
+**`type`** is a string which specifies the type of statistic
+represented by the object, where the permitted values are drawn from the enum type
+{{domxref("RTCStatsType")}}.
 
-<p>The string can be used to determine which of the
-  {{domxref("RTCStats")}}-based dictionaries are the foundation of the statistics object.
-</p>
+The string can be used to determine which of the
+{{domxref("RTCStats")}}-based dictionaries are the foundation of the statistics object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>type</em> = <em>RTCStats</em>.type;</pre>
+```js
+var type = RTCStats.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which specifies which type of statistic is represented by
-  the object. The string comes from the {{domxref("RTCStatsType")}} enum and corrsponds to
-  one of the {{domxref("RTCStats")}}-based statistic object types.</p>
+A {{domxref("DOMString")}} which specifies which type of statistic is represented by
+the object. The string comes from the {{domxref("RTCStatsType")}} enum and corrsponds to
+one of the {{domxref("RTCStats")}}-based statistic object types.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

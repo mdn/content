@@ -12,37 +12,40 @@ tags:
   - origin
 browser-compat: api.origin
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>The global <code><strong>origin</strong></code> read-only property returns the origin of the global
-  scope, serialized as a string.</p>
+The global **`origin`** read-only property returns the origin of the global
+scope, serialized as a string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myOrigin</em> = self.origin; // or just origin
-</pre>
+```js
+var myOrigin = self.origin; // or just origin
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Executed from inside a worker script, the following snippet will log the worker's
-  global scope's origin to the console each time it receives a message</p>
+Executed from inside a worker script, the following snippet will log the worker's
+global scope's origin to the console each time it receives a message
 
-<pre class="brush: js">onmessage = function() {
+```js
+onmessage = function() {
   console.log(self.origin);
-};</pre>
+};
+```
 
-<p>If the origin is not a scheme/host/port tuple (say you are trying to run it locally,
-  i.e. via <code>file://</code> URL), <code>origin</code> will return the string
-  <code>"null"</code>.</p>
+If the origin is not a scheme/host/port tuple (say you are trying to run it locally,
+i.e. via `file://` URL), `origin` will return the string
+`"null"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

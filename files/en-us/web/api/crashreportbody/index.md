@@ -10,31 +10,29 @@ tags:
   - Reporting API
 browser-compat: api.CrashReportBody
 ---
-<div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
+{{SeeCompatTable}}{{APIRef("Reporting API")}}
 
-<p>The <code>CrashReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).</p>
+The `CrashReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).
 
-<p>A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.</p>
+A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>reason</code></dt>
- <dd>A string representing the reason for the crash. Current possible reasons are:
- <ul>
-  <li><code>oom</code>: The browser ran out of memory.</li>
-  <li><code>unresponsive</code>: The page was killed due to being unresponsive.</li>
- </ul>
- </dd>
-</dl>
+- `reason`
 
-<h2 id="Examples">Examples</h2>
+  - : A string representing the reason for the crash. Current possible reasons are:
 
-<p>Crash reports are generally only retrievable via endpoints set up using the {{httpheader("Report-To")}} header. It is difficult to retrieve a crash report via a {{domxref("ReportingObserver")}}, as by that point the page would have crashed!</p>
+    - `oom`: The browser ran out of memory.
+    - `unresponsive`: The page was killed due to being unresponsive.
 
-<p>Some sample JSON might look like this:</p>
+## Examples
 
-<pre class="brush: json">{
+Crash reports are generally only retrievable via endpoints set up using the {{httpheader("Report-To")}} header. It is difficult to retrieve a crash report via a {{domxref("ReportingObserver")}}, as by that point the page would have crashed!
+
+Some sample JSON might look like this:
+
+```json
+{
   "type": "crash",
   "age": 42,
   "url": "https://example.com/",
@@ -42,22 +40,19 @@ browser-compat: api.CrashReportBody
   "body": {
     "reason": "oom"
   }
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Crash reports are always delivered to the endpoint group named <code>default</code>; there is currently no way to override this. If you want to receive other kinds of reports, but not crash reports, make sure to use a different name for the endpoint group that you choose for those reports. </p>
-</div>
+> **Note:** Crash reports are always delivered to the endpoint group named `default`; there is currently no way to override this. If you want to receive other kinds of reports, but not crash reports, make sure to use a different name for the endpoint group that you choose for those reports.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

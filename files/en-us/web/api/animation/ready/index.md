@@ -13,52 +13,52 @@ tags:
   - web animations api
 browser-compat: api.Animation.ready
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The read-only <strong><code>Animation.ready</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the <code>"pending"</code> <a href="/en-US/docs/Web/API/Animation/playState">play state</a> as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.</p>
+The read-only **`Animation.ready`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves when the animation is ready to play. A new promise is created every time the animation enters the `"pending"` [play state](/en-US/docs/Web/API/Animation/playState) as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.
 
-<div class="note">
-<p><strong>Note:</strong> Since the same {{jsxref("Promise")}} is used for both pending <code>play</code> and pending <code>pause</code> requests, authors are advised to check the state of the animation when the promise is resolved.</p>
-</div>
+> **Note:** Since the same {{jsxref("Promise")}} is used for both pending `play` and pending `pause` requests, authors are advised to check the state of the animation when the promise is resolved.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>readyPromise</em> = <em>Animation</em>.ready;
-</pre>
+```js
+var readyPromise = Animation.ready;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}} which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:</p>
+A {{jsxref("Promise")}} which resolves when the animation is ready to be played. You'll typically use a construct similar to this when using the ready promise:
 
-<pre class="brush: js">animation.ready.then(function() {
+```js
+animation.ready.then(function() {
   // Do whatever needs to be done when
   // the animation is ready to run
-});</pre>
+});
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, the state of the animation will be <code>running</code> when the <strong>current ready Promise</strong> is resolved because the animation does not leave the <code>pending</code> play state in between the calls to <code>pause</code> and <code>play</code> and hence the <strong>current ready Promise</strong> does not change.</p>
+In the following example, the state of the animation will be `running` when the **current ready Promise** is resolved because the animation does not leave the `pending` play state in between the calls to `pause` and `play` and hence the **current ready Promise** does not change.
 
-<pre class="brush: js">animation.pause();
+```js
+animation.pause();
 animation.ready.then(function() {
   // Displays 'running'
   alert(animation.playState);
 });
 animation.play();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>{{domxref("Animation.playState")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("Animation.playState")}}

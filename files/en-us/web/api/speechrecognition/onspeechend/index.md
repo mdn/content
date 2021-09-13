@@ -2,48 +2,48 @@
 title: SpeechRecognition.onspeechend
 slug: Web/API/SpeechRecognition/onspeechend
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onspeechend
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onspeechend
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onspeechend
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onspeechend</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when speech recognized by the speech recognition service has stopped being detected
-  (when the
-  <code><a href="/en-US/docs/Web/API/SpeechRecognition/speechend_event">speechend</a></code>
-  event fires.)</p>
+The **`onspeechend`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when speech recognized by the speech recognition service has stopped being detected
+(when the
+[`speechend`](/en-US/docs/Web/API/SpeechRecognition/speechend_event)
+event fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onspeechend = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onspeechend = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onspeechend = function() {
+```js
+recognition.onspeechend = function() {
   console.log('Speech has stopped being detected');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

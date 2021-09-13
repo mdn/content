@@ -2,59 +2,57 @@
 title: WebGL2RenderingContext.getUniformBlockIndex()
 slug: Web/API/WebGL2RenderingContext/getUniformBlockIndex
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getUniformBlockIndex
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getUniformBlockIndex()</code></strong> method
-	of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> retrieves the index of
-	a uniform block within a {{domxref("WebGLProgram")}}.</p>
+The **`WebGL2RenderingContext.getUniformBlockIndex()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves the index of
+a uniform block within a {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">GLuint <var>gl</var>.getUniformBlockIndex(<var>program</var>, <var>uniformBlockName</var>);</pre>
+```js
+GLuint gl.getUniformBlockIndex(program, uniformBlockName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>program</code></dt>
-	<dd>A {{domxref("WebGLProgram")}} containing the uniform block.</dd>
-	<dt><code>uniformName</code></dt>
-	<dd>A {{domxref("DOMString")}} specifying the name of the uniform block to whose index
-		to retrieve.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} containing the uniform block.
+- `uniformName`
+  - : A {{domxref("DOMString")}} specifying the name of the uniform block to whose index
+    to retrieve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLuint")}} indicating the uniform block index.</p>
+A {{domxref("WebGL_API/Types", "GLuint")}} indicating the uniform block index.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Assuming a shader with the following declaration:
+```js
+// Assuming a shader with the following declaration:
 // uniform UBOData {
 //   mat4 foo;
 // } instanceName;
 
 // use the block name, not the instance name:
 var blockIndex = gl.getUniformBlockIndex(program, 'UBOData');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("WebGL2RenderingContext.getUniformIndices()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getUniformIndices()")}}

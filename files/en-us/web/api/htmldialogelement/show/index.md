@@ -2,65 +2,68 @@
 title: HTMLDialogElement.show()
 slug: Web/API/HTMLDialogElement/show
 tags:
-- API
-- Experimental
-- HTML DOM
-- HTMLDialogElement
-- Method
-- Reference
-- show
+  - API
+  - Experimental
+  - HTML DOM
+  - HTMLDialogElement
+  - Method
+  - Reference
+  - show
 browser-compat: api.HTMLDialogElement.show
 ---
-<p>{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}</p>
+{{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
 
-<p>The <strong><code>show()</code></strong> method of the {{domxref("HTMLDialogElement")}}
-  interface displays the dialog modelessly, i.e. still allowing interaction with content
-  outside of the dialog.</p>
+The **`show()`** method of the {{domxref("HTMLDialogElement")}}
+interface displays the dialog modelessly, i.e. still allowing interaction with content
+outside of the dialog.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">dialogInstance.show();</pre>
+```js
+dialogInstance.show();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows a simple button that, when clicked, opens a
-  {{htmlelement("dialog")}} containing a form via the <code>show()</code> method. From
-  there you can click the <em>Cancel</em> button to close the dialog (via the
-  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-  button.</p>
+The following example shows a simple button that, when clicked, opens a
+{{htmlelement("dialog")}} containing a form via the `show()` method. From
+there you can click the _Cancel_ button to close the dialog (via the
+{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+button.
 
-<pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
-  &lt;dialog id="favDialog"&gt;
-    &lt;form method="dialog"&gt;
-      &lt;section&gt;
-        &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-        &lt;select id="favAnimal" name="favAnimal"&gt;
-          &lt;option&gt;&lt;/option&gt;
-          &lt;option&gt;Brine shrimp&lt;/option&gt;
-          &lt;option&gt;Red panda&lt;/option&gt;
-          &lt;option&gt;Spider monkey&lt;/option&gt;
-        &lt;/select&gt;&lt;/p&gt;
-      &lt;/section&gt;
-      &lt;menu&gt;
-        &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-        &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-      &lt;/menu&gt;
-    &lt;/form&gt;
-  &lt;/dialog&gt;
+```html
+  <!-- Simple pop-up dialog box, containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <section>
+        <p><label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal" name="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select></p>
+      </section>
+      <menu>
+        <button id="cancel" type="reset">Cancel</button>
+        <button type="submit">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
 
-  &lt;menu&gt;
-    &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-  &lt;/menu&gt;
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
 
-  &lt;script&gt;
+  <script>
     (function() {
       var updateButton = document.getElementById('updateDetails');
       var cancelButton = document.getElementById('cancel');
@@ -88,18 +91,17 @@ browser-compat: api.HTMLDialogElement.show
       });
 
     })();
-  &lt;/script&gt;</pre>
+  </script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

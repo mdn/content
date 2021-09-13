@@ -2,34 +2,34 @@
 title: HTMLSelectElement.type
 slug: Web/API/HTMLSelectElement/type
 tags:
-- API
-- HTML DOM
-- HTMLSelectElement
-- Property
-- Read-only
-- Reference
+  - API
+  - HTML DOM
+  - HTMLSelectElement
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.HTMLSelectElement.type
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.type</strong></code>
-    read-only property returns the form control's <code>type</code>.</p>
+The **`HTMLSelectElement.type`**
+read-only property returns the form control's `type`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>str</em> = <em>selectElt</em>.type;</pre>
+```js
+var str = selectElt.type;
+```
 
-<p>The possible values are:</p>
+The possible values are:
 
-<ul>
-  <li><code>"select-multiple"</code> if multiple values can be selected.</li>
-  <li><code>"select-one"</code> if only one value can be selected.</li>
-</ul>
+- `"select-multiple"` if multiple values can be selected.
+- `"select-one"` if only one value can be selected.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">switch (select.type) {
+```js
+switch (select.type) {
   case 'select-multiple':
     // Multiple values may be selected
     break;
@@ -39,18 +39,16 @@ browser-compat: api.HTMLSelectElement.type
   default:
     // Non-standard value (or this isn't a SELECT element)
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{HTMLElement("select")}} HTML element, implementing this interface.</li>
-</ul>
+- The {{HTMLElement("select")}} HTML element, implementing this interface.

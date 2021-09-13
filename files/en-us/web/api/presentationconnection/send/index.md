@@ -2,48 +2,47 @@
 title: PresentationConnection.send()
 slug: Web/API/PresentationConnection/send
 tags:
-- API
-- Experimental
-- Method
-- NeedsContent
-- NeedsExample
-- Presentation API
-- PresentationConnection
-- Reference
-- send
+  - API
+  - Experimental
+  - Method
+  - NeedsContent
+  - NeedsExample
+  - Presentation API
+  - PresentationConnection
+  - Reference
+  - send
 browser-compat: api.PresentationConnection.send
 ---
-<div>{{APIRef("Presentation")}}</div>
+{{APIRef("Presentation")}}
 
-<p>The <strong><code>send()</code></strong> method of the
-  {{domxref("PresentationConnection")}} interface tells a controlling browsing context to
-  send binary or text data to a presenting browsing context.</p>
+The **`send()`** method of the
+{{domxref("PresentationConnection")}} interface tells a controlling browsing context to
+send binary or text data to a presenting browsing context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PresentationConnection.send(data);</pre>
+```js
+PresentationConnection.send(data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>The data to send to the presentation context. It will be one of the following:
-    <ul>
-      <li>{{jsxref("String")}}</li>
-      <li>{{domxref("Blob")}}</li>
-      <li>{{jsxref("Array")}}</li>
-    </ul>
-  </dd>
-</dl>
+- `data`
 
-<h3 id="Return_value">Return value</h3>
+  - : The data to send to the presentation context. It will be one of the following:
 
-<p><code>undefined</code>.</p>
+    - {{jsxref("String")}}
+    - {{domxref("Blob")}}
+    - {{jsxref("Array")}}
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+`undefined`.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

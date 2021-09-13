@@ -11,54 +11,50 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>createWritable()</code></strong> method of the
-  {{domxref("FileSystemFileHandle")}} interface creates
-  a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.</p>
+The **`createWritable()`** method of the
+{{domxref("FileSystemFileHandle")}} interface creates
+a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
 
-<p>Any changes made through the stream won’t be reflected in the file represented by the
-  file handle until the stream has been closed. This is typically implemented by writing
-  data to a temporary file, and only replacing the file represented by file handle with
-  the temporary file when the writable filestream is closed.</p>
+Any changes made through the stream won’t be reflected in the file represented by the
+file handle until the stream has been closed. This is typically implemented by writing
+data to a temporary file, and only replacing the file represented by file handle with
+the temporary file when the writable filestream is closed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>FileSystemWritableFileStream</var> = FileSystemFileHandle.createWritable();</pre>
+```js
+var FileSystemWritableFileStream = FileSystemFileHandle.createWritable();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>FileSystemCreateWritableOptions</dt>
-  <dd>An object representing options to pass into the method. Options are:
-    <ul>
-      <li><code>keepExistingData</code>: If <code>false</code> or not specified, the
-        temporary file starts out empty, otherwise the existing file is first copied to
-        this temporary file.</li>
-    </ul>
-  </dd>
-</dl>
+- FileSystemCreateWritableOptions
 
-<h3 id="Return_value">Return value</h3>
+  - : An object representing options to pass into the method. Options are:
 
-<p>A Promise which resolves with a {{domxref('FileSystemWritableFileStream')}}.</p>
+    - `keepExistingData`: If `false` or not specified, the
+      temporary file starts out empty, otherwise the existing file is first copied to
+      this temporary file.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>NotAllowedError</dt>
-  <dd>Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not
-    <code>'granted'</code> in <code>readwrite</code> mode.</dd>
-</dl>
+A Promise which resolves with a {{domxref('FileSystemWritableFileStream')}}.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following asynchronous function writes the given contents to the file handle, and
-  thus to disk.</p>
+- NotAllowedError
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not
+    `'granted'` in `readwrite` mode.
 
-<pre class="brush: js">async function writeFile(fileHandle, contents) {
+## Examples
+
+The following asynchronous function writes the given contents to the file handle, and
+thus to disk.
+
+```js
+async function writeFile(fileHandle, contents) {
   // Create a FileSystemWritableFileStream to write to.
   const writable = await fileHandle.createWritable();
 
@@ -68,20 +64,18 @@ browser-compat: api.FileSystemFileHandle.createWritable
   // Close the file and write the contents to disk.
   await writable.close();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

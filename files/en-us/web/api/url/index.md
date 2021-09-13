@@ -19,118 +19,114 @@ tags:
   - Polyfill
 browser-compat: api.URL
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p>The <strong><code>URL</code></strong> interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.</p>
+The **`URL`** interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.
 
-<p>You normally create a new <code>URL</code> object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.</p>
+You normally create a new `URL` object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.
 
-<p>If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.</p>
+If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("URL.URL", "new URL()")}}</dt>
- <dd>Creates and returns a <code>URL</code> object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.</dd>
-</dl>
+- {{domxref("URL.URL", "new URL()")}}
+  - : Creates and returns a `URL` object referencing the URL specified using an absolute URL string, or a relative URL string and a base URL string.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("URL.hash", "hash")}}</dt>
- <dd>A {{domxref("USVString")}} containing a <code>'#'</code> followed by the fragment identifier of the URL.</dd>
- <dt>{{domxref("URL.host", "host")}}</dt>
- <dd>A {{domxref("USVString")}} containing the domain (that is the <em>hostname</em>) followed by (if a port was specified) a <code>':'</code> and the <em>port</em> of the URL.</dd>
- <dt>{{domxref("URL.hostname", "hostname")}}</dt>
- <dd>A {{domxref("USVString")}} containing the domain of the URL.</dd>
- <dt>{{domxref("URL.href", "href")}}</dt>
- <dd>A stringifier that returns a {{domxref("USVString")}} containing the whole URL.</dd>
- <dt>{{domxref("URL.origin", "origin")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
- <dt>{{domxref("URL.password", "password")}}</dt>
- <dd>A {{domxref("USVString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("URL.pathname", "pathname")}}</dt>
- <dd>Is a {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of the URL, not including the query string or fragment.</dd>
- <dt>{{domxref("URL.port", "port")}}</dt>
- <dd>A {{domxref("USVString")}} containing the port number of the URL.</dd>
- <dt>{{domxref("URL.protocol", "protocol")}}</dt>
- <dd>A {{domxref("USVString")}} containing the protocol scheme of the URL, including the final <code>':'</code>.</dd>
- <dt>{{domxref("URL.search", "search")}}</dt>
- <dd>A {{domxref("USVString")}} indicating the URL's parameter string; if any parameters are provided, this string includes all of them, beginning with the leading <code>?</code> character.</dd>
- <dt>{{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("URLSearchParams")}} object which can be used to access the individual query parameters found in <code>search</code>.</dd>
- <dt>{{domxref("URL.username","username")}}</dt>
- <dd>A {{domxref("USVString")}} containing the username specified before the domain name.</dd>
-</dl>
+- {{domxref("URL.hash", "hash")}}
+  - : A {{domxref("USVString")}} containing a `'#'` followed by the fragment identifier of the URL.
+- {{domxref("URL.host", "host")}}
+  - : A {{domxref("USVString")}} containing the domain (that is the _hostname_) followed by (if a port was specified) a `':'` and the _port_ of the URL.
+- {{domxref("URL.hostname", "hostname")}}
+  - : A {{domxref("USVString")}} containing the domain of the URL.
+- {{domxref("URL.href", "href")}}
+  - : A stringifier that returns a {{domxref("USVString")}} containing the whole URL.
+- {{domxref("URL.origin", "origin")}} {{readonlyInline}}
+  - : Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.
+- {{domxref("URL.password", "password")}}
+  - : A {{domxref("USVString")}} containing the password specified before the domain name.
+- {{domxref("URL.pathname", "pathname")}}
+  - : Is a {{domxref("USVString")}} containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+- {{domxref("URL.port", "port")}}
+  - : A {{domxref("USVString")}} containing the port number of the URL.
+- {{domxref("URL.protocol", "protocol")}}
+  - : A {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
+- {{domxref("URL.search", "search")}}
+  - : A {{domxref("USVString")}} indicating the URL's parameter string; if any parameters are provided, this string includes all of them, beginning with the leading `?` character.
+- {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
+  - : A {{domxref("URLSearchParams")}} object which can be used to access the individual query parameters found in `search`.
+- {{domxref("URL.username","username")}}
+  - : A {{domxref("USVString")}} containing the username specified before the domain name.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("URL.toString", "toString()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.</dd>
- <dt>{{domxref("URL.toJSON", "toJSON()")}}</dt>
- <dd>Returns a {{domxref("USVString")}} containing the whole URL. It returns the same string as the <code>href</code> property.</dd>
-</dl>
+- {{domxref("URL.toString", "toString()")}}
+  - : Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("URL.href")}}, though it can't be used to modify the value.
+- {{domxref("URL.toJSON", "toJSON()")}}
+  - : Returns a {{domxref("USVString")}} containing the whole URL. It returns the same string as the `href` property.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("URL.createObjectURL", "createObjectURL()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with <code>blob:</code> as its scheme, followed by an opaque string uniquely identifying the object in the browser.</dd>
- <dt>{{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}</dt>
- <dd>Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.</dd>
-</dl>
+- {{domxref("URL.createObjectURL", "createObjectURL()")}}
+  - : Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The constructor takes a <code>url</code> parameter, and an optional <code>base</code> parameter to use as a base if the <code>url</code> parameter is a relative URL:</p>
+The constructor takes a `url` parameter, and an optional `base` parameter to use as a base if the `url` parameter is a relative URL:
 
-<pre class="brush: js">const url = new URL('../cats', 'http://www.example.com/dogs');
+```js
+const url = new URL('../cats', 'http://www.example.com/dogs');
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
-</pre>
+```
 
-<p>URL properties can be set to construct the URL:</p>
+URL properties can be set to construct the URL:
 
-<pre class="brush: js">url.hash = 'tabby';
+```js
+url.hash = 'tabby';
 console.log(url.href); // "http://www.example.com/cats#tabby"
-</pre>
+```
 
-<p>URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:</p>
+URLs are encoded according to the rules found in {{RFC(3986)}}. For instance:
 
-<pre class="brush: js">url.pathname = 'démonstration.html';
+```js
+url.pathname = 'démonstration.html';
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
-</pre>
+```
 
-<p>The {{domxref("URLSearchParams")}} interface can be used to build and manipulate the URL query string.</p>
+The {{domxref("URLSearchParams")}} interface can be used to build and manipulate the URL query string.
 
-<p>To get the search params from the current window's URL, you can do this:</p>
+To get the search params from the current window's URL, you can do this:
 
-<pre class="brush: js">// https://some.site/?id=123
+```js
+// https://some.site/?id=123
 const parsedUrl = new URL(window.location.href);
 console.log(parsedUrl.searchParams.get("id")); // "123"
-</pre>
+```
 
-<p>The {{domxref("URL.toString", "toString()")}} method of <code>URL</code> just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.</p>
+The {{domxref("URL.toString", "toString()")}} method of `URL` just returns the value of the {{domxref("URL.href", "href")}} property, so the constructor can be used to normalize and encode a URL directly.
 
-<pre class="brush: js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
+```js
+const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
- <li><a href="/en-US/docs/Web/API/URL_API">URL API</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
- <li>Property to obtain a <code>URL</code> object: {{domxref("URL")}}.</li>
- <li>{{domxref("URLSearchParams")}}.</li>
-</ul>
+- A polyfill of `URL` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [URL API](/en-US/docs/Web/API/URL_API)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- Property to obtain a `URL` object: {{domxref("URL")}}.
+- {{domxref("URLSearchParams")}}.

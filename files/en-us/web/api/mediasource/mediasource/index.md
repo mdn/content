@@ -2,48 +2,48 @@
 title: MediaSource()
 slug: Web/API/MediaSource/MediaSource
 tags:
-- API
-- Audio
-- Constructor
-- Experimental
-- MSE
-- Media Source Extensions
-- MediaSource
-- Reference
-- Video
+  - API
+  - Audio
+  - Constructor
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - MediaSource
+  - Reference
+  - Video
 browser-compat: api.MediaSource.MediaSource
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>MediaSource()</strong></code> constructor of the
-  {{domxref("MediaSource")}} interface constructs and returns a new
-  <code>MediaSource</code> object with no associated source buffers.</p>
+The **`MediaSource()`** constructor of the
+{{domxref("MediaSource")}} interface constructs and returns a new
+`MediaSource` object with no associated source buffers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaSource</em> = new MediaSource();</pre>
+```js
+var mediaSource = new MediaSource();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is taken from a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is taken from a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -53,15 +53,13 @@ if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
 }
 
 ...
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

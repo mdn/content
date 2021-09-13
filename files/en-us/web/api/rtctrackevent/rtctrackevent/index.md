@@ -2,51 +2,50 @@
 title: RTCTrackEvent()
 slug: Web/API/RTCTrackEvent/RTCTrackEvent
 tags:
-- API
-- Constructor
-- Media
-- RTCTrackEvent
-- Reference
-- WebRTC
-- WebRTC API
-- events
-- track
+  - API
+  - Constructor
+  - Media
+  - RTCTrackEvent
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - events
+  - track
 browser-compat: api.RTCTrackEvent.RTCTrackEvent
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCTrackEvent()</code></strong> constructor
-    creates and returns a new {{domxref("RTCTrackEvent")}} object, configured to describe
-    the track which has been added to the {{domxref("RTCPeerConnection")}}.</p>
+The **`RTCTrackEvent()`** constructor
+creates and returns a new {{domxref("RTCTrackEvent")}} object, configured to describe
+the track which has been added to the {{domxref("RTCPeerConnection")}}.
 
-<p>In general, you won't need to use this constructor, as <code>RTCTrackEvent</code>
-  objects are created by WebRTC and delivered to your <code>RTCPeerConnector</code>'s
-  {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler as appropriate.</p>
+In general, you won't need to use this constructor, as `RTCTrackEvent`
+objects are created by WebRTC and delivered to your `RTCPeerConnector`'s
+{{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler as appropriate.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>trackEvent</em> = new RTCTrackEvent(<em>eventInfo</em>);</pre>
+```js
+trackEvent = new RTCTrackEvent(eventInfo);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>eventInfo</code></dt>
-  <dd>An object based on the {{domxref("RTCTrackEventInit")}} dictionary, providing
+- `eventInfo`
+  - : An object based on the {{domxref("RTCTrackEventInit")}} dictionary, providing
     information about the track which has been added to the
-    {{domxref("RTCPeerConnection")}}. This object has the following properties:<br>
-    {{page("/en-US/docs/Web/API/RTCTrackEventInit", "property-list")}}</dd>
-</dl>
+    {{domxref("RTCPeerConnection")}}. This object has the following properties:
+    {{page("/en-US/docs/Web/API/RTCTrackEventInit", "property-list")}}
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("RTCTrackEvent")}} describing a track which has been added to the
-  <code>RTCPeerConnection</code>.</p>
+A new {{domxref("RTCTrackEvent")}} describing a track which has been added to the
+`RTCPeerConnection`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

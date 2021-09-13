@@ -2,35 +2,37 @@
 title: FontFaceSetLoadEvent.fontfaces
 slug: Web/API/FontFaceSetLoadEvent/fontfaces
 tags:
-- API
-- CSSFontLoading
-- CSSOM
-- Experimental
-- FontFaceLoadEvent
-- Fonts
-- Property
-- Reference
-- fontfaces
+  - API
+  - CSSFontLoading
+  - CSSOM
+  - Experimental
+  - FontFaceLoadEvent
+  - Fonts
+  - Property
+  - Reference
+  - fontfaces
 browser-compat: api.FontFaceSetLoadEvent.fontfaces
 ---
-<p>{{SeeCompatTable}}{{APIRef("CSS Font Loading API")}}</p>
+{{SeeCompatTable}}{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>fontfaces</code></strong> read-only property of the
-  {{domxref("FontFaceSetLoadEvent")}} interface returns an array of
-  {{domxref("FontFace")}} instances, each of which represents a single usable font.</p>
+The **`fontfaces`** read-only property of the
+{{domxref("FontFaceSetLoadEvent")}} interface returns an array of
+{{domxref("FontFace")}} instances, each of which represents a single usable font.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var fontFace[] = FontFaceSetLoadEvent.fontfaces</pre>
+```js
+var fontFace[] = FontFaceSetLoadEvent.fontfaces
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("FontFace")}} instance.</p>
+An array of {{domxref("FontFace")}} instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,46 +2,45 @@
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Method
-- Reference
-- SourceBuffer
-- Video
-- remove
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Method
+  - Reference
+  - SourceBuffer
+  - Video
+  - remove
 browser-compat: api.SourceBuffer.remove
 ---
-<div>{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>remove()</strong></code> method of the {{domxref("SourceBuffer")}}
-  interface removes media segments within a specific time range from the
-  <code>SourceBuffer</code>. This method can only be called when
-  {{domxref("SourceBuffer.updating")}} equals <code>false</code>. If
-  <code>SourceBuffer.updating</code> is not equal to <code>false</code>, call
-  {{domxref("SourceBuffer.abort()")}}.</p>
+The **`remove()`** method of the {{domxref("SourceBuffer")}}
+interface removes media segments within a specific time range from the
+`SourceBuffer`. This method can only be called when
+{{domxref("SourceBuffer.updating")}} equals `false`. If
+`SourceBuffer.updating` is not equal to `false`, call
+{{domxref("SourceBuffer.abort()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sourceBuffer</em>.remove(<em>start</em>, <em>end</em>);
-</pre>
+```js
+sourceBuffer.remove(start, end);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>start</dt>
-  <dd>A double representing the start of the time range, in seconds.</dd>
-  <dt>end</dt>
-  <dd>A double representing the end of the time range, in seconds.</dd>
-</dl>
+- start
+  - : A double representing the start of the time range, in seconds.
+- end
+  - : A double representing the end of the time range, in seconds.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -53,35 +52,38 @@ browser-compat: api.SourceBuffer.remove
   <tbody>
     <tr>
       <td><code>InvalidAccessError</code></td>
-      <td>The {{domxref("MediaSource.duration")}} property is equal to <code>NaN</code>,
-        the <code>start</code> parameter is negative or greater than
-        {{domxref("MediaSource.duration")}}, or the end parameter is less than or equal to
-        start or equal to <code>NaN</code>.</td>
+      <td>
+        The {{domxref("MediaSource.duration")}} property is equal
+        to <code>NaN</code>, the <code>start</code> parameter is negative or
+        greater than {{domxref("MediaSource.duration")}}, or the
+        end parameter is less than or equal to start or equal to
+        <code>NaN</code>.
+      </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("SourceBuffer.updating")}} property is equal to <code>true</code>,
-        or this <code>SourceBuffer</code> has been removed from the
-        {{domxref("MediaSource")}}.</td>
+      <td>
+        The {{domxref("SourceBuffer.updating")}} property is equal
+        to <code>true</code>, or this <code>SourceBuffer</code> has been removed
+        from the {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

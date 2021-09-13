@@ -12,26 +12,26 @@ tags:
   - fallback
 browser-compat: api.CSSVariableReferenceValue.fallback
 ---
-<div>{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>fallback</code></strong> read-only property of the
-  {{domxref("CSSVariableReferenceValue")}} interface returns the <a
-    href="/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values">custom
-    property fallback value</a> of the {{domxref("CSSVariableReferenceValue")}}.</p>
+The **`fallback`** read-only property of the
+{{domxref("CSSVariableReferenceValue")}} interface returns the [custom
+property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values) of the {{domxref("CSSVariableReferenceValue")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var fallback = <var>cssVariableReferenceValue</var>.fallback;</pre>
+```js
+var fallback = cssVariableReferenceValue.fallback;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSUnparsedValue')}}.</p>
+A {{domxref('CSSUnparsedValue')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

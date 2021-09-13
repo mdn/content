@@ -2,35 +2,37 @@
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
 tags:
-- API
-- HTML DOM
-- Navigator
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - Navigator
+  - Property
+  - Reference
 browser-compat: api.Navigator.maxTouchPoints
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>maxTouchPoints</code></strong> read-only property of the
-  {{domxref("Navigator")}} interface returns the maximum number of simultaneous touch
-  contact points are supported by the current device.</p>
+The **`maxTouchPoints`** read-only property of the
+{{domxref("Navigator")}} interface returns the maximum number of simultaneous touch
+contact points are supported by the current device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>touchPoints</var> = <var>navigator</var>.maxTouchPoints;
-</pre>
+```js
+touchPoints = navigator.maxTouchPoints;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (navigator.maxTouchPoints &gt; 1) {
+```js
+if (navigator.maxTouchPoints > 1) {
   // browser supports multi-touch
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

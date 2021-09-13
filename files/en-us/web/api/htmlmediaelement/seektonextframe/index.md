@@ -2,64 +2,60 @@
 title: HTMLMediaElement.seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 tags:
-- API
-- Experimental
-- HTMLMediaElement
-- Method
-- Non-standard
-- Reference
-- Web
-- seekToNextFrame
+  - API
+  - Experimental
+  - HTMLMediaElement
+  - Method
+  - Non-standard
+  - Reference
+  - Web
+  - seekToNextFrame
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
-<p>{{APIRef("HTML DOM")}} {{non-standard_header}} {{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}} {{non-standard_header}} {{SeeCompatTable}}
 
-<p>The <strong><code>HTMLMediaElement.seekToNextFrame()</code></strong> method
-  asynchronously advances the current play position to the next frame in the media.</p>
+The **`HTMLMediaElement.seekToNextFrame()`** method
+asynchronously advances the current play position to the next frame in the media.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This non-standard method is part of an experimentation process around support for
-    non-real-time access to media for tasks including filtering, editing, and so forth.
-    You should <em>not</em> use this method in production code, because its implementation
-    may change—or be removed outright—without notice. You are, however, invited to
-    experiment with it.</p>
-</div>
+> **Warning:** This non-standard method is part of an experimentation process around support for
+> non-real-time access to media for tasks including filtering, editing, and so forth.
+> You should _not_ use this method in production code, because its implementation
+> may change—or be removed outright—without notice. You are, however, invited to
+> experiment with it.
 
-<p>This method lets you access frames of video media without the media being performed in
-  real time. This also lets you access media using frames as a seek unit rather than
-  timecodes (albeit only by seeking one frame at a time until you get to the frame you
-  want). Possible uses for this method include filtering and editing of video content.</p>
+This method lets you access frames of video media without the media being performed in
+real time. This also lets you access media using frames as a seek unit rather than
+timecodes (albeit only by seeking one frame at a time until you get to the frame you
+want). Possible uses for this method include filtering and editing of video content.
 
-<p>This method returns immediately, returning a {{jsxref("Promise")}}, whose fulfillment
-  handler is called when the seek operation is complete. In addition, a
-  {{event("seeked")}} event is sent to let interested parties know that a seek has taken
-  place. If the seek fails because the media is already at the last frame, a
-  {{event("seeked")}} event occurs, followed immediately by an {{event("ended")}} event.
-</p>
+This method returns immediately, returning a {{jsxref("Promise")}}, whose fulfillment
+handler is called when the seek operation is complete. In addition, a
+{{event("seeked")}} event is sent to let interested parties know that a seek has taken
+place. If the seek fails because the media is already at the last frame, a
+{{event("seeked")}} event occurs, followed immediately by an {{event("ended")}} event.
 
-<p>If there is no video on the media element, or the media isn't seekable, nothing
-  happens.</p>
+If there is no video on the media element, or the media isn't seekable, nothing
+happens.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>seekCompletePromise</em> = <em>HTMLMediaElement</em>.seekToNextFrame();
+```js
+var seekCompletePromise = HTMLMediaElement.seekToNextFrame();
 
-<em>HTMLMediaElement</em>.seekToNextFrame();
-</pre>
+HTMLMediaElement.seekToNextFrame();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is fulfilled once the seek operation has completed.</p>
+A {{jsxref("Promise")}} which is fulfilled once the seek operation has completed.
 
-<div class="note">
-  <p><strong>Note:</strong> Firefox 49 returns {{jsxref("undefined")}} instead of a promise, and performs the
-    seek operation synchronously.</p>
-</div>
+> **Note:** Firefox 49 returns {{jsxref("undefined")}} instead of a promise, and performs the
+> seek operation synchronously.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

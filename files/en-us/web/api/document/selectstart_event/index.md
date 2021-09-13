@@ -10,56 +10,57 @@ tags:
   - selectstart
 browser-compat: api.Document.selectstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>selectstart</strong></code> event of the <a href="/en-US/docs/Web/API/Selection">Selection API</a> is fired when a user starts a new selection.</p>
+The **`selectstart`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when a user starts a new selection.
 
-<p>If the event is canceled, the selection is not changed.</p>
+If the event is canceled, the selection is not changed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onselectstart", "onselectstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onselectstart", "onselectstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// addEventListener version
-document.addEventListener('selectstart', () =&gt; {
+```js
+// addEventListener version
+document.addEventListener('selectstart', () => {
   console.log('Selection started');
 });
 
 // onselectstart version
-document.onselectstart = () =&gt; {
+document.onselectstart = () => {
   console.log('Selection changed.');
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document/selectionchange_event", "selectionchange")}}</li>
-</ul>
+- {{domxref("Document/selectionchange_event", "selectionchange")}}

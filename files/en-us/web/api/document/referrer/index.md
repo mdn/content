@@ -10,32 +10,31 @@ tags:
   - Reference
 browser-compat: api.Document.referrer
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.referrer</code></strong> property returns the <a
-    href="https://www.w3.org/Addressing/#background">URI</a> of the page that linked to
-  this page.</p>
+The **`Document.referrer`** property returns the [URI](https://www.w3.org/Addressing/#background) of the page that linked to
+this page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>referrer</var> = <var>document</var>.referrer;
-</pre>
+```js
+var referrer = document.referrer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The value is an empty string if the user navigated to the page directly (not through a
-  link, but, for example, by using a bookmark). Because this property returns only a
-  string, it doesn't give you document object model (DOM) access to the referring page.
-</p>
+The value is an empty string if the user navigated to the page directly (not through a
+link, but, for example, by using a bookmark). Because this property returns only a
+string, it doesn't give you document object model (DOM) access to the referring page.
 
-<p>Inside an {{HTMLElement("iframe")}}, the <code>Document.referrer</code> will initially
-  be set to the same value as the {{domxref("HTMLAnchorElement/href", "href")}} of
-  the parent window's {{domxref("Window/location", "Window.location")}}.</p>
+Inside an {{HTMLElement("iframe")}}, the `Document.referrer` will initially
+be set to the same value as the {{domxref("HTMLAnchorElement/href", "href")}} of
+the parent window's {{domxref("Window/location", "Window.location")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

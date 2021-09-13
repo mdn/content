@@ -2,48 +2,48 @@
 title: MessageEvent.data
 slug: Web/API/MessageEvent/data
 tags:
-- API
-- DOM
-- MessageEvent
-- Property
-- Reference
-- data
-- messaging
+  - API
+  - DOM
+  - MessageEvent
+  - Property
+  - Reference
+  - data
+  - messaging
 browser-compat: api.MessageEvent.data
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>data</code></strong> read-only property of the
-  {{domxref("MessageEvent")}} interface represents the data sent by the message emitter.
-</p>
+The **`data`** read-only property of the
+{{domxref("MessageEvent")}} interface represents the data sent by the message emitter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var data = messageEvent.data;</pre>
+```js
+var data = messageEvent.data;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The data sent by the message emitter; this can be any data type.</p>
+The data sent by the message emitter; this can be any data type.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">myWorker.onmessage = function(e) {
+```js
+myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-    interfaces that needs to give more flexibility to authors.</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
+  interfaces that needs to give more flexibility to authors.

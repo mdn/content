@@ -2,35 +2,37 @@
 title: 'Location: protocol'
 slug: Web/API/Location/protocol
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.protocol
 ---
-<p>{{ApiRef("Location")}}</p>
+{{ApiRef("Location")}}
 
-<p>The <strong><code>protocol</code></strong> property of the {{domxref("Location")}}
-  interface is a {{domxref("USVString")}} representing the protocol scheme of the URL,
-  including the final <code>':'</code>.</p>
+The **`protocol`** property of the {{domxref("Location")}}
+interface is a {{domxref("USVString")}} representing the protocol scheme of the URL,
+including the final `':'`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.protocol;
-<em>object</em>.protocol = <em>string</em>;
-</pre>
+```js
+string = object.protocol;
+object.protocol = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Let's an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"&gt; element be in the document
+```js
+// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"> element be in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.protocol; // Returns:'https:'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

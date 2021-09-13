@@ -2,70 +2,63 @@
 title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 tags:
-- Constructor
-- Deprecated
-- Experimental
-- Media
-- RTCSessionDescription
-- Reference
-- SDP
-- WebRTC
+  - Constructor
+  - Deprecated
+  - Experimental
+  - Media
+  - RTCSessionDescription
+  - Reference
+  - SDP
+  - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}
 
-<p>The <strong><code>RTCSessionDescription()</code></strong> constructor creates a new
-  {{domxref("RTCSessionDescription")}} with its properties initialized as described in the
-  specified object.</p>
+The **`RTCSessionDescription()`** constructor creates a new
+{{domxref("RTCSessionDescription")}} with its properties initialized as described in the
+specified object.
 
-<div class="note">
-  <p><strong>Note:</strong> This constructor has been deprecated because
-    {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-    SDP as input now directly accept an object conforming to the
-    <code>RTCSessionDescriptionInit</code> dictionary, so you don't have to instantiate an
-    <code>RTCSessionDescription</code> yourself.</p>
-</div>
+> **Note:** This constructor has been deprecated because
+> {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
+> SDP as input now directly accept an object conforming to the
+> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> `RTCSessionDescription` yourself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> <em>sessionDescription</em> = new RTCSessionDescription(<em>rtcSessionDescriptionInit</em>);</pre>
+```js
+ sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>rtcSessionDescriptionInit</code> {{optional_inline}}</dt>
-  <dd>An object providing the default values for the session description; the object
-    conforms to the <code>RTCSessionDescriptionInit</code> dictionary. That dictionary has
+- `rtcSessionDescriptionInit` {{optional_inline}}
+
+  - : An object providing the default values for the session description; the object
+    conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
     the following properties:
-    <dl>
-      <dt><code>type</code></dt>
-      <dd><strong>Required.</strong> A string which is a member of the
-        <code>RTCSdpType</code> enum; it must have one of the following values:
-        <div>{{page("/en-US/docs/Web/API/RTCSessionDescription", "RTCSdpType")}}</div>
-      </dd>
-      <dt><code>sdp</code></dt>
-      <dd>A string containing a {{Glossary("SDP")}} message describing the session. This
-        value is an empty string (<code>""</code>) by default and may not be
-        <code>null</code>.</dd>
-    </dl>
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+    - `type`
+      - : **Required.** A string which is a member of the
+        `RTCSdpType` enum; it must have one of the following values:{{page("/en-US/docs/Web/API/RTCSessionDescription", "RTCSdpType")}}
+    - `sdp`
+      - : A string containing a {{Glossary("SDP")}} message describing the session. This
+        value is an empty string (`""`) by default and may not be
+        `null`.
 
-<p>This example uses the constructor to convert an SDP offer into an
-  <code>RTCSessionDescription</code> object.</p>
+## Example
 
-<div class="note">
-  <p><strong>Note:</strong> This is no longer necessary, however;
-    {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-    SDP as input now directly accept an object conforming to the
-    <code>RTCSessionDescriptionInit</code> dictionary, so you don't have to instantiate an
-    <code>RTCSessionDescription</code> yourself.</p>
-</div>
+This example uses the constructor to convert an SDP offer into an
+`RTCSessionDescription` object.
 
-<pre class="brush: js">navigator.getUserMedia({video: true}, function(stream) {
+> **Note:** This is no longer necessary, however;
+> {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
+> SDP as input now directly accept an object conforming to the
+> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> `RTCSessionDescription` yourself.
+
+```js
+navigator.getUserMedia({video: true}, function(stream) {
   pc.onaddstream({stream: stream});
   // Adding a local stream won't trigger the onaddstream callback
   pc.addStream(stream);
@@ -75,19 +68,18 @@ browser-compat: api.RTCSessionDescription.RTCSessionDescription
       // send the offer to a server to be forwarded to the friend you're calling.
     }, error);
   }, error);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC_API">WebRTC API</a></li>
-  <li>{{domxref("RTCSessionDescription")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/Guide/API/WebRTC_API)
+- {{domxref("RTCSessionDescription")}}

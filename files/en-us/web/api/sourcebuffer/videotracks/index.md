@@ -2,47 +2,46 @@
 title: SourceBuffer.videoTracks
 slug: Web/API/SourceBuffer/videoTracks
 tags:
-- API
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- videoTracks
+  - API
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - videoTracks
 browser-compat: api.SourceBuffer.videoTracks
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>videoTracks</strong></code> read-only property of the
-  {{domxref("SourceBuffer")}} interface returns a list of the video tracks currently
-  contained inside the <code>SourceBuffer</code>.</p>
+The **`videoTracks`** read-only property of the
+{{domxref("SourceBuffer")}} interface returns a list of the video tracks currently
+contained inside the `SourceBuffer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myVideoTracks</em> = <em>sourceBuffer</em>.videoTracks;
-</pre>
+```js
+var myVideoTracks = sourceBuffer.videoTracks;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("VideoTrackList")}} object.</p>
+An {{domxref("VideoTrackList")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

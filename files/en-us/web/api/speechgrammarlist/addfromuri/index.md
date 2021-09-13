@@ -2,88 +2,90 @@
 title: SpeechGrammarList.addFromURI()
 slug: Web/API/SpeechGrammarList/addFromURI
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- SpeechGrammarList
-- Web Speech API
-- addFromURI
-- recognition
-- speech
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - SpeechGrammarList
+  - Web Speech API
+  - addFromURI
+  - recognition
+  - speech
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>addFromURI()</strong></code> method of the
-  {{domxref("SpeechGrammarList")}} interface takes a grammar present at a specific URI and
-  adds it to the <code>SpeechGrammarList</code> as a new {{domxref("SpeechGrammar")}}
-  object.</p>
+The **`addFromURI()`** method of the
+{{domxref("SpeechGrammarList")}} interface takes a grammar present at a specific URI and
+adds it to the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}}
+object.
 
-<p>Note that some speech recognition services may support built-in grammars that can be
-  specified by URI.</p>
+Note that some speech recognition services may support built-in grammars that can be
+specified by URI.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">speechGrammarListInstance.addFromURI(src,weight);</pre>
+```js
+speechGrammarListInstance.addFromURI(src,weight);
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>src</dt>
-  <dd>A {{domxref("DOMString")}} representing the URI of the grammar to be added.</dd>
-  <dt>weight {{optional_inline}}</dt>
-  <dd>A float representing the weight of the grammar relative to other grammars present in
+- src
+  - : A {{domxref("DOMString")}} representing the URI of the grammar to be added.
+- weight {{optional_inline}}
+  - : A float representing the weight of the grammar relative to other grammars present in
     the {{domxref("SpeechGrammarList")}}. The weight means the importance of this grammar,
     or the likelihood that it will be recognized by the speech recognition service. The
-    value can be between <code>0.0</code> and <code>1.0</code>; If not specified, the
-    default used is <code>1.0</code>.</dd>
-</dl>
+    value can be between `0.0` and `1.0`; If not specified, the
+    default used is `1.0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
 speechRecognitionList.addFromURI('http://www.example.com/grammar.txt'); // adds a second grammar to the list.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

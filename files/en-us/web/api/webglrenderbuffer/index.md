@@ -7,44 +7,41 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLRenderbuffer</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents a buffer that can contain an image, or can be source or target of an rendering operation.</p>
+The **WebGLRenderbuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents a buffer that can contain an image, or can be source or target of an rendering operation.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>WebGLRenderbuffer</code> object does not define any methods or properties of its own and its content is not directly accessible. When working with <code>WebGLRenderbuffer</code> objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:</p>
+The `WebGLRenderbuffer` object does not define any methods or properties of its own and its content is not directly accessible. When working with `WebGLRenderbuffer` objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_render_buffer">Creating a render buffer</h3>
+### Creating a render buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createRenderbuffer();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

@@ -2,41 +2,41 @@
 title: GlobalEventHandlers.ontouchcancel
 slug: Web/API/GlobalEventHandlers/ontouchcancel
 tags:
-- API
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.ontouchcancel
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>ontouchcancel</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("touchcancel")}} events.</p>
+The **`ontouchcancel`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("touchcancel")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>cancelHandler</var> = <var>someElement</var>.ontouchcancel;
-</pre>
+```js
+var cancelHandler = someElement.ontouchcancel;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code><var>cancelHandler</var></code></dt>
-  <dd>The <code>touchcancel</code> event handler for element
-    <code><var>someElement</var></code>.</dd>
-</dl>
+- `cancelHandler`
+  - : The `touchcancel` event handler for element
+    `someElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>ontouchcancel</code> to set an element's
-  <code>touchcancel</code> event handler.</p>
+This example shows two ways to use `ontouchcancel` to set an element's
+`touchcancel` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function cancelTouch(ev) {
   // Process the event
 }
@@ -44,25 +44,23 @@ function init() {
   let el = document.getElementById('target1');
   el.ontouchcancel = cancelTouch;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" ontouchcancel="cancelTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" ontouchcancel="cancelTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("touchcancel") }}</li>
-</ul>
+- {{ event("touchcancel") }}

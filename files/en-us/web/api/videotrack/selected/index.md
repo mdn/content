@@ -2,41 +2,43 @@
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
 tags:
-- HTML DOM
-- Media
-- Media Controls
-- Media Track
-- Property
-- Reference
-- Video
-- VideoTrack
-- selected
-- track
+  - HTML DOM
+  - Media
+  - Media Controls
+  - Media Track
+  - Property
+  - Reference
+  - Video
+  - VideoTrack
+  - selected
+  - track
 browser-compat: api.VideoTrack.selected
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("VideoTrack")}}</strong> property
-    <code><strong>selected</strong></code> controls whether or not a particular video
-    track is active.</p>
+The **{{domxref("VideoTrack")}}** property
+**`selected`** controls whether or not a particular video
+track is active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>isVideoSelected</em> = <em>VideoTrack</em>.selected;
+```js
+isVideoSelected = VideoTrack.selected;
 
-<em>VideoTrack</em>.selected = <em>true</em> | <em>false</em>;</pre>
+VideoTrack.selected = true | false;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The <code>selected</code> property is a Boolean whose value is <code>true</code> if the
-  track is active. Only a single video track can be active at any given time, so setting
-  this property to <code>true</code> for one track while another track is active will make
-  that other track inactive.</p>
+The `selected` property is a Boolean whose value is `true` if the
+track is active. Only a single video track can be active at any given time, so setting
+this property to `true` for one track while another track is active will make
+that other track inactive.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

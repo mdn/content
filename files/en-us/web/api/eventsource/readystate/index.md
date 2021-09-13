@@ -2,56 +2,52 @@
 title: EventSource.readyState
 slug: Web/API/EventSource/readyState
 tags:
-- API
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- readyState
+  - API
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - readyState
 browser-compat: api.EventSource.readyState
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <code><strong>readyState</strong></code> read-only property of the
-  {{domxref("EventSource")}} interface returns a number representing the state of the
-  connection.</p>
+The **`readyState`** read-only property of the
+{{domxref("EventSource")}} interface returns a number representing the state of the
+connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myReadyState = eventSource.readyState;</pre>
+```js
+var myReadyState = eventSource.readyState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number representing the state of the connection. Possible values are:</p>
+A number representing the state of the connection. Possible values are:
 
-<ul>
-  <li><code>0</code> — connecting</li>
-  <li><code>1</code> — open</li>
-  <li><code>2</code> — closed</li>
-</ul>
+- `0` — connecting
+- `1` — open
+- `2` — closed
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
-console.log(evtSource.readyState);</pre>
+```js
+var evtSource = new EventSource('sse.php');
+console.log(evtSource.readyState);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

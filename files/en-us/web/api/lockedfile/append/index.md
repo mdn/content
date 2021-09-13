@@ -2,60 +2,45 @@
 title: LockedFile.append()
 slug: Web/API/LockedFile/append
 tags:
-- API
-- Files
-- Method
-- Non Standard
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Method
+  - Non Standard
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>append</code> method is used to write some data at the end of the file.</p>
+The `append` method is used to write some data at the end of the file.
 
-<p>The write operation is performed at the end of the file, regardless of the
-  {{domxref("LockedFile.location")}} value, and actually sets this value to
-  <code>null</code>.</p>
+The write operation is performed at the end of the file, regardless of the
+{{domxref("LockedFile.location")}} value, and actually sets this value to
+`null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = <em>instanceOfLockedFile</em>.append(data);</pre>
+```js
+var request = instanceOfLockedFile.append(data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>The data to write into the file. It can be a string or an
-    {{jsxref("ArrayBuffer")}}.</dd>
-</dl>
+- `data`
+  - : The data to write into the file. It can be a string or an
+    {{jsxref("ArrayBuffer")}}.
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
-</p>
+A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft proposal</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment        |
+| ------------------------------------ | -------------------------------- | -------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

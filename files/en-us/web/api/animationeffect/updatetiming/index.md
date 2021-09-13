@@ -11,37 +11,35 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.updateTiming
 ---
-<p>{{SeeCompatTable}} {{ APIRef("Web Animations API") }}</p>
+{{SeeCompatTable}} {{ APIRef("Web Animations API") }}
 
-<p>The <code>updateTiming()</code> method of the {{domxref("AnimationEffect")}} interface updates the specified timing properties for an animation effect.</p>
+The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface updates the specified timing properties for an animation effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">animation.updateTiming(timing);</pre>
+```js
+animation.updateTiming(timing);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>timing</code></dt>
- <dd>An <code><a href="https://drafts.csswg.org/web-animations/#dictdef-optionaleffecttiming">OptionalEffectTiming</a></code> object containing the timing properties to update.</dd>
-</dl>
+- `timing`
+  - : An [`OptionalEffectTiming`](https://drafts.csswg.org/web-animations/#dictdef-optionaleffecttiming) object containing the timing properties to update.
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationEffect")}}</li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationEffect")}}
+- {{domxref("Animation")}}

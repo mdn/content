@@ -2,58 +2,58 @@
 title: FileSystemEntry.name
 slug: Web/API/FileSystemEntry/name
 tags:
-- API
-- File and Directory Entries API
-- FileSystemEntry
-- Offline
-- Property
-- Reference
-- name
+  - API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Offline
+  - Property
+  - Reference
+  - name
 browser-compat: api.FileSystemEntry.name
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The read-only <strong><code>name</code></strong> property of
-    the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
-    specifying the entry's name; this is the entry within its parent directory (the last
-    component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
-    "fullPath")}} property).</p>
+The read-only **`name`** property of
+the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
+specifying the entry's name; this is the entry within its parent directory (the last
+component of the path as indicated by the {{domxref("FileSystemEntry.fullPath",
+    "fullPath")}} property).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>name</em> = <em>FileSystemEntry</em>.name;</pre>
+```js
+var name = FileSystemEntry.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} indicating the entry's name.</p>
+A {{domxref("USVString")}} indicating the entry's name.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows a function called <code>isFileWithExtension()</code> which returns
-  true if the specified {{domxref("FileSystemEntry")}} is both a file and the file's name
-  ends with a given extension.</p>
+This example shows a function called `isFileWithExtension()` which returns
+true if the specified {{domxref("FileSystemEntry")}} is both a file and the file's name
+ends with a given extension.
 
-<pre class="brush: js">function isFileWithExtension(entry, extension) {
-  return (entry.isFile &amp;&amp; entry.name.endsWith("." + extension));
-}</pre>
+```js
+function isFileWithExtension(entry, extension) {
+  return (entry.isFile && entry.name.endsWith("." + extension));
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-  <li>{{domxref("FileSystemEntry.fullPath")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystemEntry.fullPath")}}

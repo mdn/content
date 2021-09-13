@@ -12,44 +12,42 @@ tags:
   - web animations api
 browser-compat: api.Animation.cancel
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The Web Animations API's <code><strong>cancel()</strong></code> method of the {{domxref("Animation")}} interface clears all {{domxref("KeyframeEffect")}}s caused by this animation and aborts its playback.</p>
+The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} interface clears all {{domxref("KeyframeEffect")}}s caused by this animation and aborts its playback.
 
-<div class="note">
-<p><strong>Note:</strong> When an animation is cancelled, its {{domxref("Animation.startTime", "startTime")}} and {{domxref("Animation.currentTime", "currentTime")}} are set to <code>null</code>.</p>
-</div>
+> **Note:** When an animation is cancelled, its {{domxref("Animation.startTime", "startTime")}} and {{domxref("Animation.currentTime", "currentTime")}} are set to `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>Animation</em>.cancel();</pre>
+```js
+Animation.cancel();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method doesn't directly throw exceptions; however, if the animation's {{domxref("Animation.playState", "playState")}} is anything but <code>"idle"</code> when cancelled, the {{domxref("Animation.finished", "current finished promise", "", 1)}} is rejected with a {{domxref("DOMException")}} named <code>AbortError</code>.</p>
+This method doesn't directly throw exceptions; however, if the animation's {{domxref("Animation.playState", "playState")}} is anything but `"idle"` when cancelled, the {{domxref("Animation.finished", "current finished promise", "", 1)}} is rejected with a {{domxref("DOMException")}} named `AbortError`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("KeyframeEffect")}}</li>
- <li>{{domxref("Animation")}}</li>
- <li>{{domxref("Animation.playState")}}</li>
- <li>{{domxref("Animation.finished")}} returns the promise this action will reject if the animation's <code>playState</code> is not <code>"idle"</code>.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("KeyframeEffect")}}
+- {{domxref("Animation")}}
+- {{domxref("Animation.playState")}}
+- {{domxref("Animation.finished")}} returns the promise this action will reject if the animation's `playState` is not `"idle"`.

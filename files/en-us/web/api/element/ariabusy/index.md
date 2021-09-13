@@ -11,40 +11,43 @@ tags:
   - Element
 browser-compat: api.Element.ariaBusy
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaBusy</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-busy</code> attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.</p>
+The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaBusy</var> = element.ariaBusy;
-<var>element</var>.ariaBusy = <var>ariaBusy</var></pre>
+    var ariaBusy = element.ariaBusy;
+    element.ariaBusy = ariaBusy
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>There are no expected updates for the element.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is being updated.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : There are no expected updates for the element.
+- `"false"`
+  - : The element is being updated.
 
-<p>In this example the <code>aria-busy</code> attribute on the element with an ID of <code>clock</code> is set to "false". Using <code>ariaBusy</code> we update the value to "true".</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"&gt;&lt;/div&gt;</pre>
+In this example the `aria-busy` attribute on the element with an ID of `clock` is set to "false". Using `ariaBusy` we update the value to "true".
 
-<pre class="brush: js">let el = document.getElementById('clock');
+```html
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>
+```
+
+```js
+let el = document.getElementById('clock');
 console.log(el.ariaBusy); // false
 el.ariaBusy = "true"
-console.log(el.ariaBusy); // true</pre>
+console.log(el.ariaBusy); // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

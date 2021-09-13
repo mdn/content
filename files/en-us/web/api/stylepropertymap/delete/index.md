@@ -2,54 +2,54 @@
 title: StylePropertyMap.delete()
 slug: Web/API/StylePropertyMap/delete
 tags:
-- API
-- CSS Typed Object Model API
-- Houdini
-- Method
-- Reference
-- StylePropertyMap
-- delete()
+  - API
+  - CSS Typed Object Model API
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMap
+  - delete()
 browser-compat: api.StylePropertyMap.delete
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>delete()</code></strong> method of the
-  {{domxref("StylePropertyMap")}} interface removes the CSS declaration with the given
-  property.</p>
+The **`delete()`** method of the
+{{domxref("StylePropertyMap")}} interface removes the CSS declaration with the given
+property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">StylePropertyMap.delete(<var>property</var>)</pre>
+```js
+StylePropertyMap.delete(property)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>property</dt>
-  <dd>An identifier indicating the stylistic feature (e.g. font, width, background
-    color) to remove.</dd>
-</dl>
+- property
+  - : An identifier indicating the stylistic feature (e.g. font, width, background
+    color) to remove.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example removes the {{cssxref('background-image')}} property from the
-  element's <a href="/en-US/docs/Web/HTML/Global_attributes/style">style attribute</a>.
-</p>
+The following example removes the {{cssxref('background-image')}} property from the
+element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
-<pre class="brush: js">// get the button element
+```js
+// get the button element
 const buttonEl = document.querySelector('button');
 
 // remove background-image from style attribute
 buttonEl.attributeStyleMap.delete('background-image');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,54 +2,56 @@
 title: Keyboard.getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
 tags:
-- API
-- Keyboard API
-- Keyboard Lock
-- Keyboard Map
-- Method
-- Reference
-- getLayoutMap()
-- keyboard
+  - API
+  - Keyboard API
+  - Keyboard Lock
+  - Keyboard Map
+  - Method
+  - Reference
+  - getLayoutMap()
+  - keyboard
 browser-compat: api.Keyboard.getLayoutMap
 ---
-<div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getLayoutMap()</code></strong> method of the
-    {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves with
-    an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with
-    functions for retrieving the strings associated with specific physical keys.</p>
+The **`getLayoutMap()`** method of the
+{{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} that resolves with
+an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with
+functions for retrieving the strings associated with specific physical keys.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>promise</var> = Keyboard.getLayoutMap()</pre>
+```js
+var promise = Keyboard.getLayoutMap()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} that resolves with an instance of
-  {{domxref('KeyboardLayoutMap')}}.</p>
+A {{jsxref('Promise')}} that resolves with an instance of
+{{domxref('KeyboardLayoutMap')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example demonstrates how to get the location- or layout-specific string
-  associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
-</p>
+The following example demonstrates how to get the location- or layout-specific string
+associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
 
-<pre class="brush: js">var keyboard = navigator.keyboard;
+```js
+var keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap =&gt; {
+.then(keyboardLayoutMap => {
   var upKey = keyboardLayoutMap.get('KeyW');
   window.alert('Press ' + upKey + ' to move up.');
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

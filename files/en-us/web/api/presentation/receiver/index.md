@@ -2,98 +2,101 @@
 title: Presentation.receiver
 slug: Web/API/Presentation/receiver
 tags:
-- API
-- Presentation
-- Presentation API
-- Property
-- Read-only
-- Reference
-- receiver
+  - API
+  - Presentation
+  - Presentation API
+  - Property
+  - Read-only
+  - Reference
+  - receiver
 browser-compat: api.Presentation.receiver
 ---
-<p>{{APIRef("Presentation")}}</p>
+{{APIRef("Presentation")}}
 
-<p>The <strong>read-only</strong> {{domxref("Presentation")}} attribute
-  <code>receiver</code>, which is only available in browser contexts which are
-  <strong>receiving</strong> a presentation, returns the
-  {{domxref("PresentationReceiver")}} object which can be used to access and communicate
-  with the browser context which controls the presentation. This property is always
-  <code>null</code> when accessed from outside a browser context which is receiving a
-  presentation.</p>
+The **read-only** {{domxref("Presentation")}} attribute
+`receiver`, which is only available in browser contexts which are
+**receiving** a presentation, returns the
+{{domxref("PresentationReceiver")}} object which can be used to access and communicate
+with the browser context which controls the presentation. This property is always
+`null` when accessed from outside a browser context which is receiving a
+presentation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>receiver</em> = <em>Presentation</em>.receiver;
+```js
+receiver = Presentation.receiver;
 
-<em>receiver</em> = navigator.presentation.receiver;</pre>
+receiver = navigator.presentation.receiver;
+```
 
-<p>Since the {{domxref("Presentation")}} interface is typically accessed through
-  {{domxref("navigation.presentation")}}, the second form of the syntax shown above is the
-  more commonly used.</p>
+Since the {{domxref("Presentation")}} interface is typically accessed through
+{{domxref("navigation.presentation")}}, the second form of the syntax shown above is the
+more commonly used.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If the code is running in a context which is receiving a presentation, the returned
-  value is a {{domxref("PresentationReceiver")}} which can then be used to communicate
-  with the context which is the source of the presentation.</p>
+If the code is running in a context which is receiving a presentation, the returned
+value is a {{domxref("PresentationReceiver")}} which can then be used to communicate
+with the context which is the source of the presentation.
 
-<p>If the current context is not receiving a presentation, <code>receiver</code> is
-  <code>null</code>.</p>
+If the current context is not receiving a presentation, `receiver` is
+`null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Determining_whether_or_not_the_context_is_receiving_a_presentation">Determining
-  whether or not the context is receiving a presentation</h3>
+### Determining whether or not the context is receiving a presentation
 
-<p>You can easily determine whether or not the context is the receiver for a presentation
-  by checking the value of <code>navigator.receiver</code>. If it's a non-null value, then
-  the context is indeed receiving a presentation. If it's <code>null</code>, there's no
-  incoming presentation.</p>
+You can easily determine whether or not the context is the receiver for a presentation
+by checking the value of `navigator.receiver`. If it's a non-null value, then
+the context is indeed receiving a presentation. If it's `null`, there's no
+incoming presentation.
 
-<pre class="brush: js">if (navigator.receiver) {
+```js
+if (navigator.receiver) {
   footer.innerHTML = "Receiving presentation";
 }  else {
   footer.innerHTML = "(idle)";
-}</pre>
+}
+```
 
-<h3 id="Accessing_the_connection_list">Accessing the connection list</h3>
+### Accessing the connection list
 
-<p>This example uses <code>receiver</code> to access the list of incoming connections and
-  to build and display a list of those connections' ID strings.</p>
+This example uses `receiver` to access the list of incoming connections and
+to build and display a list of those connections' ID strings.
 
-<pre class="brush: js">let listElem = document.getElementById("connectionview");
+```js
+let listElem = document.getElementById("connectionview");
 
 navigator.presentation.receiver.connectionList
           .then(function(connections) {
     connections.forEach(function(aConnection)) {
-      listElem.innerHTML += "&lt;li&gt;" + aConnection.id
-            + "&lt;/li&gt;";
+      listElem.innerHTML += "<li>" + aConnection.id
+            + "</li>";
     });
-});</pre>
+});
+```
 
-<p>After getting access to the output list element in the variable
-  <code>connectionView</code>, {{domxref("navigator.receiver")}} is used to get a
-  reference to the {{domxref("PresentationReceiver")}} object for this context, and its
-  {{domxref("PresentationReceiver.connectionList", "connectionList")}} is used to get a
-  {{jsxref("Promise")}} which will be called when the list is available.</p>
+After getting access to the output list element in the variable
+`connectionView`, {{domxref("navigator.receiver")}} is used to get a
+reference to the {{domxref("PresentationReceiver")}} object for this context, and its
+{{domxref("PresentationReceiver.connectionList", "connectionList")}} is used to get a
+{{jsxref("Promise")}} which will be called when the list is available.
 
-<p>The promise handler receives as its input parameter an array of the incoming
-  connections. We iterate over these using {{jsxref("Array.forEach", "forEach()")}},
-  appending a new item to the <code>connectionView</code> list element for each
-  connection.</p>
+The promise handler receives as its input parameter an array of the incoming
+connections. We iterate over these using {{jsxref("Array.forEach", "forEach()")}},
+appending a new item to the `connectionView` list element for each
+connection.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Presentation API</li>
-  <li>{{domxref("Presentation")}}</li>
-  <li>{{domxref("PresentationReceiver")}}</li>
-</ul>
+- Presentation API
+- {{domxref("Presentation")}}
+- {{domxref("PresentationReceiver")}}

@@ -11,41 +11,40 @@ tags:
   - statusText
 browser-compat: api.Response.statusText
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <code><strong>statusText</strong></code> read-only property of the
-	{{domxref("Response")}} interface contains the status message corresponding to the
-	status code (e.g., <code>OK</code> for <code>200</code>).</p>
+The **`statusText`** read-only property of the
+{{domxref("Response")}} interface contains the status message corresponding to the
+status code (e.g., `OK` for `200`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>myStatusText</var> = <var>response</var>.statusText;</pre>
+```js
+var myStatusText = response.statusText;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}}.</p>
+A {{jsxref("String")}}.
 
-<p>The default value is "". Note that HTTP/2 <a
-		href="https://fetch.spec.whatwg.org/#concept-response-status-message">does not
-		support</a> status messages.</p>
+The default value is "". Note that HTTP/2 [does not
+support](https://fetch.spec.whatwg.org/#concept-response-status-message) status messages.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a
-		href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch
-		Response example</a> (see <a
-		href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response
-		live</a>) we create a new {{domxref("Request")}} object using the
-	{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-	fetch this request using {{domxref("fetch()")}}, extract a blob
-	from the response using {{domxref("Response.blob")}}, create an object URL out of it using
-	{{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+In our [Fetch
+Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response
+live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the
+{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
+fetch this request using {{domxref("fetch()")}}, extract a blob
+from the response using {{domxref("Response.blob")}}, create an object URL out of it using
+{{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
-<p>Note that at the top of the <code>fetch()</code> block we log the response
-	<code>statusText</code> value to the console.</p>
+Note that at the top of the `fetch()` block we log the response
+`statusText` value to the console.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -55,21 +54,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-	</li>
-	<li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

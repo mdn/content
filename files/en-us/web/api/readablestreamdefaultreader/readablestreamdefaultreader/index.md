@@ -2,59 +2,54 @@
 title: ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 tags:
-- API
-- Constructor
-- ReadableStreamDefaultReader
-- Reference
-- Streams
+  - API
+  - Constructor
+  - ReadableStreamDefaultReader
+  - Reference
+  - Streams
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>ReadableStreamDefaultReader()</code></strong>
-  constructor creates and returns a <code>ReadableStreamDefaultReader</code> object
-  instance.</p>
+The **`ReadableStreamDefaultReader()`**
+constructor creates and returns a `ReadableStreamDefaultReader` object
+instance.
 
-<div class="note">
-  <p><strong>Note:</strong> You generally wouldn't use this constructor manually; instead,
-    you'd use the {{domxref("ReadableStream.getReader()")}} method.</p>
-</div>
+> **Note:** You generally wouldn't use this constructor manually; instead,
+> you'd use the {{domxref("ReadableStream.getReader()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>readableStreamDefaultReader</em> = new ReadableStreamDefaultReader(<em>stream</em>);</pre>
+```js
+var readableStreamDefaultReader = new ReadableStreamDefaultReader(stream);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>stream</dt>
-  <dd>The {{domxref("ReadableStream")}} to be read.</dd>
-</dl>
+- stream
+  - : The {{domxref("ReadableStream")}} to be read.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An instance of the {{domxref("ReadableStreamDefaultReader")}} object.</p>
+An instance of the {{domxref("ReadableStreamDefaultReader")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The supplied <code>stream</code> parameter is not a {{domxref("ReadableStream")}},
-    or it is already locked for reading by another reader.</dd>
-</dl>
+- TypeError
+  - : The supplied `stream` parameter is not a {{domxref("ReadableStream")}},
+    or it is already locked for reading by another reader.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, a previously-created custom
-  <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}}
-  created using <code>getReader()</code>. (see our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
-    stream example</a> for the full code). Each chunk is read sequentially and output to
-  the UI, until the stream has finished being read, at which point we return out of the
-  recursive function and print the entire stream to another part of the UI.</p>
+In the following simple example, a previously-created custom
+`ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}}
+created using `getReader()`. (see our [Simple random
+stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). Each chunk is read sequentially and output to
+the UI, until the stream has finished being read, at which point we return out of the
+recursive function and print the entire stream to another part of the UI.
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -82,12 +77,13 @@ browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
     // Read some more, and call this function again
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

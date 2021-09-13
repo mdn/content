@@ -2,35 +2,36 @@
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
 tags:
-- API
-- Credential Management API
-- NeedsExample
-- PasswordCredential
-- Property
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - NeedsExample
+  - PasswordCredential
+  - Property
+  - Reference
+  - credential management
 browser-compat: api.PasswordCredential.iconURL
 ---
-<p>{{SeeCompatTable}}{{APIRef("Credential Management API")}}</p>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-<p>The <strong><code>iconURL</code></strong> read-only property
-    of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
-    containing a URL pointing to an image for an icon. This image is intended for display
-    in a credential chooser. The URL must be accessible without authentication.</p>
+The **`iconURL`** read-only property
+of the {{domxref("PasswordCredential")}} interface returns a {{domxref("USVString")}}
+containing a URL pointing to an image for an icon. This image is intended for display
+in a credential chooser. The URL must be accessible without authentication.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>url</em> = <em>passwordCredential</em>.iconURL</pre>
+```js
+url = passwordCredential.iconURL
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} containing a URL.</p>
+A {{domxref("USVString")}} containing a URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

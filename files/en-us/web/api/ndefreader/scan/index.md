@@ -8,58 +8,54 @@ tags:
   - Method
 browser-compat: api.NDEFReader.scan
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <code>scan()</code> method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.</p>
+The `scan()` method of the {{DOMxRef("NDEFReader")}} interface activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var readerPromise = NDEFReader.scan(options);
-</pre>
+```js
+var readerPromise = NDEFReader.scan(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>
-    <p>An object with the following properties:</p>
-    <ul>
-      <li><code>signal</code> -- An {{DOMxRef("AbortSignal")}} that allows cancelling
-        this <code>scan()</code> operation.</li>
-    </ul>
-  </dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following properties:
 
-<p>A {{JSxRef("Promise")}} that resolves immediately after
-  scheduling read operations for the NFC adapter.</p>
+    - `signal` -- An {{DOMxRef("AbortSignal")}} that allows cancelling
+      this `scan()` operation.
 
-<h2 id="Exceptions">Exceptions</h2>
+### Return value
 
-<p>This method doesn't throw exceptions; instead, it rejects the returned promise,
-  passing a {{domxref("DOMException")}} whose <code>name</code> is one of the
-  following:</p>
+A {{JSxRef("Promise")}} that resolves immediately after
+scheduling read operations for the NFC adapter.
 
-<dl>
-  <dt><code>"AbortError"</code></dt>
-  <dd>The scan operation was aborted with the {{DOMxRef("AbortSignal")}} passed in the <code>options</code> argument.</dd>
-  <dt><code>"InvalidStateError"</code></dt>
-  <dd>There's already an ongoing scan.</dd>
-  <dt><code>"NotAllowedError"</code></dt>
-  <dd>The permission for this operation was rejected.</dd>
-  <dt><code>"NotSupportedError"</code></dt>
-  <dd>There is no NFC adapter compatible with Web NFC, or a connection can not be
-    established.</dd>
-</dl>
+## Exceptions
 
-<h2 id="Examples">Examples</h2>
+This method doesn't throw exceptions; instead, it rejects the returned promise,
+passing a {{domxref("DOMException")}} whose `name` is one of the
+following:
 
-<h3>Handle scanning errors</h3>
+- `"AbortError"`
+  - : The scan operation was aborted with the {{DOMxRef("AbortSignal")}} passed in the `options` argument.
+- `"InvalidStateError"`
+  - : There's already an ongoing scan.
+- `"NotAllowedError"`
+  - : The permission for this operation was rejected.
+- `"NotSupportedError"`
+  - : There is no NFC adapter compatible with Web NFC, or a connection can not be
+    established.
 
-<p>This example shows what happens when a scan promise rejects and <code>readingerror</code> is thrown.</p>
+## Examples
 
-<pre class="brush: js">const ndef = new NDEFReader();
+### Handle scanning errors
+
+This example shows what happens when a scan promise rejects and `readingerror` is thrown.
+
+```js
+const ndef = new NDEFReader();
 ndef.scan().then(() => {
   console.log("Scan started successfully.");
   ndef.onreadingerror = (event) => {
@@ -70,12 +66,13 @@ ndef.scan().then(() => {
   };
 }).catch(error => {
   console.log(`Error! Scan failed to start: ${error}.`);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

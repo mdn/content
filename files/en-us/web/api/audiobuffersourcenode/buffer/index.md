@@ -2,52 +2,52 @@
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- Buffer
-- Media
-- Property
-- Reference
-- Web Audio API
-- sound
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - Buffer
+  - Media
+  - Property
+  - Reference
+  - Web Audio API
+  - sound
 browser-compat: api.AudioBufferSourceNode.buffer
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code><strong>buffer</strong></code> property of the {{
+The **`buffer`** property of the {{
   domxref("AudioBufferSourceNode") }} interface provides the ability to play back audio
-  using an {{domxref("AudioBuffer")}} as the source of the sound data.</p>
+using an {{domxref("AudioBuffer")}} as the source of the sound data.
 
-<p>If the <code>buffer</code> property is set to the value <code>null</code>, the node
-  generates a single channel containing silence (that is, every sample is 0).</p>
+If the `buffer` property is set to the value `null`, the node
+generates a single channel containing silence (that is, every sample is 0).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioBufferSourceNode</em>.buffer = <em>soundBuffer</em>;
-</pre>
+```js
+AudioBufferSourceNode.buffer = soundBuffer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
-  node will play.</p>
+An {{domxref("AudioBuffer")}} which contains the data representing the sound which the
+node will play.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For a full working example, see <a href="https://mdn.github.io/webaudio-examples/audio-buffer/"> this code running
-      live</a>, or <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
-</div>
+> **Note:** For a full working example, see [this code running
+> live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel &lt; channels; channel++) {
+  for (var channel = 0; channel < channels; channel++) {
    // This gives us the actual ArrayBuffer that contains the data
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
+   for (var i = 0; i < frameCount; i++) {
      // Math.random() is in [0; 1.0]
      // audio needs to be in [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
@@ -58,19 +58,18 @@ button.onclick = function() {
   // This is the AudioNode to use when we want to play an AudioBuffer
   var source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
-  source.buffer = myArrayBuffer;</pre>
+  source.buffer = myArrayBuffer;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

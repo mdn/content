@@ -9,30 +9,30 @@ tags:
   - Reference
 browser-compat: api.ValidityState.rangeUnderflow
 ---
-<p>The read-only <strong><code>rangeUnderflow</code></strong> property of a <strong><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></strong> object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> attribute.</p>
+The read-only **`rangeUnderflow`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
-<p>If the field is numeric in nature, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types and a <code>min</code> value is set, if the value don't doesn't conform to the constraints set by the <code><a href="/en-US/docs/Web/HTML/Attributes/step">min</a></code> value, the <code>rangeUnderflow</code> property will be true.</p>
+If the field is numeric in nature, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types and a `min` value is set, if the value don't doesn't conform to the constraints set by the [`min`](/en-US/docs/Web/HTML/Attributes/step) value, the `rangeUnderflow` property will be true.
 
-<p>Given the following:</p>
+Given the following:
 
-<pre class="brush: html">&lt;input type="number" min="20" max="40" step="2"/&gt;</pre>
+```html
+<input type="number" min="20" max="40" step="2"/>
+```
 
-<p>if <code>value &lt; 20</code>, <code>rangeUnderflow</code> will be true. When <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</p>
+if `value < 20`, `rangeUnderflow` will be true. When `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ValidityState.rangeOverflow")}}</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code> attribute</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code> attribute</a></li>
-</ul>
+- {{domxref("ValidityState.rangeOverflow")}}
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)
+- [`max` attribute](/en-US/docs/Web/HTML/Attributes/max)

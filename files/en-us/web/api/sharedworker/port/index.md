@@ -2,55 +2,55 @@
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
 tags:
-- API
-- Property
-- Reference
-- SharedWorker
-- Web Workers
-- port
+  - API
+  - Property
+  - Reference
+  - SharedWorker
+  - Web Workers
+  - port
 browser-compat: api.SharedWorker.port
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>port</strong></code> property of the {{domxref("SharedWorker")}}
-  interface returns a {{domxref("MessagePort")}} object used to communicate and control
-  the shared worker.</p>
+The **`port`** property of the {{domxref("SharedWorker")}}
+interface returns a {{domxref("MessagePort")}} object used to communicate and control
+the shared worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myWorker.port;</pre>
+```js
+myWorker.port;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MessagePort")}} object.</p>
+A {{domxref("MessagePort")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows creation of a <code>SharedWorker</code> object using
-  the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple
-  scripts can then access the worker through a {{domxref("MessagePort")}} object accessed
-  using the <code>SharedWorker.port</code> property — the port is started using its
-  <code>start()</code> method:</p>
+The following code snippet shows creation of a `SharedWorker` object using
+the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple
+scripts can then access the worker through a {{domxref("MessagePort")}} object accessed
+using the `SharedWorker.port` property — the port is started using its
+`start()` method:
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
-myWorker.port.start();</pre>
+```js
+var myWorker = new SharedWorker('worker.js');
+myWorker.port.start();
+```
 
-<p>For a full example, see our <a class="external external-icon"
-    href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a
-    class="external external-icon" href="https://mdn.github.io/simple-shared-worker/">run
-    shared worker</a>.)</p>
+For a full example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run
+shared worker](https://mdn.github.io/simple-shared-worker/).)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
-  <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
-</ul>
+- The {{domxref("SharedWorker")}} interface it belongs to.
+- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)

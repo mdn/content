@@ -10,59 +10,56 @@ tags:
   - oniceconnectionstatechange
 browser-compat: api.RTCPeerConnection.oniceconnectionstatechange
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.oniceconnectionstatechange</strong></code> property
-  is an event handler which specifies a function to be called when the
-  {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event is fired on an
-  {{domxref("RTCPeerConnection")}} instance. This happens when the state of the
-  connection's ICE agent, as represented by the
-  {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property,
-  changes.</p>
+The **`RTCPeerConnection.oniceconnectionstatechange`** property
+is an event handler which specifies a function to be called when the
+{{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event is fired on an
+{{domxref("RTCPeerConnection")}} instance. This happens when the state of the
+connection's ICE agent, as represented by the
+{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property,
+changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCPeerConnection</em>.oniceconnectionstatechange = <em>eventHandler</em>;
-</pre>
+```js
+RTCPeerConnection.oniceconnectionstatechange = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This event handler can be set to function which is passed a single input parameter: an
-  {{domxref("Event")}} object describing the {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event
-  which occurred. Your code can look at the value of
-  {{domxref("RTCPeerConnection.iceConnectionState")}} to determine what the new state is.
-</p>
+This event handler can be set to function which is passed a single input parameter: an
+{{domxref("Event")}} object describing the {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event
+which occurred. Your code can look at the value of
+{{domxref("RTCPeerConnection.iceConnectionState")}} to determine what the new state is.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The example below watches the state of the ICE agent for a failure or unexpected
-  closure and takes appropriate action, such as presenting an error message or attempting
-  to restart the ICE agent.</p>
+The example below watches the state of the ICE agent for a failure or unexpected
+closure and takes appropriate action, such as presenting an error message or attempting
+to restart the ICE agent.
 
-<pre class="brush: js">pc.oniceconnectionstatechange = function(event) {
+```js
+pc.oniceconnectionstatechange = function(event) {
   if (pc.iceConnectionState === "failed" ||
       pc.iceConnectionState === "disconnected" ||
       pc.iceConnectionState === "closed") {
     // Handle the failure
   }
 };
-</pre>
+```
 
-<p>Of course, "disconnected" and "closed" don't necessarily indicate errors; these can be
-  the result of normal ICE negotiation, so be sure to handle these properly (if at all).
-</p>
+Of course, "disconnected" and "closed" don't necessarily indicate errors; these can be
+the result of normal ICE negotiation, so be sure to handle these properly (if at all).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event and its type, {{domxref("Event")}}.
-  </li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}} event and its type, {{domxref("Event")}}.

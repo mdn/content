@@ -10,41 +10,42 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaLive
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaLive</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
+The **`ariaLive`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaLive = ElementInternals.ariaLive;
-ElementInternals.ariaLive = ariaLive;</pre>
+```js
+let ariaLive = ElementInternals.ariaLive;
+ElementInternals.ariaLive = ariaLive;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"assertive"</code></dt>
-  <dd>Indicates that updates to the region have the highest priority and should be presented the user immediately.</dd>
-  <dt><code>"off"</code></dt>
-  <dd>Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.</dd>
-  <dt><code>"polite"</code></dt>
-  <dd>Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"assertive"`
+  - : Indicates that updates to the region have the highest priority and should be presented the user immediately.
+- `"off"`
+  - : Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.
+- `"polite"`
+  - : Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.
 
-<p>In this example the value of <code>ariaLive</code> is set to "assertive".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaLive = "assertive";</pre>
+In this example the value of `ariaLive` is set to "assertive".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaLive = "assertive";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

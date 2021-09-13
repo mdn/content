@@ -9,44 +9,42 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createHTML
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>createHTML()</code></strong> method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.</p>
+The **`createHTML()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedHTML")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>str</var> = <var>TrustedTypePolicy</var>.createHTML(<var>input</var>[,<var>args</var>]);</pre>
+    var str = TrustedTypePolicy.createHTML(input[,args]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>input</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the string to be sanitized by the policy.</dd>
-  <dt><code>args</code>{{optional_inline}}</dt>
-  <dd>Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.</dd>
-</dl>
+- `input`
+  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+- `args`{{optional_inline}}
+  - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("TrustedHTML")}} object.</p>
+A {{domxref("TrustedHTML")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example a string containing a potentially dangerous script is used as the input for <code>createHTML()</code>. Dangerous code inserted by a user could then be sanitized before insertion into any injection sink.</p>
+In the below example a string containing a potentially dangerous script is used as the input for `createHTML()`. Dangerous code inserted by a user could then be sanitized before insertion into any injection sink.
 
-<pre class="brush: js">const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");</pre>
+```js
+const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

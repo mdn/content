@@ -10,36 +10,32 @@ tags:
   - Reference
 browser-compat: api.PresentationAvailability
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
-<p>A <code>PresentationAvailability</code> object is associated with available <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-display">presentation displays</a> and represents the <dfn>presentation display availability</dfn> for a presentation request. If the <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a> can <a href="https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays">monitor the list of available presentation displays</a> in the background (without a pending request to <code>start()</code>), the <code>PresentationAvailability</code> object <em>MUST</em> be implemented in a <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context">controlling browsing context</a>.</p>
+A `PresentationAvailability` object is associated with available [presentation displays](https://www.w3.org/TR/presentation-api/#dfn-presentation-display) and represents the _presentation display availability_ for a presentation request. If the [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) can [monitor the list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays) in the background (without a pending request to `start()`), the `PresentationAvailability` object _MUST_ be implemented in a [controlling browsing context](https://www.w3.org/TR/presentation-api/#dfn-controlling-browsing-context).
 
-<p>The <dfn><code>value</code></dfn> attribute <em>MUST</em> return the last value it was set to. The value is updated by the <a href="https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays">monitor the list of available presentation displays</a> algorithm.</p>
+The _`value`_ attribute _MUST_ return the last value it was set to. The value is updated by the [monitor the list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays) algorithm.
 
-<p>The <dfn><code>onchange</code></dfn> attribute is an <a href="https://www.w3.org/TR/presentation-api/#dfn-event-handler">event handler</a> whose corresponding <a href="https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type">event handler event type</a> is <dfn><code>change</code></dfn>.</p>
+The _`onchange`_ attribute is an [event handler](https://www.w3.org/TR/presentation-api/#dfn-event-handler) whose corresponding [event handler event type](https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type) is _`change`_.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PresentationAvailability.value")}} {{readonlyinline}}</dt>
- <dd>A boolean value indicating whether the given presentation display is available. The <dfn><code>value</code></dfn> attribute <em>MUST</em> return the last value it was set to.</dd>
-</dl>
+- {{domxref("PresentationAvailability.value")}} {{readonlyinline}}
+  - : A boolean value indicating whether the given presentation display is available. The _`value`_ attribute _MUST_ return the last value it was set to.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("PresentationAvailability.onchange")}}</dt>
- <dd>Indicates that the availability of the presentation display has changed.</dd>
-</dl>
+- {{domxref("PresentationAvailability.onchange")}}
+  - : Indicates that the availability of the presentation display has changed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

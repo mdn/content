@@ -2,65 +2,65 @@
 title: WebGLRenderingContext.blendColor()
 slug: Web/API/WebGLRenderingContext/blendColor
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendColor
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.blendColor()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> is used to set the source and
-  destination blending factors.</p>
+The **`WebGLRenderingContext.blendColor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is used to set the source and
+destination blending factors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>void gl</em>.</var>blendColor<var>(red, green, blue, alpha);</var>
-</pre>
+```js
+void gl.blendColor(red, green, blue, alpha);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>red</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} for the red component in the range of 0 to 1.</dd>
-  <dt><code>green</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} for the green component in the range of 0 to 1.</dd>
-  <dt>blue</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} for the blue component in the range of 0 to 1.</dd>
-  <dt>alpha</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} for the alpha component (transparency) in the range of 0
-    to 1.</dd>
-</dl>
+- `red`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the red component in the range of 0 to 1.
+- `green`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the green component in the range of 0 to 1.
+- blue
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the blue component in the range of 0 to 1.
+- alpha
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} for the alpha component (transparency) in the range of 0
+    to 1.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To set the blend color, use:</p>
+To set the blend color, use:
 
-<pre class="brush: js">gl.blendColor(0, 0.5, 1, 1);</pre>
+```js
+gl.blendColor(0, 0.5, 1, 1);
+```
 
-<p>To get the blend color, query the <code>BLEND_COLOR</code> constant which returns a
-  {{jsxref("Float32Array")}}.</p>
+To get the blend color, query the `BLEND_COLOR` constant which returns a
+{{jsxref("Float32Array")}}.
 
-<pre class="brush: js">gl.getParameter(gl.BLEND_COLOR);
-// Float32Array[0, 0.5, 1, 1]</pre>
+```js
+gl.getParameter(gl.BLEND_COLOR);
+// Float32Array[0, 0.5, 1, 1]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.blendEquation()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.blendFunc()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.blendEquation()")}}
+- {{domxref("WebGLRenderingContext.blendFunc()")}}

@@ -11,39 +11,42 @@ tags:
   - Element
 browser-compat: api.Element.ariaSetSize
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaSetSize</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-setsize</code> attribute, which defines the number of items in the current set of listitems or treeitems.</p>
+The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the `aria-setsize` attribute, which defines the number of items in the current set of listitems or treeitems.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaSetSize</var> = element.ariaSetSize;
-<var>element</var>.ariaSetSize = <var>ariaSetSize</var></pre>
+    var ariaSetSize = element.ariaSetSize;
+    element.ariaSetSize = ariaSetSize
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} containing an integer.
 
-<p>In this example the <code>aria-setsize</code> attribute on the element with an ID of <code>tab-id</code> is set to "3", to inform a device that there are currently 3 tabs in the group. Using <code>ariaSetSize</code> we update the value to "4".</p>
+## Examples
 
-<pre class="brush: html">&lt;button role="tab" aria-selected="true" aria-setsize="3" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
+In this example the `aria-setsize` attribute on the element with an ID of `tab-id` is set to "3", to inform a device that there are currently 3 tabs in the group. Using `ariaSetSize` we update the value to "4".
 
-<pre class="brush: js">let el = document.getElementById('tab-id');
+```html
+<button role="tab" aria-selected="true" aria-setsize="3" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+```
+
+```js
+let el = document.getElementById('tab-id');
 console.log(el.ariaSetSize); // 3
 el.ariaSetSize = "4";
-console.log(el.ariaSetSize); // 4</pre>
+console.log(el.ariaSetSize); // 4
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role">ARIA: tab role</a></li>
-</ul>
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)

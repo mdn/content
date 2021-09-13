@@ -2,35 +2,35 @@
 title: XPathException.code
 slug: Web/API/XPathException/code
 tags:
-- API
-- DOM
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathException
+  - API
+  - DOM
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathException
 browser-compat: api.XPathException.code
 ---
-<div>{{APIRef("DOM XPath")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
-<p>The <strong><code>code</code></strong> read-only property of the
-  {{domxref("XPathException")}} interface returns a <code>short</code> that contains one
-  of the <a href="/en-US/docs/Web/API/XPathException#Constants">error code constants</a>.
-</p>
+The **`code`** read-only property of the
+{{domxref("XPathException")}} interface returns a `short` that contains one
+of the [error code constants](/en-US/docs/Web/API/XPathException#Constants).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>exceptionCode</var> = <var>exception</var>.code;
-</pre>
+```js
+var exceptionCode = exception.code;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>short</code> number representing the error code.</p>
+A `short` number representing the error code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

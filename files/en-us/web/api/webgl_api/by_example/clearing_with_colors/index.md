@@ -9,30 +9,32 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
 
-<p>An example showing how to clear a WebGL rendering context to a solid color.</p>
+An example showing how to clear a WebGL rendering context to a solid color.
 
-<h2 id="Clearing_the_WebGL_context_with_a_solid_color">Clearing the WebGL context with a solid color</h2>
+## Clearing the WebGL context with a solid color
 
-<p>{{EmbedLiveSample("Clearing_the_WebGL_context_with_a_solid_color",660,425)}}</p>
+{{EmbedLiveSample("Clearing_the_WebGL_context_with_a_solid_color",660,425)}}
 
-<p>The simplest graphical {{Glossary("WebGL")}} program. Set up the {{domxref("WebGLRenderingContext","rendering context", "", 1)}} and then just clear it solid green. Note that {{Glossary("CSS")}} sets the background color of the canvas to black, so when the canvas turns green we know that {{Glossary("WebGL")}}'s magic has worked.</p>
+The simplest graphical {{Glossary("WebGL")}} program. Set up the {{domxref("WebGLRenderingContext","rendering context", "", 1)}} and then just clear it solid green. Note that {{Glossary("CSS")}} sets the background color of the canvas to black, so when the canvas turns green we know that {{Glossary("WebGL")}}'s magic has worked.
 
-<p>In addition, you may notice that clearing the drawing buffer with a solid color is a two-stage process. First, we set the clear color to green, using the method {{domxref("WebGLRenderingContext.clearColor()","clearColor()")}}. This only changes some internal state of {{Glossary("WebGL")}}, but does not draw anything yet. Next, we actually do the drawing by calling the {{domxref("WebGLRenderingContext.clear()","clear()")}} method. This is typical of how drawing is done with WebGL. There is only a handful of methods for actual drawing (<code>clear()</code> is one of them). All other methods are for setting and querying WebGL state variables (such as the clear color).</p>
+In addition, you may notice that clearing the drawing buffer with a solid color is a two-stage process. First, we set the clear color to green, using the method {{domxref("WebGLRenderingContext.clearColor()","clearColor()")}}. This only changes some internal state of {{Glossary("WebGL")}}, but does not draw anything yet. Next, we actually do the drawing by calling the {{domxref("WebGLRenderingContext.clear()","clear()")}} method. This is typical of how drawing is done with WebGL. There is only a handful of methods for actual drawing (`clear()` is one of them). All other methods are for setting and querying WebGL state variables (such as the clear color).
 
-<p>There are many "dials" and "switches" that affect drawing with {{Glossary("WebGL")}}. The clear color is just the first of many you will get to know. This is why {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} is often called a <em>state machine</em>. By tweaking those "dials" and "switches" you can modify the internal state of the WebGL machine, which in turn changes how input (in this case, a clear command) translates into output (in this case, all pixels are set to green).</p>
+There are many "dials" and "switches" that affect drawing with {{Glossary("WebGL")}}. The clear color is just the first of many you will get to know. This is why {{Glossary("WebGL")}}/{{Glossary("OpenGL")}} is often called a _state machine_. By tweaking those "dials" and "switches" you can modify the internal state of the WebGL machine, which in turn changes how input (in this case, a clear command) translates into output (in this case, all pixels are set to green).
 
-<p>Finally, we note that color in WebGL is usually in {{Glossary("RGBA")}} format, that is four numerical components for red, green, blue and alpha (opacity). Therefore, <code>clearColor()</code> takes four arguments.</p>
+Finally, we note that color in WebGL is usually in {{Glossary("RGBA")}} format, that is four numerical components for red, green, blue and alpha (opacity). Therefore, `clearColor()` takes four arguments.
 
-<pre class="brush: html">&lt;p&gt;A very simple WebGL program that shows some color.&lt;/p&gt;
-&lt;!-- Text within a canvas element is displayed
-    only if canvas is not supported. --&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>A very simple WebGL program that shows some color.</p>
+<!-- Text within a canvas element is displayed
+    only if canvas is not supported. -->
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -44,9 +46,10 @@ canvas {
   border : none;
   background-color : black;
 }
-</pre>
+```
 
-<pre class="brush: js">// Run everything inside window load event handler, to make sure
+```js
+// Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it,
 // and to not mess up the global scope. We are giving the event
 // handler a name (setupWebGL) so that we can refer to the
@@ -85,8 +88,8 @@ window.addEventListener("load", function setupWebGL (evt) {
   gl.clear(gl.COLOR_BUFFER_BIT);
 
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}

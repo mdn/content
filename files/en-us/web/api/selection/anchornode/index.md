@@ -2,40 +2,40 @@
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
 tags:
-- API
-- Experimental
-- HTML Editing
-- Property
-- Read-only
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Property
+  - Read-only
+  - Reference
+  - Selection
 browser-compat: api.Selection.anchorNode
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.anchorNode</code></strong> read-only property returns the
-  {{domxref("Node")}} in which the selection begins.</p>
+The **`Selection.anchorNode`** read-only property returns the
+{{domxref("Node")}} in which the selection begins.
 
-<p>A user may make a selection from left to right (in document order) or right to left
-  (reverse of document order). The anchor is where the user began the selection. This can
-  be visualized by holding the Shift key and pressing the arrow keys on your keyboard. The
-  selection's anchor does not move, but the selection's focus, the other end of the
-  selection, does move.</p>
+A user may make a selection from left to right (in document order) or right to left
+(reverse of document order). The anchor is where the user began the selection. This can
+be visualized by holding the Shift key and pressing the arrow keys on your keyboard. The
+selection's anchor does not move, but the selection's focus, the other end of the
+selection, does move.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> =<em> sel</em>.anchorNode</pre>
+```js
+node = sel.anchorNode
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

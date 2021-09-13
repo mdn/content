@@ -2,40 +2,42 @@
 title: ReportingObserver.disconnect()
 slug: Web/API/ReportingObserver/disconnect
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Reporting API
-- ReportingObserver
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Reporting API
+  - ReportingObserver
 browser-compat: api.ReportingObserver.disconnect
 ---
-<div>{{APIRef("Reporting API")}}{{SeeCompatTable}}</div>
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>disconnect()</code></strong> method of the
-  {{domxref("ReportingObserver")}} interface stops a reporting observer that had
-  previously started observing from collecting reports.</p>
+The **`disconnect()`** method of the
+{{domxref("ReportingObserver")}} interface stops a reporting observer that had
+previously started observing from collecting reports.
 
-<p>After calling <code>disconnect()</code>, neither
-  {{domxref("ReportingObserver.takeRecords()")}} nor the <code>records</code> parameter of
-  the
-  <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code>
-  callback will return any reports. The associated observer will no longer be active.</p>
+After calling `disconnect()`, neither
+{{domxref("ReportingObserver.takeRecords()")}} nor the `records` parameter of
+the
+[`ReportingObserver()`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver)
+callback will return any reports. The associated observer will no longer be active.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>reportingObserverInstance</em>.disconnect()
-</pre>
+```js
+reportingObserverInstance.disconnect()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
 
 let observer = new ReportingObserver(function(reports, observer) {
-  reportBtn.onclick = () =&gt; displayReports(reports);
+  reportBtn.onclick = () => displayReports(reports);
 }, options);
 
 observer.observe()
@@ -43,18 +45,16 @@ observer.observe()
 ...
 
 observer.disconnect()
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

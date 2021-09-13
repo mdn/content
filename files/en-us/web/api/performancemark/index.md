@@ -9,48 +9,44 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceMark
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><code><strong>PerformanceMark</strong></code> is an <em>abstract</em> interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>mark</code>". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a <em>named </em>{{domxref("DOMHighResTimeStamp")}} (the <em>mark</em>) to the browser's <em>performance timeline</em>.</p>
+**`PerformanceMark`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's _performance timeline_.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:</p>
+This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
-<dl>
- <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
- <dd>Returns "<code>mark</code>".</dd>
- <dt>{{domxref("PerformanceEntry.name")}}</dt>
- <dd>Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.</dd>
- <dt>{{domxref("PerformanceEntry.duration")}}</dt>
- <dd>Returns "<code>0</code>". (A mark has no <em>duration</em>.)</dd>
-</dl>
+- {{domxref("PerformanceEntry.entryType")}}
+  - : Returns "`mark`".
+- {{domxref("PerformanceEntry.name")}}
+  - : Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.
+- {{domxref("PerformanceEntry.startTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
+- {{domxref("PerformanceEntry.duration")}}
+  - : Returns "`0`". (A mark has no _duration_.)
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This interface has no methods.</p>
+This interface has no methods.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the example in <a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a>.</p>
+See the example in [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/User_Timing_API">User Timing (Overview)</a></li>
- <li><a href="/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Using the User Timing API</a></li>
-</ul>
+- [User Timing (Overview)](/en-US/docs/Web/API/User_Timing_API)
+- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)

@@ -12,156 +12,146 @@ tags:
   - request
 browser-compat: api.fetch
 ---
-<p>{{APIRef("Fetch API")}}</p>
+{{APIRef("Fetch API")}}
 
-<p>The global <code><strong>fetch()</strong></code> method starts the process of fetching a
-    resource from the network, returning a promise which is fulfilled once the response is
-    available.</p>
+The global **`fetch()`** method starts the process of fetching a
+resource from the network, returning a promise which is fulfilled once the response is
+available.
 
-<p>The promise resolves to the {{domxref("Response")}} object
-  representing the response to your request. The promise <em>does not</em> reject on HTTP
-  errors — it only rejects on network errors. You must use <code>then</code> handlers to
-  check for HTTP errors.</p>
+The promise resolves to the {{domxref("Response")}} object
+representing the response to your request. The promise _does not_ reject on HTTP
+errors — it only rejects on network errors. You must use `then` handlers to
+check for HTTP errors.
 
-<p><code>WindowOrWorkerGlobalScope</code> is implemented by both {{domxref("Window")}} and
-  {{domxref("WorkerGlobalScope")}}, which means that the <code>fetch()</code> method is
-  available in pretty much any context in which you might want to fetch resources.</p>
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
+{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
+available in pretty much any context in which you might want to fetch resources.
 
-<p>A {{domxref("fetch()")}} promise only rejects when a
-  network error is encountered (which is usually when there’s a permissions issue or
-  similar). A {{domxref("fetch()")}} promise <em>does
-    not</em> reject on HTTP errors (<code>404</code>, etc.). Instead, a
-  <code>then()</code> handler must check the {{domxref("Response.ok")}} and/or
-  {{domxref("Response.status")}} properties.</p>
+A {{domxref("fetch()")}} promise only rejects when a
+network error is encountered (which is usually when there’s a permissions issue or
+similar). A {{domxref("fetch()")}} promise _does
+not_ reject on HTTP errors (`404`, etc.). Instead, a
+`then()` handler must check the {{domxref("Response.ok")}} and/or
+{{domxref("Response.status")}} properties.
 
-<p>The <code>fetch()</code> method is controlled by the <code>connect-src</code> directive
-  of <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a>
-  rather than the directive of the resources it's retrieving.</p>
+The `fetch()` method is controlled by the `connect-src` directive
+of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
+rather than the directive of the resources it's retrieving.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>fetch()</code> method's parameters are identical to
-    those of the {{domxref("Request.Request","Request()")}} constructor.</p>
-</div>
+> **Note:** The `fetch()` method's parameters are identical to
+> those of the {{domxref("Request.Request","Request()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>fetchResponsePromise</var> = fetch(<var>resource</var> [, <var>init</var>])
-</pre>
+```js
+const fetchResponsePromise = fetch(resource [, init])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>resource</var></code></dt>
-  <dd>This defines the resource that you wish to fetch. This can either be:
-    <ul>
-      <li>A string or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.</li>
-      <li>A {{domxref("Request")}} object.</li>
-    </ul>
-  </dd>
-  <dt><code><var>init</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>An object containing any custom settings that you want to apply to the request. The
-      possible options are:</p>
+- `resource`
 
-    <dl>
-      <dt><code>method</code></dt>
-      <dd>The request method, e.g., <code>GET</code>, <code>POST</code>. Note that the
+  - : This defines the resource that you wish to fetch. This can either be:
+
+    - A string or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
+    - A {{domxref("Request")}} object.
+
+- `init` {{optional_inline}}
+
+  - : An object containing any custom settings that you want to apply to the request. The
+    possible options are:
+
+    - `method`
+      - : The request method, e.g., `GET`, `POST`. Note that the
         {{httpheader("Origin")}} header is not set on Fetch requests with a method of
-        {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.<br>
-        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}).</dd>
-      <dt><code>headers</code></dt>
-      <dd>Any headers you want to add to your request, contained within a
+        {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}.
+        (This behavior was corrected in Firefox 65 — see {{bug(1508661)}}).
+    - `headers`
+      - : Any headers you want to add to your request, contained within a
         {{domxref("Headers")}} object or an object literal with {{jsxref("String")}}
-        values. Note that <a href="/en-US/docs/Glossary/Forbidden_header_name">some names
-          are forbidden</a>.</dd>
-      <dt><code>body</code></dt>
-      <dd>Any body that you want to add to your request: this can be a
+        values. Note that [some names
+        are forbidden](/en-US/docs/Glossary/Forbidden_header_name).
+    - `body`
+      - : Any body that you want to add to your request: this can be a
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
         {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, or
         {{domxref("ReadableStream")}} object. Note that a request using the
-        <code>GET</code> or <code>HEAD</code> method cannot have a body.</dd>
-      <dt><code>mode</code></dt>
-      <dd>The mode you want to use for the request, e.g., <code>cors</code>,
-        <code>no-cors</code>, or <code>same-origin</code>.</dd>
-      <dt><code>credentials</code></dt>
-      <dd>
-        <p>Controls what browsers do with credentials (<a href="/en-US/docs/Web/HTTP/Cookies">cookies</a>, <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> entries, and TLS client certificates). Must be one of the following strings:</p>
-        <dl>
-          <dt><code>omit</code></dt>
-          <dd>Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).</dd>
-          <dt><code>same-origin</code></dt>
-          <dd>Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.</dd>
-          <dt><code>include</code></dt>
-          <dd>Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
-            <div class="notecard note">
-              <p><strong>Note:</strong> Credentials may be included in simple and "final" cross-origin requests, but should not be included in <a href="/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials">CORS preflight requests</a>.</p>
-            </div>
-          </dd>
-        </dl>
-      </dd>
-      <dt><code>cache</code></dt>
-      <dd>A string indicating how the request will interact with the browser’s <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>. The possible values, <code>default</code>, <code>no-store</code>, <code>reload</code>, <code>no-cache</code>, <code>force-cache</code>, and <code>only-if-cached</code>, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.</dd>
-<dt><code>redirect</code></dt>
-<dd>How to handle a <code>redirect</code> response:
-    <ul>
-        <li><code>follow</code>: Automatically follow redirects. Unless otherwise stated the redirect mode is set to <code>follow</code></li>
-        <li><code>error</code>: Abort with an error if a redirect occurs.</li>
-        <li><code>manual</code>: Caller intends to process the response in another context.<br>See <a href="https://fetch.spec.whatwg.org/#requests">WHATWG fetch standard</a> for more information.</li>
-    </ul>
-      <dt><code>referrer</code></dt>
-      <dd>A {{domxref("USVString")}} specifying the referrer of the request. This can be a
-        same-origin URL, <code>about:client</code>, or an empty string.</dd>
-      <dt><code>referrerPolicy</code></dt>
-      <dd>Specifies the <a
-          href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policies">referrer
-          policy</a> to use for the request. May be one of <code>no-referrer</code>,
-        <code>no-referrer-when-downgrade</code>, <code>same-origin</code>,
-        <code>origin</code>, <code>strict-origin</code>,
-        <code>origin-when-cross-origin</code>,
-        <code>strict-origin-when-cross-origin</code>, or <code>unsafe-url</code>.</dd>
-      <dt><code>integrity</code></dt>
-      <dd>Contains the <a
-          href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a>
+        `GET` or `HEAD` method cannot have a body.
+    - `mode`
+      - : The mode you want to use for the request, e.g., `cors`,
+        `no-cors`, or `same-origin`.
+    - `credentials`
+
+      - : Controls what browsers do with credentials ([cookies](/en-US/docs/Web/HTTP/Cookies), [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) entries, and TLS client certificates). Must be one of the following strings:
+
+        - `omit`
+          - : Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).
+        - `same-origin`
+          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.
+        - `include`
+
+          - : Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
+
+            > **Note:** Credentials may be included in simple and "final" cross-origin requests, but should not be included in [CORS preflight requests](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+
+    - `cache`
+      - : A string indicating how the request will interact with the browser’s [HTTP cache](/en-US/docs/Web/HTTP/Caching). The possible values, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, and `only-if-cached`, are documented in the article for the {{domxref("Request/cache", "cache")}} property of the {{domxref("Request")}} object.
+    - `redirect`
+
+      - : How to handle a `redirect` response:
+
+        - `follow`: Automatically follow redirects. Unless otherwise stated the redirect mode is set to `follow`
+        - `error`: Abort with an error if a redirect occurs.
+        - `manual`: Caller intends to process the response in another context.
+          See [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) for more information.
+
+    - `referrer`
+      - : A {{domxref("USVString")}} specifying the referrer of the request. This can be a
+        same-origin URL, `about:client`, or an empty string.
+    - `referrerPolicy`
+      - : Specifies the [referrer
+        policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies) to use for the request. May be one of `no-referrer`,
+        `no-referrer-when-downgrade`, `same-origin`,
+        `origin`, `strict-origin`,
+        `origin-when-cross-origin`,
+        `strict-origin-when-cross-origin`, or `unsafe-url`.
+    - `integrity`
+      - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
         value of the request (e.g.,
-        <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
-      <dt><code>keepalive</code></dt>
-      <dd>The <code>keepalive</code> option can be used to allow the request to outlive
-        the page. Fetch with the <code>keepalive</code> flag is a replacement for the
-        {{domxref("Navigator.sendBeacon()")}} API.</dd>
-      <dt><code>signal</code></dt>
-      <dd>An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
-        fetch request and abort it if desired via an {{domxref("AbortController")}}.</dd>
-    </dl>
-  </dd>
-</dl>
+        `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `keepalive`
+      - : The `keepalive` option can be used to allow the request to outlive
+        the page. Fetch with the `keepalive` flag is a replacement for the
+        {{domxref("Navigator.sendBeacon()")}} API.
+    - `signal`
+      - : An {{domxref("AbortSignal")}} object instance; allows you to communicate with a
+        fetch request and abort it if desired via an {{domxref("AbortController")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>AbortError</code></dt>
-  <dd>The request was aborted due to a call to the {{domxref("AbortController")}}
-    {{domxref("AbortController.abort", "abort()")}} method.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>The specified URL string includes user credentials. This information should instead
-    be provided using an {{HTTPHeader("Authorization")}} header.</dd>
-</dl>
+- `AbortError`
+  - : The request was aborted due to a call to the {{domxref("AbortController")}}
+    {{domxref("AbortController.abort", "abort()")}} method.
+- `TypeError`
+  - : The specified URL string includes user credentials. This information should instead
+    be provided using an {{HTTPHeader("Authorization")}} header.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch
-    Request example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) we
-  create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
-  using a <code>fetch()</code> call. Since we are fetching an image, we run
-  {{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
-  handled properly, then create an Object URL of it and display it in an
-  {{htmlelement("img")}} element.</p>
+In our [Fetch
+Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
+using a `fetch()` call. Since we are fetching an image, we run
+{{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
+handled properly, then create an Object URL of it and display it in an
+{{htmlelement("img")}} element.
 
-<pre class="brush: js">const myImage = document.querySelector('img');
+```js
+const myImage = document.querySelector('img');
 
 let myRequest = new Request('flowers.jpg');
 
@@ -175,16 +165,16 @@ fetch(myRequest)
 .then(function(response) {
   let objectURL = URL.createObjectURL(response);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>In the <a
-    href="https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html">Fetch
-    with init then Request example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-with-init-then-request/">Fetch
-    Request init live</a>), we do the same thing except that we pass in an
-  <code><var>init</var></code> object when we invoke <code>fetch()</code>:</p>
+In the [Fetch
+with init then Request example](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (see [Fetch
+Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), we do the same thing except that we pass in an
+`init` object when we invoke `fetch()`:
 
-<pre class="brush: js">const myImage = document.querySelector('img');
+```js
+const myImage = document.querySelector('img');
 
 let myHeaders = new Headers();
 myHeaders.append('Accept', 'image/jpeg');
@@ -200,18 +190,21 @@ let myRequest = new Request('flowers.jpg');
 
 fetch(myRequest, myInit).then(function(response) {
   // ...
-});</pre>
+});
+```
 
-<p>You could also pass the <code><var>init</var></code> object in with the
-  <code>Request</code> constructor to get the same effect:</p>
+You could also pass the `init` object in with the
+`Request` constructor to get the same effect:
 
-<pre
-  class="brush: js">let myRequest = new Request('flowers.jpg', myInit);</pre>
+```js
+let myRequest = new Request('flowers.jpg', myInit);
+```
 
-<p>You can also use an object literal as <code>headers</code> in
-  <code><var>init</var></code>.</p>
+You can also use an object literal as `headers` in
+`init`.
 
-<pre class="brush: js">const myInit = {
+```js
+const myInit = {
   method: 'GET',
   headers: {
     'Accept': 'image/jpeg'
@@ -221,21 +214,19 @@ fetch(myRequest, myInit).then(function(response) {
 };
 
 let myRequest = new Request('flowers.jpg', myInit);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

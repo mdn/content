@@ -2,65 +2,58 @@
 title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Media Capture
-- Media Capture and Streams
-- MediaRecordingErrorEvent
-- MediaStream Recording
-- MediaStream Recording API
-- Recording
-- Video
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Media Capture
+  - Media Capture and Streams
+  - MediaRecordingErrorEvent
+  - MediaStream Recording
+  - MediaStream Recording API
+  - Recording
+  - Video
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p>The
-    <strong><code>MediaRecorderErrorEvent()</code></strong>
-    constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object that
-    represents an error that occurred during the recording of media by the <a
-      href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
-      API</a>.</p>
+The
+**`MediaRecorderErrorEvent()`**
+constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object that
+represents an error that occurred during the recording of media by the [MediaStream Recording
+API](/en-US/docs/Web/API/MediaStream_Recording_API).
 
-<div class="note">
-  <p><strong>Note:</strong> In general, you won't create these yourself; they are delivered to your
-    implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while
-    recording media.</p>
-</div>
+> **Note:** In general, you won't create these yourself; they are delivered to your
+> implementation of {{domxref("MediaRecorder.onerror")}} when errors occur while
+> recording media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>errorEvent</em> = new MediaRecorderErrorEvent(<em>errorInfo</em>)</pre>
+```js
+var errorEvent = new MediaRecorderErrorEvent(errorInfo)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>errorInfo</code></dt>
-  <dd>An object describing the error object to be created. It <em>must</em> contain the
-    <code>error</code> property at a minimum.
-    <dl>
-      <dt><code>error</code></dt>
-      <dd>A {{domxref("DOMException")}} that describes the error that occurred. This
+- `errorInfo`
+
+  - : An object describing the error object to be created. It _must_ contain the
+    `error` property at a minimum.
+
+    - `error`
+      - : A {{domxref("DOMException")}} that describes the error that occurred. This
         object's {{domxref("DOMException.name", "name")}} property should indicate the
-        name of the error that occurred. The other fields may or may not be present.</dd>
-    </dl>
-  </dd>
-</dl>
+        name of the error that occurred. The other fields may or may not be present.
 
-<div class="note">
-  <p><strong>Note:</strong> Some {{Glossary("user agent", "user agents")}} add to the <code>error</code> object
-    other properties that provide information such as stack dumps, the name of the
-    JavaScript file and the line number where the error occurred, and other debugging
-    aids, but you should not rely on this information in a production environment.</p>
-</div>
+> **Note:** Some {{Glossary("user agent", "user agents")}} add to the `error` object
+> other properties that provide information such as stack dumps, the name of the
+> JavaScript file and the line number where the error occurred, and other debugging
+> aids, but you should not rely on this information in a production environment.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,46 +9,42 @@ tags:
   - Secure context
 browser-compat: api.GeolocationCoordinates
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <strong><code>GeolocationCoordinates</code></strong> interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.</p>
+The **`GeolocationCoordinates`** interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>GeolocationCoordinates</code> interface doesn't inherit any properties.</em></p>
+_The `GeolocationCoordinates` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{domxref("GeolocationCoordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the position's latitude in decimal degrees.</dd>
- <dt>{{domxref("GeolocationCoordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the position's longitude in decimal degrees.</dd>
- <dt>{{domxref("GeolocationCoordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the position's altitude in meters, relative to sea level. This value can be <code>null</code> if the implementation cannot provide the data.</dd>
- <dt>{{domxref("GeolocationCoordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the accuracy of the <code>latitude</code> and <code>longitude</code> properties, expressed in meters.</dd>
- <dt>{{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the accuracy of the <code>altitude</code> expressed in meters. This value can be <code>null</code>.</dd>
- <dt>{{domxref("GeolocationCoordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading true north the device is. <code>0</code> degrees represents true north, and the direction is determined clockwise (which means that east is <code>90</code> degrees and west is <code>270</code> degrees). If <code>speed</code> is <code>0</code>, <code>heading</code> is <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>. If the device is unable to provide <code>heading</code> information, this value is <code>null</code>.</dd>
- <dt>{{domxref("GeolocationCoordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a <code>double</code> representing the velocity of the device in meters per second. This value can be <code>null</code>.</dd>
-</dl>
+- {{domxref("GeolocationCoordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the position's latitude in decimal degrees.
+- {{domxref("GeolocationCoordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the position's longitude in decimal degrees.
+- {{domxref("GeolocationCoordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the position's altitude in meters, relative to sea level. This value can be `null` if the implementation cannot provide the data.
+- {{domxref("GeolocationCoordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the accuracy of the `latitude` and `longitude` properties, expressed in meters.
+- {{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the accuracy of the `altitude` expressed in meters. This value can be `null`.
+- {{domxref("GeolocationCoordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading true north the device is. `0` degrees represents true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
+- {{domxref("GeolocationCoordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>GeolocationCoordinates</code> interface neither implements, nor inherits any method.</em></p>
+_The `GeolocationCoordinates` interface neither implements, nor inherits any method._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a></li>
- <li>{{domxref("Geolocation")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}

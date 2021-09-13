@@ -4,54 +4,43 @@ slug: Web/API/Device_Memory_API
 tags:
   - Device Memory API
 ---
-<p>{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.</p>
+The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.
 
-<h2 id="Determining_device_memory">Determining device memory</h2>
+## Determining device memory
 
-<p>There are two ways to determine the approximate amount of RAM a device has: use the Device Memory JavaScript API or accept Client Hints.</p>
+There are two ways to determine the approximate amount of RAM a device has: use the Device Memory JavaScript API or accept Client Hints.
 
-<h3 id="JavaScript_API">JavaScript API</h3>
+### JavaScript API
 
-<p>You may query the approximate amount of RAM a device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}</p>
+You may query the approximate amount of RAM a device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}
 
-<pre class="brush:js">var RAM = navigator.deviceMemory;</pre>
+```js
+var RAM = navigator.deviceMemory;
+```
 
-<h3 id="Client_Hints">Client Hints</h3>
+### Client Hints
 
-<p>You may also use the <a href="/en-US/docs/Glossary/Client_hints">Client Hints</a> HTTP Header with the <code>Device-Memory</code> directive to retrieve the same approximate RAM capacity.</p>
+You may also use the [Client Hints](/en-US/docs/Glossary/Client_hints) HTTP Header with the `Device-Memory` directive to retrieve the same approximate RAM capacity.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Device Memory")}}</td>
-   <td>{{Spec2("Device Memory")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Status                               | Comment             |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("Device Memory")}} | {{Spec2("Device Memory")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="JavaScript_interface">JavaScript interface</h3>
+### JavaScript interface
 
-<p>{{Compat("api.Navigator.deviceMemory")}}</p>
+{{Compat("api.Navigator.deviceMemory")}}
 
-<h3 id="Client_Hints_extension">Client Hints extension</h3>
+### Client Hints extension
 
-<p>{{Compat("http.headers.Device-Memory")}}</p>
+{{Compat("http.headers.Device-Memory")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
- <li>{{HTTPHeader("Device-Memory")}} header</li>
-</ul>
+- {{DOMxRef("Navigator.deviceMemory")}}
+- {{HTTPHeader("Device-Memory")}} header

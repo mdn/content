@@ -2,57 +2,50 @@
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
 tags:
-- API
-- Clipboard
-- Clipboard API
-- ClipboardItem
-- Constructor
-- Cut
-- Reference
-- copy
-- paste
+  - API
+  - Clipboard
+  - Clipboard API
+  - ClipboardItem
+  - Constructor
+  - Cut
+  - Reference
+  - copy
+  - paste
 browser-compat: api.ClipboardItem.ClipboardItem
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p>The <code><strong>ClipboardItem()</strong></code> constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.</p>
+The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.</p>
-</div>
+> **Note:** Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>ClipboardItem</var> = new ClipboardItem(ClipboardItemData);</pre>
+```js
+var ClipboardItem = new ClipboardItem(ClipboardItemData);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>ClipboardItemData</code></dt>
-  <dd>An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.</dd>
+- `ClipboardItemData`
+  - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
+- `ClipboardItemOptions` {{optional_inline}}
 
-  <dt><code>ClipboardItemOptions</code> {{optional_inline}}</dt>
-  <dd>An {{jsxref("Object")}} with the following properties:
-    <ul>
-      <li><code><strong>presentationStyle</strong></code>: One of <code>"unspecified"</code>, <code>"inline"</code> or <code>"attachment"</code>. The default is <code>"unspecified"</code>.</li>
-    </ul>
-  </dd>
-</dl>
+  - : An {{jsxref("Object")}} with the following properties:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
-    interface.</p>
-</div>
+    - **`presentationStyle`**: One of `"unspecified"`, `"inline"` or `"attachment"`. The default is `"unspecified"`.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}}
+> interface.
 
-<p>The below example requests a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create a new {{domxref("ClipboardItem")}}. This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.</p>
+## Examples
 
-<div class="note">
-  <p><strong>Note:</strong> You can only pass in one clipboard item at a time.</p>
-</div>
+The below example requests a png image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create a new {{domxref("ClipboardItem")}}. This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.
 
-<pre class="brush: js">async function writeClipImg() {
+> **Note:** You can only pass in one clipboard item at a time.
+
+```js
+async function writeClipImg() {
   try {
     const imgURL = '/myimage.png';
     const data = await fetch(imgURL);
@@ -68,20 +61,18 @@ browser-compat: api.ClipboardItem.ClipboardItem
     console.error(err.name, err.message);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)

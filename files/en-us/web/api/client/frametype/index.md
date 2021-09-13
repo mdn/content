@@ -13,23 +13,26 @@ tags:
   - frameType
 browser-compat: api.Client.frameType
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>frameType</strong></code> read-only property of the {{domxref("Client")}} interface indicates the type of browsing context of the current {{domxref("Client")}}. This value can be one of <code>"auxiliary"</code>, <code>"top-level"</code>, <code>"nested"</code>, or <code>"none"</code>.</p>
+The **`frameType`** read-only property of the {{domxref("Client")}} interface indicates the type of browsing context of the current {{domxref("Client")}}. This value can be one of `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myFrameType</em> = <em>client</em>.frameType;</pre>
+```js
+var myFrameType = client.frameType;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">TBD
-</pre>
+```js
+TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

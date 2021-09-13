@@ -10,29 +10,32 @@ tags:
   - Service Workers
 browser-compat: api.PushManager.getSubscription
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>The <strong><code>PushManager.getSubscription()</code></strong> method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.</p>
+The **`PushManager.getSubscription()`** method of the {{domxref("PushManager")}} interface retrieves an existing push subscription.
 
-<p>It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a <code>null</code> value.</p>
+It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PushManager.getSubscription().then(function(pushSubscription) { ... } );</pre>
+```js
+PushManager.getSubscription().then(function(pushSubscription) { ... } );
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or <code>null</code>.</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet is taken from a <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications">push messaging and notification sample</a>. (No live demo is available.)</p>
+This code snippet is taken from a [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (No live demo is available.)
 
-<pre class="brush: js">// We need the service worker registration to check for a subscription
+```js
+// We need the service worker registration to check for a subscription
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     // Do we already have a push message subscription?
     serviceWorkerRegistration.pushManager.getSubscription()
@@ -62,17 +65,12 @@ browser-compat: api.PushManager.getSubscription
         window.Demo.debug.log('Error during getSubscription()', err);
       });
   });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-<p>{{Compat}}</p>
-</div>
-</div>
+{{Compat}}

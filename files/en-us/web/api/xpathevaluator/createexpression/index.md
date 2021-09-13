@@ -2,88 +2,87 @@
 title: XPathEvaluator.createExpression()
 slug: Web/API/XPathEvaluator/createExpression
 tags:
-- API
-- DOM
-- DOM XPath API
-- Method
-- Reference
-- XPath
-- XPathEvaluator
+  - API
+  - DOM
+  - DOM XPath API
+  - Method
+  - Reference
+  - XPath
+  - XPathEvaluator
 browser-compat: api.XPathEvaluator.createExpression
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>This method compiles an {{domxref("XPathExpression")}} which can then be used for
-  (repeated) evaluations of the {{Glossary("XPath")}} expression.</p>
+This method compiles an {{domxref("XPathExpression")}} which can then be used for
+(repeated) evaluations of the {{Glossary("XPath")}} expression.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>XPathExpression</var> <var>XPathEvaluator</var>.createExpression(<var>expression</var>, <var>resolver</var>);
-</pre>
+```js
+XPathExpression XPathEvaluator.createExpression(expression, resolver);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>expression</dt>
-  <dd>A {{domxref("DOMString")}} representing the XPath expression to be created.</dd>
-  <dt>resolver {{optional_inline}}</dt>
-  <dd>Permits translation of all prefixes, including the <code>xml</code> namespace
-    prefix, within the XPath expression into appropriate namespace URIs.</dd>
-</dl>
+- expression
+  - : A {{domxref("DOMString")}} representing the XPath expression to be created.
+- resolver {{optional_inline}}
+  - : Permits translation of all prefixes, including the `xml` namespace
+    prefix, within the XPath expression into appropriate namespace URIs.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("XPathExpression")}} representing the compiled form of the XPath
-  expression.</p>
+A {{domxref("XPathExpression")}} representing the compiled form of the XPath
+expression.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="INVALID_EXPRESSION_ERR">INVALID_EXPRESSION_ERR</h4>
+#### INVALID_EXPRESSION_ERR
 
-<p>If the expression is not legal according to the rules of the
-  <code>XPathEvaluator</code>, an {{domxref("XPathException")}} of type
-  <code>INVALID_EXPRESSION_ERR</code> is raised.</p>
+If the expression is not legal according to the rules of the
+`XPathEvaluator`, an {{domxref("XPathException")}} of type
+`INVALID_EXPRESSION_ERR` is raised.
 
-<h4 id="NAMESPACE_ERR">NAMESPACE_ERR</h4>
+#### NAMESPACE_ERR
 
-<p>If the expression contains namespace prefixes which cannot be resolved by the specified
-  {{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
-  <code>NAMESPACE_ERROR</code> is raised.</p>
+If the expression contains namespace prefixes which cannot be resolved by the specified
+{{domxref("XPathNSResolver")}}, a {{domxref("DOMException")}} of type
+`NAMESPACE_ERROR` is raised.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>evaluate()</code> method.</p>
+The following example shows the use of the `evaluate()` method.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Number of &amp;lt;div&amp;gt;s: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Number of &lt;div&gt;s: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var evaluator = new XPathEvaluator();
 var expression = evaluator.createExpression("//div");
 var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Document.createExpression()")}}</li>
-  <li>{{DOMxRef("XPathExpression")}}</li>
-</ul>
+- {{DOMxRef("Document.createExpression()")}}
+- {{DOMxRef("XPathExpression")}}

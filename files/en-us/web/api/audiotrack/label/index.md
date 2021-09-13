@@ -2,50 +2,51 @@
 title: AudioTrack.label
 slug: Web/API/AudioTrack/label
 tags:
-- API
-- Audio
-- Audio Track
-- AudioTrack
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- label
-- metadata
-- track
+  - API
+  - Audio
+  - Audio Track
+  - AudioTrack
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - label
+  - metadata
+  - track
 browser-compat: api.AudioTrack.label
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("AudioTrack")}}</strong>
-    property <code><strong>label</strong></code> returns a string specifying the audio
-    track's human-readable label, if one is available; otherwise, it returns an empty
-    string.</p>
+The read-only **{{domxref("AudioTrack")}}**
+property **`label`** returns a string specifying the audio
+track's human-readable label, if one is available; otherwise, it returns an empty
+string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>audioTrackLabel</em> = <em>AudioTrack</em>.label;</pre>
+```js
+var audioTrackLabel = AudioTrack.label;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
-  available in the track metadata. Otherwise, an empty string (<code>""</code>) is
-  returned.</p>
+A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+available in the track metadata. Otherwise, an empty string (`""`) is
+returned.
 
-<p>For example, a track whose {{domxref("AudioTrack.kind", "kind")}} is
-  <code>"commentary"</code> might have a <code>label</code> such as
-  <code>"Commentary with director Mark Markmarkimark and star Donna Donnalidon"</code>.
-</p>
+For example, a track whose {{domxref("AudioTrack.kind", "kind")}} is
+`"commentary"` might have a `label` such as
+`"Commentary with director Mark Markmarkimark and star Donna Donnalidon"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example returns an array of track kinds and labels for potential use in a user
-  interface to select audio tracks for a specified media element. The list is filtered to
-  only allow certain track kinds through.</p>
+This example returns an array of track kinds and labels for potential use in a user
+interface to select audio tracks for a specified media element. The list is filtered to
+only allow certain track kinds through.
 
-<pre class="brush: js">function getTrackList(el) {
+```js
+function getTrackList(el) {
   var trackList = [];
   const wantedKinds = [
     "main", "alternative", "main-desc", "translation", "commentary"
@@ -61,17 +62,18 @@ browser-compat: api.AudioTrack.label
     }
   });
   return trackList;
-}</pre>
+}
+```
 
-<p>The resulting <code>trackList</code> contains an array of audio tracks whose
-  <code>kind</code> is one of those in the array <code>wantedKinds</code>, with each entry
-  providing the track's {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind",
-  "kind")}}, and {{domxref("AudioTrack.label", "label")}}.</p>
+The resulting `trackList` contains an array of audio tracks whose
+`kind` is one of those in the array `wantedKinds`, with each entry
+providing the track's {{domxref("AudioTrack.id", "id")}}, {{domxref("AudioTrack.kind",
+  "kind")}}, and {{domxref("AudioTrack.label", "label")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

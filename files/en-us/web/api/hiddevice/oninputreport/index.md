@@ -9,22 +9,25 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.oninputreport
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>oninputreport</code></strong> event handler of the {{domxref("HIDDevice")}} interface processes inputreport events.</p>
+The **`oninputreport`** event handler of the {{domxref("HIDDevice")}} interface processes inputreport events.
 
-<p> The event fires when a new report is received from the HID device.</p>
+The event fires when a new report is received from the HID device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HIDDevice.oninputreport = function;
-HIDDevice.addEventListener('inputreport', function);</pre>
+```js
+HIDDevice.oninputreport = function;
+HIDDevice.addEventListener('inputreport', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>The following example demonstrates listening for an <code>inputreport</code> event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article <a href="https://web.dev/hid/">Connecting to uncommon HID devices</a>.</p>
+The following example demonstrates listening for an `inputreport` event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
 
-<pre class="brush: js">device.addEventListener("inputreport", event => {
+```js
+device.addEventListener("inputreport", event => {
   const { data, device, reportId } = event;
 
   // Handle only the Joy-Con Right device and a specific report ID.
@@ -35,12 +38,13 @@ HIDDevice.addEventListener('inputreport', function);</pre>
 
   const someButtons = { 1: "A", 2: "X", 4: "B", 8: "Y" };
   console.log(`User pressed button ${someButtons[value]}.`);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,30 +8,26 @@ tags:
   - Reference
 browser-compat: api.DOMStringList
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>A type returned by some APIs which contains a list of <a href="/en-US/docs/Web/API/DOMString">DOMString</a> (strings).</p>
+A type returned by some APIs which contains a list of [DOMString](/en-US/docs/Web/API/DOMString) (strings).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DOMStringList.length")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the length of the list.</dd>
-</dl>
+- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
+  - : Returns the length of the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("DOMStringList.item()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("DOMStringList.contains()")}}</dt>
- <dd>Returns a boolean value indicating if the given string is in the list</dd>
-</dl>
+- {{domxref("DOMStringList.item()")}}
+  - : Returns a {{domxref("DOMString")}}.
+- {{domxref("DOMStringList.contains()")}}
+  - : Returns a boolean value indicating if the given string is in the list
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

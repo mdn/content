@@ -2,40 +2,41 @@
 title: PaymentAddress.dependentLocality
 slug: Web/API/PaymentAddress/dependentLocality
 tags:
-- API
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Reference
-- paymentAddress
+  - API
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Reference
+  - paymentAddress
 browser-compat: api.PaymentAddress.dependentLocality
 ---
-<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The read-only <strong><code>dependentLocality</code></strong>
-    property of the {{domxref('PaymentAddress')}} interface is a string containing a
-    sublocality designation within a city, such as a  neighborhood, borough, district, or,
-    in the United Kingdom, a dependent locality. Also known as a <em>post
-      town</em>.</p>
+The read-only **`dependentLocality`**
+property of the {{domxref('PaymentAddress')}} interface is a string containing a
+sublocality designation within a city, such as a  neighborhood, borough, district, or,
+in the United Kingdom, a dependent locality. Also known as a _post
+town_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentDependentLocality</em> = <em>PaymentAddress</em>.dependentLocality;</pre>
+```js
+var paymentDependentLocality = PaymentAddress.dependentLocality;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} indicating the sublocality portion of the address. This may
-  be an empty string if no sublocality is available or required. It's used to provide
-  disambiguation when a city may include areas that duplicate street names</p>
+A {{domxref("DOMString")}} indicating the sublocality portion of the address. This may
+be an empty string if no sublocality is available or required. It's used to provide
+disambiguation when a city may include areas that duplicate street names
 
-<p>A sublocality is an area within a city, such as a neighborhood, borough, or district.
-  In the United Kingdom, this is used to indicate the <strong>post town</strong> in the
-  United Kingdom (known officially by the Royal Mail as the <strong>dependent
-    locality</strong>). This is a disambiguating feature of addresses in places where a
-  city may have areas that duplicate street names.</p>
+A sublocality is an area within a city, such as a neighborhood, borough, or district.
+In the United Kingdom, this is used to indicate the **post town** in the
+United Kingdom (known officially by the Royal Mail as the **dependent
+locality**). This is a disambiguating feature of addresses in places where a
+city may have areas that duplicate street names.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

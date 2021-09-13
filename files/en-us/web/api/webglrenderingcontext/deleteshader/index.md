@@ -2,56 +2,54 @@
 title: WebGLRenderingContext.deleteShader()
 slug: Web/API/WebGLRenderingContext/deleteShader
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.deleteShader()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> marks a given
-  {{domxref("WebGLShader")}} object for deletion. It will then be deleted whenever the
-  shader is no longer in use. This method has no effect if the shader has already been
-  deleted, and the {{domxref("WebGLShader")}} is automatically marked for deletion when it
-  is destroyed by the garbage collector.</p>
+The **`WebGLRenderingContext.deleteShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) marks a given
+{{domxref("WebGLShader")}} object for deletion. It will then be deleted whenever the
+shader is no longer in use. This method has no effect if the shader has already been
+deleted, and the {{domxref("WebGLShader")}} is automatically marked for deletion when it
+is destroyed by the garbage collector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteShader(<var>shader</var>);
-</pre>
+```js
+void gl.deleteShader(shader);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>shader</dt>
-  <dd>A {{domxref("WebGLShader")}} object to delete.</dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Deleting_a_shader">Deleting a shader</h3>
+### Deleting a shader
 
-<pre class="brush: js">gl.deleteShader(shader);</pre>
+```js
+gl.deleteShader(shader);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}

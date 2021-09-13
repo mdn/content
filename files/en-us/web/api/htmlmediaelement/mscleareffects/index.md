@@ -4,30 +4,29 @@ slug: Web/API/HTMLMediaElement/msClearEffects
 tags:
   - msClearEffects
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msClearEffects</strong></code> method of the <a href="/en-US/docs/Web/API/HTMLMediaElement"><em>HTMLMediaElement</em></a>, is a proprietary method specific to Internet Explorer and Microsoft Edge.</p>
+The **`msClearEffects`** method of the [_HTMLMediaElement_](/en-US/docs/Web/API/HTMLMediaElement), is a proprietary method specific to Internet Explorer and Microsoft Edge.
 
-<p><code><strong>msClearEffects</strong></code> clears all effects from the media pipeline.</p>
+**`msClearEffects`** clears all effects from the media pipeline.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="brush: js">HTMLMediaElement.msClearEffects();
-</pre>
+```js
+HTMLMediaElement.msClearEffects();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method has no parameters.</p>
+This method has no parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch">Touch API</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Touch API](/en-US/docs/Web/API/Touch)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

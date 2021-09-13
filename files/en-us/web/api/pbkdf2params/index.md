@@ -8,63 +8,57 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <strong><code>Pbkdf2Params</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a> algorithm.</p>
+The **`Pbkdf2Params`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>PBKDF2</code>.</dd>
- <dt><code>hash</code></dt>
- <dd>
- <p>A {{domxref("DOMString")}} representing the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest algorithm</a> to use. This may be one of:</p>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `PBKDF2`.
+- `hash`
 
- <ul>
-  <li><code>SHA-1</code></li>
-  <li><code>SHA-256</code></li>
-  <li><code>SHA-384</code></li>
-  <li><code>SHA-512</code></li>
- </ul>
+  - : A {{domxref("DOMString")}} representing the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. This may be one of:
 
- <div class="notecard warning">
- <p><strong>Warning:</strong> <code>SHA-1</code> is considered vulnerable in most cryptographic applications, but is still considered safe in PBKDF2. However, it's advisable to transition away from it everywhere, so unless you need to use <code>SHA-1</code>, don't. Use a different digest algorithm instead.</p>
- </div>
- </dd>
- <dt><code>salt</code></dt>
- <dd>A {{domxref("BufferSource")}}. This should be a random or pseudo-random value of at least 16 bytes. Unlike the input key material passed into <code><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a></code>, <code>salt</code> does not need to be kept secret.</dd>
- <dt><code>iterations</code></dt>
- <dd>A <code>Number</code> representing the number of times the hash function will be executed in <code>deriveKey()</code>. This determines how computationally expensive (that is, slow) the <code>deriveKey()</code> operation will be. In this context, slow is good, since it makes it more expensive for an attacker to run a {{Glossary("dictionary attack")}} against the keys. The general guidance here is to use as many iterations as possible, subject to keeping an acceptable level of performance for your application.</dd>
-</dl>
+    - `SHA-1`
+    - `SHA-256`
+    - `SHA-384`
+    - `SHA-512`
 
-<h2 id="Examples">Examples</h2>
+    > **Warning:** `SHA-1` is considered vulnerable in most cryptographic applications, but is still considered safe in PBKDF2. However, it's advisable to transition away from it everywhere, so unless you need to use `SHA-1`, don't. Use a different digest algorithm instead.
 
-<p>See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.</p>
+- `salt`
+  - : A {{domxref("BufferSource")}}. This should be a random or pseudo-random value of at least 16 bytes. Unlike the input key material passed into [`deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey), `salt` does not need to be kept secret.
+- `iterations`
+  - : A `Number` representing the number of times the hash function will be executed in `deriveKey()`. This determines how computationally expensive (that is, slow) the `deriveKey()` operation will be. In this context, slow is good, since it makes it more expensive for an attacker to run a {{Glossary("dictionary attack")}} against the keys. The general guidance here is to use as many iterations as possible, subject to keeping an acceptable level of performance for your application.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+See the examples for {{domxref("SubtleCrypto.deriveKey()")}}.
+
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-Pbkdf2Params', 'SubtleCrypto.Pbkdf2Params') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-Pbkdf2Params', 'SubtleCrypto.Pbkdf2Params') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "PBKDF2" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.</p>
+Browsers that support the "PBKDF2" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SubtleCrypto.deriveKey()")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.deriveKey()")}}.

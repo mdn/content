@@ -9,29 +9,28 @@ tags:
   - SVG DOM
 browser-compat: api.SVGNumber
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGNumber</code></strong> interface corresponds to the {{cssxref("&lt;number&gt;")}} basic data type.</p>
+The **`SVGNumber`** interface corresponds to the {{cssxref("&lt;number&gt;")}} basic data type.
 
-<p>An <code>SVGNumber</code> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</p>
+An `SVGNumber` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SVGNumber.value")}}</dt>
- <dd>A float representing the number.
- <p>Note: If the <code>SVGNumber</code> is read-only, a {{domxref("DOMException")}} with the code NO_MODIFICATION_ALLOWED_ERR is raised on an attempt to change the value.</p>
- </dd>
-</dl>
+- {{domxref("SVGNumber.value")}}
 
-<h2 id="Methods">Methods</h2>
+  - : A float representing the number.
 
-<p><em>This interface doesn't provide any specific methods.</em></p>
+    Note: If the `SVGNumber` is read-only, a {{domxref("DOMException")}} with the code NO_MODIFICATION_ALLOWED_ERR is raised on an attempt to change the value.
 
-<h2 id="Specifications">Specifications</h2>
+## Methods
+
+_This interface doesn't provide any specific methods._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

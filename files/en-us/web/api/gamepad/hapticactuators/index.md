@@ -11,32 +11,32 @@ tags:
   - hapticActuators
 browser-compat: api.Gamepad.hapticActuators
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>The <strong><code>hapticActuators</code></strong> read-only property of the {{domxref("Gamepad")}} interface returns an array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.</p>
+The **`hapticActuators`** read-only property of the {{domxref("Gamepad")}} interface returns an array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myHapticActuators = gamepadInstance.hapticActuators;</pre>
+```js
+var myHapticActuators = gamepadInstance.hapticActuators;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array containing {{domxref("GamepadHapticActuator")}} objects.</p>
+An array containing {{domxref("GamepadHapticActuator")}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBC</p>
+TBC
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

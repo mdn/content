@@ -10,37 +10,40 @@ tags:
   - closed
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>closed</code></strong> read-only property of the
-  {{domxref("ReadableStreamDefaultReader")}} interface returns a
-  {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
-  is released, or rejects if the stream throws an error. This property enables you
-  to write code that responds to an end to the streaming process.</p>
+The **`closed`** read-only property of the
+{{domxref("ReadableStreamDefaultReader")}} interface returns a
+{{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
+is released, or rejects if the stream throws an error. This property enables you
+to write code that responds to an end to the streaming process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>closed</em> = </code>readableStreamDefaultReader</var>.closed;</pre>
+```js
+var closed = readableStreamDefaultReader.closed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this snippet, a previously-created reader is queried to see if the stream has been
-  closed. When it is closed, the promise fulfills and the message is logged to the
-  console.</p>
+In this snippet, a previously-created reader is queried to see if the stream has been
+closed. When it is closed, the promise fulfills and the message is logged to the
+console.
 
-<pre class="brush: js">reader.closed.then(() =&gt; {
+```js
+reader.closed.then(() => {
   console.log('reader closed');
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

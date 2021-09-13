@@ -2,56 +2,56 @@
 title: WebGL2RenderingContext.createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createVertexArray
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.createVertexArray()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> creates and initializes a
-  {{domxref("WebGLVertexArrayObject")}} object that represents a vertex array object (VAO)
-  pointing to vertex array data and which provides names for different sets of vertex
-  data.</p>
+The **`WebGL2RenderingContext.createVertexArray()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+{{domxref("WebGLVertexArrayObject")}} object that represents a vertex array object (VAO)
+pointing to vertex array data and which provides names for different sets of vertex
+data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLVertexArrayObject <var>gl</var>.createVertexArray();
-</pre>
+```js
+WebGLVertexArrayObject gl.createVertexArray();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLVertexArrayObject")}} representing a vertex array object (VAO) which
-  points to vertex array data.</p>
+A {{domxref("WebGLVertexArrayObject")}} representing a vertex array object (VAO) which
+points to vertex array data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var vao = gl.createVertexArray();
+```js
+var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // ...
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
 // ...
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLVertexArrayObject")}}</li>
-</ul>
+- {{domxref("WebGLVertexArrayObject")}}

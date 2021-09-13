@@ -12,41 +12,42 @@ tags:
   - web animations api
 browser-compat: api.Animation.timeline
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code><strong>Animation.timeline</strong></code> property of the {{domxref("Animation")}} interface returns or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation. A timeline is a source of time values for synchronization purposes, and is an {{domxref("AnimationTimeline")}}-based object. By default, the animation's timeline and the {{domxref("Document")}}'s timeline are the same.</p>
+The **`Animation.timeline`** property of the {{domxref("Animation")}} interface returns or sets the {{domxref("AnimationTimeline", "timeline")}} associated with this animation. A timeline is a source of time values for synchronization purposes, and is an {{domxref("AnimationTimeline")}}-based object. By default, the animation's timeline and the {{domxref("Document")}}'s timeline are the same.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animationsTimeline</em> = <em>Animation</em>.timeline;
+```js
+var animationsTimeline = Animation.timeline;
 
-<em>Animation</em>.timeline = <em>newTimeline</em>;</pre>
+Animation.timeline = newTimeline;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("AnimationTimeline", "timeline object", "", 1)}} to use as the timing source for the animation, or <code>null</code> to use the default, which is the {{domxref("Document")}}'s timeline.</p>
+A {{domxref("AnimationTimeline", "timeline object", "", 1)}} to use as the timing source for the animation, or `null` to use the default, which is the {{domxref("Document")}}'s timeline.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here we set the animation's timeline to be the same as the document's timeline (this is the default timeline for all animations, by the way):</p>
+Here we set the animation's timeline to be the same as the document's timeline (this is the default timeline for all animations, by the way):
 
-<pre class="brush: js">animation.timeline = document.timeline;
-</pre>
+```js
+animation.timeline = document.timeline;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
- <li>{{domxref("AnimationTimeline")}} the parent object all timelines inherit from.</li>
- <li>{{domxref("DocumentTimeline")}} the only kind of timeline object available at this time.</li>
- <li>{{domxref("Document.timeline")}} is the default timeline all animations are assigned.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("AnimationTimeline")}} the parent object all timelines inherit from.
+- {{domxref("DocumentTimeline")}} the only kind of timeline object available at this time.
+- {{domxref("Document.timeline")}} is the default timeline all animations are assigned.

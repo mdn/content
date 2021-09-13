@@ -9,39 +9,39 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.defaultMuted
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.defaultMuted</code></strong> property reflects the {{htmlattrxref("muted", "video")}} HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the {{domxref("HTMLMediaElement.muted", "muted")}} property.</p>
+The **`HTMLMediaElement.defaultMuted`** property reflects the {{htmlattrxref("muted", "video")}} HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the {{domxref("HTMLMediaElement.muted", "muted")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>dMuted</em> = <em>video</em>.defaultMuted;
-<em>audio</em>.defaultMuted = true;
-</pre>
+```js
+var dMuted = video.defaultMuted;
+audio.defaultMuted = true;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. A value of <code>true</code> means that the audio output will be muted by default.</p>
+A boolean value. A value of `true` means that the audio output will be muted by default.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var videoEle = document.createElement('video');
+```js
+var videoEle = document.createElement('video');
 videoEle.defaultMuted = true;
-console.log(videoEle.outerHTML); // &lt;video muted=""&gt;&lt;/video&gt;
-</pre>
+console.log(videoEle.outerHTML); // <video muted=""></video>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
- <li>{{domxref("HTMLMediaElement.muted")}}</li>
- <li>{{domxref("HTMLMediaElement.volume")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.muted")}}
+- {{domxref("HTMLMediaElement.volume")}}

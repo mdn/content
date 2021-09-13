@@ -9,35 +9,34 @@ tags:
   - Reference
 browser-compat: api.GamepadButton.pressed
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>GamepadButton.pressed</strong></code> property of the
-  {{domxref("GamepadButton")}} interface returns a <code>boolean</code> indicating whether
-  the button is currently pressed (<code>true</code>) or unpressed (<code>false</code>).
-</p>
+The **`GamepadButton.pressed`** property of the
+{{domxref("GamepadButton")}} interface returns a `boolean` indicating whether
+the button is currently pressed (`true`) or unpressed (`false`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let gp = navigator.getGamepads()[0]; // Get the first gamepad object
+```js
+let gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
 if(gp.buttons[0].pressed == true) {
   // respond to button being pressed
-}</pre>
+}
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></li>
-</ul>
+- [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -11,55 +11,63 @@ tags:
   - Web
 browser-compat: api.HTMLInputElement.search_event
 ---
-<p>{{APIRef}}{{non-standard_header}}</p>
+{{APIRef}}{{non-standard_header}}
 
-<p>The <strong><code>search</code></strong> event is fired when a search is initiated using an {{HTMLElement("input")}} element of <code>type="search"</code>.</p>
+The **`search`** event is fired when a search is initiated using an {{HTMLElement("input")}} element of `type="search"`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onsearch"
+            >onsearch</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the <a href="/en-US/docs/Web/HTML/Element/input#attr-incremental"><code>incremental</code></a> attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is debounced).</p>
+There are several ways a search can be initiated, such as by pressing <kbd>Enter</kbd> while the {{HTMLElement("input")}} is focused, or, if the [`incremental`](/en-US/docs/Web/HTML/Element/input#attr-incremental) attribute is present, after a UA-defined timeout elapses since the most recent keystroke (with new keystrokes resetting the timeout so the firing of the event is debounced).
 
-<p>Current UA implementations of <code>&lt;input type="search"&gt;</code> have an additional control to clear the field. Using this control also fires the <code>search</code> event. In that case the <code>value</code> of the {{HTMLElement("input")}} element will be the empty string.</p>
+Current UA implementations of `<input type="search">` have an additional control to clear the field. Using this control also fires the `search` event. In that case the `value` of the {{HTMLElement("input")}} element will be the empty string.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// addEventListener version
+```js
+// addEventListener version
 const input = document.querySelector('input[type="search"]');
 
-input.addEventListener('search', () =&gt; {
- console.log<span class="exam_def">(</span><span class="exam_jsstring">"The term searched for was "</span><span class="exam_def"> + input.</span><span class="exam_jsprop">value</span><span class="exam_def">);</span>
+input.addEventListener('search', () => {
+ console.log("The term searched for was " + input.value);
 })
 
 // onsearch version
 const input = document.querySelector('input[type="search"]');
 
-input.onsearch = () =&gt; {
- console.log<span class="exam_def">(</span><span class="exam_jsstring">"The term searched for was "</span><span class="exam_def"> + input.</span><span class="exam_jsprop">value</span><span class="exam_def">);</span>
-})</pre>
+input.onsearch = () => {
+ console.log("The term searched for was " + input.value);
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This event is not part of any specification.</p>
+This event is not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

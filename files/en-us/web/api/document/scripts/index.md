@@ -2,45 +2,47 @@
 title: Document.scripts
 slug: Web/API/Document/scripts
 tags:
-- API
-- Document
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Document.scripts
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>scripts</code></strong> property of the {{domxref("Document")}}
-  interface returns a list of the {{HTMLElement("script")}}
-    elements in the document. The returned object is an
-  {{domxref("HTMLCollection")}}.</p>
+The **`scripts`** property of the {{domxref("Document")}}
+interface returns a list of the {{HTMLElement("script")}}
+elements in the document. The returned object is an
+{{domxref("HTMLCollection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>scriptList</var> = <var>document</var>.scripts;
-</pre>
+```js
+var scriptList = document.scripts;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}}. You can use this just like an array to get all the
-  elements in the list.</p>
+An {{domxref("HTMLCollection")}}. You can use this just like an array to get all the
+elements in the list.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example looks to see if the page has any {{HTMLElement("script")}} elements.</p>
+This example looks to see if the page has any {{HTMLElement("script")}} elements.
 
-<pre class="brush:js">let scripts = document.scripts;
+```js
+let scripts = document.scripts;
 
 if (scripts.length) {
   alert('This page has scripts!');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

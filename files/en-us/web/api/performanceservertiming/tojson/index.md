@@ -2,41 +2,42 @@
 title: PerformanceServerTiming.toJSON
 slug: Web/API/PerformanceServerTiming/toJSON
 tags:
-- API
-- Method
-- PerformanceServerTiming
-- Reference
-- ServerTiming
-- toJSON
+  - API
+  - Method
+  - PerformanceServerTiming
+  - Reference
+  - ServerTiming
+  - toJSON
 browser-compat: api.PerformanceServerTiming.toJSON
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the
-  {{domxref("PerformanceServerTiming")}} interface returns a {{domxref("DOMString")}} that
-  is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.</p>
+The **`toJSON()`** method of the
+{{domxref("PerformanceServerTiming")}} interface returns a {{domxref("DOMString")}} that
+is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var json = PerformanceServerTiming.toJSON()</pre>
+```js
+var json = PerformanceServerTiming.toJSON()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('DomString')}} containing JSON.</p>
+A {{domxref('DomString')}} containing JSON.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

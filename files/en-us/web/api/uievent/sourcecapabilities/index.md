@@ -9,40 +9,41 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.sourceCapabilities
 ---
-<p>{{SeeCompatTable}}{{APIRef()}}</p>
+{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>UIEvent.sourceCapabilities</code></strong> read-only property returns
-  an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
-  information about the physical device responsible for generating a touch event. If no
-  input device was responsible for the event, it returns <code>null</code>.</p>
+The **`UIEvent.sourceCapabilities`** read-only property returns
+an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
+information about the physical device responsible for generating a touch event. If no
+input device was responsible for the event, it returns `null`.
 
-<p>When a single user interaction with an input device generates a series of different
-  input events, the <code>sourceCapabilities</code> property for all of them will point to
-  the same instance of <code>InputDeviceCapabilities</code>. For example, when a user
-  lifts their finger off of a touchscreen, several UIEvents may be generated including
-  <code>touchend</code>, <code>mousedown</code>, <code>click</code>, and
-  <code>focus</code>. All of these events must have the same
-  <code>sourceCapabilities</code> representing the touchscreen.</p>
+When a single user interaction with an input device generates a series of different
+input events, the `sourceCapabilities` property for all of them will point to
+the same instance of `InputDeviceCapabilities`. For example, when a user
+lifts their finger off of a touchscreen, several UIEvents may be generated including
+`touchend`, `mousedown`, `click`, and
+`focus`. All of these events must have the same
+`sourceCapabilities` representing the touchscreen.
 
-<p>A device is considered "responsible" for an event only when that interaction is part of
-  the abstraction provided by the web platform. For example, many user agents allow a
-  window to be resized with a mouse or a keyboard, but this detail is not exposed to the
-  web platform in any way, and so the sourceCapabilities of a resize event will typically
-  be null.</p>
+A device is considered "responsible" for an event only when that interaction is part of
+the abstraction provided by the web platform. For example, many user agents allow a
+window to be resized with a mouse or a keyboard, but this detail is not exposed to the
+web platform in any way, and so the sourceCapabilities of a resize event will typically
+be null.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var iDC = event.sourceCapabilities</pre>
+```js
+var iDC = event.sourceCapabilities
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An instance of {{domxref('InputDeviceCapabilities')}}.</p>
+An instance of {{domxref('InputDeviceCapabilities')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

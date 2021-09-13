@@ -9,20 +9,20 @@ tags:
   - Reference
 browser-compat: api.UIEvent.detail
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>UIEvent.detail</code></strong> read-only property, when non-zero, provides the current (or next, depending on the event) click count.</p>
+The **`UIEvent.detail`** read-only property, when non-zero, provides the current (or next, depending on the event) click count.
 
-<p>For {{event("click")}} or {{event("dblclick")}} events, <code>UIEvent.detail</code> is the current click count.</p>
+For {{event("click")}} or {{event("dblclick")}} events, `UIEvent.detail` is the current click count.
 
-<p>For {{event("mousedown")}} or {{event("mouseup")}} events, <code>UIEvent.detail</code> is <em>1 plus</em> the current click count.</p>
+For {{event("mousedown")}} or {{event("mouseup")}} events, `UIEvent.detail` is _1 plus_ the current click count.
 
-<p>For all other {{domxref("UIEvent")}} objects, <code>UIEvent.detail</code> is always zero.</p>
+For all other {{domxref("UIEvent")}} objects, `UIEvent.detail` is always zero.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

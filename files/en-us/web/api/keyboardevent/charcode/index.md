@@ -10,78 +10,83 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.charCode
 ---
-<div>{{ ApiRef("DOM Events") }} {{non-standard_header}} {{deprecated_header}}</div>
+{{ ApiRef("DOM Events") }} {{non-standard_header}} {{deprecated_header}}
 
-<p>The <strong><code>charCode</code></strong> read-only property of the
-  {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
-  pressed during a {{Event("keypress")}} event.</p>
+The **`charCode`** read-only property of the
+{{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
+pressed during a {{Event("keypress")}} event.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Do not use this property, as it is deprecated. Instead, get the
-    Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
-    property.</p>
-</div>
+> **Warning:** Do not use this property, as it is deprecated. Instead, get the
+> Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
+> property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>code</em> = <em>event</em>.charCode;
-</pre>
+```js
+var code = event.charCode;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number that represents the Unicode value of the character key that was pressed.</p>
+A number that represents the Unicode value of the character key that was pressed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Type anything into the input box below to log a &lt;code&gt;charCode&lt;/code&gt;.&lt;/p&gt;
-&lt;input type="text" /&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Type anything into the input box below to log a <code>charCode</code>.</p>
+<input type="text" />
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let input = document.querySelector('input');
+```js
+let input = document.querySelector('input');
 let log = document.querySelector('#log');
 
 input.addEventListener('keypress', function(e) {
   log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
-  <li>In a {{Event("keypress")}} event, the Unicode value of the key pressed is stored in
-    either the {{ domxref("KeyboardEvent.keyCode", "keyCode") }} or <code>charCode</code>
-    property, but never both. If the key pressed generates a character (e.g., 'a'),
-    <code>charCode</code> is set to the code of that character; <code>charCode</code>
-    respects the letter case (in other words, <code>charCode</code> takes into account
-    whether the <kbd>shift</kbd> key is held down). Otherwise, the code of the pressed key
-    is stored in <code>keyCode</code>.</li>
-  <li>When one or more modifier keys are pressed, there are some complex rules for
-    <code>charCode</code>. See <a href="/en-US/docs/Gecko_Keypress_Event">Gecko Keypress Event</a>
-    for details.</li>
-  <li><code>charCode</code> is never set in the {{Event("keydown")}} and
-    {{Event("keyup")}} events. In these cases, <code>keyCode</code> is set instead.</li>
-  <li>To get the code of the key regardless of whether it was stored in
-    <code>keyCode</code> or <code>charCode</code>, query the {{
-    domxref("KeyboardEvent.which", "which") }} property.</li>
-  <li>Characters entered through an IME do not register through <code>keyCode</code> or
-    <code>charCode</code>.</li>
-  <li>For a list of the <code>charCode</code> values associated with particular keys, run
-    <a
-      href="/en-US/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties">Example
-      7: Displaying Event Object Properties</a> and view the resulting HTML table.</li>
-</ul>
+- In a {{Event("keypress")}} event, the Unicode value of the key pressed is stored in
+  either the {{ domxref("KeyboardEvent.keyCode", "keyCode") }} or `charCode`
+  property, but never both. If the key pressed generates a character (e.g., 'a'),
+  `charCode` is set to the code of that character; `charCode`
+  respects the letter case (in other words, `charCode` takes into account
+  whether the
 
-<h2 id="Specifications">Specifications</h2>
+  <kbd>shift</kbd>
+
+  key is held down). Otherwise, the code of the pressed key
+  is stored in `keyCode`.
+
+- When one or more modifier keys are pressed, there are some complex rules for
+  `charCode`. See [Gecko Keypress Event](/en-US/docs/Gecko_Keypress_Event)
+  for details.
+- `charCode` is never set in the {{Event("keydown")}} and
+  {{Event("keyup")}} events. In these cases, `keyCode` is set instead.
+- To get the code of the key regardless of whether it was stored in
+  `keyCode` or `charCode`, query the {{
+    domxref("KeyboardEvent.which", "which") }} property.
+- Characters entered through an IME do not register through `keyCode` or
+  `charCode`.
+- For a list of the `charCode` values associated with particular keys, run
+  [Example
+  7: Displaying Event Object Properties](/en-US/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties) and view the resulting HTML table.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

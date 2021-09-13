@@ -10,55 +10,53 @@ tags:
   - ondatachannel
 browser-compat: api.RTCPeerConnection.ondatachannel
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.ondatachannel</strong></code> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function which is called when the
-  {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}} event occurs on an {{domxref("RTCPeerConnection")}}. This
-  event, of type {{domxref("RTCDataChannelEvent")}}, is sent when an
-  {{domxref("RTCDataChannel")}} is added to the connection by the remote peer calling
-  {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}.</p>
+The **`RTCPeerConnection.ondatachannel`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function which is called when the
+{{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}} event occurs on an {{domxref("RTCPeerConnection")}}. This
+event, of type {{domxref("RTCDataChannelEvent")}}, is sent when an
+{{domxref("RTCDataChannel")}} is added to the connection by the remote peer calling
+{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}.
 
-<p>At the time this event is received, the {{domxref("RTCDataChannel")}} it indicates may
-  not yet actually be open. Be sure to wait for the <code>"open"</code> event to be fired
-  on the new <code>RTCDataChannel</code> before using it.</p>
+At the time this event is received, the {{domxref("RTCDataChannel")}} it indicates may
+not yet actually be open. Be sure to wait for the `"open"` event to be fired
+on the new `RTCDataChannel` before using it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCPeerConnection</em>.ondatachannel = <em>function</em>;
-</pre>
+```js
+RTCPeerConnection.ondatachannel = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set this property to be a function you provide which receives as input a single
-  parameter: an {{domxref("RTCDataChannelEvent")}} which provides in its
-  <code>channel</code> property the {{domxref("RTCDataChannel")}} which has been created.
-</p>
+Set this property to be a function you provide which receives as input a single
+parameter: an {{domxref("RTCDataChannelEvent")}} which provides in its
+`channel` property the {{domxref("RTCDataChannel")}} which has been created.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">pc.ondatachannel = function(ev) {
+```js
+pc.ondatachannel = function(ev) {
   console.log('Data channel is created!');
   ev.channel.onopen = function() {
     console.log('Data channel is open and ready to be used.');
   };
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}} event and its type, {{domxref("RTCDataChannelEvent")}}.
-  </li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple
-      RTCDataChannel sample</a></li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}} event and its type, {{domxref("RTCDataChannelEvent")}}.
+- {{domxref("RTCPeerConnection.createDataChannel()")}}
+- [A simple
+  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

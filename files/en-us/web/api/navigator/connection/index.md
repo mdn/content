@@ -2,45 +2,44 @@
 title: Navigator.connection
 slug: Web/API/Navigator/connection
 tags:
-- API
-- Connection
-- Experimental
-- Navigator
-- Network Information API
-- Property
-- Reference
+  - API
+  - Connection
+  - Experimental
+  - Navigator
+  - Network Information API
+  - Property
+  - Reference
 browser-compat: api.Navigator.connection
 ---
-<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>Navigator.connection</strong></code>
-    read-only property returns a {{domxref("NetworkInformation")}} object containing
-    information about the system's connection, such as the current bandwidth of the user's
-    device or whether the connection is metered.</p>
+The **`Navigator.connection`**
+read-only property returns a {{domxref("NetworkInformation")}} object containing
+information about the system's connection, such as the current bandwidth of the user's
+device or whether the connection is metered.
 
-<p>This could be used to select high
-  definition content or low definition content based on the user's connection.</p>
+This could be used to select high
+definition content or low definition content based on the user's connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>var networkInformation</var> = navigator.connection</pre>
+```js
+var networkInformation = navigator.connection
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("NetworkInformation")}} object.</p>
+A {{domxref("NetworkInformation")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Navigator/Online_and_offline_events">Online and
-      offline events</a></li>
-</ul>
+- [Online and
+  offline events](/en-US/docs/Web/API/Navigator/Online_and_offline_events)

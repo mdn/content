@@ -2,40 +2,41 @@
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>encodedBodySize</code></strong> read-only property represents the
-  size (in octets) received from the fetch (HTTP or cache), of the <em>payload body</em>,
-  before removing any applied content-codings.</p>
+The **`encodedBodySize`** read-only property represents the
+size (in octets) received from the fetch (HTTP or cache), of the _payload body_,
+before removing any applied content-codings.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>If the resource is retrieved from an application cache or a local resource, it must
-  return the size of the payload body before removing any applied content-codings.</p>
+If the resource is retrieved from an application cache or a local resource, it must
+return the size of the payload body before removing any applied content-codings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.encodedBodySize;
-</pre>
+```js
+resource.encodedBodySize;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A <code>number</code> representing the size (in octets) received from the fetch (HTTP
-  or cache), of the <em>payload body</em>, before removing any applied content-codings.
-</p>
+A `number` representing the size (in octets) received from the fetch (HTTP
+or cache), of the _payload body_, before removing any applied content-codings.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example, the value of the size properties of all "<code>resource</code>"
-  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+The following example, the value of the size properties of all "`resource`"
+{{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
-<pre class="brush: js">function log_sizes(perfEntry){
+```js
+function log_sizes(perfEntry){
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
   if ("decodedBodySize" in perfEntry)
@@ -56,16 +57,16 @@ browser-compat: api.PerformanceResourceTiming.encodedBodySize
 function check_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log_sizes(p[i]);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

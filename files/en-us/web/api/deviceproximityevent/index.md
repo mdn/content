@@ -9,37 +9,34 @@ tags:
   - Deprecated
 browser-compat: api.DeviceProximityEvent
 ---
-<div>{{APIRef("Proximity Events")}}{{deprecated_header}}</div>
-<div class="notecard warning">
-  <p><strong>Warning:</strong> <code>DeviceProximityEvent</code> is not supported by any current major browser, and should not be used.</p>
-</div>
+{{APIRef("Proximity Events")}}{{deprecated_header}}
 
-<p>The <strong><code>DeviceProximityEvent</code></strong> interface provides information about the distance of a nearby physical object using the proximity sensor of a device.</p>
+> **Warning:** `DeviceProximityEvent` is not supported by any current major browser, and should not be used.
 
-<h2 id="Properties">Properties</h2>
+The **`DeviceProximityEvent`** interface provides information about the distance of a nearby physical object using the proximity sensor of a device.
 
-<dl>
- <dt><code>DeviceProximityEvent.max</code> {{readonlyinline}}</dt>
- <dd>The maximum sensing distance the sensor is able to report, in centimeters.</dd>
- <dt><code>DeviceProximityEvent.min</code> {{readonlyinline}}</dt>
- <dd>The minimum sensing distance the sensor is able to report, in centimeters. Ususally zero.</dd>
- <dt><code>DeviceProximityEvent.value</code> {{readonlyinline}}</dt>
- <dd>The current device proximity, in centimeters.</dd>
-</dl>
+## Properties
 
-<h2 id="Examples">Examples</h2>
+- `DeviceProximityEvent.max` {{readonlyinline}}
+  - : The maximum sensing distance the sensor is able to report, in centimeters.
+- `DeviceProximityEvent.min` {{readonlyinline}}
+  - : The minimum sensing distance the sensor is able to report, in centimeters. Ususally zero.
+- `DeviceProximityEvent.value` {{readonlyinline}}
+  - : The current device proximity, in centimeters.
 
-<pre class="brush: js">window.addEventListener('deviceproximity', function(event) {
-  console.log(&quot;value: &quot; + event.value, &quot;max: &quot; + event.max, &quot;min: &quot; + event.min);
-});</pre>
+## Examples
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+```js
+window.addEventListener('deviceproximity', function(event) {
+  console.log("value: " + event.value, "max: " + event.max, "min: " + event.min);
+});
+```
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("UserProximityEvent")}}</li>
- <li><a href="/en-US/docs/Web/API/Proximity_Events">Proximity API</a></li>
-</ul>
+## See also
+
+- {{domxref("UserProximityEvent")}}
+- [Proximity API](/en-US/docs/Web/API/Proximity_Events)

@@ -11,32 +11,31 @@ tags:
   - size
 browser-compat: api.ByteLengthQueuingStrategy.size
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>size()</code></strong> method of the
-  {{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
-  <code>byteLength</code> property.</p>
+The **`size()`** method of the
+{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
+`byteLength` property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>size</em> = </code>byteLengthQueuingStrategy</var>.size(<em>chunk</em>);</pre>
+```js
+var size = byteLengthQueuingStrategy.size(chunk);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>chunk</dt>
-  <dd>A chunk of data being passed through the stream.</dd>
-</dl>
+- chunk
+  - : A chunk of data being passed through the stream.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer representing the byte length of the given chunk.</p>
+An integer representing the byte length of the given chunk.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush: js ">const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+```js
+const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
@@ -46,16 +45,17 @@ const readableStream = new ReadableStream({
     ...
   },
   cancel(err) {
-    console.log(&quot;stream error:&quot;, err);
+    console.log("stream error:", err);
   }
 }, queuingStrategy);
 
-var size = queueingStrategy.size(chunk);</pre>
+var size = queueingStrategy.size(chunk);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

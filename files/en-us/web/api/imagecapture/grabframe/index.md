@@ -2,43 +2,45 @@
 title: ImageCapture.grabFrame()
 slug: Web/API/ImageCapture/grabFrame
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- ImageCapture
-- Media
-- MediaStream Image Capture API
-- Method
-- Reference
-- grapFrame
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - ImageCapture
+  - Media
+  - MediaStream Image Capture API
+  - Method
+  - Reference
+  - grapFrame
 browser-compat: api.ImageCapture.grabFrame
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>grabFrame()</code></strong> method of the
-    {{domxref("ImageCapture")}} interface takes a snapshot of the live video in a
-    {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with
-    a {{domxref("ImageBitmap")}} containing the snapshot.</p>
+The **`grabFrame()`** method of the
+{{domxref("ImageCapture")}} interface takes a snapshot of the live video in a
+{{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with
+a {{domxref("ImageBitmap")}} containing the snapshot.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>bitmapPromise</em> = <em>imageCapture</em>.grabFrame()
-</pre>
+```js
+const bitmapPromise = imageCapture.grabFrame()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.</p>
+A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example is extracted from this <a href="https://simpl.info/imagecapture/">Simple
-    Image Capture demo</a>. It shows how to use the {{jsxref("Promise")}} returned by
-  <code>grabFrame()</code> to copy the returned frame to a {{htmlelement("canvas")}}
-  element. For simplicity it does not show how to instantiate the
-  {{domxref("ImageCapture")}} object.</p>
+This example is extracted from this [Simple
+Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
+`grabFrame()` to copy the returned frame to a {{htmlelement("canvas")}}
+element. For simplicity it does not show how to instantiate the
+{{domxref("ImageCapture")}} object.
 
-<pre class="brush: js">var grabFrameButton = document.querySelector('button#grabFrame');
+```js
+var grabFrameButton = document.querySelector('button#grabFrame');
 var canvas = document.querySelector('canvas');
 
 grabFrameButton.onclick = grabFrame;
@@ -56,12 +58,12 @@ function grabFrame() {
     console.log('grabFrame() error: ', error);
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

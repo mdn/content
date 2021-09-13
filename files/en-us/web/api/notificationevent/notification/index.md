@@ -12,17 +12,18 @@ tags:
   - ServiceWorker
 browser-compat: api.NotificationEvent.notification
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>The <code>notification</code> read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as <code>tag</code> and <code>data</code> attributes that allow you to store information for deferred use in the <code>notificationclick</code> event.</p>
+The `notification` read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as `tag` and `data` attributes that allow you to store information for deferred use in the `notificationclick` event.
 
-<h2 id="Returns">Returns</h2>
+## Returns
 
-<p>A {{domxref("Notification")}} object.</p>
+A {{domxref("Notification")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click');
 
   // Data can be attached to the notification so that you
@@ -36,21 +37,21 @@ browser-compat: api.NotificationEvent.notification
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

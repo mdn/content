@@ -2,56 +2,57 @@
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 tags:
-- API
-- HTML forms
-- HTMLSelectElement
-- Property
-- Reference
+  - API
+  - HTML forms
+  - HTMLSelectElement
+  - Property
+  - Reference
 browser-compat: api.HTMLSelectElement.autofocus
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.autofocus</strong></code> property has a value of either <code>true</code> or <code>false</code> that reflects the {{htmlattrxref("autofocus", "select")}} HTML
-  attribute, which indicates whether the associated {{HTMLElement("select")}} element 
-  will get input focus when the page loads, unless the user overrides it.</p>
+The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the {{htmlattrxref("autofocus", "select")}} HTML
+attribute, which indicates whether the associated {{HTMLElement("select")}} element 
+will get input focus when the page loads, unless the user overrides it.
 
-<p>Only one form-associated element in a document can have this attribute specified. If
-  there are several, the first element with the attribute set inserted, usually the first
-  such element on the page, get the initial focus.</p>
+Only one form-associated element in a document can have this attribute specified. If
+there are several, the first element with the attribute set inserted, usually the first
+such element on the page, get the initial focus.
 
-<div class="note">
-  <p><strong>Note:</strong> Setting this property doesn't set the focus to the associated
-    {{HTMLElement("select")}} element: it merely tells the browser to focus to it when
-    <em>the element is inserted</em> in the document. Setting it after the insertion, that
-    is most of the time after the document load, has no visible effect.</p>
-</div>
+> **Note:** Setting this property doesn't set the focus to the associated
+> {{HTMLElement("select")}} element: it merely tells the browser to focus to it when
+> _the element is inserted_ in the document. Setting it after the insertion, that
+> is most of the time after the document load, has no visible effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">aBool = aSelectElement.autofocus; // Get the value of autofocus
+```js
+aBool = aSelectElement.autofocus; // Get the value of autofocus
 aSelectElement.autofocus = aBool; // Set the value of autofocus
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;select id="mySelect" autofocus&gt;
-  &lt;option&gt;Option 1&lt;/option&gt;
-  &lt;option&gt;Option 2&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html
+<select id="mySelect" autofocus>
+  <option>Option 1</option>
+  <option>Option 2</option>
+</select>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js">// Check if the autofocus attribute on the &lt;select&gt;
+```js
+// Check if the autofocus attribute on the <select>
 var hasAutofocus = document.getElementById('mySelect').autofocus;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,57 +10,59 @@ tags:
   - postMessage
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>postMessage()</strong></code> method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send from the worker to the main thread. The data may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</p>
+The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it. This accepts a single parameter, which is the data to send from the worker to the main thread. The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-<p>The main scope that spawned the worker can send back information to the thread that spawned it using the {{domxref("Worker.postMessage")}} method.</p>
+The main scope that spawned the worker can send back information to the thread that spawned it using the {{domxref("Worker.postMessage")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">postMessage(aMessage, transferList);</pre>
+```js
+postMessage(aMessage, transferList);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>aMessage</em></dt>
- <dd>The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
- <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd><p>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.</p>
- <p>Only {{domxref("MessagePort")}} and {{jsxref("ArrayBuffer")}} objects can be transferred.</p></dd>
-</dl>
+- _aMessage_
+  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
+- _transferList_ {{optional_inline}}
 
-<h3 id="Returns">Returns</h3>
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.
 
-<p>Void.</p>
+    Only {{domxref("MessagePort")}} and {{jsxref("ArrayBuffer")}} objects can be transferred.
 
-<h2 id="Example">Example</h2>
+### Returns
 
-<p>The following code snippet shows <code>worker.js</code>, in which an <code>onmessage</code> handler is used to handle messages from the main script. Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using <code>postMessage(workerResult);</code></p>
+Void.
 
-<pre class="brush: js">onmessage = function(e) {
+## Example
+
+The following code snippet shows `worker.js`, in which an `onmessage` handler is used to handle messages from the main script. Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using `postMessage(workerResult);`
+
+```js
+onmessage = function(e) {
   console.log('Message received from main script');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
   postMessage(workerResult);
-}</pre>
+}
+```
 
-<p>In the main script, <code>onmessage</code> would have to be called on a <code>Worker object</code>, whereas inside the worker script you just need <code>onmessage</code> because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+In the main script, `onmessage` would have to be called on a `Worker object`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
-<div class="note">
-<p><strong>Note:</strong> <code>postMessage()</code> can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.</p>
-</div>
+> **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("DedicatedWorkerGlobalScope")}} interface it belongs to.</p>
+The {{domxref("DedicatedWorkerGlobalScope")}} interface it belongs to.

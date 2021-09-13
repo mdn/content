@@ -13,36 +13,36 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>rate</code></strong> property of the
-  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the
-  utterance will be spoken at.</p>
+The **`rate`** property of the
+{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the
+utterance will be spoken at.
 
-<p>If unset, a default value of 1 will be used.</p>
+If unset, a default value of 1 will be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myRate = speechSynthesisUtteranceInstance.rate;
+```js
+var myRate = speechSynthesisUtteranceInstance.rate;
 speechSynthesisUtteranceInstance.rate = 1.5;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A float representing the rate value. It can range between 0.1 (lowest) and 10
-  (highest), with 1 being the default pitch for the current platform or voice, which
-  should correspond to a normal speaking rate. Other values act as a percentage relative
-  to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.</p>
+A float representing the rate value. It can range between 0.1 (lowest) and 10
+(highest), with 1 being the default pitch for the current platform or voice, which
+should correspond to a normal speaking rate. Other values act as a percentage relative
+to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.
 
-<p>Some speech synthesis engines or voices may constrain the minimum and maximum rates
-  further. If <a href="https://www.w3.org/TR/speech-synthesis/">SSML</a> is used, this
-  value will be overridden by <a
-    href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody tags</a> in the markup.
-</p>
+Some speech synthesis engines or voices may constrain the minimum and maximum rates
+further. If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this
+value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -57,7 +57,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -65,18 +65,17 @@ inputForm.onsubmit = function(event) {
   utterThis.rate = 1.5;
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

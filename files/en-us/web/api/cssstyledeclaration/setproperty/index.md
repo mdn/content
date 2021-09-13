@@ -2,102 +2,99 @@
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 tags:
-- API
-- CSSOM
-- Method
-- Reference
+  - API
+  - CSSOM
+  - Method
+  - Reference
 browser-compat: api.CSSStyleDeclaration.setProperty
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The
-    <strong><code>CSSStyleDeclaration.setProperty()</code></strong> method interface sets
-    a new value for a property on a CSS style declaration object.</p>
+The
+**`CSSStyleDeclaration.setProperty()`** method interface sets
+a new value for a property on a CSS style declaration object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>style</em>.setProperty(<em>propertyName</em>, <em>value, priority</em>);</pre>
+```js
+style.setProperty(propertyName, value, priority);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>propertyName</code></em> is a {{domxref('DOMString')}} representing the
-    CSS property name (hyphen case) to be modified.</li>
-  <li><em><code>value</code></em> {{optional_inline}} is a
-    {{domxref('DOMString')}} containing the new property value. If not specified, treated
-    as the empty string.
-    <ul>
-      <li>Note: <em><code>value</code></em> must not contain <code>"!important"</code> --
-        that should be set using the <em><code>priority</code></em> parameter.</li>
-    </ul>
-  </li>
-  <li><em><code>priority</code></em> {{optional_inline}} is a
-    {{domxref('DOMString')}} allowing the "important" CSS priority to be set. If not
-    specified, treated as the empty string. The following values are accepted:
-    <ul>
-      <li>String value <code>"important"</code></li>
-      <li>Keyword <code>undefined</code></li>
-      <li>String empty value <code>""</code></li>
-    </ul>
-  </li>
-</ul>
+- *`propertyName`* is a {{domxref('DOMString')}} representing the
+  CSS property name (hyphen case) to be modified.
+- *`value`* {{optional_inline}} is a
+  {{domxref('DOMString')}} containing the new property value. If not specified, treated
+  as the empty string.
 
-<h3 id="Return_value">Return value</h3>
+  - Note: *`value`* must not contain `"!important"` --
+    that should be set using the _`priority`_ parameter.
 
-<ul>
-  <li>{{jsxref('undefined')}}</li>
-</ul>
+- _`priority`_ {{optional_inline}} is a
+  {{domxref('DOMString')}} allowing the "important" CSS priority to be set. If not
+  specified, treated as the empty string. The following values are accepted:
 
-<h3 id="Exceptions">Exceptions</h3>
+  - String value `"important"`
+  - Keyword `undefined`
+  - String empty value `""`
 
-<ul>
-  <li>{{domxref('DOMException')}} (NoModificationAllowedError): if the property or
-    declaration block is read only.</li>
-</ul>
+### Return value
 
-<p>If <em><code>priority</code></em> can be omitted, JavaScript has a special simpler
-  syntax for setting a CSS property on a style declaration object:</p>
+- {{jsxref('undefined')}}
 
-<pre class="brush: js"><em>style</em>.cssPropertyName = 'value';</pre>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- {{domxref('DOMException')}} (NoModificationAllowedError): if the property or
+  declaration block is read only.
 
-<p>In this example we have three buttons, which can be pressed to dynamically alter our
-  box paragraph's border, background color, and text color to random values (see the live
-  example at the end of this section).</p>
+If *`priority`* can be omitted, JavaScript has a special simpler
+syntax for setting a CSS property on a style declaration object:
 
-<p>We know that the rule we want to alter to do this is contained inside the second
-  stylesheet applied to the page, so we grab a reference to it using
-  <code><a href="/en-US/docs/Web/API/Document/styleSheetSets">document.styleSheets[1]</a></code>.
-  We then loop through the different rules contained inside the stylesheet, which are
-  contained in the array found at
-  <code><a href="/en-US/docs/Web/API/CSSStyleSheet/cssRules">stylesheet.cssRules</a></code>;
-  for each one, we check whether its
-  <code><a href="/en-US/docs/Web/API/CSSStyleRule/selectorText">CSSStyleRule.selectorText</a></code>
-  property is equal to the selector <code>.box p</code>, which indicates it is the one we
-  want.</p>
+```js
+style.cssPropertyName = 'value';
+```
 
-<p>If so, we store a reference to this <code>CSSStyleRule</code> object in a variable. We
-  then use three functions to generate random values for the properties in question, and
-  update the rule with these values. In each case, this is done with the
-  <code>setProperty()</code> method, for
-  example <code>boxParaRule.style.setProperty('border', newBorder);</code></p>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+In this example we have three buttons, which can be pressed to dynamically alter our
+box paragraph's border, background color, and text color to random values (see the live
+example at the end of this section).
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button class="border"&gt;Border&lt;/button&gt;
-  &lt;button class="bgcolor"&gt;Background&lt;/button&gt;
-  &lt;button class="color"&gt;Text&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="box"&gt;
-  &lt;p&gt;Box&lt;/p&gt;
-&lt;/div&gt;</pre>
+We know that the rule we want to alter to do this is contained inside the second
+stylesheet applied to the page, so we grab a reference to it using
+[`document.styleSheets[1]`](/en-US/docs/Web/API/Document/styleSheetSets).
+We then loop through the different rules contained inside the stylesheet, which are
+contained in the array found at
+[`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules);
+for each one, we check whether its
+[`CSSStyleRule.selectorText`](/en-US/docs/Web/API/CSSStyleRule/selectorText)
+property is equal to the selector `.box p`, which indicates it is the one we
+want.
 
-<h3 id="CSS">CSS</h3>
+If so, we store a reference to this `CSSStyleRule` object in a variable. We
+then use three functions to generate random values for the properties in question, and
+update the rule with these values. In each case, this is done with the
+`setProperty()` method, for
+example `boxParaRule.style.setProperty('border', newBorder);`
 
-<pre class="brush: css">html {
+### HTML
+
+```html
+<div class="controls">
+  <button class="border">Border</button>
+  <button class="bgcolor">Background</button>
+  <button class="color">Text</button>
+</div>
+<div class="box">
+  <p>Box</p>
+</div>
+```
+
+### CSS
+
+```css
+html {
   background: orange;
   font-family: sans-serif;
   height: 100%;
@@ -142,11 +139,13 @@ div button {
   border: 5px solid purple;
   color: white;
   transition: all 1s;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const borderBtn = document.querySelector('.border');
+```js
+const borderBtn = document.querySelector('.border');
 const bgColorBtn = document.querySelector('.bgcolor');
 const colorBtn = document.querySelector('.color');
 const box = document.querySelector('.box');
@@ -163,7 +162,7 @@ function randomColor() {
 const stylesheet = document.styleSheets[1];
 let boxParaRule;
 
-for(let i = 0; i &lt; stylesheet.cssRules.length; i++) {
+for(let i = 0; i < stylesheet.cssRules.length; i++) {
   if(stylesheet.cssRules[i].selectorText === '.box p') {
     boxParaRule = stylesheet.cssRules[i];
   }
@@ -186,16 +185,17 @@ function setRandomColor() {
 
 borderBtn.addEventListener('click', setRandomBorder);
 bgColorBtn.addEventListener('click', setRandomBgColor);
-colorBtn.addEventListener('click', setRandomColor);</pre>
+colorBtn.addEventListener('click', setRandomColor);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples', '100%', 400)}}</p>
+{{EmbedLiveSample('Examples', '100%', 400)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

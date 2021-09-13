@@ -9,35 +9,32 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframeRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSKeyframeRule</code></strong> interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.</p>
+The **`CSSKeyframeRule`** interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a {{cssxref("@keyframes")}} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSKeyframeRule.keyText")}}</dt>
- <dd>Represents the key of the keyframe, like <code>'10%'</code>, <code>'75%'</code>. The <code>from</code> keyword maps to <code>'0%'</code> and the <code>to</code> keyword maps to <code>'100%'</code>.</dd>
- <dt>{{domxref("CSSKeyframeRule.style")}}{{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.</dd>
-</dl>
+- {{domxref("CSSKeyframeRule.keyText")}}
+  - : Represents the key of the keyframe, like `'10%'`, `'75%'`. The `from` keyword maps to `'0%'` and the `to` keyword maps to `'100%'`.
+- {{domxref("CSSKeyframeRule.style")}}{{readOnlyInline}}
+  - : Returns a {{domxref("CSSStyleDeclaration")}} of the CSS style associated with the keyframe.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>
-  The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-  <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual <code>CSSKeyFrame</code> objects for each keyframe.
-</p>
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual `CSSKeyFrame` objects for each keyframe.
 
-<pre class="brush: css">@keyframes slidein {
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -45,23 +42,24 @@ browser-compat: api.CSSKeyframeRule
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0]); // a CSSKeyframeRule representing an individual keyframe.</pre>
+console.log(keyframes[0]); // a CSSKeyframeRule representing an individual keyframe.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@keyframes")}}</li>
- <li>{{domxref("CSSKeyFramesRule")}}</li>
-</ul>
+- {{cssxref("@keyframes")}}
+- {{domxref("CSSKeyFramesRule")}}

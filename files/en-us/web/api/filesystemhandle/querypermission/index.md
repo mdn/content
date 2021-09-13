@@ -9,56 +9,52 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.queryPermission
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>queryPermission()</code></strong> method of the
-  {{domxref("FileSystemHandle")}} interface queries the current permission state of the
-  current handle.</p>
+The **`queryPermission()`** method of the
+{{domxref("FileSystemHandle")}} interface queries the current permission state of the
+current handle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>PermissionState</var> = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);</pre>
+```js
+var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>FileSystemHandlePermissionDescriptor {{optional_inline}}</dt>
-  <dd>An object which specifies the permission mode to query for. Options are as follows:
-    <ul>
-      <li><code>'mode'</code>: Can be either <code>'read'</code> or
-        <code>'readwrite'</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- FileSystemHandlePermissionDescriptor {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object which specifies the permission mode to query for. Options are as follows:
 
-<p>{{domxref('PermissionStatus.state')}} which is one of <code>'granted'</code>,
-  <code>'denied'</code> or <code>'prompt'</code>.</p>
+    - `'mode'`: Can be either `'read'` or
+      `'readwrite'`.
 
-<p>If this returns "prompt" the website will have to call requestPermission() before any
-  operations on the handle can be done. If this returns "denied" any operations will
-  reject. Usually handles returned by the local file system handle factories will
-  initially return "granted" for their read permission state. However, other than through
-  the user revoking permission, a handle retrieved from IndexedDB is also likely to return
-  "prompt".</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
+`'denied'` or `'prompt'`.
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>If <code>mode</code> is specified with a value other than
-    <code>'read'</code> or <code>'readwrite'</code></dd>
-</dl>
+If this returns "prompt" the website will have to call requestPermission() before any
+operations on the handle can be done. If this returns "denied" any operations will
+reject. Usually handles returned by the local file system handle factories will
+initially return "granted" for their read permission state. However, other than through
+the user revoking permission, a handle retrieved from IndexedDB is also likely to return
+"prompt".
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following asynchronous function returns true if user has granted read or readwrite
-  permissions to the file handle. Permission is requested if not.</p>
+- `TypeError`
+  - : If `mode` is specified with a value other than
+    `'read'` or `'readwrite'`
 
-<pre class="brush: js">// fileHandle is a FileSystemFileHandle
+## Examples
+
+The following asynchronous function returns true if user has granted read or readwrite
+permissions to the file handle. Permission is requested if not.
+
+```js
+// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {
@@ -80,20 +76,18 @@ async function verifyPermission(fileHandle, withWrite) {
   // The user did not grant permission, return false.
   return false;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

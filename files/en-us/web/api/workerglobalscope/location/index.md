@@ -10,27 +10,32 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.location
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>location</strong></code> read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.</p>
+The **`location`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var locationObj = self.location;</pre>
+```js
+var locationObj = self.location;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("WorkerLocation")}} object.</p>
+A {{domxref("WorkerLocation")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you called the following in a document served at <code>localhost:8000</code></p>
+If you called the following in a document served at `localhost:8000`
 
-<pre class="brush: js">console.log(location);</pre>
+```js
+console.log(location);
+```
 
-<p>inside a worker (which would basically be the equivalent of <code>self.console.log(self.location);</code>, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerLocation")}} object written to the console — something like the following:</p>
+inside a worker (which would basically be the equivalent of `self.console.log(self.location);`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you will get a {{domxref("WorkerLocation")}} object written to the console — something like the following:
 
-<pre class="brush: js">WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
+```js
+WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
   hash: ""
   host: "localhost:8000"
   hostname: "localhost"
@@ -40,22 +45,21 @@ browser-compat: api.WorkerGlobalScope.location
   port: "8000"
   protocol: "http:"
   search: ""
-  __proto__: WorkerLocation</pre>
+  __proto__: WorkerLocation
+```
 
-<p>You could use this location object to return more information about the document's location, as you might do with a normal {{domxref("Location")}} object.</p>
+You could use this location object to return more information about the document's location, as you might do with a normal {{domxref("Location")}} object.
 
-<div class="note">
-<p><strong>Note:</strong> Firefox has a bug with using <code>console.log</code> inside shared/service workers (see {{Bug("1058644")}}), which may return strange results, but this should be fixed soon.</p>
-</div>
+> **Note:** Firefox has a bug with using `console.log` inside shared/service workers (see {{Bug("1058644")}}), which may return strange results, but this should be fixed soon.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

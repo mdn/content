@@ -2,41 +2,44 @@
 title: CSSStyleDeclaration.parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
 tags:
-- API
-- CSSOM
-- Property
-- Reference
+  - API
+  - CSSOM
+  - Property
+  - Reference
 browser-compat: api.CSSStyleDeclaration.parentRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong>CSSStyleDeclaration.parentRule</strong> read-only
-    property returns a {{domxref('CSSRule')}} that is the parent of this style
-    block, e.g. a {{domxref('CSSStyleRule')}} representing the style for a CSS
-  selector.</p>
+The **CSSStyleDeclaration.parentRule** read-only
+property returns a {{domxref('CSSRule')}} that is the parent of this style
+block, e.g. a {{domxref('CSSStyleRule')}} representing the style for a CSS
+selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>rule</em> = <em>styles</em>.parentRule;</pre>
+```js
+var rule = styles.parentRule;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The CSS rule that contains this declaration block or <code>null</code> if this
-  {{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.</p>
+The CSS rule that contains this declaration block or `null` if this
+{{domxref('CSSStyleDeclaration')}} is not attached to a {{domxref('CSSRule')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following JavaScript code gets the parent CSS style rule from a
-  {{domxref('CSSStyleDeclaration')}}:</p>
+The following JavaScript code gets the parent CSS style rule from a
+{{domxref('CSSStyleDeclaration')}}:
 
-<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
+```js
+var declaration = document.styleSheets[0].rules[0].style;
 var rule = declaration.parentRule;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

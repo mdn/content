@@ -2,53 +2,51 @@
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
 tags:
-- API
-- HTML DOM
-- Method
-- Non-standard
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - Method
+  - Non-standard
+  - Reference
+  - Window
 browser-compat: api.Window.scrollByLines
 ---
-<div>{{ ApiRef() }} {{Non-standard_header}}</div>
+{{ ApiRef() }} {{Non-standard_header}}
 
-<p>The <code><strong>Window.scrollByLines()</strong></code> method scrolls the document by
-  the specified number of lines.</p>
+The **`Window.scrollByLines()`** method scrolls the document by
+the specified number of lines.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.scrollByLines(<em>lines</em>)
-</pre>
+```js
+window.scrollByLines(lines)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>lines</code> is the number of lines to scroll the document by. It may be a
-    positive or negative integer.</li>
-</ul>
+- `lines` is the number of lines to scroll the document by. It may be a
+  positive or negative integer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;!-- Scroll up the document by 5 lines --&gt;
-&lt;button id="scroll-up" onclick="scrollByLines(-5);"&gt;Up 5 lines&lt;/button&gt;
+```html
+<!-- Scroll up the document by 5 lines -->
+<button id="scroll-up" onclick="scrollByLines(-5);">Up 5 lines</button>
 
-&lt;!-- Scroll down the document by 5 lines --&gt;
-&lt;button id="scroll-down" onclick="scrollByLines(5);"&gt;Down 5 lines&lt;/button&gt;
-</pre>
+<!-- Scroll down the document by 5 lines -->
+<button id="scroll-down" onclick="scrollByLines(5);">Down 5 lines</button>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This is not part of any specification.</p>
+This is not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.scroll()")}}</li>
-  <li>{{domxref("window.scrollBy()")}}</li>
-  <li>{{domxref("window.scrollByPages()")}}</li>
-  <li>{{domxref("window.scrollTo()")}}</li>
-</ul>
+- {{domxref("window.scroll()")}}
+- {{domxref("window.scrollBy()")}}
+- {{domxref("window.scrollByPages()")}}
+- {{domxref("window.scrollTo()")}}

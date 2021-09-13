@@ -10,48 +10,46 @@ tags:
   - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>setValueAtTime()</code> method of the
-  {{domxref("AudioParam")}} interface schedules an instant change to the
-  <code>AudioParam</code> value at a precise time, as measured against
-  {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given in the value parameter.
-</p>
+The `setValueAtTime()` method of the
+{{domxref("AudioParam")}} interface schedules an instant change to the
+`AudioParam` value at a precise time, as measured against
+{{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given in the value parameter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var AudioParam = AudioParam.setValueAtTime(<em>value</em>, <em>startTime</em>)</pre>
+```js
+var AudioParam = AudioParam.setValueAtTime(value, startTime)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>A floating point number representing the value the AudioParam will change to at the
-    given time.</dd>
-  <dt>startTime</dt>
-  <dd>A double representing the time (in seconds) after the {{domxref("AudioContext")}}
+- value
+  - : A floating point number representing the value the AudioParam will change to at the
+    given time.
+- startTime
+  - : A double representing the time (in seconds) after the {{domxref("AudioContext")}}
     was first created that the change in value will happen. A {{jsxref("TypeError")}} is
-    thrown if this value is negative.</dd>
-</dl>
+    thrown if this value is negative.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A reference to this <code>AudioParam</code> object. In some browsers older
-  implementations of this interface return void.</p>
+A reference to this `AudioParam` object. In some browsers older
+implementations of this interface return void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This simple example features a media element source with two control buttons (see our
-  <a href="https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html">webaudio-examples
-    repo</a> for the source code, or <a
-    href="https://mdn.github.io/webaudio-examples/audio-param/">view the example
-    live</a>). When the buttons are pressed, the <code>currGain</code> variable is
-  incremented/decremented by 0.25, then the <code>setValueAtTime()</code> method is used
-  to set the gain value equal to <code>currGain</code>, one second from now
-  (<code>audioCtx.currentTime + 1</code>.)</p>
+This simple example features a media element source with two control buttons (see our
+[webaudio-examples
+repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
+live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is
+incremented/decremented by 0.25, then the `setValueAtTime()` method is used
+to set the gain value equal to `currGain`, one second from now
+(`audioCtx.currentTime + 1`.)
 
-<pre class="brush: js;">// create audio context
+```js
+// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -88,19 +86,17 @@ targetAtTimePlus.onclick = function() {
 targetAtTimeMinus.onclick = function() {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

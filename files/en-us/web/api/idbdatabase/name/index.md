@@ -2,81 +2,78 @@
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Property
-- Reference
-- Storage
-- name
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - name
 browser-compat: api.IDBDatabase.name
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>name</code></strong> read-only property of the
-    <code>IDBDatabase</code> interface is a {{ domxref("DOMString")}} that contains the
-    name of the connected database.</p>
+The **`name`** read-only property of the
+`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+name of the connected database.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>dbName</em> = <em>IDBDatabase</em>.name;</pre>
+```js
+var dbName = IDBDatabase.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{ domxref("DOMString")}} containing the name of the connected database.</p>
+A {{ domxref("DOMString")}} containing the name of the connected database.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows a database connection being opened, the resulting
-  {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
-  then being logged. For a full example, see our 
-  <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a>
-   app (<a href="https://chrisdavidmills.github.io/to-do-notifications/">view example live</a>).</p>
+This example shows a database connection being opened, the resulting
+{{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
+then being logged. For a full example, see our 
+[To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)
+ app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
 
-<pre class="brush: js;">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being
 // opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;
 
   // This line will log the name of the database, which should be "toDoList"
   console.log(db.name);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -15,45 +15,44 @@ tags:
   - print
 browser-compat: api.console.debug
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.debug()</code></strong> method outputs a message to the web console at
-  the "debug" log level. The message is only displayed to the user if the console is configured to
-  display debug output. In most cases, the log level is configured within the console UI. This log
-  level might correspond to the `Debug` or `Verbose` log level.</p>
+The **`console.debug()`** method outputs a message to the web console at
+the "debug" log level. The message is only displayed to the user if the console is configured to
+display debug output. In most cases, the log level is configured within the console UI. This log
+level might correspond to the \`Debug\` or \`Verbose\` log level.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.debug(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.debug(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.debug(obj1 [, obj2, ..., objN]);
+console.debug(msg [, subst1, ..., substN]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>obj1</code> ... <code>objN</code></dt>
-  <dd>A list of JavaScript objects to output. The string representations of each of these
-    objects are appended together in the order listed and output to the console.</dd>
-  <dt><code>msg</code></dt>
-  <dd>A JavaScript string containing zero or more substitution strings, which are replaced
-    with <code>subst1</code> through <code>substN</code> in consecutive order.</dd>
-  <dt><code>subst1</code> ... <code>substN</code></dt>
-  <dd>JavaScript objects with which to replace substitution strings within
-    <code>msg</code>. This gives you additional control over the format of the output. See
+- `obj1` ... `objN`
+  - : A list of JavaScript objects to output. The string representations of each of these
+    objects are appended together in the order listed and output to the console.
+- `msg`
+  - : A JavaScript string containing zero or more substitution strings, which are replaced
+    with `subst1` through `substN` in consecutive order.
+- `subst1` ... `substN`
+  - : JavaScript objects with which to replace substitution strings within
+    `msg`. This gives you additional control over the format of the output. See
     {{SectionOnPage("/en-US/docs/Web/API/console", "Using string substitutions")}} for a
-    description of how substitutions work.</dd>
-</dl>
+    description of how substitutions work.
 
-<p>See <a href="/en-US/docs/Web/API/console#outputting_text_to_the_console">Outputting
-    text to the console</a> in the documentation of the {{domxref("console")}} object for
-  details.</p>
+See [Outputting
+text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of the {{domxref("console")}} object for
+details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

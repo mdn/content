@@ -9,39 +9,42 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.negative
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
-<p>The <strong><code>negative</code></strong>  property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/negative","negative")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.</p>
+The **`negative`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/negative","negative")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let negative = CSSCounterStyleRule.negative;
+```js
+let negative = CSSCounterStyleRule.negative;
 CSSCounterStyleRule.negative = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}
 
-<p>The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, <code>myRules[0]</code> is this <code>@counter-style</code> rule, returning <code>negative</code> gives us the value "-".</p>
+## Examples
 
-<pre class="brush: css">@counter-style neg {
+The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, `myRules[0]` is this `@counter-style` rule, returning `negative` gives us the value "-".
+
+```css
+@counter-style neg {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
   negative: "-";
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].negative); // "-" </pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].negative); // "-"
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

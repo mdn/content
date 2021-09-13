@@ -2,58 +2,55 @@
 title: CSSValueList.item()
 slug: Web/API/CSSValueList/item
 tags:
-- API
-- CSSValueList
-- Method
-- Reference
-- item
-- Deprecated
+  - API
+  - CSSValueList
+  - Method
+  - Reference
+  - item
+  - Deprecated
 browser-compat: api.CSSValueList.item
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>item()</strong></code> method of the {{domxref("CSSValueList")}}
-  interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.</p>
+The **`item()`** method of the {{domxref("CSSValueList")}}
+interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.
 
-<p>The order in this collection represents the order of the values in the CSS style
-  property. If the index is greater than or equal to the number of values in the list,
-  this method returns <code>null</code>.</p>
+The order in this collection represents the order of the values in the CSS style
+property. If the index is greater than or equal to the number of values in the list,
+this method returns `null`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](CSS_Typed_OM_API), less supported and considered experimental.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>cssValue</var> = <var>cssValueList</var>.item(<var>index</var>);</pre>
+```js
+var cssValue = cssValueList.item(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>index</dt>
-  <dd>An <code>unsigned long</code> representing the index of the CSS value within the
-    collection.</dd>
-</dl>
+- index
+  - : An `unsigned long` representing the index of the CSS value within the
+    collection.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("CSSValue")}} object at the <code>index</code> position in the
-  <code>CSSValueList</code>, or <code>null</code> if that is not a valid index.</p>
+A {{domxref("CSSValue")}} object at the `index` position in the
+`CSSValueList`, or `null` if that is not a valid index.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

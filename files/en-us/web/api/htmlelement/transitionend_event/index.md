@@ -11,59 +11,68 @@ tags:
   - transitionend
 browser-compat: api.HTMLElement.transitionend_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>transitionend</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> has completed. In the case where a transition is removed before completion, such as if the {{cssxref("transition-property")}} is removed or {{cssxref("display")}} is set to <code>none</code>, then the event will not be generated.</p>
+The **`transitionend`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed. In the case where a transition is removed before completion, such as if the {{cssxref("transition-property")}} is removed or {{cssxref("display")}} is set to `none`, then the event will not be generated.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TransitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>transitionend</code> event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.  If the <code>transitioncancel</code> event is fired, the <code>transitionend</code> event will not fire.</p>
+The `transitionend` event is fired in both directions - as it finishes transitioning to the transitioned state, and when it fully reverts to the default or non-transitioned state. If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.  If the `transitioncancel` event is fired, the `transitionend` event will not fire.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code gets an element that has a transition defined and adds a listener to the <code>transitionend</code> event:</p>
+This code gets an element that has a transition defined and adds a listener to the `transitionend` event:
 
-<pre class="brush: js">const transition = document.querySelector('.transition');
+```js
+const transition = document.querySelector('.transition');
 
-transition.addEventListener('transitionend', () =&gt; {
+transition.addEventListener('transitionend', () => {
   console.log('Transition ended');
-});</pre>
+});
+```
 
-<p>The same, but using the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}:</p>
+The same, but using the {{domxref("GlobalEventHandlers/ontransitionend", "ontransitionend")}}:
 
-<pre class="brush: js">const transition = document.querySelector('.transition');
+```js
+const transition = document.querySelector('.transition');
 
-transition.ontransitionend = () =&gt; {
+transition.ontransitionend = () => {
   console.log('Transition ended');
-};</pre>
+};
+```
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<p>In the following example, we have a simple {{htmlelement("div")}} element, styled with a transition that includes a delay:</p>
+In the following example, we have a simple {{htmlelement("div")}} element, styled with a transition that includes a delay:
 
-<pre class="brush: html">&lt;div class="transition"&gt;Hover over me&lt;/div&gt;
-&lt;div class="message"&gt;&lt;/div&gt;</pre>
+```html
+<div class="transition">Hover over me</div>
+<div class="message"></div>
+```
 
-<pre class="brush: css">.transition {
+```css
+.transition {
   width: 100px;
   height: 100px;
   background: rgba(255,0,0,1);
@@ -75,11 +84,13 @@ transition.ontransitionend = () =&gt; {
 .transition:hover {
   transform: rotate(90deg);
   background: rgba(255,0,0,0);
-}</pre>
+}
+```
 
-<p>To this, we'll add some JavaScript to indicate that the <code><a href="/en-US/docs/Web/API/HTMLElement/transitionstart_event">transitionstart</a></code>, <code><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">transitionrun</a></code>, <code><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></code> and <code>transitionend</code> events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.</p>
+To this, we'll add some JavaScript to indicate that the [`transitionstart`](/en-US/docs/Web/API/HTMLElement/transitionstart_event), [`transitionrun`](/en-US/docs/Web/API/HTMLElement/transitionrun_event), [`transitioncancel`](/en-US/docs/Web/API/Window/transitioncancel_event) and `transitionend` events fire. In this example, to cancel the transition, stop hovering over the transitioning box before the transition ends. For the transition end event to fire, stay hovered over the transition until the transition ends.
 
-<pre class="brush: js">const message = document.querySelector('.message');
+```js
+const message = document.querySelector('.message');
 const el = document.querySelector('.transition');
 
 el.addEventListener('transitionrun', function() {
@@ -97,31 +108,29 @@ el.addEventListener('transitioncancel', function() {
 el.addEventListener('transitionend', function() {
   message.textContent = 'transitionend fired';
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<p>The <code>transitionend</code> event is fired in both directions: when the box finishes turning and the opacity hits 0 or 1, depending on the direction.</p>
+The `transitionend` event is fired in both directions: when the box finishes turning and the opacity hits 0 or 1, depending on the direction.
 
-<p>If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.</p>
+If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.
 
-<p>If the <code>transitioncancel</code> event is fired, the <code>transitionend</code> event will not fire.</p>
+If the `transitioncancel` event is fired, the `transitionend` event will not fire.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("GlobalEventHandlers.ontransitionend")}} event handler</li>
- <li>The {{domxref("TransitionEvent")}} interface</li>
- <li>CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>Related events: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/transitionend_event", "transitionend")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/transitionend_event", "transitionend")}}</li>
-</ul>
+- The {{domxref("GlobalEventHandlers.ontransitionend")}} event handler
+- The {{domxref("TransitionEvent")}} interface
+- CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- Related events: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/transitionend_event", "transitionend")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionend_event", "transitionend")}}

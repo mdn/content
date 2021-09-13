@@ -2,60 +2,60 @@
 title: Document.head
 slug: Web/API/Document/head
 tags:
-- API
-- Document
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Document.head
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>head</strong></code> read-only property of
-    the {{domxref("Document")}} interface returns the {{HTMLElement("head")}} element of
-    the current document.</p>
+The **`head`** read-only property of
+the {{domxref("Document")}} interface returns the {{HTMLElement("head")}} element of
+the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>objRef</var> = document.head;
-</pre>
+```js
+var objRef = document.head;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLHeadElement")}}.</p>
+An {{domxref("HTMLHeadElement")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;head id="my-document-head"&gt;
-  &lt;title&gt;Example: using document.head&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!doctype html>
+<head id="my-document-head">
+  <title>Example: using document.head</title>
+</head>
 
-&lt;script&gt;
+<script>
   var theHead = document.head;
 
   console.log(theHead.id); // "my-document-head";
 
   console.log( theHead === document.querySelector("head") ); // true
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>document.head</code> is read-only. Trying to assign a value to this property will
-  fail silently or, in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict
-    Mode</a>, throws a {{jsxref("TypeError")}} .</p>
+`document.head` is read-only. Trying to assign a value to this property will
+fail silently or, in [Strict
+Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}} .
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.body")}}</li>
-</ul>
+- {{domxref("document.body")}}

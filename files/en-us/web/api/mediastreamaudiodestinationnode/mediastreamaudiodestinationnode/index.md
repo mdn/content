@@ -10,57 +10,54 @@ tags:
   - Web Audio API
 browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>MediaStreamAudioDestinationNode()</strong></code> constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.</p>
+The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myAudioDest = new MediaStreamAudioDestinationNode(<em>context</em>, <em>options</em>);</pre>
+```js
+var myAudioDest = new MediaStreamAudioDestinationNode(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>context</em></dt>
- <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.</dd>
- <dt><em>options {{optional_inline}}</em></dt>
- <dd>An object defining the properties you want the <code>MediaStreamAudioDestinationNode</code> to have:
-  <ul>
-    <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
-        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-        and down-mixing</a> connections to any inputs to the node. (See
+- _context_
+  - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
+- _options {{optional_inline}}_
+
+  - : An object defining the properties you want the `MediaStreamAudioDestinationNode` to have:
+
+    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
       {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of <code>channelCountMode</code>.</li>
-    <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+      definition depend on the value of `channelCountMode`.
+    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
       the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-      information including default values.)</li>
-    <li>
-      <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
-      interpretation will define how audio <a
-        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-        and down-mixing</a> will happen.<br>
-      The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+      information including default values.)
+    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
+      interpretation will define how audio [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+      The possible values are `"speakers"` or `"discrete"`. (See
       {{domxref("AudioNode.channelCountMode")}} for more information including default
       values.)
-    </li>
-  </ul>
- </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.</p>
+A new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 
-var myDestination = new MediaStreamAudioDestinationNode(<em>ac</em>);</pre>
+var myDestination = new MediaStreamAudioDestinationNode(ac);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

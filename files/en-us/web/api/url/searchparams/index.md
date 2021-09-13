@@ -2,45 +2,48 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- URL
-- URLSearchParams
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - URL
+  - URLSearchParams
 browser-compat: api.URL.searchParams
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <strong><code>searchParams</code></strong> readonly property of the
-  {{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
-  access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.</p>
+The **`searchParams`** readonly property of the
+{{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
+access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>urlSearchParams</em> = <em>url</em>.searchParams</pre>
+```js
+const urlSearchParams = url.searchParams
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("URLSearchParams")}} object.</p>
+A {{domxref("URLSearchParams")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If the URL of your page is
-  <code>https://example.com/?name=Jonathan%20Smith&amp;age=18</code> you could parse out
-  the <code>name</code> and <code>age</code> parameters using:</p>
+If the URL of your page is
+`https://example.com/?name=Jonathan%20Smith&age=18` you could parse out
+the `name` and `age` parameters using:
 
-<pre class="brush: js">let params = (new URL(document.location)).searchParams;
+```js
+let params = (new URL(document.location)).searchParams;
 let name = params.get('name'); // is the string "Jonathan Smith".
-let age = parseInt(params.get('age')); // is the number 18</pre>
+let age = parseInt(params.get('age')); // is the number 18
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

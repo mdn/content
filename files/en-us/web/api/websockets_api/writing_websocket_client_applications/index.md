@@ -11,125 +11,121 @@ tags:
   - WebSocket API
   - WebSockets
 ---
-<div>{{APIRef("Websockets API")}}</div>
+{{APIRef("Websockets API")}}
 
-<p>WebSocket client applications use the <a
-    href="/en-US/docs/Web/API/WebSockets_API">WebSocket API</a> to communicate with <a
-    href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">WebSocket
-    servers</a> using the WebSocket protocol.</p>
+WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket
+servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="note">
-  <p><strong>Note:</strong> The example snippets in this article are taken from our
-    WebSocket chat client/server sample. <a
-      href="https://github.com/mdn/samples-server/tree/master/s/websocket-chat">See the
-      code</a>.</p>
-</div>
+> **Note:** The example snippets in this article are taken from our
+> WebSocket chat client/server sample. [See the
+> code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
-<h2 id="Creating_a_WebSocket_object">Creating a WebSocket object</h2>
+## Creating a WebSocket object
 
-<p>In order to communicate using the WebSocket protocol, you need to create a
-  {{domxref("WebSocket")}} object; this will automatically attempt to open the connection
-  to the server.</p>
+In order to communicate using the WebSocket protocol, you need to create a
+{{domxref("WebSocket")}} object; this will automatically attempt to open the connection
+to the server.
 
-<p>The WebSocket constructor accepts one required and one optional parameter:</p>
+The WebSocket constructor accepts one required and one optional parameter:
 
-<pre class="brush: js"><em>webSocket</em> = new WebSocket(<em>url</em>, <em>protocols</em>);
-</pre>
+```js
+webSocket = new WebSocket(url, protocols);
+```
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>The URL to which to connect; this should be the URL to which the WebSocket server
-    will respond. This should use the URL scheme <code>wss://</code>, although some
-    software may allow you to use the insecure <code>ws://</code> for local connections.
-  </dd>
-  <dt><code>protocols</code> {{ optional_inline() }}</dt>
-  <dd>Either a single protocol string or an array of protocol strings. These strings are
+- `url`
+  - : The URL to which to connect; this should be the URL to which the WebSocket server
+    will respond. This should use the URL scheme `wss://`, although some
+    software may allow you to use the insecure `ws://` for local connections.
+- `protocols` {{ optional_inline() }}
+  - : Either a single protocol string or an array of protocol strings. These strings are
     used to indicate sub-protocols, so that a single server can implement multiple
     WebSocket sub-protocols (for example, you might want one server to be able to handle
-    different types of interactions depending on the specified <code>protocol</code>). If
-    you don't specify a protocol string, an empty string is assumed.</dd>
-</dl>
+    different types of interactions depending on the specified `protocol`). If
+    you don't specify a protocol string, an empty string is assumed.
 
-<p>The constructor will throw a <code>SecurityError</code> if the destination doesn't
-  allow access. This may happen if you attempt to use an insecure connection (most
-  {{Glossary("user agent", "user agents")}} now require a secure link for all WebSocket
-  connections unless they're on the same device or possibly on the same network).</p>
+The constructor will throw a `SecurityError` if the destination doesn't
+allow access. This may happen if you attempt to use an insecure connection (most
+{{Glossary("user agent", "user agents")}} now require a secure link for all WebSocket
+connections unless they're on the same device or possibly on the same network).
 
-<h3 id="Connection_errors">Connection errors</h3>
+### Connection errors
 
-<p>If an error occurs while attempting to connect, first a simple event with the name
-  <code>error</code> is sent to the {{domxref("WebSocket")}} object (thereby invoking its
-  {{domxref("WebSocket.onerror", "onerror")}} handler), and then the
-  {{domxref("CloseEvent")}} is sent to the <code>WebSocket</code> object (thereby invoking
-  its {{domxref("WebSocket.onclose", "onclose")}} handler) to indicate the reason for the
-  connection's closing.</p>
+If an error occurs while attempting to connect, first a simple event with the name
+`error` is sent to the {{domxref("WebSocket")}} object (thereby invoking its
+{{domxref("WebSocket.onerror", "onerror")}} handler), and then the
+{{domxref("CloseEvent")}} is sent to the `WebSocket` object (thereby invoking
+its {{domxref("WebSocket.onclose", "onclose")}} handler) to indicate the reason for the
+connection's closing.
 
-<p>The browser may also output to its console a more descriptive error message as well as
-  a closing code as defined in <a class="external"
-    href="https://datatracker.ietf.org/doc/html/rfc6455#section-7.4">RFC 6455, Section 7.4</a> through the
-  {{domxref("CloseEvent")}}.</p>
+The browser may also output to its console a more descriptive error message as well as
+a closing code as defined in [RFC 6455, Section 7.4](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4) through the
+{{domxref("CloseEvent")}}.
 
-<h3 id="Examples">Examples</h3>
+### Examples
 
-<p>This simple example creates a new WebSocket, connecting to the server at
-  <code>wss://www.example.com/socketserver</code>. A custom
-  protocol of "protocolOne" is named in the request for the socket in this example, though
-  this can be omitted.</p>
+This simple example creates a new WebSocket, connecting to the server at
+`wss://www.example.com/socketserver`. A custom
+protocol of "protocolOne" is named in the request for the socket in this example, though
+this can be omitted.
 
-<pre class="brush: js">var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
-</pre>
+```js
+var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+```
 
-<p>On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is
-  <code>CONNECTING</code>. The <code>readyState</code> will become <code>OPEN</code> once
-  the connection is ready to transfer data.</p>
+On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is
+`CONNECTING`. The `readyState` will become `OPEN` once
+the connection is ready to transfer data.
 
-<p>If you want to open a connection and are flexible about the protocols you support, you
-  can specify an array of protocols:</p>
+If you want to open a connection and are flexible about the protocols you support, you
+can specify an array of protocols:
 
-<pre class="brush: js">var exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
-</pre>
+```js
+var exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+```
 
-<p>Once the connection is established (that is, <code>readyState</code> is
-  <code>OPEN</code>), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will
-  tell you which protocol the server selected.</p>
+Once the connection is established (that is, `readyState` is
+`OPEN`), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will
+tell you which protocol the server selected.
 
-<p>Establishing a WebSocket relies on the <a
-    href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">HTTP Upgrade mechanism</a>, so
-  the request for the protocol upgrade is implicit when we address the web server as
-  <code>ws://www.example.com</code> or
-  <code>wss://www.example.com</code>.</p>
+Establishing a WebSocket relies on the [HTTP Upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism), so
+the request for the protocol upgrade is implicit when we address the web server as
+`ws://www.example.com` or
+`wss://www.example.com`.
 
-<h2 id="Sending_data_to_the_server">Sending data to the server</h2>
+## Sending data to the server
 
-<p>Once you've opened your connection, you can begin transmitting data to the server. To
-  do this, call the <code>WebSocket</code> object's {{domxref("WebSocket.send",
-  "send()")}} method for each message you want to send:</p>
+Once you've opened your connection, you can begin transmitting data to the server. To
+do this, call the `WebSocket` object's {{domxref("WebSocket.send",
+  "send()")}} method for each message you want to send:
 
-<pre class="brush: js">exampleSocket.send("Here's some text that the server is urgently awaiting!");
-</pre>
+```js
+exampleSocket.send("Here's some text that the server is urgently awaiting!");
+```
 
-<p>You can send data as a string, {{ domxref("Blob") }}, or {{jsxref("ArrayBuffer")}}.</p>
+You can send data as a string, {{ domxref("Blob") }}, or {{jsxref("ArrayBuffer")}}.
 
-<p>As establishing a connection is asynchronous and prone to failure there is no guarantee
-  that calling the <code>send()</code> method immediately after creating a WebSocket
-  object will be successful. We can at least be sure that attempting to send data only
-  takes place once a connection is established by defining an
-  {{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:</p>
+As establishing a connection is asynchronous and prone to failure there is no guarantee
+that calling the `send()` method immediately after creating a WebSocket
+object will be successful. We can at least be sure that attempting to send data only
+takes place once a connection is established by defining an
+{{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:
 
-<pre class="brush: js">exampleSocket.onopen = function (event) {
+```js
+exampleSocket.onopen = function (event) {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
 };
-</pre>
+```
 
-<h3 id="Using_JSON_to_transmit_objects">Using JSON to transmit objects</h3>
+### Using JSON to transmit objects
 
-<p>One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data
-  to the server. For example, a chat program can interact with a server using a protocol
-  implemented using packets of JSON-encapsulated data:</p>
+One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data
+to the server. For example, a chat program can interact with a server using a protocol
+implemented using packets of JSON-encapsulated data:
 
-<pre class="brush: js">// Send text to all users through the server
+```js
+// Send text to all users through the server
 function sendText() {
   // Construct a msg object containing the data the server needs to process the message from the chat client.
   var msg = {
@@ -145,37 +141,36 @@ function sendText() {
   // Blank the text input element, ready to receive the next line of text from the user.
   document.getElementById("text").value = "";
 }
-</pre>
+```
 
-<h2 id="Receiving_messages_from_the_server">Receiving messages from the server</h2>
+## Receiving messages from the server
 
-<p>WebSockets is an event-driven API; when messages are received, a <code>message</code>
-  event is sent to the <code>WebSocket</code> object. To handle it, add an event listener
-  for the <code>message</code> event, or use the {{domxref("WebSocket.onmessage",
+WebSockets is an event-driven API; when messages are received, a `message`
+event is sent to the `WebSocket` object. To handle it, add an event listener
+for the `message` event, or use the {{domxref("WebSocket.onmessage",
   "onmessage")}} event handler. To begin listening for incoming data, you can do something
-  like this:</p>
+like this:
 
-<pre class="brush: js">exampleSocket.onmessage = function (event) {
+```js
+exampleSocket.onmessage = function (event) {
   console.log(event.data);
 }
-</pre>
+```
 
-<h3 id="Receiving_and_interpreting_JSON_objects">Receiving and interpreting JSON objects
-</h3>
+### Receiving and interpreting JSON objects
 
-<p>Let's consider the chat client application first alluded to in {{ anch("Using JSON to
+Let's consider the chat client application first alluded to in {{ anch("Using JSON to
   transmit objects") }}. There are assorted types of data packets the client might
-  receive, such as:</p>
+receive, such as:
 
-<ul>
-  <li>Login handshake</li>
-  <li>Message text</li>
-  <li>User list updates</li>
-</ul>
+- Login handshake
+- Message text
+- User list updates
 
-<p>The code that interprets these incoming messages might look like this:</p>
+The code that interprets these incoming messages might look like this:
 
-<pre class="brush: js">exampleSocket.onmessage = function(event) {
+```js
+exampleSocket.onmessage = function(event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
@@ -188,18 +183,18 @@ function sendText() {
       setUsername();
       break;
     case "username":
-      text = "&lt;b&gt;User &lt;em&gt;" + msg.name + "&lt;/em&gt; signed in at " + timeStr + "&lt;/b&gt;&lt;br&gt;";
+      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
       break;
     case "message":
-      text = "(" + timeStr + ") &lt;b&gt;" + msg.name + "&lt;/b&gt;: " + msg.text + "&lt;br&gt;";
+      text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "&lt;b&gt;Your username has been set to &lt;em&gt;" + msg.name + "&lt;/em&gt; because the name you chose is in use.&lt;/b&gt;&lt;br&gt;"
+      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i &lt; msg.users.length; i++) {
-        ul += msg.users[i] + "&lt;br&gt;";
+      for (i=0; i < msg.users.length; i++) {
+        ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
       break;
@@ -210,31 +205,32 @@ function sendText() {
     document.getElementById("chatbox").contentWindow.scrollByPages(1);
   }
 };
-</pre>
+```
 
-<p>Here we use {{jsxref("JSON.parse()")}} to convert the JSON object back into the
-  original object, then examine and act upon its contents.</p>
+Here we use {{jsxref("JSON.parse()")}} to convert the JSON object back into the
+original object, then examine and act upon its contents.
 
-<h3 id="Text_data_format">Text data format</h3>
+### Text data format
 
-<p>Text received over a WebSocket connection is in UTF-8 format.</p>
+Text received over a WebSocket connection is in UTF-8 format.
 
-<h2 id="Closing_the_connection">Closing the connection</h2>
+## Closing the connection
 
-<p>When you've finished using the WebSocket connection, call the WebSocket method
-  {{domxref("WebSocket.close", "close()")}}:</p>
+When you've finished using the WebSocket connection, call the WebSocket method
+{{domxref("WebSocket.close", "close()")}}:
 
-<pre class="brush: js">exampleSocket.close();
-</pre>
+```js
+exampleSocket.close();
+```
 
-<p>It may be helpful to examine the socket's {{domxref("WebSocket.bufferedAmount",
+It may be helpful to examine the socket's {{domxref("WebSocket.bufferedAmount",
   "bufferedAmount")}} attribute before attempting to close the connection to determine if
-  any data has yet to be transmitted on the network. If this value isn't 0, there's
-  pending data still, so you may wish to wait before closing the connection.</p>
+any data has yet to be transmitted on the network. If this value isn't 0, there's
+pending data still, so you may wish to wait before closing the connection.
 
-<h2 id="Security_considerations">Security considerations</h2>
+## Security considerations
 
-<p>WebSockets should not be used in a mixed content environment; that is, you shouldn't
-  open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa.
-  Most browsers now only allow secure WebSocket connections, and no longer support using
-  them in insecure contexts.</p>
+WebSockets should not be used in a mixed content environment; that is, you shouldn't
+open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa.
+Most browsers now only allow secure WebSocket connections, and no longer support using
+them in insecure contexts.

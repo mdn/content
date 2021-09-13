@@ -2,49 +2,51 @@
 title: HTMLVideoElement.onenterpictureinpicture
 slug: Web/API/HTMLVideoElement/onenterpictureinpicture
 tags:
-- API
-- Event Handler
-- Interface
-- Picture-in-Picture
-- Picture-in-Picture API
-- Property
-- Reference
-- Video
-- events
-- pip
+  - API
+  - Event Handler
+  - Interface
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Property
+  - Reference
+  - Video
+  - events
+  - pip
 browser-compat: api.HTMLVideoElement.onenterpictureinpicture
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>The <code><strong>onenterpictureinpicture</strong></code> property of the
-  {{domxref("HTMLVideoElement")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{domxref("HTMLVideoElement.enterpictureinpicture_event",
-  "HTMLVideoElement.enterpictureinpicture")}} events.</p>
+The **`onenterpictureinpicture`** property of the
+{{domxref("HTMLVideoElement")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{domxref("HTMLVideoElement.enterpictureinpicture_event",
+  "HTMLVideoElement.enterpictureinpicture")}} events.
 
-<p>The <code>enterpictureinpicture</code> event fires after the video has successfully
-  entered picture-in-picture mode.</p>
+The `enterpictureinpicture` event fires after the video has successfully
+entered picture-in-picture mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>video</em>.onenterpictureinpicture = <em>functionRef</em>;
-</pre>
+```js
+video.onenterpictureinpicture = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Window_size_logger">Window size logger</h3>
+### Window size logger
 
-<pre class="brush: html">&lt;button id="button&gt;Enter Picture-in-Picture&lt;/button&gt;
-&lt;video id="video" muted autoplay src=""&gt;&lt;/video&gt;
-</pre>
+```html
+<button id="button>Enter Picture-in-Picture</button>
+<video id="video" muted autoplay src=""></video>
+```
 
-<pre class="brush: js">const video = document.querySelector('#video');
+```js
+const video = document.querySelector('#video');
 const button = document.querySelector('#button');
 
 function onEnterPip() {
@@ -53,22 +55,20 @@ function onEnterPip() {
 
 video.onenterpictureinpicture = onEnterPip;
 
-button.onclick = function() =&gt; {
+button.onclick = function() => {
   video.requestPictureInPicture();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Picture-in-Picture_API")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement")}}</li>
-</ul>
+- {{DOMxRef("Picture-in-Picture_API")}}
+- {{DOMxRef("HTMLVideoElement")}}

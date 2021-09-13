@@ -2,40 +2,43 @@
 title: MediaSession.metadata
 slug: Web/API/MediaSession/metadata
 tags:
-- Audio
-- Media
-- Media Session API
-- MediaSession
-- Property
-- Reference
-- Video
-- metadata
+  - Audio
+  - Media
+  - Media Session API
+  - MediaSession
+  - Property
+  - Reference
+  - Video
+  - metadata
 browser-compat: api.MediaSession.metadata
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>metadata</code></strong> property of the {{domxref("MediaSession")}}
-  interface contains a {{domxref("MediaMetadata")}} object  providing descriptive
-  information about the currently playing media, or <code>null</code> if the metadata has
-  not been set. This metadata is provided by the browser to the device for presentation in
-  any standard media control user interface the device might offer.</p>
+The **`metadata`** property of the {{domxref("MediaSession")}}
+interface contains a {{domxref("MediaMetadata")}} object  providing descriptive
+information about the currently playing media, or `null` if the metadata has
+not been set. This metadata is provided by the browser to the device for presentation in
+any standard media control user interface the device might offer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>mediaMetadata</em> = navigator.mediaSession.metadata;
-navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
+```js
+var mediaMetadata = navigator.mediaSession.metadata;
+navigator.mediaSession.metadata = mediaMetadata;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An instance of {{domxref("MediaMetadata")}} containing information about the media
-  currently being played.</p>
+An instance of {{domxref("MediaMetadata")}} containing information about the media
+currently being played.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example checks for compatibility and creates a new media session with the
-  relevant metadata:</p>
+The following example checks for compatibility and creates a new media session with the
+relevant metadata:
 
-<pre class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -50,12 +53,13 @@ navigator.mediaSession.metadata = <em>mediaMetadata</em>;</pre>
     ]
   });
 
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

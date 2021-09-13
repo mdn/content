@@ -11,65 +11,62 @@ tags:
   - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p>The <code>MediaElementAudioSourceNode</code> interface represents an audio source consisting of an HTML5 {{ htmlelement("audio") }} or {{ htmlelement("video") }} element. It is an {{domxref("AudioNode")}} that acts as an audio source.</p>
-</div>
+The `MediaElementAudioSourceNode` interface represents an audio source consisting of an HTML5 {{ htmlelement("audio") }} or {{ htmlelement("video") }} element. It is an {{domxref("AudioNode")}} that acts as an audio source.
 
-<p>A <code>MediaElementSourceNode</code> has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaElementSource()")}} method. The amount of channels in the output equals the number of channels of the audio referenced by the {{domxref("HTMLMediaElement")}} used in the creation of the node, or is 1 if the {{domxref("HTMLMediaElement")}} has no audio.</p>
+A `MediaElementSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaElementSource()")}} method. The amount of channels in the output equals the number of channels of the audio referenced by the {{domxref("HTMLMediaElement")}} used in the creation of the node, or is 1 if the {{domxref("HTMLMediaElement")}} has no audio.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>defined by the media in the {{domxref("HTMLMediaElement")}} passed to the {{domxref("AudioContext.createMediaElementSource")}} method that created it.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>
+        defined by the media in the {{domxref("HTMLMediaElement")}}
+        passed to the
+        {{domxref("AudioContext.createMediaElementSource")}}
+        method that created it.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode", "MediaElementAudioSourceNode()")}}</dt>
- <dd>Creates a new <code>MediaElementAudioSourceNode</code> object instance.</dd>
-</dl>
+- {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode", "MediaElementAudioSourceNode()")}}
+  - : Creates a new `MediaElementAudioSourceNode` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("MediaElementAudioSourceNode.mediaElement", "mediaElement")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("HTMLMediaElement")}} used when constructing this <code>MediaStreamAudioSourceNode</code>.</dd>
-</dl>
+- {{domxref("MediaElementAudioSourceNode.mediaElement", "mediaElement")}} {{ReadOnlyInline}}
+  - : The {{domxref("HTMLMediaElement")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/AudioContext/createMediaElementSource#example"><code>AudioContext.createMediaElementSource()</code></a> for example code.</p>
+See [`AudioContext.createMediaElementSource()`](/en-US/docs/Web/API/AudioContext/createMediaElementSource#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

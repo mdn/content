@@ -2,77 +2,78 @@
 title: HTMLImageElement.crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 tags:
-- API
-- CORS
-- Cross-Origin
-- Crossorigin
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- Security
-- origin
+  - API
+  - CORS
+  - Cross-Origin
+  - Crossorigin
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - Security
+  - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLImageElement")}}
-    interface's <code><strong>crossOrigin</strong></code> attribute is a string which
-    specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
-    retrieving the image.</p>
+The {{domxref("HTMLImageElement")}}
+interface's **`crossOrigin`** attribute is a string which
+specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
+retrieving the image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.crossOrigin = <em>crossOriginMode</em>;
-let <em>crossOriginMode</em> = <em>htmlImageElement</em>.crossOrigin;</pre>
+```js
+htmlImageElement.crossOrigin = crossOriginMode;
+let crossOriginMode = htmlImageElement.crossOrigin;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
-  the image resource. If you don't specify <code>crossOrigin</code>, the image is fetched
-  without CORS (the fetch <code>no-cors</code> mode).</p>
+A {{domxref("DOMString")}} of a keyword specifying the CORS mode to use when fetching
+the image resource. If you don't specify `crossOrigin`, the image is fetched
+without CORS (the fetch `no-cors` mode).
 
-<p>Permitted values are:</p>
+Permitted values are:
 
-<dl>
-  <dt><code>anonymous</code></dt>
-  <dd>Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
-    "mode")}} set to <code>cors</code> and their {{domxref("Request.credentials",
-    "credentials")}} mode set to <code>same-origin</code>. This means that CORS is enabled
-    and credentials are sent <em>if</em> the image is fetched from the same origin from
-    which the document was loaded.</dd>
-  <dt><code>use-credentials</code></dt>
-  <dd>Requests by the {{domxref("HTMLImageElement")}} will use the <code>cors</code> mode
-    and the <code>include</code> credentials mode; all image requests by the element will
-    use CORS, regardless of what domain the fetch is from.</dd>
-</dl>
+- `anonymous`
+  - : Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
+    "mode")}} set to `cors` and their {{domxref("Request.credentials",
+    "credentials")}} mode set to `same-origin`. This means that CORS is enabled
+    and credentials are sent _if_ the image is fetched from the same origin from
+    which the document was loaded.
+- `use-credentials`
+  - : Requests by the {{domxref("HTMLImageElement")}} will use the `cors` mode
+    and the `include` credentials mode; all image requests by the element will
+    use CORS, regardless of what domain the fetch is from.
 
-<p>If <code>crossOrigin</code> is an empty string (<code>""</code>),
-  the <code>anonymous</code> mode is selected.</p>
+If `crossOrigin` is an empty string (`""`),
+the `anonymous` mode is selected.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a new {{HTMLElement("img")}} element is created and added to the
-  document, loading the image with the Anonymous state; the image will be loaded using
-  CORS and credentials will be used for all cross-origin loads.</p>
+In this example, a new {{HTMLElement("img")}} element is created and added to the
+document, loading the image with the Anonymous state; the image will be loaded using
+CORS and credentials will be used for all cross-origin loads.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The code below demonstrates setting the <code>crossOrigin</code> property on an
-  <code>&lt;img&gt;</code> element to configure CORS access for the fetch of a
-  newly-created image.</p>
+The code below demonstrates setting the `crossOrigin` property on an
+`<img>` element to configure CORS access for the fetch of a
+newly-created image.
 
-<pre class="brush: js">const imageUrl = "clock-demo-400px.png";
+```js
+const imageUrl = "clock-demo-400px.png";
 const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
   image.addEventListener("load",
-    () =&gt; container.prepend(image)
+    () => container.prepend(image)
   );
 
-  image.addEventListener("error", () =&gt; {
+  image.addEventListener("error", () => {
     const errMsg = document.createElement("output");
     errMsg.value = `Error loading image at ${url}`;
     container.append(errMsg);
@@ -83,20 +84,24 @@ function loadImage(url) {
   image.src = url;
 }
 
-loadImage(imageUrl);</pre>
+loadImage(imageUrl);
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;p&gt;Here's a paragraph. It's a very interesting paragraph. You
+```html
+<div class="container">
+  <p>Here's a paragraph. It's a very interesting paragraph. You
   are captivated by this paragraph. Keep reading this paragraph.
   Okay, now you can stop reading this paragraph. Thanks for
-  reading me.&lt;/p&gt;
-&lt;/div&gt;</pre>
+  reading me.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   font: 1.125rem/1.5, Helvetica, sans-serif;
 }
 
@@ -115,16 +120,17 @@ output {
   background: rgba(100, 100, 100, 0.1);
   font-family: Courier, monospace;
   width: 95%;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 600, 260)}}</p>
+{{EmbedLiveSample("Example", 600, 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

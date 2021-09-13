@@ -8,51 +8,46 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_etc1
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_compressed_texture_etc1</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes the <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">ETC1 compressed texture format</a>.</p>
+The **`WEBGL_compressed_texture_etc1`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes the [ETC1 compressed texture format](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression).
 
-<p>Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</p>
+Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>The compressed texture format is exposed by a constant and can be used with the {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} method (note that ETC1 is <strong>not</strong> supported with the {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} method).</p>
+The compressed texture format is exposed by a constant and can be used with the {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} method (note that ETC1 is **not** supported with the {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} method).
 
-<dl>
- <dt><code>ext.COMPRESSED_RGB_ETC1_WEBGL</code></dt>
- <dd>Compresses 24-bit RGB data with no alpha channel.</dd>
-</dl>
+- `ext.COMPRESSED_RGB_ETC1_WEBGL`
+  - : Compresses 24-bit RGB data with no alpha channel.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('WEBGL_compressed_texture_etc1');
+```js
+var ext = gl.getExtension('WEBGL_compressed_texture_etc1');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_ETC1_WEBGL, 512, 512, 0, textureData);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">Ericsson Texture Compression – Wikipedia</a></li>
- <li>{{domxref("WEBGL_compressed_texture_etc")}} (ETC2 and EAC)</li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- [Ericsson Texture Compression – Wikipedia](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression)
+- {{domxref("WEBGL_compressed_texture_etc")}} (ETC2 and EAC)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

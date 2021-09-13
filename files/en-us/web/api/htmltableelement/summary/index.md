@@ -2,36 +2,38 @@
 title: HTMLTableElement.summary
 slug: Web/API/HTMLTableElement/summary
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- NeedsBrowserCompatibility
-- NeedsSpecTable
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLTableElement.summary
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The <code><strong>HTMLTableElement.summary</strong></code> property represents the
-  table description.</p>
+The **`HTMLTableElement.summary`** property represents the
+table description.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.summary = <em>string</em>;
-var<em>string</em> =<em> HTMLTableElement</em>.summary;</pre>
+```js
+HTMLTableElement.summary = string;
+varstring = HTMLTableElement.summary;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">HTMLTableElement.summary = "Usage statistics";</pre>
+```js
+HTMLTableElement.summary = "Usage statistics";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification</li>
-</ul>
+- W3C DOM 2 HTML Specification
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

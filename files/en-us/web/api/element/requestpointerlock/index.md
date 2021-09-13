@@ -12,32 +12,31 @@ tags:
   - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
-<div>{{ APIRef("DOM") }}{{ SeeCompatTable }}</div>
+{{ APIRef("DOM") }}{{ SeeCompatTable }}
 
-<p>The <strong><code>Element.requestPointerLock()</code></strong> method lets you
-  asynchronously ask for the pointer to be locked on the given element.</p>
+The **`Element.requestPointerLock()`** method lets you
+asynchronously ask for the pointer to be locked on the given element.
 
-<p>To track the success or failure of the request, it is necessary to listen for the
-  {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events at the
-  {{domxref("Document")}} level.</p>
+To track the success or failure of the request, it is necessary to listen for the
+{{event("pointerlockchange")}} and {{event("pointerlockerror")}} events at the
+{{domxref("Document")}} level.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>instanceOfElement</em>.requestPointerLock();
-</pre>
+```js
+instanceOfElement.requestPointerLock();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Document.pointerLockElement") }}</li>
-  <li>{{ domxref("Document.exitPointerLock()") }}</li>
-  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
-</ul>
+- {{ domxref("Document.pointerLockElement") }}
+- {{ domxref("Document.exitPointerLock()") }}
+- [Pointer Lock](/en-US/docs/Web/API/Pointer_Lock_API)

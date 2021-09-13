@@ -2,41 +2,38 @@
 title: File.fileName
 slug: Web/API/File/fileName
 tags:
-- API
-- DOM
-- File API
-- Files
-- Non-standard
-- Property
-- Reference
-- Deprecated
+  - API
+  - DOM
+  - File API
+  - Files
+  - Non-standard
+  - Property
+  - Reference
+  - Deprecated
 ---
-<div>{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}</div>
+{{APIRef("File API")}}{{non-standard_header}}{{deprecated_header}}
 
-<div class="note notebox">
-  <p><strong>Note:</strong> This method was removed from Firefox 7.0 and onward.</p>
-</div>
+> **Note:** This method was removed from Firefox 7.0 and onward.
 
-<p>Returns the name of the file. For security reasons the path is excluded from this
-  property.</p>
+Returns the name of the file. For security reasons the path is excluded from this
+property.
 
-<div class="note"><p><strong>Note:</strong> This property is deprecated. Use {{domxref("File.name")}} instead.</p></div>
+> **Note:** This property is deprecated. Use {{domxref("File.name")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>name</em> = <em>instanceOfFile</em>.fileName;</pre>
+```js
+var name = instanceOfFile.fileName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string</p>
+A string
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("File.name")}}</li>
-</ul>
+- {{domxref("File.name")}}

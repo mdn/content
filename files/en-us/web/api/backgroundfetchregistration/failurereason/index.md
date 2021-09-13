@@ -9,41 +9,43 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>failureReason</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.</p>
+The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let failureReason = BackgroundFetchRegistration.failureReason;</pre>
+    let failureReason = BackgroundFetchRegistration.failureReason;
 
-<h3>Value</h3>
-<p>One of the following strings:</p>
-<dl>
-  <dt><code>""</code></dt>
-  <dd>The background fetch has not completed, or was successful.</dd>
-  <dt><code>"aborted"</code></dt>
-  <dd>The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.</dd>
-  <dt><code>"bad-status"</code></dt>
-  <dd>A response had a not-ok status (a status outside the range 200-299).</dd>
-  <dt><code>"fetch-error"</code></dt>
-  <dd>A fetch failed for other reasons, for example CORS, or a network failure.</dd>
-  <dt><code>"quota-exceeded"</code></dt>
-  <dd>Storage quota was reached during the operation.</dd>
-  <dt><code>"download-total-exceeded"</code></dt>
-  <dd>The  provided <code>downloadTotal</code> was exceeded. This value was set when the background fetch was registered.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+One of the following strings:
 
-<p>Logging {{domxref("BackgroundFetchRegistration.failureReason")}} to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.</p>
+- `""`
+  - : The background fetch has not completed, or was successful.
+- `"aborted"`
+  - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+- `"bad-status"`
+  - : A response had a not-ok status (a status outside the range 200-299).
+- `"fetch-error"`
+  - : A fetch failed for other reasons, for example CORS, or a network failure.
+- `"quota-exceeded"`
+  - : Storage quota was reached during the operation.
+- `"download-total-exceeded"`
+  - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
 
-<pre class="brush: js">console.log(bgFetch.failureReason);</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+Logging {{domxref("BackgroundFetchRegistration.failureReason")}} to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.
+
+```js
+console.log(bgFetch.failureReason);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -15,75 +15,69 @@ tags:
   - send
 browser-compat: api.RTCDataChannel.send
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>
-  The <code><strong>send()</strong></code> method of the
-  {{domxref("RTCDataChannel")}} interface sends data across the data channel to the
-  remote peer.
-  This can be done any time except during the initial process of
-  creating the underlying transport channel. Data sent before connecting is buffered if
-  possible (or an error occurs if it's not possible), and is also buffered if sent while
-  the connection is closing or closed.</p>
+The **`send()`** method of the
+{{domxref("RTCDataChannel")}} interface sends data across the data channel to the
+remote peer.
+This can be done any time except during the initial process of
+creating the underlying transport channel. Data sent before connecting is buffered if
+possible (or an error occurs if it's not possible), and is also buffered if sent while
+the connection is closing or closed.
 
-<div class="note">
-  <p><strong>Note:</strong> Different browsers have different limitations on the size of the message you can
-    send. Specifications exist to define how to automatically fragment large messages, but
-    not all browsers implement them, and those that do have various additional
-    restrictions. This will get less complicated over time, but for now, if you have
-    questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels",
-    "Understanding message size limits")}}.</p>
-</div>
+> **Note:** Different browsers have different limitations on the size of the message you can
+> send. Specifications exist to define how to automatically fragment large messages, but
+> not all browsers implement them, and those that do have various additional
+> restrictions. This will get less complicated over time, but for now, if you have
+> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels",
+    "Understanding message size limits")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCDataChannel</em>.send(<em>data</em>);
-</pre>
+```js
+RTCDataChannel.send(data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>The data to transmit across the connection. This may be a {{domxref("USVString")}},
+- `data`
+  - : The data to transmit across the connection. This may be a {{domxref("USVString")}},
     a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, or an
-    {{domxref("ArrayBufferView")}}.</dd>
-</dl>
+    {{domxref("ArrayBufferView")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>Since the data channel uses a separate transport channel from the media content, it
+- `InvalidStateError`
+  - : Since the data channel uses a separate transport channel from the media content, it
     must establish its own connection; if it hasn't finished doing so (that is, its
-    {{domxref("RTCDataChannel.readyState", "readyState")}} is <code>"connecting")</code>,
-    this error occurs without sending or buffering the <code>data</code>.</dd>
-  <dt><code>NetworkError</code></dt>
-  <dd>The specified <code>data</code> would need to be buffered, and there isn't room for
+    {{domxref("RTCDataChannel.readyState", "readyState")}} is `"connecting")`,
+    this error occurs without sending or buffering the `data`.
+- `NetworkError`
+  - : The specified `data` would need to be buffered, and there isn't room for
     it in the buffer. In this scenario, the underlying transport is immediately closed.
-  </dd>
-  <dt><code>TypeError</code></dt>
-  <dd>The specified <code>data</code> is too large for the other peer to receive. Since
+- `TypeError`
+  - : The specified `data` is too large for the other peer to receive. Since
     there are multiple techniques for breaking up large data into smaller pieces for
     transfer, it's possible to encounter scenarios in which the other peer does not
     support the same ones. For example, if one peer is a modern browser that supports
-    using the <code>EOR</code> (End of Record) flag to indicate when a received message is
-    the last piece of a multi-part object sent using <code>send()</code>. For more
+    using the `EOR` (End of Record) flag to indicate when a received message is
+    the last piece of a multi-part object sent using `send()`. For more
     information about message size restrictions, see
     {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding
-    message size limits")}}.</dd>
-</dl>
+    message size limits")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a routine called <code>sendMessage()</code> is created; it accepts an
-  object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a
-  JSON string with the specified object and a time stamp.</p>
+In this example, a routine called `sendMessage()` is created; it accepts an
+object as input and sends to the remote peer, over the {{domxref("RTCDataChannel")}}, a
+JSON string with the specified object and a time stamp.
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 var dc = pc.createDataChannel("BackChannel");
 
 function sendMessage(msg) {
@@ -93,21 +87,19 @@ function sendMessage(msg) {
   }
   dc.send(JSON.stringify(obj));
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.readyState")}}</li>
-  <li>{{DOMxRef("RTCDataChannel.close_event", "close")}} event</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.readyState")}}
+- {{DOMxRef("RTCDataChannel.close_event", "close")}} event

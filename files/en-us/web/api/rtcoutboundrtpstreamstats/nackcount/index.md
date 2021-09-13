@@ -2,51 +2,52 @@
 title: RTCOutboundRtpStreamStats.nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
 tags:
-- API
-- Audio
-- Media
-- NACK
-- Packet Loss
-- Packets
-- Property
-- RTCOutboundRtpStreamStats
-- Reference
-- Reliability
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- nackCount
-- stream
+  - API
+  - Audio
+  - Media
+  - NACK
+  - Packet Loss
+  - Packets
+  - Property
+  - RTCOutboundRtpStreamStats
+  - Reference
+  - Reliability
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - nackCount
+  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.nackCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>nackCount</code></strong> property of the
-    {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a numeric value indicating the
-    number of times the {{domxref("RTCRtpSender")}} described by this object received a
-    <strong>NACK</strong> packet from the remote receiver.</p>
+The **`nackCount`** property of the
+{{domxref("RTCOutboundRtpStreamStats")}} dictionary is a numeric value indicating the
+number of times the {{domxref("RTCRtpSender")}} described by this object received a
+**NACK** packet from the remote receiver.
 
-<p>A NACK (Negative
-  ACKnowledgement, also called "Generic NACK") packet is used by the
-  {{domxref("RTCRtpReceiver")}} to inform the sender that one or more {{Glossary("RTP")}}
-  packets it sent were lost in transport.</p>
+A NACK (Negative
+ACKnowledgement, also called "Generic NACK") packet is used by the
+{{domxref("RTCRtpReceiver")}} to inform the sender that one or more {{Glossary("RTP")}}
+packets it sent were lost in transport.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>nackCount</em> = <em>RTCOutboundRtpStreamStats</em>.nackCount;</pre>
+```js
+var nackCount = RTCOutboundRtpStreamStats.nackCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating how many times the sender received a NACK packet from the
-  receiver, indicating the loss of one or more packets.</p>
+An integer value indicating how many times the sender received a NACK packet from the
+receiver, indicating the loss of one or more packets.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

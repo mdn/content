@@ -2,35 +2,36 @@
 title: MediaKeySession.close()
 slug: Web/API/MediaKeySession/close
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- MediaKeySession
-- Method
-- NeedsExample
-- Reference
-- close
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - MediaKeySession
+  - Method
+  - NeedsExample
+  - Reference
+  - close
 browser-compat: api.MediaKeySession.close
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}</div>
+{{APIRef("EncryptedMediaExtensions")}}
 
-<p>The <code>MediaKeySession.close()</code> method notifies that the current media session
-  is no longer needed, and that the content decryption module should release any resources
-  associated with this object and close it. Then, it returns a {{jsxref('Promise')}}.</p>
+The `MediaKeySession.close()` method notifies that the current media session
+is no longer needed, and that the content decryption module should release any resources
+associated with this object and close it. Then, it returns a {{jsxref('Promise')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>mediaKeySession</var>.close().then(function() { ... });</pre>
+```js
+mediaKeySession.close().then(function() { ... });
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}}.</p>
+A {{jsxref('Promise')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

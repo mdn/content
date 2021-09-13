@@ -2,41 +2,40 @@
 title: MediaKeySession.update()
 slug: Web/API/MediaKeySession/update
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- MediaKeySession
-- Method
-- NeedsExample
-- Reference
-- Update
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - MediaKeySession
+  - Method
+  - NeedsExample
+  - Reference
+  - Update
 browser-compat: api.MediaKeySession.update
 ---
-<p>{{APIRef("EncryptedMediaExtensions")}}</p>
+{{APIRef("EncryptedMediaExtensions")}}
 
-<p>The <code>MediaKeySession.update()</code> method loads messages and licenses to the
-  CDM, and then returns a {{jsxref('Promise')}} .</p>
+The `MediaKeySession.update()` method loads messages and licenses to the
+CDM, and then returns a {{jsxref('Promise')}} .
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>mediaKeySession</var>.update(<var>response</var>).then(function() { ... });</pre>
+```js
+mediaKeySession.update(response).then(function() { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>response</dt>
-  <dd>An instance of type BufferSource.</dd>
-</dl>
+- response
+  - : An instance of type BufferSource.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}}.</p>
+A {{jsxref('Promise')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

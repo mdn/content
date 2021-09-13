@@ -11,52 +11,49 @@ tags:
   - request
 browser-compat: api.Request.cache
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>cache</code></strong> read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's <a href="/en-US/docs/Web/HTTP/Caching">HTTP cache</a>.</p>
+The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var currentCacheMode = request.cache;</pre>
+```js
+var currentCacheMode = request.cache;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>RequestCache</code> value. The available values are:</p>
+A `RequestCache` value. The available values are:
 
-<ul>
- <li><code>default</code> — The browser looks for a matching request in its HTTP cache.
+- `default` — The browser looks for a matching request in its HTTP cache.
 
-  <ul>
-   <li>If there is a match and it is <a href="/en-US/docs/Web/HTTP/Caching#freshness">fresh</a>, it will be returned from the cache.</li>
-   <li>If there is a match but it is stale, the browser will make a <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
-   <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
-  </ul>
- </li>
- <li><code>no-store</code> — The browser fetches the resource from the remote server without first looking in the cache,<em> and will not</em> update the cache with the downloaded resource.</li>
- <li><code>reload</code> — The browser fetches the resource from the remote server without first looking in the cache, <em>but then will</em> update the cache with the downloaded resource.</li>
- <li><code>no-cache</code> — The browser looks for a matching request in its HTTP cache.
-  <ul>
-   <li>If there is a match,<em> fresh or stale,</em> the browser will make a <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.</li>
-   <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
-  </ul>
- </li>
- <li><code>force-cache</code> — The browser looks for a matching request in its HTTP cache.
-  <ul>
-   <li>If there is a match, <em>fresh or stale</em>, it will be returned from the cache.</li>
-   <li>If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.</li>
-  </ul>
- </li>
- <li><code>only-if-cached</code> — The browser looks for a matching request in its HTTP cache.
-  <ul>
-   <li>If there is a match, <em>fresh or stale</em>, it will be returned from the cache.</li>
-   <li>If there is no match, the browser will respond with a <a href="/en-US/docs/Web/HTTP/Status/504">504 Gateway timeout</a> status.</li>
-  </ul>
-  The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href="/en-US/docs/Web/API/Request/mode">mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>
-</ul>
+  - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#freshness), it will be returned from the cache.
+  - If there is a match but it is stale, the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+  - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
-<h2 id="Example">Example</h2>
+- `no-store` — The browser fetches the resource from the remote server without first looking in the cache, _and will not_ update the cache with the downloaded resource.
+- `reload` — The browser fetches the resource from the remote server without first looking in the cache, _but then will_ update the cache with the downloaded resource.
+- `no-cache` — The browser looks for a matching request in its HTTP cache.
 
-<pre class="brush: js">// Download a resource with cache busting, to bypass the cache
+  - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+  - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
+
+- `force-cache` — The browser looks for a matching request in its HTTP cache.
+
+  - If there is a match, _fresh or stale_, it will be returned from the cache.
+  - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
+
+- `only-if-cached` — The browser looks for a matching request in its HTTP cache.
+
+  - If there is a match, _fresh or stale_, it will be returned from the cache.
+  - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Status/504) status.
+
+  The `"only-if-cached"` mode can only be used if the request's [`mode`](/en-US/docs/Web/API/Request/mode) is `"same-origin"`. Cached redirects will be followed if the request's `redirect` property is `"follow"` and the redirects do not violate the `"same-origin"` mode.
+
+## Example
+
+```js
+// Download a resource with cache busting, to bypass the cache
 // completely.
 fetch("some.json", {cache: "no-store"})
   .then(function(response) { /* consume the response */ });
@@ -86,17 +83,17 @@ fetch("some.json", {cache: "force-cache"})
 // reference to the controller since it would need to change the value
 let controller = new AbortController();
 fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: controller.signal})
-  .catch(e =&gt; e instanceof TypeError &amp;&amp; e.message === "Failed to fetch" ?
+  .catch(e => e instanceof TypeError && e.message === "Failed to fetch" ?
     ({status: 504}) : // Workaround for chrome; which fails with a typeerror
     Promise.reject(e))
-  .then(res =&gt; {
+  .then(res => {
     if (res.status === 504) {
       controller.abort()
       controller = new AbortController();
       return fetch("some.json", {cache: "force-cache", mode: "same-origin", signal: controller.signal})
     }
     const date = res.headers.get("date"), dt = date ? new Date(date).getTime() : 0
-    if (dt &lt; (Date.now() - 86400000)) {
+    if (dt < (Date.now() - 86400000)) {
       // if older than 24 hours
       controller.abort()
       controller = new AbortController();
@@ -104,25 +101,24 @@ fetch("some.json", {cache: "only-if-cached", mode: "same-origin", signal: contro
     }
 
     // Other possible conditions
-    if (dt &lt; (Date.now() - 300000)) // If it's older than 5 minutes
+    if (dt < (Date.now() - 300000)) // If it's older than 5 minutes
       fetch("some.json", {cache: "no-cache", mode: "same-origin"}) // no cancellation or return value.
     return res
   })
   .then(function(response) { /* consume the (possibly stale) response */ })
-  .catch(error =&gt; { /* Can be an AbortError/DOMError or a TypeError */ });</pre>
+  .catch(error => { /* Can be an AbortError/DOMError or a TypeError */ });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

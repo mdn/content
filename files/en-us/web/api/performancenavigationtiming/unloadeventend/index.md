@@ -2,39 +2,41 @@
 title: PerformanceNavigationTiming.unloadEventEnd
 slug: Web/API/PerformanceNavigationTiming/unloadEventEnd
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>The <strong><code>unloadEventEnd</code></strong> read-only property returns a
-  {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-  time immediately after the user agent finishes the unload event of the previous
-  document. If there is no previous document, this property value is <code>0</code>.</p>
+The **`unloadEventEnd`** read-only property returns a
+{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
+time immediately after the user agent finishes the unload event of the previous
+document. If there is no previous document, this property value is `0`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>perfEntry</em>.unloadEventEnd;
-</pre>
+```js
+perfEntry.unloadEventEnd;
+```
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
-  time immediately after the user agent finishes the unload event of the previous
-  document.</p>
+A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
+time immediately after the user agent finishes the unload event of the previous
+document.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates this property's usage.</p>
+The following example illustrates this property's usage.
 
-<pre class="brush: js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   var perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
     // dom Properties
@@ -51,12 +53,12 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventEnd
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

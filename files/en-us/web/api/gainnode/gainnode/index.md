@@ -11,60 +11,50 @@ tags:
   - Web Audio API
 browser-compat: api.GainNode.GainNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>GainNode()</code></strong> constructor of the <a
-    href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-  {{domxref("GainNode")}} object which is an {{domxref("AudioNode")}} that represents a
-  change in volume.</p>
+The **`GainNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("GainNode")}} object which is an {{domxref("AudioNode")}} that represents a
+change in volume.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>gainNode</em> = new GainNode(<em>context</em>, <em>options</em>)</pre>
+```js
+var gainNode = new GainNode(context, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>A reference to a {{domxref("BaseAudioContext")}}, e.g. an {{domxref("AudioContext")}}.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>gain</code>: The amount of gain to apply. This parameter is a-rate
-        and it's nominal range is (-∞,+∞). The default is <code>1</code>.</li>
-        <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
-        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-        and down-mixing</a> connections to any inputs to the node. (See
+- `context`
+  - : A reference to a {{domxref("BaseAudioContext")}}, e.g. an {{domxref("AudioContext")}}.
+- `options` {{optional_inline}}
+
+  - : Options are as follows:
+
+    - `gain`: The amount of gain to apply. This parameter is a-rate
+      and it's nominal range is (-∞,+∞). The default is `1`.
+    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
       {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of <code>channelCountMode</code>.</li>
-      <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
-        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-        information including default values.)</li>
-      <li>
-        <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio <a
-          href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-          and down-mixing</a> will happen.<br>
-        The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
-        {{domxref("AudioNode.channelCountMode")}} for more information including default
-        values.)
-      </li>
-    </ul>
-  </dd>
-</dl>
+      definition depend on the value of `channelCountMode`.
+    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
+      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+      information including default values.)
+    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
+      interpretation will define how audio [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+      The possible values are `"speakers"` or `"discrete"`. (See
+      {{domxref("AudioNode.channelCountMode")}} for more information including default
+      values.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("GainNode")}} object instance.</p>
+A new {{domxref("GainNode")}} object instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-  <p>{{Compat}}</p>
-</div>
+{{Compat}}

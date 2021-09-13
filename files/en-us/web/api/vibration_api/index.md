@@ -7,44 +7,47 @@ tags:
   - Mobile
   - Vibration
 ---
-<div>{{DefaultAPISidebar("Vibration API")}}</div>
+{{DefaultAPISidebar("Vibration API")}}
 
-<p>Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The <strong>Vibration API</strong> offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.</p>
+Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The **Vibration API** offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.
 
-<h2 id="Describing_vibrations">Describing vibrations</h2>
+## Describing vibrations
 
-<p>Vibration is described as a pattern of on-off pulses, which may be of varying lengths. The pattern may consist of either a single integer, describing the number of milliseconds to vibrate, or an array of integers describing a pattern of vibrations and pauses. Vibration is controlled with a single method: {{DOMxRef("Navigator.vibrate()")}}.</p>
+Vibration is described as a pattern of on-off pulses, which may be of varying lengths. The pattern may consist of either a single integer, describing the number of milliseconds to vibrate, or an array of integers describing a pattern of vibrations and pauses. Vibration is controlled with a single method: {{DOMxRef("Navigator.vibrate()")}}.
 
-<h3 id="A_single_vibration">A single vibration</h3>
+### A single vibration
 
-<p>You may pulse the vibration hardware one time by specifying either a single value or an array consisting of only one value:</p>
+You may pulse the vibration hardware one time by specifying either a single value or an array consisting of only one value:
 
-<pre class="brush:js">window.navigator.vibrate(200);
+```js
+window.navigator.vibrate(200);
 window.navigator.vibrate([200]);
-</pre>
+```
 
-<p>Both of these examples vibrate the device for 200 ms.</p>
+Both of these examples vibrate the device for 200 ms.
 
-<h3 id="Vibration_patterns">Vibration patterns</h3>
+### Vibration patterns
 
-<p>An array of values describes alternating periods in which the device is vibrating and not vibrating. Each value in the array is converted to an integer, then interpreted alternately as the number of milliseconds the device should vibrate and the number of milliseconds it should not be vibrating. For example:</p>
+An array of values describes alternating periods in which the device is vibrating and not vibrating. Each value in the array is converted to an integer, then interpreted alternately as the number of milliseconds the device should vibrate and the number of milliseconds it should not be vibrating. For example:
 
-<pre class="brush: js">window.navigator.vibrate([200, 100, 200]);
-</pre>
+```js
+window.navigator.vibrate([200, 100, 200]);
+```
 
-<p>This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.</p>
+This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.
 
-<p>You may specify as many vibration/pause pairs as you like, and you may provide either an even or odd number of entries; it's worth noting that you don't have to provide a pause as your last entry since the vibration automatically stops at the end of each vibration period.</p>
+You may specify as many vibration/pause pairs as you like, and you may provide either an even or odd number of entries; it's worth noting that you don't have to provide a pause as your last entry since the vibration automatically stops at the end of each vibration period.
 
-<h3 id="Canceling_existing_vibrations">Canceling existing vibrations</h3>
+### Canceling existing vibrations
 
-<p>Calling {{DOMxRef("Navigator.vibrate()")}} with a value of <code>0</code>, an empty array, or an array containing all zeros will cancel any currently ongoing vibration pattern.</p>
+Calling {{DOMxRef("Navigator.vibrate()")}} with a value of `0`, an empty array, or an array containing all zeros will cancel any currently ongoing vibration pattern.
 
-<h3 id="Continued_vibrations">Continued vibrations</h3>
+### Continued vibrations
 
-<p>Some basic <code>setInterval</code> and <code>clearInterval</code> action will allow you to create persistent vibration:</p>
+Some basic `setInterval` and `clearInterval` action will allow you to create persistent vibration:
 
-<pre class="brush: js">var vibrateInterval;
+```js
+var vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
@@ -64,27 +67,21 @@ function startPersistentVibrate(duration, interval) {
     vibrateInterval = setInterval(function() {
         startVibrate(duration);
     }, interval);
-}</pre>
+}
+```
 
-<p>Of course, the snippet above doesn't take into account the array method of vibration; persistent array-based vibration will require calculating the sum of the array items and creating an interval based on that number (with an additional delay, probably).</p>
+Of course, the snippet above doesn't take into account the array method of vibration; persistent array-based vibration will require calculating the sum of the array items and creating an interval based on that number (with an additional delay, probably).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/vibration/">Vibration API</a></td>
-  </tr>
-</table>
+| Specification                                     |
+| ------------------------------------------------- |
+| [Vibration API](https://w3c.github.io/vibration/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Navigator.vibrate")}}</p>
+{{Compat("api.Navigator.vibrate")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("Navigator.vibrate()")}}</li>
-</ul>
+- {{DOMxRef("Navigator.vibrate()")}}

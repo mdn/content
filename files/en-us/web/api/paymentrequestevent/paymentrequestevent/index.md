@@ -2,53 +2,51 @@
 title: PaymentRequestEvent()
 slug: Web/API/PaymentRequestEvent/PaymentRequestEvent
 tags:
-- API
-- Constructor
-- Payment Request API
-- PaymentRequestEvent
-- Reference
-- payment
+  - API
+  - Constructor
+  - Payment Request API
+  - PaymentRequestEvent
+  - Reference
+  - payment
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
-<p>{{APIRef("Payment Request API")}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Non-standard_header}}
 
-<p>The <strong><code>PaymentRequestEvent</code></strong> constructor creates a new
-  {{domxref("PaymentRequestEvent")}} object which is a constructor for a
-  {{domxref("PaymentRequestEvent")}} which is the object passed to a payment handler when
-  a {{domxref("PaymentRequest")}} is made..</p>
+The **`PaymentRequestEvent`** constructor creates a new
+{{domxref("PaymentRequestEvent")}} object which is a constructor for a
+{{domxref("PaymentRequestEvent")}} which is the object passed to a payment handler when
+a {{domxref("PaymentRequest")}} is made..
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentRequestEvent</em> = new PaymentRequestEventy(type, options)</pre>
+```js
+var paymentRequestEvent = new PaymentRequestEventy(type, options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>type</em> </dt>
-  <dd>Must always be <code>'PaymentRequest'</code>.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>instrumentKey</code>: A {{domxref("PaymentInstrument")}} object reflecting
-        the payment instrument selected by the user or an empty string if the user has not
-        registered or chosen a payment instrument.</li>
-      <li><code>methodData</code>: An array of {{domxref("PaymentMethodData")}} objects
-        containing payment method identifiers for the payment methods that the web site
-        accepts and any associated payment method specific data.</li>
-      <li><code>modifiers</code>: An array of objects containing changes to payment
-        details.</li>
-      <li><code>paymentRequestId</code>: The ID of the {{domxref("PaymentRequest")}}
-        object.</li>
-      <li><code>paymentRequestOrigin</code>: The origin where the
-        {{domxref("PaymentRequest")}} object was initialized.</li>
-      <li><code>topLeveOrigin</code>: The top-level origin where the
-        {{domxref("PaymentRequest")}} object was initialized.</li>
-      <li><code>total</code>: The total amount being requested for payment.</li>
-    </ul>
-  </dd>
-</dl>
+- _type_
+  - : Must always be `'PaymentRequest'`.
+- _options_ {{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : Options are as follows:
 
-<p>{{Compat}}</p>
+    - `instrumentKey`: A {{domxref("PaymentInstrument")}} object reflecting
+      the payment instrument selected by the user or an empty string if the user has not
+      registered or chosen a payment instrument.
+    - `methodData`: An array of {{domxref("PaymentMethodData")}} objects
+      containing payment method identifiers for the payment methods that the web site
+      accepts and any associated payment method specific data.
+    - `modifiers`: An array of objects containing changes to payment
+      details.
+    - `paymentRequestId`: The ID of the {{domxref("PaymentRequest")}}
+      object.
+    - `paymentRequestOrigin`: The origin where the
+      {{domxref("PaymentRequest")}} object was initialized.
+    - `topLeveOrigin`: The top-level origin where the
+      {{domxref("PaymentRequest")}} object was initialized.
+    - `total`: The total amount being requested for payment.
+
+## Browser compatibility
+
+{{Compat}}

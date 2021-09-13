@@ -2,57 +2,56 @@
 title: CSSNumericValue.sub()
 slug: Web/API/CSSNumericValue/sub
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- sub()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - sub()
 browser-compat: api.CSSNumericValue.sub
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>sub()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the
-  <code>CSSNumericValue</code>.</p>
+The **`sub()`** method of the
+{{domxref("CSSNumericValue")}} interface subtracts a supplied number from the
+`CSSNumericValue`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssMathSum = CSSNumericValue.sub(number);</pre>
+```js
+var cssMathSum = CSSNumericValue.sub(number);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>number</dt>
-  <dd>Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.</dd>
-</dl>
+- number
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSMathSum')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSMathSum')}}</p>
+A {{domxref('CSSMathSum')}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-</dl>
+- TypeError
+  - : Indicates that an invalid type was passed to the method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"));
+```js
+let mathSum = CSS.px("23").sum(CSS.percent("4")).sum(CSS.cm("3")).sum(CSS.in("9"));
 // Prints "calc(23px - 4% - 3cm - 9in)"
-console.log(mathSum.toString());</pre>
+console.log(mathSum.toString());
+```
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+And/or include a list of links to useful code samples that live elsewhere:
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

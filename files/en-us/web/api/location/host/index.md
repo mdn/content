@@ -2,28 +2,30 @@
 title: 'Location: host'
 slug: Web/API/Location/host
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.host
 ---
-<div>{{ApiRef("Location")}}</div>
+{{ApiRef("Location")}}
 
-<p>The <strong><code>host</code></strong> property of the {{domxref("Location")}}
-  interface is a {{domxref("USVString")}} containing the host, that is the
-  <em>hostname</em>, and then, if the <em>port</em> of the URL is nonempty, a
-  <code>':'</code>, and the <em>port</em> of the URL.</p>
+The **`host`** property of the {{domxref("Location")}}
+interface is a {{domxref("USVString")}} containing the host, that is the
+_hostname_, and then, if the _port_ of the URL is nonempty, a
+`':'`, and the _port_ of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.host;
-<em>object.<code>host</code></em> = <em>string</em>;
-</pre>
+```js
+string = object.host;
+object.host = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var anchor = document.createElement("a");
+```js
+var anchor = document.createElement("a");
 
 anchor.href = "https://developer.mozilla.org/en-US/Location.host"
 anchor.host == "developer.mozilla.org"
@@ -34,12 +36,12 @@ anchor.host == "developer.mozilla.org"
 
 anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host"
 anchor.host == "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

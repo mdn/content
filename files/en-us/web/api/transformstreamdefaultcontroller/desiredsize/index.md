@@ -9,31 +9,34 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.desiredSize
 ---
-<div>{{DefaultAPISidebar("Streams API")}}</div>
+{{DefaultAPISidebar("Streams API")}}
 
-<p>The <strong><code>desiredSize</code></strong> read-only property of the {{domxref("TransformStreamDefaultController")}} interface returns the desired size to fill the queue of the associated {{domxref("ReadableStream")}}.</p>
+The **`desiredSize`** read-only property of the {{domxref("TransformStreamDefaultController")}} interface returns the desired size to fill the queue of the associated {{domxref("ReadableStream")}}.
 
-<p>The internal queue of a <code>ReadableStream</code> contains chunks that have been enqueued, but not yet read. The browser determines the <strong>desired size</strong> to fill the stream, and it is this value returned by the <code>desiredSize</code> property.</p>
+The internal queue of a `ReadableStream` contains chunks that have been enqueued, but not yet read. The browser determines the **desired size** to fill the stream, and it is this value returned by the `desiredSize` property.
 
-<p>If the <code>desiredSize</code> is <code>0</code> then the queue is full. Therefore you can use this information to <a href="/en-US/docs/Web/API/Streams_API/Concepts#backpressure">manually apply backpressure</a> to manage the queue.</p>
+If the `desiredSize` is `0` then the queue is full. Therefore you can use this information to [manually apply backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) to manage the queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let desiredSize = TransformStreamDefaultController.desiredSize;</pre>
+    let desiredSize = TransformStreamDefaultController.desiredSize;
 
-<h3>Value</h3>
-<p>The desired size.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+The desired size.
 
-<p>In the next example the <code>desiredSize</code> is logged to the console.</p>
+## Examples
 
-<pre class="brush: js">console.log(controller.desiredSize);</pre>
+In the next example the `desiredSize` is logged to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(controller.desiredSize);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

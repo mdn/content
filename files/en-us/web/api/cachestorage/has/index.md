@@ -12,41 +12,41 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>has()</code></strong> method of the {{domxref("CacheStorage")}}
-  interface returns a {{jsxref("Promise")}} that resolves to <code>true</code> if a
-  {{domxref("Cache")}} object matches the <code>cacheName</code>.</p>
+The **`has()`** method of the {{domxref("CacheStorage")}}
+interface returns a {{jsxref("Promise")}} that resolves to `true` if a
+{{domxref("Cache")}} object matches the `cacheName`.
 
-<p>You can access <code>CacheStorage</code> through the global
-  {{domxref("caches")}} property.</p>
+You can access `CacheStorage` through the global
+{{domxref("caches")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
+```js
+caches.has(cacheName).then(function(boolean) {
   // true: your cache exists!
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cacheName</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the {{domxref("Cache")}} object
-    you are looking for in the {{domxref("CacheStorage")}}.</dd>
-</dl>
+- `cacheName`
+  - : A {{domxref("DOMString")}} representing the name of the {{domxref("Cache")}} object
+    you are looking for in the {{domxref("CacheStorage")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>a {{jsxref("Promise")}} that resolves to <code>true</code> if the cache exists or
-  <code>false</code> if not.</p>
+a {{jsxref("Promise")}} that resolves to `true` if the cache exists or
+`false` if not.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example first checks whether a cache called 'v1' exists. If so, we add a
-  list of assets to it. If not then we run some kind of cache set-up function.</p>
+The following example first checks whether a cache called 'v1' exists. If so, we add a
+list of assets to it. If not then we run some kind of cache set-up function.
 
-<pre class="brush: js">caches.has('v1').then(function(hasCache) {
+```js
+caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
     someCacheSetupFunction();
   } else {
@@ -56,21 +56,20 @@ browser-compat: api.CacheStorage.has
   }
 }).catch(function() {
   // Handle exception here.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

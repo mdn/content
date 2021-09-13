@@ -2,44 +2,46 @@
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceResourceTiming.requestStart
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>requestStart</code></strong> read-only property returns a
-  {{domxref("DOMHighResTimeStamp","timestamp")}} of the time immediately before the
-  browser starts requesting the resource from the server, cache, or local resource. If the
-  transport connection fails and the browser retires the request, the value returned will
-  be the start of the retry request.</p>
+The **`requestStart`** read-only property returns a
+{{domxref("DOMHighResTimeStamp","timestamp")}} of the time immediately before the
+browser starts requesting the resource from the server, cache, or local resource. If the
+transport connection fails and the browser retires the request, the value returned will
+be the start of the retry request.
 
-<p>There is no <em>end</em> property for <code>requestStart</code>.</p>
+There is no _end_ property for `requestStart`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.requestStart;
-</pre>
+```js
+resource.requestStart;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the
-  browser starts requesting the resource from the server</p>
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the
+browser starts requesting the resource from the server
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, the value of the <code>*Start</code> and <code>*End</code>
-  properties of all "<code>resource</code>"
-  {{domxref("PerformanceEntry.entryType","type")}} events are logged.</p>
+In the following example, the value of the `*Start` and `*End`
+properties of all "`resource`"
+{{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
@@ -53,7 +55,7 @@ function print_start_and_end_properties(perfEntry) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in perfEntry;
     if (supported) {
@@ -64,12 +66,12 @@ function print_start_and_end_properties(perfEntry) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

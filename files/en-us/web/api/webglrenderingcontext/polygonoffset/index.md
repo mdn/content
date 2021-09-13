@@ -2,71 +2,70 @@
 title: WebGLRenderingContext.polygonOffset()
 slug: Web/API/WebGLRenderingContext/polygonOffset
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.polygonOffset()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the scale factors and
-  units to calculate depth values.</p>
+The **`WebGLRenderingContext.polygonOffset()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the scale factors and
+units to calculate depth values.
 
-<p>The offset is added before the depth test is performed and before the value is written
-  into the depth buffer.</p>
+The offset is added before the depth test is performed and before the value is written
+into the depth buffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.polygonOffset(<var>factor</var>, <var>units</var>);
-</pre>
+```js
+void gl.polygonOffset(factor, units);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>factor</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the scale factor for the variable depth offset
-    for each polygon. The default value is 0.</dd>
-  <dt>units</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the multiplier by which an
+- factor
+  - : A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the scale factor for the variable depth offset
+    for each polygon. The default value is 0.
+- units
+  - : A {{domxref("WebGL_API/Types", "GLfloat")}} which sets the multiplier by which an
     implementation-specific value is multiplied with to create a constant depth offset.
-    The default value is 0.</dd>
-</dl>
+    The default value is 0.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The polygon offset fill is disabled by default. To enable or disable polygon offset
-  fill, use the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.POLYGON_OFFSET_FILL</code>.</p>
+The polygon offset fill is disabled by default. To enable or disable polygon offset
+fill, use the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.POLYGON_OFFSET_FILL`.
 
-<pre class="brush: js">gl.enable(gl.POLYGON_OFFSET_FILL);
+```js
+gl.enable(gl.POLYGON_OFFSET_FILL);
 gl.polygonOffset(2, 3);
-</pre>
+```
 
-<p>To check the current polygon offset factor or units, query the
-  <code>POLYGON_OFFSET_FACTOR</code> and <code>POLYGON_OFFSET_UNITS</code> constants.</p>
+To check the current polygon offset factor or units, query the
+`POLYGON_OFFSET_FACTOR` and `POLYGON_OFFSET_UNITS` constants.
 
-<pre class="brush: js">gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
+```js
+gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
 gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.depthFunc()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.depthFunc()")}}

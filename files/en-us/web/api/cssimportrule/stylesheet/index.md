@@ -2,47 +2,53 @@
 title: CSSImportRule.stylesheet
 slug: Web/API/CSSImportRule/stylesheet
 tags:
-- API
-- CSSOM
-- Property
-- Reference
-- CSSImportRule
-- Read-only
+  - API
+  - CSSOM
+  - Property
+  - Reference
+  - CSSImportRule
+  - Read-only
 browser-compat: api.CSSImportRule.styleSheet
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only <strong><code>styleSheet</code></strong> property of the
-	{{domxref("CSSImportRule")}} interface returns the CSS Stylesheet specified by the
-	{{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. This will be
-	in the form of a {{domxref("CSSStyleSheet")}} object.</p>
+The read-only **`styleSheet`** property of the
+{{domxref("CSSImportRule")}} interface returns the CSS Stylesheet specified by the
+{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule). This will be
+in the form of a {{domxref("CSSStyleSheet")}} object.
 
-<p>An {{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> always has
-	an associated stylesheet.</p>
+An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) always has
+an associated stylesheet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>href</var> = <var>CSSImportRule</var>.styleSheet;</pre>
+```js
+var href = CSSImportRule.styleSheet;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSStyleSheet")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSStyleSheet")}}.
 
-<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
-	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
-	<code>styleSheet</code> property returns the imported stylesheet.</p>
+## Examples
 
-<pre class="brush:css">@import url("style.css") screen;</pre>
+The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
+first item in the list of CSS rules will be a `CSSImportRule`. The
+`styleSheet` property returns the imported stylesheet.
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].styleSheet); //returns a CSSStyleSheet object</pre>
+```css
+@import url("style.css") screen;
+```
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].styleSheet); //returns a CSSStyleSheet object
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

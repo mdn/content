@@ -2,25 +2,25 @@
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 tags:
-- API
-- HTML DOM
-- HTMLInputElement
-- Method
-- Reference
-- Text Field Selection API
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - Method
+  - Reference
+  - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepUp
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLInputElement.stepUp()</code></strong> method increments the value
-  of a numeric type of  {{HTMLElement("input")}} element by the value of the
-  <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute, or the
-  default <code>step</code> value if the step attribute is not explicitly set. The method,
-  when invoked, increments the {{htmlattrxref("value","input")}} by
-  ({{htmlattrxref("step","input")}} * n), where <code><var>n</var></code> defaults to
-  <code>1</code> if not specified, and
-  <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> defaults to the
-  default value for <code>step</code> if not specified.</p>
+The **`HTMLInputElement.stepUp()`** method increments the value
+of a numeric type of  {{HTMLElement("input")}} element by the value of the
+[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute, or the
+default `step` value if the step attribute is not explicitly set. The method,
+when invoked, increments the {{htmlattrxref("value","input")}} by
+({{htmlattrxref("step","input")}} \* n), where `n` defaults to
+`1` if not specified, and
+[`step`](/en-US/docs/Web/HTML/Attributes/step) defaults to the
+default value for `step` if not specified.
 
 <table class="no-markdown">
   <thead>
@@ -32,110 +32,128 @@ browser-compat: api.HTMLInputElement.stepUp
     <tr>
       <td>{{HTMLElement("input/date", "date")}}</td>
       <td><code>1</code> (day)</td>
-      <td>7 day (one week) increments:<br>
-        <code>&lt;input type="date" min="2019-12-25" step="7"&gt;</code>
+      <td>
+        7 day (one week) increments:<br /><code
+          >&#x3C;input type="date" min="2019-12-25" step="7"></code
+        >
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/month", "month")}}</td>
       <td><code>1</code> (month)</td>
-      <td>12 month (one year) increments:<br>
-        <code>&lt;input type="month" min="2019-12" step="12"&gt;</code>
+      <td>
+        12 month (one year) increments:<br /><code
+          >&#x3C;input type="month" min="2019-12" step="12"></code
+        >
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/week", "week")}}</td>
       <td><code>1</code> (week)</td>
-      <td>Two week increments:<br>
-        <code>&lt;input type="week" min="2019-W23" step="2"&gt;</code>
+      <td>
+        Two week increments:<br /><code
+          >&#x3C;input type="week" min="2019-W23" step="2"></code
+        >
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
       <td><code>60</code> (seconds)</td>
-      <td>900 second (15 minute) increments:<br>
-        <code>&lt;input type="time" min="09:00" step="900"&gt;</code>
+      <td>
+        900 second (15 minute) increments:<br /><code
+          >&#x3C;input type="time" min="09:00" step="900"></code
+        >
       </td>
     </tr>
     <tr>
-      <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
+      <td>
+        {{HTMLElement("input/datetime-local", "datetime-local")}}
+      </td>
       <td><code>1</code> (day)</td>
-      <td>Same day of the week:<br>
-        <code>&lt;input type="datetime-local" min="019-12-25T19:30" step="7"&gt;</code>
+      <td>
+        Same day of the week:<br /><code
+          >&#x3C;input type="datetime-local" min="019-12-25T19:30"
+          step="7"></code
+        >
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td><code>1</code></td>
-      <td>0.1 increments<br>
-        <code>&lt;input type="number" min="0" step="0.1" max="10"&gt;</code>
+      <td>
+        0.1 increments<br /><code
+          >&#x3C;input type="number" min="0" step="0.1" max="10"></code
+        >
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
       <td><code>1</code></td>
-      <td>Increments by 2:<br>
-        <code>&lt;input type="range" min="0" step="2" max="10"&gt;</code>
+      <td>
+        Increments by 2:<br /><code
+          >&#x3C;input type="range" min="0" step="2" max="10"></code
+        >
       </td>
     </tr>
   </thead>
 </table>
 
-<p>The method, when invoked, changes the form control's value by the value given in the
-  <code>step</code> attribute, multiplied by the parameter, within the constraints set on
-  the form control. The default value for the parameter, if no value is passed, is
-  <code>1</code>. The method will not cause the value to exceed the
-  set <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> value, or defy
-  the constraints set by the
-  <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute.</p>
+The method, when invoked, changes the form control's value by the value given in the
+`step` attribute, multiplied by the parameter, within the constraints set on
+the form control. The default value for the parameter, if no value is passed, is
+`1`. The method will not cause the value to exceed the
+set [`max`](/en-US/docs/Web/HTML/Attributes/max) value, or defy
+the constraints set by the
+[`step`](/en-US/docs/Web/HTML/Attributes/step) attribute.
 
-<p>If the value before invoking the <code>stepUp()</code> method is invalid—for example,
-  if it doesn't match the constraints set by the step attribute—invoking the
-  <code>stepUp()</code> method will return a value that does match the form controls
-  constraints.</p>
+If the value before invoking the `stepUp()` method is invalid—for example,
+if it doesn't match the constraints set by the step attribute—invoking the
+`stepUp()` method will return a value that does match the form controls
+constraints.
 
-<p>If the form control is non time, date, or numeric in nature, and therefore does not
-  support the <code>step</code> attribute (see the list of supported input types in the
-  table above), or if the step value is set to <code>any</code>, an
-  <code>InvalidStateError</code> exception is thrown.</p>
+If the form control is non time, date, or numeric in nature, and therefore does not
+support the `step` attribute (see the list of supported input types in the
+table above), or if the step value is set to `any`, an
+`InvalidStateError` exception is thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.stepUp(<em> [ stepIncrement ] </em>);
-</pre>
+```js
+element.stepUp( [ stepIncrement ] );
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>stepIncrement</code></em></dt>
-  <dd>The optional  <code><em>stepIncrement</em></code> parameter is a numeric value.  If
-    no parameter is passed, <code><em>stepIncrement</em></code> defaults to
-    <code>1</code>.</dd>
-</dl>
+- _`stepIncrement`_
+  - : The optional  `stepIncrement` parameter is a numeric value.  If
+    no parameter is passed, `stepIncrement` defaults to
+    `1`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Click the button in this example to increment the {{HTMLElement("input/number",
-  "number")}} input type:</p>
+Click the button in this example to increment the {{HTMLElement("input/number",
+  "number")}} input type:
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;label&gt;Enter a number between 0 and 400 that is divisible by 5:
-   &lt;input type="number" step="5" id="theNumber" min="0" max="400"&gt;
-  &lt;/label&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label&gt;Enter how many values of step you would like to increment by or leave it blank:
-   &lt;input type="number" step="1" id="incrementer" min="0" max="25"&gt;
-  &lt;/label&gt;
-&lt;/p&gt;
-&lt;input type="button" value="Increment" id="theButton"&gt;
-</pre>
+```html
+<p>
+  <label>Enter a number between 0 and 400 that is divisible by 5:
+   <input type="number" step="5" id="theNumber" min="0" max="400">
+  </label>
+</p>
+<p>
+  <label>Enter how many values of step you would like to increment by or leave it blank:
+   <input type="number" step="1" id="incrementer" min="0" max="25">
+  </label>
+</p>
+<input type="button" value="Increment" id="theButton">
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">/* make the button call the function */
+```js
+/* make the button call the function */
 let button = document.getElementById('theButton')
 button.addEventListener('click', function() {
   steponup()
@@ -150,48 +168,49 @@ function steponup() {
   } else {    /* or without a parameter. Try it with 0 */
     input.stepUp()
   }
-}</pre>
+}
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:invalid {
+```css
+input:invalid {
   border: red solid 3px;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<p>Note if you don't pass a parameter to the <code>stepUp</code> method, it defaults to
-  <code>1</code>. Any other value is a multiplier of the <code>step</code> attribute
-  value, which in this case is <code>5</code>. If you pass <code>4</code> as the
-  <code><var>stepIncrement</var></code>, the input will <code>stepUp</code> by
-  <code>4 * 5</code>, or <code>20</code>. If the parameter is <code>0</code>, the number
-  will not be incremented. The stepUp will not allow the input to out of range, in this
-  case stopping when it reaches <code>400</code>, and rounding down any floats that are
-  passed as a parameter.</p>
+Note if you don't pass a parameter to the `stepUp` method, it defaults to
+`1`. Any other value is a multiplier of the `step` attribute
+value, which in this case is `5`. If you pass `4` as the
+`stepIncrement`, the input will `stepUp` by
+`4 * 5`, or `20`. If the parameter is `0`, the number
+will not be incremented. The stepUp will not allow the input to out of range, in this
+case stopping when it reaches `400`, and rounding down any floats that are
+passed as a parameter.
 
-<p>Try setting the step increment to <code>1.2</code>. What happens when you invoke the
-  method?</p>
+Try setting the step increment to `1.2`. What happens when you invoke the
+method?
 
-<p>Try setting the value to <code>4</code>, which is not valid. What happens when you
-  invoke the method?</p>
+Try setting the value to `4`, which is not valid. What happens when you
+invoke the method?
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("input")}}</li>
-  <li>{{domxref("HTMLInputElement")}}</li>
-  <li>{{domxref("HTMLInputElement.stepDown")}}</li>
-  <li><code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>,
-    <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> and
-    <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attributes</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("HTMLInputElement.stepDown")}}
+- [`step`](/en-US/docs/Web/HTML/Attributes/step),
+  [`min`](/en-US/docs/Web/HTML/Attributes/min) and
+  [`max`](/en-US/docs/Web/HTML/Attributes/max) attributes

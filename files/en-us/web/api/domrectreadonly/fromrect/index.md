@@ -2,51 +2,49 @@
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 tags:
-- API
-- DOM Reference
-- DOMRect
-- DOMRectReadOnly
-- Experimental
-- Geometry
-- Method
-- Reference
-- fromRect()
+  - API
+  - DOM Reference
+  - DOMRect
+  - DOMRectReadOnly
+  - Experimental
+  - Geometry
+  - Method
+  - Reference
+  - fromRect()
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
-<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>fromRect()</code></strong> property of the
-    {{domxref("DOMRectReadOnly")}} interface creates a new <code>DOMRectReadOnly</code>
-    object with a given location and dimensions.</p>
+The **`fromRect()`** property of the
+{{domxref("DOMRectReadOnly")}} interface creates a new `DOMRectReadOnly`
+object with a given location and dimensions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>domRect</var> = DOMRectReadOnly.fromRect(<var>rectangle</var>)</pre>
+```js
+var domRect = DOMRectReadOnly.fromRect(rectangle)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>rectangle</var></code> {{optional_inline}}</dt>
-  <dd>An object specifying the location and dimensions of a rectangle. All properties
-    default to <code>0</code>. The properties are:
-    <ul>
-      <li><code>x</code>: The coordinate of the left side of the rectangle.</li>
-      <li><code>y</code>: The coordinate of the top side of the rectangle.</li>
-      <li><code>width</code>: The width of the rectangle.</li>
-      <li><code>height</code>: The height of the rectangle.</li>
-    </ul>
-  </dd>
-</dl>
+- `rectangle` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object specifying the location and dimensions of a rectangle. All properties
+    default to `0`. The properties are:
 
-<p>An instance of {{domxref("DOMRect")}}.</p>
+    - `x`: The coordinate of the left side of the rectangle.
+    - `y`: The coordinate of the top side of the rectangle.
+    - `width`: The width of the rectangle.
+    - `height`: The height of the rectangle.
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+An instance of {{domxref("DOMRect")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

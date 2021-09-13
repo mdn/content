@@ -9,31 +9,29 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntriesByType
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>getEntriesByType()</code></strong> method of the {{domxref("PerformanceObserverEntryList")}} returns a list of explicitly <em>observed</em> {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects for a given {{domxref("PerformanceEntry.entryType","performance entry type", '', 'true')}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).</p>
+The **`getEntriesByType()`** method of the {{domxref("PerformanceObserverEntryList")}} returns a list of explicitly _observed_ {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects for a given {{domxref("PerformanceEntry.entryType","performance entry type", '', 'true')}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
 
-<p>This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interfaces.</p>
+This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interfaces.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre><em>entries</em> = <em>list</em>.getEntriesByType(<em>type</em>);
-</pre>
+    entries = list.getEntriesByType(type);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em><code>type</code></em></dt>
- <dd>The type of entry to retrieve such as "<code>frame</code>". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.</dd>
-</dl>
+- _`type`_
+  - : The type of entry to retrieve such as "`frame`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A list of explicitly <em>observed</em> {{domxref("PerformanceEntry")}} objects that have the specified <code>type</code>. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the specified <code>type</code>, or no argument is provided, an empty list is returned.</p>
+A list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects that have the specified `type`. The items will be in chronological order based on the entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the specified `type`, or no argument is provided, an empty list is returned.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function print_perf_entry(pe) {
+```js
+function print_perf_entry(pe) {
   console.log("name: "        + pe.name      +
               "; entryType: " + pe.entryType +
               "; startTime: " + pe.startTime +
@@ -46,19 +44,19 @@ var observe_all = new PerformanceObserver(function(list, obs) {
 
   // Print all entries
   perfEntries = list.getEntries();
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Print entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
@@ -68,18 +66,18 @@ observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'res
 var observe_frame = new PerformanceObserver(function(list, obs) {
   var perfEntries = list.getEntries();
   // Should only have 'frame' entries
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
 // subscribe to only the 'frame' event
 observe_frame.observe({entryTypes: ['frame']});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

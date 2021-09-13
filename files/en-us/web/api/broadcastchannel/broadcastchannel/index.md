@@ -2,54 +2,52 @@
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 tags:
-- API
-- Broadcast Channel API
-- BroadcastChannel
-- Constructor
-- Experimental
-- HTML API
-- Reference
+  - API
+  - Broadcast Channel API
+  - BroadcastChannel
+  - Constructor
+  - Experimental
+  - HTML API
+  - Reference
 browser-compat: api.BroadcastChannel.BroadcastChannel
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>The <code><strong>BroadcastChannel()</strong></code> constructor creates a new
-  {{domxref("BroadcastChannel")}} and connects it to the underlying channel.</p>
+The **`BroadcastChannel()`** constructor creates a new
+{{domxref("BroadcastChannel")}} and connects it to the underlying channel.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> <em>channel</em> = new BroadcastChannel(<em>channelName</em>);</pre>
+```js
+ channel = new BroadcastChannel(channelName);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><em>channelName</em></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the name of the channel; there is one
+- _channelName_
+  - : Is a {{domxref("DOMString")}} representing the name of the channel; there is one
     single channel with this name for all {{glossary("browsing context", "browsing
-    contexts")}} with the same {{glossary("origin")}}.</dd>
-</dl>
+    contexts")}} with the same {{glossary("origin")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// create a new channel listening to the "internal_notification" channel.
+```js
+// create a new channel listening to the "internal_notification" channel.
 
 var bc = new BroadcastChannel('internal_notification');
 bc.postMessage('New listening connected!');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, the interface it belongs to.

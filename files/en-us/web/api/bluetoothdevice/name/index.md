@@ -2,41 +2,40 @@
 title: BluetoothDevice.name
 slug: Web/API/BluetoothDevice/name
 tags:
-- API
-- Bluetooth
-- BluetoothDevice
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- name
+  - API
+  - Bluetooth
+  - BluetoothDevice
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - name
 browser-compat: api.BluetoothDevice.name
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothDevice.name</code></strong> read-only property returns a
-  {{DOMxRef("DOMString")}} that provides a human-readable name for the device.</p>
+The **`BluetoothDevice.name`** read-only property returns a
+{{DOMxRef("DOMString")}} that provides a human-readable name for the device.
 
-<div class="note">
-  <p><strong>Note:</strong> This page describes the W3C Community Group BluetoothDevice.name property. For the
-    Firefox OS property of the same name, see
-    {{DOMxRef("BluetoothDevice_%28Firefox_OS%29/name", "BluetoothDevice.name
-    (Firefox OS)")}}.</p>
-</div>
+> **Note:** This page describes the W3C Community Group BluetoothDevice.name property. For the
+> Firefox OS property of the same name, see
+> {{DOMxRef("BluetoothDevice_%28Firefox_OS%29/name", "BluetoothDevice.name
+    (Firefox OS)")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var name = <em>instanceOfBluetoothDevice</em>.name</pre>
+```js
+var name = instanceOfBluetoothDevice.name
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{DOMxRef("DOMString")}}.</p>
+A {{DOMxRef("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

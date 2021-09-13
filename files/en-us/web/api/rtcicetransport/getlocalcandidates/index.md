@@ -2,70 +2,71 @@
 title: RTCIceTransport.getLocalCandidates()
 slug: Web/API/RTCIceTransport/getLocalCandidates
 tags:
-- API
-- Candidates
-- Connectivity
-- ICE
-- Method
-- Negotiation
-- RTCIceTransport
-- Reference
-- SDP
-- WebRTC
-- WebRTC API
-- getLocalCandidates
-- rtc
+  - API
+  - Candidates
+  - Connectivity
+  - ICE
+  - Method
+  - Negotiation
+  - RTCIceTransport
+  - Reference
+  - SDP
+  - WebRTC
+  - WebRTC API
+  - getLocalCandidates
+  - rtc
 browser-compat: api.RTCIceTransport.getLocalCandidates
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceTransport")}}</strong> method
-    <code><strong>getLocalCandidates()</strong></code> returns an array of
-    {{domxref("RTCIceCandidate")}} objects, one for each of the candidates that have been
-    gathered by the local device during the current {{Glossary("ICE")}} agent
-    session.</p>
+The **{{domxref("RTCIceTransport")}}** method
+**`getLocalCandidates()`** returns an array of
+{{domxref("RTCIceCandidate")}} objects, one for each of the candidates that have been
+gathered by the local device during the current {{Glossary("ICE")}} agent
+session.
 
-<p>The local candidates are placed in this list by the ICE agent prior to being delivered
-  to the local client's code in an {{event("icecandidate")}} event so that the client can
-  forward the candidates to the remote peer.</p>
+The local candidates are placed in this list by the ICE agent prior to being delivered
+to the local client's code in an {{event("icecandidate")}} event so that the client can
+forward the candidates to the remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>localCandidates</em> = <em>RTCIceTransport</em>.getLocalCandidates();</pre>
+```js
+localCandidates = RTCIceTransport.getLocalCandidates();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A JavaScript {{jsxref("Array")}} containing one {{domxref("RTCIceCandidate")}} object
-  for each candidate that has been identified so far during the ICE candidate gathering
-  session.</p>
+A JavaScript {{jsxref("Array")}} containing one {{domxref("RTCIceCandidate")}} object
+for each candidate that has been identified so far during the ICE candidate gathering
+session.
 
-<p>You can't correlate these local candidates with matching remote candidates. To find the
-  best match found so far, call {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
-</p>
+You can't correlate these local candidates with matching remote candidates. To find the
+best match found so far, call {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example gets the local candidate list from the
-  {{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the
-  {{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in
-  the list.</p>
+This simple example gets the local candidate list from the
+{{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the
+{{domxref("RTCPeerConnection")}}, then outputs to the console all of the candidates in
+the list.
 
-<pre class="brush: js">var localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
+```js
+var localCandidates = pc.getSenders()[0].transport.transport.getLocalCandidates();
 
 localCandidates.forEach(function(candidate, index)) {
   console.log("Candidate " + index + ": " + candidate.candidate);
-});</pre>
+});
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -14,26 +14,28 @@ tags:
   - Deprecated
 browser-compat: api.FetchEvent.isReload
 ---
-<div>{{APIRef("Service Workers API")}}{{deprecated_header}}</div>
+{{APIRef("Service Workers API")}}{{deprecated_header}}
 
-<p>The <strong><code>isReload</code></strong> read-only property of the
-  {{domxref("FetchEvent")}} interface returns <code>true</code> if the event was
-  dispatched by the user attempting to reload the page, and <code>false</code> otherwise.
-  Pressing the refresh button is a reload while clicking a link and pressing the back
-  button is not.</p>
+The **`isReload`** read-only property of the
+{{domxref("FetchEvent")}} interface returns `true` if the event was
+dispatched by the user attempting to reload the page, and `false` otherwise.
+Pressing the refresh button is a reload while clicking a link and pressing the back
+button is not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>reloaded</em> = <em>FetchEvent</em>.isReload</pre>
+```js
+var reloaded = FetchEvent.isReload
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     if (event.isReload) {
       //Return something
@@ -41,23 +43,20 @@ browser-compat: api.FetchEvent.isReload
       //Return something else
     };
   );
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a>
-  </li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

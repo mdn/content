@@ -2,60 +2,59 @@
 title: MediaSessionActionDetails.seekOffset
 slug: Web/API/MediaSessionActionDetails/seekOffset
 tags:
-- API
-- Audio
-- Media
-- Media Session API
-- MediaSession API
-- MediaSessionActionDetails
-- Property
-- Reference
-- Rewind
-- Scrub
-- Skip
-- Video
-- action
-- forward
-- offset
-- reverse
-- seek
-- seekOffset
+  - API
+  - Audio
+  - Media
+  - Media Session API
+  - MediaSession API
+  - MediaSessionActionDetails
+  - Property
+  - Reference
+  - Rewind
+  - Scrub
+  - Skip
+  - Video
+  - action
+  - forward
+  - offset
+  - reverse
+  - seek
+  - seekOffset
 browser-compat: api.MediaSessionActionDetails.seekOffset
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The {{domxref("MediaSessionActionDetails")}}
-    dictionary's <code><strong>seekOffset</strong></code> property is an optional value
-    passed into the action handler callback to provide the number of seconds the
-    <code>seekforward</code> and <code>seekbackward</code> actions should move the
-    playback time by.</p>
+The {{domxref("MediaSessionActionDetails")}}
+dictionary's **`seekOffset`** property is an optional value
+passed into the action handler callback to provide the number of seconds the
+`seekforward` and `seekbackward` actions should move the
+playback time by.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>mediaSessionActionDetails</em> = { seekOffset: <em>deltaTimeInSeconds</em> };
+```js
+let mediaSessionActionDetails = { seekOffset: deltaTimeInSeconds };
 
-let <em>deltaTime</em> = <em>mediaSessionActionDetails</em>.seekOffset;
-</pre>
+let deltaTime = mediaSessionActionDetails.seekOffset;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value indicating the time delta in seconds by which to move the
-  playback position relative to its current timestamp. If the offset isn't specified, the
-  {{Glossary("user agent")}} will choose an appropriate offset automatically. This is
-  typically in the range of five to ten seconds.</p>
+A floating-point value indicating the time delta in seconds by which to move the
+playback position relative to its current timestamp. If the offset isn't specified, the
+{{Glossary("user agent")}} will choose an appropriate offset automatically. This is
+typically in the range of five to ten seconds.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a></li>
-  <li>Refer to the {{domxref("MediaSession")}} method
-    {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</li>
-</ul>
+- [Media Session API](/en-US/docs/Web/API/Media_Session_API)
+- Refer to the {{domxref("MediaSession")}} method
+  {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}

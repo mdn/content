@@ -2,54 +2,56 @@
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
 tags:
-- API
-- CSSOM View
-- HTML DOM
-- Layout
-- Property
-- Reference
-- Window
-- innerWidth
-- width
+  - API
+  - CSSOM View
+  - HTML DOM
+  - Layout
+  - Property
+  - Reference
+  - Window
+  - innerWidth
+  - width
 browser-compat: api.Window.innerWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The read-only {{domxref("Window")}} property
-    <strong><code>innerWidth</code></strong> returns the interior width of the window in
-    pixels. This includes the width of the vertical scroll bar, if one is present.</p>
+The read-only {{domxref("Window")}} property
+**`innerWidth`** returns the interior width of the window in
+pixels. This includes the width of the vertical scroll bar, if one is present.
 
-<p>More precisely, <code>innerWidth</code> returns the width of the window's
-  {{Glossary("visual viewport")}}. The interior height of the window—the height of the
-  layout viewport—can be obtained from the {{domxref("Window.innerHeight",
-  "innerHeight")}} property.</p>
+More precisely, `innerWidth` returns the width of the window's
+{{Glossary("visual viewport")}}. The interior height of the window—the height of the
+layout viewport—can be obtained from the {{domxref("Window.innerHeight",
+  "innerHeight")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>intViewportWidth</var> = window.innerWidth;</pre>
+```js
+let intViewportWidth = window.innerWidth;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the width of the window's layout viewport in pixels. This
-  property is read-only, and has no default value.</p>
+An integer value indicating the width of the window's layout viewport in pixels. This
+property is read-only, and has no default value.
 
-<p>To change the window's width, use one of the {{domxref("Window")}} methods for resizing
-  windows, such as {{domxref("Window.resizeBy", "resizeBy()")}} or
-  {{domxref("Window.resizeTo", "resizeTo()")}}.</p>
+To change the window's width, use one of the {{domxref("Window")}} methods for resizing
+windows, such as {{domxref("Window.resizeBy", "resizeBy()")}} or
+{{domxref("Window.resizeTo", "resizeTo()")}}.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>If you need to obtain the width of the window minus the scrollbar and borders, use the
-  root {{HTMLElement("html")}} element's {{domxref("Element.clientWidth", "clientWidth")}}
-  property instead.</p>
+If you need to obtain the width of the window minus the scrollbar and borders, use the
+root {{HTMLElement("html")}} element's {{domxref("Element.clientWidth", "clientWidth")}}
+property instead.
 
-<p>The <code>innerWidth</code> property is available on any window or object that behaves
-  like a window, such as a frame or tab.</p>
+The `innerWidth` property is available on any window or object that behaves
+like a window, such as a frame or tab.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// This will return the width of the viewport
+```js
+// This will return the width of the viewport
 var intFrameWidth = window.innerWidth;
 
 // This will return the width of the frame viewport within a frameset
@@ -59,20 +61,19 @@ var intFrameWidth = self.innerWidth;
 var intFramesetWidth = parent.innerWidth;
 
 // This will return the width of the viewport of the outermost frameset
-var intOuterFramesetWidth = top.innerWidth;</pre>
+var intOuterFramesetWidth = top.innerWidth;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.outerWidth")}}</li>
-  <li>{{domxref("window.innerHeight")}}</li>
-  <li>{{domxref("window.outerHeight")}}</li>
-</ul>
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.outerHeight")}}

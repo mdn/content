@@ -11,61 +11,62 @@ tags:
   - Element
 browser-compat: api.Element.ariaHasPopup
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaHasPopup</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-haspopup</code> attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.</p>
+The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaHasPopup</var> = element.ariaHasPopup;
-<var>element</var>.ariaHasPopup = <var>ariaHasPopup</var></pre>
+    var ariaHasPopup = element.ariaHasPopup;
+    element.ariaHasPopup = ariaHasPopup
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"false"</code></dt>
-  <dd>The element does not have a popup.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>The element has a popup that is a menu.</dd>
-  <dt><code>"menu"</code></dt>
-  <dd>The element has a popup that is a menu.</dd>
-  <dt><code>"listbox"</code></dt>
-  <dd>The element has a popup that is a listbox.</dd>
-  <dt><code>"tree"</code></dt>
-  <dd>The element has a popup that is a tree.</dd>
-  <dt><code>"grid"</code></dt>
-  <dd>The element has a popup that is a grid.</dd>
-  <dt><code>"dialog"</code></dt>
-  <dd>The element has a popup that is a dialog.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<div class="warning">
-  <p><strong>Warning:</strong> Be aware that support for the different <code>aria-haspopup</code> values can vary depending on the element to which the attribute is specified. Ensure that when using <code>aria-haspopup</code>, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.</p>
+- `"false"`
+  - : The element does not have a popup.
+- `"true"`
+  - : The element has a popup that is a menu.
+- `"menu"`
+  - : The element has a popup that is a menu.
+- `"listbox"`
+  - : The element has a popup that is a listbox.
+- `"tree"`
+  - : The element has a popup that is a tree.
+- `"grid"`
+  - : The element has a popup that is a grid.
+- `"dialog"`
+  - : The element has a popup that is a dialog.
+
+> **Warning:** Be aware that support for the different `aria-haspopup` values can vary depending on the element to which the attribute is specified. Ensure that when using `aria-haspopup`, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.
+
+## Examples
+
+In this example, the `aria-haspopup` attribute on the element with an ID of `animal` is set to "`true`". Using `ariaHasPopup`, we update the value to "`listbox`", which is the expected value for a combobox that invokes a `listbox` popup.
+
+```html
+<div class="animals-combobox">
+  <label for="animal">Animal</label>
+  <input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-controls="animals-listbox" aria-activedescendant="" aria-expanded="false" aria-haspopup="true">
+  <ul id="animals-listbox" role="listbox" aria-label="Animals">
+    <li id="animal-cat" role="option">Cat</li>
+    <li id="animal-dog" role="option">Dog</li>
+  </ul>
 </div>
+```
 
-<h2 id="Examples">Examples</h2>
-
-<p>In this example, the <code>aria-haspopup</code> attribute on the element with an ID of <code>animal</code> is set to "<code>true</code>". Using <code>ariaHasPopup</code>, we update the value to "<code>listbox</code>", which is the expected value for a combobox that invokes a <code>listbox</code> popup.</p>
-
-<pre class="brush: html">&lt;div class="animals-combobox"&gt;
-  &lt;label for="animal"&gt;Animal&lt;/label&gt;
-  &lt;input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-controls="animals-listbox" aria-activedescendant="" aria-expanded="false" aria-haspopup="true"&gt;
-  &lt;ul id="animals-listbox" role="listbox" aria-label="Animals"&gt;
-    &lt;li id="animal-cat" role="option">Cat&lt;/li&gt;
-    &lt;li id="animal-dog" role="option">Dog&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: js">let el = document.getElementById('animal');
+```js
+let el = document.getElementById('animal');
 console.log(el.ariaHasPopup); // true
 el.ariaHasPopup = "listbox";
-console.log(el.ariaHasPopup); // listbox</pre>
+console.log(el.ariaHasPopup); // listbox
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

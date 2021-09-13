@@ -15,67 +15,66 @@ tags:
   - events
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The obsolete <code><strong>addstream</strong></code> event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.</p>
+The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This event has been removed from the WebRTC specification. You should instead watch for the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent for each media track added to the <code>RTCPeerConnection</code>.</p>
-</div>
+> **Warning:** This event has been removed from the WebRTC specification. You should instead watch for the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent for each media track added to the `RTCPeerConnection`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("MediaStreamEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerconnection.onaddstream")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("MediaStreamEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("RTCPeerconnection.onaddstream")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>You can, similarly, watch for streams to be removed from the connection by monitoring the {{domxref("RTCPeerConnection.removestream_event", "removestream")}} event.</p>
+You can, similarly, watch for streams to be removed from the connection by monitoring the {{domxref("RTCPeerConnection.removestream_event", "removestream")}} event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example looks to determine if the user's browser supports the {{domxref("RTCPeerConnection.track_event", "track")}} event. If it does, a <code>track</code> event listener is set up; otherwise, an <code>addstream</code> event listener is set up. <code>pc</code> is an <code>RTCPeerConnection</code>.</p>
+This example looks to determine if the user's browser supports the {{domxref("RTCPeerConnection.track_event", "track")}} event. If it does, a `track` event listener is set up; otherwise, an `addstream` event listener is set up. `pc` is an `RTCPeerConnection`.
 
-<pre class="brush: js">if (pc.addTrack !== undefined) {
-  pc.ontrack = ev =&gt; {
-    ev.streams.forEach(stream =&gt; doAddStream(stream));
+```js
+if (pc.addTrack !== undefined) {
+  pc.ontrack = ev => {
+    ev.streams.forEach(stream => doAddStream(stream));
   }
 } else {
-  pc.onaddstream = ev =&gt; {
+  pc.onaddstream = ev => {
     doAddStream(ev.stream);
   }
 }
-</pre>
+```
 
-<p>This calls a function <code>doAddStream()</code> once for each stream being added to the {{domxref("RTCPeerConnection")}}, regardless of whether the browser sends <code>addstream</code> or <code>track</code>.</p>
+This calls a function `doAddStream()` once for each stream being added to the {{domxref("RTCPeerConnection")}}, regardless of whether the browser sends `addstream` or `track`.
 
-<p>You can also use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to set an event listener:</p>
+You can also use the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method to set an event listener:
 
-<pre class="brush: js">pc.addEventListener("addstream", ev =&gt; doAddStream(ev.stream), false);</pre>
+```js
+pc.addEventListener("addstream", ev => doAddStream(ev.stream), false);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCPeerConnection.onaddstream")}}</li>
- <li>{{domxref("RTCPeerConnection.addStream()")}}</li>
- <li>{{domxref("MediaStreamEvent")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.onaddstream")}}
+- {{domxref("RTCPeerConnection.addStream()")}}
+- {{domxref("MediaStreamEvent")}}

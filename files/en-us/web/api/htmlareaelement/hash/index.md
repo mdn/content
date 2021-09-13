@@ -8,58 +8,55 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.hash
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The
-    <strong><code>HTMLAreaElement.hash</code></strong> property returns a
-    {{domxref("USVString")}} containing a <code>'#'</code> followed by the fragment
-    identifier of the URL.</p>
+The
+**`HTMLAreaElement.hash`** property returns a
+{{domxref("USVString")}} containing a `'#'` followed by the fragment
+identifier of the URL.
 
-<p>The fragment is not <a
-    href="/en-US/docs/Glossary/percent-encoding">percent-decoded</a>. If the URL does not
-  have a fragment identifier, this property contains an empty string, <code>""</code>.</p>
+The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
+have a fragment identifier, this property contains an empty string, `""`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.hash;
+string = area.hash;
 // Setter
-<em>area</em>.hash = <em>string</em>;
-</pre>
+area.hash = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the hash from an area link</h3>
+### Getting the hash from an area link
 
 Given this HTML
 
-<pre class="brush: html">
-&lt;map name="infographic"&gt;
-  &lt;area id="mdn-circle" shape="circle" coords="130,136,60"
-  href="https://developer.mozilla.org/#ExampleSection" alt="MDN" /&gt;
-&lt;/map&gt;
+```html
+<map name="infographic">
+  <area id="mdn-circle" shape="circle" coords="130,136,60"
+  href="https://developer.mozilla.org/#ExampleSection" alt="MDN" />
+</map>
 
-&lt;img usemap="#infographic" src="/media/examples/mdn-info.png" alt="MDN infographic" /&gt;
-</pre>
+<img usemap="#infographic" src="/media/examples/mdn-info.png" alt="MDN infographic" />
+```
 
 you can get the hash of the area link like this:
 
-<pre class="brush: js">
+```js
 const area = document.getElementById("mdn-circle");
 area.hash; // returns '#ExampleSection'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

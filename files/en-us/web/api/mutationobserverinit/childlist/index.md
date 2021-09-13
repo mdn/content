@@ -2,55 +2,56 @@
 title: MutationObserverInit.childList
 slug: Web/API/MutationObserverInit/childList
 tags:
-- API
-- DOM
-- DOM WHATWG
-- Monitor
-- Mutation Observer
-- Mutation Observer API
-- MutationObserverInit
-- Observer
-- Reference
-- Watching
-- childList
-- children
-- mutation
+  - API
+  - DOM
+  - DOM WHATWG
+  - Monitor
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserverInit
+  - Observer
+  - Reference
+  - Watching
+  - childList
+  - children
+  - mutation
 browser-compat: api.MutationObserverInit.childList
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong>{{domxref("MutationObserverInit")}}</strong>
-    dictionary's optional <strong><code>childList</code></strong> property indicates
-    whether or not to monitor the specified node or nodes for the addition or removal of
-    new child nodes.</p>
+The **{{domxref("MutationObserverInit")}}**
+dictionary's optional **`childList`** property indicates
+whether or not to monitor the specified node or nodes for the addition or removal of
+new child nodes.
 
-<p>If <code>childList</code> is <code>false</code> (the default), adding or removing new
-  nodes does not trigger mutation callbacks. By setting <code>childList</code> to
-  <code>true</code>, your callback will be invoked any time nodes are added to or removed
-  from the DOM node or nodes being watched.</p>
+If `childList` is `false` (the default), adding or removing new
+nodes does not trigger mutation callbacks. By setting `childList` to
+`true`, your callback will be invoked any time nodes are added to or removed
+from the DOM node or nodes being watched.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  <em>childList</em>: true | false
+```js
+var options = {
+  childList: true | false
 }
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not to invoke the callback function when new
-  nodes are added to or removed from the section of the DOM being monitored.. If
-  {{domxref("MutationObserverInit.subtree", "subtree")}} is <code>false</code>, only the
-  node indicated by the observer's target node is monitored for changes. Setting
-  <code>subtree</code> to <code>true</code> causes addition or removal of nodes anywhere
-  within the subtree rooted at <code>target</code> to be reported.</p>
+A Boolean value indicating whether or not to invoke the callback function when new
+nodes are added to or removed from the section of the DOM being monitored.. If
+{{domxref("MutationObserverInit.subtree", "subtree")}} is `false`, only the
+node indicated by the observer's target node is monitored for changes. Setting
+`subtree` to `true` causes addition or removal of nodes anywhere
+within the subtree rooted at `target` to be reported.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

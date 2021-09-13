@@ -9,32 +9,35 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyScript
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>emptyScript</code></strong> read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedScript")}} object containing an empty string.</p>
+The **`emptyScript`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedScript")}} object containing an empty string.
 
-<p>This object can be used when the application requires an empty string to be inserted into an injection sink which is expecting a <code>TrustedScript</code> object.</p>
+This object can be used when the application requires an empty string to be inserted into an injection sink which is expecting a `TrustedScript` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>emptyScript</var> = <var>TrustedTypePolicyFactory</var>.emptyScript;</pre>
+    var emptyScript = TrustedTypePolicyFactory.emptyScript;
 
-<h3>Value</h3>
-<p>A {{domxref("TrustedScript")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("TrustedScript")}} object.
 
-<p>The <a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript">specification</a> explains that the <code>emptyScript</code> object can be used to detect support for dynamic code compilation.</p>
+## Examples
 
-<p>Native Trusted Types implementations can support <code>eval(TrustedScript)</code>, therefore in the below example a native implementation will return false for <code>eval(trustedTypes.emptyScript)</code>. A polyfill will return a truthy object.</p>
+The [specification](https://w3c.github.io/webappsec-trusted-types/dist/spec/#dom-trustedtypepolicyfactory-emptyscript) explains that the `emptyScript` object can be used to detect support for dynamic code compilation.
 
-<pre class="brush: js">const supportsTS = !eval(trustedTypes.emptyScript);
-eval(supportsTS ? myTrustedScriptObj : myTrustedScriptObj.toString());</pre>
+Native Trusted Types implementations can support `eval(TrustedScript)`, therefore in the below example a native implementation will return false for `eval(trustedTypes.emptyScript)`. A polyfill will return a truthy object.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+const supportsTS = !eval(trustedTypes.emptyScript);
+eval(supportsTS ? myTrustedScriptObj : myTrustedScriptObj.toString());
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

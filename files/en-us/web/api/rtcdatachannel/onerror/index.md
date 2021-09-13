@@ -10,33 +10,35 @@ tags:
   - onerror
 browser-compat: api.RTCDataChannel.onerror
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannel.onerror</strong></code> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{DOMxRef("RTCDataChannel.error_event", "error")}} event is received. When an error occurs on the data channel, the
-  function receives as input an {{domxref("RTCErrorEvent")}} object describing the error
-  which occurred.</p>
+The **`RTCDataChannel.onerror`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called when the
+{{DOMxRef("RTCDataChannel.error_event", "error")}} event is received. When an error occurs on the data channel, the
+function receives as input an {{domxref("RTCErrorEvent")}} object describing the error
+which occurred.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDataChannel</em>.onerror = <em>function</em>;</pre>
+```js
+RTCDataChannel.onerror = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.error_event", "error")}} event when it
-  occurs on the data channel. This function receives as its only input an
-  {{domxref("ErrorEvent")}} object describing the event which was received. That event
-  object, in turn, describes the error that took place.</p>
+A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.error_event", "error")}} event when it
+occurs on the data channel. This function receives as its only input an
+{{domxref("ErrorEvent")}} object describing the event which was received. That event
+object, in turn, describes the error that took place.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the example below, a data channel is established, and an <code>onerror</code>
-  handler is added to it. The error handler passes information about the error to a UI
-  library's alert box function to present an error message to the user.</p>
+In the example below, a data channel is established, and an `onerror`
+handler is added to it. The error handler passes information about the error to a UI
+library's alert box function to present an error message to the user.
 
-<pre class="brush: js">let pc = new RTCPeerConnection();
+```js
+let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel("PlayerControl");
 
 dc.onerror = function(event) {
@@ -51,19 +53,17 @@ dc.onerror = function(event) {
 }
 
 /* ... */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{DOMxRef("RTCDataChannel.error_event", "error")}} event and its type, {{domxref("ErrorEvent")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- The {{DOMxRef("RTCDataChannel.error_event", "error")}} event and its type, {{domxref("ErrorEvent")}}.

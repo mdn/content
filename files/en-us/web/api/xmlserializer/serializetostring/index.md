@@ -2,113 +2,103 @@
 title: XMLSerializer.serializeToString()
 slug: Web/API/XMLSerializer/serializeToString
 tags:
-- API
-- DOM
-- DOM Parsing
-- DOM to HTML
-- DOM to XML
-- Parsing
-- Reference
-- Serialize
-- Serializing DOM
-- XML
-- XMLSerializer
-- serializeToString
+  - API
+  - DOM
+  - DOM Parsing
+  - DOM to HTML
+  - DOM to XML
+  - Parsing
+  - Reference
+  - Serialize
+  - Serializing DOM
+  - XML
+  - XMLSerializer
+  - serializeToString
 browser-compat: api.XMLSerializer.serializeToString
 ---
-<div>{{APIRef("DOM Parsing")}}</div>
+{{APIRef("DOM Parsing")}}
 
-<p>The {{domxref("XMLSerializer")}} method
-    <code><strong>serializeToString()</strong></code> constructs a string representing the
-    specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.</p>
+The {{domxref("XMLSerializer")}} method
+**`serializeToString()`** constructs a string representing the
+specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>xmlString</em> = <em>anXMLSerializer</em>.serializeToString(<em>rootNode</em>);</pre>
+```js
+xmlString = anXMLSerializer.serializeToString(rootNode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>rootNode</code></dt>
-  <dd>The {{domxref("Node")}} to use as the root of the DOM tree or subtree for which to
-    construct an XML representation.</dd>
-</dl>
+- `rootNode`
+  - : The {{domxref("Node")}} to use as the root of the DOM tree or subtree for which to
+    construct an XML representation.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing the XML representation of the specified DOM tree.
-</p>
+A {{domxref("DOMString")}} containing the XML representation of the specified DOM tree.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>The specified <code>rootNode</code> is not a compatible node type. The root node
-    must be either {{domxref("Node")}} or {{domxref("Attr")}}.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The tree could not be successfully serialized, probably due to issues with the
-    content's compatibility with XML serialization.</dd>
-  <dt><code>SyntaxError</code></dt>
-  <dd>A serialization of HTML was requested but could not succeed due to the content not
-    being well-formed.</dd>
-</dl>
+- `TypeError`
+  - : The specified `rootNode` is not a compatible node type. The root node
+    must be either {{domxref("Node")}} or {{domxref("Attr")}}.
+- `InvalidStateError`
+  - : The tree could not be successfully serialized, probably due to issues with the
+    content's compatibility with XML serialization.
+- `SyntaxError`
+  - : A serialization of HTML was requested but could not succeed due to the content not
+    being well-formed.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Compatible_node_types">Compatible node types</h3>
+### Compatible node types
 
-<p>The specified root node—and all of its descendants—must be compatible with the XML
-  serialization algorithm. The root node itself must be either a {{domxref("Node")}} or
-  {{domxref("Attr")}} object.</p>
+The specified root node—and all of its descendants—must be compatible with the XML
+serialization algorithm. The root node itself must be either a {{domxref("Node")}} or
+{{domxref("Attr")}} object.
 
-<p>The following types are also permitted as descendants of the root node, in addition to
-  <code>Node</code> and <code>Attr</code>:</p>
+The following types are also permitted as descendants of the root node, in addition to
+`Node` and `Attr`:
 
-<ul>
-  <li>{{domxref("DocumentType")}}</li>
-  <li>{{domxref("Document")}}</li>
-  <li>{{domxref("DocumentFragment")}}</li>
-  <li>{{domxref("Element")}}</li>
-  <li>{{domxref("Comment")}}</li>
-  <li>{{domxref("Text")}}</li>
-  <li>{{domxref("ProcessingInstruction")}}</li>
-  <li>{{domxref("Attr")}}</li>
-</ul>
+- {{domxref("DocumentType")}}
+- {{domxref("Document")}}
+- {{domxref("DocumentFragment")}}
+- {{domxref("Element")}}
+- {{domxref("Comment")}}
+- {{domxref("Text")}}
+- {{domxref("ProcessingInstruction")}}
+- {{domxref("Attr")}}
 
-<p>If any other type is encountered, a <code>TypeError</code> exception is thrown.</p>
+If any other type is encountered, a `TypeError` exception is thrown.
 
-<h3 id="Notes_on_the_resulting_XML">Notes on the resulting XML</h3>
+### Notes on the resulting XML
 
-<p>There are some things worth noting about the XML output by
-  <code>serializeToString()</code>:</p>
+There are some things worth noting about the XML output by
+`serializeToString()`:
 
-<ul>
-  <li>For XML serializations, <code>Element</code> and <code>Attr</code> nodes are always
-    serialized with their {{domxref("Element.namespaceURI", "namespaceURI")}} intact. This
-    may mean that a previously-specified {{domxref("Element.prefix", "prefix")}} or default
-    namespace may be dropped or altered.</li>
-  <li>The resulting XML is compatible with the HTML parser.</li>
-  <li>Elements in the HTML namespace that have no child nodes (thereby representing empty
-    tags) are serialized with both begin and end tags
-    (<code>"&lt;someelement&gt;&lt;/someelement&gt;"</code>) instead of using the
-    empty-element tag (<code>"&lt;someelement/&gt;"</code>).</li>
-</ul>
+- For XML serializations, `Element` and `Attr` nodes are always
+  serialized with their {{domxref("Element.namespaceURI", "namespaceURI")}} intact. This
+  may mean that a previously-specified {{domxref("Element.prefix", "prefix")}} or default
+  namespace may be dropped or altered.
+- The resulting XML is compatible with the HTML parser.
+- Elements in the HTML namespace that have no child nodes (thereby representing empty
+  tags) are serialized with both begin and end tags
+  (`"<someelement></someelement>"`) instead of using the
+  empty-element tag (`"<someelement/>"`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing
-      XML</a></li>
-  <li>Serializing to HTML: {{domxref("Element.innerHTML")}} and
-    {{domxref("Element.outerHTML")}}</li>
-  <li>Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}</li>
-</ul>
+- [Parsing and serializing
+  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- Serializing to HTML: {{domxref("Element.innerHTML")}} and
+  {{domxref("Element.outerHTML")}}
+- Parsing HTML or XML to create a DOM tree: {{domxref("DOMParser")}}

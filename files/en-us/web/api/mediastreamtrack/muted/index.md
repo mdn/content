@@ -2,62 +2,60 @@
 title: MediaStreamTrack.muted
 slug: Web/API/MediaStreamTrack/muted
 tags:
-- API
-- Media Capture and Streams
-- MediaStreamTrack
-- Property
-- Read-only
-- Reference
-- muted
+  - API
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - Property
+  - Read-only
+  - Reference
+  - muted
 browser-compat: api.MediaStreamTrack.muted
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>muted</code></strong> read-only property of the
-  {{domxref("MediaStreamTrack")}} interface returns a {{jsxref('Boolean')}} value
-  indicating whether or not the track is currently unable to provide media output.</p>
+The **`muted`** read-only property of the
+{{domxref("MediaStreamTrack")}} interface returns a {{jsxref('Boolean')}} value
+indicating whether or not the track is currently unable to provide media output.
 
-<div class="note">
-  <p><strong>Note:</strong> To implement a way for users to mute and unmute a track, use the
-    {{domxref("MediaStreamTrack.enabled", "enabled")}} property. When a track is disabled
-    by setting <code>enabled</code> to <code>false</code>, it generates only empty frames
-    (audio frames in which every sample is 0, or video frames in which every pixel is
-    black).</p>
-</div>
+> **Note:** To implement a way for users to mute and unmute a track, use the
+> {{domxref("MediaStreamTrack.enabled", "enabled")}} property. When a track is disabled
+> by setting `enabled` to `false`, it generates only empty frames
+> (audio frames in which every sample is 0, or video frames in which every pixel is
+> black).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>mutedFlag</em> = <em>track.</em>muted</pre>
+```js
+const mutedFlag = track.muted
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Boolean')}} which is <code>true</code> if the track is currently muted, or
-  <code>false</code> if the track is currently unmuted.</p>
+A {{jsxref('Boolean')}} which is `true` if the track is currently muted, or
+`false` if the track is currently unmuted.
 
-<div class="note">
-  <p><strong>Note:</strong> When possible, avoid polling <code>muted</code> to monitor the track's muting status.
-    Instead, add event listeners for the {{event("mute")}} and {{event("unmute")}} events.
-  </p>
-</div>
+> **Note:** When possible, avoid polling `muted` to monitor the track's muting status.
+> Instead, add event listeners for the {{event("mute")}} and {{event("unmute")}} events.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example counts the number of tracks in an array of {{domxref("MediaStreamTrack")}}
-  objects which are currently muted.</p>
+This example counts the number of tracks in an array of {{domxref("MediaStreamTrack")}}
+objects which are currently muted.
 
-<pre class="brush: js">let mutedCount = 0;
+```js
+let mutedCount = 0;
 
-trackList.forEach((track) =&gt; {
+trackList.forEach((track) => {
   if (track.muted) {
     mutedCount += 1;
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

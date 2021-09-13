@@ -4,49 +4,43 @@ slug: Web/API/HTMLVideoElement/msSetVideoRectangle
 tags:
   - msSetVideoRectangle
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>HTMLVideoElement.msSetVideoRectangle()</code></strong> method sets
-  the dimensions of a sub-rectangle within a video.</p>
+The **`HTMLVideoElement.msSetVideoRectangle()`** method sets
+the dimensions of a sub-rectangle within a video.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLVideoElement</em>.msSetVideoRectangle();
-</pre>
+```js
+HTMLVideoElement.msSetVideoRectangle();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>left</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Number">number</a> representing left-side position.
-  </dd>
-  <dt>top</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Number">number</a> representing top position.</dd>
-  <dt>right</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Number">number</a> representing right-side position.
-  </dd>
-  <dt>bottom</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Number">number</a> representing bottom position.
-  </dd>
-</dl>
+- left
+  - : A [number](/en-US/docs/Glossary/Number) representing left-side position.
+- top
+  - : A [number](/en-US/docs/Glossary/Number) representing top position.
+- right
+  - : A [number](/en-US/docs/Glossary/Number) representing right-side position.
+- bottom
+  - : A [number](/en-US/docs/Glossary/Number) representing bottom position.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">HTMLVideoElement.msSetVideoRectangle(left: 2, top: 0, right: 4, bottom: 4);
-</pre>
+```js
+HTMLVideoElement.msSetVideoRectangle(left: 2, top: 0, right: 4, bottom: 4);
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

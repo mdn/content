@@ -10,41 +10,40 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>keys()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface returns a new <em>array iterator</em>
-  containing the keys for each item in <code>FileSystemDirectoryHandle</code>.</p>
+The **`keys()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
+containing the keys for each item in `FileSystemDirectoryHandle`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">FileSystemDirectoryHandle.keys();</pre>
+```js
+FileSystemDirectoryHandle.keys();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref('Array')}}</p>
+A new {{jsxref('Array')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Todo</p>
+Todo
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)
