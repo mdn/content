@@ -6799,7 +6799,6 @@
 /en-US/docs/Web/API/AnimationTimingEffectProperties/iterations	/en-US/docs/Web/API/EffectTiming/iterations
 /en-US/docs/Web/API/Apps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Apps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
-/en-US/docs/Web/API/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/API/AudioBuffer.copyFromChannel	/en-US/docs/Web/API/AudioBuffer/copyFromChannel
 /en-US/docs/Web/API/AudioBuffer.copyToChannel	/en-US/docs/Web/API/AudioBuffer/copyToChannel
 /en-US/docs/Web/API/AudioBuffer.duration	/en-US/docs/Web/API/AudioBuffer/duration
@@ -8631,6 +8630,7 @@
 /en-US/docs/Web/API/TrackDefaultList/TrackDefaultList.length	/en-US/docs/Web/API/TrackDefaultList/length
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
+/en-US/docs/Web/API/Transferable	/en-US/docs/Web/API/ArrayBuffer
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
 /en-US/docs/Web/API/TransitionEvent.animationName	/en-US/docs/Web/API/TransitionEvent/propertyName
 /en-US/docs/Web/API/TransitionEvent.elapsedTime	/en-US/docs/Web/API/TransitionEvent/elapsedTime

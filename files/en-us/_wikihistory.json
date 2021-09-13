@@ -81468,24 +81468,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Transferable": {
-    "modified": "2020-10-15T21:24:56.512Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "krosylight",
-      "surma",
-      "mfluehr",
-      "fscholz",
-      "Loadmaster",
-      "gagern",
-      "GrantSolar",
-      "hunan-rostomyan",
-      "teoli",
-      "MHasan",
-      "derekenos"
-    ]
-  },
   "Web/API/TransformStream": {
     "modified": "2020-10-23T10:46:47.763Z",
     "contributors": [
