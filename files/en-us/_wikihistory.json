@@ -28376,16 +28376,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/AudioNodeOptions": {
-    "modified": "2020-10-15T21:56:52.222Z",
-    "contributors": [
-      "sideshowbarker",
-      "connorshea",
-      "Sheppy",
-      "aervin",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/AudioParam": {
     "modified": "2020-10-15T21:22:26.337Z",
     "contributors": [
@@ -91545,20 +91535,6 @@
       "Jabez",
       "Nickolay",
       "alecananian"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-10-15T21:51:33.987Z",
-    "contributors": [
-      "mfuji09",
-      "unarist",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "sideshowbarker",
-      "fscholz",
-      "kenrick95",
-      "Bzbarsky"
     ]
   },
   "Web/API/Worker": {

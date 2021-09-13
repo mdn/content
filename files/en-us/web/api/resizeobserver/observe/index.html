@@ -33,9 +33,13 @@ browser-compat: api.ResizeObserver.observe
     only has one possible option that can be set:
     <dl>
       <dt><code>box</code></dt>
-      <dd>Sets which box model the observer will observe changes to. Possible values are
-        <code>content-box</code> (the default), <code>border-box</code>, and
-        <code>device-pixel-content-box</code>.</dd>
+      <dd>Sets which box model the observer will observe changes to. Possible values are:
+        <ul>
+          <li><code>content-box</code> (the default): Size of the content area as defined in CSS.</li>
+          <li><code>border-box</code>: Size of the box border area as defined in CSS.</li>
+          <li><code>device-pixel-content-box</code>: The size of the content area as defined in CSS, in device pixels, before applying any CSS transforms on the element or its ancestors.</li>
+        </ul>
+      </dd>
     </dl>
   </dd>
 </dl>

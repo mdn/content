@@ -19,7 +19,7 @@ HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HT
 4. [Client errors](#client_error_responses) (`400`–`499`)
 5. [Server errors](#server_error_responses) (`500`–`599`)
 
-The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1).
+The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
 
 > **Note:** If you receive a response that is not in this list, it is a non-standard response, possibly custom to the server's software.
 
