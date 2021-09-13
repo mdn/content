@@ -23,9 +23,10 @@ every element in the calling array.
 
 ```js
 // Arrow function
-map((element) => { ... } )
-map((element, index) => { ... } )
-map((element, index, array) => { ... } )
+map((element) => { ... })
+map((element, index) => { ... })
+map((element, index, array) => { ... })
+map((element, index, array) => { ... }, thisArg)
 
 // Callback function
 map(callbackFn)
