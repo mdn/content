@@ -111,145 +111,154 @@ setCookie.then(logCookie, logError);</pre>
 
 <p>The rest of this section describes compatibility issues that are not already captured in the tables.</p>
 
-<h4 id="notifications">notifications</h4>
-
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities">notifications</a></p>
-
-<ul>
- <li>
-  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
-
-  <dl>
-   <dt>In Firefox</dt>
-   <dd><code>iconUrl</code> is optional.</dd>
-   <dt>In Chrome</dt>
-   <dd><code>iconUrl</code> is required.</dd>
-  </dl>
- </li>
- <li>
-  <p>When the user clicks on a notification:</p>
-
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>The notification is cleared immediately.</dd>
-   <dt>In Chrome</dt>
-   <dd>This is not the case.</dd>
-  </dl>
- </li>
- <li>
-  <p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
-
-  <ul>
-   <li>In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
-  </ul>
- </li>
-</ul>
-
-<h4 id="proxy">proxy</h4>
-
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities">proxy</a></p>
-
-<p>Firefox's Proxy API followed a completely different design from Chrome's Proxy API.</p>
-
 <dl>
- <dt>In Chrome</dt>
- <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
- <dt>In Firefox</dt>
- <dd>The proxy API only supports the PAC file approach (since this is also possible using extended PAC files).
- <div class="notecard note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
- </dd>
-</dl>
+  <dt>notifications</dt>
+  <dd>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities">notifications</a></p>
+    
+    <ul>
+     <li>
+      <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd><code>iconUrl</code> is optional.</dd>
+       <dt>In Chrome</dt>
+       <dd><code>iconUrl</code> is required.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>When the user clicks on a notification:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>The notification is cleared immediately.</dd>
+       <dt>In Chrome</dt>
+       <dd>This is not the case.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
+    
+      <ul>
+       <li>In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
+      </ul>
+     </li>
+    </ul>
+  </dd>
 
-<h4 id="tabs">tabs</h4>
+  <dt>proxy</dt>
+  <dd>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities">proxy</a></p>
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities">tabs</a></p>
+    <p>Firefox's Proxy API followed a completely different design from Chrome's Proxy API.</p>
+    
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
+     <dt>In Firefox</dt>
+     <dd>The proxy API only supports the PAC file approach (since this is also possible using extended PAC files).
+     <div class="notecard note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
+     </dd>
+    </dl>
+  </dd>
 
-<ul>
- <li>
-  <p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
+  <dt>tabs</dt>
+  <dd>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>Relative URLs passed are resolved relative to the current page URL.</dd>
-   <dt>In Chrome</dt>
-   <dd>These URLs are resolved relative to the extension's base URL.</dd>
-  </dl>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities">tabs</a></p>
+    
+    <ul>
+     <li>
+      <p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>Relative URLs passed are resolved relative to the current page URL.</dd>
+       <dt>In Chrome</dt>
+       <dd>These URLs are resolved relative to the extension's base URL.</dd>
+      </dl>
+    
+      <p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
+    
+      <pre class="brush: none;">/path/to/script.js
+    </pre>
+     </li>
+     <li>
+      <p>When :</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>Querying tabs by URL with <code>tabs.query()</code> requires the <code>"tabs"</code> permission.</dd>
+       <dt>In Chrome</dt>
+       <dd>querying tabs by URL with <code>tabs.query()</code> It's possible without the <code>"tabs"</code> permission, but will limit results to tabs whose URLs match host permissions.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>When calling <code>tabs.remove()</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</dd>
+       <dt>In Chrome</dt>
+       <dd>The callback does not wait for <code>beforeunload</code>.</dd>
+      </dl>
+     </li>
+    </ul>
+  </dd>
 
-  <p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
+  <dt>webRequest</dt>
+  <dd>
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></p>
+    
+    <dl>
+      <dt>In Firefox</dt>
+      <dd>
+        <ul>
+         <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
+         <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
+         <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
+          <ul>
+           <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
+          </ul>
+         </li>
+         <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
+          <ul>
+           <li>
+            <div class="notecard note">
+            <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
+            </div>
+           </li>
+          </ul>
+         </li>
+        </ul>
+      </dd>
+    </dl>
 
-  <pre class="brush: none;">/path/to/script.js
-</pre>
- </li>
- <li>
-  <p>When :</p>
+    <ul>
+     <li>
+      <p>When using <code>browser.webRequest.*</code>:</p>
+    
+      <dl>
+       <dt>In Firefox (starting from Firefox 52)</dt>
+       <dd>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</dd>
+       <dt>In Chrome</dt>
+       <dd>Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</dd>
+      </dl>
+     </li>
+    </ul>
+  </dd>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>Querying tabs by URL with <code>tabs.query()</code> requires the <code>"tabs"</code> permission.</dd>
-   <dt>In Chrome</dt>
-   <dd>querying tabs by URL with <code>tabs.query()</code> It's possible without the <code>"tabs"</code> permission, but will limit results to tabs whose URLs match host permissions.</dd>
-  </dl>
- </li>
- <li>
-  <p>When calling <code>tabs.remove()</code>:</p>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</dd>
-   <dt>In Chrome</dt>
-   <dd>The callback does not wait for <code>beforeunload</code>.</dd>
-  </dl>
- </li>
-</ul>
-
-<h4 id="webRequest">webRequest</h4>
-
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></p>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>
- <ul>
-  <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
-  <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
-  <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
-   <ul>
-    <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
-   </ul>
-  </li>
-  <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
-   <ul>
-    <li>
-     <div class="notecard note">
-     <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
-     </div>
-    </li>
-   </ul>
-  </li>
- </ul>
- </dd>
-</dl>
-
-<ul>
- <li>
-  <p>When using <code>browser.webRequest.*</code>:</p>
-
-  <dl>
-   <dt>In Firefox (starting from Firefox 52)</dt>
-   <dd>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</dd>
-   <dt>In Chrome</dt>
-   <dd>Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</dd>
-  </dl>
- </li>
-</ul>
-
-<h4 id="windows">windows</h4>
-
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities">windows</a></p>
-
-<dl>
- <dt>In Firefox</dt>
- <dd><code>onFocusChanged</code> will trigger multiple times for a given focus change.</dd>
+  <dt>windows</dt>
+  <dd> 
+    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities">windows</a></p>
+    
+    <dl>
+     <dt>In Firefox</dt>
+     <dd><code>onFocusChanged</code> will trigger multiple times for a given focus change.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="Unsupported_APIs">Unsupported APIs</h3>
