@@ -114,5 +114,5 @@ Full credit for this example goes to [Pogany](https://codepen.io/giaco); see [th
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
