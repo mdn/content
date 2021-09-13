@@ -6891,6 +6891,7 @@
 /en-US/docs/Web/API/AudioNode.numberOfInputs	/en-US/docs/Web/API/AudioNode/numberOfInputs
 /en-US/docs/Web/API/AudioNode.numberOfOutputs	/en-US/docs/Web/API/AudioNode/numberOfOutputs
 /en-US/docs/Web/API/AudioNode/connect(AudioNode)	/en-US/docs/Web/API/AudioNode/connect
+/en-US/docs/Web/API/AudioNodeOptions	/en-US/docs/Web/API/AudioNode
 /en-US/docs/Web/API/AudioParam.cancelScheduledValues	/en-US/docs/Web/API/AudioParam/cancelScheduledValues
 /en-US/docs/Web/API/AudioParam.defaultValue	/en-US/docs/Web/API/AudioParam/defaultValue
 /en-US/docs/Web/API/AudioParam.exponentialRampToValueAtTime	/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime
