@@ -8,14 +8,15 @@ tags:
   - Reference
   - Web Audio API
   - playbackRate
+browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-  <p><span class="seoSummary">The <strong><code>playbackRate</code></strong> property of
+  <p>The <strong><code>playbackRate</code></strong> property of
       the {{ domxref("AudioBufferSourceNode") }} interface Is a <a
         href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} that
-      defines the speed at which the audio asset will be played.</span></p>
+      defines the speed at which the audio asset will be played.</p>
 
   <p>A value of 1.0 indicates it should play at the same speed as its sampling rate,
     values less than 1.0 cause the sound to play more slowly, while values greater than
@@ -53,7 +54,7 @@ tags:
   the <code>playbackRate</code> property value on the fly.</p>
 
 <div class="note">
-  <p>You can <a class="external external-icon"
+  <p><strong>Note:</strong> You can <a class="external external-icon"
       href="https://mdn.github.io/webaudio-examples/decode-audio-data/">run the example
       live</a> (or <a class="external external-icon"
       href="https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data">view
@@ -64,7 +65,7 @@ tags:
 &lt;span class="playback-rate-value"&gt;1.0&lt;/span&gt;
 </pre>
 
-<pre class="brush: js;highlight[15]">function getData() {
+<pre class="brush: js;">function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -112,29 +113,15 @@ playbackControl.oninput = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audiobuffersourcenode-playbackrate',
-        'playbackRate')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioBufferSourceNode.playbackRate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+ </ul>

@@ -8,18 +8,20 @@ tags:
 - Media
 - Media Source Extensions
 - Method
+- Experimental
 - Non-standard
 - Reference
 - SourceBuffer
 - Video
 - removeAsync
+browser-compat: api.SourceBuffer.removeAsync
 ---
 <div>{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">The <code><strong>removeAsync()</strong></code> method of the
+<p>The <code><strong>removeAsync()</strong></code> method of the
     {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
     from the <code>SourceBuffer</code> media segments found within a specific time
-    range.</span> A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
+    range. A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
   in the specified time range have been removed.</p>
 
 <p>This method can only be called when {{domxref("SourceBuffer.updating", "updating")}} is
@@ -59,26 +61,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<p>Not currently part of the MSE specification.</p>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Media Source Extensions')}}</td>
-      <td>{{Spec2('Media Source Extensions')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any specification. It is not on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SourceBuffer.removeAsync")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

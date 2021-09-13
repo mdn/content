@@ -75,6 +75,12 @@ tags:
 
 <p>Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "<code>about:debugging</code>" or "<code>about:addons</code>").</p>
 
+<div class="note notecard">
+  <h4>Note</h4>
+  <p><a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic JS module imports</a> are now working in content scripts. For more details, see {{bug(1536094)}}.
+  Only URLs with the <em>moz-extension</em> scheme are allowed, which excludes data URLs ({{bug(1587336)}}).</p>
+  </div>
+
 <h2 id="Content_script_environment">Content script environment</h2>
 
 <h3 id="DOM_access">DOM access</h3>
@@ -88,7 +94,7 @@ tags:
  <li>If a page script redefines a built-in DOM property, the content script sees the original version of the property, not the redefined version.</li>
 </ul>
 
-<p>In Firefox, this behavior is called <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a>.</p>
+<p>In Firefox, this behavior is called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox">Xray vision</a>.</p>
 
 <p>Consider a web page like this:</p>
 
@@ -529,7 +535,7 @@ In page script, window.y: undefined</pre>
  </dd>
 </dl>
 
-<p>The same applies to <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
+<p>The same applies to <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
 
 <div class="notecard warning">
 <p><strong>Be very careful when running code in the context of the page!</strong> </p>

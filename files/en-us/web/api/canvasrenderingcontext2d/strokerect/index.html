@@ -7,11 +7,12 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeRect()</code></strong>
+  <strong><code>CanvasRenderingContext2D.strokeRect()</code></strong>
   method of the Canvas 2D API draws a rectangle that is stroked (outlined) according to
   the current {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} and other
   context settings.</p>
@@ -61,7 +62,7 @@ tags:
 <p>The rectangle's top-left corner is at (20, 10). It has a width of 160 and a height of
   100.</p>
 
-<pre class="brush: js; highlight:[4]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'green';
 ctx.strokeRect(20, 10, 160, 100);
@@ -97,25 +98,11 @@ ctx.strokeRect(30, 30, 160, 90);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokerect",
-        "CanvasRenderingContext2D.strokeRect")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.strokeRect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

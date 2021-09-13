@@ -10,10 +10,11 @@ tags:
   - Web Speech API
   - recognition
   - speech
+browser-compat: api.SpeechRecognitionEvent
 ---
 <p>{{APIRef("Web Speech API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>SpeechRecognitionEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> represents the event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.</span></p>
+<p>The <strong><code>SpeechRecognitionEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> represents the event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -21,7 +22,7 @@ tags:
 
 <dl>
  <dt>{{domxref("SpeechRecognitionEvent.emma")}} {{readonlyinline}}</dt>
- <dd>Returns an <cite>E</cite><cite>xtensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.</cite></dd>
+ <dd>Returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.</dd>
  <dt>{{domxref("SpeechRecognitionEvent.interpretation")}} {{readonlyinline}}</dt>
  <dd>Returns the semantic meaning of what the user said.</dd>
  <dt>{{domxref("SpeechRecognitionEvent.resultIndex")}} {{readonlyinline}}</dt>
@@ -50,24 +51,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#speechreco-event', 'SpeechRecognitionEvent')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognitionEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 

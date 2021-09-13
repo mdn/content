@@ -10,10 +10,11 @@ tags:
   - HTMLFormElement
   - Interface
   - Reference
+browser-compat: api.HTMLFormElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>HTMLFormElement</strong></code> interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.</span></p>
+<p>The <code><strong>HTMLFormElement</strong></code> interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.</p>
 
 <p>{{InheritanceDiagram(600,120)}}</p>
 
@@ -41,7 +42,7 @@ tags:
  <dt>{{domxref("HTMLFormElement.autocomplete")}}</dt>
  <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.</dd>
  <dt>{{domxref("HTMLFormElement.noValidate")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.</dd>
+ <dd>A boolean value reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.</dd>
 </dl>
 
 <p>Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (e.g. a form with an input named <code>action</code> will have its <code>action</code> property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).</p>
@@ -52,9 +53,9 @@ tags:
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls are subject to <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
+ <dd>Returns <code>true</code> if the element's child controls are subject to <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> and satisfy those constraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{domxref("HTMLInputElement/invalid_event", "invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
  <dt>{{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls satisfy their <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
+ <dd>Returns <code>true</code> if the element's child controls satisfy their <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">validation constraints</a>. When <code>false</code> is returned, cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
  <dt>{{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}</dt>
  <dd>Requests that the form be submitted using the specified submit button and its corresponding configuration.</dd>
  <dt>{{domxref("HTMLFormElement.reset", "reset()")}}</dt>
@@ -90,7 +91,7 @@ tags:
 
 <h3 id="Obtaining_a_form_element_object">Obtaining a form element object</h3>
 
-<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a> with {{domxref("ParentNode.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
+<p>To obtain an <code>HTMLFormElement</code> object, you can use a <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a> with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.</p>
 
 <p>{{domxref("Document.forms")}} returns an array of <code>HTMLFormElement</code> objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:</p>
 
@@ -100,7 +101,7 @@ tags:
  <dt><code>document.forms[<var>id</var>]</code></dt>
  <dd>Returns the form whose ID is <code><var>id</var></code>.</dd>
  <dt><code>document.forms[<var>name</var>]</code></dt>
- <dd>Returns the form whose {{domxref("Element.name", "name")}} attribute's value is <code><var>name</var></code>.</dd>
+ <dd>Returns the form whose <code>name</code> attribute's value is <code><var>name</var></code>.</dd>
 </dl>
 
 <h3 id="Accessing_the_forms_elements">Accessing the form's elements</h3>
@@ -230,31 +231,11 @@ f.submit();                               // Call the form's submit() method
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlformelement", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following method has been added: <code>requestAutocomplete()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "sec-forms.html#htmlformelement", "HTMLFormElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The elements properties returns an {{domxref("HTMLFormControlsCollection")}} instead of a raw {{domxref("HTMLCollection")}}. This is mainly a technical change. The following method has been added: <code>checkValidity()</code>. The following properties have been added: <code>autocomplete</code>, <code>noValidate</code>, and <code>encoding</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLFormElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

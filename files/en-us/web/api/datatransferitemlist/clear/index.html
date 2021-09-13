@@ -10,10 +10,11 @@ tags:
 - Reference
 - clear
 - drag and drop
+browser-compat: api.DataTransferItemList.clear
 ---
-<p><span class="seoSummary">The {{domxref("DataTransferItemList")}} method
+<p>The {{domxref("DataTransferItemList")}} method
     <strong><code>clear()</code></strong> removes all {{domxref("DataTransferItem")}}
-    objects from the drag data items list, leaving the list empty.</span></p>
+    objects from the drag data items list, leaving the list empty.</p>
 
 <p>The drag data store in which this list is kept is only writable while handling the
   {{event("dragstart")}} event. While handling {{event("drop")}}, the drag data store is
@@ -122,32 +123,10 @@ function dragend_handler(ev) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG',
-        'interaction.html#dom-datatransferitemlist-clear','clear()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-clear','clear()')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DataTransferItemList.clear")}}</p>
+<p>{{Compat}}</p>
 
 <div>{{APIRef("HTML Drag and Drop API")}}</div>

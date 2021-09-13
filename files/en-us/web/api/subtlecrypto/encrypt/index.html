@@ -2,13 +2,13 @@
 title: SubtleCrypto.encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 tags:
-- API
-- Method
-- Reference
-- Référence(2)
-- SubtleCrypto
-- Web Crypto API
-- encrypt
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - encrypt
+browser-compat: api.SubtleCrypto.encrypt
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -29,7 +29,7 @@ tags:
 
 <ul>
   <li><em><code>algorithm</code></em> is an object specifying the <a
-      href="#Supported_algorithms">algorithm</a> to be used and any extra parameters if
+      href="#supported_algorithms">algorithm</a> to be used and any extra parameters if
     required:
 
     <ul>
@@ -129,7 +129,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try
       the working examples</a> out on GitHub.</p>
 </div>
@@ -189,8 +189,8 @@ function encryptMessage(key) {
 }
 </pre>
 
-<pre class="brush: js">let iv = new Uint8Array(16);
-let key = new Uint8Array(16);
+<pre class="brush: js">let iv = window.crypto.getRandomValues(new Uint8Array(16));
+let key = window.crypto.getRandomValues(new Uint8Array(16));
 let data = new Uint8Array(12345);
 //crypto functions are wrapped in promises so we have to use await and make sure the function that
 //contains this code is an async function
@@ -267,25 +267,11 @@ function encryptMessage(key) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#SubtleCrypto-method-encrypt',
-        'SubtleCrypto.encrypt()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.encrypt")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

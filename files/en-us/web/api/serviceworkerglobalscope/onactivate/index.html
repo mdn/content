@@ -10,6 +10,7 @@ tags:
   - ServiceWorkerGlobalScope
   - Workers
   - onactivate
+browser-compat: api.ServiceWorkerGlobalScope.onactivate
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -24,12 +25,12 @@ tags:
 
 <p>The following snippet shows how you could use an <code>activate</code> event handler to upgrade a cache.</p>
 
-<pre class="brush: js">then.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['v2'];
+<pre class="brush: js">this.addEventListener('activate', function(event) {
+  var cacheAllowlist = ['v2'];
 
   event.waitUntil(
     caches.forEach(function(cache, cacheName) {
-      if (cacheWhitelist.indexOf(cacheName) == -1) {
+      if (cacheAllowlist.indexOf(cacheName) == -1) {
         return caches.delete(cacheName);
       }
     })
@@ -38,31 +39,18 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-global-scope-event-handlers', 'Event Handlers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.onactivate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
 </ul>

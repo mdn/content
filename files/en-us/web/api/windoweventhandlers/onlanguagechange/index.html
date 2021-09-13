@@ -8,18 +8,19 @@ tags:
 - Property
 - Reference
 - WindowEventHandlers
+browser-compat: api.WindowEventHandlers.onlanguagechange
 ---
 <div>{{APIRef("HTML DOM")}} {{SeeCompatTable}}</div>
 
 <p>The <code><strong>onlanguagechange</strong></code> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{event("languagechange")}} events.</p>
 
 <p>These events are received by the object implementing this interface, usually a
   {{domxref("Window")}}, an {{domxref("HTMLBodyElement")}}, or an
   {{domxref("HTMLIFrameElement")}}. Such an event is sent by the browser to inform that
   the preferred languages list has been updated. The list is accessible via
-  {{domxref("NavigatorLanguage.languages")}}.</p>
+  {{domxref("Navigator.languages")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,27 +45,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('HTML WHATWG', '#handler-window-onlanguagechange',
-        'WindowEventHandler.onlanguagechange') }}</td>
-      <td>{{ Spec2('HTML WHATWG') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WindowEventHandlers.onlanguagechange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

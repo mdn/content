@@ -13,13 +13,9 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><p><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</p></div>
 
-<p class="summary">The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</p>
-
-<div class="note">
-<p><strong>Note</strong>: The WebVR API's most stable version — 1.1 — has recently been implemented in Firefox 55 (Windows in release version, and Mac OS X on Nightly only) and is also available in Chrome when used with Google Daydream hardware. There is also a later evolution of the spec — 2.0 — but this is at an early stage right now. You can find information on the latest state of the specs at <a href="https://w3c.github.io/webvr/">WebVR Spec Version List</a>.</p>
-</div>
+<p>The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</p>
 
 <h2 id="Getting_started">Getting started</h2>
 
@@ -44,14 +40,14 @@ tags:
 
 <p>To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:</p>
 
-<p><img alt="" src="capture1.png" style="display: block; margin: 0px auto;"></p>
+<img alt="" src="capture1.png">
 
-<div class="note">
-<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">source code of our demo</a> on GitHub, and <a href="https://mdn.github.io/webvr-tests/raw-webgl-example/">view it live</a> also.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> You can find the <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">source code of our demo</a> on GitHub, and <a href="https://mdn.github.io/webvr-tests/raw-webgl-example/">view it live</a> also.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose <em>Run with graphics processor &gt; High-performance NVIDIA processor</em>.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose <em>Run with graphics processor &gt; High-performance NVIDIA processor</em>.</p>
 </div>
 
 <p>Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've implemented this using raw <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> code. We won't be teaching any basic JavaScript or WebGL, just the WebVR parts.</p>
@@ -66,7 +62,7 @@ tags:
 <p>When you look through the source code of <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">our demo's main JavaScript file</a>, you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.</p>
 
 <div class="note">
-<p><strong>Note</strong>: To find out more about basic JavaScript and WebGL, consult our <a href="/en-US/docs/Learn/JavaScript">JavaScript learning material</a>, and our <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL Tutorial</a>.</p>
+<p><strong>Note:</strong> To find out more about basic JavaScript and WebGL, consult our <a href="/en-US/docs/Learn/JavaScript">JavaScript learning material</a>, and our <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL Tutorial</a>.</p>
 </div>
 
 <h2 id="How_does_it_work">How does it work?</h2>
@@ -164,7 +160,7 @@ document.body.onload = start;</pre>
           console.log('Display found');</pre>
 
 <div class="note">
-<p><strong>Note</strong>: It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.</p>
+<p><strong>Note:</strong> It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.</p>
 </div>
 
 <h3 id="Starting_and_stopping_the_VR_presentation">Starting and stopping the VR presentation</h3>
@@ -232,7 +228,7 @@ document.body.onload = start;</pre>
 
 <p>Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:</p>
 
-<p><img alt="" src="capture2.png" style="display: block; margin: 0 auto;"></p>
+<img alt="" src="capture2.png">
 
 <p>You'll learn below how the stereoscopic view is actually produced.</p>
 
@@ -391,7 +387,7 @@ document.body.onload = start;</pre>
 
 <p>In this section we'll discuss the <code>displayPoseStats()</code> function, which displays our updated pose data on each frame. The function is fairly simple.</p>
 
-<p>First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{domxref("Float32Array")}}.</p>
+<p>First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{jsxref("Float32Array")}}.</p>
 
 <pre class="brush: js">function displayPoseStats(pose) {
   var pos = pose.position;

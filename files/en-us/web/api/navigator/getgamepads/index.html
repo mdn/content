@@ -9,14 +9,17 @@ tags:
 - Method
 - Navigator
 - Reference
+browser-compat: api.Navigator.getGamepads
 ---
-<p>{{APIRef("Gamepad API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
 
-<p>The <strong><code>Navigator.getGamepads()</code></strong> method returns an array of {{
-  domxref("Gamepad") }} objects, one for each gamepad connected to the device.</p>
+<p>The <strong><code>Navigator.getGamepads()</code></strong> method returns an array of 
+  {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.</p>
 
 <p>Elements in the array may be <code>null</code> if a gamepad disconnects during a
   session, so that the remaining gamepads retain the same index.</p>
+
+<p>Calls to this method will throw a <code>SecurityError</code> {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,24 +37,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Gamepad', '', 'The Gamepad API specification')}}</td>
-      <td>{{Spec2('Gamepad')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.getGamepads")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

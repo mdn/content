@@ -8,12 +8,13 @@ tags:
 - HTML
 - Method
 - Reference
+browser-compat: api.Document.getElementsByName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>getElementsByName()</code></strong> method
+<p>The <strong><code>getElementsByName()</code></strong> method
     of the {{domxref("Document")}} object returns a {{domxref("NodeList")}} Collection of
-    elements with a given {{domxref("element.name","name")}} in the document.</span></p>
+    elements with a given <code>name</code> attribute in the document.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,7 +47,7 @@ tags:
 
 <h2 id="Notes">Notes</h2>
 
-<p>The {{domxref("element.name","name")}} attribute can only be applied in (X)HTML
+<p>The <code>name</code> attribute can only be applied in (X)HTML
   documents.</p>
 
 <p>The returned {{domxref("NodeList")}} Collection contains <em>all</em> elements with the
@@ -54,7 +55,7 @@ tags:
   even elements which do not support the <code>name</code> attribute at all.</p>
 
 <div class="warning">
-  <p>The <strong>getElementsByName</strong> method works differently in IE10 and below.
+  <p><strong>Warning:</strong> The <strong>getElementsByName</strong> method works differently in IE10 and below.
     There, <code>getElementsByName()</code> also returns elements that have an <a
       href="/en-US/docs/Web/HTML/Global_attributes/id"><code>id</code> attribute</a> with
     the specified value. Be careful not to use the same string as both a <code>name</code>
@@ -62,45 +63,23 @@ tags:
 </div>
 
 <div class="warning">
-  <p>The <strong>getElementsByName</strong> method works differently in IE. There,
+  <p><strong>Warning:</strong> The <strong>getElementsByName</strong> method works differently in IE. There,
     <code>getElementsByName()</code> does not return all elements which may not have a
     <code>name</code> attribute (such as <code>&lt;span&gt;</code>).</p>
 </div>
 
 <div class="warning">
-  <p>Both IE and Edge return an {{domxref("HTMLCollection")}}, not a
+  <p><strong>Warning:</strong> Both IE and Edge return an {{domxref("HTMLCollection")}}, not a
     {{domxref("NodeList")}}</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-document-getelementsbyname',
-        "Document.getElementsByName()")}}</td>
-      <td>{{ Spec2('HTML WHATWG') }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 HTML", "html.html#ID-71555259",
-        "Document.getElementsByName()")}}</td>
-      <td>{{Spec2("DOM2 HTML")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getElementsByName")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

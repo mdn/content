@@ -9,10 +9,11 @@ tags:
   - Interface
   - Reference
   - Storage
+browser-compat: api.IDBTransaction
 ---
 <div>{{APIRef("IndexedDB")}}</div>
 
-<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="/en-US/docs/IndexedDB">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it <code>readonly</code> or <code>readwrite</code>), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an <code>IDBTransaction</code> object to abort transactions.</p>
+<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use {{domxref("IDBDatabase")}} to start transactions, {{domxref("IDBTransaction")}} to set the mode of the transaction (e.g. is it <code>readonly</code> or <code>readwrite</code>), and you access an {{domxref("IDBObjectStore")}} to make a request. You can also use an <code>IDBTransaction</code> object to abort transactions.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -72,7 +73,7 @@ objectStore1.put("1", "key");
  <dt>{{domxref("IDBTransaction.abort()")}}</dt>
  <dd>Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, this method fires an error event.</dd>
  <dt>{{domxref("IDBTransaction.objectStore()")}}</dt>
- <dd>Returns an {{domxref("IDBObjectStore")}} object representing an <span class="internalDFN">object store</span> that is part of the <span class="internalDFN">scope</span> of this <span class="internalDFN">transaction</span>.</dd>
+ <dd>Returns an {{domxref("IDBObjectStore")}} object representing an object store that is part of the scope of this transaction.</dd>
  <dt>{{domxref("IDBTransaction.commit()")}}</dt>
  <dd>For an active transaction, commits the transaction. Note that this doesn't normally <em>have</em> to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. <code>commit()</code> can be used to start the commit process without waiting for events from outstanding requests to be dispatched.</dd>
 </dl>
@@ -95,13 +96,12 @@ objectStore1.put("1", "key");
 
 <h2 id="Mode_constants">Mode constants</h2>
 
-<div>
-<div>{{ deprecated_header(13) }}</div>
+<div>{{Deprecated_Header}}</div>
 
 <div class="warning">
-<p>These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
+<p><strong>Warning:</strong> These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})</p>
 </div>
-</div>
+
 
 <p>Transactions can have one of three modes:</p>
 
@@ -116,32 +116,20 @@ objectStore1.put("1", "key");
  <tbody>
   <tr>
    <td><code><a>READ_ONLY</a></code></td>
-   <td>
-    <p>"readonly"</p>
-
-    <p>(0 in Chrome)</p>
-   </td>
+   <td>"readonly" (0 in Chrome)</td>
    <td>
     <p>Allows data to be read but not changed.</p>
    </td>
   </tr>
   <tr>
    <td><code><a>READ_WRITE</a></code></td>
-   <td>
-    <p>"readwrite"</p>
-
-    <p>(1 in Chrome)</p>
-   </td>
+   <td>"readwrite" (1 in Chrome)</td>
    <td>Allows reading and writing of data in existing data stores to be changed.</td>
   </tr>
   <tr>
    <td><code><a>VERSION_CHANGE</a></code></td>
-   <td>
-    <p>"versionchange"</p>
-
-    <p>(2 in Chrome)</p>
-   </td>
-   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
+   <td>"versionchange" (2 in Chrome)</td>
+   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="/en-US/docs/Web/API/IDBDatabase#setversion"><code>setVersion()</code></a> method of <a href="/en-US/docs/Web/API/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
   </tr>
  </tbody>
 </table>
@@ -199,31 +187,11 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}}</td>
-   <td>{{Spec2("IndexedDB 2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBTransaction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

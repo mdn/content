@@ -1,5 +1,5 @@
 ---
-title: MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode()
+title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
 tags:
   - API
@@ -8,6 +8,7 @@ tags:
   - MediaStreamAudioDestinationNode
   - Reference
   - Web Audio API
+browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -19,13 +20,31 @@ tags:
 
 <h3 id="Parameters">Parameters</h3>
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
-
 <dl>
  <dt><em>context</em></dt>
  <dd>An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.</dd>
  <dt><em>options {{optional_inline}}</em></dt>
- <dd>An <code><a href="https://webaudio.github.io/web-audio-api/#dictionary-audionodeoptions-members">AudioNodeOptions</a></code> dictionary object defining the properties you want the <code>MediaStreamAudioDestinationNode</code> to have.</dd>
+ <dd>An object defining the properties you want the <code>MediaStreamAudioDestinationNode</code> to have:
+  <ul>
+    <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
+        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+        and down-mixing</a> connections to any inputs to the node. (See
+      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+      definition depend on the value of <code>channelCountMode</code>.</li>
+    <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+      information including default values.)</li>
+    <li>
+      <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
+      interpretation will define how audio <a
+        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+        and down-mixing</a> will happen.<br>
+      The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+      {{domxref("AudioNode.channelCountMode")}} for more information including default
+      values.)
+    </li>
+  </ul>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -40,21 +59,8 @@ var myDestination = new MediaStreamAudioDestinationNode(<em>ac</em>);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API','#mediastreamaudiodestinationnode','MediaStreamAudioDestinationNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode")}}</p>
+<p>{{Compat}}</p>

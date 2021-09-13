@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web Audio API
   - filter
+browser-compat: api.BaseAudioContext.createIIRFilter
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -19,6 +20,12 @@ tags:
   which represents a general <strong>{{interwiki("wikipedia", "infinite impulse
     response")}}</strong> (IIR) filter which can be configured to serve as various types
   of filter.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
+    constructor is the recommended way to create a {{domxref("IIRFilterNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -55,25 +62,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createiirfilter',
-        'createIIRFilter()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createIIRFilter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

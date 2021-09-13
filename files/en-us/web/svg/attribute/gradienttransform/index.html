@@ -4,12 +4,18 @@ slug: Web/SVG/Attribute/gradientTransform
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.linearGradient.gradientTransform
 ---
 <div>{{SVGRef}}</div>
 
 <p>The <code>gradientTransform</code> attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i.e., userSpaceOnUse or objectBoundingBox). This allows for things such as skewing the gradient. This additional transformation matrix is post-multiplied to (i.e., inserted to the right of) any previously defined transformations, including the implicit transformation necessary to convert from object bounding box units to user space.</p>
 
-<p>Two elements are using this attribute: {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("linearGradient")}}</li>
+  <li>{{SVGElement("radialGradient")}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -105,7 +111,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.linearGradient.gradientTransform")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

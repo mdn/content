@@ -131,10 +131,6 @@ browser.alarms.onAlarm.addListener(copy);</pre>
  <li>When using content scripts, the Clipboard API is available only for HTTPS pages. As a workaround, use messaging between your content scripts and the background script.</li>
 </ul>
 
-<div class="notecard note">
-<p>The <code>execCommand('copy')</code> API isn't supported in <strong>Safari</strong></p>
-</div>
-
 <h2 id="Reading_from_the_clipboard">Reading from the clipboard</h2>
 
 <p>The <code>execCommand()</code> method provides the <code>"paste"</code> command, which lets you paste the current clipboard contents at the insertion point in an editable control. You can gain greater flexibility using the Clipboard API's {{domxref("Clipboard.read()")}} and {{domxref("Clipboard.readText()")}} methods.</p>

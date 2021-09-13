@@ -1,5 +1,5 @@
 ---
-title: getBBox()
+title: SVGGraphicsElement.getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 tags:
 - API
@@ -8,10 +8,11 @@ tags:
 - SVG
 - SVG DOM
 - SVGGraphicsElement
+browser-compat: api.SVGGraphicsElement.getBBox
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> allows us to determine
+<p>The <code><strong>SVGGraphicsElement.getBBox()</strong></code> method allows us to determine
   the coordinates of the smallest rectangle in which the object fits. The coordinates
   returned are with respect to the current SVG space (after the application of all
   geometry attributes on all the elements contained in the target element).</p>
@@ -24,7 +25,7 @@ tags:
 </div>
 
 <div class="notecard note">
-  <p><code>getBBox</code> returns different values than
+  <p><strong>Note:</strong> <code>getBBox</code> returns different values than
     {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}, as the
     latter returns value relative to the viewport</p>
 </div>
@@ -98,23 +99,11 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);</
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('SVG1.1', 'types.html#__svg__SVGLocatable__getBBox', 'getBBox')}}
-      </td>
-      <td>{{Spec2('SVG1.1')}}</td>
-      <td>Initial definition (applies to SVG elements only).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

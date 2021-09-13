@@ -13,13 +13,14 @@ tags:
   - Read-only
   - Reference
   - bubbles
+browser-compat: api.Event.bubbles
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
 <p>The <code><strong>bubbles</strong></code> read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM or not.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">Event bubbling and capture</a> for more information on bubbling.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">Event bubbling and capture</a> for more information on bubbling.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -28,7 +29,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}}, which is <code>true</code> if the event bubbles up through the DOM.</p>
+<p>A boolean value, which is <code>true</code> if the event bubbles up through the DOM.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -45,36 +46,16 @@ tags:
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Only certain events can bubble. Events that do bubble have this property set to <code>true</code>. You can use this property to check if an event is allowed to bubble or not.</p>
+<p><strong>Note:</strong> Only certain events can bubble. Events that do bubble have this property set to <code>true</code>. You can use this property to check if an event is allowed to bubble or not.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-bubbles', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events', '#Events-Event-canBubble', 'Event.bubbles')}}</td>
-   <td>{{ Spec2('DOM2 Events') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.bubbles")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

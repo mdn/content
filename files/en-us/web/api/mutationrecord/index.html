@@ -8,20 +8,23 @@ tags:
   - DOM Reference
   - NeedsContent
   - Reference
+browser-compat: api.MutationRecord
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>A <strong><code>MutationRecord</code></strong> represents an individual DOM mutation. It is the object that is passed to {{domxref("MutationObserver")}}'s callback.</p>
+<p>A <strong><code>MutationRecord</code></strong> represents an individual DOM mutation. It is the object that is inside the array passed to {{domxref("MutationObserver")}}'s callback.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+     <th>Property</th>
+     <th>Type</th>
+     <th>Description</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
   <tr>
    <td>{{domxref("MutationRecord.type")}}</td>
    <td><code>String</code></td>
@@ -77,7 +80,7 @@ tags:
      For <code>childList</code>, it is <code>null</code>.</p>
 
     <div class="note">
-    <p>Note that for this to work as expected, <code>attributeOldValue</code> or <code>characterDataOldValue</code> must be set to <code>true</code> in the corresponding <a href="/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit</a> parameter of the <code>MutationObserver</code> <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a> method</p>
+    <p><strong>Note:</strong> For this to work as expected, <code>attributeOldValue</code> or <code>characterDataOldValue</code> must be set to <code>true</code> in the corresponding <a href="/en-US/docs/Web/API/MutationObserverInit">MutationObserverInit</a> parameter of the <code>MutationObserver</code> <a href="/en-US/docs/Web/API/MutationObserver/observe">observe</a> method</p>
     </div>
    </td>
   </tr>
@@ -86,23 +89,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#mutationrecord', 'MutationRecord')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationRecord")}}</p>
+<p>{{Compat}}</p>

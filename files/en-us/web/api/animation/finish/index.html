@@ -11,12 +11,13 @@ tags:
   - Web Animations
   - waapi
   - web animations api
+browser-compat: api.Animation.finish
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<div>
-<p><span class="seoSummary">The <strong><code>finish()</code> </strong>method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction.</span> That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.</p>
-</div>
+<p>The <strong><code>finish()</code> </strong>method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction.</p>
+
+<p>That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -63,24 +64,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-finish', 'finish()')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Animation.finish")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

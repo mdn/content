@@ -9,10 +9,13 @@ tags:
   - Interface
   - Reference
   - Web API
+browser-compat: api.Element
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</span> For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p>
+<p><strong><code>Element</code></strong> is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</p>
+
+<p>For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p>
 
 <p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p>
 
@@ -27,6 +30,10 @@ tags:
  <dd>Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.</dd>
  <dt>{{DOMxRef("Element.attributes")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("NamedNodeMap")}} object containing the assigned attributes of the corresponding HTML element.</dd>
+ <dt>{{domxref("Element.childElementCount")}} {{readonlyInline}}</dt>
+ <dd>Returns the number of child elements of this element.</dd>
+ <dt>{{domxref("Element.children")}} {{readonlyInline}}</dt>
+ <dd>Returns the child elements of this element.</dd>
  <dt>{{DOMxRef("Element.classList")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{DOMxRef("DOMTokenList")}} containing the list of class attributes.</dd>
  <dt>{{DOMxRef("Element.className")}}</dt>
@@ -39,14 +46,14 @@ tags:
  <dd>Returns a {{jsxref("Number")}} representing the width of the top border of the element.</dd>
  <dt>{{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("Number")}} representing the inner width of the element.</dd>
- <dt>{{DOMxRef("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.</dd>
- <dt>{{DOMxRef("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.</dd>
+ <dt>{{domxref("Element.firstElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the first child element of this element.</dd>
  <dt>{{DOMxRef("Element.id")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the id of the element.</dd>
  <dt>{{DOMxRef("Element.innerHTML")}}</dt>
  <dd>Is a {{DOMxRef("DOMString")}} representing the markup of the element's content.</dd>
+ <dt>{{domxref("Element.lastElementChild")}} {{readonlyInline}}</dt>
+ <dd>Returns the last child element of this element.</dd>
  <dt>{{DOMxRef("Element.localName")}} {{readOnlyInline}}</dt>
  <dd>A {{DOMxRef("DOMString")}} representing the local part of the qualified name of the element.</dd>
  <dt>{{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}</dt>
@@ -83,21 +90,9 @@ tags:
  <dd>Returns the shadow root that is hosted by the element, regardless if its open or closed. <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
  <dt>{{DOMxRef("Element.slot")}} {{Experimental_Inline}}</dt>
  <dd>Returns the name of the shadow DOM slot the element is inserted in.</dd>
- <dt>{{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
  <dt>{{DOMxRef("Element.tagName")}} {{readOnlyInline}}</dt>
  <dd>Returns a {{jsxref("String")}} with the name of the tag for the given element.</dd>
- <dt>{{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("UndoManager")}} associated with the element.</dd>
- <dt>{{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.</dd>
 </dl>
-
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to <code>Element</code>.</p>
-
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
 
 <h3 id="Properties_included_from_Aria">Properties included from ARIA</h3>
 
@@ -202,10 +197,16 @@ tags:
 <dl>
  <dt>{{DOMxRef("EventTarget.addEventListener()")}}</dt>
  <dd>Registers an event handler to a specific event type on the element.</dd>
+ <dt>{{DOMxRef("Element.after()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the <code>Element</code>'s parent, just after the <code>Element</code>.</dd>
  <dt>{{DOMxRef("Element.attachShadow()")}}</dt>
  <dd>Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.</dd>
  <dt>{{DOMxRef("Element.animate()")}} {{Experimental_Inline}}</dt>
  <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
+ <dt>{{DOMxRef("Element.append()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after the last child of the element.</dd>
+ <dt>{{DOMxRef("Element.before()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the <code>Element</code>'s parent, just before the <code>Element</code>.</dd>
  <dt>{{DOMxRef("Element.closest()")}}</dt>
  <dd>Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.</dd>
  <dt>{{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
@@ -213,17 +214,23 @@ tags:
  <dt>{{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}</dt>
  <dd>Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.</dd>
  <dt>{{DOMxRef("EventTarget.dispatchEvent()")}}</dt>
- <dd>Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.</dd>
+ <dd>Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.</dd>
  <dt>{{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}</dt>
  <dd>Returns an array of Animation objects currently active on the element.</dd>
  <dt>{{DOMxRef("Element.getAttribute()")}}</dt>
  <dd>Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNames()")}}</dt>
  <dd>Returns an array of attribute names from the current element.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNode()")}}</dt>
+ <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
+ <dt>{{DOMxRef("Element.getAttributeNodeNS()")}}</dt>
+ <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
  <dt>{{DOMxRef("Element.getAttributeNS()")}}</dt>
  <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
  <dt>{{DOMxRef("Element.getBoundingClientRect()")}}</dt>
  <dd>Returns the size of an element and its position relative to the viewport.</dd>
+ <dt>{{domxref("Element.getBoxQuads()")}} {{experimental_inline}}</dt>
+ <dd>Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.</dd>
  <dt>{{DOMxRef("Element.getClientRects()")}}</dt>
  <dd>Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.</dd>
  <dt>{{DOMxRef("Element.getElementsByClassName()")}}</dt>
@@ -233,11 +240,11 @@ tags:
  <dt>{{DOMxRef("Element.getElementsByTagNameNS()")}}</dt>
  <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.</dd>
  <dt>{{DOMxRef("Element.hasAttribute()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.</dd>
+ <dd>Returns a boolean value indicating if the element has the specified attribute or not.</dd>
  <dt>{{DOMxRef("Element.hasAttributeNS()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
+ <dd>Returns a boolean value indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
  <dt>{{DOMxRef("Element.hasAttributes()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.</dd>
+ <dd>Returns a boolean value indicating if the element has one or more HTML attributes present.</dd>
  <dt>{{DOMxRef("Element.hasPointerCapture()")}}</dt>
  <dd>Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.</dd>
  <dt>{{DOMxRef("Element.insertAdjacentElement()")}}</dt>
@@ -247,23 +254,29 @@ tags:
  <dt>{{DOMxRef("Element.insertAdjacentText()")}}</dt>
  <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
  <dt>{{DOMxRef("Element.matches()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
- <dt>{{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.</dd>
+ <dd>Returns a boolean value indicating whether or not the element would be selected by the specified selector string.</dd>
+ <dt>{{DOMxRef("Element.prepend()")}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child of the element.</dd>
  <dt>{{DOMxRef("Element.querySelector()")}}</dt>
  <dd>Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.querySelectorAll()")}}</dt>
  <dd>Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.</dd>
  <dt>{{DOMxRef("Element.releasePointerCapture()")}}</dt>
  <dd>Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.</dd>
- <dt>{{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("Element.remove()")}}</dt>
  <dd>Removes the element from the children list of its parent.</dd>
  <dt>{{DOMxRef("Element.removeAttribute()")}}</dt>
  <dd>Removes the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.removeAttributeNode()")}}</dt>
+ <dd>Removes the node representation of the named attribute from the current node.</dd>
  <dt>{{DOMxRef("Element.removeAttributeNS()")}}</dt>
  <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("EventTarget.removeEventListener()")}}</dt>
  <dd>Removes an event listener from the element.</dd>
+ <dt>{{DOMxRef("Element.replaceChildren()")}}</dt>
+ <dd>Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.</dd>
+ <dt>{{DOMxRef("Element.replaceWith()")}}</dt>
+ <dd>Replaces the element in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
  <dt>{{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}</dt>
  <dd>Asynchronously asks the browser to make the element full-screen.</dd>
  <dt>{{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}</dt>
@@ -278,29 +291,18 @@ tags:
  <dd>Scrolls to a particular set of coordinates inside a given element.</dd>
  <dt>{{DOMxRef("Element.setAttribute()")}}</dt>
  <dd>Sets the value of a named attribute of the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNode()")}}</dt>
+ <dd>Sets the node representation of the named attribute from the current node.</dd>
+ <dt>{{DOMxRef("Element.setAttributeNodeNS()")}}</dt>
+ <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
  <dt>{{DOMxRef("Element.setAttributeNS()")}}</dt>
  <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}</dt>
+ <dt>{{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}{{Deprecated_Inline}}</dt>
  <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
  <dt>{{DOMxRef("Element.setPointerCapture()")}}</dt>
  <dd>Designates a specific element as the capture target of future <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a>.</dd>
  <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
  <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
-</dl>
-
-<h3 id="Obsolete_methods">Obsolete methods</h3>
-
-<dl>
- <dt>{{DOMxRef("Element.getAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.getAttributeNodeNS()")}} {{Obsolete_Inline}}</dt>
- <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.</dd>
- <dt>{{DOMxRef("Element.removeAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Removes the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNode()")}} {{Obsolete_Inline}}</dt>
- <dd>Sets the node representation of the named attribute from the current node.</dd>
- <dt>{{DOMxRef("Element.setAttributeNodeNS()")}} {{Obsolete_Inline}}</dt>
- <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
@@ -326,6 +328,9 @@ tags:
  <dt>{{domxref("Element/wheel_event","wheel")}}</dt>
  <dd>Fired when the user rotates a wheel button on a pointing device (typically a mouse).<br>
  Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.</dd>
+ <dt>{{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}</dt>
+ <dd>Fired when a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> is violated.
+  Also available via the global {{DOMxRef("GlobalEventHandlers.onsecuritypolicyviolation", "onsecuritypolicyviolation")}} property, which available on elements and the {{domxref("Document")}} and {{domxref("Window")}} objects.</dd>
 </dl>
 
 <h3 id="Clipboard_events">Clipboard events</h3>
@@ -460,106 +465,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Pseudo-Elements", '#window-interface', 'Element')}}</td>
-   <td>{{Spec2("CSS4 Pseudo-Elements")}}</td>
-   <td>Added the <code>pseudo()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Animations", '', '')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>Added the <code>getAnimations()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Undo Manager', '', 'Element')}}</td>
-   <td>{{Spec2('Undo Manager')}}</td>
-   <td>Added the <code>undoScope</code> and <code>undoManager</code> properties.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Added the following event handlers: <code>ongotpointercapture</code> and <code>onlostpointercapture</code>.<br>
-    Added the following methods: <code>setPointerCapture()</code> and <code>releasePointerCapture()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Added the following event handlers: <code>ongotpointercapture</code> and <code>onlostpointercapture</code>.<br>
-    Added the following methods: <code>setPointerCapture()</code> and <code>releasePointerCapture()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>Added the following methods: <code>querySelector()</code> and <code>querySelectorAll()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Added the <code>requestPointerLock()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#api', 'Element')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Added the <code>requestFullscreen()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Added the following properties: <code>innerHTML</code>, and <code>outerHTML</code>.<br>
-    Added the following method: <code>insertAdjacentHTML()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extension-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Added the following properties: <code>scrollTop</code>, <code>scrollLeft</code>, <code>scrollWidth</code>, <code>scrollHeight</code>, <code>clientTop</code>, <code>clientLeft</code>, <code>clientWidth</code>, and <code>clientHeight</code>.<br>
-    Added the following methods: <code>getClientRects()</code>, <code>getBoundingClientRect()</code>, <code>scroll()</code>, <code>scrollBy()</code>, <code>scrollTo()</code> and <code>scrollIntoView()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added inheritance of the {{DOMxRef("ElementTraversal")}} interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-element', 'Element')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Added the following methods: <code>closest()</code>, <code>insertAdjacentElement()</code> and <code>insertAdjacentText()</code>.<br>
-    Moved <code>hasAttributes()</code> from the <code>Node</code> interface to this one.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#interface-element", "Element")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>Removed the following methods: <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, and <code>setIdAttributeNode()</code>.<br>
-    Modified the return value of <code>getElementsByTagName()</code> and <code>getElementsByTagNameNS()</code>.<br>
-    Removed the <code>schemaTypeInfo</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added the following methods: <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, and <code>setIdAttributeNode()</code>. These methods were never implemented and have been removed in later specifications.<br>
-    Added the <code>schemaTypeInfo</code> property. This property was never implemented and has been removed in later specifications.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>The <code>normalize()</code> method has been moved to {{DOMxRef("Node")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element")}}</p>
+<p>{{Compat}}</p>

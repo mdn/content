@@ -11,13 +11,17 @@ tags:
 - Non-standard
 - Reference
 - moveTo
+- Deprecated
+browser-compat: api.FileSystemEntry.moveTo
 ---
 <p>{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("FileSystemEntry")}} interface's method
-    <code><strong>moveTo</strong></code><strong><code>()</code></strong> moves the file
+<p>The {{domxref("FileSystemEntry")}} interface's method
+    <strong><code>moveTo()</code></strong> moves the file
     specified by the entry to a new location on the file system, or renames the file if
-    the destination directory is the same as the source.</span> There are some typical
+    the destination directory is the same as the source.</p>
+
+<p>There are some typical
   restrictions on what you can do:</p>
 
 <ul>
@@ -89,7 +93,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemEntry.moveTo")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

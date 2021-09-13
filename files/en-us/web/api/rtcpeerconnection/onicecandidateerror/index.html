@@ -2,18 +2,20 @@
 title: RTCPeerConnection.onicecandidateerror
 slug: Web/API/RTCPeerConnection/onicecandidateerror
 tags:
-- Experimental
-- ICE
-- RTCPeerConnection
-- Reference
-- WebRTC
-- onicecandidateerror
+  - ICE
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - onicecandidateerror
+  - Event Handler
+  - Property
+browser-compat: api.RTCPeerConnection.onicecandidateerror
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The <code><strong>RTCPeerConnection.onicecandidateerror</strong></code> property is an
-	{{domxref("EventHandler")}} which specifies a function which is called to handle the
-	{{event("icecandidateerror")}} event when it occurs on an
+	<a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function which is called to handle the
+	{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event when it occurs on an
 	{{domxref("RTCPeerConnection")}} instance. This event is fired when an error occurs
 	during the {{Glossary("ICE")}} candidate gathering process.</p>
 
@@ -26,7 +28,7 @@ tags:
 
 <p>This should be set to a function you provide which is passed a single parameter: an
 	{{domxref("RTCPeerConnectionIceErrorEvent")}} object describing the
-	{{event("icecandidateerror")}} event. The event offers properties describing the error
+	{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event. The event offers properties describing the error
 	to help you handle it appropriately.</p>
 
 <h2 id="Example">Example</h2>
@@ -44,31 +46,15 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-onicecandidateerror',
-				'RTCPeerConnection.onicecandidateerror') }}</td>
-			<td>{{ Spec2('WebRTC 1.0') }}</td>
-			<td>Initial specification.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.onicecandidateerror")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-	<li>The {{event("icecandidateerror")}} event and its type,
+	<li>The {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event and its type,
 		{{domxref("RTCPeerConnectionIceErrorEvent")}}.</li>
 </ul>

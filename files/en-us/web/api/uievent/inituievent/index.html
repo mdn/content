@@ -8,6 +8,7 @@ tags:
 - Event
 - Method
 - UIEvent
+browser-compat: api.UIEvent.initUIEvent
 ---
 <p>{{APIRef("DOM Events")}} {{deprecated_header}}</p>
 
@@ -19,13 +20,11 @@ tags:
   before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
   dispatched, it doesn't do anything anymore.</p>
 
-<div class="note">
-  <p><strong>Do not use this method anymore as it is deprecated.</strong></p>
+<div class="warning">
+  <p><strong>Warning:</strong> Do not use this method anymore as it is deprecated.</p>
 
   <p>Instead use specific event constructors, like {{domxref("UIEvent.UIEvent",
-    "UIEvent()")}}. The page on <a
-      href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering events</a> gives more information about the way to use these.</p>
+    "UIEvent()")}}. The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,11 +38,11 @@ tags:
   <dt><em><code>type</code></em></dt>
   <dd>Is a {{domxref("DOMString")}} defining the type of event.</dd>
   <dt><em><code>canBubble</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the
+  <dd>Is a boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.</dd>
   <dt><em><code>cancelable</code></em></dt>
-  <dd>Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the
+  <dd>Is a boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.</dd>
   <dt><em><code>view</code></em></dt>
   <dd>Is the {{domxref("WindowProxy")}} associated with the event.</dd>
@@ -64,30 +63,11 @@ e.initUIEvent("click", true, true, window, 1);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Events', '#widl-UIEvent-initUIEvent',
-        'UIEvent.initUIEvent()')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>From {{SpecName('DOM2 Events')}}, deprecated.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Events', '#Events-UIEvent', 'UIEvent.initUIEvent()')}}</td>
-      <td>{{Spec2('DOM2 Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.UIEvent.initUIEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

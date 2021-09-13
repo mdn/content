@@ -7,8 +7,9 @@ tags:
   - Interface
   - Non-standard
   - Reference
+browser-compat: api.MSGestureEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+<div>{{APIRef("DOM Events")}}</div>
 
 <p>{{Non-standard_header()}}</p>
 
@@ -33,7 +34,7 @@ tags:
  <dt>{{domxref("MSGestureEvent.gestureObject")}} {{readonlyinline}}</dt>
  <dd>Returns the {{domxref("MSGesture")}} object for this gesture event.</dd>
  <dt>{{domxref("MSGestureEvent.rotation")}} {{readonlyinline}}</dt>
- <dd>Amount of rotation (in radians) since the previous {{domxref("MSGestureEvent")}} of the current gesture. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation.</dd>
+ <dd>Amount of rotation (in radians) since the previous {{domxref("MSGestureEvent")}} of the current gesture. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation.</dd>
  <dt>{{domxref("MSGestureEvent.scale")}} {{readonlyinline}}</dt>
  <dd>The difference in scale (for zoom gestures) from the previous {{domxref("MSGestureEvent")}} of the current gesture.</dd>
  <dt>{{domxref("MSGestureEvent.translationX")}} {{readonlyinline}}</dt>
@@ -76,7 +77,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MSGestureEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

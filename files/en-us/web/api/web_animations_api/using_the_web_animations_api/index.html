@@ -20,7 +20,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Web Animations")}}</p>
 
-<p class="summary">The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.</p>
+<p>The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.</p>
 
 <h2 id="Meet_the_Web_Animations_API">Meet the Web Animations API</h2>
 
@@ -38,9 +38,9 @@ tags:
 
 <h3 id="The_CSS_version">The CSS version</h3>
 
-<p>Here’s a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
+<p>Here’s a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full <a href="https://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="https://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif"></a></p>
 
 <p>Notice that the background moves, Alice spins, and her color changes at an offset from her spinning. We’re going to focus on just Alice for this tutorial. Here’s the simplified CSS that controls Alice’s animation:</p>
 
@@ -74,7 +74,7 @@ tags:
 
 <pre class="brush: js">var aliceTumbling = [
   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-  { color: '#431236', offset: 0.3},
+  { color: '#431236', offset: 0.3 },
   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
 ];</pre>
 
@@ -98,12 +98,12 @@ tags:
 <p>You’ll notice a few differences here from how equivalent values are represented in CSS:</p>
 
 <ul>
- <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
+ <li>For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.</li>
  <li>The other thing you’ll notice is that it’s <code>iterations</code>, not <code>iteration-count</code>.</li>
 </ul>
 
 <div class="note">
-<p>There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string <code>"infinite"</code>, but instead uses the JavaScript keyword <code>Infinity</code>. And instead of <code>timing-function</code> we use <code>easing</code>. We aren’t listing an <code>easing</code> value here because, unlike CSS Animations where the default <a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a> is <code>ease</code>, in the Web Animations API the default easing is <code>linear</code> — which is what we want here.</p>
+<p><strong>Note:</strong> There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string <code>"infinite"</code>, but instead uses the JavaScript keyword <code>Infinity</code>. And instead of <code>timing-function</code> we use <code>easing</code>. We aren’t listing an <code>easing</code> value here because, unlike CSS Animations where the default <a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a> is <code>ease</code>, in the Web Animations API the default easing is <code>linear</code> — which is what we want here.</p>
 </div>
 
 <h4 id="Bring_the_pieces_together">Bring the pieces together</h4>
@@ -115,14 +115,14 @@ tags:
   aliceTiming
 )</pre>
 
-<p>And boom: the animation starts playing (see the finished <a href="http://codepen.io/rachelnabors/pen/rxpmJL">version on Codepen</a>).</p>
+<p>And boom: the animation starts playing (see the finished <a href="https://codepen.io/rachelnabors/pen/rxpmJL">version on Codepen</a>).</p>
 
 <p>The <code>animate()</code> method can be called on any DOM element that could be animated with CSS. And it can be written in several ways. Instead of making objects for keyframes and timing properties, we could just pass their values in directly, like so:</p>
 
 <pre class="brush: js">document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3},
+    { color: '#431236', offset: 0.3 },
     { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
   ], {
     duration: 3000,
@@ -135,15 +135,15 @@ tags:
 <pre class="brush: js">document.getElementById("alice").animate(
   [
     { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-    { color: '#431236', offset: 0.3},
+    { color: '#431236', offset: 0.3 },
     { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
   ], 3000);</pre>
 
 <h2 id="Controlling_playback_with_play_pause_reverse_and_updatePlaybackRate">Controlling playback with play(), pause(), reverse(), and updatePlaybackRate()</h2>
 
-<p>While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation’s playback. The Web Animations API provides several useful methods for controlling playback. Let’s take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
+<p>While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation’s playback. The Web Animations API provides several useful methods for controlling playback. Let’s take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the <a href="https://codepen.io/rachelnabors/pen/PNYGZQ">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="growing-shrinking_article_optimized.gif"></a></p>
 
 <p>In this game, Alice has an animation that causes her to go from small to big which we control via a bottle and a cupcake. Both of these have their own animations.</p>
 
@@ -206,9 +206,9 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
-<p>In <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen’s Race example, Alice and the Red Queen are running to stay in place (check out the <a href="http://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Through_the_Looking-Glass">Through the Looking-Glass</a>, Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen’s Race example, Alice and the Red Queen are running to stay in place (check out the <a href="https://codepen.io/rachelnabors/pen/PNGGaV">full code on Codepen</a>):</p>
 
-<p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
+<p><a href="https://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="red-queen-race_optimized.gif"></a></p>
 
 <p>Because small children tire out easily, unlike automaton chess pieces, Alice is constantly slowing down. We can do this by setting a decay on her animation’s <code>playbackRate</code>. We use <code>updatePlaybackRate()</code> instead of setting the playbackRate directly since that produces a smooth update:</p>
 
@@ -319,7 +319,7 @@ drinking.pause();</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not shipping in all browsers as of this writing, but the polyfill does support them today.</p>
+<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not shipping in all browsers as of this writing, but the polyfill does support them today.</p>
 </div>
 
 <h2 id="Callbacks_and_promises">Callbacks and promises</h2>
@@ -351,7 +351,7 @@ aliceChange.onfinish = endGame;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li class="post__title">The <a href="http://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
- <li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods</li>
- <li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
+ <li>The <a href="https://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
+ <li><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods</li>
+ <li><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
 </ul>

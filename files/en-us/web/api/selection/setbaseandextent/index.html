@@ -8,6 +8,7 @@ tags:
 - Reference
 - Selection
 - setBaseAndExtent
+browser-compat: api.Selection.setBaseAndExtent
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
@@ -38,7 +39,7 @@ tags:
 </dl>
 
 <div class="note">
-  <p><strong>Note</strong>: If the focus position appears before the anchor position in
+  <p><strong>Note:</strong> If the focus position appears before the anchor position in
     the document, the direction of the selection is reversed — the caret is placed at the
     beginning of the text rather the end, which matters for any keyboard command that
     might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
@@ -123,7 +124,7 @@ button.onclick = function() {
 <p>{{ EmbedLiveSample('Examples', '100%', 370) }}</p>
 
 <div class="note">
-  <p><strong>Note</strong>: You can find this <a
+  <p><strong>Note:</strong> You can find this <a
       href="https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html">example
       on GitHub</a> (<a
       href="https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html">see
@@ -132,25 +133,11 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Selection API', '#dom-selection-setbaseandextent',
-        'Selection.setBaseAndExtent()')}}</td>
-      <td>{{Spec2('Selection API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Selection.setBaseAndExtent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

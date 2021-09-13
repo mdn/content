@@ -12,7 +12,9 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p><span class="seoSummary">Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</span> This article provides a detailed introduction to using web workers.</p>
+<p>Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (although the <code>responseXML</code> and <code>channel</code> attributes are always null) or <code><a href="/en-US/docs/Web/API/Fetch_API">fetch</a></code> (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).</p>
+
+<p>This article provides a detailed introduction to using web workers.</p>
 
 <h2 id="Web_Workers_API">Web Workers API</h2>
 
@@ -21,14 +23,14 @@ tags:
 <p>The worker context is represented by a {{domxref("DedicatedWorkerGlobalScope")}} object in the case of dedicated workers (standard workers that are utilized by a single script; shared workers use {{domxref("SharedWorkerGlobalScope")}}). A dedicated worker is only accessible from the script that first spawned it, whereas shared workers can be accessed from multiple scripts.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Web/API/Web_Workers_API">The Web Workers API landing page</a> for reference documentation on workers and additional guides.</p>
 </div>
 
 <p>You can run whatever code you like inside the worker thread, with some exceptions. For example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("window")}} object. But you can use a large number of items available under <code>window</code>, including <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, and data storage mechanisms like <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>. See <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and classes available to workers</a> for more details.</p>
 
 <p>Data is sent between workers and the main thread via a system of messages — both sides send their messages using the <code>postMessage()</code> method, and respond to messages via the <code>onmessage</code> event handler (the message is contained within the {{event("Message")}} event's data attribute.) The data is copied rather than shared.</p>
 
-<p>Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use <a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the exception that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
+<p>Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the exception that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
 
 <h2 id="Dedicated_workers">Dedicated workers</h2>
 
@@ -50,22 +52,19 @@ tags:
 
 <p>Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
-<div style="overflow: hidden;">
-<pre class="brush: js">var myWorker = new Worker('worker.js');
-</pre>
-</div>
+<pre class="brush: js">var myWorker = new Worker('worker.js');</pre>
 
 <h3 id="Sending_messages_to_and_from_a_dedicated_worker">Sending messages to and from a dedicated worker</h3>
 
 <p>The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.onmessage", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
 <pre class="brush: js">first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
 second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }</pre>
 
@@ -91,13 +90,13 @@ second.onchange = function() {
 
 <p>Here we grab the message event data and set it as the <code>textContent</code> of the result paragraph, so the user can see the result of the calculation.</p>
 
-<div class="note"><strong>Note</strong>: Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</div>
+<div class="note"><p><strong>Note:</strong> Notice that <code>onmessage</code> and <code>postMessage()</code> need to be hung off the <code>Worker</code> object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.</p></div>
 
-<div class="note"><strong>Note</strong>: When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</div>
+<div class="note"><p><strong>Note:</strong> When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read {{anch("Transferring data to and from workers further details", "Transferring data to and from workers: further details")}} for a much more thorough explanation.</p></div>
 
 <h3 id="Terminating_a_worker">Terminating a worker</h3>
 
-<p>If you need to immediately terminate a running worker from the main thread, you can do so by calling the worker's {{domxref("Worker", "terminate")}} method:</p>
+<p>If you need to immediately terminate a running worker from the main thread, you can do so by calling the worker's {{domxref("Worker", "terminate")}} method:</p>
 
 <pre class="brush: js">myWorker.terminate();</pre>
 
@@ -107,7 +106,7 @@ second.onchange = function() {
 
 <p>When a runtime error occurs in the worker, its <code>onerror</code> event handler is called. It receives an event named <code>error</code> which implements the <code>ErrorEvent</code> interface.</p>
 
-<p>The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's <a class="internal" href="/en-US/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code> </a> method.</p>
+<p>The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's <a href="/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> method.</p>
 
 <p>The error event has the following three fields that are of interest:</p>
 
@@ -133,9 +132,9 @@ importScripts('foo.js');                 /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');       /* imports two scripts */
 importScripts('//example.com/hello.js'); /* You can import scripts from other origins */</pre>
 
-<p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
+<p>The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, <code>NETWORK_ERROR</code> is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations <strong>after</strong> the <code>importScripts()</code> method are also kept, since these are always evaluated before the rest of the code.</p>
 
-<div class="note"><strong>Note</strong>: Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</div>
+<div class="note"><p><strong>Note:</strong> Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into <code>importScripts()</code> . This is done synchronously; <code>importScripts()</code> does not return until all the scripts have been loaded and executed.</p></div>
 
 <h2 id="Shared_workers">Shared workers</h2>
 
@@ -144,11 +143,11 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 <p>Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
+<p><strong>Note:</strong> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
+<p><strong>Note:</strong> In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).</p>
 </div>
 
 <h3 id="Spawning_a_shared_worker">Spawning a shared worker</h3>
@@ -159,10 +158,10 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <p>One big difference is that with a shared worker you have to communicate via a <code>port</code> object — an explicit port is opened that the scripts can use to communicate with the worker (this is done implicitly in the case of dedicated workers).</p>
 
-<p>The port connection needs to be started either implicitly by use of the <code>onmessage</code> event handler or explicitly with the <code>start()</code> method before any messages can be posted. Calling <code>start()</code> is only needed if the <code>message</code> event is wired up via the <code>addEventListener()</code> method.</p>
+<p>The port connection needs to be started either implicitly by use of the <code>onmessage</code> event handler or explicitly with the <code>start()</code> method before any messages can be posted. Calling <code>start()</code> is only needed if the <code>message</code> event is wired up via the <code>addEventListener()</code> method.</p>
 
 <div class="note">
-<p><strong>Note</strong>: When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
+<p><strong>Note:</strong> When using the <code>start()</code> method to open the port connection, it needs to be called from both the parent thread and the worker thread if two-way communication is needed.</p>
 </div>
 
 <h3 id="Sending_messages_to_and_from_a_shared_worker">Sending messages to and from a shared worker</h3>
@@ -208,15 +207,15 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 <h2 id="Content_security_policy">Content security policy</h2>
 
-<p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
+<p>Workers are considered to have their own execution context, distinct from the document that created them. For this reason they are, in general, not governed by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a> of the document (or parent worker) that created them. So for example, suppose a document is served with the following header:</p>
 
 <pre class="brush: plain">Content-Security-Policy: script-src 'self'</pre>
 
-<div>Among other things, this will prevent any scripts it includes from using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.<br>
-<br>
-To specify a content security policy for the worker, set a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> response header for the request which delivered the worker script itself.<br>
-<br>
-The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.</div>
+<p>Among other things, this will prevent any scripts it includes from using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. However, if the script constructs a worker, code running in the worker's context <em>will</em> be allowed to use <code>eval()</code>.</p>
+
+<p>To specify a content security policy for the worker, set a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> response header for the request which delivered the worker script itself.</p>
+
+<p>The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the CSP of the document or worker that created it.</p>
 
 <h2 id="Transferring_data_to_and_from_workers_further_details">Transferring data to and from workers: further details</h2>
 
@@ -290,107 +289,107 @@ onmessage = function(oEvent) {
 
 <p>If you have to pass some complex data and have to call many different functions both on the main page and in the Worker, you can create a system which groups everything together.</p>
 
-<p>First, we create a QueryableWorker class that takes the <code>url</code> of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
+<p>First, we create a <code>QueryableWorker</code> class that takes the URL of the worker, a default listener, and an error handler, and this class is going to keep track of a list of listeners and help us communicate with the worker:</p>
 
 <pre class="brush: js">function QueryableWorker(url, defaultListener, onError) {
-    var instance = this,
-        worker = new Worker(url),
-        listeners = {};
+    var instance = this,
+        worker = new Worker(url),
+        listeners = {};
 
-    this.defaultListener = defaultListener || function() {};
+    this.defaultListener = defaultListener || function() {};
 
-    if (onError) {worker.onerror = onError;}
+    if (onError) {worker.onerror = onError;}
 
-    this.postMessage = function(message) {
-        worker.postMessage(message);
-    }
+    this.postMessage = function(message) {
+        worker.postMessage(message);
+    }
 
-    this.terminate = function() {
-        worker.terminate();
+    this.terminate = function() {
+        worker.terminate();
     }
 }</pre>
 
 <p>Then we add the methods of adding/removing listeners:</p>
 
 <pre class="brush: js">this.addListeners = function(name, listener) {
-    listeners[name] = listener;
+    listeners[name] = listener;
 }
 
 this.removeListeners = function(name) {
     delete listeners[name];
 }</pre>
 
-<p>Here we let the worker handle two simple operations for illustration: getting the difference of two numbers and making an alert after three seconds. In order to achieve that we first implement a sendQuery method which queries if the worker actually has the corresponding methods to do what we want.</p>
+<p>Here we let the worker handle two simple operations for illustration: getting the difference of two numbers and making an alert after three seconds. In order to achieve that we first implement a <code>sendQuery</code> method which queries if the worker actually has the corresponding methods to do what we want.</p>
 
 <pre class="brush: js">/*
-  This functions takes at least one argument, the method name we want to query.
-  Then we can pass in the arguments that the method needs.
+  This functions takes at least one argument, the method name we want to query.
+  Then we can pass in the arguments that the method needs.
  */
 this.sendQuery = function() {
     if (arguments.length &lt; 1) {
-         throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
-         return;
-    }
-    worker.postMessage({
-        'queryMethod': arguments[0],
-        'queryArguments': Array.prototype.slice.call(arguments, 1)
-    });
+         throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+         return;
+    }
+    worker.postMessage({
+        'queryMethod': arguments[0],
+        'queryArguments': Array.prototype.slice.call(arguments, 1)
+    });
 }</pre>
 
-<p>We finish QueryableWorker with the <code>onmessage</code> method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in <code>listeners</code>.:</p>
+<p>We finish QueryableWorker with the <code>onmessage</code> method. If the worker has the corresponding methods we queried, it should return the name of the corresponding listener and the arguments it needs, we just need to find it in <code>listeners</code>.:</p>
 
 <pre class="brush: js">worker.onmessage = function(event) {
     if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
-        event.data.hasOwnProperty('queryMethodArguments')) {
-        listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+        event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+        event.data.hasOwnProperty('queryMethodArguments')) {
+        listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
-        this.defaultListener.call(instance, event.data);
-    }
+        this.defaultListener.call(instance, event.data);
+    }
 }
 </pre>
 
-<p>Now onto the worker.  First we need to have the methods to handle the two simple operations:</p>
+<p>Now onto the worker. First we need to have the methods to handle the two simple operations:</p>
 
 <pre class="brush: js">var queryableFunctions = {
     getDifference: function(a, b) {
-        reply('printStuff', a - b);
-    },
-    waitSomeTime: function() {
-        setTimeout(function() {
-            reply('doAlert', 3, 'seconds');
-        }, 3000);
-    }
+        reply('printStuff', a - b);
+    },
+    waitSomeTime: function() {
+        setTimeout(function() {
+            reply('doAlert', 3, 'seconds');
+        }, 3000);
+    }
 }
 
 function reply() {
     if (arguments.length &lt; 1) {
-        throw new TypeError('reply - takes at least one argument');
-        return;
-    }
-    postMessage({
-        queryMethodListener: arguments[0],
-        queryMethodArguments: Array.prototype.slice.call(arguments, 1)
-    });
+        throw new TypeError('reply - takes at least one argument');
+        return;
+    }
+    postMessage({
+        queryMethodListener: arguments[0],
+        queryMethodArguments: Array.prototype.slice.call(arguments, 1)
+    });
 }
 
 /* This method is called when main page calls QueryWorker's postMessage method directly*/
 function defaultReply(message) {
-    // do something
+    // do something
 }
 </pre>
 
 <p>And the <code>onmessage</code> method is now trivial:</p>
 
 <pre class="brush: js">onmessage = function(event) {
-    if (event.data instanceof Object &amp;&amp;
-        event.data.hasOwnProperty('queryMethod') &amp;&amp;
-        event.data.hasOwnProperty('queryMethodArguments')) {
-        queryableFunctions[event.data.queryMethod]
-            .apply(self, event.data.queryMethodArguments);
-    } else {
-        defaultReply(event.data);
-    }
+    if (event.data instanceof Object &amp;&amp;
+        event.data.hasOwnProperty('queryMethod') &amp;&amp;
+        event.data.hasOwnProperty('queryMethodArguments')) {
+        queryableFunctions[event.data.queryMethod]
+            .apply(self, event.data.queryMethodArguments);
+    } else {
+        defaultReply(event.data);
+    }
 }
 </pre>
 
@@ -415,31 +414,31 @@ function defaultReply(message) {
         * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
      */
     function QueryableWorker(url, defaultListener, onError) {
-      var instance = this,
-      worker = new Worker(url),
-      listeners = {};
+      var instance = this,
+      worker = new Worker(url),
+      listeners = {};
 
-      this.defaultListener = defaultListener || function() {};
+      this.defaultListener = defaultListener || function() {};
 
-      if (onError) {worker.onerror = onError;}
+      if (onError) {worker.onerror = onError;}
 
-      this.postMessage = function(message) {
-        worker.postMessage(message);
-      }
-
-      this.terminate = function() {
-        worker.terminate();
+      this.postMessage = function(message) {
+        worker.postMessage(message);
       }
 
-      this.addListener = function(name, listener) {
-        listeners[name] = listener;
-      }
-
-      this.removeListener = function(name) {
-        delete listeners[name];
+      this.terminate = function() {
+        worker.terminate();
       }
 
-      /*
+      this.addListener = function(name, listener) {
+        listeners[name] = listener;
+      }
+
+      this.removeListener = function(name) {
+        delete listeners[name];
+      }
+
+      /*
         This functions takes at least one argument, the method name we want to query.
         Then we can pass in the arguments that the method needs.
       */
@@ -454,16 +453,16 @@ function defaultReply(message) {
         });
       }
 
-      worker.onmessage = function(event) {
+      worker.onmessage = function(event) {
         if (event.data instanceof Object &amp;&amp;
-          event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
-          event.data.hasOwnProperty('queryMethodArguments')) {
-          listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+          event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
+          event.data.hasOwnProperty('queryMethodArguments')) {
+          listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
         } else {
-          this.defaultListener.call(instance, event.data);
-        }
+          this.defaultListener.call(instance, event.data);
+        }
       }
-    }
+    }
 
     // your custom "queryable" worker
     var myTask = new QueryableWorker('my_task.js');
@@ -536,7 +535,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on transferable objects, performance, and feature-detection for this method, read <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
+<p><strong>Note:</strong> For more information on transferable objects, performance, and feature-detection for this method, read <a href="https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> on HTML5 Rocks.</p>
 </div>
 
 <h2 id="Embedded_workers">Embedded workers</h2>
@@ -662,11 +661,11 @@ onmessage = function(event) {
 
     worker.onmessage = function(event) {
       document.getElementById('result').textContent = event.data;
-      dump('Got: ' + event.data + '\n');
+      console.log('Got: ' + event.data + '\n');
     };
 
     worker.onerror = function(error) {
-      dump('Worker error: ' + error.message + '\n');
+      console.log('Worker error: ' + error.message + '\n');
       throw error;
     };
 
@@ -677,15 +676,11 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">dump</a> the error message.</p>
+<p>The web page creates a <code>div</code> element with the ID <code>result</code> , which gets used to display the result, then spawns the worker. After spawning the worker, the <code>onmessage</code> handler is configured to display the results by setting the contents of the <code>div</code> element, and the <code>onerror</code> handler is set to log the error message to the devtools console.</p>
 
 <p>Finally, a message is sent to the worker to start it.</p>
 
 <p><a href="https://mdn.github.io/fibonacci-worker/">Try this example live</a>.</p>
-
-<h3 id="Performing_web_IO_in_the_background">Performing web I/O in the background</h3>
-
-<p>You can find an example of this in the article <a class="internal" href="/en-US/docs/Using_workers_in_extensions">Using workers in extensions</a> .</p>
 
 <h3 id="Dividing_tasks_among_multiple_workers">Dividing tasks among multiple workers</h3>
 
@@ -697,28 +692,28 @@ onmessage = function(event) {
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a> essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</li>
- <li>Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to <a href="/en-US/js-ctypes">js-ctypes</a> in your worker. See {{domxref("ChromeWorker")}} for more details.</li>
+
  <li><a href="/en-US/docs/Web/API/Web_Audio_API#audio_processing_in_javascript">Audio Worklet</a> provide the ability for direct scripted audio processing to be done in a worklet (a lightweight version of worker) context.</li>
 </ul>
 
 <h2 id="Debugging_worker_threads">Debugging worker threads</h2>
 
-<p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way</em> as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
+<p>Most browsers support debugging of worker threads in their JavaScript debuggers in <em>exactly the same way</em> as debugging the main thread! For example, both Firefox and Chrome list JavaScript source files for both the main thread and active worker threads, and all of these files can be opened to set breakpoints and logpoints.</p>
 
-<p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a>, just like code running in the main thread.</p>
+<p>The screenshot below shows this on Firefox. The <em>sources list</em> shows <code>worker.js</code> running in a separate worker thread. When selected this file is opened in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">source pane</a>, just like code running in the main thread.</p>
 
-<p><img src="worker-source.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-source.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
+<p><strong>Note:</strong> Worker scripts are loaded when needed, and hence may not be present in the sources list when a page is first loaded.</p>
 </div>
 
-<p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
+<p>In the source pane you can <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">set a breakpoint</a> (or <a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">logpoint</a>) in a worker thread in the normal way. When execution is paused, the context of the debugger is updated to show correct <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint">breakpoints</a>, <a href="/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint#inline_variable_preview">inline variable preview</a>, <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">call stack</a>, etc., just as you'd expect.</p>
 
-<p><img src="worker-breakpoints-callstack.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img src="worker-breakpoints-callstack.png"></p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
+<p><strong>Note:</strong> For more information see <a href="/en-US/docs/Tools/Debugger">Firefox JavaScript Debugger</a>.</p>
 </div>
 
 <h2 id="Functions_and_interfaces_available_in_workers">Functions and interfaces available in workers</h2>
@@ -729,17 +724,17 @@ onmessage = function(event) {
  <li>{{domxref("Navigator")}}</li>
  <li>{{domxref("XMLHttpRequest")}}</li>
  <li>{{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval")}}</li>
+ <li>{{domxref("setTimeout()")}} and {{domxref("setInterval()")}}</li>
 </ul>
 
 <p>The main thing you <em>can't</em> do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.</p>
 
 <div class="notecard note">
-<p>You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
+<p><strong>Note:</strong> You can test whether a method is available to workers using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a> . For example, if you enter <a href="/en-US/docs/Web/API/EventSource">EventSource</a> into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
+<p><strong>Note:</strong> For a complete list of functions available to workers, see <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions and interfaces available to workers</a>.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
@@ -762,7 +757,7 @@ onmessage = function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a class="internal" href="/en-US/docs/Web/API/Worker">Worker</a></code> interface</li>
- <li><code><a class="internal" href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> interface</li>
+ <li><code><a href="/en-US/docs/Web/API/Worker">Worker</a></code> interface</li>
+ <li><code><a href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></code> interface</li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
 </ul>

@@ -13,6 +13,7 @@ tags:
   - Web Audio
   - Web Audio API
   - createBuffer
+browser-compat: api.BaseAudioContext.createBuffer
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -25,13 +26,13 @@ tags:
   reference page.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>createBuffer()</code> used to be able to take compressed
-    data and give back decoded samples, but this ability was removed from the spec,
-    because all the decoding was done on the main thread, therefore
+  <p><strong>Note:</strong> <code>createBuffer()</code> used to be able to take compressed
+    data and give back decoded samples, but this ability was removed from the specification,
+    because all the decoding was done on the main thread, so
     <code>createBuffer()</code> was blocking other code execution. The asynchronous method
-    <code>decodeAudioData()</code> does the same thing — takes compressed audio, say, an
+    <code>decodeAudioData()</code> does the same thing — takes compressed audio, such as an
     MP3 file, and directly gives you back an {{ domxref("AudioBuffer") }} that you can
-    then set to play via in an {{ domxref("AudioBufferSourceNode") }}. For simple uses
+    then play via an {{ domxref("AudioBufferSourceNode") }}. For simple use cases
     like playing an MP3, <code>decodeAudioData()</code> is what you should be using.</p>
 </div>
 
@@ -43,7 +44,7 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <div class="note">
-  <p><strong>Note</strong>: For an in-depth explanation of how audio buffers work, and
+  <p><strong>Note:</strong> For an in-depth explanation of how audio buffers work, and
     what these parameters mean, read <a
       href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">Audio
       buffers: frames, samples and channels</a> from our Basic concepts guide.</p>
@@ -99,7 +100,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
   44100Hz = 1 second.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: audio resampling is very similar to image resizing: say you've
+  <p><strong>Note:</strong> audio resampling is very similar to image resizing: say you've
     got a 16 x 16 image, but you want it to fill a 32x32 area: you resize (resample) it.
     the result has less quality (it can be blurry or edgy, depending on the resizing
     algorithm), but it works, and the resized image takes up less space. Resampled audio
@@ -115,7 +116,7 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
     href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view
     the source</a>.</p>
 
-<pre class="brush: js;highlight[14]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js;">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
@@ -145,25 +146,11 @@ source.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbuffer',
-        'createBuffer()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createBuffer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

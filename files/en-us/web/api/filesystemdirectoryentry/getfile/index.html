@@ -3,19 +3,18 @@ title: FileSystemDirectoryEntry.getFile()
 slug: Web/API/FileSystemDirectoryEntry/getFile
 tags:
 - API
-- File System API
 - File and Directory Entries API
 - FileSystemDirectoryEntry
 - Files
 - Method
-- Non-standard
 - Reference
 - getFile
+browser-compat: api.FileSystemDirectoryEntry.getFile
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The {{domxref("FileSystemDirectoryEntry")}} interface's method
-  <code><strong>getFile</strong></code><strong><code>()</code></strong> returns a
+  <strong><code>getFile()</code></strong> returns a
   {{domxref("FileSystemFileEntry")}} object corresponding to a file contained somewhere
   within the directory subtree rooted at the directory on which it's called.</p>
 
@@ -40,7 +39,7 @@ tags:
     representing the file in question.</dd>
   <dt><code>errorCallback</code> {{optional_inline}}</dt>
   <dd>A method to be called if an error occurs. Receives as its sole input parameter a
-    {{domxref("FileError")}} object describing the error which occurred.</dd>
+    {{domxref("DOMException")}} object describing the error which occurred.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -50,20 +49,16 @@ tags:
 <h3 id="Errors">Errors</h3>
 
 <p>If an error occurs and an <code>errorCallback</code> was specified, it gets called with
-  a single parameter: a {{domxref("FileError")}} object describing the error. The
-  {domxref("FileError.code")}} specifies what type of error occurred, as follows:</p>
+  a single parameter: a {{domxref("DOMException")}} object describing the error. The
+  name of the {{domxref("DOMException")}} indicates what type of error occurred, as follows:</p>
 
 <dl>
-  <dt><code>FileError.NOT_FOUND_ERR</code></dt>
+  <dt><code>NotFoundError</code></dt>
   <dd>The <code>create</code> option was not specified (or was specified as
     <code>false</code>), and the file doesn't exist.</dd>
-  <dt><code>FileError.PATH_EXISTS_ERR</code></dt>
-  <dd>The <code>create</code> and <code>exclusive</code> options were both
-    <code>true</code>, indicating that the file should be created but must not already
-    exist, but the file does in fact already exist.</dd>
-  <dt><code>FileError.SECURITY_ERR</code></dt>
+  <dt><code>SecurityError</code></dt>
   <dd>The request to access the file was denied for security reasons.</dd>
-  <dt><code>FileError.TYPE_MISMATCH_ERR</code></dt>
+  <dt><code>TypeMismatchError</code></dt>
   <dd>The path specified is not a file; it's probably a directory, but might be an
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.</dd>
@@ -117,32 +112,11 @@ function loadDictionaryForLanguage(appDataDirEntry, lang) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('File System API', '#dom-filesystemdirectoryentry-getfile',
-        'getFile()') }}</td>
-      <td>{{ Spec2('File System API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured
-  data. If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</div>
-
-<p>{{Compat("api.FileSystemDirectoryEntry.getFile")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

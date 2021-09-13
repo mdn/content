@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - primaryKey
+browser-compat: api.IDBCursor.primaryKey
 ---
 <div>
   <p>{{APIRef("IDBCursor")}}</p>
@@ -37,21 +38,17 @@ tags:
   log the primary key of the cursor to the console, something like this (its the album
   title in each case, which is our primarykey):</p>
 
-<pre style="font-size: 14px;">Hemispheres
-</pre>
+<pre>Hemispheres</pre>
 
-<p>T<span style="line-height: 1.5;">he cursor does not require us to select the data based
+<p>The cursor does not require us to select the data based
     on a key; we can just grab all of it. Also note that in each iteration of the loop,
-    you can grab data from the current record under the cursor object using </span><code
-    style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span
-    style="line-height: 1.5;">. For a complete working example, see our <a
+    you can grab data from the current record under the cursor object using <code
+    >cursor.value.foo</code>. For a complete working example, see our <a
       href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor
-      example</a></span><span style="line-height: 1.5;"> (</span><a
-    href="https://mdn.github.io/indexeddb-examples/idbcursor/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+      example</a> (><a
+    href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;"><span style="line-height: 1.5;">function displayData() {</span>
+<pre class="brush: js">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -72,29 +69,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbcursor-primarykey', 'primaryKey')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbcursor-primarykey", "primaryKey")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBCursor.primaryKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

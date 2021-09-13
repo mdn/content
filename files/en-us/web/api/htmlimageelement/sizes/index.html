@@ -13,15 +13,18 @@ tags:
 - size
 - sizes
 - width
+browser-compat: api.HTMLImageElement.sizes
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The {{domxref("HTMLImageElement")}} property
+<p>The {{domxref("HTMLImageElement")}} property
     <code><strong>sizes</strong></code> allows you to specify the layout width of the
     image for each of a list of media conditions. This provides the ability to
     automatically select among different images—even images of different orientations or
     aspect ratios—as the document state changes to match different media
-    conditions.</span> Each condition is specified using the same conditional format used
+    conditions.</p>
+
+<p>Each condition is specified using the same conditional format used
   by <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -141,32 +144,15 @@ break50.addEventListener("click",
 
 <p>{{EmbedLiveSample("Example", 900, 850)}}</p>
 
-<p>This result may be <a
-    href="https://mdn.mozillademos.org/en-US/docs/Web/API/HTMLImageElement/sizes$samples/Example">viewed
-    in its own window here</a>.</p>
+<p>This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-img-sizes', 'HTMLImageElement.sizes')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLImageElement.sizes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

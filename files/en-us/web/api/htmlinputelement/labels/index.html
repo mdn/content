@@ -7,12 +7,14 @@ tags:
 - HTMLInputElement
 - Property
 - Reference
+browser-compat: api.HTMLInputElement.labels
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p>The <code><strong>HTMLInputElement.labels</strong></code> read-only property returns a
   {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
-  {{HTMLElement("input")}} element.</p>
+  {{HTMLElement("input")}} element, if the element is not hidden. If the element has the
+  type <code>hidden</code>, the property returns <code>null</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,28 +48,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "forms.html#dom-lfe-labels", "labels")}}</td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLInputElement.labels")}}</p>
+<p>{{Compat}}</p>

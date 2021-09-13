@@ -8,8 +8,9 @@ tags:
 - MouseEvent
 - Reference
 - events
+browser-compat: api.MouseEvent.MouseEvent
 ---
-<p id="Summary">{{APIRef("DOM Events")}}</p>
+<div>{{APIRef("DOM Events")}}</div>
 
 <p>The <strong><code>MouseEvent()</code></strong> constructor creates a new
   {{domxref("MouseEvent")}}.</p>
@@ -28,35 +29,47 @@ tags:
   <dd>Is a <code>MouseEventInit</code> dictionary, having the following fields:
 
     <ul>
-      <li><code>"screenX"</code>, optional and defaulting to <code>0</code>, of type
-        <code>long</code>, that is the horizontal position of the mouse event on the
-        user's screen; setting this value doesn't move the mouse pointer.</li>
-      <li><code>"screenY"</code>, optional and defaulting to <code>0</code>, of type
-        <code>long</code>, that is the vertical position of the mouse event on the user's
-        screen; setting this value doesn't move the mouse pointer.</li>
-      <li><code>"clientX"</code>, optional and defaulting to <code>0</code>, of type
-        <code>long</code>, that is the horizontal position of the mouse event on the
-        client window of user's screen; setting this value doesn't move the mouse pointer.
+      <li>
+        <code>"screenX"</code>, optional <code>long</code>, defaulting to <code>0</code>,
+        that is the horizontal position of the mouse event on the user's screen;
+        setting this value doesn't move the mouse pointer.
       </li>
-      <li><code>"clientY"</code>, optional and defaulting to <code>0</code>, of type
-        <code>long</code>, that is the vertical position of the mouse event on the client
-        window of the user's screen; setting this value doesn't move the mouse pointer.
+      <li>
+        <code>"screenY"</code>, optional <code>long</code>, defaulting to <code>0</code>,
+        that is the vertical position of the mouse event on the user's screen;
+        setting this value doesn't move the mouse pointer.
       </li>
-      <li><code>"ctrlKey"</code>, optional and defaulting to <code>false</code>, of type
-        {{jsxref("Boolean")}}, that indicates if the <kbd>ctrl</kbd> key was
-        simultaneously pressed.</li>
-      <li><code>"shiftKey"</code>, optional and defaulting to <code>false</code>, of type
-        {{jsxref("Boolean")}}, that indicates if the <kbd>shift</kbd> key was
-        simultaneously pressed.</li>
-      <li><code>"altKey"</code>, optional and defaulting to <code>false</code>, of type
-        {{jsxref("Boolean")}}, that indicates if the <kbd>alt</kbd> key was simultaneously
-        pressed.</li>
-      <li><code>"metaKey"</code>, optional and defaulting to <code>false</code>, of type
-        {{jsxref("Boolean")}}, that indicates if the <kbd>meta</kbd> key was
-        simultaneously pressed.</li>
-      <li><code>"button"</code>, optional and defaulting to <code>0</code>, of type
-        <code>short</code>, that describes which button is pressed during events related
-        to the press or release of a button:
+      <li>
+        <code>"clientX"</code>, optional <code>long</code>, defaulting to <code>0</code>,
+        that is the horizontal position of the mouse event on the client window of user's screen;
+        setting this value doesn't move the mouse pointer.
+      </li>
+      <li>
+        <code>"clientY"</code>, optional <code>long</code>, defaulting to <code>0</code>,
+        that is the vertical position of the mouse event
+        on the client window of the user's screen;
+        setting this value doesn't move the mouse pointer.
+      </li>
+      <li>
+        <code>"ctrlKey"</code>, optional boolean value, defaulting to <code>false</code>,
+        that indicates if the <kbd>ctrl</kbd> key was simultaneously pressed.
+      </li>
+      <li>
+        <code>"shiftKey"</code>, optional boolean value, defaulting to <code>false</code>,
+        that indicates if the <kbd>shift</kbd> key was simultaneously pressed.
+      </li>
+      <li>
+        <code>"altKey"</code>, optional boolean value, defaulting to <code>false</code>,
+        that indicates if the <kbd>alt</kbd> key was simultaneously pressed.
+      </li>
+      <li>
+        <code>"metaKey"</code>, optional boolean value, defaulting to <code>false</code>,
+        that indicates if the <kbd>meta</kbd> key was simultaneously pressed.
+      </li>
+      <li>
+        <code>"button"</code>, optional <code>short</code>, defaulting to <code>0</code>,
+        that describes which button is pressed
+        during events related to the press or release of a button:
         <table class="standard-table">
           <thead>
             <tr>
@@ -80,9 +93,10 @@ tags:
           </tbody>
         </table>
       </li>
-      <li><code>"buttons"</code>, optional and defaulting to <code>0</code>, of type
-        <code>unsigned short</code>, that describes which buttons are pressed when the
-        event is launched:
+      <li>
+        <code>"buttons"</code>, optional <code>unsigned short</code>, defaulting to <code>0</code>,
+        that describes which buttons are pressed
+        when the event is launched:
         <table class="standard-table">
           <thead>
             <tr>
@@ -110,55 +124,37 @@ tags:
           </tbody>
         </table>
       </li>
-      <li><code>"relatedTarget"</code>, optional and defaulting to <code>null</code>, of
-        type {{domxref("EventTarget")}}, that is the element just left (in case of  a
-        {{event("mouseenter")}} or {{event("mouseover")}}) or is entering (in case of a
-        {{event("mouseout")}} or {{event("mouseleave")}}).</li>
-      <li><code>"region"</code>, optional and defaulting to <code>null</code>, of type
-        {{domxref("DOMString")}}, is the id of the hit region affected by the event. The
-        absence of any hit region is affected, is represented by the <code>null</code>
-        value.</li>
+      <li>
+        <code>"relatedTarget"</code>, optional {{domxref("EventTarget")}}, defaulting to <code>null</code>
+        that is the element just left
+        (in case of a {{event("mouseenter")}} or {{event("mouseover")}})
+        or is entering (in case of a {{event("mouseout")}} or {{event("mouseleave")}}).
+      </li>
+      <li>
+        <code>"region"</code>, optional {{domxref("DOMString")}}, defaulting to <code>null</code>,
+        that is the ID of the hit region affected by the event.
+        The absence of any affected hit region is represented with the <code>null</code> value.
+      </li>
     </ul>
 
     <p>In some implementations, passing anything other than a number for the screen and
       client fields will throw a <code>TypeError</code>.</p>
 
     <div class="note">
-      <p><em>The <code>MouseEventInit</code> dictionary also accepts fields from
+      <p><strong>Note:</strong> The <code>MouseEventInit</code> dictionary also accepts fields from
           {{domxref("UIEvent.UIEvent", "UIEventInit")}} and from {{domxref("Event.Event",
-          "EventInit")}} dictionaries.</em></p>
+          "EventInit")}} dictionaries.</p>
     </div>
   </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#extensions-to-the-mouseevent-interface',
-        'MouseEvent')}}</td>
-      <td>{{Spec2('CSSOM View')}}</td>
-      <td>Redefines screen and client fields long to double.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Events','#interface-MouseEvent','MouseEvent()')}}</td>
-      <td>{{Spec2('DOM3 Events')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MouseEvent.MouseEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 

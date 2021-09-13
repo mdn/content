@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - name
+browser-compat: api.IDBIndex.name
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -63,7 +64,7 @@ tags:
     demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
     example live</a>).</p>
 
-<pre class="brush: js" style="font-size: 14px;">function displayDataByIndex() {
+<pre class="brush: js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -94,29 +95,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbindex-name', 'name')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbindex-name", "name")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBIndex.name")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

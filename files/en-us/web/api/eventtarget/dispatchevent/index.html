@@ -7,14 +7,15 @@ tags:
   - DOM Element Methods
   - Gecko
   - Method
+browser-compat: api.EventTarget.dispatchEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><span class="seoSummary">Dispatches an {{domxref("Event")}} at the specified
+<p>Dispatches an {{domxref("Event")}} at the specified
     {{domxref("EventTarget")}}, (synchronously) invoking the affected
     {{domxref("EventListener")}}s in the appropriate order. The normal event processing
     rules (including the capturing and optional bubbling phase) also apply to events
-    dispatched manually with <code>dispatchEvent()</code>.</span></p>
+    dispatched manually with <code>dispatchEvent()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -66,29 +67,12 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>See <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating
-    and triggering events</a>.</p>
+<p>See <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-eventtarget-dispatchevent',
-        'EventTarget.dispatchEvent()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td>Initial definition in the DOM 2 Events specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventTarget.dispatchEvent")}}</p>
+<p>{{Compat}}</p>

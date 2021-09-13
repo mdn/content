@@ -8,11 +8,12 @@ tags:
 - Gradients
 - Method
 - Reference
+browser-compat: api.CanvasGradient.addColorStop
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
 <p>The
-  <code><strong>CanvasGradient</strong></code><strong><code>.addColorStop()</code></strong>
+  <strong><code>CanvasGradient.addColorStop()</code></strong>
   method adds a new color stop, defined by an <code>offset</code> and a
   <code>color</code>, to a given canvas gradient.</p>
 
@@ -49,7 +50,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5,6,7]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let gradient = ctx.createLinearGradient(0, 0, 200, 0);
@@ -66,25 +67,11 @@ ctx.fillRect(10, 10, 200, 100);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop",
-        "CanvasGradient.addColorStop")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasGradient.addColorStop")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

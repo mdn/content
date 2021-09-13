@@ -11,12 +11,15 @@ tags:
   - Method
   - Reference
   - requestFrame
+browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The {{domxref("CanvasCaptureMediaStreamTrack")}} method
+<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} method
     <strong><code>requestFrame()</code></strong> requests that a frame be captured from
-    the canvas and sent to the stream.</span> Applications that need to carefully control
+    the canvas and sent to the stream.</p>
+
+<p>Applications that need to carefully control
   the timing of rendering and frame capture can use <code>requestFrame()</code> to
   directly specify when it's time to capture a frame.</p>
 
@@ -56,28 +59,11 @@ stream.getVideoTracks()[0].requestFrame();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Media Capture DOM Elements',
-        '#dom-canvascapturemediastreamtrack-requestframe',
-        'CanvasCaptureMediaStream.requestFrame()')}}</td>
-      <td>{{Spec2('Media Capture DOM Elements')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasCaptureMediaStreamTrack.requestFrame")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

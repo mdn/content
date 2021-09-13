@@ -8,11 +8,12 @@ tags:
   - File System Access API
   - FileSystemDirectoryHandle
   - Method
+browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
 
-<p class="summary">The <strong><code>getDirectoryHandle()</code></strong> method of the
+<p>The <strong><code>getDirectoryHandle()</code></strong> method of the
   {{domxref("FileSystemDirectoryHandle")}} interface returns a
   {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name
   within the directory handle on which the method is called.</p>
@@ -68,26 +69,11 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('File System Access
-        API','#dom-filesystemdirectoryhandle-getdirectoryhandle','getDirectoryHandle')}}
-      </td>
-      <td>{{Spec2('File System Access API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemDirectoryHandle.getDirectoryHandle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -8,11 +8,12 @@ tags:
 - Experimental
 - Method
 - Reference
+browser-compat: api.CanvasPattern.setTransform
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
 <p>The
-  <code><strong>CanvasPattern</strong></code><strong><code>.setTransform()</code></strong>
+  <strong><code>CanvasPattern.setTransform()</code></strong>
   method uses an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} object as the
   pattern's transformation matrix and invokes it on the pattern.</p>
 
@@ -48,14 +49,14 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js highlight:[12]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var svg1 = document.getElementById('svg1');
 var matrix = svg1.createSVGMatrix();
 
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
@@ -72,12 +73,11 @@ img.onload = function() {
 <pre
   class="brush: js">const matrix = new DOMMatrix([1, .2, .8, 1, 0, 0]);</pre>
 
-<p>Edit the code below and see your changes update live in the canvas:</p>
+<h4>Editable demo</h4>
 
-<div class="hidden">
-  <h6 id="Playable_code">Playable code</h6>
+<p>Here's an editable demo of the code snippet above. Try changing the argument to <code>SetTransform()</code> to see the  effect it had.</p>
 
-  <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+  <pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;svg id="svg1" style="display:none"&gt;&lt;/svg&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
@@ -85,7 +85,7 @@ img.onload = function() {
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height:120px"&gt;
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+img.src = 'canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
@@ -94,7 +94,7 @@ img.onload = function() {
 };&lt;/textarea&gt;
 </pre>
 
-  <pre class="brush: js">var canvas = document.getElementById('canvas');
+  <pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -121,31 +121,16 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+<p>{{ EmbedLiveSample('Editable_demo', 700, 400) }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform",
-        "CanvasPattern.setTransform")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasPattern.setTransform")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

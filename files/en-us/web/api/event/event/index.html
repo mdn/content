@@ -7,11 +7,12 @@ tags:
 - DOM
 - Event
 - Reference
+browser-compat: api.Event.Event
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Event()</strong></code> constructor creates
-    a new {{domxref("Event")}}.</span></p>
+<p>The <code><strong>Event()</strong></code> constructor creates
+    a new {{domxref("Event")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,13 +31,13 @@ tags:
 
     <dl>
       <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event bubbles. The default is
+      <dd>A boolean value indicating whether the event bubbles. The default is
         <code>false</code>.</dd>
       <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event can be cancelled. The
+      <dd>A boolean value indicating whether the event can be cancelled. The
         default is <code>false</code>.</dd>
       <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the event will trigger listeners
+      <dd>A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
         default is <code>false</code>.</dd>
     </dl>
@@ -56,32 +57,16 @@ myDiv.dispatchEvent(evt);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-event-event','Event()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.Event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("Event")}}</li>
   <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering events</a></li>
+  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
 </ul>

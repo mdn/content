@@ -9,14 +9,15 @@ tags:
 - Media
 - Reference
 - Web Audio API
+browser-compat: api.DelayNode.DelayNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>DelayNode()</code></strong>
+<p>The <strong><code>DelayNode()</code></strong>
     constructor of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>
     creates a new {{domxref("DelayNode")}} object with a delay-line; an AudioNode
     audio-processing module that causes a delay between the arrival of an input data, and
-    its propagation to the output.</span></p>
+    its propagation to the output.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,8 +25,6 @@ tags:
 var <var>delayNode</var> = new DelayNode(<var>context</var>, <var>options</var>);</pre>
 
 <h3 id="Parameters">Parameters</h3>
-
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary.</em></p>
 
 <dl>
   <dt><em>context</em></dt>
@@ -38,6 +37,23 @@ var <var>delayNode</var> = new DelayNode(<var>context</var>, <var>options</var>)
         default is <code>0</code>.</li>
       <li><code>maxDelayTime</code>: The maximum delay time for the node, in seconds.
         Defaults to <code>1</code>.</li>
+      <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
+        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+        and down-mixing</a> connections to any inputs to the node. (See
+      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+      definition depend on the value of <code>channelCountMode</code>.</li>
+      <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)</li>
+      <li>
+        <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio <a
+          href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+          and down-mixing</a> will happen.<br>
+        The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
+      </li>
     </ul>
   </dd>
 </dl>
@@ -56,21 +72,8 @@ const delayNode = new DelayNode(audioCtx, {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API','#dom-delaynode-delaynode','DelayNode()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DelayNode.DelayNode")}}</p>
+<p>{{Compat}}</p>

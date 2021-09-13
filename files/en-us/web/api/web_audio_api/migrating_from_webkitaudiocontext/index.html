@@ -12,14 +12,15 @@ tags:
   - porting
   - webkitAudioContext
 ---
-<p>The Web Audio API went through many iterations before reaching its current state. It was first implemented in WebKit, and some of its older parts were not immediately removed as they were replaced in the specification, leading to many sites using non-compatible code. <span class="seoSummary">In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.</span></p>
+
+<p>In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.</p>
 
 <p>The Web Audio standard was first implemented in <a href="http://webkit.org/">WebKit</a>, and the implementation was built in parallel with the work on the <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">specification</a> of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.</p>
 
 <p>New engines implementing the Web Audio spec (such as Gecko) will only implement the official, final version of the specification, which means that code using <code>webkitAudioContext</code> or old naming conventions in the Web Audio specification may not immediately work out of the box in a compliant Web Audio implementation.  This article attempts to summarize the areas where developers are likely to encounter these problems and provide examples on how to port such code to standards based {{domxref("AudioContext")}}, which will work across different browser engines.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is a library called <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch">webkitAudioContext monkeypatch</a>, which automatically fixes some of these changes to make most code targeting <code>webkitAudioContext</code> to work on the standards based <code>AudioContext</code> out of the box, but it currently doesn't handle all of the cases below.  Please consult the <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md">README file</a> for that library to see a list of APIs that are automatically handled by it.</p>
+<p><strong>Note:</strong> There is a library called <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch">webkitAudioContext monkeypatch</a>, which automatically fixes some of these changes to make most code targeting <code>webkitAudioContext</code> to work on the standards based <code>AudioContext</code> out of the box, but it currently doesn't handle all of the cases below.  Please consult the <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md">README file</a> for that library to see a list of APIs that are automatically handled by it.</p>
 </div>
 
 <h2 id="Changes_to_the_creator_methods">Changes to the creator methods</h2>
@@ -77,7 +78,7 @@ src.stop(2);</pre>
 
 <h2 id="Remove_synchronous_buffer_creation">Remove synchronous buffer creation</h2>
 
-<p>In the old WebKit implementation of Web Audio, there were two versions of <code>createBuffer()</code>, one which created an initially empty buffer, and one which took an existing {{domxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}.  The latter version of <code>createBuffer()</code> was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.</p>
+<p>In the old WebKit implementation of Web Audio, there were two versions of <code>createBuffer()</code>, one which created an initially empty buffer, and one which took an existing {{jsxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}. The latter version of <code>createBuffer()</code> was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.</p>
 
 <p>Because of these problems, this version of the <code>createBuffer()</code> method has been removed, and you should use the asynchronous <code>decodeAudioData()</code> method instead.</p>
 

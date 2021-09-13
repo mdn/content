@@ -17,10 +17,11 @@ tags:
   - Sharing
   - Video
   - WebRTC
+browser-compat: api.MediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaDevices</code></strong> interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.</span></p>
+<p>The <strong><code>MediaDevices</code></strong> interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -47,6 +48,8 @@ tags:
 	<dd>Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a <code>MediaStream</code>.</dd>
 	<dt>{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}</dt>
 	<dd>With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.</dd>
+	<dt>{{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }}</dt>
+	<dd>Prompts the user to select a specific audio output device.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -93,26 +96,11 @@ function errorMsg(msg, error) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
-			<td>{{Spec2('Media Capture')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaDevices")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

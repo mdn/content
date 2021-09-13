@@ -11,7 +11,9 @@ tags:
   - tilemap
   - tiles
 ---
-<div>{{GamesSidebar}}</div><p class="summary">Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called <strong>tiles</strong>. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> (although the same high level techniques could be used in any programming language.)</p>
+<div>{{GamesSidebar}}</div>
+
+<p class="summary">Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called <strong>tiles</strong>. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using <a href="/en-US/docs/Web/JavaScript">JavaScript</a> and <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> (although the same high level techniques could be used in any programming language.)</p>
 
 <p>Besides the performance gains, tilemaps can also be mapped to a logical grid, which can be used in other ways inside the game logic (for example creating a path-finding graph, or handling collisions) or to create a level editor.</p>
 
@@ -37,7 +39,7 @@ tags:
  <li><strong>Logic grid</strong>: This can be a collision grid, a path-finding grid, etc., depending on the type of game.</li>
 </ul>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: For the visual grid, a special value (usually a negative number, <code>0</code> or <code>null</code>) is needed to represent empty tiles.</p>
 </div>
 
@@ -66,7 +68,7 @@ tags:
 }
 </pre>
 
-<p>You can read more about this and see an example implementation in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps">Square tilemaps implementation: Static maps</a>.</p>
+<p>You can read more about this and see an example implementation in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Square tilemaps implementation: Static maps</a>.</p>
 
 <h3 id="Scrolling_tilemaps">Scrolling tilemaps</h3>
 
@@ -92,7 +94,7 @@ function screenToWorld(x,y) {
 
 <p>A trivial method for rendering would just be to iterate over all the tiles (like in static tilemaps) and draw them, subtracting the camera coordinates (like in the <code>worldToScreen()</code> example shown above) and letting the parts that fall outside the view window sit there, hidden. Drawing all the tiles that can not be seen is wasteful, however, and can take a toll on performance. <strong>Only tiles that are at visible should be rendered</strong> ideally — see the {{anch("Performance")}} section for more ideas on improving rendering performance.</p>
 
-<p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
+<p>You can read more about implementing scrolling tilemaps and see some example implementations in <a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Square tilemaps implementation: Scrolling maps</a>.</p>
 
 <h3 id="Layers">Layers</h3>
 
@@ -108,7 +110,7 @@ function screenToWorld(x,y) {
 
 <p>Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in <em>Tetris</em> or <em>Bejeweled</em>), path-finding algorithms, etc.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note</strong>: You can take a look at our demo that shows <a href="https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html">how to use a logic grid to handle collisions</a>.</p>
 </div>
 
@@ -136,7 +138,7 @@ function screenToWorld(x,y) {
  <li>Related articles on the MDN:
   <ul>
    <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps">Static square tile maps implementation with Canvas API</a></li>
-   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Scrolling square tile maps implementation with Canvas API</a></li>
+   <li><a href="/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps">Scrolling square tile maps implementation with Canvas API</a></li>
   </ul>
  </li>
  <li>External resources:

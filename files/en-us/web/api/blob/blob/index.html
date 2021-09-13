@@ -7,12 +7,13 @@ tags:
 - Constructor
 - File API
 - Reference
+browser-compat: api.Blob.Blob
 ---
 <div>{{APIRef("File API")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Blob()</strong></code> constructor returns a
+<p>The <code><strong>Blob()</strong></code> constructor returns a
     new {{domxref("Blob")}} object. The content of the blob consists of the concatenation
-    of the values given in the parameter <code>array</code>.</span></p>
+    of the values given in the parameter <code>array</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -51,31 +52,16 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js  language-js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // an array consisting of a single DOMString
+<pre class="brush: js ">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;']; // an array consisting of a single DOMString
 var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('File API', '#constructorBlob', 'Blob()')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Blob.Blob")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

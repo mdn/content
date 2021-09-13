@@ -6,6 +6,7 @@ tags:
 - Location
 - Property
 - Reference
+browser-compat: api.Location.href
 ---
 <p>{{ApiRef("Location")}}</p>
 
@@ -14,7 +15,7 @@ tags:
   URL, and allows the href to be updated.</p>
 
 <p>Setting the value of <code>href</code> <em>navigates</em> to the provided URL. If you
-  want <em>redirection</em>, use {{domxref("Location/replace","Location.replace()")}}.</p>
+  want <em>redirection</em>, use {{domxref("Location/replace","location.replace()")}}. The difference from setting the <code>href</code> property value is that when using the <code>location.replace()</code> method, after navigating to the given URL, the current page will not be saved in session <a href="/en-US/docs/Web/API/History_API">history</a> — meaning the user won't be able to use the back button to navigate to it.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,21 +32,8 @@ var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/Locat
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-location-href', 'href')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Location.href")}}</p>
+<p>{{Compat}}</p>

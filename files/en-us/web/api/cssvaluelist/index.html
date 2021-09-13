@@ -6,12 +6,23 @@ tags:
   - CSSOM
   - CSSValueList
   - Interface
-  - Obsolete
   - Reference
+  - Deprecated
+browser-compat: api.CSSValueList
 ---
-<div>{{APIRef("CSSOM")}}</div>
+<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
 
 <p>The <code><strong>CSSValueList</strong></code> interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
 
 <p>Some properties allow an empty list in their syntax. In that case, these properties take the <code>none</code> identifier. So, an empty list means that the property has the value <code>none</code>.</p>
 
@@ -37,24 +48,14 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValuesList', 'CSSValuesList')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSValueList")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

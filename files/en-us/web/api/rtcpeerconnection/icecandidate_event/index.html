@@ -11,11 +11,13 @@ tags:
   - WebRTC
   - WebRTC API
   - events
+  - Event
   - icecandidate
+browser-compat: api.RTCPeerConnection.icecandidate_event
 ---
-<div>{{WebRTCSidebar}}</div>
+<div>{{APIRef("WebRTC")}}</div>
 
-<p>An <strong><code>icecandidate</code></strong> event is sent to an {{domxref("RTCPeerConnection")}}  when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.</p>
+<p>An <strong><code>icecandidate</code></strong> event is sent to an {{domxref("RTCPeerConnection")}} when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.</p>
 
 <table class="properties">
  <tbody>
@@ -40,28 +42,28 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>There are three reasons why the <code>icecandidate</code> event is fired on an {{domxref("RTCPeerConnection")}}.</p>
+<p>There are three reasons why the <code>icecandidate</code> event is fired on an {{domxref("RTCPeerConnection")}}.</p>
 
 <h3 id="Sharing_a_new_candidate">Sharing a new candidate</h3>
 
-<p>The majority of <code>icecandidate</code> events are fired to indicate that a new candidate has been gathered. This candidate needs to be delivered to the remote peer over the signaling channel your code manages.</p>
+<p>The majority of <code>icecandidate</code> events are fired to indicate that a new candidate has been gathered. This candidate needs to be delivered to the remote peer over the signaling channel your code manages.</p>
 
 <pre class="brush: js">rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {
     sendCandidateToRemotePeer(event.candidate)
   } else {
-    /* there are no more candidates coming during this negotiation */
-  }
+    /* there are no more candidates coming during this negotiation */
+  }
 }
 </pre>
 
-<p>The remote peer, upon receiving the candidate, will add the candidate to its candidate pool by calling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, passing in the {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string you have passed along using the signaling server.</p>
+<p>The remote peer, upon receiving the candidate, will add the candidate to its candidate pool by calling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, passing in the {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string you have passed along using the signaling server.</p>
 
 <h3 id="Indicating_the_end_of_a_generation_of_candidates">Indicating the end of a generation of candidates</h3>
 
 <p>When an ICE negotiation session runs out of candidates to propose for a given {{domxref("RTCIceTransport")}}, it has completed gathering for a <strong>generation</strong> of candidates. That this has occurred is indicated by an <code>icecandidate</code> event whose {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string is empty (<code>""</code>).</p>
 
-<p>You should deliver this to the remote peer just like any standard candidate, as described under {{anch("Sharing a new candidate")}} above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code> are not forwarded across the signaling connection.</p>
+<p>You should deliver this to the remote peer just like any standard candidate, as described under {{anch("Sharing a new candidate")}} above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code> are not forwarded across the signaling connection.</p>
 
 <p>The end-of-candidates indication is described in <a href="https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice-02#section-9.3">section 9.3 of the Trickle ICE draft specification</a> (note that the section number is subject to change as the specification goes through repeated drafts).</p>
 
@@ -71,24 +73,24 @@ tags:
 
 <p>This signal exists for backward compatibility purposes and does <em>not</em> need to be delivered onward to the remote peer (which is why the code snippet above checks to see if <code>event.candidate</code> is <code>null</code> prior to sending the candidate along.</p>
 
-<p>If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:</p>
+<p>If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:</p>
 
 <pre class="brush: js">pc.addEventListener("icegatheringstatechange", ev =&gt; {
-  switch(pc.iceGatheringState) {
-    case "new":
-      /* gathering is either just starting or has been reset */
-      break;
-    case "gathering":
-      /* gathering has begun or is ongoing */
-      break;
+  switch(pc.iceGatheringState) {
+    case "new":
+      /* gathering is either just starting or has been reset */
+      break;
+    case "gathering":
+      /* gathering has begun or is ongoing */
+      break;
     case "complete":
-      /* gathering has ended */
-      break;
-  }
+      /* gathering has ended */
+      break;
+  }
 });
 </pre>
 
-<p>As you can see in this example, the <code>icegatheringstatechange</code> event lets you know when the value of the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has been updated. If that value is now <code>complete</code>, you know that ICE gathering has just ended.</p>
+<p>As you can see in this example, the <code>icegatheringstatechange</code> event lets you know when the value of the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has been updated. If that value is now <code>complete</code>, you know that ICE gathering has just ended.</p>
 
 <p>This is a more reliable approach than looking at the individual ICE messages for one indicating that the ICE session is finished.</p>
 
@@ -122,24 +124,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#event-icecandidate', 'icecandidate') }}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.icecandidate_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

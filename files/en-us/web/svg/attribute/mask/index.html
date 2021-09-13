@@ -4,12 +4,37 @@ slug: Web/SVG/Attribute/mask
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.mask
 ---
 <div>{{SVGRef}}</div>
 
 <p>The <strong><code>mask</code></strong> attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.</p>
 
 <p class="note"><strong>Note:</strong> As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.</p>
+
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement('a')}}</li>
+  <li>{{SVGElement('circle')}}</li>
+  <li>{{SVGElement('clipPath')}}</li>
+  <li>{{SVGElement('ellipse')}}</li>
+  <li>{{SVGElement('g')}}</li>
+  <li>{{SVGElement('glyph')}}</li>
+  <li>{{SVGElement('image')}}</li>
+  <li>{{SVGElement('line')}}</li>
+  <li>{{SVGElement('marker')}}</li>
+  <li>{{SVGElement('mask')}}</li>
+  <li>{{SVGElement('path')}}</li>
+  <li>{{SVGElement('pattern')}}</li>
+  <li>{{SVGElement('polygon')}}</li>
+  <li>{{SVGElement('polyline')}}</li>
+  <li>{{SVGElement('rect')}}</li>
+  <li>{{SVGElement('svg')}}</li>
+  <li>{{SVGElement('symbol')}}</li>
+  <li>{{SVGElement('text')}}</li>
+  <li>{{SVGElement('use')}}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -35,8 +60,6 @@ tags:
 </div>
 
 <p>Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.</p>
-
-<p>As a presentation attribute, it can be applied to any element but it has noticeable effects mostly on the following nineteen elements: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -84,4 +107,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.mask")}}</p>
+<p>{{Compat}}</p>

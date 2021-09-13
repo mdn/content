@@ -16,10 +16,13 @@ tags:
   - display
   - getDisplayMedia
   - screen
+browser-compat: api.DisplayMediaStreamConstraints
 ---
 <p>{{APIRef("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">The <code><strong>DisplayMediaStreamConstraints</strong></code> dictionary is used to specify whether or not to include video and/or audio tracks in the {{domxref("MediaStream")}} to be returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, as well as what type of processing must be applied to the tracks.</span> Processing information is specified using {{domxref("MediaTrackConstraints")}} objects providing options which are applied to the track after the media data is received but before it is made available on the {{domxref("MediaStream")}}.</p>
+<p>The <code><strong>DisplayMediaStreamConstraints</strong></code> dictionary is used to specify whether or not to include video and/or audio tracks in the {{domxref("MediaStream")}} to be returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, as well as what type of processing must be applied to the tracks.</p>
+
+<p>Processing information is specified using {{domxref("MediaTrackConstraints")}} objects providing options which are applied to the track after the media data is received but before it is made available on the {{domxref("MediaStream")}}.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -32,24 +35,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Screen Capture', '#dom-displaymediastreamconstraints', 'DisplayMediaStreamConstraints')}}</td>
-   <td>{{Spec2('Screen Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DisplayMediaStreamConstraints")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

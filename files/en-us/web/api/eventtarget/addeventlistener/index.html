@@ -18,12 +18,15 @@ tags:
   - attachEvent
   - events
   - mselementresize
+browser-compat: api.EventTarget.addEventListener
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><span class="seoSummary">The {{domxref("EventTarget")}} method
+<p>The {{domxref("EventTarget")}} method
     <strong><code>addEventListener()</code></strong> sets up a function that will be
-    called whenever the specified event is delivered to the target.</span> Common targets
+    called whenever the specified event is delivered to the target.</p>
+
+<p>Common targets
   are {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}, but the
   target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 </p>
@@ -34,10 +37,11 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-  class="brush: js"><var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>options</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>]);
-<var>target</var>.addEventListener(<var>type</var>, <var>listener</var> [, <var>useCapture</var>, <var>wantsUntrusted</var> {{Non-standard_inline}}]); // Gecko/Mozilla only</pre>
+<pre class="brush: js">target.addEventListener(type, listener);
+target.addEventListener(type, listener, options);
+target.addEventListener(type, listener, useCapture);
+target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUntrusted is Firefox only
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -56,15 +60,15 @@ tags:
     options are:
     <dl>
       <dt><code>capture</code></dt>
-      <dd>A {{jsxref("Boolean")}} indicating that events of this type will be dispatched
+      <dd>A boolean value indicating that events of this type will be dispatched
         to the registered <code><var>listener</var></code> before being dispatched to any
         <code>EventTarget</code> beneath it in the DOM tree.</dd>
       <dt><code>once</code></dt>
-      <dd>A {{jsxref("Boolean")}} indicating that the <code><var>listener</var></code>
+      <dd>A boolean value indicating that the <code><var>listener</var></code>
         should be invoked at most once after being added. If <code>true</code>, the
         <code><var>listener</var></code> would be automatically removed when invoked.</dd>
       <dt><code>passive</code></dt>
-      <dd>A {{jsxref("Boolean")}} that, if <code>true</code>, indicates that the function
+      <dd>A boolean value that, if <code>true</code>, indicates that the function
         specified by <code><var>listener</var></code> will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call <code>preventDefault()</code>, the user agent will do nothing other than
@@ -72,14 +76,14 @@ tags:
           passive listeners</a> to learn more.</dd>
       <dt><code>signal</code></dt>
       <dd>An {{domxref("AbortSignal")}}. The listener will be removed when the given <code>AbortSignal</code>’s {{domxref("AbortController/abort()", "abort()")}} method is called.</dd>
-      <dt>{{non-standard_inline}} <code>mozSystemGroup</code></dt>
-      <dd>A {{jsxref("Boolean")}} indicating that the listener should be added to the
+      <dt><code>mozSystemGroup</code> {{non-standard_inline}}</dt>
+      <dd>A boolean value indicating that the listener should be added to the
         system group. Available only in code running in XBL or in the
         {{glossary("chrome")}} of the Firefox browser.</dd>
     </dl>
   </dd>
   <dt><code><var>useCapture</var></code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether events of this type will be dispatched to
+  <dd><p>A boolean value indicating whether events of this type will be dispatched to
     the registered <code><var>listener</var></code> <em>before</em> being dispatched to
     any <code>EventTarget</code> beneath it in the DOM tree. Events that are bubbling
     upward through the tree will not trigger a listener designated to use capture. Event
@@ -88,21 +92,16 @@ tags:
     that event. The event propagation mode determines the order in which elements receive
     the event. See <a href="https://www.w3.org/TR/DOM-Level-3-Events/#event-flow">DOM
       Level 3 Events</a> and <a
-      href="http://www.quirksmode.org/js/events_order.html#link4">JavaScript Event
+      href="https://www.quirksmode.org/js/events_order.html#link4">JavaScript Event
       order</a> for a detailed explanation. If not specified,
-    <code><var>useCapture</var></code> defaults to <code>false</code>.</dd>
-  <dd>
-    <div class="note"><strong>Note:</strong> For event listeners attached to the event
-      target, the event is in the target phase, rather than the capturing and bubbling
-      phases. Events in the target phase will trigger all listeners on an element in the
-      order they were registered, regardless of the <code><var>useCapture</var></code>
-      parameter.</div>
-
-    <div class="note"><strong>Note:</strong> <code><var>useCapture</var></code> has not
-      always been optional. Ideally, you should include it for the widest possible browser
-      compatibility.</div>
+    <code><var>useCapture</var></code> defaults to <code>false</code>.</p>
+    <div class="notecard note">
+      <p><strong>Note:</strong> For event listeners attached to the event target, the event is in the target phase,
+        rather than the capturing and bubbling phases.
+        Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.</p>
+    </div>
   </dd>
-  <dt><code><var>wantsUntrusted</var></code> {{Non-standard_inline}}</dt>
+  <dt><code><var>wantsUntrusted</var></code> {{optional_inline}} {{Non-standard_inline}}</dt>
   <dd>A Firefox (Gecko)-specific parameter. If <code>true</code>, the listener receives
     synthetic events dispatched by web content (the default is <code>false</code> for
     browser {{glossary("chrome")}} and <code>true</code> for regular web pages). This
@@ -251,7 +250,7 @@ el.addEventListener("click", modifyText, false);
 
 <p>{{EmbedLiveSample('Add_a_simple_listener')}}</p>
 
-<h3 id="add_a_abortable_listener">Add an abortable listener</h3>
+<h3 id="Add_an_abortable_listener">Add an abortable listener</h3>
 
 <p>This example demonstrates how to add an <code>addEventListener()</code> that can be aborted with an {{domxref("AbortSignal")}}.</p>
 
@@ -287,7 +286,7 @@ function modifyText() {
 
 <h4 id="Result_5">Result</h4>
 
-<p>{{EmbedLiveSample('add_a_abortable_listener')}}</p>
+<p>{{EmbedLiveSample('Add_an_abortable_listener')}}</p>
 
 <h3 id="Event_listener_with_anonymous_function">Event listener with anonymous function
 </h3>
@@ -521,9 +520,9 @@ function nonePassiveHandler(event) {
 <p>It is often desirable to reference the element on which the event handler was fired,
   such as when using a generic handler for a set of similar elements.</p>
 
-<p>If attaching a handler function to an element using <code>addEventListener()</code>,
-  the value of {{jsxref("Operators/this","this")}} inside the handler is a reference to
-  the element. It is the same as the value of the <code>currentTarget</code> property of
+<p>When attaching a handler function to an element using <code>addEventListener()</code>,
+  the value of {{jsxref("Operators/this","this")}} inside the handler will be a reference to
+  the element. It will be the same as the value of the <code>currentTarget</code> property of
   the event argument that is passed to the handler.</p>
 
 <pre class="brush: js">my_element.addEventListener('click', function (e) {
@@ -572,9 +571,8 @@ function nonePassiveHandler(event) {
 
 <h4 id="Specifying_this_using_bind">Specifying "this" using bind()</h4>
 
-<p>The {{jsxref("Function.prototype.bind()")}} method lets you specify the value that
-  should be used as <code>this</code> for all calls to a given function. This lets you
-  easily bypass problems where it's unclear what <code>this</code> will be, depending on
+<p>The {{jsxref("Function.prototype.bind()")}} method lets you establish a fixed
+  <code>this</code> context for all subsequent calls — bypassing problems where it's unclear what <code>this</code> will be, depending on
   the context from which your function was called. Note, however, that you'll need to keep
   a reference to the listener around so you can remove it later.</p>
 
@@ -586,11 +584,16 @@ function nonePassiveHandler(event) {
   this.onclick1 = function(event) {
     console.log(this.name); // undefined, as |this| is the element
   };
+
   this.onclick2 = function(event) {
     console.log(this.name); // 'Something Good', as |this| is bound to newly created object
   };
+
+  // bind causes a fixed `this` context to be assigned to onclick2
+  this.onclick2 = this.onclick2.bind(this);
+
   element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
+  element.addEventListener('click', this.onclick2, false); // Trick
 }
 const s = new Something(document.body);
 </pre>
@@ -712,7 +715,7 @@ myButton.addEventListener('click', function() {
 console.log(someString);  // Expected Value: 'Data' (will never output 'Data Again')
 </pre>
 
-<div class="note">
+<div class="notecard note">
   <p><strong>Note:</strong> Although inner scopes have access to <code>const</code>,
     <code>let</code> variables from outer scopes, you cannot expect any changes to these
     variables to be accessible after the event listener definition, within the same outer
@@ -728,7 +731,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
   properties, and that they can be passed around by reference, makes them likely
   candidates for sharing data among scopes. Let's explore this.</p>
 
-<div class="note">
+  <div class="notecard note">
   <p><strong>Note:</strong> Functions in JavaScript are actually objects. (Hence they too
     can have properties, and will be retained in memory even after they finish executing
     if assigned to a variable that persists in memory.)</p>
@@ -763,8 +766,8 @@ window.setInterval(function() {
   function, both have access to the same data (i.e. when one changes the data, the other
   can respond to the change).</p>
 
-<div class="note">
-  <p><strong>Note:</strong> Objects are stored in variables by reference, meaning only the
+  <div class="notecard note">
+    <p><strong>Note:</strong> Objects are stored in variables by reference, meaning only the
     memory location of the actual data is stored in the variable. Among other things, this
     means variables that "store" objects can actually affect other variables that get
     assigned ("store") the same object reference. When two variables reference the same
@@ -772,7 +775,7 @@ window.setInterval(function() {
     either variable will affect the other.</p>
 </div>
 
-<div class="note">
+<div class="notecard note">
   <p><strong>Note:</strong> Because objects are stored in variables by reference, you can
     return an object from a function to keep it alive (preserve it in memory so you don't
     lose the data) after that function stops executing.</p>
@@ -810,8 +813,8 @@ window.setInterval(function() {
   using the following code at the beginning of your script. The code supports the use of
   <code>handleEvent()</code> and also the {{event("DOMContentLoaded")}} event.</p>
 
-<div class="note">
-  <p><strong>Note: </strong><code>useCapture</code> is not supported, as IE 8 does not
+  <div class="notecard note">
+    <p><strong>Note:</strong> <code>useCapture</code> is not supported, as IE 8 does not
     have any alternative method. The following code only adds IE 8 support. This IE 8
     polyfill only works in standards mode: a doctype declaration is required.</p>
 </div>
@@ -991,11 +994,10 @@ for(let i=0, j=0 ; i&lt;els.length ; i++){
   prevents the event listener from being called, so it can't block page rendering while
   the user is scrolling.</p>
 
-<div class="note">
-  <p><strong>Note:</strong> See the compatibility table below if you need to know which
-    browsers (and/or which versions of those browsers) implement this altered behavior.
-  </p>
-</div>
+  <div class="notecard note">
+    <p><strong>Note:</strong> See the compatibility table below if you need to know which
+    browsers (and/or which versions of those browsers) implement this altered behavior.</p>
+  </div>
 
 <p>You can override this behavior by explicitly setting the value of <code>passive</code>
   to <code>false</code>, as shown here:</p>
@@ -1032,46 +1034,16 @@ window.addEventListener('scroll', function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM4", "#dom-eventtarget-addeventlistener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM4")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener",
-        "EventTarget.addEventListener()")}}</td>
-      <td>{{Spec2("DOM2 Events")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventTarget.addEventListener", 3)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>{{domxref("EventTarget.removeEventListener()")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and
-      triggering custom events</a></li>
-  <li><a href="http://www.quirksmode.org/js/this.html">More details on the use of
-      <code>this</code> in event handlers</a></li>
+  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering custom events</a></li>
+  <li><a href="https://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
 </ul>

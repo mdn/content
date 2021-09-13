@@ -2,14 +2,15 @@
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
 tags:
-- API
-- Database
-- IDBFactory
-- IndexedDB
-- Method
-- Reference
-- Storage
-- cmp
+  - API
+  - Database
+  - IDBFactory
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - cmp
+browser-compat: api.IDBFactory.cmp
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -22,7 +23,7 @@ tags:
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: Do not use this method for comparing arbitrary JavaScript
+  <p><strong>Note:</strong> Do not use this method for comparing arbitrary JavaScript
     values, because many JavaScript values are either not valid IndexedDB keys (booleans
     and objects, for example) or are treated as equivalent IndexedDB keys (for example,
     since IndexedDB ignores arrays with non-numeric properties and treats them as empty
@@ -49,7 +50,7 @@ tags:
 <p>An integer that indicates the result of the comparison; the table below lists the
   possible values and their meanings:</p>
 
-<table class="standard-table" style="width: 434px;">
+<table class="standard-table">
   <tbody>
     <tr>
       <th scope="col">Returned value</th>
@@ -81,7 +82,7 @@ tags:
       <th scope="col">Description</th>
     </tr>
     <tr>
-      <td><a href="/en-US/docs/DOM/DOMError"><code>DataError</code></a></td>
+      <td><a href="/en-US/docs/Web/API/DOMError"><code>DataError</code></a></td>
       <td>One of the supplied keys was not a valid key.</td>
     </tr>
   </thead>
@@ -89,36 +90,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight:[3]">var a = 1;
+<pre class="brush: js;">var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
 console.log( "Comparison results: " + result );</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbfactory-cmp', 'cmp()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbfactory-cmp", "cmp()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBFactory.cmp")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

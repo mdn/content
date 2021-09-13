@@ -16,7 +16,7 @@ tags:
 
 <h2 id="API_reference_syntax">API reference syntax</h2>
 
-<p>Syntax sections for API reference pages are written manually, and may differ slightly based on feature being documented.
+<p>Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
   The section starts with a heading (typically {{HTMLElement("H2")}}) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
   Below the heading is a code block showing the feature's exact syntax, styled using the <code>brush: [markup-language]</code> class.</p>
 
@@ -64,9 +64,9 @@ new IntersectionObserver(callback, options);
 <p>Methods that can be used in many different different ways should be expanded out into multiple lines, showing all possible variations.</p>
 
 <p>Each option should be on its own line, omitting both per-option comments and assignment. For example, {{jsxref("Array.prototype.slice()")}} has two optional parameters, and would be documented as shown below:</p>
-<pre class="brush: js">Array slice();
-Array slice(begin);
-Array slice(begin, end);</pre>
+<pre class="brush: js">slice();
+slice(begin);
+slice(begin, end);</pre>
 
 <p>Similarly, for {{DOMxRef("CanvasRenderingContext2D.drawImage")}}:</p>
 
@@ -90,7 +90,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <p>Formal syntax notation (using <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">BNF</a>) should not be used in the Syntax section — instead use the expanded multiple-line format <a href="#multiple_lines">described above</a>.</p>
 
-<p>While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can <em>conflict</em> with valid syntax for particular programming languages. For example, <code>[ ]</code> indictes both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:</p>
+<p>While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can <em>conflict</em> with valid syntax for particular programming languages. For example, "<code>[&nbsp;]</code>" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:</p>
 
 <pre class="brush: js">arr.slice([begin[, end]])</pre>
 
@@ -99,7 +99,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <h5 id="Concise_syntax_blocks">Concise syntax blocks</h5>
 
-<p>The aim is to make the syntax block as pure and unambiguous as definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
+<p>The aim is to make the syntax block as pure and unambiguous a definition of the feature's syntax as possible — don't include any irrelevant syntax. For example, you may see this syntax form used to describe promises in many places on the site:</p>
 
 <pre class="brush: js">caches.match(request, options).then(function(response) {
   // Do something with the response
@@ -108,6 +108,37 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 <p>But this version is much more concise, and doesn't include the superfluous {{JSxRef("Promise.prototype.then()")}} method call:</p>
 
 <pre class="brush: js">match(request, options);</pre>
+
+<h5 id="Callback_syntax_blocks">Callback syntax blocks</h5>
+
+<p>For methods with a callback function, the syntax for arrow functions, functions, and inline functions is shown:</p>
+
+<pre class="brush: js">
+// Arrow function
+filter((currentValue) => { ... } )
+filter((currentValue, index) => { ... } )
+filter((currentValue, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(currentValue) { ... })
+filter(function callbackFn(currentValue, index) { ... })
+filter(function callbackFn(currentValue, index, array){ ... })
+filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+</pre>
+
+<h5 id="Syntax_for_arbitrary_number_of_parameters">Syntax for arbitrary number of parameters</h5>
+
+<p>For methods that accept an arbitrary number of parameters, the syntax block is written like this:</p>
+
+<pre class="brush: js">
+unshift(element0)
+unshift(element0, element1)
+unshift(element0, element1, ... , elementN)
+</pre>
 
 <h4 id="Parameters_section">Parameters section</h4>
 
@@ -126,7 +157,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <h4 id="Exceptions_section">Exceptions section</h4>
 
-<p>Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.</p>
+<p>Finally, include an "Exceptions" subsection, which explains what exceptions can be thrown if a problem is encountered when invoking the constructor/method. This could be because a parameter name has been misspelled or it has been given a value of the wrong datatype, because there is a problem with the environment it is being invoked in (e.g. trying to run a secure context-only feature in a non-secure context), or some other reason.</p>
 
 <p>Determining what exceptions are thrown by a method can require a good perusal of the specification. Looking through the spec's step-by-step explanation of how a feature operates will generally provide a solid list of the exceptions and the situations that cause them to be thrown.</p>
 
@@ -139,20 +170,9 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 
 <h3 id="Properties">Properties</h3>
 
-<h4 id="Syntax_block_2">Syntax block</h4>
-
-<p>Start with a syntax block, like this (see {{DOMxRef("IntersectionObserver.root")}}):</p>
-
-<pre class="brush: js">var root = IntersectionObserver.root;</pre>
-
-<p>For a non-read-only property, it is a good idea to include two lines, which show getting and setting the property (see {{DOMxRef("AudioParam.value")}}):</p>
-
-<pre class="brush: js">gain = gainNode.gain.value;
-gainNode.gain.value = 0;</pre>
-
 <h4 id="Value_section">Value section</h4>
 
-<p>Below the syntax block you need to include a "Value" subsection, which contains a explanation of the property's value — both its data type and what its purpose is.</p>
+<p>Properties contain no syntax section. Instead, add a "Value" section containing an explanation of the property's value. Describe its data type and what its purpose is.</p>
 
 <h4 id="Exceptions_section_2">Exceptions section</h4>
 
@@ -168,11 +188,11 @@ gainNode.gain.value = 0;</pre>
 
 <pre class="brush: js">window.onvrdisplaypresentchange = functionRef;</pre>
 
-<p>And that's it — event handler properties are always settable, and always contain a function, therefore no more information is needed.</p>
+<p>And that's it — event handler properties are always settable, and always contain a function; therefore no more information is needed.</p>
 
 <h2 id="JavaScript_reference_syntax">JavaScript reference syntax</h2>
 
-<p>JavaScript built-in object reference pages follow the same basic rules as API reference pages, e.g. for methods and properties. There are a few differences that you might observe:</p>
+<p>JavaScript built-in object reference pages follow the same basic rules as API reference pages; e.g. for methods and properties. There are a few differences that you might observe:</p>
 
 <ul>
  <li>For built-in objects with a single constructor, the constructor syntax is often included on the object landing page. See {{JSxRef("Date")}} for example. You'll notice that static methods (those that exist on the <code>Date</code> object itself) are listed under "Methods", whereas instance methods are listed under "Date.prototype methods".</li>
@@ -202,7 +222,7 @@ gainNode.gain.value = 0;</pre>
 
 <h4 id="Formal_syntax2">Formal syntax</h4>
 
-<p>the last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
+<p>The last section, "Formal syntax", is automatically generated from the data included in the <a href="https://github.com/mdn/data">MDN data repo</a>'s CSS directory. You just need to include a <code>CSSSyntax</code> macro call below the title, and it will take care of the rest.</p>
 
 <p>The only complication arises from making sure the data you need is present. The <a href="https://github.com/mdn/data/blob/master/css/properties.json">properties.json</a> file needs to contain an entry for the property you are documenting, and the <a href="https://github.com/mdn/data/blob/master/css/types.json">types.json</a> file needs to contain an entry for all of the value types used in the property's value.</p>
 
@@ -220,7 +240,7 @@ gainNode.gain.value = 0;</pre>
 
 <h2 id="HTML_reference_syntax">HTML reference syntax</h2>
 
-<p>HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. the main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.</p>
+<p>HTML reference pages don't have "Syntax" sections — the syntax is always just the element name surrounded by angle brackets, so it isn't needed. The main thing you need to know about HTML elements is what attributes they take and what their values can be, and this is covered in a separate "Attributes" section. See {{htmlelement("ol")}} and {{htmlelement("video")}} for examples.</p>
 
 <h2 id="HTTP_reference_syntax">HTTP reference syntax</h2>
 
@@ -234,7 +254,7 @@ gainNode.gain.value = 0;</pre>
 
 <p>The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:</p>
 
-<pre class="brush: plain">If-None-Match: &lt;etag_value&gt;
+<pre class="brush: http">If-None-Match: &lt;etag_value&gt;
 If-None-Match: &lt;etag_value&gt;, &lt;etag_value&gt;, …
 If-None-Match: *</pre>
 
@@ -248,7 +268,7 @@ If-None-Match: *</pre>
 
 <p>Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the <a href="/en-US/docs/Web/HTTP/Methods/GET">GET method</a> looks like this:</p>
 
-<pre class="brush: plain">GET /index.html</pre>
+<pre class="brush: http">GET /index.html</pre>
 
 <h3 id="HTTP_response_status_codes">HTTP response status codes</h3>
 

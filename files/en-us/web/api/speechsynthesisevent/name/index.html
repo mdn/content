@@ -11,6 +11,7 @@ tags:
 - name
 - speech
 - synthesis
+browser-compat: api.SpeechSynthesisEvent.name
 ---
 <div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
 
@@ -34,30 +35,16 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <pre class="brush: js">utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' milliseconds.');
+  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
 }</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#dom-speechsynthesisevent-name', 'name')}}
-			</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechSynthesisEvent.name")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

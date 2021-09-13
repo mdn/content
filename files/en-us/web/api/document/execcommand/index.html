@@ -8,22 +8,28 @@ tags:
   - NeedsExample
   - Reference
   - editor
+  - Deprecated
+browser-compat: api.Document.execCommand
 ---
 <div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
 
-<p><span class="seoSummary">When an HTML document has been switched to
+<p>When an HTML document has been switched to
     <code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code>, its
     <code>document</code> object exposes an <strong><code>execCommand</code></strong>
     method to run commands that manipulate the current editable region, such as <a
       href="/en-US/docs/Web/HTML/Element/input">form inputs</a> or
     <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code>
-    elements.</span></p>
+    elements.</p>
 
 <p>Most commands affect the document's <a
     href="/en-US/docs/Web/API/Selection">selection</a> (bold, italics, etc.), while others
   insert new elements (adding a link), or affect an entire line (indenting). When using
   <code>contentEditable</code>, <code>execCommand()</code> affects the currently active
   editable element.</p>
+
+<div class="Notecard note">
+  <p><strong>Note:</strong> This method is obsolete and should not be used. In particular, to interact with the clipboard, consider using the <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a> instead.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -36,10 +42,10 @@ tags:
   disabled.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code><var>document</var>.execCommand()</code> only returns
+  <p><strong>Note:</strong> <code><var>document</var>.execCommand()</code> only returns
     <code>true</code> if it is invoked as part of a user interaction. You can't use it to
     verify browser support before calling a command. From Firefox 82, nested
-    <code>document.execCommand()</code> calls will always return <code>false</code>. </p>
+    <code>document.execCommand()</code> calls will always return <code>false</code>.</p>
 </div>
 
 <h3 id="Parameters">Parameters</h3>
@@ -49,7 +55,7 @@ tags:
   <dd>A {{domxref("DOMString")}} specifying the name of the command to execute. See
     {{anch("Commands")}} for a list of possible commands.</dd>
   <dt><code><var>aShowDefaultUI</var></code></dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether the default user interface should be
+  <dd>A boolean value indicating whether the default user interface should be
     shown. This is not implemented in Mozilla.</dd>
   <dt><code><var>aValueArgument</var></code></dt>
   <dd>For commands which require an input argument, is a {{domxref("DOMString")}}
@@ -208,15 +214,16 @@ tags:
   <dd>Removes the <a href="/en-US/docs/Web/HTML/Element/a">anchor element</a> from a
     selected hyperlink.</dd>
   <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
-  <dd>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean
-    true/false as a value argument.</dd>
-  <dd>NOTE: This argument is logically backwards (i.e. use <code>false</code> to use CSS,
+  <dd><p>Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean
+    true/false as a value argument.</p>
+  <div class="notecard note"><p><strong>Note:</strong> This argument is logically backwards (i.e. use <code>false</code> to use CSS,
     <code>true</code> to use HTML) and unsupported by Internet Explorer. This has been
-    deprecated in favor of <code>styleWithCSS</code>.</dd>
+    deprecated in favor of <code>styleWithCSS</code>.</p></div></dd>
   <dt><code>styleWithCSS</code></dt>
   <dd>Replaces the <code>useCSS</code> command. <code>true</code> modifies/generates
-    <code>style</code> attributes in markup, false generates presentational elements.<br>
-     </dd>
+    <code>style</code> attributes in markup, false generates presentational elements.<br></dd>
+  <dt><code>AutoUrlDetect</code></dt>
+  <dd>Changes the browser auto-link behavior (Internet Explorer only)</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
@@ -226,24 +233,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td><a href="https://w3c.github.io/editing/docs/execCommand/">execCommand</a></td>
-      <td>Unofficial Draft</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.execCommand")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

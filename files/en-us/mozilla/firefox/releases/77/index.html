@@ -76,6 +76,7 @@ tags:
  <li>The {{WebExtAPIRef("tabs.duplicate")}} API now supports <code>duplicateProperties</code>, enabling the position and active status of a duplicated tab to be specified. ({{bug(1560218)}})</li>
  <li>The {{WebExtAPIRef("permissions")}} API events {{WebExtAPIRef("permissions.onAdded")}} and {{WebExtAPIRef("permissions.onRemoved")}} are now supported. ({{bug(1444294)}})</li>
  <li>Multiple <code>Content-Security-Policy</code> header changes requested in {{WebExtAPIRef("webRequest.onHeadersReceived")}} are merged. ({{bug(1462989 )}})</li>
+ <li>{{WebExtAPIRef("webRequest")}} events will no longer be triggered for <code>data:</code>-URLs. ({{bug(1631933)}})</li>
 </ul>
 
 <h3 id="Manifest_changes">Manifest changes</h3>
@@ -89,12 +90,6 @@ tags:
 <ul>
  <li>Use of the <code>unlimitedStorage</code> permission no longer results in a prompt during extension installation or update. See <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Requesting the right permissions</a> for more information. ({{bug(1630413)}})</li>
  <li>Changes related to <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite cookies</a> mean that when setting <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions </a>to bypass tracking protection for extension pages hosts must be specified as a full domain or with wildcards. However, for Content scripts tracking protection can only be bypassed for hosts specified with a full domain.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/77/">Site compatibility for Firefox 77</a></li>
 </ul>
 
 <h2 id="Older_versions">Older versions</h2>

@@ -4,12 +4,13 @@ slug: Web/API/NodeIterator
 tags:
 - API
 - DOM
+browser-compat: api.NodeIterator
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>NodeIterator</code></strong> interface
+<p>The <strong><code>NodeIterator</code></strong> interface
 		represents an iterator over the members of a list of the nodes in a subtree of the
-		DOM. The nodes will be returned in document order.</span></p>
+		DOM. The nodes will be returned in document order.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -52,7 +53,7 @@ tags:
 					<td>Shows all nodes.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
 					<td><code>2</code></td>
 					<td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful
 						only when creating a {{ domxref("NodeIterator") }} with an {{
@@ -63,7 +64,7 @@ tags:
 						tree.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}
+					<td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}
 					</td>
 					<td><code>8</code></td>
 					<td>Shows {{ domxref("CDATASection") }} nodes.</td>
@@ -94,32 +95,20 @@ tags:
 					<td>Shows {{ domxref("Element") }} nodes.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
 					<td><code>32</code></td>
-					<td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when
-						creating a {{ domxref("NodeIterator") }} with an {{
-						domxref("Entity") }} node as its root; in this case, it means that
-						the {{ domxref("Entity") }} node will appear in the first position
-						of the traversal. Since entities are not part of the document
-						tree, they do not appear when traversing over the document tree.
-					</td>
+					<td>Legacy, no more used.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}
+					<td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}
 					</td>
 					<td><code>16</code></td>
-					<td>Shows {{ domxref("EntityReference") }} nodes.</td>
+					<td>Legacy, no more used.</td>
 				</tr>
 				<tr>
-					<td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
+					<td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
 					<td><code>2048</code></td>
-					<td>Shows {{ domxref("Notation") }} nodes. This is meaningful only
-						when creating a {{ domxref("NodeIterator") }} with a {{
-						domxref("Notation") }} node as its root; in this case, it means
-						that the {{ domxref("Notation") }} node will appear in the first
-						position of the traversal. Since entities are not part of the
-						document tree, they do not appear when traversing over the
-						document tree.</td>
+					<td>Legacy, no more used.</td>
 				</tr>
 				<tr>
 					<td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -138,7 +127,7 @@ tags:
 	<dd>Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.</dd>
 	<dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}}
 		{{deprecated_inline}}</dt>
-	<dd>Is a {{domxref("Boolean")}} indicating if, when discarding an
+	<dd>Is a boolean value indicating if, when discarding an
 		{{domxref("EntityReference")}} its whole sub-tree must be discarded at the same
 		time.</dd>
 	<dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
@@ -146,7 +135,7 @@ tags:
 	<dd>Returns the {{domxref("Node")}} to which the iterator is anchored.</dd>
 	<dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
 		experimental_inline() }}</dt>
-	<dd>Returns a {{domxref("Boolean")}} flag that indicates whether the
+	<dd>Returns a boolean flag that indicates whether the
 		{{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>,
 		or after, the flag being <code>false</code>, the anchor node.</dd>
 </dl>
@@ -156,7 +145,7 @@ tags:
 <p><em>This interface doesn't inherit any method.</em></p>
 
 <dl>
-	<dt>{{domxref("NodeIterator.detach()")}} {{obsolete_inline()}}</dt>
+	<dt>{{domxref("NodeIterator.detach()")}} {{deprecated_inline}}</dt>
 	<dd>This operation is a no-op. It doesn't do anything. Previously it was telling the
 		engine that the <code>NodeIterator</code> was no more used, but this is now
 		useless.</dd>
@@ -170,37 +159,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td>Added the <code>referenceNode</code> and
-				<code>pointerBeforeReferenceNode</code> properties.<br>
-				Removed the <code>expandEntityReferences</code> property.<br>
-				The method <code>detach()</code> has been changed to be a no-op.<br>
-				The methods <code>previousNode()</code> and <code>nextNode()</code> don't
-				raise an exception any more.</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview',
-				'NodeIterator')}}</td>
-			<td>{{Spec2('DOM2 Traversal_Range')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeIterator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -13,6 +13,7 @@ tags:
   - URL
   - Window
   - popstate
+browser-compat: api.Window.popstate_event
 ---
 <p>{{APIRef}}</p>
 
@@ -41,7 +42,7 @@ tags:
 
 <h2 id="The_history_stack">The history stack</h2>
 
-<p>If the history entry being activated was created by a call to <code><a href="/en-US/docs/Web/API/History_API#The_pushState()_method">history.pushState()</a></code> or was affected by a call to <code><a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a></code>, the <code>popstate</code> event's <code>state</code> property contains a copy of the history entry's state object.</p>
+<p>If the history entry being activated was created by a call to <code><a href="/en-US/docs/Web/API/History_API#the_pushstate()_method">history.pushState()</a></code> or was affected by a call to <code><a href="/en-US/docs/Web/API/History_API#the_replacestate()_method">history.replaceState()</a></code>, the <code>popstate</code> event's <code>state</code> property contains a copy of the history entry's state object.</p>
 
 <p>These methods and their corresponding events can be used to add data to the history stack which can be used to reconstruct a dynamically generated page, or to otherwise alter the state of the content being presented while remaining on the same {{domxref("Document")}}.</p>
 
@@ -50,7 +51,7 @@ tags:
 <p>Browsers tend to handle the <code>popstate</code> event differently on page load. Chrome (prior to v34) and Safari always emit a <code>popstate</code> event on page load, but Firefox doesn't.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: When writing functions that process <code>popstate</code> event it is important to take into account that properties like <code>window.location</code> will already reflect the state change (if it affected the current URL), but <code>document</code> might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} method call should be used to effectively put its inner <em>callback</em> function that does the processing at the end of the browser event loop: <code>window.</code><code>onpopstate</code><code> = () =&gt; setTimeout(doSomeThing, 0);</code></p>
+<p><strong>Note:</strong> When writing functions that process <code>popstate</code> event it is important to take into account that properties like <code>window.location</code> will already reflect the state change (if it affected the current URL), but <code>document</code> might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("setTimeout()")}} method call should be used to effectively put its inner <em>callback</em> function that does the processing at the end of the browser event loop: <code>window.</code><code>onpopstate</code><code> = () =&gt; setTimeout(doSomeThing, 0);</code></p>
 </div>
 
 <h2 id="When_popstate_is_sent">When popstate is sent</h2>
@@ -71,7 +72,7 @@ tags:
  <li>If the <strong>new-entry</strong> doesn't have persisted user state and its URL's fragment is non-<code>null</code>, the document is scrolled to that fragment.</li>
  <li>Next, <strong>current-entry</strong> is set to <strong>new-entry</strong>. The destination entry is now considered to be current.</li>
  <li>If <strong>new-entry</strong> has serialized state information saved with it, that information is deserialized into {{domxref("History.state")}}; otherwise, <code>state</code> is <code>null</code>.</li>
- <li><span style="color: #229922;">If the value of <code>state</code> changed, the <code>popstate</code> event is sent to the document.</span></li>
+ <li>If the value of <code>state</code> changed, the <code>popstate</code> event is sent to the document.</li>
  <li>Any persisted user state is restored, if the browser chooses to do so.</li>
  <li>If the original and new entry's shared the same document, but had different fragments in their URLs, send the {{domxref("Window.hashchange_event", "hashchange")}} event to the window.</li>
 </ol>
@@ -110,22 +111,11 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-popstate', 'popstate')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.popstate_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,6 +6,7 @@ tags:
   - Reference
   - WebGL
   - WebGL extension
+browser-compat: api.WEBGL_depth_texture
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -14,7 +15,7 @@ tags:
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
 
 <div class="note">
-<p><strong>Availability:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constant in WebGL2 is <code>gl.UNSIGNED_INT_24_8</code>.</p>
+<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constant in WebGL2 is <code>gl.UNSIGNED_INT_24_8</code>.</p>
 </div>
 
 <h2 id="Constants">Constants</h2>
@@ -43,7 +44,7 @@ tags:
 </ul>
 
 <div class="note">
-<p>Incorrectly stated as the <code>target</code> parameter in the specification, see <a href="https://www.khronos.org/bugzilla/show_bug.cgi?id=674">https://www.khronos.org/bugzilla/show_bug.cgi?id=674</a>.</p>
+<p><strong>Note:</strong> Incorrectly stated as the <code>target</code> parameter in the specification, see <a href="https://www.khronos.org/bugzilla/show_bug.cgi?id=674">https://www.khronos.org/bugzilla/show_bug.cgi?id=674</a>.</p>
 </div>
 
 
@@ -56,26 +57,11 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.DEPTH_COMPONENT, 512, 512, 0, gl.DEPTH_COMPON
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WEBGL_depth_texture', "", "WEBGL_depth_texture")}}</td>
-   <td>{{Spec2('WEBGL_depth_texture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.WEBGL_depth_texture")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -11,6 +11,7 @@ tags:
   - WebExtensions
   - runtime
   - sendNativeMessage
+browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -47,30 +48,30 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.runtime.sendNativeMessage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
 <p>Here's a background script that sends a "ping" message to the "ping_pong" app and logs the response, whenever the user clicks the browser action:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">onResponse</span><span class="punctuation token">(</span>response<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">`Received ${</span>response}<span class="punctuation token">`)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}
+<pre class="brush: js line-numbers">function onResponse(response) {
+  console.log(`Received ${response}`);
+}
 
-</span></code>function onError(error) {
-  console.log(`Error: ${error}`);
-}<code class="language-js">
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
 
-<span class="comment token">/*
+/*
 On a click on the browser action, send the app a message.
-*/</span>
-browser<span class="punctuation token">.</span>browserAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Sending:  ping"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  var sending = browser<span class="punctuation token">.</span>runtime<span class="punctuation token">.</span><span class="function token">sendNativeMessage</span><span class="punctuation token">(</span><span class="string token">"ping_pong"</span><span class="punctuation token">,</span> <span class="string token">"ping"</span><span class="punctuation token">)</span><span class="punctuation token">;
-  sending.then(onResponse, onError);</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+*/
+browser.browserAction.onClicked.addListener(() => {
+  console.log("Sending:  ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
+  sending.then(onResponse, onError);
+});
+</pre>
+
 
 <p>{{WebExtExamples}}</p>
 

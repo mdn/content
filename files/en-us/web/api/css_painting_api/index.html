@@ -29,7 +29,7 @@ tags:
 
 <dl>
  <dt>{{domxref('PaintWorklet')}}</dt>
- <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
+ <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file."><code>CSS.paintWorklet</code></a>.</dd>
  <dt>{{domxref('PaintWorkletGlobalScope')}}</dt>
  <dd>The global execution context of the <code>paintWorklet</code>.</dd>
  <dt>{{domxref('PaintRenderingContext2D')}}</dt>
@@ -49,142 +49,103 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="/en-US/docs/Web/CSS/paint()" title="The documentation about this has not yet been written; please consider contributing!">paint()</a></code>  function.</p>
+<p>The following example creates a list of items with a background image that rotates between three different colors and three widths. In a supporting browser you will see something like the image below.</p>
 
-<p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href="/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function:</p>
+<p><img alt="The width and color of the background image changes based on the custom properties" src="Guide/boxbg.png"></p>
 
-<pre class="brush: js">registerPaint('hollowHighlights', class {
+<p>To achieve this we'll define two custom CSS properties, <code>--boxColor</code> and <code>--widthSubtractor</code>.</p>
 
-  static get inputProperties() { return ['--boxColor']; }
+<h3>The paint worklet</h3>
 
-  static get inputArguments() { return ['*','&lt;length&gt;']; }
+<p>In our worklet, we can reference these custom properties.</p>
 
+<pre class="brush: js">registerPaint('boxbg', class {
   static get contextOptions() { return {alpha: true}; }
 
-  paint(ctx, size, props, args) {
-		const x = 0;
-		const y = size.height * 0.3;
-		const blockWidth = size.width * 0.33;
-		const blockHeight = size.height * 0.85;
+  /*
+     use this function to retrieve any custom properties (or regular properties, such as 'height')
+     defined for the element, return them in the specified array
+  */
+  static get inputProperties() { return ['--boxColor', '--widthSubtractor']; }
 
-		const theColor = props.get( '--boxColor' );
-		const strokeType = args[0].toString();
-		const strokeWidth = parseInt(args[1]);
+  paint(ctx, size, props) {
+    /*
+       ctx -&gt; drawing context
+       size -&gt; paintSize: width and height
+       props -&gt; properties: get() method
+    */
 
-		console.log(theColor);
-
-		if ( strokeWidth ) {
-			ctx.lineWidth = strokeWidth;
-		} else {
-			ctx.lineWidth = 1.0;
-		}
-
-		if ( strokeType === 'stroke' ) {
-			ctx.fillStyle = 'transparent';
-			ctx.strokeStyle = theColor;
-		} else if ( strokeType === 'filled' ) {
-			ctx.fillStyle = theColor;
-			ctx.strokeStyle = theColor;
-		} else {
-			ctx.fillStyle = 'none';
-			ctx.strokeStyle = 'none';
-		}
-
-		ctx.beginPath();
-		ctx.moveTo( x, y );
-		ctx.lineTo( blockWidth, y );
-		ctx.lineTo( blockWidth + blockHeight, blockHeight );
-		ctx.lineTo( x, blockHeight );
-		ctx.lineTo( x, y );
-		ctx.closePath();
-		ctx.fill();
-		ctx.stroke();
-
-		for (let i = 0; i &lt; 4; i++) {
-			let start = i * 2;
-			ctx.beginPath();
-			ctx.moveTo( blockWidth + (start * 10) + 10, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20, y);
-			ctx.lineTo( blockWidth + (start * 10) + 20 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10 + blockHeight, blockHeight);
-			ctx.lineTo( blockWidth + (start * 10) + 10, y);
-			ctx.closePath();
-			ctx.fill();
-			ctx.stroke();
-		}
+    ctx.fillStyle = props.get('--boxColor');
+    ctx.fillRect(0, size.height/3, size.width*0.4 - props.get('--widthSubtractor'), size.height*0.6);
   }
 });</pre>
 
-<div id="hollowExample">
-<p>We then include the paintWorklet:</p>
+<p>We used the <code>inputProperties()</code> method in the <code>registerPaint()</code> class to get the values of two custom properties set on an element that has <code>boxbg</code> applied to it and then used those within our <code>paint()</code> function. The <code>inputProperties()</code> method can return all properties affecting the element, not just custom properties.</p>
 
-<pre class="brush: html hidden">&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-    &lt;li&gt;item 3&lt;/li&gt;
-    &lt;li&gt;item 4&lt;/li&gt;
-    &lt;li&gt;item 5&lt;/li&gt;
-    &lt;li&gt;item 6&lt;/li&gt;
-    &lt;li&gt;item 7&lt;/li&gt;
-    &lt;li&gt;item 8&lt;/li&gt;
-    &lt;li&gt;item 9&lt;/li&gt;
-    &lt;li&gt;item 10&lt;/li&gt;
-    &lt;li&gt;item 11&lt;/li&gt;
-    &lt;li&gt;item 12&lt;/li&gt;
-    &lt;li&gt;item 13&lt;/li&gt;
-    &lt;li&gt;item 14&lt;/li&gt;
-    &lt;li&gt;item 15&lt;/li&gt;
-    &lt;li&gt;item 16&lt;/li&gt;
-    &lt;li&gt;item 17&lt;/li&gt;
-    &lt;li&gt;item 18&lt;/li&gt;
-    &lt;li&gt;item 19&lt;/li&gt;
-    &lt;li&gt;item 20&lt;/li&gt;
-&lt;/ul&gt;</pre>
+<h3>Using the paint worklet</h3>
 
-<pre class="brush: js">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 
-<p>Then we can use the {{cssxref('&lt;image&gt;')}} with the CSS {{cssxref('paint()')}} function:</p>
+<h4>CSS</h4>
+
+<p>In our CSS, we define the <code>--boxColor</code> and <code>--widthSubtractor</code> custom properties.</p>
 
 <pre class="brush: css">li {
+   background-image: paint(boxbg);
    --boxColor: hsla(55, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
    --boxColor: hsla(155, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, filled,  3px);
+   --widthSubtractor: 20;
 }
 
 li:nth-of-type(3n+1) {
    --boxColor: hsla(255, 90%, 60%, 1.0);
-   background-image: paint(hollowHighlights, stroke, 1px);
+   --widthSubtractor: 40;
 }</pre>
-</div>
-<p>We've included a custom property in the selector block defining a boxColor. Custom properties are accessible to the PaintWorklet.</p>
 
-<p>{{EmbedLiveSample("hollowExample", 300, 300)}}</p>
+<h4>JavaScript</h4>
+
+<p>In our <code>&lt;script&gt;</code> we register the worklet:</p>
+
+<pre class="brush: js">CSS.paintWorklet.addModule('boxbg.js');</pre>
+
+<h4>Result</h4>
+
+<p>While you can't play with the worklet's script, you can alter the custom property values in DevTools to change the colors and width of the background image.</p>
+
+{{EmbedGHLiveSample("css-examples/houdini/css_painting_api/example-boxbg.html", '100%', 400)}}
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Painting API')}}</td>
-   <td>{{Spec2('CSS Painting API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.PaintWorkletGlobalScope")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>See the browser compatibility data for each CSS Painting API Interfaces.</p>
+<p>See the browser compatibility data for each CSS Painting API Interface.</p>
 
 <h2 id="See_also">See also</h2>
 

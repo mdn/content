@@ -12,12 +12,15 @@ tags:
 - WebRTC API
 - id
 - rtc
+browser-compat: api.RTCStats.id
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>id</code></strong> property of the
+<p>The <strong><code>id</code></strong> property of the
     {{domxref("RTCStats")}} dictionary is a string which uniquely identifies the object
-    for which this <code>RTCStats</code> object provides statistics.</span> Using the
+    for which this <code>RTCStats</code> object provides statistics.</p>
+
+<p>Using the
   <code>id</code>, you can correlate two or more <code>RTCStats</code>-based objects in
   order to monitor statistics over time for a given WebRTC object, such as an
   {{Glossary("RTP")}} stream, an {{domxref("RTCPeerConnection")}}, or an
@@ -38,21 +41,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtcstats-id', 'RTCStats.id')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCStats.id")}}</p>
+<p>{{Compat}}</p>

@@ -8,7 +8,7 @@ tags:
   - part 6
   - server-side
 ---
-<p class="summary">This subarticle shows how to define a page/form to create <code>BookInstance</code> objects. This is very much like the form we used to create <code>Book</code> objects.</p>
+<p>This subarticle shows how to define a page/form to create <code>BookInstance</code> objects. This is very much like the form we used to create <code>Book</code> objects.</p>
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
@@ -93,7 +93,7 @@ exports.bookinstance_create_post = [
 
 <p>Create <strong>/views/bookinstance_form.pug</strong> and copy in the text below.</p>
 
-<pre>extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1=title
@@ -133,15 +133,15 @@ block content
 
 <p>The view structure and behavior is almost the same as for the <strong>book_form.pug</strong> template, so we won't go over it again.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The above template hard-codes the <em>Status</em> values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.</p>
 </div>
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>
 
-<p>Run the application and open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>Create new book instance (copy)</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid <code>BookInstance</code>, it should be saved and you'll be taken to the detail page.</p>
+<p>Run the application and open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Then select the <em>Create new book instance (copy)</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid <code>BookInstance</code>, it should be saved and you'll be taken to the detail page.</p>
 
-<p><img alt="" src="locallibary_express_bookinstance_create_empty.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="locallibary_express_bookinstance_create_empty.png"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

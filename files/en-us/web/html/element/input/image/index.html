@@ -14,14 +14,13 @@ tags:
   - Input Type
   - Number
   - Reference
+browser-compat: html.elements.input.input-image
 ---
 <div>{{HTMLRef}}</div>
 
 <p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>image</code></strong> are used to create graphical submit buttons, i.e. submit buttons that take the form of an image rather than text.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}</div>
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <table class="properties">
  <tbody>
@@ -103,7 +102,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="htmlattrdefalt">{{htmlattrdef("alt")}}</h3>
+<h3 id="attr-alt">alt</h3>
 
 <p>The <code>alt</code> attribute provides an alternate string to use as the button's label if the image cannot be shown (due to error, a {{Glossary("user agent")}} that cannot or is configured not to show images, or if the user is using a screen reading device). If provided, it must be a non-empty string appropriate as a label for the button.</p>
 
@@ -113,15 +112,15 @@ tags:
 <p><strong>Important:</strong> While the <code>alt</code> attribute is technically optional, you should always include one to maximize the usability of your content.</p>
 </div>
 
-<p>Functionally, the <code>&lt;input type="image"&gt;</code> <code>alt</code> attribute works just like the {{htmlattrdef("alt", "img")}} attribute on {{HTMLElement("img")}} elements.</p>
+<p>Functionally, the <code>&lt;input type="image"&gt;</code> <code>alt</code> attribute works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.</p>
 
-<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
+<h3 id="attr-formaction">formaction</h3>
 
 <p>A string indicating the URL to which to submit the data. This takes precedence over the {{htmlattrxref("action", "form")}} attribute on the {{HTMLElement("form")}} element that owns the {{HTMLElement("input")}}.</p>
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
+<h3 id="attr-formenctype">formenctype</h3>
 
 <p>A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:</p>
 
@@ -138,7 +137,7 @@ tags:
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
+<h3 id="attr-formmethod">formmethod</h3>
 
 <p>A string indicating the HTTP method to use when submitting the form's data; this value overrides any {{htmlattrxref("method", "form")}} attribute given on the owning form. Permitted values are:</p>
 
@@ -153,13 +152,13 @@ tags:
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
+<h3 id="attr-formnovalidate">formnovalidate</h3>
 
 <p>A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.</p>
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
+<h3 id="attr-formtarget">formtarget</h3>
 
 <p>A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a <strong>browsing context</strong> (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.</p>
 
@@ -178,15 +177,15 @@ tags:
 
 <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> and {{HTMLElement("button")}} elements.</p>
 
-<h3 id="htmlattrdefheight">{{htmlattrdef("height")}}</h3>
+<h3 id="attr-height">height</h3>
 
 <p>A number specifying the height, in CSS pixels, at which to draw the image specified by the <code>src</code> attribute.</p>
 
-<h3 id="htmlattrdefsrc">{{htmlattrdef("src")}}</h3>
+<h3 id="attr-src">src</h3>
 
 <p>A string specifying the URL of the image file to display to represent the graphical submit button. When the user interacts with the image, the input is handled like any other button input.</p>
 
-<h3 id="htmlattrdefwidth">{{htmlattrdef("width")}}</h3>
+<h3 id="attr-width">width</h3>
 
 <p>A number indicating the width at which to draw the image, in CSS pixels.</p>
 
@@ -209,7 +208,7 @@ tags:
  </tbody>
 </table>
 
-<h3 id="htmlattrdefusemap">{{htmlattrdef("usemap")}}</h3>
+<h3 id="attr-usemap">usemap</h3>
 
 <p>If <code>usemap</code> is specified, it must be the name of an image map element, {{HTMLElement("map")}}, that defines an image map to use with the image. This usage is obsolete; you should switch to using the {{HTMLElement("img")}} element when you want to use image maps.</p>
 
@@ -373,33 +372,11 @@ label {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#image-button-state-(type=image)', '&lt;input type="image"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#image-button-state-%28type=image%29', '&lt;input type="image"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("html.elements.input.input-image")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

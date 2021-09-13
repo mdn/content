@@ -8,6 +8,7 @@ tags:
 - Reference
 - Web Authentication API
 - WebAuthn
+browser-compat: api.PublicKeyCredentialCreationOptions.pubKeyCredParams
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
@@ -38,8 +39,8 @@ tags:
   <dd>A numeric identifier for the algorithm to be used to generate the key pair. The
     links between identifier and algorithms are defined in <a
       href="https://www.iana.org/assignments/cose/cose.xhtml#algorithms">this IANA
-      registry</a> (e.g. <code>-7</code> indicates the elliptic curve algorithm ECDSA with
-    SHA-256).</dd>
+    registry</a>. Targeting ES256 (<code>-7</code>) and RS256 (<code>-257</code>) provides
+    coverage for the vast majority of authenticators.</dd>
 </dl>
 
 <p>Though those elements are sorted by preference (the first element being the most
@@ -84,28 +85,11 @@ navigator.credentials.create({ publicKey })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebAuthn','#dom-publickeycredentialcreationoptions-pubkeycredparams','pubKeyCredParams')}}
-      </td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PublicKeyCredentialCreationOptions.pubKeyCredParams")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

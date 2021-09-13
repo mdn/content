@@ -1,6 +1,6 @@
 ---
-title: Console.group()
-slug: Web/API/Console/group
+title: console.group()
+slug: Web/API/console/group
 tags:
   - API
   - DOM
@@ -8,11 +8,12 @@ tags:
   - Method
   - Web Development
   - web console
+browser-compat: api.console.group
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Creates a new inline group in the <a href="/en-US/docs/Tools/Web_Console">Web
-		Console</a> log. This indents following console messages by an additional level,
+<p>The <strong><code>console.group()</code></strong> method creates a new inline group in the <a href="/en-US/docs/Tools/Web_Console">Web
+		console</a> log. This indents following console messages by an additional level,
 	until {{domxref("console.groupEnd()")}} is called.</p>
 
 <p>{{AvailableInWorkers}}</p>
@@ -61,37 +62,15 @@ console.log("Back to the outer level");
 <p><img alt="A screenshot of messages nested in the console output."
 		src="nesting.png"></p>
 
-<p>See <a href="/en-US/docs/Web/API/Console#using_groups_in_the_console">Using groups in
+<p>See <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">Using groups in
 		the console</a> in the documentation of {{domxref("console")}} for more details.
 </p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("Console API", "#group", "console.group()")}}</td>
-			<td>{{Spec2("Console API")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Console.group")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a class="external"
-			href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly
-			documentation: Console</a></li>
-</ul>

@@ -1,6 +1,6 @@
 ---
 title: console.count()
-slug: Web/API/Console/count
+slug: Web/API/console/count
 tags:
 - API
 - DOM
@@ -9,6 +9,7 @@ tags:
 - Reference
 - Web Development
 - web console
+browser-compat: api.console.count
 ---
 <div>{{APIRef("Console API")}}</div>
 
@@ -34,7 +35,7 @@ tags:
 
 <p>For example, given code like this:</p>
 
-<pre class="brush: js; highlight[4, 13]">let user = "";
+<pre class="brush: js;">let user = "";
 
 function greet() {
   console.count();
@@ -50,7 +51,7 @@ console.count();</pre>
 
 <p>Console output will look something like this:</p>
 
-<pre class="brush: none;">"default: 1"
+<pre>"default: 1"
 "default: 2"
 "default: 3"
 "default: 4"</pre>
@@ -61,7 +62,7 @@ console.count();</pre>
 <p>If we pass the <code>user</code> variable as the <code>label</code> argument to the
   first invocation of <code>count()</code>, and the string "alice" to the second:</p>
 
-<pre class="brush: js; highlight[4, 13]">let user = "";
+<pre class="brush: js;">let user = "";
 
 function greet() {
   console.count(user);
@@ -77,7 +78,7 @@ console.count("alice");</pre>
 
 <p>We will see output like this:</p>
 
-<pre class="brush: none;">"bob: 1"
+<pre>"bob: 1"
 "alice: 1"
 "alice: 2"
 "alice: 3"</pre>
@@ -87,23 +88,8 @@ console.count("alice");</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
-      <td>{{Spec2("Console API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Console.count")}}</p>
+<p>{{Compat}}</p>

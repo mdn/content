@@ -11,6 +11,7 @@ tags:
   - Service Workers
   - ServiceWorker
   - Workers
+browser-compat: api.ExtendableEvent
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -19,7 +20,7 @@ tags:
 <p>If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the <code>ExtendableEvent</code> handler, the browser should throw an <code>InvalidStateError</code>; note also that multiple calls will stack up, and the resulting promises will be added to the list of <a href="https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises">extend lifetime promises</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The behavior described in the above paragraph was fixed in Firefox 43 (see {{bug(1180274)}}.)</p>
+<p><strong>Note:</strong> The behavior described in the above paragraph was fixed in Firefox 43 (see {{bug(1180274)}}.)</p>
 </div>
 
 <p>This interface inherits from the {{domxref("Event")}} interface.</p>
@@ -27,7 +28,7 @@ tags:
 <p>{{InheritanceDiagram(700, 60, 20)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.</p>
+<p><strong>Note:</strong> This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.</p>
 </div>
 
 <h2 id="Constructor">Constructor</h2>
@@ -48,7 +49,7 @@ tags:
 <dl>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> {{domxref("EventHandler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
+ <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
  </dd>
 </dl>
 
@@ -59,7 +60,7 @@ tags:
 <p>The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
+<p><strong>Note:</strong> In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
 </div>
 
 <pre class="brush: js">var CACHE_VERSION = 1;
@@ -89,28 +90,15 @@ self.addEventListener('install', function(event) {
   );
 });</pre>
 
-<div class="note"><strong>Important</strong>: When fetching resources, it's very important to use <code>{mode: 'no-cors'}</code> if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, <a href="http://www.chromium.org">www.chromium.org</a> doesn't support CORS.</div>
+<div class="note"><p><strong>Note:</strong> When fetching resources, it's very important to use <code>{mode: 'no-cors'}</code> if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, <a href="http://www.chromium.org">www.chromium.org</a> doesn't support CORS.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#extendableevent', 'ExtendableEvent')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ExtendableEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

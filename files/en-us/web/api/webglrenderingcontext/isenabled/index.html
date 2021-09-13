@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.isEnabled
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -26,9 +27,7 @@ tags:
 
 <dl>
   <dt><code>cap</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying which WebGL capability to test. Possible values:
-  </dd>
-  <dd>
+  <dd><p>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to test. Possible values:</p>
     <table class="standard-table">
       <thead>
         <tr>
@@ -84,8 +83,8 @@ tags:
         </tr>
       </tbody>
     </table>
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-    following values are available additionally:
+    <p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+    following values are available additionally:</p>
 
     <table class="standard-table">
       <thead>
@@ -108,7 +107,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("GLboolean")}} indicating if the capability <em>cap</em> is enabled
+<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating if the capability <em>cap</em> is enabled
   (<code>true</code>), or not (<code>false</code>).</p>
 
 <h2 id="Examples">Examples</h2>
@@ -118,7 +117,7 @@ tags:
 </pre>
 
 <p>To activate or deactivate a specific capability, use the
-  {{domxref("WebGLRenderingContext.enable()")}} and 
+  {{domxref("WebGLRenderingContext.enable()")}} and
   {{domxref("WebGLRenderingContext.disable()")}} methods:</p>
 
 <pre class="brush: js">gl.enable(gl.STENCIL_TEST);
@@ -127,44 +126,11 @@ gl.disable(gl.STENCIL_TEST);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.3", "isEnabled")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition for WebGL.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glIsEnabled.xml", "glIsEnabled")}}</td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 2.0 API.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.2", "isEnabled")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Updated definition for WebGL 2.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 3.0', "glIsEnabled.xhtml", "glIsEnabled")}}</td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Man page of the (similar) OpenGL ES 3.0 API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.isEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

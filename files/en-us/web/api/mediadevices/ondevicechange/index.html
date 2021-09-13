@@ -12,16 +12,17 @@ tags:
 - Reference
 - Video
 - ondevicechanged
+browser-compat: api.MediaDevices.ondevicechange
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary">The <strong><code>MediaDevices.ondevicechange</code></strong>
-    property is an {{domxref("EventHandler")}} which specifies a function to be called
+<p>The <strong><code>MediaDevices.ondevicechange</code></strong>
+    property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
     when the {{event("devicechange")}} event occurs on a {{domxref("MediaDevices")}}
     instance. This happens whenever the set of media devices available to the
     {{Glossary("user agent")}} and, by extension, to the web site or app has changed. You
     can at any time use {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
-    to get the updated list of available devices.</span></p>
+    to get the updated list of available devices.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -45,10 +46,7 @@ tags:
   a handler for the {{event("devicechange")}} event, the list is refreshed any time a
   media device is attached to or removed from the device running the sample.</p>
 
-<div class="hidden">
-  <h3 id="HTML_content">HTML content</h3>
-
-  <pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
 &lt;div id="startButton" class="button"&gt;
   Start
 &lt;/div&gt;
@@ -65,9 +63,8 @@ tags:
 
 &lt;div id="log"&gt;&lt;/div&gt;</pre>
 
-  <h3 id="CSS_content">CSS content</h3>
 
-  <pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -111,14 +108,7 @@ h2 {
   padding: 6px;
 }</pre>
 
-  <h3 id="JavaScript_content">JavaScript content</h3>
-
-  <h4 id="Other_code">Other code</h4>
-
-  <p>Below is other code which, while needed to make this example work, isn'tt related
-    directly to <code>ondevicechange</code>, so we won't go into any detail.</p>
-
-  <pre class="brush: js">let videoElement = document.getElementById("video");
+<pre class="brush: js hidden">let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
@@ -143,7 +133,6 @@ document.getElementById("startButton").addEventListener("click", function() {
     })
     .catch(err =&gt; log(err.name + ": " + err.message));
 }, false);</pre>
-</div>
 
 <p>We set up global variables that contain references to the {{HTMLElement("ul")}}
   elements that are used to list the audio and video devices:</p>
@@ -230,27 +219,11 @@ let videoList = document.getElementById("videoList");</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediadevices-ondevicechange',
-        'ondevicechange') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaDevices.ondevicechange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

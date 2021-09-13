@@ -7,16 +7,17 @@ tags:
   - Focus
   - Method
   - Reference
+browser-compat: api.Document.hasFocus
 ---
 <div>{{APIRef}}</div>
 
 <p>The <code><strong>hasFocus()</strong></code> method of the {{domxref("Document")}}
-  interface returns a {{jsxref("Boolean")}} value indicating whether the document or any
+  interface returns a boolean value indicating whether the document or any
   element inside the document has focus. This method can be used to determine whether the
   active element in a document has focus.</p>
 
 <div class="note">
-  <p>When viewing a document, an element with focus is always the <a
+  <p><strong>Note:</strong> When viewing a document, an element with focus is always the <a
       href="/en-US/docs/Web/API/Document/activeElement">active element</a> in
     the document, but an active element does not necessarily have focus. For example, an
     active element within a popup window that is not the foreground doesn't have focus.
@@ -73,27 +74,11 @@ setInterval(checkPageFocus, 300);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus',
-        'Document.hasFocus()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.hasFocus")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

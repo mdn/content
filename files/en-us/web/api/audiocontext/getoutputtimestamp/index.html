@@ -10,14 +10,14 @@ tags:
   - Web Audio API
   - getOutputTimestamp
   - sound
+browser-compat: api.AudioContext.getOutputTimestamp
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The
+<p>The
     <strong><code>getOutputTimestamp()</code></strong> property of the
     {{domxref("AudioContext")}} interface returns a new <code>AudioTimestamp</code> object
-    containing two audio timestamp values relating to the current audio context.</span>
-</p>
+    containing two audio timestamp values relating to the current audio context.</p>
 
 <p>The two values are as follows:</p>
 
@@ -36,7 +36,7 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-  class="brush: js">var timestamp = AudioContext.getOutputTimestamp()</pre>
+  class="brush: js">var timestamp = context.getOutputTimestamp()</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -96,22 +96,8 @@ function outputTimestamps() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio
-        API','#dom-audiocontext-getoutputtimestamp','getOutputTimestamp()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioContext.getOutputTimestamp")}}</p>
+<p>{{Compat}}</p>

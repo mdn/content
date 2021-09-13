@@ -7,13 +7,16 @@ tags:
   - Event
   - Method
   - Reference
+browser-compat: api.Event.preventDefault
 ---
 <div>{{apiref("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Event")}} interface's
+<p>The {{domxref("Event")}} interface's
     <strong><code>preventDefault()</code></strong> method tells the {{Glossary("user
     agent")}} that if the event does not get explicitly handled, its default action should
-    not be taken as it normally would be.</span> The event continues to propagate as
+    not be taken as it normally would be.</p>
+
+  <p>The event continues to propagate as
   usual, unless one of its event listeners calls {{domxref("Event.stopPropagation",
   "stopPropagation()")}} or {{domxref("Event.stopImmediatePropagation",
   "stopImmediatePropagation()")}}, either of which terminates propagation at once.</p>
@@ -155,30 +158,8 @@ function displayWarning(msg) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-event-preventdefault',
-        'Event.preventDefault()')}}</td>
-      <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Events', '#Events-Event-preventDefault',
-        'Event.preventDefault()')}}</td>
-      <td>{{ Spec2('DOM2 Events') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Event.preventDefault")}}</p>
+<p>{{Compat}}</p>

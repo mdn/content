@@ -8,21 +8,22 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.onclick
 ---
 <p>{{ ApiRef("HTML DOM") }}</p>
 
 <p>The <code><strong>onclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the {{domxref("EventHandler")}} for
+  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
   processing {{domxref("Element/click_event", "click")}} events on a given element.</p>
 
 <p>The <code>click</code> event is raised when the user clicks on an element. It fires
   after the {{domxref("Element/mousedown_event", "mousedown")}} and
   {{domxref("Element/mouseup_event", "mouseup")}} events, in that order.</p>
 
-<div class="note"><strong>Note:</strong> When using the <code>click</code> event to
+<div class="note"><p><strong>Note:</strong> When using the <code>click</code> event to
   trigger an action, also consider adding this same action to the
   {{domxref("Element/keydown_event", "keydown")}} event, to allow the use of that same
-  action by people who don't use a mouse or a touch screen.</div>
+  action by people who don't use a mouse or a touch screen.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -35,7 +36,7 @@ tags:
     href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
     expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
   argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object
-  that <code>onclick</code> was bound too (which will also match
+  that <code>onclick</code> was bound to (which will also match
   <code>event.currentTarget</code>)</p>
 
 <p>Only one <code>onclick</code> handler can be assigned to an object at a time. You may
@@ -91,26 +92,11 @@ function inputChange(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.onclick")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

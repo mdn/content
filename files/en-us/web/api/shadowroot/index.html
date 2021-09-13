@@ -8,6 +8,7 @@ tags:
   - ShadowRoot
   - Web Components
   - shadow dom
+browser-compat: api.ShadowRoot
 ---
 <div>{{APIRef('Shadow DOM')}}</div>
 
@@ -20,7 +21,7 @@ tags:
 <dl>
  <dt>{{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
- <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</dd>
  <dt>{{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}</dt>
  <dd>The element that's currently in full screen mode for this shadow tree.</dd>
@@ -37,6 +38,14 @@ tags:
  <dt>{{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.</dd>
 </dl>
+
+<h3 id="event_handlers">Event handlers</h3>
+
+<dl>
+ <dt>{{domxref("ShadowRoot.onslotchange")}}</dt>
+ <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("slotchange")}} event is raised.</dd>
+</dl>
+
 
 <h2 id="Methods">Methods</h2>
 
@@ -86,23 +95,8 @@ attributeChangedCallback(name, oldValue, newValue) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#interface-shadowroot','Interface ShadowRoot')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ShadowRoot")}}</p>
+<p>{{Compat}}</p>

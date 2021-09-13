@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
 
-<p class="summary">The Content Index API allows developers to register their offline enabled content with the browser.</p>
+<p>The Content Index API allows developers to register their offline enabled content with the browser.</p>
 
 <h2 id="Concepts_and_Usage">Concepts and Usage</h2>
 
@@ -23,7 +23,7 @@ tags:
 <p>Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.</p>
 
 <div class="note">
-  <p>The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.</p>
+  <p><strong>Note:</strong> The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>
@@ -195,20 +195,7 @@ const contentIndexItems = self.registration.index.getAll();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Content Index API')}}</td>
-   <td>{{Spec2('Content Index API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.ContentIndex")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

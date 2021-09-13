@@ -8,6 +8,7 @@ tags:
   - Reference
   - message
   - messaging
+browser-compat: api.BroadcastChannel.message_event
 ---
 <div>{{APIRef}}</div>
 
@@ -42,13 +43,12 @@ tags:
 
 <h4 id="Sender">Sender</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Sender&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Sender&lt;/h1&gt;
 &lt;label for="message"&gt;Type a message to broadcast:&lt;/label&gt;&lt;br/&gt;
 &lt;textarea id="message" name="message" rows="1" cols="40"&gt;Hello&lt;/textarea&gt;
 &lt;button id="broadcast-message" type="button"&gt;Broadcast message&lt;/button&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
      border: 1px solid black;
      padding: .5rem;
      height: 150px;
@@ -72,7 +72,6 @@ button {
     vertical-align: top;
     height: 1.5rem;
 }</pre>
-</div>
 
 <pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 const messageControl = document.querySelector('#message');
@@ -85,11 +84,10 @@ broadcastMessageButton.addEventListener('click', () =&gt; {
 
 <h4 id="Receiver_1">Receiver 1</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Receiver 1&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Receiver 1&lt;/h1&gt;
 &lt;div id="received"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -101,7 +99,6 @@ h1 {
     sans-serif; margin-bottom: 1rem;
 }
 </pre>
-</div>
 
 <pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 channel.addEventListener('message', (event) =&gt; {
@@ -110,11 +107,10 @@ channel.addEventListener('message', (event) =&gt; {
 
 <h4 id="Receiver_2">Receiver 2</h4>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Receiver 2&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Receiver 2&lt;/h1&gt;
 &lt;div id="received"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -126,7 +122,6 @@ h1 {
     margin-bottom: 1rem;
 }
 </pre>
-</div>
 
 <pre class="brush: js">const channel = new BroadcastChannel('example-channel');
 channel.addEventListener('message', (event) =&gt; {
@@ -143,22 +138,11 @@ channel.addEventListener('message', (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-message')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BroadcastChannel.message_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -17,7 +17,7 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}</div>
 
-<p><span class="seoSummary">The Payment Request API provides a consistent user experience for both merchants and users. It is not a new way for paying for things; rather, it's a way for users to select their preferred way of paying for things, and make that information available to a merchant.</span></p>
+<p>The Payment Request API provides a consistent user experience for both merchants and users. It is not a new way for paying for things; rather, it's a way for users to select their preferred way of paying for things, and make that information available to a merchant.</p>
 
 <h2 id="Payment_Request_concepts_and_usage">Payment Request concepts and usage</h2>
 
@@ -38,7 +38,7 @@ tags:
 <p>You can find a complete guide in <a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the {{htmlattrxref("allowpaymentrequest","iframe")}} attribute set on them.</p>
+<p><strong>Note:</strong> The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the {{htmlattrxref("allowpaymentrequest","iframe")}} attribute set on them.</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>
@@ -67,7 +67,7 @@ tags:
  <dd>A dictionary containing strings providing descriptive explanations of any errors in any {{domxref("PaymentAddress")}} entries which have errors.</dd>
  <dt>{{domxref("PayerErrors")}}</dt>
  <dd>A dictionary containing strings providing descriptive explanations of any errors in related to {{domxref("PaymentResponse")}}'s email, phone, and name attributes.</dd>
- <dt>{{domxref("PaymentDetailsUpdate")}}</dt>
+ <dt>{{domxref("PaymentRequestUpdateEvent.updateWith#parameters", "PaymentDetailsUpdate")}}</dt>
  <dd>An object describing changes that need to be made to the payment details in the event that the server needs to update information following the instantiation of the payment interface but before the user begins to interact with it.</dd>
 </dl>
 
@@ -86,29 +86,19 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Payment')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>Initial definition.</td>
+   <td><a href="https://w3c.github.io/payment-request/">Payment Request API</a></td>
   </tr>
   <tr>
-   <td>{{SpecName('Basic Card Payment')}}</td>
-   <td>{{Spec2('Basic Card Payment')}}</td>
-   <td>Defines {{domxref("BasicCardRequest")}} and {{domxref("BasicCardResponse")}}, among other things needed for handling credit card payment</td>
+   <td><a href="https://w3c.github.io/payment-method-basic-card/">Payment Method: Basic Card</a></td>
   </tr>
   <tr>
-   <td>{{SpecName('Payment Method Identifiers')}}</td>
-   <td>{{Spec2('Payment Method Identifiers')}}</td>
-   <td>Defines payment method identifiers and how they are validated, and, where applicable, minted and formally registered with the W3C.</td>
+   <td><a href="https://w3c.github.io/payment-method-id/">Payment Method Identifiers</td></td>
   </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

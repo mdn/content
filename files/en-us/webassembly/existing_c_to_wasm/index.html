@@ -101,6 +101,10 @@ void destroy_buffer(uint8_t* p) {
   version: Module.cwrap('version', 'number', []),
   create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
   destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
+  encode: Module.cwrap("encode", "", ["number","number","number","number",]),
+  free_result: Module.cwrap("free_result", "", ["number"]),
+  get_result_pointer: Module.cwrap("get_result_pointer", "number", []),
+  get_result_size: Module.cwrap("get_result_size", "number", []),
 };
 
 const image = await loadImage('./image.jpg');

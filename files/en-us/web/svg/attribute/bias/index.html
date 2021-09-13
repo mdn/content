@@ -6,10 +6,17 @@ tags:
   - NeedsExample
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.feConvolveMatrix.bias
 ---
 <div>{{SVGRef}}</div>
 
 <p>The <strong><code>bias</code></strong> attribute shifts the range of the filter. After applying the {{SVGAttr("kernelMatrix")}} of the {{SVGElement("feConvolveMatrix")}} element to the input image to yield a number and applied the {{SVGAttr("divisor")}} attribute, the <code>bias</code> attribute is added to each component. This allows representation of values that would otherwise be clamped to 0 or 1.</p>
+
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("feConvolveMatrix")}}</li>
+</ul>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -58,4 +65,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.elements.feConvolveMatrix.bias")}}</p>
+<p>{{Compat}}</p>

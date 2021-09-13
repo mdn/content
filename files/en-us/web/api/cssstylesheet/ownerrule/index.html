@@ -16,13 +16,14 @@ tags:
 - StyleSheet
 - import
 - ownerRule
+browser-compat: api.CSSStyleSheet.ownerRule
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p><span class="seoSummary">The read-only {{domxref("CSSStyleSheet")}} property
+<p>The read-only {{domxref("CSSStyleSheet")}} property
     <code><strong>ownerRule</strong></code> returns the {{domxref("CSSImportRule")}}
     corresponding to the {{cssxref("@import")}} at-rule which imported the stylesheet into
-    the document.</span> If the stylesheet wasn't imported into the document using
+    the document. If the stylesheet wasn't imported into the document using
   <code>@import</code>, the returned value is <code>null</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -63,25 +64,11 @@ for (let rule of ruleList) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSSOM", "#dom-cssstylesheet-ownerrule", 'CSSStyleSheet.ownerRule')}}
-      </td>
-      <td>{{Spec2("CSSOM")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleSheet.ownerRule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

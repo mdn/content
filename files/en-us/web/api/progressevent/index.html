@@ -7,6 +7,7 @@ tags:
   - Progress Events
   - ProgressEvent
   - Reference
+browser-compat: api.ProgressEvent
 ---
 <div>{{APIRef("DOM Events")}}</div>
 
@@ -27,7 +28,7 @@ tags:
 
 <dl>
  <dt>{{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("Boolean")}} flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
+ <dd>A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
  <dt>{{domxref("ProgressEvent.loaded")}} {{readonlyInline}}</dt>
  <dd>A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing <code>total</code> by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.</dd>
  <dt>{{domxref("ProgressEvent.total")}} {{readonlyInline}}</dt>
@@ -63,24 +64,11 @@ client.send()</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#interface-progressevent', 'ProgressEvent')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ProgressEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

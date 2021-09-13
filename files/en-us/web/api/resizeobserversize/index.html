@@ -6,14 +6,14 @@ tags:
   - Interface
   - Reference
   - ResizeObserverSize
+browser-compat: api.ResizeObserverSize
 ---
 <div>{{DefaultAPISidebar("Resize Observer API")}}</div>
 
-<p class="summary">The <strong><code>ResizeObserverSize</code></strong> interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.</p>
+<p>The <strong><code>ResizeObserverSize</code></strong> interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.</p>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-  <p>In <a href="/en-US/docs/Web/CSS/CSS_Columns">multi-column layout</a>, which is a fragmented context, the sizing returned by <code>ResizeObserverSize</code> will be the size of the first column.</p>
+  <p><strong>Note:</strong> In <a href="/en-US/docs/Web/CSS/CSS_Columns">multi-column layout</a>, which is a fragmented context, the sizing returned by <code>ResizeObserverSize</code> will be the size of the first column.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -28,8 +28,7 @@ tags:
 </dl>
 
 <div class="notecard note">
-  <h4>Note:</h4>
-  <p>For more explanation of writing modes and block and inline dimensions, read <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a>.</p>
+  <p><strong>Note:</strong> For more explanation of writing modes and block and inline dimensions, read <a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a>.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -46,23 +45,8 @@ resizeObserver.observe(divElem);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Specification</th>
-    <th scope="col">Status</th>
-    <th scope="col">Comment</th>
-   </tr>
-   <tr>
-    <td>{{SpecName('Resize Observer','#resizeobserversize','ResizeObserverSize')}}</td>
-    <td>{{Spec2('Resize Observer')}}</td>
-    <td>Initial definition.</td>
-   </tr>
-  </tbody>
- </table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.ResizeObserverSize")}}</p>
+<p>{{Compat}}</p>

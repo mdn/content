@@ -13,10 +13,13 @@ tags:
   - Offline
   - Reference
   - filesystem
+browser-compat: api.FileSystemEntrySync
 ---
 <div>{{APIRef("File System API")}}{{Non-standard_header()}}</div>
 
-<p><span class="seoSummary">The <code>FileSystemEntrySync</code> interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("FileSystemDirectoryEntry")}}.</span> It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about the file it points to—including the file name and its path from the root to the entry.</p>
+<p>The <code>FileSystemEntrySync</code> interface of the File and Directory Entries API represents an entry in a file system; it can be either a {{domxref("FileEntrySync")}} or {{domxref("FileSystemDirectoryEntry")}}.</p>
+
+<p>This interface includes methods for working with files—including copying, moving, removing, and reading files—as well as information about the file it points to—including the file name and its path from the root to the entry.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> This API was never accepted and never became standardized. Various browsers implement pieces of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> (otherwise known as the File System API) but you should try to avoid using it.</p>
@@ -26,7 +29,7 @@ tags:
 
 <p>The <code>FileSystemEntrySync</code> interface includes methods that you would expect for manipulating files and directories, but it also include a really handy method for getting a URL of the entry: <code><a href="#tourl">toURL()</a></code>. It also introduces a new URL scheme: <code>filesystem:</code>.</p>
 
-<p>You can use the <code>filesystem:</code> scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use <code>filesystem:</code> scheme for the root directory of the origin of the app. For example, if your app is in <code><a href="http://ww.html5rocks.com">http://ww.html5rocks.com</a></code>, open <code>filesystem:<a href="http://www.html5rocks.com/temporary/">http://www.html5rocks.com/temporary/</a></code> in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.</p>
+<p>You can use the <code>filesystem:</code> scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use <code>filesystem:</code> scheme for the root directory of the origin of the app. For example, if your app is in <code><a href="https://www.html5rocks.com/en/">https://www.html5rocks.com/en/</a></code>, open <code>filesystem:<a href="http://www.html5rocks.com/temporary/">http://www.html5rocks.com/temporary/</a></code> in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.</p>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -65,12 +68,12 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><a name="attr_filesystem"><code>filesystem</code></a></td>
+   <td><code>filesystem</code></td>
    <td><code>readonly FileSystemSync</code></td>
    <td>The file system where the entry resides.</td>
   </tr>
   <tr>
-   <td><a id="attr_fullpath" name="fullpath"><code>fullpath</code></a></td>
+   <td><code>fullpath</code></td>
    <td><code>readonly DOMString</code></td>
    <td>
     <p>The full absolute path from the root to the entry.</p>
@@ -79,17 +82,17 @@ tags:
     </td>
   </tr>
   <tr>
-   <td><a id="attr_root" name="attr_isDirectory"><code>isDirectory</code></a></td>
+   <td><code>isDirectory</code></td>
    <td><code>readonly boolean</code></td>
    <td>True if FileSystemEntrySync is a directory.</td>
   </tr>
   <tr>
-   <td><a id="attr_isfile"><code>isFile</code></a></td>
+   <td><code>isFile</code></td>
    <td><code>readonly boolean</code></td>
    <td>True if the FileSystemEntrySync is a file.</td>
   </tr>
   <tr>
-   <td><a id="attr_name"><code>name</code></a></td>
+   <td><code>name</code></td>
    <td><code>readonly DOMString</code></td>
    <td>The name of the entry, excluding the path leading to it.</td>
   </tr>
@@ -105,18 +108,15 @@ tags:
 <pre>Metadata getMetada ()
   raises <code>(<a href="/en-US/docs/Web/API/FileException">FileException</a>)</code>;</pre>
 
-<h5 id="Parameter">Parameter</h5>
+<h4 id="Parameter">Parameter</h4>
 
 <p>None</p>
 
-<h5 id="Returns">Returns</h5>
+<h4 id="Returns">Returns</h4>
 
-<dl>
- <dt><code>Metadata</code></dt>
- <dd></dd>
-</dl>
+<p>A <code>Metadata</code> object.</p>
 
-<h5 id="Exceptions">Exceptions</h5>
+<h4 id="Exceptions">Exceptions</h4>
 
 <p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
@@ -158,7 +158,7 @@ tags:
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
 ) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
-<h5 id="Parameters">Parameters</h5>
+<h4 id="Parameters">Parameters</h4>
 
 <dl>
  <dt>parent</dt>
@@ -167,14 +167,11 @@ tags:
  <dd>The new name of the entry. If you do not specify a name, the browser preserves the entry's current name.</dd>
 </dl>
 
-<h5 id="Returns_2">Returns</h5>
+<h4 id="Returns_2">Returns</h4>
 
-<dl>
- <dt><code>FileSystemEntrySync</code></dt>
- <dd>An object that represents an entry in the file system.</dd>
-</dl>
+<p>A <code>FileSystemEntrySync</code> object.</p>
 
-<h5 id="Exceptions_2">Exceptions</h5>
+<h4 id="Exceptions_2">Exceptions</h4>
 
 <p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
@@ -220,7 +217,7 @@ tags:
   in DirectoryEntrySync <em>parent</em>, optional DOMString <em>newName</em>
 ) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
-<h5 id="Parameters_2">Parameters</h5>
+<h4 id="Parameters_2">Parameters</h4>
 
 <dl>
  <dt>parent</dt>
@@ -229,14 +226,11 @@ tags:
  <dd>The new name of the entry. If you do not specify a name, the browser preserves the FileSystemEntrySync's current name.</dd>
 </dl>
 
-<h5 id="Returns_3">Returns</h5>
+<h4 id="Returns_3">Returns</h4>
 
-<dl>
- <dt><code>FileSystemEntrySync</code></dt>
- <dd>An object that represents an entry in the file system.</dd>
-</dl>
+<p>A <code>FileSystemEntrySync</code> object.</p>
 
-<h5 id="Exceptions_3">Exceptions</h5>
+<h4 id="Exceptions_3">Exceptions</h4>
 
 <p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
@@ -288,18 +282,15 @@ tags:
 
 <pre>DOMString toURL ();</pre>
 
-<h5 id="Parameter_2">Parameter</h5>
+<h4 id="Parameter_2">Parameter</h4>
 
 <p>None.</p>
 
-<h5 id="Returns_4">Returns</h5>
+<h4 id="Returns_4">Returns</h4>
 
-<dl>
- <dt><code>DOMString</code></dt>
- <dd></dd>
-</dl>
+<p>A <code>DOMString</code> object.</p>
 
-<h5 id="Exceptions_4">Exceptions</h5>
+<h4 id="Exceptions_4">Exceptions</h4>
 
 <p>None</p>
 
@@ -310,18 +301,15 @@ tags:
 <pre>void remove (
 ) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
 
-<h5 id="Parameter_3">Parameter</h5>
+<h4 id="Parameter_3">Parameter</h4>
 
 <p>None</p>
 
-<h5 id="Returns_5">Returns</h5>
+<h4 id="Returns_5">Returns</h4>
 
-<dl>
- <dt><code>void</code></dt>
- <dd></dd>
-</dl>
+<p>None.</p>
 
-<h5 id="Exceptions_5">Exceptions</h5>
+<h4 id="Exceptions_5">Exceptions</h4>
 
 <p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
 
@@ -356,24 +344,24 @@ tags:
 
 <pre>void getParent ();</pre>
 
-<h5 id="Parameter_4">Parameter</h5>
+<h4 id="Parameter_4">Parameter</h4>
 
 <p>None</p>
 
-<h5 id="Returns_6">Returns</h5>
+<h4 id="Returns_6">Returns</h4>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/DirectoryEntrySync">DirectoryEntrySync</a></code></dt>
  <dd>An object that represents a directory in the file system.</dd>
 </dl>
 
-<h5 id="Exceptions_6">Exceptions</h5>
+<h4 id="Exceptions_6">Exceptions</h4>
 
 <p>None.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemEntrySync")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

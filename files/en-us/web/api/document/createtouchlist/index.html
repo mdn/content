@@ -10,21 +10,15 @@ tags:
 - Mobile
 - createTouchList
 - touch
+browser-compat: api.Document.createTouchList
 ---
 <div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Before {{Gecko("25.0")}}, this method was defined on the
-    {{DOMxRef("DocumentTouch")}} mixin.</p>
-</div>
-
-<p>The <strong><code>Document.createTouchList()</code></strong> method <span
-    class="seosummary">creates and returns a new {{DOMxRef("TouchList")}} object.</span>
-</p>
+<p>The <strong><code>Document.createTouchList()</code></strong> method creates and returns a new {{DOMxRef("TouchList")}} object.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <var>list</var> = DocumentTouch.createTouchList([<var>touch1 [, touch2 [, ...]]]</var>);
+<pre class="brush: js">var <var>list</var> = document.createTouchList([<var>touch1 [, touch2 [, ...]]]</var>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -72,28 +66,11 @@ var list2 = document.createTouchList(touch1, touch2);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Touch Events",
-        "#widl-Document-createTouchList-TouchList-Touch-touches",
-        "Document.createTouchList()")}}</td>
-      <td>{{Spec2("Touch Events")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createTouchList")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

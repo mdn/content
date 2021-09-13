@@ -2,14 +2,15 @@
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
 tags:
-- API
-- CSSOM View
-- HTML DOM
-- JavaScript
-- Media Queries
-- Method
-- Reference
-- Window
+  - API
+  - CSSOM View
+  - HTML DOM
+  - JavaScript
+  - Media Queries
+  - Method
+  - Reference
+  - Window
+browser-compat: api.Window.matchMedia
 ---
 <div>{{APIRef}}</div>
 
@@ -52,7 +53,7 @@ tags:
 <p>If you need to be kept aware of whether or not the document matches the media query at
   all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
   "change")}} event to be delivered to the object. There's <a
-    href="/en-US/docs/Web/API/Window/devicePixelRatio#Example">a good example of this</a>
+    href="/en-US/docs/Web/API/Window/devicePixelRatio#example">a good example of this</a>
   in the article on {{domxref("Window.devicePixelRatio")}}.</p>
 
 <h2 id="Examples">Examples</h2>
@@ -73,7 +74,7 @@ document.querySelector(".mq-value").innerText = mql.matches;
 <p>The JavaScript code passes the media query to match into {{domxref("Window.matchMedia",
   "matchMedia()")}} to compile it, then sets the <code>&lt;span&gt;</code>'s
   {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results'
-  {{domxref("MediaQueryList.media", "matches")}} property, so that it indicates whether or
+  {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or
   not the document matches the media query at the moment the page was loaded.</p>
 
 <h3 id="HTML">HTML</h3>
@@ -82,10 +83,7 @@ document.querySelector(".mq-value").innerText = mql.matches;
 
 <p>A simple <code>&lt;span&gt;</code> to receive the output.</p>
 
-<div class="hidden">
-  <h3 id="CSS">CSS</h3>
-
-  <pre class="brush: css">.mq-value {
+<pre class="brush: css hidden">.mq-value {
   font: 18px arial, sans-serif;
   font-weight: bold;
   color: #88f;
@@ -93,7 +91,6 @@ document.querySelector(".mq-value").innerText = mql.matches;
   border: 1px solid #dde;
 }
 </pre>
-</div>
 
 <h3 id="Result">Result</h3>
 
@@ -104,34 +101,17 @@ document.querySelector(".mq-value").innerText = mql.matches;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}}</td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.matchMedia")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">Media queries</a>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a>
   </li>
-  <li><a href="/en-US/docs/DOM/Using_media_queries_from_code"
-      title="CSS/Using media queries from code">Using media queries from code</a></li>
+  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</a></li>
   <li>{{domxref("MediaQueryList")}}</li>
-  <li>{{domxref("MediaQueryListListener")}}</li>
 </ul>

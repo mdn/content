@@ -6,6 +6,7 @@ tags:
   - Reference
   - WebGL
   - WebGL extension
+browser-compat: api.WEBGL_draw_buffers
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -14,12 +15,12 @@ tags:
 <p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
 
 <div class="note">
-<p><strong>Availability:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL <code>#version 300 es</code>.</p>
+<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL <code>#version 300 es</code>.</p>
 </div>
 
 <h2 id="Constants">Constants</h2>
 
-<p>This extension exposes new constants, which can be used in the {{domxref("WebGLRenderingContext.framebufferRenderbuffer()", "gl.framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.framebufferTexture2D()", "gl.framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "gl.getFramebufferAttachmentParameter()")}}  {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}, and {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} methods.</p>
+<p>This extension exposes new constants, which can be used in the {{domxref("WebGLRenderingContext.framebufferRenderbuffer()", "gl.framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.framebufferTexture2D()", "gl.framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "gl.getFramebufferAttachmentParameter()")}} {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}, and {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} methods.</p>
 
 <dl>
  <dt><code>ext.COLOR_ATTACHMENT0_WEBGL<br>
@@ -38,7 +39,7 @@ tags:
  ext.COLOR_ATTACHMENT13_WEBGL<br>
  ext.COLOR_ATTACHMENT14_WEBGL<br>
  ext.COLOR_ATTACHMENT15_WEBGL</code></dt>
- <dd>A {{domxref("GLenum")}} specifying a color buffer.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer.</dd>
  <dt><code>ext.DRAW_BUFFER0_WEBGL<br>
  ext.DRAW_BUFFER1_WEBGL<br>
  ext.DRAW_BUFFER2_WEBGL<br>
@@ -55,11 +56,11 @@ tags:
  ext.DRAW_BUFFER13_WEBGL<br>
  ext.DRAW_BUFFER14_WEBGL<br>
  ext.DRAW_BUFFER15_WEBGL</code></dt>
- <dd>A {{domxref("GLenum")}} returning a draw buffer.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLenum")}} returning a draw buffer.</dd>
  <dt><code>ext.MAX_COLOR_ATTACHMENTS_WEBGL</code></dt>
- <dd>A {{domxref("GLint")}} indicating the maximum number of framebuffer color attachment points.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of framebuffer color attachment points.</dd>
  <dt><code>ext.MAX_DRAW_BUFFERS_WEBGL</code></dt>
- <dd>A {{domxref("GLint")}} indicating the maximum number of draw buffers.</dd>
+ <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -80,7 +81,7 @@ tags:
 <pre class="brush: js">var ext = gl.getExtension('WEBGL_draw_buffers');
 </pre>
 
-<p>Binding multiple textures (to a <code>tx[]</code> array)  to different framebuffer color attachments:</p>
+<p>Binding multiple textures (to a <code>tx[]</code> array) to different framebuffer color attachments:</p>
 
 <pre class="brush: js">var fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
@@ -115,26 +116,11 @@ void main(void) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WEBGL_draw_buffers', '', 'WEBGL_draw_buffers')}}</td>
-   <td>{{Spec2('WEBGL_draw_buffers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.WEBGL_draw_buffers.drawBuffersWEBGL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

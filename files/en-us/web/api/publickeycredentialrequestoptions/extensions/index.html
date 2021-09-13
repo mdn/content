@@ -2,12 +2,13 @@
 title: PublicKeyCredentialRequestOptions.extensions
 slug: Web/API/PublicKeyCredentialRequestOptions/extensions
 tags:
-- API
-- Property
-- PublicKeyCredentialRequestOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialRequestOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
+browser-compat: api.PublicKeyCredentialRequestOptions.extensions
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
@@ -43,7 +44,7 @@ tags:
   during the registration operation.</p>
 
 <div class="notecard warning">
-  <p><strong>Warning!</strong> As of June 2020, only <code>appid</code> is supported by <a
+  <p><strong>Warning:</strong> As of June 2020, only <code>appid</code> is supported by <a
       href="https://bugs.chromium.org/p/chromium/issues/detail?id=818303">Chrome</a> and
     <a
       href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface">Edge</a>.
@@ -83,7 +84,7 @@ tags:
 
         <ul>
           <li><code>contentType</code> ({{domxref("USVString")}})</li>
-          <li><code>content</code> ({{domxref("ArrayBuffer")}})</li>
+          <li><code>content</code> ({{jsxref("ArrayBuffer")}})</li>
         </ul>
       </td>
       <td>Generic transaction authorization. This is used to display an image or some
@@ -106,7 +107,7 @@ tags:
     <tr>
       <td><code>loc</code></td>
       <td>Boolean</td>
-      <td>Location. If <code>true</code>, the client outputs a {{domxref("Coordinates")}}
+      <td>Location. If <code>true</code>, the client outputs a {{domxref("GeolocationCoordinates")}}
         object representing the geolocation of the authenticator.</td>
     </tr>
     <tr>
@@ -150,28 +151,11 @@ navigator.credentials.get({ "publicKey": options })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebAuthn','#dom-publickeycredentialrequestoptions-extensions','extensions')}}
-      </td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PublicKeyCredentialRequestOptions.extensions")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

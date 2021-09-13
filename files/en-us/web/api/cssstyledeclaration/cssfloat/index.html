@@ -6,10 +6,11 @@ tags:
   - CSSOM
   - CSSStyleDeclaration
   - Reference
+browser-compat: api.CSSStyleDeclaration.cssFloat
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>cssFloat</strong></code> property of the {{domxref("CSSStyleDeclaration")}} interface returns the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} with <code>float</code> as an argument.</span></p>
+<p>The <code><strong>cssFloat</strong></code> property of the {{domxref("CSSStyleDeclaration")}} interface returns the result of invoking {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} with <code>float</code> as an argument.</p>
 <p>When setting, it invokes {{DOMxRef("CSSStyleDeclaration.setProperty()")}} with <code>float</code> as the first argument, and the given value as the second argument. The given value must be a valid value for the {{cssxref("float")}} property.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -38,23 +39,8 @@ console.log(rule.style.cssFloat); //right</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM", "#dom-cssstyledeclaration-cssfloat", "CSSStyleDeclaration.cssFloat")}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSStyleDeclaration.cssFloat")}}</p>
+<p>{{Compat}}</p>

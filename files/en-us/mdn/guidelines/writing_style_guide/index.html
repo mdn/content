@@ -64,17 +64,17 @@ tags:
 
 <p>We'll discuss the former (providing the information the reader may need) here. To learn more about ensuring that pages are properly classified and ranked by search engines, see the article <a href="/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">How to write for SEO on MDN</a>.</p>
 
-<p>The goal is to write pages that include all the information that readers may need without going into too much details. Following are some recommendations in this area.</p>
+<p>The goal is to write pages that include all the information that readers may need without going into too much detail. Following are some recommendations to achieve this.</p>
 
 <h4 id="Consider_your_audience">Consider your audience</h4>
 
-<p>Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. For example, article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking.</p>
+<p>Keep in mind that these are guidelines. Some of these tips may not apply in every case. Certainly keep your article's audience in mind. For example, an article on advanced network techniques likely doesn't need to go into as much detail about basic networking concepts as the typical article on networking.</p>
 
 <h4 id="Provide_a_useful_summary">Provide a useful summary</h4>
 
-<p>Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information for the readers to understand if the article is likely to be covering what they're interested in reading about.</p>
+<p>Make sure the article's summary—that is, the opening paragraph or paragraphs before the first heading—provides enough information to adequately inform readers of the article's contents. This way a reader can determine quickly whether the article is relevant to their concerns.</p>
 
-<p>In a guide or tutorial content, the summary should let the reader know what topics will be covered and what they're already expected to know, if anything. It should mention the technologies and/or APIs that are being documented or discussed, with links to related information, and it should offer hints to situations in which the article's contents might be useful.</p>
+<p>In a guide or tutorial, the summary should inform the reader of the topics that are covered as well as of what requisite knowledge the reader is expected to have, if any. It should mention the technologies and/or APIs that are being documented or discussed, with links to related information, and it should offer hints to situations in which the article's contents might be useful.</p>
 
 <h5 id="Example_Too_short!">Example: Too short!</h5>
 
@@ -86,7 +86,7 @@ tags:
 
 <h5 id="Example_Too_long!">Example: Too long!</h5>
 
-<p>Here, we've updated the summary, but now it's far too long. Too much details are included, and the text gets far too much into describing other methods and properties.</p>
+<p>Here, we've updated the summary, but now it's far too long. Too much detail is included, and the text delves too deeply into describing other methods and properties.</p>
 
 <p>Instead, the summary should focus on the <code>strokeText()</code> method, and should refer to the appropriate guides where the other details are described.</p>
 
@@ -129,7 +129,7 @@ tags:
 <p>The text following each piece of code should explain anything relevant, using an appropriate level of detail:</p>
 
 <ul>
- <li>If the code is very simple and doesn't really use directly anything related to the API being documented, you may only give a quick summary of what it is and why it's there.</li>
+ <li>If the code is very simple and doesn't really use anything directly related to the API being documented, you need only give a quick summary of what it is and why it's there.</li>
  <li>If the code is intricate, uses the API being documented, or is technically creative, you should provide a more detailed explanation.</li>
 </ul>
 
@@ -141,7 +141,7 @@ tags:
 
 <h3 id="Headings">Headings</h3>
 
-<p>When a new paragraph starts a new section, a header should be added.  Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
+<p>When a new paragraph starts a new section, a header should be added. Use heading levels in decreasing order: {{HTMLElement("h2")}} then {{HTMLElement("h3")}} then {{HTMLElement("h4")}}, without skipping levels.</p>
 
 <p>H2 is the highest level allowed because H1 is reserved for the page title. If you need more than three or four levels of headers, consider breaking up the article into several smaller articles with a landing page.</p>
 
@@ -338,7 +338,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 </table>
 
 <div class="note notecard">
-<p><strong>Note</strong>: Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers won't understand the meaning, and others are often confused with one another.</p>
+<p><strong>Note</strong>: Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.</p>
 
 <p>Also, be sure that <em>you</em> use them correctly, if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.</p>
 </div>
@@ -394,7 +394,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p>Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.</p>
 </div>
 
-<p>Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>". The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate he "<kbd>Escape</kbd>" key.</p>
+<p>Keyboard keys should use sentence-style capitalization, not all-caps capitalization. For example, "<kbd>Enter</kbd>" not "<kbd>ENTER</kbd>". The only exception is that you can use "<kbd>ESC</kbd>" to abbreviate the "<kbd>Escape</kbd>" key.</p>
 
 <p>Certain words should always be capitalized (such as trademarks which include capital letters), or words derived from the name of a person (unless it's being used within code, and code’s syntax requires lower-casing). Some examples:</p>
 
@@ -419,16 +419,30 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Hyphenation">Hyphenation</h3>
 
-<p>Hyphenate compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
+<p>Hyphenated compounds should be used when the last letter of the prefix is a vowel and is the same as the first letter of the root.</p>
 
 <ul>
  <li><span class="correct"><strong>Correct</strong></span>: email, re-elect, co-op</li>
  <li><span class="incorrect"><strong>Incorrect</strong></span>: e-mail, reelect, coop</li>
 </ul>
 
-<h3 id="Gender-neutral_language">Gender-neutral language</h3>
 
-<p>To make the text as inclusive as possible, it is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.<br>
+<h3 id="Inclusive_language">Inclusive language</h3>
+
+<p>MDN has a wide and diverse audience. We strongly encourage keeping text as inclusive as possible. Here are some alternatives to common terms used in documentation:</p>
+
+<ul>
+  <li>Avoid using the terms <b>master</b> and <b>slave</b> and instead <b>main</b> and <b>replica</b></li>
+  <li>Replace <b>whitelist</b> and <b>blacklist</b> with <b>allowlist</b> and <b>denylist</b></li>
+  <li><b>Sanity</b> should be replaced with <b>coherence</b></li>
+  <li>Instead of <b>dummy</b> you should use <b>placeholder</b>
+  <li>You should not need to use <b>crazy</b> and <b>insane</b> in documentation, however if the case arises consider <b>fantastic</b> instead.</li>
+</ul>
+
+
+<h4 id="Gender-neutral_language">Gender-neutral language</h4>
+
+<p>It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.<br>
  <br>
  Let's take the following example:</p>
 
@@ -457,6 +471,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 <p><em>A confirmation dialog box appears, which asks the user for permission to use the web cam.</em></p>
 
 <p>This last example of dealing with the problem is arguably better. Not only is it grammatically more correct, but removes some of the complexity associated with dealing with genders across different languages that may have wildly different gender rules. This solution can make translation easier for both readers and localizers.</p>
+
 
 <h3 id="Numbers_and_numerals">Numbers and numerals</h3>
 
@@ -532,9 +547,9 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Spelling">Spelling</h3>
 
-<p>For words with variant spellings, always use their American English spelling.</p>
+<p>Use American-English spelling.</p>
 
-<p>In general, use the first entry at <a href="http://www.dictionary.com/">Dictionary.com</a>, unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English. For example, if you <a href="http://www.dictionary.com/browse/behavior">look up "behavior"</a>, you find the phrase "Chiefly British" followed by a link to the American standard form, "<a href="http://dictionary.reference.com/browse/behavior">behavior</a>". Do not use variant spellings.</p>
+<p>In general, use the first entry at <a href="https://www.dictionary.com/">Dictionary.com</a>, unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English. For example, if you <a href="https://www.dictionary.com/browse/behavior">look up "behavior"</a>, you find the phrase "Chiefly British" followed by a link to the American standard form, "<a href="https://dictionary.reference.com/browse/behavior">behavior</a>". Do not use variant spellings.</p>
 
 <ul>
  <li><span class="correct"><strong>Correct</strong></span>: localize, behavior</li>
@@ -579,20 +594,20 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <h3 id="Preferred_dictionary">Preferred dictionary</h3>
 
-<p>For questions of spelling, please refer to <a href="http://www.dictionary.com/">Dictionary.com</a>. The spelling checker for this site uses American English. Please do not use variant spellings (e.g., use <em>color</em> rather than <em>colour</em>).</p>
+<p>For questions of spelling, please refer to <a href="https://www.dictionary.com/">Dictionary.com</a>. The spelling checker for this site uses American English. Please do not use variant spellings (e.g., use <em>color</em> rather than <em>colour</em>).</p>
 
-<p>We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please post them on the <a href="https://discourse.mozilla.org/c/mdn">MDN discussion forum</a>, so we know what should be added.</p>
+<p>We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, <a href="/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">please get in touch</a>, so we know what should be added.</p>
 
 <h3 id="Language_grammar_spelling">Language, grammar, spelling</h3>
 
 <p>If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.</p>
 
 <ul>
- <li><a href="http://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548">On Writing Well</a>, by William Zinsser (Amazon link)</li>
- <li><a href="http://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">Style: The Basics of Clarity and Grace</a>, by Joseph Williams and Gregory Colomb (Amazon link)</li>
+ <li><a href="https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548">On Writing Well</a>, by William Zinsser (Amazon link)</li>
+ <li><a href="https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/">Style: The Basics of Clarity and Grace</a>, by Joseph Williams and Gregory Colomb (Amazon link)</li>
  <li><a href="https://brians.wsu.edu/common-errors-in-english-usage/">Common Errors in English</a></li>
- <li><a href="http://www-personal.umich.edu/~jlawler/aue.html">English Grammar FAQ</a> (alt.usage.english)</li>
- <li><a href="http://www.angryflower.com/bobsqu.gif">Bob's quick guide to the apostrophe, you idiots</a> (funny)</li>
- <li><a href="http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster's Concise Dictionary of English Usage</a> (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.</li>
- <li><a href="http://english.stackexchange.com/">English Language and Usage StackExchange</a>: Question and answer site for English language usage.</li>
+ <li><a href="https://www-personal.umich.edu/~jlawler/aue.html">English Grammar FAQ</a> (alt.usage.english)</li>
+ <li><a href="https://www.angryflower.com/bobsqu.gif">Bob's quick guide to the apostrophe, you idiots</a> (funny)</li>
+ <li><a href="https://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster's Concise Dictionary of English Usage</a> (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.</li>
+ <li><a href="https://english.stackexchange.com/">English Language and Usage StackExchange</a>: Question and answer site for English language usage.</li>
 </ul>

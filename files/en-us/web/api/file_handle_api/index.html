@@ -29,7 +29,6 @@ tags:
 
 <p>Because the intent is to allow the storage of files through IndexedDB, creating a {{domxref("IDBMutableFile")}} instance requires an <a href="/en-US/docs/Web/API/IDBFactory#open">IndexedDB Database</a>.</p>
 
-<div style="overflow: hidden;">
 <pre class="brush: js">var IDBReq = indexedDB.open("myFileStorageDataBase");
 
 IDBReq.onsuccess = function(){
@@ -42,7 +41,6 @@ IDBReq.onsuccess = function(){
   };
 };
 </pre>
-</div>
 
 <p>{{domxref("IDBDatabase.createMutableFile","createMutableFile()")}} takes two arguments: a name and an optional type. Both of these are just descriptive and are not used by the database. However, they are important for the {{domxref("FileHandle")}} object as it can generate {{domxref("File")}} objects which inherit their own {{domxref("File.name","name")}} and {{domxref("File.type","type")}} from those values. That said, as the name does not match any real filename it can be an empty string, for example, and it doesn't even have to be unique.</p>
 

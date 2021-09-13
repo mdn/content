@@ -9,10 +9,11 @@ tags:
   - Service worker API
   - ServiceWorker
   - skipWaiting
+browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>ServiceWorkerGlobalScope.skipWaiting()</code></strong> method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.</span></p>
+<p>The <strong><code>ServiceWorkerGlobalScope.skipWaiting()</code></strong> method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.</p>
 
 <p>Use this method with {{domxref("Clients.claim()")}} to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.</p>
 
@@ -44,32 +45,19 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkerglobalscope-skipwaiting', 'skipWaiting()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.skipWaiting")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{domxref("Clients.claim()")}}</li>
  <li>{{jsxref("Promise", "Promises")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
 </ul>

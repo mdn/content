@@ -1,20 +1,23 @@
 ---
-title: StaticRange.StaticRange()
+title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
 tags:
-- API
-- Constructor
-- DOM
-- DOM API
-- Range
-- Reference
-- StaticRange
+  - API
+  - Constructor
+  - DOM
+  - DOM API
+  - Range
+  - Reference
+  - StaticRange
+browser-compat: api.StaticRange.StaticRange
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span class="seoSummary">The <strong><code>StaticRange()</code></strong> constructor
+<p>The <strong><code>StaticRange()</code></strong> constructor
     creates a new {{domxref("StaticRange")}} object representing a span of content within
-    the DOM.</span> It includes properties identifying the standard and end positions of
+    the DOM.</p>
+
+<p>This constructor includes properties identifying the standard and end positions of
   the range as well as a Boolean indicating whether or not the range is
   <strong>collapsed</strong> (that is, empty).</p>
 
@@ -28,9 +31,8 @@ tags:
 <dl>
   <dt><code>rangeSpec</code></dt>
   <dd>
-    <p>The required <code>rangeSpec</code> parameter is an object adhering to the
-      {{domxref("StaticRangeInit")}} dictionary. The four required
-      <code>rangeSpec</code> properties are:</p>
+    <p>The required <code>rangeSpec</code> parameter is an object 
+      containing the four following properties:</p>
 
     <dl>
       <dt><code>startContainer</code></dt>
@@ -61,28 +63,15 @@ tags:
     <code>startContainer</code> and/or <code>endContainer</code> are a type of node which
     you can't include in a range. Those node types
     are <code>Node.DOCUMENT_TYPE_NODE</code> (representing the {{domxref("DocumentType")}}
-    node derived from the {{Glossary("DTD")}} identified using the <code>doctype</code>
+    node derived from the {{Glossary("Doctype", "DTD")}} identified using the <code>doctype</code>
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
     attribute of an element on the DOM..</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-staticrange-staticrange','StaticRange()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.StaticRange.StaticRange")}}</p>
+<p>{{Compat}}</p>

@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Workers
   - Workers
+browser-compat: api.DedicatedWorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
@@ -15,7 +16,7 @@ tags:
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements properties from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}</dt>
@@ -28,7 +29,7 @@ tags:
  <dt>{{domxref("WorkerGlobalScope.self")}}</dt>
  <dd>Returns an object reference to the <code>DedicatedWorkerGlobalScope</code> object itself.</dd>
  <dt>{{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("Console")}} associated with the worker.</dd>
+ <dd>Returns the {{domxref("console")}} associated with the worker.</dd>
  <dt>{{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}</dt>
  <dd>Returns the {{domxref("WorkerLocation")}} associated with the worker. <code>WorkerLocation</code> is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.</dd>
  <dt>{{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}</dt>
@@ -39,18 +40,18 @@ tags:
 
 <h3 id="Event_handlers">Event handlers</h3>
 
-<p><em>This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("DedicatedWorkerGlobalScope.onmessage")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)</dd>
  <dt>{{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements methods from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("DedicatedWorkerGlobalScope.close()")}}</dt>
@@ -71,17 +72,17 @@ tags:
 <h3 id="Implemented_from_other_places">Implemented from other places</h3>
 
 <dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.atob")}}</dt>
+ <dt>{{domxref("atob", "atob()")}}</dt>
  <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.btoa")}}</dt>
+ <dt>{{domxref("btoa", "btoa")}}</dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval")}}</dt>
+ <dt>{{domxref("clearInterval")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("setInterval")}}.</dd>
+ <dt>{{domxref("clearTimeout")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("setTimeout")}}.</dd>
+ <dt>{{domxref("setInterval")}}</dt>
  <dd>Schedules the execution of a function every X milliseconds.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout")}}</dt>
+ <dt>{{domxref("setTimeout")}}</dt>
  <dd>Sets a delay for executing a function.</dd>
 </dl>
 
@@ -98,24 +99,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dedicatedworkerglobalscope', 'DedicatedWorkerGlobalScope')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DedicatedWorkerGlobalScope")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

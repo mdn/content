@@ -7,13 +7,14 @@ tags:
 - Secure context
 - Storage API
 - persist()
+browser-compat: api.StorageManager.persist
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">The <strong><code>persist()</code></strong> method of the
+<p>The <strong><code>persist()</code></strong> method of the
     {{domxref("StorageManager")}} interface requests permission to use persistent storage,
     and returns a {{jsxref('Promise')}} that resolves to <code>true</code> if permission
-    is granted and box mode is persistent, and <code>false</code> otherwise.</span></p>
+    is granted and box mode is persistent, and <code>false</code> otherwise.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -40,21 +41,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Storage','#dom-storagemanager-persist','persist')}}</td>
-      <td>{{Spec2('Storage')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.StorageManager.persist")}}</p>
+<p>{{Compat}}</p>

@@ -11,12 +11,15 @@ tags:
 - Process
 - Reference
 - Web Audio API
+browser-compat: api.AudioWorkletProcessor.process
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>process()</code></strong>
+<p>The <strong><code>process()</code></strong>
     method of an {{domxref("AudioWorkletProcessor")}}-derived class implements the audio
-    processing algorithm for the audio processor worklet.</span> Although the method is
+    processing algorithm for the audio processor worklet.</p>
+
+<p>Although the method is
   not a part of the {{domxref("AudioWorkletProcessor")}} interface, any implementation
   of <code>AudioWorkletProcessor</code> must provide a <code>process()</code> method.</p>
 
@@ -27,7 +30,7 @@ tags:
   invoked to do so.</p>
 
 <div class="notecard note">
-  <p><strong>Important:</strong> Currently, audio data blocks are always 128 frames
+  <p><strong>Note:</strong> Currently, audio data blocks are always 128 frames
     long—that is, they contain 128 32-bit floating-point samples for each of the inputs'
     channels. However, plans are already in place to revise the specification to allow the
     size of the audio blocks to be changed depending on circumstances (for example, if the
@@ -58,7 +61,7 @@ tags:
     <p>Each sample value is in range of <code>[-1 .. 1]</code>.</p>
 
     <p>The number of <em>inputs</em> and thus the length of that array is fixed at the
-      construction of the node (see {{domxref("AudioWorkletNodeOptions")}}). If there is
+      construction of the node (see {{domxref("AudioWorkletNode")}}). If there is
       no active node connected to the <em>n</em>-th input of the node,
       <code>inputs[n]</code> will be an empty array (zero input channels available).</p>
 
@@ -140,7 +143,7 @@ tags:
     property.</li>
 </ol>
 
-<p class="note"><strong>Note</strong>: An absence of the <code>return</code> statement
+<p><strong>Note</strong>: An absence of the <code>return</code> statement
   means that the method returns <code>undefined</code>, and as this is a falsy value, it
   is like returning <code>false</code>. Omitting an explicit <code>return</code> statement
   may cause hard-to-detect problems for your nodes.</p>
@@ -197,25 +200,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioworkletprocessor-process', 'process()')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioWorkletProcessor.process")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

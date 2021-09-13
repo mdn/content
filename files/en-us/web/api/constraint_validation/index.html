@@ -9,7 +9,7 @@ tags:
 ---
 <div>{{apiref()}}</div>
 
-<p><span class="seoSummary">The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.</span></p>
+<p>The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.</p>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
 
@@ -37,13 +37,13 @@ tags:
 <p>The constraint validation API extends the interfaces for the form-associated elements listed below with a number of new properties and methods (elements that can have a <code>form</code> attribute that indicates their form owner):</p>
 
 <ul>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLFieldSetElement">HTMLFieldsetElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLInputElement">HTMLInputElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLObjectElement">HTMLObjectElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></strong></code></li>
- <li><code><strong><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></strong></code></li>
+ <li>{{domxref("HTMLButtonElement")}}</li>
+ <li>{{domxref("HTMLFieldsetElement")}}</li>
+ <li>{{domxref("HTMLInputElement")}}</li>
+ <li>{{domxref("HTMLObjectElement")}}</li>
+ <li>{{domxref("HTMLOutputElement")}}</li>
+ <li>{{domxref("HTMLSelectElement")}}</li>
+ <li>{{domxref("HTMLTextAreaElement")}}</li>
 </ul>
 
 <h4 id="Properties">Properties</h4>
@@ -83,7 +83,6 @@ tags:
 <p>If you wanted to instead display custom error messages, you could use JavaScript like the following:</p>
 
 <pre class="brush: js">const nameInput = document.querySelector('input');
-const form = document.querySelector('form');
 
 nameInput.addEventListener('input', () =&gt; {
   nameInput.setCustomValidity('');
@@ -112,35 +111,12 @@ nameInput.addEventListener('invalid', () =&gt; {
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
+<p><strong>Note:</strong> Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', 'sec-forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No change from the previous snapshot {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'constraint validation API') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>First snapshot of  {{SpecName('HTML WHATWG')}} containing this interface.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.ValidityState")}}
 
 <h2 id="See_also">See also</h2>
 

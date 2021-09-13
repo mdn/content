@@ -15,12 +15,15 @@ tags:
 - Translated
 - Translation
 - track
+browser-compat: api.AudioTrack.language
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The read-only <strong>{{domxref("AudioTrack")}}</strong>
+<p>The read-only <strong>{{domxref("AudioTrack")}}</strong>
     property <strong><code>language</code></strong> returns a string identifying the
-    language used in the audio track.</span> For tracks that include multiple languages
+    language used in the audio track.</p>
+
+<p>For tracks that include multiple languages
   (such as a movie in English in which a few lines are spoken in other languages), this
   should be the video's primary language.</p>
 
@@ -48,7 +51,7 @@ tags:
 <p>This could then be used to build a user interface for selecting the language the user
   would like to listen to while watching a movie, for example.</p>
 
-<pre class="brush: js line-numbers language-js">function getAvailableLanguages(el) {
+<pre class="brush: js">function getAvailableLanguages(el) {
   var trackList = [];
   const wantedKinds = [
     "main", "translation"
@@ -68,30 +71,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'media.html#dom-audiotrack-language',
-        'AudioTrack.language')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotrack-language',
-        'AudioTrack.language')}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioTrack.language")}}</p>
+<p>{{Compat}}</p>

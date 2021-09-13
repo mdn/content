@@ -8,6 +8,7 @@ tags:
 - URL
 - URL API
 - port
+browser-compat: api.URL.port
 ---
 <div>{{ApiRef("URL API")}}</div>
 
@@ -29,30 +30,17 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">const url = new URL('<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-string">https://mydomain.com:80/svn/Repos/</span></span></span></span>');
+<pre class="brush: js">const url = new URL('https://mydomain.com:80/svn/Repos/');
 console.log(url.port); // Logs '80'
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('URL', '#dom-url-port', 'URL.port')}}</td>
-      <td>{{Spec2('URL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL.port")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

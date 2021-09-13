@@ -15,14 +15,15 @@ tags:
 - parameters
 - sender
 - setParameters
+browser-compat: api.RTCRtpSender.setParameters
 ---
 <div>{{APIRef("WebRTC API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>setParameters()</code></strong> method of
+<p>The <strong><code>setParameters()</code></strong> method of
     the {{domxref("RTCRtpSender")}} interface applies changes the configuration of
     sender's {{domxref("RTCRtpSender.track", "track")}}, which is the
     {{domxref("MediaStreamTrack")}} for which the <code>RTCRtpSender</code> is
-    responsible.</span></p>
+    responsible.</p>
 
 <p>In other words, <code>setParameters()</code> updates the configuration of the
   {{Glossary("RTP")}} transmission as well as the encoding configuration for a specific
@@ -39,12 +40,24 @@ tags:
 <dl>
   <dt><code>parameters</code></dt>
   <dd>
-    <p>A parameters object previously obtained by calling the same
-      sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with
+    <p>
+      A parameters object previously obtained by calling the same
+      sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with
       the desired changes to the sender's configuration parameters. These parameters
       include potential codecs that could be use for encoding the sender's
-      {{domxref("RTCRtpSender.track", "track")}}. The available parameters are:</p>
-    {{page("/en-US/docs/Web/API/RTCRtpSendParameters", "property-list")}}
+      {{domxref("RTCRtpSender.track", "track")}}. The available parameters are:
+    </p>
+    <dl>
+      <dt><code>encodings</code></dt>
+      <dd>An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters for a single codec that could be used to encode the track's media.</dd>
+      <dt><code>transactionId</code></dt>
+      <dd>A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.</dd>
+      <dt><code>degradationPreference</code> {{deprecated_inline}}</dt>
+      <dd>Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is <code>balanced</code>.</dd>
+      <dt><code>priority</code> {{deprecated_inline}}</dt>
+      <dd>A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is <code>low</code>.</dd>
+
+    </dl>
   </dd>
 </dl>
 
@@ -195,25 +208,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC
-        1.0','#dom-rtcrtpsender-setparameters','RTCRtpSender.setParameters()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender.setParameters")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,6 +7,7 @@ tags:
   - Property
   - Reference
   - TextMetrics
+browser-compat: api.TextMetrics.width
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
@@ -21,7 +22,7 @@ tags:
 
 <p>... you can get a {{domxref("TextMetrics")}} object using the following code:</p>
 
-<pre class="brush: js;highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let text = ctx.measureText('foo'); // TextMetrics object
@@ -30,20 +31,11 @@ text.width; // 16;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TextMetrics.width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,8 +9,9 @@ tags:
   - Fonts
   - Interface
   - Reference
+browser-compat: api.FontFace
 ---
-<p>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("CSS Font Loading API")}}</p>
 
 <p>The <code><strong>FontFace</strong></code> interface represents a single usable font face. It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.</p>
 
@@ -18,22 +19,26 @@ tags:
 
 <dl>
  <dt>{{domxref("FontFace.FontFace", "FontFace()")}}</dt>
- <dd>Constructs and returns a new <code>FontFace</code> object, built from an external resource described by an URL or from an {{domxref("ArrayBuffer")}}.</dd>
+ <dd>Constructs and returns a new <code>FontFace</code> object, built from an external resource described by an URL or from an {{jsxref("ArrayBuffer")}}.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface doesn't inherit any property.</em></p>
-
 <dl>
+ <dt>{{domxref("FontFace.ascentOverride")}}</dt>
+ <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>ascent metric</em> of the font. It is equivalent to the {{cssxref("@font-face/ascent-override", "ascent-override")}} descriptor.</dd>
+ <dt>{{domxref("FontFace.descentOverride")}}</dt>
+ <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>descent metric</em> of the font. It is equivalent to the {{cssxref("@font-face/descent-override", "descent-override")}} descriptor.</dd>
  <dt>{{domxref("FontFace.display")}}</dt>
  <dd>A {{domxref("CSSOMString")}} that determines how a font face is displayed based on whether and when it is downloaded and ready to use.</dd>
  <dt>{{domxref("FontFace.family")}}</dt>
  <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>family</em> of the font. It is equivalent to the {{cssxref("@font-face/font-family", "font-family")}} descriptor.</dd>
  <dt>{{domxref("FontFace.featureSettings")}}</dt>
  <dd>A {{domxref("CSSOMString")}} that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.</dd>
+ <dt>{{domxref("FontFace.lineGapOverride")}}</dt>
+ <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>line-gap metric</em> of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.</dd>
  <dt>{{domxref("FontFace.loaded")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("Promise")}} that resolves with the current <code>FontFace</code> object when the font specified in the object's constructor is done loading or rejects with a <code>SyntaxError</code>.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that resolves with the current <code>FontFace</code> object when the font specified in the object's constructor is done loading or rejects with a <code>SyntaxError</code>.</dd>
  <dt>{{domxref("FontFace.status")}} {{readonlyinline}}</dt>
  <dd>Returns an enumerated value indicating the status of the font, one of  <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>, or <code>"error"</code>.</dd>
  <dt>{{domxref("FontFace.stretch")}}</dt>
@@ -44,13 +49,11 @@ tags:
  <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>range of unicode codepoints</em> encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.</dd>
  <dt>{{domxref("FontFace.variant")}}</dt>
  <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>variant</em> of the font. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}} descriptor.</dd>
+ <dt>{{domxref("FontFace.variationSettings")}}</dt>
+ <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>variation settings</em> of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.</dd>
  <dt>{{domxref("FontFace.weight")}}</dt>
  <dd>A {{domxref("CSSOMString")}} that contains the <em>weight</em> of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.</dd>
 </dl>
-
-<h2 id="Methods">Methods</h2>
-
-<p><em>This interface doesn't inherit any method.</em></p>
 
 <dl>
  <dt>{{domxref("FontFace.load()")}}</dt>
@@ -59,27 +62,14 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Font Loading','#fontface-interface','FontFace')}}</td>
-   <td>{{Spec2('CSS3 Font Loading')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FontFace")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/@font-face/font-family">@font-face</a></li>
+ <li><a href="/en-US/docs/Web/CSS/@font-face">@font-face</a></li>
 </ul>

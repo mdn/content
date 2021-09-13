@@ -17,10 +17,13 @@ tags:
   - Web Speech Events
   - pause
   - speech
+browser-compat: api.HTMLMediaElement.pause_event
 ---
 <div>{{APIRef("HTMLMediaElement")}}</div>
 
-<p><span class="seoSummary">The <code>pause</code> event is sent when a request to pause an activity is handled and the activity has entered its paused state, most commonly after the media has been paused through a call to the element's {{domxref("HTMLMediaElement.pause", "pause()")}} method.</span> The event is sent once the <code>pause()</code> method returns and after the media element's {{domxref("HTMLMediaElement.paused", "paused")}} property has been changed to <code>true</code>.</p>
+<p>The <code>pause</code> event is sent when a request to pause an activity is handled and the activity has entered its paused state, most commonly after the media has been paused through a call to the element's {{domxref("HTMLMediaElement.pause", "pause()")}} method.</p>
+
+<p>The event is sent once the <code>pause()</code> method returns and after the media element's {{domxref("HTMLMediaElement.paused", "paused")}} property has been changed to <code>true</code>.</p>
 
 <h2 id="General_info">General info</h2>
 
@@ -81,28 +84,11 @@ video.onpause = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-pause", "pause media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-pause", "pause media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.pause_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Related_Events">Related Events</h2>
 

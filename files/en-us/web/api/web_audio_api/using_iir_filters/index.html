@@ -11,13 +11,13 @@ tags:
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>IIRFilterNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is an {{domxref("AudioNode")}} processor that implements a general <a href="https://en.wikipedia.org/wiki/infinite%20impulse%20response">infinite impulse response</a> (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.</p>
+<p>The <strong><code>IIRFilterNode</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> is an {{domxref("AudioNode")}} processor that implements a general <a href="https://en.wikipedia.org/wiki/infinite%20impulse%20response">infinite impulse response</a> (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.</p>
 
 <h2 id="Demo">Demo</h2>
 
 <p>Our simple example for this guide provides a play/pause button that starts and pauses audio play, and a toggle that turns an IIR filter on and off, altering the tone of the sound. It also provides a canvas on which is drawn the frequency response of the audio, so you can see what effect the IIR filter has.</p>
 
-<p><img alt="A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied." src="iir-filter-demo.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied." src="iir-filter-demo.png"></p>
 
 <p>You can check out the <a href="https://codepen.io/Rumyra/pen/oPxvYB/">full demo here on Codepen</a>. Also see the <a href="https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node">source code on GitHub</a>. It includes some different coefficient values for different lowpass frequencies — you can change the value of the <code>filterNumber</code> constant to a value between 0 and 3 to check out the different available effects.</p>
 
@@ -58,7 +58,7 @@ tags:
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: These values are calculated based on the lowpass filter specified in the <a href="https://webaudio.github.io/web-audio-api/#filters-characteristics">filter characteristics of the Web Audio API specification</a>. As this filter node gains more popularity we should be able to collate more coefficient values.</p>
+<p><strong>Note:</strong> These values are calculated based on the lowpass filter specified in the <a href="https://webaudio.github.io/web-audio-api/#filters-characteristics">filter characteristics of the Web Audio API specification</a>. As this filter node gains more popularity we should be able to collate more coefficient values.</p>
 </div>
 
 <h2 id="Using_an_IIRFilter_in_an_audio_graph">Using an IIRFilter in an audio graph</h2>

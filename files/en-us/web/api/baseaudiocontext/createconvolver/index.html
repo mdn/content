@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createConvolver
+browser-compat: api.BaseAudioContext.createConvolver
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -18,6 +19,12 @@ tags:
     reverb effects to your audio. See the <a
       href="https://webaudio.github.io/web-audio-api/#background-3">spec definition of
       Convolution</a> for more information.</p>
+</div>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
+    constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -71,25 +78,11 @@ convolver.buffer = concertHallBuffer;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createconvolver',
-        'createConvolver()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createConvolver")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

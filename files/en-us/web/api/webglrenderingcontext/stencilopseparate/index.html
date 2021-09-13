@@ -7,6 +7,7 @@ tags:
 - Reference
 - WebGL
 - WebGLRenderingContext
+browser-compat: api.WebGLRenderingContext.stencilOpSeparate
 ---
 <div>{{APIRef("WebGL")}}</div>
 
@@ -26,7 +27,7 @@ tags:
 
 <dl>
   <dt>face</dt>
-  <dd>A {{domxref("GLenum")}} specifying whether the front and/or back stencil state is
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
     <ul>
       <li><code>gl.FRONT</code></li>
@@ -35,13 +36,13 @@ tags:
     </ul>
   </dd>
   <dt><code>fail</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when the stencil test fails.
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test fails.
     The default value is <code>gl.KEEP</code>.</dd>
   <dt><code>zfail</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when the stencil test passes,
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test passes,
     but the depth test fails. The default value is <code>gl.KEEP</code>.</dd>
   <dt><code>zpass</code></dt>
-  <dd>A {{domxref("GLenum")}} specifying the function to use when both the stencil test
+  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when both the stencil test
     and the depth test pass, or when the stencil test passes and there is no depth buffer
     or depth testing is disabled. The default value is <code>gl.KEEP</code>.</dd>
 </dl>
@@ -102,35 +103,11 @@ gl.getParameter(gl.STENCIL_BITS);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.3", "stencilOpSeparate")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('OpenGL ES 2.0', "glStencilOpSeparate.xml", "glStencilOpSeparate")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Man page of the OpenGL API.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.stencilOpSeparate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,10 +12,11 @@ tags:
   - Track List
   - Tracks
   - list
+browser-compat: api.TextTrackList
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>TextTrackList</code></strong> interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate {{domxref("textTrack")}} object in the list.</span></p>
+<p>The <strong><code>TextTrackList</code></strong> interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate {{domxref("textTrack")}} object in the list.</p>
 
 <p>Retrieve an instance of this object with {{domxref('HTMLMediaElement.textTracks')}}. The individual tracks can be accessed using array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}} for example.</p>
 
@@ -57,7 +58,7 @@ tags:
  <dt><code><a href="/en-US/docs/Web/API/TextTrackList/change_event">change</a></code></dt>
  <dd>Fired when a text track has been made active or inactive.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/TextTrackList/onchange">onchange</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/TextTrackList/removeTrack">removetrack</a></code></dt>
+ <dt><code><a href="/en-US/docs/Web/API/TextTrackList/removeTrack_event">removetrack</a></code></dt>
  <dd>Fired when a new text track has been removed from the media element.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/TextTrackList/onremovetrack">onremovetrack</a></code> property.</dd>
 </dl>
@@ -89,23 +90,8 @@ function updateTrackCount(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#texttracklist', 'TexTrackList')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TextTrackList")}}</p>
+<p>{{Compat}}</p>

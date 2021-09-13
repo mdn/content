@@ -22,9 +22,8 @@ tags:
 ---
 <p>The tables below list the standard key values in various categories of key, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.</p>
 
-<div class="pull-aside">
-<div class="moreinfo">Learn how to use these key values in JavaScript using <a href="/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a></div>
-</div>
+<div class="notecard callout">
+<p>Learn how to use these key values in JavaScript using <a href="/en-US/docs/Web/API/KeyboardEvent/key"><code>KeyboardEvent.key</code></a>.</p></div>
 
 <p><a href="#special_values">Special Values </a>| <a href="#modifier_keys">Modifier Keys</a> | <a href="#whitespace_keys">Whitespace Keys</a> | <a href="#navigation_keys">Navigation Keys</a> | <a href="#editing_keys">Editing Keys</a> | <a href="#ui_keys">UI Keys</a> | <a href="#device_keys">Device Keys</a> | <a href="#ime_and_composition_keys">IME and Composition Keys</a> | <a href="#function_keys">Function Keys</a> | <a href="#phone_keys">Phone Keys</a> | <a href="#multimedia_keys">Multimedia Keys</a> | <a href="#audio_control_keys">Audio Control Keys</a> | <a href="#tv_control_keys">TV Control Keys</a> | <a href="#media_controller_keys">Media Controller Keys</a> | <a href="#speech_recognition_keys">Speech Recognition Keys</a> | <a href="#document_keys">Document Keys</a> | <a href="#application_selector_keys">Application Selector Keys</a> | <a href="#browser_control_keys">Browser Control Keys</a> | <a href="#numeric_keypad_keys">Numeric Keypad Keys</a></p>
 
@@ -32,18 +31,18 @@ tags:
 
 <p>Values of <code>key</code> which have special meanings other than identifying a specific key or character.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -66,19 +65,21 @@ tags:
 
 <p><em>Modifiers</em> are special keys which are used to generate special characters or cause special actions when used in combination with other keys. Examples include the <kbd>Shift</kbd> and <kbd>Control</kbd> keys, and lock keys such as <kbd>Caps Lock</kbd> and <kbd>NumLock</kbd>.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"Alt"</code> [5]</td>
    <td>The <kbd>Alt</kbd> (Alternative) key.</td>
@@ -231,7 +232,7 @@ tags:
    <td></td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as <code>"OS"</code> instead of as <code>"Meta"</code>. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as <code>"OS"</code> by Firefox: <code>VK_LWIN</code> (0x5B) and <code>VK_RWIN</code> (0x5C) on Windows, and <code>GDK_KEY_Super_L</code> (0xFFEB), <code>GDK_KEY_Super_R</code> (0xFFEC), <code>GDK_KEY_Hyper_L</code> (0xFFED), and <code>GDK_KEY_Hyper_R</code> (0xFFEE) on Linux.</p>
@@ -246,18 +247,18 @@ tags:
 
 <h2 id="Whitespace_keys">Whitespace keys</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -308,18 +309,18 @@ tags:
 
 <h2 id="Navigation_keys">Navigation keys</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -410,18 +411,18 @@ tags:
 
 <h2 id="Editing_keys">Editing keys</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -544,18 +545,18 @@ tags:
 
 <h2 id="UI_keys">UI keys</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -646,7 +647,7 @@ tags:
   <tr>
    <td><code>"Pause"</code></td>
    <td>The <kbd>Pause</kbd> key. Pauses the current application or state, if applicable.
-    <div class="note"><strong>Note:</strong> This shouldn't be confused with the <code>"MediaPause"</code> key value, which is used for media controllers, rather than to control applications and processes.</div>
+    <div class="note"><p><strong>Note:</strong> This shouldn't be confused with the <code>"MediaPause"</code> key value, which is used for media controllers, rather than to control applications and processes.</p></div>
    </td>
    <td><code>VK_PAUSE</code> (0x13)</td>
    <td></td>
@@ -658,7 +659,7 @@ tags:
   <tr>
    <td><code>"Play"</code></td>
    <td>The <kbd>Play</kbd> key. Resumes a previously paused application, if applicable.
-    <div class="note"><strong>Note:</strong> This shouldn't be confused with the <code>"MediaPlay"</code> key value, which is used for media controllers, rather than to control applications and processes.</div>
+    <div class="note"><p><strong>Note:</strong> This shouldn't be confused with the <code>"MediaPlay"</code> key value, which is used for media controllers, rather than to control applications and processes.</p></div>
    </td>
    <td><code>VK_PLAY</code> (0xFA)</td>
    <td></td>
@@ -717,18 +718,18 @@ tags:
 
 <h2 id="Device_keys">Device keys</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -771,7 +772,7 @@ tags:
   <tr>
    <td><code>"Power"</code></td>
    <td>The <kbd>Power</kbd> button or key, to toggle power on and off.
-    <div class="note"><strong>Note:</strong> Not all systems pass this key through to the user agent.</div>
+    <div class="note"><p><strong>Note:</strong> Not all systems pass this key through to the user agent.</p></div>
    </td>
    <td></td>
    <td></td>
@@ -847,18 +848,18 @@ tags:
 
 <h4 id="Common_IME_keys">Common IME keys</h4>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
  </thead>
  <tbody>
@@ -1032,19 +1033,21 @@ tags:
 
 <p>These keys are only available on Korean keyboards. There are other keys defined by various platforms for Korean keyboards, but these are the most common and are the ones identified by the UI Events specification.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"HangulMode"</code></td>
    <td>The <kbd>Hangul</kbd> (Korean character set) mode key, which toggles between Hangul and English entry modes.</td>
@@ -1072,7 +1075,7 @@ tags:
     <code>Qt::Key_Hangul_Jeonja</code> (0x01001138)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] <code>VK_HANGUL</code> and <code>VK_KANA</code> share the same numeric key value on Windows, as do <code>VK_HANJA</code> and <code>VK_KANJI</code>.</p>
@@ -1081,19 +1084,21 @@ tags:
 
 <p>These keys are only available on Japanese keyboards.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"Eisu"</code> [1]</td>
    <td>The <kbd>Eisu</kbd> key. This key's purpose is defined by the IME, but may be used to close the IME.</td>
@@ -1189,7 +1194,7 @@ tags:
     <p><code>KEYCODE_ZENKAKU_HANKAKU</code> (211)</p>
    </td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Prior to Firefox 37, the <kbd>Eisu</kbd> key was mapped to <code>"RomanCharacters"</code> by mistake.</p>
@@ -1212,7 +1217,7 @@ tags:
 
 <p>The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col"><strong><code>CompositionEvent.data</code></strong> value</th>
@@ -1489,19 +1494,21 @@ tags:
 
 <p>If more function keys are available, their names continue the pattern here by continuing to increment the numeric portion of each key's name, so that, for example, <code>"F24"</code> is a valid key value.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"F1"</code></td>
    <td>The first general-purpose function key, <kbd>F1</kbd>.</td>
@@ -1718,26 +1725,28 @@ tags:
    <td><code>Qt::Key_Context4</code> (0x01100003)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <h2 id="Phone_keys">Phone keys</h2>
 
 <p>These keys represent buttons which commonly exist on modern smartphones.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"AppSwitch"</code></td>
    <td>Presents a list of recently-used applications which lets the user change apps quickly.</td>
@@ -1834,7 +1843,7 @@ tags:
    <td><code>Qt::Key_VoiceDial</code> (0x01100008)</td>
    <td><code>KEYCODE_VOICE_ASSIST</code> (231)</td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Prior to Firefox 37, the Home button generated a key code of <code>"Exit"</code>. Starting in Firefox 37, the button generates the key code <code>"MozHomeScreen"</code>.</p>
@@ -1843,19 +1852,21 @@ tags:
 
 <p>The multimedia keys are extra buttons or keys for controlling media devices, found on some keyboards.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"ChannelDown"</code></td>
    <td>Switches to the previous channel.</td>
@@ -1961,7 +1972,7 @@ tags:
     <code>Qt::Key_MediaPrevious</code> (0x01000082)</td>
    <td><code>KEYCODE_MEDIA_PREVIOUS</code> (88)</td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Internet Explorer, Edge, and Firefox (36 and earlier) use <code>"MediaNextTrack"</code> and <code>"MediaPreviousTrack"</code> instead of <code>"MediaTrackNext"</code> and <code>"MediaTrackPrevious"</code>.</p>
@@ -1972,19 +1983,21 @@ tags:
 
 <p>These media keys are used specifically for controlling audio.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"AudioBalanceLeft"</code></td>
    <td>Adjusts audio balance toward the left.</td>
@@ -2144,7 +2157,7 @@ tags:
    <td><code>Qt::Key_MicVolumeUp</code> (0x0100011D)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Internet Explorer, Edge, and Firefox (48 and earlier) use <code>"VolumeUp"</code>, <code>"VolumeDown"</code>, and <code>"VolumeMute"</code> instead of <code>"AudioVolumeUp"</code>, <code>"AudioVolumeDown"</code>, and <code>"AudioVolumeMute"</code>. In Firefox 49 they were updated to match the latest specification. The old names are still used on <a href="/en-US/docs/Mozilla/B2G_OS">Boot to Gecko</a>.</p>
@@ -2153,19 +2166,21 @@ tags:
 
 <p>These key values represent buttons or keys present on television devices, or computers or phones which have TV support.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"TV"</code> [1]</td>
    <td>Switches into TV viewing mode.</td>
@@ -2406,7 +2421,7 @@ tags:
    <td></td>
    <td><code>KEYCODE_TV_TIMER_PROGRAMMING</code> (258)</td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Firefox added proper support for the <code>"TV"</code> key in Firefox 37; before that, this key generated the key code <code>"Live"</code>.</p>
@@ -2421,28 +2436,30 @@ tags:
 
 <ul>
  <li><a href="http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/">DTV Application Software Environment</a> (part of the {{interwiki("wikipedia", "ATSC")}} specification)</li>
- <li><a href="http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf">Open Cable Application Platform 1.1.3</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/OpenCable_Application_Platform">Open Cable Application Platform</a></li>
  <li><a href="http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx">ANSI/CEA-2014-B</a>: Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet</li>
- <li><a href="http://developer.android.com/reference/android/view/KeyEvent.html">Android KeyEvent key code values</a></li>
+ <li><a href="https://developer.android.com/reference/android/view/KeyEvent.html">Android KeyEvent key code values</a></li>
 </ul>
 
 <div class="note">
 <p><strong>Note:</strong> Remote controls typically include keys whose values are already defined elsewhere, such as under {{anch("Multimedia keys")}} or {{anch("Audio control keys")}}. Those keys' values will match what's documented in those tables.</p>
 </div>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"AVRInput"</code> [3]</td>
    <td>Changes the input mode on an external audio/video receiver (AVR) unit.</td>
@@ -3021,7 +3038,7 @@ tags:
    <td><code>Qt::Key_Zoom</code> (0x01020006)</td>
    <td><code>KEYCODE_TV_ZOOM_MODE</code> (255)</td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Don't confuse the media controller <code>VK_APPS</code> key with the Windows <code>VK_APPS</code> key, which is also known as <code>VK_CONTEXT_MENU</code>. That key is encoded as <code>"ContextMenu"</code>.</p>
@@ -3034,19 +3051,21 @@ tags:
 
 <p>These special multimedia keys are used to control speech recognition features.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"SpeechCorrectionList"</code> [1]</td>
    <td>Presents a list of possible corrections for a word which was incorrectly identified.</td>
@@ -3063,7 +3082,7 @@ tags:
    <td></td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] The <code>APPCOMMAND_CORRECTION_LIST</code> command on Windows generates <code>"Unidentified"</code> on Firefox.</p>
@@ -3074,18 +3093,18 @@ tags:
 
 <p>These keys control documents. In the specification, they're included in other sets of keys (such as the media keys), but they are more sensibly considered to be their own category.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
   <tr>
    <td><code>"Close"</code> [1]</td>
@@ -3168,7 +3187,7 @@ tags:
     <code>Qt::Key_Send</code> (0x010000EB)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Prior to Firefox 37, this key generated the key value <code>"Unidentified"</code>.</p>
@@ -3177,19 +3196,21 @@ tags:
 
 <p>Some keyboards offer special keys for launching or switching to certain common applications. Key values for those are listed here.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"LaunchCalculator"</code> [5]</td>
    <td>The <kbd>Calculator</kbd> key, often labeled with an icon. This is often used as a generic application launcher key (<code>APPCOMMAND_LAUNCH_APP2</code>).</td>
@@ -3456,7 +3477,7 @@ tags:
     <code>Qt::Key_LaunchF</code> (0x010000B1)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Internet Explorer, Edge, and Firefox (36 and earlier) use <code>"SelectMedia"</code> instead of <code>"LaunchMediaPlayer"</code>. Firefox 37 through Firefox 48 use <code>"MediaSelect"</code>. Firefox 49 has been updated to match the latest specification, and to return <code>"LaunchMediaPlayer"</code>.</p>
@@ -3473,19 +3494,21 @@ tags:
 
 <p>Some keyboards include special keys for controlling Web browsers. Those keys follow.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td><code>"BrowserBack"</code></td>
    <td>Navigates to the previous content or page in the current Web view's history.</td>
@@ -3557,7 +3580,7 @@ tags:
     <code>Qt::Key_Search</code> (0x01000063)</td>
    <td></td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] Prior to Firefox 37, this key's value was reported as <code>"Unidentified"</code>.</p>
@@ -3567,24 +3590,26 @@ tags:
 <p>These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as <code>"0"</code> through <code>"9"</code>), some multimedia keyboards include additional number keys for higher numbers.</p>
 
 <div class="note">
-<p>The <kbd>10</kbd> key, if present, generates events with the <code>key</code> value of <code>"0"</code>.</p>
+<p><strong>Note:</strong> The <kbd>10</kbd> key, if present, generates events with the <code>key</code> value of <code>"0"</code>.</p>
 </div>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
-   <th rowspan="2" scope="col" style="text-align: left;"><code>KeyboardEvent.key</code> Value</th>
-   <th rowspan="2" scope="col" style="text-align: left;">Description</th>
-   <th colspan="4" scope="col" style="text-align: center;">Virtual Keycode</th>
+   <th rowspan="2" scope="col"><code>KeyboardEvent.key</code> Value</th>
+   <th rowspan="2" scope="col">Description</th>
+   <th colspan="4" scope="col">Virtual Keycode</th>
   </tr>
   <tr>
-   <th scope="col" style="text-align: left;">Windows</th>
-   <th scope="col" style="text-align: left;">Mac</th>
-   <th scope="col" style="text-align: left;">Linux</th>
-   <th scope="col" style="text-align: left;">Android</th>
+   <th scope="col">Windows</th>
+   <th scope="col">Mac</th>
+   <th scope="col">Linux</th>
+   <th scope="col">Android</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
-   <td><code>"Decimal"</code> [1] {{obsolete_inline}}</td>
+   <td><code>"Decimal"</code> [1] {{deprecated_inline}}</td>
    <td>
     <p>The decimal point key (typically <kbd>.</kbd> or <kbd>,</kbd> depending on the region).</p>
 
@@ -3613,7 +3638,7 @@ tags:
    <td></td>
   </tr>
   <tr>
-   <td><code>"Multiply"</code> [1] {{obsolete_inline}}</td>
+   <td><code>"Multiply"</code> [1] {{deprecated_inline}}</td>
    <td>The numeric keypad's multiplication key, <kbd>*</kbd>.</td>
    <td><code>VK_MULTIPLY</code> (0x6A)</td>
    <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
@@ -3622,7 +3647,7 @@ tags:
    <td><code>KEYCODE_NUMPAD_MULTIPLY</code> (155)</td>
   </tr>
   <tr>
-   <td><code>"Add"</code> [1] {{obsolete_inline}}</td>
+   <td><code>"Add"</code> [1] {{deprecated_inline}}</td>
    <td>The numeric keypad's addition key, <kbd>+</kbd>.</td>
    <td><code>VK_ADD</code> (0x6B)</td>
    <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
@@ -3639,7 +3664,7 @@ tags:
    <td><code>KEYCODE_CLEAR</code> (28)</td>
   </tr>
   <tr>
-   <td><code>"Divide"</code> [1] {{obsolete_inline}}</td>
+   <td><code>"Divide"</code> [1] {{deprecated_inline}}</td>
    <td>The numeric keypad's division key, <kbd>/</kbd>.</td>
    <td><code>VK_DIVIDE</code> (0x6F)</td>
    <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
@@ -3648,7 +3673,7 @@ tags:
    <td><code>KEYCODE_NUMPAD_DIVIDE</code> (154)</td>
   </tr>
   <tr>
-   <td><code>"Subtract"</code> [1] {{obsolete_inline}}</td>
+   <td><code>"Subtract"</code> [1] {{deprecated_inline}}</td>
    <td>The numeric keypad's subtraction key, <kbd>-</kbd>.</td>
    <td><code>VK_SUBTRACT</code> (0x6D)</td>
    <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>
@@ -3676,7 +3701,7 @@ tags:
    <td><code>GDK_KEY_KP_0</code> (0xFFB0) - <code>GDK_KEY_KP_9</code> (0xFFB9)</td>
    <td><code>KEYCODE_NUMPAD_0</code> (144) - <code>KEYCODE_NUMPAD_9</code> (153)</td>
   </tr>
- </thead>
+ </tbody>
 </table>
 
 <p>[1] While older browsers used words like <code>"Add"</code>, <code>"Decimal"</code>, <code>"Multiply"</code>, and so forth modern browsers identify these using the actual character (<code>"+"</code>, <code>"."</code>, <code>"*"</code>, and so forth).</p>

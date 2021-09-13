@@ -11,10 +11,13 @@ tags:
   - Media
   - Reference
   - sound
+browser-compat: api.HTMLAudioElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLAudioElement</code></strong> interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.</span> It's based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.</p>
+<p>The <strong><code>HTMLAudioElement</code></strong> interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.</p>
+
+<p>This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -38,11 +41,11 @@ tags:
 <p><em>The following methods are non-standard and should not be used.</em></p>
 
 <dl>
- <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.</dd>
- <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.</dd>
- <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.</dd>
 </dl>
 
@@ -60,7 +63,7 @@ tags:
 <pre class="brush: js">audioElement.play();</pre>
 
 <div class="note">
-<p>A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> and <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> for best practices and work arounds.</p>
+<p><strong>Note:</strong> A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> and <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> for best practices and work arounds.</p>
 </div>
 
 <p>Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:</p>
@@ -77,31 +80,11 @@ audioElement.addEventListener('loadeddata', () =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlaudioelement", "HTMLAudioElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLAudioElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

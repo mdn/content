@@ -9,21 +9,13 @@ tags:
 - Property
 - Reference
 - onvisibilitychange
+browser-compat: api.Document.onvisibilitychange
 ---
 <div>{{ApiRef('DOM')}}</div>
 
 <p>The <code><strong>Document.onvisibilitychange</strong></code> property represents the
   event handler that is called when a {{event("visibilitychange")}} event reaches this
   object.</p>
-
-<div class="notecard warning">
-  <p>Safari doesn’t fire the
-    <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code>
-    event as expected when <code>visibilityState</code> transitions to
-    <code>hidden</code>; so for that case, you need to also include code to listen for the
-    <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> event.
-  </p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,24 +36,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Page Visibility API','#dom-document-onvisibilitychange','onvisibilitychange')}}</td>
-      <td>{{Spec2('Page Visibility API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.onvisibilitychange")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -12,9 +12,9 @@ tags:
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}</div>
 
-<p>In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently in terms of your ability to style them with CSS than regular boxes. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.</p>
+<p>In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.</p>
 
-<table class="learn-box standard-table">
+<table>
 	<tbody>
 		<tr>
 			<th scope="row">Prerequisites:</th>
@@ -48,7 +48,7 @@ tags:
 
 <p>So what can we do about the overflowing issue?</p>
 
-<p>As we learned in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will work with other replaced elements such as <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>s, or <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>s.</p>
+<p>As we learned in <a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">our previous lesson</a>, a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>s, or <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>s.</p>
 
 <p><strong>Try adding <code>max-width: 100%</code> to the <code>&lt;img&gt;</code> element in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.</strong></p>
 
@@ -56,17 +56,17 @@ tags:
 
 <p>The {{cssxref("object-fit")}} property can help you here. When using <code>object-fit</code> the replaced element can be sized to fit a box in a variety of ways.</p>
 
-<p>Below we have used the value <code>cover</code>, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained some parts of the image will be cropped by the box.</p>
+<p>Below we have used the value <code>cover</code>, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/images/object-fit.html", '100%', 1000)}}</p>
 
-<p>If we use <code>contain</code> as a value the image will be scaled down until it is small enough to fit inside the box. This will result in "letterboxing" if it is not the same aspect ratio as the box.</p>
+<p>If we use <code>contain</code> as a value, the image will be scaled down until it is small enough to fit inside the box. This will result in "letterboxing" if it is not the same aspect ratio as the box.</p>
 
 <p>You could also try the value of <code>fill</code>, which will fill the box but not maintain the aspect ratio.</p>
 
 <h2 id="Replaced_elements_in_layout">Replaced elements in layout</h2>
 
-<p>When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently to other elements. For example, in a flex or grid layout elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.</p>
+<p>When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a flex or grid layout elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.</p>
 
 <p>You can see this happening in the example below where we have a two column, two row grid container, which has four items in it. All of the <code>&lt;div&gt;</code> elements have a background color and stretch to fill the row and column. The image, however, does not stretch.</p>
 
@@ -74,26 +74,26 @@ tags:
 
 <p>If you are following these lessons in order then you may not have looked at layout yet. Just keep in mind that replaced elements, when they become part of a grid or flex layout, have different default behaviors, essentially to avoid them being stretched strangely by the layout.</p>
 
-<p>To force the image to stretch to fill the grid cell it is in, you'd have to do something like following:</p>
+<p>To force the image to stretch to fill the grid cell it is in, you'd have to do something like the following:</p>
 
 <pre class="brush: css">img {
   width: 100%;
   height: 100%;
 }</pre>
 
-<p>This would however stretch the image, so probably isn't what you'd want to do.</p>
+<p>This would, however, stretch the image, so it's probably not what you'd want to do.</p>
 
 <h2 id="Form_elements">Form elements</h2>
 
-<p>Form elements can be a tricky issue when it comes to styling with CSS, and the <a href="/en-US/docs/Learn/Forms">Web Forms module</a> contains detailed guides to the trickier aspects of styling form elements, which I will not fully reproduce here. There are a few key basics worth highlighting in this section of the article.</p>
+<p>Form elements can be a tricky issue when it comes to styling with CSS. The <a href="/en-US/docs/Learn/Forms">Web Forms module</a> contains detailed guides to the trickier aspects of styling these, which I will not fully reproduce here. There are, however, a few key basics worth highlighting in this section.</p>
 
 <p>Many form controls are added to your page by way of the <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> element — this defines simple form fields such as text inputs, through to more complex fields added in HTML5 such as color and date pickers. There are some additional elements, such as <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> for multiline text input, and also elements used to contain and label parts of forms such as <code><a href="/en-US/docs/Web/HTML/Element/fieldset">&lt;fieldset&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/legend">&lt;legend&gt;</a></code>.</p>
 
-<p>HTML5 also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers are inconsistent in how much styling and customization they allow for such items.</p>
+<p>HTML5 also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers vary with one another in how much styling and customization they allow for such items.</p>
 
 <h3 id="Styling_text_input_elements">Styling text input elements</h3>
 
-<p>Elements that allow for text input, such as <code>&lt;input type="text"&gt;</code>, specific types such as <code>&lt;input type="email"&gt;</code>, and the <code>&lt;textarea&gt;</code> element are quite easy to style and tend to behave just like other boxes on your page. The default styling of these elements will differ however based on the operating system and browser that your user visits the site with.</p>
+<p>Elements that allow for text input, such as <code>&lt;input type="text"&gt;</code>, and the more specific <code>&lt;input type="email"&gt;</code>, and the <code>&lt;textarea&gt;</code> element are quite easy to style and tend to behave just like other boxes on your page. The default styling of these elements will differ, however, based on the operating system and browser that your user visits the site with.</p>
 
 <p>In the example below we have styled some text inputs using CSS — you can see that things such as borders, margins and padding all apply as you would expect. We are using attribute selectors to target the different input types. Try changing how this form looks by adjusting the borders, adding background colors to the fields, and changing fonts and padding.</p>
 
@@ -107,7 +107,7 @@ tags:
 
 <h3 id="Inheritance_and_form_elements">Inheritance and form elements</h3>
 
-<p>In some browsers, form elements do not inherit font styling by default. Therefore if you want to be sure that your form fields use the font defined on the body, or on a parent element, you should add this rule to your CSS.</p>
+<p>In some browsers, form elements do not inherit font styling by default. Therefore, if you want to be sure that your form fields use the font defined on the body, or on a parent element, you should add this rule to your CSS.</p>
 
 <pre class="brush: css">button,
 input,
@@ -119,9 +119,9 @@ textarea {
 
 <h3 id="Form_elements_and_box-sizing">Form elements and box-sizing</h3>
 
-<p>Across browsers form elements use different box sizing rules for different widgets. You learned about the <code>box-sizing</code> property in <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">our box model lesson</a> and you can use this knowledge when styling forms to ensure a consistent experience when setting widths and heights on form elements.</p>
+<p>Across browsers, form elements use different box sizing rules for different widgets. You learned about the <code>box-sizing</code> property in <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">our box model lesson</a> and you can use this knowledge when styling forms to ensure a consistent experience when setting widths and heights on form elements.</p>
 
-<p>For consistency it is a good idea to set margins and padding to <code>0</code> on all elements, then add these back in when styling particular controls</p>
+<p>For consistency, it is a good idea to set margins and padding to <code>0</code> on all elements, then add these back in when styling particular controls:</p>
 
 <pre class="brush: css">button,
 input,
@@ -151,7 +151,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0; 
+  margin: 0;
 }
 
 textarea {

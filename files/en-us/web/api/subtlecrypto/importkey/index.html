@@ -2,12 +2,13 @@
 title: SubtleCrypto.importKey()
 slug: Web/API/SubtleCrypto/importKey
 tags:
-- API
-- Method
-- Reference
-- SubtleCrypto
-- Web Crypto API
-- importKey
+  - API
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web Crypto API
+  - importKey
+browser-compat: api.SubtleCrypto.importKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -17,18 +18,18 @@ tags:
     href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>.</p>
 
 <p>The function accepts several import formats: see <a
-    href="/en-US/docs/Web/API/SubtleCrypto/importKey#Supported_formats">Supported
+    href="#supported_formats">Supported
     formats</a> for details.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = <em>crypto</em><code>.subtle.importKey(
-<em>    format</em>,
-    <em>keyData</em>,
-    <em>algorithm</em>,
-    <em>extractable</em>,
-    <em>keyUsages
-</em>)</code>;
+<pre class="brush: js">const result = crypto.subtle.importKey(
+    format,
+    keyData,
+    algorithm,
+    extractable,
+    keyUsages
+);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
@@ -45,40 +46,40 @@ tags:
       <li><code>jwk</code>: <a href="#json_web_key">JSON Web Key</a> format.</li>
     </ul>
   </li>
-  <li><code><em>keyData</em></code> is an {{domxref("ArrayBuffer")}}, a <a
+  <li><code><em>keyData</em></code> is an {{jsxref("ArrayBuffer")}}, a <a
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>,
-    a {{domxref("DataView")}}, or a <code>JSONWebKey</code> object containing the key in
+    a {{jsxref("DataView")}}, or a <code>JSONWebKey</code> object containing the key in
     the given format.</li>
   <li><em><code>algorithm</code></em> is a dictionary object defining the type of key to
     import and providing extra algorithm-specific parameters.
     <ul>
       <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#RSA-PSS">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#RSA-OAEP">RSA-OAEP</a>: Pass an
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: Pass an
         <code><a href="/en-US/docs/Web/API/RsaHashedImportParams">RsaHashedImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ECDSA">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ECDH">ECDH</a>: Pass
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: Pass
         an <code><a href="/en-US/docs/Web/API/EcKeyImportParams">EcKeyImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: Pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: Pass an
         <code><a href="/en-US/docs/Web/API/HmacImportParams">HmacImportParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: Pass the
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: Pass the
         string identifying the algorithm or an object of the form
         <code>{ "name": ALGORITHM }</code>, where <code>ALGORITHM </code>is the name of
         the algorithm.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a> :
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a> :
         Pass the string <code>PBKDF2</code>.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#HKDF">HKDF</a>: Pass the
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a>: Pass the
         string <code>HKDF</code>.</li>
     </ul>
   </li>
-  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it
+  <li><code><em>extractable</em></code> is a boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
     {{domxref("SubtleCrypto.wrapKey()")}}.</li>
   <li><code><em>keyUsages</em></code> is an {{jsxref("Array")}} indicating what can be
@@ -157,7 +158,7 @@ tags:
 
 <p>The <code>importKey()</code> method expects to receive this object as an
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the <a href="http://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
+  containing the <a href="https://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
   form of the <code>PrivateKeyInfo</code>. DER is a set of rules for encoding ASN.1
   structures into a binary form.</p>
 
@@ -165,7 +166,7 @@ tags:
     href="https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail">PEM format</a>. PEM format
   is a way to encode binary data in ASCII. It consists of a header and a footer, and in
   between, the <a
-    href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64-encoded</a>
+    href="/en-US/docs/Glossary/Base64">base64-encoded</a>
   binary data. A PEM-encoded <code>PrivateKeyInfo</code> looks like this:</p>
 
 <pre class="brush: plain">-----BEGIN PRIVATE KEY-----
@@ -180,7 +181,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 
 <ul>
   <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">window.atob()</a></code>.
+    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
   </li>
   <li>convert the resulting string into an
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
@@ -205,7 +206,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 <p>Just like <a href="#pkcs_8">PKCS #8</a>, the <code>importKey()</code> method expects to
   receive this object as an
   <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-  containing the <a href="http://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
+  containing the <a href="https://luca.ntop.org/Teaching/Appunti/asn1.html">DER-encoded</a>
   form of the <code>SubjectPublicKeyInfo</code>.</p>
 
 <p>Again, you are most likely to encounter this object in <a
@@ -227,7 +228,7 @@ gQIDAQAB
 
 <ul>
   <li>base64-decode the part between header and footer, using
-    <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob">window.atob()</a></code>.
+    <code><a href="/en-US/docs/Web/API/atob">window.atob()</a></code>.
   </li>
   <li>convert the resulting string into an
     <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>.
@@ -260,7 +261,7 @@ gQIDAQAB
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/import-key/index.html">try the
       working examples</a> on GitHub.</p>
 </div>
@@ -426,25 +427,11 @@ function importPrivateKey(jwk) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-importKey',
-        'SubtleCrypto.importKey()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.importKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

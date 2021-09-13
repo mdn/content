@@ -10,11 +10,13 @@ tags:
 - WebRTC
 - WebRTC API
 - deleted
+browser-compat: api.RTCIceCandidateStats.deleted
 ---
-<p>{{APIRef("WebRTC")}}<br>
-  <span class="seoSummary">The {{domxref("RTCIceCandidateStats")}} dictionary's
+<div>{{APIRef("WebRTC")}}</div>
+
+<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
     <code><strong>deleted</strong></code> property indicates whether or not the candidate
-    has been deleted or released.</span>
+    has been deleted or released.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -47,7 +49,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>In this example, {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}
+<p>In this example, {{domxref("setInterval()")}}
   is used to set up a function that runs periodically to display the latest statistics for
   candidates. Only candidates which have not been deleted are included in the output.</p>
 
@@ -77,24 +79,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcicecandidatestats-deleted', 'RTCIceCandidateStats.deleted') }}</td>
-      <td>{{ Spec2('WebRTC Statistics Identifiers') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCIceCandidateStats.deleted")}}</p>
+<p>{{Compat}}</p>

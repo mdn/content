@@ -6,10 +6,16 @@ tags:
   - DOM
   - DOM Reference
   - File API
-  - Obsolete
+  - Deprecated
   - Reference
+browser-compat: api.BlobBuilder
 ---
 <p>{{APIRef("File API")}}{{ deprecated_header}}</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The <code>BlobBuilder</code> interface has been
+  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</p>
+</div>
 
 <p>The <strong><code>BlobBuilder</code></strong> interface provides an easy way to
   construct {{domxref("Blob")}} objects. Just create a <code>BlobBuilder</code> and append
@@ -17,8 +23,6 @@ tags:
   building your blob, call {{manch("getBlob")}} to retrieve a {{domxref("Blob")}}
   containing the data you sent into the blob builder.</p>
 
-<div class="note"><strong>Note:</strong> The <code>BlobBuilder</code> interface has been
-  deprecated in favor of the newly introduced {{domxref('Blob')}} constructor.</div>
 
 <h2 id="Method_overview">Method overview</h2>
 
@@ -77,7 +81,7 @@ void append(
 );
 </pre>
 
-<h6 id="Parameters">Parameters</h6>
+<h4 id="Parameters">Parameters</h4>
 
 <dl>
   <dt><code>data</code></dt>
@@ -99,7 +103,7 @@ void append(
 );
 </pre>
 
-<h6 id="Parameters_2">Parameters</h6>
+<h4 id="Parameters_2">Parameters</h4>
 
 <dl>
   <dt><code>contentType</code> {{optional_inline}}</dt>
@@ -107,7 +111,7 @@ void append(
     the value of the <code>Blob</code> object's type property.</dd>
 </dl>
 
-<h6 id="Return_value">Return value</h6>
+<h4 id="Return_value">Return value</h4>
 
 <p>A {{domxref("Blob")}} object containing all of the data passed to any calls to
   {{manch("append")}} made since the <code>BlobBuilder</code> was created. This also
@@ -124,7 +128,7 @@ void append(
 );
 </pre>
 
-<h6 id="Parameters_3">Parameters</h6>
+<h4 id="Parameters_3">Parameters</h4>
 
 <dl>
   <dt><code>name</code></dt>
@@ -134,13 +138,13 @@ void append(
     the value of the <code>File</code> object's type property.</dd>
 </dl>
 
-<h6 id="Return_value_2">Return value</h6>
+<h4 id="Return_value_2">Return value</h4>
 
 <p>A {{domxref("File")}} object.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BlobBuilder")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

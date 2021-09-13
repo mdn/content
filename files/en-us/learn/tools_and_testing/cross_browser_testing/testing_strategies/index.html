@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad-hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -89,7 +89,7 @@ tags:
 
 <ul>
  <li><a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&amp;qpcustomd=0">Netmarketshare</a></li>
- <li><a href="http://gs.statcounter.com/">Statcounter</a></li>
+ <li><a href="https://gs.statcounter.com/">Statcounter</a></li>
 </ul>
 
 <p>These are both very North America-centric, and not particularly accurate, but they can give you an idea of broad trends.</p>
@@ -125,7 +125,7 @@ tags:
 
 <p>By default, you should see the reporting tab, like so:</p>
 
-<p><img alt="" src="analytics-reporting.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="analytics-reporting.png"></p>
 
 <p>There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all. <a href="https://support.google.com/analytics/answer/1008015">Getting started with Analytics</a> provides some useful guidance on reporting (and more) for beginners.</p>
 
@@ -157,7 +157,7 @@ tags:
 
 <p>Consider the following example (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">source code</a>, and also the <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">example running live</a>):</p>
 
-<p><img alt="" src="sliding-box-demo.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="sliding-box-demo.png"></p>
 
 <p>Test criteria for this feature could be written like so:</p>
 
@@ -186,7 +186,7 @@ tags:
 <ul>
  <li>They give you a set of steps to follow when you are performing tests.</li>
  <li>They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to active the button using your mouse, and then the keyboard...") — see {{anch("User testing")}}, below.</li>
- <li>They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see Using an automation tool to automate browser testing, later in the series).</li>
+ <li>They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium">Selenium</a>, later in the series).</li>
 </ul>
 
 <h2 id="Putting_together_a_testing_lab">Putting together a testing lab</h2>
@@ -234,7 +234,7 @@ tags:
 <p>More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:</p>
 
 <ul>
- <li>The official <a href="https://developer.android.com/studio/">Android Studio IDE</a> for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust <a href="https://developer.android.com/studio/run/emulator.html">emulator</a>. If you want something a bit more lightweight, <a href="http://www.andyroid.net/">Andy</a> is a reasonable option that runs on both Windows and Mac.</li>
+ <li>The official <a href="https://developer.android.com/studio/">Android Studio IDE</a> for developing Android apps is a bit heavy weight for just testing websites on Google Chrome or the old Stock Android browser, but it does come with a Robust <a href="https://developer.android.com/studio/run/emulator.html">emulator</a>. If you want something a bit more lightweight, <a href="https://www.andyroid.net/">Andy</a> is a reasonable option that runs on both Windows and Mac.</li>
  <li>Apple provides an app called <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html">Simulator</a> that runs on top of the <a href="https://developer.apple.com/xcode/">XCode</a> development environment, and emulates iPad/iPhone/Apple Watch/Apple TV. This includes the native iOS Safari browser. This unfortunately only runs on a Mac.</li>
 </ul>
 
@@ -252,7 +252,7 @@ tags:
 
 <h3 id="Virtual_machines">Virtual machines</h3>
 
-<p>Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as <a href="www.parallels.com/">Parallels</a>, <a href="http://www.vmware.com/">VMWare</a>, and <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a>; we personally like the latter, because it is free.</p>
+<p>Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as <a href="www.parallels.com/">Parallels</a>, <a href="https://www.vmware.com/">VMWare</a>, and <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a>; we personally like the latter, because it is free.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a <strong>dynamically allocated</strong> hard drive that grows and shrinks as the need arises.</p>
@@ -263,7 +263,7 @@ tags:
 <ol>
  <li>Get hold of an installer disk or image (e.g. ISO file) for the operating system you want to emulate. Virtual Box is unable to provide these; most, like Windows OSes, are commercial products that can't be freely distributed.</li>
  <li><a href="https://www.virtualbox.org/wiki/Downloads">Download the appropriate installer</a> for your operating system and install it.</li>
- <li>Open the app; you'll be presented with a view like the following: <img alt="" src="virtualbox.png" style="display: block; margin: 0px auto;"></li>
+ <li>Open the app; you'll be presented with a view like the following: <img alt="" src="virtualbox.png"></li>
  <li>To create a new virtual machine, press the <em>New</em> button in the top left hand corner.</li>
  <li>Follow the instructions and fill in the following dialog boxes as appropriate. You'll:
   <ol>
@@ -278,7 +278,7 @@ tags:
 
 <p>Now the new virtual box should appear in the left hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.</p>
 
-<p><img alt="" src="virtualbox-installer.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="virtualbox-installer.png"></p>
 
 <div class="warning">
 <p><strong>Important</strong>: You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.</p>
@@ -286,7 +286,7 @@ tags:
 
 <p>After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.</p>
 
-<p><img alt="" src="virtualbox-running.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="virtualbox-running.png"></p>
 
 <p>You need to treat this virtual operating system installation just like you would any real installation — for example, as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.</p>
 
@@ -309,7 +309,7 @@ tags:
 
 <h3 id="Automation_and_commercial_apps">Automation and commercial apps</h3>
 
-<p>As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system (<a href="http://www.seleniumhq.org/">Selenium</a> being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.</p>
+<p>As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system (<a href="https://www.seleniumhq.org/">Selenium</a> being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.</p>
 
 <p>There are also commercial tools available such as <a href="https://saucelabs.com/">Sauce Labs</a>, <a href="https://www.browserstack.com/">Browser Stack</a> and <a href="https://www.lambdatest.com/">LambdaTest </a>that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.<br>
  <br>

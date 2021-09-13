@@ -17,9 +17,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">One of HTML's main jobs is to give text structure and meaning (also known as {{glossary("semantics")}}) so that a browser can display it correctly. This article explains the way {{glossary("HTML")}} can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
+<p class="summary">One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way {{glossary("HTML")}} can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -36,7 +36,7 @@ tags:
 
 <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p>
 
-<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="newspaper_small.jpg" style="display: block; margin: 0px auto;" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
+<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="newspaper_small.jpg" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
 
 <p>Structured content makes the reading experience easier and more enjoyable.</p>
 
@@ -84,12 +84,12 @@ tags:
 
 <p>However, when you open the document in your browser, you'll see that the text appears as a big chunk!</p>
 
-<p><img alt="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it." src="screen_shot_2017-03-29_at_09.20.35.png" style="display: block; margin: 0px auto;" title="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it."></p>
+<p><img alt="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it." src="screen_shot_2017-03-29_at_09.20.35.png" title="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it."></p>
 
 <p>This is because there are no elements to give the content structure, so the browser does not know what is a heading and what is a paragraph. Furthermore:</p>
 
 <ul>
- <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
+ <li>Users looking at a web page tend to scan quickly to find relevant content, often just reading the headings, to begin with. (We usually <a class="external external-icon" href="https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/">spend a very short time on a web page</a>.) If they can't see anything useful within a few seconds, they'll likely get frustrated and go somewhere else.</li>
  <li>Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of {{glossary("SEO")}} (Search Engine Optimization).</li>
  <li>Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a <a class="external external-icon" href="https://en.wikipedia.org/wiki/Screen_reader" title="screen readers">screen reader</a>. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.</li>
  <li>To style content with {{glossary("CSS")}}, or make it do interesting things with {{glossary("JavaScript")}}, you need to have elements wrapping the relevant content, so CSS/JavaScript can effectively target it.</li>

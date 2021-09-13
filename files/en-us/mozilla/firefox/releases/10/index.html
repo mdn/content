@@ -10,7 +10,7 @@ tags:
 
 <p>Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
 
-<div class="note"><strong>Important note:</strong> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a class="external" href="http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.</div>
+<div class="note"><strong>Important note:</strong> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a class="external" href="https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.</div>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -78,7 +78,7 @@ tags:
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
- <li>Firefox 10 now supports the <a class="external" href="http://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
+ <li>Firefox 10 now supports the <a class="external" href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
  <li><a href="/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
 </ul>
 
@@ -99,7 +99,7 @@ tags:
  <li>When encountering an unknown optional parameter in <a href="/en-US/docs/Web/API/IDBObjectStore#createindex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en-US/docs/Web/API/IDBDatabase#createobjectstore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
  <li>When <a href="/en-US/docs/Web/API/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en-US/docs/Web/API/IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
  <li>The methods <a href="/en-US/docs/Web/API/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en-US/docs/Web/API/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en-US/docs/Web/API/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
- <li>The method <a href="/en-US/docs/Web/API/IDBDatabase#setversion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en-US/docs/Web/API/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded </code>callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en-US/docs/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
+ <li>The method <a href="/en-US/docs/Web/API/IDBDatabase#setversion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en-US/docs/Web/API/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded</code> callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en-US/docs/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
  <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
  <li>The method <a href="/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29"><code>IDBFactory.deleteDatabase()</code></a> method has been added.</li>
  <li>Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.</li>
@@ -111,7 +111,7 @@ tags:
  <li>When the proper MIME type is passed, <code>image/svg+xml</code>, <a href="/en-US/docs/Web/API/DOMParser#parsing_a_svg_document">the <code>DOMParser</code> now creates a <code>SVGDocument</code></a> when given a string with SVG.</li>
  <li>In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.</li>
  <li>The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.</li>
- <li>The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
+  <li>The <code>NameList</code> interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
  <li>The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.</li>
  <li>The {{ domxref("XMLHttpRequest") }} <code>responseType</code> "<code>moz-json</code>" <a href="/en-US/docs/Mozilla/Firefox/Releases/9#dom">introduced in Firefox 9</a> has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}</li>
 </ul>

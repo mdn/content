@@ -6,12 +6,15 @@ tags:
 - DOM
 - Method
 - Reference
+browser-compat: api.Document.getElementsByTagName
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>getElementsByTagName</code></strong> method of
-  {{domxref("Document")}} interface <span class="seoSummary">returns an
-    {{domxref("HTMLCollection")}} of elements with the given tag name.</span> The complete
+  {{domxref("Document")}} interface returns an
+    {{domxref("HTMLCollection")}} of elements with the given tag name.</p>
+
+<p>The complete
   document is searched, including the root node. The returned <code>HTMLCollection</code>
   is live, meaning that it updates itself automatically to stay in sync with the DOM tree
   without having to call <code>document.getElementsByTagName()</code> again.</p>
@@ -28,10 +31,10 @@ tags:
     string "*" represents all elements.</li>
 </ul>
 
-<div class="note"><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The
+<div class="note"><p><strong>Note:</strong> <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">The
     latest W3C specification</a> says <var>elements</var> is an
   <code>HTMLCollection</code>; however, this method returns a {{domxref("NodeList")}} in
-  WebKit browsers. See {{bug(14869)}} for details.</div>
+  WebKit browsers. See {{bug(14869)}} for details.</p></div>
 
 <h2 id="Example">Example</h2>
 
@@ -119,28 +122,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM
-        WHATWG','#dom-document-getelementsbytagname','document.getElementsByTagName')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getElementsByTagName")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

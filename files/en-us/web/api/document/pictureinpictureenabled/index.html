@@ -11,13 +11,16 @@ tags:
 - Reference
 - Video
 - pip
+browser-compat: api.Document.pictureInPictureEnabled
 ---
 <div>{{APIRef("Picture-in-Picture API")}}</div>
 
-<p><span class="seoSummary">The read-only
+<p>The read-only
     <code><strong>pictureInPictureEnabled</strong></code> property of the
     {{domxref("Document")}} interface indicates whether or not picture-in-picture mode is
-    available.</span> Picture-in-Picture mode is available by default unless specified
+    available.</p>
+
+<p>Picture-in-Picture mode is available by default unless specified
   otherwise by a <a
     href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture">Feature-Policy</a>.
 </p>
@@ -32,7 +35,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} value, which is <code>true</code> if a video can enter
+<p>A boolean value, which is <code>true</code> if a video can enter
   picture-in-picture and be displayed in a floating window by calling
   {{domxref("HTMLVideoElement.requestFullscreen()")}}. If picture-in-picture mode isn't
   available, this value is <code>false</code>.</p>
@@ -53,27 +56,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Picture-in-Picture", "#dom-document-pictureinpictureenabled",
-        "Document.pictureInPictureEnabled")}}</td>
-      <td>{{Spec2("Picture-in-Picture")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.pictureInPictureEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

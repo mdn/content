@@ -7,13 +7,14 @@ tags:
   - HTMLCanvasElement
   - Method
   - Reference
+browser-compat: api.HTMLCanvasElement.getContext
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <strong><code>HTMLCanvasElement.getContext()</code></strong> method returns a drawing
     context on the canvas, or {{jsxref("null")}} if the context identifier is not
-    supported, or the canvas has already been set to a different context mode.</span></p>
+    supported, or the canvas has already been set to a different context mode.</p>
 
 <p>Later calls to this method on the same canvas element, with the same
   <code>contextType</code> argument, will always return the same drawing context instance
@@ -50,7 +51,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
     </ul>
 
     <div class="note">
-      <p><strong>Note</strong>: The identifier <code>"experimental-webgl"</code> is used
+      <p><strong>Note:</strong> The identifier <code>"experimental-webgl"</code> is used
         in new implementations of WebGL. These implementations have either not reached
         test suite conformance, or the graphics drivers on the platform are not yet
         stable. The <a href="https://www.khronos.org/">Khronos Group</a> certifies WebGL
@@ -124,13 +125,19 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
         overwritten by the author.</li>
       <li><strong><code>stencil</code></strong>: Boolean that indicates that the drawing
         buffer has a stencil buffer of at least 8 bits.</li>
+      <li><code><strong>xrCompatible</strong></code>: Boolean that hints to the user agent
+        to use a compatible graphics adapter for an
+        <a href="/en-US/docs/Web/API/WebXR_Device_API">immersive XR device</a>. Setting this
+        synchronous flag at context creation is discouraged; rather call the asynchronous
+        {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you
+        intend to start an XR session.</li>
     </ul>
   </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("RenderingContext")}} which is either a</p>
+<p>A rendering context which is either a</p>
 
 <ul>
   <li>{{domxref("CanvasRenderingContext2D")}} for <code>"2d"</code>,</li>
@@ -162,39 +169,11 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvas-getcontext",
-        "HTMLCanvasElement.getContext")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change since the latest snapshot, {{SpecName('HTML5 W3C')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1',
-        "semantics-scripting.html#dom-htmlcanvaselement-getcontext",
-        "HTMLCanvasElement.getContext")}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-getcontext",
-        "HTMLCanvasElement.getContext")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition.
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLCanvasElement.getContext")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

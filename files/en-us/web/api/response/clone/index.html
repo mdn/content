@@ -2,13 +2,14 @@
 title: Response.clone()
 slug: Web/API/Response/clone
 tags:
-- API
-- Experimental
-- Fetch
-- Method
-- Reference
-- Response
-- clone
+  - API
+  - Experimental
+  - Fetch
+  - Method
+  - Reference
+  - Response
+  - clone
+browser-compat: api.Response.clone
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -17,8 +18,8 @@ tags:
   different variable.</p>
 
 <p><code>clone()</code> throws a {{jsxref("TypeError")}} if the response
-  {{domxref("Body")}} has already been used. In fact, the main reason <code>clone()</code>
-  exists is to allow multiple uses of {{domxref("Body")}} objects (when they are one-use
+  body has already been used. In fact, the main reason <code>clone()</code>
+  exists is to allow multiple uses of body objects (when they are one-use
   only.)</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -37,14 +38,14 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>In our <a
-    href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone">Fetch
+    href="https://github.com/mdn/fetch-examples/tree/master/fetch-response-clone">Fetch
     Response clone example</a> (see <a
     href="https://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone
     live</a>) we create a new {{domxref("Request")}} object using the
   {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-  fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}. When the fetch
+  fetch this request using {{domxref("fetch()")}}. When the fetch
   resolves successfully, we clone it, extract a blob from both responses using two
-  {{domxref("Body.blob")}} calls, create object URLs out of the blobs using
+  {{domxref("Response.blob")}} calls, create object URLs out of the blobs using
   {{domxref("URL.createObjectURL")}}, and display them in two separate
   {{htmlelement("img")}} elements.</p>
 
@@ -69,30 +70,17 @@ fetch(myRequest).then(function(response) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-response-clone','clone()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Response.clone")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a>
+  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
   </li>
   <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>

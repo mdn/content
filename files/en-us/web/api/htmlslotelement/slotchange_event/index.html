@@ -8,10 +8,11 @@ tags:
   - events
   - shadow dom
   - slotchange
+browser-compat: api.HTMLSlotElement.slotchange_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <code><strong>slotchange</strong></code> event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.</span></p>
+<p>The <code><strong>slotchange</strong></code> event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.</p>
 
 <div class="note">
 <p><strong>Note:</strong> the <code>slotchange</code> event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.</p>
@@ -62,26 +63,11 @@ slots[1].addEventListener('slotchange', function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#mutation-observers", '"Mutation observers" and slotchange event')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLSlotElement.slotchange_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

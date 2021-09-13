@@ -16,13 +16,16 @@ tags:
 - WebRTC API
 - firCount
 - stream
+browser-compat: api.RTCInboundRtpStreamStats.firCount
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The <strong><code>firCount</code></strong> property of the
+<p>The <strong><code>firCount</code></strong> property of the
     {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the number of
     <strong>Full Intra Request</strong> (<strong>FIR</strong>) packets have been sent by
-    the receiver to the sender.</span> The receiver sends a FIR packet when the stream
+    the receiver to the sender.</p>
+
+<p>The receiver sends a FIR packet when the stream
   falls behind and needs to skip frames in order to catch up.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -47,23 +50,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC Statistics Identifiers',
-        '#dom-rtcinboundrtpstreamstats-fircount', 'RTCInboundRtpStreamStats.firCount')}}
-      </td>
-      <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCInboundRtpStreamStats.firCount")}}</p>
+<p>{{Compat}}</p>

@@ -10,11 +10,12 @@ tags:
   - Property
   - Reference
   - ontransitioncancel
+browser-compat: api.GlobalEventHandlers.ontransitioncancel
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
 <p>The <strong><code>ontransitioncancel</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
   processes {{event("transitioncancel")}} events.</p>
 
 <p>The <code>transitioncancel</code> event is sent when a <a
@@ -48,7 +49,7 @@ tags:
   value of {{cssxref("transition-duration")}}.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>elapsedTime</code> does not include time prior to the
+  <p><strong>Note:</strong> <code>elapsedTime</code> does not include time prior to the
     transition effect beginning; that means that the value of
     {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>,
     which is zero until the delay period ends and the animation begins.</p>
@@ -79,7 +80,7 @@ tags:
   color and size change, and causes the box to rotate, while the mouse cursor hovers over
   it.</p>
 
-<pre class="brush: css highlight:[13,14]">.box {
+<pre class="brush: css">.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -144,28 +145,11 @@ box.ontransitioncancel = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS3
-        Transitions','#dom-globaleventhandlers-ontransitioncancel','ontransitioncancel')}}
-      </td>
-      <td>{{Spec2('CSS3 Transitions')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.ontransitioncancel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,13 +1,14 @@
 ---
-title: PeriodicWave.PeriodicWave()
+title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
 tags:
-- API
-- Audio
-- Constructor
-- PeriodicWave
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - PeriodicWave
+  - Reference
+  - Web Audio API
+browser-compat: api.PeriodicWave.PeriodicWave
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
@@ -22,8 +23,6 @@ tags:
 
 <h3 id="Parameters">Parameters</h3>
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
-
 <dl>
   <dt><code>context</code></dt>
   <dd>A {{domxref("BaseAudioContext")}} representing the audio context you want the node
@@ -36,12 +35,29 @@ tags:
       href="https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints">PeriodicWaveConstraints</a>
     dictionary.):
     <ul>
-      <li><code>real</code>: A {{domxref("Float32Array")}} containing the cosine terms
+      <li><code>real</code>: A {{jsxref("Float32Array")}} containing the cosine terms
         that you want to use to form the wave (equivalent to the <code>real</code>
-        parameter of {{domxref("AudioContext.createPeriodicWave")}}).</li>
-      <li><code>imag</code>: A {{domxref("Float32Array")}} containing the sine terms that
+        parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
+      <li><code>imag</code>: A {{jsxref("Float32Array")}} containing the sine terms that
         you want to use to form the wave (equivalent to the <code>imag</code> parameter of
-        {{domxref("AudioContext.createPeriodicWave")}}).</li>
+        {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
+      <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
+        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+        and down-mixing</a> connections to any inputs to the node. (See
+      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+      definition depend on the value of <code>channelCountMode</code>.</li>
+      <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)</li>
+      <li>
+        <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio <a
+          href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+          and down-mixing</a> will happen.<br>
+        The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
+      </li>
     </ul>
   </dd>
 </dl>
@@ -71,21 +87,8 @@ var wave = new PeriodicWave(ac, options);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API','#periodicwave','PeriodicWave')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PeriodicWave.PeriodicWave")}}</p>
+<p>{{Compat}}</p>

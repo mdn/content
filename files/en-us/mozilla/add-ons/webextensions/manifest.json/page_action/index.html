@@ -5,6 +5,7 @@ tags:
   - Add-ons
   - Extensions
   - WebExtensions
+browser-compat: webextensions.manifest.page_action
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -151,12 +152,13 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>pinned</code></td>
+   <td><code>pinned</code> {{deprecated_inline}}</td>
    <td><code>Boolean</code></td>
    <td>
     <p>Optional. Defaults to <code>true</code>.</p>
 
-    <p>Controls whether or not the page action should appear in the location bar by default when the user installs the extension.</p>
+    <p>Controls whether or not the page action should appear in the location bar by default when the user installs the extension. This property is no longer supported since Firefox 89.</p>
+
    </td>
   </tr>
  </tbody>
@@ -188,7 +190,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.manifest.page_action")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

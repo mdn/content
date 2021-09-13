@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -90,7 +90,7 @@ dblSgl;</pre>
 <pre class="brush: js">let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">Escape notation</a> for more details.</p>
+<p>This works fine. You can escape other characters in the same way, e.g. <code>\"</code>,  and there are some special codes besides. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences">Escape sequences</a> for more details.</p>
 
 <h2 id="Concatenating_strings">Concatenating strings</h2>
 
@@ -191,12 +191,12 @@ let output = 'I like the song "' + song + '". I gave it a score of ' + (score/hi
 
 <pre class="brush: js">let examScore = 45;
 let examHighestScore = 70;
-examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
+examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). ${ examScore &gt;= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;</pre>
 
 <ul>
  <li>The first two placeholders here are pretty simple, only including a simple value in the string.</li>
  <li>The third one calculates a percentage result and rounds it to the nearest integer.</li>
- <li>The fourth one includes uses a ternary operator to check whether the score is above a certain mark and print a pass or fail message depending on the result.</li>
+ <li>The fourth one includes a ternary operator to check whether the score is above a certain mark and print a pass or fail message depending on the result.</li>
 </ul>
 
 <p>Another point to note is that if you want to split a traditional string over multiple lines, you need to include a newline character, <code>\n</code>:</p>

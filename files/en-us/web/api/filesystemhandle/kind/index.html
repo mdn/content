@@ -9,11 +9,12 @@ tags:
   - Property
   - Read-only
   - handle
+browser-compat: api.FileSystemHandle.kind
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 </div>
 
-<p class="summary">The <strong><code>kind</code></strong> read-only property of the
+<p>The <strong><code>kind</code></strong> read-only property of the
   {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
   <code>'file'</code> if the associated entry is a file or <code>'directory'</code>. It is
   used to distinguish files from directories when iterating over the contents of a
@@ -49,9 +50,9 @@ async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.type === 'file') {
+  if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.type === 'directory')
+  } else if (fileHandle.kind === 'directory')
     // run directory code
   }
 
@@ -60,24 +61,11 @@ async function getFile() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('File System Access API','#dom-filesystemhandle-kind','kind')}}</td>
-      <td>{{Spec2('File System Access API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemHandle.kind")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

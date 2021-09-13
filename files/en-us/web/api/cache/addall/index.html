@@ -12,16 +12,17 @@ tags:
   - Service worker API
   - ServiceWorker
   - addAll
+browser-compat: api.Cache.addAll
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>addAll()</code></strong> method of the
+<p>The <strong><code>addAll()</code></strong> method of the
     {{domxref("Cache")}} interface takes an array of URLs, retrieves them, and adds the
     resulting response objects to the given cache. The request objects created during
-    retrieval become keys to the stored response operations. </span></p>
+    retrieval become keys to the stored response operations. </p>
 
 <div class="note">
-  <p><strong>Note</strong>: <code>addAll()</code> will overwrite any key/value pairs
+  <p><strong>Note:</strong> <code>addAll()</code> will overwrite any key/value pairs
     previously stored in the cache that match the request, but will fail if a
     resulting <code>put()</code> operation would overwrite a previous cache entry stored
     by the same <code>addAll()</code> method.</p>
@@ -48,27 +49,13 @@ tags:
 
 <h3 id="Exceptions">Exceptions</h3>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Exception</strong></th>
-      <th scope="col"><strong>Happens when</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>
-        <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
-
-        <p>The Response status is not in the 200 range (i.e., not a successful response.)
-          This occurs if the request does not return successfully, but also if the request
-          is a <em>cross-origin no-cors</em> request (in which case the reported status is
-          always 0.)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<dl>
+  <dt><code>TypeError</code></dt>
+  <dd>
+    <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
+    <p>The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a <em>cross-origin no-cors</em> request (in which case the reported status is always 0.)</p>
+  </dd>
+</dl>
 
 <h2 id="Examples">Examples</h2>
 
@@ -97,26 +84,13 @@ tags:
 });
 </pre>
 
-<h3 id="Specifications">Specifications</h3>
+<h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#cache-addAll', 'Cache: addAll')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Cache.addAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -124,5 +98,5 @@ tags:
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope/caches", "WorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

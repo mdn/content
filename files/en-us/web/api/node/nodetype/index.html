@@ -6,13 +6,14 @@ tags:
 - DOM
 - Property
 - Reference
+browser-compat: api.Node.nodeType
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The read-only <code><strong>Node.nodeType</strong></code>
+<p>The read-only <code><strong>Node.nodeType</strong></code>
     property is an integer that identifies what the node is. It distinguishes different
     kind of nodes from each other, such as {{domxref("Element", "elements")}},
-    {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.</span></p>
+    {{domxref("Text", "text")}} and {{domxref("Comment", "comments")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +27,7 @@ tags:
 
 <h3 id="Node_type_constants">Node type constants</h3>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Constant</th>
@@ -87,40 +88,8 @@ tags:
   </tbody>
 </table>
 
-<h3 id="Deprecated_node_type_constants_deprecated_inline">Deprecated node type constants
-  {{deprecated_inline()}}</h3>
-
-<div class="notecard note">
-  <p>The following constants have been deprecated and should not be used anymore.</p>
-</div>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>Constant</td>
-      <td>Value</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code>Node.ENTITY_REFERENCE_NODE</code></td>
-      <td>5</td>
-      <td>An XML Entity Reference node, such as <code>&amp;foo;</code>. Removed in
-        {{SpecName("DOM4")}}.</td>
-    </tr>
-    <tr>
-      <td><code>Node.ENTITY_NODE</code></td>
-      <td>6</td>
-      <td>An XML <code>&lt;!ENTITY …&gt;</code> node. Removed in {{SpecName("DOM4")}}.
-      </td>
-    </tr>
-    <tr>
-      <td><code>Node.NOTATION_NODE</code></td>
-      <td>12</td>
-      <td>An XML <code>&lt;!NOTATION …&gt;</code> node. Removed in {{SpecName("DOM4")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
+<p>The following constants have been deprecated and are not in use anymore: <code>Node.ENTITY_REFERENCE_NODE</code> (5),
+  <code>Node.ENTITY_NODE</code> (6), and <code>Node.NOTATION_NODE</code> (12).</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -151,39 +120,8 @@ if (node.nodeType !== Node.COMMENT_NODE) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-node-nodetype', 'Node.nodeType')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Deprecated <code>ATTRIBUTE_NODE</code>, <code>ENTITY_REFERENCE_NODE</code> and
-        <code>NOTATION_NODE</code> types.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node.nodeType')}}</td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>No changes.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Core', 'core.html#ID-111237558', 'Node.nodeType')}}</td>
-      <td>{{Spec2('DOM2 Core')}}</td>
-      <td>No changes.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM1', 'level-one-core.html#ID-111237558', 'Node.nodeType')}}</td>
-      <td>{{Spec2('DOM1')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.nodeType")}}</p>
+<p>{{Compat}}</p>

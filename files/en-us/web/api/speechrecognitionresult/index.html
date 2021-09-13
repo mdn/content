@@ -10,6 +10,7 @@ tags:
   - Web Speech API
   - recognition
   - speech
+browser-compat: api.SpeechRecognitionResult
 ---
 <p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
 
@@ -19,9 +20,9 @@ tags:
 
 <dl>
 	<dt>{{domxref("SpeechRecognitionResult.isFinal")}} {{readonlyinline}}</dt>
-	<dd>A {{domxref("Boolean")}} that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.</dd>
+	<dd>A boolean value that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.</dd>
 	<dt>{{domxref("SpeechRecognitionResult.length")}} {{readonlyinline}}</dt>
-	<dd>Returns <cite>the length of the "array" — the </cite>number of {{domxref("SpeechRecognitionAlternative")}} objects contained in the result (also referred to as "n-best alternatives".)</dd>
+	<dd>Returns the length of the "array" — the number of {{domxref("SpeechRecognitionAlternative")}} objects contained in the result (also referred to as "n-best alternatives".)</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -51,24 +52,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Speech API', '#speechreco-result', 'SpeechRecognitionResult')}}</td>
-			<td>{{Spec2('Web Speech API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SpeechRecognitionResult")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
 

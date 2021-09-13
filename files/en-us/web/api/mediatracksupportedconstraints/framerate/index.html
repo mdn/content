@@ -2,26 +2,29 @@
 title: MediaTrackSupportedConstraints.frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSupportedConstraints
-- Property
-- Reference
-- Web
-- WebRTC
-- frameRate
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSupportedConstraints
+  - Property
+  - Reference
+  - Web
+  - WebRTC
+  - frameRate
+browser-compat: api.MediaTrackSupportedConstraints.frameRate
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
     <strong><code>frameRate</code></strong> property is a read-only Boolean value which is
     present (and set to <code>true</code>) in the object returned by
     {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
     {{Glossary("user agent")}} supports the {{domxref("MediaTrackConstraints.frameRate",
-    "frameRate")}} constraint.</span> If the constraint isn't supported, it's not included
+    "frameRate")}} constraint.</p>
+
+<p>If the constraint isn't supported, it's not included
   in the list, so this value will never be <code>false</code>.</p>
 
 <p>The <code>frameRate</code> constraint can be used to establish acceptable upper and
@@ -43,7 +46,7 @@ tags:
   allow specifying limits on the frame rate for video tracks.</p>
 
 <div class="note">
-  <p>If this property is present, its value is always <code>true</code>.</p>
+  <p><strong>Note:</strong> If this property is present, its value is always <code>true</code>.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -61,24 +64,16 @@ if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
     result.textContent = "Not supported!";
 }</pre>
 
-<details>
-  <summary>
-    <h3 id="HTML">HTML</h3>
-  </summary>
+<h3 id="HTML">HTML</h3>
 
-  <pre class="brush: html">&lt;div id="result"&gt;
+<pre class="brush: html">&lt;div id="result"&gt;
 &lt;/div&gt;</pre>
-</details>
 
-<details>
-  <summary>
-    <h3 id="CSS">CSS</h3>
-  </summary>
+<h3 id="CSS">CSS</h3>
 
-  <pre class="brush: css">#result {
+<pre class="brush: css">#result {
   font: 14px "Arial", sans-serif;
 }</pre>
-</details>
 
 <h3 id="Result">Result</h3>
 
@@ -93,27 +88,11 @@ if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediatracksupportedconstraints-framerate',
-        'frameRate') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.frameRate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

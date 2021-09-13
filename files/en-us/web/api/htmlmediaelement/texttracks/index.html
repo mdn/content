@@ -13,13 +13,14 @@ tags:
   - Video
   - Web
   - textTracks
+browser-compat: api.HTMLMediaElement.textTracks
 ---
 <div>{{APIRef("HTML DOM")}}{{draft}}</div>
 
-<p><span class="seoSummary">The read-only <strong><code>textTracks</code></strong>
+<p>The read-only <strong><code>textTracks</code></strong>
     property on {{DOMxRef("HTMLMediaElement")}} objects returns a
     {{DOMxRef("TextTrackList")}} object listing all of the {{DOMxRef("TextTrack")}}
-    objects representing the media element's text tracks</span>, in the same order as in
+    objects representing the media element's text tracks, in the same order as in
   the list of text tracks.</p>
 
 <p>You can detect when tracks are added to and removed from an
@@ -36,10 +37,8 @@ tags:
   the list, you can monitor it for changes to detect when new text tracks are added or
   existing ones removed.</p>
 
-<div class="hidden">
-  <p>See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
+<p>See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
     more about watching for changes to a media element's track list.</p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -101,8 +100,7 @@ for (var i = 0, L = tracks.length; i &lt; L; i++) { /* tracks.length == 10 */
 
 <dl>
   <dt>length</dt>
-  <dd>Returns the number of text tracks in <code
-      id="text-track-api:texttracklist-4">TextTrackList</code> object.</dd>
+  <dd>Returns the number of text tracks in <code>TextTrackList</code> object.</dd>
 </dl>
 
 <h3 id="methods">methods</h3>
@@ -110,38 +108,17 @@ for (var i = 0, L = tracks.length; i &lt; L; i++) { /* tracks.length == 10 */
 <dl>
   <dt>getTrackById()</dt>
   <dd>The <dfn><code>getTrackById(<var>id</var>)</code></dfn> method returns the first
-    <code id="text-track-api:texttrack-6">TextTrack</code> in the <code
-      id="text-track-api:texttracklist-9">TextTrackList</code> object that matches the id,
+    <code>TextTrack</code> in the <code>TextTrackList</code> object that matches the id,
     or null if there is no match.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#dom-media-texttracks",
-        "HTMLMediaElement.textTracks")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from {{SpecName('HTML5 W3C')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement",
-        "HTMLMediaElement.textTracks")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.textTracks")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

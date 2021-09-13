@@ -8,13 +8,14 @@ tags:
 - Method
 - Reference
 - getElementsByClassName
+browser-compat: api.Element.getElementsByClassName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The {{domxref("Element")}} method
+<p>The {{domxref("Element")}} method
     <code><strong>getElementsByClassName()</strong></code> returns a live
     {{domxref("HTMLCollection")}} which contains every descendant element which has the
-    specified class name or names.</span></p>
+    specified class name or names.</p>
 
 <p>The method {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}}
   on the {{domxref("Document")}} interface works essentially the same way, except it acts
@@ -51,7 +52,7 @@ tags:
   immediately removed from the collection.</p>
 
 <div class="note">
-  <p>In <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>, the
+  <p><strong>Note:</strong> In <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks mode</a>, the
     class names are compared in a case-insensitive fashion. Otherwise, they're case
     sensitive.</p>
 </div>
@@ -82,8 +83,8 @@ tags:
 
 <p>You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the
   returned <code>HTMLCollection</code> or standard array syntax to examine individual
-  elements in the collection. However <u><strong>the following code will not
-      work</strong></u> as one might expect because <code>"matches"</code> will change as
+  elements in the collection. However, the following code will not
+      work as one might expect because <code>"matches"</code> will change as
   soon as any <code>"colorbox"</code> class is removed.</p>
 
 <pre class="brush: js">var matches = element.getElementsByClassName('colorbox');
@@ -123,22 +124,8 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname',
-        'Element.getElementsByClassName()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.getElementsByClassName")}}</p>
+<p>{{Compat}}</p>

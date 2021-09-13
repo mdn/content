@@ -11,7 +11,13 @@ tags:
 
 <p>A path definition is a list of <a href="#path_commands">path commands</a> where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.</p>
 
-<p>Three elements have this attribute: {{SVGElement("path")}}, {{SVGElement("glyph")}}, and {{SVGElement("missing-glyph")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("path")}}</li>
+  <li>{{SVGElement("glyph")}}</li>
+  <li>{{SVGElement("missing-glyph")}}</li>
+</ul>
 
 <div id="Example">
 <div class="hidden">
@@ -527,7 +533,7 @@ tags:
      <li><code><var>large-arc-flag</var></code> and <code><var>sweep-flag</var></code> allows to chose which arc must be drawn as 4 possible arcs can be drawn out of the other parameters.
       <ul>
        <li><code><var>large-arc-flag</var></code> allows to chose one of the large arc (<code>1</code>) or small arc (<code>0</code>),</li>
-       <li><code><var>sweep-flag</var></code> allows to chose one of the clockwise turning arc (<code>1</code>) or anticlockwise turning arc (<code>0</code>)</li>
+       <li><code><var>sweep-flag</var></code> allows to chose one of the clockwise turning arc (<code>1</code>) or counterclockwise turning arc (<code>0</code>)</li>
       </ul>
      </li>
     </ul>
@@ -545,7 +551,7 @@ tags:
      <li><code><var>large-arc-flag</var></code> and <code><var>sweep-flag</var></code> allows to chose which arc must be drawn as 4 possible arcs can be drawn out of the other parameters.
       <ul>
        <li><code><var>large-arc-flag</var></code> allows a choice of large arc (<code>1</code>) or small arc (<code>0</code>),</li>
-       <li><code><var>sweep-flag</var></code> allows a choice of a clockwise arc (<code>1</code>) or anticlockwise arc (<code>0</code>)</li>
+       <li><code><var>sweep-flag</var></code> allows a choice of a clockwise arc (<code>1</code>) or counterclockwise arc (<code>0</code>)</li>
       </ul>
      </li>
     </ul>
@@ -638,6 +644,10 @@ tags:
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('ClosePath', '100%', 200)}}</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> As a <a href="/en-US/docs/Web/SVG/Attribute/Presentation#attr-d">presentation attribute</a> <code>d</code> can be used as a CSS property</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

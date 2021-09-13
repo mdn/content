@@ -9,10 +9,11 @@ tags:
   - Interface
   - handle
   - working with files
+browser-compat: api.FileSystemHandle
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemHandle</code> directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.</p>
+<p>The <strong><code>FileSystemHandle</code></strong> interface of the {{domxref('File System Access API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemHandle</code> directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.</p>
 
 <h2 id="Interfaces_based_on_FileSystemHandle">Interfaces based on FileSystemHandle</h2>
 
@@ -58,9 +59,9 @@ async function getFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker();
 
-  if (fileHandle.type === 'file') {
+  if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.type === 'directory')
+  } else if (fileHandle.kind === 'directory')
     // run directory code
   }
 
@@ -109,24 +110,11 @@ async function verifyPermission(fileHandle, withWrite) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemhandle','FileSystemHandle')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemHandle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

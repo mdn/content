@@ -1,0 +1,60 @@
+---
+title: NSS 3.63 release notes
+slug: Mozilla/Projects/NSS/NSS_3.63_release_notes
+---
+<h2 id="Introduction">Introduction</h2>
+
+<p>Network Security Services (NSS) 3.63 was released on <strong>18 March 2021</strong>.</p>
+
+
+<h2 id="Distribution_Information">Distribution Information</h2>
+
+<p>The HG tag is NSS_3_63_RTM. NSS 3.63 requires NSPR 4.30 or newer.</p>
+
+<p>NSS 3.63 source distributions are available on ftp.mozilla.org for secure HTTPS download:</p>
+
+<ul>
+ <li>Source tarballs:<br>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_63_RTM/src/">https://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_63_RTM/src/</a></li>
+</ul>
+
+<p>Other releases are available <a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Releases">in NSS Releases</a>.</p>
+
+<h2 id="Bugs_fixed_in_NSS_3.63">Bugs fixed in NSS 3.63</h2>
+
+<ul>
+  <li> Bug 1688374 - Fix parallel build NSS-3.61 with make.</li>
+  <li> Bug 1697380 - Make a clang-format run on top of helpful contributions.</li>
+  <li> Bug 1683520 - ECCKiila P384, change syntax of nested structs initialization to prevent build isses with GCC 4.8.</li>
+  <li> Bug 1683520 - [lib/freebl/ecl] P-384: allow zero scalars in dual scalar multiplication.</li>
+  <li> Bug 1683520 - ECCKiila P521, change syntax of nested structs initialization to prevent build isses with GCC 4.8.</li>
+  <li> Bug 1683520 - [lib/freebl/ecl] P-521: allow zero scalars in dual scalar multiplication.</li>
+  <li> Bug 1696800 - HACL* update March 2021 - c95ab70fcb2bc21025d8845281bc4bc8987ca683.</li>
+  <li> Bug 1694214 - tstclnt can't enable middlebox compat mode.</li>
+  <li> Bug 1694392 - NSS does not work with PKCS #11 modules not supporting profiles.</li>
+  <li> Bug 1685880 - Minor fix to prevent unused variable on early return.</li>
+  <li> Bug 1685880 - Fix for the gcc compiler version 7 to support setenv with nss build.</li>
+  <li> Bug 1693217 - Increase nssckbi.h version number for March 2021 batch of root CA changes, CA list version 2.48.</li>
+  <li> Bug 1692094 - Set email distrust after to 21-03-01 for Camerfirma's 'Chambers of Commerce' and 'Global Chambersign' roots.</li>
+  <li> Bug 1618407 - Symantec root certs - Set CKA_NSS_EMAIL_DISTRUST_AFTER.</li>
+  <li> Bug 1693173 - Add GlobalSign R45, E45, R46, and E46 root certs to NSS.</li>
+  <li> Bug 1683738 - Add AC RAIZ FNMT-RCM SERVIDORES SEGUROS root cert to NSS.</li>
+  <li> Bug 1686854 - Remove GeoTrust PCA-G2 and VeriSign Universal root certs from NSS.</li>
+  <li> Bug 1687822 - Turn off Websites trust bit for the “Staat der Nederlanden Root CA - G3” root cert in NSS.</li>
+  <li> Bug 1692094 - Turn off Websites Trust Bit for 'Chambers of Commerce Root - 2008' and 'Global Chambersign Root - 2008’.</li>
+  <li> Bug 1694291 - Tracing fixes for ECH.</li>
+</ul>
+
+<h2 id="Compatibility">Compatibility</h2>
+
+<p>NSS 3.63 shared libraries are backwards-compatible with all older NSS 3.x shared libraries. A program linked with older NSS 3.x shared libraries will work with NSS 3.63 shared libraries without recompiling or relinking. Furthermore, applications that restrict their use of NSS APIs to the functions listed in NSS Public Functions will remain compatible with future versions of the NSS shared libraries.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>Bugs discovered should be reported by filing a bug report on <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=NSS">bugzilla.mozilla.org</a> (product NSS).</p>
+
+<h2 id="Notes">Notes</h2>
+
+<p>This version of NSS contains a significant update to the root CAs.</p>
+
+<p>Discussions about moving the documentation are still ongoing. (See discussion in the 3.62 release notes.)</p>

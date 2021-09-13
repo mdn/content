@@ -19,8 +19,8 @@ tags:
 <p>The following are essential concepts that you must be familiar with to get the most out of Git and GitHub.</p>
 
 <ul>
-  <li>Git is a <em>version control system</em> tool — an essential class of tool in any development workflow. It allows a group of developers to work on the same code base without getting in each other's way, stores the code base safely in a remote location, allows developers to roll the code back to previous states if required, and more.</li>
-  <li>GitHub is a web application that provides useful tools on top of Git for working with stored codebases, as well as server space to store the codebases. It does similar things to other applications in this space, such as <a href="https://about.gitlab.com/">GitLab</a> or <a href="https://bitbucket.org/">Bitbucket</a>.</li>
+  <li>Git is a <em>version control system</em> tool — an essential class of tools in any development workflow. It allows a group of developers to work on the same code base without getting in each other's way, stores the code base safely in a remote location, allows developers to roll the code back to previous states if required, and more.</li>
+  <li>GitHub is a web application that provides useful tools on top of Git for working with stored codebases, as well as server space to store the codebases. Its functions are similar to those of other applications, such as <a href="https://about.gitlab.com/">GitLab</a> or <a href="https://bitbucket.org/">Bitbucket</a>.</li>
   <li>Each codebase is stored in a container called a <em>repository</em>, or <em>repo</em>.</li>
   <li>Making a change to a repository minimally involves:
     <ul>
@@ -78,7 +78,7 @@ tags:
   <li>Cloning means making a local copy of a repo for you to work on (i.e. on your local hard drive).</li>
 </ul>
 
-<p>It is possible to do the two things separately, but in practice you will nearly always do them together when contributing to other people's projects. You should first make a fork of each repo you want to work on. This is required for you to submit change requests to the main version of the repo (we'll learn how to create a pull request later on). Due to security reasons, you can't submit changes directly to the main version of the repo.</p>
+<p>It is possible to do the two things separately, but in practice you will nearly always do them together when contributing to other people's projects. You should first make a fork of each repo you want to work on. This is required for you to submit change requests to the main version of the repo (we'll learn how to create a pull request later on). Due to security reasons, you can't submit changes directly to the main version of the repo. So to submit changes, first fork the main repo, then push the changes to your fork, and then create a pull request to get the changes from your fork merged into the main repo.</p>
 
 <p>Let's fork <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> right now; you'll definitely be contributing to this repo at some point. Follow these steps:</p>
 
@@ -449,6 +449,13 @@ To github.com:chrisdavidmills/content.git
 </ol>
 
 <p>If you look at your remote fork's github.com page again, you'll see the commit that you wanted to reverse, plus the commit that reverses it.</p>
+
+<div class="note notecard">
+  <h4>Note</h4>
+  <p>Another way to handle getting rid of files that have ended up in pull requests that you don't want to be there is to use the GitHub UI. Go to your pull request's page on github.com, go to the "Files changed" tab, and find the file you want to remove from the pull request. At the top right of the file's box in the page there will be a "three dot" (<code>...</code>) menu. Press this button and choose "Delete file". In the confirmation page, enter a title for the new commit, make sure the "Commit directly..." checkbox is selected, and press the "Commit changes" button.</p>
+
+  <p>It is usually a good idea to get the rest of the pull request looking exactly how you want it before you make changes via the GitHub UI. If you do something like this and then end up having to make more changes, you'll need to remember to pull the changes you made to your remote branch down to your local branch (e.g. with <code>git pull</code>) before you can push more commits.</p>
+</div>
 
 <h3 id="want_to_see_more">Want to see more?</h3>
 

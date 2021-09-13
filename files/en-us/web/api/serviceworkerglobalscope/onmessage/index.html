@@ -10,6 +10,7 @@ tags:
 - ServiceWorkerGlobalScope
 - Workers
 - onmessage
+browser-compat: api.ServiceWorkerGlobalScope.onmessage
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
@@ -19,14 +20,14 @@ tags:
   incoming messages are received.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: Service workers define the extendable event to allow extending
+  <p><strong>Note:</strong> Service workers define the extendable event to allow extending
     the lifetime of the event. For the <code>message</code> event, service workers use the
     {{domxref("ExtendableMessageEvent")}} interface which extends the
     {{domxref("ExtendableEvent")}} interface.</p>
 </div>
 
 <div class="note">
-  <p><strong>Note</strong>: Messages received from service worker contexts (e.g. as the
+  <p><strong>Note:</strong> Messages received from service worker contexts (e.g. as the
     event object of <code>onmessage</code>) are represented by {{domxref("MessageEvent")}}
     objects in modern browsers, for consistency with other web messaging features. (They
     used to be represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have
@@ -47,22 +48,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#service-worker-global-scope-event-handlers',
-        'Event Handlers')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.onmessage")}}</p>
+<p>{{Compat}}</p>

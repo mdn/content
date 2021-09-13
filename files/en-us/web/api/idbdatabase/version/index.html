@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - version
+browser-compat: api.IDBDatabase.version
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -34,7 +35,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight:[17]">// Let us open our database
+<pre class="brush: js;">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database
@@ -55,29 +56,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbdatabase-version', 'version')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbdatabase-version", "version")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBDatabase.version")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

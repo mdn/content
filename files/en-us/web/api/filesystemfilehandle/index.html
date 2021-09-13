@@ -8,10 +8,11 @@ tags:
   - FileSystemFileHandle
   - Interface
   - working with files
+browser-compat: api.FileSystemFileHandle
 ---
 <div>{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemFileHandle</code></strong> interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.</p>
+<p>The <strong><code>FileSystemFileHandle</code></strong> interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.</p>
 
 <p>Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.</p>
 
@@ -36,7 +37,20 @@ tags:
 
 <p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
 
-<pre class="brush: js">async function getTheFile() {
+<pre class="brush: js">const pickerOpts = {
+  types: [
+    {
+      description: 'Images',
+      accept: {
+        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
+      }
+    },
+  ],
+  excludeAcceptAllOption: true,
+  multiple: false
+};
+
+async function getTheFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
@@ -62,24 +76,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemfilehandle','FileSystemFileHandle')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemFileHandle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

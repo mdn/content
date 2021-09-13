@@ -9,6 +9,7 @@ tags:
   - Method
   - Reference
   - get
+browser-compat: api.Headers.get
 ---
 <div>{{APIRef("Fetch")}}</div>
 
@@ -37,7 +38,7 @@ tags:
 
 <h3 id="Returns">Returns</h3>
 
-<p>A {{domxref("ByteString")}} sequence representing the values of the retrieved header or
+<p>A {{jsxref("String")}} sequence representing the values of the retrieved header or
   <code>null</code> if this header is not set.</p>
 
 <h2 id="Example">Example</h2>
@@ -61,35 +62,16 @@ myHeaders.get('Content-Type'); // Returns "image/jpeg"
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
 </pre>
-
-<div class="note">
-  <p><strong>Note</strong>: {{domxref("Headers.getAll")}} used to have this functionality,
-    with {{domxref("Headers.get")}} returning only the first value added to the
-    <code>Headers</code> object. The latest spec has removed <code>getAll()</code>, and
-    updated <code>get()</code> to return all values.</p>
-</div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Fetch','#dom-headers-get','get()')}}</td>
-      <td>{{Spec2('Fetch')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Headers.get")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

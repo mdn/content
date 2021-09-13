@@ -7,6 +7,8 @@ tags:
 - Method
 - Node
 - NodeList
+- Polyfill
+browser-compat: api.NodeList.entries
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -24,7 +26,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight:[12]">var node = document.createElement("div");
+<pre class="brush: js;">var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -48,11 +50,12 @@ Array [ 2, &lt;span&gt; ]</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.NodeList.entries")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+  <li>A polyfill of <code>NodeList.prototype.entries</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
   <li>{{domxref("Node")}}</li>
   <li>{{domxref("NodeList")}}</li>
 </ul>

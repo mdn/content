@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - mode
+browser-compat: api.IDBTransaction.mode
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -33,7 +34,7 @@ tags:
 <p>An {{domxref("IDBTransactionMode")}} object defining the mode for isolating access to
   data in the current object stores:</p>
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">Value</th>
@@ -67,15 +68,15 @@ tags:
   handlers to report on the outcome of the transaction opening in the event of success or
   failure. At the end, we log the mode of the current transaction using <code>mode</code>.
   For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do
-    Notifications</a><span style="line-height: 1.5;"> app (</span><a
-    href="https://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view
-    example live</a><span style="line-height: 1.5;">.)</span></p>
+    href="https://github.com/mdn/to-do-notifications/">To-do
+    Notifications app</a> (<a
+    href="https://mdn.github.io/to-do-notifications/">view
+    example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+<pre class="brush: js">// Let us open our database
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -120,29 +121,11 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbtransaction-mode', 'mode')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbtransaction-mode", "mode")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBTransaction.mode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

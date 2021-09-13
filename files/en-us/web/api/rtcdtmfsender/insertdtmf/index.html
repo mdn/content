@@ -13,20 +13,24 @@ tags:
 - WebRTC
 - WebRTC API
 - insertDTMF
+browser-compat: api.RTCDTMFSender.insertDTMF
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The
-    <code><strong>insertDTMF</strong></code><strong><code>()</code></strong> method on the
-    {{domxref("RTCDTMFSender")}} interface starts sending </span>{{Glossary("DTMF")}}<span
-    class="seoSummary"> tones to the remote peer over the
-    {{domxref("RTCPeerConnection")}}. Sending of the tones is performed asynchronously,
+<p>The
+    <strong><code>insertDTMF()</code></strong> method on the
+    {{domxref("RTCDTMFSender")}} interface starts sending {{Glossary("DTMF")}} tones to the remote peer over the
+    {{domxref("RTCPeerConnection")}}.</p>
+
+<p>Sending of the tones is performed asynchronously,
     with {{event("tonechange")}} events sent to the <code>RTCDTMFSender</code> every time
-    a tone starts or ends.</span></p>
+    a tone starts or ends.</p>
 
 <p>As long as the connection is active, you can send tones at any time. Calling
-  <code>insertDTMF()</code> will append the specified tones to the end of the current tone
-  buffer, so that those tones play after the previously-enqueued tones.</p>
+  <code>insertDTMF()</code> replaces any already-pending tones from the <code>toneBuffer</code>.
+  You can abort sending queued tones by specifying an empty string (<code>""</code>) as the set of tones to play.
+  Since <code>insertDTMF()</code> replaces the tone buffer, in order to add to the DTMF tones being played, it is necessary to call
+  <code>insertDTMF</code> with a string containing both the remaining tones (stored in the <code>toneBuffer</code>) and the new tones appended together.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -70,25 +74,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-RTCDTMFSender-insertDTMF',
-        'RTCDTMFSender.insertDTMF()') }}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDTMFSender.insertDTMF")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

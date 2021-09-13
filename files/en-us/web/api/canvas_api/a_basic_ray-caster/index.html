@@ -11,9 +11,7 @@ tags:
 ---
 <div>{{CanvasSidebar}}</div>
 
-<div class="summary">
 <p>This article provides an interesting real-world example of using the {{HTMLElement("canvas")}} element to do software rendering of a 3D environment using ray-casting.</p>
-</div>
 
 <p>{{EmbedGHLiveSample("canvas-raycaster/index.html", 900, 300)}}</p>
 
@@ -27,7 +25,7 @@ tags:
 
 <h2 id="How.3F">How?</h2>
 
-<p>The basic idea is to use {{domxref("WindowOrWorkerGlobalScope/setInterval","setInterval()")}} at some arbitrary delay that corresponds to a desired frame rate. After every interval an update function will repaint the canvas showing the current view. I know I could have started with a simpler example, but I'm sure the canvas tutorial will <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">get to that</a>, and I wanted to see if I could do this.</p>
+<p>The basic idea is to use {{domxref("setInterval()")}} at some arbitrary delay that corresponds to a desired frame rate. After every interval an update function will repaint the canvas showing the current view. I know I could have started with a simpler example, but I'm sure the canvas tutorial will <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">get to that</a>, and I wanted to see if I could do this.</p>
 
 <p>So every update, the raycaster looks to see if you've pressed any keys lately, to conserve calculations by not casting if you're idle. If you have, then the canvas is cleared, the ground and sky are drawn, the camera position and/or orientation are updated, and the rays are cast out. As the rays intersect walls, then they render a vertical sliver of canvas in the color of the wall they've hit, blended with a darker version of the color according to the distance to the wall. The height of the sliver is also modulated by the distance from the camera to the wall, and is drawn centered over the horizon line.</p>
 

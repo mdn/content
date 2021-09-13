@@ -8,6 +8,7 @@ tags:
 - Reference
 - Web Authentication API
 - WebAuthn
+browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
 <div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
 
@@ -50,7 +51,7 @@ tags:
   and their results from the processing.</p>
 
 <div class="notecard warning">
-  <p><strong>Warning!</strong> As of March 2019, only <code>appId</code> (used during
+  <p><strong>Warning:</strong> As of March 2019, only <code>appId</code> (used during
     creation with {{domxref("PublicKeyCredentialRequestOptions.extensions")}}) is
     supported by <a
       href="https://bugs.chromium.org/p/chromium/issues/detail?id=818303">Chrome</a> and
@@ -97,28 +98,11 @@ navigator.credentials.create({ publicKey })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('WebAuthn','#dom-publickeycredential-getclientextensionresults','getClientExtensionResults()')}}
-      </td>
-      <td>{{Spec2('WebAuthn')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PublicKeyCredential.getClientExtensionResults")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

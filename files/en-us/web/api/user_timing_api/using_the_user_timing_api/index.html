@@ -23,7 +23,7 @@ tags:
 
 <p>The {{domxref("Performance.mark","performance.mark()")}} method is used to create a performance mark. The method takes one argument, the <em>name</em> of the mark, as shown in the following example.</p>
 
-<pre class="brush: js highlight:[8]">function create_marks(ev) {
+<pre class="brush: js">function create_marks(ev) {
   if (performance.mark === undefined) {
     log("Create Marks: performance.mark Not supported", 0);
     return;
@@ -45,7 +45,7 @@ tags:
 
 <p>The {{domxref("Performance")}} interface has three methods to retrieve marks. The following examples shows how to use each of these methods ({{domxref("Performance.getEntries","performance.getEntries()")}}, {{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}, and {{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}} ) to retrieve one or more marks.</p>
 
-<pre class="brush: js highlight:[9,19,26]">function display_marks(ev) {
+<pre class="brush: js">function display_marks(ev) {
   if (performance.getEntries === undefined) {
     log("Display Marks: performance.getEntries Not supported", 0);
     return;
@@ -87,7 +87,7 @@ tags:
 
 <p>The {{domxref("Performance.clearMarks","performance.clearMarks()")}} method is used to remove one or more marks from the browser's performance timeline. If a specific mark <em>name</em> is given to this method, only the mark(s) with that name will be removed. However, if no argument is given, then all {{domxref("PerformanceEntry","performance entries")}} of type "<code>mark</code>" will be removed from the performance timeline. The following example demonstrates both uses of this method.</p>
 
-<pre class="brush: js highlight:[10,14]">function clear_marks(obj) {
+<pre class="brush: js">function clear_marks(obj) {
   if (performance.clearMarks === undefined) {
     log("Clear Marks: performance.clearMarks Not supported", 0);
     return;
@@ -113,7 +113,7 @@ tags:
 
 <p>A <code>measure</code> is created by calling <code>performance.measure(measureName, startMarkName, endMarkName)</code> where <code>measureName</code> is the measure's name and <code>startMarkName</code> and <code>endMarkName</code> are the start and end names, respectively, of the marks the measure will be placed between (in the performance timeline).</p>
 
-<pre class="brush: js highlight:[18]">function create_measures(ev) {
+<pre class="brush: js">function create_measures(ev) {
   if (performance.measure === undefined) {
     log("Create Measures: performance.measure Not supported", 1);
     return;
@@ -148,7 +148,7 @@ tags:
 
 <p>The {{domxref("Performance")}} interface has three methods to retrieve measures. The following examples shows how to use each of these methods ({{domxref("Performance.getEntries","performance.getEntries()")}}, {{domxref("Performance.getEntriesByType","performance.getEntriesByType(entryType)")}}, and {{domxref("Performance.getEntriesByName","performance.getEntriesByName(name, entryType)")}}) to retrieve one or more measures.</p>
 
-<pre class="brush: js highlight:[9,19,26]">function display_measures(ev) {
+<pre class="brush: js">function display_measures(ev) {
   if (performance.getEntries === undefined) {
     log("Display Measures: performance.getEntries Not supported", 1);
     return;
@@ -190,7 +190,7 @@ tags:
 
 <p>The {{domxref("Performance.clearMeasures","performance.clearMeasures()")}} method is used to remove <em>measures</em> from the browser's performance timeline. If the method is called with a specific measure name, all measures with that name will be removed from the timeline. If the method is called with no arguments, all {{domxref("PerformanceEntry","performance entries")}} with a type of "<code>measure</code>" will be removed from the timeline. The following examples shows both uses of this method.</p>
 
-<pre class="brush: js highlight:[10,14]">function clear_measures(obj) {
+<pre class="brush: js">function clear_measures(obj) {
   if (performance.clearMeasures === undefined) {
     log("Clear Mearsures: performance.clearMeasures Not supported", 1);
     return;
@@ -210,7 +210,7 @@ tags:
 
 <h2 id="Interoperability">Interoperability</h2>
 
-<p>As shown in the {{domxref("Performance")}} interface's <a href="/Web/API/Performance#Browser_compatibility">Browser Compatibility</a> table, the <code>User Timing</code> methods are broadly implemented by desktop and mobile browsers (the only exceptions are no support for Desktop Safari and Mobile Safari).</p>
+<p>As shown in the {{domxref("Performance")}} interface's <a href="/en-US/docs/Web/API/Performance#browser_compatibility">Browser Compatibility</a> table, the <code>User Timing</code> methods are broadly implemented by desktop and mobile browsers (the only exceptions are no support for Desktop Safari and Mobile Safari).</p>
 
 <h2 id="See_also">See also</h2>
 

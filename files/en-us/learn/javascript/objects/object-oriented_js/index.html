@@ -22,7 +22,7 @@ tags:
 
 <p class="summary">With the basics out of the way, we'll now focus on object-oriented JavaScript (OOJS) — this article presents a basic view of object-oriented programming (OOP) theory, then explores how JavaScript emulates object classes via constructor functions, and how to create object instances.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -47,13 +47,13 @@ tags:
 
 <p>To start this off, we could return to our Person object type from our <a href="/en-US/docs/Learn/JavaScript/Objects/Basics">first objects article</a>, which defines the generic data and functionality of a person. There are lots of things you <em>could</em> know about a person (their address, height, shoe size, DNA profile, passport number, significant personality traits ...) , but in this case we are only interested in showing their name, age, gender, and interests, and we also want to be able to write a short introduction about them based on this data, and get them to say hello. This is known as <strong>abstraction</strong> — creating a simple model of a more complex thing, which represents its most important aspects in a way that is easy to work with for our program's purposes.</p>
 
-<p><img alt="" src="person-diagram.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="person-diagram.png"></p>
 
 <h3 id="Creating_actual_objects">Creating actual objects</h3>
 
 <p>From our class, we can create <strong>object instances</strong> — objects that contain the data and functionality defined in the class. From our Person class, we can now create some actual people:</p>
 
-<p><img alt="" src="mdn-graphics-instantiation-2-fixed.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-2-fixed.png"></p>
 
 <p>When an object instance is created from a class, the class's <strong>constructor function</strong> is run to create it. This process of creating an object instance from a class is called <strong>instantiation</strong> — the object instance is <strong>instantiated</strong> from the class.</p>
 
@@ -61,7 +61,7 @@ tags:
 
 <p>In this case we don't want generic people — we want teachers and students, which are both more specific types of people. In OOP, we can create new classes based on other classes — these new <strong>child classes </strong>(also known as <strong>subclasses</strong>) can be made to <strong>inherit</strong> the data and code features of their <strong>parent class</strong>, so you can reuse functionality common to all the object types rather than having to duplicate it.  Where functionality differs between classes, you can define specialized features directly on them as needed.</p>
 
-<p><img alt="" src="mdn-graphics-inherited-3.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-graphics-inherited-3.png"></p>
 
 <p>This is really useful — teachers and students share many common features such as name, gender, and age, so it is convenient to only have to define those features once. You can also define the same feature separately in different classes, as each definition of that feature will be in a different namespace. For example, a student's greeting might be of the form "Yo, I'm [firstName]" (e.g <em>Yo, I'm Sam</em>), whereas a teacher might use something more formal, such as "Hello, my name is [Prefix] [lastName], and I teach [Subject]." (e.g <em>Hello, My name is Mr Griffiths, and I teach Chemistry</em>).</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <p>You can now create object instances from your child classes. For example:</p>
 
-<p><img alt="" src="mdn-graphics-instantiation-teacher-3.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-teacher-3.png"></p>
 
 <p>In the rest of the article, we'll start to look at how OOP theory can be put into practice in JavaScript.</p>
 

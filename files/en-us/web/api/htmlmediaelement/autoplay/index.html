@@ -12,13 +12,14 @@ tags:
 - Video
 - Web
 - autoplay
+browser-compat: api.HTMLMediaElement.autoplay
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p><span class="seoSummary">The <strong><code>HTMLMediaElement.autoplay</code></strong>
+<p>The <strong><code>HTMLMediaElement.autoplay</code></strong>
     property reflects the {{htmlattrxref("autoplay", "video")}} HTML attribute, indicating
     whether playback should automatically begin as soon as enough media is available to do
-    so without interruption.</span></p>
+    so without interruption.</p>
 
 <p>A media element whose source is a {{domxref("MediaStream")}} and whose
   <code>autoplay</code> property is <code>true</code> will begin playback when it becomes
@@ -46,7 +47,7 @@ var <em>autoplay</em> = <em>HTMLMediaElement</em>.autoplay;</pre>
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Boolean")}} whose value is <code>true</code> if the media element will
+<p>A boolean value which is <code>true</code> if the media element will
   begin playback as soon as enough content has loaded to allow it to do so without
   interruption.</p>
 
@@ -74,31 +75,11 @@ var <em>autoplay</em> = <em>HTMLMediaElement</em>.autoplay;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "embedded-content.html#dom-media-autoplay",
-        "HTMLMediaElement.autoplay")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change from {{SpecName('HTML5 W3C')}}</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement",
-        "HTMLMediaElement.autoplay")}}</td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLMediaElement.autoplay")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

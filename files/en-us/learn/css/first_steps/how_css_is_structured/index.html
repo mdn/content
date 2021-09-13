@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">Now that you are beginning to understand the purpose and use of CSS, let's examine the structure of CSS.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -221,7 +221,7 @@ p {
 
 <p>The rules of specificity and the cascade can seem complicated at first. These rules are easier to understand as you become more familiar with CSS. The <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a> section in the next module explains this in detail, including how to calculate specificity.</p>
 
-<p>For now, remember that specificity exists. Sometimes, CSS might not apply as you expected because something else in the stylesheet has more specificity. Recognizing that more than one rule could apply to an element, is the first step in fixing these kinds of issues.</p>
+<p>For now, remember that specificity exists. Sometimes, CSS might not apply as you expected because something else in the stylesheet has more specificity. Recognizing that more than one rule could apply to an element is the first step in fixing these kinds of issues.</p>
 
 <h2 id="Properties_and_values">Properties and values</h2>
 
@@ -234,15 +234,15 @@ p {
 
 <p>The example below highlights a single property and value. The property name is <code>color</code> and the value is <code>blue</code>.</p>
 
-<p><img alt="A declaration highlighted in the CSS" src="declaration.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
+<p><img alt="A declaration highlighted in the CSS" src="declaration.png"></p>
 
 <p>When a property is paired with a value, this pairing is called a <em>CSS declaration</em>. CSS declarations are found within <em>CSS Declaration Blocks</em>. In the example below, highlighting identifies the CSS declaration block.</p>
 
-<p><img alt="A highlighted declaration block" src="declaration-block.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
+<p><img alt="A highlighted declaration block" src="declaration-block.png"></p>
 
 <p>Finally, CSS declaration blocks are paired with <em>selectors</em> to produce <em>CSS rulesets</em> (or <em>CSS rules</em>). The example below contains two rules: one for the <code>h1</code> selector and one for the <code>p</code> selector. The colored highlighting identifies the <code>h1</code> rule.</p>
 
-<p><img alt="The rule for h1 highlighted" src="rules.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
+<p><img alt="The rule for h1 highlighted" src="rules.png"></p>
 
 <p>Setting CSS properties to specific values is the primary way of defining layout and styling for a document. The CSS engine calculates which declarations apply to every single element of a page.</p>
 
@@ -265,7 +265,7 @@ p {
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, <code>color</code> should be spelled <code>color</code>, as <code>colour</code> will not work.</p>
+<p><strong>Important</strong>: In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, <code>colour</code> should be spelled <code>color</code>, as <code>colour</code> will not work.</p>
 </div>
 
 <h3 id="Functions">Functions</h3>

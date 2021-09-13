@@ -11,12 +11,15 @@ tags:
   - Reference
   - SourceBufferList
   - Video
+browser-compat: api.SourceBufferList
 ---
 <p>{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
 
 <p>The <strong><code>SourceBufferList</code></strong> interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.</p>
 
-<p>The source buffer list containing the <code>SourceBuffer</code>s appended to a particular <code>MediaSource</code> can be retrieved using the {{domxref("MediaSource.sourceBuffers")}} property. The individual source buffers can be accessed using array operator (i.e. <code>[]</code>) or functions such as {{jsxref("Array.forEach", "forEach()")}} for example.</p>
+<p>The source buffer list containing the <code>SourceBuffer</code>s appended to a particular <code>MediaSource</code> can be retrieved using the {{domxref("MediaSource.sourceBuffers")}} property.</p>
+
+<p>The individual source buffers can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -40,35 +43,27 @@ tags:
 
 <p><em>Inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/SourceBufferList/SourceBuffer"><code>SourceBufferList</code>: indexed property getter</a></dt>
- <dd>This getter allows the <code>SourceBuffer</code> objects in the list to be accessed with an array operator (i.e. <code>[]</code>.)</dd>
-</dl>
-
 <h2 id="Examples">Examples</h2>
 
-<p>TBD.</p>
+<p>This example shows how to access the active source buffers of the {{domxref("MediaSource")}} connected to an already playing {{domxref("HTMLVideoElement")}}.
+
+<pre class="brush: js">// Video is an already playing video using a MediaSource srcObject
+var video = document.querySelector('video');
+var mediaSource = video.srcObject;
+var sourceBufferList = mediaSource.activeSourceBuffers;
+for (var i = 0; i &lt; sourceBufferList.length; i++) {
+  var sourceBuffer = sourceBufferList[i];
+  // Do something with each SourceBuffer, such as call abort()
+  sourceBuffer.abort();
+}</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#sourcebufferlist', 'SourceBufferList')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SourceBufferList")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -177,13 +177,12 @@ self.addEventListener('install', (e) =&gt; {
 <p>Remember the <code>activate</code> event we skipped? It can be used to clear out the old cache we don't need anymore:</p>
 
 <pre class="brush: js">self.addEventListener('activate', (e) =&gt; {
-  e.waitUntil((async () =&gt; {
-    const keyList = await caches.keys();
-    await Promise.all(keyList.map((key) =&gt; {
+  e.waitUntil(caches.keys().then((keyList) =&gt; {
+    return Promise.all(keyList.map((key) =&gt; {
       if (key === cacheName) { return; }
-      await caches.delete(key);
+      return caches.delete(key);
     }))
-  })());
+  }));
 });</pre>
 
 <p>This ensures we have only the files we need in the cache, so we don't leave any garbage behind; the <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">available cache space in the browser is limited</a>, so it is a good idea to clean up after ourselves.</p>

@@ -9,6 +9,7 @@ tags:
   - XHR
   - XMLHttpRequest
   - set
+browser-compat: api.FormData.set
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
@@ -17,7 +18,7 @@ tags:
 <p>The difference between <code>set()</code> and {{domxref("FormData.append")}} is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas {{domxref("FormData.append")}} will append the new value onto the end of the existing set of values.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note:</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -60,24 +61,11 @@ formData.get('name'); // "72"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-set','set()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FormData.set")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

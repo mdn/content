@@ -9,8 +9,6 @@ tags:
   - Button Role
   - Reference
 ---
-<p>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</p>
-
 <p class="summary"><span class="seoSummary">The <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> role should be used for clickable elements that trigger a response when activated by the user. Adding <code>role="button"</code> will make an element appear as a button control to a screen reader. This role can be used in combination with the <code>aria-pressed</code> attribute to create toggle buttons.</span></p>
 
 <pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-pressed="false"&gt;Save&lt;/div&gt;</pre>
@@ -111,11 +109,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">    &lt;h1&gt;ARIA Button Example&lt;/h1&gt;
-    &lt;ul id="nameList"&gt;&lt;/ul&gt;
-    &lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
-    &lt;input type="text" id="newName"&gt;
-    &lt;span role="button" tabindex="0" onclick="handleCommand()" onKeyDown="handleCommand()"&gt;Add Name&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;ARIA Button Example&lt;/h1&gt;
+&lt;ul id="nameList"&gt;&lt;/ul&gt;
+&lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
+&lt;input type="text" id="newName"&gt;
+&lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;
+</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -128,34 +127,39 @@ tags:
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">function handleCommand(event) {
-    // Handles both mouse clicks and keyboard
-    // activate with Enter or Space
+  // Handles both mouse clicks and keyboard
+  // activate with Enter or Space
+    
+  // Keypresses other then Enter and Space should not trigger a command
+  if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
+    return;
+  }
 
-    // Get the new name value from the input element
-    let newNameInput = document.getElementById('newName');
-    let name = newNameInput.value;
-    newNameInput.value = ''; // clear the text field
-    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+  // Get the new name value from the input element
+  let newNameInput = document.getElementById('newName');
+  let name = newNameInput.value;
+  newNameInput.value = ''; // clear the text field
+  newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
-    // Don't add blank entries to the list.
-    if(name.length &gt; 0) {
-        listItem = document.createElement('li');
-        listItem.appendChild(document.createTextNode(name));
+  // Don't add blank entries to the list.
+  if (name.length &gt; 0) {
+    listItem = document.createElement('li');
+    listItem.appendChild(document.createTextNode(name));
 
-        // Add the new name to the list.
-        let list = document.getElementById('nameList');
-        list.appendChild(listItem);
-    }
+    // Add the new name to the list.
+    let list = document.getElementById('nameList');
+    list.appendChild(listItem);
+  }
 }</pre>
 
 <p>{{EmbedLiveSample("Basic_button_example")}}</p>
@@ -166,7 +170,7 @@ ul {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html">&lt;button type="button" onclick="handleBtnClick()" onKeyDown="handleBtnKeyDown()"&gt;
+<pre class="brush: html">&lt;button type="button" onclick="handleBtnClick(event)" onKeyDown="handleBtnKeyDown(event)"&gt;
   Mute Audio
 &lt;/button&gt;
 
@@ -186,14 +190,14 @@ ul {
 
 <pre class="brush: css">button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 </pre>
 
@@ -219,10 +223,10 @@ function toggleButton(element) {
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
   // toggle the play state of the audio file
-  if(pressed) {
-     audio.pause();
+  if (pressed) {
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }</pre>
 
@@ -268,8 +272,8 @@ function toggleButton(element) {
 <ul>
  <li><code><a href="https://www.w3.org/TR/wai-aria/roles#button">button</a></code></li>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-pressed">aria-pressed</a></code></li>
- <li><code>aria-expanded</code></li>
- <li><a href="/en-US/docs/">aria-haspopup</a></li>
+ <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">aria-expanded</a></code></li>
+ <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup">aria-haspopup</a></code></li>
 </ul>
 
 <h3 id="Additional_resources">Additional resources</h3>
@@ -280,3 +284,10 @@ function toggleButton(element) {
  <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">Official WAI-ARIA example code</a></li>
  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role">ARIA menubutton role</a></li>
 </ul>
+
+
+<section id="Quick_links">
+  <ol>
+   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

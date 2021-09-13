@@ -8,10 +8,11 @@ tags:
 - Reference
 - CSSImportRule
 - Read-only
+browser-compat: api.CSSImportRule.media
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p class="summary">The read-only <strong><code>media</code></strong> property of the
+<p>The read-only <strong><code>media</code></strong> property of the
 	{{domxref("CSSImportRule")}} interface returns a {{domxref("MediaList")}} object,
 	containing the value of the <code>media</code> attribute of the associated stylesheet.
 </p>
@@ -19,12 +20,16 @@ tags:
 <h2 id="Syntax">Syntax</h2>
 
 <pre
-	class="brush: js">var <var>media</var> = <var>CSSImportRule</var>.media;</pre>
+	class="brush: js">let media = CSSImportRule.media;</pre>
 
 <h3>Value</h3>
-<p>A {{domxref("MediaList")}} object.</p>
+<p>Returns a {{domxref("MediaList")}} object.</p>
+
+<p>The value of <code>media</code> can be set by passing a string containing the <code>media</code> attribute; for example <code>"print"</code>.</p>
 
 <h2 id="Examples">Examples</h2>
+
+<h3>Getting the media property</h3>
 
 <p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
 	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
@@ -33,40 +38,20 @@ tags:
 
 <pre class="brush:css">@import url("style.css") screen;</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].media); //returns a MediaList</pre>
+
+<h3>Setting the media property</h3>
+
+<p>To change the <code>media</code> attribute of the associated stylesheet, set the value of <code>media</code> to a string containing the new value.</p>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+myRules[0].media = "print";</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('CSSOM', '#dom-cssimportrule-media', 'CSSImportRule.media')}}
-			</td>
-			<td>{{Spec2('CSSOM')}}</td>
-			<td>No changes from {{SpecName('DOM2 Style')}}</td>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSImportRule', 'CSSImportRule')}}
-			</td>
-			<td>{{Spec2('DOM2 Style')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured
-	data. If you'd like to contribute to the data, please check out <a
-		href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-	and send us a pull request.</div>
-
-<p>{{Compat("api.CSSImportRule.media")}}</p>
+<p>{{Compat}}</p>

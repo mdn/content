@@ -9,6 +9,7 @@ tags:
 - Non-standard
 - Reference
 - Window
+browser-compat: api.Window.openDialog
 ---
 <div>{{APIRef("HTML DOM")}}{{Non-standard_header}}</div>
 
@@ -26,7 +27,7 @@ tags:
 <p>The call to <code>openDialog()</code> returns immediately. If you want the call to
   block until the user has closed the dialog, supply <code>modal</code> as a
   <code>windowFeatures</code> parameter. Note that this also means the user won't be able
-  to interact with the opener window until he closes the modal dialog.</p>
+  to interact with the opener window until they close the modal dialog.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -133,7 +134,7 @@ retVals.delivery = "immediate";
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.openDialog")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -143,5 +144,5 @@ retVals.delivery = "immediate";
       example</a></li>
   <li><a
       href="/en-US/docs/Archive/Web/Window.importDialog"><code>window.importDialog</code></a>
-    (mobile) {{obsolete_inline}}</li>
+    (mobile) {{deprecated_inline}}</li>
 </ul>

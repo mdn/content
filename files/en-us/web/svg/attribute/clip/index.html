@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/clip
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.clip
 ---
 <div>{{SVGRef}}{{deprecated_header}}</div>
 
@@ -11,7 +12,16 @@ tags:
 
 <p>This attribute has the same parameter values as defined for the {{ cssxref("clip","CSS clip property") }}. Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the <code>rect()</code>. The value of <code>auto</code> defines a clipping path along the bounds of the viewport created by the given element.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following six elements: {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, {{ SVGElement("image") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("pattern") }}, {{ SVGElement("marker") }}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{ SVGElement("svg") }}</li>
+  <li>{{ SVGElement("symbol") }}</li>
+  <li>{{ SVGElement("image") }}</li>
+  <li>{{ SVGElement("foreignObject") }}</li>
+  <li>{{ SVGElement("pattern") }}</li>
+  <li>{{ SVGElement("marker") }}</li>
+</ul>
 
 <div id="topExample">
 <div class="hidden">
@@ -84,4 +94,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.clip")}}s</p>
+<p>{{Compat}}s</p>

@@ -2,13 +2,13 @@
 title: RTCPeerConnection.addStream()
 slug: Web/API/RTCPeerConnection/addStream
 tags:
-- Deprecated
-- Experimental
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- addStream
+  - Deprecated
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - addStream
+browser-compat: api.RTCPeerConnection.addStream
 ---
 <p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
 
@@ -21,7 +21,7 @@ tags:
 <p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
   <code>closed</code>, an <code>InvalidStateError</code> is raised. If the
   {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>stable</code>, the event {{event("negotiationneeded")}} is sent on the
+  <code>stable</code>, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
   {{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must
   be repeated to consider the new stream.</p>
 
@@ -71,7 +71,7 @@ tags:
 
 <p>The exception is in Chrome, where <code>addStream()</code> <em>does</em> make the peer
   connection sensitive to later stream changes (though such changes do not fire the
-  {{event("negotiationneeded")}} event). If you are relying on the Chrome behavior, note
+  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event). If you are relying on the Chrome behavior, note
   that other browsers do not have it. You can write web compatible code using feature
   detection instead:</p>
 
@@ -98,27 +98,11 @@ if (pc.removeTrack) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#legacy-interface-extensions',
-        'RTCPeerConnection.addStream()') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.addStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

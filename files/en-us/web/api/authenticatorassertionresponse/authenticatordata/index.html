@@ -8,6 +8,7 @@ tags:
   - Reference
   - Web Authentication API
   - WebAuthn
+browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
 ---
 <p>{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}</p>
 
@@ -41,7 +42,7 @@ tags:
    <li><dfn><strong>credentialPublicKey</strong> (variable length) - </dfn>A <a href="https://datatracker.ietf.org/doc/html/rfc8152">COSE</a> encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.</li>
   </ul>
  </li>
- <li><strong>extensions</strong> (variable length) - An optional <a href="/en-US/docs/">CBOR</a> map of extensions.</li>
+ <li><strong>extensions</strong> (variable length) - An optional <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map of extensions.</li>
 </ul>
 
 <h2 id="Examples">Examples</h2>
@@ -51,7 +52,7 @@ tags:
   timeout: 60000
 };
 
-navigator.credentials.get({  publickey: options })
+navigator.credentials.get({  publicKey: options })
   .then(function (assertionPKCred) {
     var authenticatorData = assertionPKCred.response.authenticatorData;
     // Maybe try to convert the authenticatorData to see what's inside
@@ -66,21 +67,8 @@ navigator.credentials.get({  publickey: options })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebAuthn','#dom-authenticatorassertionresponse-authenticatordata','authenticatorData')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AuthenticatorAssertionResponse.authenticatorData")}}</p>
+<p>{{Compat}}</p>

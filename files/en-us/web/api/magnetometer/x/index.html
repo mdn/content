@@ -11,15 +11,18 @@ tags:
 - Sensor APIs
 - Sensors
 - x
+browser-compat: api.Magnetometer.x
 ---
-<div>{{APIRef("Generic Sensor API")}}</div>
+<div>{{APIRef("Sensor API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>x</code></strong> read-only property of the
+<p>The <strong><code>x</code></strong> read-only property of the
     {{domxref("Magnetometer")}} interface returns a double precision integer containing
-    the magnetic field around the device's x axis. </span></p>
+    the magnetic field around the device's x axis.</p>
+
 <p>If a feature policy blocks use of a feature it is because your code is inconsistent
   with the policies set on your server. This is not something that would ever be shown to
-  a user. See {{httpheader('Feature-Policy')}} for implementation instructions.</p>
+  a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
+  instructions.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -46,26 +49,8 @@ magSensor.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Generic Sensor')}}</td>
-      <td>{{Spec2('Generic Sensor')}}</td>
-      <td>Defines sensors in general.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Magnetometer','#magnetometer-x','x')}}</td>
-      <td>{{Spec2('Magnetometer')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Magnetometer.x")}}</p>
+<p>{{Compat}}</p>

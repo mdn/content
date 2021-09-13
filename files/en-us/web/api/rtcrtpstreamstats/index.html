@@ -13,10 +13,13 @@ tags:
   - WebRTC
   - WebRTC API
   - rtc
+browser-compat: api.RTCRtpStreamStats
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.</span> While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.</p>
+<p>The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.</p>
+
+<p>While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.</p>
 
 <p><code>RTCRtpStreamStats</code> is the base class for all RTP-related statistics reports. It's based on {{anch("RTCStats")}} and adds the following additional fields.</p>
 
@@ -69,21 +72,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebRTC Statistics Identifiers', '#streamstats-dict*', 'RTCRtpStreamStats')}}</td>
-   <td>{{Spec2('WebRTC Statistics Identifiers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpStreamStats")}}</p>
+<p>{{Compat}}</p>

@@ -11,6 +11,7 @@ tags:
 - Reference
 - Window
 - find
+browser-compat: api.Window.find
 ---
 <div>{{ApiRef}}{{Non-standard_Header}}</div>
 
@@ -19,7 +20,7 @@ tags:
     versions of Gecko. See {{Bug("672395")}}.</p>
 </div>
 
-<p>The <code><strong>Window.find()</strong></code> method finds a string in a window.</p>
+<p>The <code><strong>Window.find()</strong></code> method finds a string in a window sequentially.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,16 +31,16 @@ tags:
   <dt><code>aString</code></dt>
   <dd>The text string for which to search.</dd>
   <dt><code>aCaseSensitive</code></dt>
-  <dd>{{jsxref("Boolean")}}. If <code>true</code>, specifies a case-sensitive search.</dd>
+  <dd>A boolean value. If <code>true</code>, specifies a case-sensitive search.</dd>
   <dt><code>aBackwards</code></dt>
-  <dd>{{jsxref("Boolean")}}. If <code>true</code>, specifies a backward search.</dd>
+  <dd>A boolean value. If <code>true</code>, specifies a backward search.</dd>
   <dt><code>aWrapAround</code></dt>
-  <dd>{{jsxref("Boolean")}}. If <code>true</code>, specifies a wrap around search.</dd>
+  <dd>A boolean value. If <code>true</code>, specifies a wrap around search.</dd>
   <dt><code>aWholeWord</code> {{Unimplemented_Inline}}</dt>
-  <dd>{{jsxref("Boolean")}}. If <code>true</code>, specifies a whole word search. This is
+  <dd>A boolean value. If <code>true</code>, specifies a whole word search. This is
     not implemented; see {{bug(481513)}}.</dd>
   <dt><code>aSearchInFrames</code></dt>
-  <dd>{{jsxref("Boolean")}}. If <code>true</code>, specifies a search in frames.</dd>
+  <dd>A boolean value. If <code>true</code>, specifies a search in frames.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -50,16 +51,18 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">findString = function findText(text) {
-  alert("String \x22" + text + "\x22 found? " + window.find(text));
+<pre class="brush: js">function findString(text) {
+  document.querySelector("#output").textContent="String found? " + window.find(text);
 }</pre>
 
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
 &lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
-&lt;button type="button" onClick='findString("Banana")'&gt;Search for Banana&lt;/button&gt;
+&lt;button type="button" onClick='findString("Bananas")'&gt;Search for Bananas&lt;/button&gt;
 &lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;
+
+&lt;p id="output"&gt;&lt;/p&gt;
 </pre>
 
 <h3 id="Result">Result</h3>
@@ -77,4 +80,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.find")}}</p>
+<p>{{Compat}}</p>

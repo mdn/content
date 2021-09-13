@@ -22,6 +22,7 @@ tags:
   - getClientRects
   - offsetHeight
   - scrollHeight
+browser-compat: api.Element.getBoundingClientRect
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -44,8 +45,7 @@ tags:
   <code>width</code> and <code>height</code> are relative to the top-left of the viewport.
 </p>
 
-<p style="display: block;"><img alt=""
-    src="element-box-diagram.png"></p>
+<p><img alt="" src="element-box-diagram.png"></p>
 
 <p>The <code>width</code> and <code>height</code> properties of the {{domxref("DOMRect")}}
   object returned by the method include the <code>padding</code> and
@@ -95,6 +95,8 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<h3 id="Basic">Basic</h3>
+
 <p>This simple example retrieves the <code>DOMRect</code> object representing the bounding
   client rect of a simple <code>&lt;div&gt;</code> element, and prints out its properties
   below it.</p>
@@ -119,7 +121,7 @@ for (var key in rect) {
   }
 }</pre>
 
-<p>{{EmbedLiveSample('Examples', '100%', 640)}}</p>
+<p>{{EmbedLiveSample('Basic', '100%', 640)}}</p>
 
 <p>Notice how the <code>width</code>/<code>height</code> are equal to its
   <code>width</code>/<code>height</code> + <code>padding</code>.</p>
@@ -129,25 +131,50 @@ for (var key in rect) {
   to the absolute distance from the relevant edge of the viewport to that side of the
   element, in each case.</p>
 
+<h4 id="Scrolling">Scrolling</h4>
+<p>This example demonstrates how bounding client rect is changing when document is scrolled.</p>
+
+<pre class="brush: html notranslate">
+&lt;div&gt;&lt;/div&gt;
+    &lt;div id="example"&gt;&lt;/div&gt;
+    &lt;div id="controls"&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css notranslate">div#example {
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: 50px auto;
+  background: purple;
+}
+
+body { padding-bottom: 1000px; }
+p { margin: 0; }</pre>
+
+<pre class="brush: js notranslate">function update() {
+  const container = document.getElementById("controls");
+  const elem = document.querySelector('div');
+  const rect = elem.getBoundingClientRect();
+
+  container.innerHTML = '';
+  for (let key in rect) {
+    if(typeof rect[key] !== 'function') {
+      let para = document.createElement('p');
+      para.textContent  = `${ key } : ${ rect[key] }`;
+      container.appendChild(para);
+    }
+  }
+}
+
+document.addEventListener('scroll', update);
+update();</pre>
+
+<p>{{EmbedLiveSample('Scrolling', '100%', 640)}}</p>
+
+
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM View", "#dom-element-getboundingclientrect",
-        "Element.getBoundingClientRect()")}}</td>
-      <td>{{Spec2("CSSOM View")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h3 id="Notes">Notes</h3>
 
@@ -179,7 +206,7 @@ emptyObj = { ...rect }
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.getBoundingClientRect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

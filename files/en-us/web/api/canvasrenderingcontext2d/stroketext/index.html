@@ -14,6 +14,7 @@ tags:
 - Stroke String
 - Stroking Text
 - strokeText
+browser-compat: api.CanvasRenderingContext2D.strokeText
 ---
 <div>{{APIRef}}</div>
 
@@ -30,7 +31,7 @@ tags:
   on it.</p>
 
 <div class="notecard note">
-  <p>Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
+  <p><strong>Note:</strong> Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
     fill the text characters rather than having just their outlines drawn.</p>
 </div>
 
@@ -85,7 +86,7 @@ tags:
 
 <p>The JavaScript code for this example follows.</p>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
@@ -115,7 +116,7 @@ ctx.strokeText('Hello world', 50, 90);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js; highlight:[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
@@ -128,25 +129,11 @@ ctx.strokeText('Hello world', 50, 90, 140);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroketext",
-        "CanvasRenderingContext2D.strokeText")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.strokeText")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

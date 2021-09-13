@@ -10,7 +10,7 @@ tags:
 ---
 <div>{{ APIRef("Web Crypto API") }}</div>
 
-<p>The <strong><code>Pbkdf2Params</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2">PBKDF2</a> algorithm.</p>
+<p>The <strong><code>Pbkdf2Params</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a> algorithm.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -19,7 +19,7 @@ tags:
  <dd>A {{domxref("DOMString")}}. This should be set to <code>PBKDF2</code>.</dd>
  <dt><code>hash</code></dt>
  <dd>
- <p>A {{domxref("DOMString")}} representing the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#Supported_algorithms">digest algorithm</a> to use. This may be one of:</p>
+ <p>A {{domxref("DOMString")}} representing the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">digest algorithm</a> to use. This may be one of:</p>
 
  <ul>
   <li><code>SHA-1</code></li>
@@ -29,7 +29,7 @@ tags:
  </ul>
 
  <div class="notecard warning">
- <p><strong>Warning</strong>: <code>SHA-1</code> is considered vulnerable in most cryptographic applications, but is still considered safe in PBKDF2. However, it's advisable to transition away from it everywhere, so unless you need to use <code>SHA-1</code>, don't. Use a different digest algorithm instead.</p>
+ <p><strong>Warning:</strong> <code>SHA-1</code> is considered vulnerable in most cryptographic applications, but is still considered safe in PBKDF2. However, it's advisable to transition away from it everywhere, so unless you need to use <code>SHA-1</code>, don't. Use a different digest algorithm instead.</p>
  </div>
  </dd>
  <dt><code>salt</code></dt>
@@ -44,7 +44,7 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table class="no-markdown">
  <tbody>
   <tr>
    <th scope="col">Specification</th>

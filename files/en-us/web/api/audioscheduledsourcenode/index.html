@@ -10,13 +10,14 @@ tags:
   - Reference
   - Web Audio API
   - sound
+browser-compat: api.AudioScheduledSourceNode
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
 <p>The <code>AudioScheduledSourceNode</code> interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the {{domxref("AudioScheduledSourceNode.start", "start()")}} and {{domxref("AudioScheduledSourceNode.stop", "stop()")}} methods, as well as the {{domxref("AudioScheduledSourceNode.onended", "onended")}} event handler.</p>
 
 <div class="note">
-<p>You can't create an <code>AudioScheduledSourceNode</code> object directly. Instead, use the interface which extends it, such as {{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}, and {{domxref("ConstantSourceNode")}}.</p>
+<p><strong>Note:</strong> You can't create an <code>AudioScheduledSourceNode</code> object directly. Instead, use the interface which extends it, such as {{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}, and {{domxref("ConstantSourceNode")}}.</p>
 </div>
 
 <p>Unless stated otherwise, nodes based upon <code>AudioScheduledSourceNode</code> output silence when not playing (that is, before <code>start()</code> is called and after <code>stop()</code> is called). Silence is represented, as always, by a stream of samples with the value zero (0).</p>
@@ -48,24 +49,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioScheduledSourceNode', 'AudioScheduledSourceNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioScheduledSourceNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

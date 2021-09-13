@@ -9,12 +9,13 @@ tags:
 - Reference
 - Web Audio API
 - minValue
+browser-compat: api.AudioParam.minValue
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>minValue</code></strong>
+<p>The <strong><code>minValue</code></strong>
     read-only property of the {{domxref("AudioParam")}} interface represents the minimum
-    possible value for the parameter's nominal (effective) range.</span></p>
+    possible value for the parameter's nominal (effective) range.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,31 +32,18 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js;highlight[3]">const audioCtx = new AudioContext();
+<pre class="brush: js;">const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 console.log(gainNode.gain.minValue); // -3.4028234663852886e38
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-audioparam-minvalue', 'minValue')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioParam.minValue")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

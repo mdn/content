@@ -1,5 +1,5 @@
 ---
-title: PushEvent.PushEvent()
+title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
 tags:
 - API
@@ -10,6 +10,7 @@ tags:
 - PushEvent
 - Reference
 - Service Workers
+browser-compat: api.PushEvent.PushEvent
 ---
 <p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
 
@@ -19,8 +20,7 @@ tags:
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js">var myPushEvent = new PushEvent(type, <span class="idlInterface" id="idl-def-PushEvent"><span class="extAttr">eventInitDict</span></span>);</pre>
+<pre class="brush: js">const myPushEvent = new PushEvent(type, eventInitDict);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -55,7 +55,7 @@ myPushEvent.data.text(); // should return 'Some sample text'</pre>
 
 <div>
 
-	<p>{{Compat("api.PushEvent.PushEvent")}}</p>
+	<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>

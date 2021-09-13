@@ -13,12 +13,12 @@ tags:
 - Reference
 - methodName
 - payment
+browser-compat: api.PaymentMethodChangeEvent.methodName
 ---
 <div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
 
-<p>The read-only <code><strong>methodName</strong></code> property of the <span
-    class="seoSummary">{{domxref("PaymentMethodChangeEvent")}} interface is a string which
-    uniquely identifies the payment handler currently selected by the user.</span> The
+<p>The read-only <code><strong>methodName</strong></code> property of the {{domxref("PaymentMethodChangeEvent")}} interface is a string which
+    uniquely identifies the payment handler currently selected by the user. The
   payment handler may be a payment technology, such as Apple Pay or Android Pay, and each
   payment handler may support multiple payment methods; changes to the payment method
   within the payment handler are described by the <code>PaymentMethodChangeEvent</code>.
@@ -65,23 +65,8 @@ const response = await request.show();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Payment','#dom-paymentmethodchangeevent-methodname','PaymentMethodChangeEvent.methodName')}}
-      </td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentMethodChangeEvent.methodName")}}</p>
+<p>{{Compat}}</p>

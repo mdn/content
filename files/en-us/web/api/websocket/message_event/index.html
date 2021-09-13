@@ -6,6 +6,7 @@ tags:
   - Reference
   - WebSocket
   - message
+browser-compat: api.WebSocket.message_event
 ---
 <div>{{APIRef}}</div>
 
@@ -34,7 +35,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js line-numbers language-js">// Create WebSocket connection.
+<pre class="brush: js">// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for messages
@@ -44,24 +45,11 @@ socket.addEventListener('message', function (event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "web-sockets.html#event-message", "WebSocket message")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WebSocket.message_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -69,5 +57,5 @@ socket.addEventListener('message', function (event) {
  <li><a href="/en-US/docs/Web/API/WebSocket/close_event">WebSocket: close event</a></li>
  <li><a href="/en-US/docs/Web/API/WebSocket/error_event">WebSocket: error event</a></li>
  <li><a href="/en-US/docs/Web/API/WebSocket/open_event">WebSocket: open event</a></li>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
 </ul>

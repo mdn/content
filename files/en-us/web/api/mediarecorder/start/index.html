@@ -2,25 +2,28 @@
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
 tags:
-- API
-- Audio
-- Media
-- Media Capture
-- MediaRecorder
-- MediaStream Recording
-- MediaStream Recording API
-- Method
-- NeedsExample
-- Recording Media
-- Reference
-- Video
-- start
+  - API
+  - Audio
+  - Media
+  - Media Capture
+  - MediaRecorder
+  - MediaStream Recording
+  - MediaStream Recording API
+  - Method
+  - NeedsExample
+  - Recording Media
+  - Reference
+  - Video
+  - start
+browser-compat: api.MediaRecorder.start
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaRecorder")}} method
+<p>The {{domxref("MediaRecorder")}} method
     <code><strong>start()</strong></code>, which is part of the MediaStream Recording API,
-    begins recording media into one or more {{domxref("Blob")}} objects.</span> You can
+    begins recording media into one or more {{domxref("Blob")}} objects.</p>
+
+<p>You can
   record the entire duration of the media into a single <code>Blob</code> (or until you
   call {{domxref("MediaRecorder.requestData", "requestData()")}}), or you can specify the
   number of milliseconds to record at a time. Then, each time that amount of media has
@@ -42,7 +45,7 @@ tags:
   <code>MediaRecorder</code>, followed by a {{event("stop")}} event.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: If the browser is unable to start recording or continue
+  <p><strong>Note:</strong> If the browser is unable to start recording or continue
     recording, it will raise a {{domxref("DOMError")}} event, followed by a
     {{domxref("MediaRecorder.dataavailable")}} event containing the <code>Blob</code> it
     has gathered, followed by the {{domxref("MediaRecorder.stop")}} event.</p>
@@ -90,11 +93,8 @@ tags:
   <dt><code>SecurityError</code></dt>
   <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.  This also
-    happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as
-    {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the
-    {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the
-    source stream. This exception may also be delivered as an {{event("error")}} event if
+    "getUserMedia()")}} when the user denies permission to use an input device. This
+    exception may also be delivered as an {{event("error")}} event if
     the security options for the source media change after recording begins.</dd>
   <dt><code>UnknownError</code></dt>
   <dd>Something else went wrong during the recording process.</dd>
@@ -113,30 +113,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording", "#dom-mediarecorder-start",
-        "MediaRecorder.start()")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.start")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
       the MediaRecorder API</a></li>
   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
     getUserMedia + Web Audio API visualization demo, by <a

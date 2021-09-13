@@ -8,10 +8,11 @@ tags:
   - Interface
   - NeedsNewLayout
   - Reference
+browser-compat: api.HTMLTrackElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><span class="seoSummary">The <strong><code>HTMLTrackElement</code></strong> interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.</span></p>
+<p>The <strong><code>HTMLTrackElement</code></strong> interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -29,16 +30,18 @@ tags:
  <dt>{{domxref("HTMLTrackElement.label")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("label", "track")}} HTML attribute, indicating a user-readable title for the track.</dd>
  <dt>{{domxref("HTMLTrackElement.default")}}</dt>
- <dd>A {{domxref("Boolean")}} reflecting the {{htmlattrxref("default", "track")}}  attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.</dd>
+ <dd>A boolean value reflecting the {{htmlattrxref("default", "track")}} attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.</dd>
  <dt>{{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}</dt>
  <dd>Returns  an <code>unsigned short</code> that show the readiness state of the track:
  <table class="standard-table">
+  <thead>
+    <tr>
+      <th>Constant</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Value</td>
-    <td class="header">Description</td>
-   </tr>
    <tr>
     <td><code>NONE</code></td>
     <td>0</td>
@@ -88,29 +91,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmltrackelement", "HTMLTrackElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-track-element", "HTMLTrackElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLTrackElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

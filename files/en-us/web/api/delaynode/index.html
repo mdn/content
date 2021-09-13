@@ -8,10 +8,13 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.DelayNode
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>DelayNode</code></strong> interface represents a <a href="https://en.wikipedia.org/wiki/Digital_delay_line" title="Wikipedia: Digital delay line">delay-line</a>; an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.</span> A <code>DelayNode</code> always has exactly one input and one output, both with the same amount of channels.</p>
+<p>The <strong><code>DelayNode</code></strong> interface represents a <a href="https://en.wikipedia.org/wiki/Digital_delay_line" title="Wikipedia: Digital delay line">delay-line</a>; an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.</p>
+
+<p>A <code>DelayNode</code> always has exactly one input and one output, both with the same amount of channels.</p>
 
 <p><img alt="The DelayNode acts as a delay-line, here with a value of 1s." src="webaudiodelaynode.png"></p>
 
@@ -46,7 +49,7 @@ tags:
 
 <dl>
 	<dt>{{domxref("DelayNode.DelayNode", "DelayNode()")}}</dt>
-	<dd>Creates a new instance of an DelayNode object instance. Alternatively, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method.</dd>
+	<dd>Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -64,28 +67,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createDelay","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDelay#example"><code>BaseAudioContext.createDelay()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Audio API', '#DelayNode', 'DelayNode')}}</td>
-			<td>{{Spec2('Web Audio API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DelayNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,36 @@
+---
+title: CompressionStream.writable
+slug: Web/API/CompressionStream/writable
+tags:
+  - API
+  - Property
+  - Reference
+  - writable
+  - CompressionStream
+browser-compat: api.CompressionStream.writable
+---
+<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+
+<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">let writableStream = CompressionStream.writable;</pre>
+
+<h3>Value</h3>
+<p>A {{domxref("WritableStream")}}.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>The following example returns a {{domxref("WritableStream")}} from a <code>CompressionStream</code>.</p>
+
+<pre class="brush:js">let stream = new CompressionStream('gzip');
+console.log(stream.writeable); //a WritableStream</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>

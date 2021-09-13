@@ -6,6 +6,7 @@ tags:
   - HTML DOM
   - Interface
   - Reference
+browser-compat: api.HTMLOutputElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -37,7 +38,7 @@ tags:
  <dt>{{domxref("HTMLOutputElement.value")}}</dt>
  <dd>A {{domxref("DOMString")}} representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.</dd>
  <dt>{{domxref("HTMLOutputElement.willValidate")}}{{ReadOnlyInline}}</dt>
- <dd>A {{jsxref("Boolean")}} indicating whether the element is a candidate for constraint validation.</dd>
+ <dd>A boolean value indicating whether the element is a candidate for constraint validation.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -46,10 +47,12 @@ tags:
 
 <dl>
  <dt>{{domxref("HTMLOutputElement.checkValidity()")}}</dt>
- <dd>Checks the validity of the element and returns a {{jsxref("Boolean")}} holding the check result.</dd>
+ <dd>Checks the validity of the element and returns a boolean value holding the check result.</dd>
  <dt>{{domxref("HTMLOutputElement.reportValidity()")}}</dt>
- <dd>This method reports the problems with the constraints on the element, if any, to the user. If there are problems, fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns <code>false</code>; if there are no problems, it returns <code>true</code>.</dd>
- <dd>When the problem is reported, the user agent may focus the element and change the scrolling position of the document or perform some other action that brings the element to the user's attention. User agents may report more than one constraint violation if this element suffers from multiple problems at once. If the element is not rendered, then the user agent may report the error for the running script instead of notifying the user.</dd>
+ <dd>
+   <p>This method reports the problems with the constraints on the element, if any, to the user. If there are problems, fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns <code>false</code>; if there are no problems, it returns <code>true</code>.</p>
+   <p>When the problem is reported, the user agent may focus the element and change the scrolling position of the document or perform some other action that brings the element to the user's attention. User agents may report more than one constraint violation if this element suffers from multiple problems at once. If the element is not rendered, then the user agent may report the error for the running script instead of notifying the user.</p>
+ </dd>
  <dt>{{domxref("HTMLOutputElement.setCustomValidity()")}}</dt>
  <dd>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</dd>
 </dl>
@@ -72,36 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmloutputelement", "HTMLOutputElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "forms.html#the-output-element", "HTMLOutputElement")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-output-element", "HTMLOutputElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLOutputElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
