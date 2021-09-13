@@ -527,8 +527,9 @@ tags:
 <h5 id="EnvironmentMQ_Planned_in_Media_Queries_Level_5">EnvironmentMQ (Planned in Media Queries Level 5)</h5>
 
 <dl>
-  <dt><a href="https://drafts.csswg.org/mediaqueries-5/#light-level">light-level</a></dt>
+  <dt>light-level</dt>
   <dd>
+    <p><a href="https://drafts.csswg.org/mediaqueries-5/#light-level">light-level</a></p>
     <p>Has three valid values: dim, normal, and washed. Interestingly, the specification refrains from actually defining the three levels in terms of a measurement of lux, because devices with a light sensor usually adjust the brightness of the screen automatically. The specifications also note the difference in technology, such as e-ink, which remains readable in bright daylight, versus liquid crystals, which do not.</p>
   </dd>
 
@@ -562,12 +563,11 @@ tags:
       <p>From W3C's Draft document, Media Queries Level 5 section on light-level: "<em>The <code><strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level" id="ref-for-descdef-media-light-level①">light-level</a></strong></code> media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response</em>." This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.</p>
 
       <dt>prefers-contrast</dt>
-    </dd>
+      <dd>
+        <p><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast">prefers-contrast</a></p>
+        <p>From W3C's Draft document, Media Queries Level 5 section on <code><strong>prefers-contrast</strong></code>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
+      </dd>
   </dl>
-
-<p><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast">prefers-contrast</a></p>
-
-<p>From W3C's Draft document, Media Queries Level 5 section on <code><strong>prefers-contrast</strong></code>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
 
 <h4 id="MediaQueryList_Interface"><code>MediaQueryList</code> Interface</h4>
 <p>Section 4.2 from the CSSWG.org drafts integrates with the <strong><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop" id="ref-for-event-loop">event loop</a></strong> defined in HTML. <strong><a href="https://drafts.csswg.org/cssom-view/#biblio-html">[HTML]</a></strong> for the <strong><code><a href="https://drafts.csswg.org/cssom-view/#mediaquerylist" id="ref-for-mediaquerylist③">MediaQueryList</a></code></strong> object. See the MDN document, <strong><a href="/en-US/docs/Web/API/MediaQueryList">MediaQueryList</a></strong> for more information.</p>
